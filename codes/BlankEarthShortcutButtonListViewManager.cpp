@@ -43,55 +43,56 @@ void BlankEarthShortcutButtonListViewManager__CreateList(
   bool v10; // w6
   bool v11; // w7
   const MethodInfo *v12; // x2
-  __int64 scrollBar; // x0
+  UnityEngine_Component_o *scrollBar; // x0
   __int64 v14; // x1
   struct ListViewItemSeed_o *seed; // x8
+  System_Nullable_float__o v16; // x0
   float y; // s0
-  __int64 v17; // x1
-  __int64 v18; // x2
-  __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x1
+  __int64 v21; // x2
   Il2CppObject *Object_object__58532980; // x22
-  __int64 v22; // x2
+  __int64 v23; // x2
   Il2CppObject *Component_object; // x21
   BlankEarthSpotNavimenuEntity_array *EnableShortcutButtons; // x22
-  DataMasterBase_TMaster__TEntity__PKType__o *v25; // x23
-  int32_t v26; // w24
-  __int64 v27; // x26
-  System_String_o *v28; // x2
-  System_String_o *v29; // x3
-  int32_t v30; // w4
-  int32_t v31; // w5
-  bool v32; // w6
-  bool v33; // w7
-  BlankEarthSpotNavimenuEntity_o *v34; // x27
+  DataMasterBase_TMaster__TEntity__PKType__o *v26; // x23
+  int32_t v27; // w24
+  __int64 v28; // x26
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  BlankEarthSpotNavimenuEntity_o *v35; // x27
   System_Collections_Generic_List_object__o *itemList; // x25
-  System_Action_o *v36; // x28
-  BlankEarthShortcutButtonListViewItem_o *v37; // x26
-  const MethodInfo *v38; // x6
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
+  System_Action_o *v37; // x28
+  BlankEarthShortcutButtonListViewItem_o *v38; // x26
+  const MethodInfo *v39; // x6
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v46; // x9
+  _QWORD *v47; // x9
   __int64 size; // x10
-  Il2CppClass **v48; // x0
-  struct System_Collections_Generic_List_ListViewItem__o *v49; // x8
-  struct ListViewItemSeed_o *v50; // x21
-  int v51; // w20
+  Il2CppClass **v49; // x0
+  struct System_Collections_Generic_List_ListViewItem__o *v50; // x8
+  struct ListViewItemSeed_o *v51; // x21
+  int v52; // w20
   float Value; // s0
   System_Nullable_float__o p_defaultArrangementPitchY; // x0
-  bool v54; // cc
-  UnityEngine_Transform_o *v55; // x20
+  bool v55; // cc
+  UnityEngine_Transform_o *v56; // x20
   struct UnityEngine_Vector3_o *p_oneVector; // x8
   float *p_y; // x9
   float *p_z; // x10
   struct UnityEngine_Vector3_StaticFields *static_fields; // x10
-  struct System_Nullable_float__o v61; // [xsp+8h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  struct System_Nullable_float__o v62; // [xsp+8h] [xbp-68h] BYREF
+  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596CE27 & 1) == 0 )
   {
@@ -134,24 +135,22 @@ void BlankEarthShortcutButtonListViewManager__CreateList(
     seed = this->fields.seed;
     if ( !seed )
       goto LABEL_47;
+    v16 = (System_Nullable_float__o)&v62;
     y = seed->fields.arrangementPich.fields.y;
-    v61 = 0;
-    System_Nullable_float____ctor(
-      (System_Nullable_float__o)&v61,
-      y,
-      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-    this->fields.defaultArrangementPitchY = v61;
+    v62 = 0;
+    System_Nullable_float____ctor(v16, y, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    this->fields.defaultArrangementPitchY = v62;
   }
-  scrollBar = (__int64)this->fields.scrollBar;
+  scrollBar = (UnityEngine_Component_o *)this->fields.scrollBar;
   if ( !scrollBar )
     goto LABEL_47;
-  scrollBar = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollBar, 0);
+  scrollBar = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(scrollBar, 0);
   if ( !scrollBar )
     goto LABEL_47;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollBar, 0, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v17, v18);
-  scrollBar = (__int64)AssetManager__getAssetStorage((System_String_o *)StringLiteral_9287/*"MapShortcut/DownloadMapShortcut"*/, 0);
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v18, v19);
+  scrollBar = (UnityEngine_Component_o *)AssetManager__getAssetStorage((System_String_o *)StringLiteral_9287/*"MapShortcut/DownloadMapShortcut"*/, 0);
   if ( !scrollBar )
     goto LABEL_47;
   Object_object__58532980 = AssetData__GetObject_object__58532980(
@@ -159,10 +158,13 @@ void BlankEarthShortcutButtonListViewManager__CreateList(
                               (System_String_o *)StringLiteral_5546/*"DownloadMapShortcutAtlas"*/,
                               (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
-  scrollBar = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__58532980, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
+  scrollBar = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
+                                           (UnityEngine_Object_o *)Object_object__58532980,
+                                           0,
+                                           0);
   Component_object = 0;
-  if ( (scrollBar & 1) != 0 )
+  if ( ((unsigned __int8)scrollBar & 1) != 0 )
   {
     if ( !Object_object__58532980 )
       goto LABEL_47;
@@ -171,13 +173,13 @@ void BlankEarthShortcutButtonListViewManager__CreateList(
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
   }
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v14, v22);
-  scrollBar = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BlankEarthSpotNavimenuMaster___);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v14, v23);
+  scrollBar = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BlankEarthSpotNavimenuMaster___);
   if ( !scrollBar
     || (EnableShortcutButtons = BlankEarthSpotNavimenuMaster__GetEnableShortcutButtons(
                                   (BlankEarthSpotNavimenuMaster_o *)scrollBar,
                                   0),
-        scrollBar = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___),
+        scrollBar = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___),
         !EnableShortcutButtons) )
   {
 LABEL_47:
@@ -185,49 +187,49 @@ LABEL_47:
   }
   if ( SLODWORD(EnableShortcutButtons->max_length) >= 1 )
   {
-    v25 = (DataMasterBase_TMaster__TEntity__PKType__o *)scrollBar;
-    v26 = 0;
+    v26 = (DataMasterBase_TMaster__TEntity__PKType__o *)scrollBar;
+    v27 = 0;
     do
     {
-      v27 = sub_2213CCC(BlankEarthShortcutButtonListViewManager___c__DisplayClass18_0_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v27, 0);
-      if ( !v27 )
+      v28 = sub_2213CCC(BlankEarthShortcutButtonListViewManager___c__DisplayClass18_0_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v28, 0);
+      if ( !v28 )
         goto LABEL_47;
-      *(_QWORD *)(v27 + 32) = this;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 32), (int32_t)this, v28, v29, v30, v31, v32, v33);
-      if ( (unsigned int)v26 >= LODWORD(EnableShortcutButtons->max_length) )
+      *(_QWORD *)(v28 + 32) = this;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 32), (int32_t)this, v29, v30, v31, v32, v33, v34);
+      if ( (unsigned int)v27 >= LODWORD(EnableShortcutButtons->max_length) )
         sub_2213CE4(scrollBar);
-      *(_DWORD *)(v27 + 16) = v26;
-      v34 = EnableShortcutButtons->m_Items[v26];
-      if ( !v34 || !v25 )
+      *(_DWORD *)(v28 + 16) = v27;
+      v35 = EnableShortcutButtons->m_Items[v27];
+      if ( !v35 || !v26 )
         goto LABEL_47;
-      scrollBar = DataMasterBase_object__object__int___TryGetEntity(
-                    v25,
-                    (Il2CppObject **)(v27 + 24),
-                    v34->fields.blankEarthSpotId,
-                    (const MethodInfo_3F10B80 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
-      if ( (scrollBar & 1) != 0 )
+      scrollBar = (UnityEngine_Component_o *)DataMasterBase_object__object__int___TryGetEntity(
+                                               v26,
+                                               (Il2CppObject **)(v28 + 24),
+                                               v35->fields.blankEarthSpotId,
+                                               (const MethodInfo_3F10B80 *)Method_DataMasterBase_BlankEarthSpotMaster__BlankEarthSpotEntity__int__TryGetEntity__);
+      if ( ((unsigned __int8)scrollBar & 1) != 0 )
       {
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+        v37 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
-          v36,
-          (Il2CppObject *)v27,
+          v37,
+          (Il2CppObject *)v28,
           Method_BlankEarthShortcutButtonListViewManager___c__DisplayClass18_0__CreateList_b__0__,
           0);
-        v37 = (BlankEarthShortcutButtonListViewItem_o *)sub_2213CCC(BlankEarthShortcutButtonListViewItem_TypeInfo);
+        v38 = (BlankEarthShortcutButtonListViewItem_o *)sub_2213CCC(BlankEarthShortcutButtonListViewItem_TypeInfo);
         BlankEarthShortcutButtonListViewItem___ctor(
-          v37,
-          v34,
-          v26,
+          v38,
+          v35,
+          v27,
           commonUIAtlas,
           (UIAtlas_o *)Component_object,
-          v36,
-          v38);
+          v37,
+          v39);
         if ( !itemList )
           goto LABEL_47;
         items = itemList->fields._items;
-        v46 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+        v47 = Method_System_Collections_Generic_List_ListViewItem__Add__;
         ++itemList->fields._version;
         if ( !items )
           goto LABEL_47;
@@ -236,28 +238,28 @@ LABEL_47:
         {
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
-            (Il2CppObject *)v37,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+            (Il2CppObject *)v38,
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
         }
         else
         {
-          v48 = &items->obj.klass + size;
+          v49 = &items->obj.klass + size;
           itemList->fields._size = size + 1;
-          v48[4] = (Il2CppClass *)v37;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v48 + 4), (int32_t)v37, v39, v40, v41, v42, v43, v44);
+          v49[4] = (Il2CppClass *)v38;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v49 + 4), (int32_t)v38, v40, v41, v42, v43, v44, v45);
         }
       }
     }
-    while ( ++v26 < SLODWORD(EnableShortcutButtons->max_length) );
+    while ( ++v27 < SLODWORD(EnableShortcutButtons->max_length) );
   }
-  v49 = this->fields.itemList;
-  if ( !v49 )
-    goto LABEL_47;
-  v50 = this->fields.seed;
+  v50 = this->fields.itemList;
   if ( !v50 )
     goto LABEL_47;
-  v51 = v49->fields._size;
-  if ( v51 <= 6 )
+  v51 = this->fields.seed;
+  if ( !v51 )
+    goto LABEL_47;
+  v52 = v50->fields._size;
+  if ( v52 <= 6 )
   {
     p_defaultArrangementPitchY = (System_Nullable_float__o)&this->fields.defaultArrangementPitchY;
     Value = System_Nullable_float___get_Value(
@@ -268,18 +270,18 @@ LABEL_47:
   {
     Value = this->fields.overWriteArrangementPitchY;
   }
-  scrollBar = (__int64)this->fields.listViewGrid;
-  v50->fields.arrangementPich.fields.y = Value;
+  scrollBar = (UnityEngine_Component_o *)this->fields.listViewGrid;
+  v51->fields.arrangementPich.fields.y = Value;
   if ( !scrollBar )
     goto LABEL_47;
-  scrollBar = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)scrollBar, 0);
-  v54 = v51 <= 6;
-  v55 = (UnityEngine_Transform_o *)scrollBar;
-  if ( v54 )
+  scrollBar = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)scrollBar, 0);
+  v55 = v52 <= 6;
+  v56 = (UnityEngine_Transform_o *)scrollBar;
+  if ( v55 )
   {
     if ( !byte_5969AE5 )
     {
-      scrollBar = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      scrollBar = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -293,13 +295,13 @@ LABEL_47:
     p_y = &this->fields.listOverWriteScale.fields.y;
     p_z = &this->fields.listOverWriteScale.fields.z;
   }
-  if ( !v55 )
+  if ( !v56 )
     goto LABEL_47;
-  v62.fields.x = p_oneVector->fields.x;
-  v62.fields.y = *p_y;
-  v62.fields.z = *p_z;
-  UnityEngine_Transform__set_localScale(v55, v62, 0);
-  scrollBar = (__int64)this->fields.scrollView;
+  v63.fields.x = p_oneVector->fields.x;
+  v63.fields.y = *p_y;
+  v63.fields.z = *p_z;
+  UnityEngine_Transform__set_localScale(v56, v63, 0);
+  scrollBar = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollBar )
     goto LABEL_47;
   UIScrollView__ResetPosition((UIScrollView_o *)scrollBar, 0);
@@ -1514,7 +1516,7 @@ void BlankEarthShortcutButtonListViewManager___c__DisplayClass19_0___OnClickButt
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v4);
     this = (BlankEarthShortcutButtonListViewManager___c__DisplayClass19_0_o *)TerminalSceneComponent_TypeInfo;
   }
-  v5 = **((_QWORD **)this + 23);
+  v5 = **(_QWORD **)&this[4].fields.spotId;
   if ( !v5 || (this = *(BlankEarthShortcutButtonListViewManager___c__DisplayClass19_0_o **)(v5 + 240)) == 0 )
 LABEL_15:
     sub_2213CDC(this, method);

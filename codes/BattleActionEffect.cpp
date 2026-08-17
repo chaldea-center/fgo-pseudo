@@ -971,6 +971,7 @@ BattleActionEffect_MaxHpBuffServant_o *BattleActionEffect_MaxHpBuffServant__Init
   int32_t v5; // w5
   bool v6; // w6
   bool v7; // w7
+  BattleActionEffect_MaxHpBuffServant_o *result; // x0
 
   this->fields.buffArray = buffArray;
   sub_2213A04(
@@ -983,8 +984,9 @@ BattleActionEffect_MaxHpBuffServant_o *BattleActionEffect_MaxHpBuffServant__Init
     v6,
     v7);
   this->fields.targetId = targetId;
+  result = this;
   this->fields.diffVal = diffVal;
-  return this;
+  return result;
 }
 
 

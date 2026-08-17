@@ -396,54 +396,60 @@ void PartyOrganizationConfirmItemDraw__SetItem(
   __int64 *v133; // x8
   System_String_o *v134; // x0
   const MethodInfo *v135; // x5
-  System_String_o *v137; // x1
-  PartyOrganizationConfirmItemDraw_o *v140; // x0
-  System_String_o *v141; // x3
-  int v142; // w24
-  const MethodInfo *v143; // x1
-  __int64 v144; // x2
-  const MethodInfo *v145; // x5
-  __int64 *v146; // x8
-  System_String_o *v147; // x0
-  const MethodInfo *v148; // x4
-  float v149; // s0
-  float v150; // s1
-  System_String_o *v151; // x1
-  PartyOrganizationConfirmItemDraw_o *v152; // x0
-  bool v153; // w3
-  System_String_o *v154; // x0
-  System_String_o *v156; // x1
-  PartyOrganizationConfirmItemDraw_o *v159; // x0
-  System_String_o *v160; // x3
-  bool v161; // w4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  System_String_o *v138; // x1
+  float b; // s2
+  float a; // s3
+  PartyOrganizationConfirmItemDraw_o *v141; // x0
+  System_String_o *v142; // x3
+  int v143; // w24
+  const MethodInfo *v144; // x1
+  __int64 v145; // x2
+  const MethodInfo *v146; // x5
+  __int64 *v147; // x8
+  System_String_o *v148; // x0
+  const MethodInfo *v149; // x4
+  float v150; // s0
+  float v151; // s1
+  System_String_o *v152; // x1
+  PartyOrganizationConfirmItemDraw_o *v153; // x0
+  bool v154; // w3
+  System_String_o *v155; // x0
+  float v156; // s0 OVERLAPPED
+  float v157; // s1
+  System_String_o *v158; // x1
+  float v159; // s2
+  float v160; // s3
+  PartyOrganizationConfirmItemDraw_o *v161; // x0
+  System_String_o *v162; // x3
+  bool v163; // w4
   int64_t fatigureTime; // x21
-  __int64 v163; // x1
-  __int64 v164; // x2
+  __int64 v165; // x1
+  __int64 v166; // x2
   UnityEngine_Object_o *classCompatibilityIcon; // x21
-  _DWORD *v166; // x8
-  Il2CppObject *v167; // x21
-  __int64 v168; // x2
-  __int64 v169; // x22
-  __int64 v170; // x23
+  _DWORD *v168; // x8
+  Il2CppObject *v169; // x21
+  __int64 v170; // x2
+  __int64 v171; // x22
+  __int64 v172; // x23
   int32_t SvtClassId; // w21
-  UserServantEntity_o *v172; // x0
-  int v173; // w9
-  __int64 v174; // x20
-  __int64 v175; // x0
-  __int64 v176; // x22
-  int32_t v177; // w0
-  int32_t v178; // w22
-  int32_t v179; // w20
-  System_String_o *v180; // x21
-  Il2CppObject *v181; // x0
-  bool v182; // [xsp+68h] [xbp-88h]
+  UserServantEntity_o *v174; // x0
+  int v175; // w9
+  __int64 v176; // x20
+  __int64 v177; // x0
+  __int64 v178; // x22
+  int32_t v179; // w0
+  int32_t v180; // w22
+  int32_t v181; // w20
+  System_String_o *v182; // x21
+  Il2CppObject *v183; // x0
+  bool v184; // [xsp+68h] [xbp-88h]
   int32_t TimesToRestart_k__BackingField; // [xsp+6Ch] [xbp-84h] BYREF
   UnityEngine_Color_o color; // [xsp+70h] [xbp-80h] BYREF
-  int v185; // [xsp+84h] [xbp-6Ch] BYREF
+  int v187; // [xsp+84h] [xbp-6Ch] BYREF
   UserServantCollectionEntity_o *entity; // [xsp+88h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v187; // 0:x0.16
-  UnityEngine_Color_o v188; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v189; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v189; // 0:x0.16
 
   if ( (byte_596BFB8 & 1) == 0 )
   {
@@ -494,7 +500,7 @@ void PartyOrganizationConfirmItemDraw__SetItem(
     byte_596BFB8 = 1;
   }
   entity = 0;
-  v185 = 0;
+  v187 = 0;
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
   if ( !item || !mode )
@@ -771,7 +777,7 @@ LABEL_165:
           v94 = item->fields.imageLimitCount;
         }
       }
-      v182 = isRarityHide;
+      v184 = isRarityHide;
       v99 = item->fields.svtLimitCount;
       if ( !*(&ImageLimitCount_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo, v16, v34);
@@ -822,7 +828,7 @@ LABEL_165:
         this->fields.maskSpriteDefaultAtlas,
         0);
       v112 = (UnityEngine_Object_o *)this->fields.supportSprite;
-      isRarityHide = v182;
+      isRarityHide = v184;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v110, v111);
       v113 = UnityEngine_Object__op_Inequality(v112, 0, 0);
@@ -1145,8 +1151,8 @@ LABEL_318:
     }
     UISprite__set_spriteName((UISprite_o *)lv, (System_String_o *)*v125, 0);
     memberTypeSprite = this->fields.memberTypeSprite;
-    v185 = item->fields.index + 1;
-    v127 = System_Int32__ToString((int32_t)&v185, 0);
+    v187 = item->fields.index + 1;
+    v127 = System_Int32__ToString((int32_t)&v187, 0);
     lv = (__int64)System_String__Concat_75651716((System_String_o *)StringLiteral_22628/*"member_txt_"*/, v127, 0);
     if ( memberTypeSprite )
     {
@@ -1174,72 +1180,75 @@ LABEL_225:
     v133 = &StringLiteral_12048/*"SELECT_NO_SORTIE"*/;
 LABEL_232:
     v134 = LocalizationManager__Get((System_String_o *)*v133, 0);
-    v188.fields.r = 0.0;
-    v188.fields.g = 0.0;
-    v137 = v134;
-    v188.fields.b = 0.0;
-    v188.fields.a = 1.0;
-    v140 = this;
-    v141 = 0;
+    r = 0.0;
+    g = 0.0;
+    v138 = v134;
+    b = 0.0;
+    a = 1.0;
+    v141 = this;
+    v142 = 0;
 LABEL_233:
-    PartyOrganizationConfirmItemDraw__SetMaskMessage(v140, v137, v188, 0, v141, 0, v135);
-    v142 = 1;
+    PartyOrganizationConfirmItemDraw__SetMaskMessage(v141, v138, *(UnityEngine_Color_o *)&r, 0, v142, 0, v135);
+    v143 = 1;
     goto LABEL_270;
   }
   if ( PartyOrganizationListViewItem__get_IsQuestRestriction(item, 0)
     && !PartyOrganizationListViewItem__get_IsEmpty(item, 0) )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
-    v154 = LocalizationManager__Get((System_String_o *)StringLiteral_10675/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
+    v155 = LocalizationManager__Get((System_String_o *)StringLiteral_10675/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/, 0);
     goto LABEL_246;
   }
   if ( item->fields.isUniqueSvtRestriction || item->fields.isUniqueIndividualityRestriction )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
-    v146 = &StringLiteral_10676/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING2"*/;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
+    v147 = &StringLiteral_10676/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING2"*/;
 LABEL_241:
-    v147 = LocalizationManager__Get((System_String_o *)*v146, 0);
-    v149 = 0.0;
+    v148 = LocalizationManager__Get((System_String_o *)*v147, 0);
     v150 = 0.0;
-    v151 = v147;
-    v152 = this;
-    v153 = 0;
+    v151 = 0.0;
+    v152 = v148;
+    v153 = this;
+    v154 = 0;
 LABEL_242:
-    v142 = 1;
-    PartyOrganizationConfirmItemDraw__SetWarningMessage(v152, v151, 1, v153, v149, v150, v148);
+    v143 = 1;
+    PartyOrganizationConfirmItemDraw__SetWarningMessage(v153, v152, 1, v154, v150, v151, v149);
     goto LABEL_270;
   }
   if ( item->fields.isFixedSupportPositionRestriction )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
-    v146 = &StringLiteral_10677/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING3"*/;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
+    v147 = &StringLiteral_10677/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING3"*/;
     goto LABEL_241;
   }
   if ( item->fields.isFixedServantPositionRestriction )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
-    v146 = &StringLiteral_10678/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING4"*/;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
+    v147 = &StringLiteral_10678/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING4"*/;
     goto LABEL_241;
   }
   fatigureTime = item->fields.fatigureTime;
   if ( (fatigureTime & 0x8000000000000000LL) == 0 )
   {
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v143, v144);
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v144, v145);
     if ( fatigureTime > NetworkManager__getTime(0) )
     {
       UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_431/*"#042484"*/, &color, 0);
       color.fields.a = 0.69804;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v163, v164);
-      v137 = LocalizationManager__Get((System_String_o *)StringLiteral_12054/*"SELECT_NO_SORTIE_REASON_FATIGUE"*/, 0);
-      v140 = this;
-      v188 = color;
-      v141 = (System_String_o *)StringLiteral_21384/*"img_frames_mask11"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v165, v166);
+      v138 = LocalizationManager__Get((System_String_o *)StringLiteral_12054/*"SELECT_NO_SORTIE_REASON_FATIGUE"*/, 0);
+      v141 = this;
+      r = color.fields.r;
+      g = color.fields.g;
+      b = color.fields.b;
+      a = color.fields.a;
+      v142 = (System_String_o *)StringLiteral_21384/*"img_frames_mask11"*/;
       goto LABEL_233;
     }
     PartyOrganizationListViewItem__ClearFatigure(item, 0);
@@ -1248,59 +1257,59 @@ LABEL_242:
   if ( item->fields._IsAllOutBattle_k__BackingField )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
     v133 = &StringLiteral_12049/*"SELECT_NO_SORTIE_ALLOUT_BATTLE"*/;
     goto LABEL_232;
   }
   if ( item->fields._IsNotSupportSingle_k__BackingField )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
-    v151 = LocalizationManager__Get((System_String_o *)StringLiteral_10679/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0);
-    v149 = 10.0;
-    v150 = -22.0;
-    v152 = this;
-    v153 = 1;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
+    v152 = LocalizationManager__Get((System_String_o *)StringLiteral_10679/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT"*/, 0);
+    v150 = 10.0;
+    v151 = -22.0;
+    v153 = this;
+    v154 = 1;
     goto LABEL_242;
   }
   if ( item->fields._IsDataLost_k__BackingField )
   {
-    v189.fields.r = 1.0;
-    v189.fields.g = 1.0;
-    v156 = (System_String_o *)StringLiteral_1/*""*/;
-    v189.fields.b = 1.0;
-    v189.fields.a = 1.0;
-    v159 = this;
-    v160 = (System_String_o *)StringLiteral_19315/*"datalost_svt_select"*/;
-    v161 = 1;
+    v156 = 1.0;
+    v157 = 1.0;
+    v158 = (System_String_o *)StringLiteral_1/*""*/;
+    v159 = 1.0;
+    v160 = 1.0;
+    v161 = this;
+    v162 = (System_String_o *)StringLiteral_19315/*"datalost_svt_select"*/;
+    v163 = 1;
     goto LABEL_247;
   }
   if ( item->fields._TimesToRestart_k__BackingField >= 1 )
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v143, v144);
-    v180 = LocalizationManager__Get((System_String_o *)StringLiteral_12055/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, 0);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v144, v145);
+    v182 = LocalizationManager__Get((System_String_o *)StringLiteral_12055/*"SELECT_NO_SORTIE_TIMES_TO_RESTART"*/, 0);
     TimesToRestart_k__BackingField = item->fields._TimesToRestart_k__BackingField;
-    v181 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &TimesToRestart_k__BackingField);
-    v154 = System_String__Format(v180, v181, 0);
+    v183 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &TimesToRestart_k__BackingField);
+    v155 = System_String__Format(v182, v183, 0);
 LABEL_246:
-    v189.fields.r = 0.0;
-    v189.fields.g = 0.0;
-    v156 = v154;
-    v189.fields.b = 0.0;
-    v189.fields.a = 1.0;
-    v159 = this;
-    v160 = 0;
-    v161 = 0;
+    v156 = 0.0;
+    v157 = 0.0;
+    v158 = v155;
+    v159 = 0.0;
+    v160 = 1.0;
+    v161 = this;
+    v162 = 0;
+    v163 = 0;
 LABEL_247:
-    v142 = 1;
-    PartyOrganizationConfirmItemDraw__SetMaskMessage(v159, v156, v189, 1, v160, v161, v145);
+    v143 = 1;
+    PartyOrganizationConfirmItemDraw__SetMaskMessage(v161, v158, *(UnityEngine_Color_o *)&v156, 1, v162, v163, v146);
     goto LABEL_270;
   }
 LABEL_268:
-  PartyOrganizationConfirmItemDraw__ClearMessage(this, v143);
+  PartyOrganizationConfirmItemDraw__ClearMessage(this, v144);
 LABEL_269:
-  v142 = 0;
+  v143 = 0;
 LABEL_270:
   classCompatibilityIcon = (UnityEngine_Object_o *)this->fields.classCompatibilityIcon;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1309,29 +1318,29 @@ LABEL_270:
     return;
   if ( item->fields.isFollower )
   {
-    v166 = item->fields.followerInfo;
-    if ( v166 )
+    v168 = item->fields.followerInfo;
+    if ( v168 )
     {
       lv = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !lv )
         goto LABEL_206;
-      v167 = DataManager__GetMasterData_object_(
+      v169 = DataManager__GetMasterData_object_(
                (DataManager_o *)lv,
                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
       lv = (__int64)PartyOrganizationListViewItem__get_ServantLeader(item, 0);
       if ( !lv )
         goto LABEL_206;
-      v169 = *(_QWORD *)(lv + 48);
-      v170 = *(_QWORD *)(lv + 56);
+      v171 = *(_QWORD *)(lv + 48);
+      v172 = *(_QWORD *)(lv + 56);
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16, v168);
-      *(_QWORD *)&v187.fields.currentCryptoKey = v169;
-      *(_QWORD *)&v187.fields.fakeValue = v170;
-      lv = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v187, 0);
-      if ( !v167 )
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16, v170);
+      *(_QWORD *)&v189.fields.currentCryptoKey = v171;
+      *(_QWORD *)&v189.fields.fakeValue = v172;
+      lv = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v189, 0);
+      if ( !v169 )
         goto LABEL_206;
       lv = (__int64)DataMasterBase_object__object__int___GetEntity(
-                      (DataMasterBase_TMaster__TEntity__PKType__o *)v167,
+                      (DataMasterBase_TMaster__TEntity__PKType__o *)v169,
                       lv,
                       (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       if ( !lv )
@@ -1340,34 +1349,34 @@ LABEL_270:
       lv = (__int64)PartyOrganizationListViewItem__get_ServantLeader(item, 0);
       if ( !lv )
         goto LABEL_206;
-      LODWORD(v166) = ServantLeaderInfo__IsHideSupport((ServantLeaderInfo_o *)lv, 0);
+      LODWORD(v168) = ServantLeaderInfo__IsHideSupport((ServantLeaderInfo_o *)lv, 0);
       goto LABEL_289;
     }
     goto LABEL_288;
   }
-  v172 = item->fields.userServantEntity;
-  if ( v172 )
+  v174 = item->fields.userServantEntity;
+  if ( v174 )
   {
-    SvtClassId = UserServantEntity__getSvtClassId(v172, 0, 0, 0);
+    SvtClassId = UserServantEntity__getSvtClassId(v174, 0, 0, 0);
   }
   else
   {
-    v166 = item->fields._ServantEntity_k__BackingField;
-    if ( !v166 )
+    v168 = item->fields._ServantEntity_k__BackingField;
+    if ( !v168 )
     {
 LABEL_288:
       SvtClassId = 0;
       goto LABEL_289;
     }
-    SvtClassId = v166[20];
+    SvtClassId = v168[20];
   }
-  LODWORD(v166) = 0;
+  LODWORD(v168) = 0;
 LABEL_289:
   if ( SvtClassId )
-    v173 = v142;
+    v175 = v143;
   else
-    v173 = 1;
-  if ( !((unsigned int)v166 | v173) )
+    v175 = 1;
+  if ( !((unsigned int)v168 | v175) )
   {
     lv = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !lv )
@@ -1377,21 +1386,21 @@ LABEL_289:
       lv = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( !lv )
         goto LABEL_206;
-      v174 = *(_QWORD *)(lv + 32);
-      lv = sub_1FFEA10(v174, PartyOrganizationRootComponent_TypeInfo);
+      v176 = *(_QWORD *)(lv + 32);
+      lv = sub_1FFEA10(v176, PartyOrganizationRootComponent_TypeInfo);
       if ( !lv )
         goto LABEL_206;
-      v175 = sub_1FFEA10(v174, PartyOrganizationRootComponent_TypeInfo);
-      v176 = *(_QWORD *)(v175 + 544);
-      if ( v176 )
+      v177 = sub_1FFEA10(v176, PartyOrganizationRootComponent_TypeInfo);
+      v178 = *(_QWORD *)(v177 + 544);
+      if ( v178 )
       {
-        v177 = BattleSetupInfo__TargetQuestId(*(BattleSetupInfo_o **)(v175 + 544), 0);
-        if ( v177 )
+        v179 = BattleSetupInfo__TargetQuestId(*(BattleSetupInfo_o **)(v177 + 544), 0);
+        if ( v179 )
         {
-          v178 = *(_DWORD *)(v176 + 24);
-          if ( v178 )
+          v180 = *(_DWORD *)(v178 + 24);
+          if ( v180 )
           {
-            v179 = v177;
+            v181 = v179;
             lv = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !lv )
               goto LABEL_206;
@@ -1400,7 +1409,7 @@ LABEL_289:
                             (const MethodInfo_385636C *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
             if ( !lv )
               goto LABEL_206;
-            lv = (__int64)QuestPhaseMaster__GetEntity((QuestPhaseMaster_o *)lv, v179, v178, 0);
+            lv = (__int64)QuestPhaseMaster__GetEntity((QuestPhaseMaster_o *)lv, v181, v180, 0);
             if ( lv )
             {
               if ( this->fields.classCompatibilityIcon )
@@ -1455,9 +1464,13 @@ void PartyOrganizationConfirmItemDraw__SetMaskMessage(
   float v27; // s8
   UnityEngine_Transform_o *v28; // x20
   float restrictionMaskMessageWidth; // s0
+  float x; // s0 OVERLAPPED
+  float z; // s2
+  float y; // s1
+  struct UnityEngine_Vector3_StaticFields *v33; // x8
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_Object_o *restrictionWarningBase; // x20
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = maskColor.fields.a;
   b = maskColor.fields.b;
@@ -1521,11 +1534,11 @@ void PartyOrganizationConfirmItemDraw__SetMaskMessage(
     gameObject = (UnityEngine_Component_o *)this->fields.restrictionMaskSprite;
     if ( !gameObject )
       goto LABEL_46;
-    v34.fields.r = r;
-    v34.fields.g = g;
-    v34.fields.b = b;
-    v34.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)gameObject, v34, 0);
+    v36.fields.r = r;
+    v36.fields.g = g;
+    v36.fields.b = b;
+    v36.fields.a = a;
+    UIWidget__set_color((UIWidget_o *)gameObject, v36, 0);
     gameObject = (UnityEngine_Component_o *)this->fields.restrictionMaskMessageText;
     if ( !gameObject )
       goto LABEL_46;
@@ -1550,13 +1563,16 @@ void PartyOrganizationConfirmItemDraw__SetMaskMessage(
           gameObject = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
-        oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+        static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+        x = static_fields->oneVector.fields.x;
+        y = static_fields->oneVector.fields.y;
+        z = static_fields->oneVector.fields.z;
       }
       else
       {
-        oneVector.fields.x = restrictionMaskMessageWidth / v27;
-        oneVector.fields.z = 1.0;
-        oneVector.fields.y = 1.0;
+        x = restrictionMaskMessageWidth / v27;
+        z = 1.0;
+        y = 1.0;
       }
       if ( !v28 )
         goto LABEL_46;
@@ -1574,9 +1590,12 @@ void PartyOrganizationConfirmItemDraw__SetMaskMessage(
       }
       if ( !v28 )
         goto LABEL_46;
-      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+      v33 = UnityEngine_Vector3_TypeInfo->static_fields;
+      y = v33->oneVector.fields.y;
+      z = v33->oneVector.fields.z;
+      x = v33->oneVector.fields.x;
     }
-    UnityEngine_Transform__set_localScale(v28, oneVector, 0);
+    UnityEngine_Transform__set_localScale(v28, *(UnityEngine_Vector3_o *)&x, 0);
   }
   restrictionWarningBase = (UnityEngine_Object_o *)this->fields.restrictionWarningBase;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1828,8 +1847,12 @@ void PartyOrganizationConfirmItemDraw__SetWarningMessage(
   int32_t restrictionWarningMessageWidth; // s0
   UnityEngine_Transform_o *v23; // x19
   float v24; // s0
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float x; // s0 OVERLAPPED
+  float z; // s2
+  float y; // s1
+  struct UnityEngine_Vector3_StaticFields *v28; // x8
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596BFBB & 1) == 0 )
   {
@@ -1864,11 +1887,11 @@ void PartyOrganizationConfirmItemDraw__SetWarningMessage(
       gameObject = (UnityEngine_Component_o *)this->fields.restrictionMaskSprite;
       if ( !gameObject )
         goto LABEL_39;
-      v28.fields.r = 0.0;
-      v28.fields.g = 0.0;
-      v28.fields.b = 0.0;
-      v28.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)gameObject, v28, 0);
+      v30.fields.r = 0.0;
+      v30.fields.g = 0.0;
+      v30.fields.b = 0.0;
+      v30.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)gameObject, v30, 0);
       gameObject = (UnityEngine_Component_o *)this->fields.restrictionMaskSprite;
       if ( !gameObject )
         goto LABEL_39;
@@ -1927,13 +1950,16 @@ void PartyOrganizationConfirmItemDraw__SetWarningMessage(
                         gameObject = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
                         byte_5969AE5 = 1;
                       }
-                      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+                      static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+                      x = static_fields->oneVector.fields.x;
+                      y = static_fields->oneVector.fields.y;
+                      z = static_fields->oneVector.fields.z;
                     }
                     else
                     {
-                      oneVector.fields.x = v24 / v21;
-                      oneVector.fields.z = 1.0;
-                      oneVector.fields.y = 1.0;
+                      x = v24 / v21;
+                      z = 1.0;
+                      y = 1.0;
                     }
                     if ( v23 )
                       goto LABEL_38;
@@ -1951,9 +1977,12 @@ void PartyOrganizationConfirmItemDraw__SetWarningMessage(
                 }
                 if ( v23 )
                 {
-                  oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+                  v28 = UnityEngine_Vector3_TypeInfo->static_fields;
+                  y = v28->oneVector.fields.y;
+                  z = v28->oneVector.fields.z;
+                  x = v28->oneVector.fields.x;
 LABEL_38:
-                  UnityEngine_Transform__set_localScale(v23, oneVector, 0);
+                  UnityEngine_Transform__set_localScale(v23, *(UnityEngine_Vector3_o *)&x, 0);
                   return;
                 }
               }

@@ -214,11 +214,11 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
   float v23; // s10
   float v24; // s11
   UnityEngine_Object_o *mSv; // x20
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v27; // 0:kr34_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr40_12.12
-  UnityEngine_Vector3_o v29; // 0:kr74_12.12
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
@@ -253,9 +253,9 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
     v11 = this->fields.mTrans;
     if ( v11 )
     {
-      v30 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
-      v31 = NGUIMath__SpringLerp_56364876(v30, this->fields.target, this->fields.strength, v6, 0);
-      UnityEngine_Transform__set_position(v11, v31, 0);
+      v27 = UnityEngine_Transform__get_position(this->fields.mTrans, 0);
+      v28 = NGUIMath__SpringLerp_56364876(v27, this->fields.target, this->fields.strength, v6, 0);
+      UnityEngine_Transform__set_position(v11, v28, 0);
       mTrans = this->fields.mTrans;
       if ( mTrans )
       {
@@ -263,10 +263,10 @@ void SpringPosition__Update(SpringPosition_o *this, const MethodInfo *method)
         v12 = this->fields.target.fields.z;
         v14 = this->fields.target.fields.x;
         v15 = this->fields.mThreshold;
-        v27 = UnityEngine_Transform__get_position(mTrans, 0);
-        if ( v15 < (float)((float)((float)(v12 - v27.fields.z) * (float)(v12 - v27.fields.z))
-                         + (float)((float)((float)(v14 - v27.fields.x) * (float)(v14 - v27.fields.x))
-                                 + (float)((float)(v13 - v27.fields.y) * (float)(v13 - v27.fields.y)))) )
+        v29 = UnityEngine_Transform__get_position(mTrans, 0);
+        if ( v15 < (float)((float)((float)(v12 - v29.fields.z) * (float)(v12 - v29.fields.z))
+                         + (float)((float)((float)(v14 - v29.fields.x) * (float)(v14 - v29.fields.x))
+                                 + (float)((float)(v13 - v29.fields.y) * (float)(v13 - v29.fields.y)))) )
           goto LABEL_24;
         mTrans = this->fields.mTrans;
         if ( !mTrans )
@@ -298,9 +298,9 @@ LABEL_30:
   v20 = this->fields.mTrans;
   if ( !v20 )
     goto LABEL_30;
-  v32 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v33 = NGUIMath__SpringLerp_56364876(v32, this->fields.target, this->fields.strength, v6, 0);
-  UnityEngine_Transform__set_localPosition(v20, v33, 0);
+  v31 = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
+  v32 = NGUIMath__SpringLerp_56364876(v31, this->fields.target, this->fields.strength, v6, 0);
+  UnityEngine_Transform__set_localPosition(v20, v32, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_30;
@@ -308,10 +308,10 @@ LABEL_30:
   v21 = this->fields.target.fields.z;
   v23 = this->fields.target.fields.x;
   v24 = this->fields.mThreshold;
-  v29 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  if ( v24 < (float)((float)((float)(v21 - v29.fields.z) * (float)(v21 - v29.fields.z))
-                   + (float)((float)((float)(v23 - v29.fields.x) * (float)(v23 - v29.fields.x))
-                           + (float)((float)(v22 - v29.fields.y) * (float)(v22 - v29.fields.y)))) )
+  v33 = UnityEngine_Transform__get_localPosition(mTrans, 0);
+  if ( v24 < (float)((float)((float)(v21 - v33.fields.z) * (float)(v21 - v33.fields.z))
+                   + (float)((float)((float)(v23 - v33.fields.x) * (float)(v23 - v33.fields.x))
+                           + (float)((float)(v22 - v33.fields.y) * (float)(v22 - v33.fields.y)))) )
     goto LABEL_24;
   mTrans = this->fields.mTrans;
   if ( !mTrans )
@@ -399,9 +399,9 @@ System_IAsyncResult_o *SpringPosition_OnFinished__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

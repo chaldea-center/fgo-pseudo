@@ -285,7 +285,7 @@ void UIScriptChara__EndSet(UIScriptChara_o *this, const MethodInfo *method)
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
   float x; // s8
   float y; // s9
-  float v7; // s10
+  float z; // s10
   float v8; // s10
   float v9; // s10
   float v10; // s10
@@ -298,10 +298,10 @@ void UIScriptChara__EndSet(UIScriptChara_o *this, const MethodInfo *method)
   MissionNaviTransitionBoardItem_o *p_setCallback; // x19
   struct System_Action_o *v18; // x20
   struct System_Action_o *setCallback; // t1
-  float z; // s2
-  float v21; // s2
-  float v22; // s2
-  float v23; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
@@ -321,60 +321,60 @@ void UIScriptChara__EndSet(UIScriptChara_o *this, const MethodInfo *method)
   baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
   if ( !baseSpecialEffect )
     goto LABEL_22;
-  z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0).fields.z;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0);
   baseSpecialEffect = this->fields.baseSpecialEffect;
   if ( !baseSpecialEffect )
     goto LABEL_22;
-  v7 = z;
+  z = localPosition.fields.z;
   baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
   if ( !baseSpecialEffect )
     goto LABEL_22;
-  v24.fields.x = x;
-  v24.fields.y = y;
-  v24.fields.z = v7;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, v24, 0);
+  v21.fields.x = x;
+  v21.fields.y = y;
+  v21.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, v21, 0);
   baseSpecialEffect = this->fields.baseEffect;
   if ( !baseSpecialEffect )
     goto LABEL_22;
   baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
   if ( !baseSpecialEffect )
     goto LABEL_22;
-  v21 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0).fields.z;
+  v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0);
   baseSpecialEffect = this->fields.baseEffect;
   if ( !baseSpecialEffect )
     goto LABEL_22;
-  v8 = v21;
+  v8 = v22.fields.z;
+  baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
+  if ( !baseSpecialEffect )
+    goto LABEL_22;
+  v23.fields.x = x;
+  v23.fields.y = y;
+  v23.fields.z = v8;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, v23, 0);
+  baseSpecialEffect = this->fields.baseEffectBack;
+  if ( !baseSpecialEffect )
+    goto LABEL_22;
+  baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
+  if ( !baseSpecialEffect )
+    goto LABEL_22;
+  v24 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0);
+  baseSpecialEffect = this->fields.baseEffectBack;
+  if ( !baseSpecialEffect )
+    goto LABEL_22;
+  v9 = v24.fields.z;
   baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
   if ( !baseSpecialEffect )
     goto LABEL_22;
   v25.fields.x = x;
   v25.fields.y = y;
-  v25.fields.z = v8;
+  v25.fields.z = v9;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, v25, 0);
-  baseSpecialEffect = this->fields.baseEffectBack;
-  if ( !baseSpecialEffect )
-    goto LABEL_22;
-  baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
-  if ( !baseSpecialEffect )
-    goto LABEL_22;
-  v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0).fields.z;
-  baseSpecialEffect = this->fields.baseEffectBack;
-  if ( !baseSpecialEffect )
-    goto LABEL_22;
-  v9 = v22;
-  baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0);
-  if ( !baseSpecialEffect )
-    goto LABEL_22;
-  v26.fields.x = x;
-  v26.fields.y = y;
-  v26.fields.z = v9;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, v26, 0);
   baseSpecialEffect = this->fields.baseShadowEffect;
   if ( !baseSpecialEffect
     || (baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0)) == 0
-    || (v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0).fields.z,
+    || (v26 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)baseSpecialEffect, 0),
         (baseSpecialEffect = this->fields.baseShadowEffect) == 0)
-    || (v10 = v23,
+    || (v10 = v26.fields.z,
         (baseSpecialEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(baseSpecialEffect, 0)) == 0) )
   {
 LABEL_22:
@@ -398,11 +398,17 @@ LABEL_22:
 
 UnityEngine_Vector3_o UIScriptChara__GetBasePosition(UIScriptChara_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.basePosition.fields.x;
-  result.fields.y = this->fields.basePosition.fields.y;
-  result.fields.z = this->fields.basePosition.fields.z;
+  x = this->fields.basePosition.fields.x;
+  y = this->fields.basePosition.fields.y;
+  z = this->fields.basePosition.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -472,22 +478,32 @@ float UIScriptChara__GetConvertedLocalRotationEulerAnglesToAngle(
 float UIScriptChara__GetDepth(UIScriptChara_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *baseDepth; // x0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   baseDepth = this->fields.baseDepth;
   if ( !baseDepth )
     sub_2213CDC(0, method);
-  return UnityEngine_Transform__get_localPosition(baseDepth, 0).fields.z;
+  localPosition = UnityEngine_Transform__get_localPosition(baseDepth, 0);
+  return localPosition.fields.z;
 }
 
 
 UnityEngine_Rect_o UIScriptChara__GetHighRectEdgeBlur(UIScriptChara_o *this, const MethodInfo *method)
 {
+  float v2; // s0
+  float v3; // s1
+  float v4; // s2
+  float v5; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = 0.0;
-  result.fields.m_YMin = 0.0;
-  result.fields.m_Width = 1.0;
-  result.fields.m_Height = 1.0;
+  v2 = 0.0;
+  v3 = 0.0;
+  v4 = 1.0;
+  v5 = 1.0;
+  result.fields.m_Height = v5;
+  result.fields.m_Width = v4;
+  result.fields.m_YMin = v3;
+  result.fields.m_XMin = v2;
   return result;
 }
 
@@ -495,6 +511,9 @@ UnityEngine_Rect_o UIScriptChara__GetHighRectEdgeBlur(UIScriptChara_o *this, con
 UnityEngine_Vector3_o UIScriptChara__GetOffsetEdgeBlur(UIScriptChara_o *this, const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !byte_5969AE0 )
@@ -503,31 +522,46 @@ UnityEngine_Vector3_o UIScriptChara__GetOffsetEdgeBlur(UIScriptChara_o *this, co
     byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  result.fields.x = static_fields->zeroVector.fields.x;
-  result.fields.y = static_fields->zeroVector.fields.y;
-  result.fields.z = static_fields->zeroVector.fields.z;
+  x = static_fields->zeroVector.fields.x;
+  y = static_fields->zeroVector.fields.y;
+  z = static_fields->zeroVector.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
 
 UnityEngine_Rect_o UIScriptChara__GetRectEdgeBlur(UIScriptChara_o *this, const MethodInfo *method)
 {
+  float v2; // s0
+  float v3; // s1
+  float v4; // s2
+  float v5; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = 0.0;
-  result.fields.m_YMin = 0.0;
-  result.fields.m_Width = 1.0;
-  result.fields.m_Height = 1.0;
+  v2 = 0.0;
+  v3 = 0.0;
+  v4 = 1.0;
+  v5 = 1.0;
+  result.fields.m_Height = v5;
+  result.fields.m_Width = v4;
+  result.fields.m_YMin = v3;
+  result.fields.m_XMin = v2;
   return result;
 }
 
 
 UnityEngine_Vector2_o UIScriptChara__GetSizeEdgeBlur(UIScriptChara_o *this, const MethodInfo *method)
 {
+  float v2; // s0
+  float v3; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = 1024.0;
-  result.fields.y = 1024.0;
+  v2 = 1024.0;
+  v3 = 1024.0;
+  result.fields.y = v3;
+  result.fields.x = v2;
   return result;
 }
 
@@ -2510,19 +2544,17 @@ void UIScriptChara__SetCutout(UIScriptChara_o *this, float time, bool isSkip, co
 void UIScriptChara__SetDepth(UIScriptChara_o *this, int32_t d, const MethodInfo *method)
 {
   UnityEngine_Transform_o *baseDepth; // x0
-  UnityEngine_Vector3_o v7; // 0:kr14_12.12
-  unsigned __int64 localPosition; // 0:s0.4,4:s1.4
+  float v6; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   baseDepth = this->fields.baseDepth;
   if ( !baseDepth
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(baseDepth, 0),
-        (baseDepth = this->fields.baseDepth) == 0) )
+    || (localPosition = UnityEngine_Transform__get_localPosition(baseDepth, 0), (baseDepth = this->fields.baseDepth) == 0) )
   {
     sub_2213CDC(baseDepth, *(_QWORD *)&d);
   }
-  *(_QWORD *)&v7.fields.x = localPosition;
-  v7.fields.z = (float)-d * 10.0;
-  UnityEngine_Transform__set_localPosition(baseDepth, v7, 0);
+  v6 = (float)-d * 10.0;
+  UnityEngine_Transform__set_localPosition(baseDepth, localPosition, 0);
 }
 
 
@@ -2838,12 +2870,17 @@ bool UIScriptChara__SetRoll(
   float x; // s10
   __int64 v9; // x1
   struct UnityEngine_Transform_o *baseRoll1; // x0
-  __int64 v11; // x1
+  float v11; // s11
+  float v12; // s12
+  float v13; // s13
+  float w; // s14
+  __int64 v15; // x1
   Il2CppObject *Component_object; // x20
-  UnityEngine_Quaternion_o v14; // 0:kr00_16.16
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   z = centerOffset.fields.z;
   y = centerOffset.fields.y;
@@ -2855,18 +2892,22 @@ bool UIScriptChara__SetRoll(
     byte_5972958 = 1;
   }
   UIScriptChara__StopRollAxisTween(this, method);
-  v15.fields.y = 0.0;
-  v15.fields.z = rollZ * 0.017453;
-  v15.fields.x = 0.0;
-  v14 = UnityEngine_Quaternion__Internal_FromEulerRad(v15, 0);
+  v18.fields.y = 0.0;
+  v18.fields.z = rollZ * 0.017453;
+  v18.fields.x = 0.0;
+  v21 = UnityEngine_Quaternion__Internal_FromEulerRad(v18, 0);
   baseRoll1 = this->fields.baseRoll1;
   if ( !baseRoll1 )
     goto LABEL_13;
+  v11 = v21.fields.x;
+  v12 = v21.fields.y;
+  v13 = v21.fields.z;
+  w = v21.fields.w;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)baseRoll1,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15);
   baseRoll1 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
                                                   (UnityEngine_Object_o *)Component_object,
                                                   0,
@@ -2878,21 +2919,28 @@ bool UIScriptChara__SetRoll(
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
   }
   baseRoll1 = this->fields.baseRoll1;
+  if ( !baseRoll1 )
+    goto LABEL_13;
+  v22.fields.x = v11;
+  v22.fields.y = v12;
+  v22.fields.z = v13;
+  v22.fields.w = w;
+  UnityEngine_Transform__set_localRotation(baseRoll1, v22, 0);
+  baseRoll1 = this->fields.baseRoll1;
   if ( !baseRoll1
-    || (UnityEngine_Transform__set_localRotation(baseRoll1, v14, 0), (baseRoll1 = this->fields.baseRoll1) == 0)
-    || (v16.fields.z = -z,
-        v16.fields.y = -y,
-        v16.fields.x = -x,
-        UnityEngine_Transform__set_localPosition(baseRoll1, v16, 0),
+    || (v19.fields.z = -z,
+        v19.fields.y = -y,
+        v19.fields.x = -x,
+        UnityEngine_Transform__set_localPosition(baseRoll1, v19, 0),
         (baseRoll1 = this->fields.baseRoll2) == 0) )
   {
 LABEL_13:
     sub_2213CDC(baseRoll1, v9);
   }
-  v17.fields.x = x;
-  v17.fields.y = y;
-  v17.fields.z = z;
-  UnityEngine_Transform__set_localPosition(baseRoll1, v17, 0);
+  v20.fields.x = x;
+  v20.fields.y = y;
+  v20.fields.z = z;
+  UnityEngine_Transform__set_localPosition(baseRoll1, v20, 0);
   this->fields.isRoll = 0;
   return 1;
 }
@@ -3111,28 +3159,34 @@ bool UIScriptChara__StartRoll(UIScriptChara_o *this, float duration, float rollZ
 {
   __int64 v7; // x1
   struct UnityEngine_Transform_o *baseRoll1; // x0
-  __int64 v9; // x1
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float w; // s11
+  __int64 v13; // x1
   Il2CppObject *Component_object; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v12; // x1
-  TweenRotation_o *v13; // x20
-  UnityEngine_GameObject_o *v14; // x0
-  System_String_o *v15; // x2
-  System_String_o *v16; // x3
-  int32_t v17; // w4
-  int32_t v18; // w5
-  bool v19; // w6
-  bool v20; // w7
-  int32_t v21; // w1
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
-  bool v28; // w8
-  UnityEngine_Quaternion_o v30; // 0:kr00_16.16
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v16; // x1
+  TweenRotation_o *v17; // x20
+  UnityEngine_GameObject_o *v18; // x0
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  int32_t v25; // w1
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  bool v32; // w8
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v37; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   if ( (byte_5972959 & 1) == 0 )
   {
@@ -3142,18 +3196,22 @@ bool UIScriptChara__StartRoll(UIScriptChara_o *this, float duration, float rollZ
     byte_5972959 = 1;
   }
   UIScriptChara__StopRollAxisTween(this, method);
-  v31.fields.y = 0.0;
-  v31.fields.z = rollZ * 0.017453;
-  v31.fields.x = 0.0;
-  v30 = UnityEngine_Quaternion__Internal_FromEulerRad(v31, 0);
+  v34.fields.y = 0.0;
+  v34.fields.z = rollZ * 0.017453;
+  v34.fields.x = 0.0;
+  v35 = UnityEngine_Quaternion__Internal_FromEulerRad(v34, 0);
   baseRoll1 = this->fields.baseRoll1;
   if ( !baseRoll1 )
     goto LABEL_19;
+  x = v35.fields.x;
+  y = v35.fields.y;
+  z = v35.fields.z;
+  w = v35.fields.w;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)baseRoll1,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
   baseRoll1 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
                                                   (UnityEngine_Object_o *)Component_object,
                                                   0,
@@ -3169,43 +3227,51 @@ bool UIScriptChara__StartRoll(UIScriptChara_o *this, float duration, float rollZ
 LABEL_19:
     sub_2213CDC(baseRoll1, v7);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseRoll1, 0);
-  v13 = TweenRotation__Begin(gameObject, duration, v30, 0);
+  v37.fields.x = x;
+  v37.fields.y = y;
+  v37.fields.z = z;
+  v37.fields.w = w;
+  v17 = TweenRotation__Begin(gameObject, duration, v37, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
-  baseRoll1 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
+  baseRoll1 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v17, 0, 0);
   if ( ((unsigned __int8)baseRoll1 & 1) == 0 )
     goto LABEL_16;
-  if ( !v13 )
+  if ( !v17 )
     goto LABEL_19;
-  if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v13, 0) )
+  if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v17, 0) )
   {
 LABEL_16:
     baseRoll1 = this->fields.baseRoll1;
     if ( baseRoll1 )
     {
-      UnityEngine_Transform__set_localRotation(baseRoll1, v30, 0);
-      v28 = 0;
+      v36.fields.x = x;
+      v36.fields.y = y;
+      v36.fields.z = z;
+      v36.fields.w = w;
+      UnityEngine_Transform__set_localRotation(baseRoll1, v36, 0);
+      v32 = 0;
       goto LABEL_18;
     }
     goto LABEL_19;
   }
-  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v13->fields.eventReceiver = v14;
+  v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v17->fields.eventReceiver = v18;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v13->fields.eventReceiver,
-    (int32_t)v14,
-    v15,
-    v16,
-    v17,
-    v18,
+    (MissionNaviTransitionBoardItem_o *)&v17->fields.eventReceiver,
+    (int32_t)v18,
     v19,
-    v20);
-  v21 = StringLiteral_6248/*"EndExecuteCameraRoll"*/;
-  v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6248/*"EndExecuteCameraRoll"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
-  v28 = 1;
+    v20,
+    v21,
+    v22,
+    v23,
+    v24);
+  v25 = StringLiteral_6248/*"EndExecuteCameraRoll"*/;
+  v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6248/*"EndExecuteCameraRoll"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->fields.callWhenFinished, v25, v26, v27, v28, v29, v30, v31);
+  v32 = 1;
 LABEL_18:
-  this->fields.isRoll = v28;
+  this->fields.isRoll = v32;
   return 1;
 }
 
@@ -3247,10 +3313,9 @@ void UIScriptChara__StartRollAxis(
   int32_t v38; // w5
   bool v39; // w6
   bool v40; // w7
-  UnityEngine_Vector3_o v41; // 0:kr10_12.12
-  UnityEngine_Vector3_o Positive; // 0:kr24_12.12
-  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v44; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s1.4,4:s2.4,8:s3.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v14 = isLoop;
@@ -3268,10 +3333,10 @@ void UIScriptChara__StartRollAxis(
     sub_2213CDC(0, v15);
   localRotation = UnityEngine_Transform__get_localRotation(baseRoll1, 0);
   v41 = UnityEngine_Quaternion__Internal_ToEulerRad(localRotation, 0);
-  v43.fields.x = v41.fields.x * 57.296;
-  v43.fields.y = v41.fields.y * 57.296;
-  v43.fields.z = v41.fields.z * 57.296;
-  Positive = UnityEngine_Quaternion__Internal_MakePositive(v43, 0);
+  v41.fields.x = v41.fields.x * 57.296;
+  v41.fields.y = v41.fields.y * 57.296;
+  v41.fields.z = v41.fields.z * 57.296;
+  Positive = UnityEngine_Quaternion__Internal_MakePositive(v41, 0);
   isRollLoop = this->fields.isRollLoop;
   this->fields.initAngle = Positive;
   if ( isRollLoop )
@@ -3296,10 +3361,10 @@ void UIScriptChara__StartRollAxis(
       p_y = &static_fields->rightVector.fields.y;
       p_z = &static_fields->rightVector.fields.z;
 LABEL_17:
-      v44.fields.y = *p_y;
-      v44.fields.x = *p_x;
-      v44.fields.z = *p_z;
-      this->fields.stopLocalRotationLoopEnd = UnityEngine_Quaternion__AngleAxis(stopAngle, v44, 0);
+      v43.fields.y = *p_y;
+      v43.fields.x = *p_x;
+      v43.fields.z = *p_z;
+      this->fields.stopLocalRotationLoopEnd = UnityEngine_Quaternion__AngleAxis(stopAngle, v43, 0);
       goto LABEL_18;
     }
     if ( System_String__op_Equality(rollAxis, (System_String_o *)StringLiteral_26344/*"y"*/, 0) )
@@ -3357,33 +3422,37 @@ bool UIScriptChara__StartRollEx(
   float x; // s13
   __int64 v11; // x1
   UnityEngine_Component_o *baseRoll1; // x0
-  __int64 v13; // x1
+  float v13; // s11
+  float v14; // s12
+  float w; // s14
+  __int64 v16; // x1
   Il2CppObject *Component_object; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Component_o *v16; // x20
-  __int64 v17; // x1
-  UnityEngine_GameObject_o *v18; // x0
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
-  int32_t v25; // w1
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
-  bool v32; // w8
-  UnityEngine_Vector3_o v34; // 0:kr20_12.12
-  UnityEngine_Quaternion_o v35; // 0:kr00_16.16
-  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Component_o *v19; // x20
+  __int64 v20; // x1
+  UnityEngine_GameObject_o *v21; // x0
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  int32_t v28; // w1
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  bool v35; // w8
+  float value; // [xsp+Ch] [xbp-64h]
   UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o value; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v44; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   z = centerOffset.fields.z;
   y = centerOffset.fields.y;
@@ -3397,18 +3466,22 @@ bool UIScriptChara__StartRollEx(
     byte_597295A = 1;
   }
   UIScriptChara__StopRollAxisTween(this, method);
-  v36.fields.y = 0.0;
-  v36.fields.z = rollZ * 0.017453;
-  v36.fields.x = 0.0;
-  v35 = UnityEngine_Quaternion__Internal_FromEulerRad(v36, 0);
+  v38.fields.y = 0.0;
+  v38.fields.z = rollZ * 0.017453;
+  v38.fields.x = 0.0;
+  v42 = UnityEngine_Quaternion__Internal_FromEulerRad(v38, 0);
   baseRoll1 = (UnityEngine_Component_o *)this->fields.baseRoll1;
+  value = v42.fields.x;
   if ( !baseRoll1 )
     goto LABEL_23;
+  v13 = v42.fields.y;
+  v14 = v42.fields.z;
+  w = v42.fields.w;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        baseRoll1,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
   baseRoll1 = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
                                            (UnityEngine_Object_o *)Component_object,
                                            0,
@@ -3429,59 +3502,63 @@ bool UIScriptChara__StartRollEx(
                                            (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenRotation___);
   if ( !baseRoll1 )
     goto LABEL_23;
-  v16 = baseRoll1;
-  value = TweenRotation__get_value((TweenRotation_o *)baseRoll1, 0);
-  v34 = UnityEngine_Quaternion__Internal_ToEulerRad(value, 0);
-  v37.fields.x = v34.fields.x * 57.296;
-  v37.fields.y = v34.fields.y * 57.296;
-  v37.fields.z = v34.fields.z * 57.296;
-  *(UnityEngine_Vector3_o *)&v16[5].monitor = UnityEngine_Quaternion__Internal_MakePositive(v37, 0);
-  HIDWORD(v16[5].fields.m_CachedPtr) = 0;
-  LODWORD(v16[6].klass) = 0;
-  *((float *)&v16[6].klass + 1) = rollZ;
+  v19 = baseRoll1;
+  v43 = TweenRotation__get_value((TweenRotation_o *)baseRoll1, 0);
+  v39 = UnityEngine_Quaternion__Internal_ToEulerRad(v43, 0);
+  v39.fields.x = v39.fields.x * 57.296;
+  v39.fields.y = v39.fields.y * 57.296;
+  v39.fields.z = v39.fields.z * 57.296;
+  *(UnityEngine_Vector3_o *)&v19[5].monitor = UnityEngine_Quaternion__Internal_MakePositive(v39, 0);
+  HIDWORD(v19[5].fields.m_CachedPtr) = 0;
+  LODWORD(v19[6].klass) = 0;
+  *((float *)&v19[6].klass + 1) = rollZ;
   if ( duration <= 0.0 )
   {
-    UITweener__Sample((UITweener_o *)v16, 1.0, 1, 0);
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v16, 0, 0);
+    UITweener__Sample((UITweener_o *)v19, 1.0, 1, 0);
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v19, 0, 0);
   }
   baseRoll1 = (UnityEngine_Component_o *)this->fields.baseRoll1;
   if ( !baseRoll1
-    || (v38.fields.z = -z,
-        v38.fields.y = -y,
-        v38.fields.x = -x,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseRoll1, v38, 0),
+    || (v40.fields.z = -z,
+        v40.fields.y = -y,
+        v40.fields.x = -x,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseRoll1, v40, 0),
         (baseRoll1 = (UnityEngine_Component_o *)this->fields.baseRoll2) == 0) )
   {
 LABEL_23:
     sub_2213CDC(baseRoll1, v11);
   }
-  v39.fields.x = x;
-  v39.fields.y = y;
-  v39.fields.z = z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseRoll1, v39, 0);
+  v41.fields.x = x;
+  v41.fields.y = y;
+  v41.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseRoll1, v41, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17);
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v16, 0, 0)
-    || !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v16, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0)
+    || !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v19, 0) )
   {
     baseRoll1 = (UnityEngine_Component_o *)this->fields.baseRoll1;
     if ( baseRoll1 )
     {
-      UnityEngine_Transform__set_localRotation((UnityEngine_Transform_o *)baseRoll1, v35, 0);
-      v32 = 0;
+      v44.fields.y = v13;
+      v44.fields.z = v14;
+      v44.fields.x = value;
+      v44.fields.w = w;
+      UnityEngine_Transform__set_localRotation((UnityEngine_Transform_o *)baseRoll1, v44, 0);
+      v35 = 0;
       goto LABEL_22;
     }
     goto LABEL_23;
   }
-  v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v16[3].monitor = v18;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16[3].monitor, (int32_t)v18, v19, v20, v21, v22, v23, v24);
-  v25 = StringLiteral_6248/*"EndExecuteCameraRoll"*/;
-  v16[3].fields.m_CachedPtr = StringLiteral_6248/*"EndExecuteCameraRoll"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16[3].fields, v25, v26, v27, v28, v29, v30, v31);
-  v32 = 1;
+  v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v19[3].monitor = v21;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19[3].monitor, (int32_t)v21, v22, v23, v24, v25, v26, v27);
+  v28 = StringLiteral_6248/*"EndExecuteCameraRoll"*/;
+  v19[3].fields.m_CachedPtr = StringLiteral_6248/*"EndExecuteCameraRoll"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19[3].fields, v28, v29, v30, v31, v32, v33, v34);
+  v35 = 1;
 LABEL_22:
-  this->fields.isRoll = v32;
+  this->fields.isRoll = v35;
   return 1;
 }
 
@@ -3818,12 +3895,10 @@ void UIScriptChara__StopRollAxisLoop(UIScriptChara_o *this, bool isFastPlay, con
   int32_t v27; // w5
   bool v28; // w6
   bool v29; // w7
-  UnityEngine_Vector3_o v30; // 0:kr10_12.12
-  UnityEngine_Vector3_o v31; // 0:kr30_12.12
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_597295F & 1) == 0 )
@@ -3845,22 +3920,22 @@ void UIScriptChara__StopRollAxisLoop(UIScriptChara_o *this, bool isFastPlay, con
   rollAxis = this->fields.rollAxis;
   localRotation = UnityEngine_Transform__get_localRotation(baseRoll1, 0);
   v30 = UnityEngine_Quaternion__Internal_ToEulerRad(localRotation, 0);
-  v32.fields.x = v30.fields.x * 57.296;
-  v32.fields.y = v30.fields.y * 57.296;
-  v32.fields.z = v30.fields.z * 57.296;
-  Positive = UnityEngine_Quaternion__Internal_MakePositive(v32, 0);
+  v30.fields.x = v30.fields.x * 57.296;
+  v30.fields.y = v30.fields.y * 57.296;
+  v30.fields.z = v30.fields.z * 57.296;
+  Positive = UnityEngine_Quaternion__Internal_MakePositive(v30, 0);
   ConvertedLocalRotationEulerAnglesToAngle = UIScriptChara__GetConvertedLocalRotationEulerAnglesToAngle(
                                                v9,
                                                rollAxis,
                                                Positive,
                                                this->fields.initAngle,
                                                v10);
-  v31 = UnityEngine_Quaternion__Internal_ToEulerRad(this->fields.stopLocalRotationLoopEnd, 0);
-  v33.fields.x = v31.fields.x * 57.296;
-  v33.fields.y = v31.fields.y * 57.296;
-  v33.fields.z = v31.fields.z * 57.296;
-  v35 = UnityEngine_Quaternion__Internal_MakePositive(v33, 0);
-  v16 = UIScriptChara__GetConvertedLocalRotationEulerAnglesToAngle(v12, rollAxis, v35, this->fields.initAngle, v13);
+  v32 = UnityEngine_Quaternion__Internal_ToEulerRad(this->fields.stopLocalRotationLoopEnd, 0);
+  v32.fields.x = v32.fields.x * 57.296;
+  v32.fields.y = v32.fields.y * 57.296;
+  v32.fields.z = v32.fields.z * 57.296;
+  v33 = UnityEngine_Quaternion__Internal_MakePositive(v32, 0);
+  v16 = UIScriptChara__GetConvertedLocalRotationEulerAnglesToAngle(v12, rollAxis, v33, this->fields.initAngle, v13);
   rollAngle = this->fields.rollAngle;
   if ( rollAngle >= 0.0 )
   {
@@ -4049,13 +4124,14 @@ void UIScriptChara__RollAxis_d__122___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool UIScriptChara__RollAxis_d__122__MoveNext(UIScriptChara__RollAxis_d__122_o *this, const MethodInfo *method)
 {
   UIScriptChara__RollAxis_d__122_o *v2; // x20
   int32_t _1__state; // w8
   struct UIScriptChara_o *_4__this; // x19
   float v5; // s8
-  float v6; // s9
+  float y; // s9
   __int64 v7; // x1
   UnityEngine_Object_o *sortingGroup; // x21
   Il2CppObject *Component_object; // x0
@@ -4080,46 +4156,47 @@ bool UIScriptChara__RollAxis_d__122__MoveNext(UIScriptChara__RollAxis_d__122_o *
   float v28; // s1
   float v29; // s2
   int32x4_t v30; // q4
-  int32x4_t v31; // q1
-  float32x4_t v32; // q2
-  int32x4_t v33; // q5
-  int32x4_t v34; // q3
-  float32x4_t v35; // q2
-  int32x4_t v36; // q1
-  float32x4_t v37; // q4
-  int32x4_t v38; // q6
-  int8x16_t v39; // q0
-  float32x4_t v40; // q3
-  float32x4_t v41; // q7
-  int8x16_t v42; // q5
-  float32x4_t v43; // q2
-  float32x4_t v44; // q4
-  float *v45; // x8
+  float v31; // v1.s[2]
+  float v32; // v2.s[3]
+  float v33; // v3.s[1]
+  int32x4_t v34; // q5
+  float32x4_t v35; // q4
+  int32x4_t v36; // q6
+  float32x4_t v37; // q7
+  int8x16_t v38; // q5
+  float32x4_t v39; // q4
+  float *v40; // x8
   float angle; // s0
   float duration; // s1
-  System_String_o *v48; // x2
-  System_String_o *v49; // x3
-  int32_t v50; // w4
-  int32_t v51; // w5
-  bool v52; // w6
-  bool v53; // w7
-  float v54; // s0
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  int32_t v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  float v49; // s0
   float time_5__5; // s8
-  float v56; // s0
-  float v57; // s1
+  float v51; // s0
+  float v52; // s1
   MissionNaviTransitionBoardItem_o *p__2__current; // x20
-  float *v63; // x9
-  float *v64; // x10
+  bool result; // w0
+  float v55; // s2
+  float v56; // s3
+  float v57; // s0 OVERLAPPED
+  float v58; // s1
+  float *v59; // x9
+  float *v60; // x10
   float *p_w; // x11
-  const MethodInfo *v66; // x1
-  float y; // s1
-  int32x4_t v68; // q0
-  int32x4_t v69; // q3
-  UnityEngine_Quaternion_o localRotation; // 0:kr20_16.16
-  UnityEngine_Quaternion_o v71; // 0:kr30_16.16
-  UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o stopRotation_5__3; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  const MethodInfo *v62; // x1
+  float v63; // [xsp+0h] [xbp-80h]
+  float v64; // [xsp+10h] [xbp-70h]
+  float x; // [xsp+20h] [xbp-60h]
+  float w; // [xsp+30h] [xbp-50h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
   v2 = this;
   if ( (byte_597297C & 1) == 0 )
@@ -4165,22 +4242,22 @@ bool UIScriptChara__RollAxis_d__122__MoveNext(UIScriptChara__RollAxis_d__122_o *
     this = (UIScriptChara__RollAxis_d__122_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)this, 0);
     if ( !this )
       goto LABEL_55;
-    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
     this = (UIScriptChara__RollAxis_d__122_o *)_4__this->fields.baseRoll1;
     if ( !this )
       goto LABEL_55;
-    v6 = y;
-    v72.fields.y = -y;
-    v72.fields.x = -v5;
-    v72.fields.z = -0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v72, 0);
+    y = localPosition.fields.y;
+    v68.fields.y = -localPosition.fields.y;
+    v68.fields.x = -v5;
+    v68.fields.z = -0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v68, 0);
     this = (UIScriptChara__RollAxis_d__122_o *)_4__this->fields.baseRoll2;
     if ( !this )
       goto LABEL_55;
-    v73.fields.z = 0.0;
-    v73.fields.x = v5;
-    v73.fields.y = v6;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v73, 0);
+    v69.fields.z = 0.0;
+    v69.fields.x = v5;
+    v69.fields.y = y;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v69, 0);
     sortingGroup = (UnityEngine_Object_o *)_4__this->fields.sortingGroup;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
@@ -4258,44 +4335,69 @@ LABEL_38:
         if ( !this )
           goto LABEL_55;
         localRotation = UnityEngine_Transform__get_localRotation((UnityEngine_Transform_o *)this, 0);
-        v71 = UnityEngine_Quaternion__AngleAxis(v2->fields.angle, v2->fields._rotationAxis_5__2, 0);
-        v68.n128_u32[0] = LODWORD(v71.fields.x);
-        v69.n128_u32[0] = LODWORD(v71.fields.w);
-        v30 = v68;
+        w = localRotation.fields.w;
+        v63 = localRotation.fields.y;
+        localRotation.fields.w = v2->fields._rotationAxis_5__2.fields.z;
+        v64 = localRotation.fields.z;
+        x = localRotation.fields.x;
+        localRotation.fields.y = v2->fields._rotationAxis_5__2.fields.x;
+        localRotation.fields.z = v2->fields._rotationAxis_5__2.fields.y;
+        v71 = UnityEngine_Quaternion__AngleAxis(v2->fields.angle, *(UnityEngine_Vector3_o *)&localRotation.fields.y, 0);
+        v30 = (int32x4_t)v71;
         v30.n128_u32[1] = LODWORD(v71.fields.y);
-        v31 = v30;
-        v31.n128_u32[2] = LODWORD(v71.fields.z);
-        v32 = v31;
-        v32.n128_u32[3] = LODWORD(v71.fields.w);
-        v69.n128_u32[1] = LODWORD(localRotation.fields.y);
-        v33.n128_u64[0] = v69.n128_u64[0];
-        v33.n128_u64[1] = __PAIR64__(LODWORD(localRotation.fields.x), LODWORD(localRotation.fields.z));
-        v34 = vzip1q_s32(vtrn2q_s32(v69, v30), v30);
-        v35 = vmulq_n_f32(v32, localRotation.fields.w);
-        v36 = vrev64q_s32(vuzp2q_s32(vuzp1q_s32(v33, v31), v33));
-        v37 = vmulq_f32(v33, vextq_s8(v33, vzip1q_s32(vzip1q_s32(v33, v68), v33), 0xCu));
-        v38 = vuzp1q_s32(v34, v34);
-        v39 = vzip1q_s32(v68, v36);
-        v40 = vmulq_f32(v36, v34);
-        v41 = vaddq_f32(v35, v37);
-        v42 = vzip2q_s32(v38, v33);
-        v43 = vsubq_f32(v35, v37);
-        v44 = vaddq_f32(v41, v40);
-        v44.n128_u32[3] = vsubq_f32(v43, v40).n128_u32[3];
+        *(UnityEngine_Quaternion_o *)&v71.fields.y = (UnityEngine_Quaternion_o)v30;
+        v31 = v71.fields.z;
+        *(UnityEngine_Quaternion_o *)&v71.fields.z = *(UnityEngine_Quaternion_o *)&v71.fields.y;
+        v32 = v71.fields.w;
+        v33 = v63;
+        v34.n128_u64[0] = *(_QWORD *)&v71.fields.w;
+        v34.n128_u64[1] = __PAIR64__(LODWORD(x), LODWORD(v64));
+        *(UnityEngine_Quaternion_o *)&v71.fields.w = (UnityEngine_Quaternion_o)vzip1q_s32(
+                                                                                 vtrn2q_s32(
+                                                                                   *(int32x4_t *)&v71.fields.w,
+                                                                                   v30),
+                                                                                 v30);
+        *(UnityEngine_Quaternion_o *)&v71.fields.z = (UnityEngine_Quaternion_o)vmulq_n_f32(
+                                                                                 *(float32x4_t *)&v71.fields.z,
+                                                                                 w);
+        *(UnityEngine_Quaternion_o *)&v71.fields.y = (UnityEngine_Quaternion_o)vrev64q_s32(
+                                                                                 vuzp2q_s32(
+                                                                                   vuzp1q_s32(
+                                                                                     v34,
+                                                                                     *(int32x4_t *)&v71.fields.y),
+                                                                                   v34));
+        v35 = vmulq_f32(v34, vextq_s8(v34, vzip1q_s32(vzip1q_s32(v34, (int32x4_t)v71), v34), 0xCu));
+        v36 = vuzp1q_s32(*(int32x4_t *)&v71.fields.w, *(int32x4_t *)&v71.fields.w);
+        v71 = (UnityEngine_Quaternion_o)vzip1q_s32((int32x4_t)v71, *(int32x4_t *)&v71.fields.y);
+        *(UnityEngine_Quaternion_o *)&v71.fields.w = (UnityEngine_Quaternion_o)vmulq_f32(
+                                                                                 *(float32x4_t *)&v71.fields.y,
+                                                                                 *(float32x4_t *)&v71.fields.w);
+        v37 = vaddq_f32(*(float32x4_t *)&v71.fields.z, v35);
+        v38 = vzip2q_s32(v36, v34);
+        *(UnityEngine_Quaternion_o *)&v71.fields.z = (UnityEngine_Quaternion_o)vsubq_f32(
+                                                                                 *(float32x4_t *)&v71.fields.z,
+                                                                                 v35);
+        v39 = vaddq_f32(v37, *(float32x4_t *)&v71.fields.w);
+        v39.n128_u32[3] = vsubq_f32(*(float32x4_t *)(&v71 + 8), *(float32x4_t *)(&v71 + 12)).n128_u32[3];
         v2->fields._stopRotation_5__3 = (struct UnityEngine_Quaternion_o)vsubq_f32(
-                                                                           v44,
+                                                                           v39,
                                                                            vmulq_f32(
-                                                                             vextq_s8(v42, v42, 8u),
-                                                                             vextq_s8(vzip1q_s32(v36, v39), v39, 8u)));
-        v45 = &v2->fields._stopRotation_5__3.fields.x;
+                                                                             vextq_s8(v38, v38, 8u),
+                                                                             vextq_s8(
+                                                                               vzip1q_s32(
+                                                                                 *(int32x4_t *)&v71.fields.y,
+                                                                                 (int32x4_t)v71),
+                                                                               (int8x16_t)v71,
+                                                                               8u)));
+        v40 = &v2->fields._stopRotation_5__3.fields.x;
         if ( v2->fields.duration <= 0.0 )
         {
           this = (UIScriptChara__RollAxis_d__122_o *)_4__this->fields.baseRoll1;
           if ( _4__this->fields.isRollWait )
           {
-            v45 = &_4__this->fields.stopLocalRotationLoopEnd.fields.x;
-            v63 = &_4__this->fields.stopLocalRotationLoopEnd.fields.y;
-            v64 = &_4__this->fields.stopLocalRotationLoopEnd.fields.z;
+            v40 = &_4__this->fields.stopLocalRotationLoopEnd.fields.x;
+            v59 = &_4__this->fields.stopLocalRotationLoopEnd.fields.y;
+            v60 = &_4__this->fields.stopLocalRotationLoopEnd.fields.z;
             p_w = &_4__this->fields.stopLocalRotationLoopEnd.fields.w;
             if ( !this )
               goto LABEL_55;
@@ -4303,15 +4405,15 @@ LABEL_38:
           else
           {
             p_w = &v2->fields._stopRotation_5__3.fields.w;
-            v64 = &v2->fields._stopRotation_5__3.fields.z;
-            v63 = &v2->fields._stopRotation_5__3.fields.y;
+            v60 = &v2->fields._stopRotation_5__3.fields.z;
+            v59 = &v2->fields._stopRotation_5__3.fields.y;
             if ( !this )
               goto LABEL_55;
           }
-          stopRotation_5__3.fields.w = *p_w;
-          stopRotation_5__3.fields.z = *v64;
-          stopRotation_5__3.fields.y = *v63;
-          stopRotation_5__3.fields.x = *v45;
+          v56 = *p_w;
+          v55 = *v60;
+          v58 = *v59;
+          v57 = *v40;
           goto LABEL_52;
         }
         this = (UIScriptChara__RollAxis_d__122_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
@@ -4335,28 +4437,35 @@ LABEL_42:
             angularVelocity_5__4 * deltaTime,
             0,
             0);
-          v54 = 0.0;
+          v49 = 0.0;
           time_5__5 = v2->fields._time_5__5;
           if ( !_4__this->fields.isRollLoop )
-            v54 = UnityEngine_Time__get_deltaTime(0);
-          v56 = time_5__5 + v54;
-          v57 = v2->fields.duration;
-          v2->fields._time_5__5 = v56;
-          if ( v56 < v57 )
+            v49 = UnityEngine_Time__get_deltaTime(0);
+          v51 = time_5__5 + v49;
+          v52 = v2->fields.duration;
+          v2->fields._time_5__5 = v51;
+          if ( v51 < v52 )
           {
             v2->fields.__2__current = 0;
             p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-            sub_2213A04(p__2__current, 0, v48, v49, v50, v51, v52, v53);
+            sub_2213A04(p__2__current, 0, v43, v44, v45, v46, v47, v48);
+            result = 1;
             p__2__current[-1].fields._BoardType_k__BackingField = 1;
-            return 1;
+            return result;
           }
           this = (UIScriptChara__RollAxis_d__122_o *)_4__this->fields.baseRoll1;
           if ( this )
           {
-            stopRotation_5__3 = v2->fields._stopRotation_5__3;
+            v55 = v2->fields._stopRotation_5__3.fields.z;
+            v56 = v2->fields._stopRotation_5__3.fields.w;
+            v57 = v2->fields._stopRotation_5__3.fields.x;
+            v58 = v2->fields._stopRotation_5__3.fields.y;
 LABEL_52:
-            UnityEngine_Transform__set_localRotation((UnityEngine_Transform_o *)this, stopRotation_5__3, 0);
-            UIScriptChara__EndExecuteRollAxis(_4__this, v66);
+            UnityEngine_Transform__set_localRotation(
+              (UnityEngine_Transform_o *)this,
+              *(UnityEngine_Quaternion_o *)&v57,
+              0);
+            UIScriptChara__EndExecuteRollAxis(_4__this, v62);
             return 0;
           }
         }
@@ -4450,16 +4559,18 @@ void UIScriptChara___c__DisplayClass59_0___SetEffectEdgeBlur_b__0(
   unsigned __int64 v16; // x25
   __int64 v17; // x22
   UnityEngine_Transform_o *transform; // x23
+  float v19; // s0
+  float v20; // s1
   struct UnityEngine_Texture_o *maskTex; // x8
-  UIScriptChara___c__DisplayClass59_0_o *v20; // x23
-  struct UnityEngine_Texture_o *v21; // x8
-  int v22; // w24
-  int v23; // w8
+  UIScriptChara___c__DisplayClass59_0_o *v22; // x23
+  struct UnityEngine_Texture_o *v23; // x8
+  int v24; // w24
+  int v25; // w8
   float (**p_name)(void); // x8
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Rect_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = this;
   if ( (byte_597297B & 1) == 0 )
@@ -4519,12 +4630,12 @@ LABEL_30:
                                                           0);
         if ( !this )
           goto LABEL_30;
-        v27.fields.z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
         if ( !transform )
           goto LABEL_30;
-        v27.fields.x = v13;
-        v27.fields.y = v14;
-        UnityEngine_Transform__set_localPosition(transform, v27, 0);
+        v19 = v13;
+        v20 = v14;
+        UnityEngine_Transform__set_localPosition(transform, localPosition, 0);
       }
       else if ( !v17 )
       {
@@ -4539,35 +4650,35 @@ LABEL_30:
       maskTex = v3->fields.maskTex;
       if ( !maskTex )
         goto LABEL_30;
-      v20 = this;
+      v22 = this;
       this = (UIScriptChara___c__DisplayClass59_0_o *)((UIScriptChara___c__DisplayClass59_0_o *(__fastcall *)(struct UnityEngine_Texture_o *__return_ptr, struct UnityEngine_Texture_o *, const MethodInfo *))maskTex->klass->vtable._4_get_width.methodPtr)(
                                                         maskTex,
                                                         v3->fields.maskTex,
                                                         maskTex->klass->vtable._4_get_width.method);
-      v21 = v3->fields.maskTex;
-      if ( !v21 )
+      v23 = v3->fields.maskTex;
+      if ( !v23 )
         goto LABEL_30;
-      v22 = (int)this;
-      this = (UIScriptChara___c__DisplayClass59_0_o *)((UIScriptChara___c__DisplayClass59_0_o *(__fastcall *)(struct UnityEngine_Texture_o *__return_ptr, struct UnityEngine_Texture_o *, const MethodInfo *))v21->klass->vtable._6_get_height.methodPtr)(
-                                                        v21,
+      v24 = (int)this;
+      this = (UIScriptChara___c__DisplayClass59_0_o *)((UIScriptChara___c__DisplayClass59_0_o *(__fastcall *)(struct UnityEngine_Texture_o *__return_ptr, struct UnityEngine_Texture_o *, const MethodInfo *))v23->klass->vtable._6_get_height.methodPtr)(
+                                                        v23,
                                                         v3->fields.maskTex,
-                                                        v21->klass->vtable._6_get_height.method);
-      if ( !v20 )
+                                                        v23->klass->vtable._6_get_height.method);
+      if ( !v22 )
         goto LABEL_30;
-      v25.fields.y = (float)(int)this;
-      v25.fields.x = (float)v22;
-      v25.fields.z = 0.0;
-      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v20, v25, 0);
+      v28.fields.y = (float)(int)this;
+      v28.fields.x = (float)v24;
+      v28.fields.z = 0.0;
+      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v22, v28, 0);
       FGOEdgeBlur__set_Thickness((FGOEdgeBlur_o *)v17, v3->fields.thick, 0);
       FGOEdgeBlur__set_Level((FGOEdgeBlur_o *)v17, v3->fields.level, 0);
       this = (UIScriptChara___c__DisplayClass59_0_o *)v3->fields.maskTex;
       if ( !this )
         goto LABEL_30;
-      v23 = ((__int64 (__fastcall *)(UIScriptChara___c__DisplayClass59_0_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
+      v25 = ((__int64 (__fastcall *)(UIScriptChara___c__DisplayClass59_0_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
               this,
               *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
       this = (UIScriptChara___c__DisplayClass59_0_o *)v3->fields.__4__this;
-      if ( v23 <= 1024 )
+      if ( v25 <= 1024 )
       {
         if ( !this )
           goto LABEL_30;
@@ -4579,12 +4690,12 @@ LABEL_30:
           goto LABEL_30;
         p_name = (float (**)(void))&this->klass[1]._1.byval_arg;
       }
-      v28.fields.m_XMin = (*p_name)();
-      FGOEdgeBlur__set_Rect((FGOEdgeBlur_o *)v17, v28, 0);
-      v26.fields.x = v13;
-      v26.fields.y = v14;
-      v26.fields.z = v15;
-      FGOEdgeBlur__setMaskImagePosition((FGOEdgeBlur_o *)v17, v26, 0);
+      v30.fields.m_XMin = (*p_name)();
+      FGOEdgeBlur__set_Rect((FGOEdgeBlur_o *)v17, v30, 0);
+      v29.fields.x = v13;
+      v29.fields.y = v14;
+      v29.fields.z = v15;
+      FGOEdgeBlur__setMaskImagePosition((FGOEdgeBlur_o *)v17, v29, 0);
       *(float *)&v12 = v6->fields.color.fields.r;
       ++v16;
     }

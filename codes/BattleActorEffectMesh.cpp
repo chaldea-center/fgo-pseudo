@@ -56,7 +56,9 @@ void BattleActorEffectMesh__OnTransformParentChanged(BattleActorEffectMesh_o *th
   UnityEngine_Object_c **v23; // x26
   UnityEngine_MeshRenderer_o **v24; // x26
   UnityEngine_SkinnedMeshRenderer_o *v25; // t1
-  UnityEngine_Object_o *v26; // [xsp+8h] [xbp-48h] BYREF
+  UnityEngine_ParticleSystem_ShapeModule_o v26; // x0
+  UnityEngine_ParticleSystem_ShapeModule_o v27; // x0
+  UnityEngine_Object_o *v28; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_5973112 & 1) == 0 )
   {
@@ -67,7 +69,7 @@ void BattleActorEffectMesh__OnTransformParentChanged(BattleActorEffectMesh_o *th
     byte_5973112 = 1;
   }
   particles = this->fields.particles;
-  v26 = 0;
+  v28 = 0;
   if ( !particles || !particles->max_length )
     return;
   ComponentsInParent_object__58857920 = (UnityEngine_Object_o *)UnityEngine_Component__GetComponentsInParent_object__58857920(
@@ -135,7 +137,7 @@ LABEL_61:
                                                                         (UnityEngine_ParticleSystem_o *)ComponentsInParent_object__58857920,
                                                                         0).fields.m_ParticleSystem;
         type = this->fields.type;
-        v26 = ComponentsInParent_object__58857920;
+        v28 = ComponentsInParent_object__58857920;
         if ( type == 1 )
         {
           if ( !v9 )
@@ -193,10 +195,8 @@ LABEL_61:
             }
             if ( v22 >= LODWORD(v21[1].klass) )
               goto LABEL_61;
-            UnityEngine_ParticleSystem_ShapeModule__set_meshRenderer(
-              (UnityEngine_ParticleSystem_ShapeModule_o)&v26,
-              *v24,
-              0);
+            v27.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v28;
+            UnityEngine_ParticleSystem_ShapeModule__set_meshRenderer(v27, *v24, 0);
           }
         }
         else if ( !type )
@@ -256,10 +256,8 @@ LABEL_61:
             }
             if ( v16 >= LODWORD(v15[1].klass) )
               goto LABEL_61;
-            UnityEngine_ParticleSystem_ShapeModule__set_skinnedMeshRenderer(
-              (UnityEngine_ParticleSystem_ShapeModule_o)&v26,
-              *v18,
-              0);
+            v26.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v28;
+            UnityEngine_ParticleSystem_ShapeModule__set_skinnedMeshRenderer(v26, *v18, 0);
           }
         }
 LABEL_59:

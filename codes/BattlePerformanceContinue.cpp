@@ -4999,6 +4999,7 @@ bool BattlePerformanceContinue__CoEndContinue_d__133__MoveNext(
   float timer_5__2; // s8
   struct BattlePerformanceContinue_o *_4__this; // x8
   struct BattlePerformance_o *perf; // x8
+  bool result; // w0
   float deltaTime; // s0
   Il2CppObject **p__2__current; // x19
   System_String_o *v10; // x2
@@ -5050,8 +5051,9 @@ LABEL_13:
   p__2__current = &v2->fields.__2__current;
   *((float *)p__2__current + 4) = timer_5__2 + deltaTime;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v10, v11, v12, v13, v14, v15);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

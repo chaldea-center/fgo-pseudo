@@ -835,75 +835,82 @@ void ServantCostumeControl__RefreshEventCostumeInfo(ServantCostumeControl_o *thi
   System_DateTime_o v42; // x1
   System_DateTime_o v43; // x2
   System_DateTime_o v44; // x22
-  System_Object_array *v45; // x21
-  System_String_o *v46; // x2
-  System_String_o *v47; // x3
-  int32_t v48; // w4
-  int32_t v49; // w5
-  bool v50; // w6
-  bool v51; // w7
-  Il2CppObject *v52; // x22
-  __int64 v53; // x1
-  System_String_o *v54; // x2
-  System_String_o *v55; // x3
-  int32_t v56; // w4
-  int32_t v57; // w5
-  bool v58; // w6
-  bool v59; // w7
-  Il2CppObject *v60; // x22
-  System_String_o *v61; // x2
-  System_String_o *v62; // x3
-  int32_t v63; // w4
-  int32_t v64; // w5
-  bool v65; // w6
-  bool v66; // w7
-  Il2CppObject *v67; // x22
-  System_String_o *v68; // x2
-  System_String_o *v69; // x3
-  int32_t v70; // w4
-  int32_t v71; // w5
-  bool v72; // w6
-  bool v73; // w7
-  Il2CppObject *v74; // x22
-  System_String_o *v75; // x2
-  System_String_o *v76; // x3
-  int32_t v77; // w4
-  int32_t v78; // w5
-  bool v79; // w6
-  bool v80; // w7
-  Il2CppObject *v81; // x22
-  __int64 v82; // x1
-  __int64 v83; // x2
-  Il2CppObject *v84; // x22
-  UILabel_o *alreadyGetLabel; // x21
-  System_String_o *v86; // x23
-  Il2CppObject *v87; // x0
-  _BOOL8 v88; // x0
+  System_DateTime_o v45; // x0
+  System_TimeSpan_o v46; // x1
+  System_Object_array *v47; // x21
+  System_DateTime_o v48; // x0
+  System_String_o *v49; // x2
+  System_String_o *v50; // x3
+  int32_t v51; // w4
+  int32_t v52; // w5
+  bool v53; // w6
+  bool v54; // w7
+  Il2CppObject *v55; // x22
+  __int64 v56; // x1
+  System_DateTime_o v57; // x0
+  System_String_o *v58; // x2
+  System_String_o *v59; // x3
+  int32_t v60; // w4
+  int32_t v61; // w5
+  bool v62; // w6
+  bool v63; // w7
+  Il2CppObject *v64; // x22
+  System_DateTime_o v65; // x0
+  System_String_o *v66; // x2
+  System_String_o *v67; // x3
+  int32_t v68; // w4
+  int32_t v69; // w5
+  bool v70; // w6
+  bool v71; // w7
+  Il2CppObject *v72; // x22
+  System_DateTime_o v73; // x0
+  System_String_o *v74; // x2
+  System_String_o *v75; // x3
+  int32_t v76; // w4
+  int32_t v77; // w5
+  bool v78; // w6
+  bool v79; // w7
+  Il2CppObject *v80; // x22
+  System_DateTime_o v81; // x0
+  System_String_o *v82; // x2
+  System_String_o *v83; // x3
+  int32_t v84; // w4
+  int32_t v85; // w5
+  bool v86; // w6
+  bool v87; // w7
+  Il2CppObject *v88; // x22
   __int64 v89; // x1
+  __int64 v90; // x2
+  Il2CppObject *v91; // x22
+  UILabel_o *alreadyGetLabel; // x21
+  System_String_o *v93; // x23
+  Il2CppObject *v94; // x0
+  _BOOL8 v95; // x0
+  __int64 v96; // x1
   Il2CppObject *current; // x21
-  __int64 v91; // x0
+  __int64 v98; // x0
   int64_t startedAt; // x21
-  __int64 v93; // x1
-  __int64 v94; // x2
-  UILabel_o *v95; // x20
-  System_String_o *v96; // x21
-  Il2CppObject *v97; // x0
-  _BOOL8 v98; // x0
-  __int64 v99; // x1
-  Il2CppObject *v100; // x19
-  System_Collections_Generic_List_Enumerator_object__o v101; // [xsp+0h] [xbp-90h] BYREF
+  __int64 v100; // x1
+  __int64 v101; // x2
+  UILabel_o *v102; // x20
+  System_String_o *v103; // x21
+  Il2CppObject *v104; // x0
+  _BOOL8 v105; // x0
+  __int64 v106; // x1
+  Il2CppObject *v107; // x19
+  System_Collections_Generic_List_Enumerator_object__o v108; // [xsp+0h] [xbp-90h] BYREF
   int32_t Minute; // [xsp+1Ch] [xbp-74h] BYREF
   int32_t Hour; // [xsp+20h] [xbp-70h] BYREF
   int32_t Day; // [xsp+24h] [xbp-6Ch] BYREF
   int32_t Month; // [xsp+28h] [xbp-68h] BYREF
   int32_t Year; // [xsp+2Ch] [xbp-64h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v107; // [xsp+30h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v114; // [xsp+30h] [xbp-60h] BYREF
   uint64_t dateData; // [xsp+48h] [xbp-48h] BYREF
-  UnityEngine_Vector3_o v109; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v110; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v111; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v112; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v113; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v117; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v118; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v119; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v120; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A276 & 1) == 0 )
   {
@@ -932,7 +939,7 @@ void ServantCostumeControl__RefreshEventCostumeInfo(ServantCostumeControl_o *thi
   }
   alreadyGetInfo = (__int64)this->fields.alreadyGetInfo;
   dateData = 0;
-  memset(&v107, 0, sizeof(v107));
+  memset(&v114, 0, sizeof(v114));
   if ( !alreadyGetInfo )
     goto LABEL_108;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)alreadyGetInfo, 0, 0);
@@ -1075,10 +1082,10 @@ LABEL_37:
       if ( !alreadyGetInfo )
         goto LABEL_108;
       UIWidget__set_width((UIWidget_o *)alreadyGetInfo, 726, 0);
-      v109.fields.x = 0.0;
-      v109.fields.z = 0.0;
-      v109.fields.y = -15.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v33, v109, 0);
+      v116.fields.x = 0.0;
+      v116.fields.z = 0.0;
+      v116.fields.y = -15.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v33, v116, 0);
       alreadyGetInfo = (__int64)UnityEngine_Component__get_gameObject(v33, 0);
       if ( !alreadyGetInfo )
         goto LABEL_108;
@@ -1104,10 +1111,10 @@ LABEL_47:
   alreadyGetInfo = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)alreadyGetInfo, 0);
   if ( !alreadyGetInfo )
     goto LABEL_108;
-  v110.fields.x = 0.0;
-  v110.fields.z = 0.0;
-  v110.fields.y = -16.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)alreadyGetInfo, v110, 0);
+  v117.fields.x = 0.0;
+  v117.fields.z = 0.0;
+  v117.fields.y = -16.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)alreadyGetInfo, v117, 0);
   alreadyGetInfo = EventEntity__IsOpen(v7, 0, 0);
   if ( (alreadyGetInfo & 1) != 0 )
   {
@@ -1133,156 +1140,163 @@ LABEL_47:
           dateData = v44.fields._dateData;
           if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v42.fields._dateData, v43.fields._dateData);
-          dateData = System_DateTime__op_Addition(v44, v40, 0).fields._dateData;
-          v45 = (System_Object_array *)sub_2213B20(object___TypeInfo, 5);
-          Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
+          v45.fields._dateData = v44.fields._dateData;
+          v46.fields._ticks = v40.fields._ticks;
+          dateData = System_DateTime__op_Addition(v45, v46, 0).fields._dateData;
+          v47 = (System_Object_array *)sub_2213B20(object___TypeInfo, 5);
+          v48.fields._dateData = (uint64_t)&dateData;
+          Year = System_DateTime__get_Year(v48, 0);
           alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Year);
-          if ( v45 )
+          if ( v47 )
           {
-            v52 = (Il2CppObject *)alreadyGetInfo;
+            v55 = (Il2CppObject *)alreadyGetInfo;
             if ( alreadyGetInfo )
             {
-              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v45->obj.klass->_1.element_class);
+              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v47->obj.klass->_1.element_class);
               if ( !alreadyGetInfo )
                 goto LABEL_89;
             }
-            if ( !LODWORD(v45->max_length) )
+            if ( !LODWORD(v47->max_length) )
               goto LABEL_87;
-            v45->m_Items[0] = v52;
-            sub_2213A04((MissionNaviTransitionBoardItem_o *)v45->m_Items, (int32_t)v52, v46, v47, v48, v49, v50, v51);
-            Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
+            v47->m_Items[0] = v55;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)v47->m_Items, (int32_t)v55, v49, v50, v51, v52, v53, v54);
+            v57.fields._dateData = (uint64_t)&dateData;
+            Month = System_DateTime__get_Month(v57, 0);
             alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Month);
-            v60 = (Il2CppObject *)alreadyGetInfo;
+            v64 = (Il2CppObject *)alreadyGetInfo;
             if ( alreadyGetInfo )
             {
-              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v45->obj.klass->_1.element_class);
+              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v47->obj.klass->_1.element_class);
               if ( !alreadyGetInfo )
                 goto LABEL_89;
             }
-            if ( (v45->max_length & 0xFFFFFFFE) == 0 )
+            if ( (v47->max_length & 0xFFFFFFFE) == 0 )
               goto LABEL_87;
-            v45->m_Items[1] = v60;
+            v47->m_Items[1] = v64;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v45->m_Items[1],
-              (int32_t)v60,
-              v54,
-              v55,
-              v56,
-              v57,
+              (MissionNaviTransitionBoardItem_o *)&v47->m_Items[1],
+              (int32_t)v64,
               v58,
-              v59);
-            Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-            alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Day);
-            v67 = (Il2CppObject *)alreadyGetInfo;
-            if ( alreadyGetInfo )
-            {
-              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v45->obj.klass->_1.element_class);
-              if ( !alreadyGetInfo )
-                goto LABEL_89;
-            }
-            if ( LODWORD(v45->max_length) <= 2 )
-              goto LABEL_87;
-            v45->m_Items[2] = v67;
-            sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v45->m_Items[2],
-              (int32_t)v67,
+              v59,
+              v60,
               v61,
               v62,
-              v63,
-              v64,
-              v65,
-              v66);
-            Hour = System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
-            alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Hour);
-            v74 = (Il2CppObject *)alreadyGetInfo;
+              v63);
+            v65.fields._dateData = (uint64_t)&dateData;
+            Day = System_DateTime__get_Day(v65, 0);
+            alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Day);
+            v72 = (Il2CppObject *)alreadyGetInfo;
             if ( alreadyGetInfo )
             {
-              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v45->obj.klass->_1.element_class);
+              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v47->obj.klass->_1.element_class);
               if ( !alreadyGetInfo )
                 goto LABEL_89;
             }
-            if ( (v45->max_length & 0xFFFFFFFC) == 0 )
+            if ( LODWORD(v47->max_length) <= 2 )
               goto LABEL_87;
-            v45->m_Items[3] = v74;
+            v47->m_Items[2] = v72;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v45->m_Items[3],
-              (int32_t)v74,
+              (MissionNaviTransitionBoardItem_o *)&v47->m_Items[2],
+              (int32_t)v72,
+              v66,
+              v67,
               v68,
               v69,
               v70,
-              v71,
-              v72,
-              v73);
-            Minute = System_DateTime__get_Minute((System_DateTime_o)&dateData, 0);
-            alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Minute);
-            v81 = (Il2CppObject *)alreadyGetInfo;
+              v71);
+            v73.fields._dateData = (uint64_t)&dateData;
+            Hour = System_DateTime__get_Hour(v73, 0);
+            alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Hour);
+            v80 = (Il2CppObject *)alreadyGetInfo;
             if ( alreadyGetInfo )
             {
-              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v45->obj.klass->_1.element_class);
+              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v47->obj.klass->_1.element_class);
               if ( !alreadyGetInfo )
-              {
-LABEL_89:
-                v91 = sub_2213D00(alreadyGetInfo, v53);
-                sub_2213BA0(v91, 0);
-              }
+                goto LABEL_89;
             }
-            if ( LODWORD(v45->max_length) <= 4 )
-LABEL_87:
-              sub_2213CE4(alreadyGetInfo);
-            v45->m_Items[4] = v81;
+            if ( (v47->max_length & 0xFFFFFFFC) == 0 )
+              goto LABEL_87;
+            v47->m_Items[3] = v80;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v45->m_Items[4],
-              (int32_t)v81,
+              (MissionNaviTransitionBoardItem_o *)&v47->m_Items[3],
+              (int32_t)v80,
+              v74,
               v75,
               v76,
               v77,
               v78,
-              v79,
-              v80);
-            v84 = (Il2CppObject *)System_String__Format_75698016((System_String_o *)StringLiteral_26554/*"{0}/{1}/{2} {3:D2}:{4:D2}"*/, v45, 0);
+              v79);
+            v81.fields._dateData = (uint64_t)&dateData;
+            Minute = System_DateTime__get_Minute(v81, 0);
+            alreadyGetInfo = j_il2cpp_value_box_0(qword_5984348, &Minute);
+            v88 = (Il2CppObject *)alreadyGetInfo;
+            if ( alreadyGetInfo )
+            {
+              alreadyGetInfo = sub_2213BB4(alreadyGetInfo, v47->obj.klass->_1.element_class);
+              if ( !alreadyGetInfo )
+              {
+LABEL_89:
+                v98 = sub_2213D00(alreadyGetInfo, v56);
+                sub_2213BA0(v98, 0);
+              }
+            }
+            if ( LODWORD(v47->max_length) <= 4 )
+LABEL_87:
+              sub_2213CE4(alreadyGetInfo);
+            v47->m_Items[4] = v88;
+            sub_2213A04(
+              (MissionNaviTransitionBoardItem_o *)&v47->m_Items[4],
+              (int32_t)v88,
+              v82,
+              v83,
+              v84,
+              v85,
+              v86,
+              v87);
+            v91 = (Il2CppObject *)System_String__Format_75698016((System_String_o *)StringLiteral_26554/*"{0}/{1}/{2} {3:D2}:{4:D2}"*/, v47, 0);
             alreadyGetLabel = this->fields.alreadyGetLabel;
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v82, v83);
-            v86 = LocalizationManager__Get((System_String_o *)StringLiteral_3999/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, 0);
-            v87 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5743/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
-            alreadyGetInfo = (__int64)System_String__Format_75697880(v86, v87, v84, 0);
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v89, v90);
+            v93 = LocalizationManager__Get((System_String_o *)StringLiteral_3999/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, 0);
+            v94 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5743/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
+            alreadyGetInfo = (__int64)System_String__Format_75697880(v93, v94, v91, 0);
             if ( alreadyGetLabel )
             {
               UILabel__set_text(alreadyGetLabel, (System_String_o *)alreadyGetInfo, 0);
               alreadyGetInfo = (__int64)this->fields.spendQpLb;
               if ( alreadyGetInfo )
               {
-                v111.fields.a = 1.0;
-                v111.fields.r = 0.32941;
-                v111.fields.g = 0.32941;
-                v111.fields.b = 0.32941;
-                UIWidget__set_color((UIWidget_o *)alreadyGetInfo, v111, 0);
+                v118.fields.a = 1.0;
+                v118.fields.r = 0.32941;
+                v118.fields.g = 0.32941;
+                v118.fields.b = 0.32941;
+                UIWidget__set_color((UIWidget_o *)alreadyGetInfo, v118, 0);
                 alreadyGetInfo = (__int64)this->fields.itemInfoList;
                 if ( alreadyGetInfo )
                 {
                   System_Collections_Generic_List_object___GetEnumerator(
-                    (System_Collections_Generic_List_Enumerator_T__o *)&v101,
+                    (System_Collections_Generic_List_Enumerator_T__o *)&v108,
                     (System_Collections_Generic_List_object__o *)alreadyGetInfo,
                     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_LimitCntUpItemComponent__GetEnumerator__);
-                  v107 = v101;
-                  v101.fields._list = 0;
-                  *(_QWORD *)&v101.fields._index = &v107;
+                  v114 = v108;
+                  v108.fields._list = 0;
+                  *(_QWORD *)&v108.fields._index = &v114;
                   while ( 1 )
                   {
-                    v88 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                            &v107,
+                    v95 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                            &v114,
                             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_LimitCntUpItemComponent__MoveNext__);
-                    if ( !v88 )
+                    if ( !v95 )
                       break;
-                    current = v107.fields._current;
-                    if ( !v107.fields._current )
-                      sub_2213CDC(v88, v89);
-                    LimitCntUpItemComponent__SetMaskSprite((LimitCntUpItemComponent_o *)v107.fields._current, 1, 0);
+                    current = v114.fields._current;
+                    if ( !v114.fields._current )
+                      sub_2213CDC(v95, v96);
+                    LimitCntUpItemComponent__SetMaskSprite((LimitCntUpItemComponent_o *)v114.fields._current, 1, 0);
                     LOBYTE(current[6].klass) = 1;
                   }
 LABEL_106:
                   System_Collections_Generic_List_Enumerator_object___Dispose(
-                    &v107,
+                    &v114,
                     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_LimitCntUpItemComponent__Dispose__);
                   return;
                 }
@@ -1299,56 +1313,56 @@ LABEL_106:
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v34);
   if ( startedAt <= NetworkManager__getTime(0) && !EventEntity__IsOpen(v7, 0, 0) )
   {
-    v95 = this->fields.alreadyGetLabel;
+    v102 = this->fields.alreadyGetLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v93, v94);
-    v96 = LocalizationManager__Get((System_String_o *)StringLiteral_3998/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0);
-    v97 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5743/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
-    alreadyGetInfo = (__int64)System_String__Format(v96, v97, 0);
-    if ( v95 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v100, v101);
+    v103 = LocalizationManager__Get((System_String_o *)StringLiteral_3998/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0);
+    v104 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5743/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0);
+    alreadyGetInfo = (__int64)System_String__Format(v103, v104, 0);
+    if ( v102 )
     {
-      UILabel__set_text(v95, (System_String_o *)alreadyGetInfo, 0);
+      UILabel__set_text(v102, (System_String_o *)alreadyGetInfo, 0);
       alreadyGetInfo = (__int64)this->fields.spendQpLb;
       if ( alreadyGetInfo )
       {
-        v112.fields.r = 1.0;
-        v112.fields.g = 1.0;
-        v112.fields.b = 1.0;
-        v112.fields.a = 1.0;
-        UIWidget__set_color((UIWidget_o *)alreadyGetInfo, v112, 0);
+        v119.fields.r = 1.0;
+        v119.fields.g = 1.0;
+        v119.fields.b = 1.0;
+        v119.fields.a = 1.0;
+        UIWidget__set_color((UIWidget_o *)alreadyGetInfo, v119, 0);
         if ( this->fields.haveQpVal < this->fields.spendQpVal )
         {
           alreadyGetInfo = (__int64)this->fields.spendQpLb;
           if ( !alreadyGetInfo )
             goto LABEL_108;
-          v113.fields.g = 0.0;
-          v113.fields.b = 0.0;
-          v113.fields.r = 1.0;
-          v113.fields.a = 1.0;
-          UIWidget__set_color((UIWidget_o *)alreadyGetInfo, v113, 0);
+          v120.fields.g = 0.0;
+          v120.fields.b = 0.0;
+          v120.fields.r = 1.0;
+          v120.fields.a = 1.0;
+          UIWidget__set_color((UIWidget_o *)alreadyGetInfo, v120, 0);
         }
         alreadyGetInfo = (__int64)this->fields.itemInfoList;
         if ( alreadyGetInfo )
         {
           System_Collections_Generic_List_object___GetEnumerator(
-            (System_Collections_Generic_List_Enumerator_T__o *)&v101,
+            (System_Collections_Generic_List_Enumerator_T__o *)&v108,
             (System_Collections_Generic_List_object__o *)alreadyGetInfo,
             (const MethodInfo_448473C *)Method_System_Collections_Generic_List_LimitCntUpItemComponent__GetEnumerator__);
-          v107 = v101;
-          v101.fields._list = 0;
-          *(_QWORD *)&v101.fields._index = &v107;
+          v114 = v108;
+          v108.fields._list = 0;
+          *(_QWORD *)&v108.fields._index = &v114;
           while ( 1 )
           {
-            v98 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                    &v107,
-                    (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_LimitCntUpItemComponent__MoveNext__);
-            if ( !v98 )
+            v105 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                     &v114,
+                     (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_LimitCntUpItemComponent__MoveNext__);
+            if ( !v105 )
               break;
-            v100 = v107.fields._current;
-            if ( !v107.fields._current )
-              sub_2213CDC(v98, v99);
-            LimitCntUpItemComponent__SetMaskSprite((LimitCntUpItemComponent_o *)v107.fields._current, 0, 0);
-            LOBYTE(v100[6].klass) = 1;
+            v107 = v114.fields._current;
+            if ( !v114.fields._current )
+              sub_2213CDC(v105, v106);
+            LimitCntUpItemComponent__SetMaskSprite((LimitCntUpItemComponent_o *)v114.fields._current, 0, 0);
+            LOBYTE(v107[6].klass) = 1;
           }
           goto LABEL_106;
         }

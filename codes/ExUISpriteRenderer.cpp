@@ -172,12 +172,20 @@ void ExUISpriteRenderer__EndLoad(ExUISpriteRenderer_o *this, AssetData_o *data, 
 
 UnityEngine_Color_o ExUISpriteRenderer__GetTweenColor(ExUISpriteRenderer_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.mColor.fields.r;
-  result.fields.g = this->fields.mColor.fields.g;
-  result.fields.b = this->fields.mColor.fields.b;
-  result.fields.a = this->fields.mColor.fields.a;
+  r = this->fields.mColor.fields.r;
+  g = this->fields.mColor.fields.g;
+  b = this->fields.mColor.fields.b;
+  a = this->fields.mColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -552,15 +560,17 @@ void ExUISpriteRenderer__Resize(ExUISpriteRenderer_o *this, System_String_o *ass
   UnityEngine_Transform_o *transform; // x0
   __int64 v36; // x1
   __int64 v37; // x1
+  float x; // s8
+  float z; // s9
   float BackFSOffsetY; // s0
   int32_t mHeight; // w22
-  float v40; // s10
+  float v42; // s10
   struct ExUISpriteRenderer_StaticFields *static_fields; // x8
   int32_t BACK_HEIGHT_16_9; // w20
   int32_t BACK_HEIGHT_21_9; // w21
   double iptr; // [xsp+8h] [xbp-58h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FB98 & 1) == 0 )
   {
@@ -699,11 +709,13 @@ LABEL_54:
   if ( !transform )
     goto LABEL_63;
   localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  x = localPosition.fields.x;
+  z = localPosition.fields.z;
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v37);
   BackFSOffsetY = FSUtility__GetBackFSOffsetY(assetName, 0);
   mHeight = this->fields.mHeight;
-  v40 = BackFSOffsetY;
+  v42 = BackFSOffsetY;
   static_fields = ExUISpriteRenderer_TypeInfo->static_fields;
   BACK_HEIGHT_16_9 = static_fields->BACK_HEIGHT_16_9;
   BACK_HEIGHT_21_9 = static_fields->BACK_HEIGHT_21_9;
@@ -711,10 +723,10 @@ LABEL_54:
   if ( !transform )
 LABEL_63:
     sub_2213CDC(transform, v36);
-  v46.fields.z = localPosition.fields.z;
-  v46.fields.y = (float)(v40 * (float)(mHeight - BACK_HEIGHT_16_9)) / (float)(BACK_HEIGHT_21_9 - BACK_HEIGHT_16_9);
-  v46.fields.x = localPosition.fields.x;
-  UnityEngine_Transform__set_localPosition(transform, v46, 0);
+  v48.fields.z = z;
+  v48.fields.y = (float)(v42 * (float)(mHeight - BACK_HEIGHT_16_9)) / (float)(BACK_HEIGHT_21_9 - BACK_HEIGHT_16_9);
+  v48.fields.x = x;
+  UnityEngine_Transform__set_localPosition(transform, v48, 0);
 LABEL_62:
   ExUISpriteRenderer__ReScaleUpdate(this, v10);
 }

@@ -371,8 +371,10 @@ bool MaskFade__Fadein(MaskFade_o *this, float duration, System_Action_o *callbac
   int32_t v37; // w5
   bool v38; // w6
   bool v39; // w7
+  bool result; // w0
   __int64 v41; // x1
-  UnityEngine_Color_o v42; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  UnityEngine_Color_o value; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v43; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   if ( (byte_5973B46 & 1) == 0 )
   {
@@ -409,7 +411,8 @@ bool MaskFade__Fadein(MaskFade_o *this, float duration, System_Action_o *callbac
       {
         if ( !Component_object )
           goto LABEL_33;
-        if ( COERCE_FLOAT(LODWORD(TweenColor__get_value((TweenColor_o *)Component_object, 0).fields.a)) <= 0.0 )
+        value = TweenColor__get_value((TweenColor_o *)Component_object, 0);
+        if ( value.fields.a <= 0.0 )
         {
           maskKind = this->fields.maskKind;
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -441,11 +444,11 @@ LABEL_21:
     v22 = *((float *)maskSprite + 38);
     v23 = *((float *)maskSprite + 39);
     v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskSprite, 0);
-    v42.fields.a = 0.0;
-    v42.fields.r = v21;
-    v42.fields.g = v22;
-    v42.fields.b = v23;
-    v26 = TweenColor__Begin(v24, duration, v42, 0);
+    v43.fields.a = 0.0;
+    v43.fields.r = v21;
+    v43.fields.g = v22;
+    v43.fields.b = v23;
+    v26 = TweenColor__Begin(v24, duration, v43, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
     if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v26, 0, 0) )
@@ -470,8 +473,9 @@ LABEL_28:
       v33 = StringLiteral_6258/*"EndFadein"*/;
       v26->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6258/*"EndFadein"*/;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26->fields.callWhenFinished, v33, v34, v35, v36, v37, v38, v39);
+      result = 1;
       this->fields.isExecuteMask = 1;
-      return 1;
+      return result;
     }
 LABEL_33:
     sub_2213CDC(maskSprite, callback);
@@ -546,9 +550,10 @@ bool MaskFade__Fadeout(
   BalanceConfig_c *v41; // x0
   const MethodInfo *v42; // x1
   __int64 v44; // x1
-  UnityEngine_Color_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o value; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v47; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  UnityEngine_Color_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v48; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   if ( (byte_5973B43 & 1) == 0 )
   {
@@ -585,7 +590,8 @@ bool MaskFade__Fadeout(
       {
         if ( !Component_object )
           goto LABEL_44;
-        if ( COERCE_FLOAT(LODWORD(TweenColor__get_value((TweenColor_o *)Component_object, 0).fields.a)) >= 1.0 )
+        value = TweenColor__get_value((TweenColor_o *)Component_object, 0);
+        if ( value.fields.a >= 1.0 )
         {
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
           if ( !*(&FadeLogger_TypeInfo->_2.cctor_finished + 1) )
@@ -631,20 +637,20 @@ LABEL_21:
       maskSprite = this->fields.maskSprite;
       if ( !maskSprite )
         goto LABEL_44;
-      v45.fields.r = v23;
-      v45.fields.g = v23;
-      v45.fields.a = *((float *)maskSprite + 40);
-      v45.fields.b = v23;
-      UIWidget__set_color((UIWidget_o *)maskSprite, v45, 0);
+      v46.fields.r = v23;
+      v46.fields.g = v23;
+      v46.fields.a = *((float *)maskSprite + 40);
+      v46.fields.b = v23;
+      UIWidget__set_color((UIWidget_o *)maskSprite, v46, 0);
       maskSprite = this->fields.maskSprite;
       if ( !maskSprite )
         goto LABEL_44;
       v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskSprite, 0);
-      v47.fields.r = v23;
-      v47.fields.g = v23;
-      v47.fields.b = v23;
-      v47.fields.a = v24;
-      v27 = TweenColor__Begin(v25, duration, v47, 0);
+      v48.fields.r = v23;
+      v48.fields.g = v23;
+      v48.fields.b = v23;
+      v48.fields.a = v24;
+      v27 = TweenColor__Begin(v25, duration, v48, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v27, 0, 0) )
@@ -683,11 +689,11 @@ LABEL_35:
         maskSprite = this->fields.maskSprite;
         if ( maskSprite )
         {
-          v46.fields.r = v23;
-          v46.fields.g = v23;
-          v46.fields.b = v23;
-          v46.fields.a = v24;
-          UIWidget__set_color((UIWidget_o *)maskSprite, v46, 0);
+          v47.fields.r = v23;
+          v47.fields.g = v23;
+          v47.fields.b = v23;
+          v47.fields.a = v24;
+          UIWidget__set_color((UIWidget_o *)maskSprite, v47, 0);
           MaskFade__EndFadeout(this, v42);
           return 1;
         }
@@ -820,32 +826,35 @@ bool MaskFade__IsOnTop(MaskFade_o *this, const MethodInfo *method)
 // local variable allocation has failed, the output may be wrong!
 void MaskFade__SetInitColor(MaskFade_o *this, int32_t kind, const MethodInfo *method)
 {
-  UIWidget_o *maskSprite; // x0
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct UISprite_o *maskSprite; // x0
+  float a; // s3
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
 
-  maskSprite = (UIWidget_o *)this->fields.maskSprite;
+  maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
     sub_2213CDC(0, *(_QWORD *)&kind);
   if ( kind == 1 )
   {
-    v6.fields.r = 0.0;
-    v6.fields.g = 0.0;
-    v6.fields.b = 0.0;
+    r = 0.0;
+    g = 0.0;
+    b = 0.0;
   }
   else
   {
-    v6.fields.r = maskSprite->fields.mColor.fields.r;
-    v6.fields.g = maskSprite->fields.mColor.fields.g;
-    v6.fields.b = maskSprite->fields.mColor.fields.b;
+    r = maskSprite->fields.mColor.fields.r;
+    g = maskSprite->fields.mColor.fields.g;
+    b = maskSprite->fields.mColor.fields.b;
     if ( kind == 2 )
     {
-      v6.fields.r = 1.0;
-      v6.fields.g = 1.0;
-      v6.fields.b = 1.0;
+      r = 1.0;
+      g = 1.0;
+      b = 1.0;
     }
   }
-  v6.fields.a = maskSprite->fields.mColor.fields.a;
-  UIWidget__set_color(maskSprite, v6, 0);
+  a = maskSprite->fields.mColor.fields.a;
+  UIWidget__set_color((UIWidget_o *)maskSprite, *(UnityEngine_Color_o *)&r, 0);
 }
 
 

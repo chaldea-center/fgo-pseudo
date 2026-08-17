@@ -1372,7 +1372,7 @@ bool ScriptBranchListViewItem___c__DisplayClass19_0___RemoveUserQuestRoute_b__0(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, c, method);
     this = (ScriptBranchListViewItem___c__DisplayClass19_0_o *)NetworkManager_TypeInfo;
   }
-  if ( userId != *(_QWORD *)(*((_QWORD *)this + 23) + 64LL) )
+  if ( userId != this[5].fields.__4__this->fields.sortValue1B )
     return 0;
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -1425,7 +1425,7 @@ bool ScriptBranchListViewItem___c__DisplayClass20_0___AddUserQuestRoute_b__0(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, c, method);
     this = (ScriptBranchListViewItem___c__DisplayClass20_0_o *)NetworkManager_TypeInfo;
   }
-  if ( userId != *(_QWORD *)(*((_QWORD *)this + 23) + 64LL) )
+  if ( userId != *(_QWORD *)(*(_QWORD *)&this[4].fields.i + 64LL) )
     return 0;
   _4__this = v4->fields.__4__this;
   if ( !_4__this )

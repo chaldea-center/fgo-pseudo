@@ -868,7 +868,8 @@ EventMissionConditionEntity_o *MissionInfoMaker__GetMissionNotClearConditionInfo
             (System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o *)&v31,
             Values,
             (const MethodInfo_3CC3590 *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__List_EventMissionConditionEntity___GetEnumerator__);
-          v33 = *(System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o *)&v31.fields._dictionary;
+          v33.fields._currentValue = v31.fields._current.fields.key;
+          *(_OWORD *)&v33.fields._dictionary = *(_OWORD *)&v31.fields._dictionary;
           while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___MoveNext(
                     &v33,
                     (const MethodInfo_41591F8 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__List_EventMissionConditionEntity___MoveNext__) )

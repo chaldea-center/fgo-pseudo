@@ -195,6 +195,7 @@ void EventFortificationListViewObject__InitItem(EventFortificationListViewObject
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventFortificationListViewObject__Init_38221064(
         EventFortificationListViewObject_o *this,
         int32_t initMode,
@@ -202,23 +203,18 @@ void EventFortificationListViewObject__Init_38221064(
 {
   const MethodInfo *v3; // x3
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v10.fields.x = v5;
-  v10.fields.y = v6;
-  v10.fields.z = v7;
-  EventFortificationListViewObject__Init(this, initMode, 0, v4, v10, v3);
+  EventFortificationListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventFortificationListViewObject__Init_38221712(
         EventFortificationListViewObject_o *this,
         int32_t initMode,
@@ -226,23 +222,18 @@ void EventFortificationListViewObject__Init_38221712(
         const MethodInfo *method)
 {
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  EventFortificationListViewObject__Init(this, initMode, callbackFunc, v4, v11, method);
+  EventFortificationListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventFortificationListViewObject__Init_38236384(
         EventFortificationListViewObject_o *this,
         int32_t initMode,
@@ -250,20 +241,14 @@ void EventFortificationListViewObject__Init_38236384(
         float delay,
         const MethodInfo *method)
 {
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  EventFortificationListViewObject__Init(this, initMode, callbackFunc, delay, v11, method);
+  EventFortificationListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 

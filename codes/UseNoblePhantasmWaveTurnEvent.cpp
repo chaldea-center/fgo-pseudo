@@ -17,6 +17,7 @@ UseNoblePhantasmWaveTurnEvent_o *UseNoblePhantasmWaveTurnEvent__CreateBySaveData
   ServantWaveTurnEvent_SaveData_o *v2; // x19
   Il2CppClass *v3; // d8
   Il2CppObject *v4; // x19
+  UseNoblePhantasmWaveTurnEvent_o *result; // x0
 
   v2 = saveData;
   if ( (byte_5973E40 & 1) == 0 )
@@ -29,8 +30,9 @@ UseNoblePhantasmWaveTurnEvent_o *UseNoblePhantasmWaveTurnEvent__CreateBySaveData
   v3 = *(Il2CppClass **)&v2->fields.Wave;
   v4 = (Il2CppObject *)sub_2213CCC(UseNoblePhantasmWaveTurnEvent_TypeInfo);
   System_Object___ctor(v4, 0);
+  result = (UseNoblePhantasmWaveTurnEvent_o *)v4;
   v4[1].klass = v3;
-  return (UseNoblePhantasmWaveTurnEvent_o *)v4;
+  return result;
 }
 
 

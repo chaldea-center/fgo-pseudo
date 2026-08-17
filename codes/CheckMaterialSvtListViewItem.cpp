@@ -1007,14 +1007,19 @@ bool CheckMaterialSvtListViewItem__get_IsUseSupportServant(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o CheckMaterialSvtListViewItem__get_SvtId(
         CheckMaterialSvtListViewItem_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v3; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o result; // 0:x0.16
 
-  *(_QWORD *)&result.fields.fakeValue = *(_QWORD *)&this->fields._SvtId_k__BackingField.fields.fakeValue;
-  *(_QWORD *)&result.fields.currentCryptoKey = *(_QWORD *)&this->fields._SvtId_k__BackingField.fields.currentCryptoKey;
+  v2 = *(_QWORD *)&this->fields._SvtId_k__BackingField.fields.fakeValue;
+  v3 = *(_QWORD *)&this->fields._SvtId_k__BackingField.fields.currentCryptoKey;
+  *(_QWORD *)&result.fields.fakeValue = v2;
+  *(_QWORD *)&result.fields.currentCryptoKey = v3;
   return result;
 }
 

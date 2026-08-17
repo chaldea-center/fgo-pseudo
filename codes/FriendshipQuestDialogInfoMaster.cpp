@@ -43,10 +43,12 @@ bool FriendshipQuestDialogInfoMaster__GetLimitCountUnsealInfo(
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t v8; // w22
   Il2CppObject *Item; // x0
+  bool result; // w0
   Il2CppObject *v11; // x23
   Il2CppClass *klass; // x21
   void *monitor; // x22
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
+  int32_t v14; // w8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v15; // 0:x0.16
 
   if ( (byte_5970BC6 & 1) == 0 )
   {
@@ -87,11 +89,13 @@ LABEL_11:
       monitor = Item[1].monitor;
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, svtId);
-      *(_QWORD *)&v14.fields.currentCryptoKey = klass;
-      *(_QWORD *)&v14.fields.fakeValue = monitor;
-      *svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v14, 0);
+      *(_QWORD *)&v15.fields.currentCryptoKey = klass;
+      *(_QWORD *)&v15.fields.fakeValue = monitor;
+      v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v15, 0);
+      result = 1;
+      *svtId = v14;
       *questId = (int32_t)v11[2].klass;
-      return 1;
+      return result;
     }
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     ++v8;

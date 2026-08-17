@@ -584,7 +584,7 @@ bool PurchaseBehaviour__IsAlreadyInitializedWithObfuscatedAccountId(const Method
     return 0;
   if ( !Instance || (monitor = Instance[1].monitor) == 0 )
     sub_2213CDC(monitor, v6);
-  return (*(bool (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 536LL))(
+  return (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 536LL))(
            monitor,
            *(_QWORD *)(*(_QWORD *)monitor + 544LL));
 }
@@ -616,7 +616,7 @@ bool PurchaseBehaviour__IsDeferredPurchaseExists(const MethodInfo *method)
     return 0;
   if ( !Instance || (monitor = Instance[1].monitor) == 0 )
     sub_2213CDC(monitor, v6);
-  return (*(bool (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 808LL))(
+  return (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 808LL))(
            monitor,
            *(_QWORD *)(*(_QWORD *)monitor + 816LL));
 }
@@ -648,7 +648,7 @@ bool PurchaseBehaviour__IsObfuscatedAccountIdCached(const MethodInfo *method)
     return 0;
   if ( !Instance || (monitor = Instance[1].monitor) == 0 )
     sub_2213CDC(monitor, v6);
-  return (*(bool (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 520LL))(
+  return (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 520LL))(
            monitor,
            *(_QWORD *)(*(_QWORD *)monitor + 528LL));
 }
@@ -680,7 +680,7 @@ bool PurchaseBehaviour__IsPurchasingFrameworkAvailable(const MethodInfo *method)
     return 0;
   if ( !Instance || (monitor = Instance[1].monitor) == 0 )
     sub_2213CDC(monitor, v6);
-  return (*(bool (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 440LL))(
+  return (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)monitor + 440LL))(
            monitor,
            *(_QWORD *)(*(_QWORD *)monitor + 448LL));
 }

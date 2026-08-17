@@ -353,15 +353,19 @@ UnityEngine_Vector2_o ServantStatusCharaGraphViewerListViewManager__get_CenterPo
         const MethodInfo *method)
 {
   UnityEngine_Component_o *scrollView; // x0
-  unsigned __int64 localPosition; // kr00_8
+  float v4; // s0
+  float v5; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollView, 0)) == 0 )
     sub_2213CDC(scrollView, method);
-  localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
-  result.fields.x = this->fields.clipOffset.fields.x - *(float *)&localPosition;
-  result.fields.y = this->fields.clipOffset.fields.y - *((float *)&localPosition + 1);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
+  v4 = this->fields.clipOffset.fields.x - localPosition.fields.x;
+  v5 = this->fields.clipOffset.fields.y - localPosition.fields.y;
+  result.fields.y = v5;
+  result.fields.x = v4;
   return result;
 }
 

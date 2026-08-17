@@ -41,14 +41,16 @@ void QuestInformationListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v39; // w5
   bool v40; // w6
   bool v41; // w7
-  System_Array_o *v42; // x19
-  struct QuestInformationListViewItemDraw_StaticFields *v43; // x0
-  System_String_o *v44; // x2
-  System_String_o *v45; // x3
-  int32_t v46; // w4
-  int32_t v47; // w5
-  bool v48; // w6
-  bool v49; // w7
+  System_Array_o *v42; // x0
+  System_RuntimeFieldHandle_o v43; // x1
+  System_Array_o *v44; // x19
+  struct QuestInformationListViewItemDraw_StaticFields *v45; // x0
+  System_String_o *v46; // x2
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
 
   if ( (byte_596D390 & 1) == 0 )
   {
@@ -94,13 +96,12 @@ void QuestInformationListViewItemDraw___cctor(const MethodInfo *method)
   v35->DEFAULT_SHADER = (struct System_String_o *)v33;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v35->DEFAULT_SHADER, v33, v36, v37, v38, v39, v40, v41);
   v42 = (System_Array_o *)sub_2213B20(float___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v42,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__8F796773B56326A3653096CD68407FB306C75260B4E9EC37B8CCB3A5A985DB58,
-    0);
-  v43 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
-  v43->TARGET_POSITION = (struct System_Single_array *)v42;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v43->TARGET_POSITION, (int32_t)v42, v44, v45, v46, v47, v48, v49);
+  v43.fields.value = Field__PrivateImplementationDetails__8F796773B56326A3653096CD68407FB306C75260B4E9EC37B8CCB3A5A985DB58;
+  v44 = v42;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v42, v43, 0);
+  v45 = QuestInformationListViewItemDraw_TypeInfo->static_fields;
+  v45->TARGET_POSITION = (struct System_Single_array *)v44;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v45->TARGET_POSITION, (int32_t)v44, v46, v47, v48, v49, v50, v51);
 }
 
 
@@ -325,11 +326,15 @@ void QuestInformationListViewItemDraw__SetDispType(
         const MethodInfo *method)
 {
   QuestInformationListViewItemDraw_o *v8; // x21
-  QuestInformationListViewItemDraw_o *v12; // x21
-  UnityEngine_Material_o *v13; // x20
-  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  QuestInformationListViewItemDraw_o *v13; // x21
+  UnityEngine_Material_o *v14; // x20
+  struct QuestInformationListViewItemDraw_StaticFields *static_fields; // x8
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
   if ( (byte_596D38A & 1) == 0 )
@@ -345,17 +350,17 @@ void QuestInformationListViewItemDraw__SetDispType(
     case 3:
       if ( !sp )
         goto LABEL_22;
-      v16.fields.r = 1.0;
-      v16.fields.g = 1.0;
-      v16.fields.b = 1.0;
-      v16.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)sp, v16, 0);
-      v13 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
+      v17.fields.r = 1.0;
+      v17.fields.g = 1.0;
+      v17.fields.b = 1.0;
+      v17.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)sp, v17, 0);
+      v14 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
                                         v8,
                                         1,
                                         v8->klass->vtable._5_GetNewChocoMaterial.method);
-      v12 = (QuestInformationListViewItemDraw_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_83274924((UnityEngine_Material_o *)v12, v13, 0);
+      v13 = (QuestInformationListViewItemDraw_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_83274924((UnityEngine_Material_o *)v13, v14, 0);
       goto LABEL_15;
     case 2:
       if ( !item )
@@ -367,7 +372,11 @@ void QuestInformationListViewItemDraw__SetDispType(
           j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp, sp);
         if ( sp )
         {
-          SHADOW_COLOR = QuestInformationListViewItemDraw_TypeInfo->static_fields->SHADOW_COLOR;
+          static_fields = QuestInformationListViewItemDraw_TypeInfo->static_fields;
+          b = static_fields->SHADOW_COLOR.fields.b;
+          a = static_fields->SHADOW_COLOR.fields.a;
+          r = static_fields->SHADOW_COLOR.fields.r;
+          g = static_fields->SHADOW_COLOR.fields.g;
           goto LABEL_21;
         }
 LABEL_22:
@@ -375,40 +384,40 @@ LABEL_22:
       }
       if ( !sp )
         goto LABEL_22;
-      v15.fields.r = 1.0;
-      v15.fields.g = 1.0;
-      v15.fields.b = 1.0;
-      v15.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)sp, v15, 0);
+      v16.fields.r = 1.0;
+      v16.fields.g = 1.0;
+      v16.fields.b = 1.0;
+      v16.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)sp, v16, 0);
       this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._4_GetNewColorShadowMaterial.methodPtr)(
                                                      v8,
                                                      1,
                                                      v8->klass->vtable._4_GetNewColorShadowMaterial.method);
       if ( !this )
         goto LABEL_22;
-      v12 = this;
+      v13 = this;
       UnityEngine_Material__SetColor(
         (UnityEngine_Material_o *)this,
         (System_String_o *)StringLiteral_16813/*"_Color"*/,
         item->fields.mainColor,
         0);
       UnityEngine_Material__SetColor(
-        (UnityEngine_Material_o *)v12,
+        (UnityEngine_Material_o *)v13,
         (System_String_o *)StringLiteral_16758/*"_AddColor"*/,
         item->fields.addColor,
         0);
 LABEL_15:
-      UISpriteAltMat__SetMaterialKeepTexture(sp, (UnityEngine_Material_o *)v12, 0);
+      UISpriteAltMat__SetMaterialKeepTexture(sp, (UnityEngine_Material_o *)v13, 0);
       return;
     case 1:
       if ( sp )
       {
-        SHADOW_COLOR.fields.r = 1.0;
-        SHADOW_COLOR.fields.g = 1.0;
-        SHADOW_COLOR.fields.b = 1.0;
-        SHADOW_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
 LABEL_21:
-        UIWidget__set_color((UIWidget_o *)sp, SHADOW_COLOR, 0);
+        UIWidget__set_color((UIWidget_o *)sp, *(UnityEngine_Color_o *)&r, 0);
         UISpriteAltMat__ResetMaterial(sp, 0);
         return;
       }
@@ -426,16 +435,20 @@ void QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
         const MethodInfo *method)
 {
   QuestInformationListViewItemDraw_o *v8; // x21
-  UnityEngine_Material_o *v12; // x21
-  UnityEngine_Texture_o *v13; // x0
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  UnityEngine_Material_o *v13; // x21
+  UnityEngine_Texture_o *v14; // x0
   UITexture_c *klass; // x8
-  UITexture_o *v15; // x0
-  UnityEngine_Material_o *v16; // x1
-  UnityEngine_Material_o *v17; // x20
-  UnityEngine_Texture_o *v18; // x0
-  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UITexture_o *v16; // x0
+  UnityEngine_Material_o *v17; // x1
+  UnityEngine_Material_o *v18; // x20
+  UnityEngine_Texture_o *v19; // x0
+  struct QuestInformationListViewItemDraw_StaticFields *static_fields; // x8
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
   if ( (byte_596D38C & 1) == 0 )
@@ -452,16 +465,16 @@ void QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
     case 3:
       if ( !texture )
         goto LABEL_27;
-      v21.fields.r = 1.0;
-      v21.fields.g = 1.0;
-      v21.fields.b = 1.0;
-      v21.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)texture, v21, 0);
+      v22.fields.r = 1.0;
+      v22.fields.g = 1.0;
+      v22.fields.b = 1.0;
+      v22.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)texture, v22, 0);
       ((void (__fastcall *)(UITexture_o *, _QWORD, const MethodInfo *))texture->klass->vtable._29_set_shader.methodPtr)(
         texture,
         0,
         texture->klass->vtable._29_set_shader.method);
-      v17 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
+      v18 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._5_GetNewChocoMaterial.methodPtr)(
                                         v8,
                                         1,
                                         v8->klass->vtable._5_GetNewChocoMaterial.method);
@@ -474,19 +487,19 @@ void QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
                                                      (UnityEngine_Material_o *)this,
                                                      (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
                                                      0);
-      if ( !v17 )
+      if ( !v18 )
         goto LABEL_27;
-      UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
+      UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
       this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
                                                      texture,
                                                      texture->klass->vtable._24_get_material.method);
       if ( !this )
         goto LABEL_27;
-      v18 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, 0);
-      UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, v18, 0);
+      v19 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, 0);
+      UnityEngine_Material__SetTexture(v18, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, v19, 0);
       klass = texture->klass;
-      v15 = texture;
-      v16 = v17;
+      v16 = texture;
+      v17 = v18;
       goto LABEL_20;
     case 2:
       if ( !item )
@@ -498,7 +511,11 @@ void QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
           j_il2cpp_runtime_class_init_0(QuestInformationListViewItemDraw_TypeInfo, *(_QWORD *)&dispTp, texture);
         if ( texture )
         {
-          SHADOW_COLOR = QuestInformationListViewItemDraw_TypeInfo->static_fields->SHADOW_COLOR;
+          static_fields = QuestInformationListViewItemDraw_TypeInfo->static_fields;
+          r = static_fields->SHADOW_COLOR.fields.r;
+          g = static_fields->SHADOW_COLOR.fields.g;
+          b = static_fields->SHADOW_COLOR.fields.b;
+          a = static_fields->SHADOW_COLOR.fields.a;
           goto LABEL_26;
         }
 LABEL_27:
@@ -506,16 +523,16 @@ LABEL_27:
       }
       if ( !texture )
         goto LABEL_27;
-      v20.fields.r = 1.0;
-      v20.fields.g = 1.0;
-      v20.fields.b = 1.0;
-      v20.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)texture, v20, 0);
+      v21.fields.r = 1.0;
+      v21.fields.g = 1.0;
+      v21.fields.b = 1.0;
+      v21.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)texture, v21, 0);
       ((void (__fastcall *)(UITexture_o *, _QWORD, const MethodInfo *))texture->klass->vtable._29_set_shader.methodPtr)(
         texture,
         0,
         texture->klass->vtable._29_set_shader.method);
-      v12 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._4_GetNewColorShadowMaterial.methodPtr)(
+      v13 = (UnityEngine_Material_o *)((__int64 (__fastcall *)(QuestInformationListViewItemDraw_o *, __int64, const MethodInfo *))v8->klass->vtable._4_GetNewColorShadowMaterial.methodPtr)(
                                         v8,
                                         1,
                                         v8->klass->vtable._4_GetNewColorShadowMaterial.method);
@@ -528,25 +545,25 @@ LABEL_27:
                                                      (UnityEngine_Material_o *)this,
                                                      (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
                                                      0);
-      if ( !v12 )
+      if ( !v13 )
         goto LABEL_27;
-      UnityEngine_Material__SetTexture(v12, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
+      UnityEngine_Material__SetTexture(v13, (System_String_o *)StringLiteral_16914/*"_MainTex"*/, (UnityEngine_Texture_o *)this, 0);
       this = (QuestInformationListViewItemDraw_o *)((__int64 (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._24_get_material.methodPtr)(
                                                      texture,
                                                      texture->klass->vtable._24_get_material.method);
       if ( !this )
         goto LABEL_27;
-      v13 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, 0);
-      UnityEngine_Material__SetTexture(v12, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, v13, 0);
-      UnityEngine_Material__SetColor(v12, (System_String_o *)StringLiteral_16813/*"_Color"*/, item->fields.mainColor, 0);
-      UnityEngine_Material__SetColor(v12, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, item->fields.addColor, 0);
+      v14 = UnityEngine_Material__GetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, 0);
+      UnityEngine_Material__SetTexture(v13, (System_String_o *)StringLiteral_16919/*"_MaskTex"*/, v14, 0);
+      UnityEngine_Material__SetColor(v13, (System_String_o *)StringLiteral_16813/*"_Color"*/, item->fields.mainColor, 0);
+      UnityEngine_Material__SetColor(v13, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, item->fields.addColor, 0);
       klass = texture->klass;
-      v15 = texture;
-      v16 = v12;
+      v16 = texture;
+      v17 = v13;
 LABEL_20:
       ((void (__fastcall *)(UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))klass->vtable._25_set_material.methodPtr)(
-        v15,
         v16,
+        v17,
         klass->vtable._25_set_material.method);
       ((void (__fastcall *)(UITexture_o *, const MethodInfo *))texture->klass->vtable._30_MarkAsChanged.methodPtr)(
         texture,
@@ -555,12 +572,12 @@ LABEL_20:
     case 1:
       if ( texture )
       {
-        SHADOW_COLOR.fields.r = 1.0;
-        SHADOW_COLOR.fields.g = 1.0;
-        SHADOW_COLOR.fields.b = 1.0;
-        SHADOW_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
 LABEL_26:
-        UIWidget__set_color((UIWidget_o *)texture, SHADOW_COLOR, 0);
+        UIWidget__set_color((UIWidget_o *)texture, *(UnityEngine_Color_o *)&r, 0);
         return;
       }
       goto LABEL_27;
@@ -1736,7 +1753,7 @@ LABEL_8:
   QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
     (QuestInformationListViewItemDraw_o *)this,
     item->fields.dispType,
-    *((UITexture_o **)this + 18),
+    (UITexture_o *)this[4].fields.__4__this,
     item,
     v5);
 }

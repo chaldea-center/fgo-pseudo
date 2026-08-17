@@ -178,26 +178,26 @@ void ScriptLineMessage__AddLabel(
   UnityEngine_Transform_o *v80; // x21
   UnityEngine_Transform_o *v81; // x21
   int32_t condensedSize; // w22
+  float v83; // s0
   System_Collections_Generic_List_object__o *dispLabelList; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v85; // x10
+  _QWORD *v86; // x10
   __int64 size; // x11
-  Il2CppClass **v87; // x0
-  System_String_o *v88; // x23
-  int v89; // w8
-  __int64 v90; // x23
+  Il2CppClass **v88; // x0
+  System_String_o *v89; // x23
+  int v90; // w8
+  __int64 v91; // x23
   UILabel_o *RubyLabel; // x0
-  System_String_o *v92; // x2
-  System_String_o *v93; // x3
-  int32_t v94; // w4
-  int32_t v95; // w5
-  bool v96; // w6
-  bool v97; // w7
-  System_String_o *v98; // x23
-  __int64 v99; // x23
-  int v100; // w24
-  int32_t v101; // w0
-  float v102; // s0
+  System_String_o *v93; // x2
+  System_String_o *v94; // x3
+  int32_t v95; // w4
+  int32_t v96; // w5
+  bool v97; // w6
+  bool v98; // w7
+  System_String_o *v99; // x23
+  __int64 v100; // x23
+  int v101; // w24
+  int32_t v102; // w0
   UnityEngine_Vector2_o v103; // 0:s1.4,4:s2.4
   UnityEngine_Vector3_o v104; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v105; // 0:s0.4,4:s1.4,8:s2.4
@@ -248,7 +248,7 @@ void ScriptLineMessage__AddLabel(
         {
           if ( v50 )
           {
-            v88 = *(System_String_o **)(Label + 32);
+            v89 = *(System_String_o **)(Label + 32);
             Label = sub_2213B20(char___TypeInfo, 1);
             if ( !Label )
               goto LABEL_64;
@@ -256,16 +256,16 @@ void ScriptLineMessage__AddLabel(
             if ( *(_DWORD *)(Label + 24) )
             {
               *(_WORD *)(Label + 32) = 58;
-              if ( !v88 )
+              if ( !v89 )
                 goto LABEL_64;
-              Label = (__int64)System_String__Split_75705984(v88, (System_Char_array *)Label, 0);
+              Label = (__int64)System_String__Split_75705984(v89, (System_Char_array *)Label, 0);
               if ( !Label )
                 goto LABEL_64;
-              v89 = *(_DWORD *)(Label + 24);
-              v90 = Label;
-              if ( v89 <= 1 )
+              v90 = *(_DWORD *)(Label + 24);
+              v91 = Label;
+              if ( v90 <= 1 )
               {
-                if ( v89 )
+                if ( v90 )
                 {
                   ScriptMessageLabel__UpdateImage(
                     (ScriptMessageLabel_o *)v18,
@@ -285,13 +285,13 @@ void ScriptLineMessage__AddLabel(
                 sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)(v18 + 24),
                   (int32_t)RubyLabel,
-                  v92,
                   v93,
                   v94,
                   v95,
                   v96,
-                  v97);
-                if ( *(_DWORD *)(v90 + 24) >= 2u )
+                  v97,
+                  v98);
+                if ( *(_DWORD *)(v91 + 24) >= 2u )
                 {
                   ScriptMessageLabel__UpdateImageRuby(
                     (ScriptMessageLabel_o *)v18,
@@ -299,8 +299,8 @@ void ScriptLineMessage__AddLabel(
                     (UILabel_o **)(v18 + 24),
                     &this->fields.dispPosition,
                     this->fields.fontSize,
-                    *(System_String_o **)(v90 + 32),
-                    *(System_String_o **)(v90 + 40),
+                    *(System_String_o **)(v91 + 32),
+                    *(System_String_o **)(v91 + 40),
                     font,
                     0,
                     0);
@@ -333,7 +333,7 @@ void ScriptLineMessage__AddLabel(
             goto LABEL_25;
           if ( (unsigned int)v55 > 2 )
           {
-            v98 = *(System_String_o **)(v51 + 48);
+            v99 = *(System_String_o **)(v51 + 48);
             Label = sub_2213B20(char___TypeInfo, 1);
             if ( !Label )
               goto LABEL_64;
@@ -341,21 +341,21 @@ void ScriptLineMessage__AddLabel(
             if ( *(_DWORD *)(Label + 24) )
             {
               *(_WORD *)(Label + 32) = 44;
-              if ( !v98 )
+              if ( !v99 )
                 goto LABEL_64;
-              Label = (__int64)System_String__Split_75705984(v98, (System_Char_array *)Label, 0);
+              Label = (__int64)System_String__Split_75705984(v99, (System_Char_array *)Label, 0);
               if ( !Label )
                 goto LABEL_64;
-              v99 = Label;
+              v100 = Label;
               if ( *(_DWORD *)(Label + 24) )
               {
                 Label = System_Int32__Parse(*(System_String_o **)(Label + 32), 0);
-                if ( (*(_DWORD *)(v99 + 24) & 0xFFFFFFFE) != 0 )
+                if ( (*(_DWORD *)(v100 + 24) & 0xFFFFFFFE) != 0 )
                 {
-                  v100 = Label;
-                  v101 = System_Int32__Parse(*(System_String_o **)(v99 + 40), 0);
-                  v103.fields.x = (float)v100;
-                  v103.fields.y = (float)v101;
+                  v101 = Label;
+                  v102 = System_Int32__Parse(*(System_String_o **)(v100 + 40), 0);
+                  v103.fields.x = (float)v101;
+                  v103.fields.y = (float)v102;
                   ScriptMessageLabel__UpdateImage_51892000(
                     (ScriptMessageLabel_o *)v18,
                     (UISprite_o **)(v18 + 32),
@@ -505,11 +505,11 @@ LABEL_25:
         {
           v81 = (UnityEngine_Transform_o *)Label;
           condensedSize = this->fields.condensedSize;
-          LODWORD(v102) = (unsigned int)UnityEngine_Transform__get_localPosition(this->fields.messageOffset, 0);
+          LODWORD(v83) = (unsigned int)UnityEngine_Transform__get_localPosition(this->fields.messageOffset, 0);
           if ( v81 )
           {
             v105.fields.z = 1.0;
-            v105.fields.x = (float)condensedSize / fabsf(v102);
+            v105.fields.x = (float)condensedSize / fabsf(v83);
             v105.fields.y = 1.0;
             UnityEngine_Transform__set_localScale(v81, v105, 0);
             goto LABEL_38;
@@ -525,7 +525,7 @@ LABEL_38:
   if ( !dispLabelList )
     goto LABEL_64;
   items = dispLabelList->fields._items;
-  v85 = Method_System_Collections_Generic_List_ScriptMessageLabel__Add__;
+  v86 = Method_System_Collections_Generic_List_ScriptMessageLabel__Add__;
   ++dispLabelList->fields._version;
   if ( !items )
     goto LABEL_64;
@@ -535,14 +535,14 @@ LABEL_38:
     System_Collections_Generic_List_object___AddWithResize(
       dispLabelList,
       (Il2CppObject *)v18,
-      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v85[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
   }
   else
   {
-    v87 = &items->obj.klass + size;
-    v87[4] = (Il2CppClass *)v18;
+    v88 = &items->obj.klass + size;
+    v88[4] = (Il2CppClass *)v18;
     dispLabelList->fields._size = size + 1;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v87 + 4), v18, v74, v75, v76, v77, v78, v79);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v88 + 4), v18, v74, v75, v76, v77, v78, v79);
   }
 }
 
@@ -1320,13 +1320,17 @@ ScriptMessageLabel_array *ScriptLineMessage__GetDispLabelArray(ScriptLineMessage
 UnityEngine_Vector2_o ScriptLineMessage__GetPrintedSize(ScriptLineMessage_o *this, const MethodInfo *method)
 {
   float x; // s0
+  float v3; // s0
+  float v4; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   x = this->fields.dispPosition.fields.x;
   if ( this->fields.maxDispPosition.fields.x >= x )
     x = this->fields.maxDispPosition.fields.x;
-  result.fields.x = x - this->fields.startPosition.fields.x;
-  result.fields.y = -(float)(this->fields.maxDispPosition.fields.y - this->fields.startPosition.fields.y);
+  v3 = x - this->fields.startPosition.fields.x;
+  v4 = -(float)(this->fields.maxDispPosition.fields.y - this->fields.startPosition.fields.y);
+  result.fields.y = v4;
+  result.fields.x = v3;
   return result;
 }
 
@@ -2351,10 +2355,14 @@ LABEL_88:
 
 UnityEngine_Vector2_o ScriptLineMessage__get_DispPos(ScriptLineMessage_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.dispPosition.fields.x;
-  result.fields.y = this->fields.dispPosition.fields.y;
+  x = this->fields.dispPosition.fields.x;
+  y = this->fields.dispPosition.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -2367,10 +2375,14 @@ float ScriptLineMessage__get_RubyLineHegight(ScriptLineMessage_o *this, const Me
 
 UnityEngine_Vector2_o ScriptLineMessage__get_StartPos(ScriptLineMessage_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.startPosition.fields.x;
-  result.fields.y = this->fields.startPosition.fields.y;
+  x = this->fields.startPosition.fields.x;
+  y = this->fields.startPosition.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -2440,9 +2452,9 @@ System_IAsyncResult_o *ScriptLineMessage_ProcAddLabel__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -2533,7 +2545,7 @@ System_IAsyncResult_o *ScriptLineMessage_ProcAddLabel2__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = txt;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -2629,7 +2641,7 @@ void ScriptLineMessage___c__DisplayClass55_0___UpdateLabels_b__1(
   bool v6; // w6
   bool v7; // w7
   ScriptLineMessage___c__DisplayClass55_0_o *v8; // x19
-  struct System_String_o *tmpColorTag; // x1
+  struct ScriptLineMessage_o *tmpColorTag; // x1
 
   if ( !text )
     goto LABEL_7;
@@ -2642,7 +2654,7 @@ void ScriptLineMessage___c__DisplayClass55_0___UpdateLabels_b__1(
     ScriptLineMessage__AddLabel(
       (ScriptLineMessage_o *)this,
       text,
-      *((System_String_o **)this + 17),
+      (System_String_o *)this[2].fields.__4__this,
       0,
       v8->fields.font,
       v5);
@@ -2651,10 +2663,10 @@ void ScriptLineMessage___c__DisplayClass55_0___UpdateLabels_b__1(
   if ( !this )
 LABEL_7:
     sub_2213CDC(this, text);
-  tmpColorTag = v8->fields.tmpColorTag;
-  *((_QWORD *)this + 17) = tmpColorTag;
+  tmpColorTag = (struct ScriptLineMessage_o *)v8->fields.tmpColorTag;
+  this[2].fields.__4__this = tmpColorTag;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)((char *)this + 136),
+    (MissionNaviTransitionBoardItem_o *)&this[2].fields.__4__this,
     (int32_t)tmpColorTag,
     (System_String_o *)method,
     v3,

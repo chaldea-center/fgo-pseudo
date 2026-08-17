@@ -1359,7 +1359,7 @@ System_IAsyncResult_o *WarBoardPartyOrganizationMenu_OnFinishedEditMember__Begin
   WarBoardPartyOrganizationMenu_ResponseData_array *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = data;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -1491,7 +1491,7 @@ System_IAsyncResult_o *WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent__Begi
   v11 = (unsigned __int64)memberItem;
   *((_QWORD *)&v11 + 1) = j_il2cpp_value_box_0(qword_5984328, v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984328, v13);
-  return sub_2213A14(this, &v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v11, callback, object);
 }
 
 

@@ -103,15 +103,22 @@ void TutorialNotificationMessage__EndOpen(TutorialNotificationMessage_o *this, c
   __int64 v9; // x1
   UnityEngine_GameObject_o *v10; // x21
   UnityEngine_Transform_o *transform; // x22
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s11
+  float y; // s12
+  float z; // s13
+  float v15; // s8
+  float v16; // s9
+  float v17; // s10
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F419 & 1) == 0 )
   {
@@ -135,21 +142,30 @@ void TutorialNotificationMessage__EndOpen(TutorialNotificationMessage_o *this, c
     v10 = touchBase;
     transform = UnityEngine_GameObject__get_transform(touchBase, 0);
     touchBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v10, 0);
+    if ( !touchBase )
+      goto LABEL_17;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)touchBase, 0);
+    x = localPosition.fields.x;
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
+    touchBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v10, 0);
     if ( !touchBase
-      || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)touchBase, 0),
-          (touchBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v10, 0)) == 0)
       || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)touchBase, 0),
           (touchBase = this->fields.touchBase) == 0)
-      || (touchBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(touchBase, 0), !transform) )
+      || (v15 = localScale.fields.x,
+          v16 = localScale.fields.y,
+          v17 = localScale.fields.z,
+          touchBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(touchBase, 0),
+          !transform) )
     {
 LABEL_17:
       sub_2213CDC(touchBase, v9);
     }
     UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)touchBase, 0);
-    v20.fields.x = localPosition.fields.x + this->fields.touchObjPos.fields.x;
-    v20.fields.y = localPosition.fields.y + this->fields.touchObjPos.fields.y;
-    v20.fields.z = localPosition.fields.z + this->fields.touchObjPos.fields.z;
-    UnityEngine_Transform__set_localPosition(transform, v20, 0);
+    v26.fields.x = x + this->fields.touchObjPos.fields.x;
+    v26.fields.y = y + this->fields.touchObjPos.fields.y;
+    v26.fields.z = z + this->fields.touchObjPos.fields.z;
+    UnityEngine_Transform__set_localPosition(transform, v26, 0);
     if ( !byte_5969AE6 )
     {
       sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -159,17 +175,20 @@ LABEL_17:
       transform,
       UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
       0);
-    UnityEngine_Transform__set_localScale(transform, localScale, 0);
+    v27.fields.x = v15;
+    v27.fields.y = v16;
+    v27.fields.z = v17;
+    UnityEngine_Transform__set_localScale(transform, v27, 0);
     this->fields.touchObject = v10;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.touchObject,
       (int32_t)v10,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17);
+      v18,
+      v19,
+      v20,
+      v21,
+      v22,
+      v23);
   }
   this->fields.isButtonEnable = 1;
 }
@@ -414,7 +433,7 @@ void TutorialNotificationMessage__Open(
   System_Action_o *v29; // x0
   intptr_t *v30; // x8
   System_Action_o *v31; // x21
-  struct UnityEngine_Vector2_o localPosition; // kr00_8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
   y = messagePos.fields.y;
@@ -463,11 +482,10 @@ void TutorialNotificationMessage__Open(
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
       if ( !transform )
         goto LABEL_30;
-      localPosition = (struct UnityEngine_Vector2_o)UnityEngine_Transform__get_localPosition(
-                                                      (UnityEngine_Transform_o *)transform,
-                                                      0);
+      localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
       transform = this->fields.messageLabel;
-      this->fields.messageDefaultPosition = localPosition;
+      this->fields.messageDefaultPosition.fields.x = localPosition.fields.x;
+      this->fields.messageDefaultPosition.fields.y = localPosition.fields.y;
       if ( !transform )
         goto LABEL_30;
       this->fields.messageDefaultFontSize = *((_DWORD *)transform + 106);
@@ -550,7 +568,7 @@ void TutorialNotificationMessage__OpenWithArrow(
   const MethodInfo *v22; // x2
   void *transform; // x0
   System_String_o *v24; // x1
-  struct UnityEngine_Vector2_o localPosition; // kr00_8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   y = messagePos.fields.y;
@@ -597,11 +615,10 @@ void TutorialNotificationMessage__OpenWithArrow(
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
     if ( !transform )
       goto LABEL_27;
-    localPosition = (struct UnityEngine_Vector2_o)UnityEngine_Transform__get_localPosition(
-                                                    (UnityEngine_Transform_o *)transform,
-                                                    0);
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
     transform = this->fields.messageLabel;
-    this->fields.messageDefaultPosition = localPosition;
+    this->fields.messageDefaultPosition.fields.x = localPosition.fields.x;
+    this->fields.messageDefaultPosition.fields.y = localPosition.fields.y;
     if ( !transform )
       goto LABEL_27;
     this->fields.messageDefaultFontSize = *((_DWORD *)transform + 106);
@@ -676,9 +693,9 @@ void TutorialNotificationMessage__Open_47104524(
   System_String_o *v34; // x20
   System_Action_o *v35; // x22
   System_Action_o *v36; // x20
-  struct UnityEngine_Vector2_o localPosition; // kr00_8
-  int32_t v38; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector2_o v39; // 0:s0.4,4:s1.4
+  int32_t v37; // [xsp+Ch] [xbp-74h] BYREF
+  UnityEngine_Vector2_o v38; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -762,9 +779,9 @@ void TutorialNotificationMessage__Open_47104524(
     transform = this->fields.messageLabel;
     if ( !transform )
       goto LABEL_51;
-    v39.fields.x = 3.0;
-    v39.fields.y = 3.0;
-    UILabel__set_effectDistance(transform, v39, 0);
+    v38.fields.x = 3.0;
+    v38.fields.y = 3.0;
+    UILabel__set_effectDistance(transform, v38, 0);
     transform = this->fields.messageLabel;
     if ( !transform )
       goto LABEL_51;
@@ -805,11 +822,10 @@ void TutorialNotificationMessage__Open_47104524(
     transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
     if ( !transform )
       goto LABEL_51;
-    localPosition = (struct UnityEngine_Vector2_o)UnityEngine_Transform__get_localPosition(
-                                                    (UnityEngine_Transform_o *)transform,
-                                                    0);
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
     transform = this->fields.messageLabel;
-    this->fields.messageDefaultPosition = localPosition;
+    this->fields.messageDefaultPosition.fields.x = localPosition.fields.x;
+    this->fields.messageDefaultPosition.fields.y = localPosition.fields.y;
     if ( !transform )
       goto LABEL_51;
     this->fields.messageDefaultFontSize = transform->fields.mFontSize;
@@ -866,8 +882,8 @@ LABEL_44:
   if ( !dlgBgId )
     goto LABEL_48;
   backTexture = this->fields.backTexture;
-  v38 = dlgBgId;
-  v33 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v38);
+  v37 = dlgBgId;
+  v33 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v37);
   v34 = System_String__Format((System_String_o *)StringLiteral_3154/*"Back/back{0}"*/, v33, 0);
   v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v35, (Il2CppObject *)this, Method_TutorialNotificationMessage__Open_b__14_0__, 0);

@@ -10,13 +10,15 @@ bool ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(
         ServantCollectionCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  return (((__int64 (__fastcall *)(ServantCollectionCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
-            this,
-            this->klass->vtable._5_IsMatchRarityFilter.method)
-        & 1) != 0
-      && ((bool (__fastcall *)(ServantCollectionCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._7_IsMatchClassFilter.methodPtr)(
-           this,
-           this->klass->vtable._7_IsMatchClassFilter.method);
+  if ( (((__int64 (__fastcall *)(ServantCollectionCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
+          this,
+          this->klass->vtable._5_IsMatchRarityFilter.method)
+      & 1) != 0 )
+    return ((__int64 (__fastcall *)(ServantCollectionCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._7_IsMatchClassFilter.methodPtr)(
+             this,
+             this->klass->vtable._7_IsMatchClassFilter.method);
+  else
+    return 0;
 }
 
 

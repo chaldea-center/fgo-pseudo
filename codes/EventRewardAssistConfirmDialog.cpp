@@ -562,7 +562,7 @@ void EventRewardAssistConfirmDialog___c__DisplayClass22_0___Open_b__0(
   struct EventRewardAssistConfirmDialog_o *_4__this; // x8
   UISprite_o *skillIcon; // x20
   struct ShopEntity_o *shopEnt; // x8
-  System_String_o *v7; // x21
+  AssistEntity_c *klass; // x21
   struct AssistEntity_o *beforeAssistEnt; // x8
   Il2CppObject *v9; // x22
   Il2CppObject *v10; // x0
@@ -603,7 +603,7 @@ void EventRewardAssistConfirmDialog___c__DisplayClass22_0___Open_b__0(
   shopEnt = v3->fields.shopEnt;
   if ( !shopEnt )
     goto LABEL_14;
-  v7 = (System_String_o *)**((_QWORD **)this + 23);
+  klass = this[3].fields.afterAssistEnt->klass;
   eventId = shopEnt->fields.eventId;
   this = (EventRewardAssistConfirmDialog___c__DisplayClass22_0_o *)j_il2cpp_value_box_0(qword_5984348, &eventId);
   beforeAssistEnt = v3->fields.beforeAssistEnt;
@@ -612,7 +612,7 @@ void EventRewardAssistConfirmDialog___c__DisplayClass22_0___Open_b__0(
   v9 = (Il2CppObject *)this;
   imageId = beforeAssistEnt->fields.imageId;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &imageId);
-  v13 = System_String__Format_75697880(v7, v9, v10, 0);
+  v13 = System_String__Format_75697880((System_String_o *)klass, v9, v10, 0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v11, v12);
   this = (EventRewardAssistConfirmDialog___c__DisplayClass22_0_o *)AtlasManager__SetEventUI(skillIcon, v13, 0);

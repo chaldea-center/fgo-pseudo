@@ -53,7 +53,7 @@ System_String_o *QuestRestrictionMaster__GetRestrictionName(
   CommonReleaseMaster_o *v11; // x23
   int32_t Count; // w0
   int32_t v13; // w24
-  Il2CppObject *Entity; // x25
+  void *Entity; // x25
   int32_t i; // w26
   const MethodInfo *v16; // x2
   CommonReleaseMaster_o *v17; // x27
@@ -140,9 +140,9 @@ LABEL_14:
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                         (int32_t)v17->fields._MasterName_k__BackingField,
                                         (const MethodInfo_3F10B30 *)Method_DataMasterBase_RestrictionMaster__RestrictionEntity__int__GetEntity__);
-          Entity = (Il2CppObject *)result;
+          Entity = result;
           if ( result )
-            return (System_String_o *)Entity[1].monitor;
+            return (System_String_o *)*((_QWORD *)Entity + 3);
           return result;
         }
 LABEL_27:
@@ -152,7 +152,7 @@ LABEL_27:
   }
   if ( !Entity )
     return 0;
-  return (System_String_o *)Entity[1].monitor;
+  return (System_String_o *)*((_QWORD *)Entity + 3);
 }
 
 

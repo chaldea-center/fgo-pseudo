@@ -539,7 +539,7 @@ void WarBoardEffectComponent__WidgetDepthIncrement(
       this = (WarBoardEffectComponent_o *)v16->m_Items[v15];
       if ( !this )
         break;
-      UIWidget__set_depth((UIWidget_o *)this, *((_DWORD *)this + 44) + value, 0);
+      UIWidget__set_depth((UIWidget_o *)this, LODWORD(this[2].fields.effectIcon) + value, 0);
       if ( (_DWORD)max_length == (_DWORD)++v15 )
         return;
     }

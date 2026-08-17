@@ -868,6 +868,7 @@ bool ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26__Move
   int32_t v26; // w5
   bool v27; // w6
   bool v28; // w7
+  bool result; // w0
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+18h] [xbp-48h] BYREF
 
   v2 = this;
@@ -972,8 +973,9 @@ LABEL_29:
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, 0, v23, v24, v25, v26, v27, v28);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

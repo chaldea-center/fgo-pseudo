@@ -28,15 +28,19 @@ void BaseMenu__Close(BaseMenu_o *this, System_Action_o *callback, const MethodIn
   UnityEngine_Transform_o *v13; // x20
   __int64 v14; // x1
   __int64 v15; // x2
-  UnityEngine_GameObject_o *v16; // x20
-  BaseMenu_c *v17; // x0
-  __int64 v18; // x1
-  __int64 v19; // x2
-  TweenPosition_o *v20; // x20
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_GameObject_o *v19; // x20
+  BaseMenu_c *v20; // x0
+  __int64 v21; // x1
+  __int64 v22; // x2
+  TweenPosition_o *v23; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v22; // x1
-  UnityEngine_Vector3_o v23; // 0:kr14_12.12
+  __int64 v25; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5969E67 & 1) == 0 )
   {
@@ -72,29 +76,35 @@ void BaseMenu__Close(BaseMenu_o *this, System_Action_o *callback, const MethodIn
       position = UnityEngine_Transform__get_position(this->fields.closeTransform, 0);
       if ( !v13 )
         goto LABEL_24;
-      v23 = UnityEngine_Transform__InverseTransformPoint(v13, position, 0);
-      v16 = this->fields.baseWindow;
-      v17 = BaseMenu_TypeInfo;
+      v27 = UnityEngine_Transform__InverseTransformPoint(v13, position, 0);
+      x = v27.fields.x;
+      y = v27.fields.y;
+      z = v27.fields.z;
+      v19 = this->fields.baseWindow;
+      v20 = BaseMenu_TypeInfo;
       if ( !*(&BaseMenu_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo, v14, v15);
-        v17 = BaseMenu_TypeInfo;
+        v20 = BaseMenu_TypeInfo;
       }
-      v20 = TweenPosition__Begin(v16, v17->static_fields->CLOSE_MOVE_TIME, v23, 0);
+      v28.fields.x = x;
+      v28.fields.y = y;
+      v28.fields.z = z;
+      v23 = TweenPosition__Begin(v19, v20->static_fields->CLOSE_MOVE_TIME, v28, 0);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18, v19);
-      transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v20, 0, 0);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21, v22);
+      transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v23, 0, 0);
       if ( ((unsigned __int8)transform & 1) != 0 )
       {
-        if ( v20 )
+        if ( v23 )
         {
-          v20->fields.method = 3;
+          v23->fields.method = 3;
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          v20->fields.eventReceiver = gameObject;
-          sub_2213A04(&v20->fields.eventReceiver, gameObject);
-          v22 = StringLiteral_6240/*"EndCloseBaseDialog"*/;
-          v20->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6240/*"EndCloseBaseDialog"*/;
-          sub_2213A04(&v20->fields.callWhenFinished, v22);
+          v23->fields.eventReceiver = gameObject;
+          sub_2213A04(&v23->fields.eventReceiver, gameObject);
+          v25 = StringLiteral_6240/*"EndCloseBaseDialog"*/;
+          v23->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6240/*"EndCloseBaseDialog"*/;
+          sub_2213A04(&v23->fields.callWhenFinished, v25);
           return;
         }
 LABEL_24:
@@ -251,8 +261,8 @@ void BaseMenu__Open(BaseMenu_o *this, System_Action_o *callback, const MethodInf
   TweenPosition_o *v24; // x20
   UnityEngine_GameObject_o *v25; // x0
   __int64 v26; // x1
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5969E66 & 1) == 0 )
   {
@@ -351,10 +361,10 @@ LABEL_31:
       p_basePosition = &this->fields.basePosition;
       p_y = &this->fields.basePosition.fields.y;
     }
-    v27.fields.z = *p_z;
-    v27.fields.y = *p_y;
-    v27.fields.x = p_basePosition->fields.x;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v27, 0);
+    v28.fields.z = *p_z;
+    v28.fields.y = *p_y;
+    v28.fields.x = p_basePosition->fields.x;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v28, 0);
   }
   BaseMenu__EndOpenBaseDialog(this, v6);
 }

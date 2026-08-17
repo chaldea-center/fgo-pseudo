@@ -184,7 +184,7 @@ void WarBoardTreasureComponent__OnClick(WarBoardTreasureComponent_o *this, const
   struct WarBoardTreasureData_o *treasureData; // x8
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x20
-  __int64 v6; // x8
+  intptr_t m_CachedPtr; // x8
   struct WarBoardTreasureData_o *v7; // x8
 
   v2 = this;
@@ -211,10 +211,10 @@ void WarBoardTreasureComponent__OnClick(WarBoardTreasureComponent_o *this, const
       this = (WarBoardTreasureComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
       if ( this )
       {
-        v6 = *((_QWORD *)this + 42);
-        if ( v6 )
+        m_CachedPtr = this[5].fields.m_CachedPtr;
+        if ( m_CachedPtr )
         {
-          OverwriteAssetSoundName__PlaySe(v5, *(System_String_o **)(v6 + 24), 0, 0);
+          OverwriteAssetSoundName__PlaySe(v5, *(System_String_o **)(m_CachedPtr + 24), 0, 0);
           this = (WarBoardTreasureComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
           v7 = v2->fields.treasureData;
           if ( v7 )

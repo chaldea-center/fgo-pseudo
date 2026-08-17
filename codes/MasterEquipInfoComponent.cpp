@@ -137,7 +137,7 @@ void MasterEquipInfoComponent__setEquipInfo(
   int32_t genderImageId[2]; // [xsp+10h] [xbp-50h] BYREF
   System_String_o *detail; // [xsp+18h] [xbp-48h] BYREF
   System_String_o *equipName; // [xsp+20h] [xbp-40h] BYREF
-  __int64 maxLv; // [xsp+28h] [xbp-38h] BYREF
+  int32_t maxLv[2]; // [xsp+28h] [xbp-38h] BYREF
 
   if ( (byte_596B3B1 & 1) == 0 )
   {
@@ -153,7 +153,7 @@ void MasterEquipInfoComponent__setEquipInfo(
   }
   equipStatusInfo = this->fields.equipStatusInfo;
   equipName = 0;
-  maxLv = 0;
+  *(_QWORD *)maxLv = 0;
   *(_QWORD *)genderImageId = 0;
   detail = 0;
   barExp = 0;
@@ -164,14 +164,7 @@ void MasterEquipInfoComponent__setEquipInfo(
   this->fields.isChange = 1;
   if ( !usrEquipData )
     goto LABEL_44;
-  UserEquipEntity__getEquipInfo(
-    usrEquipData,
-    (int32_t *)&maxLv + 1,
-    (int32_t *)&maxLv,
-    &equipName,
-    &detail,
-    &genderImageId[1],
-    0);
+  UserEquipEntity__getEquipInfo(usrEquipData, &maxLv[1], maxLv, &equipName, &detail, &genderImageId[1], 0);
   equipStatusInfo = (UnityEngine_GameObject_o *)this->fields.equipIconComp;
   if ( !equipStatusInfo )
     goto LABEL_44;
@@ -236,7 +229,7 @@ LABEL_22:
     goto LABEL_44;
   UILabel__set_text(equipLevelLb, (System_String_o *)equipStatusInfo, 0);
   equipMaxLvLb = this->fields.equipMaxLvLb;
-  equipStatusInfo = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&maxLv, 0);
+  equipStatusInfo = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)maxLv, 0);
   if ( !equipMaxLvLb )
     goto LABEL_44;
   UILabel__set_text(equipMaxLvLb, (System_String_o *)equipStatusInfo, 0);
@@ -312,9 +305,9 @@ LABEL_22:
 
 void MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoComponent_o *this, const MethodInfo *method)
 {
-  __int64 usrEquipEnt; // x0
-  __int64 v4; // x8
-  __int64 v5; // x20
+  UserEquipEntity_o *usrEquipEnt; // x0
+  int64_t userId; // x8
+  UserEquipEntity_o *v5; // x20
   unsigned __int64 v6; // x21
   int32_t v7; // w23
   int32_t v8; // w24
@@ -341,76 +334,78 @@ void MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoComponent_o *thi
     sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     byte_596B3B2 = 1;
   }
-  usrEquipEnt = (__int64)this->fields.usrEquipEnt;
+  usrEquipEnt = this->fields.usrEquipEnt;
   if ( !usrEquipEnt )
     goto LABEL_24;
-  usrEquipEnt = (__int64)UserEquipEntity__getSkillIdList((UserEquipEntity_o *)usrEquipEnt, 0);
+  usrEquipEnt = (UserEquipEntity_o *)UserEquipEntity__getSkillIdList(usrEquipEnt, 0);
   if ( !usrEquipEnt )
     goto LABEL_24;
-  v4 = *(_QWORD *)(usrEquipEnt + 24);
+  userId = usrEquipEnt->fields.userId;
   v5 = usrEquipEnt;
-  if ( (int)v4 >= 1 )
+  if ( (int)userId >= 1 )
   {
     v6 = 0;
     while ( 1 )
     {
-      if ( v6 >= (unsigned int)v4 )
+      if ( v6 >= (unsigned int)userId )
         sub_2213CE4(usrEquipEnt);
-      usrEquipEnt = (__int64)this->fields.usrEquipEnt;
+      usrEquipEnt = this->fields.usrEquipEnt;
       if ( !usrEquipEnt )
         break;
-      v7 = *(_DWORD *)(v5 + 32 + 4 * v6);
-      usrEquipEnt = UserEquipEntity__getSkillLv((UserEquipEntity_o *)usrEquipEnt, v6, 0);
+      v7 = *(&v5->fields.equipId.fields.currentCryptoKey + v6);
+      usrEquipEnt = (UserEquipEntity_o *)UserEquipEntity__getSkillLv(usrEquipEnt, v6, 0);
       if ( !this->fields.usrEquipEnt )
         break;
-      v8 = usrEquipEnt;
+      v8 = (int)usrEquipEnt;
       IsNew = UserEquipEntity__IsNew(this->fields.usrEquipEnt, 0);
-      usrEquipEnt = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      usrEquipEnt = (UserEquipEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !usrEquipEnt )
         break;
-      usrEquipEnt = (__int64)DataManager__GetMasterData_object_(
-                               (DataManager_o *)usrEquipEnt,
-                               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SkillMaster___);
+      usrEquipEnt = (UserEquipEntity_o *)DataManager__GetMasterData_object_(
+                                           (DataManager_o *)usrEquipEnt,
+                                           (const MethodInfo_385636C *)Method_DataManager_GetMasterData_SkillMaster___);
       if ( !usrEquipEnt )
         break;
-      usrEquipEnt = (__int64)DataMasterBase_object__object__int___GetEntity(
-                               (DataMasterBase_TMaster__TEntity__PKType__o *)usrEquipEnt,
-                               v7,
-                               (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+      usrEquipEnt = (UserEquipEntity_o *)DataMasterBase_object__object__int___GetEntity(
+                                           (DataMasterBase_TMaster__TEntity__PKType__o *)usrEquipEnt,
+                                           v7,
+                                           (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
       if ( !usrEquipEnt )
         break;
       SkillEntity__GetIconId((SkillEntity_o *)usrEquipEnt, 0);
-      usrEquipEnt = (__int64)this->fields.skillInfoGrid;
+      usrEquipEnt = (UserEquipEntity_o *)this->fields.skillInfoGrid;
       if ( !usrEquipEnt )
         break;
       skillInfoPrefab = this->fields.skillInfoPrefab;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)usrEquipEnt, 0);
-      usrEquipEnt = (__int64)BaseMonoBehaviour__createObject(
-                               (BaseMonoBehaviour_o *)this,
-                               skillInfoPrefab,
-                               transform,
-                               0,
-                               0);
+      usrEquipEnt = (UserEquipEntity_o *)BaseMonoBehaviour__createObject(
+                                           (BaseMonoBehaviour_o *)this,
+                                           skillInfoPrefab,
+                                           transform,
+                                           0,
+                                           0);
       if ( !usrEquipEnt )
         break;
       v12 = (UnityEngine_GameObject_o *)usrEquipEnt;
-      usrEquipEnt = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)usrEquipEnt, 0);
+      usrEquipEnt = (UserEquipEntity_o *)UnityEngine_GameObject__get_transform(
+                                           (UnityEngine_GameObject_o *)usrEquipEnt,
+                                           0);
       v13 = (UnityEngine_Transform_o *)usrEquipEnt;
       if ( !byte_5969AE5 )
       {
-        usrEquipEnt = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        usrEquipEnt = (UserEquipEntity_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
       if ( !v13 )
         break;
       UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-      usrEquipEnt = (__int64)UnityEngine_GameObject__get_transform(v12, 0);
+      usrEquipEnt = (UserEquipEntity_o *)UnityEngine_GameObject__get_transform(v12, 0);
       if ( !this->fields.skillInfoGrid )
         break;
       v14 = (UnityEngine_Transform_o *)usrEquipEnt;
-      usrEquipEnt = (__int64)UnityEngine_Component__get_transform(
-                               (UnityEngine_Component_o *)this->fields.skillInfoGrid,
-                               0);
+      usrEquipEnt = (UserEquipEntity_o *)UnityEngine_Component__get_transform(
+                                           (UnityEngine_Component_o *)this->fields.skillInfoGrid,
+                                           0);
       if ( !usrEquipEnt )
         break;
       localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)usrEquipEnt, 0);
@@ -437,8 +432,8 @@ void MasterEquipInfoComponent__setEquipSkillInfo(MasterEquipInfoComponent_o *thi
         IsNew,
         v16,
         v19);
-      LODWORD(v4) = *(_DWORD *)(v5 + 24);
-      if ( (__int64)++v6 >= (int)v4 )
+      LODWORD(userId) = v5->fields.userId;
+      if ( (__int64)++v6 >= (int)userId )
         return;
     }
 LABEL_24:

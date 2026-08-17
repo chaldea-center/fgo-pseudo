@@ -133,7 +133,7 @@ void EventInfoAreaImproveResultInfoComponent__SetIcon(
     goto LABEL_25;
   Entity = UserItemMaster__GetEntity(
              (UserItemMaster_o *)Master_object,
-             *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+             (int64_t)this[2].fields.m_CancellationTokenSource[1].klass,
              giftEnt->fields.objectId,
              0);
   if ( !Entity )

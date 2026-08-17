@@ -24,7 +24,7 @@ BlankEarthSpotNavimenuEntity_MessageData_o *BlankEarthSpotNavimenuEntity__GetMes
         const MethodInfo *method)
 {
   BlankEarthSpotNavimenuEntity_MessageData_o *result; // x0
-  System_Collections_IEnumerable_o *v8; // x22
+  BlankEarthSpotNavimenuEntity_MessageData_o *v8; // x22
   int64_t messageClosedAt; // x8
   System_Collections_Generic_List_object__o *v10; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
@@ -87,7 +87,7 @@ BlankEarthSpotNavimenuEntity_MessageData_o *BlankEarthSpotNavimenuEntity__GetMes
                                                            (const MethodInfo *)nowTime);
   if ( !result )
     return result;
-  v8 = (System_Collections_IEnumerable_o *)result;
+  v8 = result;
   if ( !LODWORD(result->fields._Color_k__BackingField) )
     return 0;
   if ( isInit )
@@ -109,7 +109,7 @@ LABEL_9:
     v10,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity_MessageData___ctor__);
   v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
-                                                               v8,
+                                                               (System_Collections_IEnumerable_o *)v8,
                                                                (const MethodInfo_388851C *)Method_System_Linq_Enumerable_OfType_Dictionary_string__object____);
   Item = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                         v11,

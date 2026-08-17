@@ -11,6 +11,7 @@ DropInfo_o *BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo
   __int64 v4; // x0
   __int64 v5; // x1
   bool isRateUp; // w8
+  DropInfo_o *result; // x0
   bool isAdd; // w10
   int32x2_t v9; // d0
   int32_t rarity; // w8
@@ -25,6 +26,7 @@ DropInfo_o *BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo
   if ( !v3 )
     sub_2213CDC(v4, v5);
   isRateUp = this->fields.isRateUp;
+  result = (DropInfo_o *)v3;
   isAdd = this->fields.isAdd;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.type;
   v9.n64_u64[0] = *(unsigned __int64 *)&this->fields.limitCount;
@@ -34,7 +36,7 @@ DropInfo_o *BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo
   rarity = this->fields.rarity;
   *(_DWORD *)(v3 + 44) = this->fields.originalNum;
   *(_DWORD *)(v3 + 36) = rarity;
-  return (DropInfo_o *)v3;
+  return result;
 }
 
 

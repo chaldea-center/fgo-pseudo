@@ -206,8 +206,8 @@ void MaterialCollectionServantSortSelectMenu__InitCategoryContainer(
   Il2CppObject *v21; // x21
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o BottomPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o BottomPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596B6E6 & 1) == 0 )
@@ -304,10 +304,10 @@ LABEL_27:
         if ( !v21 )
           goto LABEL_27;
         ServantFilterCategoryContainer__SetActive((ServantFilterCategoryContainer_o *)v21, 1, 0);
-        v25.fields.x = x;
-        v25.fields.y = y;
-        v25.fields.z = z;
-        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v21, v25, 0);
+        v24.fields.x = x;
+        v24.fields.y = y;
+        v24.fields.z = z;
+        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v21, v24, 0);
         ServantFilterCategoryContainer__Layout(
           (ServantFilterCategoryContainer_o *)v21,
           HIDWORD(v21[3].monitor) == v5,
@@ -1043,7 +1043,8 @@ void MaterialCollectionServantSortSelectMenu__SetupButtonLayout(
 {
   UnityEngine_GameObject_o *servantFilterRoot; // x0
   System_Array_o *v6; // x20
-  const MethodInfo *v7; // x2
+  System_RuntimeFieldHandle_o v7; // x1
+  const MethodInfo *v8; // x2
 
   if ( (byte_596B6EA & 1) == 0 )
   {
@@ -1099,14 +1100,12 @@ void MaterialCollectionServantSortSelectMenu__SetupButtonLayout(
           {
             UnityEngine_GameObject__SetActive(servantFilterRoot, 1, 0);
             v6 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 5);
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-              v6,
-              (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__6264D1E09B01537F0D39D6A65A2204D7B37920D11B1193137B3A264A68190205,
-              0);
+            v7.fields.value = Field__PrivateImplementationDetails__6264D1E09B01537F0D39D6A65A2204D7B37920D11B1193137B3A264A68190205;
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v6, v7, 0);
             MaterialCollectionServantSortSelectMenu__InitCategoryContainer(
               this,
               (ListViewSort_FilterCategoryKind_array *)v6,
-              v7);
+              v8);
             servantFilterRoot = (UnityEngine_GameObject_o *)this->fields.servantFilterScrollView;
             if ( servantFilterRoot )
             {
@@ -1517,7 +1516,7 @@ System_IAsyncResult_o *MaterialCollectionServantSortSelectMenu_CallbackFunc__Beg
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

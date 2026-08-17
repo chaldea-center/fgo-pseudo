@@ -801,7 +801,7 @@ System_IAsyncResult_o *FriendSearchMenu_CallbackFunc__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(qword_5984328, v12);
   v11[1] = friendCode;
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

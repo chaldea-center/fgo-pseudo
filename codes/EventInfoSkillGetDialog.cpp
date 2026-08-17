@@ -271,6 +271,7 @@ void EventInfoSkillGetDialog__SetBasePanel(EventInfoSkillGetDialog_o *this, cons
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Cysharp_Threading_Tasks_UniTask_o EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync(
         EventInfoSkillGetDialog_o *this,
         System_Threading_CancellationToken_o cancellationToken,
@@ -294,8 +295,9 @@ Cysharp_Threading_Tasks_UniTask_o EventInfoSkillGetDialog__WaitFadeAndRegisterBa
   bool v20; // w6
   bool v21; // w7
   const MethodInfo *v22; // x1
-  Cysharp_Threading_Tasks_UniTask_o v25; // kr00_16
-  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o v26; // [xsp+0h] [xbp-70h] BYREF
+  struct Cysharp_Threading_Tasks_IUniTaskSource_o *v23; // x0
+  __int64 v24; // x1
+  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o v25; // [xsp+0h] [xbp-70h] BYREF
   Cysharp_Threading_Tasks_UniTask_o result; // 0:x0.16
 
   if ( (byte_597264E & 1) == 0 )
@@ -303,9 +305,9 @@ Cysharp_Threading_Tasks_UniTask_o EventInfoSkillGetDialog__WaitFadeAndRegisterBa
     sub_2213A60(&Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___);
     byte_597264E = 1;
   }
-  memset(&v26, 0, sizeof(v26));
+  memset(&v25, 0, sizeof(v25));
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v26.fields.__t__builder,
+    (MissionNaviTransitionBoardItem_o *)&v25.fields.__t__builder,
     0,
     (System_String_o *)method,
     v3,
@@ -313,18 +315,18 @@ Cysharp_Threading_Tasks_UniTask_o EventInfoSkillGetDialog__WaitFadeAndRegisterBa
     v5,
     v6,
     v7);
-  v26.fields.__4__this = this;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26.fields.__4__this, (int32_t)this, v10, v11, v12, v13, v14, v15);
-  v26.fields.cancellationToken = cancellationToken;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26.fields.cancellationToken, 0, v16, v17, v18, v19, v20, v21);
-  v26.fields.__1__state = -1;
+  v25.fields.__4__this = this;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25.fields.__4__this, (int32_t)this, v10, v11, v12, v13, v14, v15);
+  v25.fields.cancellationToken = cancellationToken;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25.fields.cancellationToken, 0, v16, v17, v18, v19, v20, v21);
+  v25.fields.__1__state = -1;
   if ( !*((_QWORD *)Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___
         + 7) )
     sub_224B964(Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21___);
-  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(&v26, v22);
-  v25 = sub_307F42C(&v26.fields.__t__builder, 0);
-  *(_QWORD *)&result.fields.token = *(_QWORD *)&v25.fields.token;
-  result.fields.source = v25.fields.source;
+  EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(&v25, v22);
+  v23 = (struct Cysharp_Threading_Tasks_IUniTaskSource_o *)sub_307F42C(&v25.fields.__t__builder, 0);
+  *(_QWORD *)&result.fields.token = v24;
+  result.fields.source = v23;
   return result;
 }
 
@@ -398,42 +400,43 @@ void EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
-  System_Threading_CancellationToken_o v16; // x21
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
-  Cysharp_Threading_Tasks_UniTask_o v23; // kr10_16
+  struct System_Threading_CancellationTokenSource_o *source; // x21
+  System_Threading_CancellationToken_o v17; // x2
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  Cysharp_Threading_Tasks_UniTask_o v24; // kr10_16
   struct Cysharp_Threading_Tasks_UniTask_Awaiter_o u__1; // q0
   Cysharp_Threading_Tasks_IUniTaskSource_c *klass; // x8
-  __int64 v26; // x9
+  __int64 v27; // x9
   int *p_offset; // x10
-  __int64 v28; // x0
-  System_String_o *v29; // x2
-  System_String_o *v30; // x3
-  int32_t v31; // w4
-  int32_t v32; // w5
-  bool v33; // w6
-  bool v34; // w7
-  Cysharp_Threading_Tasks_IUniTaskSource_c *v35; // x8
-  __int64 v36; // x9
-  Cysharp_Threading_Tasks_IUniTaskSource_c **v37; // x10
-  __int64 v38; // x0
+  __int64 v29; // x0
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  Cysharp_Threading_Tasks_IUniTaskSource_c *v36; // x8
+  __int64 v37; // x9
+  Cysharp_Threading_Tasks_IUniTaskSource_c **v38; // x10
+  __int64 v39; // x0
   UnityEngine_Object_o *closeButton; // x20
-  __int64 v40; // x1
-  UnityEngine_Component_o *v41; // x0
+  __int64 v41; // x1
+  UnityEngine_Component_o *v42; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  int v43; // w8
+  int v44; // w8
   struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *runnerPromise; // x19
-  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c *v45; // x8
-  __int64 v46; // x9
-  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **v47; // x10
-  __int64 v48; // x0
-  struct Cysharp_Threading_Tasks_UniTask_Awaiter_o v49; // q0
+  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c *v46; // x8
+  __int64 v47; // x9
+  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **v48; // x10
+  __int64 v49; // x0
+  struct Cysharp_Threading_Tasks_UniTask_Awaiter_o v50; // q0
   Cysharp_Threading_Tasks_UniTask_o task; // [xsp+10h] [xbp-60h] BYREF
-  Cysharp_Threading_Tasks_UniTask_o v51; // [xsp+20h] [xbp-50h] BYREF
+  Cysharp_Threading_Tasks_UniTask_o v52; // [xsp+20h] [xbp-50h] BYREF
 
   v2 = this;
   if ( (byte_5972658 & 1) == 0 )
@@ -477,13 +480,14 @@ void EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(
       v9->__9__21_0 = _9__21_0;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->__9__21_0, (int32_t)_9__21_0, v10, v11, v12, v13, v14, v15);
     }
-    v16.fields._source = v2->fields.cancellationToken.fields._source;
+    source = v2->fields.cancellationToken.fields._source;
     if ( !*(&Cysharp_Threading_Tasks_UniTask_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(Cysharp_Threading_Tasks_UniTask_TypeInfo, method);
-    v51 = Cysharp_Threading_Tasks_UniTask__WaitWhile(_9__21_0, 8, v16, 0, 0);
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v51, 0, v17, v18, v19, v20, v21, v22);
-    v23 = v51;
-    task = v51;
+    v17.fields._source = source;
+    v52 = Cysharp_Threading_Tasks_UniTask__WaitWhile(_9__21_0, 8, v17, 0, 0);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v52, 0, v18, v19, v20, v21, v22, v23);
+    v24 = v52;
+    task = v52;
     if ( !byte_597201D )
     {
       sub_2213A60(&Cysharp_Threading_Tasks_UniTask_TypeInfo);
@@ -494,45 +498,45 @@ void EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21__MoveNext(
       j_il2cpp_runtime_class_init_0(Cysharp_Threading_Tasks_UniTask_TypeInfo, method);
     if ( byte_597201E )
     {
-      if ( !v23.fields.source )
+      if ( !v24.fields.source )
         goto LABEL_28;
     }
     else
     {
       this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)sub_2213A60(&Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo);
       byte_597201E = 1;
-      if ( !v23.fields.source )
+      if ( !v24.fields.source )
         goto LABEL_28;
     }
-    klass = v23.fields.source->klass;
-    v26 = *(unsigned __int16 *)&v23.fields.source->klass->_2.rank;
-    if ( *(_WORD *)&v23.fields.source->klass->_2.rank )
+    klass = v24.fields.source->klass;
+    v27 = *(unsigned __int16 *)&v24.fields.source->klass->_2.rank;
+    if ( *(_WORD *)&v24.fields.source->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((Cysharp_Threading_Tasks_IUniTaskSource_c **)p_offset - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
       {
-        --v26;
+        --v27;
         p_offset += 4;
-        if ( !v26 )
+        if ( !v27 )
           goto LABEL_25;
       }
-      v28 = (__int64)&klass->vtable[*p_offset];
+      v29 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_25:
-      v28 = sub_224BC3C(v23.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 0);
+      v29 = sub_224BC3C(v24.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 0);
     }
-    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v28)(
-                                                                                 v23.fields.source,
-                                                                                 *(unsigned int *)&v23.fields.token,
-                                                                                 *(_QWORD *)(v28 + 8));
+    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v29)(
+                                                                                 v24.fields.source,
+                                                                                 *(unsigned int *)&v24.fields.token,
+                                                                                 *(_QWORD *)(v29 + 8));
     if ( !(_DWORD)this )
     {
-      v49 = (struct Cysharp_Threading_Tasks_UniTask_Awaiter_o)task;
+      v50 = (struct Cysharp_Threading_Tasks_UniTask_Awaiter_o)task;
       v2->fields.__1__state = 0;
-      v2->fields.__u__1 = v49;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__u__1, 0, v29, v30, v31, v32, v33, v34);
+      v2->fields.__u__1 = v50;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__u__1, 0, v30, v31, v32, v33, v34, v35);
       sub_312C280(
         &v2->fields.__t__builder,
         &task,
@@ -557,29 +561,29 @@ LABEL_28:
   }
   if ( task.fields.source )
   {
-    v35 = task.fields.source->klass;
-    v36 = *(unsigned __int16 *)&task.fields.source->klass->_2.rank;
+    v36 = task.fields.source->klass;
+    v37 = *(unsigned __int16 *)&task.fields.source->klass->_2.rank;
     if ( *(_WORD *)&task.fields.source->klass->_2.rank )
     {
-      v37 = (Cysharp_Threading_Tasks_IUniTaskSource_c **)&v35->_1.interfaceOffsets->offset;
-      while ( *(v37 - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
+      v38 = (Cysharp_Threading_Tasks_IUniTaskSource_c **)&v36->_1.interfaceOffsets->offset;
+      while ( *(v38 - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
       {
-        --v36;
-        v37 += 2;
-        if ( !v36 )
+        --v37;
+        v38 += 2;
+        if ( !v37 )
           goto LABEL_35;
       }
-      v38 = (__int64)&v35->vtable[*(_DWORD *)v37 + 2];
+      v39 = (__int64)&v36->vtable[*(_DWORD *)v38 + 2];
     }
     else
     {
 LABEL_35:
-      v38 = sub_224BC3C(task.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 2);
+      v39 = sub_224BC3C(task.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 2);
     }
-    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v38)(
+    this = (EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync_d__21_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v39)(
                                                                                  task.fields.source,
                                                                                  (unsigned __int16)task.fields.token,
-                                                                                 *(_QWORD *)(v38 + 8));
+                                                                                 *(_QWORD *)(v39 + 8));
   }
   if ( !_4__this )
     sub_2213CDC(this, method);
@@ -588,15 +592,15 @@ LABEL_35:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(closeButton, 0, 0) )
   {
-    v41 = (UnityEngine_Component_o *)_4__this->fields.closeButton;
-    if ( !v41 )
-      sub_2213CDC(0, v40);
-    gameObject = UnityEngine_Component__get_gameObject(v41, 0);
+    v42 = (UnityEngine_Component_o *)_4__this->fields.closeButton;
+    if ( !v42 )
+      sub_2213CDC(0, v41);
+    gameObject = UnityEngine_Component__get_gameObject(v42, 0);
     AndroidBackKeyManager__AddBackBtn(gameObject, 0);
   }
-  v43 = (unsigned __int8)byte_5972021;
+  v44 = (unsigned __int8)byte_5972021;
   v2->fields.__1__state = -2;
-  if ( !v43 )
+  if ( !v44 )
   {
     sub_2213A60(&Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo);
     byte_5972021 = 1;
@@ -604,28 +608,28 @@ LABEL_35:
   runnerPromise = v2->fields.__t__builder.fields.runnerPromise;
   if ( runnerPromise )
   {
-    v45 = runnerPromise->klass;
-    v46 = *(unsigned __int16 *)&runnerPromise->klass->_2.rank;
+    v46 = runnerPromise->klass;
+    v47 = *(unsigned __int16 *)&runnerPromise->klass->_2.rank;
     if ( *(_WORD *)&runnerPromise->klass->_2.rank )
     {
-      v47 = (Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **)&v45->_1.interfaceOffsets->offset;
-      while ( *(v47 - 1) != Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo )
+      v48 = (Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **)&v46->_1.interfaceOffsets->offset;
+      while ( *(v48 - 1) != Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo )
       {
-        --v46;
-        v47 += 2;
-        if ( !v46 )
+        --v47;
+        v48 += 2;
+        if ( !v47 )
           goto LABEL_51;
       }
-      v48 = (__int64)&v45->vtable[*(_DWORD *)v47 + 2];
+      v49 = (__int64)&v46->vtable[*(_DWORD *)v48 + 2];
     }
     else
     {
 LABEL_51:
-      v48 = sub_224BC3C(runnerPromise, Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo, 2);
+      v49 = sub_224BC3C(runnerPromise, Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo, 2);
     }
-    (*(void (__fastcall **)(struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *, _QWORD))v48)(
+    (*(void (__fastcall **)(struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *, _QWORD))v49)(
       runnerPromise,
-      *(_QWORD *)(v48 + 8));
+      *(_QWORD *)(v49 + 8));
   }
 }
 
@@ -1085,15 +1089,17 @@ void EventInfoSkillGetDialog___c__DisplayClass20_0___Open_b__1(
   System_Threading_CancellationToken_o v3; // x0
   System_Threading_CancellationToken_o v4; // x1
   System_Threading_CancellationToken_o v5; // x2
+  System_Threading_CancellationToken_o v6; // x1
   Cysharp_Threading_Tasks_UniTask_o Dialog__WaitFadeAndRegisterBackKeyAsync; // 0:x0.16
 
   _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   v3.fields._source = Cysharp_Threading_Tasks_UniTaskCancellationExtensions__GetCancellationTokenOnDestroy(_4__this, 0).fields._source;
   if ( !_4__this )
     sub_2213CDC(v3.fields._source, v4.fields._source);
+  v6.fields._source = v3.fields._source;
   Dialog__WaitFadeAndRegisterBackKeyAsync = EventInfoSkillGetDialog__WaitFadeAndRegisterBackKeyAsync(
                                               (EventInfoSkillGetDialog_o *)_4__this,
-                                              v3,
+                                              v6,
                                               (const MethodInfo *)v5.fields._source);
   Cysharp_Threading_Tasks_UniTaskExtensions__Forget(Dialog__WaitFadeAndRegisterBackKeyAsync, 0);
 }

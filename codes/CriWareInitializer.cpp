@@ -337,17 +337,18 @@ bool CriWareInitializer__InitializeAtom(CriAtomConfig_o *config, const MethodInf
   struct CriAtomConfig_SwitchOpusVoicePoolConfig_o *switchOpusVoicePoolConfig; // x8
   struct CriAtomConfig_WebGLWebAudioVoicePoolConfig_o *webglWebAudioVoicePoolConfig; // x8
   __int64 v40; // x2
-  __int64 v41; // x1
-  __int64 v42; // x2
+  System_DateTime_o v41; // x0
+  __int64 v42; // x1
+  __int64 v43; // x2
   uint32_t Ticks; // w21
   struct System_String_o *acfFileName; // x21
-  __int64 v45; // x1
-  __int64 v46; // x2
-  __int64 v47; // x1
-  __int64 v48; // x2
+  __int64 v46; // x1
+  __int64 v47; // x2
+  __int64 v48; // x1
+  __int64 v49; // x2
   System_String_o *streamingAssetsPath; // x22
   bool keepPlayingSoundOnPause; // w19
-  CriAtomServer_c *v51; // x0
+  CriAtomServer_c *v52; // x0
   uint64_t dateData; // [xsp+58h] [xbp-58h] BYREF
 
   if ( (byte_59698A3 & 1) == 0 )
@@ -519,9 +520,10 @@ bool CriWareInitializer__InitializeAtom(CriAtomConfig_o *config, const MethodInf
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v5, v40);
       dateData = System_DateTime__get_Now(0).fields._dateData;
-      Ticks = System_DateTime__get_Ticks((System_DateTime_o)&dateData, 0);
+      v41.fields._dateData = (uint64_t)&dateData;
+      Ticks = System_DateTime__get_Ticks(v41, 0);
       if ( !*(&CriAtomEx_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(CriAtomEx_TypeInfo, v41, v42);
+        j_il2cpp_runtime_class_init_0(CriAtomEx_TypeInfo, v42, v43);
       CriAtomEx__SetRandomSeed(Ticks, 0);
     }
     acfFileName = config->fields.acfFileName;
@@ -534,21 +536,21 @@ LABEL_56:
       {
         streamingAssetsPath = CriWare_Common__get_streamingAssetsPath(0);
         if ( !*(&System_IO_Path_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, v47, v48);
+          j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo, v48, v49);
         acfFileName = System_IO_Path__Combine(streamingAssetsPath, acfFileName, 0);
       }
       if ( !*(&CriAtomEx_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(CriAtomEx_TypeInfo, v45, v46);
+        j_il2cpp_runtime_class_init_0(CriAtomEx_TypeInfo, v46, v47);
       CriAtomEx__RegisterAcf(0, acfFileName, 0);
     }
     keepPlayingSoundOnPause = config->fields.keepPlayingSoundOnPause;
-    v51 = CriAtomServer_TypeInfo;
+    v52 = CriAtomServer_TypeInfo;
     if ( !*(&CriAtomServer_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(CriAtomServer_TypeInfo, v5, v40);
-      v51 = CriAtomServer_TypeInfo;
+      v52 = CriAtomServer_TypeInfo;
     }
-    v51->static_fields->KeepPlayingSoundOnPause = keepPlayingSoundOnPause;
+    v52->static_fields->KeepPlayingSoundOnPause = keepPlayingSoundOnPause;
   }
   return (v7 & 1) == 0;
 }

@@ -2260,55 +2260,58 @@ System_String_o *Internal_Cryptography_Pal_CertificateData__GetNameInfo(
   System_String_o *SimpleNameInfo; // x19
   System_String_o **v8; // x8
   System_String_o *v9; // x23
-  int32_t v10; // w1
-  __int64 v11; // x8
-  System_String_o **v12; // x8
-  System_String_o *v13; // x24
+  System_Nullable_Int32Enum__o v10; // x0
+  int32_t v11; // w1
+  __int64 v12; // x8
+  System_String_o **v13; // x8
+  System_Nullable_Int32Enum__o v14; // x0
+  System_String_o *v15; // x24
   System_Collections_Generic_List_object__o *Extensions; // x0
-  _BOOL8 v15; // x0
-  __int64 v16; // x1
+  _BOOL8 v17; // x0
+  __int64 v18; // x1
   Il2CppObject *current; // x19
   Il2CppClass *klass; // x8
   System_Byte_array *monitor; // x19
+  System_Nullable_Int32Enum__o v22; // x0
   int32_t Value; // w1
-  const MethodInfo *v21; // x3
-  int v22; // w24
+  const MethodInfo *v24; // x3
+  int v25; // w24
   struct System_Collections_Generic_List_T__o *list; // x23
-  __int64 *v24; // x8
-  System_String_o *v25; // x22
-  __int64 v26; // x8
-  System_Collections_Generic_List_object__c *v27; // x8
-  System_Collections_Generic_List_object__o *v28; // x20
-  __int64 v29; // x9
+  __int64 *v27; // x8
+  System_String_o *v28; // x22
+  __int64 v29; // x8
+  System_Collections_Generic_List_object__c *v30; // x8
+  System_Collections_Generic_List_object__o *v31; // x20
+  __int64 v32; // x9
   int32_t *p_offset; // x10
-  __int64 v31; // x0
-  __int64 v32; // x0
-  __int64 v33; // x1
-  __int64 v34; // x20
-  __int64 v35; // x8
-  __int64 v36; // x9
-  int *v37; // x10
-  __int64 v38; // x0
-  __int64 v39; // x0
-  __int64 v40; // x1
-  __int64 v41; // x20
-  __int64 v42; // x8
-  __int64 v43; // x9
-  int *v44; // x10
-  __int64 v45; // x0
-  System_String_o *v46; // x0
-  System_String_o *v47; // x1
-  System_String_o *v48; // x21
-  int v49; // w22
-  __int64 v50; // x21
-  __int64 v51; // x8
-  __int64 v52; // x9
-  int *v53; // x10
-  __int64 v54; // x0
-  System_Collections_Generic_List_Enumerator_object__o v56; // [xsp+0h] [xbp-90h] BYREF
-  __int64 v57; // [xsp+18h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+20h] [xbp-70h] BYREF
-  __int64 v59; // [xsp+48h] [xbp-48h] BYREF
+  __int64 v34; // x0
+  __int64 v35; // x0
+  __int64 v36; // x1
+  __int64 v37; // x20
+  __int64 v38; // x8
+  __int64 v39; // x9
+  int *v40; // x10
+  __int64 v41; // x0
+  __int64 v42; // x0
+  __int64 v43; // x1
+  __int64 v44; // x20
+  __int64 v45; // x8
+  __int64 v46; // x9
+  int *v47; // x10
+  __int64 v48; // x0
+  System_String_o *v49; // x0
+  System_String_o *v50; // x1
+  System_String_o *v51; // x21
+  int v52; // w22
+  __int64 v53; // x21
+  __int64 v54; // x8
+  __int64 v55; // x9
+  int *v56; // x10
+  __int64 v57; // x0
+  System_Collections_Generic_List_Enumerator_object__o v59; // [xsp+0h] [xbp-90h] BYREF
+  __int64 v60; // [xsp+18h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v61; // [xsp+20h] [xbp-70h] BYREF
+  __int64 v62; // [xsp+48h] [xbp-48h] BYREF
 
   if ( (byte_597A7DC & 1) == 0 )
   {
@@ -2333,26 +2336,26 @@ System_String_o *Internal_Cryptography_Pal_CertificateData__GetNameInfo(
     sub_2213A60(&StringLiteral_1/*""*/);
     byte_597A7DC = 1;
   }
-  v59 = 0;
-  memset(&v58, 0, sizeof(v58));
-  v57 = 0;
+  v62 = 0;
+  memset(&v61, 0, sizeof(v61));
+  v60 = 0;
   if ( !nameType )
   {
-    v11 = 72;
+    v12 = 72;
     if ( forIssuer )
-      v11 = 48;
+      v12 = 48;
     SimpleNameInfo = Internal_Cryptography_Pal_CertificateData__GetSimpleNameInfo(
                        *(System_Security_Cryptography_X509Certificates_X500DistinguishedName_o **)((char *)&this->fields.RawData
-                                                                                                 + v11),
+                                                                                                 + v12),
                        *(const MethodInfo **)&nameType);
     if ( SimpleNameInfo )
       return SimpleNameInfo;
     if ( forIssuer )
-      v12 = (System_String_o **)&StringLiteral_1419/*"2.5.29.18"*/;
+      v13 = (System_String_o **)&StringLiteral_1419/*"2.5.29.18"*/;
     else
-      v12 = (System_String_o **)&StringLiteral_1418/*"2.5.29.17"*/;
-    v9 = *v12;
-    v59 = 0;
+      v13 = (System_String_o **)&StringLiteral_1418/*"2.5.29.17"*/;
+    v9 = *v13;
+    v62 = 0;
     goto LABEL_20;
   }
   SimpleNameInfo = 0;
@@ -2361,42 +2364,43 @@ System_String_o *Internal_Cryptography_Pal_CertificateData__GetNameInfo(
   else
     v8 = (System_String_o **)&StringLiteral_1418/*"2.5.29.17"*/;
   v9 = *v8;
-  v59 = 0;
+  v62 = 0;
   if ( nameType > 2 )
   {
     if ( (unsigned int)(nameType - 3) >= 2 )
     {
       if ( nameType != 5 )
         goto LABEL_38;
-      v10 = 6;
+      v10 = (System_Nullable_Int32Enum__o)&v62;
+      v11 = 6;
     }
     else
     {
-      v10 = 2;
+      v10 = (System_Nullable_Int32Enum__o)&v62;
+      v11 = 2;
     }
     goto LABEL_23;
   }
   if ( nameType == 1 )
   {
 LABEL_20:
-    v10 = 1;
+    v10 = (System_Nullable_Int32Enum__o)&v62;
+    v11 = 1;
 LABEL_23:
     System_Nullable_Int32Enum____ctor(
-      (System_Nullable_Int32Enum__o)&v59,
       v10,
+      v11,
       (const MethodInfo_45E4698 *)Method_System_Nullable_GeneralNameType___ctor__);
-    v13 = 0;
+    v15 = 0;
     goto LABEL_24;
   }
   if ( nameType != 2 )
     goto LABEL_38;
-  System_Nullable_Int32Enum____ctor(
-    (System_Nullable_Int32Enum__o)&v59,
-    0,
-    (const MethodInfo_45E4698 *)Method_System_Nullable_GeneralNameType___ctor__);
-  v13 = (System_String_o *)StringLiteral_1367/*"1.3.6.1.4.1.311.20.2.3"*/;
+  v14 = (System_Nullable_Int32Enum__o)&v62;
+  System_Nullable_Int32Enum____ctor(v14, 0, (const MethodInfo_45E4698 *)Method_System_Nullable_GeneralNameType___ctor__);
+  v15 = (System_String_o *)StringLiteral_1367/*"1.3.6.1.4.1.311.20.2.3"*/;
 LABEL_24:
-  if ( !(_BYTE)v59 )
+  if ( !(_BYTE)v62 )
   {
     SimpleNameInfo = 0;
     goto LABEL_38;
@@ -2405,184 +2409,185 @@ LABEL_24:
   if ( !Extensions )
     goto LABEL_86;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v56,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v59,
     Extensions,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_X509Extension__GetEnumerator__);
-  v58 = v56;
-  v56.fields._list = 0;
-  *(_QWORD *)&v56.fields._index = &v58;
+  v61 = v59;
+  v59.fields._list = 0;
+  *(_QWORD *)&v59.fields._index = &v61;
   while ( 1 )
   {
-    v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v58,
+    v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v61,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__MoveNext__);
-    if ( !v15 )
+    if ( !v17 )
       break;
-    current = v58.fields._current;
-    if ( !v58.fields._current )
-      sub_2213CDC(v15, v16);
-    klass = v58.fields._current[1].klass;
+    current = v61.fields._current;
+    if ( !v61.fields._current )
+      sub_2213CDC(v17, v18);
+    klass = v61.fields._current[1].klass;
     if ( !klass )
-      sub_2213CDC(v15, v16);
+      sub_2213CDC(v17, v18);
     if ( System_String__op_Equality((System_String_o *)klass->_1.name, v9, 0) )
     {
       monitor = (System_Byte_array *)current[1].monitor;
+      v22 = (System_Nullable_Int32Enum__o)&v62;
       Value = System_Nullable_Int32Enum___get_Value(
-                (System_Nullable_Int32Enum__o)&v59,
+                v22,
                 (const MethodInfo_45E46B0 *)Method_System_Nullable_GeneralNameType__get_Value__);
-      SimpleNameInfo = Internal_Cryptography_Pal_CertificateData__FindAltNameMatch(monitor, Value, v13, v21);
+      SimpleNameInfo = Internal_Cryptography_Pal_CertificateData__FindAltNameMatch(monitor, Value, v15, v24);
       if ( SimpleNameInfo )
       {
-        v22 = 16;
+        v25 = 16;
         goto LABEL_34;
       }
     }
   }
   SimpleNameInfo = 0;
-  v22 = 13;
+  v25 = 13;
 LABEL_34:
-  list = v56.fields._list;
+  list = v59.fields._list;
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    *(System_Collections_Generic_List_Enumerator_object__o **)&v56.fields._index,
+    *(System_Collections_Generic_List_Enumerator_object__o **)&v59.fields._index,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__);
   if ( list )
     sub_2213CD4(list);
-  if ( v22 == 13 )
+  if ( v25 == 13 )
   {
 LABEL_38:
     if ( nameType == 1 )
     {
-      v24 = &StringLiteral_1305/*"1.2.840.113549.1.9.1"*/;
+      v27 = &StringLiteral_1305/*"1.2.840.113549.1.9.1"*/;
     }
     else
     {
       if ( nameType != 3 )
         return (System_String_o *)StringLiteral_1/*""*/;
-      v24 = &StringLiteral_1433/*"2.5.4.3"*/;
+      v27 = &StringLiteral_1433/*"2.5.4.3"*/;
     }
-    v25 = (System_String_o *)*v24;
-    if ( !*v24 )
+    v28 = (System_String_o *)*v27;
+    if ( !*v27 )
       return (System_String_o *)StringLiteral_1/*""*/;
-    v26 = 72;
+    v29 = 72;
     if ( forIssuer )
-      v26 = 48;
+      v29 = 48;
     Extensions = (System_Collections_Generic_List_object__o *)Internal_Cryptography_Pal_CertificateData__ReadReverseRdns(
-                                                                *(System_Security_Cryptography_X509Certificates_X500DistinguishedName_o **)((char *)&this->fields.RawData + v26),
+                                                                *(System_Security_Cryptography_X509Certificates_X500DistinguishedName_o **)((char *)&this->fields.RawData + v29),
                                                                 *(const MethodInfo **)&nameType);
     if ( Extensions )
     {
-      v27 = Extensions->klass;
-      v28 = Extensions;
-      v29 = *(unsigned __int16 *)&Extensions->klass->_2.rank;
+      v30 = Extensions->klass;
+      v31 = Extensions;
+      v32 = *(unsigned __int16 *)&Extensions->klass->_2.rank;
       if ( *(_WORD *)&Extensions->klass->_2.rank )
       {
-        p_offset = &v27->_1.interfaceOffsets->offset;
+        p_offset = &v30->_1.interfaceOffsets->offset;
         while ( *((System_Collections_Generic_IEnumerable_KeyValuePair_string__string___c **)p_offset - 1) != System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo )
         {
-          --v29;
+          --v32;
           p_offset += 4;
-          if ( !v29 )
+          if ( !v32 )
             goto LABEL_50;
         }
-        v31 = (__int64)&v27->vtable + 16 * *p_offset;
+        v34 = (__int64)&v30->vtable + 16 * *p_offset;
       }
       else
       {
 LABEL_50:
-        v31 = sub_224BC3C(Extensions, System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, 0);
+        v34 = sub_224BC3C(Extensions, System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, 0);
       }
-      v32 = (*(__int64 (__fastcall **)(System_Collections_Generic_List_object__o *, _QWORD))v31)(
-              v28,
-              *(_QWORD *)(v31 + 8));
-      v57 = v32;
-      v56.fields._list = 0;
-      *(_QWORD *)&v56.fields._index = &v57;
+      v35 = (*(__int64 (__fastcall **)(System_Collections_Generic_List_object__o *, _QWORD))v34)(
+              v31,
+              *(_QWORD *)(v34 + 8));
+      v60 = v35;
+      v59.fields._list = 0;
+      *(_QWORD *)&v59.fields._index = &v60;
       while ( 1 )
       {
-        v34 = v57;
-        if ( !v57 )
-          sub_2213CDC(v32, v33);
-        v35 = *(_QWORD *)v57;
-        v36 = *(unsigned __int16 *)(*(_QWORD *)v57 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v57 + 302LL) )
+        v37 = v60;
+        if ( !v60 )
+          sub_2213CDC(v35, v36);
+        v38 = *(_QWORD *)v60;
+        v39 = *(unsigned __int16 *)(*(_QWORD *)v60 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v60 + 302LL) )
         {
-          v37 = (int *)(*(_QWORD *)(v35 + 176) + 8LL);
-          while ( *((System_Collections_IEnumerator_c **)v37 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v40 = (int *)(*(_QWORD *)(v38 + 176) + 8LL);
+          while ( *((System_Collections_IEnumerator_c **)v40 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v36;
-            v37 += 4;
-            if ( !v36 )
+            --v39;
+            v40 += 4;
+            if ( !v39 )
               goto LABEL_58;
           }
-          v38 = v35 + 16LL * *v37 + 312;
+          v41 = v38 + 16LL * *v40 + 312;
         }
         else
         {
 LABEL_58:
-          v38 = sub_224BC3C(v57, System_Collections_IEnumerator_TypeInfo, 0);
+          v41 = sub_224BC3C(v60, System_Collections_IEnumerator_TypeInfo, 0);
         }
-        v39 = (*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v34, *(_QWORD *)(v38 + 8));
-        if ( (v39 & 1) == 0 )
+        v42 = (*(__int64 (__fastcall **)(__int64, _QWORD))v41)(v37, *(_QWORD *)(v41 + 8));
+        if ( (v42 & 1) == 0 )
           break;
-        v41 = v57;
-        if ( !v57 )
-          sub_2213CDC(v39, v40);
-        v42 = *(_QWORD *)v57;
-        v43 = *(unsigned __int16 *)(*(_QWORD *)v57 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v57 + 302LL) )
+        v44 = v60;
+        if ( !v60 )
+          sub_2213CDC(v42, v43);
+        v45 = *(_QWORD *)v60;
+        v46 = *(unsigned __int16 *)(*(_QWORD *)v60 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v60 + 302LL) )
         {
-          v44 = (int *)(*(_QWORD *)(v42 + 176) + 8LL);
-          while ( *((System_Collections_Generic_IEnumerator_KeyValuePair_string__string___c **)v44 - 1) != System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo )
+          v47 = (int *)(*(_QWORD *)(v45 + 176) + 8LL);
+          while ( *((System_Collections_Generic_IEnumerator_KeyValuePair_string__string___c **)v47 - 1) != System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo )
           {
-            --v43;
-            v44 += 4;
-            if ( !v43 )
+            --v46;
+            v47 += 4;
+            if ( !v46 )
               goto LABEL_66;
           }
-          v45 = v42 + 16LL * *v44 + 312;
+          v48 = v45 + 16LL * *v47 + 312;
         }
         else
         {
 LABEL_66:
-          v45 = sub_224BC3C(v57, System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, 0);
+          v48 = sub_224BC3C(v60, System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, 0);
         }
-        v46 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v45)(v41, *(_QWORD *)(v45 + 8));
-        v48 = v47;
-        v32 = System_String__op_Equality(v46, v25, 0);
-        if ( (v32 & 1) != 0 )
+        v49 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v48)(v44, *(_QWORD *)(v48 + 8));
+        v51 = v50;
+        v35 = System_String__op_Equality(v49, v28, 0);
+        if ( (v35 & 1) != 0 )
         {
-          v49 = 16;
-          SimpleNameInfo = v48;
+          v52 = 16;
+          SimpleNameInfo = v51;
           goto LABEL_71;
         }
       }
-      v49 = 20;
+      v52 = 20;
 LABEL_71:
-      v50 = v57;
-      if ( v57 )
+      v53 = v60;
+      if ( v60 )
       {
-        v51 = *(_QWORD *)v57;
-        v52 = *(unsigned __int16 *)(*(_QWORD *)v57 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v57 + 302LL) )
+        v54 = *(_QWORD *)v60;
+        v55 = *(unsigned __int16 *)(*(_QWORD *)v60 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v60 + 302LL) )
         {
-          v53 = (int *)(*(_QWORD *)(v51 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v53 - 1) != System_IDisposable_TypeInfo )
+          v56 = (int *)(*(_QWORD *)(v54 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v56 - 1) != System_IDisposable_TypeInfo )
           {
-            --v52;
-            v53 += 4;
-            if ( !v52 )
+            --v55;
+            v56 += 4;
+            if ( !v55 )
               goto LABEL_76;
           }
-          v54 = v51 + 16LL * *v53 + 312;
+          v57 = v54 + 16LL * *v56 + 312;
         }
         else
         {
 LABEL_76:
-          v54 = sub_224BC3C(v57, System_IDisposable_TypeInfo, 0);
+          v57 = sub_224BC3C(v60, System_IDisposable_TypeInfo, 0);
         }
-        (*(void (__fastcall **)(__int64, _QWORD))v54)(v50, *(_QWORD *)(v54 + 8));
+        (*(void (__fastcall **)(__int64, _QWORD))v57)(v53, *(_QWORD *)(v57 + 8));
       }
-      if ( v49 != 20 )
+      if ( v52 != 20 )
         return SimpleNameInfo;
       return (System_String_o *)StringLiteral_1/*""*/;
     }
@@ -2873,6 +2878,7 @@ bool Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21__MoveNext(
   int32_t v37; // w5
   bool v38; // w6
   bool v39; // w7
+  bool result; // w0
   struct System_Collections_Generic_KeyValuePair_string__string__o v41; // [xsp+0h] [xbp-50h] BYREF
   System_Collections_Generic_KeyValuePair_object__object__o v42; // 0:x0.16
 
@@ -3037,8 +3043,9 @@ LABEL_28:
             v30);
           v2->fields.__2__current = v41;
           sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current, 0, v34, v35, v36, v37, v38, v39);
+          result = 1;
           v2->fields.__1__state = 1;
-          return 1;
+          return result;
         }
       }
     }
@@ -3087,14 +3094,19 @@ System_Collections_Generic_IEnumerator_KeyValuePair_string__string___o *Internal
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_KeyValuePair_string__string__o Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21__System_Collections_Generic_IEnumerator_System_Collections_Generic_KeyValuePair_System_String_System_String___get_Current(
         Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *this,
         const MethodInfo *method)
 {
+  struct System_String_o *value; // x1
+  struct System_String_o *key; // x0
   System_Collections_Generic_KeyValuePair_string__string__o result; // 0:x0.16
 
-  result.fields.value = this->fields.__2__current.fields.value;
-  result.fields.key = this->fields.__2__current.fields.key;
+  value = this->fields.__2__current.fields.value;
+  key = this->fields.__2__current.fields.key;
+  result.fields.value = value;
+  result.fields.key = key;
   return result;
 }
 
@@ -3457,7 +3469,7 @@ bool Internal_Threading_Tasks_Tracing_TaskTrace__get_Enabled(const MethodInfo *m
   }
   s_callbacks = Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo->static_fields->s_callbacks;
   if ( s_callbacks )
-    LOBYTE(s_callbacks) = ((bool (__fastcall *)(struct Internal_Runtime_Augments_TaskTraceCallbacks_o *, void *))s_callbacks->klass[1]._1.image)(
+    LOBYTE(s_callbacks) = ((__int64 (__fastcall *)(struct Internal_Runtime_Augments_TaskTraceCallbacks_o *, void *))s_callbacks->klass[1]._1.image)(
                             s_callbacks,
                             s_callbacks->klass[1]._1.gc_desc);
   return (char)s_callbacks;

@@ -179,7 +179,7 @@ System_IAsyncResult_o *CriAudioWriteStream_Delegate__BeginInvoke(
   v10[0] = buffer;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984350, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -206,7 +206,7 @@ uint32_t CriAudioWriteStream_Delegate__Invoke(
         uint32_t numSamples,
         const MethodInfo *method)
 {
-  return ((uint32_t (__fastcall *)(intptr_t, System_Single_array_array *, uint32_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, System_Single_array_array *, uint32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            buffer,
            numSamples,
@@ -277,7 +277,7 @@ System_IAsyncResult_o *CriAudioWriteStream_InternalDelegate__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(qword_5984358, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984358, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984350, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -305,7 +305,7 @@ uint32_t CriAudioWriteStream_InternalDelegate__Invoke(
         uint32_t numSamples,
         const MethodInfo *method)
 {
-  return ((uint32_t (__fastcall *)(intptr_t, intptr_t, intptr_t, uint32_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, intptr_t, intptr_t, uint32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            cbobj,
            data,
@@ -373,7 +373,7 @@ LABEL_12:
   callback = v7->fields.callback;
   if ( !callback )
     goto LABEL_14;
-  return ((uint32_t (__fastcall *)(intptr_t, struct System_Single_array_array *, _QWORD, intptr_t))callback->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, struct System_Single_array_array *, _QWORD, intptr_t))callback->fields.invoke_impl)(
            callback->fields.method_code,
            v7->fields.buffer,
            numSamples,

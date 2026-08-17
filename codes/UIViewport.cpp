@@ -14,17 +14,24 @@ void UIViewport__LateUpdate(UIViewport_o *this, const MethodInfo *method)
   UnityEngine_Transform_o *mCam; // x0
   UnityEngine_Camera_o *sourceCamera; // x20
   UnityEngine_Camera_o *v9; // x20
+  float x; // s8
+  float y; // s9
+  float v12; // s10
+  float v13; // s11
   int32_t width; // w20
   int32_t height; // w21
-  int32_t v12; // w22
+  int32_t v16; // w22
   float fullSize; // s12
-  float v14; // s9
-  unsigned __int64 v15; // kr50_8
-  unsigned __int64 v16; // kr58_8
-  UnityEngine_Rect_o rect; // 0:kr40_16.16
+  float v18; // s9
+  float v19; // s10
+  float v20; // s11
+  float v21; // s8
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Rect_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59752E8 & 1) == 0 )
   {
@@ -48,48 +55,55 @@ void UIViewport__LateUpdate(UIViewport_o *this, const MethodInfo *method)
       position = UnityEngine_Transform__get_position(mCam, 0);
       if ( !sourceCamera )
         goto LABEL_25;
-      v15 = (unsigned __int64)UnityEngine_Camera__WorldToScreenPoint_83198204(sourceCamera, position, 0);
+      v23 = UnityEngine_Camera__WorldToScreenPoint_83198204(sourceCamera, position, 0);
       mCam = this->fields.bottomRight;
       if ( !mCam )
         goto LABEL_25;
       v9 = this->fields.sourceCamera;
-      v19 = UnityEngine_Transform__get_position(mCam, 0);
+      x = v23.fields.x;
+      y = v23.fields.y;
+      v24 = UnityEngine_Transform__get_position(mCam, 0);
       if ( !v9 )
         goto LABEL_25;
-      v16 = (unsigned __int64)UnityEngine_Camera__WorldToScreenPoint_83198204(v9, v19, 0);
+      v25 = UnityEngine_Camera__WorldToScreenPoint_83198204(v9, v24, 0);
+      v12 = v25.fields.x;
+      v13 = v25.fields.y;
       width = UnityEngine_Screen__get_width(0);
       height = UnityEngine_Screen__get_height(0);
-      v12 = UnityEngine_Screen__get_width(0);
+      v16 = UnityEngine_Screen__get_width(0);
       mCam = (UnityEngine_Transform_o *)UnityEngine_Screen__get_height(0);
       if ( !this->fields.mCam )
         goto LABEL_25;
       fullSize = this->fields.fullSize;
-      v14 = (float)(*((float *)&v15 + 1) - *((float *)&v16 + 1)) / (float)(int)mCam;
+      v18 = (float)(y - v13) / (float)(int)mCam;
+      v19 = (float)(v12 - x) / (float)v16;
+      v20 = v13 / (float)height;
+      v21 = x / (float)width;
       rect = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
-      if ( (float)(*(float *)&v15 / (float)width) != rect.fields.m_XMin
-        || (float)(*((float *)&v16 + 1) / (float)height) != rect.fields.m_YMin
-        || (float)((float)(*(float *)&v16 - *(float *)&v15) / (float)v12) != rect.fields.m_Width
-        || v14 != rect.fields.m_Height )
+      if ( v21 != rect.fields.m_XMin
+        || v20 != rect.fields.m_YMin
+        || v19 != rect.fields.m_Width
+        || v18 != rect.fields.m_Height )
       {
         mCam = (UnityEngine_Transform_o *)this->fields.mCam;
         if ( !mCam )
           goto LABEL_25;
-        v20.fields.m_XMin = *(float *)&v15 / (float)width;
-        v20.fields.m_YMin = *((float *)&v16 + 1) / (float)height;
-        v20.fields.m_Width = (float)(*(float *)&v16 - *(float *)&v15) / (float)v12;
-        v20.fields.m_Height = v14;
-        UnityEngine_Camera__set_rect((UnityEngine_Camera_o *)mCam, v20, 0);
+        v27.fields.m_XMin = v21;
+        v27.fields.m_YMin = v20;
+        v27.fields.m_Width = v19;
+        v27.fields.m_Height = v18;
+        UnityEngine_Camera__set_rect((UnityEngine_Camera_o *)mCam, v27, 0);
       }
       mCam = (UnityEngine_Transform_o *)this->fields.mCam;
       if ( !mCam )
 LABEL_25:
         sub_2213CDC(mCam, v6);
-      if ( UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)mCam, 0) != (float)(fullSize * v14) )
+      if ( UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)mCam, 0) != (float)(fullSize * v18) )
       {
         mCam = (UnityEngine_Transform_o *)this->fields.mCam;
         if ( mCam )
         {
-          UnityEngine_Camera__set_orthographicSize((UnityEngine_Camera_o *)mCam, fullSize * v14, 0);
+          UnityEngine_Camera__set_orthographicSize((UnityEngine_Camera_o *)mCam, fullSize * v18, 0);
           return;
         }
         goto LABEL_25;

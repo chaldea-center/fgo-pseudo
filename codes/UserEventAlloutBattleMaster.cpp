@@ -363,7 +363,7 @@ System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__o *Use
   __int64 v20; // x0
   __int64 v21; // x0
   __int128 v22; // q0
-  Il2CppObject *value; // x21
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   UserEventAlloutBattleMaster_o *v24; // x0
   const MethodInfo *v25; // x2
   __int64 naturalAligment; // x10
@@ -499,16 +499,16 @@ LABEL_20:
                 &v39,
                 (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
       {
-        value = v39.fields._current.fields.value;
+        current = v39.fields._current;
         v24 = (UserEventAlloutBattleMaster_o *)System_Int32__Parse((System_String_o *)v39.fields._current.fields.key, 0);
         if ( (_DWORD)v24 == questId )
         {
-          if ( value
+          if ( current.fields.value
             && (naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment,
-                value->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
+                current.fields.value->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
           {
-            v27 = (System_Collections_Generic_List_object__c *)value->klass->_2.typeHierarchy[naturalAligment - 1] == System_Collections_Generic_List_object__TypeInfo
-                ? (System_Collections_Generic_List_object__o *)value
+            v27 = (System_Collections_Generic_List_object__c *)current.fields.value->klass->_2.typeHierarchy[naturalAligment - 1] == System_Collections_Generic_List_object__TypeInfo
+                ? (System_Collections_Generic_List_object__o *)current.fields.value
                 : 0LL;
           }
           else

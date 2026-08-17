@@ -262,14 +262,14 @@ void SvtEqCombineListViewManager__CheckDragMax(
   __int64 v29; // x22
   __int64 v30; // x23
   int32_t v31; // w8
-  int v32; // w23
+  int32_t v32; // w23
   int v33; // w22
   const MethodInfo *v34; // x4
   int32_t LevelMax; // w21
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-A0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+40h] [xbp-80h] BYREF
-  __int64 checkLv; // [xsp+58h] [xbp-68h] BYREF
+  int32_t increLv[2]; // [xsp+58h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
   if ( (byte_596A3D3 & 1) == 0 )
@@ -292,7 +292,7 @@ void SvtEqCombineListViewManager__CheckDragMax(
   }
   *isMaxLvSelected = 0;
   itemList = this->fields.itemList;
-  checkLv = 0;
+  *(_QWORD *)increLv = 0;
   memset(&v38, 0, sizeof(v38));
   memset(&v37, 0, sizeof(v37));
   if ( !itemList )
@@ -422,20 +422,15 @@ LABEL_16:
             if ( itemList )
             {
               v33 = *((_DWORD *)itemList + 101);
-              LODWORD(checkLv) = *((_DWORD *)itemList + 100);
-              v32 = checkLv;
+              increLv[0] = *((_DWORD *)itemList + 100);
+              v32 = increLv[0];
               LevelMax = UserServantEntity__getLevelMax((UserServantEntity_o *)itemList, 0);
               if ( v32 != LevelMax )
               {
-                while ( !SvtEqCombineListViewManager__CheckIncrementLv(
-                           this,
-                           (int32_t *)&checkLv,
-                           (int32_t *)&checkLv + 1,
-                           v7 + v6 + v33,
-                           v34) )
+                while ( !SvtEqCombineListViewManager__CheckIncrementLv(this, increLv, &increLv[1], v7 + v6 + v33, v34) )
                   ;
               }
-              *isMaxLvSelected = SHIDWORD(checkLv) >= LevelMax;
+              *isMaxLvSelected = increLv[1] >= LevelMax;
               return;
             }
           }
@@ -459,6 +454,7 @@ bool SvtEqCombineListViewManager__CheckIncrementLv(
   int32_t LevelMax; // w0
   int32_t v11; // w8
   int32_t v12; // w8
+  bool result; // w0
 
   if ( (byte_596A3D4 & 1) == 0 )
   {
@@ -494,8 +490,9 @@ LABEL_16:
   {
     if ( v11 != totalExp )
     {
+      result = 0;
       ++*checkLv;
-      return 0;
+      return result;
     }
     v12 = *((_DWORD *)baseUsrSvtData + 5) + 1;
   }
@@ -2513,7 +2510,8 @@ LABEL_36:
     (System_Collections_Generic_List_Enumerator_T__o *)&v40,
     (System_Collections_Generic_List_object__o *)Instance,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v43 = *(System_Collections_Generic_List_Enumerator_object__o *)&v40.fields.currentCryptoKey;
+  v43.fields._current = (Il2CppObject *)v40.fields.fakeValue;
+  *(_OWORD *)&v43.fields._list = *(_OWORD *)&v40.fields.currentCryptoKey;
   v41 = 0;
   v42 = &v43;
   while ( 1 )
@@ -3210,7 +3208,8 @@ LABEL_43:
     (System_Collections_Generic_List_object__o *)Instance,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
   v13 = !isIconSizeChange && isInit;
-  v44 = *(System_Collections_Generic_List_Enumerator_object__o *)&v41.fields.currentCryptoKey;
+  v44.fields._current = (Il2CppObject *)v41.fields.fakeValue;
+  *(_OWORD *)&v44.fields._list = *(_OWORD *)&v41.fields.currentCryptoKey;
   v42 = 0;
   v43 = &v44;
   while ( 1 )
@@ -4405,6 +4404,7 @@ void SvtEqCombineListViewManager__OnMoveEnd(SvtEqCombineListViewManager_o *this,
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SvtEqCombineListViewManager__RefrashListDisp(SvtEqCombineListViewManager_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
@@ -4449,39 +4449,42 @@ void SvtEqCombineListViewManager__RefrashListDisp(SvtEqCombineListViewManager_o 
   unsigned int v42; // w8
   UILabel_o *spendQpLabel; // x21
   Il2CppObject *v44; // x0
+  float v45; // s1 OVERLAPPED
+  float v46; // s3
+  float v47; // s0
+  float v48; // s2
   UILabel_o *getBasicExpLabel; // x21
-  Il2CppObject *v47; // x0
+  Il2CppObject *v50; // x0
   UILabel_o *getAccExpLabel; // x21
-  Il2CppObject *v49; // x0
-  const MethodInfo *v50; // x2
-  __int64 v51; // x2
-  struct UserServantEntity_o *v52; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v53; // x21
-  __int64 v54; // x22
-  __int64 v55; // x23
-  int32_t v56; // w8
-  const MethodInfo *v57; // x4
+  Il2CppObject *v52; // x0
+  const MethodInfo *v53; // x2
+  __int64 v54; // x2
+  struct UserServantEntity_o *v55; // x8
+  DataMasterBase_TMaster__TEntity__PKType__o *v56; // x21
+  __int64 v57; // x22
+  __int64 v58; // x23
+  int32_t v59; // w8
+  const MethodInfo *v60; // x4
   int32_t LevelMax; // w21
-  struct UserServantEntity_o *v59; // x8
-  bool v60; // w1
-  bool v61; // w22
-  _BOOL8 v62; // x0
-  __int64 v63; // x1
-  __int64 v64; // x2
-  __int64 v65; // x3
-  Il2CppObject *v66; // x21
-  __int64 v67; // x9
-  SvtEqCombineListViewManager_o *v68; // x0
-  bool v69; // w1
+  struct UserServantEntity_o *v62; // x8
+  bool v63; // w1
+  bool v64; // w22
+  _BOOL8 v65; // x0
+  __int64 v66; // x1
+  __int64 v67; // x2
+  __int64 v68; // x3
+  Il2CppObject *v69; // x21
+  __int64 v70; // x9
+  SvtEqCombineListViewManager_o *v71; // x0
+  bool v72; // w1
   struct System_Collections_Generic_List_long__o *tempMaterialUsrSvtIdList; // x8
   int32_t size; // w8
-  int32_t v72; // w21
+  int32_t v75; // w21
   int32_t selectMax; // [xsp+4h] [xbp-CCh] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v74; // [xsp+8h] [xbp-C8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v75; // [xsp+20h] [xbp-B0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v76; // [xsp+40h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v77; // 0:x0.16
-  UnityEngine_Color_o v78; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_Collections_Generic_List_Enumerator_object__o v77; // [xsp+8h] [xbp-C8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v78; // [xsp+20h] [xbp-B0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v79; // [xsp+40h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v80; // 0:x0.16
 
   if ( (byte_596A3D2 & 1) == 0 )
   {
@@ -4507,8 +4510,8 @@ void SvtEqCombineListViewManager__RefrashListDisp(SvtEqCombineListViewManager_o 
     sub_2213A60(&StringLiteral_13005/*"SUM_INFO"*/);
     byte_596A3D2 = 1;
   }
-  memset(&v76, 0, sizeof(v76));
-  memset(&v75, 0, sizeof(v75));
+  memset(&v79, 0, sizeof(v79));
+  memset(&v78, 0, sizeof(v78));
   ObjectList = (System_Collections_Generic_List_object__o *)SvtEqCombineListViewManager__get_ObjectList(this, method);
   baseUsrSvtData = this->fields.baseUsrSvtData;
   p_selectQp = &this->fields.selectQp;
@@ -4528,31 +4531,31 @@ void SvtEqCombineListViewManager__RefrashListDisp(SvtEqCombineListViewManager_o 
   if ( !itemList )
     goto LABEL_100;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v74,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v77,
     (System_Collections_Generic_List_object__o *)itemList,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v76 = v74;
-  v74.fields._list = 0;
-  *(_QWORD *)&v74.fields._index = &v76;
+  v79 = v77;
+  v77.fields._list = 0;
+  *(_QWORD *)&v77.fields._index = &v79;
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v76,
+            &v79,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
     if ( (v11 & 1) == 0 )
       break;
-    current = (SvtEqCombineListViewItem_o *)v76.fields._current;
-    if ( !v76.fields._current )
+    current = (SvtEqCombineListViewItem_o *)v79.fields._current;
+    if ( !v79.fields._current )
       goto LABEL_99;
     naturalAligment = SvtEqCombineListViewItem_TypeInfo->_2.naturalAligment;
-    if ( v76.fields._current->klass->_2.naturalAligment < (unsigned int)naturalAligment
-      || (SvtEqCombineListViewItem_c *)v76.fields._current->klass->_2.typeHierarchy[naturalAligment - 1] != SvtEqCombineListViewItem_TypeInfo )
+    if ( v79.fields._current->klass->_2.naturalAligment < (unsigned int)naturalAligment
+      || (SvtEqCombineListViewItem_c *)v79.fields._current->klass->_2.typeHierarchy[naturalAligment - 1] != SvtEqCombineListViewItem_TypeInfo )
     {
-      v11 = sub_221405C(v76.fields._current, SvtEqCombineListViewItem_TypeInfo, v13, v14);
+      v11 = sub_221405C(v79.fields._current, SvtEqCombineListViewItem_TypeInfo, v13, v14);
 LABEL_99:
       sub_2213CDC(v11, v12);
     }
-    if ( ListViewItem__get_IsSelect((ListViewItem_o *)v76.fields._current, 0) )
+    if ( ListViewItem__get_IsSelect((ListViewItem_o *)v79.fields._current, 0) )
     {
       v18 = this->fields.baseUsrSvtData;
       this->fields.selectQp += v9;
@@ -4577,14 +4580,14 @@ LABEL_19:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v76,
+    &v79,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   selectInfoLabel = this->fields.selectInfoLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v22, v23);
   v25 = LocalizationManager__Get((System_String_o *)StringLiteral_13005/*"SUM_INFO"*/, 0);
-  LODWORD(v74.fields._list) = this->fields.selectSum;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v74);
+  LODWORD(v77.fields._list) = this->fields.selectSum;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v77);
   selectMax = this->fields.selectMax;
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &selectMax);
   itemList = (__int64)System_String__Format_75697880(v25, v26, v27, 0);
@@ -4598,26 +4601,26 @@ LABEL_19:
   if ( combineEventList && combineEventList->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v74,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v77,
       combineEventList,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    v75 = v74;
-    v74.fields._list = 0;
-    *(_QWORD *)&v74.fields._index = &v75;
+    v78 = v77;
+    v77.fields._list = 0;
+    *(_QWORD *)&v77.fields._index = &v78;
     while ( 1 )
     {
       v30 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v75,
+              &v78,
               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
       if ( !v30 )
         break;
-      v33 = v75.fields._current;
-      if ( !v75.fields._current )
+      v33 = v78.fields._current;
+      if ( !v78.fields._current )
         sub_2213CDC(v30, v31);
-      klass_high = HIDWORD(v75.fields._current[1].klass);
+      klass_high = HIDWORD(v78.fields._current[1].klass);
       if ( klass_high == 17 )
       {
-        v35 = *(float *)&v75.fields._current[3].monitor;
+        v35 = *(float *)&v78.fields._current[3].monitor;
         selectExp = this->fields.selectExp;
         if ( !byte_596A15B )
         {
@@ -4652,12 +4655,12 @@ LABEL_19:
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v75,
+      &v78,
       (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
   }
   spendQpLabel = this->fields.spendQpLabel;
-  LODWORD(v74.fields._list) = this->fields.selectQp;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v74);
+  LODWORD(v77.fields._list) = this->fields.selectQp;
+  v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v77);
   itemList = (__int64)System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v44, 0);
   if ( !spendQpLabel )
     goto LABEL_100;
@@ -4667,24 +4670,24 @@ LABEL_19:
     itemList = (__int64)this->fields.spendQpLabel;
     if ( !itemList )
       goto LABEL_100;
-    v78.fields.g = 1.0;
-    v78.fields.a = 1.0;
+    v45 = 1.0;
+    v46 = 1.0;
     if ( this->fields.userQP < this->fields.selectQp )
-      v78.fields.g = 0.0;
-    v78.fields.r = 1.0;
-    v78.fields.b = v78.fields.g;
-    UIWidget__set_color((UIWidget_o *)itemList, v78, 0);
+      v45 = 0.0;
+    v47 = 1.0;
+    v48 = v45;
+    UIWidget__set_color((UIWidget_o *)itemList, *(UnityEngine_Color_o *)(&v45 - 1), 0);
   }
   getBasicExpLabel = this->fields.getBasicExpLabel;
-  LODWORD(v74.fields._list) = this->fields.selectExp;
-  v47 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v74);
-  itemList = (__int64)System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v47, 0);
+  LODWORD(v77.fields._list) = this->fields.selectExp;
+  v50 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v77);
+  itemList = (__int64)System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v50, 0);
   if ( !getBasicExpLabel
     || (UILabel__set_text(getBasicExpLabel, (System_String_o *)itemList, 0),
         getAccExpLabel = this->fields.getAccExpLabel,
         selectMax = this->fields.addTotalExp,
-        v49 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &selectMax),
-        itemList = (__int64)System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v49, 0),
+        v52 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &selectMax),
+        itemList = (__int64)System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v52, 0),
         !getAccExpLabel) )
   {
 LABEL_100:
@@ -4699,28 +4702,28 @@ LABEL_100:
     itemList = (__int64)DataManager__GetMasterData_object_(
                           (DataManager_o *)itemList,
                           (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
-    v52 = this->fields.baseUsrSvtData;
-    if ( !v52 )
+    v55 = this->fields.baseUsrSvtData;
+    if ( !v55 )
       goto LABEL_100;
-    v53 = (DataMasterBase_TMaster__TEntity__PKType__o *)itemList;
-    v54 = *(_QWORD *)&v52->fields.svtId.fields.currentCryptoKey;
-    v55 = *(_QWORD *)&v52->fields.svtId.fields.fakeValue;
+    v56 = (DataMasterBase_TMaster__TEntity__PKType__o *)itemList;
+    v57 = *(_QWORD *)&v55->fields.svtId.fields.currentCryptoKey;
+    v58 = *(_QWORD *)&v55->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3, v51);
-    *(_QWORD *)&v77.fields.currentCryptoKey = v54;
-    *(_QWORD *)&v77.fields.fakeValue = v55;
-    itemList = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v77, 0);
-    if ( !v53 )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3, v54);
+    *(_QWORD *)&v80.fields.currentCryptoKey = v57;
+    *(_QWORD *)&v80.fields.fakeValue = v58;
+    itemList = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v80, 0);
+    if ( !v56 )
       goto LABEL_100;
     itemList = (__int64)DataMasterBase_object__object__int___GetEntity(
-                          v53,
+                          v56,
                           itemList,
                           (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( !itemList )
       goto LABEL_100;
-    v56 = *(_DWORD *)(itemList + 132);
+    v59 = *(_DWORD *)(itemList + 132);
     itemList = (__int64)this->fields.baseUsrSvtData;
-    this->fields.expType = v56;
+    this->fields.expType = v59;
     if ( !itemList )
       goto LABEL_100;
     this->fields.totalExp = *(_DWORD *)(itemList + 404) + this->fields.selectExp + this->fields.addTotalExp;
@@ -4734,20 +4737,20 @@ LABEL_100:
                      &this->fields.checkLv,
                      &this->fields.increLv,
                      this->fields.totalExp,
-                     v57);
+                     v60);
       while ( (itemList & 1) == 0 );
-      v59 = this->fields.baseUsrSvtData;
-      if ( !v59 )
+      v62 = this->fields.baseUsrSvtData;
+      if ( !v62 )
         goto LABEL_100;
       itemList = (__int64)this->fields.levelUpInfoImg;
-      if ( this->fields.increLv - v59->fields.lv < 1 )
+      if ( this->fields.increLv - v62->fields.lv < 1 )
       {
         if ( !itemList )
           goto LABEL_100;
         itemList = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0);
         if ( !itemList )
           goto LABEL_100;
-        v60 = 0;
+        v63 = 0;
       }
       else
       {
@@ -4756,50 +4759,50 @@ LABEL_100:
         itemList = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemList, 0);
         if ( !itemList )
           goto LABEL_100;
-        v60 = 1;
+        v63 = 1;
       }
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemList, v60, 0);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemList, v63, 0);
     }
     itemList = (__int64)this->fields.itemList;
     if ( !itemList )
       goto LABEL_100;
-    v61 = this->fields.increLv >= LevelMax;
+    v64 = this->fields.increLv >= LevelMax;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v74,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v77,
       (System_Collections_Generic_List_object__o *)itemList,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    v76 = v74;
-    v74.fields._list = 0;
-    *(_QWORD *)&v74.fields._index = &v76;
+    v79 = v77;
+    v77.fields._list = 0;
+    *(_QWORD *)&v77.fields._index = &v79;
     while ( 1 )
     {
-      v62 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v76,
+      v65 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v79,
               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-      if ( !v62 )
+      if ( !v65 )
         break;
-      v66 = v76.fields._current;
-      if ( !v76.fields._current )
-        sub_2213CDC(v62, v63);
-      v67 = SvtEqCombineListViewItem_TypeInfo->_2.naturalAligment;
-      if ( v76.fields._current->klass->_2.naturalAligment < (unsigned int)v67
-        || (SvtEqCombineListViewItem_c *)v76.fields._current->klass->_2.typeHierarchy[v67 - 1] != SvtEqCombineListViewItem_TypeInfo )
+      v69 = v79.fields._current;
+      if ( !v79.fields._current )
+        sub_2213CDC(v65, v66);
+      v70 = SvtEqCombineListViewItem_TypeInfo->_2.naturalAligment;
+      if ( v79.fields._current->klass->_2.naturalAligment < (unsigned int)v70
+        || (SvtEqCombineListViewItem_c *)v79.fields._current->klass->_2.typeHierarchy[v70 - 1] != SvtEqCombineListViewItem_TypeInfo )
       {
-        v18 = (UserServantEntity_o *)sub_221405C(v76.fields._current, SvtEqCombineListViewItem_TypeInfo, v64, v65);
+        v18 = (UserServantEntity_o *)sub_221405C(v79.fields._current, SvtEqCombineListViewItem_TypeInfo, v67, v68);
 LABEL_102:
         sub_2213CDC(v18, v17);
       }
-      if ( !ListViewItem__get_IsSelect((ListViewItem_o *)v76.fields._current, 0) )
-        BYTE2(v66[15].monitor) = v61;
+      if ( !ListViewItem__get_IsSelect((ListViewItem_o *)v79.fields._current, 0) )
+        BYTE2(v69[15].monitor) = v64;
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v76,
+      &v79,
       (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   }
   if ( this->fields.selectSum >= 1 )
   {
-    v68 = this;
-    v69 = 1;
+    v71 = this;
+    v72 = 1;
     goto LABEL_86;
   }
   tempMaterialUsrSvtIdList = this->fields.tempMaterialUsrSvtIdList;
@@ -4807,10 +4810,10 @@ LABEL_102:
     goto LABEL_100;
   if ( tempMaterialUsrSvtIdList->fields._size <= 0 )
   {
-    v68 = this;
-    v69 = 0;
+    v71 = this;
+    v72 = 0;
 LABEL_86:
-    SvtEqCombineListViewManager__SetBtnEnable(v68, v69, v50);
+    SvtEqCombineListViewManager__SetBtnEnable(v71, v72, v53);
     if ( !ObjectList )
       goto LABEL_100;
     goto LABEL_92;
@@ -4829,13 +4832,13 @@ LABEL_92:
   size = ObjectList->fields._size;
   if ( size >= 1 )
   {
-    v72 = 0;
+    v75 = 0;
     this->fields.callbackCount = size;
     while ( 1 )
     {
       itemList = (__int64)System_Collections_Generic_List_object___get_Item(
                             ObjectList,
-                            v72,
+                            v75,
                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_SvtEqCombineListViewObject__get_Item__);
       if ( !itemList )
         break;
@@ -4843,7 +4846,7 @@ LABEL_92:
         itemList,
         this->fields.isInput,
         *(_QWORD *)(*(_QWORD *)itemList + 464LL));
-      if ( ++v72 >= ObjectList->fields._size )
+      if ( ++v75 >= ObjectList->fields._size )
         return;
     }
     goto LABEL_100;
@@ -5182,7 +5185,10 @@ void SvtEqCombineListViewManager__SetBtnEnable(
 {
   bool v4; // w21
   UnityEngine_Component_o *decideBtnBg; // x0
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   v4 = isEnable;
   if ( (byte_596A3CE & 1) == 0 )
@@ -5199,13 +5205,13 @@ void SvtEqCombineListViewManager__SetBtnEnable(
                                              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !decideBtnBg )
     goto LABEL_9;
-  v7.fields.r = 1.0;
-  v7.fields.a = 1.0;
+  v6 = 1.0;
+  v7 = 1.0;
   if ( !this->fields.isDecideFlg )
-    v7.fields.r = 0.5;
-  v7.fields.g = v7.fields.r;
-  v7.fields.b = v7.fields.r;
-  UIWidget__set_color((UIWidget_o *)decideBtnBg, v7, 0);
+    v6 = 0.5;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color((UIWidget_o *)decideBtnBg, *(UnityEngine_Color_o *)&v6, 0);
   decideBtnBg = (UnityEngine_Component_o *)this->fields.allReleaseButton;
   if ( !decideBtnBg )
 LABEL_9:
@@ -5223,10 +5229,10 @@ void SvtEqCombineListViewManager__SetDispActive(
   void *allReleaseButton; // x0
   __int64 v6; // x2
   float v7; // s8
-  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v8; // s3 OVERLAPPED
+  float v9; // s0
+  float v10; // s1
+  float v11; // s2
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -5237,6 +5243,9 @@ void SvtEqCombineListViewManager__SetDispActive(
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A3CD & 1) == 0 )
   {
@@ -5272,53 +5281,14 @@ void SvtEqCombineListViewManager__SetDispActive(
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !allReleaseButton )
     goto LABEL_40;
-  v8.fields.a = 1.0;
+  v8 = 1.0;
   if ( isShow )
     v7 = 1.0;
-  v8.fields.r = v7;
-  v8.fields.g = v7;
-  v8.fields.b = v7;
-  UIWidget__set_color((UIWidget_o *)allReleaseButton, v8, 0);
+  v9 = v7;
+  v10 = v7;
+  v11 = v7;
+  UIWidget__set_color((UIWidget_o *)allReleaseButton, *(UnityEngine_Color_o *)(&v8 - 3), 0);
   allReleaseButton = this->fields.spendQpInfoImg;
-  if ( !allReleaseButton )
-    goto LABEL_40;
-  allReleaseButton = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)allReleaseButton,
-                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
-  if ( !allReleaseButton )
-    goto LABEL_40;
-  v9.fields.r = v7;
-  v9.fields.g = v7;
-  v9.fields.b = v7;
-  v9.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)allReleaseButton, v9, 0);
-  allReleaseButton = this->fields.spendQpLabel;
-  if ( !allReleaseButton )
-    goto LABEL_40;
-  allReleaseButton = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)allReleaseButton,
-                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
-  if ( !allReleaseButton )
-    goto LABEL_40;
-  v10.fields.r = v7;
-  v10.fields.g = v7;
-  v10.fields.b = v7;
-  v10.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)allReleaseButton, v10, 0);
-  allReleaseButton = this->fields.getExpBg;
-  if ( !allReleaseButton )
-    goto LABEL_40;
-  allReleaseButton = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)allReleaseButton,
-                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
-  if ( !allReleaseButton )
-    goto LABEL_40;
-  v11.fields.r = v7;
-  v11.fields.g = v7;
-  v11.fields.b = v7;
-  v11.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)allReleaseButton, v11, 0);
-  allReleaseButton = this->fields.getExpBgImg;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5331,7 +5301,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v12.fields.b = v7;
   v12.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v12, 0);
-  allReleaseButton = this->fields.getExpLabel;
+  allReleaseButton = this->fields.spendQpLabel;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5344,7 +5314,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v13.fields.b = v7;
   v13.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v13, 0);
-  allReleaseButton = this->fields.getBasicExpLabel;
+  allReleaseButton = this->fields.getExpBg;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5357,7 +5327,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v14.fields.b = v7;
   v14.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v14, 0);
-  allReleaseButton = this->fields.getAccExpLabel;
+  allReleaseButton = this->fields.getExpBgImg;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5370,7 +5340,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v15.fields.b = v7;
   v15.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v15, 0);
-  allReleaseButton = this->fields.haveQpBg;
+  allReleaseButton = this->fields.getExpLabel;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5383,7 +5353,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v16.fields.b = v7;
   v16.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v16, 0);
-  allReleaseButton = this->fields.haveQpInfoImg;
+  allReleaseButton = this->fields.getBasicExpLabel;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5396,7 +5366,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v17.fields.b = v7;
   v17.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v17, 0);
-  allReleaseButton = this->fields.haveQpLabel;
+  allReleaseButton = this->fields.getAccExpLabel;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5409,7 +5379,7 @@ void SvtEqCombineListViewManager__SetDispActive(
   v18.fields.b = v7;
   v18.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v18, 0);
-  allReleaseButton = this->fields.nextExpBg;
+  allReleaseButton = this->fields.haveQpBg;
   if ( !allReleaseButton )
     goto LABEL_40;
   allReleaseButton = UnityEngine_Component__GetComponent_object_(
@@ -5422,6 +5392,45 @@ void SvtEqCombineListViewManager__SetDispActive(
   v19.fields.b = v7;
   v19.fields.a = 1.0;
   UIWidget__set_color((UIWidget_o *)allReleaseButton, v19, 0);
+  allReleaseButton = this->fields.haveQpInfoImg;
+  if ( !allReleaseButton )
+    goto LABEL_40;
+  allReleaseButton = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)allReleaseButton,
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+  if ( !allReleaseButton )
+    goto LABEL_40;
+  v20.fields.r = v7;
+  v20.fields.g = v7;
+  v20.fields.b = v7;
+  v20.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)allReleaseButton, v20, 0);
+  allReleaseButton = this->fields.haveQpLabel;
+  if ( !allReleaseButton )
+    goto LABEL_40;
+  allReleaseButton = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)allReleaseButton,
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+  if ( !allReleaseButton )
+    goto LABEL_40;
+  v21.fields.r = v7;
+  v21.fields.g = v7;
+  v21.fields.b = v7;
+  v21.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)allReleaseButton, v21, 0);
+  allReleaseButton = this->fields.nextExpBg;
+  if ( !allReleaseButton )
+    goto LABEL_40;
+  allReleaseButton = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)allReleaseButton,
+                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+  if ( !allReleaseButton )
+    goto LABEL_40;
+  v22.fields.r = v7;
+  v22.fields.g = v7;
+  v22.fields.b = v7;
+  v22.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)allReleaseButton, v22, 0);
   allReleaseButton = this->fields.nextExpInfoImg;
   if ( !allReleaseButton )
     goto LABEL_40;
@@ -5429,11 +5438,11 @@ void SvtEqCombineListViewManager__SetDispActive(
                        (UnityEngine_Component_o *)allReleaseButton,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !allReleaseButton
-    || (v20.fields.r = v7,
-        v20.fields.g = v7,
-        v20.fields.b = v7,
-        v20.fields.a = 1.0,
-        UIWidget__set_color((UIWidget_o *)allReleaseButton, v20, 0),
+    || (v23.fields.r = v7,
+        v23.fields.g = v7,
+        v23.fields.b = v7,
+        v23.fields.a = 1.0,
+        UIWidget__set_color((UIWidget_o *)allReleaseButton, v23, 0),
         (allReleaseButton = this->fields.nextExpLabel) == 0)
     || (allReleaseButton = UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)allReleaseButton,
@@ -5442,11 +5451,11 @@ void SvtEqCombineListViewManager__SetDispActive(
 LABEL_40:
     sub_2213CDC(allReleaseButton, isShow);
   }
-  v21.fields.a = 1.0;
-  v21.fields.r = v7;
-  v21.fields.g = v7;
-  v21.fields.b = v7;
-  UIWidget__set_color((UIWidget_o *)allReleaseButton, v21, 0);
+  v24.fields.a = 1.0;
+  v24.fields.r = v7;
+  v24.fields.g = v7;
+  v24.fields.b = v7;
+  UIWidget__set_color((UIWidget_o *)allReleaseButton, v24, 0);
 }
 
 
@@ -8544,7 +8553,7 @@ System_IAsyncResult_o *SvtEqCombineListViewManager_CallbackFunc__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(SvtEqCombineListViewManager_ResultKind_TypeInfo, &v12);
   v11[1] = list;
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -8637,7 +8646,7 @@ System_IAsyncResult_o *SvtEqCombineListViewManager_RequestCallbackFunc__BeginInv
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

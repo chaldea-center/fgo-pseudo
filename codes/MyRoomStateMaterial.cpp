@@ -2880,7 +2880,7 @@ void MyRoomStateMaterial__AddMaterialLimitUp(
   ServantVoiceEntity_o *v17; // x19
   __int64 v18; // x1
   __int64 v19; // x2
-  int v20; // w22
+  int32_t v20; // w22
   BalanceConfig_c *v21; // x0
   int v22; // w9
   int32_t v23; // w2
@@ -2931,7 +2931,7 @@ void MyRoomStateMaterial__AddMaterialLimitUp(
   MyRoomStateMaterial_o *v70; // [xsp+70h] [xbp-A0h]
   System_Collections_Generic_List_Enumerator_object__o v71; // [xsp+78h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v72; // [xsp+90h] [xbp-80h] BYREF
-  __int64 syncSvtId; // [xsp+A8h] [xbp-68h] BYREF
+  int32_t limitCount[2]; // [xsp+A8h] [xbp-68h] BYREF
 
   v70 = this;
   if ( (byte_596B9A1 & 1) == 0 )
@@ -2951,7 +2951,7 @@ void MyRoomStateMaterial__AddMaterialLimitUp(
     this = (MyRoomStateMaterial_o *)sub_2213A60(&StringLiteral_1/*""*/);
     byte_596B9A1 = 1;
   }
-  syncSvtId = 0;
+  *(_QWORD *)limitCount = 0;
   memset(&v72, 0, sizeof(v72));
   if ( !servantChangEntities
     || (max_length = servantChangEntities->max_length,
@@ -2988,7 +2988,7 @@ LABEL_93:
     v67 = (ServantChangeEntity_o **)(v11 + 4);
     if ( v12 )
       changeSvtVoiceId = (int32_t)v12->_1.element_class;
-    HIDWORD(syncSvtId) = 1;
+    limitCount[1] = 1;
     if ( !uscEnt )
       goto LABEL_92;
     v14 = (_DWORD)max_length != 1 && v10 == (_DWORD)max_length - 1;
@@ -3016,20 +3016,20 @@ LABEL_93:
                                         (ServantVoiceMaster_o *)MasterData_object,
                                         2,
                                         svtId,
-                                        SHIDWORD(syncSvtId),
+                                        limitCount[1],
                                         0);
       if ( !this )
         goto LABEL_92;
       v17 = (ServantVoiceEntity_o *)this;
-      ServantVoiceEntity__TryGetSyncServantId((ServantVoiceEntity_o *)this, (int32_t *)&syncSvtId, 0, 0);
-      v20 = HIDWORD(syncSvtId);
+      ServantVoiceEntity__TryGetSyncServantId((ServantVoiceEntity_o *)this, limitCount, 0, 0);
+      v20 = limitCount[1];
       v21 = BalanceConfig_TypeInfo;
       if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v18, v19);
         v21 = BalanceConfig_TypeInfo;
       }
-      if ( HIDWORD(syncSvtId) == 2 )
+      if ( limitCount[1] == 2 )
         v22 = 10;
       else
         v22 = 9;
@@ -3038,7 +3038,7 @@ LABEL_93:
       else
         v23 = v22;
       CondVoiceList = (System_Collections_Generic_List_object__o *)ServantVoiceEntity__getCondVoiceList(v17, 2, v23, 0);
-      v25 = (Il2CppObject *)System_Int32__ToString((int32_t)&syncSvtId + 4, 0);
+      v25 = (Il2CppObject *)System_Int32__ToString((int32_t)&limitCount[1], 0);
       v28 = System_String__Format((System_String_o *)StringLiteral_8955/*"MATERIAL_STORY_LIMIT_UP_{0}"*/, v25, 0);
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v26, v27);
@@ -3077,7 +3077,7 @@ LABEL_41:
         if ( !v38 )
           break;
         current = (SvtVoiceInfo_o *)v72.fields._current;
-        if ( (HIDWORD(syncSvtId) | 2) == 3 )
+        if ( (limitCount[1] | 2) == 3 )
         {
           if ( !v72.fields._current )
             sub_2213CDC(v38, v39);
@@ -3092,7 +3092,7 @@ LABEL_41:
           v43 = monitor[4];
           if ( !v43 )
             sub_2213CDC(v38, v39);
-          if ( HIDWORD(syncSvtId) == *(_DWORD *)(v43 + 20) )
+          if ( limitCount[1] == *(_DWORD *)(v43 + 20) )
             goto LABEL_52;
         }
         else
@@ -3127,13 +3127,13 @@ LABEL_52:
               v70,
               materialList,
               svtId,
-              SHIDWORD(syncSvtId),
+              limitCount[1],
               uscEnt,
               *v67,
               OverwriteName,
               v34,
               0,
-              syncSvtId,
+              limitCount[0],
               v60);
             goto LABEL_41;
           }
@@ -3172,13 +3172,13 @@ LABEL_52:
                 v70,
                 materialList,
                 svtId,
-                SHIDWORD(syncSvtId),
+                limitCount[1],
                 uscEnt,
                 *v67,
                 v54,
                 -1,
                 v57->fields.id,
-                syncSvtId,
+                limitCount[0],
                 v60);
               goto LABEL_41;
             }
@@ -3196,20 +3196,20 @@ LABEL_52:
         v70,
         materialList,
         svtId,
-        SHIDWORD(syncSvtId),
+        limitCount[1],
         uscEnt,
         *v67,
         v36,
         -1,
         0,
-        syncSvtId,
+        limitCount[0],
         v60);
 LABEL_72:
       maxLimitCount = uscEnt->fields.maxLimitCount;
       v9 = (VoiceMaster_o *)v62;
-      v15 = ++HIDWORD(syncSvtId);
+      v15 = ++limitCount[1];
     }
-    while ( SHIDWORD(syncSvtId) <= maxLimitCount );
+    while ( limitCount[1] <= maxLimitCount );
 LABEL_90:
     ++v10;
     servantChangEntities = v68;
@@ -9883,7 +9883,7 @@ System_Collections_Generic_Dictionary_int__int__o *MyRoomStateMaterial__GetPlaye
   __int64 v4; // x2
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
   __int64 v6; // x1
-  Il2CppObject *value; // x20
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   _BOOL8 v8; // x0
   __int64 v9; // x1
   System_String_o *v10; // x0
@@ -9933,15 +9933,15 @@ System_Collections_Generic_Dictionary_int__int__o *MyRoomStateMaterial__GetPlaye
               &v15,
               (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
-      value = v15.fields._current.fields.value;
+      current = v15.fields._current;
       v8 = System_Int32__TryParse((System_String_o *)v15.fields._current.fields.key, &result[1], 0);
       if ( v8 )
       {
-        if ( !value )
+        if ( !current.fields.value )
           sub_2213CDC(v8, v9);
-        v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))value->klass->vtable[3].methodPtr)(
-                                   value,
-                                   value->klass->vtable[3].method);
+        v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
+                                   current.fields.value,
+                                   current.fields.value->klass->vtable[3].method);
         v11 = System_Int32__TryParse(v10, result, 0);
         if ( v11 )
         {
@@ -10677,7 +10677,7 @@ void MyRoomStateMaterial__InitMainStory(
   System_Collections_Generic_List_object__o *v350; // [xsp+60h] [xbp-100h]
   System_Collections_Generic_List_Enumerator_object__o v351; // [xsp+78h] [xbp-E8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v352; // [xsp+90h] [xbp-D0h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v353; // [xsp+B0h] [xbp-B0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v353; // [xsp+B0h] [xbp-B0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v354; // [xsp+D0h] [xbp-90h] BYREF
   System_Collections_Generic_List_QuestScriptReleaseEntity__o *questScriptReleaseEnt; // [xsp+E8h] [xbp-78h] BYREF
   QuestScriptEntity_o *scriptEnt; // [xsp+F0h] [xbp-70h] BYREF
@@ -10906,12 +10906,12 @@ LABEL_248:
     (System_Collections_Generic_List_Enumerator_T__o *)&v351,
     v11,
     (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v353 = (System_Collections_Generic_List_Enumerator_int__o)v351;
+  v353 = v351;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v353,
+            (System_Collections_Generic_List_Enumerator_int__o *)&v353,
             (const MethodInfo_40F5CBC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-    v341 = v353.fields._current;
+    v341 = (int32_t)v353.fields._current;
     v50 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_List_MaterialEventLogListViewItem_Info___TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v50,
@@ -11648,7 +11648,7 @@ LABEL_147:
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v353,
+    (System_Collections_Generic_List_Enumerator_int__o *)&v353,
     (const MethodInfo_40F5CB8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
 }
 
@@ -17943,7 +17943,7 @@ void MyRoomStateMaterial_StateEvent___c__DisplayClass2_2___begin_b__2(
 LABEL_25:
     sub_2213CDC(this, method);
   }
-  *((_DWORD *)this + 28) = v36->fields.listIndex;
+  LODWORD(this[3].fields.itm) = v36->fields.listIndex;
   MyRoomStateMaterial__SetState((MyRoomStateMaterial_o *)this, 8, 0);
 }
 
@@ -20108,7 +20108,7 @@ void MyRoomStateMaterial_StateMainInterlude___c__DisplayClass2_2___begin_b__2(
 LABEL_25:
     sub_2213CDC(this, method);
   }
-  *((_DWORD *)this + 28) = v36->fields.listIndex;
+  LODWORD(this[3].fields.itm) = v36->fields.listIndex;
   MyRoomStateMaterial__SetState((MyRoomStateMaterial_o *)this, 10, 0);
 }
 
@@ -25389,6 +25389,7 @@ MaterialEventLogListViewItem_Info_o *MyRoomStateMaterial_StateServantStory__Crea
   int32_t v26; // w1
   int32_t FONT_SIZE; // w8
   int v28; // w10
+  MaterialEventLogListViewItem_Info_o *result; // x0
   int32_t limit_count; // w9
   MaterialEventLogListViewItem_Info_o *v31; // [xsp+0h] [xbp-50h] BYREF
   System_String_o *ruby; // [xsp+8h] [xbp-48h] BYREF
@@ -25471,12 +25472,13 @@ LABEL_18:
   *(_DWORD *)(v7 + 72) = FONT_SIZE;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), v26, v19, v20, v21, v22, v23, v24);
   v28 = *(_DWORD *)(v7 + 68);
+  result = (MaterialEventLogListViewItem_Info_o *)v7;
   limit_count = v4->fields.limit_count;
   *(_DWORD *)(v7 + 32) = Entity->fields.materialStoryPriority;
   *(_DWORD *)(v7 + 60) = svt_id;
   *(_DWORD *)(v7 + 64) = limit_count;
   *(_DWORD *)(v7 + 68) = v28 | 2;
-  return (MaterialEventLogListViewItem_Info_o *)v7;
+  return result;
 }
 
 
@@ -26296,11 +26298,11 @@ void MyRoomStateMaterial_StateServantStory___c__DisplayClass5_0___MoveServantSto
     j_il2cpp_runtime_class_init_0(MyRoomStateMaterial_StateServantStory___c_TypeInfo, method, v2);
     this = (MyRoomStateMaterial_StateServantStory___c__DisplayClass5_0_o *)MyRoomStateMaterial_StateServantStory___c_TypeInfo;
   }
-  static_fields = (struct MyRoomStateMaterial_StateServantStory___c_StaticFields *)*((_QWORD *)this + 23);
+  static_fields = *(struct MyRoomStateMaterial_StateServantStory___c_StaticFields **)&this[5].fields.svtId;
   _9__5_2 = static_fields->__9__5_2;
   if ( !_9__5_2 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[7].klass) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v2);
       static_fields = MyRoomStateMaterial_StateServantStory___c_TypeInfo->static_fields;
@@ -32931,6 +32933,7 @@ bool MyRoomStateMaterial__InitRecordWithServant_d__78__MoveNext(
   bool v33; // w6
   bool v34; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   __int64 v37; // x2
   struct UserServantCollectionEntity_o *collectionEntity_5__4; // x8
   MaterialEventLogListViewItem_Info_o *v39; // x21
@@ -33066,8 +33069,9 @@ LABEL_27:
       v2->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
       sub_2213A04(p__2__current, 0, v29, v30, v31, v32, v33, v34);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 2;
-      return 1;
+      return result;
     }
     goto LABEL_27;
   }
@@ -33134,8 +33138,8 @@ LABEL_30:
   {
     this->klass = 0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)this, 0, v57, v58, v59, v60, v61, v62);
+    result = 0;
     _4__this->fields._recordWithServantPageDataConstructionCompleted_k__BackingField = 1;
-    return 0;
   }
   else
   {
@@ -33155,9 +33159,10 @@ LABEL_30:
     v2->fields.__2__current = 0;
     v67 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
     sub_2213A04(v67, 0, v68, v69, v70, v71, v72, v73);
+    result = 1;
     v67[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
   }
+  return result;
 }
 
 
@@ -33858,7 +33863,7 @@ void MyRoomStateMaterial___c__DisplayClass112_1___OpenConfirmNextStoryDialog_b__
       {
         selectInfos = CS___8__locals1->fields.selectInfos;
         nextStoryIndex = CS___8__locals1->fields.nextStoryIndex;
-        *((_BYTE *)this + 216) = 1;
+        LOBYTE(this[6].fields.CS___8__locals1) = 1;
         MyRoomStateMaterial__SetScollPosY((MyRoomStateMaterial_o *)this, selectInfos, nextStoryIndex, 0);
         v6 = v2->fields.CS___8__locals1;
         if ( v6 )
@@ -33878,7 +33883,7 @@ void MyRoomStateMaterial___c__DisplayClass112_1___OpenConfirmNextStoryDialog_b__
                 nextInfo = v7->fields.nextInfo;
                 if ( nextInfo )
                 {
-                  v9 = *((_QWORD *)this + 10);
+                  v9 = *(_QWORD *)&this[2].fields.yes;
                   if ( v9 )
                   {
                     (*(void (__fastcall **)(_QWORD, struct MaterialEventLogListViewItem_o *, _QWORD))(v9 + 24))(
@@ -36609,7 +36614,7 @@ void MyRoomStateMaterial___c__DisplayClass77_2___InitMainStory_b__3(
   this = (MyRoomStateMaterial___c__DisplayClass77_2_o *)MapControl_QuestInfo__GetMine((MapControl_QuestInfo_o *)this, 0);
   if ( !this )
     goto LABEL_34;
-  IsNullOrEmpty = System_String__IsNullOrEmpty(*((System_String_o **)this + 15), 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)this[2].fields.item, 0);
   v7 = v3->fields.item;
   if ( IsNullOrEmpty )
   {
@@ -37637,7 +37642,7 @@ void MyRoomStateMaterial___c__DisplayClass82_7___ConstructMaterialDataGradually_
   __int64 size; // x10
   Il2CppClass **v18; // x0
   int32_t v19; // w20
-  __int64 v20; // x8
+  _DWORD *monitor; // x8
   __int64 v21; // x2
   struct MaterialEventLogListViewItem_o *v22; // x8
   struct MaterialEventLogListViewItem_Info_o *v23; // x8
@@ -37702,13 +37707,13 @@ void MyRoomStateMaterial___c__DisplayClass82_7___ConstructMaterialDataGradually_
   v19 = 0;
   while ( 1 )
   {
-    v20 = *((_QWORD *)this + 13);
-    if ( !v20 )
+    monitor = this[3].monitor;
+    if ( !monitor )
       goto LABEL_20;
-    if ( v19 >= *(_DWORD *)(v20 + 24) )
+    if ( v19 >= monitor[6] )
       goto LABEL_31;
     this = (MyRoomStateMaterial___c__DisplayClass82_7_o *)System_Collections_Generic_List_object___get_Item(
-                                                            *((System_Collections_Generic_List_object__o **)this + 13),
+                                                            (System_Collections_Generic_List_object__o *)this[3].monitor,
                                                             v19,
                                                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_MyRoomStateMaterial_EventSubFolder__get_Item__);
     if ( !this )
@@ -37741,7 +37746,7 @@ void MyRoomStateMaterial___c__DisplayClass82_7___ConstructMaterialDataGradually_
     this = (MyRoomStateMaterial___c__DisplayClass82_7_o *)MyRoomParamsManager_TypeInfo;
   }
   v25 = v2->fields.__4__this;
-  *(_DWORD *)(*((_QWORD *)this + 23) + 84LL) = v24;
+  HIDWORD(this[5].fields.__4__this->fields.mEventItemInfos) = v24;
   if ( !v25
     || (this = (MyRoomStateMaterial___c__DisplayClass82_7_o *)v25->fields.mEventSubFolderInfos) == 0
     || (this = (MyRoomStateMaterial___c__DisplayClass82_7_o *)System_Collections_Generic_List_object___get_Item(
@@ -37854,7 +37859,7 @@ int32_t MyRoomStateMaterial___c__DisplayClass83_0___ReSortMainInterludeFolder_b_
     goto LABEL_42;
   this = (MyRoomStateMaterial___c__DisplayClass83_0_o *)DataMasterBase_object__object__int___GetEntity(
                                                           warMst,
-                                                          *((_DWORD *)this + 10),
+                                                          (int32_t)this[1].klass,
                                                           (const MethodInfo_3F10B30 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
   if ( !b )
     goto LABEL_42;
@@ -37870,7 +37875,7 @@ int32_t MyRoomStateMaterial___c__DisplayClass83_0___ReSortMainInterludeFolder_b_
     goto LABEL_42;
   this = (MyRoomStateMaterial___c__DisplayClass83_0_o *)DataMasterBase_object__object__int___GetEntity(
                                                           v9,
-                                                          *((_DWORD *)this + 10),
+                                                          (int32_t)this[1].klass,
                                                           (const MethodInfo_3F10B30 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
   if ( !this )
     goto LABEL_42;
@@ -37929,7 +37934,7 @@ int32_t MyRoomStateMaterial___c__DisplayClass83_0___ReSortMainInterludeFolder_b_
       goto LABEL_42;
     v19 = DataMasterBase_object__object__int___GetEntity(
             questMst,
-            *((_DWORD *)this + 11),
+            HIDWORD(this[1].klass),
             (const MethodInfo_3F10B30 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
     klass = (QuestEntity_o *)v19;
     if ( v19 )
@@ -37974,7 +37979,7 @@ LABEL_42:
     goto LABEL_42;
   afterActionVals = (QuestEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                        v23,
-                                       *((_DWORD *)this + 11),
+                                       HIDWORD(this[1].klass),
                                        (const MethodInfo_3F10B30 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( afterActionVals )
   {
@@ -39183,7 +39188,7 @@ void MyRoomStateMaterial___c__DisplayClass88_2___AddMaterialLevelUp_b__2(
   int v28; // w8
   int _9__2; // w21
   int CS___8__locals2_high; // w27
-  int v31; // w20
+  int klass; // w20
   int _9__2_high; // w28
   __int64 v33; // x2
   __int128 v34; // q1
@@ -39407,7 +39412,7 @@ void MyRoomStateMaterial___c__DisplayClass88_2___AddMaterialLevelUp_b__2(
   CS___8__locals2_high = HIDWORD(this->fields.CS___8__locals2);
   _9__2 = (int)this->fields.__9__2;
   _9__2_high = HIDWORD(this->fields.__9__2);
-  v31 = *((_DWORD *)this + 12);
+  klass = (int)this[1].klass;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method, v24);
   this = (MyRoomStateMaterial___c__DisplayClass88_2_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(
@@ -39496,7 +39501,7 @@ void MyRoomStateMaterial___c__DisplayClass88_2___AddMaterialLevelUp_b__2(
       goto LABEL_91;
     v50 = *(&this->fields.friendship + 1);
     v51 = 274877907LL * v50 * (_9__2 - CS___8__locals2_high);
-    v45 = v50 * (v31 - _9__2_high) / 1000 + _9__2_high;
+    v45 = v50 * (klass - _9__2_high) / 1000 + _9__2_high;
     *(_DWORD *)(v20 + 412) = (v51 >> 38) + ((unsigned __int64)v51 >> 63) + CS___8__locals2_high;
   }
   *(_DWORD *)(v20 + 408) = v45;
@@ -39576,7 +39581,7 @@ void MyRoomStateMaterial___c__DisplayClass88_2___AddMaterialLevelUp_b__2(
     goto LABEL_91;
   v67 = *(&this->fields.friendship + 1);
   *(_DWORD *)(v21 + 412) = v67 * (_9__2 - CS___8__locals2_high) / 1000 + CS___8__locals2_high;
-  *(_DWORD *)(v21 + 408) = v67 * (v31 - _9__2_high) / 1000 + _9__2_high;
+  *(_DWORD *)(v21 + 408) = v67 * (klass - _9__2_high) / 1000 + _9__2_high;
   v68 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(value, 0);
   *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v21 + 96) = v68;
   *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v20 + 96) = v68;
@@ -40030,7 +40035,7 @@ void MyRoomStateMaterial___c__DisplayClass91_2___AddMaterialReleaseCostume_b__3(
   __int64 v7; // x2
   struct ServantCostumeEntity_o *svtCostume; // x8
   int32_t svtId; // w22
-  struct BalanceConfig_StaticFields *static_fields; // x8
+  _DWORD *_9__3; // x8
   struct ServantCostumeEntity_o *v11; // x9
   int32_t id; // w22
   struct MyRoomStateMaterial___c__DisplayClass91_1_o *v13; // x8
@@ -40107,19 +40112,19 @@ void MyRoomStateMaterial___c__DisplayClass91_2___AddMaterialReleaseCostume_b__3(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v7);
     this = (MyRoomStateMaterial___c__DisplayClass91_2_o *)BalanceConfig_TypeInfo;
   }
-  static_fields = (struct BalanceConfig_StaticFields *)*((_QWORD *)this + 23);
-  if ( svtId == static_fields->ServantIdMashu1 )
+  _9__3 = this[3].fields.__9__3;
+  if ( svtId == _9__3[92] )
   {
     v11 = v2->fields.svtCostume;
     if ( !v11 )
       goto LABEL_34;
     id = v11->fields.id;
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[4].fields.CS___8__locals2) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v7);
-      static_fields = BalanceConfig_TypeInfo->static_fields;
+      _9__3 = &BalanceConfig_TypeInfo->static_fields->CriticalRateToAddByQuickFirstBonus;
     }
-    if ( id == static_fields->SpecialLimitCountPLD )
+    if ( id == _9__3[263] )
     {
       this = (MyRoomStateMaterial___c__DisplayClass91_2_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v13 = v2->fields.CS___8__locals2;

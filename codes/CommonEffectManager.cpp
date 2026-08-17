@@ -147,7 +147,7 @@ void CommonEffectManager__CreateParam(
         int32_t flip,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v14; // x1
   CommonEffectManager_o *v15; // x25
   const MethodInfo *v16; // [xsp+0h] [xbp-60h]
@@ -157,11 +157,11 @@ void CommonEffectManager__CreateParam(
     sub_2213A60(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
     byte_5971F34 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   v15 = (CommonEffectManager_o *)Instance;
   if ( !byte_5969AE0 )
   {
-    Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Instance = (Il2CppObject *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v15 )
@@ -190,7 +190,7 @@ void CommonEffectManager__CreateParam_50761748(
         int32_t flip,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v16; // x1
   CommonEffectManager_o *v17; // x26
   const MethodInfo *v18; // [xsp+0h] [xbp-60h]
@@ -200,11 +200,11 @@ void CommonEffectManager__CreateParam_50761748(
     sub_2213A60(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
     byte_5971F35 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   v17 = (CommonEffectManager_o *)Instance;
   if ( !byte_5969AE0 )
   {
-    Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Instance = (Il2CppObject *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v17 )
@@ -325,7 +325,7 @@ void CommonEffectManager__Create_50717624(
         int32_t flip,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v14; // x1
   CommonEffectManager_o *v15; // x25
   const MethodInfo *v16; // [xsp+0h] [xbp-60h]
@@ -335,11 +335,11 @@ void CommonEffectManager__Create_50717624(
     sub_2213A60(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
     byte_5971F31 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   v15 = (CommonEffectManager_o *)Instance;
   if ( !byte_5969AE0 )
   {
-    Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Instance = (Il2CppObject *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v15 )
@@ -377,11 +377,22 @@ CommonEffectComponent_o *CommonEffectManager__Create_50757756(
   UnityEngine_GameObject_o *v18; // x24
   Il2CppObject *Component_object; // x22
   UnityEngine_Transform_o *v20; // x24
-  const MethodInfo *v21; // x1
-  const MethodInfo *v22; // x4
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Quaternion_o FlipQuaternion; // 0:kr10_16.16
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  float v21; // s11
+  float v22; // s12
+  float v23; // s13
+  const MethodInfo *v24; // x1
+  float v25; // s14
+  float v26; // s15
+  float v27; // s8
+  float w; // s9
+  const MethodInfo *v29; // x4
+  float v31; // [xsp+48h] [xbp-38h]
+  float v32; // [xsp+4Ch] [xbp-34h]
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o FlipQuaternion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   z = pos.fields.z;
   y = pos.fields.y;
@@ -412,28 +423,43 @@ CommonEffectComponent_o *CommonEffectManager__Create_50757756(
   if ( !prefab )
     goto LABEL_14;
   v20 = (UnityEngine_Transform_o *)transform;
+  v31 = y;
+  v32 = z;
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(prefab, 0);
   if ( !transform )
     goto LABEL_14;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
-  FlipQuaternion = CommonEffectManager__GetFlipQuaternion(flip, v21);
+  v21 = localScale.fields.x;
+  v22 = localScale.fields.y;
+  v23 = localScale.fields.z;
+  FlipQuaternion = CommonEffectManager__GetFlipQuaternion(flip, v24);
   if ( !parent )
     goto LABEL_14;
+  v25 = FlipQuaternion.fields.x;
+  v26 = FlipQuaternion.fields.y;
+  v27 = FlipQuaternion.fields.z;
+  w = FlipQuaternion.fields.w;
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0);
-  if ( !v20
-    || (UnityEngine_Transform__set_parent(v20, (UnityEngine_Transform_o *)transform, 0),
-        v26.fields.x = x,
-        v26.fields.y = y,
-        v26.fields.z = z,
-        UnityEngine_Transform__set_localPosition(v20, v26, 0),
-        UnityEngine_Transform__set_localRotation(v20, FlipQuaternion, 0),
-        UnityEngine_Transform__set_localScale(v20, localScale, 0),
-        !Component_object) )
-  {
+  if ( !v20 )
+    goto LABEL_14;
+  UnityEngine_Transform__set_parent(v20, (UnityEngine_Transform_o *)transform, 0);
+  v34.fields.x = x;
+  v34.fields.y = v31;
+  v34.fields.z = v32;
+  UnityEngine_Transform__set_localPosition(v20, v34, 0);
+  v37.fields.x = v25;
+  v37.fields.y = v26;
+  v37.fields.z = v27;
+  v37.fields.w = w;
+  UnityEngine_Transform__set_localRotation(v20, v37, 0);
+  v35.fields.x = v21;
+  v35.fields.y = v22;
+  v35.fields.z = v23;
+  UnityEngine_Transform__set_localScale(v20, v35, 0);
+  if ( !Component_object )
 LABEL_14:
     sub_2213CDC(transform, v17);
-  }
-  CommonEffectComponent__Init_50738128((CommonEffectComponent_o *)Component_object, AssetName, 0, 0, v22);
+  CommonEffectComponent__Init_50738128((CommonEffectComponent_o *)Component_object, AssetName, 0, 0, v29);
   return (CommonEffectComponent_o *)Component_object;
 }
 
@@ -566,10 +592,19 @@ CommonEffectComponent_o *CommonEffectManager__Create_50758856(
   Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *v18; // x23
   const MethodInfo *v19; // x1
-  const MethodInfo *v20; // x4
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Quaternion_o FlipQuaternion; // 0:kr10_16.16
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  float v20; // s13
+  float v21; // s14
+  float v22; // s15
+  float v23; // s8
+  float w; // s9
+  const MethodInfo *v25; // x4
+  float v27; // [xsp+48h] [xbp-38h]
+  float v28; // [xsp+4Ch] [xbp-34h]
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o FlipQuaternion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   z = pos.fields.z;
   y = pos.fields.y;
@@ -601,26 +636,39 @@ CommonEffectComponent_o *CommonEffectManager__Create_50758856(
   if ( !transform )
     goto LABEL_14;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
+  v20 = localScale.fields.z;
+  v27 = localScale.fields.y;
+  v28 = localScale.fields.x;
   if ( !*(&CommonEffectManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo, v19);
   FlipQuaternion = CommonEffectManager__GetFlipQuaternion(flip, v19);
   if ( !parent )
     goto LABEL_14;
+  v21 = FlipQuaternion.fields.x;
+  v22 = FlipQuaternion.fields.y;
+  v23 = FlipQuaternion.fields.z;
+  w = FlipQuaternion.fields.w;
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0);
-  if ( !v18
-    || (UnityEngine_Transform__set_parent(v18, (UnityEngine_Transform_o *)transform, 0),
-        v24.fields.x = x,
-        v24.fields.y = y,
-        v24.fields.z = z,
-        UnityEngine_Transform__set_localPosition(v18, v24, 0),
-        UnityEngine_Transform__set_localRotation(v18, FlipQuaternion, 0),
-        UnityEngine_Transform__set_localScale(v18, localScale, 0),
-        !Component_object) )
-  {
+  if ( !v18 )
+    goto LABEL_14;
+  UnityEngine_Transform__set_parent(v18, (UnityEngine_Transform_o *)transform, 0);
+  v30.fields.x = x;
+  v30.fields.y = y;
+  v30.fields.z = z;
+  UnityEngine_Transform__set_localPosition(v18, v30, 0);
+  v33.fields.x = v21;
+  v33.fields.y = v22;
+  v33.fields.z = v23;
+  v33.fields.w = w;
+  UnityEngine_Transform__set_localRotation(v18, v33, 0);
+  v31.fields.z = v20;
+  v31.fields.y = v27;
+  v31.fields.x = v28;
+  UnityEngine_Transform__set_localScale(v18, v31, 0);
+  if ( !Component_object )
 LABEL_14:
     sub_2213CDC(transform, v15);
-  }
-  CommonEffectComponent__Init_50738192((CommonEffectComponent_o *)Component_object, data, 0, 0, v20);
+  CommonEffectComponent__Init_50738192((CommonEffectComponent_o *)Component_object, data, 0, 0, v25);
   return (CommonEffectComponent_o *)Component_object;
 }
 
@@ -700,7 +748,7 @@ void CommonEffectManager__Create_50759688(
         int32_t flip,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v12; // x1
   CommonEffectManager_o *v13; // x24
   const MethodInfo *v14; // [xsp+0h] [xbp-50h]
@@ -710,11 +758,11 @@ void CommonEffectManager__Create_50759688(
     sub_2213A60(&Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
     byte_5971F30 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonEffectManager__get_Instance__);
   v13 = (CommonEffectManager_o *)Instance;
   if ( !byte_5969AE0 )
   {
-    Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Instance = (Il2CppObject *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v13 )
@@ -1553,9 +1601,13 @@ System_String_o *CommonEffectManager__GetAssetName(System_String_o *effectName, 
 UnityEngine_Quaternion_o CommonEffectManager__GetFlipQuaternion(int32_t flip, const MethodInfo *method)
 {
   unsigned int v2; // w10
+  float w; // s3
   struct UnityEngine_Quaternion_StaticFields *static_fields; // x8
   float *p_y; // x9
   float *p_z; // x10
+  float x; // s0
+  float v8; // s2
+  float v9; // s1
   UnityEngine_Quaternion_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = flip - 1;
@@ -1567,20 +1619,24 @@ UnityEngine_Quaternion_o CommonEffectManager__GetFlipQuaternion(int32_t flip, co
       byte_5969AE6 = 1;
     }
     static_fields = UnityEngine_Quaternion_TypeInfo->static_fields;
-    result.fields.w = static_fields->identityQuaternion.fields.w;
+    w = static_fields->identityQuaternion.fields.w;
     p_y = &static_fields->identityQuaternion.fields.y;
     p_z = &static_fields->identityQuaternion.fields.z;
   }
   else
   {
-    result.fields.w = 0.0;
+    w = 0.0;
     static_fields = (struct UnityEngine_Quaternion_StaticFields *)((char *)&unk_EDA548 + 4 * v2);
     p_y = (float *)((char *)&unk_EDA554 + 4 * v2);
     p_z = (float *)((char *)&unk_EDA560 + 4 * v2);
   }
-  result.fields.x = static_fields->identityQuaternion.fields.x;
-  result.fields.z = *p_z;
-  result.fields.y = *p_y;
+  x = static_fields->identityQuaternion.fields.x;
+  v8 = *p_z;
+  v9 = *p_y;
+  result.fields.w = w;
+  result.fields.z = v8;
+  result.fields.y = v9;
+  result.fields.x = x;
   return result;
 }
 

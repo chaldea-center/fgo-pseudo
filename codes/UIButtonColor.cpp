@@ -283,12 +283,7 @@ void UIButtonColor__OnInit(UIButtonColor_o *this, const MethodInfo *method)
   int32_t v34; // w5
   bool v35; // w6
   bool v36; // w7
-  float r; // s0
-  float g; // s1
-  float b; // s2
-  float a; // s3
-  UnityEngine_Color_o v41; // 0:kr00_16.16
-  UnityEngine_Color_o color; // 0:kr10_16.16
+  UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974F89 & 1) == 0 )
   {
@@ -395,10 +390,6 @@ LABEL_43:
           goto LABEL_43;
       }
       color = UnityEngine_Material__get_color((UnityEngine_Material_o *)isPlaying, 0);
-      r = color.fields.r;
-      g = color.fields.g;
-      b = color.fields.b;
-      a = color.fields.a;
     }
     else
     {
@@ -420,16 +411,9 @@ LABEL_43:
       }
       if ( !v30 )
         goto LABEL_43;
-      v41 = UnityEngine_Light__get_color((UnityEngine_Light_o *)v30, 0);
-      r = v41.fields.r;
-      g = v41.fields.g;
-      b = v41.fields.b;
-      a = v41.fields.a;
+      color = UnityEngine_Light__get_color((UnityEngine_Light_o *)v30, 0);
     }
-    this->fields.mDefaultColor.fields.r = r;
-    this->fields.mDefaultColor.fields.g = g;
-    this->fields.mDefaultColor.fields.b = b;
-    this->fields.mDefaultColor.fields.a = a;
+    this->fields.mDefaultColor = color;
     goto LABEL_40;
   }
 }
@@ -728,16 +712,24 @@ void UIButtonColor__UpdateColor(UIButtonColor_o *this, bool instant, const Metho
 
 UnityEngine_Color_o UIButtonColor__get_defaultColor(UIButtonColor_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !this->fields.mInitDone )
     ((void (__fastcall *)(UIButtonColor_o *, const MethodInfo *))this->klass->vtable._6_OnInit.methodPtr)(
       this,
       this->klass->vtable._6_OnInit.method);
-  result.fields.r = this->fields.mDefaultColor.fields.r;
-  result.fields.g = this->fields.mDefaultColor.fields.g;
-  result.fields.b = this->fields.mDefaultColor.fields.b;
-  result.fields.a = this->fields.mDefaultColor.fields.a;
+  r = this->fields.mDefaultColor.fields.r;
+  g = this->fields.mDefaultColor.fields.g;
+  b = this->fields.mDefaultColor.fields.b;
+  a = this->fields.mDefaultColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

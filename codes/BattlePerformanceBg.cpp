@@ -2508,38 +2508,38 @@ BattlePerformanceBg_SaveData_o *BattlePerformanceBg__getSaveData(BattlePerforman
   bool v26; // w7
   struct BattlePerformanceBg_BgState_o *v27; // x8
   unsigned int v28; // w25
-  Il2CppObject *value; // x23
-  Il2CppObject *key; // x24
-  __int64 v31; // x22
-  __int64 v32; // x0
-  __int64 v33; // x1
-  System_String_o *v34; // x2
-  System_String_o *v35; // x3
-  int32_t v36; // w4
-  int32_t v37; // w5
-  bool v38; // w6
-  bool v39; // w7
-  System_String_o *v40; // x2
-  System_String_o *v41; // x3
-  int32_t v42; // w4
-  int32_t v43; // w5
-  bool v44; // w6
-  bool v45; // w7
-  __int64 v46; // x0
-  __int64 v47; // x1
-  _DWORD *v48; // x23
-  __int64 v49; // x0
-  __int64 v50; // x1
-  System_String_o *v51; // x2
-  System_String_o *v52; // x3
-  int32_t v53; // w4
-  int32_t v54; // w5
-  bool v55; // w6
-  bool v56; // w7
-  _DWORD *v57; // x0
-  __int64 v59; // x0
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v60; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v61; // [xsp+30h] [xbp-80h] BYREF
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  __int64 v30; // x22
+  __int64 v31; // x0
+  __int64 v32; // x1
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
+  int32_t v42; // w5
+  bool v43; // w6
+  bool v44; // w7
+  __int64 v45; // x0
+  __int64 v46; // x1
+  _DWORD *v47; // x23
+  __int64 v48; // x0
+  __int64 v49; // x1
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  _DWORD *v56; // x0
+  BattlePerformanceBg_SaveData_o *result; // x0
+  __int64 v58; // x0
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v59; // [xsp+8h] [xbp-A8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v60; // [xsp+30h] [xbp-80h] BYREF
 
   if ( (byte_5973F9A & 1) == 0 )
   {
@@ -2555,7 +2555,7 @@ BattlePerformanceBg_SaveData_o *BattlePerformanceBg__getSaveData(BattlePerforman
     sub_2213A60(&BattlePerformanceBg_SaveData_TypeInfo);
     byte_5973F9A = 1;
   }
-  memset(&v61, 0, sizeof(v61));
+  memset(&v60, 0, sizeof(v60));
   BattlePerformanceBg__saveHistoryBgState(this, 0, v2);
   v4 = sub_2213CCC(BattlePerformanceBg_SaveData_TypeInfo);
   BattlePerformanceBg_SaveData___ctor((BattlePerformanceBg_SaveData_o *)v4, v5);
@@ -2597,52 +2597,68 @@ LABEL_26:
         sub_2213CDC(compDictionary, v7);
       }
       System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-        &v60,
+        &v59,
         compDictionary,
         (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__BattleBgComponent_SaveData__GetEnumerator__);
-      v61 = v60;
+      v60 = v59;
       v28 = 0;
-      v60.fields._dictionary = 0;
-      *(_QWORD *)&v60.fields._version = &v61;
+      v59.fields._dictionary = 0;
+      *(_QWORD *)&v59.fields._version = &v60;
       while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-                &v61,
+                &v60,
                 (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__BattleBgComponent_SaveData__MoveNext__) )
       {
-        key = v61.fields._current.fields.key;
-        value = v61.fields._current.fields.value;
-        v31 = sub_2213CCC(BattlePerformanceBg_SaveData_CompSaveData_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v31, 0);
-        if ( !v31 )
-          sub_2213CDC(v32, v33);
-        *(_QWORD *)(v31 + 16) = key;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 16), (int32_t)key, v34, v35, v36, v37, v38, v39);
-        *(_QWORD *)(v31 + 24) = value;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 24), (int32_t)value, v40, v41, v42, v43, v44, v45);
-        v48 = *v20;
+        current = v60.fields._current;
+        v30 = sub_2213CCC(BattlePerformanceBg_SaveData_CompSaveData_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v30, 0);
+        if ( !v30 )
+          sub_2213CDC(v31, v32);
+        *(_QWORD *)(v30 + 16) = current.fields.key;
+        sub_2213A04(
+          (MissionNaviTransitionBoardItem_o *)(v30 + 16),
+          (int32_t)current.fields.key,
+          v33,
+          v34,
+          v35,
+          v36,
+          v37,
+          v38);
+        *(_QWORD *)(v30 + 24) = current.fields.value;
+        sub_2213A04(
+          (MissionNaviTransitionBoardItem_o *)(v30 + 24),
+          (int32_t)current.fields.value,
+          v39,
+          v40,
+          v41,
+          v42,
+          v43,
+          v44);
+        v47 = *v20;
         if ( !*v20 )
-          sub_2213CDC(v46, v47);
-        v49 = sub_2213BB4(v31, *(_QWORD *)(*(_QWORD *)v48 + 64LL));
-        if ( !v49 )
+          sub_2213CDC(v45, v46);
+        v48 = sub_2213BB4(v30, *(_QWORD *)(*(_QWORD *)v47 + 64LL));
+        if ( !v48 )
         {
-          v59 = sub_2213D00(0, v50);
-          sub_2213BA0(v59, 0);
+          v58 = sub_2213D00(0, v49);
+          sub_2213BA0(v58, 0);
         }
-        if ( v28 >= v48[6] )
-          sub_2213CE4(v49);
-        v57 = &v48[2 * v28];
-        *((_QWORD *)v57 + 4) = v31;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v57 + 8), v31, v51, v52, v53, v54, v55, v56);
+        if ( v28 >= v47[6] )
+          sub_2213CE4(v48);
+        v56 = &v47[2 * v28];
+        *((_QWORD *)v56 + 4) = v30;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v56 + 8), v30, v50, v51, v52, v53, v54, v55);
         ++v28;
       }
       System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-        &v61,
+        &v60,
         (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__BattleBgComponent_SaveData__Dispose__);
     }
   }
   if ( !v4 )
     goto LABEL_26;
+  result = (BattlePerformanceBg_SaveData_o *)v4;
   *(_QWORD *)(v4 + 32) = *(_QWORD *)&this->fields.loadbgno;
-  return (BattlePerformanceBg_SaveData_o *)v4;
+  return result;
 }
 
 

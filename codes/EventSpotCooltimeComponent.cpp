@@ -804,8 +804,7 @@ void EventSpotCooltimeComponent__SetSpot(
   _QWORD *v24; // x10
   __int64 size; // x11
   Il2CppClass **v26; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596ACDA & 1) == 0 )
   {
@@ -834,10 +833,10 @@ void EventSpotCooltimeComponent__SetSpot(
       if ( !transform )
         goto LABEL_21;
       localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
-      v28.fields.x = localPosition.fields.x + this->fields.spotInfoOffset.fields.x;
-      v28.fields.y = localPosition.fields.y + this->fields.spotInfoOffset.fields.y;
-      v28.fields.z = localPosition.fields.z + this->fields.spotInfoOffset.fields.z;
-      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v10, v28, 0);
+      localPosition.fields.x = localPosition.fields.x + this->fields.spotInfoOffset.fields.x;
+      localPosition.fields.y = localPosition.fields.y + this->fields.spotInfoOffset.fields.y;
+      localPosition.fields.z = localPosition.fields.z + this->fields.spotInfoOffset.fields.z;
+      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v10, localPosition, 0);
       if ( !v10 )
         goto LABEL_21;
       gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v10, 0);

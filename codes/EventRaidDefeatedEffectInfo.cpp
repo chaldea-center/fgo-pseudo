@@ -151,7 +151,7 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
   System_Text_StringBuilder_o *v3; // x19
   __int64 v4; // x1
   struct System_Collections_Generic_Dictionary_int__List_int___o *playedEffectList; // x0
-  Il2CppObject *value; // x20
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   System_String_o *v7; // x0
   System_String_o *v8; // x0
   System_Text_StringBuilder_o *appended; // x0
@@ -160,7 +160,7 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
   char v12; // w20
   System_String_o *v13; // x1
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v15; // [xsp+10h] [xbp-E0h] BYREF
-  int32_t current; // [xsp+3Ch] [xbp-B4h] BYREF
+  int32_t v16; // [xsp+3Ch] [xbp-B4h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v17; // [xsp+40h] [xbp-B0h] BYREF
   int key; // [xsp+5Ch] [xbp-94h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v19; // [xsp+60h] [xbp-90h] BYREF
@@ -186,7 +186,7 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
   key = 0;
   memset(&v17, 0, sizeof(v17));
   memset(&v19, 0, sizeof(v19));
-  current = 0;
+  v16 = 0;
   v3 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v3, 0);
   playedEffectList = this->fields.playedEffectList;
@@ -201,18 +201,18 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
             &v19,
             (const MethodInfo_4158548 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_int___MoveNext__) )
   {
-    value = v19.fields._current.fields.value;
+    current = v19.fields._current;
     key = (int)v19.fields._current.fields.key;
     v7 = System_Int32__ToString((int32_t)&key, 0);
     v8 = System_String__Concat_75651716(v7, (System_String_o *)StringLiteral_1533/*":"*/, 0);
     if ( !v3 )
       sub_2213CDC(v8, v8);
     appended = System_Text_StringBuilder__Append_75735064(v3, v8, 0);
-    if ( !value )
+    if ( !current.fields.value )
       sub_2213CDC(appended, v10);
     System_Collections_Generic_List_int___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v15,
-      (System_Collections_Generic_List_int__o *)value,
+      (System_Collections_Generic_List_int__o *)current.fields.value,
       (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
     v11 = *(_OWORD *)&v15.fields._dictionary;
     v12 = 0;
@@ -224,10 +224,10 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
               &v17,
               (const MethodInfo_40F5CBC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
-      current = v17.fields._current;
+      v16 = v17.fields._current;
       if ( (v12 & 1) != 0 )
         System_Text_StringBuilder__Append_75735064(v3, (System_String_o *)StringLiteral_869/*","*/, 0);
-      v13 = System_Int32__ToString((int32_t)&current, 0);
+      v13 = System_Int32__ToString((int32_t)&v16, 0);
       v12 = 1;
       System_Text_StringBuilder__Append_75735064(v3, v13, 0);
     }
@@ -242,7 +242,7 @@ System_String_o *EventRaidDefeatedEffectInfo__ConvertToStringData(
   if ( !v3 )
 LABEL_18:
     sub_2213CDC(playedEffectList, v4);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
-           v3,
-           v3->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
+                              v3,
+                              v3->klass->vtable._3_ToString.method);
 }

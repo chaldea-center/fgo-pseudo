@@ -2121,8 +2121,8 @@ void BattleEffectReplaceShaderTexture__setupChocoShader(
   float v14; // s13
   float v15; // s14
   float v16; // s15
-  UnityEngine_Color_o Color; // 0:kr00_16.16
-  UnityEngine_Color_o v18; // 0:kr10_16.16
+  UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 

@@ -89,7 +89,7 @@ void EventRewardAnotherPayListViewItemDraw__SetItemUI(
     goto LABEL_51;
   this = (EventRewardAnotherPayListViewItemDraw_o *)UserItemMaster__GetEntityDefinitely(
                                                       (UserItemMaster_o *)Master_object,
-                                                      *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+                                                      *(_QWORD *)&this[1].fields.skillDetailLabel->fields.updateAnchors,
                                                       ItemEntity_k__BackingField->fields.id,
                                                       0);
   if ( !this )

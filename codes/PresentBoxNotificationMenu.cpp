@@ -501,7 +501,7 @@ System_IAsyncResult_o *PresentBoxNotificationMenu_CallbackFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(PresentBoxNotificationMenu_Result_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

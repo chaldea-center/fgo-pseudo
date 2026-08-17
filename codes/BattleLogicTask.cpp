@@ -592,10 +592,10 @@ BattleActionData_o *BattleLogicTask__MakeAction(
 {
   if ( !task )
     sub_2213CDC(0, logic);
-  return ((BattleActionData_o *(__fastcall *)(BattleLogicTask_o *, BattleLogic_o *, const MethodInfo *))task->klass->vtable._6_MakeActionData.methodPtr)(
-           task,
-           logic,
-           task->klass->vtable._6_MakeActionData.method);
+  return (BattleActionData_o *)((__int64 (__fastcall *)(BattleLogicTask_o *, BattleLogic_o *, const MethodInfo *))task->klass->vtable._6_MakeActionData.methodPtr)(
+                                 task,
+                                 logic,
+                                 task->klass->vtable._6_MakeActionData.method);
 }
 
 
@@ -1346,14 +1346,19 @@ OverwriteTreasureDeviceData_o *BattleLogicTask__get_OverwriteTdData(BattleLogicT
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_KeyValuePair_BattleServantData__BattleBuffData_BuffData____o BattleLogicTask__get_PairDisplayTriggerIntervalBuff(
         BattleLogicTask_o *this,
         const MethodInfo *method)
 {
+  struct BattleBuffData_BuffData_array *value; // x1
+  struct BattleServantData_o *key; // x0
   System_Collections_Generic_KeyValuePair_BattleServantData__BattleBuffData_BuffData____o result; // 0:x0.16
 
-  result.fields.value = this->fields._PairDisplayTriggerIntervalBuff_k__BackingField.fields.value;
-  result.fields.key = this->fields._PairDisplayTriggerIntervalBuff_k__BackingField.fields.key;
+  value = this->fields._PairDisplayTriggerIntervalBuff_k__BackingField.fields.value;
+  key = this->fields._PairDisplayTriggerIntervalBuff_k__BackingField.fields.key;
+  result.fields.value = value;
+  result.fields.key = key;
   return result;
 }
 

@@ -94,6 +94,7 @@ UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateEnemyPrefab(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateLocal(
         MasterFigureManagerOld_o *this,
         UnityEngine_GameObject_o *parent,
@@ -108,11 +109,14 @@ UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateLocal(
   UnityEngine_GameObject_o *v11; // x24
   Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *transform; // x23
-  float x; // s0
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v17; // 0:kr14_12.12
-  UnityEngine_Vector3_o zeroVector; // 0:kr20_12.12
-  __int64 v19; // 0:s1.4,4:s2.4
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  __int64 v17; // kr00_8
+  float v18; // s0 OVERLAPPED
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = *(_QWORD *)&offset.fields.value.fields.y;
   v5 = *(_QWORD *)&offset.fields.hasValue;
@@ -143,6 +147,9 @@ UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateLocal(
   if ( !gameObject )
     goto LABEL_19;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+  x = localScale.fields.x;
+  y = localScale.fields.y;
+  z = localScale.fields.z;
   UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_15349/*"UIMasterFigureOld"*/, 0);
   if ( !parent )
     goto LABEL_19;
@@ -152,8 +159,8 @@ UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateLocal(
   UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)gameObject, 0);
   if ( (_BYTE)v5 )
   {
-    v19 = v4;
-    x = *((float *)&v5 + 1);
+    v17 = v4;
+    v18 = *((float *)&v5 + 1);
   }
   else
   {
@@ -162,13 +169,11 @@ UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateLocal(
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
-    zeroVector = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
-    x = zeroVector.fields.x;
-    v19 = *(_QWORD *)&zeroVector.fields.y;
+    static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+    v18 = static_fields->zeroVector.fields.x;
+    v17 = *(_QWORD *)&static_fields->zeroVector.fields.y;
   }
-  v17.fields.x = x;
-  *(_QWORD *)&v17.fields.y = v19;
-  UnityEngine_Transform__set_localPosition(transform, v17, 0);
+  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v18, 0);
   if ( !byte_5969AE6 )
   {
     sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -178,7 +183,10 @@ UIMasterFigureTextureOld_o *MasterFigureManagerOld__CreateLocal(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v22.fields.x = x;
+  v22.fields.y = y;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localScale(transform, v22, 0);
   gameObject = UnityEngine_GameObject__get_gameObject(parent, 0);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0), !Component_object) )

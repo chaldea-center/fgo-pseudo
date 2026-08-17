@@ -480,7 +480,7 @@ System_IAsyncResult_o *BonusSelectSummonMsgInfo_TryGetBonusSelectData__BeginInvo
   v11[2] = 0;
   v11[0] = v7;
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v12);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -510,7 +510,7 @@ bool BonusSelectSummonMsgInfo_TryGetBonusSelectData__Invoke(
         int32_t gachaId,
         const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            data,
            gachaId,

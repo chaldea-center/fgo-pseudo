@@ -142,6 +142,7 @@ bool WarBoardOrthostichySchedule__Execute_d__4__MoveNext(
   int32_t v28; // w5
   bool v29; // w6
   bool v30; // w7
+  bool result; // w0
   struct System_Collections_IEnumerator_o *v32; // x20
   System_Collections_IEnumerator_c *v33; // x8
   __int64 v34; // x9
@@ -288,8 +289,9 @@ LABEL_37:
   v2->fields.__2__current = (Il2CppObject *)v37;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, v37, v39, v40, v41, v42, v43, v44);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

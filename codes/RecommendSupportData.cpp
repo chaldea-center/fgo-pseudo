@@ -1625,6 +1625,7 @@ bool RecommendSupportData__TryGetOldQuest(
         const MethodInfo *method)
 {
   System_Object_array *oldDeckData; // x0
+  bool result; // w0
   System_Object_array *v11; // x22
   RecommendSupportData_RecommendDeckData_o *v12; // x23
   const MethodInfo *v13; // x2
@@ -1654,9 +1655,9 @@ bool RecommendSupportData__TryGetOldQuest(
          index,
          (const MethodInfo_3814FD0 *)Method_BasicHelper_IsValidIndex_RecommendSupportData_RecommendDeckData___) )
   {
+    result = 0;
     *questId = 0;
     *questPhase = 0;
-    return 0;
   }
   else
   {
@@ -1678,6 +1679,7 @@ bool RecommendSupportData__TryGetOldQuest(
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v24, (int32_t)klass, v16, v17, v18, v19, v20, v21);
     return *questId > 0;
   }
+  return result;
 }
 
 
@@ -1748,6 +1750,7 @@ bool RecommendSupportData__TryGetQuest(
   bool v20; // w7
   int32_t monitor; // w9
   Il2CppClass *klass; // x1
+  bool result; // w0
   Il2CppClass *v24; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596C421 & 1) == 0 )
@@ -1784,10 +1787,11 @@ bool RecommendSupportData__TryGetQuest(
   }
   else
   {
+    result = 0;
     *questId = 0;
     *questPhase = 0;
-    return 0;
   }
+  return result;
 }
 
 

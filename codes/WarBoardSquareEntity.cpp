@@ -36,12 +36,10 @@ System_String_o *WarBoardSquareEntity__CreatePrimaryKey(WarBoardSquareEntity_o *
 UnityEngine_Vector3_o WarBoardSquareEntity__GetPosition(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo_45E9150 *v2; // x2
-  struct System_Nullable_Vector3__o v7; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Vector3_o Value; // 0:kr00_12.12
-  System_Nullable_Vector3__o v9; // 0:x0.16
-  System_Nullable_Vector3__o v10; // 0:x0.16
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
+  struct System_Nullable_Vector3__o v4; // [xsp+0h] [xbp-30h] BYREF
+  System_Nullable_Vector3__o v5; // 0:x0.16
+  System_Nullable_Vector3__o v6; // 0:x0.16
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971AAE & 1) == 0 )
   {
@@ -52,20 +50,16 @@ UnityEngine_Vector3_o WarBoardSquareEntity__GetPosition(WarBoardSquareEntity_o *
   }
   if ( !this->fields.position.fields.hasValue )
   {
-    v11.fields.z = 0.0;
-    *(_QWORD *)&v9.fields.hasValue = &v7;
-    v11.fields.x = (float)this->fields.positionX;
-    v11.fields.y = (float)-this->fields.positionY;
-    v7 = (struct System_Nullable_Vector3__o)0LL;
-    *(_QWORD *)&v9.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-    System_Nullable_Vector3____ctor(v9, v11, v2);
-    this->fields.position = v7;
+    v7.fields.z = 0.0;
+    *(_QWORD *)&v5.fields.hasValue = &v4;
+    v7.fields.x = (float)this->fields.positionX;
+    v7.fields.y = (float)-this->fields.positionY;
+    v4 = (struct System_Nullable_Vector3__o)0LL;
+    *(_QWORD *)&v5.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+    System_Nullable_Vector3____ctor(v5, v7, v2);
+    this->fields.position = v4;
   }
-  *(_QWORD *)&v10.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-  *(_QWORD *)&v10.fields.hasValue = &this->fields;
-  Value = System_Nullable_Vector3___get_Value(v10, (const MethodInfo_45E916C *)v2);
-  result.fields.x = Value.fields.x;
-  result.fields.y = Value.fields.y;
-  result.fields.z = Value.fields.z;
-  return result;
+  *(_QWORD *)&v6.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+  *(_QWORD *)&v6.fields.hasValue = &this->fields;
+  return System_Nullable_Vector3___get_Value(v6, (const MethodInfo_45E916C *)v2);
 }

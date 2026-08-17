@@ -2109,12 +2109,19 @@ void QuestBoardListViewManager__MoveBoard(
   bool v37; // w6
   bool v38; // w7
   float v39; // s10
-  MoveObject_o *v40; // x21
-  System_Action_o *v41; // x22
-  System_Action_o *v42; // x23
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v44; // 0:kr14_12.12
-  UnityEngine_Vector3_o v45; // 0:s3.4,4:s4.4,8:s5.4
+  float x; // s10
+  float y; // s11
+  float z; // s12
+  MoveObject_o *v43; // x21
+  float v44; // s13
+  float v45; // s15
+  float v46; // s14
+  System_Action_o *v47; // x22
+  System_Action_o *v48; // x23
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s3.4,4:s4.4,8:s5.4
 
   if ( (byte_596D2C4 & 1) == 0 )
   {
@@ -2157,26 +2164,35 @@ LABEL_10:
     sub_2213CDC(v14, v15);
   }
   LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v13 + 16), 0);
-  v44 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v13 + 16), 0);
-  v40 = *(MoveObject_o **)(v13 + 24);
-  v41 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  x = LocalPosition.fields.x;
+  y = LocalPosition.fields.y;
+  z = LocalPosition.fields.z;
+  v50 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v13 + 16), 0);
+  v43 = *(MoveObject_o **)(v13 + 24);
+  v44 = v50.fields.x;
+  v45 = v50.fields.y;
+  v46 = v50.fields.z;
+  v47 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v41,
+    v47,
     (Il2CppObject *)v13,
     Method_QuestBoardListViewManager___c__DisplayClass198_0__MoveBoard_b__0__,
     0);
-  v42 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v48 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v42,
+    v48,
     (Il2CppObject *)v13,
     Method_QuestBoardListViewManager___c__DisplayClass198_0__MoveBoard_b__1__,
     0);
-  if ( !v40 )
+  if ( !v43 )
     goto LABEL_10;
-  v45.fields.y = v44.fields.y + moveY;
-  v45.fields.x = v44.fields.x;
-  v45.fields.z = v44.fields.z;
-  MoveObject__Play(v40, LocalPosition, v45, time, v41, v42, 0.0, easeType, 0);
+  v52.fields.y = v45 + moveY;
+  v51.fields.x = x;
+  v51.fields.y = y;
+  v51.fields.z = z;
+  v52.fields.x = v44;
+  v52.fields.z = v46;
+  MoveObject__Play(v43, v51, v52, time, v47, v48, 0.0, easeType, 0);
 }
 
 
@@ -7853,6 +7869,8 @@ bool QuestBoardListViewManager__TryGetFlagFromOnEventStart(
 {
   void *EventTutorialEntity; // x0
   __int64 v7; // x1
+  int32_t v8; // w8
+  bool result; // w0
 
   if ( (byte_596D29D & 1) == 0 )
   {
@@ -7879,8 +7897,10 @@ bool QuestBoardListViewManager__TryGetFlagFromOnEventStart(
                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventTutorialEntity__get_Item__);
       if ( EventTutorialEntity )
       {
-        *flagType = *((_DWORD *)EventTutorialEntity + 5);
-        return 1;
+        v8 = *((_DWORD *)EventTutorialEntity + 5);
+        result = 1;
+        *flagType = v8;
+        return result;
       }
 LABEL_9:
       sub_2213CDC(EventTutorialEntity, v7);
@@ -8879,6 +8899,7 @@ bool QuestBoardListViewManager__WaitFinish_d__121__MoveNext(
   int32_t _1__state; // w8
   struct QuestBoardListViewManager_o *_4__this; // x8
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   System_Action_o *endAct; // x0
 
   _1__state = this->fields.__1__state;
@@ -8901,8 +8922,9 @@ LABEL_6:
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   return 0;
 }
@@ -9771,7 +9793,7 @@ LABEL_16:
   this = (QuestBoardListViewManager___c__DisplayClass161_0_o *)v2->fields.__4__this;
   if ( !this )
     goto LABEL_20;
-  if ( *((_BYTE *)this + 580) )
+  if ( BYTE4(this[18].klass) )
     QuestBoardListViewManager__RemoveTempBG((QuestBoardListViewManager_o *)this, method);
 }
 
@@ -9915,8 +9937,8 @@ LABEL_11:
   if ( !this )
     goto LABEL_29;
   callback = v4->fields.callback;
-  *((_QWORD *)this + 21) = callback;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)this + 1, (int32_t)callback, v28, v29, v30, v31, v32, v33);
+  this[4].monitor = callback;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[4].monitor, (int32_t)callback, v28, v29, v30, v31, v32, v33);
   v35 = v4->fields.__4__this;
   if ( !v35 )
     goto LABEL_29;

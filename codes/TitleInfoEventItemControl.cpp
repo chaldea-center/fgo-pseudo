@@ -1460,6 +1460,7 @@ bool TitleInfoEventItemControl__DelayedDestroy_d__41__MoveNext(
   int32_t v46; // w5
   bool v47; // w6
   bool v48; // w7
+  bool result; // w0
   System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v51; // [xsp+20h] [xbp-50h] BYREF
 
@@ -1641,8 +1642,9 @@ bool TitleInfoEventItemControl__DelayedDestroy_d__41__MoveNext(
               this->fields.__2__current = (Il2CppObject *)v41;
               p__2__current = &this->fields.__2__current;
               sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v41, v43, v44, v45, v46, v47, v48);
+              result = 1;
               *((_DWORD *)p__2__current - 2) = 1;
-              return 1;
+              return result;
             }
           }
         }

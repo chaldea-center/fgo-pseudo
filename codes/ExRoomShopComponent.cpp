@@ -379,7 +379,7 @@ System_Collections_Generic_List_ShopEntity__o *ExRoomShopComponent__GetTargetDai
   ShopEntity_o *v13; // x21
   const MethodInfo_3CEF9D8 *v14; // x4
   __int64 v15; // x0
-  System_ValueTuple_int__object__o v16; // x1
+  System_ValueTuple_int__object__o v16; // x1 OVERLAPPED
   System_String_o *v17; // x3
   int32_t v18; // w4
   int32_t v19; // w5

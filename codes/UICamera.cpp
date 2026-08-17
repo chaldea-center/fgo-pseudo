@@ -433,7 +433,7 @@ void UICamera__Awake(UICamera_o *this, const MethodInfo *method)
   struct UICamera_StaticFields *static_fields; // x8
   struct UICamera_MouseOrTouch_array *v23; // x9
   struct UnityEngine_Vector2_o *v24; // x9
-  unsigned __int64 mousePosition; // kr00_8
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974F17 & 1) == 0 )
   {
@@ -478,12 +478,13 @@ LABEL_11:
   if ( !LODWORD(mMouse->max_length) )
     goto LABEL_36;
   v14 = mMouse->m_Items[0];
-  mousePosition = (unsigned __int64)UnityEngine_Input__get_mousePosition(0);
+  mousePosition = UnityEngine_Input__get_mousePosition(0);
   if ( !v14 )
     goto LABEL_35;
   v12 = UICamera_TypeInfo;
   v15 = 5;
-  v14->fields.pos = (struct UnityEngine_Vector2_o)mousePosition;
+  v14->fields.pos.fields.x = mousePosition.fields.x;
+  v14->fields.pos.fields.y = mousePosition.fields.y;
   do
   {
     if ( !*(&v12->_2.cctor_finished + 1) )
@@ -2277,18 +2278,18 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
   bool v11; // w6
   bool v12; // w7
   UICamera_c *v13; // x0
-  __int64 static_fields; // x0
-  __int64 v15; // x8
-  __int64 v16; // x1
+  UICamera_c *static_fields; // x0
+  const MethodInfo *v15; // x8
+  Il2CppClass **klass; // x1
   struct UICamera_MouseOrTouch_o *currentTouch; // x22
   _BOOL4 v18; // w21
   float time; // s0
-  __int64 v20; // x8
+  struct UICamera_StaticFields *v20; // x8
   struct UnityEngine_Vector2_o *v21; // x22
   struct UnityEngine_Vector2_o zeroVector; // d2
   struct UICamera_MouseOrTouch_o *v23; // x8
-  __int64 v24; // x8
-  __int64 v25; // x8
+  struct UICamera_MouseOrTouch_o *v24; // x8
+  struct UICamera_MouseOrTouch_o *v25; // x8
   __int64 v26; // x1
   System_String_o *v27; // x2
   System_String_o *v28; // x3
@@ -2311,7 +2312,7 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
   struct UICamera_StaticFields *v45; // x8
   struct UnityEngine_GameObject_o *mGenericHandler; // x1
   UICamera_c *v47; // x0
-  __int64 v48; // x1
+  Il2CppClass *element_class; // x1
   System_String_o *v49; // x2
   System_String_o *v50; // x3
   int32_t v51; // w4
@@ -2319,7 +2320,7 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
   bool v53; // w6
   bool v54; // w7
   struct UICamera_StaticFields *v55; // x8
-  struct UnityEngine_GameObject_o *v56; // x1
+  Il2CppClass *v56; // x1
   System_String_o *v57; // x2
   System_String_o *v58; // x3
   int32_t v59; // w4
@@ -2329,13 +2330,13 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
   struct UICamera_StaticFields *v63; // x8
   struct UICamera_MouseOrTouch_o *v64; // x9
   int v65; // w8
-  __int64 v66; // x8
-  __int64 v67; // x1
-  MissionNaviTransitionBoardItem_o *v68; // x0
-  __int64 v69; // x8
-  UnityEngine_Object_o *v70; // x22
+  struct UICamera_StaticFields *v66; // x8
+  struct UnityEngine_Camera_o *currentCamera; // x1
+  MissionNaviTransitionBoardItem_o *p_this_arg; // x0
+  struct UICamera_MouseOrTouch_o *v69; // x8
+  UnityEngine_Object_o *pressed; // x22
   UICamera_c *v71; // x0
-  __int64 v72; // x8
+  Il2CppClass **nestedTypes; // x8
   System_String_o *v73; // x2
   System_String_o *v74; // x3
   int32_t v75; // w4
@@ -2351,8 +2352,10 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
   int32_t v85; // w5
   bool v86; // w6
   bool v87; // w7
-  unsigned __int64 mousePosition; // kr00_8
-  UnityEngine_Vector3_o v89; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // [xsp+0h] [xbp-60h]
+  float x; // [xsp+10h] [xbp-50h]
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v91; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974F1F & 1) == 0 )
   {
@@ -2371,17 +2374,25 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
       v13 = UICamera_TypeInfo;
     }
-    static_fields = (__int64)v13->static_fields;
-    v15 = *(_QWORD *)(static_fields + 320);
-    *(_DWORD *)(static_fields + 148) = 1;
+    static_fields = (UICamera_c *)v13->static_fields;
+    v15 = static_fields->vtable._0_Equals.method;
+    HIDWORD(static_fields->_1.properties) = 1;
     if ( !v15 )
       goto LABEL_72;
-    if ( !*(_DWORD *)(v15 + 24) )
+    if ( !LODWORD(v15->name) )
       sub_2213CE4(static_fields);
-    v16 = *(_QWORD *)(v15 + 32);
-    *(_QWORD *)(static_fields + 160) = v16;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(static_fields + 160), v16, v7, v8, v9, v10, v11, v12);
-    static_fields = (__int64)UICamera_TypeInfo;
+    klass = (Il2CppClass **)v15->klass;
+    static_fields->_1.nestedTypes = klass;
+    sub_2213A04(
+      (MissionNaviTransitionBoardItem_o *)&static_fields->_1.nestedTypes,
+      (int32_t)klass,
+      v7,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12);
+    static_fields = UICamera_TypeInfo;
     currentTouch = UICamera_TypeInfo->static_fields->currentTouch;
     if ( !currentTouch )
       goto LABEL_72;
@@ -2389,7 +2400,7 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
     currentTouch->fields.touchBegan = v18;
     if ( v18 )
     {
-      if ( *(_DWORD *)(static_fields + 228) )
+      if ( *(&static_fields->_2.cctor_finished + 1) )
       {
         time = RealTime__get_time(0);
       }
@@ -2403,56 +2414,69 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
       }
       currentTouch->fields.pressTime = time;
     }
-    mousePosition = (unsigned __int64)UnityEngine_Input__get_mousePosition(0);
-    static_fields = (__int64)UICamera_TypeInfo;
+    mousePosition = UnityEngine_Input__get_mousePosition(0);
+    static_fields = UICamera_TypeInfo;
+    y = mousePosition.fields.y;
+    x = mousePosition.fields.x;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
-      static_fields = (__int64)UICamera_TypeInfo;
+      mousePosition.fields.y = y;
+      mousePosition.fields.x = x;
+      static_fields = UICamera_TypeInfo;
     }
-    v20 = *(_QWORD *)(static_fields + 184);
-    v21 = *(struct UnityEngine_Vector2_o **)(v20 + 160);
+    v20 = static_fields->static_fields;
+    v21 = (struct UnityEngine_Vector2_o *)v20->currentTouch;
     if ( v18 )
     {
       if ( !byte_59699C0 )
       {
-        static_fields = sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+        static_fields = (UICamera_c *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+        mousePosition.fields.y = y;
+        mousePosition.fields.x = x;
         byte_59699C0 = 1;
       }
       zeroVector = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
     }
     else
     {
-      v23 = *(struct UICamera_MouseOrTouch_o **)(v20 + 160);
-      if ( !*(_DWORD *)(static_fields + 228) )
+      v23 = v20->currentTouch;
+      if ( !*(&static_fields->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(static_fields, v6);
+        mousePosition.fields.y = y;
+        mousePosition.fields.x = x;
         v23 = UICamera_TypeInfo->static_fields->currentTouch;
       }
       if ( !v23 )
         goto LABEL_72;
-      zeroVector = (struct UnityEngine_Vector2_o)vsub_f32((float32x2_t)mousePosition, (float32x2_t)v23->fields.pos).n64_u64[0];
+      zeroVector = (struct UnityEngine_Vector2_o)vsub_f32(
+                                                   *(float32x2_t *)&mousePosition.fields.x,
+                                                   (float32x2_t)v23->fields.pos).n64_u64[0];
     }
     if ( !v21 )
       goto LABEL_72;
-    static_fields = (__int64)UICamera_TypeInfo;
+    static_fields = UICamera_TypeInfo;
     v21[4] = zeroVector;
-    if ( !*(_DWORD *)(static_fields + 228) )
+    if ( !*(&static_fields->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(static_fields, v6);
-      static_fields = (__int64)UICamera_TypeInfo;
+      mousePosition.fields.y = y;
+      mousePosition.fields.x = x;
+      static_fields = UICamera_TypeInfo;
     }
-    v24 = *(_QWORD *)(*(_QWORD *)(static_fields + 184) + 160LL);
+    v24 = static_fields->static_fields->currentTouch;
     if ( !v24 )
       goto LABEL_72;
-    *(_QWORD *)(v24 + 16) = mousePosition;
-    v25 = *(_QWORD *)(*(_QWORD *)(static_fields + 184) + 160LL);
+    v24->fields.pos.fields.x = mousePosition.fields.x;
+    v24->fields.pos.fields.y = mousePosition.fields.y;
+    v25 = static_fields->static_fields->currentTouch;
     if ( !v25 )
       goto LABEL_72;
-    v89.fields.z = 0.0;
-    v89.fields.x = *(float *)(v25 + 16);
-    v89.fields.y = *(float *)(v25 + 20);
-    if ( !UICamera__Raycast(v89, (const MethodInfo *)static_fields) )
+    v91.fields.z = 0.0;
+    v91.fields.x = v25->fields.pos.fields.x;
+    v91.fields.y = v25->fields.pos.fields.y;
+    if ( !UICamera__Raycast(v91, (const MethodInfo *)static_fields) )
     {
       v33 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -2509,55 +2533,71 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
       v47 = UICamera_TypeInfo;
     }
-    static_fields = (__int64)v47->static_fields->currentTouch;
+    static_fields = (UICamera_c *)v47->static_fields->currentTouch;
     if ( !static_fields )
       goto LABEL_72;
-    v48 = *(_QWORD *)(static_fields + 64);
-    *(_QWORD *)(static_fields + 56) = v48;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(static_fields + 56), v48, v38, v39, v40, v41, v42, v43);
+    element_class = static_fields->_1.element_class;
+    *(_QWORD *)&static_fields->_1.this_arg.bits = element_class;
+    sub_2213A04(
+      (MissionNaviTransitionBoardItem_o *)&static_fields->_1.this_arg.bits,
+      (int32_t)element_class,
+      v38,
+      v39,
+      v40,
+      v41,
+      v42,
+      v43);
     v55 = UICamera_TypeInfo->static_fields;
-    static_fields = (__int64)v55->currentTouch;
+    static_fields = (UICamera_c *)v55->currentTouch;
     if ( !static_fields )
       goto LABEL_72;
-    v56 = v55->hoveredObject;
-    *(_QWORD *)(static_fields + 64) = v56;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(static_fields + 64), (int32_t)v56, v49, v50, v51, v52, v53, v54);
-    static_fields = (__int64)UICamera_TypeInfo;
+    v56 = (Il2CppClass *)v55->hoveredObject;
+    static_fields->_1.element_class = v56;
+    sub_2213A04(
+      (MissionNaviTransitionBoardItem_o *)&static_fields->_1.element_class,
+      (int32_t)v56,
+      v49,
+      v50,
+      v51,
+      v52,
+      v53,
+      v54);
+    static_fields = UICamera_TypeInfo;
     v63 = UICamera_TypeInfo->static_fields;
     v64 = v63->currentTouch;
     if ( !v64 )
       goto LABEL_72;
     v63->lastTouchPosition = v64->fields.pos;
-    v65 = *(_DWORD *)(static_fields + 228);
+    v65 = *(&static_fields->_2.cctor_finished + 1);
     if ( v18 )
     {
       if ( !v65 )
       {
         j_il2cpp_runtime_class_init_0(static_fields, v6);
-        static_fields = (__int64)UICamera_TypeInfo;
+        static_fields = UICamera_TypeInfo;
       }
-      v66 = *(_QWORD *)(static_fields + 184);
-      static_fields = *(_QWORD *)(v66 + 160);
+      v66 = static_fields->static_fields;
+      static_fields = (UICamera_c *)v66->currentTouch;
       if ( !static_fields )
         goto LABEL_72;
-      v67 = *(_QWORD *)(v66 + 136);
-      *(_QWORD *)(static_fields + 48) = v67;
-      v68 = (MissionNaviTransitionBoardItem_o *)(static_fields + 48);
+      currentCamera = v66->currentCamera;
+      static_fields->_1.this_arg.data = currentCamera;
+      p_this_arg = (MissionNaviTransitionBoardItem_o *)&static_fields->_1.this_arg;
     }
     else
     {
       if ( !v65 )
       {
         j_il2cpp_runtime_class_init_0(static_fields, v6);
-        static_fields = (__int64)UICamera_TypeInfo;
+        static_fields = UICamera_TypeInfo;
       }
-      v69 = *(_QWORD *)(*(_QWORD *)(static_fields + 184) + 160LL);
+      v69 = static_fields->static_fields->currentTouch;
       if ( !v69 )
         goto LABEL_72;
-      v70 = *(UnityEngine_Object_o **)(v69 + 72);
+      pressed = (UnityEngine_Object_o *)v69->fields.pressed;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
-      if ( !UnityEngine_Object__op_Inequality(v70, 0, 0) )
+      if ( !UnityEngine_Object__op_Inequality(pressed, 0, 0) )
         goto LABEL_64;
       v71 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -2565,15 +2605,15 @@ void UICamera__ProcessFakeTouches(UICamera_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
         v71 = UICamera_TypeInfo;
       }
-      static_fields = (__int64)v71->static_fields;
-      v72 = *(_QWORD *)(static_fields + 160);
-      if ( !v72 )
+      static_fields = (UICamera_c *)v71->static_fields;
+      nestedTypes = static_fields->_1.nestedTypes;
+      if ( !nestedTypes )
         goto LABEL_72;
-      v67 = *(_QWORD *)(v72 + 48);
-      *(_QWORD *)(static_fields + 136) = v67;
-      v68 = (MissionNaviTransitionBoardItem_o *)(static_fields + 136);
+      currentCamera = (struct UnityEngine_Camera_o *)nestedTypes[6];
+      static_fields->_1.events = currentCamera;
+      p_this_arg = (MissionNaviTransitionBoardItem_o *)&static_fields->_1.events;
     }
-    sub_2213A04(v68, v67, v57, v58, v59, v60, v61, v62);
+    sub_2213A04(p_this_arg, (int32_t)currentCamera, v57, v58, v59, v60, v61, v62);
 LABEL_64:
     UICamera__ProcessTouch(this, v18, MouseButtonUp, (const MethodInfo *)v58);
     if ( MouseButtonUp )
@@ -2592,11 +2632,11 @@ LABEL_64:
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
       v80 = UICamera_TypeInfo;
     }
-    static_fields = (__int64)v80->static_fields->currentTouch;
+    static_fields = (UICamera_c *)v80->static_fields->currentTouch;
     if ( static_fields )
     {
-      *(_QWORD *)(static_fields + 56) = 0;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)(static_fields + 56), 0, v73, v74, v75, v76, v77, v78);
+      *(_QWORD *)&static_fields->_1.this_arg.bits = 0;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->_1.this_arg.bits, 0, v73, v74, v75, v76, v77, v78);
       v81 = UICamera_TypeInfo->static_fields;
       v81->currentTouch = 0;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&v81->currentTouch, 0, v82, v83, v84, v85, v86, v87);
@@ -2610,193 +2650,200 @@ LABEL_72:
 
 void UICamera__ProcessMouse(UICamera_o *this, const MethodInfo *method)
 {
-  UICamera_MouseOrTouch_o *v3; // x0
+  __int64 v3; // x1
+  float x; // s8
+  UICamera_MouseOrTouch_o *v5; // x0
+  float y; // s9
   struct UnityEngine_GameObject_o *dragged; // x8
+  struct UnityEngine_GameObject_o *v8; // x8
   void *monitor; // x9
-  float32x2_t *v6; // x9
-  struct UnityEngine_GameObject_o *v7; // x8
-  _DWORD *v8; // x9
-  __int64 v9; // x9
-  void *v10; // x8
-  float32x2_t *v11; // x8
-  __int64 v12; // x20
-  float v13; // s11
-  _DWORD *v14; // x9
-  __int64 v15; // x10
-  __int64 v16; // x9
-  _DWORD *v17; // x9
-  __int64 v18; // x10
-  __int64 v19; // x8
-  int v20; // w23
-  int v21; // w22
+  float32x2_t *v10; // x9
+  struct UnityEngine_GameObject_o *v11; // x8
+  _DWORD *v12; // x9
+  __int64 v13; // x9
+  void *v14; // x8
+  float32x2_t *v15; // x8
+  __int64 v16; // x20
+  float v17; // s11
+  _DWORD *v18; // x9
+  __int64 v19; // x10
+  __int64 v20; // x9
+  _DWORD *v21; // x9
+  __int64 v22; // x10
+  __int64 v23; // x8
+  int v24; // w23
+  int v25; // w22
   int32_t i; // w20
-  __int64 v23; // x1
-  UICamera_c *v24; // x0
+  __int64 v27; // x1
+  UICamera_c *v28; // x0
   float mNextRaycast; // s8
-  __int64 v26; // x1
-  UICamera_c *v27; // x0
-  __int64 v28; // x1
-  System_String_o *v29; // x2
-  System_String_o *v30; // x3
-  int32_t v31; // w4
-  int32_t v32; // w5
-  bool v33; // w6
-  bool v34; // w7
-  UICamera_c *v35; // x0
+  __int64 v30; // x1
+  float v31; // s8
+  float v32; // s9
+  UICamera_c *v33; // x0
+  float z; // s10
+  __int64 v35; // x1
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  UICamera_c *v42; // x0
   struct UICamera_StaticFields *static_fields; // x8
   struct UnityEngine_GameObject_o *fallThrough; // x1
-  UICamera_c *v38; // x0
+  UICamera_c *v45; // x0
   UnityEngine_Object_o *hoveredObject; // x20
-  System_String_o *v40; // x2
-  System_String_o *v41; // x3
-  int32_t v42; // w4
-  int32_t v43; // w5
-  bool v44; // w6
-  bool v45; // w7
-  UICamera_c *v46; // x0
-  struct UICamera_StaticFields *v47; // x8
+  System_String_o *v47; // x2
+  System_String_o *v48; // x3
+  int32_t v49; // w4
+  int32_t v50; // w5
+  bool v51; // w6
+  bool v52; // w7
+  UICamera_c *v53; // x0
+  struct UICamera_StaticFields *v54; // x8
   struct UnityEngine_GameObject_o *mGenericHandler; // x1
-  __int64 v49; // x20
-  struct UnityEngine_GameObject_o *v50; // x8
-  _DWORD *v51; // x9
+  __int64 v56; // x20
+  struct UnityEngine_GameObject_o *v57; // x8
+  _DWORD *v58; // x9
   struct UnityEngine_GameObject_o *m_CachedPtr; // x1
-  _DWORD *v53; // x8
-  __int64 v54; // x8
-  UnityEngine_Object_o *v55; // x20
-  UnityEngine_Object_o *v56; // x21
-  System_String_o *v57; // x2
-  System_String_o *v58; // x3
-  int32_t v59; // w4
-  int32_t v60; // w5
-  bool v61; // w6
-  bool v62; // w7
-  _BOOL4 v63; // w20
-  UICamera_c *v64; // x0
-  void *v65; // x8
-  struct UnityEngine_GameObject_o *v66; // x1
-  UICamera_c *v67; // x0
-  UnityEngine_Object_o *v68; // x21
-  const MethodInfo *v69; // x2
-  int v70; // w27
-  struct UICamera_StaticFields *v71; // x9
+  _DWORD *v60; // x8
+  __int64 v61; // x8
+  UnityEngine_Object_o *v62; // x20
+  UnityEngine_Object_o *v63; // x21
+  System_String_o *v64; // x2
+  System_String_o *v65; // x3
+  int32_t v66; // w4
+  int32_t v67; // w5
+  bool v68; // w6
+  bool v69; // w7
+  _BOOL4 v70; // w20
+  UICamera_c *v71; // x0
+  void *v72; // x8
+  struct UnityEngine_GameObject_o *v73; // x1
+  UICamera_c *v74; // x0
+  UnityEngine_Object_o *v75; // x21
+  const MethodInfo *v76; // x2
+  int v77; // w27
+  struct UICamera_StaticFields *v78; // x9
   struct UICamera_MoveDelegate_o *onMouseMove; // x8
   struct UICamera_MouseOrTouch_o *currentTouch; // x9
-  struct UICamera_StaticFields *v74; // x0
-  System_String_o *v75; // x2
-  System_String_o *v76; // x3
-  int32_t v77; // w4
-  int32_t v78; // w5
-  bool v79; // w6
-  bool v80; // w7
+  struct UICamera_StaticFields *v81; // x0
+  System_String_o *v82; // x2
+  System_String_o *v83; // x3
+  int32_t v84; // w4
+  int32_t v85; // w5
+  bool v86; // w6
+  bool v87; // w7
   UnityEngine_Object_o *mHover; // x21
-  __int64 v82; // x1
-  UICamera_c *v83; // x0
-  UnityEngine_Object_c *v84; // x8
+  __int64 v89; // x1
+  UICamera_c *v90; // x0
+  UnityEngine_Object_c *v91; // x8
   UnityEngine_Object_o *mTooltip; // x21
-  int v86; // w10
-  __int64 v87; // x1
-  const MethodInfo *v88; // x2
-  UICamera_c *v89; // x0
-  struct UICamera_StaticFields *v90; // x9
+  int v93; // w10
+  __int64 v94; // x1
+  const MethodInfo *v95; // x2
+  UICamera_c *v96; // x0
+  struct UICamera_StaticFields *v97; // x9
   struct UICamera_BoolDelegate_o *onHover; // x8
-  struct UICamera_StaticFields *v92; // x8
-  UnityEngine_GameObject_o *v93; // x21
-  Il2CppObject *v94; // x0
-  const MethodInfo *v95; // x3
+  struct UICamera_StaticFields *v99; // x8
+  UnityEngine_GameObject_o *v100; // x21
+  Il2CppObject *v101; // x0
+  const MethodInfo *v102; // x3
   MissionNaviTransitionBoardItem_o *p_mHover; // x0
-  System_String_o *v97; // x2
-  System_String_o *v98; // x3
-  int32_t v99; // w4
-  int32_t v100; // w5
-  bool v101; // w6
-  bool v102; // w7
-  unsigned __int64 v103; // x21
-  int v104; // w28
+  System_String_o *v104; // x2
+  System_String_o *v105; // x3
+  int32_t v106; // w4
+  int32_t v107; // w5
+  bool v108; // w6
+  bool v109; // w7
+  unsigned __int64 v110; // x21
+  int v111; // w28
   bool MouseButtonDown; // w22
   bool MouseButtonUp; // w0
-  System_String_o *v107; // x2
-  System_String_o *v108; // x3
-  int32_t v109; // w4
-  int32_t v110; // w5
-  bool v111; // w6
-  bool v112; // w7
-  UICamera_c *v113; // x8
-  bool v114; // w23
-  _QWORD *v115; // x8
-  struct UnityEngine_GameObject_o *v116; // x1
-  System_String_o *v117; // x2
-  System_String_o *v118; // x3
-  int32_t v119; // w4
-  int32_t v120; // w5
-  bool v121; // w6
-  bool v122; // w7
-  struct UICamera_StaticFields *v123; // x8
-  int v124; // w9
+  System_String_o *v114; // x2
+  System_String_o *v115; // x3
+  int32_t v116; // w4
+  int32_t v117; // w5
+  bool v118; // w6
+  bool v119; // w7
+  UICamera_c *v120; // x8
+  bool v121; // w23
+  _QWORD *v122; // x8
+  struct UnityEngine_GameObject_o *v123; // x1
+  System_String_o *v124; // x2
+  System_String_o *v125; // x3
+  int32_t v126; // w4
+  int32_t v127; // w5
+  bool v128; // w6
+  bool v129; // w7
+  struct UICamera_StaticFields *v130; // x8
+  int v131; // w9
   struct UnityEngine_Camera_o *currentCamera; // x1
   MissionNaviTransitionBoardItem_o *p_pressedCam; // x0
-  struct UICamera_MouseOrTouch_o *v127; // x8
+  struct UICamera_MouseOrTouch_o *v134; // x8
   UnityEngine_Object_o *pressed; // x24
-  UICamera_c *v129; // x0
+  UICamera_c *v136; // x0
   struct UnityEngine_GameObject_o *last; // x8
-  __int64 v131; // x1
-  System_String_o *v132; // x2
-  System_String_o *v133; // x3
-  int32_t v134; // w4
-  int32_t v135; // w5
-  bool v136; // w6
-  bool v137; // w7
-  UICamera_c *v138; // x0
-  struct UICamera_StaticFields *v139; // x8
-  System_String_o *v140; // x2
-  System_String_o *v141; // x3
-  int32_t v142; // w4
-  int32_t v143; // w5
-  bool v144; // w6
-  bool v145; // w7
+  __int64 v138; // x1
+  System_String_o *v139; // x2
+  System_String_o *v140; // x3
+  int32_t v141; // w4
+  int32_t v142; // w5
+  bool v143; // w6
+  bool v144; // w7
+  UICamera_c *v145; // x0
+  struct UICamera_StaticFields *v146; // x8
+  System_String_o *v147; // x2
+  System_String_o *v148; // x3
+  int32_t v149; // w4
+  int32_t v150; // w5
+  bool v151; // w6
+  bool v152; // w7
   float time; // s0
-  struct UICamera_StaticFields *v147; // x8
+  struct UICamera_StaticFields *v154; // x8
   struct UICamera_MouseOrTouch_array *mMouse; // x9
-  UICamera_MouseOrTouch_o *v149; // x9
+  UICamera_MouseOrTouch_o *v156; // x9
   struct UnityEngine_GameObject_o *current; // x1
-  System_String_o *v151; // x2
-  System_String_o *v152; // x3
-  int32_t v153; // w4
-  int32_t v154; // w5
-  bool v155; // w6
-  bool v156; // w7
-  void *v157; // x8
-  struct UnityEngine_GameObject_o *v158; // x1
-  __int64 v159; // x1
-  UICamera_c *v160; // x0
-  struct UICamera_StaticFields *v161; // x8
-  struct UICamera_BoolDelegate_o *v162; // x9
-  UnityEngine_GameObject_o *v163; // x19
-  Il2CppObject *v164; // x0
-  const MethodInfo *v165; // x3
-  struct UICamera_StaticFields *v166; // x0
-  System_String_o *v167; // x2
-  System_String_o *v168; // x3
-  int32_t v169; // w4
-  int32_t v170; // w5
-  bool v171; // w6
-  bool v172; // w7
-  struct UICamera_MouseOrTouch_array *v173; // x8
-  struct UnityEngine_GameObject_o *v174; // x1
-  System_String_o *v175; // x2
-  System_String_o *v176; // x3
-  int32_t v177; // w4
-  int32_t v178; // w5
-  bool v179; // w6
-  bool v180; // w7
-  __int64 v181; // x19
-  _DWORD *v182; // x8
-  __int64 v183; // x9
-  struct UnityEngine_GameObject_o *v184; // x1
-  __int64 v185; // x1
-  unsigned __int64 mousePosition; // kr00_8
-  char v187[4]; // [xsp+8h] [xbp-88h] BYREF
-  char v188[4]; // [xsp+Ch] [xbp-84h] BYREF
-  UnityEngine_Vector3_o v189; // 0:kr14_12.12
+  System_String_o *v158; // x2
+  System_String_o *v159; // x3
+  int32_t v160; // w4
+  int32_t v161; // w5
+  bool v162; // w6
+  bool v163; // w7
+  void *v164; // x8
+  struct UnityEngine_GameObject_o *v165; // x1
+  __int64 v166; // x1
+  UICamera_c *v167; // x0
+  struct UICamera_StaticFields *v168; // x8
+  struct UICamera_BoolDelegate_o *v169; // x9
+  UnityEngine_GameObject_o *v170; // x19
+  Il2CppObject *v171; // x0
+  const MethodInfo *v172; // x3
+  struct UICamera_StaticFields *v173; // x0
+  System_String_o *v174; // x2
+  System_String_o *v175; // x3
+  int32_t v176; // w4
+  int32_t v177; // w5
+  bool v178; // w6
+  bool v179; // w7
+  struct UICamera_MouseOrTouch_array *v180; // x8
+  struct UnityEngine_GameObject_o *v181; // x1
+  System_String_o *v182; // x2
+  System_String_o *v183; // x3
+  int32_t v184; // w4
+  int32_t v185; // w5
+  bool v186; // w6
+  bool v187; // w7
+  __int64 v188; // x19
+  _DWORD *v189; // x8
+  __int64 v190; // x9
+  struct UnityEngine_GameObject_o *v191; // x1
+  char v192[4]; // [xsp+8h] [xbp-88h] BYREF
+  char v193[4]; // [xsp+Ch] [xbp-84h] BYREF
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v195; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v196; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974F1D & 1) == 0 )
   {
@@ -2805,326 +2852,336 @@ void UICamera__ProcessMouse(UICamera_o *this, const MethodInfo *method)
     sub_2213A60(&StringLiteral_10316/*"OnHover"*/);
     byte_5974F1D = 1;
   }
-  mousePosition = (unsigned __int64)UnityEngine_Input__get_mousePosition(0);
-  v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+  mousePosition = UnityEngine_Input__get_mousePosition(0);
+  x = mousePosition.fields.x;
+  v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+  y = mousePosition.fields.y;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-    v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+    v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
   }
-  *(void **)((char *)&v3[1].fields.dragged[2].monitor + 4) = (void *)mousePosition;
-  dragged = v3[1].fields.dragged;
-  monitor = dragged[13].monitor;
+  dragged = v5[1].fields.dragged;
+  *((float *)&dragged[2].monitor + 1) = x;
+  *(float *)&dragged[2].fields.m_CachedPtr = y;
+  v8 = v5[1].fields.dragged;
+  monitor = v8[13].monitor;
   if ( !monitor )
     goto LABEL_174;
   if ( !*((_DWORD *)monitor + 6) )
     goto LABEL_175;
-  v6 = (float32x2_t *)*((_QWORD *)monitor + 4);
-  if ( !v6 )
-    goto LABEL_174;
-  v6[4].n64_u64[0] = vsub_f32(*(float32x2_t *)((char *)&dragged[2].monitor + 4), v6[2]).n64_u64[0];
-  v7 = v3[1].fields.dragged;
-  v8 = v7[13].monitor;
-  if ( !v8 )
-    goto LABEL_174;
-  if ( !v8[6] )
-    goto LABEL_175;
-  v9 = *((_QWORD *)v8 + 4);
-  if ( !v9 )
-    goto LABEL_174;
-  *(_QWORD *)(v9 + 16) = *(void **)((char *)&v7[2].monitor + 4);
-  v10 = v3[1].fields.dragged[13].monitor;
+  v10 = (float32x2_t *)*((_QWORD *)monitor + 4);
   if ( !v10 )
     goto LABEL_174;
-  if ( !*((_DWORD *)v10 + 6) )
-    goto LABEL_175;
-  v11 = (float32x2_t *)*((_QWORD *)v10 + 4);
-  if ( !v11 )
+  v10[4].n64_u64[0] = vsub_f32(*(float32x2_t *)((char *)&v8[2].monitor + 4), v10[2]).n64_u64[0];
+  v11 = v5[1].fields.dragged;
+  v12 = v11[13].monitor;
+  if ( !v12 )
     goto LABEL_174;
-  v12 = 5;
-  v13 = vaddv_f32(vmul_f32(v11[4], v11[4]));
+  if ( !v12[6] )
+    goto LABEL_175;
+  v13 = *((_QWORD *)v12 + 4);
+  if ( !v13 )
+    goto LABEL_174;
+  *(_QWORD *)(v13 + 16) = *(void **)((char *)&v11[2].monitor + 4);
+  v14 = v5[1].fields.dragged[13].monitor;
+  if ( !v14 )
+    goto LABEL_174;
+  if ( !*((_DWORD *)v14 + 6) )
+    goto LABEL_175;
+  v15 = (float32x2_t *)*((_QWORD *)v14 + 4);
+  if ( !v15 )
+    goto LABEL_174;
+  v16 = 5;
+  v17 = vaddv_f32(vmul_f32(v15[4], v15[4]));
   do
   {
-    if ( !LODWORD(v3[2].fields.pos.fields.y) )
+    if ( !LODWORD(v5[2].fields.pos.fields.y) )
     {
-      j_il2cpp_runtime_class_init_0(v3, v185);
-      v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5, v3);
+      v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
     }
-    v14 = v3[1].fields.dragged[13].monitor;
-    if ( !v14 )
-      goto LABEL_174;
-    if ( (unsigned int)(v12 - 4) >= v14[6] )
-      goto LABEL_175;
-    v15 = *((_QWORD *)v14 + 4);
-    if ( !v15 )
-      goto LABEL_174;
-    v16 = *(_QWORD *)&v14[2 * v12];
-    if ( !v16 )
-      goto LABEL_174;
-    *(_QWORD *)(v16 + 16) = *(_QWORD *)(v15 + 16);
-    v17 = v3[1].fields.dragged[13].monitor;
-    if ( !v17 )
-      goto LABEL_174;
-    if ( (unsigned int)(v12 - 4) >= v17[6] )
-      goto LABEL_175;
-    v18 = *((_QWORD *)v17 + 4);
+    v18 = v5[1].fields.dragged[13].monitor;
     if ( !v18 )
       goto LABEL_174;
-    v19 = *(_QWORD *)&v17[2 * v12];
+    if ( (unsigned int)(v16 - 4) >= v18[6] )
+      goto LABEL_175;
+    v19 = *((_QWORD *)v18 + 4);
     if ( !v19 )
       goto LABEL_174;
-    ++v12;
-    *(_QWORD *)(v19 + 32) = *(_QWORD *)(v18 + 32);
+    v20 = *(_QWORD *)&v18[2 * v16];
+    if ( !v20 )
+      goto LABEL_174;
+    *(_QWORD *)(v20 + 16) = *(_QWORD *)(v19 + 16);
+    v21 = v5[1].fields.dragged[13].monitor;
+    if ( !v21 )
+      goto LABEL_174;
+    if ( (unsigned int)(v16 - 4) >= v21[6] )
+      goto LABEL_175;
+    v22 = *((_QWORD *)v21 + 4);
+    if ( !v22 )
+      goto LABEL_174;
+    v23 = *(_QWORD *)&v21[2 * v16];
+    if ( !v23 )
+      goto LABEL_174;
+    ++v16;
+    *(_QWORD *)(v23 + 32) = *(_QWORD *)(v22 + 32);
   }
-  while ( (_DWORD)v12 != 7 );
-  v20 = 0;
-  v21 = 0;
+  while ( (_DWORD)v16 != 7 );
+  v24 = 0;
+  v25 = 0;
   for ( i = 0; i != 3; ++i )
   {
     if ( UnityEngine_Input__GetMouseButtonDown(i, 0) )
     {
-      v24 = UICamera_TypeInfo;
-      v21 = 1;
+      v28 = UICamera_TypeInfo;
+      v25 = 1;
     }
     else
     {
       if ( !UnityEngine_Input__GetMouseButton(i, 0) )
         continue;
-      v24 = UICamera_TypeInfo;
+      v28 = UICamera_TypeInfo;
     }
-    if ( !*(&v24->_2.cctor_finished + 1) )
+    if ( !*(&v28->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v24, v23);
-      v24 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v28, v27);
+      v28 = UICamera_TypeInfo;
     }
-    v20 = 1;
-    v24->static_fields->currentScheme = 0;
+    v24 = 1;
+    v28->static_fields->currentScheme = 0;
   }
-  if ( (v13 > 0.001) | v20 & 1 || (mNextRaycast = this->fields.mNextRaycast, mNextRaycast < RealTime__get_time(0)) )
+  if ( (v17 > 0.001) | v24 & 1 || (mNextRaycast = this->fields.mNextRaycast, mNextRaycast < RealTime__get_time(0)) )
   {
     this->fields.mNextRaycast = RealTime__get_time(0) + 0.02;
-    v189 = UnityEngine_Input__get_mousePosition(0);
-    v27 = UICamera_TypeInfo;
+    v195 = UnityEngine_Input__get_mousePosition(0);
+    v31 = v195.fields.x;
+    v32 = v195.fields.y;
+    v33 = UICamera_TypeInfo;
+    z = v195.fields.z;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v26);
-    if ( !UICamera__Raycast(v189, (const MethodInfo *)v27) )
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v30);
+    v196.fields.x = v31;
+    v196.fields.y = v32;
+    v196.fields.z = z;
+    if ( !UICamera__Raycast(v196, (const MethodInfo *)v33) )
     {
-      v35 = UICamera_TypeInfo;
+      v42 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v28);
-        v35 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v35);
+        v42 = UICamera_TypeInfo;
       }
-      static_fields = v35->static_fields;
+      static_fields = v42->static_fields;
       fallThrough = static_fields->fallThrough;
       static_fields->hoveredObject = fallThrough;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&static_fields->hoveredObject,
         (int32_t)fallThrough,
-        v29,
-        v30,
-        v31,
-        v32,
-        v33,
-        v34);
+        v36,
+        v37,
+        v38,
+        v39,
+        v40,
+        v41);
     }
-    v38 = UICamera_TypeInfo;
+    v45 = UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v28);
-      v38 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v35);
+      v45 = UICamera_TypeInfo;
     }
-    hoveredObject = (UnityEngine_Object_o *)v38->static_fields->hoveredObject;
+    hoveredObject = (UnityEngine_Object_o *)v45->static_fields->hoveredObject;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v35);
     if ( UnityEngine_Object__op_Equality(hoveredObject, 0, 0) )
     {
-      v46 = UICamera_TypeInfo;
+      v53 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-        v46 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+        v53 = UICamera_TypeInfo;
       }
-      v47 = v46->static_fields;
-      mGenericHandler = v47->mGenericHandler;
-      v47->hoveredObject = mGenericHandler;
+      v54 = v53->static_fields;
+      mGenericHandler = v54->mGenericHandler;
+      v54->hoveredObject = mGenericHandler;
       sub_2213A04(
-        (MissionNaviTransitionBoardItem_o *)&v47->hoveredObject,
+        (MissionNaviTransitionBoardItem_o *)&v54->hoveredObject,
         (int32_t)mGenericHandler,
-        v40,
-        v41,
-        v42,
-        v43,
-        v44,
-        v45);
+        v47,
+        v48,
+        v49,
+        v50,
+        v51,
+        v52);
     }
-    v49 = 0;
+    v56 = 0;
     while ( 1 )
     {
-      v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+      v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-        v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+        v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
       }
-      v50 = v3[1].fields.dragged;
-      v51 = v50[13].monitor;
-      if ( !v51 )
+      v57 = v5[1].fields.dragged;
+      v58 = v57[13].monitor;
+      if ( !v58 )
         break;
-      if ( (unsigned int)v49 >= v51[6] )
+      if ( (unsigned int)v56 >= v58[6] )
         goto LABEL_175;
-      v3 = *(UICamera_MouseOrTouch_o **)&v51[2 * v49 + 8];
-      if ( !v3 )
+      v5 = *(UICamera_MouseOrTouch_o **)&v58[2 * v56 + 8];
+      if ( !v5 )
         break;
-      m_CachedPtr = (struct UnityEngine_GameObject_o *)v50[15].fields.m_CachedPtr;
-      v3->fields.current = m_CachedPtr;
+      m_CachedPtr = (struct UnityEngine_GameObject_o *)v57[15].fields.m_CachedPtr;
+      v5->fields.current = m_CachedPtr;
       sub_2213A04(
-        (MissionNaviTransitionBoardItem_o *)&v3->fields.current,
+        (MissionNaviTransitionBoardItem_o *)&v5->fields.current,
         (int32_t)m_CachedPtr,
-        v40,
-        v41,
-        v42,
-        v43,
-        v44,
-        v45);
-      if ( (_DWORD)++v49 == 3 )
+        v47,
+        v48,
+        v49,
+        v50,
+        v51,
+        v52);
+      if ( (_DWORD)++v56 == 3 )
         goto LABEL_58;
     }
 LABEL_174:
-    sub_2213CDC(v3, v185);
+    sub_2213CDC(v5, v3);
   }
 LABEL_58:
-  v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+  v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-    v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+    v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
   }
-  v53 = v3[1].fields.dragged[13].monitor;
-  if ( !v53 )
+  v60 = v5[1].fields.dragged[13].monitor;
+  if ( !v60 )
     goto LABEL_174;
-  if ( !v53[6] )
+  if ( !v60[6] )
     goto LABEL_175;
-  v54 = *((_QWORD *)v53 + 4);
-  if ( !v54 )
+  v61 = *((_QWORD *)v60 + 4);
+  if ( !v61 )
     goto LABEL_174;
-  v55 = *(UnityEngine_Object_o **)(v54 + 56);
-  v56 = *(UnityEngine_Object_o **)(v54 + 64);
+  v62 = *(UnityEngine_Object_o **)(v61 + 56);
+  v63 = *(UnityEngine_Object_o **)(v61 + 64);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v185);
-  v63 = UnityEngine_Object__op_Inequality(v55, v56, 0);
-  v64 = UICamera_TypeInfo;
-  if ( v63 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+  v70 = UnityEngine_Object__op_Inequality(v62, v63, 0);
+  v71 = UICamera_TypeInfo;
+  if ( v70 )
   {
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-      v64 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+      v71 = UICamera_TypeInfo;
     }
-    v64->static_fields->currentScheme = 0;
+    v71->static_fields->currentScheme = 0;
   }
-  if ( !*(&v64->_2.cctor_finished + 1) )
+  if ( !*(&v71->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v64, v185);
-    v64 = UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v71, v3);
+    v71 = UICamera_TypeInfo;
   }
-  v3 = (UICamera_MouseOrTouch_o *)v64->static_fields;
-  v65 = v3[3].monitor;
-  if ( !v65 )
+  v5 = (UICamera_MouseOrTouch_o *)v71->static_fields;
+  v72 = v5[3].monitor;
+  if ( !v72 )
     goto LABEL_174;
-  if ( !*((_DWORD *)v65 + 6) )
+  if ( !*((_DWORD *)v72 + 6) )
     goto LABEL_175;
-  v66 = (struct UnityEngine_GameObject_o *)*((_QWORD *)v65 + 4);
-  v3[1].fields.last = v66;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3[1].fields.last, (int32_t)v66, v57, v58, v59, v60, v61, v62);
-  v67 = UICamera_TypeInfo;
+  v73 = (struct UnityEngine_GameObject_o *)*((_QWORD *)v72 + 4);
+  v5[1].fields.last = v73;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[1].fields.last, (int32_t)v73, v64, v65, v66, v67, v68, v69);
+  v74 = UICamera_TypeInfo;
   UICamera_TypeInfo->static_fields->currentTouchID = -1;
-  if ( (v20 & 1) != 0 )
+  if ( (v24 & 1) != 0 )
   {
     this->fields.mTooltipTime = 0.0;
-    if ( v13 <= 0.001 )
+    if ( v17 <= 0.001 )
       goto LABEL_93;
     goto LABEL_85;
   }
-  if ( v13 <= 0.001 )
+  if ( v17 <= 0.001 )
   {
-    v70 = 1;
+    v77 = 1;
 LABEL_95:
-    if ( !*(&v67->_2.cctor_finished + 1) )
+    if ( !*(&v74->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v67, v185);
-      v67 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v74, v3);
+      v74 = UICamera_TypeInfo;
     }
-    mHover = (UnityEngine_Object_o *)v67->static_fields->mHover;
+    mHover = (UnityEngine_Object_o *)v74->static_fields->mHover;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v185);
-    if ( (v63 & UnityEngine_Object__op_Inequality(mHover, 0, 0) & 1) != 0 )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+    if ( (v70 & UnityEngine_Object__op_Inequality(mHover, 0, 0) & 1) != 0 )
     {
-      v83 = UICamera_TypeInfo;
+      v90 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v82);
-        v83 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v89);
+        v90 = UICamera_TypeInfo;
       }
-      v84 = UnityEngine_Object_TypeInfo;
+      v91 = UnityEngine_Object_TypeInfo;
       mTooltip = (UnityEngine_Object_o *)this->fields.mTooltip;
-      v86 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
-      v83->static_fields->currentScheme = 0;
-      if ( !v86 )
-        j_il2cpp_runtime_class_init_0(v84, v82);
+      v93 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
+      v90->static_fields->currentScheme = 0;
+      if ( !v93 )
+        j_il2cpp_runtime_class_init_0(v91, v89);
       if ( UnityEngine_Object__op_Inequality(mTooltip, 0, 0) )
-        UICamera__ShowTooltip(this, 0, v88);
-      v89 = UICamera_TypeInfo;
+        UICamera__ShowTooltip(this, 0, v95);
+      v96 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v87);
-        v89 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v94);
+        v96 = UICamera_TypeInfo;
       }
-      v90 = v89->static_fields;
-      onHover = v90->onHover;
+      v97 = v96->static_fields;
+      onHover = v97->onHover;
       if ( onHover )
       {
-        if ( !*(&v89->_2.cctor_finished + 1) )
+        if ( !*(&v96->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(v89, v87);
-          v90 = UICamera_TypeInfo->static_fields;
-          onHover = v90->onHover;
+          j_il2cpp_runtime_class_init_0(v96, v94);
+          v97 = UICamera_TypeInfo->static_fields;
+          onHover = v97->onHover;
           if ( !onHover )
             goto LABEL_174;
         }
         ((void (__fastcall *)(intptr_t, struct UnityEngine_GameObject_o *, _QWORD, intptr_t))onHover->fields.invoke_impl)(
           onHover->fields.method_code,
-          v90->mHover,
+          v97->mHover,
           0,
           onHover->fields.method);
-        v89 = UICamera_TypeInfo;
+        v96 = UICamera_TypeInfo;
       }
-      if ( !*(&v89->_2.cctor_finished + 1) )
+      if ( !*(&v96->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(v89, v87);
-        v89 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v96, v94);
+        v96 = UICamera_TypeInfo;
       }
-      v92 = v89->static_fields;
-      v188[0] = 0;
-      v93 = v92->mHover;
-      v94 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, v188);
-      UICamera__Notify(v93, (System_String_o *)StringLiteral_10316/*"OnHover"*/, v94, v95);
+      v99 = v96->static_fields;
+      v193[0] = 0;
+      v100 = v99->mHover;
+      v101 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, v193);
+      UICamera__Notify(v100, (System_String_o *)StringLiteral_10316/*"OnHover"*/, v101, v102);
       p_mHover = (MissionNaviTransitionBoardItem_o *)&UICamera_TypeInfo->static_fields->mHover;
       p_mHover->klass = 0;
-      sub_2213A04(p_mHover, 0, v97, v98, v99, v100, v101, v102);
+      sub_2213A04(p_mHover, 0, v104, v105, v106, v107, v108, v109);
     }
   }
   else
   {
-    if ( !this->fields.stickyTooltip || v63 )
+    if ( !this->fields.stickyTooltip || v70 )
     {
       if ( this->fields.mTooltipTime == 0.0 )
       {
-        v68 = (UnityEngine_Object_o *)this->fields.mTooltip;
+        v75 = (UnityEngine_Object_o *)this->fields.mTooltip;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v185);
-        if ( UnityEngine_Object__op_Inequality(v68, 0, 0) )
-          UICamera__ShowTooltip(this, 0, v69);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+        if ( UnityEngine_Object__op_Inequality(v75, 0, 0) )
+          UICamera__ShowTooltip(this, 0, v76);
       }
       else
       {
@@ -3132,23 +3189,23 @@ LABEL_95:
       }
     }
 LABEL_85:
-    v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+    v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-      v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+      v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
     }
-    v71 = (struct UICamera_StaticFields *)v3[1].fields.dragged;
-    onMouseMove = v71->onMouseMove;
+    v78 = (struct UICamera_StaticFields *)v5[1].fields.dragged;
+    onMouseMove = v78->onMouseMove;
     if ( onMouseMove )
     {
-      if ( !LODWORD(v3[2].fields.pos.fields.y) )
+      if ( !LODWORD(v5[2].fields.pos.fields.y) )
       {
-        j_il2cpp_runtime_class_init_0(v3, v185);
-        v71 = UICamera_TypeInfo->static_fields;
-        onMouseMove = v71->onMouseMove;
+        j_il2cpp_runtime_class_init_0(v5, v3);
+        v78 = UICamera_TypeInfo->static_fields;
+        onMouseMove = v78->onMouseMove;
       }
-      currentTouch = v71->currentTouch;
+      currentTouch = v78->currentTouch;
       if ( !currentTouch || !onMouseMove )
         goto LABEL_174;
       ((void (__fastcall *)(intptr_t, intptr_t, float, float))onMouseMove->fields.invoke_impl)(
@@ -3156,231 +3213,231 @@ LABEL_85:
         onMouseMove->fields.method,
         currentTouch->fields.delta.fields.x,
         currentTouch->fields.delta.fields.y);
-      v74 = UICamera_TypeInfo->static_fields;
-      v74->currentTouch = 0;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v74->currentTouch, 0, v75, v76, v77, v78, v79, v80);
+      v81 = UICamera_TypeInfo->static_fields;
+      v81->currentTouch = 0;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v81->currentTouch, 0, v82, v83, v84, v85, v86, v87);
     }
 LABEL_93:
-    v70 = v20 ^ 1;
-    if ( ((v21 | v20 ^ 1) & 1) != 0 )
+    v77 = v24 ^ 1;
+    if ( ((v25 | v24 ^ 1) & 1) != 0 )
     {
-      v67 = UICamera_TypeInfo;
+      v74 = UICamera_TypeInfo;
       goto LABEL_95;
     }
-    v70 = 0;
+    v77 = 0;
   }
-  v103 = 0;
-  v104 = -1;
+  v110 = 0;
+  v111 = -1;
   while ( 2 )
   {
-    MouseButtonDown = UnityEngine_Input__GetMouseButtonDown(v103, 0);
-    MouseButtonUp = UnityEngine_Input__GetMouseButtonUp(v103, 0);
-    v113 = UICamera_TypeInfo;
-    v114 = MouseButtonUp;
+    MouseButtonDown = UnityEngine_Input__GetMouseButtonDown(v110, 0);
+    MouseButtonUp = UnityEngine_Input__GetMouseButtonUp(v110, 0);
+    v120 = UICamera_TypeInfo;
+    v121 = MouseButtonUp;
     if ( MouseButtonDown || MouseButtonUp )
     {
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-        v113 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+        v120 = UICamera_TypeInfo;
       }
-      v113->static_fields->currentScheme = 0;
+      v120->static_fields->currentScheme = 0;
     }
-    if ( !*(&v113->_2.cctor_finished + 1) )
+    if ( !*(&v120->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v113, v185);
-      v113 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v120, v3);
+      v120 = UICamera_TypeInfo;
     }
-    v3 = (UICamera_MouseOrTouch_o *)v113->static_fields;
-    v115 = v3[3].monitor;
-    if ( !v115 )
+    v5 = (UICamera_MouseOrTouch_o *)v120->static_fields;
+    v122 = v5[3].monitor;
+    if ( !v122 )
       goto LABEL_174;
-    if ( v103 >= *((unsigned int *)v115 + 6) )
+    if ( v110 >= *((unsigned int *)v122 + 6) )
       goto LABEL_175;
-    v116 = (struct UnityEngine_GameObject_o *)v115[v103 + 4];
-    v3[1].fields.last = v116;
+    v123 = (struct UnityEngine_GameObject_o *)v122[v110 + 4];
+    v5[1].fields.last = v123;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v3[1].fields.last,
-      (int32_t)v116,
-      v107,
-      v108,
-      v109,
-      v110,
-      v111,
-      v112);
-    v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
-    v123 = UICamera_TypeInfo->static_fields;
-    v124 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
-    v123->currentTouchID = v104;
-    v123->currentKey = v103 + 323;
+      (MissionNaviTransitionBoardItem_o *)&v5[1].fields.last,
+      (int32_t)v123,
+      v114,
+      v115,
+      v116,
+      v117,
+      v118,
+      v119);
+    v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+    v130 = UICamera_TypeInfo->static_fields;
+    v131 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
+    v130->currentTouchID = v111;
+    v130->currentKey = v110 + 323;
     if ( MouseButtonDown )
     {
-      if ( !v124 )
+      if ( !v131 )
       {
-        j_il2cpp_runtime_class_init_0(v3, v185);
-        v123 = UICamera_TypeInfo->static_fields;
+        j_il2cpp_runtime_class_init_0(v5, v3);
+        v130 = UICamera_TypeInfo->static_fields;
       }
-      v3 = v123->currentTouch;
-      if ( !v3 )
+      v5 = v130->currentTouch;
+      if ( !v5 )
         goto LABEL_174;
-      currentCamera = v123->currentCamera;
-      v3->fields.pressedCam = currentCamera;
-      p_pressedCam = (MissionNaviTransitionBoardItem_o *)&v3->fields.pressedCam;
+      currentCamera = v130->currentCamera;
+      v5->fields.pressedCam = currentCamera;
+      p_pressedCam = (MissionNaviTransitionBoardItem_o *)&v5->fields.pressedCam;
       goto LABEL_141;
     }
-    if ( !v124 )
+    if ( !v131 )
     {
-      j_il2cpp_runtime_class_init_0(v3, v185);
-      v123 = UICamera_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v5, v3);
+      v130 = UICamera_TypeInfo->static_fields;
     }
-    v127 = v123->currentTouch;
-    if ( !v127 )
+    v134 = v130->currentTouch;
+    if ( !v134 )
       goto LABEL_174;
-    pressed = (UnityEngine_Object_o *)v127->fields.pressed;
+    pressed = (UnityEngine_Object_o *)v134->fields.pressed;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v185);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
     if ( UnityEngine_Object__op_Inequality(pressed, 0, 0) )
     {
-      v129 = UICamera_TypeInfo;
+      v136 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-        v129 = UICamera_TypeInfo;
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+        v136 = UICamera_TypeInfo;
       }
-      v3 = (UICamera_MouseOrTouch_o *)v129->static_fields;
-      last = v3[1].fields.last;
+      v5 = (UICamera_MouseOrTouch_o *)v136->static_fields;
+      last = v5[1].fields.last;
       if ( !last )
         goto LABEL_174;
       currentCamera = (struct UnityEngine_Camera_o *)last[2].klass;
-      v3[1].fields.delta = (struct UnityEngine_Vector2_o)currentCamera;
-      p_pressedCam = (MissionNaviTransitionBoardItem_o *)&v3[1].fields.delta;
+      v5[1].fields.delta = (struct UnityEngine_Vector2_o)currentCamera;
+      p_pressedCam = (MissionNaviTransitionBoardItem_o *)&v5[1].fields.delta;
 LABEL_141:
-      sub_2213A04(p_pressedCam, (int32_t)currentCamera, v117, v118, v119, v120, v121, v122);
+      sub_2213A04(p_pressedCam, (int32_t)currentCamera, v124, v125, v126, v127, v128, v129);
     }
-    UICamera__ProcessTouch(this, MouseButtonDown, v114, (const MethodInfo *)v118);
-    v138 = UICamera_TypeInfo;
+    UICamera__ProcessTouch(this, MouseButtonDown, v121, (const MethodInfo *)v125);
+    v145 = UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v131);
-      v138 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v138);
+      v145 = UICamera_TypeInfo;
     }
-    v139 = v138->static_fields;
-    ++v103;
-    --v104;
-    v139->currentKey = 0;
-    if ( v103 != 3 )
+    v146 = v145->static_fields;
+    ++v110;
+    --v111;
+    v146->currentKey = 0;
+    if ( v110 != 3 )
       continue;
     break;
   }
-  if ( (v63 & v70 & 1) == 0 )
+  if ( (v70 & v77 & 1) == 0 )
     goto LABEL_160;
-  if ( !*(&v138->_2.cctor_finished + 1) )
+  if ( !*(&v145->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v138, v131);
-    v139 = UICamera_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v145, v138);
+    v146 = UICamera_TypeInfo->static_fields;
   }
-  v139->currentScheme = 0;
+  v146->currentScheme = 0;
   time = RealTime__get_time(0);
-  v147 = UICamera_TypeInfo->static_fields;
-  mMouse = v147->mMouse;
+  v154 = UICamera_TypeInfo->static_fields;
+  mMouse = v154->mMouse;
   this->fields.mTooltipTime = time + this->fields.tooltipDelay;
   if ( !mMouse )
     goto LABEL_174;
   if ( !LODWORD(mMouse->max_length) )
     goto LABEL_175;
-  v149 = mMouse->m_Items[0];
-  if ( !v149 )
+  v156 = mMouse->m_Items[0];
+  if ( !v156 )
     goto LABEL_174;
-  current = v149->fields.current;
-  v147->mHover = current;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v147->mHover, (int32_t)current, v140, v141, v142, v143, v144, v145);
-  v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo->static_fields;
-  v157 = v3[3].monitor;
-  if ( !v157 )
+  current = v156->fields.current;
+  v154->mHover = current;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v154->mHover, (int32_t)current, v147, v148, v149, v150, v151, v152);
+  v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo->static_fields;
+  v164 = v5[3].monitor;
+  if ( !v164 )
     goto LABEL_174;
-  if ( !*((_DWORD *)v157 + 6) )
+  if ( !*((_DWORD *)v164 + 6) )
     goto LABEL_175;
-  v158 = (struct UnityEngine_GameObject_o *)*((_QWORD *)v157 + 4);
-  v3[1].fields.last = v158;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3[1].fields.last, (int32_t)v158, v151, v152, v153, v154, v155, v156);
-  v160 = UICamera_TypeInfo;
-  v161 = UICamera_TypeInfo->static_fields;
-  v162 = v161->onHover;
-  v161->currentTouchID = -1;
-  if ( !v162 )
+  v165 = (struct UnityEngine_GameObject_o *)*((_QWORD *)v164 + 4);
+  v5[1].fields.last = v165;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[1].fields.last, (int32_t)v165, v158, v159, v160, v161, v162, v163);
+  v167 = UICamera_TypeInfo;
+  v168 = UICamera_TypeInfo->static_fields;
+  v169 = v168->onHover;
+  v168->currentTouchID = -1;
+  if ( !v169 )
     goto LABEL_157;
-  if ( !*(&v160->_2.cctor_finished + 1) )
+  if ( !*(&v167->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v160, v159);
-    v161 = UICamera_TypeInfo->static_fields;
-    v162 = v161->onHover;
-    if ( !v162 )
+    j_il2cpp_runtime_class_init_0(v167, v166);
+    v168 = UICamera_TypeInfo->static_fields;
+    v169 = v168->onHover;
+    if ( !v169 )
       goto LABEL_174;
   }
-  ((void (__fastcall *)(intptr_t, struct UnityEngine_GameObject_o *, __int64, intptr_t))v162->fields.invoke_impl)(
-    v162->fields.method_code,
-    v161->mHover,
+  ((void (__fastcall *)(intptr_t, struct UnityEngine_GameObject_o *, __int64, intptr_t))v169->fields.invoke_impl)(
+    v169->fields.method_code,
+    v168->mHover,
     1,
-    v162->fields.method);
-  v160 = UICamera_TypeInfo;
+    v169->fields.method);
+  v167 = UICamera_TypeInfo;
 LABEL_157:
-  if ( !*(&v160->_2.cctor_finished + 1) )
+  if ( !*(&v167->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v160, v159);
-    v160 = UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v167, v166);
+    v167 = UICamera_TypeInfo;
   }
-  v163 = v160->static_fields->mHover;
-  v187[0] = 1;
-  v164 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, v187);
-  UICamera__Notify(v163, (System_String_o *)StringLiteral_10316/*"OnHover"*/, v164, v165);
-  v138 = UICamera_TypeInfo;
+  v170 = v167->static_fields->mHover;
+  v192[0] = 1;
+  v171 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984328, v192);
+  UICamera__Notify(v170, (System_String_o *)StringLiteral_10316/*"OnHover"*/, v171, v172);
+  v145 = UICamera_TypeInfo;
 LABEL_160:
-  if ( !*(&v138->_2.cctor_finished + 1) )
+  if ( !*(&v145->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v138, v131);
-    v138 = UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v145, v138);
+    v145 = UICamera_TypeInfo;
   }
-  v166 = v138->static_fields;
-  v166->currentTouch = 0;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v166->currentTouch, 0, v132, v133, v134, v135, v136, v137);
-  v173 = UICamera_TypeInfo->static_fields->mMouse;
-  if ( !v173 )
+  v173 = v145->static_fields;
+  v173->currentTouch = 0;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v173->currentTouch, 0, v139, v140, v141, v142, v143, v144);
+  v180 = UICamera_TypeInfo->static_fields->mMouse;
+  if ( !v180 )
     goto LABEL_174;
-  if ( !LODWORD(v173->max_length) )
+  if ( !LODWORD(v180->max_length) )
 LABEL_175:
-    sub_2213CE4(v3);
-  v3 = v173->m_Items[0];
-  if ( !v3 )
+    sub_2213CE4(v5);
+  v5 = v180->m_Items[0];
+  if ( !v5 )
     goto LABEL_174;
-  v174 = v3->fields.current;
-  v3->fields.last = v174;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3->fields.last, (int32_t)v174, v167, v168, v169, v170, v171, v172);
-  v181 = 5;
+  v181 = v5->fields.current;
+  v5->fields.last = v181;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5->fields.last, (int32_t)v181, v174, v175, v176, v177, v178, v179);
+  v188 = 5;
   do
   {
-    v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+    v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v185);
-      v3 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v3);
+      v5 = (UICamera_MouseOrTouch_o *)UICamera_TypeInfo;
     }
-    v182 = v3[1].fields.dragged[13].monitor;
-    if ( !v182 )
+    v189 = v5[1].fields.dragged[13].monitor;
+    if ( !v189 )
       goto LABEL_174;
-    if ( (unsigned int)(v181 - 4) >= v182[6] )
+    if ( (unsigned int)(v188 - 4) >= v189[6] )
       goto LABEL_175;
-    v183 = *((_QWORD *)v182 + 4);
-    if ( !v183 )
+    v190 = *((_QWORD *)v189 + 4);
+    if ( !v190 )
       goto LABEL_174;
-    v3 = *(UICamera_MouseOrTouch_o **)&v182[2 * v181];
-    if ( !v3 )
+    v5 = *(UICamera_MouseOrTouch_o **)&v189[2 * v188];
+    if ( !v5 )
       goto LABEL_174;
-    v184 = *(struct UnityEngine_GameObject_o **)(v183 + 56);
-    v3->fields.last = v184;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v3->fields.last, (int32_t)v184, v175, v176, v177, v178, v179, v180);
-    ++v181;
+    v191 = *(struct UnityEngine_GameObject_o **)(v190 + 56);
+    v5->fields.last = v191;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5->fields.last, (int32_t)v191, v182, v183, v184, v185, v186, v187);
+    ++v188;
   }
-  while ( (_DWORD)v181 != 7 );
+  while ( (_DWORD)v188 != 7 );
 }
 
 
@@ -5916,6 +5973,7 @@ LABEL_100:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
 {
   const MethodInfo *v2; // x1
@@ -5944,247 +6002,260 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
   UICamera_c *v25; // x0
   struct UICamera_StaticFields *v26; // x8
   int32_t cullingMask; // w21
-  int32_t v28; // w0
-  float v29; // s11
-  int32_t v30; // w22
-  UICamera_c *v31; // x0
+  UnityEngine_LayerMask_o v28; // w0
+  int32_t v29; // w0
+  float v30; // s11
+  int32_t v31; // w22
+  UICamera_c *v32; // x0
   float farClipPlane; // s0
   int data_high; // w8
-  int v34; // w9
-  __int64 v35; // x9
-  __int64 v36; // x20
-  unsigned int v37; // w8
-  UnityEngine_GameObject_o *v38; // x21
-  __int64 v39; // x1
-  UnityEngine_Object_o *v40; // x22
-  void *v41; // x19
-  UICamera_c *v42; // x0
-  float *v43; // x8
-  float v44; // s5
-  float v45; // s13
-  float v46; // s7
-  float v47; // s11
-  __int64 v48; // kr98_8
-  float v49; // s15
-  float v50; // s9
-  float v51; // s8
-  float v52; // s14
-  struct UnityEngine_Mathf_StaticFields *v53; // x8
-  float v54; // s0
-  float v55; // s1
-  float v56; // s0
-  __int64 v57; // x1
-  UICamera_c *v58; // x0
-  struct UICamera_StaticFields *v59; // x9
-  float v60; // s11
-  float v61; // s12
-  __int64 v62; // x8
-  __int64 v63; // x20
-  UnityEngine_GameObject_o *v64; // x20
-  __int64 v65; // x1
-  UnityEngine_Object_o *v66; // x21
-  void *v67; // x19
-  UICamera_c *v68; // x0
-  int v69; // w9
-  struct UICamera_StaticFields *v70; // x8
-  UICamera_c *v71; // x0
-  float *v72; // x8
-  float v73; // s5
-  float v74; // s13
-  float v75; // s7
-  float v76; // s11
-  __int64 v77; // krA8_8
-  float v78; // s15
-  float v79; // s9
-  float v80; // s8
-  float v81; // s14
-  struct UnityEngine_Mathf_StaticFields *v82; // x8
-  float v83; // s0
-  float v84; // s1
-  float v85; // s0
-  __int64 v86; // x1
-  __int64 v87; // x1
-  UnityEngine_Object_o *v88; // x21
-  unsigned __int64 v89; // x19
-  __int64 v90; // x21
-  UnityEngine_GameObject_o *v91; // x22
-  __int64 v92; // x1
+  int v35; // w9
+  __int64 v36; // x9
+  __int64 v37; // x20
+  unsigned int v38; // w8
+  UnityEngine_GameObject_o *v39; // x21
+  __int64 v40; // x1
+  UnityEngine_Object_o *v41; // x22
+  void *v42; // x19
+  UICamera_c *v43; // x0
+  float *v44; // x8
+  float v45; // s5
+  float v46; // s13
+  float v47; // s7
+  float v48; // s11
+  __int64 v49; // kr10_8
+  float v50; // s15
+  float v51; // s9
+  float v52; // s8
+  float v53; // s14
+  struct UnityEngine_Mathf_StaticFields *v54; // x8
+  float v55; // s0
+  float v56; // s1
+  float v57; // s0
+  __int64 v58; // x1
+  float v59; // s11
+  float v60; // s12
+  UICamera_c *v61; // x0
+  float v62; // s13
+  float *v63; // x8
+  struct UICamera_StaticFields *v64; // x9
+  float v65; // s11
+  float v66; // s12
+  __int64 v67; // x8
+  __int64 v68; // x20
+  UnityEngine_GameObject_o *v69; // x20
+  __int64 v70; // x1
+  UnityEngine_Object_o *v71; // x21
+  void *v72; // x19
+  UICamera_c *v73; // x0
+  int v74; // w9
+  struct UICamera_StaticFields *v75; // x8
+  UICamera_c *v76; // x0
+  float *v77; // x8
+  float v78; // s5
+  float v79; // s13
+  float v80; // s7
+  float v81; // s11
+  __int64 v82; // kr28_8
+  float v83; // s15
+  float v84; // s9
+  float v85; // s8
+  float v86; // s14
+  struct UnityEngine_Mathf_StaticFields *v87; // x8
+  float v88; // s0
+  float v89; // s1
+  float v90; // s0
+  __int64 v91; // x1
+  float v92; // s11
+  float v93; // s12
+  float v94; // s13
+  __int64 v95; // x1
+  UnityEngine_Object_o *v96; // x21
+  unsigned __int64 v97; // x19
+  __int64 v98; // x21
+  UnityEngine_GameObject_o *v99; // x22
+  __int64 v100; // x1
   UnityEngine_Object_o *Component_object; // x23
   void *monitor; // x23
-  __int64 v95; // x1
-  Il2CppObject *v96; // x23
-  int32_t v97; // w8
-  __int128 v98; // q0
-  __int128 v99; // q1
-  struct UnityEngine_Vector2_o v100; // x10
-  struct UICamera_StaticFields *v101; // x8
-  UnityEngine_GameObject_o *v102; // x0
-  struct UICamera_StaticFields *v103; // x8
-  System_String_o *v104; // x2
-  System_String_o *v105; // x3
-  int32_t v106; // w4
-  int32_t v107; // w5
-  bool v108; // w6
-  bool v109; // w7
-  struct UICamera_StaticFields *v110; // x8
+  __int64 v103; // x1
+  Il2CppObject *v104; // x23
+  int32_t v105; // w8
+  __int128 v106; // q0
+  __int128 v107; // q1
+  struct UnityEngine_Vector2_o v108; // x10
+  struct UICamera_StaticFields *v109; // x8
+  UnityEngine_GameObject_o *v110; // x0
+  struct UICamera_StaticFields *v111; // x8
+  System_String_o *v112; // x2
+  System_String_o *v113; // x3
+  int32_t v114; // w4
+  int32_t v115; // w5
+  bool v116; // w6
+  bool v117; // w7
+  struct UICamera_StaticFields *v118; // x8
   BetterList_UICamera_DepthEntry__o *mHits; // x22
-  UICamera_c *v112; // x8
-  BetterList_UICamera_DepthEntry__o *v113; // x20
-  struct UICamera___c_StaticFields *v114; // x8
+  UICamera_c *v120; // x8
+  BetterList_UICamera_DepthEntry__o *v121; // x20
+  struct UICamera___c_StaticFields *v122; // x8
   BetterList_CompareFunc_UICamera_DepthEntry__o *_9__125_0; // x21
-  Il2CppObject *v116; // x22
-  struct UICamera___c_StaticFields *v117; // x0
-  System_String_o *v118; // x2
-  System_String_o *v119; // x3
-  int32_t v120; // w4
-  int32_t v121; // w5
-  bool v122; // w6
-  bool v123; // w7
-  unsigned __int64 v124; // x20
+  Il2CppObject *v124; // x22
+  struct UICamera___c_StaticFields *v125; // x0
+  System_String_o *v126; // x2
+  System_String_o *v127; // x3
+  int32_t v128; // w4
+  int32_t v129; // w5
+  bool v130; // w6
+  bool v131; // w7
+  unsigned __int64 v132; // x20
   __int64 i; // x19
-  UICamera_c *v126; // x8
-  int v127; // w9
-  __int64 v128; // x8
-  __int64 v129; // x19
-  UnityEngine_GameObject_o *v130; // x21
-  __int64 v131; // x1
-  UnityEngine_Object_o *v132; // x22
-  void *v133; // x22
-  UICamera_c *v134; // x0
-  __int64 v135; // x1
-  Il2CppObject *v136; // x22
-  System_String_o *v137; // x2
-  System_String_o *v138; // x3
-  int32_t v139; // w4
-  int32_t v140; // w5
-  bool v141; // w6
-  bool v142; // w7
-  int32_t v143; // w8
-  struct UICamera_StaticFields *v144; // x9
-  UICamera_c *v145; // x8
-  struct UICamera_StaticFields *v146; // x9
-  __int64 v147; // x11
-  struct UICamera_StaticFields *v148; // x8
-  BetterList_UICamera_DepthEntry__o *v149; // x21
-  UICamera_c *v150; // x8
-  BetterList_UICamera_DepthEntry__o *v151; // x20
-  struct UICamera___c_StaticFields *v152; // x8
+  UICamera_c *v134; // x8
+  int v135; // w9
+  __int64 v136; // x8
+  __int64 v137; // x19
+  UnityEngine_GameObject_o *v138; // x21
+  __int64 v139; // x1
+  UnityEngine_Object_o *v140; // x22
+  void *v141; // x22
+  UICamera_c *v142; // x0
+  __int64 v143; // x1
+  Il2CppObject *v144; // x22
+  System_String_o *v145; // x2
+  System_String_o *v146; // x3
+  int32_t v147; // w4
+  int32_t v148; // w5
+  bool v149; // w6
+  bool v150; // w7
+  int32_t v151; // w8
+  struct UICamera_StaticFields *v152; // x9
+  UICamera_c *v153; // x8
+  struct UICamera_StaticFields *v154; // x9
+  __int64 v155; // x11
+  struct UICamera_StaticFields *v156; // x8
+  BetterList_UICamera_DepthEntry__o *v157; // x21
+  UICamera_c *v158; // x8
+  BetterList_UICamera_DepthEntry__o *v159; // x20
+  struct UICamera___c_StaticFields *v160; // x8
   BetterList_CompareFunc_UICamera_DepthEntry__o *_9__125_1; // x21
-  Il2CppObject *v154; // x22
-  struct UICamera___c_StaticFields *v155; // x0
-  System_String_o *v156; // x2
-  System_String_o *v157; // x3
-  int32_t v158; // w4
-  int32_t v159; // w5
-  bool v160; // w6
-  bool v161; // w7
-  unsigned __int64 v162; // x20
-  __int64 v163; // x19
-  __int64 v164; // x8
-  __int64 v165; // x1
-  Il2CppObject *v166; // x21
-  const MethodInfo *v167; // x1
-  UnityEngine_GameObject_o *v168; // x21
-  __int64 v169; // x1
-  Il2CppObject *v170; // x21
-  UICamera_c *v171; // x0
-  System_String_o *v172; // x2
-  System_String_o *v173; // x3
-  int32_t v174; // w4
-  int32_t v175; // w5
-  bool v176; // w6
-  bool v177; // w7
-  UICamera_c *v178; // x0
-  int32_t v179; // w1
-  MissionNaviTransitionBoardItem_o *v180; // x0
-  UICamera_c *v181; // x0
-  UICamera_c *v182; // x8
-  __int128 v183; // q1
-  __int128 v184; // q2
-  struct UICamera_StaticFields *v185; // x9
+  Il2CppObject *v162; // x22
+  struct UICamera___c_StaticFields *v163; // x0
+  System_String_o *v164; // x2
+  System_String_o *v165; // x3
+  int32_t v166; // w4
+  int32_t v167; // w5
+  bool v168; // w6
+  bool v169; // w7
+  unsigned __int64 v170; // x20
+  __int64 v171; // x19
+  __int64 v172; // x8
+  __int64 v173; // x1
+  Il2CppObject *v174; // x21
+  float v175; // s11
+  float v176; // s12
+  float v177; // s13
+  const MethodInfo *v178; // x1
+  UnityEngine_GameObject_o *v179; // x21
+  __int64 v180; // x1
+  Il2CppObject *v181; // x21
+  UICamera_c *v182; // x0
+  System_String_o *v183; // x2
+  System_String_o *v184; // x3
+  int32_t v185; // w4
+  int32_t v186; // w5
+  bool v187; // w6
+  bool v188; // w7
+  UICamera_c *v189; // x0
+  int32_t v190; // w1
+  MissionNaviTransitionBoardItem_o *v191; // x0
+  UICamera_c *v192; // x0
+  UICamera_c *v193; // x8
+  __int128 v194; // q1
+  __int128 v195; // q2
+  struct UICamera_StaticFields *v196; // x9
   int32_t go; // w1
   MissionNaviTransitionBoardItem_o *p_hoveredObject; // x0
-  System_String_o *v188; // x2
-  System_String_o *v189; // x3
-  int32_t v190; // w4
-  int32_t v191; // w5
-  bool v192; // w6
-  bool v193; // w7
-  UICamera_c *v194; // x8
-  __int64 v195; // x11
-  struct UICamera_StaticFields *v196; // x10
-  UICamera_c *v197; // x0
-  int32_t v198; // w1
-  MissionNaviTransitionBoardItem_o *v199; // x0
-  System_String_o *v200; // x2
-  System_String_o *v201; // x3
-  int32_t v202; // w4
-  int32_t v203; // w5
-  bool v204; // w6
-  bool v205; // w7
-  UICamera_c *v207; // x0
-  UICamera_c *v208; // x8
-  UnityEngine_GameObject_o *v209; // x0
-  struct UICamera_StaticFields *v210; // x8
+  System_String_o *v199; // x2
+  System_String_o *v200; // x3
+  int32_t v201; // w4
+  int32_t v202; // w5
+  bool v203; // w6
+  bool v204; // w7
+  UICamera_c *v205; // x8
+  __int64 v206; // x11
+  struct UICamera_StaticFields *v207; // x10
+  UICamera_c *v208; // x0
+  int32_t v209; // w1
+  MissionNaviTransitionBoardItem_o *v210; // x0
   System_String_o *v211; // x2
   System_String_o *v212; // x3
   int32_t v213; // w4
   int32_t v214; // w5
   bool v215; // w6
   bool v216; // w7
-  UICamera_c *v217; // x0
+  UICamera_c *v218; // x0
+  UICamera_c *v219; // x8
+  UnityEngine_GameObject_o *v220; // x0
+  struct UICamera_StaticFields *v221; // x8
+  System_String_o *v222; // x2
+  System_String_o *v223; // x3
+  int32_t v224; // w4
+  int32_t v225; // w5
+  bool v226; // w6
+  bool v227; // w7
+  UICamera_c *v228; // x0
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v219; // x1
+  const MethodInfo *v230; // x1
   UnityEngine_Object_o *RootRigidbody; // x0
-  __int64 v221; // x1
-  UnityEngine_GameObject_o *v222; // x0
-  struct UICamera_StaticFields *v223; // x8
-  System_String_o *v224; // x2
-  System_String_o *v225; // x3
-  int32_t v226; // w4
-  int32_t v227; // w5
-  bool v228; // w6
-  bool v229; // w7
-  UICamera_c *v230; // x0
-  UnityEngine_Transform_o *v231; // x0
-  const MethodInfo *v232; // x1
-  UnityEngine_Object_o *v233; // x19
+  __int64 v232; // x1
+  float *v233; // x8
   UnityEngine_GameObject_o *v234; // x0
-  __int64 v235; // x1
-  UICamera_c *v236; // x8
-  struct UnityEngine_GameObject_o *v237; // x19
-  struct UICamera_StaticFields *v238; // x8
-  __int128 v239; // q1
-  __int128 v240; // q2
-  int v241; // w8
-  __int128 v242; // q1
-  _OWORD *v243; // x8
-  __int128 v244; // q2
-  UICamera_c *v245; // x8
+  struct UICamera_StaticFields *v235; // x8
+  System_String_o *v236; // x2
+  System_String_o *v237; // x3
+  int32_t v238; // w4
+  int32_t v239; // w5
+  bool v240; // w6
+  bool v241; // w7
+  UICamera_c *v242; // x0
+  UnityEngine_Transform_o *v243; // x0
+  const MethodInfo *v244; // x1
+  UnityEngine_Object_o *v245; // x19
   UnityEngine_GameObject_o *v246; // x0
-  unsigned __int64 v247; // kr00_8
-  float v248; // [xsp+Ch] [xbp-1B4h]
-  float v249; // [xsp+Ch] [xbp-1B4h]
-  float v250; // [xsp+10h] [xbp-1B0h]
-  float v251; // [xsp+10h] [xbp-1B0h]
+  __int64 v247; // x1
+  UICamera_c *v248; // x8
+  struct UnityEngine_GameObject_o *v249; // x19
+  struct UICamera_StaticFields *v250; // x8
+  __int128 v251; // q1
+  __int128 v252; // q2
+  int v253; // w8
+  __int128 v254; // q1
+  _OWORD *v255; // x8
+  __int128 v256; // q2
+  UICamera_c *v257; // x8
+  UnityEngine_GameObject_o *v258; // x0
+  float v259; // [xsp+Ch] [xbp-1B4h]
+  float v260; // [xsp+Ch] [xbp-1B4h]
+  float v261; // [xsp+10h] [xbp-1B0h]
+  float v262; // [xsp+10h] [xbp-1B0h]
   float x; // [xsp+20h] [xbp-1A0h]
   float y; // [xsp+24h] [xbp-19Ch]
-  UICamera_DepthEntry_o v254; // [xsp+28h] [xbp-198h] BYREF
-  UnityEngine_Ray_o v255; // [xsp+70h] [xbp-150h] BYREF
-  UnityEngine_Ray_o v256; // [xsp+90h] [xbp-130h] BYREF
-  UnityEngine_Ray_o v257; // [xsp+B0h] [xbp-110h] BYREF
+  UICamera_DepthEntry_o v265; // [xsp+28h] [xbp-198h] BYREF
+  UnityEngine_Ray_o v266; // [xsp+70h] [xbp-150h] BYREF
+  UnityEngine_Ray_o v267; // [xsp+90h] [xbp-130h] BYREF
+  UnityEngine_Ray_o v268; // [xsp+B0h] [xbp-110h] BYREF
   UICamera_DepthEntry_o dest; // [xsp+D0h] [xbp-F0h] BYREF
-  UnityEngine_Vector3_o v259; // 0:kr14_12.12
-  UnityEngine_Vector3_o v260; // 0:kr20_12.12
-  UnityEngine_Vector3_o v261; // 0:kr34_12.12
-  UnityEngine_Vector3_o v262; // 0:kr40_12.12
-  UnityEngine_Vector3_o v263; // 0:kr60_12.12
-  UnityEngine_Vector3_o point; // 0:kr74_12.12
-  UnityEngine_Vector3_o v265; // 0:kr80_12.12
-  UnityEngine_Vector2_o v266; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v267; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v268; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v269; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector2_o v270; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v271; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v272; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v273; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v274; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v275; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v276; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v277; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v278; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v279; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v280; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o point; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v282; // 0:s0.4,4:s1.4,8:s2.4
 
   z = inPos.fields.z;
   x = inPos.fields.x;
@@ -6210,7 +6281,7 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
     byte_5974F0B = 1;
   }
   v4 = 0;
-  memset(&v257, 0, sizeof(v257));
+  memset(&v268, 0, sizeof(v268));
   while ( 1 )
   {
     currentCamera = (__int64)UICamera_TypeInfo;
@@ -6281,16 +6352,16 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
     currentCamera = (__int64)v24->static_fields->currentCamera;
     if ( !currentCamera )
       goto LABEL_292;
-    v268.fields.z = z;
-    v268.fields.x = x;
-    v268.fields.y = y;
-    v247 = (unsigned __int64)UnityEngine_Camera__ScreenToViewportPoint((UnityEngine_Camera_o *)currentCamera, v268, 0);
-    if ( (v247 & 0x7FFFFFFF) > 0x7F800000
-      || *(float *)&v247 > 1.0
-      || *(float *)&v247 < 0.0
-      || (HIDWORD(v247) & 0x7FFFFFFFu) > 0x7F800000
-      || *((float *)&v247 + 1) < 0.0
-      || *((float *)&v247 + 1) > 1.0 )
+    v272.fields.z = z;
+    v272.fields.x = x;
+    v272.fields.y = y;
+    v273 = UnityEngine_Camera__ScreenToViewportPoint((UnityEngine_Camera_o *)currentCamera, v272, 0);
+    if ( (LODWORD(v273.fields.x) & 0x7FFFFFFFu) > 0x7F800000
+      || v273.fields.x > 1.0
+      || v273.fields.x < 0.0
+      || (LODWORD(v273.fields.y) & 0x7FFFFFFFu) > 0x7F800000
+      || v273.fields.y < 0.0
+      || v273.fields.y > 1.0 )
     {
       goto LABEL_25;
     }
@@ -6303,80 +6374,83 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
     currentCamera = (__int64)v25->static_fields->currentCamera;
     if ( !currentCamera )
       goto LABEL_292;
-    v269.fields.z = z;
-    v269.fields.x = x;
-    v269.fields.y = y;
+    v274.fields.z = z;
+    v274.fields.x = x;
+    v274.fields.y = y;
     UnityEngine_Camera__ScreenPointToRay_83198808(
       (UnityEngine_Ray_o *)&dest,
       (UnityEngine_Camera_o *)currentCamera,
-      v269,
+      v274,
       0);
     v26 = UICamera_TypeInfo->static_fields;
-    v257 = *(UnityEngine_Ray_o *)&dest.fields.depth;
+    *(_QWORD *)&v268.fields.m_Direction.fields.y = *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x;
+    *(_OWORD *)&v268.fields.m_Origin.fields.x = *(_OWORD *)&dest.fields.depth;
     currentCamera = (__int64)v26->currentCamera;
     if ( !currentCamera )
       goto LABEL_292;
     cullingMask = UnityEngine_Camera__get_cullingMask((UnityEngine_Camera_o *)currentCamera, 0);
-    v28 = UnityEngine_LayerMask__op_Implicit((UnityEngine_LayerMask_o)*(&v10->_1.byval_arg.bits + 1), 0);
-    v29 = *((float *)&v10->_1.castClass + 1);
-    v30 = v28;
-    if ( v29 <= 0.0 )
+    v28.fields.m_Mask = *(&v10->_1.byval_arg.bits + 1);
+    v29 = UnityEngine_LayerMask__op_Implicit(v28, 0);
+    v30 = *((float *)&v10->_1.castClass + 1);
+    v31 = v29;
+    if ( v30 <= 0.0 )
     {
-      v31 = UICamera_TypeInfo;
+      v32 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-        v31 = UICamera_TypeInfo;
+        v32 = UICamera_TypeInfo;
       }
-      currentCamera = (__int64)v31->static_fields->currentCamera;
+      currentCamera = (__int64)v32->static_fields->currentCamera;
       if ( !currentCamera )
         goto LABEL_292;
       farClipPlane = UnityEngine_Camera__get_farClipPlane((UnityEngine_Camera_o *)currentCamera, 0);
       currentCamera = (__int64)UICamera_TypeInfo->static_fields->currentCamera;
       if ( !currentCamera )
         goto LABEL_292;
-      v29 = farClipPlane - UnityEngine_Camera__get_nearClipPlane((UnityEngine_Camera_o *)currentCamera, 0);
+      v30 = farClipPlane - UnityEngine_Camera__get_nearClipPlane((UnityEngine_Camera_o *)currentCamera, 0);
     }
     data_high = HIDWORD(v10->_1.byval_arg.data);
     if ( data_high > 1 )
       break;
     if ( !data_high )
     {
-      v69 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
-      *(UnityEngine_Ray_o *)&dest.fields.depth = v257;
-      if ( !v69 )
+      v74 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
+      *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x = *(_QWORD *)&v268.fields.m_Direction.fields.y;
+      *(_OWORD *)&dest.fields.depth = *(_OWORD *)&v268.fields.m_Origin.fields.x;
+      if ( !v74 )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
       if ( !*(&UnityEngine_Physics_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo, v2);
-      *(_OWORD *)&v256.fields.m_Origin.fields.x = *(_OWORD *)&dest.fields.depth;
-      v70 = UICamera_TypeInfo->static_fields;
-      *(_QWORD *)&v256.fields.m_Direction.fields.y = *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x;
-      if ( !UnityEngine_Physics__Raycast_83886624(&v256, &v70->lastHit, v29, v30 & cullingMask, 0) )
+      *(_OWORD *)&v267.fields.m_Origin.fields.x = *(_OWORD *)&dest.fields.depth;
+      v75 = UICamera_TypeInfo->static_fields;
+      *(_QWORD *)&v267.fields.m_Direction.fields.y = *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x;
+      if ( !UnityEngine_Physics__Raycast_83886624(&v267, &v75->lastHit, v30, v31 & cullingMask, 0) )
         goto LABEL_25;
-      v207 = UICamera_TypeInfo;
+      v218 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-        v207 = UICamera_TypeInfo;
+        v218 = UICamera_TypeInfo;
       }
-      point = UnityEngine_RaycastHit__get_point(&v207->static_fields->lastHit, 0);
-      v208 = UICamera_TypeInfo;
+      point = UnityEngine_RaycastHit__get_point(&v218->static_fields->lastHit, 0);
+      v219 = UICamera_TypeInfo;
       UICamera_TypeInfo->static_fields->lastWorldPosition = point;
-      currentCamera = (__int64)UnityEngine_RaycastHit__get_collider(&v208->static_fields->lastHit, 0);
+      currentCamera = (__int64)UnityEngine_RaycastHit__get_collider(&v219->static_fields->lastHit, 0);
       if ( !currentCamera )
         goto LABEL_292;
-      v209 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
-      v210 = UICamera_TypeInfo->static_fields;
-      v210->hoveredObject = v209;
+      v220 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
+      v221 = UICamera_TypeInfo->static_fields;
+      v221->hoveredObject = v220;
       sub_2213A04(
-        (MissionNaviTransitionBoardItem_o *)&v210->hoveredObject,
-        (int32_t)v209,
-        v211,
-        v212,
-        v213,
-        v214,
-        v215,
-        v216);
+        (MissionNaviTransitionBoardItem_o *)&v221->hoveredObject,
+        (int32_t)v220,
+        v222,
+        v223,
+        v224,
+        v225,
+        v226,
+        v227);
       currentCamera = (__int64)UICamera_TypeInfo->static_fields->list;
       if ( !currentCamera )
         goto LABEL_292;
@@ -6388,53 +6462,54 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
         goto LABEL_292;
       if ( *(_BYTE *)(currentCamera + 40) )
         return v4 < size;
-      v217 = UICamera_TypeInfo;
+      v228 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-        v217 = UICamera_TypeInfo;
+        v228 = UICamera_TypeInfo;
       }
-      currentCamera = (__int64)v217->static_fields->hoveredObject;
+      currentCamera = (__int64)v228->static_fields->hoveredObject;
       if ( !currentCamera )
         goto LABEL_292;
       transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)currentCamera, 0);
-      RootRigidbody = (UnityEngine_Object_o *)UICamera__FindRootRigidbody(transform, v219);
+      RootRigidbody = (UnityEngine_Object_o *)UICamera__FindRootRigidbody(transform, v230);
       goto LABEL_277;
     }
     if ( data_high != 1 )
       goto LABEL_25;
-    *(_OWORD *)&dest.fields.depth = *(_OWORD *)&v257.fields.m_Origin.fields.x;
-    v34 = *(&UnityEngine_Physics_TypeInfo->_2.cctor_finished + 1);
-    *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x = *(_QWORD *)&v257.fields.m_Direction.fields.y;
-    if ( !v34 )
+    *(_OWORD *)&dest.fields.depth = *(_OWORD *)&v268.fields.m_Origin.fields.x;
+    v35 = *(&UnityEngine_Physics_TypeInfo->_2.cctor_finished + 1);
+    *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x = *(_QWORD *)&v268.fields.m_Direction.fields.y;
+    if ( !v35 )
       j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo, v2);
-    v255 = *(UnityEngine_Ray_o *)&dest.fields.depth;
-    currentCamera = (__int64)UnityEngine_Physics__RaycastAll_83889396(&v255, v29, v30 & (unsigned int)cullingMask, 0);
+    *(_OWORD *)&v266.fields.m_Origin.fields.x = *(_OWORD *)&dest.fields.depth;
+    *(_QWORD *)&v266.fields.m_Direction.fields.y = *(_QWORD *)&dest.fields.hit.fields.m_Normal.fields.x;
+    currentCamera = (__int64)UnityEngine_Physics__RaycastAll_83889396(&v266, v30, v31 & (unsigned int)cullingMask, 0);
     if ( !currentCamera )
       goto LABEL_292;
-    v35 = *(_QWORD *)(currentCamera + 24);
-    v36 = currentCamera;
-    v37 = v35;
-    if ( (int)v35 >= 2 )
+    v36 = *(_QWORD *)(currentCamera + 24);
+    v37 = currentCamera;
+    v38 = v36;
+    if ( (int)v36 >= 2 )
     {
-      v89 = 0;
-      v90 = currentCamera + 32;
+      v97 = 0;
+      v98 = currentCamera + 32;
       while ( 1 )
       {
-        if ( v89 >= v37 )
+        if ( v97 >= v38 )
           goto LABEL_293;
-        currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)v90, 0);
+        currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)v98, 0);
         if ( !currentCamera )
           goto LABEL_292;
         currentCamera = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
         if ( !currentCamera )
           goto LABEL_292;
-        v91 = (UnityEngine_GameObject_o *)currentCamera;
+        v99 = (UnityEngine_GameObject_o *)currentCamera;
         Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)currentCamera,
                                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v92);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v100);
         currentCamera = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
         if ( (currentCamera & 1) != 0 )
         {
@@ -6446,15 +6521,16 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
             monitor = Component_object[9].monitor;
             if ( !monitor )
               goto LABEL_131;
-            if ( v89 >= *(unsigned int *)(v36 + 24) )
+            if ( v97 >= *(unsigned int *)(v37 + 24) )
               goto LABEL_293;
-            v262 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)v90, 0);
-            currentCamera = (*((__int64 (__fastcall **)(_QWORD, _QWORD, float, float, float))monitor + 3))(
+            v278 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)v98, 0);
+            currentCamera = (*((__int64 (__fastcall **)(_QWORD, _QWORD, long double, long double, long double))monitor
+                             + 3))(
                               *((_QWORD *)monitor + 8),
                               *((_QWORD *)monitor + 5),
-                              v262.fields.x,
-                              v262.fields.y,
-                              v262.fields.z);
+                              *(long double *)&v278.fields.x,
+                              *(long double *)&v278.fields.y,
+                              *(long double *)&v278.fields.z);
             if ( (currentCamera & 1) != 0 )
               goto LABEL_131;
           }
@@ -6463,67 +6539,67 @@ bool UICamera__Raycast(UnityEngine_Vector3_o inPos, const MethodInfo *method)
         {
           if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v2);
-          v96 = NGUITools__FindInParents_object_(
-                  v91,
-                  (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
+          v104 = NGUITools__FindInParents_object_(
+                   v99,
+                   (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v95);
-          currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v96, 0, 0);
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v103);
+          currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v104, 0, 0);
           if ( (currentCamera & 1) == 0 )
             goto LABEL_131;
-          if ( !v96 )
+          if ( !v104 )
             goto LABEL_292;
-          if ( *(float *)&v96[9].klass >= 0.001 )
+          if ( *(float *)&v104[9].klass >= 0.001 )
           {
 LABEL_131:
             if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
             if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v2);
-            v97 = NGUITools__CalculateRaycastDepth(v91, 0);
+            v105 = NGUITools__CalculateRaycastDepth(v99, 0);
             currentCamera = (__int64)UICamera_TypeInfo;
-            UICamera_TypeInfo->static_fields->mHit.fields.depth = v97;
-            if ( v97 != 0x7FFFFFFF )
+            UICamera_TypeInfo->static_fields->mHit.fields.depth = v105;
+            if ( v105 != 0x7FFFFFFF )
             {
               if ( !*(_DWORD *)(currentCamera + 228) )
                 j_il2cpp_runtime_class_init_0(currentCamera, v2);
-              if ( v89 >= *(unsigned int *)(v36 + 24) )
+              if ( v97 >= *(unsigned int *)(v37 + 24) )
                 goto LABEL_293;
-              v99 = *(_OWORD *)v90;
-              v98 = *(_OWORD *)(v90 + 16);
-              v100 = *(struct UnityEngine_Vector2_o *)(v90 + 32);
-              v101 = UICamera_TypeInfo->static_fields;
-              v101->mHit.fields.hit.fields.m_Collider = *(_DWORD *)(v90 + 40);
-              *(_OWORD *)&v101->mHit.fields.hit.fields.m_Point.fields.x = v99;
-              v101->mHit.fields.hit.fields.m_UV = v100;
-              *(_OWORD *)&v101->mHit.fields.hit.fields.m_Normal.fields.y = v98;
-              if ( v89 >= *(unsigned int *)(v36 + 24) )
+              v107 = *(_OWORD *)v98;
+              v106 = *(_OWORD *)(v98 + 16);
+              v108 = *(struct UnityEngine_Vector2_o *)(v98 + 32);
+              v109 = UICamera_TypeInfo->static_fields;
+              v109->mHit.fields.hit.fields.m_Collider = *(_DWORD *)(v98 + 40);
+              *(_OWORD *)&v109->mHit.fields.hit.fields.m_Point.fields.x = v107;
+              v109->mHit.fields.hit.fields.m_UV = v108;
+              *(_OWORD *)&v109->mHit.fields.hit.fields.m_Normal.fields.y = v106;
+              if ( v97 >= *(unsigned int *)(v37 + 24) )
                 goto LABEL_293;
               UICamera_TypeInfo->static_fields->mHit.fields.point = UnityEngine_RaycastHit__get_point(
-                                                                      (UnityEngine_RaycastHit_o *)v90,
+                                                                      (UnityEngine_RaycastHit_o *)v98,
                                                                       0);
-              if ( v89 >= *(unsigned int *)(v36 + 24) )
+              if ( v97 >= *(unsigned int *)(v37 + 24) )
                 goto LABEL_293;
-              currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)v90, 0);
+              currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)v98, 0);
               if ( !currentCamera )
                 goto LABEL_292;
-              v102 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
-              v103 = UICamera_TypeInfo->static_fields;
-              v103->mHit.fields.go = v102;
+              v110 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
+              v111 = UICamera_TypeInfo->static_fields;
+              v111->mHit.fields.go = v110;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)&v103->mHit.fields.go,
-                (int32_t)v102,
-                v104,
-                v105,
-                v106,
-                v107,
-                v108,
-                v109);
-              v110 = UICamera_TypeInfo->static_fields;
-              mHits = v110->mHits;
+                (MissionNaviTransitionBoardItem_o *)&v111->mHit.fields.go,
+                (int32_t)v110,
+                v112,
+                v113,
+                v114,
+                v115,
+                v116,
+                v117);
+              v118 = UICamera_TypeInfo->static_fields;
+              mHits = v118->mHits;
               if ( !mHits )
                 goto LABEL_292;
-              memcpy(&dest, &v110->mHit, sizeof(dest));
+              memcpy(&dest, &v118->mHit, sizeof(dest));
               BetterList_UICamera_DepthEntry___Add(
                 mHits,
                 &dest,
@@ -6531,135 +6607,135 @@ LABEL_131:
             }
           }
         }
-        v37 = *(_DWORD *)(v36 + 24);
-        ++v89;
-        v90 += 44;
-        if ( (__int64)v89 >= (int)v37 )
+        v38 = *(_DWORD *)(v37 + 24);
+        ++v97;
+        v98 += 44;
+        if ( (__int64)v97 >= (int)v38 )
         {
-          v112 = UICamera_TypeInfo;
+          v120 = UICamera_TypeInfo;
           if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
           {
             j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-            v112 = UICamera_TypeInfo;
+            v120 = UICamera_TypeInfo;
           }
           currentCamera = (__int64)UICamera___c_TypeInfo;
-          v113 = v112->static_fields->mHits;
+          v121 = v120->static_fields->mHits;
           if ( !*(&UICamera___c_TypeInfo->_2.cctor_finished + 1) )
           {
             j_il2cpp_runtime_class_init_0(UICamera___c_TypeInfo, v2);
             currentCamera = (__int64)UICamera___c_TypeInfo;
           }
-          v114 = *(struct UICamera___c_StaticFields **)(currentCamera + 184);
-          _9__125_0 = v114->__9__125_0;
+          v122 = *(struct UICamera___c_StaticFields **)(currentCamera + 184);
+          _9__125_0 = v122->__9__125_0;
           if ( !_9__125_0 )
           {
             if ( !*(_DWORD *)(currentCamera + 228) )
             {
               j_il2cpp_runtime_class_init_0(currentCamera, v2);
-              v114 = UICamera___c_TypeInfo->static_fields;
+              v122 = UICamera___c_TypeInfo->static_fields;
             }
-            v116 = (Il2CppObject *)v114->__9;
+            v124 = (Il2CppObject *)v122->__9;
             _9__125_0 = (BetterList_CompareFunc_UICamera_DepthEntry__o *)sub_2213CCC(BetterList_CompareFunc_UICamera_DepthEntry__TypeInfo);
             BetterList_CompareFunc_UICamera_DepthEntry____ctor(
               _9__125_0,
-              v116,
+              v124,
               Method_UICamera___c__Raycast_b__125_0__,
               0);
-            v117 = UICamera___c_TypeInfo->static_fields;
-            v117->__9__125_0 = _9__125_0;
+            v125 = UICamera___c_TypeInfo->static_fields;
+            v125->__9__125_0 = _9__125_0;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v117->__9__125_0,
+              (MissionNaviTransitionBoardItem_o *)&v125->__9__125_0,
               (int32_t)_9__125_0,
-              v118,
-              v119,
-              v120,
-              v121,
-              v122,
-              v123);
+              v126,
+              v127,
+              v128,
+              v129,
+              v130,
+              v131);
           }
-          if ( v113 )
+          if ( v121 )
           {
             BetterList_UICamera_DepthEntry___Sort(
-              v113,
+              v121,
               (BetterList_CompareFunc_T__o *)_9__125_0,
               (const MethodInfo_3E75A88 *)Method_BetterList_UICamera_DepthEntry__Sort__);
-            v124 = 0;
+            v132 = 0;
             for ( i = 32; ; i += 72 )
             {
-              v126 = UICamera_TypeInfo;
+              v134 = UICamera_TypeInfo;
               if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
               {
                 j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-                v126 = UICamera_TypeInfo;
+                v134 = UICamera_TypeInfo;
               }
-              currentCamera = (__int64)v126->static_fields->mHits;
+              currentCamera = (__int64)v134->static_fields->mHits;
               if ( !currentCamera )
                 goto LABEL_292;
-              v127 = *(&v126->_2.cctor_finished + 1);
-              if ( (__int64)v124 >= *(int *)(currentCamera + 24) )
+              v135 = *(&v134->_2.cctor_finished + 1);
+              if ( (__int64)v132 >= *(int *)(currentCamera + 24) )
                 goto LABEL_216;
-              if ( !v127 )
+              if ( !v135 )
               {
-                j_il2cpp_runtime_class_init_0(v126, v2);
+                j_il2cpp_runtime_class_init_0(v134, v2);
                 currentCamera = (__int64)UICamera_TypeInfo->static_fields->mHits;
                 if ( !currentCamera )
                   goto LABEL_292;
               }
-              v128 = *(_QWORD *)(currentCamera + 16);
-              if ( !v128 )
+              v136 = *(_QWORD *)(currentCamera + 16);
+              if ( !v136 )
                 goto LABEL_292;
-              if ( v124 >= *(unsigned int *)(v128 + 24) )
+              if ( v132 >= *(unsigned int *)(v136 + 24) )
                 goto LABEL_293;
-              if ( UICamera__IsVisible_56139020((UICamera_DepthEntry_o *)(v128 + i), v2) )
+              if ( UICamera__IsVisible_56139020((UICamera_DepthEntry_o *)(v136 + i), v2) )
                 break;
-              ++v124;
+              ++v132;
             }
-            v181 = UICamera_TypeInfo;
+            v192 = UICamera_TypeInfo;
             if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
             {
               j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-              v181 = UICamera_TypeInfo;
+              v192 = UICamera_TypeInfo;
             }
-            currentCamera = (__int64)v181->static_fields->mHits;
+            currentCamera = (__int64)v192->static_fields->mHits;
             if ( currentCamera )
             {
               BetterList_UICamera_DepthEntry___get_Item(
                 &dest,
                 (BetterList_UICamera_DepthEntry__o *)currentCamera,
-                v124,
+                v132,
                 (const MethodInfo_3E75070 *)Method_BetterList_UICamera_DepthEntry__get_Item__);
-              v182 = UICamera_TypeInfo;
-              v183 = *(_OWORD *)&dest.fields.hit.fields.m_Normal.fields.y;
-              v184 = *(_OWORD *)&dest.fields.hit.fields.m_Point.fields.x;
-              v185 = UICamera_TypeInfo->static_fields;
-              *(_OWORD *)&v185->lastHit.fields.m_Distance = *(_OWORD *)&dest.fields.hit.fields.m_Distance;
-              *(_OWORD *)&v185->lastHit.fields.m_Point.fields.x = v184;
-              *(_OWORD *)&v185->lastHit.fields.m_Normal.fields.y = v183;
-              currentCamera = (__int64)v182->static_fields->mHits;
+              v193 = UICamera_TypeInfo;
+              v194 = *(_OWORD *)&dest.fields.hit.fields.m_Normal.fields.y;
+              v195 = *(_OWORD *)&dest.fields.hit.fields.m_Point.fields.x;
+              v196 = UICamera_TypeInfo->static_fields;
+              *(_OWORD *)&v196->lastHit.fields.m_Distance = *(_OWORD *)&dest.fields.hit.fields.m_Distance;
+              *(_OWORD *)&v196->lastHit.fields.m_Point.fields.x = v195;
+              *(_OWORD *)&v196->lastHit.fields.m_Normal.fields.y = v194;
+              currentCamera = (__int64)v193->static_fields->mHits;
               if ( currentCamera )
               {
                 BetterList_UICamera_DepthEntry___get_Item(
-                  &v254,
+                  &v265,
                   (BetterList_UICamera_DepthEntry__o *)currentCamera,
-                  v124,
+                  v132,
                   (const MethodInfo_3E75070 *)Method_BetterList_UICamera_DepthEntry__get_Item__);
-                go = (int32_t)v254.fields.go;
+                go = (int32_t)v265.fields.go;
                 p_hoveredObject = (MissionNaviTransitionBoardItem_o *)&UICamera_TypeInfo->static_fields->hoveredObject;
-                p_hoveredObject->klass = (MissionNaviTransitionBoardItem_c *)v254.fields.go;
-                sub_2213A04(p_hoveredObject, go, v188, v189, v190, v191, v192, v193);
+                p_hoveredObject->klass = (MissionNaviTransitionBoardItem_c *)v265.fields.go;
+                sub_2213A04(p_hoveredObject, go, v199, v200, v201, v202, v203, v204);
                 currentCamera = (__int64)UICamera_TypeInfo->static_fields->mHits;
                 if ( currentCamera )
                 {
                   BetterList_UICamera_DepthEntry___get_Item(
-                    &v254,
+                    &v265,
                     (BetterList_UICamera_DepthEntry__o *)currentCamera,
-                    v124,
+                    v132,
                     (const MethodInfo_3E75070 *)Method_BetterList_UICamera_DepthEntry__get_Item__);
-                  v194 = UICamera_TypeInfo;
-                  v195 = *(_QWORD *)&v254.fields.point.fields.x;
-                  v196 = UICamera_TypeInfo->static_fields;
-                  v196->lastWorldPosition.fields.z = v254.fields.point.fields.z;
-                  *(_QWORD *)&v196->lastWorldPosition.fields.x = v195;
+                  v205 = UICamera_TypeInfo;
+                  v206 = *(_QWORD *)&v265.fields.point.fields.x;
+                  v207 = UICamera_TypeInfo->static_fields;
+                  v207->lastWorldPosition.fields.z = v265.fields.point.fields.z;
+                  *(_QWORD *)&v207->lastWorldPosition.fields.x = v206;
                   goto LABEL_256;
                 }
               }
@@ -6669,9 +6745,9 @@ LABEL_131:
         }
       }
     }
-    if ( (unsigned int)v35 != 1 )
+    if ( (unsigned int)v36 != 1 )
       goto LABEL_25;
-    if ( !(_DWORD)v35 )
+    if ( !(_DWORD)v36 )
       goto LABEL_293;
     currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)(currentCamera + 32), 0);
     if ( !currentCamera )
@@ -6679,32 +6755,32 @@ LABEL_131:
     currentCamera = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
     if ( !currentCamera )
       goto LABEL_292;
-    v38 = (UnityEngine_GameObject_o *)currentCamera;
-    v40 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+    v39 = (UnityEngine_GameObject_o *)currentCamera;
+    v41 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)currentCamera,
                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v39);
-    currentCamera = UnityEngine_Object__op_Inequality(v40, 0, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40);
+    currentCamera = UnityEngine_Object__op_Inequality(v41, 0, 0);
     if ( (currentCamera & 1) != 0 )
     {
-      if ( !v40 )
+      if ( !v41 )
         goto LABEL_292;
-      currentCamera = UIWidget__get_isVisible((UIWidget_o *)v40, 0);
+      currentCamera = UIWidget__get_isVisible((UIWidget_o *)v41, 0);
       if ( (currentCamera & 1) == 0 )
         goto LABEL_25;
-      v41 = v40[9].monitor;
-      if ( v41 )
+      v42 = v41[9].monitor;
+      if ( v42 )
       {
-        if ( !*(_DWORD *)(v36 + 24) )
+        if ( !*(_DWORD *)(v37 + 24) )
           goto LABEL_293;
-        v259 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)(v36 + 32), 0);
-        currentCamera = (*((__int64 (__fastcall **)(_QWORD, _QWORD, float, float, float))v41 + 3))(
-                          *((_QWORD *)v41 + 8),
-                          *((_QWORD *)v41 + 5),
-                          v259.fields.x,
-                          v259.fields.y,
-                          v259.fields.z);
+        v275 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)(v37 + 32), 0);
+        currentCamera = (*((__int64 (__fastcall **)(_QWORD, _QWORD, long double, long double, long double))v42 + 3))(
+                          *((_QWORD *)v42 + 8),
+                          *((_QWORD *)v42 + 5),
+                          *(long double *)&v275.fields.x,
+                          *(long double *)&v275.fields.y,
+                          *(long double *)&v275.fields.z);
         if ( (currentCamera & 1) == 0 )
           goto LABEL_25;
       }
@@ -6713,69 +6789,75 @@ LABEL_131:
     {
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v2);
-      v166 = NGUITools__FindInParents_object_(v38, (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
+      v174 = NGUITools__FindInParents_object_(v39, (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v165);
-      currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v166, 0, 0);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v173);
+      currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v174, 0, 0);
       if ( (currentCamera & 1) != 0 )
       {
-        if ( !v166 )
+        if ( !v174 )
           goto LABEL_292;
-        if ( *(float *)&v166[9].klass < 0.001 )
+        if ( *(float *)&v174[9].klass < 0.001 )
           goto LABEL_25;
       }
     }
-    if ( !*(_DWORD *)(v36 + 24) )
+    if ( !*(_DWORD *)(v37 + 24) )
       goto LABEL_293;
-    v263 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)(v36 + 32), 0);
-    if ( !*(_DWORD *)(v36 + 24) )
+    v279 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)(v37 + 32), 0);
+    if ( !*(_DWORD *)(v37 + 24) )
       goto LABEL_293;
-    currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)(v36 + 32), 0);
+    v175 = v279.fields.x;
+    v176 = v279.fields.y;
+    v177 = v279.fields.z;
+    currentCamera = (__int64)UnityEngine_RaycastHit__get_collider((UnityEngine_RaycastHit_o *)(v37 + 32), 0);
     if ( !currentCamera )
       goto LABEL_292;
-    v168 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
+    v179 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v167);
-    currentCamera = UICamera__IsVisible(v263, v168, v167);
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v178);
+    v280.fields.x = v175;
+    v280.fields.y = v176;
+    v280.fields.z = v177;
+    currentCamera = UICamera__IsVisible(v280, v179, v178);
     if ( (currentCamera & 1) != 0 )
     {
-      if ( !*(_DWORD *)(v36 + 24) )
+      if ( !*(_DWORD *)(v37 + 24) )
         goto LABEL_293;
       currentCamera = (__int64)UICamera_TypeInfo;
-      v239 = *(_OWORD *)(v36 + 48);
-      v240 = *(_OWORD *)(v36 + 60);
-      v241 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
-      *(_OWORD *)&dest.fields.depth = *(_OWORD *)(v36 + 32);
-      *(_OWORD *)&dest.fields.hit.fields.m_Normal.fields.x = v239;
-      *(_OWORD *)&dest.fields.hit.fields.m_FaceID = v240;
-      if ( !v241 )
+      v251 = *(_OWORD *)(v37 + 48);
+      v252 = *(_OWORD *)(v37 + 60);
+      v253 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
+      *(_OWORD *)&dest.fields.depth = *(_OWORD *)(v37 + 32);
+      *(_OWORD *)&dest.fields.hit.fields.m_Normal.fields.x = v251;
+      *(_OWORD *)&dest.fields.hit.fields.m_FaceID = v252;
+      if ( !v253 )
       {
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
         currentCamera = (__int64)UICamera_TypeInfo;
       }
-      v242 = *(_OWORD *)&dest.fields.hit.fields.m_Normal.fields.x;
-      v243 = *(_OWORD **)(currentCamera + 184);
-      v244 = *(_OWORD *)&dest.fields.hit.fields.m_FaceID;
-      v243[5] = *(_OWORD *)&dest.fields.depth;
-      v243[6] = v242;
-      *(_OWORD *)((char *)v243 + 108) = v244;
-      if ( !*(_DWORD *)(v36 + 24) )
+      v254 = *(_OWORD *)&dest.fields.hit.fields.m_Normal.fields.x;
+      v255 = *(_OWORD **)(currentCamera + 184);
+      v256 = *(_OWORD *)&dest.fields.hit.fields.m_FaceID;
+      v255[5] = *(_OWORD *)&dest.fields.depth;
+      v255[6] = v254;
+      *(_OWORD *)((char *)v255 + 108) = v256;
+      if ( !*(_DWORD *)(v37 + 24) )
 LABEL_293:
         sub_2213CE4(currentCamera);
-      v265 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)(v36 + 32), 0);
-      v245 = UICamera_TypeInfo;
-      UICamera_TypeInfo->static_fields->lastWorldPosition = v265;
-      currentCamera = (__int64)UnityEngine_RaycastHit__get_collider(&v245->static_fields->lastHit, 0);
+      v282 = UnityEngine_RaycastHit__get_point((UnityEngine_RaycastHit_o *)(v37 + 32), 0);
+      v257 = UICamera_TypeInfo;
+      UICamera_TypeInfo->static_fields->lastWorldPosition = v282;
+      currentCamera = (__int64)UnityEngine_RaycastHit__get_collider(&v257->static_fields->lastHit, 0);
       if ( !currentCamera )
         goto LABEL_292;
-      v246 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
-      v179 = (int)v246;
-      v238 = UICamera_TypeInfo->static_fields;
-      v238->hoveredObject = v246;
+      v258 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
+      v190 = (int)v258;
+      v250 = UICamera_TypeInfo->static_fields;
+      v250->hoveredObject = v258;
 LABEL_290:
-      v180 = (MissionNaviTransitionBoardItem_o *)&v238->hoveredObject;
+      v191 = (MissionNaviTransitionBoardItem_o *)&v250->hoveredObject;
 LABEL_291:
-      sub_2213A04(v180, v179, v172, v173, v174, v175, v176, v177);
+      sub_2213A04(v191, v190, v183, v184, v185, v186, v187, v188);
       return v4 < size;
     }
 LABEL_25:
@@ -6783,50 +6865,53 @@ LABEL_25:
   }
   if ( data_high == 2 )
   {
-    v71 = UICamera_TypeInfo;
+    v76 = UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-      v71 = UICamera_TypeInfo;
+      v76 = UICamera_TypeInfo;
     }
-    v72 = (float *)v71->static_fields;
-    v74 = v257.fields.m_Origin.fields.y;
-    v73 = v257.fields.m_Origin.fields.x;
-    v75 = v257.fields.m_Origin.fields.z;
-    v76 = v257.fields.m_Direction.fields.x;
-    v77 = *(_QWORD *)&v257.fields.m_Direction.fields.y;
-    v78 = v72[116];
-    v79 = v72[117];
-    v80 = v72[118];
-    v81 = v72[119];
+    v77 = (float *)v76->static_fields;
+    v79 = v268.fields.m_Origin.fields.y;
+    v78 = v268.fields.m_Origin.fields.x;
+    v81 = v268.fields.m_Direction.fields.x;
+    v80 = v268.fields.m_Origin.fields.z;
+    v82 = *(_QWORD *)&v268.fields.m_Direction.fields.y;
+    v83 = v77[116];
+    v84 = v77[117];
+    v85 = v77[118];
+    v86 = v77[119];
     if ( !byte_5969AE4 )
     {
-      v249 = v257.fields.m_Origin.fields.x;
-      v251 = v257.fields.m_Origin.fields.z;
+      v260 = v268.fields.m_Origin.fields.x;
+      v262 = v268.fields.m_Origin.fields.z;
       sub_2213A60(&UnityEngine_Mathf_TypeInfo);
-      v73 = v249;
-      v75 = v251;
+      v78 = v260;
+      v80 = v262;
       byte_5969AE4 = 1;
     }
-    v82 = UnityEngine_Mathf_TypeInfo->static_fields;
-    v83 = (float)(*((float *)&v77 + 1) * v80) + (float)((float)(v76 * v78) + (float)(*(float *)&v77 * v79));
-    v84 = fmaxf(fabsf(v83), 0.0) * 0.000001;
-    if ( v84 <= (float)(v82->Epsilon * 8.0) )
-      v84 = v82->Epsilon * 8.0;
-    if ( vabds_f32(0.0, v83) < v84 )
+    v87 = UnityEngine_Mathf_TypeInfo->static_fields;
+    v88 = (float)(*((float *)&v82 + 1) * v85) + (float)((float)(v81 * v83) + (float)(*(float *)&v82 * v84));
+    v89 = fmaxf(fabsf(v88), 0.0) * 0.000001;
+    if ( v89 <= (float)(v87->Epsilon * 8.0) )
+      v89 = v87->Epsilon * 8.0;
+    if ( vabds_f32(0.0, v88) < v89 )
       goto LABEL_25;
-    v85 = (float)((float)-(float)((float)(v75 * v80) + (float)((float)(v73 * v78) + (float)(v74 * v79))) - v81) / v83;
-    if ( v85 <= 0.0 )
+    v90 = (float)((float)-(float)((float)(v80 * v85) + (float)((float)(v78 * v83) + (float)(v79 * v84))) - v86) / v88;
+    if ( v90 <= 0.0 )
       goto LABEL_25;
-    v261 = UnityEngine_Ray__GetPoint(&v257, v85, 0);
+    v277 = UnityEngine_Ray__GetPoint(&v268, v90, 0);
+    v92 = v277.fields.x;
+    v93 = v277.fields.y;
+    v94 = v277.fields.z;
     if ( !*(&UnityEngine_Physics2D_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Physics2D_TypeInfo, v86);
-    v267.fields.x = v261.fields.x;
-    v267.fields.y = v261.fields.y;
-    v88 = (UnityEngine_Object_o *)UnityEngine_Physics2D__OverlapPoint(v267, v30 & (unsigned int)cullingMask, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Physics2D_TypeInfo, v91);
+    v271.fields.x = v92;
+    v271.fields.y = v93;
+    v96 = (UnityEngine_Object_o *)UnityEngine_Physics2D__OverlapPoint(v271, v31 & (unsigned int)cullingMask, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v87);
-    if ( !UnityEngine_Object__op_Implicit(v88, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v95);
+    if ( !UnityEngine_Object__op_Implicit(v96, 0) )
       goto LABEL_25;
     currentCamera = (__int64)UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
@@ -6834,118 +6919,127 @@ LABEL_25:
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
       currentCamera = (__int64)UICamera_TypeInfo;
     }
-    *(UnityEngine_Vector3_o *)(*(_QWORD *)(currentCamera + 184) + 68LL) = v261;
-    if ( !v88 )
+    v233 = *(float **)(currentCamera + 184);
+    v233[17] = v92;
+    v233[18] = v93;
+    v233[19] = v94;
+    if ( !v96 )
       goto LABEL_292;
-    v222 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v88, 0);
-    v223 = UICamera_TypeInfo->static_fields;
-    v223->hoveredObject = v222;
+    v234 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v96, 0);
+    v235 = UICamera_TypeInfo->static_fields;
+    v235->hoveredObject = v234;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v223->hoveredObject,
-      (int32_t)v222,
-      v224,
-      v225,
-      v226,
-      v227,
-      v228,
-      v229);
+      (MissionNaviTransitionBoardItem_o *)&v235->hoveredObject,
+      (int32_t)v234,
+      v236,
+      v237,
+      v238,
+      v239,
+      v240,
+      v241);
     if ( LOBYTE(v10->_1.byval_arg.bits) )
       return v4 < size;
-    v230 = UICamera_TypeInfo;
+    v242 = UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-      v230 = UICamera_TypeInfo;
+      v242 = UICamera_TypeInfo;
     }
-    currentCamera = (__int64)v230->static_fields->hoveredObject;
+    currentCamera = (__int64)v242->static_fields->hoveredObject;
     if ( !currentCamera )
       goto LABEL_292;
-    v231 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)currentCamera, 0);
-    RootRigidbody = (UnityEngine_Object_o *)UICamera__FindRootRigidbody2D(v231, v232);
+    v243 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)currentCamera, 0);
+    RootRigidbody = (UnityEngine_Object_o *)UICamera__FindRootRigidbody2D(v243, v244);
 LABEL_277:
-    v233 = RootRigidbody;
+    v245 = RootRigidbody;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v221);
-    currentCamera = UnityEngine_Object__op_Inequality(v233, 0, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v232);
+    currentCamera = UnityEngine_Object__op_Inequality(v245, 0, 0);
     if ( (currentCamera & 1) == 0 )
       return v4 < size;
-    if ( !v233 )
+    if ( !v245 )
       goto LABEL_292;
-    v234 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v233, 0);
-    v236 = UICamera_TypeInfo;
-    v237 = v234;
+    v246 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v245, 0);
+    v248 = UICamera_TypeInfo;
+    v249 = v246;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v235);
-      v236 = UICamera_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v247);
+      v248 = UICamera_TypeInfo;
     }
-    v238 = v236->static_fields;
-    v179 = (int)v237;
-    v238->hoveredObject = v237;
+    v250 = v248->static_fields;
+    v190 = (int)v249;
+    v250->hoveredObject = v249;
     goto LABEL_290;
   }
   if ( data_high != 3 )
     goto LABEL_25;
-  v42 = UICamera_TypeInfo;
+  v43 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-    v42 = UICamera_TypeInfo;
+    v43 = UICamera_TypeInfo;
   }
-  v43 = (float *)v42->static_fields;
-  v45 = v257.fields.m_Origin.fields.y;
-  v44 = v257.fields.m_Origin.fields.x;
-  v46 = v257.fields.m_Origin.fields.z;
-  v47 = v257.fields.m_Direction.fields.x;
-  v48 = *(_QWORD *)&v257.fields.m_Direction.fields.y;
-  v49 = v43[116];
-  v50 = v43[117];
-  v51 = v43[118];
-  v52 = v43[119];
+  v44 = (float *)v43->static_fields;
+  v46 = v268.fields.m_Origin.fields.y;
+  v45 = v268.fields.m_Origin.fields.x;
+  v48 = v268.fields.m_Direction.fields.x;
+  v47 = v268.fields.m_Origin.fields.z;
+  v49 = *(_QWORD *)&v268.fields.m_Direction.fields.y;
+  v50 = v44[116];
+  v51 = v44[117];
+  v52 = v44[118];
+  v53 = v44[119];
   if ( !byte_5969AE4 )
   {
-    v248 = v257.fields.m_Origin.fields.x;
-    v250 = v257.fields.m_Origin.fields.z;
+    v259 = v268.fields.m_Origin.fields.x;
+    v261 = v268.fields.m_Origin.fields.z;
     sub_2213A60(&UnityEngine_Mathf_TypeInfo);
-    v44 = v248;
-    v46 = v250;
+    v45 = v259;
+    v47 = v261;
     byte_5969AE4 = 1;
   }
-  v53 = UnityEngine_Mathf_TypeInfo->static_fields;
-  v54 = (float)(*((float *)&v48 + 1) * v51) + (float)((float)(v47 * v49) + (float)(*(float *)&v48 * v50));
-  v55 = fmaxf(fabsf(v54), 0.0) * 0.000001;
-  if ( v55 <= (float)(v53->Epsilon * 8.0) )
-    v55 = v53->Epsilon * 8.0;
-  if ( vabds_f32(0.0, v54) < v55 )
+  v54 = UnityEngine_Mathf_TypeInfo->static_fields;
+  v55 = (float)(*((float *)&v49 + 1) * v52) + (float)((float)(v48 * v50) + (float)(*(float *)&v49 * v51));
+  v56 = fmaxf(fabsf(v55), 0.0) * 0.000001;
+  if ( v56 <= (float)(v54->Epsilon * 8.0) )
+    v56 = v54->Epsilon * 8.0;
+  if ( vabds_f32(0.0, v55) < v56 )
     goto LABEL_25;
-  v56 = (float)((float)-(float)((float)(v46 * v51) + (float)((float)(v44 * v49) + (float)(v45 * v50))) - v52) / v54;
-  if ( v56 <= 0.0 )
+  v57 = (float)((float)-(float)((float)(v47 * v52) + (float)((float)(v45 * v50) + (float)(v46 * v51))) - v53) / v55;
+  if ( v57 <= 0.0 )
     goto LABEL_25;
-  v260 = UnityEngine_Ray__GetPoint(&v257, v56, 0);
-  v58 = UICamera_TypeInfo;
+  v276 = UnityEngine_Ray__GetPoint(&v268, v57, 0);
+  v59 = v276.fields.x;
+  v60 = v276.fields.y;
+  v61 = UICamera_TypeInfo;
+  v62 = v276.fields.z;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v57);
-    v58 = UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v58);
+    v61 = UICamera_TypeInfo;
   }
-  v58->static_fields->lastWorldPosition = v260;
-  v59 = v58->static_fields;
-  v60 = v59->lastWorldPosition.fields.x;
-  v61 = v59->lastWorldPosition.fields.y;
+  v63 = (float *)v61->static_fields;
+  v63[17] = v59;
+  v63[18] = v60;
+  v63[19] = v62;
+  v64 = v61->static_fields;
+  v65 = v64->lastWorldPosition.fields.x;
+  v66 = v64->lastWorldPosition.fields.y;
   if ( !*(&UnityEngine_Physics2D_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Physics2D_TypeInfo, v57);
-  v266.fields.x = v60;
-  v266.fields.y = v61;
-  currentCamera = (__int64)UnityEngine_Physics2D__OverlapPointAll(v266, v30 & (unsigned int)cullingMask, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Physics2D_TypeInfo, v58);
+  v270.fields.x = v65;
+  v270.fields.y = v66;
+  currentCamera = (__int64)UnityEngine_Physics2D__OverlapPointAll(v270, v31 & (unsigned int)cullingMask, 0);
   if ( !currentCamera )
     goto LABEL_292;
-  v62 = *(_QWORD *)(currentCamera + 24);
-  v63 = currentCamera;
-  if ( (int)v62 < 2 )
+  v67 = *(_QWORD *)(currentCamera + 24);
+  v68 = currentCamera;
+  if ( (int)v67 < 2 )
   {
     if ( (unsigned int)*(_QWORD *)(currentCamera + 24) != 1 )
       goto LABEL_25;
-    if ( !(_DWORD)v62 )
+    if ( !(_DWORD)v67 )
       goto LABEL_293;
     currentCamera = *(_QWORD *)(currentCamera + 32);
     if ( !currentCamera )
@@ -6953,34 +7047,34 @@ LABEL_277:
     currentCamera = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
     if ( !currentCamera )
       goto LABEL_292;
-    v64 = (UnityEngine_GameObject_o *)currentCamera;
-    v66 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+    v69 = (UnityEngine_GameObject_o *)currentCamera;
+    v71 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)currentCamera,
                                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v65);
-    currentCamera = UnityEngine_Object__op_Inequality(v66, 0, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v70);
+    currentCamera = UnityEngine_Object__op_Inequality(v71, 0, 0);
     if ( (currentCamera & 1) != 0 )
     {
-      if ( !v66 )
+      if ( !v71 )
         goto LABEL_292;
-      if ( !UIWidget__get_isVisible((UIWidget_o *)v66, 0) )
+      if ( !UIWidget__get_isVisible((UIWidget_o *)v71, 0) )
         goto LABEL_25;
-      v67 = v66[9].monitor;
-      if ( v67 )
+      v72 = v71[9].monitor;
+      if ( v72 )
       {
-        v68 = UICamera_TypeInfo;
+        v73 = UICamera_TypeInfo;
         if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-          v68 = UICamera_TypeInfo;
+          v73 = UICamera_TypeInfo;
         }
-        if ( ((*((__int64 (__fastcall **)(_QWORD, _QWORD, float, float, float))v67 + 3))(
-                *((_QWORD *)v67 + 8),
-                *((_QWORD *)v67 + 5),
-                v68->static_fields->lastWorldPosition.fields.x,
-                v68->static_fields->lastWorldPosition.fields.y,
-                v68->static_fields->lastWorldPosition.fields.z)
+        if ( ((*((__int64 (__fastcall **)(_QWORD, _QWORD, float, float, float))v72 + 3))(
+                *((_QWORD *)v72 + 8),
+                *((_QWORD *)v72 + 5),
+                v73->static_fields->lastWorldPosition.fields.x,
+                v73->static_fields->lastWorldPosition.fields.y,
+                v73->static_fields->lastWorldPosition.fields.z)
             & 1) == 0 )
           goto LABEL_25;
       }
@@ -6989,79 +7083,79 @@ LABEL_277:
     {
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v2);
-      v170 = NGUITools__FindInParents_object_(v64, (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
+      v181 = NGUITools__FindInParents_object_(v69, (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v169);
-      currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v170, 0, 0);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v180);
+      currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v181, 0, 0);
       if ( (currentCamera & 1) != 0 )
       {
-        if ( !v170 )
+        if ( !v181 )
           goto LABEL_292;
-        if ( *(float *)&v170[9].klass < 0.001 )
+        if ( *(float *)&v181[9].klass < 0.001 )
           goto LABEL_25;
       }
     }
-    v171 = UICamera_TypeInfo;
+    v182 = UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-      v171 = UICamera_TypeInfo;
+      v182 = UICamera_TypeInfo;
     }
-    if ( UICamera__IsVisible(v171->static_fields->lastWorldPosition, v64, v2) )
+    if ( UICamera__IsVisible(v182->static_fields->lastWorldPosition, v69, v2) )
     {
-      v178 = UICamera_TypeInfo;
+      v189 = UICamera_TypeInfo;
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-        v178 = UICamera_TypeInfo;
+        v189 = UICamera_TypeInfo;
       }
-      v179 = (int)v64;
-      v180 = (MissionNaviTransitionBoardItem_o *)&v178->static_fields->hoveredObject;
-      v180->klass = (MissionNaviTransitionBoardItem_c *)v64;
+      v190 = (int)v69;
+      v191 = (MissionNaviTransitionBoardItem_o *)&v189->static_fields->hoveredObject;
+      v191->klass = (MissionNaviTransitionBoardItem_c *)v69;
       goto LABEL_291;
     }
     goto LABEL_25;
   }
-  v129 = 0;
+  v137 = 0;
   do
   {
-    if ( (unsigned int)v129 >= (unsigned int)v62 )
+    if ( (unsigned int)v137 >= (unsigned int)v67 )
       goto LABEL_293;
-    currentCamera = *(_QWORD *)(v63 + 32 + 8 * v129);
+    currentCamera = *(_QWORD *)(v68 + 32 + 8 * v137);
     if ( !currentCamera )
       goto LABEL_292;
     currentCamera = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)currentCamera, 0);
     if ( !currentCamera )
       goto LABEL_292;
-    v130 = (UnityEngine_GameObject_o *)currentCamera;
-    v132 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+    v138 = (UnityEngine_GameObject_o *)currentCamera;
+    v140 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)currentCamera,
                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v131);
-    currentCamera = UnityEngine_Object__op_Inequality(v132, 0, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v139);
+    currentCamera = UnityEngine_Object__op_Inequality(v140, 0, 0);
     if ( (currentCamera & 1) != 0 )
     {
-      if ( !v132 )
+      if ( !v140 )
         goto LABEL_292;
-      currentCamera = UIWidget__get_isVisible((UIWidget_o *)v132, 0);
+      currentCamera = UIWidget__get_isVisible((UIWidget_o *)v140, 0);
       if ( (currentCamera & 1) == 0 )
         goto LABEL_195;
-      v133 = v132[9].monitor;
-      if ( v133 )
+      v141 = v140[9].monitor;
+      if ( v141 )
       {
-        v134 = UICamera_TypeInfo;
+        v142 = UICamera_TypeInfo;
         if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-          v134 = UICamera_TypeInfo;
+          v142 = UICamera_TypeInfo;
         }
-        currentCamera = (*((__int64 (__fastcall **)(_QWORD, _QWORD, float, float, float))v133 + 3))(
-                          *((_QWORD *)v133 + 8),
-                          *((_QWORD *)v133 + 5),
-                          v134->static_fields->lastWorldPosition.fields.x,
-                          v134->static_fields->lastWorldPosition.fields.y,
-                          v134->static_fields->lastWorldPosition.fields.z);
+        currentCamera = (*((__int64 (__fastcall **)(_QWORD, _QWORD, float, float, float))v141 + 3))(
+                          *((_QWORD *)v141 + 8),
+                          *((_QWORD *)v141 + 5),
+                          v142->static_fields->lastWorldPosition.fields.x,
+                          v142->static_fields->lastWorldPosition.fields.y,
+                          v142->static_fields->lastWorldPosition.fields.z);
         if ( (currentCamera & 1) == 0 )
           goto LABEL_195;
       }
@@ -7070,17 +7164,17 @@ LABEL_277:
     {
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v2);
-      v136 = NGUITools__FindInParents_object_(
-               v130,
+      v144 = NGUITools__FindInParents_object_(
+               v138,
                (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UIRect___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v135);
-      currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v136, 0, 0);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v143);
+      currentCamera = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v144, 0, 0);
       if ( (currentCamera & 1) != 0 )
       {
-        if ( !v136 )
+        if ( !v144 )
           goto LABEL_292;
-        if ( *(float *)&v136[9].klass < 0.001 )
+        if ( *(float *)&v144[9].klass < 0.001 )
           goto LABEL_195;
       }
     }
@@ -7088,110 +7182,110 @@ LABEL_277:
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v2);
-    v143 = NGUITools__CalculateRaycastDepth(v130, 0);
+    v151 = NGUITools__CalculateRaycastDepth(v138, 0);
     currentCamera = (__int64)UICamera_TypeInfo;
-    v144 = UICamera_TypeInfo->static_fields;
-    v144->mHit.fields.depth = v143;
-    if ( v143 != 0x7FFFFFFF )
+    v152 = UICamera_TypeInfo->static_fields;
+    v152->mHit.fields.depth = v151;
+    if ( v151 != 0x7FFFFFFF )
     {
       if ( !*(_DWORD *)(currentCamera + 228) )
       {
         j_il2cpp_runtime_class_init_0(currentCamera, v2);
-        v144 = UICamera_TypeInfo->static_fields;
+        v152 = UICamera_TypeInfo->static_fields;
       }
-      v144->mHit.fields.go = v130;
+      v152->mHit.fields.go = v138;
       sub_2213A04(
-        (MissionNaviTransitionBoardItem_o *)&v144->mHit.fields.go,
-        (int32_t)v130,
-        v137,
-        v138,
-        v139,
-        v140,
-        v141,
-        v142);
-      v145 = UICamera_TypeInfo;
-      v146 = UICamera_TypeInfo->static_fields;
-      v147 = *(_QWORD *)&v146->lastWorldPosition.fields.x;
-      v146->mHit.fields.point.fields.z = v146->lastWorldPosition.fields.z;
-      *(_QWORD *)&v146->mHit.fields.point.fields.x = v147;
-      v148 = v145->static_fields;
-      v149 = v148->mHits;
-      if ( !v149 )
-        goto LABEL_292;
-      memcpy(&dest, &v148->mHit, sizeof(dest));
-      BetterList_UICamera_DepthEntry___Add(
+        (MissionNaviTransitionBoardItem_o *)&v152->mHit.fields.go,
+        (int32_t)v138,
+        v145,
+        v146,
+        v147,
+        v148,
         v149,
+        v150);
+      v153 = UICamera_TypeInfo;
+      v154 = UICamera_TypeInfo->static_fields;
+      v155 = *(_QWORD *)&v154->lastWorldPosition.fields.x;
+      v154->mHit.fields.point.fields.z = v154->lastWorldPosition.fields.z;
+      *(_QWORD *)&v154->mHit.fields.point.fields.x = v155;
+      v156 = v153->static_fields;
+      v157 = v156->mHits;
+      if ( !v157 )
+        goto LABEL_292;
+      memcpy(&dest, &v156->mHit, sizeof(dest));
+      BetterList_UICamera_DepthEntry___Add(
+        v157,
         &dest,
         (const MethodInfo_3E752C4 *)Method_BetterList_UICamera_DepthEntry__Add__);
     }
 LABEL_195:
-    LODWORD(v62) = *(_DWORD *)(v63 + 24);
-    ++v129;
+    LODWORD(v67) = *(_DWORD *)(v68 + 24);
+    ++v137;
   }
-  while ( (int)v129 < (int)v62 );
-  v150 = UICamera_TypeInfo;
+  while ( (int)v137 < (int)v67 );
+  v158 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-    v150 = UICamera_TypeInfo;
+    v158 = UICamera_TypeInfo;
   }
   currentCamera = (__int64)UICamera___c_TypeInfo;
-  v151 = v150->static_fields->mHits;
+  v159 = v158->static_fields->mHits;
   if ( !*(&UICamera___c_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(UICamera___c_TypeInfo, v2);
     currentCamera = (__int64)UICamera___c_TypeInfo;
   }
-  v152 = *(struct UICamera___c_StaticFields **)(currentCamera + 184);
-  _9__125_1 = v152->__9__125_1;
+  v160 = *(struct UICamera___c_StaticFields **)(currentCamera + 184);
+  _9__125_1 = v160->__9__125_1;
   if ( !_9__125_1 )
   {
     if ( !*(_DWORD *)(currentCamera + 228) )
     {
       j_il2cpp_runtime_class_init_0(currentCamera, v2);
-      v152 = UICamera___c_TypeInfo->static_fields;
+      v160 = UICamera___c_TypeInfo->static_fields;
     }
-    v154 = (Il2CppObject *)v152->__9;
+    v162 = (Il2CppObject *)v160->__9;
     _9__125_1 = (BetterList_CompareFunc_UICamera_DepthEntry__o *)sub_2213CCC(BetterList_CompareFunc_UICamera_DepthEntry__TypeInfo);
-    BetterList_CompareFunc_UICamera_DepthEntry____ctor(_9__125_1, v154, Method_UICamera___c__Raycast_b__125_1__, 0);
-    v155 = UICamera___c_TypeInfo->static_fields;
-    v155->__9__125_1 = _9__125_1;
+    BetterList_CompareFunc_UICamera_DepthEntry____ctor(_9__125_1, v162, Method_UICamera___c__Raycast_b__125_1__, 0);
+    v163 = UICamera___c_TypeInfo->static_fields;
+    v163->__9__125_1 = _9__125_1;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v155->__9__125_1,
+      (MissionNaviTransitionBoardItem_o *)&v163->__9__125_1,
       (int32_t)_9__125_1,
-      v156,
-      v157,
-      v158,
-      v159,
-      v160,
-      v161);
+      v164,
+      v165,
+      v166,
+      v167,
+      v168,
+      v169);
   }
-  if ( !v151 )
+  if ( !v159 )
     goto LABEL_292;
   BetterList_UICamera_DepthEntry___Sort(
-    v151,
+    v159,
     (BetterList_CompareFunc_T__o *)_9__125_1,
     (const MethodInfo_3E75A88 *)Method_BetterList_UICamera_DepthEntry__Sort__);
-  v162 = 0;
-  v163 = 32;
+  v170 = 0;
+  v171 = 32;
   while ( 2 )
   {
-    v126 = UICamera_TypeInfo;
+    v134 = UICamera_TypeInfo;
     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-      v126 = UICamera_TypeInfo;
+      v134 = UICamera_TypeInfo;
     }
-    currentCamera = (__int64)v126->static_fields->mHits;
+    currentCamera = (__int64)v134->static_fields->mHits;
     if ( !currentCamera )
       goto LABEL_292;
-    v127 = *(&v126->_2.cctor_finished + 1);
-    if ( (__int64)v162 >= *(int *)(currentCamera + 24) )
+    v135 = *(&v134->_2.cctor_finished + 1);
+    if ( (__int64)v170 >= *(int *)(currentCamera + 24) )
     {
 LABEL_216:
-      if ( !v127 )
+      if ( !v135 )
       {
-        j_il2cpp_runtime_class_init_0(v126, v2);
+        j_il2cpp_runtime_class_init_0(v134, v2);
         currentCamera = (__int64)UICamera_TypeInfo->static_fields->mHits;
         if ( !currentCamera )
           goto LABEL_292;
@@ -7201,47 +7295,47 @@ LABEL_216:
         (const MethodInfo_3E752AC *)Method_BetterList_UICamera_DepthEntry__Clear__);
       goto LABEL_25;
     }
-    if ( !v127 )
+    if ( !v135 )
     {
-      j_il2cpp_runtime_class_init_0(v126, v2);
+      j_il2cpp_runtime_class_init_0(v134, v2);
       currentCamera = (__int64)UICamera_TypeInfo->static_fields->mHits;
       if ( !currentCamera )
         goto LABEL_292;
     }
-    v164 = *(_QWORD *)(currentCamera + 16);
-    if ( !v164 )
+    v172 = *(_QWORD *)(currentCamera + 16);
+    if ( !v172 )
       goto LABEL_292;
-    if ( v162 >= *(unsigned int *)(v164 + 24) )
+    if ( v170 >= *(unsigned int *)(v172 + 24) )
       goto LABEL_293;
-    if ( !UICamera__IsVisible_56139020((UICamera_DepthEntry_o *)(v164 + v163), v2) )
+    if ( !UICamera__IsVisible_56139020((UICamera_DepthEntry_o *)(v172 + v171), v2) )
     {
-      ++v162;
-      v163 += 72;
+      ++v170;
+      v171 += 72;
       continue;
     }
     break;
   }
-  v197 = UICamera_TypeInfo;
+  v208 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v2);
-    v197 = UICamera_TypeInfo;
+    v208 = UICamera_TypeInfo;
   }
-  currentCamera = (__int64)v197->static_fields->mHits;
+  currentCamera = (__int64)v208->static_fields->mHits;
   if ( !currentCamera )
     goto LABEL_292;
   BetterList_UICamera_DepthEntry___get_Item(
     &dest,
     (BetterList_UICamera_DepthEntry__o *)currentCamera,
-    v162,
+    v170,
     (const MethodInfo_3E75070 *)Method_BetterList_UICamera_DepthEntry__get_Item__);
-  v198 = (int32_t)dest.fields.go;
-  v199 = (MissionNaviTransitionBoardItem_o *)&UICamera_TypeInfo->static_fields->hoveredObject;
-  v199->klass = (MissionNaviTransitionBoardItem_c *)dest.fields.go;
-  sub_2213A04(v199, v198, v200, v201, v202, v203, v204, v205);
-  v194 = UICamera_TypeInfo;
+  v209 = (int32_t)dest.fields.go;
+  v210 = (MissionNaviTransitionBoardItem_o *)&UICamera_TypeInfo->static_fields->hoveredObject;
+  v210->klass = (MissionNaviTransitionBoardItem_c *)dest.fields.go;
+  sub_2213A04(v210, v209, v211, v212, v213, v214, v215, v216);
+  v205 = UICamera_TypeInfo;
 LABEL_256:
-  currentCamera = (__int64)v194->static_fields->mHits;
+  currentCamera = (__int64)v205->static_fields->mHits;
   if ( !currentCamera )
 LABEL_292:
     sub_2213CDC(currentCamera, v2);
@@ -8588,7 +8682,7 @@ System_IAsyncResult_o *UICamera_BoolDelegate__BeginInvoke(
   v10[0] = go;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984328, v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -8689,7 +8783,7 @@ System_IAsyncResult_o *UICamera_FloatDelegate__BeginInvoke(
   v10[0] = go;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984378, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -8788,7 +8882,7 @@ System_IAsyncResult_o *UICamera_GetAxisFunc__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = name;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -8810,10 +8904,13 @@ float UICamera_GetAxisFunc__EndInvoke(
 
 float UICamera_GetAxisFunc__Invoke(UICamera_GetAxisFunc_o *this, System_String_o *name, const MethodInfo *method)
 {
-  return ((float (__fastcall *)(intptr_t, System_String_o *, intptr_t))this->fields.invoke_impl)(
-           this->fields.method_code,
-           name,
-           this->fields.method);
+  float result; // s0
+
+  ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))this->fields.invoke_impl)(
+    this->fields.method_code,
+    name,
+    this->fields.method);
+  return result;
 }
 
 
@@ -8888,7 +8985,7 @@ System_IAsyncResult_o *UICamera_GetKeyStateFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(UnityEngine_KeyCode_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -8910,7 +9007,7 @@ bool UICamera_GetKeyStateFunc__EndInvoke(
 
 bool UICamera_GetKeyStateFunc__Invoke(UICamera_GetKeyStateFunc_o *this, int32_t key, const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(intptr_t, int32_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, int32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            key,
            this->fields.method);
@@ -8983,7 +9080,7 @@ System_IAsyncResult_o *UICamera_GetTouchCallback__BeginInvoke(
   v10 = index;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -9001,10 +9098,10 @@ UICamera_Touch_o *UICamera_GetTouchCallback__Invoke(
         int32_t index,
         const MethodInfo *method)
 {
-  return ((UICamera_Touch_o *(__fastcall *)(intptr_t, int32_t, intptr_t))this->fields.invoke_impl)(
-           this->fields.method_code,
-           index,
-           this->fields.method);
+  return (UICamera_Touch_o *)((__int64 (__fastcall *)(intptr_t, int32_t, intptr_t))this->fields.invoke_impl)(
+                               this->fields.method_code,
+                               index,
+                               this->fields.method);
 }
 
 
@@ -9067,9 +9164,9 @@ System_IAsyncResult_o *UICamera_GetTouchCountCallback__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -9091,7 +9188,7 @@ int32_t UICamera_GetTouchCountCallback__EndInvoke(
 
 int32_t UICamera_GetTouchCountCallback__Invoke(UICamera_GetTouchCountCallback_o *this, const MethodInfo *method)
 {
-  return ((int32_t (__fastcall *)(intptr_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            this->fields.method);
 }
@@ -9176,7 +9273,7 @@ System_IAsyncResult_o *UICamera_KeyCodeDelegate__BeginInvoke(
   v11[2] = 0;
   v11[0] = go;
   v11[1] = j_il2cpp_value_box_0(UnityEngine_KeyCode_TypeInfo, &v12);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -9338,7 +9435,7 @@ System_IAsyncResult_o *UICamera_MoveDelegate__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(UnityEngine_Vector2_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -9436,7 +9533,7 @@ System_IAsyncResult_o *UICamera_ObjectDelegate__BeginInvoke(
 
   v7[0] = go;
   v7[1] = obj;
-  return sub_2213A14(this, v7, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v7, callback, object);
 }
 
 
@@ -9522,9 +9619,9 @@ System_IAsyncResult_o *UICamera_OnCustomInput__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -9602,9 +9699,9 @@ System_IAsyncResult_o *UICamera_OnScreenResize__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -9708,7 +9805,7 @@ System_IAsyncResult_o *UICamera_VectorDelegate__BeginInvoke(
   v11[2] = 0;
   v11[0] = go;
   v11[1] = j_il2cpp_value_box_0(UnityEngine_Vector2_TypeInfo, &v12);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -9809,7 +9906,7 @@ System_IAsyncResult_o *UICamera_VoidDelegate__BeginInvoke(
   UnityEngine_GameObject_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = go;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

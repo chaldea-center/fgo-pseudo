@@ -129,6 +129,7 @@ void ParticleDisconnector__Initialize(
   unsigned int v14; // w23
   Il2CppClass **v15; // x8
   UnityEngine_Component_o *v16; // x20
+  UnityEngine_ParticleSystem_MainModule_o v17; // x0
   UnityEngine_Transform_o *transform; // x21
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-38h] BYREF
 
@@ -181,10 +182,8 @@ void ParticleDisconnector__Initialize(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
       }
       m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)v16, 0).fields.m_ParticleSystem;
-      UnityEngine_ParticleSystem_MainModule__set_cullingMode(
-        (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-        3,
-        0);
+      v17.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      UnityEngine_ParticleSystem_MainModule__set_cullingMode(v17, 3, 0);
       transform = UnityEngine_Component__get_transform(v16, 0);
       this = (ParticleDisconnector_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
       if ( !transform )

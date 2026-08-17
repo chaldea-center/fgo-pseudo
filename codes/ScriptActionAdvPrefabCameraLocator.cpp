@@ -52,9 +52,9 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
   struct UnityEngine_Camera_array *v9; // x8
   UnityEngine_Camera_o *v10; // x20
   float v11; // s0
-  float y; // s1
-  float z; // s2
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   targetRig = this->fields.targetRig;
@@ -106,13 +106,13 @@ void ScriptActionAdvPrefabCameraLocator__LateUpdate(
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
-        y = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0).fields.y;
-        UnityEngine_Camera__set_farClipPlane(v10, y, 0);
+        localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
+        UnityEngine_Camera__set_farClipPlane(v10, localScale.fields.y, 0);
         targetRig = (UnityEngine_GameObject_o *)this->fields.Locator;
         if ( !targetRig )
           break;
-        z = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0).fields.z;
-        UnityEngine_Camera__set_fieldOfView(v10, z, 0);
+        v14 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)targetRig, 0);
+        UnityEngine_Camera__set_fieldOfView(v10, v14.fields.z, 0);
         if ( (_DWORD)max_length == (_DWORD)++v8 )
           return;
       }

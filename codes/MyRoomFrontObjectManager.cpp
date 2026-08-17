@@ -23,13 +23,14 @@ void MyRoomFrontObjectManager___ctor(MyRoomFrontObjectManager_o *this, const Met
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MyRoomFrontObjectManager__FrameIn(MyRoomFrontObjectManager_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
   UnityEngine_Object_o *dispObject; // x20
   _BOOL8 v5; // x0
   const MethodInfo *v6; // x1
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  int v7; // s0 OVERLAPPED
 
   if ( (byte_596B4DE & 1) == 0 )
   {
@@ -44,20 +45,25 @@ void MyRoomFrontObjectManager__FrameIn(MyRoomFrontObjectManager_o *this, const M
   {
     if ( !this->fields.dispObject )
       sub_2213CDC(v5, v6);
-    MyRoomFrontObjectManager__MoveDispObject(this, v9, this->fields.BasePosition, v6);
+    MyRoomFrontObjectManager__MoveDispObject(this, *(UnityEngine_Vector3_o *)&v7, this->fields.BasePosition, v6);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MyRoomFrontObjectManager__FrameOut(MyRoomFrontObjectManager_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
   UnityEngine_Object_o *dispObject; // x20
   _BOOL8 v5; // x0
   const MethodInfo *v6; // x1
-  float32x2_t *v7; // x8
-  UnityEngine_Vector3_o v8; // 0:kr00_12.12
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  int v7; // s2 OVERLAPPED
+  float32x2_t *v8; // x8
+  unsigned __int64 v9; // d3 OVERLAPPED
+  float z; // s0
+  float v11; // s1
+  float v12; // s5
+  int v13; // s4
 
   if ( (byte_596B4DD & 1) == 0 )
   {
@@ -70,14 +76,19 @@ void MyRoomFrontObjectManager__FrameOut(MyRoomFrontObjectManager_o *this, const 
   v5 = UnityEngine_Object__op_Inequality(dispObject, 0, 0);
   if ( v5 )
   {
-    v7 = (float32x2_t *)this->fields.dispObject;
-    if ( !v7 )
+    v8 = (float32x2_t *)this->fields.dispObject;
+    if ( !v8 )
       sub_2213CDC(v5, v6);
-    v9.fields.x = this->fields.BasePosition.fields.z;
-    LODWORD(v9.fields.y) = v7[5].n64_u32[0];
-    *(float32x2_t *)&v8.fields.x = vadd_f32(*(float32x2_t *)&this->fields.BasePosition.fields.x, v7[4]);
-    v8.fields.z = v9.fields.x + v9.fields.y;
-    MyRoomFrontObjectManager__MoveDispObject(this, v9, v8, v6);
+    v9 = vadd_f32(*(float32x2_t *)&this->fields.BasePosition.fields.x, v8[4]).n64_u64[0];
+    z = this->fields.BasePosition.fields.z;
+    v11 = v8[5].n64_f32[0];
+    v12 = z + v11;
+    v13 = HIDWORD(v9);
+    MyRoomFrontObjectManager__MoveDispObject(
+      this,
+      *(UnityEngine_Vector3_o *)(&v7 - 2),
+      *(UnityEngine_Vector3_o *)&v9,
+      v6);
   }
 }
 
@@ -156,7 +167,7 @@ void MyRoomFrontObjectManager__MoveDispObject(
   UnityEngine_GameObject_o *gameObject; // x0
   float frameInOutDuration; // s11
   UnityEngine_GameObject_o *v14; // x0
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v16; // 0:s1.4,4:s2.4,8:s3.4
 
   z = to.fields.z;

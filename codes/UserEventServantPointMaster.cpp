@@ -478,7 +478,7 @@ int32_t UserEventServantPointMaster___c__DisplayClass3_1___GetBestServantPointEn
   {
     sub_2213CDC(this, svtPointEnt);
   }
-  return *((_DWORD *)this + 52);
+  return (int32_t)this[8].fields.svtMaster;
 }
 
 

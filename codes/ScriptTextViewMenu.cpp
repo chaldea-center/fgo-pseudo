@@ -144,14 +144,15 @@ void ScriptTextViewMenu__Open(
   bool v25; // w7
   System_String_o *v26; // x21
   System_Array_o *v27; // x22
-  struct System_String_array *v28; // x0
-  int32_t v29; // w1
+  System_RuntimeFieldHandle_o v28; // x1
+  struct System_String_array *v29; // x0
+  int32_t v30; // w1
   struct System_String_array **p_textLineData; // x0
-  const MethodInfo *v31; // x2
+  const MethodInfo *v32; // x2
   ScriptTextListViewManager_o *scriptTextListViewManager; // x20
-  ScriptTextListViewManager_CallbackFunc_o *v33; // x21
-  const MethodInfo *v34; // x3
+  ScriptTextListViewManager_CallbackFunc_o *v34; // x21
   const MethodInfo *v35; // x3
+  const MethodInfo *v36; // x3
 
   if ( (byte_596DD82 & 1) == 0 )
   {
@@ -197,31 +198,29 @@ void ScriptTextViewMenu__Open(
               (System_String_o *)StringLiteral_1/*""*/,
               0);
       v27 = (System_Array_o *)sub_2213B20(char___TypeInfo, 4);
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-        v27,
-        (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3,
-        0);
+      v28.fields.value = Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v27, v28, 0);
       if ( !v26 )
         goto LABEL_16;
-      v28 = System_String__Split_75706100(v26, (System_Char_array *)v27, 0, 0);
-      v29 = (int)v28;
-      this->fields.textLineData = v28;
+      v29 = System_String__Split_75706100(v26, (System_Char_array *)v27, 0, 0);
+      v30 = (int)v29;
+      this->fields.textLineData = v29;
       p_textLineData = &this->fields.textLineData;
     }
     else
     {
-      v29 = 0;
+      v30 = 0;
       this->fields.textLineData = 0;
       p_textLineData = &this->fields.textLineData;
     }
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_textLineData, v29, v20, v21, v22, v23, v24, v25);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_textLineData, v30, v20, v21, v22, v23, v24, v25);
     menuRootObject = (UnityEngine_GameObject_o *)this->fields.scriptTextListViewManager;
     if ( menuRootObject )
     {
       ScriptTextListViewManager__CreateList(
         (ScriptTextListViewManager_o *)menuRootObject,
         this->fields.textLineData,
-        v31);
+        v32);
       if ( (jumpLine & 0x80000000) == 0 )
       {
         menuRootObject = (UnityEngine_GameObject_o *)this->fields.scriptTextListViewManager;
@@ -235,15 +234,15 @@ void ScriptTextViewMenu__Open(
       {
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)menuRootObject, 1, 0);
         scriptTextListViewManager = this->fields.scriptTextListViewManager;
-        v33 = (ScriptTextListViewManager_CallbackFunc_o *)sub_2213CCC(ScriptTextListViewManager_CallbackFunc_TypeInfo);
+        v34 = (ScriptTextListViewManager_CallbackFunc_o *)sub_2213CCC(ScriptTextListViewManager_CallbackFunc_TypeInfo);
         ScriptTextListViewManager_CallbackFunc___ctor(
-          v33,
+          v34,
           (Il2CppObject *)this,
           Method_ScriptTextViewMenu_OnClickItem__,
-          v34);
+          v35);
         if ( scriptTextListViewManager )
         {
-          ScriptTextListViewManager__SetMode_44382396(scriptTextListViewManager, 1, v33, v35);
+          ScriptTextListViewManager__SetMode_44382396(scriptTextListViewManager, 1, v34, v36);
           return;
         }
       }
@@ -537,7 +536,7 @@ System_IAsyncResult_o *ScriptTextViewMenu_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(ScriptTextViewMenu_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

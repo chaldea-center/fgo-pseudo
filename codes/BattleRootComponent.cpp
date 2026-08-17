@@ -442,9 +442,9 @@ LABEL_146:
         if ( !*(_DWORD *)(v80 + 228) )
           *(__n128 *)&v75 = j_il2cpp_runtime_class_init_0(v80, battleEnt);
         this = *(BattleRootComponent_o **)(v78[7] + 16LL);
-        if ( (*(_WORD *)((char *)this + 309) & 1) == 0 )
+        if ( (*(_WORD *)((_BYTE *)&this[2].fields.manualHeight + 1) & 1) == 0 )
           this = (BattleRootComponent_o *)sub_224B908(v75);
-        v77 = (System_Collections_Generic_IEnumerable_TSource__o *)**((_QWORD **)this + 23);
+        v77 = **(System_Collections_Generic_IEnumerable_TSource__o ***)&this[1].fields.kind;
         if ( !v77 )
           goto LABEL_146;
       }
@@ -826,6 +826,7 @@ System_Collections_Generic_IEnumerable_int__o *BattleRootComponent__GetClassBoar
   int32_t v18; // w5
   bool v19; // w6
   bool v20; // w7
+  System_Collections_Generic_IEnumerable_int__o *result; // x0
 
   if ( (byte_597359A & 1) == 0 )
   {
@@ -840,8 +841,9 @@ System_Collections_Generic_IEnumerable_int__o *BattleRootComponent__GetClassBoar
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 40), (int32_t)battleEntity, v9, v10, v11, v12, v13, v14);
   *(_QWORD *)(v8 + 72) = classBoardCSMaster;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 72), (int32_t)classBoardCSMaster, v15, v16, v17, v18, v19, v20);
+  result = (System_Collections_Generic_IEnumerable_int__o *)v8;
   *(_QWORD *)(v8 + 56) = userSvtId;
-  return (System_Collections_Generic_IEnumerable_int__o *)v8;
+  return result;
 }
 
 
@@ -2897,6 +2899,7 @@ System_Collections_Generic_IEnumerator_int__o *BattleRootComponent__GetClassBoar
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
+  System_Collections_Generic_IEnumerator_int__o *result; // x0
 
   if ( (byte_59735A6 & 1) == 0 )
   {
@@ -2939,8 +2942,9 @@ System_Collections_Generic_IEnumerator_int__o *BattleRootComponent__GetClassBoar
     v16,
     v17,
     v18);
+  result = (System_Collections_Generic_IEnumerator_int__o *)v10;
   v10->fields.userSvtId = this->fields.__3__userSvtId;
-  return (System_Collections_Generic_IEnumerator_int__o *)v10;
+  return result;
 }
 
 
@@ -3830,8 +3834,8 @@ LABEL_26:
   this->fields.__2__current = (Il2CppObject *)v28;
   v29 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v29, (int32_t)v28, v30, v31, v32, v33, v34, v35);
-  *((_DWORD *)v29 - 2) = 1;
   LOBYTE(AssumedBattleAssetLoadManager_k__BackingField) = 1;
+  *((_DWORD *)v29 - 2) = 1;
   return (char)AssumedBattleAssetLoadManager_k__BackingField;
 }
 
@@ -4035,7 +4039,7 @@ bool BattleRootComponent__LoadAssetsIndependentToMainOne_d__14__MoveNext(
   System_Collections_Generic_List_Enumerator_int__o v144; // [xsp+18h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v145; // [xsp+30h] [xbp-A0h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-88h] BYREF
-  System_Collections_Generic_HashSet_Enumerator_T__o v147; // [xsp+50h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v147; // [xsp+50h] [xbp-80h] BYREF
   int32_t v148; // [xsp+6Ch] [xbp-64h] BYREF
 
   v8 = this;
@@ -4363,13 +4367,13 @@ bool BattleRootComponent__LoadAssetsIndependentToMainOne_d__14__MoveNext(
       (System_Collections_Generic_HashSet_Enumerator_T__o *)&v144,
       v34,
       (const MethodInfo_42B49B4 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
-    v147 = (System_Collections_Generic_HashSet_Enumerator_T__o)v144;
+    v147 = v144;
     v144.fields._list = 0;
     *(_QWORD *)&v144.fields._index = &v147;
     while ( 1 )
     {
       v38 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
-              &v147,
+              (System_Collections_Generic_HashSet_Enumerator_T__o *)&v147,
               (const MethodInfo_40F5A3C *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
       if ( !v38 )
         break;
@@ -4378,7 +4382,7 @@ bool BattleRootComponent__LoadAssetsIndependentToMainOne_d__14__MoveNext(
       v40 = DataMasterBase_object__object__int___TryGetEntity(
               v37,
               &entity,
-              (int32_t)v147.fields._current,
+              v147.fields._current,
               (const MethodInfo_3F10B80 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
       if ( v40 )
       {
@@ -4416,7 +4420,7 @@ bool BattleRootComponent__LoadAssetsIndependentToMainOne_d__14__MoveNext(
       }
     }
     System_Collections_Generic_HashSet_Enumerator_int___Dispose(
-      &v147,
+      (System_Collections_Generic_HashSet_Enumerator_T__o *)&v147,
       (const MethodInfo_40F5A38 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
     ++v8->fields._loadCntMax_5__2;
     if ( !_4__this )
@@ -4716,9 +4720,10 @@ LABEL_39:
     v8->fields.__2__current = 0;
     v124 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
     sub_2213A04(v124, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     v124[-1].fields._BoardType_k__BackingField = 2;
-    return 1;
   }
+  return result;
 }
 
 
@@ -5505,8 +5510,8 @@ LABEL_102:
           this->fields.__2__current = (Il2CppObject *)v20;
           v21 = &this->fields.__2__current;
           sub_2213A04((MissionNaviTransitionBoardItem_o *)v21, (int32_t)v20, v22, v23, v24, v25, v26, v27);
-          *((_DWORD *)v21 - 2) = 1;
           LOBYTE(Instance) = 1;
+          *((_DWORD *)v21 - 2) = 1;
           return (char)Instance;
         }
       }
@@ -5844,9 +5849,9 @@ System_IAsyncResult_o *BattleRootComponent_callBackBeginResume__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

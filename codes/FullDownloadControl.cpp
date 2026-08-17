@@ -336,6 +336,7 @@ bool FullDownloadControl__downLoadAll_d__8__MoveNext(
   struct FullDownloadControl_o *_4__this; // x21
   Il2CppObject *wait_5__2; // x1
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   __int64 v26; // x2
   CommonUI_o *v27; // x19
 
@@ -411,8 +412,9 @@ LABEL_12:
         this->fields.__2__current = wait_5__2;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)wait_5__2, v16, v17, v18, v19, v20, v21);
+        result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
-        return 1;
+        return result;
       }
     }
     goto LABEL_21;

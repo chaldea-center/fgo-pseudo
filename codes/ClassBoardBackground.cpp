@@ -1109,6 +1109,7 @@ System_Collections_IEnumerator_o *ClassBoardBackground__PlayGrandReturnTransitio
   int32_t v10; // w5
   bool v11; // w6
   bool v12; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_59745DE & 1) == 0 )
   {
@@ -1121,8 +1122,9 @@ System_Collections_IEnumerator_o *ClassBoardBackground__PlayGrandReturnTransitio
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 32), (int32_t)this, v7, v8, v9, v10, v11, v12);
+  result = (System_Collections_IEnumerator_o *)v6;
   *(_BYTE *)(v6 + 40) = v5;
-  return (System_Collections_IEnumerator_o *)v6;
+  return result;
 }
 
 
@@ -1443,6 +1445,7 @@ LABEL_73:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ClassBoardBackground__PlayGrandTransitionAnimationFromTween(
         ClassBoardBackground_o *this,
         bool isQuick,
@@ -1451,26 +1454,28 @@ void ClassBoardBackground__PlayGrandTransitionAnimationFromTween(
   float v5; // s8
   int32_t width; // w20
   float height; // s1
-  float v8; // s0
-  float v9; // s1
+  int v8; // s3 OVERLAPPED
+  float v9; // s0
   float v10; // s1
-  float v11; // s0
-  float v12; // s1
-  TweenPosition_o *v13; // x0
-  __int64 v14; // x1
-  UITweener_o *v15; // x19
-  ClassBoardBackground___c_c *v16; // x0
+  float v11; // s1
+  float v12; // s0
+  float v13; // s1
+  int v14; // s2
+  float v15; // s1
+  TweenPosition_o *v16; // x0
+  __int64 v17; // x1
+  UITweener_o *v18; // x19
+  ClassBoardBackground___c_c *v19; // x0
   struct ClassBoardBackground___c_StaticFields *static_fields; // x8
   EventDelegate_Callback_o *_9__77_0; // x20
-  Il2CppObject *v19; // x21
-  struct ClassBoardBackground___c_StaticFields *v20; // x0
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
-  UnityEngine_Vector3_o v27; // 0:s1.4,4:s2.4,8:s3.4
+  Il2CppObject *v22; // x21
+  struct ClassBoardBackground___c_StaticFields *v23; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
 
   if ( (byte_59745DC & 1) == 0 )
   {
@@ -1485,57 +1490,57 @@ void ClassBoardBackground__PlayGrandTransitionAnimationFromTween(
     v5 = 1.0;
   width = UnityEngine_Screen__get_width(0);
   height = (float)UnityEngine_Screen__get_height(0);
-  v27.fields.z = 0.0;
-  v8 = (float)width / height;
-  v9 = 2.333;
-  if ( v8 <= 2.333 )
-    v9 = v8;
-  v10 = (float)(v9 + -2.274) / 0.059;
-  if ( v8 >= 2.274 )
-    v11 = v10;
-  else
-    v11 = 0.0;
-  if ( v11 <= 1.0 )
+  v8 = 0;
+  v9 = (float)width / height;
+  v10 = 2.333;
+  if ( v9 <= 2.333 )
+    v10 = v9;
+  v11 = (float)(v10 + -2.274) / 0.059;
+  if ( v9 >= 2.274 )
     v12 = v11;
   else
-    v12 = 1.0;
-  if ( v11 < 0.0 )
     v12 = 0.0;
-  v27.fields.y = 0.0;
-  v27.fields.x = this->fields.classScorePosXMin
-               + (float)((float)(this->fields.classScorePosXMax - this->fields.classScorePosXMin) * v12);
-  v13 = TweenPosition__Begin(this->fields.boardRoot, v5, v27, 0);
-  if ( !v13 )
-    sub_2213CDC(0, v14);
-  v15 = (UITweener_o *)v13;
-  v13->fields.method = 21;
-  v16 = ClassBoardBackground___c_TypeInfo;
+  if ( v12 <= 1.0 )
+    v13 = v12;
+  else
+    v13 = 1.0;
+  if ( v12 < 0.0 )
+    v13 = 0.0;
+  v14 = 0;
+  v15 = this->fields.classScorePosXMin
+      + (float)((float)(this->fields.classScorePosXMax - this->fields.classScorePosXMin) * v13);
+  v16 = TweenPosition__Begin(this->fields.boardRoot, v5, *(UnityEngine_Vector3_o *)(&v8 - 2), 0);
+  if ( !v16 )
+    sub_2213CDC(0, v17);
+  v18 = (UITweener_o *)v16;
+  v16->fields.method = 21;
+  v19 = ClassBoardBackground___c_TypeInfo;
   if ( !*(&ClassBoardBackground___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ClassBoardBackground___c_TypeInfo, v14);
-    v16 = ClassBoardBackground___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ClassBoardBackground___c_TypeInfo, v17);
+    v19 = ClassBoardBackground___c_TypeInfo;
   }
-  static_fields = v16->static_fields;
+  static_fields = v19->static_fields;
   _9__77_0 = static_fields->__9__77_0;
   if ( !_9__77_0 )
   {
-    if ( !*(&v16->_2.cctor_finished + 1) )
+    if ( !*(&v19->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v16, v14);
+      j_il2cpp_runtime_class_init_0(v19, v17);
       static_fields = ClassBoardBackground___c_TypeInfo->static_fields;
     }
-    v19 = (Il2CppObject *)static_fields->__9;
+    v22 = (Il2CppObject *)static_fields->__9;
     _9__77_0 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       _9__77_0,
-      v19,
+      v22,
       Method_ClassBoardBackground___c__PlayGrandTransitionAnimationFromTween_b__77_0__,
       0);
-    v20 = ClassBoardBackground___c_TypeInfo->static_fields;
-    v20->__9__77_0 = _9__77_0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v20->__9__77_0, (int32_t)_9__77_0, v21, v22, v23, v24, v25, v26);
+    v23 = ClassBoardBackground___c_TypeInfo->static_fields;
+    v23->__9__77_0 = _9__77_0;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->__9__77_0, (int32_t)_9__77_0, v24, v25, v26, v27, v28, v29);
   }
-  UITweener__SetOnFinished(v15, _9__77_0, 0);
+  UITweener__SetOnFinished(v18, _9__77_0, 0);
 }
 
 
@@ -3934,6 +3939,7 @@ void ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79___c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79__MoveNext(
         ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79_o *this,
         const MethodInfo *method)
@@ -3942,28 +3948,30 @@ bool ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79__Mo
   int32_t _1__state; // w22
   struct ClassBoardBackground_o *_4__this; // x8
   float v5; // s0
-  UITweener_o *v7; // x19
-  ClassBoardBackground___c_c *v8; // x0
+  int v6; // s2 OVERLAPPED
+  int v7; // s3
+  int v8; // s1
+  UITweener_o *v9; // x19
+  ClassBoardBackground___c_c *v10; // x0
   struct ClassBoardBackground___c_StaticFields *static_fields; // x8
   EventDelegate_Callback_o *_9__79_0; // x20
-  Il2CppObject *v11; // x21
-  struct ClassBoardBackground___c_StaticFields *v12; // x0
-  System_String_o *v13; // x2
-  System_String_o *v14; // x3
-  int32_t v15; // w4
-  int32_t v16; // w5
-  bool v17; // w6
-  bool v18; // w7
+  Il2CppObject *v13; // x21
+  struct ClassBoardBackground___c_StaticFields *v14; // x0
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
   float classScoreTweenStartDelay; // s8
-  UnityEngine_WaitForSeconds_o *v20; // x20
+  UnityEngine_WaitForSeconds_o *v22; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
-  UnityEngine_Vector3_o v29; // 0:s1.4,4:s2.4,8:s3.4
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
 
   v2 = this;
   if ( (byte_59745F6 & 1) == 0 )
@@ -3982,11 +3990,11 @@ bool ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79__Mo
     if ( _4__this )
     {
       classScoreTweenStartDelay = _4__this->fields.classScoreTweenStartDelay;
-      v20 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v20, classScoreTweenStartDelay, 0);
-      v2->fields.__2__current = (Il2CppObject *)v20;
+      v22 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v22, classScoreTweenStartDelay, 0);
+      v2->fields.__2__current = (Il2CppObject *)v22;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
-      sub_2213A04(p__2__current, (int32_t)v20, v22, v23, v24, v25, v26, v27);
+      sub_2213A04(p__2__current, (int32_t)v22, v24, v25, v26, v27, v28, v29);
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
       return _1__state == 0;
     }
@@ -3998,48 +4006,48 @@ bool ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79__Mo
   if ( !_4__this )
     goto LABEL_19;
   v5 = 0.0;
-  v29.fields.y = 0.0;
-  v29.fields.z = 0.0;
+  v6 = 0;
+  v7 = 0;
   if ( !v2->fields.isQuick )
     v5 = 1.0;
-  v29.fields.x = 0.0;
+  v8 = 0;
   this = (ClassBoardBackground__PlayGrandReturnTransitionAnimationFromTween_d__79_o *)TweenPosition__Begin(
                                                                                         _4__this->fields.boardRoot,
                                                                                         v5,
-                                                                                        v29,
+                                                                                        *(UnityEngine_Vector3_o *)(&v6 - 1),
                                                                                         0);
   if ( !this )
 LABEL_19:
     sub_2213CDC(this, method);
-  v7 = (UITweener_o *)this;
+  v9 = (UITweener_o *)this;
   LODWORD(this->fields.__4__this) = 21;
-  v8 = ClassBoardBackground___c_TypeInfo;
+  v10 = ClassBoardBackground___c_TypeInfo;
   if ( !*(&ClassBoardBackground___c_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ClassBoardBackground___c_TypeInfo, method);
-    v8 = ClassBoardBackground___c_TypeInfo;
+    v10 = ClassBoardBackground___c_TypeInfo;
   }
-  static_fields = v8->static_fields;
+  static_fields = v10->static_fields;
   _9__79_0 = static_fields->__9__79_0;
   if ( !_9__79_0 )
   {
-    if ( !*(&v8->_2.cctor_finished + 1) )
+    if ( !*(&v10->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v8, method);
+      j_il2cpp_runtime_class_init_0(v10, method);
       static_fields = ClassBoardBackground___c_TypeInfo->static_fields;
     }
-    v11 = (Il2CppObject *)static_fields->__9;
+    v13 = (Il2CppObject *)static_fields->__9;
     _9__79_0 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       _9__79_0,
-      v11,
+      v13,
       Method_ClassBoardBackground___c__PlayGrandReturnTransitionAnimationFromTween_b__79_0__,
       0);
-    v12 = ClassBoardBackground___c_TypeInfo->static_fields;
-    v12->__9__79_0 = _9__79_0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__79_0, (int32_t)_9__79_0, v13, v14, v15, v16, v17, v18);
+    v14 = ClassBoardBackground___c_TypeInfo->static_fields;
+    v14->__9__79_0 = _9__79_0;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14->__9__79_0, (int32_t)_9__79_0, v15, v16, v17, v18, v19, v20);
   }
-  UITweener__SetOnFinished(v7, _9__79_0, 0);
+  UITweener__SetOnFinished(v9, _9__79_0, 0);
   return _1__state == 0;
 }
 
@@ -4111,6 +4119,7 @@ bool ClassBoardBackground__WaitAnimationFinished_d__93__MoveNext(
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   if ( (byte_59745F7 & 1) == 0 )
@@ -4156,8 +4165,9 @@ LABEL_13:
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v10, v11, v12, v13, v14, v15);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

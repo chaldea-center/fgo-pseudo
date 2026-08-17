@@ -293,6 +293,7 @@ bool ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__MoveNext(
   bool v20; // w7
   Il2CppObject *loopWait_5__2; // x1
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   v2 = this;
   if ( (byte_596C884 & 1) == 0 )
@@ -349,8 +350,9 @@ LABEL_11:
     v2->fields.__2__current = loopWait_5__2;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)loopWait_5__2, v5, v6, v7, v8, v9, v10);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   return 0;
 }

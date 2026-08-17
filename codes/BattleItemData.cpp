@@ -50,6 +50,7 @@ BattleItemData_SaveData_o *BattleItemData__GetSaveData(BattleItemData_o *this, c
   Il2CppObject *v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  BattleItemData_SaveData_o *result; // x0
 
   if ( (byte_5973540 & 1) == 0 )
   {
@@ -60,8 +61,9 @@ BattleItemData_SaveData_o *BattleItemData__GetSaveData(BattleItemData_o *this, c
   System_Object___ctor(v3, 0);
   if ( !v3 )
     sub_2213CDC(v4, v5);
+  result = (BattleItemData_SaveData_o *)v3;
   v3[1].klass = *(Il2CppClass **)&this->fields.itemId;
-  return (BattleItemData_SaveData_o *)v3;
+  return result;
 }
 
 

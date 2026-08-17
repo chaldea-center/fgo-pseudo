@@ -23,7 +23,11 @@ UnityEngine_GameObject_o *DiggingConfirmDialogComponent__CreatePrefab(
   __int64 v7; // x1
   UnityEngine_GameObject_o *v8; // x19
   UnityEngine_Transform_o *transform; // x20
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596AA58 & 1) == 0 )
   {
@@ -44,6 +48,9 @@ UnityEngine_GameObject_o *DiggingConfirmDialogComponent__CreatePrefab(
   {
     sub_2213CDC(v6, v7);
   }
+  x = localScale.fields.x;
+  y = localScale.fields.y;
+  z = localScale.fields.z;
   UnityEngine_Transform__set_parent(transform, parentObject, 0);
   if ( !byte_5969AE0 )
   {
@@ -60,7 +67,10 @@ UnityEngine_GameObject_o *DiggingConfirmDialogComponent__CreatePrefab(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v15.fields.x = x;
+  v15.fields.y = y;
+  v15.fields.z = z;
+  UnityEngine_Transform__set_localScale(transform, v15, 0);
   return v8;
 }
 

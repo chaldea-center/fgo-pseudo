@@ -12,15 +12,18 @@ UnityEngine_Vector3_o Bezier__GetFirstDerivative(
         const MethodInfo *method)
 {
   float v5; // s6
+  float v6; // s0
+  float v7; // s1
+  float v8; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v5 = (float)(1.0 - t) + (float)(1.0 - t);
-  result.fields.x = (float)((float)(p2.fields.x - p1.fields.x) * (float)(t + t))
-                  + (float)((float)(p1.fields.x - p0.fields.x) * v5);
-  result.fields.y = (float)((float)(p2.fields.y - p1.fields.y) * (float)(t + t))
-                  + (float)((float)(p1.fields.y - p0.fields.y) * v5);
-  result.fields.z = (float)((float)(p2.fields.z - p1.fields.z) * (float)(t + t))
-                  + (float)((float)(p1.fields.z - p0.fields.z) * v5);
+  v6 = (float)((float)(p2.fields.x - p1.fields.x) * (float)(t + t)) + (float)((float)(p1.fields.x - p0.fields.x) * v5);
+  v7 = (float)((float)(p2.fields.y - p1.fields.y) * (float)(t + t)) + (float)((float)(p1.fields.y - p0.fields.y) * v5);
+  v8 = (float)((float)(p2.fields.z - p1.fields.z) * (float)(t + t)) + (float)((float)(p1.fields.z - p0.fields.z) * v5);
+  result.fields.z = v8;
+  result.fields.y = v7;
+  result.fields.x = v6;
   return result;
 }
 
@@ -45,6 +48,9 @@ UnityEngine_Vector3_o Bezier__GetFirstDerivative_48546328(
   float v14; // s6
   float v15; // s17
   float v16; // s7
+  float v17; // s0
+  float v18; // s1
+  float v19; // s2
   float v20; // [xsp+18h] [xbp+18h]
   float v21; // [xsp+20h] [xbp+20h]
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
@@ -66,9 +72,12 @@ UnityEngine_Vector3_o Bezier__GetFirstDerivative_48546328(
   v14 = (float)(1.0 - v13) * (float)((float)(1.0 - v13) * 3.0);
   v15 = v13 * (float)((float)(1.0 - v13) * 6.0);
   v16 = v13 * (float)(v13 * 3.0);
-  result.fields.x = (float)((float)(t - p2.fields.x) * v16) + (float)((float)(v6 * v14) + (float)(v9 * v15));
-  result.fields.y = (float)((float)(*(&t + 1) - p2.fields.y) * v16) + (float)((float)(v7 * v14) + (float)(v10 * v15));
-  result.fields.z = (float)((float)(v20 - p2.fields.z) * v16) + (float)((float)(v8 * v14) + (float)(v11 * v15));
+  v17 = (float)((float)(t - p2.fields.x) * v16) + (float)((float)(v6 * v14) + (float)(v9 * v15));
+  v18 = (float)((float)(*(&t + 1) - p2.fields.y) * v16) + (float)((float)(v7 * v14) + (float)(v10 * v15));
+  v19 = (float)((float)(v20 - p2.fields.z) * v16) + (float)((float)(v8 * v14) + (float)(v11 * v15));
+  result.fields.z = v19;
+  result.fields.y = v18;
+  result.fields.x = v17;
   return result;
 }
 
@@ -88,6 +97,8 @@ UnityEngine_Vector3_o Bezier__GetPoint(
   float v9; // s1
   float32x2_t v10; // d0
   unsigned __int64 v11; // d0
+  float v12; // s2
+  float v13; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v5 = 1.0;
@@ -110,12 +121,14 @@ UnityEngine_Vector3_o Bezier__GetPoint(
                 vmul_n_f32(vsub_f32(*(float32x2_t *)&p2.fields.x, *(float32x2_t *)&p1.fields.x), v9)),
               v10),
             v9)).n64_u64[0];
-  result.fields.z = (float)(p0.fields.z + (float)((float)(p1.fields.z - p0.fields.z) * v9))
-                  + (float)(v9
-                          * (float)((float)(p1.fields.z + (float)((float)(p2.fields.z - p1.fields.z) * v9))
-                                  - (float)(p0.fields.z + (float)((float)(p1.fields.z - p0.fields.z) * v9))));
-  result.fields.y = *((float *)&v11 + 1);
+  v12 = (float)(p0.fields.z + (float)((float)(p1.fields.z - p0.fields.z) * v9))
+      + (float)(v9
+              * (float)((float)(p1.fields.z + (float)((float)(p2.fields.z - p1.fields.z) * v9))
+                      - (float)(p0.fields.z + (float)((float)(p1.fields.z - p0.fields.z) * v9))));
+  v13 = *((float *)&v11 + 1);
   result.fields.x = *(float *)&v11;
+  result.fields.z = v12;
+  result.fields.y = v13;
   return result;
 }
 
@@ -139,6 +152,9 @@ UnityEngine_Vector3_o Bezier__GetPoint_48546060(
   float v13; // s4
   float v14; // s5
   float v15; // s7
+  float v16; // s0
+  float v17; // s1
+  float v18; // s2
   float v19; // [xsp+18h] [xbp+18h]
   float v20; // [xsp+20h] [xbp+20h]
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
@@ -159,9 +175,11 @@ UnityEngine_Vector3_o Bezier__GetPoint_48546060(
   v13 = p1.fields.y * (float)(v7 * v9);
   v14 = p1.fields.z * (float)(v7 * v9);
   v15 = v7 * (float)(v7 * v7);
-  result.fields.x = (float)(t * v15) + (float)((float)(p2.fields.x * v11) + (float)((float)(p0.fields.x * v10) + v12));
-  result.fields.y = (float)(*(&t + 1) * v15)
-                  + (float)((float)(p2.fields.y * v11) + (float)((float)(p0.fields.y * v10) + v13));
-  result.fields.z = (float)(v19 * v15) + (float)((float)(p2.fields.z * v11) + (float)((float)(p0.fields.z * v10) + v14));
+  v16 = (float)(t * v15) + (float)((float)(p2.fields.x * v11) + (float)((float)(p0.fields.x * v10) + v12));
+  v17 = (float)(*(&t + 1) * v15) + (float)((float)(p2.fields.y * v11) + (float)((float)(p0.fields.y * v10) + v13));
+  v18 = (float)(v19 * v15) + (float)((float)(p2.fields.z * v11) + (float)((float)(p0.fields.z * v10) + v14));
+  result.fields.z = v18;
+  result.fields.y = v17;
+  result.fields.x = v16;
   return result;
 }

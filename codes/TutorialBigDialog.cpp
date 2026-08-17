@@ -2394,6 +2394,7 @@ System_Collections_IEnumerator_o *TutorialBigDialog__WaitPurchase(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596F3FB & 1) == 0 )
   {
@@ -2405,8 +2406,9 @@ System_Collections_IEnumerator_o *TutorialBigDialog__WaitPurchase(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 40) = CurrentIndex;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 

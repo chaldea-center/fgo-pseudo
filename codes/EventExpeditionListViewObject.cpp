@@ -244,7 +244,7 @@ bool EventExpeditionListViewObject__IsAllUserItemEnough(
       this = (EventExpeditionListViewObject_o *)UserItemMaster__TryGetEntity(
                                                   (UserItemMaster_o *)MasterData_object,
                                                   &entity,
-                                                  *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+                                                  (int64_t)this[1].fields.manager->fields.sortKindLabel,
                                                   v7->fields.objectId,
                                                   0);
       if ( ((unsigned __int8)this & 1) == 0 )

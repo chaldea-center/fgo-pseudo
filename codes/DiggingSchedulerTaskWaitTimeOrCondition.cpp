@@ -70,6 +70,7 @@ bool DiggingSchedulerTaskWaitTimeOrCondition__Execute_d__3__MoveNext(
   float v12; // s1
   float espTime_5__2; // s8
   __int64 v14; // x8
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   _1__state = this->fields.__1__state;
@@ -110,8 +111,9 @@ LABEL_8:
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

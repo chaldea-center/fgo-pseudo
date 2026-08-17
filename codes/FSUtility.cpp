@@ -107,12 +107,13 @@ void FSUtility___ctor(FSUtility_o *this, const MethodInfo *method)
 float FSUtility__CalculateNotchWidth(const MethodInfo *method)
 {
   float m_XMin; // s8
+  float m_Width; // s9
   int32_t width; // w0
-  __int64 v3; // x1
-  ManagerConfig_c *v4; // x8
-  int v5; // w19
+  __int64 v4; // x1
+  ManagerConfig_c *v5; // x8
+  int v6; // w19
   int HEIGHT; // s9
-  UnityEngine_Rect_o safeArea; // 0:kr00_16.16
+  UnityEngine_Rect_o safeArea; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59722B0 & 1) == 0 )
   {
@@ -121,17 +122,18 @@ float FSUtility__CalculateNotchWidth(const MethodInfo *method)
   }
   safeArea = UnityEngine_Screen__get_safeArea(0);
   m_XMin = safeArea.fields.m_XMin;
+  m_Width = safeArea.fields.m_Width;
   width = UnityEngine_Screen__get_width(0);
-  v4 = ManagerConfig_TypeInfo;
-  v5 = width;
+  v5 = ManagerConfig_TypeInfo;
+  v6 = width;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v3);
-    v4 = ManagerConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v4);
+    v5 = ManagerConfig_TypeInfo;
   }
-  if ( safeArea.fields.m_XMin <= (float)((float)v5 - (float)(safeArea.fields.m_Width + safeArea.fields.m_XMin)) )
-    m_XMin = (float)v5 - (float)(safeArea.fields.m_Width + safeArea.fields.m_XMin);
-  HEIGHT = v4->static_fields->HEIGHT;
+  if ( m_XMin <= (float)((float)v6 - (float)(m_Width + m_XMin)) )
+    m_XMin = (float)v6 - (float)(m_Width + m_XMin);
+  HEIGHT = v5->static_fields->HEIGHT;
   return m_XMin * (float)((float)HEIGHT / (float)UnityEngine_Screen__get_height(0));
 }
 
@@ -148,6 +150,8 @@ UnityEngine_Vector2_o FSUtility__GetAddOffset(FSOffset_o *refOffset, int32_t cal
   const MethodInfo *v11; // x1
   float subMarginX; // s10
   float OffsetX; // s0
+  float v14; // s0
+  float v15; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_59722AD & 1) == 0 )
@@ -190,8 +194,10 @@ UnityEngine_Vector2_o FSUtility__GetAddOffset(FSOffset_o *refOffset, int32_t cal
         y = y + refOffset->fields.addBottomY;
     }
   }
-  result.fields.x = x;
-  result.fields.y = y;
+  v14 = x;
+  v15 = y;
+  result.fields.y = v15;
+  result.fields.x = v14;
   return result;
 }
 
@@ -363,14 +369,16 @@ float FSUtility__GetOffsetX(float subMarginX, int32_t calcNotch, const MethodInf
 float FSUtility__GetSafeAreaWidth(const MethodInfo *method)
 {
   float m_XMin; // s8
+  float m_Width; // s9
   float width; // s1
-  UnityEngine_Rect_o safeArea; // 0:kr00_16.16
+  UnityEngine_Rect_o safeArea; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   safeArea = UnityEngine_Screen__get_safeArea(0);
   m_XMin = safeArea.fields.m_XMin;
+  m_Width = safeArea.fields.m_Width;
   width = (float)UnityEngine_Screen__get_width(0);
-  if ( m_XMin <= (float)(width - (float)(safeArea.fields.m_Width + m_XMin)) )
-    m_XMin = width - (float)(safeArea.fields.m_Width + safeArea.fields.m_XMin);
+  if ( m_XMin <= (float)(width - (float)(m_Width + m_XMin)) )
+    m_XMin = width - (float)(m_Width + m_XMin);
   return (float)UnityEngine_Screen__get_width(0) - (float)(m_XMin + m_XMin);
 }
 
@@ -1025,7 +1033,7 @@ void FSUtility__ReadFSUtilityList(FSUtility_o *this, FSUtilityList_o *fsUtilityL
       }
       if ( !v37 )
         break;
-      this = *(FSUtility_o **)(*((_QWORD *)this + 23) + 40LL);
+      this = *(FSUtility_o **)&this[4].fields.m_CancellationTokenSource->fields._disposed;
       if ( !this )
         break;
       System_Collections_Generic_Dictionary_int__float___Add(

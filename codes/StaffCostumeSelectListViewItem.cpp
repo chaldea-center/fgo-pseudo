@@ -73,12 +73,14 @@ bool StaffCostumeSelectListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   struct StaffPhotoCostumeEntity_o *StaffPhotoCostumeEntity_k__BackingField; // x9
+  bool result; // w0
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
     sub_2213CDC(this, sort);
+  result = 1;
   this->fields.sortValue1 = StaffPhotoCostumeEntity_k__BackingField->fields.dispOrder;
-  return 1;
+  return result;
 }
 
 

@@ -1,12 +1,14 @@
 void UserItemListViewItemDraw___ctor(UserItemListViewItemDraw_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct System_Single_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
   if ( (byte_596B5FF & 1) == 0 )
   {
@@ -15,12 +17,11 @@ void UserItemListViewItemDraw___ctor(UserItemListViewItemDraw_o *this, const Met
     byte_596B5FF = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(float___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__422B3C7B2DE8568542AA18DEE65F4FCAC64982394C5ABCF41D2B33D3EBFE51FD,
-    0);
-  this->fields.enableTimePos = (struct System_Single_array *)v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.enableTimePos, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v4.fields.value = Field__PrivateImplementationDetails__422B3C7B2DE8568542AA18DEE65F4FCAC64982394C5ABCF41D2B33D3EBFE51FD;
+  v5 = (struct System_Single_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.enableTimePos = v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.enableTimePos, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 

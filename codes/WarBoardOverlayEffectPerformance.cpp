@@ -1051,8 +1051,8 @@ LABEL_29:
   this->fields.__2__current = 0;
   v19 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v19, 0, v2, v3, v4, v5, v6, v7);
-  *((_DWORD *)v19 - 2) = 1;
   LOBYTE(transform) = 1;
+  *((_DWORD *)v19 - 2) = 1;
   return (char)transform;
 }
 
@@ -1171,5 +1171,7 @@ System_String_o *WarBoardOverlayEffectPerformance___c___CheckSimpleAnimationEnd_
 LABEL_8:
     v7 = sub_224BC3C(state, SimpleAnimation_State_TypeInfo, 9);
   }
-  return (*(System_String_o *(__fastcall **)(SimpleAnimation_State_o *, _QWORD))v7)(state, *(_QWORD *)(v7 + 8));
+  return (System_String_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD))v7)(
+                              state,
+                              *(_QWORD *)(v7 + 8));
 }

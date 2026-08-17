@@ -151,10 +151,14 @@ UnityEngine_Vector2_o ScriptMessageWindow__get_DefaultWindowDispCenter(
         ScriptMessageWindow_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.defaultWindowDispCenter.fields.x;
-  result.fields.y = this->fields.defaultWindowDispCenter.fields.y;
+  x = this->fields.defaultWindowDispCenter.fields.x;
+  y = this->fields.defaultWindowDispCenter.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -163,10 +167,14 @@ UnityEngine_Vector2_o ScriptMessageWindow__get_DefaultWindowDispSize(
         ScriptMessageWindow_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.defaultWindowDispSize.fields.x;
-  result.fields.y = this->fields.defaultWindowDispSize.fields.y;
+  x = this->fields.defaultWindowDispSize.fields.x;
+  y = this->fields.defaultWindowDispSize.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

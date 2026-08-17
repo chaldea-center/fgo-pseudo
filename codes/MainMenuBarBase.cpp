@@ -394,7 +394,7 @@ void MainMenuBarBase__Awake(MainMenuBarBase_o *this, const MethodInfo *method)
   const MethodInfo *v249; // x1
   __int64 v250; // x0
   char v251; // [xsp+Ch] [xbp-84h]
-  UnityEngine_Vector3_o v252; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v253; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v254; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -600,10 +600,10 @@ LABEL_168:
       {
         if ( !v96 )
           goto LABEL_167;
-        v254.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v96, 0).fields.z;
-        v254.fields.x = (float)m_X;
-        v254.fields.y = (float)m_Y;
-        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)v96, v254, 0);
+        size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v96, 0);
+        size.fields.x = (float)m_X;
+        size.fields.y = (float)m_Y;
+        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)v96, size, 0);
       }
       v90 = *(_DWORD *)(v34 + 24);
       if ( (int)++v91 >= v90 )
@@ -977,10 +977,10 @@ LABEL_53:
     v201 = (UnityEngine_GameObject_o *)IsOpen;
     v202 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.summonBtn, 0);
     GameObjectExtensions__SafeSetParent_42897308(v201, v202, 0);
-    v252.fields.x = v20;
-    v252.fields.y = v21;
-    v252.fields.z = v26;
-    GameObjectExtensions__SetLocalPosition(v201, v252, 0);
+    v253.fields.x = v20;
+    v253.fields.y = v21;
+    v253.fields.z = v26;
+    GameObjectExtensions__SetLocalPosition(v201, v253, 0);
     if ( !v201 )
       goto LABEL_167;
     v203 = UnityEngine_GameObject__GetComponent_object_(
@@ -1017,10 +1017,10 @@ LABEL_53:
     v212 = (UnityEngine_GameObject_o *)IsOpen;
     v213 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.friendBtn, 0);
     GameObjectExtensions__SafeSetParent_42897308(v212, v213, 0);
-    v253.fields.x = v20;
-    v253.fields.y = v21;
-    v253.fields.z = v26;
-    GameObjectExtensions__SetLocalPosition(v212, v253, 0);
+    v254.fields.x = v20;
+    v254.fields.y = v21;
+    v254.fields.z = v26;
+    GameObjectExtensions__SetLocalPosition(v212, v254, 0);
     if ( !v212 )
       goto LABEL_167;
     v214 = UnityEngine_GameObject__GetComponent_object_(
@@ -1190,8 +1190,12 @@ LABEL_164:
 void MainMenuBarBase__BackActive(MainMenuBarBase_o *this, bool isOpen, const MethodInfo *method)
 {
   UnityEngine_Component_o *backCloseSprite; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s8
+  float z; // s9
+  float v8; // s1 OVERLAPPED
+  float v9; // s2
+  float v10; // s0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   backCloseSprite = (UnityEngine_Component_o *)this->fields.backCloseSprite;
   if ( !backCloseSprite )
@@ -1212,27 +1216,34 @@ void MainMenuBarBase__BackActive(MainMenuBarBase_o *this, bool isOpen, const Met
     goto LABEL_14;
   UIWidget__SetDirty((UIWidget_o *)backCloseSprite, 0);
   backCloseSprite = (UnityEngine_Component_o *)this->fields.backCloseSprite;
+  if ( !backCloseSprite )
+    goto LABEL_14;
+  UIWidget__SetDirty((UIWidget_o *)backCloseSprite, 0);
+  backCloseSprite = (UnityEngine_Component_o *)this->fields.menuGrid;
   if ( !backCloseSprite
-    || (UIWidget__SetDirty((UIWidget_o *)backCloseSprite, 0),
-        (backCloseSprite = (UnityEngine_Component_o *)this->fields.menuGrid) == 0)
     || (backCloseSprite = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
                                                        (UnityEngine_GameObject_o *)backCloseSprite,
                                                        0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)backCloseSprite, 0),
         (backCloseSprite = (UnityEngine_Component_o *)this->fields.menuGrid) == 0)
-    || (backCloseSprite = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
-                                                       (UnityEngine_GameObject_o *)backCloseSprite,
-                                                       0)) == 0 )
+    || (x = localPosition.fields.x,
+        z = localPosition.fields.z,
+        (backCloseSprite = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                        (UnityEngine_GameObject_o *)backCloseSprite,
+                                                        0)) == 0) )
   {
 LABEL_14:
     sub_2213CDC(backCloseSprite, isOpen);
   }
-  v8.fields.y = -33.0;
-  v8.fields.z = localPosition.fields.z;
+  v8 = -33.0;
+  v9 = z;
   if ( isOpen )
-    v8.fields.y = -6.0;
-  v8.fields.x = localPosition.fields.x;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)backCloseSprite, v8, 0);
+    v8 = -6.0;
+  v10 = x;
+  UnityEngine_Transform__set_localPosition(
+    (UnityEngine_Transform_o *)backCloseSprite,
+    *(UnityEngine_Vector3_o *)(&v8 - 1),
+    0);
 }
 
 
@@ -1399,6 +1410,7 @@ void MainMenuBarBase__FrameIn(MainMenuBarBase_o *this, bool is_force, const Meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MainMenuBarBase__FrameInOut(MainMenuBarBase_o *this, bool is_framein, bool is_force, const MethodInfo *method)
 {
   __int64 v7; // x20
@@ -1424,13 +1436,21 @@ void MainMenuBarBase__FrameInOut(MainMenuBarBase_o *this, bool is_framein, bool 
   bool v27; // w7
   float v28; // s9
   float IntpTime_AutoResume; // s9
-  MoveObject_o *v30; // x21
-  System_Action_o *v31; // x22
-  System_Action_o *v32; // x23
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v38; // 0:kr14_12.12
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v40; // 0:s3.4,4:s4.4,8:s5.4
+  float x; // s10
+  float z; // s11
+  float v32; // s12
+  float v33; // s13
+  MoveObject_o *v34; // x21
+  System_Action_o *v35; // x22
+  System_Action_o *v36; // x23
+  float v37; // s1 OVERLAPPED
+  float v38; // s0
+  float v39; // s2
+  float v40; // s3 OVERLAPPED
+  float v41; // s5
+  float v42; // s4
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FF43 & 1) == 0 )
   {
@@ -1479,35 +1499,48 @@ LABEL_29:
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9);
   IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(0.25, 0);
   LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v7 + 16), 0);
-  v38 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v7 + 16), 0);
-  v30 = *(MoveObject_o **)(v7 + 24);
-  v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-  System_Action___ctor(v31, (Il2CppObject *)v7, Method_MainMenuBarBase___c__DisplayClass179_0__FrameInOut_b__0__, 0);
-  v32 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-  System_Action___ctor(v32, (Il2CppObject *)v7, Method_MainMenuBarBase___c__DisplayClass179_0__FrameInOut_b__1__, 0);
-  if ( !v30 )
+  x = LocalPosition.fields.x;
+  z = LocalPosition.fields.z;
+  v44 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v7 + 16), 0);
+  v32 = v44.fields.x;
+  v33 = v44.fields.z;
+  v34 = *(MoveObject_o **)(v7 + 24);
+  v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v35, (Il2CppObject *)v7, Method_MainMenuBarBase___c__DisplayClass179_0__FrameInOut_b__0__, 0);
+  v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v36, (Il2CppObject *)v7, Method_MainMenuBarBase___c__DisplayClass179_0__FrameInOut_b__1__, 0);
+  if ( !v34 )
     goto LABEL_29;
-  v39.fields.y = -90.0;
+  v37 = -90.0;
   if ( is_framein )
-    v39.fields.x = v38.fields.x;
+    v38 = v32;
   else
-    v39.fields.x = LocalPosition.fields.x;
+    v38 = x;
   if ( is_framein )
-    v39.fields.z = v38.fields.z;
+    v39 = v33;
   else
-    v39.fields.z = LocalPosition.fields.z;
+    v39 = z;
   if ( is_framein )
-    v40.fields.x = LocalPosition.fields.x;
+    v40 = x;
   else
-    v40.fields.x = v38.fields.x;
+    v40 = v32;
   if ( is_framein )
-    v40.fields.z = LocalPosition.fields.z;
+    v41 = z;
   else
-    v40.fields.z = v38.fields.z;
-  v40.fields.y = v19;
+    v41 = v33;
+  v42 = v19;
   if ( !is_framein )
-    v39.fields.y = mFrameInPosY;
-  MoveObject__Play(v30, v39, v40, IntpTime_AutoResume, v31, v32, 0.0, 17, 0);
+    v37 = mFrameInPosY;
+  MoveObject__Play(
+    v34,
+    *(UnityEngine_Vector3_o *)(&v37 - 1),
+    *(UnityEngine_Vector3_o *)&v40,
+    IntpTime_AutoResume,
+    v35,
+    v36,
+    0.0,
+    17,
+    0);
 }
 
 
@@ -5674,37 +5707,39 @@ void MainMenuBarBase__Start(MainMenuBarBase_o *this, const MethodInfo *method)
 void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_play_se, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *menuComp; // x0
+  float x; // s9
+  float z; // s8
   UnityEngine_GameObject_o *gameObject; // x22
-  const MethodInfo *v9; // x2
+  const MethodInfo *v11; // x2
   struct System_Collections_Hashtable_o *table; // x23
-  struct System_Collections_Hashtable_o *v11; // x23
-  struct System_Collections_Hashtable_o *v12; // x23
   struct System_Collections_Hashtable_o *v13; // x23
   struct System_Collections_Hashtable_o *v14; // x23
-  __int64 v15; // x1
-  System_Collections_Hashtable_o *v16; // x23
-  const MethodInfo *v17; // x1
-  const MethodInfo *v18; // x1
+  struct System_Collections_Hashtable_o *v15; // x23
+  struct System_Collections_Hashtable_o *v16; // x23
+  __int64 v17; // x1
+  System_Collections_Hashtable_o *v18; // x23
   const MethodInfo *v19; // x1
   const MethodInfo *v20; // x1
   const MethodInfo *v21; // x1
-  float v22; // s10
-  struct System_Collections_Hashtable_o *v23; // x23
-  struct System_Collections_Hashtable_o *v24; // x23
+  const MethodInfo *v22; // x1
+  const MethodInfo *v23; // x1
+  float v24; // s10
   struct System_Collections_Hashtable_o *v25; // x23
   struct System_Collections_Hashtable_o *v26; // x23
   struct System_Collections_Hashtable_o *v27; // x23
-  __int64 v28; // x1
-  System_Collections_Hashtable_o *v29; // x21
-  _QWORD *v30; // x0
-  System_Reflection_MethodBase_o *v31; // x0
-  int32_t v32; // w1
-  int v33; // [xsp+Ch] [xbp-64h] BYREF
-  float x; // [xsp+10h] [xbp-60h] BYREF
-  int v35; // [xsp+14h] [xbp-5Ch]
-  float z; // [xsp+18h] [xbp-58h]
-  _BYTE v37[4]; // [xsp+1Ch] [xbp-54h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  struct System_Collections_Hashtable_o *v28; // x23
+  struct System_Collections_Hashtable_o *v29; // x23
+  __int64 v30; // x1
+  System_Collections_Hashtable_o *v31; // x21
+  _QWORD *v32; // x0
+  System_Reflection_MethodBase_o *v33; // x0
+  int32_t v34; // w1
+  int v35; // [xsp+Ch] [xbp-64h] BYREF
+  float v36; // [xsp+10h] [xbp-60h] BYREF
+  int v37; // [xsp+14h] [xbp-5Ch]
+  float v38; // [xsp+18h] [xbp-58h]
+  _BYTE v39[4]; // [xsp+1Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FF24 & 1) == 0 )
   {
@@ -5741,8 +5776,10 @@ void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_
     menuComp = this->fields.menuComp;
     if ( !menuComp )
       goto LABEL_47;
+    x = localPosition.fields.x;
+    z = localPosition.fields.z;
     gameObject = UnityEngine_GameObject__get_gameObject(menuComp, 0);
-    MainMenuBarBase__SetOutSideColliderEnable(this, 1, v9);
+    MainMenuBarBase__SetOutSideColliderEnable(this, 1, v11);
     menuComp = (UnityEngine_GameObject_o *)this->fields.mMenuNoticeNumber;
     if ( !menuComp )
       goto LABEL_47;
@@ -5756,8 +5793,8 @@ void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_
           menuComp,
           menuComp->klass[1].vtable._0_Equals.methodPtr);
         table = this->fields.table;
-        v37[0] = 1;
-        menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984328, v37);
+        v39[0] = 1;
+        menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984328, v39);
         if ( table )
         {
           ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))table->klass->vtable._22_Add.methodPtr)(
@@ -5765,18 +5802,18 @@ void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_
             StringLiteral_21946/*"isLocal"*/,
             menuComp,
             table->klass->vtable._22_Add.method);
-          v11 = this->fields.table;
-          x = localPosition.fields.x;
-          v35 = -1019674624;
-          z = localPosition.fields.z;
-          menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &x);
-          if ( v11 )
+          v13 = this->fields.table;
+          v36 = x;
+          v37 = -1019674624;
+          v38 = z;
+          menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v36);
+          if ( v13 )
           {
-            ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v11->klass->vtable._22_Add.methodPtr)(
-              v11,
+            ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v13->klass->vtable._22_Add.methodPtr)(
+              v13,
               StringLiteral_23916/*"position"*/,
               menuComp,
-              v11->klass->vtable._22_Add.method);
+              v13->klass->vtable._22_Add.method);
             menuComp = (UnityEngine_GameObject_o *)this->fields.table;
             if ( menuComp )
             {
@@ -5785,15 +5822,15 @@ void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_
                 StringLiteral_23570/*"onstart"*/,
                 StringLiteral_23610/*"openMenuStateImg"*/,
                 *(_QWORD *)&menuComp->klass[1]._2.interfaces_count);
-              v12 = this->fields.table;
+              v14 = this->fields.table;
               menuComp = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-              if ( v12 )
+              if ( v14 )
               {
-                ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v12->klass->vtable._22_Add.methodPtr)(
-                  v12,
+                ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v14->klass->vtable._22_Add.methodPtr)(
+                  v14,
                   StringLiteral_23572/*"onstarttarget"*/,
                   menuComp,
-                  v12->klass->vtable._22_Add.method);
+                  v14->klass->vtable._22_Add.method);
                 menuComp = (UnityEngine_GameObject_o *)this->fields.table;
                 if ( menuComp )
                 {
@@ -5802,15 +5839,15 @@ void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_
                     StringLiteral_23565/*"oncomplete"*/,
                     StringLiteral_23550/*"onMoveComplete"*/,
                     *(_QWORD *)&menuComp->klass[1]._2.interfaces_count);
-                  v13 = this->fields.table;
+                  v15 = this->fields.table;
                   menuComp = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-                  if ( v13 )
+                  if ( v15 )
                   {
-                    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v13->klass->vtable._22_Add.methodPtr)(
-                      v13,
+                    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v15->klass->vtable._22_Add.methodPtr)(
+                      v15,
                       StringLiteral_23567/*"oncompletetarget"*/,
                       menuComp,
-                      v13->klass->vtable._22_Add.method);
+                      v15->klass->vtable._22_Add.method);
                     menuComp = (UnityEngine_GameObject_o *)this->fields.table;
                     if ( menuComp )
                     {
@@ -5819,37 +5856,37 @@ void MainMenuBarBase__SwitchMenu(MainMenuBarBase_o *this, bool is_open, bool is_
                         StringLiteral_19609/*"easetype"*/,
                         StringLiteral_19594/*"easeInQuad"*/,
                         *(_QWORD *)&menuComp->klass[1]._2.interfaces_count);
-                      v14 = this->fields.table;
-                      v33 = 1024148374;
-                      menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984378, &v33);
-                      if ( v14 )
+                      v16 = this->fields.table;
+                      v35 = 1024148374;
+                      menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984378, &v35);
+                      if ( v16 )
                       {
-                        ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v14->klass->vtable._22_Add.methodPtr)(
-                          v14,
+                        ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v16->klass->vtable._22_Add.methodPtr)(
+                          v16,
                           StringLiteral_25366/*"time"*/,
                           menuComp,
-                          v14->klass->vtable._22_Add.method);
-                        v16 = this->fields.table;
+                          v16->klass->vtable._22_Add.method);
+                        v18 = this->fields.table;
                         if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
-                          j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v15);
-                        iTween__MoveTo_75293528(gameObject, v16, 0);
-                        MainMenuBarBase__ResetShopNotice(this, v17);
-                        MainMenuBarBase__ResetSummonNoticeDraw(this, v18);
-                        MainMenuBarBase__ResetExRoomIconAndNotice(this, v19);
-                        MainMenuBarBase__CheckTerminalButtonEnable(this, v20);
-                        MainMenuBarBase__CheckLatestScenarioButtonEnable(this, v21);
+                          j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v17);
+                        iTween__MoveTo_75293528(gameObject, v18, 0);
+                        MainMenuBarBase__ResetShopNotice(this, v19);
+                        MainMenuBarBase__ResetSummonNoticeDraw(this, v20);
+                        MainMenuBarBase__ResetExRoomIconAndNotice(this, v21);
+                        MainMenuBarBase__CheckTerminalButtonEnable(this, v22);
+                        MainMenuBarBase__CheckLatestScenarioButtonEnable(this, v23);
                         if ( !is_play_se )
                           return;
 LABEL_40:
-                        v30 = Method_MainMenuBarBase_SwitchMenu__;
+                        v32 = Method_MainMenuBarBase_SwitchMenu__;
                         if ( (*((_BYTE *)Method_MainMenuBarBase_SwitchMenu__ + 83) & 2) != 0 )
-                          v30 = (_QWORD *)sub_2213A78(Method_MainMenuBarBase_SwitchMenu__);
-                        v31 = (System_Reflection_MethodBase_o *)sub_2213A44(v30, v30[4]);
+                          v32 = (_QWORD *)sub_2213A78(Method_MainMenuBarBase_SwitchMenu__);
+                        v33 = (System_Reflection_MethodBase_o *)sub_2213A44(v32, v32[4]);
                         if ( is_open )
-                          v32 = 9;
+                          v34 = 9;
                         else
-                          v32 = 10;
-                        OverwriteAssetSoundName__PlaySystemSe(v31, v32, 0, 0);
+                          v34 = 10;
+                        OverwriteAssetSoundName__PlaySystemSe(v33, v34, 0, 0);
                         return;
                       }
                     }
@@ -5865,36 +5902,36 @@ LABEL_47:
     }
     menuComp = (UnityEngine_GameObject_o *)this->fields.table;
     if ( this->fields.mIsCloseHideMode )
-      v22 = -420.0;
+      v24 = -420.0;
     else
-      v22 = -328.0;
+      v24 = -328.0;
     if ( !menuComp )
       goto LABEL_47;
     (*(void (__fastcall **)(UnityEngine_GameObject_o *, Il2CppMethodPointer))&menuComp->klass[1]._2.naturalAligment)(
       menuComp,
       menuComp->klass[1].vtable._0_Equals.methodPtr);
-    v23 = this->fields.table;
-    v37[0] = 1;
-    menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984328, v37);
-    if ( !v23 )
+    v25 = this->fields.table;
+    v39[0] = 1;
+    menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984328, v39);
+    if ( !v25 )
       goto LABEL_47;
-    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v23->klass->vtable._22_Add.methodPtr)(
-      v23,
+    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v25->klass->vtable._22_Add.methodPtr)(
+      v25,
       StringLiteral_21946/*"isLocal"*/,
       menuComp,
-      v23->klass->vtable._22_Add.method);
-    v24 = this->fields.table;
-    x = localPosition.fields.x;
-    v35 = LODWORD(v22);
-    z = localPosition.fields.z;
-    menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &x);
-    if ( !v24 )
+      v25->klass->vtable._22_Add.method);
+    v26 = this->fields.table;
+    v36 = x;
+    v37 = LODWORD(v24);
+    v38 = z;
+    menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v36);
+    if ( !v26 )
       goto LABEL_47;
-    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v24->klass->vtable._22_Add.methodPtr)(
-      v24,
+    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v26->klass->vtable._22_Add.methodPtr)(
+      v26,
       StringLiteral_23916/*"position"*/,
       menuComp,
-      v24->klass->vtable._22_Add.method);
+      v26->klass->vtable._22_Add.method);
     menuComp = (UnityEngine_GameObject_o *)this->fields.table;
     if ( !menuComp )
       goto LABEL_47;
@@ -5903,15 +5940,15 @@ LABEL_47:
       StringLiteral_23570/*"onstart"*/,
       StringLiteral_18815/*"closeMenuStateImg"*/,
       *(_QWORD *)&menuComp->klass[1]._2.interfaces_count);
-    v25 = this->fields.table;
+    v27 = this->fields.table;
     menuComp = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !v25 )
+    if ( !v27 )
       goto LABEL_47;
-    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v25->klass->vtable._22_Add.methodPtr)(
-      v25,
+    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v27->klass->vtable._22_Add.methodPtr)(
+      v27,
       StringLiteral_23572/*"onstarttarget"*/,
       menuComp,
-      v25->klass->vtable._22_Add.method);
+      v27->klass->vtable._22_Add.method);
     menuComp = (UnityEngine_GameObject_o *)this->fields.table;
     if ( !menuComp )
       goto LABEL_47;
@@ -5920,15 +5957,15 @@ LABEL_47:
       StringLiteral_23565/*"oncomplete"*/,
       StringLiteral_23550/*"onMoveComplete"*/,
       *(_QWORD *)&menuComp->klass[1]._2.interfaces_count);
-    v26 = this->fields.table;
+    v28 = this->fields.table;
     menuComp = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !v26 )
+    if ( !v28 )
       goto LABEL_47;
-    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v26->klass->vtable._22_Add.methodPtr)(
-      v26,
+    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v28->klass->vtable._22_Add.methodPtr)(
+      v28,
       StringLiteral_23567/*"oncompletetarget"*/,
       menuComp,
-      v26->klass->vtable._22_Add.method);
+      v28->klass->vtable._22_Add.method);
     menuComp = (UnityEngine_GameObject_o *)this->fields.table;
     if ( !menuComp )
       goto LABEL_47;
@@ -5937,20 +5974,20 @@ LABEL_47:
       StringLiteral_19609/*"easetype"*/,
       StringLiteral_19594/*"easeInQuad"*/,
       *(_QWORD *)&menuComp->klass[1]._2.interfaces_count);
-    v27 = this->fields.table;
-    v33 = 1024148374;
-    menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984378, &v33);
-    if ( !v27 )
+    v29 = this->fields.table;
+    v35 = 1024148374;
+    menuComp = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(qword_5984378, &v35);
+    if ( !v29 )
       goto LABEL_47;
-    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v27->klass->vtable._22_Add.methodPtr)(
-      v27,
+    ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, UnityEngine_GameObject_o *, const MethodInfo *))v29->klass->vtable._22_Add.methodPtr)(
+      v29,
       StringLiteral_25366/*"time"*/,
       menuComp,
-      v27->klass->vtable._22_Add.method);
-    v29 = this->fields.table;
+      v29->klass->vtable._22_Add.method);
+    v31 = this->fields.table;
     if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v28);
-    iTween__MoveTo_75293528(gameObject, v29, 0);
+      j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v30);
+    iTween__MoveTo_75293528(gameObject, v31, 0);
     if ( is_play_se )
       goto LABEL_40;
   }

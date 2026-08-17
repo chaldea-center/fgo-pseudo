@@ -166,8 +166,11 @@ void BattleServantBuffIconComponent__SetEnableVisual(
   UnityEngine_Object_o *iconSprite; // x21
   __int64 v6; // x1
   UIWidget_o *v7; // x0
-  const MethodInfo *v9; // x1
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v8; // s0 OVERLAPPED
+  float v9; // s3
+  float v10; // s1
+  float v11; // s2
+  const MethodInfo *v12; // x1
 
   if ( (byte_597418E & 1) == 0 )
   {
@@ -182,13 +185,13 @@ void BattleServantBuffIconComponent__SetEnableVisual(
     v7 = (UIWidget_o *)this->fields.iconSprite;
     if ( !v7 )
       goto LABEL_11;
-    v10.fields.r = 0.5;
-    v10.fields.a = 1.0;
+    v8 = 0.5;
+    v9 = 1.0;
     if ( isEnable )
-      v10.fields.r = 1.0;
-    v10.fields.g = v10.fields.r;
-    v10.fields.b = v10.fields.r;
-    UIWidget__set_color(v7, v10, 0);
+      v8 = 1.0;
+    v10 = v8;
+    v11 = v8;
+    UIWidget__set_color(v7, *(UnityEngine_Color_o *)&v8, 0);
     v7 = (UIWidget_o *)this->fields.iconSprite;
     if ( !v7 )
 LABEL_11:
@@ -196,7 +199,7 @@ LABEL_11:
     ((void (__fastcall *)(UIWidget_o *, const MethodInfo *))v7->klass->vtable._30_MarkAsChanged.methodPtr)(
       v7,
       v7->klass->vtable._30_MarkAsChanged.method);
-    BattleServantBuffIconComponent__SyncBackgroundColorWithIcon(this, v9);
+    BattleServantBuffIconComponent__SyncBackgroundColorWithIcon(this, v12);
   }
 }
 

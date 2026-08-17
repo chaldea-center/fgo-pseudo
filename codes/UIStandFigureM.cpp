@@ -684,87 +684,100 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
   float v25; // s9
   float v26; // s10
   float v27; // s11
-  UIStandFigureM_o *v28; // x0
-  const MethodInfo *v29; // x3
-  int v30; // w26
-  System_String_o *v32; // x1
-  struct UnityEngine_Texture2D_array *v35; // x26
-  float v36; // s12
-  float v37; // s13
-  float v38; // s14
-  float v39; // s15
-  float v40; // s8
-  float v41; // s9
-  float v42; // s10
-  float v43; // s11
-  UIStandFigureM_o *v44; // x0
-  const MethodInfo *v45; // x3
-  int v46; // w25
-  System_String_o *v48; // x1
+  UnityEngine_Vector2Int_o faceTextureSize; // x2
+  UIStandFigureM_o *v29; // x0
+  const MethodInfo *v30; // x3
+  int v31; // w26
+  float v32; // s0 OVERLAPPED
+  float v33; // s1
+  System_String_o *v34; // x1
+  float v35; // s2
+  float v36; // s3
+  struct UnityEngine_Texture2D_array *v37; // x26
+  float v38; // s12
+  float v39; // s13
+  float v40; // s14
+  float v41; // s15
+  float v42; // s8
+  float v43; // s9
+  float v44; // s10
+  float v45; // s11
+  UnityEngine_Vector2Int_o v46; // x2
+  UIStandFigureM_o *v47; // x0
+  const MethodInfo *v48; // x3
+  int v49; // w25
+  float v50; // s0 OVERLAPPED
+  float v51; // s1
+  System_String_o *v52; // x1
+  float v53; // s2
+  float v54; // s3
   float x; // s8
-  float v52; // s9
-  int v53; // w25
+  float v56; // s9
+  int v57; // w25
   float y; // s10
-  float v55; // s11
-  int v56; // w0
-  int v57; // w23
-  UIStandFigureM_o *v58; // x8
-  int v59; // w21
-  int v60; // w21
+  float v59; // s11
+  int v60; // w0
+  int v61; // w23
+  UIStandFigureM_o *v62; // x8
+  int v63; // w21
   int v64; // w21
-  int v65; // w0
-  UnityEngine_Mesh_o *v66; // x21
-  __int64 v67; // x22
+  float v65; // s3
+  float v66; // s1
+  float v67; // s2
+  float v68; // s0 OVERLAPPED
+  int v69; // w21
+  int v70; // w0
+  UnityEngine_Mesh_o *v71; // x21
+  __int64 v72; // x22
   int32_t LeftX; // w23
   int32_t RightX; // w23
-  int32_t v70; // w23
-  int32_t v71; // w23
-  UIStandFigureM_o *v72; // x23
+  int32_t v75; // w23
+  int32_t v76; // w23
+  UIStandFigureM_o *v77; // x23
   unsigned int m_CancellationTokenSource; // w9
   float32x2_t *static_fields; // x10
-  float v75; // s1
-  float32x2_t *v76; // x10
-  float v77; // s1
-  float32x2_t *v78; // x10
-  int32_t v79; // s1
-  float32x2_t *v80; // x8
-  float v81; // s1
-  __int64 v82; // x24
+  float v80; // s1
+  float32x2_t *v81; // x10
+  float v82; // s1
+  float32x2_t *v83; // x10
+  int32_t v84; // s1
+  float32x2_t *v85; // x8
+  float v86; // s1
+  __int64 v87; // x24
   float BodyU; // s8
   float BodyV; // s0
-  float v85; // s8
+  float v90; // s8
   float BodyW; // s9
-  float v87; // s0
-  float v88; // s8
-  float v89; // s9
+  float v92; // s0
+  float v93; // s8
+  float v94; // s9
   float BodyH; // s0
-  float v91; // s8
-  float v92; // s9
-  float v93; // s10
-  float v94; // s0
-  __int64 v95; // x25
   float v96; // s8
-  float v97; // s0
-  float v98; // s8
-  float v99; // s9
-  float v100; // s0
+  float v97; // s9
+  float v98; // s10
+  float v99; // s0
+  __int64 v100; // x25
   float v101; // s8
-  float v102; // s9
-  float v103; // s0
-  float v104; // s8
-  float v105; // s9
-  float v106; // s10
-  float v107; // s0
-  System_Array_o *v108; // x22
-  UnityEngine_Vector3_o v109; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v110; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v111; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v112; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v113; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v114; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v115; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v116; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v102; // s0
+  float v103; // s8
+  float v104; // s9
+  float v105; // s0
+  float v106; // s8
+  float v107; // s9
+  float v108; // s0
+  float v109; // s8
+  float v110; // s9
+  float v111; // s10
+  float v112; // s0
+  System_Array_o *v113; // x0
+  System_RuntimeFieldHandle_o v114; // x1
+  System_Int32_array *v115; // x22
+  UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o v117; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v118; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v119; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v120; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v121; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v10 = this;
   if ( (byte_59721E7 & 1) == 0 )
@@ -874,25 +887,22 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
     (System_String_o *)StringLiteral_17012/*"_SubTex2"*/,
     (UnityEngine_Texture_o *)v19->m_Items[1],
     0);
-  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(
-                               v28,
-                               inFigure->fields.faceType,
-                               inFigure->fields.faceTextureSize,
-                               v29);
+  faceTextureSize = inFigure->fields.faceTextureSize;
+  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(v29, inFigure->fields.faceType, faceTextureSize, v30);
   if ( (unsigned int)this >= LODWORD(v19->max_length) )
     goto LABEL_100;
-  v30 = (int)this;
+  v31 = (int)this;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16859/*"_FaceTex2"*/,
     (UnityEngine_Texture_o *)v19->m_Items[(int)this],
     0);
-  if ( (unsigned int)(v30 + 1) >= LODWORD(v19->max_length) )
+  if ( (unsigned int)(v31 + 1) >= LODWORD(v19->max_length) )
     goto LABEL_100;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16847/*"_FaceAlphaTex2"*/,
-    (UnityEngine_Texture_o *)v19->m_Items[v30 + 1],
+    (UnityEngine_Texture_o *)v19->m_Items[v31 + 1],
     0);
   if ( isContinueSilhouette )
     UnityEngine_Material__SetColor(v18, (System_String_o *)StringLiteral_16871/*"_FilterColor"*/, v10->fields.filterColor, 0);
@@ -900,139 +910,136 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
   UnityEngine_Material__SetColor(v18, (System_String_o *)StringLiteral_16813/*"_Color"*/, v10->fields.mColor, 0);
   if ( inFigure->fields.faceType )
   {
-    v110.fields.x = m_XMin;
-    v110.fields.y = m_YMin;
-    v110.fields.z = m_Width;
-    v110.fields.w = m_Height;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v110, 0);
-    v111.fields.x = v24;
-    v111.fields.y = v25;
-    v32 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
-    v111.fields.z = v26;
-    v111.fields.w = v27;
+    v117.fields.x = m_XMin;
+    v117.fields.y = m_YMin;
+    v117.fields.z = m_Width;
+    v117.fields.w = m_Height;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v117, 0);
+    v32 = v24;
+    v33 = v25;
+    v34 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
+    v35 = v26;
+    v36 = v27;
   }
   else
   {
-    v112.fields.x = 0.0;
-    v112.fields.y = 0.0;
-    v112.fields.z = 0.0;
-    v112.fields.w = 0.0;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v112, 0);
-    v32 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
-    v111.fields.x = 0.0;
-    v111.fields.y = 0.0;
-    v111.fields.z = 0.0;
-    v111.fields.w = 0.0;
+    v118.fields.x = 0.0;
+    v118.fields.y = 0.0;
+    v118.fields.z = 0.0;
+    v118.fields.w = 0.0;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v118, 0);
+    v34 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
+    v32 = 0.0;
+    v33 = 0.0;
+    v35 = 0.0;
+    v36 = 0.0;
   }
-  UnityEngine_Material__SetVector(v18, v32, v111, 0);
-  v35 = outFigure->fields.textureList;
-  if ( !v35 )
+  UnityEngine_Material__SetVector(v18, v34, *(UnityEngine_Vector4_o *)&v32, 0);
+  v37 = outFigure->fields.textureList;
+  if ( !v37 )
     goto LABEL_101;
-  if ( !LODWORD(v35->max_length) )
+  if ( !LODWORD(v37->max_length) )
     goto LABEL_100;
-  v36 = outFigure->fields.faceTextureRect.fields.m_XMin;
-  v37 = outFigure->fields.faceTextureRect.fields.m_YMin;
-  v38 = outFigure->fields.faceTextureRect.fields.m_Width;
-  v39 = outFigure->fields.faceTextureRect.fields.m_Height;
-  v40 = outFigure->fields.faceRect.fields.m_XMin;
-  v41 = outFigure->fields.faceRect.fields.m_YMin;
-  v42 = outFigure->fields.faceRect.fields.m_Width;
-  v43 = outFigure->fields.faceRect.fields.m_Height;
+  v38 = outFigure->fields.faceTextureRect.fields.m_XMin;
+  v39 = outFigure->fields.faceTextureRect.fields.m_YMin;
+  v40 = outFigure->fields.faceTextureRect.fields.m_Width;
+  v41 = outFigure->fields.faceTextureRect.fields.m_Height;
+  v42 = outFigure->fields.faceRect.fields.m_XMin;
+  v43 = outFigure->fields.faceRect.fields.m_YMin;
+  v44 = outFigure->fields.faceRect.fields.m_Width;
+  v45 = outFigure->fields.faceRect.fields.m_Height;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[0],
+    (UnityEngine_Texture_o *)v37->m_Items[0],
     0);
-  if ( (v35->max_length & 0xFFFFFFFE) == 0 )
+  if ( (v37->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_100;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_17011/*"_SubTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[1],
+    (UnityEngine_Texture_o *)v37->m_Items[1],
     0);
-  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(
-                               v44,
-                               outFigure->fields.faceType,
-                               outFigure->fields.faceTextureSize,
-                               v45);
-  if ( (unsigned int)this >= LODWORD(v35->max_length) )
+  v46 = outFigure->fields.faceTextureSize;
+  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(v47, outFigure->fields.faceType, v46, v48);
+  if ( (unsigned int)this >= LODWORD(v37->max_length) )
     goto LABEL_100;
-  v46 = (int)this;
+  v49 = (int)this;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16858/*"_FaceTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[(int)this],
+    (UnityEngine_Texture_o *)v37->m_Items[(int)this],
     0);
-  if ( (unsigned int)(v46 + 1) >= LODWORD(v35->max_length) )
+  if ( (unsigned int)(v49 + 1) >= LODWORD(v37->max_length) )
     goto LABEL_100;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16846/*"_FaceAlphaTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[v46 + 1],
+    (UnityEngine_Texture_o *)v37->m_Items[v49 + 1],
     0);
   if ( outFigure->fields.faceType )
   {
-    v113.fields.x = v36;
-    v113.fields.y = v37;
-    v113.fields.z = v38;
-    v113.fields.w = v39;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v113, 0);
-    v114.fields.x = v40;
-    v114.fields.y = v41;
-    v48 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
-    v114.fields.z = v42;
-    v114.fields.w = v43;
+    v119.fields.x = v38;
+    v119.fields.y = v39;
+    v119.fields.z = v40;
+    v119.fields.w = v41;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v119, 0);
+    v50 = v42;
+    v51 = v43;
+    v52 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
+    v53 = v44;
+    v54 = v45;
   }
   else
   {
-    v115.fields.x = 0.0;
-    v115.fields.y = 0.0;
-    v115.fields.z = 0.0;
-    v115.fields.w = 0.0;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v115, 0);
-    v48 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
-    v114.fields.x = 0.0;
-    v114.fields.y = 0.0;
-    v114.fields.z = 0.0;
-    v114.fields.w = 0.0;
+    v120.fields.x = 0.0;
+    v120.fields.y = 0.0;
+    v120.fields.z = 0.0;
+    v120.fields.w = 0.0;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v120, 0);
+    v52 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
+    v50 = 0.0;
+    v51 = 0.0;
+    v53 = 0.0;
+    v54 = 0.0;
   }
-  UnityEngine_Material__SetVector(v18, v48, v114, 0);
+  UnityEngine_Material__SetVector(v18, v52, *(UnityEngine_Vector4_o *)&v50, 0);
   if ( !LODWORD(v19->max_length) )
     goto LABEL_100;
   this = (UIStandFigureM_o *)v19->m_Items[0];
   if ( !this )
     goto LABEL_101;
   x = outFigure->fields.dispOffset.fields.x;
-  v52 = inFigure->fields.dispOffset.fields.x;
+  v56 = inFigure->fields.dispOffset.fields.x;
   this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                this,
                                this->klass->vtable._4_get_isAnchoredHorizontally.method);
   if ( !LODWORD(v19->max_length) )
     goto LABEL_100;
-  v53 = (int)this;
+  v57 = (int)this;
   this = (UIStandFigureM_o *)v19->m_Items[0];
   if ( !this )
     goto LABEL_101;
   y = outFigure->fields.dispOffset.fields.y;
-  v55 = inFigure->fields.dispOffset.fields.y;
-  v56 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._6_get_canBeAnchored.methodPtr)(
+  v59 = inFigure->fields.dispOffset.fields.y;
+  v60 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._6_get_canBeAnchored.methodPtr)(
           this,
           this->klass->vtable._6_get_canBeAnchored.method);
-  v116.fields.w = 0.0;
-  v116.fields.x = (float)(x - v52) / (float)v53;
-  v116.fields.y = (float)(y - v55) / (float)v56;
-  v116.fields.z = 0.0;
-  UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16962/*"_PositionOffset"*/, v116, 0);
+  v121.fields.w = 0.0;
+  v121.fields.x = (float)(x - v56) / (float)v57;
+  v121.fields.y = (float)(y - v59) / (float)v60;
+  v121.fields.z = 0.0;
+  UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16962/*"_PositionOffset"*/, v121, 0);
   this = (UIStandFigureM_o *)v10->fields.bodyFilter;
   if ( !this )
     goto LABEL_101;
   this = (UIStandFigureM_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !this )
     goto LABEL_101;
-  v109.fields.z = 0.0;
-  v109.fields.y = outFigure->fields.dispOffset.fields.y;
-  v109.fields.x = outFigure->fields.dispOffset.fields.x;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v109, 0);
+  v116.fields.z = 0.0;
+  v116.fields.y = outFigure->fields.dispOffset.fields.y;
+  v116.fields.x = outFigure->fields.dispOffset.fields.x;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v116, 0);
   if ( v13 == v14 )
   {
     *(_WORD *)&v10->fields.isWide = *(_WORD *)&inFigure->fields.isWide;
@@ -1047,17 +1054,17 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( !LODWORD(v35->max_length) )
+    if ( !LODWORD(v37->max_length) )
       goto LABEL_100;
-    v57 = (int)this;
-    this = (UIStandFigureM_o *)v35->m_Items[0];
+    v61 = (int)this;
+    this = (UIStandFigureM_o *)v37->m_Items[0];
     if ( !this )
       goto LABEL_101;
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    v58 = v57 >= (int)this ? inFigure : outFigure;
-    *(_WORD *)&v10->fields.isWide = *(_WORD *)&v58->fields.isWide;
+    v62 = v61 >= (int)this ? inFigure : outFigure;
+    *(_WORD *)&v10->fields.isWide = *(_WORD *)&v62->fields.isWide;
     if ( !LODWORD(v19->max_length) )
       goto LABEL_100;
     this = (UIStandFigureM_o *)v19->m_Items[0];
@@ -1066,20 +1073,20 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( !LODWORD(v35->max_length) )
+    if ( !LODWORD(v37->max_length) )
       goto LABEL_100;
-    v59 = (int)this;
-    this = (UIStandFigureM_o *)v35->m_Items[0];
+    v63 = (int)this;
+    this = (UIStandFigureM_o *)v37->m_Items[0];
     if ( !this )
       goto LABEL_101;
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( v59 >= (int)this )
+    if ( v63 >= (int)this )
     {
-      if ( !LODWORD(v35->max_length) )
+      if ( !LODWORD(v37->max_length) )
         goto LABEL_100;
-      this = (UIStandFigureM_o *)v35->m_Items[0];
+      this = (UIStandFigureM_o *)v37->m_Items[0];
       if ( !this )
         goto LABEL_101;
       this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
@@ -1087,17 +1094,17 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
                                    this->klass->vtable._4_get_isAnchoredHorizontally.method);
       if ( !LODWORD(v19->max_length) )
         goto LABEL_100;
-      v64 = (int)this;
+      v69 = (int)this;
       this = (UIStandFigureM_o *)v19->m_Items[0];
       if ( !this )
         goto LABEL_101;
-      v65 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
+      v70 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
               this,
               this->klass->vtable._4_get_isAnchoredHorizontally.method);
-      v117.fields.z = 0.0;
-      v117.fields.w = 1.0;
-      v117.fields.y = (float)v64 / (float)v65;
-      v117.fields.x = v117.fields.y * 0.5;
+      v67 = 0.0;
+      v65 = 1.0;
+      v66 = (float)v69 / (float)v70;
+      v68 = v66 * 0.5;
     }
     else
     {
@@ -1109,172 +1116,171 @@ void UIStandFigureM__SetCrossFadeCharacterSimpleMesh(
       this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                    this,
                                    this->klass->vtable._4_get_isAnchoredHorizontally.method);
-      if ( !LODWORD(v35->max_length) )
+      if ( !LODWORD(v37->max_length) )
         goto LABEL_100;
-      v60 = (int)this;
-      this = (UIStandFigureM_o *)v35->m_Items[0];
+      v64 = (int)this;
+      this = (UIStandFigureM_o *)v37->m_Items[0];
       if ( !this )
         goto LABEL_101;
-      v117.fields.w = (float)v60
-                    / (float)((int (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
-                               this,
-                               this->klass->vtable._4_get_isAnchoredHorizontally.method);
-      v117.fields.y = 1.0;
-      v117.fields.z = v117.fields.w * 0.5;
-      v117.fields.x = 0.0;
+      v65 = (float)v64
+          / (float)((int (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
+                     this,
+                     this->klass->vtable._4_get_isAnchoredHorizontally.method);
+      v66 = 1.0;
+      v67 = v65 * 0.5;
+      v68 = 0.0;
     }
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_17058/*"_UvRangeX"*/, v117, 0);
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_17058/*"_UvRangeX"*/, *(UnityEngine_Vector4_o *)&v68, 0);
   }
-  v66 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
-  UnityEngine_Mesh___ctor(v66, 0);
-  v67 = sub_2213B20(UnityEngine_Vector3___TypeInfo, 4);
+  v71 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
+  UnityEngine_Mesh___ctor(v71, 0);
+  v72 = sub_2213B20(UnityEngine_Vector3___TypeInfo, 4);
   LeftX = UIStandFigureRender__get_LeftX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_TopY((UIStandFigureRender_o *)v10, 0);
-  if ( !v67 )
+  if ( !v72 )
     goto LABEL_101;
-  if ( !*(_DWORD *)(v67 + 24) )
+  if ( !*(_DWORD *)(v72 + 24) )
     goto LABEL_100;
-  *(_DWORD *)(v67 + 40) = 0;
-  *(float *)(v67 + 32) = (float)LeftX;
-  *(float *)(v67 + 36) = (float)(int)this;
+  *(_DWORD *)(v72 + 40) = 0;
+  *(float *)(v72 + 32) = (float)LeftX;
+  *(float *)(v72 + 36) = (float)(int)this;
   RightX = UIStandFigureRender__get_RightX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_TopY((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v67 + 24) & 0xFFFFFFFE) == 0 )
+  if ( (*(_DWORD *)(v72 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_100;
-  *(_DWORD *)(v67 + 52) = 0;
-  *(float *)(v67 + 44) = (float)RightX;
-  *(float *)(v67 + 48) = (float)(int)this;
-  v70 = UIStandFigureRender__get_LeftX((UIStandFigureRender_o *)v10, 0);
+  *(_DWORD *)(v72 + 52) = 0;
+  *(float *)(v72 + 44) = (float)RightX;
+  *(float *)(v72 + 48) = (float)(int)this;
+  v75 = UIStandFigureRender__get_LeftX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_BottomY((UIStandFigureRender_o *)v10, 0);
-  if ( *(_DWORD *)(v67 + 24) <= 2u
-    || (*(_DWORD *)(v67 + 64) = 0,
-        *(float *)(v67 + 56) = (float)v70,
-        *(float *)(v67 + 60) = (float)(int)this,
-        v71 = UIStandFigureRender__get_RightX((UIStandFigureRender_o *)v10, 0),
+  if ( *(_DWORD *)(v72 + 24) <= 2u
+    || (*(_DWORD *)(v72 + 64) = 0,
+        *(float *)(v72 + 56) = (float)v75,
+        *(float *)(v72 + 60) = (float)(int)this,
+        v76 = UIStandFigureRender__get_RightX((UIStandFigureRender_o *)v10, 0),
         this = (UIStandFigureM_o *)UIStandFigureRender__get_BottomY((UIStandFigureRender_o *)v10, 0),
-        (*(_DWORD *)(v67 + 24) & 0xFFFFFFFC) == 0) )
+        (*(_DWORD *)(v72 + 24) & 0xFFFFFFFC) == 0) )
   {
 LABEL_100:
     sub_2213CE4(this);
   }
-  *(_DWORD *)(v67 + 76) = 0;
-  *(float *)(v67 + 68) = (float)v71;
-  *(float *)(v67 + 72) = (float)(int)this;
+  *(_DWORD *)(v72 + 76) = 0;
+  *(float *)(v72 + 68) = (float)v76;
+  *(float *)(v72 + 72) = (float)(int)this;
   this = (UIStandFigureM_o *)sub_2213B20(UnityEngine_Vector3___TypeInfo, 4);
-  v72 = this;
+  v77 = this;
   if ( !byte_5969AE9 )
   {
     this = (UIStandFigureM_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE9 = 1;
   }
-  if ( !v72 )
+  if ( !v77 )
 LABEL_101:
     sub_2213CDC(this, inFigure);
-  m_CancellationTokenSource = (unsigned int)v72->fields.m_CancellationTokenSource;
+  m_CancellationTokenSource = (unsigned int)v77->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource )
     goto LABEL_100;
   static_fields = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v75 = -static_fields[10].n64_f32[0];
-  v72->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(static_fields[9]).n64_u64[0];
-  *(float *)&v72->fields.rightAnchor = v75;
+  v80 = -static_fields[10].n64_f32[0];
+  v77->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(static_fields[9]).n64_u64[0];
+  *(float *)&v77->fields.rightAnchor = v80;
   if ( (m_CancellationTokenSource & 0xFFFFFFFE) == 0 )
     goto LABEL_100;
-  v76 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v77 = -v76[10].n64_f32[0];
-  *(float32x2_t *)((char *)&v72->fields.rightAnchor + 4) = vneg_f32(v76[9]);
-  *((float *)&v72->fields.bottomAnchor + 1) = v77;
+  v81 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v82 = -v81[10].n64_f32[0];
+  *(float32x2_t *)((char *)&v77->fields.rightAnchor + 4) = vneg_f32(v81[9]);
+  *((float *)&v77->fields.bottomAnchor + 1) = v82;
   if ( m_CancellationTokenSource <= 2 )
     goto LABEL_100;
-  v78 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  *(float *)&v79 = -v78[10].n64_f32[0];
-  v72->fields.topAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(v78[9]).n64_u64[0];
-  v72->fields.updateAnchors = v79;
+  v83 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  *(float *)&v84 = -v83[10].n64_f32[0];
+  v77->fields.topAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(v83[9]).n64_u64[0];
+  v77->fields.updateAnchors = v84;
   if ( (m_CancellationTokenSource & 0xFFFFFFFC) == 0 )
     goto LABEL_100;
-  v80 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v81 = -v80[10].n64_f32[0];
-  *(float32x2_t *)(&v72->fields.updateAnchors + 1) = vneg_f32(v80[9]);
-  *((float *)&v72->fields.mGo + 1) = v81;
-  v82 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 4);
+  v85 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v86 = -v85[10].n64_f32[0];
+  *(float32x2_t *)(&v77->fields.updateAnchors + 1) = vneg_f32(v85[9]);
+  *((float *)&v77->fields.mGo + 1) = v86;
+  v87 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 4);
   BodyU = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
   BodyV = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( !v82 )
+  if ( !v87 )
     goto LABEL_101;
-  if ( !*(_DWORD *)(v82 + 24) )
+  if ( !*(_DWORD *)(v87 + 24) )
     goto LABEL_100;
-  *(float *)(v82 + 32) = BodyU;
-  *(float *)(v82 + 36) = BodyV;
-  v85 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  *(float *)(v87 + 32) = BodyU;
+  *(float *)(v87 + 36) = BodyV;
+  v90 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
   BodyW = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v87 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v82 + 24) & 0xFFFFFFFE) == 0 )
+  v92 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  if ( (*(_DWORD *)(v87 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_100;
-  *(float *)(v82 + 40) = v85 + BodyW;
-  *(float *)(v82 + 44) = v87;
-  v88 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v89 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  *(float *)(v87 + 40) = v90 + BodyW;
+  *(float *)(v87 + 44) = v92;
+  v93 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v94 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
   BodyH = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  if ( *(_DWORD *)(v82 + 24) <= 2u )
+  if ( *(_DWORD *)(v87 + 24) <= 2u )
     goto LABEL_100;
-  *(float *)(v82 + 48) = v88;
-  *(float *)(v82 + 52) = v89 - BodyH;
-  v91 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v92 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v93 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  v94 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v82 + 24) & 0xFFFFFFFC) == 0 )
-    goto LABEL_100;
-  *(float *)(v82 + 56) = v91 + v92;
-  *(float *)(v82 + 60) = v93 - v94;
-  v95 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 4);
+  *(float *)(v87 + 48) = v93;
+  *(float *)(v87 + 52) = v94 - BodyH;
   v96 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v97 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( !v95 )
-    goto LABEL_101;
-  if ( !*(_DWORD *)(v95 + 24) )
+  v97 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
+  v98 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  v99 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
+  if ( (*(_DWORD *)(v87 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_100;
-  *(float *)(v95 + 32) = v96;
-  *(float *)(v95 + 36) = v97;
-  v98 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v99 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v100 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v95 + 24) & 0xFFFFFFFE) == 0 )
-    goto LABEL_100;
-  *(float *)(v95 + 40) = v98 + v99;
-  *(float *)(v95 + 44) = v100;
+  *(float *)(v87 + 56) = v96 + v97;
+  *(float *)(v87 + 60) = v98 - v99;
+  v100 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 4);
   v101 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
   v102 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  v103 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  if ( *(_DWORD *)(v95 + 24) <= 2u )
-    goto LABEL_100;
-  *(float *)(v95 + 48) = v101;
-  *(float *)(v95 + 52) = v102 - v103;
-  v104 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v105 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v106 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  v107 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v95 + 24) & 0xFFFFFFFC) == 0 )
-    goto LABEL_100;
-  *(float *)(v95 + 56) = v104 + v105;
-  *(float *)(v95 + 60) = v106 - v107;
-  if ( !v66 )
+  if ( !v100 )
     goto LABEL_101;
-  UnityEngine_Mesh__set_vertices(v66, (UnityEngine_Vector3_array *)v67, 0);
-  UnityEngine_Mesh__set_normals(v66, (UnityEngine_Vector3_array *)v72, 0);
-  UnityEngine_Mesh__set_uv(v66, (UnityEngine_Vector2_array *)v82, 0);
-  UnityEngine_Mesh__set_uv2(v66, (UnityEngine_Vector2_array *)v95, 0);
-  v108 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v108,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__17561EE993D63D39DEA46FA556F169AC25EA9094105A6E8EB18EACBD66ACD57E,
-    0);
-  UnityEngine_Mesh__set_triangles(v66, (System_Int32_array *)v108, 0);
-  UnityEngine_Mesh__RecalculateNormals(v66, 0);
-  UnityEngine_Mesh__RecalculateBounds(v66, 0);
+  if ( !*(_DWORD *)(v100 + 24) )
+    goto LABEL_100;
+  *(float *)(v100 + 32) = v101;
+  *(float *)(v100 + 36) = v102;
+  v103 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v104 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
+  v105 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  if ( (*(_DWORD *)(v100 + 24) & 0xFFFFFFFE) == 0 )
+    goto LABEL_100;
+  *(float *)(v100 + 40) = v103 + v104;
+  *(float *)(v100 + 44) = v105;
+  v106 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v107 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  v108 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
+  if ( *(_DWORD *)(v100 + 24) <= 2u )
+    goto LABEL_100;
+  *(float *)(v100 + 48) = v106;
+  *(float *)(v100 + 52) = v107 - v108;
+  v109 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v110 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
+  v111 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  v112 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
+  if ( (*(_DWORD *)(v100 + 24) & 0xFFFFFFFC) == 0 )
+    goto LABEL_100;
+  *(float *)(v100 + 56) = v109 + v110;
+  *(float *)(v100 + 60) = v111 - v112;
+  if ( !v71 )
+    goto LABEL_101;
+  UnityEngine_Mesh__set_vertices(v71, (UnityEngine_Vector3_array *)v72, 0);
+  UnityEngine_Mesh__set_normals(v71, (UnityEngine_Vector3_array *)v77, 0);
+  UnityEngine_Mesh__set_uv(v71, (UnityEngine_Vector2_array *)v87, 0);
+  UnityEngine_Mesh__set_uv2(v71, (UnityEngine_Vector2_array *)v100, 0);
+  v113 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
+  v114.fields.value = Field__PrivateImplementationDetails__17561EE993D63D39DEA46FA556F169AC25EA9094105A6E8EB18EACBD66ACD57E;
+  v115 = (System_Int32_array *)v113;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v113, v114, 0);
+  UnityEngine_Mesh__set_triangles(v71, v115, 0);
+  UnityEngine_Mesh__RecalculateNormals(v71, 0);
+  UnityEngine_Mesh__RecalculateBounds(v71, 0);
   this = (UIStandFigureM_o *)v10->fields.bodyFilter;
   if ( !this )
     goto LABEL_101;
-  UnityEngine_MeshFilter__set_mesh((UnityEngine_MeshFilter_o *)this, v66, 0);
+  UnityEngine_MeshFilter__set_mesh((UnityEngine_MeshFilter_o *)this, v71, 0);
   this = (UIStandFigureM_o *)v10->fields.bodyFilter;
   if ( !this )
     goto LABEL_101;
@@ -1331,125 +1337,138 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
   float v25; // s9
   float v26; // s10
   float v27; // s11
-  UIStandFigureM_o *v28; // x0
-  const MethodInfo *v29; // x3
-  int v30; // w26
-  System_String_o *v32; // x1
-  struct UnityEngine_Texture2D_array *v35; // x26
-  float v36; // s12
-  float v37; // s13
-  float v38; // s14
-  float v39; // s15
-  float v40; // s8
-  float v41; // s9
-  float v42; // s10
-  float v43; // s11
-  UIStandFigureM_o *v44; // x0
-  const MethodInfo *v45; // x3
-  int v46; // w25
-  System_String_o *v48; // x1
+  UnityEngine_Vector2Int_o faceTextureSize; // x2
+  UIStandFigureM_o *v29; // x0
+  const MethodInfo *v30; // x3
+  int v31; // w26
+  float v32; // s0 OVERLAPPED
+  float v33; // s1
+  System_String_o *v34; // x1
+  float v35; // s2
+  float v36; // s3
+  struct UnityEngine_Texture2D_array *v37; // x26
+  float v38; // s12
+  float v39; // s13
+  float v40; // s14
+  float v41; // s15
+  float v42; // s8
+  float v43; // s9
+  float v44; // s10
+  float v45; // s11
+  UnityEngine_Vector2Int_o v46; // x2
+  UIStandFigureM_o *v47; // x0
+  const MethodInfo *v48; // x3
+  int v49; // w25
+  float v50; // s0 OVERLAPPED
+  float v51; // s1
+  System_String_o *v52; // x1
+  float v53; // s2
+  float v54; // s3
   float x; // s8
-  float v52; // s9
-  int v53; // w25
+  float v56; // s9
+  int v57; // w25
   float y; // s10
-  float v55; // s11
-  int v56; // w0
-  int v57; // w23
-  int v58; // w22
-  int v59; // w22
+  float v59; // s11
+  int v60; // w0
+  int v61; // w23
+  int v62; // w22
   int v63; // w22
-  int v64; // w0
-  UnityEngine_Mesh_o *v65; // x22
-  __int64 v66; // x23
+  float v64; // s3
+  float v65; // s1
+  float v66; // s2
+  float v67; // s0 OVERLAPPED
+  int v68; // w22
+  int v69; // w0
+  UnityEngine_Mesh_o *v70; // x22
+  __int64 v71; // x23
   int32_t LeftX; // w24
   int32_t RightX; // w24
-  int32_t v69; // w24
-  int32_t v70; // w24
-  unsigned int v71; // w8
-  float v72; // s0
-  float v73; // s1
-  float32x2_t v74; // d0
-  float32x2_t v75; // d1
-  __int64 v76; // d0
+  int32_t v74; // w24
+  int32_t v75; // w24
+  unsigned int v76; // w8
   float v77; // s0
   float v78; // s1
-  float v79; // s0
-  float v80; // s1
-  float32x2_t v81; // d0
-  float32x2_t v82; // d1
-  __int64 v83; // d0
+  float32x2_t v79; // d0
+  float32x2_t v80; // d1
+  __int64 v81; // d0
+  float v82; // s0
+  float v83; // s1
   float v84; // s0
   float v85; // s1
-  UIStandFigureM_o *v86; // x24
+  float32x2_t v86; // d0
+  float32x2_t v87; // d1
+  __int64 v88; // d0
+  float v89; // s0
+  float v90; // s1
+  UIStandFigureM_o *v91; // x24
   unsigned int m_CancellationTokenSource; // w9
   float32x2_t *static_fields; // x10
-  float v89; // s1
-  float32x2_t *v90; // x10
-  float v91; // s1
-  float32x2_t *v92; // x10
-  int32_t v93; // s1
-  float32x2_t *v94; // x10
-  float v95; // s1
-  float32x2_t *v96; // x10
-  float v97; // s1
-  float32x2_t *v98; // x10
-  int32_t v99; // s1
-  float32x2_t *v100; // x10
-  float v101; // s1
-  float32x2_t *v102; // x10
-  float v103; // s1
-  float32x2_t *v104; // x10
-  float v105; // s1
-  float32x2_t *v106; // x10
-  float v107; // s1
-  float32x2_t *v108; // x10
-  float v109; // s1
-  float32x2_t *v110; // x8
-  int32_t v111; // s1
-  __int64 v112; // x25
+  float v94; // s1
+  float32x2_t *v95; // x10
+  float v96; // s1
+  float32x2_t *v97; // x10
+  int32_t v98; // s1
+  float32x2_t *v99; // x10
+  float v100; // s1
+  float32x2_t *v101; // x10
+  float v102; // s1
+  float32x2_t *v103; // x10
+  int32_t v104; // s1
+  float32x2_t *v105; // x10
+  float v106; // s1
+  float32x2_t *v107; // x10
+  float v108; // s1
+  float32x2_t *v109; // x10
+  float v110; // s1
+  float32x2_t *v111; // x10
+  float v112; // s1
+  float32x2_t *v113; // x10
+  float v114; // s1
+  float32x2_t *v115; // x8
+  int32_t v116; // s1
+  __int64 v117; // x25
   float BodyU; // s8
   float BodyV; // s0
-  float v115; // s8
+  float v120; // s8
   float BodyW; // s9
-  float v117; // s0
-  float v118; // s8
-  float v119; // s9
+  float v122; // s0
+  float v123; // s8
+  float v124; // s9
   float BodyH; // s0
-  float v121; // s8
-  float v122; // s9
-  float v123; // s10
-  float v124; // s0
-  unsigned int v125; // w8
-  float v126; // s0
-  float v127; // s1
-  __int64 v128; // x26
-  float v129; // s8
-  float v130; // s0
-  float v131; // s8
-  float v132; // s9
-  float v133; // s0
+  float v126; // s8
+  float v127; // s9
+  float v128; // s10
+  float v129; // s0
+  unsigned int v130; // w8
+  float v131; // s0
+  float v132; // s1
+  __int64 v133; // x26
   float v134; // s8
-  float v135; // s9
-  float v136; // s0
-  float v137; // s8
-  float v138; // s9
-  float v139; // s10
-  float v140; // s0
-  unsigned int v141; // w8
-  float v142; // s0
-  float v143; // s1
-  float v144; // s0
-  float v145; // s1
-  System_Array_o *v146; // x20
-  UnityEngine_Vector3_o v147; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v148; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v149; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v150; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v151; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v152; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v153; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v154; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v135; // s0
+  float v136; // s8
+  float v137; // s9
+  float v138; // s0
+  float v139; // s8
+  float v140; // s9
+  float v141; // s0
+  float v142; // s8
+  float v143; // s9
+  float v144; // s10
+  float v145; // s0
+  unsigned int v146; // w8
+  float v147; // s0
+  float v148; // s1
+  float v149; // s0
+  float v150; // s1
+  System_Array_o *v151; // x0
+  System_RuntimeFieldHandle_o v152; // x1
+  System_Int32_array *v153; // x20
+  UnityEngine_Vector3_o v154; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o v155; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v156; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v157; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v158; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v159; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v9 = inFigure;
   v10 = this;
@@ -1560,25 +1579,22 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
     (System_String_o *)StringLiteral_17012/*"_SubTex2"*/,
     (UnityEngine_Texture_o *)v19->m_Items[1],
     0);
-  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(
-                               v28,
-                               v9->fields.faceType,
-                               v9->fields.faceTextureSize,
-                               v29);
+  faceTextureSize = v9->fields.faceTextureSize;
+  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(v29, v9->fields.faceType, faceTextureSize, v30);
   if ( (unsigned int)this >= LODWORD(v19->max_length) )
     goto LABEL_131;
-  v30 = (int)this;
+  v31 = (int)this;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16859/*"_FaceTex2"*/,
     (UnityEngine_Texture_o *)v19->m_Items[(int)this],
     0);
-  if ( (unsigned int)(v30 + 1) >= LODWORD(v19->max_length) )
+  if ( (unsigned int)(v31 + 1) >= LODWORD(v19->max_length) )
     goto LABEL_131;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16847/*"_FaceAlphaTex2"*/,
-    (UnityEngine_Texture_o *)v19->m_Items[v30 + 1],
+    (UnityEngine_Texture_o *)v19->m_Items[v31 + 1],
     0);
   if ( isContinueSilhouette )
     UnityEngine_Material__SetColor(v18, (System_String_o *)StringLiteral_16871/*"_FilterColor"*/, v10->fields.filterColor, 0);
@@ -1586,139 +1602,136 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
   UnityEngine_Material__SetColor(v18, (System_String_o *)StringLiteral_16813/*"_Color"*/, v10->fields.mColor, 0);
   if ( v9->fields.faceType )
   {
-    v148.fields.x = m_XMin;
-    v148.fields.y = m_YMin;
-    v148.fields.z = m_Width;
-    v148.fields.w = m_Height;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v148, 0);
-    v149.fields.x = v24;
-    v149.fields.y = v25;
-    v32 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
-    v149.fields.z = v26;
-    v149.fields.w = v27;
+    v155.fields.x = m_XMin;
+    v155.fields.y = m_YMin;
+    v155.fields.z = m_Width;
+    v155.fields.w = m_Height;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v155, 0);
+    v32 = v24;
+    v33 = v25;
+    v34 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
+    v35 = v26;
+    v36 = v27;
   }
   else
   {
-    v150.fields.x = 0.0;
-    v150.fields.y = 0.0;
-    v150.fields.z = 0.0;
-    v150.fields.w = 0.0;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v150, 0);
-    v32 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
-    v149.fields.x = 0.0;
-    v149.fields.y = 0.0;
-    v149.fields.z = 0.0;
-    v149.fields.w = 0.0;
+    v156.fields.x = 0.0;
+    v156.fields.y = 0.0;
+    v156.fields.z = 0.0;
+    v156.fields.w = 0.0;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16851/*"_FaceInfo2"*/, v156, 0);
+    v34 = (System_String_o *)StringLiteral_16861/*"_FaceTexOffset2"*/;
+    v32 = 0.0;
+    v33 = 0.0;
+    v35 = 0.0;
+    v36 = 0.0;
   }
-  UnityEngine_Material__SetVector(v18, v32, v149, 0);
-  v35 = outFigure->fields.textureList;
-  if ( !v35 )
+  UnityEngine_Material__SetVector(v18, v34, *(UnityEngine_Vector4_o *)&v32, 0);
+  v37 = outFigure->fields.textureList;
+  if ( !v37 )
     goto LABEL_132;
-  if ( !LODWORD(v35->max_length) )
+  if ( !LODWORD(v37->max_length) )
     goto LABEL_131;
-  v36 = outFigure->fields.faceTextureRect.fields.m_XMin;
-  v37 = outFigure->fields.faceTextureRect.fields.m_YMin;
-  v38 = outFigure->fields.faceTextureRect.fields.m_Width;
-  v39 = outFigure->fields.faceTextureRect.fields.m_Height;
-  v40 = outFigure->fields.faceRect.fields.m_XMin;
-  v41 = outFigure->fields.faceRect.fields.m_YMin;
-  v42 = outFigure->fields.faceRect.fields.m_Width;
-  v43 = outFigure->fields.faceRect.fields.m_Height;
+  v38 = outFigure->fields.faceTextureRect.fields.m_XMin;
+  v39 = outFigure->fields.faceTextureRect.fields.m_YMin;
+  v40 = outFigure->fields.faceTextureRect.fields.m_Width;
+  v41 = outFigure->fields.faceTextureRect.fields.m_Height;
+  v42 = outFigure->fields.faceRect.fields.m_XMin;
+  v43 = outFigure->fields.faceRect.fields.m_YMin;
+  v44 = outFigure->fields.faceRect.fields.m_Width;
+  v45 = outFigure->fields.faceRect.fields.m_Height;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[0],
+    (UnityEngine_Texture_o *)v37->m_Items[0],
     0);
-  if ( (v35->max_length & 0xFFFFFFFE) == 0 )
+  if ( (v37->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_131;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_17011/*"_SubTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[1],
+    (UnityEngine_Texture_o *)v37->m_Items[1],
     0);
-  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(
-                               v44,
-                               outFigure->fields.faceType,
-                               outFigure->fields.faceTextureSize,
-                               v45);
-  if ( (unsigned int)this >= LODWORD(v35->max_length) )
+  v46 = outFigure->fields.faceTextureSize;
+  this = (UIStandFigureM_o *)UIStandFigureM__GetTexturePosition(v47, outFigure->fields.faceType, v46, v48);
+  if ( (unsigned int)this >= LODWORD(v37->max_length) )
     goto LABEL_131;
-  v46 = (int)this;
+  v49 = (int)this;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16858/*"_FaceTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[(int)this],
+    (UnityEngine_Texture_o *)v37->m_Items[(int)this],
     0);
-  if ( (unsigned int)(v46 + 1) >= LODWORD(v35->max_length) )
+  if ( (unsigned int)(v49 + 1) >= LODWORD(v37->max_length) )
     goto LABEL_131;
   UnityEngine_Material__SetTexture(
     v18,
     (System_String_o *)StringLiteral_16846/*"_FaceAlphaTex"*/,
-    (UnityEngine_Texture_o *)v35->m_Items[v46 + 1],
+    (UnityEngine_Texture_o *)v37->m_Items[v49 + 1],
     0);
   if ( outFigure->fields.faceType )
   {
-    v151.fields.x = v36;
-    v151.fields.y = v37;
-    v151.fields.z = v38;
-    v151.fields.w = v39;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v151, 0);
-    v152.fields.x = v40;
-    v152.fields.y = v41;
-    v48 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
-    v152.fields.z = v42;
-    v152.fields.w = v43;
+    v157.fields.x = v38;
+    v157.fields.y = v39;
+    v157.fields.z = v40;
+    v157.fields.w = v41;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v157, 0);
+    v50 = v42;
+    v51 = v43;
+    v52 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
+    v53 = v44;
+    v54 = v45;
   }
   else
   {
-    v153.fields.x = 0.0;
-    v153.fields.y = 0.0;
-    v153.fields.z = 0.0;
-    v153.fields.w = 0.0;
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v153, 0);
-    v48 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
-    v152.fields.x = 0.0;
-    v152.fields.y = 0.0;
-    v152.fields.z = 0.0;
-    v152.fields.w = 0.0;
+    v158.fields.x = 0.0;
+    v158.fields.y = 0.0;
+    v158.fields.z = 0.0;
+    v158.fields.w = 0.0;
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/, v158, 0);
+    v52 = (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/;
+    v50 = 0.0;
+    v51 = 0.0;
+    v53 = 0.0;
+    v54 = 0.0;
   }
-  UnityEngine_Material__SetVector(v18, v48, v152, 0);
+  UnityEngine_Material__SetVector(v18, v52, *(UnityEngine_Vector4_o *)&v50, 0);
   if ( !LODWORD(v19->max_length) )
     goto LABEL_131;
   this = (UIStandFigureM_o *)v19->m_Items[0];
   if ( !this )
     goto LABEL_132;
   x = outFigure->fields.dispOffset.fields.x;
-  v52 = v9->fields.dispOffset.fields.x;
+  v56 = v9->fields.dispOffset.fields.x;
   this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                this,
                                this->klass->vtable._4_get_isAnchoredHorizontally.method);
   if ( !LODWORD(v19->max_length) )
     goto LABEL_131;
-  v53 = (int)this;
+  v57 = (int)this;
   this = (UIStandFigureM_o *)v19->m_Items[0];
   if ( !this )
     goto LABEL_132;
   y = outFigure->fields.dispOffset.fields.y;
-  v55 = v9->fields.dispOffset.fields.y;
-  v56 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._6_get_canBeAnchored.methodPtr)(
+  v59 = v9->fields.dispOffset.fields.y;
+  v60 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._6_get_canBeAnchored.methodPtr)(
           this,
           this->klass->vtable._6_get_canBeAnchored.method);
-  v154.fields.w = 0.0;
-  v154.fields.x = (float)(x - v52) / (float)v53;
-  v154.fields.y = (float)(y - v55) / (float)v56;
-  v154.fields.z = 0.0;
-  UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16962/*"_PositionOffset"*/, v154, 0);
+  v159.fields.w = 0.0;
+  v159.fields.x = (float)(x - v56) / (float)v57;
+  v159.fields.y = (float)(y - v59) / (float)v60;
+  v159.fields.z = 0.0;
+  UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_16962/*"_PositionOffset"*/, v159, 0);
   this = (UIStandFigureM_o *)v10->fields.bodyFilter;
   if ( !this )
     goto LABEL_132;
   this = (UIStandFigureM_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !this )
     goto LABEL_132;
-  v147.fields.z = 0.0;
-  v147.fields.y = outFigure->fields.dispOffset.fields.y;
-  v147.fields.x = outFigure->fields.dispOffset.fields.x;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v147, 0);
+  v154.fields.z = 0.0;
+  v154.fields.y = outFigure->fields.dispOffset.fields.y;
+  v154.fields.x = outFigure->fields.dispOffset.fields.x;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v154, 0);
   if ( v13 == v14 )
   {
     *(_WORD *)&v10->fields.isWide = *(_WORD *)&v9->fields.isWide;
@@ -1733,16 +1746,16 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( !LODWORD(v35->max_length) )
+    if ( !LODWORD(v37->max_length) )
       goto LABEL_131;
-    v57 = (int)this;
-    this = (UIStandFigureM_o *)v35->m_Items[0];
+    v61 = (int)this;
+    this = (UIStandFigureM_o *)v37->m_Items[0];
     if ( !this )
       goto LABEL_132;
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( v57 < (int)this )
+    if ( v61 < (int)this )
       v9 = outFigure;
     *(_WORD *)&v10->fields.isWide = *(_WORD *)&v9->fields.isWide;
     if ( !LODWORD(v19->max_length) )
@@ -1753,20 +1766,20 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( !LODWORD(v35->max_length) )
+    if ( !LODWORD(v37->max_length) )
       goto LABEL_131;
-    v58 = (int)this;
-    this = (UIStandFigureM_o *)v35->m_Items[0];
+    v62 = (int)this;
+    this = (UIStandFigureM_o *)v37->m_Items[0];
     if ( !this )
       goto LABEL_132;
     this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                  this,
                                  this->klass->vtable._4_get_isAnchoredHorizontally.method);
-    if ( v58 >= (int)this )
+    if ( v62 >= (int)this )
     {
-      if ( !LODWORD(v35->max_length) )
+      if ( !LODWORD(v37->max_length) )
         goto LABEL_131;
-      this = (UIStandFigureM_o *)v35->m_Items[0];
+      this = (UIStandFigureM_o *)v37->m_Items[0];
       if ( !this )
         goto LABEL_132;
       this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
@@ -1774,17 +1787,17 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
                                    this->klass->vtable._4_get_isAnchoredHorizontally.method);
       if ( !LODWORD(v19->max_length) )
         goto LABEL_131;
-      v63 = (int)this;
+      v68 = (int)this;
       this = (UIStandFigureM_o *)v19->m_Items[0];
       if ( !this )
         goto LABEL_132;
-      v64 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
+      v69 = ((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
               this,
               this->klass->vtable._4_get_isAnchoredHorizontally.method);
-      v155.fields.z = 0.0;
-      v155.fields.w = 1.0;
-      v155.fields.y = (float)v63 / (float)v64;
-      v155.fields.x = v155.fields.y * 0.5;
+      v66 = 0.0;
+      v64 = 1.0;
+      v65 = (float)v68 / (float)v69;
+      v67 = v65 * 0.5;
     }
     else
     {
@@ -1796,338 +1809,337 @@ void UIStandFigureM__SetCrossFadeCharacterUseWithFaceMesh(
       this = (UIStandFigureM_o *)((__int64 (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
                                    this,
                                    this->klass->vtable._4_get_isAnchoredHorizontally.method);
-      if ( !LODWORD(v35->max_length) )
+      if ( !LODWORD(v37->max_length) )
         goto LABEL_131;
-      v59 = (int)this;
-      this = (UIStandFigureM_o *)v35->m_Items[0];
+      v63 = (int)this;
+      this = (UIStandFigureM_o *)v37->m_Items[0];
       if ( !this )
         goto LABEL_132;
-      v155.fields.w = (float)v59
-                    / (float)((int (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
-                               this,
-                               this->klass->vtable._4_get_isAnchoredHorizontally.method);
-      v155.fields.y = 1.0;
-      v155.fields.z = v155.fields.w * 0.5;
-      v155.fields.x = 0.0;
+      v64 = (float)v63
+          / (float)((int (__fastcall *)(UIStandFigureM_o *, const MethodInfo *))this->klass->vtable._4_get_isAnchoredHorizontally.methodPtr)(
+                     this,
+                     this->klass->vtable._4_get_isAnchoredHorizontally.method);
+      v65 = 1.0;
+      v66 = v64 * 0.5;
+      v67 = 0.0;
     }
-    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_17058/*"_UvRangeX"*/, v155, 0);
+    UnityEngine_Material__SetVector(v18, (System_String_o *)StringLiteral_17058/*"_UvRangeX"*/, *(UnityEngine_Vector4_o *)&v67, 0);
   }
-  v65 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
-  UnityEngine_Mesh___ctor(v65, 0);
-  v66 = sub_2213B20(UnityEngine_Vector3___TypeInfo, 12);
+  v70 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
+  UnityEngine_Mesh___ctor(v70, 0);
+  v71 = sub_2213B20(UnityEngine_Vector3___TypeInfo, 12);
   LeftX = UIStandFigureRender__get_LeftX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_TopY((UIStandFigureRender_o *)v10, 0);
-  if ( !v66 )
+  if ( !v71 )
     goto LABEL_132;
-  if ( !*(_DWORD *)(v66 + 24) )
+  if ( !*(_DWORD *)(v71 + 24) )
     goto LABEL_131;
-  *(_DWORD *)(v66 + 40) = 0;
-  *(float *)(v66 + 32) = (float)LeftX;
-  *(float *)(v66 + 36) = (float)(int)this;
+  *(_DWORD *)(v71 + 40) = 0;
+  *(float *)(v71 + 32) = (float)LeftX;
+  *(float *)(v71 + 36) = (float)(int)this;
   RightX = UIStandFigureRender__get_RightX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_TopY((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v66 + 24) & 0xFFFFFFFE) == 0 )
+  if ( (*(_DWORD *)(v71 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_131;
-  *(_DWORD *)(v66 + 52) = 0;
-  *(float *)(v66 + 44) = (float)RightX;
-  *(float *)(v66 + 48) = (float)(int)this;
-  v69 = UIStandFigureRender__get_LeftX((UIStandFigureRender_o *)v10, 0);
+  *(_DWORD *)(v71 + 52) = 0;
+  *(float *)(v71 + 44) = (float)RightX;
+  *(float *)(v71 + 48) = (float)(int)this;
+  v74 = UIStandFigureRender__get_LeftX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_BottomY((UIStandFigureRender_o *)v10, 0);
-  if ( *(_DWORD *)(v66 + 24) <= 2u )
+  if ( *(_DWORD *)(v71 + 24) <= 2u )
     goto LABEL_131;
-  *(_DWORD *)(v66 + 64) = 0;
-  *(float *)(v66 + 56) = (float)v69;
-  *(float *)(v66 + 60) = (float)(int)this;
-  v70 = UIStandFigureRender__get_RightX((UIStandFigureRender_o *)v10, 0);
+  *(_DWORD *)(v71 + 64) = 0;
+  *(float *)(v71 + 56) = (float)v74;
+  *(float *)(v71 + 60) = (float)(int)this;
+  v75 = UIStandFigureRender__get_RightX((UIStandFigureRender_o *)v10, 0);
   this = (UIStandFigureM_o *)UIStandFigureRender__get_BottomY((UIStandFigureRender_o *)v10, 0);
-  v71 = *(_DWORD *)(v66 + 24);
-  if ( v71 <= 3 )
+  v76 = *(_DWORD *)(v71 + 24);
+  if ( v76 <= 3 )
     goto LABEL_131;
-  *(_DWORD *)(v66 + 76) = 0;
-  *(float *)(v66 + 68) = (float)v70;
-  *(float *)(v66 + 72) = (float)(int)this;
-  if ( v71 == 4 )
+  *(_DWORD *)(v71 + 76) = 0;
+  *(float *)(v71 + 68) = (float)v75;
+  *(float *)(v71 + 72) = (float)(int)this;
+  if ( v76 == 4 )
     goto LABEL_131;
-  v72 = v9->fields.facePositionRect.fields.m_Height + v9->fields.facePositionRect.fields.m_YMin;
-  v73 = v9->fields.facePositionRect.fields.m_XMin;
-  *(_DWORD *)(v66 + 88) = 0;
-  *(float *)(v66 + 80) = v73;
-  *(float *)(v66 + 84) = v72;
-  if ( v71 <= 5 )
+  v77 = v9->fields.facePositionRect.fields.m_Height + v9->fields.facePositionRect.fields.m_YMin;
+  v78 = v9->fields.facePositionRect.fields.m_XMin;
+  *(_DWORD *)(v71 + 88) = 0;
+  *(float *)(v71 + 80) = v78;
+  *(float *)(v71 + 84) = v77;
+  if ( v76 <= 5 )
     goto LABEL_131;
-  v74.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_Width;
-  v75.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_XMin;
-  *(_DWORD *)(v66 + 100) = 0;
-  *(float32x2_t *)(v66 + 92) = vadd_f32(v74, v75);
-  if ( v71 == 6 )
+  v79.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_Width;
+  v80.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_XMin;
+  *(_DWORD *)(v71 + 100) = 0;
+  *(float32x2_t *)(v71 + 92) = vadd_f32(v79, v80);
+  if ( v76 == 6 )
     goto LABEL_131;
-  v76 = *(_QWORD *)&v9->fields.facePositionRect.fields.m_XMin;
-  *(_DWORD *)(v66 + 112) = 0;
-  *(_QWORD *)(v66 + 104) = v76;
-  if ( v71 <= 7 )
+  v81 = *(_QWORD *)&v9->fields.facePositionRect.fields.m_XMin;
+  *(_DWORD *)(v71 + 112) = 0;
+  *(_QWORD *)(v71 + 104) = v81;
+  if ( v76 <= 7 )
     goto LABEL_131;
-  v77 = v9->fields.facePositionRect.fields.m_Width + v9->fields.facePositionRect.fields.m_XMin;
-  v78 = v9->fields.facePositionRect.fields.m_YMin;
-  *(_DWORD *)(v66 + 124) = 0;
-  *(float *)(v66 + 116) = v77;
-  *(float *)(v66 + 120) = v78;
-  if ( v71 == 8 )
+  v82 = v9->fields.facePositionRect.fields.m_Width + v9->fields.facePositionRect.fields.m_XMin;
+  v83 = v9->fields.facePositionRect.fields.m_YMin;
+  *(_DWORD *)(v71 + 124) = 0;
+  *(float *)(v71 + 116) = v82;
+  *(float *)(v71 + 120) = v83;
+  if ( v76 == 8 )
     goto LABEL_131;
-  v79 = v9->fields.facePositionRect.fields.m_Height + v9->fields.facePositionRect.fields.m_YMin;
-  v80 = v9->fields.facePositionRect.fields.m_XMin;
-  *(_DWORD *)(v66 + 136) = 0;
-  *(float *)(v66 + 128) = v80;
-  *(float *)(v66 + 132) = v79;
-  if ( v71 <= 9
-    || (v81.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_Width,
-        v82.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_XMin,
-        *(_DWORD *)(v66 + 148) = 0,
-        *(float32x2_t *)(v66 + 140) = vadd_f32(v81, v82),
-        v71 == 10)
-    || (v83 = *(_QWORD *)&v9->fields.facePositionRect.fields.m_XMin,
-        *(_DWORD *)(v66 + 160) = 0,
-        *(_QWORD *)(v66 + 152) = v83,
-        v71 <= 0xB) )
+  v84 = v9->fields.facePositionRect.fields.m_Height + v9->fields.facePositionRect.fields.m_YMin;
+  v85 = v9->fields.facePositionRect.fields.m_XMin;
+  *(_DWORD *)(v71 + 136) = 0;
+  *(float *)(v71 + 128) = v85;
+  *(float *)(v71 + 132) = v84;
+  if ( v76 <= 9
+    || (v86.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_Width,
+        v87.n64_u64[0] = *(unsigned __int64 *)&v9->fields.facePositionRect.fields.m_XMin,
+        *(_DWORD *)(v71 + 148) = 0,
+        *(float32x2_t *)(v71 + 140) = vadd_f32(v86, v87),
+        v76 == 10)
+    || (v88 = *(_QWORD *)&v9->fields.facePositionRect.fields.m_XMin,
+        *(_DWORD *)(v71 + 160) = 0,
+        *(_QWORD *)(v71 + 152) = v88,
+        v76 <= 0xB) )
   {
 LABEL_131:
     sub_2213CE4(this);
   }
-  v84 = v9->fields.facePositionRect.fields.m_Width + v9->fields.facePositionRect.fields.m_XMin;
-  v85 = v9->fields.facePositionRect.fields.m_YMin;
-  *(_DWORD *)(v66 + 172) = 0;
-  *(float *)(v66 + 164) = v84;
-  *(float *)(v66 + 168) = v85;
+  v89 = v9->fields.facePositionRect.fields.m_Width + v9->fields.facePositionRect.fields.m_XMin;
+  v90 = v9->fields.facePositionRect.fields.m_YMin;
+  *(_DWORD *)(v71 + 172) = 0;
+  *(float *)(v71 + 164) = v89;
+  *(float *)(v71 + 168) = v90;
   this = (UIStandFigureM_o *)sub_2213B20(UnityEngine_Vector3___TypeInfo, 12);
-  v86 = this;
+  v91 = this;
   if ( !byte_5969AE9 )
   {
     this = (UIStandFigureM_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE9 = 1;
   }
-  if ( !v86 )
+  if ( !v91 )
 LABEL_132:
     sub_2213CDC(this, inFigure);
-  m_CancellationTokenSource = (unsigned int)v86->fields.m_CancellationTokenSource;
+  m_CancellationTokenSource = (unsigned int)v91->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource )
     goto LABEL_131;
   static_fields = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v89 = -static_fields[10].n64_f32[0];
-  v86->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(static_fields[9]).n64_u64[0];
-  *(float *)&v86->fields.rightAnchor = v89;
+  v94 = -static_fields[10].n64_f32[0];
+  v91->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(static_fields[9]).n64_u64[0];
+  *(float *)&v91->fields.rightAnchor = v94;
   if ( (m_CancellationTokenSource & 0xFFFFFFFE) == 0 )
     goto LABEL_131;
-  v90 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v91 = -v90[10].n64_f32[0];
-  *(float32x2_t *)((char *)&v86->fields.rightAnchor + 4) = vneg_f32(v90[9]);
-  *((float *)&v86->fields.bottomAnchor + 1) = v91;
+  v95 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v96 = -v95[10].n64_f32[0];
+  *(float32x2_t *)((char *)&v91->fields.rightAnchor + 4) = vneg_f32(v95[9]);
+  *((float *)&v91->fields.bottomAnchor + 1) = v96;
   if ( m_CancellationTokenSource <= 2 )
     goto LABEL_131;
-  v92 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  *(float *)&v93 = -v92[10].n64_f32[0];
-  v86->fields.topAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(v92[9]).n64_u64[0];
-  v86->fields.updateAnchors = v93;
+  v97 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  *(float *)&v98 = -v97[10].n64_f32[0];
+  v91->fields.topAnchor = (struct UIRect_AnchorPoint_o *)vneg_f32(v97[9]).n64_u64[0];
+  v91->fields.updateAnchors = v98;
   if ( (m_CancellationTokenSource & 0xFFFFFFFC) == 0 )
     goto LABEL_131;
-  v94 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v95 = -v94[10].n64_f32[0];
-  *(float32x2_t *)(&v86->fields.updateAnchors + 1) = vneg_f32(v94[9]);
-  *((float *)&v86->fields.mGo + 1) = v95;
+  v99 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v100 = -v99[10].n64_f32[0];
+  *(float32x2_t *)(&v91->fields.updateAnchors + 1) = vneg_f32(v99[9]);
+  *((float *)&v91->fields.mGo + 1) = v100;
   if ( m_CancellationTokenSource <= 4 )
     goto LABEL_131;
-  v96 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v97 = -v96[10].n64_f32[0];
-  v86->fields.mTrans = (struct UnityEngine_Transform_o *)vneg_f32(v96[9]).n64_u64[0];
-  *(float *)&v86->fields.mChildren = v97;
+  v101 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v102 = -v101[10].n64_f32[0];
+  v91->fields.mTrans = (struct UnityEngine_Transform_o *)vneg_f32(v101[9]).n64_u64[0];
+  *(float *)&v91->fields.mChildren = v102;
   if ( m_CancellationTokenSource == 5 )
     goto LABEL_131;
-  v98 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  *(float *)&v99 = -v98[10].n64_f32[0];
-  *(float32x2_t *)((char *)&v86->fields.mChildren + 4) = vneg_f32(v98[9]);
-  v86->fields.mUpdateFrame = v99;
+  v103 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  *(float *)&v104 = -v103[10].n64_f32[0];
+  *(float32x2_t *)((char *)&v91->fields.mChildren + 4) = vneg_f32(v103[9]);
+  v91->fields.mUpdateFrame = v104;
   if ( m_CancellationTokenSource <= 6 )
     goto LABEL_131;
-  v100 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v101 = -v100[10].n64_f32[0];
-  *(float32x2_t *)&v86->fields.mAnchorsCached = vneg_f32(v100[9]);
-  *(float *)&v86->fields.mRoot = v101;
+  v105 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v106 = -v105[10].n64_f32[0];
+  *(float32x2_t *)&v91->fields.mAnchorsCached = vneg_f32(v105[9]);
+  *(float *)&v91->fields.mRoot = v106;
   if ( (m_CancellationTokenSource & 0xFFFFFFF8) == 0 )
     goto LABEL_131;
-  v102 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v103 = -v102[10].n64_f32[0];
-  *(float32x2_t *)((char *)&v86->fields.mRoot + 4) = vneg_f32(v102[9]);
-  *((float *)&v86->fields.mParent + 1) = v103;
+  v107 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v108 = -v107[10].n64_f32[0];
+  *(float32x2_t *)((char *)&v91->fields.mRoot + 4) = vneg_f32(v107[9]);
+  *((float *)&v91->fields.mParent + 1) = v108;
   if ( m_CancellationTokenSource <= 8 )
     goto LABEL_131;
-  v104 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v105 = -v104[10].n64_f32[0];
-  *(float32x2_t *)&v86->fields.mRootSet = vneg_f32(v104[9]);
-  *(float *)&v86->fields.mCam = v105;
+  v109 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v110 = -v109[10].n64_f32[0];
+  *(float32x2_t *)&v91->fields.mRootSet = vneg_f32(v109[9]);
+  *(float *)&v91->fields.mCam = v110;
   if ( m_CancellationTokenSource == 9 )
     goto LABEL_131;
-  v106 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v107 = -v106[10].n64_f32[0];
-  *(float32x2_t *)((char *)&v86->fields.mCam + 4) = vneg_f32(v106[9]);
-  v86->fields.mColor.fields.r = v107;
+  v111 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v112 = -v111[10].n64_f32[0];
+  *(float32x2_t *)((char *)&v91->fields.mCam + 4) = vneg_f32(v111[9]);
+  v91->fields.mColor.fields.r = v112;
   if ( m_CancellationTokenSource <= 0xA )
     goto LABEL_131;
-  v108 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v109 = -v108[10].n64_f32[0];
-  *(float32x2_t *)&v86->fields.mColor.fields.g = vneg_f32(v108[9]);
-  v86->fields.mColor.fields.a = v109;
+  v113 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  v114 = -v113[10].n64_f32[0];
+  *(float32x2_t *)&v91->fields.mColor.fields.g = vneg_f32(v113[9]);
+  v91->fields.mColor.fields.a = v114;
   if ( m_CancellationTokenSource == 11 )
     goto LABEL_131;
-  v110 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  *(float *)&v111 = -v110[10].n64_f32[0];
-  *(float32x2_t *)&v86->fields.mPivot = vneg_f32(v110[9]);
-  v86->fields.mHeight = v111;
-  v112 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 12);
+  v115 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
+  *(float *)&v116 = -v115[10].n64_f32[0];
+  *(float32x2_t *)&v91->fields.mPivot = vneg_f32(v115[9]);
+  v91->fields.mHeight = v116;
+  v117 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 12);
   BodyU = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
   BodyV = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( !v112 )
+  if ( !v117 )
     goto LABEL_132;
-  if ( !*(_DWORD *)(v112 + 24) )
+  if ( !*(_DWORD *)(v117 + 24) )
     goto LABEL_131;
-  *(float *)(v112 + 32) = BodyU;
-  *(float *)(v112 + 36) = BodyV;
-  v115 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  *(float *)(v117 + 32) = BodyU;
+  *(float *)(v117 + 36) = BodyV;
+  v120 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
   BodyW = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v117 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v112 + 24) & 0xFFFFFFFE) == 0 )
+  v122 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  if ( (*(_DWORD *)(v117 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_131;
-  *(float *)(v112 + 40) = v115 + BodyW;
-  *(float *)(v112 + 44) = v117;
-  v118 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v119 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  *(float *)(v117 + 40) = v120 + BodyW;
+  *(float *)(v117 + 44) = v122;
+  v123 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v124 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
   BodyH = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  if ( *(_DWORD *)(v112 + 24) <= 2u )
+  if ( *(_DWORD *)(v117 + 24) <= 2u )
     goto LABEL_131;
-  *(float *)(v112 + 48) = v118;
-  *(float *)(v112 + 52) = v119 - BodyH;
-  v121 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v122 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v123 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  v124 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  v125 = *(_DWORD *)(v112 + 24);
-  if ( v125 <= 3 )
+  *(float *)(v117 + 48) = v123;
+  *(float *)(v117 + 52) = v124 - BodyH;
+  v126 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v127 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
+  v128 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  v129 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
+  v130 = *(_DWORD *)(v117 + 24);
+  if ( v130 <= 3 )
     goto LABEL_131;
-  *(float *)(v112 + 56) = v121 + v122;
-  *(float *)(v112 + 60) = v123 - v124;
-  if ( v125 == 4 )
+  *(float *)(v117 + 56) = v126 + v127;
+  *(float *)(v117 + 60) = v128 - v129;
+  if ( v130 == 4 )
     goto LABEL_131;
-  v126 = v9->fields.faceTextureRect.fields.m_Height + v9->fields.faceTextureRect.fields.m_YMin;
-  *(float *)(v112 + 64) = v9->fields.faceTextureRect.fields.m_XMin;
-  *(float *)(v112 + 68) = v126;
-  if ( v125 <= 5 )
+  v131 = v9->fields.faceTextureRect.fields.m_Height + v9->fields.faceTextureRect.fields.m_YMin;
+  *(float *)(v117 + 64) = v9->fields.faceTextureRect.fields.m_XMin;
+  *(float *)(v117 + 68) = v131;
+  if ( v130 <= 5 )
     goto LABEL_131;
-  *(float32x2_t *)(v112 + 72) = vadd_f32(
+  *(float32x2_t *)(v117 + 72) = vadd_f32(
                                   *(float32x2_t *)&v9->fields.faceTextureRect.fields.m_Width,
                                   *(float32x2_t *)&v9->fields.faceTextureRect.fields.m_XMin);
-  if ( v125 == 6 )
+  if ( v130 == 6 )
     goto LABEL_131;
-  *(_QWORD *)(v112 + 80) = *(_QWORD *)&v9->fields.faceTextureRect.fields.m_XMin;
-  if ( v125 <= 7 )
+  *(_QWORD *)(v117 + 80) = *(_QWORD *)&v9->fields.faceTextureRect.fields.m_XMin;
+  if ( v130 <= 7 )
     goto LABEL_131;
-  v127 = v9->fields.faceTextureRect.fields.m_YMin;
-  *(float *)(v112 + 88) = v9->fields.faceTextureRect.fields.m_Width + v9->fields.faceTextureRect.fields.m_XMin;
-  *(float *)(v112 + 92) = v127;
-  if ( v125 == 8 )
+  v132 = v9->fields.faceTextureRect.fields.m_YMin;
+  *(float *)(v117 + 88) = v9->fields.faceTextureRect.fields.m_Width + v9->fields.faceTextureRect.fields.m_XMin;
+  *(float *)(v117 + 92) = v132;
+  if ( v130 == 8 )
     goto LABEL_131;
-  *(_QWORD *)(v112 + 96) = 0;
-  if ( v125 <= 9 )
+  *(_QWORD *)(v117 + 96) = 0;
+  if ( v130 <= 9 )
     goto LABEL_131;
-  *(_QWORD *)(v112 + 104) = 0;
-  if ( v125 == 10 )
+  *(_QWORD *)(v117 + 104) = 0;
+  if ( v130 == 10 )
     goto LABEL_131;
-  *(_QWORD *)(v112 + 112) = 0;
-  if ( v125 <= 0xB )
+  *(_QWORD *)(v117 + 112) = 0;
+  if ( v130 <= 0xB )
     goto LABEL_131;
-  *(_QWORD *)(v112 + 120) = 0;
-  v128 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 12);
-  v129 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v130 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( !v128 )
-    goto LABEL_132;
-  if ( !*(_DWORD *)(v128 + 24) )
-    goto LABEL_131;
-  *(float *)(v128 + 32) = v129;
-  *(float *)(v128 + 36) = v130;
-  v131 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v132 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v133 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  if ( (*(_DWORD *)(v128 + 24) & 0xFFFFFFFE) == 0 )
-    goto LABEL_131;
-  *(float *)(v128 + 40) = v131 + v132;
-  *(float *)(v128 + 44) = v133;
+  *(_QWORD *)(v117 + 120) = 0;
+  v133 = sub_2213B20(UnityEngine_Vector2___TypeInfo, 12);
   v134 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
   v135 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  v136 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  if ( *(_DWORD *)(v128 + 24) <= 2u )
+  if ( !v133 )
+    goto LABEL_132;
+  if ( !*(_DWORD *)(v133 + 24) )
     goto LABEL_131;
-  *(float *)(v128 + 48) = v134;
-  *(float *)(v128 + 52) = v135 - v136;
-  v137 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
-  v138 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
-  v139 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
-  v140 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
-  v141 = *(_DWORD *)(v128 + 24);
-  if ( v141 <= 3 )
+  *(float *)(v133 + 32) = v134;
+  *(float *)(v133 + 36) = v135;
+  v136 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v137 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
+  v138 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  if ( (*(_DWORD *)(v133 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_131;
-  *(float *)(v128 + 56) = v137 + v138;
-  *(float *)(v128 + 60) = v139 - v140;
-  if ( v141 == 4 )
+  *(float *)(v133 + 40) = v136 + v137;
+  *(float *)(v133 + 44) = v138;
+  v139 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v140 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  v141 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
+  if ( *(_DWORD *)(v133 + 24) <= 2u )
     goto LABEL_131;
-  v142 = v9->fields.faceTextureRect.fields.m_Height + v9->fields.faceTextureRect.fields.m_YMin;
-  *(float *)(v128 + 64) = v9->fields.faceTextureRect.fields.m_XMin;
-  *(float *)(v128 + 68) = v142;
-  if ( v141 <= 5 )
+  *(float *)(v133 + 48) = v139;
+  *(float *)(v133 + 52) = v140 - v141;
+  v142 = UIStandFigureRender__get_BodyU((UIStandFigureRender_o *)v10, 0);
+  v143 = UIStandFigureRender__get_BodyW((UIStandFigureRender_o *)v10, 0);
+  v144 = UIStandFigureRender__get_BodyV((UIStandFigureRender_o *)v10, 0);
+  v145 = UIStandFigureRender__get_BodyH((UIStandFigureRender_o *)v10, 0);
+  v146 = *(_DWORD *)(v133 + 24);
+  if ( v146 <= 3 )
     goto LABEL_131;
-  *(float32x2_t *)(v128 + 72) = vadd_f32(
+  *(float *)(v133 + 56) = v142 + v143;
+  *(float *)(v133 + 60) = v144 - v145;
+  if ( v146 == 4 )
+    goto LABEL_131;
+  v147 = v9->fields.faceTextureRect.fields.m_Height + v9->fields.faceTextureRect.fields.m_YMin;
+  *(float *)(v133 + 64) = v9->fields.faceTextureRect.fields.m_XMin;
+  *(float *)(v133 + 68) = v147;
+  if ( v146 <= 5 )
+    goto LABEL_131;
+  *(float32x2_t *)(v133 + 72) = vadd_f32(
                                   *(float32x2_t *)&v9->fields.faceTextureRect.fields.m_Width,
                                   *(float32x2_t *)&v9->fields.faceTextureRect.fields.m_XMin);
-  if ( v141 == 6 )
+  if ( v146 == 6 )
     goto LABEL_131;
-  *(_QWORD *)(v128 + 80) = *(_QWORD *)&v9->fields.faceTextureRect.fields.m_XMin;
-  if ( v141 <= 7 )
+  *(_QWORD *)(v133 + 80) = *(_QWORD *)&v9->fields.faceTextureRect.fields.m_XMin;
+  if ( v146 <= 7 )
     goto LABEL_131;
-  v143 = v9->fields.faceTextureRect.fields.m_YMin;
-  *(float *)(v128 + 88) = v9->fields.faceTextureRect.fields.m_Width + v9->fields.faceTextureRect.fields.m_XMin;
-  *(float *)(v128 + 92) = v143;
-  if ( v141 == 8 )
+  v148 = v9->fields.faceTextureRect.fields.m_YMin;
+  *(float *)(v133 + 88) = v9->fields.faceTextureRect.fields.m_Width + v9->fields.faceTextureRect.fields.m_XMin;
+  *(float *)(v133 + 92) = v148;
+  if ( v146 == 8 )
     goto LABEL_131;
-  v144 = v9->fields.faceTextureRect.fields.m_Height + v9->fields.faceTextureRect.fields.m_YMin;
-  *(float *)(v128 + 96) = v9->fields.faceTextureRect.fields.m_XMin;
-  *(float *)(v128 + 100) = v144;
-  if ( v141 <= 9 )
+  v149 = v9->fields.faceTextureRect.fields.m_Height + v9->fields.faceTextureRect.fields.m_YMin;
+  *(float *)(v133 + 96) = v9->fields.faceTextureRect.fields.m_XMin;
+  *(float *)(v133 + 100) = v149;
+  if ( v146 <= 9 )
     goto LABEL_131;
-  *(float32x2_t *)(v128 + 104) = vadd_f32(
+  *(float32x2_t *)(v133 + 104) = vadd_f32(
                                    *(float32x2_t *)&v9->fields.faceTextureRect.fields.m_Width,
                                    *(float32x2_t *)&v9->fields.faceTextureRect.fields.m_XMin);
-  if ( v141 == 10 )
+  if ( v146 == 10 )
     goto LABEL_131;
-  *(_QWORD *)(v128 + 112) = *(_QWORD *)&v9->fields.faceTextureRect.fields.m_XMin;
-  if ( v141 <= 0xB )
+  *(_QWORD *)(v133 + 112) = *(_QWORD *)&v9->fields.faceTextureRect.fields.m_XMin;
+  if ( v146 <= 0xB )
     goto LABEL_131;
-  v145 = v9->fields.faceTextureRect.fields.m_YMin;
-  *(float *)(v128 + 120) = v9->fields.faceTextureRect.fields.m_Width + v9->fields.faceTextureRect.fields.m_XMin;
-  *(float *)(v128 + 124) = v145;
-  if ( !v65 )
+  v150 = v9->fields.faceTextureRect.fields.m_YMin;
+  *(float *)(v133 + 120) = v9->fields.faceTextureRect.fields.m_Width + v9->fields.faceTextureRect.fields.m_XMin;
+  *(float *)(v133 + 124) = v150;
+  if ( !v70 )
     goto LABEL_132;
-  UnityEngine_Mesh__set_vertices(v65, (UnityEngine_Vector3_array *)v66, 0);
-  UnityEngine_Mesh__set_normals(v65, (UnityEngine_Vector3_array *)v86, 0);
-  UnityEngine_Mesh__set_uv(v65, (UnityEngine_Vector2_array *)v112, 0);
-  UnityEngine_Mesh__set_uv2(v65, (UnityEngine_Vector2_array *)v128, 0);
-  v146 = (System_Array_o *)sub_2213B20(int___TypeInfo, 30);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v146,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__069DF9CCFA1F4B655A076CAE43C0BECBCC82EE255C5C4E18D4A6AA1F8EF09131,
-    0);
-  UnityEngine_Mesh__set_triangles(v65, (System_Int32_array *)v146, 0);
-  UnityEngine_Mesh__RecalculateNormals(v65, 0);
-  UnityEngine_Mesh__RecalculateBounds(v65, 0);
+  UnityEngine_Mesh__set_vertices(v70, (UnityEngine_Vector3_array *)v71, 0);
+  UnityEngine_Mesh__set_normals(v70, (UnityEngine_Vector3_array *)v91, 0);
+  UnityEngine_Mesh__set_uv(v70, (UnityEngine_Vector2_array *)v117, 0);
+  UnityEngine_Mesh__set_uv2(v70, (UnityEngine_Vector2_array *)v133, 0);
+  v151 = (System_Array_o *)sub_2213B20(int___TypeInfo, 30);
+  v152.fields.value = Field__PrivateImplementationDetails__069DF9CCFA1F4B655A076CAE43C0BECBCC82EE255C5C4E18D4A6AA1F8EF09131;
+  v153 = (System_Int32_array *)v151;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v151, v152, 0);
+  UnityEngine_Mesh__set_triangles(v70, v153, 0);
+  UnityEngine_Mesh__RecalculateNormals(v70, 0);
+  UnityEngine_Mesh__RecalculateBounds(v70, 0);
   this = (UIStandFigureM_o *)v10->fields.bodyFilter;
   if ( !this )
     goto LABEL_132;
-  UnityEngine_MeshFilter__set_mesh((UnityEngine_MeshFilter_o *)this, v65, 0);
+  UnityEngine_MeshFilter__set_mesh((UnityEngine_MeshFilter_o *)this, v70, 0);
   this = (UIStandFigureM_o *)v10->fields.bodyFilter;
   if ( !this )
     goto LABEL_132;

@@ -434,7 +434,7 @@ LABEL_8:
   QuestInformationListViewItemDraw__SetDispTypeEnemyTex(
     (QuestInformationListViewItemDraw_o *)this,
     item->fields.dispType,
-    *((UITexture_o **)this + 18),
+    (UITexture_o *)this[4].fields.__4__this,
     item,
     0);
 }

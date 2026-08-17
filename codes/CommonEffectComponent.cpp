@@ -1943,6 +1943,7 @@ bool CommonEffectComponent__PlayNormalAnimation(CommonEffectComponent_o *this, i
   __int64 v8; // x1
   UnityEngine_Animation_o *name; // x0
   UnityEngine_TrackedReference_o *Item; // x21
+  bool result; // w0
   UnityEngine_Animation_o *v12; // x22
   struct System_String_o *v13; // x0
   struct System_String_o **p_playAnimation; // x20
@@ -1986,8 +1987,9 @@ LABEL_13:
   this->fields.playAnimation = v13;
   p_playAnimation = &this->fields.playAnimation;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p_playAnimation, (int32_t)v13, v15, v16, v17, v18, v19, v20);
+  result = 1;
   *((_DWORD *)p_playAnimation - 4) = next;
-  return 1;
+  return result;
 }
 
 
@@ -2318,8 +2320,8 @@ LABEL_22:
     this->fields.playAnimation = v21;
     p_playAnimation = &this->fields.playAnimation;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)p_playAnimation, (int32_t)v21, v23, v24, v25, v26, v27, v28);
-    *((_DWORD *)p_playAnimation - 4) = next;
     LOBYTE(Item) = 1;
+    *((_DWORD *)p_playAnimation - 4) = next;
   }
   return (char)Item;
 }
@@ -2400,6 +2402,7 @@ void CommonEffectComponent__ResetPrewarmParticleList(CommonEffectComponent_o *th
   il2cpp_array_size_t max_length; // x8
   unsigned __int64 v5; // x21
   UnityEngine_Object_o *v6; // x19
+  UnityEngine_ParticleSystem_MainModule_o v7; // x0
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = this;
@@ -2429,9 +2432,8 @@ void CommonEffectComponent__ResetPrewarmParticleList(CommonEffectComponent_o *th
           if ( !v6 )
             sub_2213CDC(this, method);
           m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)v6, 0).fields.m_ParticleSystem;
-          this = (CommonEffectComponent_o *)UnityEngine_ParticleSystem_MainModule__get_prewarm(
-                                              (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                                              0);
+          v7.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+          this = (CommonEffectComponent_o *)UnityEngine_ParticleSystem_MainModule__get_prewarm(v7, 0);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             this = (CommonEffectComponent_o *)UnityEngine_ParticleSystem__get_isPlaying(
@@ -3557,6 +3559,7 @@ bool CommonEffectComponent__DelayFrameCoroutine_d__87__MoveNext(
   int32_t _1__state; // w8
   int32_t currentFrame_5__2; // w8
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -3578,8 +3581,9 @@ bool CommonEffectComponent__DelayFrameCoroutine_d__87__MoveNext(
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   ActionExtensions__Call(this->fields.action, 0);
   return 0;

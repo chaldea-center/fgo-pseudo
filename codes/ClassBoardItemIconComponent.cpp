@@ -286,11 +286,14 @@ void ClassBoardItemIconComponent__setItemInfo(
   Il2CppObject *v27; // x0
   UILabel_o *needNumLb; // x20
   Il2CppObject *v29; // x0
+  float v30; // s2
+  float v31; // s0 OVERLAPPED
+  float v32; // s1
+  float v33; // s3
   int32_t NeedItemNum_k__BackingField; // [xsp+Ch] [xbp-44h] BYREF
   int64_t haveItemNum; // [xsp+18h] [xbp-38h] BYREF
-  UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59746BB & 1) == 0 )
   {
@@ -398,17 +401,17 @@ void ClassBoardItemIconComponent__setItemInfo(
   {
     if ( Master_object )
     {
-      v36.fields.r = 1.0;
-      v36.fields.g = 1.0;
-      v36.fields.b = 1.0;
-      v36.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)Master_object, v36, 0);
+      v37.fields.r = 1.0;
+      v37.fields.g = 1.0;
+      v37.fields.b = 1.0;
+      v37.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)Master_object, v37, 0);
       Master_object = (int64_t)this->fields.needNumLb;
       if ( Master_object )
       {
-        v35.fields.r = 1.0;
-        v35.fields.g = 1.0;
-        v35.fields.b = 1.0;
+        v31 = 1.0;
+        v32 = 1.0;
+        v30 = 1.0;
         goto LABEL_36;
       }
     }
@@ -417,20 +420,20 @@ LABEL_39:
   }
   if ( !Master_object )
     goto LABEL_39;
-  v34.fields.b = 0.0;
-  v34.fields.r = 1.0;
-  v34.fields.g = 1.0;
-  v34.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)Master_object, v34, 0);
+  v36.fields.b = 0.0;
+  v36.fields.r = 1.0;
+  v36.fields.g = 1.0;
+  v36.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)Master_object, v36, 0);
   Master_object = (int64_t)this->fields.needNumLb;
   if ( !Master_object )
     goto LABEL_39;
-  v35.fields.b = 0.0;
-  v35.fields.r = 1.0;
-  v35.fields.g = 1.0;
+  v30 = 0.0;
+  v31 = 1.0;
+  v32 = 1.0;
 LABEL_36:
-  v35.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)Master_object, v35, 0);
+  v33 = 1.0;
+  UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v31, 0);
   Master_object = (int64_t)this->fields.itemInfo;
   if ( !Master_object )
     goto LABEL_39;

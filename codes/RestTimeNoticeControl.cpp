@@ -68,6 +68,7 @@ void RestTimeNoticeControl__Start(RestTimeNoticeControl_o *this, const MethodInf
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void RestTimeNoticeControl__UpdateRestTime(RestTimeNoticeControl_o *this, int64_t now, const MethodInfo *method)
 {
   int64_t endAt; // x24
@@ -90,14 +91,17 @@ void RestTimeNoticeControl__UpdateRestTime(RestTimeNoticeControl_o *this, int64_
   unsigned __int64 v22; // x21
   Il2CppObject *v23; // x0
   UILabel_o *v24; // x8
-  int v27; // w21
-  System_String_o *v28; // x20
-  Il2CppObject *v29; // x0
-  int v30; // [xsp+Ch] [xbp-44h] BYREF
-  int v31; // [xsp+18h] [xbp-38h] BYREF
-  int v32; // [xsp+1Ch] [xbp-34h] BYREF
-  UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v25; // s0 OVERLAPPED
+  float v26; // s1
+  float v27; // s2
+  float v28; // s3
+  int v29; // w21
+  System_String_o *v30; // x20
+  Il2CppObject *v31; // x0
+  int v32; // [xsp+Ch] [xbp-44h] BYREF
+  int v33; // [xsp+18h] [xbp-38h] BYREF
+  int v34; // [xsp+1Ch] [xbp-34h] BYREF
+  UnityEngine_Color_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974B96 & 1) == 0 )
   {
@@ -134,12 +138,12 @@ void RestTimeNoticeControl__UpdateRestTime(RestTimeNoticeControl_o *this, int64_
   restTimeLabel = this->fields.restTimeLabel;
   if ( !restTimeLabel )
     goto LABEL_32;
-  v33.fields.r = 1.0;
-  v33.fields.g = 1.0;
-  v33.fields.b = 1.0;
-  v33.fields.a = 1.0;
+  v35.fields.r = 1.0;
+  v35.fields.g = 1.0;
+  v35.fields.b = 1.0;
+  v35.fields.a = 1.0;
   v18 = endAt - now;
-  UILabel__set_effectColor(restTimeLabel, v33, 0);
+  UILabel__set_effectColor(restTimeLabel, v35, 0);
   if ( (__int64)v18 < 1 )
     goto LABEL_26;
   v19 = v18 / 0x15180;
@@ -148,8 +152,8 @@ void RestTimeNoticeControl__UpdateRestTime(RestTimeNoticeControl_o *this, int64_
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
     v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5798/*"EVENT_DAY_TXT"*/, 0);
-    v21 = &v32;
-    v32 = v19;
+    v21 = &v34;
+    v34 = v19;
 LABEL_23:
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, v21);
     restTimeLabel = (UILabel_o *)System_String__Format(v20, v23, 0);
@@ -157,9 +161,9 @@ LABEL_23:
     if ( !v24 )
       goto LABEL_32;
     v14 = (System_String_o *)restTimeLabel;
-    v34.fields.r = 0.0;
-    v34.fields.g = 0.0;
-    v34.fields.b = 0.0;
+    v25 = 0.0;
+    v26 = 0.0;
+    v27 = 0.0;
     goto LABEL_25;
   }
   v22 = v18 / 0xE10;
@@ -168,28 +172,28 @@ LABEL_23:
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
     v20 = LocalizationManager__Get((System_String_o *)StringLiteral_5964/*"EVENT_TIME_TXT"*/, 0);
-    v21 = &v31;
-    v31 = v22;
+    v21 = &v33;
+    v33 = v22;
     goto LABEL_23;
   }
-  v27 = (v18 / 0x3C) & ~((int)(v18 / 0x3C) >> 31);
+  v29 = (v18 / 0x3C) & ~((int)(v18 / 0x3C) >> 31);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
-  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5866/*"EVENT_MIN_TXT"*/, 0);
-  v30 = v27;
-  v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v30);
-  restTimeLabel = (UILabel_o *)System_String__Format(v28, v29, 0);
+  v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5866/*"EVENT_MIN_TXT"*/, 0);
+  v32 = v29;
+  v31 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v32);
+  restTimeLabel = (UILabel_o *)System_String__Format(v30, v31, 0);
   v24 = this->fields.restTimeLabel;
   if ( !v24 )
 LABEL_32:
     sub_2213CDC(restTimeLabel, v16);
-  v34.fields.r = 1.0;
-  v34.fields.g = 1.0;
+  v25 = 1.0;
+  v26 = 1.0;
   v14 = (System_String_o *)restTimeLabel;
-  v34.fields.b = 1.0;
+  v27 = 1.0;
 LABEL_25:
-  v34.fields.a = 1.0;
-  UILabel__set_effectColor(v24, v34, 0);
+  v28 = 1.0;
+  UILabel__set_effectColor(v24, *(UnityEngine_Color_o *)&v25, 0);
 LABEL_26:
   restTimeLabel = this->fields.restTimeLabel;
   if ( !restTimeLabel )

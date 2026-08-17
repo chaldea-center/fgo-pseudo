@@ -1294,7 +1294,7 @@ bool EventUpValSetupInfo___c__DisplayClass50_0___AnalyzeInfo_b__0(
             questId,
             questPhase,
             7,
-            *((_QWORD *)this + 17),
+            *(_QWORD *)&this[2].fields.ignoreFlg,
             0);
 }
 
@@ -1616,7 +1616,7 @@ int32_t EventUpValSetupInfo___c__DisplayClass51_0___AnalyzeInfoCombineCampaign_b
 {
   EventUpValSetupInfo___c__DisplayClass51_0_o *v6; // x20
   DataMasterBase_TMaster__TEntity__PKType__o *eventMaster; // x8
-  __int64 v8; // x20
+  EventUpValSetupInfo___c__DisplayClass51_0_c *klass; // x20
 
   v6 = this;
   if ( (byte_597038E & 1) == 0 )
@@ -1632,7 +1632,7 @@ int32_t EventUpValSetupInfo___c__DisplayClass51_0___AnalyzeInfoCombineCampaign_b
                                                                 (const MethodInfo_3F10B30 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__)) == 0
     || !a
     || (eventMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)v6->fields.eventMaster) == 0
-    || (v8 = *((_QWORD *)this + 12),
+    || (klass = this[3].klass,
         (this = (EventUpValSetupInfo___c__DisplayClass51_0_o *)DataMasterBase_object__object__int___GetEntity(
                                                                  eventMaster,
                                                                  a->fields.eventId,
@@ -1640,5 +1640,5 @@ int32_t EventUpValSetupInfo___c__DisplayClass51_0___AnalyzeInfoCombineCampaign_b
   {
     sub_2213CDC(this, a);
   }
-  return v8 - *((_DWORD *)this + 24);
+  return (_DWORD)klass - LODWORD(this[3].klass);
 }

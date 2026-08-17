@@ -87,7 +87,10 @@ UnityEngine_Color_o WarBoardEventBossUIComponent__ConvertHexToColor(
         const MethodInfo *method)
 {
   int32_t v4; // w0
+  float v5; // s3
   unsigned __int64 v6; // d0
+  float v7; // s2
+  float v8; // s1
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596E06E & 1) == 0 )
@@ -98,13 +101,16 @@ UnityEngine_Color_o WarBoardEventBossUIComponent__ConvertHexToColor(
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, hexStrColor, method);
   v4 = System_Convert__ToInt32_76696416(hexStrColor, 16, 0);
-  result.fields.a = 1.0;
+  v5 = 1.0;
   v6 = vdiv_f32(
          vcvt_f32_s32(vand_s8(vshl_u32(vdup_n_s32(v4), (uint32x2_t)0xFFFFFFF8FFFFFFF0LL), (int8x8_t)0xFF000000FFLL)),
          vdup_n_s32(0x437F0000u)).n64_u64[0];
-  result.fields.b = (float)(unsigned __int8)v4 / 255.0;
-  result.fields.g = *((float *)&v6 + 1);
+  v7 = (float)(unsigned __int8)v4 / 255.0;
+  v8 = *((float *)&v6 + 1);
   result.fields.r = *(float *)&v6;
+  result.fields.a = v5;
+  result.fields.b = v7;
+  result.fields.g = v8;
   return result;
 }
 
@@ -164,9 +170,9 @@ System_String_o *WarBoardEventBossUIComponent__CreateSaveDta(
     sub_2213CDC(appended, v5);
   }
   System_Text_StringBuilder__Append_75737564(v3, v8->fields.defeatPoint, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
-           v3,
-           v3->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v3->klass->vtable._3_ToString.methodPtr)(
+                              v3,
+                              v3->klass->vtable._3_ToString.method);
 }
 
 
@@ -1122,14 +1128,19 @@ void WarBoardEventBossUIComponent__SetDisp(
   const MethodInfo *v113; // x3
   const MethodInfo *v114; // x2
   struct WarBoardUserServantData_o *v115; // x8
-  const MethodInfo *v116; // x2
-  struct WarBoardStageBossEntity_o *v117; // x8
+  float r; // s8
+  float g; // s9
+  float b; // s10
+  float a; // s11
+  const MethodInfo *v120; // x2
+  struct WarBoardStageBossEntity_o *v121; // x8
   UILabel_o *bossName; // x19
-  int32_t v119; // [xsp+0h] [xbp-90h] BYREF
-  int32_t v120; // [xsp+4h] [xbp-8Ch] BYREF
-  int32_t v121; // [xsp+8h] [xbp-88h] BYREF
+  int32_t v123; // [xsp+0h] [xbp-90h] BYREF
+  int32_t v124; // [xsp+4h] [xbp-8Ch] BYREF
+  int32_t v125; // [xsp+8h] [xbp-88h] BYREF
   int32_t iconId; // [xsp+Ch] [xbp-84h] BYREF
-  UnityEngine_Color_o TextEffectColor; // 0:kr00_16.16
+  UnityEngine_Color_o TextEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v128; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596E060 & 1) == 0 )
   {
@@ -1391,8 +1402,8 @@ LABEL_75:
   idx = v96->fields.idx;
   iconId = v96->fields.iconId;
   v99 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &iconId);
-  v121 = idx;
-  v100 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v121);
+  v125 = idx;
+  v100 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v125);
   v101 = System_String__Format_75697880((System_String_o *)StringLiteral_26137/*"war_board_boss_icon_{0}{1:D2}"*/, v99, v100, 0);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(this, v97, v101, v102);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
@@ -1406,13 +1417,13 @@ LABEL_75:
     (System_String_o *)StringLiteral_26132/*"war_board_boss_hp_back"*/,
     v104);
   hpBarUnderSprite = this->fields.hpBarUnderSprite;
-  v120 = idx;
-  v106 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v120);
+  v124 = idx;
+  v106 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v124);
   v107 = System_String__Format((System_String_o *)StringLiteral_26134/*"war_board_boss_hp_lower_{0}"*/, v106, 0);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(this, hpBarUnderSprite, v107, v108);
   hpBarUpperSprite = this->fields.hpBarUpperSprite;
-  v119 = idx;
-  v110 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v119);
+  v123 = idx;
+  v110 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v123);
   v111 = System_String__Format((System_String_o *)StringLiteral_26135/*"war_board_boss_hp_upper_{0}"*/, v110, 0);
   WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(this, hpBarUpperSprite, v111, v112);
   bossIconSp = WarBoardEventBossUIComponent__SetSpriteByLocalAtlas(
@@ -1427,19 +1438,27 @@ LABEL_75:
   bossIconSp = (__int64)this->fields.totalHpLabel;
   if ( !bossIconSp )
     goto LABEL_75;
+  r = TextEffectColor.fields.r;
+  g = TextEffectColor.fields.g;
+  b = TextEffectColor.fields.b;
+  a = TextEffectColor.fields.a;
   UILabel__set_effectColor((UILabel_o *)bossIconSp, TextEffectColor, 0);
   bossIconSp = (__int64)this->fields.bossName;
   if ( !bossIconSp )
     goto LABEL_75;
-  UILabel__set_effectColor((UILabel_o *)bossIconSp, TextEffectColor, 0);
-  v117 = this->fields.warBoardStageBossEnt;
-  if ( !v117 )
+  v128.fields.r = r;
+  v128.fields.g = g;
+  v128.fields.b = b;
+  v128.fields.a = a;
+  UILabel__set_effectColor((UILabel_o *)bossIconSp, v128, 0);
+  v121 = this->fields.warBoardStageBossEnt;
+  if ( !v121 )
     goto LABEL_75;
   bossName = this->fields.bossName;
   bossIconSp = (__int64)WarBoardEventBossUIComponent__GetStageBossName(
                           (WarBoardEventBossUIComponent_o *)bossIconSp,
-                          v117->fields.idx,
-                          v116);
+                          v121->fields.idx,
+                          v120);
   if ( !bossName )
     goto LABEL_75;
   UILabel__set_text(bossName, (System_String_o *)bossIconSp, 0);

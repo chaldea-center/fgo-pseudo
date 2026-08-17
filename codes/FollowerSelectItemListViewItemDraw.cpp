@@ -189,6 +189,7 @@ void FollowerSelectItemListViewItemDraw__Awake(FollowerSelectItemListViewItemDra
   bool v31; // w7
   struct UISprite_o *v32; // x8
   struct System_String_o *mSpriteName; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596AF89 & 1) == 0 )
   {
@@ -255,9 +256,9 @@ void FollowerSelectItemListViewItemDraw__Awake(FollowerSelectItemListViewItemDra
 LABEL_14:
       sub_2213CDC(transform, v17);
     }
-    this->fields.defaultMaskPosition = (struct UnityEngine_Vector2_o)UnityEngine_Transform__get_localPosition(
-                                                                       (UnityEngine_Transform_o *)transform,
-                                                                       0);
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    this->fields.defaultMaskPosition.fields.x = localPosition.fields.x;
+    this->fields.defaultMaskPosition.fields.y = localPosition.fields.y;
   }
 }
 
@@ -1225,6 +1226,7 @@ LABEL_18:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FollowerSelectItemListViewItemDraw__SetItem(
         FollowerSelectItemListViewItemDraw_o *this,
         FollowerSelectItemListViewItem_o *item,
@@ -1314,31 +1316,34 @@ void FollowerSelectItemListViewItemDraw__SetItem(
   float v87; // s8
   UnityEngine_Transform_o *v88; // x22
   float warningMessageWidth; // s0
-  struct FollowerInfo_o *v92; // x8
-  int64_t v93; // x2
-  __int64 v94; // x1
-  __int64 v95; // x2
+  float x; // s0 OVERLAPPED
+  float z; // s2
+  float y; // s1
+  struct FollowerInfo_o *v93; // x8
+  int64_t v94; // x2
+  struct UnityEngine_Vector3_StaticFields *v95; // x8
+  __int64 v96; // x1
+  __int64 v97; // x2
   UsedCount_o *UsedCount; // x20
-  BalanceConfig_c *v97; // x8
+  BalanceConfig_c *v99; // x8
   int32_t MaxFriendChocolateUse; // w9
   UILabel_o *numberOfUsabletimesPrefixLabel; // x20
   UILabel_o *numberOfUsabletimesLabel; // x20
   UILabel_o *numberOfUsabletimesSuffixLabel; // x20
-  __int64 v102; // x1
-  __int64 v103; // x2
-  int v104; // w8
-  System_String_o *v105; // x0
-  System_String_o *v106; // x0
+  __int64 v104; // x1
+  __int64 v105; // x2
+  int v106; // w8
   System_String_o *v107; // x0
-  unsigned __int128 v108; // [xsp+0h] [xbp-90h] BYREF
+  System_String_o *v108; // x0
+  System_String_o *v109; // x0
+  unsigned __int128 v110; // [xsp+0h] [xbp-90h] BYREF
   UnityEngine_Color_o color; // [xsp+18h] [xbp-78h] BYREF
-  int32_t v110; // [xsp+2Ch] [xbp-64h] BYREF
+  int32_t v112; // [xsp+2Ch] [xbp-64h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v112; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v113; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v114; // 0:x0.16
-  UnityEngine_Vector3_o v115; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v115; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v116; // 0:x0.16
+  UnityEngine_Vector3_o v117; // 0:s0.4,4:s1.4,8:s2.4
 
   v7 = item;
   if ( (byte_596AF8A & 1) == 0 )
@@ -1375,10 +1380,10 @@ void FollowerSelectItemListViewItemDraw__SetItem(
   }
   switchSkillInfo = (__int64)this->fields.switchSkillInfo;
   entity = 0;
-  v110 = 0;
+  v112 = 0;
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
-  v108 = 0u;
+  v110 = 0u;
   if ( switchSkillInfo )
     SwitchUIWidgetComponent__Clear((SwitchUIWidgetComponent_o *)switchSkillInfo, 0);
   switchSkillUIList = this->fields.switchSkillUIList;
@@ -1490,9 +1495,9 @@ void FollowerSelectItemListViewItemDraw__SetItem(
     v35 = *(_QWORD *)&ServantLeader->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v30, v31);
-    *(_QWORD *)&v112.fields.currentCryptoKey = v34;
-    *(_QWORD *)&v112.fields.fakeValue = v35;
-    v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v112, 0) > 0;
+    *(_QWORD *)&v114.fields.currentCryptoKey = v34;
+    *(_QWORD *)&v114.fields.fakeValue = v35;
+    v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v114, 0) > 0;
   }
   else
   {
@@ -1561,10 +1566,10 @@ void FollowerSelectItemListViewItemDraw__SetItem(
       p_y = &this->fields.defaultMaskPosition.fields.y;
       p_GrandMaskPosition01 = &this->fields.defaultMaskPosition;
     }
-    v115.fields.z = 0.0;
-    v115.fields.y = *p_y;
-    v115.fields.x = p_GrandMaskPosition01->fields.x;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)switchSkillInfo, v115, 0);
+    v117.fields.z = 0.0;
+    v117.fields.y = *p_y;
+    v117.fields.x = p_GrandMaskPosition01->fields.x;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)switchSkillInfo, v117, 0);
   }
   if ( v7->fields.isQuestRestriction || v7->fields._IsSlotRestriction_k__BackingField )
   {
@@ -1644,17 +1649,20 @@ LABEL_78:
         switchSkillInfo = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
-      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+      v95 = UnityEngine_Vector3_TypeInfo->static_fields;
+      x = v95->oneVector.fields.x;
+      y = v95->oneVector.fields.y;
+      z = v95->oneVector.fields.z;
     }
     else
     {
-      oneVector.fields.x = warningMessageWidth / v87;
-      oneVector.fields.z = 1.0;
-      oneVector.fields.y = 1.0;
+      x = warningMessageWidth / v87;
+      z = 1.0;
+      y = 1.0;
     }
     if ( !v88 )
       goto LABEL_186;
-    UnityEngine_Transform__set_localScale(v88, oneVector, 0);
+    UnityEngine_Transform__set_localScale(v88, *(UnityEngine_Vector3_o *)&x, 0);
     goto LABEL_78;
   }
   switchSkillInfo = (__int64)this->fields.maskSprite;
@@ -1693,9 +1701,9 @@ LABEL_79:
     v60 = *(_QWORD *)&v33->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, item, v58);
-    *(_QWORD *)&v113.fields.currentCryptoKey = v59;
-    *(_QWORD *)&v113.fields.fakeValue = v60;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v113, 0) < 1
+    *(_QWORD *)&v115.fields.currentCryptoKey = v59;
+    *(_QWORD *)&v115.fields.fakeValue = v60;
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v115, 0) < 1
       || (v56 & 1) != 0
       || ServantLeaderInfo__IsHideSupport(v33, 0)
       || v7->fields._IsDataLost_k__BackingField )
@@ -1748,9 +1756,9 @@ LABEL_79:
       v74 = (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object;
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v70, v71);
-      *(_QWORD *)&v114.fields.currentCryptoKey = v72;
-      *(_QWORD *)&v114.fields.fakeValue = v73;
-      switchSkillInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v114, 0);
+      *(_QWORD *)&v116.fields.currentCryptoKey = v72;
+      *(_QWORD *)&v116.fields.fakeValue = v73;
+      switchSkillInfo = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v116, 0);
       if ( !v74 )
         goto LABEL_186;
       switchSkillInfo = (__int64)DataMasterBase_object__object__int___GetEntity(
@@ -1843,37 +1851,37 @@ LABEL_147:
       switchSkillInfo = (__int64)DataManager__GetMasterData_object_(
                                    (DataManager_o *)switchSkillInfo,
                                    (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventBoostItemUsedMaster___);
-      v92 = v7->fields.followerInfo;
-      v93 = v92 ? v92->fields.userId : 0LL;
+      v93 = v7->fields.followerInfo;
+      v94 = v93 ? v93->fields.userId : 0LL;
       if ( !switchSkillInfo )
         goto LABEL_186;
-      UsedCount = EventBoostItemUsedMaster__GetUsedCount((EventBoostItemUsedMaster_o *)switchSkillInfo, eventId, v93, 0);
-      v97 = BalanceConfig_TypeInfo;
+      UsedCount = EventBoostItemUsedMaster__GetUsedCount((EventBoostItemUsedMaster_o *)switchSkillInfo, eventId, v94, 0);
+      v99 = BalanceConfig_TypeInfo;
       if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v94, v95);
-        v97 = BalanceConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v96, v97);
+        v99 = BalanceConfig_TypeInfo;
       }
-      MaxFriendChocolateUse = v97->static_fields->MaxFriendChocolateUse;
-      v110 = MaxFriendChocolateUse;
+      MaxFriendChocolateUse = v99->static_fields->MaxFriendChocolateUse;
+      v112 = MaxFriendChocolateUse;
       if ( UsedCount )
       {
-        if ( !*(&v97->_2.cctor_finished + 1) )
+        if ( !*(&v99->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(v97, v94, v95);
+          j_il2cpp_runtime_class_init_0(v99, v96, v97);
           MaxFriendChocolateUse = BalanceConfig_TypeInfo->static_fields->MaxFriendChocolateUse;
         }
-        v110 = MaxFriendChocolateUse - UsedCount->fields.count;
+        v112 = MaxFriendChocolateUse - UsedCount->fields.count;
       }
       numberOfUsabletimesPrefixLabel = this->fields.numberOfUsabletimesPrefixLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v94, v95);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v96, v97);
       switchSkillInfo = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6729/*"FOLLOWER_SELECT_FRIEND_CHOCO_REMAINING_COUNT_PREFIX_TEXT"*/, 0);
       if ( !numberOfUsabletimesPrefixLabel )
         goto LABEL_186;
       UILabel__set_text(numberOfUsabletimesPrefixLabel, (System_String_o *)switchSkillInfo, 0);
       numberOfUsabletimesLabel = this->fields.numberOfUsabletimesLabel;
-      switchSkillInfo = (__int64)System_Int32__ToString((int32_t)&v110, 0);
+      switchSkillInfo = (__int64)System_Int32__ToString((int32_t)&v112, 0);
       if ( !numberOfUsabletimesLabel )
         goto LABEL_186;
       UILabel__set_text(numberOfUsabletimesLabel, (System_String_o *)switchSkillInfo, 0);
@@ -1882,27 +1890,27 @@ LABEL_147:
       if ( !numberOfUsabletimesSuffixLabel )
         goto LABEL_186;
       UILabel__set_text(numberOfUsabletimesSuffixLabel, (System_String_o *)switchSkillInfo, 0);
-      v104 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
-      if ( v110 )
+      v106 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+      if ( v112 )
       {
-        if ( !v104 )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v102, v103);
-        v105 = LocalizationManager__Get((System_String_o *)StringLiteral_6727/*"FOLLOWER_SELECT_FRIEND_CHOCO_AVAILABLE_COLOR"*/, 0);
-        UnityEngine_ColorUtility__TryParseHtmlString(v105, &color, 0);
-        v106 = LocalizationManager__Get((System_String_o *)StringLiteral_6728/*"FOLLOWER_SELECT_FRIEND_CHOCO_DEFAULT_COLOR"*/, 0);
-        UnityEngine_ColorUtility__TryParseHtmlString(v106, (UnityEngine_Color_o *)&v108, 0);
+        if ( !v106 )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v104, v105);
+        v107 = LocalizationManager__Get((System_String_o *)StringLiteral_6727/*"FOLLOWER_SELECT_FRIEND_CHOCO_AVAILABLE_COLOR"*/, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString(v107, &color, 0);
+        v108 = LocalizationManager__Get((System_String_o *)StringLiteral_6728/*"FOLLOWER_SELECT_FRIEND_CHOCO_DEFAULT_COLOR"*/, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString(v108, (UnityEngine_Color_o *)&v110, 0);
       }
       else
       {
-        if ( !v104 )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v102, v103);
-        v107 = LocalizationManager__Get((System_String_o *)StringLiteral_6731/*"FOLLOWER_SELECT_FRIEND_CHOCO_UNAVAILABLE_COLOR"*/, 0);
-        UnityEngine_ColorUtility__TryParseHtmlString(v107, &color, 0);
+        if ( !v106 )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v104, v105);
+        v109 = LocalizationManager__Get((System_String_o *)StringLiteral_6731/*"FOLLOWER_SELECT_FRIEND_CHOCO_UNAVAILABLE_COLOR"*/, 0);
+        UnityEngine_ColorUtility__TryParseHtmlString(v109, &color, 0);
         switchSkillInfo = (__int64)this->fields.friendChocolateSprite;
         if ( !switchSkillInfo )
           goto LABEL_186;
         UIWidget__set_color((UIWidget_o *)switchSkillInfo, color, 0);
-        v108 = (unsigned __int128)color;
+        v110 = (unsigned __int128)color;
       }
       switchSkillInfo = (__int64)this->fields.numberOfUsabletimesSprite;
       if ( !switchSkillInfo )
@@ -1911,7 +1919,7 @@ LABEL_147:
       switchSkillInfo = (__int64)this->fields.friendChocolateSprite;
       if ( !switchSkillInfo )
         goto LABEL_186;
-      UIWidget__set_color((UIWidget_o *)switchSkillInfo, (UnityEngine_Color_o)v108, 0);
+      UIWidget__set_color((UIWidget_o *)switchSkillInfo, (UnityEngine_Color_o)v110, 0);
       item = (FollowerSelectItemListViewItem_o *)(&dword_0 + 1);
       goto LABEL_126;
     }

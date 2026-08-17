@@ -55,9 +55,11 @@ bool TreasureDeviceExtractor__EnumerateTreasureDeviceData_d__0__MoveNext(
   MissionNaviTransitionBoardItem_o *p__7__wrap1; // x0
   struct BattleUserServantData_array *_7__wrap1; // x9
   int32_t max_length; // w10
+  bool result; // w0
   int32_t treasureDeviceLv; // w2
-  struct SimpleTreasureDeviceData_o v20; // x8
-  struct SimpleTreasureDeviceData_o v21; // [xsp+8h] [xbp-18h] BYREF
+  SimpleTreasureDeviceData_o v20; // x0
+  struct SimpleTreasureDeviceData_o v21; // x8
+  struct SimpleTreasureDeviceData_o v22; // [xsp+8h] [xbp-18h] BYREF
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -107,12 +109,14 @@ LABEL_11:
     ++_7__wrap2;
   }
   treasureDeviceLv = v14->fields.treasureDeviceLv;
-  v21 = 0;
-  SimpleTreasureDeviceData___ctor((SimpleTreasureDeviceData_o)&v21, (int32_t)method, treasureDeviceLv, 0);
-  v20 = v21;
+  v20 = (SimpleTreasureDeviceData_o)&v22;
+  v22 = 0;
+  SimpleTreasureDeviceData___ctor(v20, (int32_t)method, treasureDeviceLv, 0);
+  v21 = v22;
+  result = 1;
   this->fields.__1__state = 1;
-  this->fields.__2__current = v20;
-  return 1;
+  this->fields.__2__current = v21;
+  return result;
 }
 
 

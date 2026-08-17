@@ -76,7 +76,8 @@ UnityEngine_Vector2_o UIIconLabel__GetIconSize(UIIconLabel_o *this, const Method
   UnityEngine_Object_o *iconSprite; // x20
   __int64 v4; // x1
   struct UISprite_o *v5; // x0
-  UnityEngine_Vector2_o v8; // kr00_8
+  float x; // s0
+  float y; // s1
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -93,11 +94,9 @@ UnityEngine_Vector2_o UIIconLabel__GetIconSize(UIIconLabel_o *this, const Method
     v5 = this->fields.iconSprite;
     if ( !v5 )
       sub_2213CDC(0, v4);
-    v8 = ((UnityEngine_Vector2_o (__fastcall *)(struct UISprite_o *, const MethodInfo *))v5->klass->vtable._22_get_localSize.methodPtr)(
-           v5,
-           v5->klass->vtable._22_get_localSize.method);
-    result.fields.y = v8.fields.y;
-    result.fields.x = v8.fields.x;
+    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v5->klass->vtable._22_get_localSize.methodPtr)(
+      v5,
+      v5->klass->vtable._22_get_localSize.method);
   }
   else
   {
@@ -107,9 +106,11 @@ UnityEngine_Vector2_o UIIconLabel__GetIconSize(UIIconLabel_o *this, const Method
       byte_59699C0 = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
+    x = static_fields->zeroVector.fields.x;
+    y = static_fields->zeroVector.fields.y;
   }
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -121,18 +122,26 @@ UnityEngine_Color_o UIIconLabel__GetPurchaseDecisionColor(
         int32_t iconKind,
         const MethodInfo *method)
 {
+  float v5; // s0
   float v6; // s1
+  float v7; // s3
+  float v9; // s1
+  float v10; // s2
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = 0.5;
+  v5 = 0.5;
   v6 = 1.0;
-  result.fields.a = 1.0;
+  v7 = 1.0;
   if ( iconKind == 28 && compareData < 0 )
     v6 = 0.5;
   if ( compareData < 0 || dispData <= compareData )
-    result.fields.r = v6;
-  result.fields.g = result.fields.r;
-  result.fields.b = result.fields.r;
+    v5 = v6;
+  v9 = v5;
+  v10 = v5;
+  result.fields.a = v7;
+  result.fields.b = v10;
+  result.fields.g = v9;
+  result.fields.r = v5;
   return result;
 }
 
@@ -144,18 +153,26 @@ UnityEngine_Color_o UIIconLabel__GetPurchaseDecisionColor_48097200(
         int32_t iconKind,
         const MethodInfo *method)
 {
+  float v5; // s0
   float v6; // s1
+  float v7; // s3
+  float v9; // s1
+  float v10; // s2
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = 0.5;
+  v5 = 0.5;
   v6 = 1.0;
-  result.fields.a = 1.0;
+  v7 = 1.0;
   if ( iconKind == 28 && compareData < 0 )
     v6 = 0.5;
   if ( compareData < 0 || dispData <= compareData )
-    result.fields.r = v6;
-  result.fields.g = result.fields.r;
-  result.fields.b = result.fields.r;
+    v5 = v6;
+  v9 = v5;
+  v10 = v5;
+  result.fields.a = v7;
+  result.fields.b = v10;
+  result.fields.g = v9;
+  result.fields.r = v5;
   return result;
 }
 
@@ -225,17 +242,19 @@ void UIIconLabel__SetAdjustLong(
   UnityEngine_Object_o *transform; // x22
   float v31; // s0
   float v32; // s10
-  struct UILabel_o *v33; // x8
+  float y; // s8
+  float z; // s9
+  struct UILabel_o *v35; // x8
   int32_t mAlignment; // w9
   int32_t blankSize; // w8
-  float v36; // s0
-  float v37; // s10
-  int32_t v38; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v38; // s0
+  float v39; // s10
+  int32_t v40; // [xsp+Ch] [xbp-74h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v38 = data;
+  v40 = data;
   if ( (byte_596FD6F & 1) == 0 )
   {
     sub_2213A60(&AtlasManager_TypeInfo);
@@ -245,7 +264,7 @@ void UIIconLabel__SetAdjustLong(
     sub_2213A60(&StringLiteral_1/*""*/);
     byte_596FD6F = 1;
   }
-  v8 = System_Int32__ToString((int32_t)&v38, 0);
+  v8 = System_Int32__ToString((int32_t)&v40, 0);
   v10 = 1.0;
   v11 = (System_String_o *)StringLiteral_1/*""*/;
   NumberFormat_48247712 = v8;
@@ -264,7 +283,7 @@ void UIIconLabel__SetAdjustLong(
     v18 = 1.0;
     NumberFormat_48247712 = LocalizationManager__GetNumberFormat_48247712(NumberFormat_48247712, 0);
     v17 = 0;
-    v20 = v38 <= adjustData || adjustData <= -1;
+    v20 = v40 <= adjustData || adjustData <= -1;
     v19 = 5;
     if ( v20 )
       v10 = 1.0;
@@ -297,11 +316,11 @@ void UIIconLabel__SetAdjustLong(
   textLabel = this->fields.textLabel;
   if ( !textLabel )
     goto LABEL_69;
-  v41.fields.r = v10;
-  v41.fields.g = v14;
-  v41.fields.b = v13;
-  v41.fields.a = v18;
-  UIWidget__set_color((UIWidget_o *)textLabel, v41, 0);
+  v43.fields.r = v10;
+  v43.fields.g = v14;
+  v43.fields.b = v13;
+  v43.fields.a = v18;
+  UIWidget__set_color((UIWidget_o *)textLabel, v43, 0);
   extentionTextLabel = (UnityEngine_Object_o *)this->fields.extentionTextLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
@@ -374,34 +393,36 @@ void UIIconLabel__SetAdjustLong(
       if ( !textLabel )
         goto LABEL_69;
       localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)textLabel, 0);
+      y = localPosition.fields.y;
+      z = localPosition.fields.z;
       textLabel = (UILabel_o *)System_String__op_Equality(NumberFormat_48247712, (System_String_o *)StringLiteral_1/*""*/, 0);
-      v33 = this->fields.textLabel;
+      v35 = this->fields.textLabel;
       if ( ((unsigned __int8)textLabel & 1) != 0 )
       {
-        if ( !v33 )
+        if ( !v35 )
           goto LABEL_69;
-        v32 = v32 - (float)v33->fields.mSpacingX;
+        v32 = v32 - (float)v35->fields.mSpacingX;
       }
-      else if ( !v33 )
+      else if ( !v35 )
       {
         goto LABEL_69;
       }
-      mAlignment = v33->fields.mAlignment;
+      mAlignment = v35->fields.mAlignment;
       blankSize = this->fields.blankSize;
       if ( mAlignment == 2 )
       {
-        v36 = (float)(v32 * 0.5) + (float)blankSize;
+        v38 = (float)(v32 * 0.5) + (float)blankSize;
       }
       else
       {
         if ( mAlignment != 3 )
         {
-          v37 = (float)-blankSize;
+          v39 = (float)-blankSize;
           goto LABEL_65;
         }
-        v36 = v32 + (float)blankSize;
+        v38 = v32 + (float)blankSize;
       }
-      v37 = -v36;
+      v39 = -v38;
 LABEL_65:
       textLabel = (UILabel_o *)this->fields.iconSprite;
       if ( textLabel )
@@ -409,10 +430,10 @@ LABEL_65:
         textLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)textLabel, 0);
         if ( textLabel )
         {
-          v40.fields.x = v37;
-          v40.fields.y = localPosition.fields.y;
-          v40.fields.z = localPosition.fields.z;
-          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, v40, 0);
+          v42.fields.x = v39;
+          v42.fields.y = y;
+          v42.fields.z = z;
+          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, v42, 0);
           return;
         }
       }
@@ -734,26 +755,28 @@ void UIIconLabel__Set_48071660(
   UnityEngine_Object_o *transform; // x21
   float v109; // s0
   float v110; // s10
+  float y; // s8
+  float z; // s9
   struct UILabel_o *textLabel; // x8
   int32_t mAlignment; // w9
   int32_t blankSize; // w8
-  float v114; // s0
-  float v115; // s10
-  System_String_o *v116; // x0
+  float v116; // s0
+  float v117; // s10
+  System_String_o *v118; // x0
   System_String_o *spriteName; // [xsp+0h] [xbp-A0h]
-  int32_t v118; // [xsp+8h] [xbp-98h]
-  int32_t v119; // [xsp+Ch] [xbp-94h] BYREF
-  int v120; // [xsp+10h] [xbp-90h] BYREF
-  int32_t v121; // [xsp+14h] [xbp-8Ch] BYREF
+  int32_t v120; // [xsp+8h] [xbp-98h]
+  int32_t v121; // [xsp+Ch] [xbp-94h] BYREF
+  int v122; // [xsp+10h] [xbp-90h] BYREF
+  int32_t v123; // [xsp+14h] [xbp-8Ch] BYREF
   int32_t exceedCount; // [xsp+18h] [xbp-88h] BYREF
   int32_t rarity; // [xsp+1Ch] [xbp-84h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr30_12.12
-  UnityEngine_Vector3_o v125; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v126; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v127; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v128; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   exceedCount = adjustData;
   rarity = data;
-  v121 = equipData;
+  v123 = equipData;
   if ( (byte_596FD6E & 1) == 0 )
   {
     sub_2213A60(&AtlasManager_TypeInfo);
@@ -805,8 +828,8 @@ void UIIconLabel__Set_48071660(
     sub_2213A60(&StringLiteral_21421/*"img_list_no"*/);
     byte_596FD6E = 1;
   }
-  v120 = equipData + data;
-  v18 = System_Int32__ToString((int32_t)&v120, 0);
+  v122 = equipData + data;
+  v18 = System_Int32__ToString((int32_t)&v122, 0);
   v20 = exceedCount;
   v21 = 1.0;
   v22 = 1.0;
@@ -816,7 +839,7 @@ void UIIconLabel__Set_48071660(
   else
     v24 = 0.92157;
   v25 = v18;
-  v118 = iconKind;
+  v120 = iconKind;
   if ( exceedCount <= 0 )
     v26 = 1.0;
   else
@@ -859,8 +882,8 @@ LABEL_181:
       v29 = System_Int32__ToString((int32_t)&rarity, 0);
       if ( !isMaxHide )
       {
-        v116 = System_Int32__ToString((int32_t)&exceedCount, 0);
-        v29 = System_String__Concat_75694928(v29, (System_String_o *)StringLiteral_1123/*"/"*/, v116, 0);
+        v118 = System_Int32__ToString((int32_t)&exceedCount, 0);
+        v29 = System_String__Concat_75694928(v29, (System_String_o *)StringLiteral_1123/*"/"*/, v118, 0);
       }
       v27 = 0;
       v28 = 0;
@@ -876,8 +899,8 @@ LABEL_197:
       v53 = &StringLiteral_21408/*"img_list_atk"*/;
 LABEL_136:
       spriteName = (System_String_o *)*v53;
-      v120 = v121 + rarity;
-      v70 = System_Int32__ToString_77138656((int32_t)&v120, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
+      v122 = v123 + rarity;
+      v70 = System_Int32__ToString_77138656((int32_t)&v122, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
       v27 = 0;
       v28 = 0;
       iconKind = 0;
@@ -888,7 +911,7 @@ LABEL_136:
       goto LABEL_219;
     case 7:
       spriteName = (System_String_o *)StringLiteral_21415/*"img_list_cost"*/;
-      if ( v121 < 1 )
+      if ( v123 < 1 )
       {
         v27 = 0;
         v28 = 0;
@@ -896,7 +919,7 @@ LABEL_136:
         goto LABEL_218;
       }
       v73 = System_Int32__ToString((int32_t)&rarity, 0);
-      v74 = System_Int32__ToString((int32_t)&v121, 0);
+      v74 = System_Int32__ToString((int32_t)&v123, 0);
       v29 = System_String__Concat_75694928(v73, (System_String_o *)StringLiteral_861/*"+"*/, v74, 0);
 LABEL_201:
       v27 = 0;
@@ -1205,10 +1228,10 @@ LABEL_203:
         goto LABEL_217;
       }
       v68 = lv;
-      p_rarity = &v120;
+      p_rarity = &v122;
       if ( lv <= 0 )
         v68 = rarity;
-      v120 = v68;
+      v122 = v68;
 LABEL_158:
       v79 = System_Int32__ToString((int32_t)p_rarity, 0);
       v80 = System_Int32__ToString((int32_t)&exceedCount, 0);
@@ -1342,11 +1365,11 @@ LABEL_219:
       iconSprite = (UIWidget_o *)this->fields.textLabel;
       if ( !iconSprite )
         goto LABEL_278;
-      v126.fields.r = v21;
-      v126.fields.g = v24;
-      v126.fields.b = v26;
-      v126.fields.a = v22;
-      UIWidget__set_color(iconSprite, v126, 0);
+      v128.fields.r = v21;
+      v128.fields.g = v24;
+      v128.fields.b = v26;
+      v128.fields.a = v22;
+      UIWidget__set_color(iconSprite, v128, 0);
       extentionTextLabel = (UnityEngine_Object_o *)this->fields.extentionTextLabel;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v96);
@@ -1368,7 +1391,7 @@ LABEL_226:
       iconSprite = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)iconSprite, 0);
       if ( !iconSprite )
         goto LABEL_278;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)iconSprite, v118 != 56, 0);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)iconSprite, v120 != 56, 0);
       if ( iconKind < 1 )
       {
         if ( v27 )
@@ -1446,6 +1469,8 @@ LABEL_226:
         if ( !iconSprite )
           goto LABEL_278;
         localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0);
+        y = localPosition.fields.y;
+        z = localPosition.fields.z;
         iconSprite = (UIWidget_o *)System_String__op_Equality(v29, (System_String_o *)StringLiteral_1/*""*/, 0);
         textLabel = this->fields.textLabel;
         if ( ((unsigned __int8)iconSprite & 1) != 0 )
@@ -1462,18 +1487,18 @@ LABEL_226:
         blankSize = this->fields.blankSize;
         if ( mAlignment == 2 )
         {
-          v114 = (float)(v110 * 0.5) + (float)blankSize;
+          v116 = (float)(v110 * 0.5) + (float)blankSize;
         }
         else
         {
           if ( mAlignment != 3 )
           {
-            v115 = (float)-blankSize;
+            v117 = (float)-blankSize;
             goto LABEL_271;
           }
-          v114 = v110 + (float)blankSize;
+          v116 = v110 + (float)blankSize;
         }
-        v115 = -v114;
+        v117 = -v116;
 LABEL_271:
         iconSprite = (UIWidget_o *)this->fields.iconSprite;
         if ( iconSprite )
@@ -1481,10 +1506,10 @@ LABEL_271:
           iconSprite = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconSprite, 0);
           if ( iconSprite )
           {
-            v125.fields.x = v115;
-            v125.fields.y = localPosition.fields.y;
-            v125.fields.z = localPosition.fields.z;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)iconSprite, v125, 0);
+            v127.fields.x = v117;
+            v127.fields.y = y;
+            v127.fields.z = z;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)iconSprite, v127, 0);
             return;
           }
         }
@@ -1548,13 +1573,13 @@ LABEL_198:
 LABEL_60:
       spriteName = (System_String_o *)*v38;
       v29 = System_Int32__ToString_77138656((int32_t)&rarity, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
-      if ( v121 < 0 )
+      if ( v123 < 0 )
       {
-        v48 = System_Int32__ToString((int32_t)&v121, 0);
+        v48 = System_Int32__ToString((int32_t)&v123, 0);
       }
       else
       {
-        v47 = System_Int32__ToString_77138656((int32_t)&v121, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
+        v47 = System_Int32__ToString_77138656((int32_t)&v123, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
         v48 = System_String__Concat_75651716((System_String_o *)StringLiteral_861/*"+"*/, v47, 0);
       }
       v23 = v48;
@@ -1600,8 +1625,8 @@ LABEL_195:
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v19);
       v89 = LocalizationManager__Get((System_String_o *)StringLiteral_6749/*"FOLLOWER_SELECT_TYPE_POINT"*/, 0);
-      v119 = rarity;
-      v90 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v119);
+      v121 = rarity;
+      v90 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v121);
       v91 = System_String__Format(v89, v90, 0);
 LABEL_196:
       v29 = v91;

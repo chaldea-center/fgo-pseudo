@@ -112,8 +112,7 @@ void SvtEqCombineUIDragDropListViewItem__OnDragDropMove(
   __int64 v9; // x1
   UnityEngine_GameObject_o *transform; // x0
   UnityEngine_Transform_o *v11; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = delta.fields.z;
   y = delta.fields.y;
@@ -136,10 +135,10 @@ void SvtEqCombineUIDragDropListViewItem__OnDragDropMove(
     }
     v11 = (UnityEngine_Transform_o *)transform;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
-    v13.fields.y = y + localPosition.fields.y;
-    v13.fields.z = z + localPosition.fields.z;
-    v13.fields.x = x + localPosition.fields.x;
-    UnityEngine_Transform__set_localPosition(v11, v13, 0);
+    localPosition.fields.y = y + localPosition.fields.y;
+    localPosition.fields.z = z + localPosition.fields.z;
+    localPosition.fields.x = x + localPosition.fields.x;
+    UnityEngine_Transform__set_localPosition(v11, localPosition, 0);
   }
 }
 
@@ -326,6 +325,7 @@ LABEL_29:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SvtEqCombineUIDragDropListViewItem__Update(SvtEqCombineUIDragDropListViewItem_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
@@ -358,29 +358,41 @@ void SvtEqCombineUIDragDropListViewItem__Update(SvtEqCombineUIDragDropListViewIt
   __int64 v30; // x2
   UnityEngine_Camera_o *v31; // x22
   struct UICamera_StaticFields *v32; // x8
-  float v33; // s14
-  float v34; // s15
-  UnityEngine_Vector2_o ViewSize; // kr30_8
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v36; // s14
+  float v37; // s15
+  float v38; // s8
+  float v39; // s11
+  UnityEngine_Vector2_o ViewSize; // kr00_8
+  float v41; // s10
+  float v42; // s13
   bool IsLimitOverPosition2; // w21
-  __int64 v37; // x1
-  __int64 v38; // x2
-  UnityEngine_Object_o *v39; // x22
-  float v40; // s0
-  float v41; // s1
   __int64 v44; // x1
   __int64 v45; // x2
   UnityEngine_Object_o *v46; // x22
   float v47; // s0
-  unsigned __int64 v50; // kr20_8
-  unsigned __int64 size; // kr38_8
-  UnityEngine_Ray_o v52; // [xsp+0h] [xbp-E0h] BYREF
-  UnityEngine_Ray_o v53; // [xsp+18h] [xbp-C8h] BYREF
-  UnityEngine_RaycastHit_o v54; // [xsp+30h] [xbp-B0h] BYREF
-  UnityEngine_Vector3_o v55; // 0:kr00_12.12
-  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
+  float v48; // s1
+  float v49; // s0 OVERLAPPED
+  int v50; // s2
+  float v51; // s1
+  __int64 v52; // x1
+  __int64 v53; // x2
+  UnityEngine_Object_o *v54; // x22
+  float v55; // s0
+  float v56; // s0 OVERLAPPED
+  int v57; // s2
+  float v58; // s1
+  UnityEngine_Ray_o v59; // [xsp+0h] [xbp-E0h] BYREF
+  UnityEngine_Ray_o v60; // [xsp+18h] [xbp-C8h] BYREF
+  UnityEngine_RaycastHit_o v61; // [xsp+30h] [xbp-B0h] BYREF
+  UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A420 & 1) == 0 )
   {
@@ -393,7 +405,7 @@ void SvtEqCombineUIDragDropListViewItem__Update(SvtEqCombineUIDragDropListViewIt
     byte_596A420 = 1;
   }
   isDrag = this->fields.isDrag;
-  memset(&v54, 0, sizeof(v54));
+  memset(&v61, 0, sizeof(v61));
   if ( !isDrag )
     return;
   dragSurface = (UnityEngine_Object_o *)this->fields.dragSurface;
@@ -419,17 +431,17 @@ void SvtEqCombineUIDragDropListViewItem__Update(SvtEqCombineUIDragDropListViewIt
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v10, v11);
   if ( !v12 )
     goto LABEL_84;
-  v56.fields.z = 0.0;
+  v62.fields.z = 0.0;
   static_fields = UICamera_TypeInfo->static_fields;
-  v56.fields.x = static_fields->lastTouchPosition.fields.x;
-  v56.fields.y = static_fields->lastTouchPosition.fields.y;
-  UnityEngine_Camera__ScreenPointToRay_83198808(&v53, v12, v56, 0);
+  v62.fields.x = static_fields->lastTouchPosition.fields.x;
+  v62.fields.y = static_fields->lastTouchPosition.fields.y;
+  UnityEngine_Camera__ScreenPointToRay_83198808(&v60, v12, v62, 0);
   if ( !*(&UnityEngine_Physics_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo, v14, v15);
-  v52 = v53;
-  if ( !UnityEngine_Physics__Raycast_83886968(&v52, &v54, 0) )
+  v59 = v60;
+  if ( !UnityEngine_Physics__Raycast_83886968(&v59, &v61, 0) )
     goto LABEL_27;
-  main = (__int64)UnityEngine_RaycastHit__get_collider(&v54, 0);
+  main = (__int64)UnityEngine_RaycastHit__get_collider(&v61, 0);
   if ( !main )
     goto LABEL_84;
   Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
@@ -493,63 +505,76 @@ LABEL_27:
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v10, v30);
   if ( !v31 )
     goto LABEL_84;
-  v57.fields.z = 0.0;
+  v63.fields.z = 0.0;
   v32 = UICamera_TypeInfo->static_fields;
-  v57.fields.x = v32->lastTouchPosition.fields.x;
-  v57.fields.y = v32->lastTouchPosition.fields.y;
-  v55 = UnityEngine_Camera__ScreenToWorldPoint_83198228(v31, v57, 0);
+  v63.fields.x = v32->lastTouchPosition.fields.x;
+  v63.fields.y = v32->lastTouchPosition.fields.y;
+  v64 = UnityEngine_Camera__ScreenToWorldPoint_83198228(v31, v63, 0);
   if ( !monitor )
     goto LABEL_84;
+  x = v64.fields.x;
+  y = v64.fields.y;
+  z = v64.fields.z;
   main = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)monitor, 0);
   if ( !main )
     goto LABEL_84;
-  v50 = (unsigned __int64)UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)main, v55, 0);
-  v33 = *((float *)monitor + 83);
-  v34 = *((float *)monitor + 84);
+  v65.fields.x = x;
+  v65.fields.y = y;
+  v65.fields.z = z;
+  v66 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)main, v65, 0);
+  v36 = *((float *)monitor + 83);
+  v37 = *((float *)monitor + 84);
+  v38 = v66.fields.x;
+  v39 = v66.fields.y;
   ViewSize = UIPanel__GetViewSize((UIPanel_o *)monitor, 0);
   main = sub_1FFEA10(this->fields.mCollider, UnityEngine_BoxCollider_TypeInfo);
   if ( !main )
     goto LABEL_84;
-  size = (unsigned __int64)UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)main, 0);
+  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)main, 0);
+  v41 = size.fields.x;
+  v42 = size.fields.y;
   IsLimitOverPosition2 = UIScrollView__IsLimitOverPosition2((UIScrollView_o *)scrollView, 0);
   if ( IsLimitOverPosition2 )
     this->fields.isLimit = 1;
   if ( UIScrollView__get_canMoveVertically((UIScrollView_o *)scrollView, 0) )
   {
-    v39 = (UnityEngine_Object_o *)scrollView[2].fields.m_CachedPtr;
+    v46 = (UnityEngine_Object_o *)scrollView[2].fields.m_CachedPtr;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v37, v38);
-    if ( UnityEngine_Object__op_Inequality(v39, 0, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v44, v45);
+    if ( UnityEngine_Object__op_Inequality(v46, 0, 0) )
     {
       main = scrollView[2].fields.m_CachedPtr;
       if ( !main )
         goto LABEL_84;
       if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0) > 0.0 )
       {
-        v40 = *((float *)&v50 + 1) - v34;
-        v41 = (float)(ViewSize.fields.y - *((float *)&size + 1)) * 0.5;
+        v47 = v39 - v37;
+        v48 = (float)(ViewSize.fields.y - v42) * 0.5;
         if ( !this->fields.isLimit )
         {
-          if ( v40 > (float)-v41 )
+          if ( v47 > (float)-v48 )
           {
-            if ( v40 < v41 )
+            if ( v47 < v48 )
               return;
-            v58.fields.x = 0.0;
-            v58.fields.z = 0.0;
-            v58.fields.y = -1.0;
+            v49 = 0.0;
+            v50 = 0;
+            v51 = -1.0;
 LABEL_75:
-            if ( !UIScrollView__IsLimitOverPosition2_56300764((UIScrollView_o *)scrollView, v58, 0) )
+            if ( !UIScrollView__IsLimitOverPosition2_56300764(
+                    (UIScrollView_o *)scrollView,
+                    *(UnityEngine_Vector3_o *)&v49,
+                    0) )
             {
-              v47 = 0.5;
+              v55 = 0.5;
 LABEL_81:
-              UIScrollView__Scroll((UIScrollView_o *)scrollView, v47, 0);
+              UIScrollView__Scroll((UIScrollView_o *)scrollView, v55, 0);
               return;
             }
             return;
           }
-          v59.fields.x = 0.0;
-          v59.fields.z = 0.0;
-          v59.fields.y = 1.0;
+          v56 = 0.0;
+          v57 = 0;
+          v58 = 1.0;
           goto LABEL_79;
         }
         goto LABEL_64;
@@ -558,10 +583,10 @@ LABEL_81:
   }
   if ( !UIScrollView__get_canMoveHorizontally((UIScrollView_o *)scrollView, 0) )
     goto LABEL_66;
-  v46 = (UnityEngine_Object_o *)scrollView[2].monitor;
+  v54 = (UnityEngine_Object_o *)scrollView[2].monitor;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v44, v45);
-  if ( !UnityEngine_Object__op_Inequality(v46, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v52, v53);
+  if ( !UnityEngine_Object__op_Inequality(v54, 0, 0) )
   {
 LABEL_66:
     if ( IsLimitOverPosition2 )
@@ -574,8 +599,8 @@ LABEL_84:
     sub_2213CDC(main, v10);
   if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0) <= 0.0 )
     goto LABEL_66;
-  v40 = *(float *)&v50 - v33;
-  v41 = (float)(ViewSize.fields.x - *(float *)&size) * 0.5;
+  v47 = v38 - v36;
+  v48 = (float)(ViewSize.fields.x - v41) * 0.5;
   if ( this->fields.isLimit )
   {
 LABEL_64:
@@ -584,28 +609,28 @@ LABEL_64:
       UIScrollView__Press((UIScrollView_o *)scrollView, 0, 0);
       return;
     }
-    if ( v40 <= (float)-v41 || v40 >= v41 )
+    if ( v47 <= (float)-v48 || v47 >= v48 )
       return;
 LABEL_67:
     this->fields.isLimit = 0;
     return;
   }
-  if ( v40 > (float)-v41 )
+  if ( v47 > (float)-v48 )
   {
-    if ( v40 < v41 )
+    if ( v47 < v48 )
       return;
-    v58.fields.y = 0.0;
-    v58.fields.z = 0.0;
-    v58.fields.x = -1.0;
+    v51 = 0.0;
+    v50 = 0;
+    v49 = -1.0;
     goto LABEL_75;
   }
-  v59.fields.y = 0.0;
-  v59.fields.z = 0.0;
-  v59.fields.x = 1.0;
+  v58 = 0.0;
+  v57 = 0;
+  v56 = 1.0;
 LABEL_79:
-  if ( !UIScrollView__IsLimitOverPosition2_56300764((UIScrollView_o *)scrollView, v59, 0) )
+  if ( !UIScrollView__IsLimitOverPosition2_56300764((UIScrollView_o *)scrollView, *(UnityEngine_Vector3_o *)&v56, 0) )
   {
-    v47 = -0.5;
+    v55 = -0.5;
     goto LABEL_81;
   }
 }

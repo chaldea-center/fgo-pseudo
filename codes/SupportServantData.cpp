@@ -1701,13 +1701,13 @@ LABEL_18:
   this = (SupportServantData_o *)BalanceConfig_TypeInfo;
   for ( i = 4; ; ++i )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[1].fields.eventSetupInfo2) )
     {
       j_il2cpp_runtime_class_init_0(this, data, v11);
       this = (SupportServantData_o *)BalanceConfig_TypeInfo;
     }
     v13 = i - 4;
-    if ( i - 4 >= *(int *)(*((_QWORD *)this + 23) + 180LL) )
+    if ( i - 4 >= SHIDWORD(this[1].fields.oldEquipIdList->m_Items[18]) )
       break;
     servantIdList = data->fields.servantIdList;
     if ( !servantIdList )

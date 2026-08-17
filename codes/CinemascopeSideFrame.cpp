@@ -63,7 +63,8 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
   bool IsFullScreenMovie; // w8
   bool v14; // w21
   int32_t v15; // w19
-  System_Nullable_int__o v16; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v16; // x0
+  System_Nullable_int__o v18; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596A45F & 1) == 0 )
   {
@@ -73,7 +74,7 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
     byte_596A45F = 1;
   }
   show = this->fields.show;
-  v16 = 0;
+  v18 = 0;
   if ( show )
   {
     if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
@@ -93,10 +94,8 @@ System_Nullable_int__o CinemascopeSideFrame__Show(
     if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v11, v12);
     CommonUI__SetForceObi_16_9(v14, 0);
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v16,
-      v15,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    v16 = (System_Nullable_int__o)&v18;
+    System_Nullable_int____ctor(v16, v15, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
   }
-  return v16;
+  return v18;
 }

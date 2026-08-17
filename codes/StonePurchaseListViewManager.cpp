@@ -17,28 +17,30 @@ void StonePurchaseListViewManager__CreateList(
   int v7; // w9
   BankShopEntity_array *BuyableEntitiyList; // x20
   il2cpp_array_size_t max_length; // x8
+  float x; // s8
   float y; // s9
-  unsigned __int64 v11; // x21
-  Il2CppClass **v12; // x26
-  BankShopEntity_o *v13; // x23
-  __int64 v14; // x22
-  const MethodInfo *v15; // x3
-  System_String_o *v16; // x2
-  System_String_o *v17; // x3
-  int32_t v18; // w4
-  int32_t v19; // w5
-  bool v20; // w6
-  bool v21; // w7
-  il2cpp_array_size_t v22; // x8
+  float z; // s10
+  unsigned __int64 v13; // x21
+  Il2CppClass **v14; // x26
+  BankShopEntity_o *v15; // x23
+  __int64 v16; // x22
+  const MethodInfo *v17; // x3
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  il2cpp_array_size_t v24; // x8
   struct ListViewItemSeed_o *seed; // x8
-  float v24; // s12
-  struct ListViewItemSeed_o *v25; // x8
+  float v26; // s12
+  struct ListViewItemSeed_o *v27; // x8
   intptr_t m_CachedPtr; // x8
-  _QWORD *v27; // x9
+  _QWORD *v29; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v29; // x8
-  struct ListViewItemSeed_o *v30; // x8
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  intptr_t v31; // x8
+  struct ListViewItemSeed_o *v32; // x8
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596E708 & 1) == 0 )
@@ -68,34 +70,36 @@ void StonePurchaseListViewManager__CreateList(
           max_length = BuyableEntitiyList->max_length;
           if ( (int)max_length < 1 )
             goto LABEL_4;
+          x = LocalPosition.fields.x;
           y = LocalPosition.fields.y;
-          v11 = 0;
+          z = LocalPosition.fields.z;
+          v13 = 0;
           while ( 1 )
           {
-            if ( v11 >= (unsigned int)max_length )
+            if ( v13 >= (unsigned int)max_length )
 LABEL_39:
               sub_2213CE4(this);
-            v12 = &BuyableEntitiyList->obj.klass + v11;
-            v13 = (BankShopEntity_o *)v12[4];
-            v14 = sub_2213CCC(StonePurchaseListViewItem_TypeInfo);
-            StonePurchaseListViewItem___ctor((StonePurchaseListViewItem_o *)v14, v11, v13, v15);
-            if ( !v14 )
+            v14 = &BuyableEntitiyList->obj.klass + v13;
+            v15 = (BankShopEntity_o *)v14[4];
+            v16 = sub_2213CCC(StonePurchaseListViewItem_TypeInfo);
+            StonePurchaseListViewItem___ctor((StonePurchaseListViewItem_o *)v16, v13, v15, v17);
+            if ( !v16 )
               break;
-            this = *(StonePurchaseListViewManager_o **)(v14 + 120);
-            *(float *)(v14 + 100) = LocalPosition.fields.x;
-            *(float *)(v14 + 104) = y;
-            *(float *)(v14 + 108) = LocalPosition.fields.z;
+            this = *(StonePurchaseListViewManager_o **)(v16 + 120);
+            *(float *)(v16 + 100) = x;
+            *(float *)(v16 + 104) = y;
+            *(float *)(v16 + 108) = z;
             if ( !this )
               break;
             this = (StonePurchaseListViewManager_o *)BankShopEntity__HasFlag((BankShopEntity_o *)this, 2, 0);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              v22 = BuyableEntitiyList->max_length;
-              if ( (__int64)v11 >= (int)v22 - 1 )
+              v24 = BuyableEntitiyList->max_length;
+              if ( (__int64)v13 >= (int)v24 - 1 )
                 goto LABEL_25;
-              if ( (int)v11 + 1 >= (unsigned int)v22 )
+              if ( (int)v13 + 1 >= (unsigned int)v24 )
                 goto LABEL_39;
-              this = (StonePurchaseListViewManager_o *)v12[5];
+              this = (StonePurchaseListViewManager_o *)v14[5];
               if ( !this )
                 break;
               this = (StonePurchaseListViewManager_o *)BankShopEntity__HasFlag((BankShopEntity_o *)this, 2, 0);
@@ -105,28 +109,28 @@ LABEL_25:
                 seed = v4->fields.seed;
                 if ( !seed )
                   break;
-                v24 = seed->fields.arrangementPich.fields.y + v4->fields.specialBoardOffset;
+                v26 = seed->fields.arrangementPich.fields.y + v4->fields.specialBoardOffset;
               }
               else
               {
-                v30 = v4->fields.seed;
-                if ( !v30 )
+                v32 = v4->fields.seed;
+                if ( !v32 )
                   break;
-                v24 = v30->fields.arrangementPich.fields.y + (float)(v4->fields.specialBoardOffset * 0.5);
+                v26 = v32->fields.arrangementPich.fields.y + (float)(v4->fields.specialBoardOffset * 0.5);
               }
             }
             else
             {
-              v25 = v4->fields.seed;
-              if ( !v25 )
+              v27 = v4->fields.seed;
+              if ( !v27 )
                 break;
-              v24 = v25->fields.arrangementPich.fields.y;
+              v26 = v27->fields.arrangementPich.fields.y;
             }
             this = (StonePurchaseListViewManager_o *)v4->fields.itemList;
             if ( !this )
               break;
             m_CachedPtr = this->fields.m_CachedPtr;
-            v27 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+            v29 = Method_System_Collections_Generic_List_ListViewItem__Add__;
             ++HIDWORD(this->fields.m_CancellationTokenSource);
             if ( !m_CachedPtr )
               break;
@@ -135,19 +139,19 @@ LABEL_25:
             {
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
-                (Il2CppObject *)v14,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+                (Il2CppObject *)v16,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
             }
             else
             {
-              v29 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+              v31 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
               LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-              *(_QWORD *)(v29 + 32) = v14;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v29 + 32), v14, v16, v17, v18, v19, v20, v21);
+              *(_QWORD *)(v31 + 32) = v16;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 32), v16, v18, v19, v20, v21, v22, v23);
             }
-            y = y + v24;
+            y = y + v26;
             LODWORD(max_length) = BuyableEntitiyList->max_length;
-            if ( (__int64)++v11 >= (int)max_length )
+            if ( (__int64)++v13 >= (int)max_length )
               goto LABEL_4;
           }
         }
@@ -1032,7 +1036,7 @@ System_IAsyncResult_o *StonePurchaseListViewManager_CallbackFunc__BeginInvoke(
   v10 = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

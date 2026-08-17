@@ -1766,6 +1766,8 @@ System_Int32_array *BattleLogicBaseAi__GetLogicTargetIds(
   __int64 v19; // x23
   BattleLogicTarget_o *logictarget; // x26
   struct AiActEntity_o *aiActEnt; // x8
+  int v22; // w8
+  System_Int32_array *result; // x0
 
   if ( (byte_5973A5F & 1) == 0 )
   {
@@ -1802,8 +1804,10 @@ System_Int32_array *BattleLogicBaseAi__GetLogicTargetIds(
   }
   if ( !*(_DWORD *)(v19 + 24) )
     sub_2213CE4(TargetAiAct);
-  *(_DWORD *)(v19 + 32) = TargetAiAct;
-  return (System_Int32_array *)v19;
+  v22 = TargetAiAct;
+  result = (System_Int32_array *)v19;
+  *(_DWORD *)(v19 + 32) = v22;
+  return result;
 }
 
 
@@ -2666,7 +2670,7 @@ System_IAsyncResult_o *BattleLogicBaseAi_taskAiActFunction__BeginInvoke(
 
   v7[0] = retList;
   v7[1] = arg;
-  return sub_2213A14(this, v7, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v7, callback, object);
 }
 
 

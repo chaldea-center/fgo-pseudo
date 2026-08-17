@@ -617,9 +617,9 @@ void ClassBoardUIController__SetCameraWorkBlock(ClassBoardUIController_o *this, 
   __int64 v6; // x1
   UnityEngine_Object_o *MapCamera; // x19
   _BOOL8 v8; // x0
-  __int64 v9; // x0
+  MapCamera_o *v9; // x0
   __int64 v10; // x1
-  __int64 v11; // x19
+  MapCamera_o *v11; // x19
 
   if ( (byte_5974775 & 1) == 0 )
   {
@@ -643,16 +643,16 @@ void ClassBoardUIController__SetCameraWorkBlock(ClassBoardUIController_o *this, 
   v8 = UnityEngine_Object__op_Inequality(MapCamera, 0, 0);
   if ( v8 )
   {
-    v9 = (__int64)ClassBoardGlobalObject__get_MapCamera((const MethodInfo *)v8);
+    v9 = ClassBoardGlobalObject__get_MapCamera((const MethodInfo *)v8);
     v11 = v9;
     if ( !byte_5974778 )
     {
-      v9 = sub_2213A60(&ClassBoardPageSwitcher_TypeInfo);
+      v9 = (MapCamera_o *)sub_2213A60(&ClassBoardPageSwitcher_TypeInfo);
       byte_5974778 = 1;
     }
     if ( !v11 )
       sub_2213CDC(v9, v10);
-    *(_BYTE *)(v11 + 97) = ClassBoardPageSwitcher_TypeInfo->static_fields->cameraWorkBlockNum < 1;
+    v11->fields._IsTouchEnable_k__BackingField = ClassBoardPageSwitcher_TypeInfo->static_fields->cameraWorkBlockNum < 1;
   }
 }
 

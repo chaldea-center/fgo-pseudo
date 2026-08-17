@@ -24,11 +24,11 @@ void BattleSyncFromTargetTransformComponent__SyncTarget(
   UnityEngine_Transform_o *v13; // x8
   UnityEngine_Transform_o *v14; // x20
   struct BattleSyncTransformComponent_SyncData_o *v15; // x19
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr30_12.12
-  UnityEngine_Vector3_o lossyScale; // 0:kr44_12.12
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -59,10 +59,10 @@ void BattleSyncFromTargetTransformComponent__SyncTarget(
         {
           if ( v7 )
           {
-            v19.fields.z = position.fields.z + v8->fields.positionDiff.fields.z;
-            v19.fields.y = position.fields.y + v8->fields.positionDiff.fields.y;
-            v19.fields.x = position.fields.x + v8->fields.positionDiff.fields.x;
-            UnityEngine_Transform__set_position(v7, v19, 0);
+            v17.fields.z = position.fields.z + v8->fields.positionDiff.fields.z;
+            v17.fields.y = position.fields.y + v8->fields.positionDiff.fields.y;
+            v17.fields.x = position.fields.x + v8->fields.positionDiff.fields.x;
+            UnityEngine_Transform__set_position(v7, v17, 0);
             syncData = this->fields.syncData;
             if ( syncData )
             {
@@ -89,10 +89,10 @@ LABEL_30:
                   {
                     if ( v11 )
                     {
-                      v20.fields.z = localScale.fields.z + v12->fields.scaleDiff.fields.z;
-                      v20.fields.y = localScale.fields.y + v12->fields.scaleDiff.fields.y;
-                      v20.fields.x = localScale.fields.x + v12->fields.scaleDiff.fields.x;
-                      UnityEngine_Transform__set_localScale(v11, v20, 0);
+                      v19.fields.z = localScale.fields.z + v12->fields.scaleDiff.fields.z;
+                      v19.fields.y = localScale.fields.y + v12->fields.scaleDiff.fields.y;
+                      v19.fields.x = localScale.fields.x + v12->fields.scaleDiff.fields.x;
+                      UnityEngine_Transform__set_localScale(v11, v19, 0);
                       syncData = this->fields.syncData;
                       if ( syncData )
                       {

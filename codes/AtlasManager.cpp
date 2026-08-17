@@ -19876,6 +19876,7 @@ bool AtlasManager__GetAtlasEnumerator_d__472__MoveNext(
   __int64 v11; // x1
   __int64 v12; // x2
   Il2CppObject *Object_object__58532980; // x20
+  bool result; // w0
   Il2CppObject *Component_object; // x0
   struct UIAtlas_o **p__2__current; // x19
   System_String_o *v17; // x2
@@ -19945,8 +19946,9 @@ LABEL_15:
     v20,
     v21,
     v22);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -20261,6 +20263,7 @@ bool AtlasManager__loadAsset_d__288__MoveNext(AtlasManager__loadAsset_d__288_o *
   int32_t v24; // w5
   bool v25; // w6
   bool v26; // w7
+  bool result; // w0
 
   if ( (byte_596F8D4 & 1) == 0 )
   {
@@ -20337,13 +20340,15 @@ LABEL_19:
     this->fields.__2__current = (Il2CppObject *)v19;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v19, v21, v22, v23, v24, v25, v26);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   if ( !_4__this )
     goto LABEL_19;
+  result = 0;
   _4__this->fields.isBusy = 0;
-  return 0;
+  return result;
 }
 
 

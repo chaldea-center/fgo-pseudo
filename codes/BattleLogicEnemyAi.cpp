@@ -3231,7 +3231,7 @@ void BattleLogicEnemyAi__resetAct(BattleLogicEnemyAi_o *this, const MethodInfo *
   this = (BattleLogicEnemyAi_o *)v2->fields.data;
   if ( !this )
     goto LABEL_14;
-  *((_DWORD *)this + 84) = 0;
+  LODWORD(this[2].fields.actlist) = 0;
   this = (BattleLogicEnemyAi_o *)BattleData__getFieldEnemyServantList((BattleData_o *)this, 0, 0);
   if ( !this )
     goto LABEL_14;

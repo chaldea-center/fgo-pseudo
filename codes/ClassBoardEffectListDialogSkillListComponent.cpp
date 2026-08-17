@@ -710,7 +710,8 @@ LABEL_62:
       (System_Collections_Generic_List_Enumerator_T__o *)&v213,
       (System_Collections_Generic_List_object__o *)entitys,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ClassBoardCommandSpellEntity__GetEnumerator__);
-    v218 = *(System_Collections_Generic_List_Enumerator_object__o *)&v213.fields._dictionary;
+    v218.fields._current = v213.fields._current.fields.key;
+    *(_OWORD *)&v218.fields._list = *(_OWORD *)&v213.fields._dictionary;
     v213.fields._dictionary = 0;
     *(_QWORD *)&v213.fields._version = &v218;
     while ( 1 )
@@ -945,7 +946,8 @@ LABEL_158:
         (System_Collections_Generic_List_object__o *)value,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ClassBoardEffectListDialogSkillListComponent_FuncDictionaryData__GetEnumerator__);
       v132 = 0;
-      v214 = *(System_Collections_Generic_List_Enumerator_object__o *)&v213.fields._dictionary;
+      v214.fields._current = v213.fields._current.fields.key;
+      *(_OWORD *)&v214.fields._list = *(_OWORD *)&v213.fields._dictionary;
       v213.fields._dictionary = 0;
       *(_QWORD *)&v213.fields._version = &v214;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(

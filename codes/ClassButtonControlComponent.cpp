@@ -1,36 +1,36 @@
 void ClassButtonControlComponent___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
-  System_Array_o *v8; // x19
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct System_Int32_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  System_Array_o *v10; // x0
+  System_RuntimeFieldHandle_o v11; // x1
+  System_Array_o *v12; // x19
   struct ClassButtonControlComponent_StaticFields *static_fields; // x0
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
-  System_Array_o *v16; // x19
-  struct ClassButtonControlComponent_StaticFields *v17; // x0
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
-  System_Array_o *v24; // x19
-  struct ClassButtonControlComponent_StaticFields *v25; // x0
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_Array_o *v20; // x0
+  System_RuntimeFieldHandle_o v21; // x1
+  System_Array_o *v22; // x19
+  struct ClassButtonControlComponent_StaticFields *v23; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  System_Array_o *v30; // x0
+  System_RuntimeFieldHandle_o v31; // x1
   System_Array_o *v32; // x19
   struct ClassButtonControlComponent_StaticFields *v33; // x0
   System_String_o *v34; // x2
@@ -39,30 +39,46 @@ void ClassButtonControlComponent___cctor(const MethodInfo *method)
   int32_t v37; // w5
   bool v38; // w6
   bool v39; // w7
-  System_Array_o *v40; // x19
-  struct ClassButtonControlComponent_StaticFields *v41; // x0
-  System_String_o *v42; // x2
-  System_String_o *v43; // x3
-  int32_t v44; // w4
-  int32_t v45; // w5
-  bool v46; // w6
-  bool v47; // w7
-  System_Array_o *v48; // x19
-  struct ClassButtonControlComponent_StaticFields *v49; // x0
-  System_String_o *v50; // x2
-  System_String_o *v51; // x3
-  int32_t v52; // w4
-  int32_t v53; // w5
-  bool v54; // w6
-  bool v55; // w7
-  System_Array_o *v56; // x19
-  struct ClassButtonControlComponent_StaticFields *v57; // x0
-  System_String_o *v58; // x2
-  System_String_o *v59; // x3
-  int32_t v60; // w4
-  int32_t v61; // w5
-  bool v62; // w6
-  bool v63; // w7
+  System_Array_o *v40; // x0
+  System_RuntimeFieldHandle_o v41; // x1
+  System_Array_o *v42; // x19
+  struct ClassButtonControlComponent_StaticFields *v43; // x0
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
+  int32_t v47; // w5
+  bool v48; // w6
+  bool v49; // w7
+  System_Array_o *v50; // x0
+  System_RuntimeFieldHandle_o v51; // x1
+  System_Array_o *v52; // x19
+  struct ClassButtonControlComponent_StaticFields *v53; // x0
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
+  System_Array_o *v60; // x0
+  System_RuntimeFieldHandle_o v61; // x1
+  System_Array_o *v62; // x19
+  struct ClassButtonControlComponent_StaticFields *v63; // x0
+  System_String_o *v64; // x2
+  System_String_o *v65; // x3
+  int32_t v66; // w4
+  int32_t v67; // w5
+  bool v68; // w6
+  bool v69; // w7
+  System_Array_o *v70; // x0
+  System_RuntimeFieldHandle_o v71; // x1
+  System_Array_o *v72; // x19
+  struct ClassButtonControlComponent_StaticFields *v73; // x0
+  System_String_o *v74; // x2
+  System_String_o *v75; // x3
+  int32_t v76; // w4
+  int32_t v77; // w5
+  bool v78; // w6
+  bool v79; // w7
 
   if ( (byte_596FB5D & 1) == 0 )
   {
@@ -79,77 +95,57 @@ void ClassButtonControlComponent___cctor(const MethodInfo *method)
     byte_596FB5D = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5,
-    0);
-  ClassButtonControlComponent_TypeInfo->static_fields->mstClassIdTableHaveMixIcon = (struct System_Int32_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__DFC9DBE6DE77A476BBB7F1224ED564087A6ADE8ECA1F2503AFEA414DE21000F5;
+  v3 = (struct System_Int32_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  ClassButtonControlComponent_TypeInfo->static_fields->mstClassIdTableHaveMixIcon = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ClassButtonControlComponent_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
-  v8 = (System_Array_o *)sub_2213B20(int___TypeInfo, 11);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v7,
     v8,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__2346B4293F72AC9E53CFAEB667D6E61CF0B87957FC559E4186BF3CE8ADAAD288,
-    0);
+    v9);
+  v10 = (System_Array_o *)sub_2213B20(int___TypeInfo, 11);
+  v11.fields.value = Field__PrivateImplementationDetails__2346B4293F72AC9E53CFAEB667D6E61CF0B87957FC559E4186BF3CE8ADAAD288;
+  v12 = v10;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v10, v11, 0);
   static_fields = ClassButtonControlComponent_TypeInfo->static_fields;
-  static_fields->mstClassIdTableHaveMixRecommendIcon = (struct System_Int32_array *)v8;
+  static_fields->mstClassIdTableHaveMixRecommendIcon = (struct System_Int32_array *)v12;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->mstClassIdTableHaveMixRecommendIcon,
-    (int32_t)v8,
-    v10,
-    v11,
-    v12,
-    v13,
+    (int32_t)v12,
     v14,
-    v15);
-  v16 = (System_Array_o *)sub_2213B20(int___TypeInfo, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v15,
     v16,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4,
-    0);
-  v17 = ClassButtonControlComponent_TypeInfo->static_fields;
-  v17->mstClassIdTableNoMixIcon = (struct System_Int32_array *)v16;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v17->mstClassIdTableNoMixIcon,
-    (int32_t)v16,
+    v17,
     v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
-  v24 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v24,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__8D0959D34A719C2CDE8FB7258D0EA7954059C6042F95BDDD8F80F9F4C919BEC9,
-    0);
-  v25 = ClassButtonControlComponent_TypeInfo->static_fields;
-  v25->mstClassIdTableHaveRecommendIcon = (struct System_Int32_array *)v24;
+    v19);
+  v20 = (System_Array_o *)sub_2213B20(int___TypeInfo, 9);
+  v21.fields.value = Field__PrivateImplementationDetails__18A642AD06501B3ADC1AC875D0D6E7DA04D9B26814FC4875D2936BA32EFED2E4;
+  v22 = v20;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v20, v21, 0);
+  v23 = ClassButtonControlComponent_TypeInfo->static_fields;
+  v23->mstClassIdTableNoMixIcon = (struct System_Int32_array *)v22;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v25->mstClassIdTableHaveRecommendIcon,
-    (int32_t)v24,
+    (MissionNaviTransitionBoardItem_o *)&v23->mstClassIdTableNoMixIcon,
+    (int32_t)v22,
+    v24,
+    v25,
     v26,
     v27,
     v28,
-    v29,
-    v30,
-    v31);
-  v32 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v32,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841,
-    0);
+    v29);
+  v30 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
+  v31.fields.value = Field__PrivateImplementationDetails__8D0959D34A719C2CDE8FB7258D0EA7954059C6042F95BDDD8F80F9F4C919BEC9;
+  v32 = v30;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v30, v31, 0);
   v33 = ClassButtonControlComponent_TypeInfo->static_fields;
-  v33->supportGroupTypeTableHaveMixIcon = (struct System_Int32_array *)v32;
+  v33->mstClassIdTableHaveRecommendIcon = (struct System_Int32_array *)v32;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v33->supportGroupTypeTableHaveMixIcon,
+    (MissionNaviTransitionBoardItem_o *)&v33->mstClassIdTableHaveRecommendIcon,
     (int32_t)v32,
     v34,
     v35,
@@ -157,54 +153,66 @@ void ClassButtonControlComponent___cctor(const MethodInfo *method)
     v37,
     v38,
     v39);
-  v40 = (System_Array_o *)sub_2213B20(int___TypeInfo, 11);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v40,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__A7A559F58129985AC8C2B5A3F851C7B13B7939AF67587D4A9161F453CE8B339C,
-    0);
-  v41 = ClassButtonControlComponent_TypeInfo->static_fields;
-  v41->supportGroupTypeTableHaveMixRecommendIcon = (struct System_Int32_array *)v40;
+  v40 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
+  v41.fields.value = Field__PrivateImplementationDetails__10B4796EAC59C7D81C33711F219BA227247A4E338ADAD078159BA01E87590841;
+  v42 = v40;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v40, v41, 0);
+  v43 = ClassButtonControlComponent_TypeInfo->static_fields;
+  v43->supportGroupTypeTableHaveMixIcon = (struct System_Int32_array *)v42;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v41->supportGroupTypeTableHaveMixRecommendIcon,
-    (int32_t)v40,
-    v42,
-    v43,
+    (MissionNaviTransitionBoardItem_o *)&v43->supportGroupTypeTableHaveMixIcon,
+    (int32_t)v42,
     v44,
     v45,
     v46,
-    v47);
-  v48 = (System_Array_o *)sub_2213B20(int___TypeInfo, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v47,
     v48,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5,
-    0);
-  v49 = ClassButtonControlComponent_TypeInfo->static_fields;
-  v49->supportGroupTypeTableNoMixIcon = (struct System_Int32_array *)v48;
+    v49);
+  v50 = (System_Array_o *)sub_2213B20(int___TypeInfo, 11);
+  v51.fields.value = Field__PrivateImplementationDetails__A7A559F58129985AC8C2B5A3F851C7B13B7939AF67587D4A9161F453CE8B339C;
+  v52 = v50;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v50, v51, 0);
+  v53 = ClassButtonControlComponent_TypeInfo->static_fields;
+  v53->supportGroupTypeTableHaveMixRecommendIcon = (struct System_Int32_array *)v52;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v49->supportGroupTypeTableNoMixIcon,
-    (int32_t)v48,
-    v50,
-    v51,
-    v52,
-    v53,
+    (MissionNaviTransitionBoardItem_o *)&v53->supportGroupTypeTableHaveMixRecommendIcon,
+    (int32_t)v52,
     v54,
-    v55);
-  v56 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v55,
     v56,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__3BE3D2195C9EDB60EB462B8E9091D8219F1329AF8AF99568111D31E8BFE97C08,
-    0);
-  v57 = ClassButtonControlComponent_TypeInfo->static_fields;
-  v57->supportGroupTypeTableHaveRecommendIcon = (struct System_Int32_array *)v56;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v57->supportGroupTypeTableHaveRecommendIcon,
-    (int32_t)v56,
+    v57,
     v58,
-    v59,
-    v60,
-    v61,
-    v62,
-    v63);
+    v59);
+  v60 = (System_Array_o *)sub_2213B20(int___TypeInfo, 9);
+  v61.fields.value = Field__PrivateImplementationDetails__921C803ABFA6AC88F44F7AB19198E5C137D1C7183E8E6912757A6263E8DEE0A5;
+  v62 = v60;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v60, v61, 0);
+  v63 = ClassButtonControlComponent_TypeInfo->static_fields;
+  v63->supportGroupTypeTableNoMixIcon = (struct System_Int32_array *)v62;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v63->supportGroupTypeTableNoMixIcon,
+    (int32_t)v62,
+    v64,
+    v65,
+    v66,
+    v67,
+    v68,
+    v69);
+  v70 = (System_Array_o *)sub_2213B20(int___TypeInfo, 10);
+  v71.fields.value = Field__PrivateImplementationDetails__3BE3D2195C9EDB60EB462B8E9091D8219F1329AF8AF99568111D31E8BFE97C08;
+  v72 = v70;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v70, v71, 0);
+  v73 = ClassButtonControlComponent_TypeInfo->static_fields;
+  v73->supportGroupTypeTableHaveRecommendIcon = (struct System_Int32_array *)v72;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v73->supportGroupTypeTableHaveRecommendIcon,
+    (int32_t)v72,
+    v74,
+    v75,
+    v76,
+    v77,
+    v78,
+    v79);
 }
 
 
@@ -1240,7 +1248,7 @@ System_IAsyncResult_o *ClassButtonControlComponent_CallbackFunc__BeginInvoke(
   v10 = classPos;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

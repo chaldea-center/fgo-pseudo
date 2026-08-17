@@ -46,16 +46,24 @@ bool VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *method)
   int64_t birthDay; // x19
   System_DateTime_o v5; // x1
   System_DateTime_o v6; // x2
-  __int64 v7; // x1
-  __int64 v8; // x2
+  System_DateTime_o v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
+  System_DateTime_o v10; // x0
+  System_DateTime_o v11; // x0
   int32_t Year; // w1
+  System_DateTime_o v13; // x0
+  System_DateTime_o v14; // x0
   int32_t Month; // w19
-  __int64 v11; // x1
-  __int64 v12; // x2
+  System_DateTime_o v16; // x0
+  __int64 v17; // x1
+  __int64 v18; // x2
+  System_DateTime_o v19; // x0
   int32_t Day; // w19
-  uint64_t v15; // [xsp+8h] [xbp-48h] BYREF
-  int v16; // [xsp+18h] [xbp-38h]
-  uint64_t v17; // [xsp+20h] [xbp-30h] BYREF
+  System_DateTime_o v21; // x0
+  uint64_t v23; // [xsp+8h] [xbp-48h] BYREF
+  int v24; // [xsp+18h] [xbp-38h]
+  uint64_t v25; // [xsp+20h] [xbp-30h] BYREF
   uint64_t dateData; // [xsp+28h] [xbp-28h] BYREF
 
   if ( (byte_596F6F5 & 1) == 0 )
@@ -64,9 +72,9 @@ bool VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *method)
     sub_2213A60(&NetworkManager_TypeInfo);
     byte_596F6F5 = 1;
   }
-  v17 = 0;
+  v25 = 0;
   dateData = 0;
-  v16 = 0;
+  v24 = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
     sub_2213CDC(0, v2);
@@ -76,32 +84,40 @@ bool VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *method)
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v2, v3);
   dateData = NetworkManager__getServerDateTime(0).fields._dateData;
-  v17 = NetworkManager__getDateTime_48347260(birthDay, 0).fields._dateData;
+  v25 = NetworkManager__getDateTime_48347260(birthDay, 0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v5.fields._dateData, v6.fields._dateData);
-  if ( System_DateTime__get_Month((System_DateTime_o)&v17, 0) == 2 )
+  v7.fields._dateData = (uint64_t)&v25;
+  if ( System_DateTime__get_Month(v7, 0) == 2 )
   {
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v7, v8);
-    if ( System_DateTime__get_Day((System_DateTime_o)&v17, 0) == 29 )
+      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v8, v9);
+    v10.fields._dateData = (uint64_t)&v25;
+    if ( System_DateTime__get_Day(v10, 0) == 29 )
     {
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v7, v8);
-      Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-      v15 = 0;
-      System_DateTime___ctor_77013752((System_DateTime_o)&v15, Year, 2, 29, 0);
-      v17 = v15;
+        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v8, v9);
+      v11.fields._dateData = (uint64_t)&dateData;
+      Year = System_DateTime__get_Year(v11, 0);
+      v23 = 0;
+      v13.fields._dateData = (uint64_t)&v23;
+      System_DateTime___ctor_77013752(v13, Year, 2, 29, 0);
+      v25 = v23;
     }
   }
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v7, v8);
-  Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-  if ( Month != System_DateTime__get_Month((System_DateTime_o)&v17, 0) )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v8, v9);
+  v14.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v14, 0);
+  v16.fields._dateData = (uint64_t)&v25;
+  if ( Month != System_DateTime__get_Month(v16, 0) )
     return 0;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v11, v12);
-  Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-  return Day == System_DateTime__get_Day((System_DateTime_o)&v17, 0);
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v17, v18);
+  v19.fields._dateData = (uint64_t)&dateData;
+  Day = System_DateTime__get_Day(v19, 0);
+  v21.fields._dateData = (uint64_t)&v25;
+  return Day == System_DateTime__get_Day(v21, 0);
 }
 
 
@@ -690,6 +706,7 @@ bool VoiceCondType__TryIsSatisfyCondition(bool *isPlayable, int32_t type, const 
   VoiceCondType_c *v6; // x0
   bool IsSatisfyEventCondition; // w0
   VoiceCondType_c *v8; // x0
+  bool v9; // w8
 
   if ( (byte_596F6FC & 1) == 0 )
   {
@@ -714,8 +731,10 @@ bool VoiceCondType__TryIsSatisfyCondition(bool *isPlayable, int32_t type, const 
       j_il2cpp_runtime_class_init_0(VoiceCondType_TypeInfo, *(_QWORD *)&type, method);
     IsSatisfyEventCondition = VoiceCondType__IsSatisfyBirthdayCondition((const MethodInfo *)v6);
   }
-  *isPlayable = IsSatisfyEventCondition;
-  return 1;
+  v9 = IsSatisfyEventCondition;
+  result = 1;
+  *isPlayable = v9;
+  return result;
 }
 
 

@@ -122,9 +122,11 @@ void ShopBuyItemUtility__SetBgSprite(
   int v18; // w23
   int32_t v19; // w27
   int32_t v20; // w22
-  float v21; // s10
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s8
+  float z; // s9
+  float v23; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596C828 & 1) == 0 )
   {
@@ -176,16 +178,20 @@ void ShopBuyItemUtility__SetBgSprite(
     mWidth + v15 + v15 + v18 + v19 + v20 + ShopBuyItemUtility_TypeInfo->static_fields->COIN_WIDTH_OFFSET_VALUE,
     0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)possessionBGSprite, 0);
-  if ( !gameObject
-    || (UnityEngine_GameObject__SetActive(gameObject, 1, 0), !grid)
+  if ( !gameObject )
+    goto LABEL_24;
+  UnityEngine_GameObject__SetActive(gameObject, 1, 0);
+  if ( !grid
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)grid,
                                                    0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0),
+        y = localPosition.fields.y,
+        z = localPosition.fields.z,
         (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)possessionBGSprite,
                                                     0)) == 0)
-    || (LODWORD(v21) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0),
+    || (LODWORD(v23) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0),
         (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)grid,
                                                     0)) == 0) )
@@ -193,10 +199,10 @@ void ShopBuyItemUtility__SetBgSprite(
 LABEL_24:
     sub_2213CDC(gameObject, possessionNumLabel);
   }
-  v23.fields.z = localPosition.fields.z;
-  v23.fields.x = (float)(v21 + (float)v15) + (float)(mWidth + v15);
-  v23.fields.y = localPosition.fields.y;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v23, 0);
+  v25.fields.z = z;
+  v25.fields.x = (float)(v23 + (float)v15) + (float)(mWidth + v15);
+  v25.fields.y = y;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v25, 0);
 }
 
 

@@ -4,6 +4,7 @@ void UIRotSprite___ctor(UIRotSprite_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIRotSprite__OnFill(
         UIRotSprite_o *this,
         BetterList_Vector3__o *verts,
@@ -42,15 +43,20 @@ void UIRotSprite__OnFill(
   float v37; // s9
   int32_t v38; // w24
   int32_t v39; // w0
-  int32_t v40; // w24
-  int32_t v41; // w0
-  const MethodInfo *v42; // x4
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
+  int32_t v44; // w24
+  int32_t v45; // w0
+  const MethodInfo *v46; // x4
+  int v47; // s4 OVERLAPPED
   unsigned int size; // w23
   struct UIWidget_OnPostFillCallback_o *onPostFill; // x8
-  UnityEngine_Rect_o v48; // 0:kr00_16.16
-  UnityEngine_Rect_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v51; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Rect_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59721CB & 1) == 0 )
   {
@@ -114,26 +120,34 @@ void UIRotSprite__OnFill(
       v39 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
               v10,
               *(_QWORD *)&v10->klass[1]._1.byval_arg.bits);
-      v49.fields.m_XMin = v33;
-      v49.fields.m_YMin = v36;
-      v49.fields.m_Width = v31;
-      v49.fields.m_Height = v30;
-      v48 = NGUIMath__ConvertToTexCoords(v49, v38, v39, 0);
-      v40 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v10->klass[1]._1.image)(
+      v53.fields.m_XMin = v33;
+      v53.fields.m_YMin = v36;
+      v53.fields.m_Width = v31;
+      v53.fields.m_Height = v30;
+      v54 = NGUIMath__ConvertToTexCoords(v53, v38, v39, 0);
+      m_XMin = v54.fields.m_XMin;
+      m_YMin = v54.fields.m_YMin;
+      m_Width = v54.fields.m_Width;
+      m_Height = v54.fields.m_Height;
+      v44 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v10->klass[1]._1.image)(
               v10,
               v10->klass[1]._1.gc_desc);
-      v41 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
+      v45 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
               v10,
               *(_QWORD *)&v10->klass[1]._1.byval_arg.bits);
-      v50.fields.m_XMin = v35;
-      v50.fields.m_YMin = v34;
-      v50.fields.m_Width = v37;
-      v50.fields.m_Height = v32;
-      NGUIMath__ConvertToTexCoords(v50, v40, v41, 0);
+      v55.fields.m_XMin = v35;
+      v55.fields.m_YMin = v34;
+      v55.fields.m_Width = v37;
+      v55.fields.m_Height = v32;
+      NGUIMath__ConvertToTexCoords(v55, v44, v45, 0);
       if ( verts )
       {
+        v56.fields.m_XMin = m_XMin;
+        v56.fields.m_YMin = m_YMin;
         size = verts->fields.size;
-        UIRotSprite__RotFill(this, verts, uvs, cols, v48, v51, v42);
+        v56.fields.m_Width = m_Width;
+        v56.fields.m_Height = m_Height;
+        UIRotSprite__RotFill(this, verts, uvs, cols, v56, *(UnityEngine_Rect_o *)&v47, v46);
         onPostFill = this->fields.onPostFill;
         if ( onPostFill )
           ((void (__fastcall *)(intptr_t, UIRotSprite_o *, _QWORD, BetterList_Vector3__o *, BetterList_Vector2__o *, BetterList_Color32__o *, intptr_t))onPostFill->fields.invoke_impl)(
@@ -176,24 +190,29 @@ void UIRotSprite__RotFill(
   float v21; // s3
   float v22; // s13
   const MethodInfo *v23; // x1
-  const MethodInfo *v24; // x1
+  float x; // s10
+  float y; // s11
+  const MethodInfo *v26; // x1
   UnityEngine_Color32_o drawingColor; // x0
-  UnityEngine_Color32_o v26; // x1
+  UnityEngine_Color32_o v28; // x1
   unsigned int rgba; // w22
-  float v28; // s15
-  UnityEngine_Color32_o v29; // x1
-  UnityEngine_Color32_o v30; // x1
-  UnityEngine_Color32_o v31; // x1
+  float v30; // s15
+  float v31; // s11
   UnityEngine_Color32_o v32; // x1
-  UnityEngine_Vector4_o drawingUVs; // 0:kr00_16.16
-  UnityEngine_Vector2_o v34; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v35; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v36; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v37; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color32_o v33; // x1
+  UnityEngine_Color32_o v34; // x1
+  UnityEngine_Color32_o v35; // x1
+  float w; // [xsp+8h] [xbp-78h]
+  float z; // [xsp+Ch] [xbp-74h]
+  UnityEngine_Vector2_o v38; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v39; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v40; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v41; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o drawingUVs; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   m_Height = outer.fields.m_Height;
   m_Width = outer.fields.m_Width;
@@ -229,52 +248,57 @@ void UIRotSprite__RotFill(
   v20 = v19;
   v22 = v21;
   drawingUVs = UIRotSprite__get_drawingUVs(this, v23);
-  drawingColor = UIRotSprite__get_drawingColor(this, v24);
+  x = drawingUVs.fields.x;
+  y = drawingUVs.fields.y;
+  w = drawingUVs.fields.w;
+  z = drawingUVs.fields.z;
+  drawingColor = UIRotSprite__get_drawingColor(this, v26);
   if ( !verts )
     goto LABEL_7;
-  v38.fields.z = 0.0;
-  v38.fields.y = v18;
+  v42.fields.z = 0.0;
+  v42.fields.y = v18;
   rgba = drawingColor.fields.rgba;
-  v38.fields.x = (float)(v20 + v16) * 0.5;
-  BetterList_Vector3___Add(verts, v38, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
-  v39.fields.z = 0.0;
-  v28 = (float)(v18 + v22) * 0.5;
-  v39.fields.x = v16;
-  v39.fields.y = v28;
-  BetterList_Vector3___Add(verts, v39, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
-  v40.fields.z = 0.0;
-  v40.fields.x = (float)(v20 + v16) * 0.5;
-  v40.fields.y = v22;
-  BetterList_Vector3___Add(verts, v40, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
-  v41.fields.z = 0.0;
-  v41.fields.x = v20;
-  v41.fields.y = v28;
-  BetterList_Vector3___Add(verts, v41, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
+  v42.fields.x = (float)(v20 + v16) * 0.5;
+  BetterList_Vector3___Add(verts, v42, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
+  v43.fields.z = 0.0;
+  v30 = (float)(v18 + v22) * 0.5;
+  v43.fields.x = v16;
+  v43.fields.y = v30;
+  BetterList_Vector3___Add(verts, v43, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
+  v44.fields.z = 0.0;
+  v44.fields.x = (float)(v20 + v16) * 0.5;
+  v44.fields.y = v22;
+  BetterList_Vector3___Add(verts, v44, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
+  v45.fields.z = 0.0;
+  v45.fields.x = v20;
+  v45.fields.y = v30;
+  BetterList_Vector3___Add(verts, v45, (const MethodInfo_3E716D4 *)Method_BetterList_Vector3__Add__);
   if ( !uvs )
     goto LABEL_7;
-  v34.fields.y = drawingUVs.fields.y;
-  v34.fields.x = (float)(drawingUVs.fields.x + drawingUVs.fields.z) * 0.5;
-  BetterList_Vector2___Add(uvs, v34, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
-  v35.fields.x = drawingUVs.fields.x;
-  v35.fields.y = (float)(drawingUVs.fields.y + drawingUVs.fields.w) * 0.5;
-  BetterList_Vector2___Add(uvs, v35, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
-  v36.fields.x = (float)(drawingUVs.fields.x + drawingUVs.fields.z) * 0.5;
-  v36.fields.y = drawingUVs.fields.w;
-  BetterList_Vector2___Add(uvs, v36, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
-  v37.fields.x = drawingUVs.fields.z;
-  v37.fields.y = (float)(drawingUVs.fields.y + drawingUVs.fields.w) * 0.5;
-  BetterList_Vector2___Add(uvs, v37, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
+  v38.fields.y = y;
+  v38.fields.x = (float)(x + z) * 0.5;
+  BetterList_Vector2___Add(uvs, v38, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
+  v31 = (float)(y + w) * 0.5;
+  v39.fields.x = x;
+  v39.fields.y = v31;
+  BetterList_Vector2___Add(uvs, v39, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
+  v40.fields.x = (float)(x + z) * 0.5;
+  v40.fields.y = w;
+  BetterList_Vector2___Add(uvs, v40, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
+  v41.fields.x = z;
+  v41.fields.y = v31;
+  BetterList_Vector2___Add(uvs, v41, (const MethodInfo_3E70CB8 *)Method_BetterList_Vector2__Add__);
   if ( !cols )
 LABEL_7:
-    sub_2213CDC(drawingColor, v26);
-  v29 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v29, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
-  v30 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v30, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
-  v31 = (UnityEngine_Color32_o)rgba;
-  BetterList_Color32___Add(cols, v31, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
+    sub_2213CDC(drawingColor, v28);
   v32 = (UnityEngine_Color32_o)rgba;
   BetterList_Color32___Add(cols, v32, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
+  v33 = (UnityEngine_Color32_o)rgba;
+  BetterList_Color32___Add(cols, v33, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
+  v34 = (UnityEngine_Color32_o)rgba;
+  BetterList_Color32___Add(cols, v34, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
+  v35 = (UnityEngine_Color32_o)rgba;
+  BetterList_Color32___Add(cols, v35, (const MethodInfo_3E6E720 *)Method_BetterList_Color32__Add__);
 }
 
 
@@ -286,8 +310,8 @@ UnityEngine_Color32_o UIRotSprite__get_drawingColor(UIRotSprite_o *this, const M
   float r; // s11
   __int64 v7; // x1
   double v8; // d1
-  UnityEngine_Color_o v10; // 0:kr00_16.16
   UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59721CA & 1) == 0 )
   {
@@ -309,11 +333,11 @@ UnityEngine_Color32_o UIRotSprite__get_drawingColor(UIRotSprite_o *this, const M
     v11.fields.g = g;
     v11.fields.b = b;
     v11.fields.a = finalAlpha;
-    v10 = NGUITools__ApplyPMA(v11, 0);
-    r = v10.fields.r;
-    g = v10.fields.g;
-    b = v10.fields.b;
-    finalAlpha = v10.fields.a;
+    v12 = NGUITools__ApplyPMA(v11, 0);
+    r = v12.fields.r;
+    g = v12.fields.g;
+    b = v12.fields.b;
+    finalAlpha = v12.fields.a;
   }
   if ( UnityEngine_QualitySettings__get_activeColorSpace(0) == 1 )
   {
@@ -329,41 +353,49 @@ UnityEngine_Color32_o UIRotSprite__get_drawingColor(UIRotSprite_o *this, const M
 UnityEngine_Vector4_o UIRotSprite__get_drawingUVs(UIRotSprite_o *this, const MethodInfo *method)
 {
   int32_t mFlip; // w8
+  float m_XMin; // s2
+  float v4; // s1
   float m_Height; // s3
+  float v6; // s0
+  float m_YMin; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   mFlip = this->fields.mFlip;
   if ( mFlip == 3 )
   {
-    result.fields.z = this->fields.mOuterUV.fields.m_XMin;
-    result.fields.w = this->fields.mOuterUV.fields.m_YMin;
-    result.fields.x = this->fields.mOuterUV.fields.m_Width + result.fields.z;
-    result.fields.y = this->fields.mOuterUV.fields.m_Height + result.fields.w;
+    m_XMin = this->fields.mOuterUV.fields.m_XMin;
+    m_YMin = this->fields.mOuterUV.fields.m_YMin;
+    v6 = this->fields.mOuterUV.fields.m_Width + m_XMin;
+    v4 = this->fields.mOuterUV.fields.m_Height + m_YMin;
   }
   else if ( mFlip == 2 )
   {
-    result.fields.x = this->fields.mOuterUV.fields.m_XMin;
-    result.fields.w = this->fields.mOuterUV.fields.m_YMin;
-    result.fields.y = this->fields.mOuterUV.fields.m_Height + result.fields.w;
-    result.fields.z = result.fields.x + this->fields.mOuterUV.fields.m_Width;
+    v6 = this->fields.mOuterUV.fields.m_XMin;
+    m_YMin = this->fields.mOuterUV.fields.m_YMin;
+    v4 = this->fields.mOuterUV.fields.m_Height + m_YMin;
+    m_XMin = v6 + this->fields.mOuterUV.fields.m_Width;
   }
   else
   {
     if ( mFlip == 1 )
     {
-      result.fields.z = this->fields.mOuterUV.fields.m_XMin;
-      result.fields.y = this->fields.mOuterUV.fields.m_YMin;
+      m_XMin = this->fields.mOuterUV.fields.m_XMin;
+      v4 = this->fields.mOuterUV.fields.m_YMin;
       m_Height = this->fields.mOuterUV.fields.m_Height;
-      result.fields.x = this->fields.mOuterUV.fields.m_Width + result.fields.z;
+      v6 = this->fields.mOuterUV.fields.m_Width + m_XMin;
     }
     else
     {
-      result.fields.x = this->fields.mOuterUV.fields.m_XMin;
-      result.fields.y = this->fields.mOuterUV.fields.m_YMin;
+      v6 = this->fields.mOuterUV.fields.m_XMin;
+      v4 = this->fields.mOuterUV.fields.m_YMin;
       m_Height = this->fields.mOuterUV.fields.m_Height;
-      result.fields.z = result.fields.x + this->fields.mOuterUV.fields.m_Width;
+      m_XMin = v6 + this->fields.mOuterUV.fields.m_Width;
     }
-    result.fields.w = result.fields.y + m_Height;
+    m_YMin = v4 + m_Height;
   }
+  result.fields.w = m_YMin;
+  result.fields.z = m_XMin;
+  result.fields.y = v4;
+  result.fields.x = v6;
   return result;
 }

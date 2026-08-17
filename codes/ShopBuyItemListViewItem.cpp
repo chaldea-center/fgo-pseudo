@@ -377,11 +377,11 @@ bool ShopBuyItemListViewItem__GetSendType(
         const MethodInfo *method)
 {
   ShopEntity_o *Shop_k__BackingField; // x22
-  int v9; // w11
+  int32_t v9; // w11
   int v10; // w8
   int32_t v11; // w9
   int32_t buyQuestNum[2]; // [xsp+0h] [xbp-40h] BYREF
-  __int64 buyCmdCodeNum; // [xsp+8h] [xbp-38h] BYREF
+  int32_t buyCmdCodeNum[2]; // [xsp+8h] [xbp-38h] BYREF
   int32_t buyServantNum[2]; // [xsp+18h] [xbp-28h] BYREF
 
   *isTake = 0;
@@ -389,23 +389,23 @@ bool ShopBuyItemListViewItem__GetSendType(
   *isQuest = 0;
   Shop_k__BackingField = this->fields._Shop_k__BackingField;
   *(_QWORD *)buyQuestNum = 0;
-  buyCmdCodeNum = 0;
+  *(_QWORD *)buyCmdCodeNum = 0;
   if ( !Shop_k__BackingField )
     return 0;
   *(_QWORD *)buyServantNum = 0;
   *(_QWORD *)buyQuestNum = 0;
-  buyCmdCodeNum = 0;
+  *(_QWORD *)buyCmdCodeNum = 0;
   ShopEntity__GetSum(
     Shop_k__BackingField,
     &buyServantNum[1],
     buyServantNum,
-    (int32_t *)&buyCmdCodeNum + 1,
-    (int32_t *)&buyCmdCodeNum,
+    &buyCmdCodeNum[1],
+    buyCmdCodeNum,
     &buyQuestNum[1],
     buyQuestNum,
     0);
-  v9 = buyCmdCodeNum;
-  v10 = HIDWORD(buyCmdCodeNum) + buyServantNum[0];
+  v9 = buyCmdCodeNum[0];
+  v10 = buyCmdCodeNum[1] + buyServantNum[0];
   v11 = buyQuestNum[1];
   *isTake = buyServantNum[1] > 0;
   *isSend = v10 + v9 > 0;
@@ -714,8 +714,8 @@ LABEL_57:
     if ( (max_length & ~(max_length >> 31)) == ++v30 )
       goto LABEL_57;
   }
-  v35 = v30;
   LOBYTE(Shop_k__BackingField) = 0;
+  v35 = v30;
   return (char)Shop_k__BackingField;
 }
 

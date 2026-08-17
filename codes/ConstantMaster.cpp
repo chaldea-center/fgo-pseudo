@@ -190,9 +190,12 @@ bool ConstantMaster__IsOtherImage(const MethodInfo *method)
   const MethodInfo *v3; // x1
   int32_t Value; // w0
   System_DateTime_o v5; // x1
-  uint64_t v6; // x19
-  System_DateTime_o v7; // x0
-  uint64_t v9; // [xsp+8h] [xbp-28h] BYREF
+  System_DateTime_o v6; // x0
+  uint64_t v7; // x19
+  System_DateTime_o v8; // x0
+  System_DateTime_o v9; // x1
+  System_DateTime_o v10; // x0
+  uint64_t v12; // [xsp+8h] [xbp-28h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-18h] BYREF
 
   if ( (byte_5970656 & 1) == 0 )
@@ -204,17 +207,20 @@ bool ConstantMaster__IsOtherImage(const MethodInfo *method)
   }
   v2 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
   dateData = 0;
-  v9 = 0;
+  v12 = 0;
   if ( !v2 )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v1);
   dateData = NetworkManager__getServerDateTime(0).fields._dateData;
   Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8675/*"LOGIN_DAY"*/, v3);
-  v9 = NetworkManager__getServerDateTime_48347596(Value, 0).fields._dateData;
+  v12 = NetworkManager__getServerDateTime_48347596(Value, 0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v5.fields._dateData);
-  v6 = System_DateTime__get_Date((System_DateTime_o)&dateData, 0).fields._dateData;
-  v7.fields._dateData = System_DateTime__get_Date((System_DateTime_o)&v9, 0).fields._dateData;
-  return System_DateTime__op_Equality((System_DateTime_o)v6, v7, 0);
+  v6.fields._dateData = (uint64_t)&dateData;
+  v7 = System_DateTime__get_Date(v6, 0).fields._dateData;
+  v8.fields._dateData = (uint64_t)&v12;
+  v9.fields._dateData = System_DateTime__get_Date(v8, 0).fields._dateData;
+  v10.fields._dateData = v7;
+  return System_DateTime__op_Equality(v10, v9, 0);
 }
 
 

@@ -16,6 +16,7 @@ BattleActionData_o *MessageBattleLogicTask__CreateInitActionData(
   __int64 v7; // x1
   struct System_Int32_array *actorIdlist; // x8
   int v9; // w8
+  BattleActionData_o *result; // x0
   unsigned int v11; // w8
 
   if ( (byte_5973D4E & 1) == 0 )
@@ -44,11 +45,12 @@ LABEL_10:
   v5->fields.actorId = v9;
   if ( !msgEnt )
     goto LABEL_10;
+  result = v5;
   v11 = this->fields.actortype & 0xFFFFFFFB;
   v5->fields.isForcedSpeedOne = this->fields.isForcedSpeedOne;
   v5->fields.motionId = msgEnt->fields.motionId;
   v5->fields.state = 2 * (v11 == 1);
-  return v5;
+  return result;
 }
 
 

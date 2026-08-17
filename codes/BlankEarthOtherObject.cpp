@@ -519,6 +519,7 @@ LABEL_12:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BlankEarthOtherObject__ZoomInAdjustAppearance(
         BlankEarthOtherObject_o *this,
         float speedTime,
@@ -542,12 +543,14 @@ void BlankEarthOtherObject__ZoomInAdjustAppearance(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
-  System_Action_c *v24; // x0
-  EasingObject_o *v25; // x21
-  System_Action_o *v26; // x22
-  System_Action_o *v27; // x23
-  UnityEngine_Vector3_o v28; // 0:kr20_12.12
-  UnityEngine_Quaternion_o v29; // 0:kr10_16.16
+  unsigned __int64 v24; // d0 OVERLAPPED
+  float v25; // s2
+  int v26; // s1
+  System_Action_c *v27; // x0
+  EasingObject_o *v28; // x21
+  System_Action_o *v29; // x22
+  System_Action_o *v30; // x23
+  UnityEngine_Quaternion_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596CE07 & 1) == 0 )
   {
@@ -577,33 +580,33 @@ void BlankEarthOtherObject__ZoomInAdjustAppearance(
   if ( !transform )
     goto LABEL_8;
   *(UnityEngine_Quaternion_o *)(v7 + 32) = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0);
-  *(float32x2_t *)&v28.fields.x = vmul_f32(
-                                    *(float32x2_t *)&this->fields.zoomInOffsetEulerAngle.fields.x,
-                                    vdup_n_s32(0x3C8EFA35u));
-  v28.fields.z = this->fields.zoomInOffsetEulerAngle.fields.z * 0.017453;
-  v29 = UnityEngine_Quaternion__Internal_FromEulerRad(v28, 0);
-  v24 = System_Action_TypeInfo;
-  v25 = *(EasingObject_o **)(v7 + 16);
-  *(UnityEngine_Quaternion_o *)(v7 + 48) = v29;
-  v26 = (System_Action_o *)sub_2213CCC(v24);
+  v24 = vmul_f32(*(float32x2_t *)&this->fields.zoomInOffsetEulerAngle.fields.x, vdup_n_s32(0x3C8EFA35u)).n64_u64[0];
+  v25 = this->fields.zoomInOffsetEulerAngle.fields.z * 0.017453;
+  v26 = HIDWORD(v24);
+  v31 = UnityEngine_Quaternion__Internal_FromEulerRad(*(UnityEngine_Vector3_o *)&v24, 0);
+  v27 = System_Action_TypeInfo;
+  v28 = *(EasingObject_o **)(v7 + 16);
+  *(UnityEngine_Quaternion_o *)(v7 + 48) = v31;
+  v29 = (System_Action_o *)sub_2213CCC(v27);
   System_Action___ctor(
-    v26,
+    v29,
     (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__0__,
     0);
-  v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v27,
+    v30,
     (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass48_0__ZoomInAdjustAppearance_b__1__,
     0);
-  if ( !v25 )
+  if ( !v28 )
 LABEL_8:
     sub_2213CDC(transform, v9);
-  EasingObject__Play(v25, speedTime, v26, v27, 0.0, easingType, 0);
+  EasingObject__Play(v28, speedTime, v29, v30, 0.0, easingType, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BlankEarthOtherObject__ZoomOutAdjustAppearance(
         BlankEarthOtherObject_o *this,
         float speedTime,
@@ -627,12 +630,14 @@ void BlankEarthOtherObject__ZoomOutAdjustAppearance(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
-  System_Action_c *v24; // x0
-  EasingObject_o *v25; // x21
-  System_Action_o *v26; // x22
-  System_Action_o *v27; // x23
-  UnityEngine_Vector3_o v28; // 0:kr20_12.12
-  UnityEngine_Quaternion_o v29; // 0:kr10_16.16
+  unsigned __int64 v24; // d0 OVERLAPPED
+  float v25; // s2
+  int v26; // s1
+  System_Action_c *v27; // x0
+  EasingObject_o *v28; // x21
+  System_Action_o *v29; // x22
+  System_Action_o *v30; // x23
+  UnityEngine_Quaternion_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596CE08 & 1) == 0 )
   {
@@ -662,30 +667,29 @@ void BlankEarthOtherObject__ZoomOutAdjustAppearance(
   if ( !transform )
     goto LABEL_8;
   *(UnityEngine_Quaternion_o *)(v7 + 32) = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)transform, 0);
-  *(float32x2_t *)&v28.fields.x = vmul_f32(
-                                    *(float32x2_t *)&this->fields.zoomOutOffsetEulerAngle.fields.x,
-                                    vdup_n_s32(0x3C8EFA35u));
-  v28.fields.z = this->fields.zoomOutOffsetEulerAngle.fields.z * 0.017453;
-  v29 = UnityEngine_Quaternion__Internal_FromEulerRad(v28, 0);
-  v24 = System_Action_TypeInfo;
-  v25 = *(EasingObject_o **)(v7 + 16);
-  *(UnityEngine_Quaternion_o *)(v7 + 48) = v29;
-  v26 = (System_Action_o *)sub_2213CCC(v24);
+  v24 = vmul_f32(*(float32x2_t *)&this->fields.zoomOutOffsetEulerAngle.fields.x, vdup_n_s32(0x3C8EFA35u)).n64_u64[0];
+  v25 = this->fields.zoomOutOffsetEulerAngle.fields.z * 0.017453;
+  v26 = HIDWORD(v24);
+  v31 = UnityEngine_Quaternion__Internal_FromEulerRad(*(UnityEngine_Vector3_o *)&v24, 0);
+  v27 = System_Action_TypeInfo;
+  v28 = *(EasingObject_o **)(v7 + 16);
+  *(UnityEngine_Quaternion_o *)(v7 + 48) = v31;
+  v29 = (System_Action_o *)sub_2213CCC(v27);
   System_Action___ctor(
-    v26,
+    v29,
     (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__0__,
     0);
-  v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v27,
+    v30,
     (Il2CppObject *)v7,
     Method_BlankEarthOtherObject___c__DisplayClass49_0__ZoomOutAdjustAppearance_b__1__,
     0);
-  if ( !v25 )
+  if ( !v28 )
 LABEL_8:
     sub_2213CDC(transform, v9);
-  EasingObject__Play(v25, speedTime, v26, v27, 0.0, easingType, 0);
+  EasingObject__Play(v28, speedTime, v29, v30, 0.0, easingType, 0);
 }
 
 
@@ -699,11 +703,17 @@ UnityEngine_Vector3_o BlankEarthOtherObject__get_OtherObjZoomInPos(
         BlankEarthOtherObject_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.otherObjZoomInPos.fields.x;
-  result.fields.y = this->fields.otherObjZoomInPos.fields.y;
-  result.fields.z = this->fields.otherObjZoomInPos.fields.z;
+  x = this->fields.otherObjZoomInPos.fields.x;
+  y = this->fields.otherObjZoomInPos.fields.y;
+  z = this->fields.otherObjZoomInPos.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -752,11 +762,17 @@ int32_t BlankEarthOtherObject__get_objectId(BlankEarthOtherObject_o *this, const
 
 UnityEngine_Vector3_o BlankEarthOtherObject__get_selfScale(BlankEarthOtherObject_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields._selfScale_k__BackingField.fields.x;
-  result.fields.y = this->fields._selfScale_k__BackingField.fields.y;
-  result.fields.z = this->fields._selfScale_k__BackingField.fields.z;
+  x = this->fields._selfScale_k__BackingField.fields.x;
+  y = this->fields._selfScale_k__BackingField.fields.y;
+  z = this->fields._selfScale_k__BackingField.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -838,6 +854,7 @@ bool BlankEarthOtherObject__CoPlayAnimUntilFinish_d__58__MoveNext(
   bool v18; // w6
   bool v19; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -871,8 +888,9 @@ LABEL_14:
             v5->fields.__2__current = 0;
             p__2__current = (MissionNaviTransitionBoardItem_o *)&v5->fields.__2__current;
             sub_2213A04(p__2__current, 0, v14, v15, v16, v17, v18, v19);
+            result = 1;
             p__2__current[-1].fields._BoardType_k__BackingField = 1;
-            return 1;
+            return result;
           }
           goto LABEL_17;
         }

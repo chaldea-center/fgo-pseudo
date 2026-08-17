@@ -17,7 +17,7 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
   float z; // s10
   float m_Distance; // s11
   float v12; // s14
-  __int64 v13; // kr60_8
+  __int64 v13; // kr00_8
   float v14; // s12
   float v15; // s1
   struct UnityEngine_Mathf_StaticFields *static_fields; // x8
@@ -30,16 +30,19 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
   float v23; // s10
   float v24; // s8
   float v25; // s9
-  UnityEngine_Ray_o v26; // [xsp+8h] [xbp-98h] BYREF
-  UnityEngine_Ray_o v27; // [xsp+20h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o Point; // 0:kr00_12.12
-  UnityEngine_Vector3_o position; // 0:kr14_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr40_12.12
-  UnityEngine_Quaternion_o v31; // 0:kr30_16.16
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  float v26; // s10
+  float w; // s11
+  float v28; // s8
+  float v29; // s9
+  UnityEngine_Ray_o v30; // [xsp+8h] [xbp-98h] BYREF
+  UnityEngine_Ray_o v31; // [xsp+20h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o Point; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o mLocalPos; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s4.4,4:s5.4,8:s6.4
+  UnityEngine_Vector3_o v35; // 0:s4.4,4:s5.4,8:s6.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974FD0 & 1) == 0 )
   {
@@ -48,7 +51,7 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
     byte_5974FD0 = 1;
   }
   mDragging = this->fields.mDragging;
-  memset(&v27, 0, sizeof(v27));
+  memset(&v31, 0, sizeof(v31));
   if ( mDragging )
   {
     target = (UnityEngine_Object_o *)this->fields.target;
@@ -58,17 +61,17 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
     {
       if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v6);
-      UICamera__get_currentRay(&v26, 0);
+      UICamera__get_currentRay(&v30, 0);
       x = this->fields.mPlane.fields.m_Normal.fields.x;
       y = this->fields.mPlane.fields.m_Normal.fields.y;
-      *(_OWORD *)&v27.fields.m_Origin.fields.x = *(_OWORD *)&v26.fields.m_Origin.fields.x;
+      *(_OWORD *)&v31.fields.m_Origin.fields.x = *(_OWORD *)&v30.fields.m_Origin.fields.x;
       z = this->fields.mPlane.fields.m_Normal.fields.z;
       m_Distance = this->fields.mPlane.fields.m_Distance;
-      *(_QWORD *)&v27.fields.m_Direction.fields.y = *(_QWORD *)&v26.fields.m_Direction.fields.y;
-      v12 = v26.fields.m_Origin.fields.x;
-      v13 = *(_QWORD *)&v26.fields.m_Origin.fields.y;
-      v14 = (float)(v26.fields.m_Direction.fields.z * z)
-          + (float)((float)(v26.fields.m_Direction.fields.x * x) + (float)(v26.fields.m_Direction.fields.y * y));
+      *(_QWORD *)&v31.fields.m_Direction.fields.y = *(_QWORD *)&v30.fields.m_Direction.fields.y;
+      v12 = v30.fields.m_Origin.fields.x;
+      v13 = *(_QWORD *)&v30.fields.m_Origin.fields.y;
+      v14 = (float)(v30.fields.m_Direction.fields.z * z)
+          + (float)((float)(v30.fields.m_Direction.fields.x * x) + (float)(v30.fields.m_Direction.fields.y * y));
       if ( !byte_5969AE4 )
       {
         sub_2213A60(&UnityEngine_Mathf_TypeInfo);
@@ -102,30 +105,38 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
             sub_2213CDC(cachedTransform, v7);
           }
           UIWidget__set_height((UIWidget_o *)cachedTransform, this->fields.mHeight, 0);
-          Point = UnityEngine_Ray__GetPoint(&v27, v18, 0);
+          Point = UnityEngine_Ray__GetPoint(&v31, v18, 0);
           v21 = Point.fields.x - this->fields.mRayPos.fields.x;
           v22 = Point.fields.y - this->fields.mRayPos.fields.y;
           v23 = Point.fields.z - this->fields.mRayPos.fields.z;
           position = UnityEngine_Transform__get_position(v20, 0);
-          v32.fields.x = v21 + position.fields.x;
-          v32.fields.y = v22 + position.fields.y;
-          v32.fields.z = v23 + position.fields.z;
-          UnityEngine_Transform__set_position(v20, v32, 0);
+          position.fields.x = v21 + position.fields.x;
+          position.fields.y = v22 + position.fields.y;
+          position.fields.z = v23 + position.fields.z;
+          UnityEngine_Transform__set_position(v20, position, 0);
           localRotation = UnityEngine_Transform__get_localRotation(v20, 0);
-          v31 = UnityEngine_Quaternion__Inverse(localRotation, 0);
-          localPosition = UnityEngine_Transform__get_localPosition(v20, 0);
-          v34.fields.x = localPosition.fields.x - this->fields.mLocalPos.fields.x;
-          v34.fields.y = localPosition.fields.y - this->fields.mLocalPos.fields.y;
-          v34.fields.z = localPosition.fields.z - this->fields.mLocalPos.fields.z;
-          LODWORD(v24) = (unsigned int)UnityEngine_Quaternion__op_Multiply_83371700(v31, v34, 0);
+          v37 = UnityEngine_Quaternion__Inverse(localRotation, 0);
+          v24 = v37.fields.x;
+          v25 = v37.fields.y;
+          v26 = v37.fields.z;
+          w = v37.fields.w;
+          *(UnityEngine_Vector3_o *)&v38.fields.x = UnityEngine_Transform__get_localPosition(v20, 0);
+          v35.fields.x = v38.fields.x - this->fields.mLocalPos.fields.x;
+          v35.fields.y = v38.fields.y - this->fields.mLocalPos.fields.y;
+          v35.fields.z = v38.fields.z - this->fields.mLocalPos.fields.z;
+          v38.fields.x = v24;
+          v38.fields.y = v25;
+          v38.fields.z = v26;
+          v38.fields.w = w;
+          LODWORD(v28) = (unsigned int)UnityEngine_Quaternion__op_Multiply_83371700(v38, v35, 0);
           mLocalPos = this->fields.mLocalPos;
-          v25 = mLocalPos.fields.y;
+          v29 = mLocalPos.fields.y;
           UnityEngine_Transform__set_localPosition(v20, mLocalPos, 0);
           NGUIMath__ResizeWidget_56366900(
             this->fields.target,
             this->fields.pivot,
-            v24,
-            v25,
+            v28,
+            v29,
             this->fields.minWidth,
             this->fields.minHeight,
             this->fields.maxWidth,
@@ -180,7 +191,7 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
   float v34; // s10
   float m_Distance; // s11
   float v36; // s14
-  __int64 v37; // kr20_8
+  __int64 v37; // kr00_8
   float v38; // s12
   float v39; // s1
   struct UnityEngine_Mathf_StaticFields *v40; // x8
@@ -191,8 +202,8 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
   float v45; // [xsp+4h] [xbp-9Ch]
   UnityEngine_Ray_o v46; // [xsp+8h] [xbp-98h] BYREF
   UnityEngine_Ray_o v47; // [xsp+20h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o Point; // 0:kr00_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
+  UnityEngine_Vector3_o Point; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974FCF & 1) == 0 )
   {

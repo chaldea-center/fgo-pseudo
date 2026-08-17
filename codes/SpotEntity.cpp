@@ -22,14 +22,20 @@ UnityEngine_Vector3_o SpotEntity__GetLocalPositionOnMapModel(SpotEntity_o *this,
   int32_t x; // s8
   int32_t y; // s9
   int32_t z; // w0
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   x = this->fields.x;
   y = this->fields.y;
   z = SpotEntity__get_z(this, method);
-  result.fields.x = (float)x;
-  result.fields.y = (float)y;
-  result.fields.z = (float)z;
+  v5 = (float)x;
+  v6 = (float)y;
+  v7 = (float)z;
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 

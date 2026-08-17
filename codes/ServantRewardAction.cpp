@@ -1512,7 +1512,7 @@ LABEL_17:
   }
   if ( !v6 )
     goto LABEL_17;
-  CommonUI__OpenServantStatusDialog_37382876(v6, 6, v10, v11, v12, *(_DWORD *)(*((_QWORD *)this + 23) + 20LL), 0);
+  CommonUI__OpenServantStatusDialog_37382876(v6, 6, v10, v11, v12, HIDWORD(this[7].fields.that->fields.m_CachedPtr), 0);
 }
 
 
@@ -2999,11 +2999,17 @@ void ServantRewardAction_StateTouchWait__begin(
   System_String_o *v16; // x21
   Il2CppObject *Instance; // x22
   NotificationDialog_ClickDelegate_o *v18; // x23
+  System_Nullable_float__o p_titlePosY; // x0
+  System_Nullable_float__o v20; // x0
+  System_Nullable_int__o p_messageWidgetSizeY; // x0
+  System_Nullable_float__o p_buttonPosY; // x0
+  System_Nullable_int__o v23; // x0
+  System_Nullable_int__o p_buttonWidgetSizeY; // x0
   System_Nullable_int__o buttonWidgetSizeY; // [xsp+60h] [xbp-70h] BYREF
-  System_Nullable_int__o v20; // [xsp+68h] [xbp-68h] BYREF
+  System_Nullable_int__o v26; // [xsp+68h] [xbp-68h] BYREF
   System_Nullable_float__o buttonPosY; // [xsp+70h] [xbp-60h] BYREF
   System_Nullable_int__o messageWidgetSizeY; // [xsp+78h] [xbp-58h] BYREF
-  System_Nullable_float__o v23; // [xsp+80h] [xbp-50h] BYREF
+  System_Nullable_float__o v29; // [xsp+80h] [xbp-50h] BYREF
   System_Nullable_float__o titlePosY; // [xsp+88h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+98h] [xbp-38h] BYREF
 
@@ -3091,34 +3097,31 @@ LABEL_20:
       (Il2CppObject *)v4,
       Method_ServantRewardAction_StateTouchWait__begin_b__1_0__,
       0);
+    p_titlePosY = (System_Nullable_float__o)&titlePosY;
     titlePosY = 0;
-    System_Nullable_float____ctor(
-      (System_Nullable_float__o)&titlePosY,
-      170.0,
-      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-    v23 = 0;
-    System_Nullable_float____ctor(
-      (System_Nullable_float__o)&v23,
-      8.0,
-      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    System_Nullable_float____ctor(p_titlePosY, 170.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    v20 = (System_Nullable_float__o)&v29;
+    v29 = 0;
+    System_Nullable_float____ctor(v20, 8.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    p_messageWidgetSizeY = (System_Nullable_int__o)&messageWidgetSizeY;
     messageWidgetSizeY = 0;
     System_Nullable_int____ctor(
-      (System_Nullable_int__o)&messageWidgetSizeY,
+      p_messageWidgetSizeY,
       270,
       (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    p_buttonPosY = (System_Nullable_float__o)&buttonPosY;
     buttonPosY = 0;
     System_Nullable_float____ctor(
-      (System_Nullable_float__o)&buttonPosY,
+      p_buttonPosY,
       -162.5,
       (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-    v20 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v20,
-      217,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    v23 = (System_Nullable_int__o)&v26;
+    v26 = 0;
+    System_Nullable_int____ctor(v23, 217, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    p_buttonWidgetSizeY = (System_Nullable_int__o)&buttonWidgetSizeY;
     buttonWidgetSizeY = 0;
     System_Nullable_int____ctor(
-      (System_Nullable_int__o)&buttonWidgetSizeY,
+      p_buttonWidgetSizeY,
       55,
       (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
     if ( Instance )
@@ -3135,13 +3138,13 @@ LABEL_20:
         0,
         0,
         titlePosY,
-        v23,
+        v29,
         30,
         5,
         messageWidgetSizeY,
         0,
         buttonPosY,
-        v20,
+        v26,
         buttonWidgetSizeY,
         0);
       return;

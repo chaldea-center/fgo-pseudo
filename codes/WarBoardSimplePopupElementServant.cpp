@@ -483,7 +483,7 @@ void WarBoardSimplePopupElementServant__SetUp(
   int32_t MaxHp; // [xsp+8h] [xbp-68h] BYREF
   int32_t iconLevel_k__BackingField; // [xsp+Ch] [xbp-64h] BYREF
   Il2CppObject *entity; // [xsp+10h] [xbp-60h] BYREF
-  __int64 v140; // [xsp+18h] [xbp-58h] BYREF
+  int32_t svtId[2]; // [xsp+18h] [xbp-58h] BYREF
   UnityEngine_Vector3_o v141; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v142; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -514,7 +514,7 @@ void WarBoardSimplePopupElementServant__SetUp(
     byte_596E408 = 1;
   }
   entity = 0;
-  v140 = 0;
+  *(_QWORD *)svtId = 0;
   if ( !v3 )
     goto LABEL_165;
   if ( WarBoardPieceData__get_isMaster(v3, 0) || !v3->fields._battleServant_k__BackingField )
@@ -663,14 +663,14 @@ void WarBoardSimplePopupElementServant__SetUp(
     this = (WarBoardSimplePopupElementServant_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( !this )
       goto LABEL_165;
-    pieceData = (WarBoardPieceData_o *)(*((_DWORD *)this + 128) == 2);
+    pieceData = (WarBoardPieceData_o *)(LODWORD(this[1].fields.hpBar) == 2);
   }
   if ( !actionCountObj )
     goto LABEL_165;
   UnityEngine_GameObject__SetActive(actionCountObj, (bool)pieceData, 0);
   actValueLabel = v4->fields.actValueLabel;
-  LODWORD(v140) = v3->fields._currentActionCount_k__BackingField;
-  this = (WarBoardSimplePopupElementServant_o *)System_Int32__ToString((int32_t)&v140, 0);
+  svtId[0] = v3->fields._currentActionCount_k__BackingField;
+  this = (WarBoardSimplePopupElementServant_o *)System_Int32__ToString((int32_t)svtId, 0);
   if ( !actValueLabel )
     goto LABEL_165;
   UILabel__set_text(actValueLabel, (System_String_o *)this, 0);
@@ -698,7 +698,7 @@ void WarBoardSimplePopupElementServant__SetUp(
         this = (WarBoardSimplePopupElementServant_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( !this )
           goto LABEL_165;
-        pieceData = (WarBoardPieceData_o *)(*((_DWORD *)this + 128) == 2);
+        pieceData = (WarBoardPieceData_o *)(LODWORD(this[1].fields.hpBar) == 2);
       }
       else
       {
@@ -714,8 +714,8 @@ void WarBoardSimplePopupElementServant__SetUp(
         if ( !Cost_k__BackingField )
           goto LABEL_165;
         v55 = v4->fields.actionPointValueLabel;
-        LODWORD(v140) = Cost_k__BackingField->fields._CurrentActionPoint_k__BackingField;
-        this = (WarBoardSimplePopupElementServant_o *)System_Int32__ToString((int32_t)&v140, 0);
+        svtId[0] = Cost_k__BackingField->fields._CurrentActionPoint_k__BackingField;
+        this = (WarBoardSimplePopupElementServant_o *)System_Int32__ToString((int32_t)svtId, 0);
         if ( !v55 )
           goto LABEL_165;
         UILabel__set_text(v55, (System_String_o *)this, 0);
@@ -802,7 +802,7 @@ void WarBoardSimplePopupElementServant__SetUp(
   if ( npcImageSvtId_k__BackingField <= 0 )
     npcImageSvtId_k__BackingField = v3->fields._iconId_k__BackingField;
   npcDispLimitCount_k__BackingField = v3->fields._npcDispLimitCount_k__BackingField;
-  HIDWORD(v140) = npcImageSvtId_k__BackingField;
+  svtId[1] = npcImageSvtId_k__BackingField;
   if ( npcDispLimitCount_k__BackingField <= 0 )
     npcDispLimitCount_k__BackingField = v3->fields._iconLimitCount_k__BackingField;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
@@ -818,7 +818,7 @@ void WarBoardSimplePopupElementServant__SetUp(
   if ( !WarBoardPieceData__get_IsEnemyMonster(v3, 0) )
   {
     servantIcon = v4->fields.servantIcon;
-    v81 = HIDWORD(v140);
+    v81 = svtId[1];
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v78, v79);
     v82 = ServantImageLimitSealAfter;
@@ -830,7 +830,7 @@ void WarBoardSimplePopupElementServant__SetUp(
   if ( !this )
     goto LABEL_165;
   posAtkValueLabel = (int32_t)this->fields.posAtkValueLabel;
-  iconLevel_k__BackingField = HIDWORD(v140);
+  iconLevel_k__BackingField = svtId[1];
   v85 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &iconLevel_k__BackingField);
   MaxHp = npcDispLimitCount_k__BackingField;
   v86 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &MaxHp);
@@ -842,7 +842,7 @@ void WarBoardSimplePopupElementServant__SetUp(
   v92 = (UISprite_o *)v4->fields.enemyIcon;
   if ( !v91 )
   {
-    v95 = System_Int32__ToString((int32_t)&v140 + 4, 0);
+    v95 = System_Int32__ToString((int32_t)&svtId[1], 0);
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v93, v94);
     if ( !AtlasManager__SetEventUI_47569484(posAtkValueLabel, v92, v95, 0) )
@@ -986,8 +986,8 @@ LABEL_165:
         goto LABEL_165;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
       critecalStarsLabel = v4->fields.critecalStarsLabel;
-      LODWORD(v140) = WarBoardPieceData__get_CriticalStars(v3, 0);
-      this = (WarBoardSimplePopupElementServant_o *)System_Int32__ToString((int32_t)&v140, 0);
+      svtId[0] = WarBoardPieceData__get_CriticalStars(v3, 0);
+      this = (WarBoardSimplePopupElementServant_o *)System_Int32__ToString((int32_t)svtId, 0);
       if ( !critecalStarsLabel )
         goto LABEL_165;
       UILabel__set_text(critecalStarsLabel, (System_String_o *)this, 0);
@@ -1379,39 +1379,47 @@ void WarBoardSimplePopupElementServant___c__DisplayClass55_0___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WarBoardSimplePopupElementServant___c__DisplayClass55_0___UpdateUiBrightnessByPieceStatus_b__0(
         WarBoardSimplePopupElementServant___c__DisplayClass55_0_o *this,
         UIWidget_o *x,
         const MethodInfo *method)
 {
-  UnityEngine_Color_o v4; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v3; // s0 OVERLAPPED
+  float v4; // s3
+  float v5; // s1
+  float v6; // s2
 
   if ( !x )
     sub_2213CDC(this, 0);
-  v4.fields.r = 0.5;
-  v4.fields.a = 1.0;
+  v3 = 0.5;
+  v4 = 1.0;
   if ( !this->fields.hasIconDarkenBuff )
-    v4.fields.r = 1.0;
-  v4.fields.g = v4.fields.r;
-  v4.fields.b = v4.fields.r;
-  UIWidget__set_color(x, v4, 0);
+    v3 = 1.0;
+  v5 = v3;
+  v6 = v3;
+  UIWidget__set_color(x, *(UnityEngine_Color_o *)&v3, 0);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void WarBoardSimplePopupElementServant___c__DisplayClass55_0___UpdateUiBrightnessByPieceStatus_b__1(
         WarBoardSimplePopupElementServant___c__DisplayClass55_0_o *this,
         UIWidget_o *x,
         const MethodInfo *method)
 {
-  UnityEngine_Color_o v4; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v3; // s0 OVERLAPPED
+  float v4; // s3
+  float v5; // s1
+  float v6; // s2
 
   if ( !x )
     sub_2213CDC(this, 0);
-  v4.fields.r = 0.5;
-  v4.fields.a = 1.0;
+  v3 = 0.5;
+  v4 = 1.0;
   if ( !this->fields.hasIconDarkenBuff )
-    v4.fields.r = 1.0;
-  v4.fields.g = v4.fields.r;
-  v4.fields.b = v4.fields.r;
-  UIWidget__set_color(x, v4, 0);
+    v3 = 1.0;
+  v5 = v3;
+  v6 = v3;
+  UIWidget__set_color(x, *(UnityEngine_Color_o *)&v3, 0);
 }

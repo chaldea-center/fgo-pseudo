@@ -22,6 +22,7 @@ int32_t ServantStatusListViewItemDrawTdSpeed__GetKind(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawTdSpeed__SetItem(
         ServantStatusListViewItemDrawTdSpeed_o *this,
         ServantStatusListViewItem_o *item,
@@ -59,7 +60,10 @@ void ServantStatusListViewItemDrawTdSpeed__SetItem(
   struct UISprite_array *tdSpeedButtonSpriteList; // x8
   System_String_o **v36; // x8
   struct UIRangeLabel_array *v37; // x8
-  UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v38; // s0 OVERLAPPED
+  float v39; // s1
+  float v40; // s2
+  float v41; // s3
 
   if ( (byte_596DF5B & 1) == 0 )
   {
@@ -186,22 +190,22 @@ LABEL_55:
         if ( !TreasureDeviceSpeedSelect )
           break;
         if ( v33 == v34 )
-          v41.fields.r = v28;
+          v38 = v28;
         else
-          v41.fields.r = v19;
+          v38 = v19;
         if ( v33 == v34 )
-          v41.fields.g = v29;
+          v39 = v29;
         else
-          v41.fields.g = v20;
+          v39 = v20;
         if ( v33 == v34 )
-          v41.fields.b = v30;
+          v40 = v30;
         else
-          v41.fields.b = v21;
+          v40 = v21;
         if ( v33 == v34 )
-          v41.fields.a = v31;
+          v41 = v31;
         else
-          v41.fields.a = v22;
-        UIRangeLabel__set_effectColor((UIRangeLabel_o *)TreasureDeviceSpeedSelect, v41, 0);
+          v41 = v22;
+        UIRangeLabel__set_effectColor((UIRangeLabel_o *)TreasureDeviceSpeedSelect, *(UnityEngine_Color_o *)&v38, 0);
         if ( v26 + (_DWORD)++v27 == 4 )
           return;
       }

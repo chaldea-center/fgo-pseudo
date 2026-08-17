@@ -285,7 +285,7 @@ void BitExpeditionFinishComponent__SetUp(
   UnityEngine_Transform_o *transform; // x25
   UnityEngine_Component_o *dogRoot; // x0
   UnityEngine_Transform_o *v33; // x0
-  __int64 v34; // x0
+  UnityEngine_Transform_o *v34; // x0
   __int64 v35; // x1
   UnityEngine_Transform_o *v36; // x25
   struct System_Collections_Generic_Dictionary_int__Animation__o *v37; // x25
@@ -390,11 +390,11 @@ void BitExpeditionFinishComponent__SetUp(
     if ( !transform )
       sub_2213CDC(v33, v33);
     UnityEngine_Transform__SetParent(transform, v33, 0);
-    v34 = (__int64)UnityEngine_GameObject__get_transform(v29, 0);
-    v36 = (UnityEngine_Transform_o *)v34;
+    v34 = UnityEngine_GameObject__get_transform(v29, 0);
+    v36 = v34;
     if ( !byte_5969AE5 )
     {
-      v34 = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      v34 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v36 )

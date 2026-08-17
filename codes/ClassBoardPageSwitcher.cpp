@@ -451,8 +451,16 @@ void ClassBoardPageSwitcher__DirectlyBack(ClassBoardPageSwitcher_o *this, const 
   this = (ClassBoardPageSwitcher_o *)sceneRoot->fields.controller;
   if ( !this )
     goto LABEL_20;
-  *((_QWORD *)this + 20) = 0;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 160), 0, v2, v3, v4, v5, v6, v7);
+  this[1].fields._SceneJumpInfo_k__BackingField = 0;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&this[1].fields._SceneJumpInfo_k__BackingField,
+    0,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   SceneJumpInfo_k__BackingField = v8->fields._SceneJumpInfo_k__BackingField;
   if ( !SceneJumpInfo_k__BackingField )
     goto LABEL_20;
@@ -924,7 +932,7 @@ LABEL_9:
   classBoardRoot = v9->fields.classBoardRoot;
   if ( !classBoardRoot )
     goto LABEL_25;
-  v11 = (Il2CppObject *)*((_QWORD *)this + 22);
+  v11 = (Il2CppObject *)this[2].klass;
   this = (ClassBoardPageSwitcher_o *)UnityEngine_GameObject__get_transform(classBoardRoot, 0);
   if ( !this )
     goto LABEL_25;
@@ -1025,7 +1033,7 @@ void ClassBoardPageSwitcher__InitForwardUi(ClassBoardPageSwitcher_o *this, const
   __int64 v8; // x0
   struct ClassBoardRootComponent_o *v9; // x8
   UnityEngine_GameObject_o *forwardUiRoot; // x8
-  Il2CppObject *v11; // x20
+  Il2CppObject *monitor; // x20
   __int64 v12; // x1
   UnityEngine_Transform_o *transform; // x21
   Il2CppObject *Component_object; // x0
@@ -1081,12 +1089,12 @@ LABEL_9:
   forwardUiRoot = v9->fields.forwardUiRoot;
   if ( !forwardUiRoot )
     goto LABEL_18;
-  v11 = (Il2CppObject *)*((_QWORD *)this + 23);
+  monitor = (Il2CppObject *)this[2].monitor;
   transform = UnityEngine_GameObject__get_transform(forwardUiRoot, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
   this = (ClassBoardPageSwitcher_o *)UnityEngine_Object__Instantiate_object__59717116(
-                                       v11,
+                                       monitor,
                                        transform,
                                        (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
   if ( !this )

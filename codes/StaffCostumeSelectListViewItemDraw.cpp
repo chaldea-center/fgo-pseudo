@@ -14,12 +14,12 @@ void StaffCostumeSelectListViewItemDraw__SetDisp(
   __int64 v6; // x2
   UIRangeLabel_o *v7; // x21
   int v8; // w8
-  float *v9; // x11
-  float *v10; // x8
-  float *v11; // x9
-  float *v12; // x10
+  struct UISprite_o *v9; // x11
+  float *p_mTrans; // x8
+  float *p_mUpdateFrame; // x9
+  float *p_mChildren; // x10
   float *v13; // x11
-  float *v14; // x11
+  struct UISprite_o *iconSprite; // x11
   __int64 *v15; // x8
   __int64 v16; // x1
   __int64 v17; // x2
@@ -63,11 +63,11 @@ void StaffCostumeSelectListViewItemDraw__SetDisp(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v6);
       this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
     }
-    v14 = (float *)*((_QWORD *)this + 23);
-    v10 = v14 + 20;
-    v11 = v14 + 21;
-    v12 = v14 + 22;
-    v13 = v14 + 23;
+    iconSprite = this[2].fields.iconSprite;
+    p_mTrans = (float *)&iconSprite->fields.mTrans;
+    p_mUpdateFrame = (float *)&iconSprite->fields.mTrans + 1;
+    p_mChildren = (float *)&iconSprite->fields.mChildren;
+    v13 = (float *)&iconSprite->fields.mChildren + 1;
     if ( v7 )
       goto LABEL_22;
 LABEL_36:
@@ -86,18 +86,18 @@ LABEL_36:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v6);
     this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
   }
-  v9 = (float *)*((_QWORD *)this + 23);
-  v10 = v9 + 24;
-  v11 = v9 + 25;
-  v12 = v9 + 26;
-  v13 = v9 + 27;
+  v9 = this[2].fields.iconSprite;
+  p_mTrans = (float *)&v9->fields.mChanged;
+  p_mUpdateFrame = (float *)&v9->fields.mUpdateFrame;
+  p_mChildren = (float *)&v9->fields.mAnchorsCached;
+  v13 = (float *)(&v9->fields.mAnchorsCached + 4);
   if ( !v7 )
     goto LABEL_36;
 LABEL_22:
   v21.fields.a = *v13;
-  v21.fields.b = *v12;
-  v21.fields.g = *v11;
-  v21.fields.r = *v10;
+  v21.fields.b = *p_mChildren;
+  v21.fields.g = *p_mUpdateFrame;
+  v21.fields.r = *p_mTrans;
   UIRangeLabel__set_effectColor(v7, v21, 0);
   this = v4[6];
   if ( !this )

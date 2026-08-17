@@ -216,6 +216,7 @@ void EquipGraphListViewObject__InitItem(EquipGraphListViewObject_o *this, const 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EquipGraphListViewObject__Init_49134312(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
@@ -224,23 +225,18 @@ void EquipGraphListViewObject__Init_49134312(
 {
   const MethodInfo *v4; // x4
   float v5; // s0
-  float v6; // s1
-  float v7; // s2
-  float v8; // s3
-  UnityEngine_Vector3_o v12; // 0:kr00_12.12
+  int v6; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v12.fields.x = v6;
-  v12.fields.y = v7;
-  v12.fields.z = v8;
-  EquipGraphListViewObject__Init(this, initMode, 0, v5, v12, afterEndSelectConfirm, v4);
+  EquipGraphListViewObject__Init(this, initMode, 0, v5, *(UnityEngine_Vector3_o *)&v6, afterEndSelectConfirm, v4);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EquipGraphListViewObject__Init_49135108(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
@@ -249,23 +245,18 @@ void EquipGraphListViewObject__Init_49135108(
         const MethodInfo *method)
 {
   const MethodInfo *v5; // x4
-  float v6; // s1
-  float v7; // s2
-  float v8; // s3
-  UnityEngine_Vector3_o v12; // 0:kr00_12.12
+  int v6; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v12.fields.x = v6;
-  v12.fields.y = v7;
-  v12.fields.z = v8;
-  EquipGraphListViewObject__Init(this, initMode, callbackFunc, delay, v12, 0, v5);
+  EquipGraphListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v6, 0, v5);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EquipGraphListViewObject__Init_49135196(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
@@ -274,20 +265,14 @@ void EquipGraphListViewObject__Init_49135196(
 {
   const MethodInfo *v4; // x4
   float v5; // s0
-  float v6; // s1
-  float v7; // s2
-  float v8; // s3
-  UnityEngine_Vector3_o v12; // 0:kr00_12.12
+  int v6; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v12.fields.x = v6;
-  v12.fields.y = v7;
-  v12.fields.z = v8;
-  EquipGraphListViewObject__Init(this, initMode, callbackFunc, v5, v12, 0, v4);
+  EquipGraphListViewObject__Init(this, initMode, callbackFunc, v5, *(UnityEngine_Vector3_o *)&v6, 0, v4);
 }
 
 

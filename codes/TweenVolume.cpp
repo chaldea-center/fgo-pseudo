@@ -12,25 +12,26 @@ TweenVolume_o *TweenVolume__Begin(
         float targetVolume,
         const MethodInfo *method)
 {
-  TweenVolume_o *v7; // x0
+  Il2CppObject *v7; // x0
   const MethodInfo *v8; // x1
   TweenVolume_o *v9; // x19
+  float value; // s0
+  TweenVolume_o *result; // x0
 
   if ( (byte_5975200 & 1) == 0 )
   {
     sub_2213A60(&Method_UITweener_Begin_TweenVolume___);
     byte_5975200 = 1;
   }
-  v7 = (TweenVolume_o *)UITweener__Begin_object_(
-                          go,
-                          duration,
-                          (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenVolume___);
+  v7 = UITweener__Begin_object_(go, duration, (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenVolume___);
   if ( !v7 )
     sub_2213CDC(0, v8);
-  v9 = v7;
-  v7->fields.from = TweenVolume__get_value(v7, v8);
+  v9 = (TweenVolume_o *)v7;
+  value = TweenVolume__get_value((TweenVolume_o *)v7, v8);
+  result = v9;
+  v9->fields.from = value;
   v9->fields.to = targetVolume;
-  return v9;
+  return result;
 }
 
 

@@ -2171,14 +2171,18 @@ UnityEngine_Vector3_o FriendRootComponent__GetDisplayPositionModeKindButtons(
   FriendRootComponent_o *v2; // x19
   struct UISprite_o *modeEditLockSprite; // x8
   int mWidth; // w20
-  float v5; // s8
+  float y; // s8
   __int64 v6; // x1
   __int64 v7; // x2
   float z; // s9
   float v9; // s10
   __int64 v10; // x1
   __int64 v11; // x2
-  float y; // s1
+  float v12; // s1
+  float v13; // s2
+  float v14; // s0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
@@ -2192,14 +2196,15 @@ UnityEngine_Vector3_o FriendRootComponent__GetDisplayPositionModeKindButtons(
     || (this = (FriendRootComponent_o *)v2->fields.modeButtonParent) == 0
     || (mWidth = modeEditLockSprite->fields.mWidth,
         (this = (FriendRootComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0)
-    || (y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y,
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
         (this = (FriendRootComponent_o *)v2->fields.modeButtonParent) == 0)
-    || (v5 = y,
+    || (y = localPosition.fields.y,
         (this = (FriendRootComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0) )
   {
     sub_2213CDC(this, method);
   }
-  z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+  v16 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  z = v16.fields.z;
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v6, v7);
   v9 = (float)mWidth;
@@ -2209,9 +2214,12 @@ UnityEngine_Vector3_o FriendRootComponent__GetDisplayPositionModeKindButtons(
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v10, v11);
     v9 = v9 - FSUtility__GetOffsetX(74.0, 1, 0);
   }
-  result.fields.y = v5;
-  result.fields.z = z;
-  result.fields.x = v9;
+  v12 = y;
+  v13 = z;
+  v14 = v9;
+  result.fields.z = v13;
+  result.fields.y = v12;
+  result.fields.x = v14;
   return result;
 }
 
@@ -2221,23 +2229,27 @@ UnityEngine_Vector3_o FriendRootComponent__GetHidePositionModeKindButtons(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *modeButtonParent; // x0
-  float v4; // s8
-  float y; // s1
+  float y; // s8
+  float v5; // s0
+  float v6; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   modeButtonParent = this->fields.modeButtonParent;
   if ( !modeButtonParent
     || (modeButtonParent = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(modeButtonParent, 0)) == 0
-    || (y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)modeButtonParent, 0).fields.y,
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)modeButtonParent, 0),
         (modeButtonParent = this->fields.modeButtonParent) == 0)
-    || (v4 = y,
+    || (y = localPosition.fields.y,
         (modeButtonParent = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(modeButtonParent, 0)) == 0) )
   {
     sub_2213CDC(modeButtonParent, method);
   }
-  result.fields.z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)modeButtonParent, 0).fields.z;
-  result.fields.x = -200.0;
-  result.fields.y = v4;
+  result = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)modeButtonParent, 0);
+  v5 = -200.0;
+  v6 = y;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -5147,49 +5159,35 @@ void FriendRootComponent__SetActiveModeKindButtons(
 {
   bool v3; // w20
   __int64 v5; // x1
-  float v6; // s8
-  float v7; // s9
+  float x; // s8
+  float y; // s9
   UnityEngine_GameObject_o *modeButtonParent; // x0
-  float v9; // s10
+  float z; // s10
   UnityEngine_GameObject_o *gameObject; // x0
-  float x; // s0
-  float y; // s1
-  float z; // s2
-  UnityEngine_Vector3_o DisplayPositionModeKindButtons; // 0:kr00_12.12
-  UnityEngine_Vector3_o HidePositionModeKindButtons; // 0:kr14_12.12
-  UnityEngine_Vector3_o v16; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o DisplayPositionModeKindButtons; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v12; // 0:s1.4,4:s2.4,8:s3.4
 
   v3 = isActive;
   if ( this->fields.isActiveModeKindButtons != isActive )
   {
     if ( isActive )
-    {
       DisplayPositionModeKindButtons = FriendRootComponent__GetDisplayPositionModeKindButtons(
                                          this,
                                          (const MethodInfo *)isActive);
-      x = DisplayPositionModeKindButtons.fields.x;
-      y = DisplayPositionModeKindButtons.fields.y;
-      z = DisplayPositionModeKindButtons.fields.z;
-    }
     else
-    {
-      HidePositionModeKindButtons = FriendRootComponent__GetHidePositionModeKindButtons(
-                                      this,
-                                      (const MethodInfo *)isActive);
-      x = HidePositionModeKindButtons.fields.x;
-      y = HidePositionModeKindButtons.fields.y;
-      z = HidePositionModeKindButtons.fields.z;
-    }
-    v6 = x;
-    v7 = y;
+      DisplayPositionModeKindButtons = FriendRootComponent__GetHidePositionModeKindButtons(
+                                         this,
+                                         (const MethodInfo *)isActive);
+    x = DisplayPositionModeKindButtons.fields.x;
+    y = DisplayPositionModeKindButtons.fields.y;
     modeButtonParent = this->fields.modeButtonParent;
-    v9 = z;
+    z = DisplayPositionModeKindButtons.fields.z;
     if ( !modeButtonParent
       || (gameObject = UnityEngine_GameObject__get_gameObject(modeButtonParent, 0),
-          v16.fields.x = v6,
-          v16.fields.y = v7,
-          v16.fields.z = v9,
-          (modeButtonParent = (UnityEngine_GameObject_o *)TweenPosition__Begin(gameObject, 0.2, v16, 0)) == 0) )
+          v12.fields.x = x,
+          v12.fields.y = y,
+          v12.fields.z = z,
+          (modeButtonParent = (UnityEngine_GameObject_o *)TweenPosition__Begin(gameObject, 0.2, v12, 0)) == 0) )
     {
       sub_2213CDC(modeButtonParent, v5);
     }
@@ -6769,7 +6767,7 @@ System_IAsyncResult_o *FriendRootComponent_messageRequestCallback__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = result;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

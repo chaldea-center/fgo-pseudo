@@ -2235,7 +2235,8 @@ int32_t ExRoomMissionPresenter__ResolveMissionReceiveVoiceType(
   Il2CppObject *Item; // x0
   Il2CppClass *klass; // x8
   int32_t generic_class; // w1
-  __int64 v13; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v12; // x0
+  __int64 v14; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596AED8 & 1) == 0 )
   {
@@ -2273,12 +2274,10 @@ LABEL_14:
       if ( klass )
       {
         generic_class = (int32_t)klass->_1.generic_class;
-        v13 = 0;
-        System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v13,
-          generic_class,
-          (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-        if ( SHIDWORD(v13) > 2 )
+        v12 = (System_Nullable_int__o)&v14;
+        v14 = 0;
+        System_Nullable_int____ctor(v12, generic_class, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+        if ( SHIDWORD(v14) > 2 )
           break;
       }
     }

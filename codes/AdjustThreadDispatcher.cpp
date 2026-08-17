@@ -89,51 +89,50 @@ void AdjustThreadDispatcher__Initialize(const MethodInfo *method)
 
 void AdjustThreadDispatcher__RunOnMainThread(System_Action_o *action, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  AdjustThreadDispatcher_c *v4; // x0
+  AdjustThreadDispatcher_c *v3; // x0
   Il2CppObject **static_fields; // x8
-  __int64 v6; // x1
-  __int64 v7; // x2
-  AdjustThreadDispatcher_c *v8; // x0
+  __int64 v5; // x1
+  __int64 v6; // x2
+  AdjustThreadDispatcher_c *v7; // x0
   System_Collections_Generic_Queue_T__o *executionQueue; // x0
   bool lockTaken; // [xsp+1Ch] [xbp-24h] BYREF
-  Il2CppObject *v11; // [xsp+28h] [xbp-18h]
+  Il2CppObject *v10; // [xsp+28h] [xbp-18h]
 
   if ( (byte_59685A0 & 1) == 0 )
   {
-    sub_2213A60(&AdjustThreadDispatcher_TypeInfo, method);
-    sub_2213A60(&Method_System_Collections_Generic_Queue_Action__Enqueue__, v3);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_Action__Enqueue__);
     byte_59685A0 = 1;
   }
-  v11 = 0;
+  v10 = 0;
   lockTaken = 0;
   if ( action )
   {
-    v4 = AdjustThreadDispatcher_TypeInfo;
+    v3 = AdjustThreadDispatcher_TypeInfo;
     if ( !*(&AdjustThreadDispatcher_TypeInfo->_2.cctor_finished + 1) )
     {
       ((void (*)(void))j_il2cpp_runtime_class_init_0)();
-      v4 = AdjustThreadDispatcher_TypeInfo;
+      v3 = AdjustThreadDispatcher_TypeInfo;
     }
-    static_fields = (Il2CppObject **)v4->static_fields;
+    static_fields = (Il2CppObject **)v3->static_fields;
     lockTaken = 0;
-    v11 = *static_fields;
-    System_Threading_Monitor__Enter_77553232(v11, &lockTaken, 0);
-    v8 = AdjustThreadDispatcher_TypeInfo;
+    v10 = *static_fields;
+    System_Threading_Monitor__Enter_77553232(v10, &lockTaken, 0);
+    v7 = AdjustThreadDispatcher_TypeInfo;
     if ( !*(&AdjustThreadDispatcher_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustThreadDispatcher_TypeInfo, v6, v7);
-      v8 = AdjustThreadDispatcher_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustThreadDispatcher_TypeInfo, v5, v6);
+      v7 = AdjustThreadDispatcher_TypeInfo;
     }
-    executionQueue = (System_Collections_Generic_Queue_T__o *)v8->static_fields->executionQueue;
+    executionQueue = (System_Collections_Generic_Queue_T__o *)v7->static_fields->executionQueue;
     if ( !executionQueue )
-      sub_2213CDC(0, v6, v7);
+      sub_2213CDC(0, v5, v6);
     System_Collections_Generic_Queue_object___Enqueue(
       executionQueue,
       (Il2CppObject *)action,
       (const MethodInfo_46D3DA4 *)Method_System_Collections_Generic_Queue_Action__Enqueue__);
     if ( lockTaken )
-      System_Threading_Monitor__Exit(v11, 0);
+      System_Threading_Monitor__Exit(v10, 0);
   }
 }
 
@@ -141,63 +140,61 @@ void AdjustThreadDispatcher__RunOnMainThread(System_Action_o *action, const Meth
 void AdjustThreadDispatcher__Update(AdjustThreadDispatcher_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
-  __int64 v3; // x1
-  __int64 v4; // x1
-  AdjustThreadDispatcher_c *v5; // x0
+  AdjustThreadDispatcher_c *v3; // x0
   struct System_Collections_Generic_Queue_Action__o *executionQueue; // x8
-  __int64 v7; // x1
-  __int64 v8; // x2
-  AdjustThreadDispatcher_c *v9; // x0
-  System_Collections_Generic_Queue_T__o *v10; // x0
-  Il2CppObject *v11; // x24
+  __int64 v5; // x1
+  __int64 v6; // x2
+  AdjustThreadDispatcher_c *v7; // x0
+  System_Collections_Generic_Queue_T__o *v8; // x0
+  Il2CppObject *v9; // x24
   bool lockTaken; // [xsp+1Ch] [xbp-44h] BYREF
-  Il2CppObject *v13; // [xsp+28h] [xbp-38h]
+  Il2CppObject *v11; // [xsp+28h] [xbp-38h]
 
   if ( (byte_59685A1 & 1) == 0 )
   {
-    sub_2213A60(&AdjustThreadDispatcher_TypeInfo, method);
-    sub_2213A60(&Method_System_Collections_Generic_Queue_Action__Dequeue__, v3);
-    sub_2213A60(&Method_System_Collections_Generic_Queue_Action__get_Count__, v4);
+    sub_2213A60(&AdjustThreadDispatcher_TypeInfo);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_Action__Dequeue__);
+    sub_2213A60(&Method_System_Collections_Generic_Queue_Action__get_Count__);
     byte_59685A1 = 1;
   }
-  v13 = 0;
+  v11 = 0;
   lockTaken = 0;
   while ( 1 )
   {
-    v5 = AdjustThreadDispatcher_TypeInfo;
+    v3 = AdjustThreadDispatcher_TypeInfo;
     if ( !*(&AdjustThreadDispatcher_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(AdjustThreadDispatcher_TypeInfo, method, v2);
-      v5 = AdjustThreadDispatcher_TypeInfo;
+      v3 = AdjustThreadDispatcher_TypeInfo;
     }
-    executionQueue = v5->static_fields->executionQueue;
+    executionQueue = v3->static_fields->executionQueue;
     if ( !executionQueue )
-      sub_2213CDC(v5, method, v2);
+      sub_2213CDC(v3, method, v2);
     if ( executionQueue->fields._size <= 0 )
       break;
-    if ( !*(&v5->_2.cctor_finished + 1) )
+    if ( !*(&v3->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v5, method, v2);
+      j_il2cpp_runtime_class_init_0(v3, method, v2);
       executionQueue = AdjustThreadDispatcher_TypeInfo->static_fields->executionQueue;
     }
-    v13 = (Il2CppObject *)executionQueue;
+    v11 = (Il2CppObject *)executionQueue;
     lockTaken = 0;
     System_Threading_Monitor__Enter_77553232((Il2CppObject *)executionQueue, &lockTaken, 0);
-    v9 = AdjustThreadDispatcher_TypeInfo;
+    v7 = AdjustThreadDispatcher_TypeInfo;
     if ( !*(&AdjustThreadDispatcher_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(AdjustThreadDispatcher_TypeInfo, v7, v8);
-      v9 = AdjustThreadDispatcher_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AdjustThreadDispatcher_TypeInfo, v5, v6);
+      v7 = AdjustThreadDispatcher_TypeInfo;
     }
-    v10 = (System_Collections_Generic_Queue_T__o *)v9->static_fields->executionQueue;
-    if ( !v10 )
-      sub_2213CDC(0, v7, v8);
-    v11 = System_Collections_Generic_Queue_object___Dequeue(
-            v10,
-            (const MethodInfo_46D3F34 *)Method_System_Collections_Generic_Queue_Action__Dequeue__);
+    v8 = (System_Collections_Generic_Queue_T__o *)v7->static_fields->executionQueue;
+    if ( !v8 )
+      sub_2213CDC(0, v5, v6);
+    v9 = System_Collections_Generic_Queue_object___Dequeue(
+           v8,
+           (const MethodInfo_46D3F34 *)Method_System_Collections_Generic_Queue_Action__Dequeue__);
     if ( lockTaken )
-      System_Threading_Monitor__Exit(v13, 0);
-    if ( v11 )
-      ((void (__fastcall *)(Il2CppClass *, void *))v11[1].monitor)(v11[4].klass, v11[2].monitor);
+      System_Threading_Monitor__Exit(v11, 0);
+    if ( v9 )
+      ((void (__fastcall *)(Il2CppClass *, void *))v9[1].monitor)(v9[4].klass, v9[2].monitor);
   }
 }

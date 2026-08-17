@@ -348,7 +348,7 @@ void WarBoardTreasureListComponent__setListData(
         int32_t setColMax,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  void *Instance; // x0
   __int64 v7; // x1
   Il2CppObject *MasterData_object; // x25
   il2cpp_array_size_t max_length; // x8
@@ -356,7 +356,7 @@ void WarBoardTreasureListComponent__setListData(
   unsigned __int64 v11; // x27
   __int64 v12; // x2
   int v13; // w8
-  __int64 v14; // x24
+  void *v14; // x24
   unsigned int v15; // w27
   Il2CppObject *prefabResultItem; // x25
   int32_t *v17; // x29
@@ -384,19 +384,19 @@ void WarBoardTreasureListComponent__setListData(
   }
   if ( treasureList )
   {
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
                                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___),
-          (Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
+          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
     {
 LABEL_33:
       sub_2213CDC(Instance, v7);
     }
-    Instance = (__int64)DataManager__GetMasterData_object_(
-                          (DataManager_o *)Instance,
-                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GiftMaster___);
+    Instance = DataManager__GetMasterData_object_(
+                 (DataManager_o *)Instance,
+                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_GiftMaster___);
     max_length = treasureList->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -411,19 +411,19 @@ LABEL_33:
           goto LABEL_34;
         if ( !MasterData_object )
           goto LABEL_33;
-        Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
-                              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                              treasureList->m_Items[v11],
-                              (const MethodInfo_3F10B30 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
+        Instance = DataMasterBase_object__object__int___GetEntity(
+                     (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
+                     treasureList->m_Items[v11],
+                     (const MethodInfo_3F10B30 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
         if ( !Instance )
           goto LABEL_33;
         if ( !v10 )
           goto LABEL_33;
         v25 = v11;
-        Instance = (__int64)GiftMaster__GetGiftListById(v10, *(_DWORD *)(Instance + 40), 0);
+        Instance = GiftMaster__GetGiftListById(v10, *((_DWORD *)Instance + 10), 0);
         if ( !Instance )
           goto LABEL_33;
-        v13 = *(_DWORD *)(Instance + 24);
+        v13 = *((_DWORD *)Instance + 6);
         v14 = Instance;
         if ( v13 >= 1 )
           break;
@@ -440,39 +440,39 @@ LABEL_31:
       while ( v15 < v13 )
       {
         prefabResultItem = (Il2CppObject *)this->fields.prefabResultItem;
-        v17 = *(int32_t **)(v14 + 8LL * (int)v15 + 32);
+        v17 = (int32_t *)*((_QWORD *)v14 + (int)v15 + 4);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v12);
-        Instance = (__int64)UnityEngine_Object__Instantiate_object_(
-                              prefabResultItem,
-                              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        Instance = UnityEngine_Object__Instantiate_object_(
+                     prefabResultItem,
+                     (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !Instance )
           goto LABEL_33;
         v18 = (UnityEngine_GameObject_o *)Instance;
-        Instance = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
+        Instance = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
         if ( !Instance )
           goto LABEL_33;
         UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)Instance, this->fields.listRoot, 0);
-        Instance = (__int64)UnityEngine_GameObject__get_transform(v18, 0);
+        Instance = UnityEngine_GameObject__get_transform(v18, 0);
         v19 = (UnityEngine_Transform_o *)Instance;
         if ( !byte_5969AE0 )
         {
-          Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          Instance = (void *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
         if ( !v19 )
           goto LABEL_33;
         UnityEngine_Transform__set_localPosition(v19, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        Instance = (__int64)UnityEngine_GameObject__get_transform(v18, 0);
+        Instance = UnityEngine_GameObject__get_transform(v18, 0);
         if ( !Instance )
           goto LABEL_33;
         v26.fields.x = this->fields.iconScale;
         v26.fields.y = v26.fields.x;
         v26.fields.z = v26.fields.x;
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v26, 0);
-        Instance = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                              v18,
-                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+        Instance = UnityEngine_GameObject__GetComponent_object_(
+                     v18,
+                     (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !v17 )
           goto LABEL_33;
         v20 = (ItemIconComponent_o *)Instance;
@@ -484,18 +484,18 @@ LABEL_31:
         ItemIconComponent__SetGift_47884936((ItemIconComponent_o *)Instance, v17[5], v17[6], v21, 0, 0);
         ItemIconComponent__SetCondensedScale(v20, this->fields.counterLabelMaxWidth, 0);
         UnityEngine_GameObject__SetActive(v18, 1, 0);
-        Instance = (__int64)this->fields.listRoot;
+        Instance = this->fields.listRoot;
         if ( !Instance )
           goto LABEL_33;
-        Instance = (__int64)UnityEngine_Component__GetComponent_object_(
-                              (UnityEngine_Component_o *)Instance,
-                              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+        Instance = UnityEngine_Component__GetComponent_object_(
+                     (UnityEngine_Component_o *)Instance,
+                     (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
         if ( !Instance )
           goto LABEL_33;
-        Instance = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Instance + 440LL))(
-                     Instance,
-                     *(_QWORD *)(*(_QWORD *)Instance + 448LL));
-        v13 = *(_DWORD *)(v14 + 24);
+        Instance = (void *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Instance + 440LL))(
+                             Instance,
+                             *(_QWORD *)(*(_QWORD *)Instance + 448LL));
+        v13 = *((_DWORD *)v14 + 6);
         if ( (int)++v15 >= v13 )
           goto LABEL_31;
       }

@@ -95,6 +95,7 @@ void EffectRenderBehaviour__OnDestroy(EffectRenderBehaviour_o *this, const Metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
@@ -106,22 +107,22 @@ void EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_o *this, co
   __int64 v9; // x3
   UnityEngine_Renderer_o *v10; // x19
   UnityEngine_Material_o *material; // x21
-  UnityEngine_Material_o *v12; // x21
-  UnityEngine_Material_o *v13; // x20
-  UnityEngine_Material_o *v14; // x20
+  int v12; // s3
+  UnityEngine_Material_o *v13; // x21
+  int v14; // s3
   UnityEngine_Material_o *v15; // x20
-  EffectRenderBehaviour_o *v16; // x0
-  const MethodInfo *v17; // x1
-  UnityEngine_Matrix4x4_o v22; // [xsp+0h] [xbp-1B0h] BYREF
-  UnityEngine_Matrix4x4_o v23; // [xsp+40h] [xbp-170h] BYREF
-  UnityEngine_Matrix4x4_o v24; // [xsp+80h] [xbp-130h] BYREF
-  UnityEngine_Matrix4x4_o v25; // [xsp+C0h] [xbp-F0h] BYREF
-  UnityEngine_Matrix4x4_o v26; // [xsp+100h] [xbp-B0h] BYREF
-  UnityEngine_Matrix4x4_o v27; // [xsp+140h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o lossyScale; // 0:kr14_12.12
-  UnityEngine_Vector4_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Material_o *v16; // x20
+  UnityEngine_Material_o *v17; // x20
+  EffectRenderBehaviour_o *v18; // x0
+  const MethodInfo *v19; // x1
+  UnityEngine_Matrix4x4_o v20; // [xsp+0h] [xbp-1B0h] BYREF
+  UnityEngine_Matrix4x4_o v21; // [xsp+40h] [xbp-170h] BYREF
+  UnityEngine_Matrix4x4_o v22; // [xsp+80h] [xbp-130h] BYREF
+  UnityEngine_Matrix4x4_o v23; // [xsp+C0h] [xbp-F0h] BYREF
+  UnityEngine_Matrix4x4_o v24; // [xsp+100h] [xbp-B0h] BYREF
+  UnityEngine_Matrix4x4_o v25; // [xsp+140h] [xbp-70h] BYREF
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   if ( (byte_596F51C & 1) == 0 )
   {
@@ -136,7 +137,7 @@ void EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_o *this, co
     sub_2213A60(&StringLiteral_16973/*"_RenderType"*/);
     byte_596F51C = 1;
   }
-  memset(&v27, 0, sizeof(v27));
+  memset(&v25, 0, sizeof(v25));
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
@@ -158,7 +159,7 @@ void EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_o *this, co
     if ( (UnityEngine_ParticleSystemRenderer_c *)transform->klass != UnityEngine_ParticleSystemRenderer_TypeInfo )
     {
       sub_221405C(transform, UnityEngine_ParticleSystemRenderer_TypeInfo, v8, v9);
-      EffectRenderBehaviour___ctor(v16, v17);
+      EffectRenderBehaviour___ctor(v18, v19);
       return;
     }
     material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)transform, 0);
@@ -166,56 +167,58 @@ void EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_o *this, co
     if ( !transform )
       goto LABEL_21;
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
-    v30.fields.x = position.fields.x;
-    v30.fields.y = position.fields.y;
-    v30.fields.z = position.fields.z;
     if ( !material )
       goto LABEL_21;
-    v30.fields.w = 0.0;
-    UnityEngine_Material__SetVector(material, (System_String_o *)StringLiteral_16790/*"_Center"*/, v30, 0);
-    v12 = UnityEngine_Renderer__get_material(v10, 0);
+    v12 = 0;
+    UnityEngine_Material__SetVector(
+      material,
+      (System_String_o *)StringLiteral_16790/*"_Center"*/,
+      *(UnityEngine_Vector4_o *)&position.fields.x,
+      0);
+    v13 = UnityEngine_Renderer__get_material(v10, 0);
     transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform )
       goto LABEL_21;
     lossyScale = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)transform, 0);
-    v31.fields.x = lossyScale.fields.x;
-    v31.fields.y = lossyScale.fields.y;
-    v31.fields.z = lossyScale.fields.z;
-    if ( !v12 )
+    if ( !v13 )
       goto LABEL_21;
-    v31.fields.w = 0.0;
-    UnityEngine_Material__SetVector(v12, (System_String_o *)StringLiteral_16988/*"_Scaling"*/, v31, 0);
-    v13 = UnityEngine_Renderer__get_material(v10, 0);
+    v14 = 0;
+    UnityEngine_Material__SetVector(
+      v13,
+      (System_String_o *)StringLiteral_16988/*"_Scaling"*/,
+      *(UnityEngine_Vector4_o *)&lossyScale.fields.x,
+      0);
+    v15 = UnityEngine_Renderer__get_material(v10, 0);
     transform = (UnityEngine_Component_o *)UnityEngine_Camera__get_current(0);
     if ( !transform )
       goto LABEL_21;
     transform = (UnityEngine_Component_o *)UnityEngine_Camera__get_worldToCameraMatrix(
-                                             &v26,
+                                             &v24,
                                              (UnityEngine_Camera_o *)transform,
                                              0);
-    if ( !v13 )
+    if ( !v15 )
       goto LABEL_21;
-    v25 = v26;
-    UnityEngine_Material__SetMatrix(v13, (System_String_o *)StringLiteral_16788/*"_Camera"*/, &v25, 0);
-    v14 = UnityEngine_Renderer__get_material(v10, 0);
+    v23 = v24;
+    UnityEngine_Material__SetMatrix(v15, (System_String_o *)StringLiteral_16788/*"_Camera"*/, &v23, 0);
+    v16 = UnityEngine_Renderer__get_material(v10, 0);
     transform = (UnityEngine_Component_o *)UnityEngine_Camera__get_current(0);
     if ( !transform
-      || (UnityEngine_Camera__get_worldToCameraMatrix(&v24, (UnityEngine_Camera_o *)transform, 0),
-          v27 = v24,
-          transform = (UnityEngine_Component_o *)UnityEngine_Matrix4x4__get_inverse(&v23, &v27, 0),
-          !v14)
-      || (v22 = v23,
-          UnityEngine_Material__SetMatrix(v14, (System_String_o *)StringLiteral_16789/*"_CameraInv"*/, &v22, 0),
-          v15 = UnityEngine_Renderer__get_material(v10, 0),
+      || (UnityEngine_Camera__get_worldToCameraMatrix(&v22, (UnityEngine_Camera_o *)transform, 0),
+          v25 = v22,
+          transform = (UnityEngine_Component_o *)UnityEngine_Matrix4x4__get_inverse(&v21, &v25, 0),
+          !v16)
+      || (v20 = v21,
+          UnityEngine_Material__SetMatrix(v16, (System_String_o *)StringLiteral_16789/*"_CameraInv"*/, &v20, 0),
+          v17 = UnityEngine_Renderer__get_material(v10, 0),
           transform = (UnityEngine_Component_o *)UnityEngine_ParticleSystemRenderer__get_renderMode(
                                                    (UnityEngine_ParticleSystemRenderer_o *)v10,
                                                    0),
-          !v15) )
+          !v17) )
     {
 LABEL_21:
       sub_2213CDC(transform, v7);
     }
-    UnityEngine_Material__SetInt(v15, (System_String_o *)StringLiteral_16973/*"_RenderType"*/, (int32_t)transform, 0);
+    UnityEngine_Material__SetInt(v17, (System_String_o *)StringLiteral_16973/*"_RenderType"*/, (int32_t)transform, 0);
   }
 }
 

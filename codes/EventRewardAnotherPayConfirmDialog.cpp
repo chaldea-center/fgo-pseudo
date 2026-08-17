@@ -332,9 +332,10 @@ void EventRewardAnotherPayConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   __int64 v5; // x0
   __int64 v6; // x1
+  __int64 selectedSkillId; // x2
   struct System_Action_EventRewardAnotherPayConfirmDialog_BuyState__int__o *onClickButton; // x8
   intptr_t method_code; // x0
-  System_Reflection_MethodBase_o *v9; // x0
+  System_Reflection_MethodBase_o *v10; // x0
 
   if ( (byte_596AACD & 1) == 0 )
   {
@@ -350,12 +351,14 @@ void EventRewardAnotherPayConfirmDialog__OnClickDecide(
         v3 = (_QWORD *)sub_2213A78(Method_EventRewardAnotherPayConfirmDialog_OnClickDecide__);
       v4 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
       OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
+      selectedSkillId = (unsigned int)this->fields.selectedSkillId;
       onClickButton = this->fields.onClickButton;
-      if ( this->fields.selectedSkillId < 1 )
+      if ( (int)selectedSkillId < 1 )
       {
         if ( onClickButton )
         {
           method_code = onClickButton->fields.method_code;
+          selectedSkillId = (unsigned int)this->fields.buyAnotherItemId;
           goto LABEL_16;
         }
       }
@@ -363,15 +366,19 @@ void EventRewardAnotherPayConfirmDialog__OnClickDecide(
       {
         method_code = onClickButton->fields.method_code;
 LABEL_16:
-        ((void (__fastcall *)(intptr_t, __int64))onClickButton->fields.invoke_impl)(method_code, 1);
+        ((void (__fastcall *)(intptr_t, __int64, __int64, intptr_t))onClickButton->fields.invoke_impl)(
+          method_code,
+          1,
+          selectedSkillId,
+          onClickButton->fields.method);
         return;
       }
       sub_2213CDC(v5, v6);
     }
     if ( (*((_BYTE *)Method_EventRewardAnotherPayConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
       v3 = (_QWORD *)sub_2213A78(Method_EventRewardAnotherPayConfirmDialog_OnClickDecide__);
-    v9 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0, 0);
+    v10 = (System_Reflection_MethodBase_o *)sub_2213A44(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
   }
 }
 
@@ -1081,44 +1088,48 @@ void EventRewardAnotherPayConfirmDialog__SetButtonDisp(
   __int64 v33; // x2
   struct UnityEngine_GameObject_o *v34; // x21
   EventRewardAnotherPayConfirmDialog_c *v35; // x0
-  __int64 v38; // x1
-  __int64 v39; // x2
-  EventRewardAnotherPayConfirmDialog_c *v40; // x0
-  UnityEngine_GameObject_o *v41; // x20
-  int v42; // w8
-  struct EventRewardAnotherPayConfirmDialog_StaticFields *v43; // x10
-  float *v44; // x8
-  float *v45; // x9
-  float *v46; // x10
-  __int64 v47; // x1
-  __int64 v48; // x2
-  EventRewardAnotherPayConfirmDialog_c *v49; // x0
+  _DWORD *v36; // x8
+  int v37; // s0 OVERLAPPED
+  int v38; // s1
+  int v39; // s2
+  __int64 v40; // x1
+  __int64 v41; // x2
+  EventRewardAnotherPayConfirmDialog_c *v42; // x0
+  UnityEngine_GameObject_o *v43; // x20
+  int v44; // w8
+  struct EventRewardAnotherPayConfirmDialog_StaticFields *v45; // x10
+  float *v46; // x8
+  float *v47; // x9
+  float *v48; // x10
+  __int64 v49; // x1
+  __int64 v50; // x2
+  EventRewardAnotherPayConfirmDialog_c *v51; // x0
   struct UnityEngine_GameObject_o *cancelButton; // x19
-  __int64 v51; // x1
-  __int64 v52; // x2
-  EventRewardAnotherPayConfirmDialog_c *v53; // x0
-  UnityEngine_GameObject_o *v54; // x20
-  const MethodInfo *v55; // x2
-  struct EventRewardAnotherPayConfirmDialog_StaticFields *v56; // x10
-  __int64 v57; // x1
-  __int64 v58; // x2
-  EventRewardAnotherPayConfirmDialog_c *v59; // x0
-  int32_t v60; // w9
-  int v61; // w8
-  struct EventRewardAnotherPayConfirmDialog_StaticFields *v62; // x10
-  float *v63; // x8
-  float *v64; // x9
-  float *v65; // x10
-  UnityEngine_GameObject_o *v66; // x0
-  EventRewardAnotherPayConfirmDialog_c *v67; // x0
-  int v68; // w8
+  _DWORD *p_x; // x8
+  __int64 v54; // x1
+  __int64 v55; // x2
+  EventRewardAnotherPayConfirmDialog_c *v56; // x0
+  UnityEngine_GameObject_o *v57; // x20
+  const MethodInfo *v58; // x2
+  struct EventRewardAnotherPayConfirmDialog_StaticFields *v59; // x10
+  __int64 v60; // x1
+  __int64 v61; // x2
+  EventRewardAnotherPayConfirmDialog_c *v62; // x0
+  int32_t v63; // w9
+  int v64; // w8
+  struct EventRewardAnotherPayConfirmDialog_StaticFields *v65; // x10
+  int *p_CancelButtonPurchasedPos; // x8
+  int *v67; // x9
+  int *v68; // x10
+  UnityEngine_GameObject_o *v69; // x0
+  EventRewardAnotherPayConfirmDialog_c *v70; // x0
+  int v71; // w8
   struct EventRewardAnotherPayConfirmDialog_StaticFields *static_fields; // x10
-  float *p_x; // x8
-  float *p_y; // x9
-  float *p_z; // x10
-  struct EventRewardAnotherPayConfirmDialog_StaticFields *v73; // x10
-  UnityEngine_Vector3_o CancelButtonChoicePos; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v75; // 0:s0.4,4:s1.4,8:s2.4
+  int *p_CancelButtonResultPos; // x8
+  int *p_y; // x9
+  int *p_z; // x10
+  struct EventRewardAnotherPayConfirmDialog_StaticFields *v76; // x10
+  UnityEngine_Vector3_o v77; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596AAC5 & 1) == 0 )
   {
@@ -1238,18 +1249,21 @@ void EventRewardAnotherPayConfirmDialog__SetButtonDisp(
       if ( !decideButton )
         goto LABEL_98;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0);
-      v49 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+      v51 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       cancelButton = this->fields.cancelButton;
       if ( !*(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v47, v48);
-        v49 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v49, v50);
+        v51 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      CancelButtonChoicePos = v49->static_fields->CancelButtonChoicePos;
+      p_x = (_DWORD *)&v51->static_fields->CancelButtonReconfirmPos.fields.x;
+      v37 = p_x[3];
+      v38 = p_x[4];
+      v39 = p_x[5];
 LABEL_87:
-      v66 = cancelButton;
+      v69 = cancelButton;
 LABEL_97:
-      GameObjectExtensions__SetLocalPosition(v66, CancelButtonChoicePos, 0);
+      GameObjectExtensions__SetLocalPosition(v69, *(UnityEngine_Vector3_o *)&v37, 0);
       return;
     }
     if ( state != 4 )
@@ -1278,41 +1292,44 @@ LABEL_50:
                 j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v32, v33);
                 v35 = EventRewardAnotherPayConfirmDialog_TypeInfo;
               }
-              CancelButtonChoicePos = v35->static_fields->CancelButtonChoiceMultiSkillsItemPos;
+              v36 = (_DWORD *)&v35->static_fields->CancelButtonReconfirmPos.fields.x;
+              v37 = v36[15];
+              v38 = v36[16];
+              v39 = v36[17];
             }
             else
             {
-              v67 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-              v68 = *(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1);
+              v70 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+              v71 = *(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1);
               if ( this->fields.state == 7 )
               {
-                if ( !v68 )
+                if ( !v71 )
                 {
                   j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v32, v33);
-                  v67 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                  v70 = EventRewardAnotherPayConfirmDialog_TypeInfo;
                 }
-                static_fields = v67->static_fields;
-                p_x = &static_fields->CancelButtonResultPos.fields.x;
-                p_y = &static_fields->CancelButtonResultPos.fields.y;
-                p_z = &static_fields->CancelButtonResultPos.fields.z;
+                static_fields = v70->static_fields;
+                p_CancelButtonResultPos = (int *)&static_fields->CancelButtonResultPos;
+                p_y = (int *)&static_fields->CancelButtonResultPos.fields.y;
+                p_z = (int *)&static_fields->CancelButtonResultPos.fields.z;
               }
               else
               {
-                if ( !v68 )
+                if ( !v71 )
                 {
                   j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v32, v33);
-                  v67 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+                  v70 = EventRewardAnotherPayConfirmDialog_TypeInfo;
                 }
-                v73 = v67->static_fields;
-                p_x = &v73->CancelButtonChoiceMultiPos.fields.x;
-                p_y = &v73->CancelButtonChoiceMultiPos.fields.y;
-                p_z = &v73->CancelButtonChoiceMultiPos.fields.z;
+                v76 = v70->static_fields;
+                p_CancelButtonResultPos = (int *)&v76->CancelButtonChoiceMultiPos;
+                p_y = (int *)&v76->CancelButtonChoiceMultiPos.fields.y;
+                p_z = (int *)&v76->CancelButtonChoiceMultiPos.fields.z;
               }
-              CancelButtonChoicePos.fields.x = *p_x;
-              CancelButtonChoicePos.fields.y = *p_y;
-              CancelButtonChoicePos.fields.z = *p_z;
+              v37 = *p_CancelButtonResultPos;
+              v38 = *p_y;
+              v39 = *p_z;
             }
-            v66 = v34;
+            v69 = v34;
             goto LABEL_97;
           }
         }
@@ -1333,67 +1350,67 @@ LABEL_57:
     if ( !decideButton )
       goto LABEL_98;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0);
-    v40 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-    v41 = this->fields.decideButton;
-    v42 = *(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1);
+    v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+    v43 = this->fields.decideButton;
+    v44 = *(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1);
     if ( this->fields.state == 4 )
     {
-      if ( !v42 )
+      if ( !v44 )
       {
-        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v38, v39);
-        v40 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v40, v41);
+        v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      v43 = v40->static_fields;
-      v44 = &v43->DecideButtonPurchasedPos.fields.x;
-      v45 = &v43->DecideButtonPurchasedPos.fields.y;
-      v46 = &v43->DecideButtonPurchasedPos.fields.z;
+      v45 = v42->static_fields;
+      v46 = &v45->DecideButtonPurchasedPos.fields.x;
+      v47 = &v45->DecideButtonPurchasedPos.fields.y;
+      v48 = &v45->DecideButtonPurchasedPos.fields.z;
     }
     else
     {
-      if ( !v42 )
+      if ( !v44 )
       {
-        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v38, v39);
-        v40 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v40, v41);
+        v42 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      v56 = v40->static_fields;
-      v44 = &v56->DecideButtonReconfirmPos.fields.x;
-      v45 = &v56->DecideButtonReconfirmPos.fields.y;
-      v46 = &v56->DecideButtonReconfirmPos.fields.z;
+      v59 = v42->static_fields;
+      v46 = &v59->DecideButtonReconfirmPos.fields.x;
+      v47 = &v59->DecideButtonReconfirmPos.fields.y;
+      v48 = &v59->DecideButtonReconfirmPos.fields.z;
     }
-    v75.fields.x = *v44;
-    v75.fields.y = *v45;
-    v75.fields.z = *v46;
-    GameObjectExtensions__SetLocalPosition(v41, v75, 0);
-    v59 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-    v60 = this->fields.state;
+    v77.fields.x = *v46;
+    v77.fields.y = *v47;
+    v77.fields.z = *v48;
+    GameObjectExtensions__SetLocalPosition(v43, v77, 0);
+    v62 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+    v63 = this->fields.state;
     cancelButton = this->fields.cancelButton;
-    v61 = *(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1);
-    if ( v60 == 4 )
+    v64 = *(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1);
+    if ( v63 == 4 )
     {
-      if ( !v61 )
+      if ( !v64 )
       {
-        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v57, v58);
-        v59 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v60, v61);
+        v62 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      v62 = v59->static_fields;
-      v63 = &v62->CancelButtonPurchasedPos.fields.x;
-      v64 = &v62->CancelButtonPurchasedPos.fields.y;
-      v65 = &v62->CancelButtonPurchasedPos.fields.z;
+      v65 = v62->static_fields;
+      p_CancelButtonPurchasedPos = (int *)&v65->CancelButtonPurchasedPos;
+      v67 = (int *)&v65->CancelButtonPurchasedPos.fields.y;
+      v68 = (int *)&v65->CancelButtonPurchasedPos.fields.z;
     }
     else
     {
-      if ( !v61 )
+      if ( !v64 )
       {
-        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v57, v58);
-        v59 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v60, v61);
+        v62 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      v63 = &v59->static_fields->CancelButtonReconfirmPos.fields.x;
-      v64 = v63 + 1;
-      v65 = v63 + 2;
+      p_CancelButtonPurchasedPos = (int *)v62->static_fields;
+      v67 = p_CancelButtonPurchasedPos + 1;
+      v68 = p_CancelButtonPurchasedPos + 2;
     }
-    CancelButtonChoicePos.fields.x = *v63;
-    CancelButtonChoicePos.fields.y = *v64;
-    CancelButtonChoicePos.fields.z = *v65;
+    v37 = *p_CancelButtonPurchasedPos;
+    v38 = *v67;
+    v39 = *v68;
     goto LABEL_87;
   }
   switch ( state )
@@ -1413,19 +1430,19 @@ LABEL_57:
       if ( !decideButton )
         goto LABEL_98;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 0, 0);
-      v53 = EventRewardAnotherPayConfirmDialog_TypeInfo;
-      v54 = this->fields.decideButton;
+      v56 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+      v57 = this->fields.decideButton;
       if ( !*(&EventRewardAnotherPayConfirmDialog_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v51, v52);
-        v53 = EventRewardAnotherPayConfirmDialog_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventRewardAnotherPayConfirmDialog_TypeInfo, v54, v55);
+        v56 = EventRewardAnotherPayConfirmDialog_TypeInfo;
       }
-      GameObjectExtensions__SetLocalPosition(v54, v53->static_fields->DecideButtonSelectSkillPos, 0);
+      GameObjectExtensions__SetLocalPosition(v57, v56->static_fields->DecideButtonSelectSkillPos, 0);
       GameObjectExtensions__SetLocalPosition(
         this->fields.cancelButton,
         EventRewardAnotherPayConfirmDialog_TypeInfo->static_fields->CancelButtonSelectSkillPos,
         0);
-      EventRewardAnotherPayConfirmDialog__SetDecideButtonEnable(this, 0, v55);
+      EventRewardAnotherPayConfirmDialog__SetDecideButtonEnable(this, 0, v58);
       break;
     case 7:
       goto LABEL_50;

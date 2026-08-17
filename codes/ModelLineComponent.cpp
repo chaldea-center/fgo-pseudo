@@ -123,15 +123,11 @@ LABEL_10:
 void ModelLineComponent__ChangeToClear(ModelLineComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
-  UnityEngine_Color_o MaterialColor; // 0:kr00_16.16
-  UnityEngine_Color_o v5; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o MaterialColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   MaterialColor = ModelLineComponent__GetMaterialColor(this, method);
-  v5.fields.r = MaterialColor.fields.r;
-  v5.fields.g = MaterialColor.fields.g;
-  v5.fields.b = MaterialColor.fields.b;
-  v5.fields.a = 0.0;
-  ModelLineComponent__SetMaterialColor(this, v5, v3);
+  MaterialColor.fields.a = 0.0;
+  ModelLineComponent__SetMaterialColor(this, MaterialColor, v3);
 }
 
 
@@ -260,15 +256,13 @@ LABEL_12:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ModelLineComponent__SetContrast(ModelLineComponent_o *this, float value, const MethodInfo *method)
 {
-  UnityEngine_Color_o v3; // 0:kr00_16.16
+  float v5; // s3
 
-  v3.fields.r = value;
-  v3.fields.g = value;
-  v3.fields.b = value;
-  v3.fields.a = 1.0;
-  ModelLineComponent__SetMaterialColor(this, v3, method);
+  v5 = 1.0;
+  ModelLineComponent__SetMaterialColor(this, *(UnityEngine_Color_o *)&value, method);
 }
 
 
@@ -469,9 +463,9 @@ void ModelLineComponent__SetQuestAfterActionScaleAnim_42988136(
         float time,
         const MethodInfo *method)
 {
-  float *v7; // x0
+  Il2CppObject *v7; // x0
   __int64 v8; // x1
-  float *v9; // x21
+  Il2CppObject *v9; // x21
   float lineWidth; // s0
   float distance; // s0
   float v12; // s1
@@ -492,8 +486,8 @@ void ModelLineComponent__SetQuestAfterActionScaleAnim_42988136(
   bool v27; // w6
   bool v28; // w7
   float v29; // s8
-  float *v30; // x20
-  __int64 v31; // d0
+  Il2CppObject *v30; // x20
+  void *v31; // d0
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s2
   int v34; // w8
@@ -506,19 +500,19 @@ void ModelLineComponent__SetQuestAfterActionScaleAnim_42988136(
     sub_2213A60(&StringLiteral_13624/*"StateQuestAfterActionEnd"*/);
     byte_596D146 = 1;
   }
-  v7 = (float *)UITweener__Begin_object_(
-                  this->fields.lineObject,
-                  time,
-                  (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenScale___);
+  v7 = UITweener__Begin_object_(
+         this->fields.lineObject,
+         time,
+         (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenScale___);
   v9 = v7;
   if ( isDisp )
   {
     if ( !v7 )
       goto LABEL_21;
     lineWidth = this->fields.lineWidth;
-    v7[34] = 0.0;
-    v7[32] = lineWidth;
-    v7[33] = lineWidth;
+    LODWORD(v7[8].monitor) = 0;
+    *(float *)&v7[8].klass = lineWidth;
+    *((float *)&v7[8].klass + 1) = lineWidth;
     distance = this->fields.distance;
   }
   else
@@ -528,34 +522,34 @@ void ModelLineComponent__SetQuestAfterActionScaleAnim_42988136(
     v12 = this->fields.lineWidth;
     v13 = this->fields.distance;
     distance = 0.0;
-    v7[32] = v12;
-    v7[33] = v12;
-    v7[34] = v13;
+    *(float *)&v7[8].klass = v12;
+    *((float *)&v7[8].klass + 1) = v12;
+    *(float *)&v7[8].monitor = v13;
   }
   v14 = this->fields.lineWidth;
-  v7[37] = distance;
-  v7[35] = v14;
-  v7[36] = v14;
-  *((_DWORD *)v7 + 8) = 2;
+  *((float *)&v7[9].klass + 1) = distance;
+  *((float *)&v7[8].monitor + 1) = v14;
+  *(float *)&v7[9].klass = v14;
+  LODWORD(v7[2].klass) = 2;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  *((_QWORD *)v9 + 10) = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 20), (int32_t)gameObject, v16, v17, v18, v19, v20, v21);
+  v9[5].klass = (Il2CppClass *)gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9[5], (int32_t)gameObject, v16, v17, v18, v19, v20, v21);
   v22 = StringLiteral_13624/*"StateQuestAfterActionEnd"*/;
-  *((_QWORD *)v9 + 11) = StringLiteral_13624/*"StateQuestAfterActionEnd"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 22), v22, v23, v24, v25, v26, v27, v28);
+  v9[5].monitor = (void *)StringLiteral_13624/*"StateQuestAfterActionEnd"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9[5].monitor, v22, v23, v24, v25, v26, v27, v28);
   if ( time != 0.0 || isDisp )
   {
-    v7 = (float *)UITweener__Begin_object_(
-                    this->fields.lineObject,
-                    time,
-                    (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
+    v7 = UITweener__Begin_object_(
+           this->fields.lineObject,
+           time,
+           (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
     v29 = this->fields.distance;
     v30 = v7;
     if ( isDisp )
     {
       if ( !byte_5969AE0 )
       {
-        v7 = (float *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        v7 = (Il2CppObject *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
       if ( v30 )
@@ -563,27 +557,27 @@ void ModelLineComponent__SetQuestAfterActionScaleAnim_42988136(
         v31 = 0;
         static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
         z = static_fields->zeroVector.fields.z;
-        *((_QWORD *)v30 + 16) = *(_QWORD *)&static_fields->zeroVector.fields.x;
-        v30[34] = z;
+        v30[8].klass = *(Il2CppClass **)&static_fields->zeroVector.fields.x;
+        *(float *)&v30[8].monitor = z;
 LABEL_19:
-        *(_QWORD *)(v30 + 35) = v31;
-        v30[37] = v29;
-        *((_DWORD *)v30 + 8) = 2;
+        *(void **)((char *)&v30[8].monitor + 4) = v31;
+        *((float *)&v30[9].klass + 1) = v29;
+        LODWORD(v30[2].klass) = 2;
         return;
       }
     }
     else if ( v7 )
     {
-      *((_QWORD *)v7 + 16) = 0;
+      v7[8].klass = 0;
       v34 = (unsigned __int8)byte_5969AE0;
-      v7[34] = v29;
+      *(float *)&v7[8].monitor = v29;
       if ( !v34 )
       {
         sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
       v35 = UnityEngine_Vector3_TypeInfo->static_fields;
-      v31 = *(_QWORD *)&v35->zeroVector.fields.x;
+      v31 = *(void **)&v35->zeroVector.fields.x;
       v29 = v35->zeroVector.fields.z;
       goto LABEL_19;
     }
@@ -684,7 +678,7 @@ void ModelLineComponent__Setup(
   __int64 v52; // x1
   __int64 v53; // x2
   int32_t v54; // w20
-  UnityEngine_Vector3_o LocalPositionOnMapModel; // 0:kr14_12.12
+  UnityEngine_Vector3_o LocalPositionOnMapModel; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D140 & 1) == 0 )
@@ -876,12 +870,13 @@ void ModelLineComponent__SetupTweenScale(
   ModelLineComponent_o *v5; // x19
   float lineWidth; // s1
   struct TweenScale_o *v7; // x8
-  unsigned __int64 v8; // d1
-  UnityEngine_Vector3_c *v9; // x9
+  float *p_lineWidth; // x9
+  unsigned __int64 v9; // d1
+  UnityEngine_Vector3_c *v10; // x9
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
-  struct UnityEngine_Vector3_StaticFields *v12; // x9
-  struct TweenScale_o *v13; // x8
+  struct UnityEngine_Vector3_StaticFields *v13; // x9
+  struct TweenScale_o *v14; // x8
 
   if ( !spotRoadInfo )
     goto LABEL_13;
@@ -898,7 +893,8 @@ void ModelLineComponent__SetupTweenScale(
       v7 = this->fields.tweenScale;
       if ( v7 )
       {
-        v8 = vld1_dup_f32(&this->fields.lineWidth).n64_u64[0];
+        p_lineWidth = &this->fields.lineWidth;
+        v9 = vld1_dup_f32(p_lineWidth).n64_u64[0];
         goto LABEL_11;
       }
     }
@@ -912,7 +908,7 @@ LABEL_13:
   }
   if ( !tweenScale )
     goto LABEL_13;
-  v9 = UnityEngine_Vector3_TypeInfo;
+  v10 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&tweenScale->fields.from.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -920,16 +916,16 @@ LABEL_13:
   v7 = v5->fields.tweenScale;
   if ( !v7 )
     goto LABEL_13;
-  v12 = v9->static_fields;
-  distance = v12->zeroVector.fields.z;
-  v8 = *(_QWORD *)&v12->zeroVector.fields.x;
+  v13 = v10->static_fields;
+  distance = v13->zeroVector.fields.z;
+  v9 = *(_QWORD *)&v13->zeroVector.fields.x;
 LABEL_11:
-  *(_QWORD *)&v7->fields.to.fields.x = v8;
+  *(_QWORD *)&v7->fields.to.fields.x = v9;
   v7->fields.to.fields.z = distance;
-  v13 = v5->fields.tweenScale;
-  if ( !v13 )
+  v14 = v5->fields.tweenScale;
+  if ( !v14 )
     goto LABEL_13;
-  v13->fields.duration = 0.0;
+  v14->fields.duration = 0.0;
 }
 
 
@@ -963,8 +959,7 @@ void ModelLineComponent__UpdateDisp(ModelLineComponent_o *this, int32_t layerId,
   const MethodInfo *v6; // x1
   SpotLayerEntity_o *endSpotLayerEntity; // x0
   const MethodInfo *v8; // x1
-  UnityEngine_Color_o MaterialColor; // 0:kr00_16.16
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o MaterialColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   startSpotLayerEntity = this->fields.startSpotLayerEntity;
   if ( startSpotLayerEntity && this->fields.endSpotLayerEntity )
@@ -982,11 +977,8 @@ void ModelLineComponent__UpdateDisp(ModelLineComponent_o *this, int32_t layerId,
     {
 LABEL_8:
       MaterialColor = ModelLineComponent__GetMaterialColor(this, v6);
-      v10.fields.r = MaterialColor.fields.r;
-      v10.fields.g = MaterialColor.fields.g;
-      v10.fields.b = MaterialColor.fields.b;
-      v10.fields.a = 0.0;
-      ModelLineComponent__SetMaterialColor(this, v10, v8);
+      MaterialColor.fields.a = 0.0;
+      ModelLineComponent__SetMaterialColor(this, MaterialColor, v8);
     }
   }
 }

@@ -60,8 +60,9 @@ void CoinRoomControlEffect__SetValue(
   UnityEngine_ParticleSystem_MainModule_o v7; // x0
   int32_t v8; // s0
   int32_t devideValue; // s1
-  UnityEngine_ParticleSystem_MinMaxCurve_o v10; // [xsp+0h] [xbp-60h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v11; // [xsp+28h] [xbp-38h] BYREF
+  UnityEngine_ParticleSystem_MainModule_o v10; // x0
+  UnityEngine_ParticleSystem_MinMaxCurve_o v11; // [xsp+0h] [xbp-60h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v12; // [xsp+28h] [xbp-38h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+48h] [xbp-18h] BYREF
 
   targetParticle = this->fields.targetParticle;
@@ -76,14 +77,12 @@ void CoinRoomControlEffect__SetValue(
   devideValue = this->fields.devideValue;
   m_ParticleSystem = v7.fields.m_ParticleSystem;
   UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(
-    &v11,
+    &v12,
     this->fields.coefficient * (float)((float)v8 / (float)devideValue),
     0);
-  v10 = v11;
-  UnityEngine_ParticleSystem_MainModule__set_startSize(
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    &v10,
-    0);
+  v10.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v11 = v12;
+  UnityEngine_ParticleSystem_MainModule__set_startSize(v10, &v11, 0);
 }
 
 
@@ -129,6 +128,7 @@ bool CoinRoomControlEffect__AddValue_d__10__MoveNext(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
+  bool result; // w0
   UnityEngine_ParticleSystem_MainModule_o v25; // x0
   UnityEngine_ParticleSystem_MinMaxCurve_o v26; // [xsp+0h] [xbp-90h] BYREF
   UnityEngine_ParticleSystem_MinMaxCurve_o v27; // [xsp+20h] [xbp-70h] BYREF
@@ -180,8 +180,9 @@ LABEL_7:
     v5->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v5->fields.__2__current;
     sub_2213A04(p__2__current, 0, v18, v19, v20, v21, v22, v23);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(&v28, v5->fields._endSize_5__3, 0);
   v25.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v5->fields._mainModule_5__5;

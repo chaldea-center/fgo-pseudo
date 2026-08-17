@@ -751,19 +751,20 @@ void EventTutorialEntity__TextTutorialChain(
   EventTutorialEntity_TextTuto_o *v129; // x8
   int32_t dlgTitleFontSize; // w19
   int32_t dlgFontSize; // w25
-  struct EventTutorialEntity_TextTuto_array *v132; // x8
-  __int64 v133; // x9
-  EventTutorialEntity_TextTuto_o *v134; // x8
-  struct EventTutorialEntity_TextTuto_array *v135; // x8
-  __int64 v136; // x9
-  EventTutorialEntity_TextTuto_o *v137; // x8
-  System_String_o *v138; // x23
+  System_Nullable_int__o p_messageWidgetSizeX; // x0
+  struct EventTutorialEntity_TextTuto_array *v133; // x8
+  __int64 v134; // x9
+  EventTutorialEntity_TextTuto_o *v135; // x8
+  struct EventTutorialEntity_TextTuto_array *v136; // x8
+  __int64 v137; // x9
+  EventTutorialEntity_TextTuto_o *v138; // x8
+  System_String_o *v139; // x23
   int32_t dlgBgId; // w22
-  CommonUI_o *v140; // x19
-  System_Action_o *v141; // x24
+  CommonUI_o *v141; // x19
+  System_Action_o *v142; // x24
   System_Nullable_int__o messageWidgetSizeX; // [xsp+48h] [xbp-88h] BYREF
-  UnityEngine_Vector2_o v143; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v144; // 0:s2.4,4:s3.4,8:s4.4
+  UnityEngine_Vector2_o v144; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v145; // 0:s2.4,4:s3.4,8:s4.4
 
   while ( 1 )
   {
@@ -1150,50 +1151,50 @@ LABEL_104:
           }
           else
           {
-            v132 = this->fields.textJson;
-            if ( !v132 )
+            v133 = this->fields.textJson;
+            if ( !v133 )
               goto LABEL_131;
-            v133 = *(int *)(v9 + 24);
-            if ( (unsigned int)v133 >= LODWORD(v132->max_length) )
+            v134 = *(int *)(v9 + 24);
+            if ( (unsigned int)v134 >= LODWORD(v133->max_length) )
               goto LABEL_132;
-            v134 = v132->m_Items[v133];
-            if ( !v134 )
+            v135 = v133->m_Items[v134];
+            if ( !v135 )
               goto LABEL_131;
             v115 = BasicHelper__EqualExceptNullOrEmpty(
-                     v134->fields.textAlign,
+                     v135->fields.textAlign,
                      (System_String_o *)StringLiteral_24325/*"right"*/,
                      0)
                  ? 3
                  : 2;
           }
           Master_object = (CommonReleaseMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v135 = this->fields.textJson;
-          if ( !v135 )
+          v136 = this->fields.textJson;
+          if ( !v136 )
             goto LABEL_131;
-          v136 = *(int *)(v9 + 24);
-          if ( (unsigned int)v136 >= LODWORD(v135->max_length) )
+          v137 = *(int *)(v9 + 24);
+          if ( (unsigned int)v137 >= LODWORD(v136->max_length) )
 LABEL_132:
             sub_2213CE4(Master_object);
-          v137 = v135->m_Items[v136];
-          if ( !v137 )
+          v138 = v136->m_Items[v137];
+          if ( !v138 )
             goto LABEL_131;
-          v138 = v137->fields.text;
-          dlgBgId = v137->fields.dlgBgId;
-          v140 = (CommonUI_o *)Master_object;
-          v141 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+          v139 = v138->fields.text;
+          dlgBgId = v138->fields.dlgBgId;
+          v141 = (CommonUI_o *)Master_object;
+          v142 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
           System_Action___ctor(
-            v141,
+            v142,
             (Il2CppObject *)v9,
             Method_EventTutorialEntity___c__DisplayClass31_0__TextTutorialChain_b__11__,
             0);
-          if ( !v140 )
+          if ( !v141 )
             goto LABEL_131;
-          v144.fields.z = 0.0;
-          v143.fields.x = v41;
-          v143.fields.y = v42;
-          v144.fields.x = v44;
-          v144.fields.y = v37;
-          CommonUI__OpenEventTutorialNotificationDialog(v140, v138, v106, v143, v144, dlgBgId, v115, v141, 0, v68, 0);
+          v145.fields.z = 0.0;
+          v144.fields.x = v41;
+          v144.fields.y = v42;
+          v145.fields.x = v44;
+          v145.fields.y = v37;
+          CommonUI__OpenEventTutorialNotificationDialog(v141, v139, v106, v144, v145, dlgBgId, v115, v142, 0, v68, 0);
         }
         else
         {
@@ -1289,9 +1290,10 @@ LABEL_132:
               goto LABEL_131;
             dlgTitleFontSize = v129->fields.dlgTitleFontSize;
             dlgFontSize = v129->fields.dlgFontSize;
+            p_messageWidgetSizeX = (System_Nullable_int__o)&messageWidgetSizeX;
             messageWidgetSizeX = 0;
             System_Nullable_int____ctor(
-              (System_Nullable_int__o)&messageWidgetSizeX,
+              p_messageWidgetSizeX,
               v119,
               (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
             if ( !v125 )
@@ -1592,7 +1594,7 @@ bool EventTutorialEntity__TryGetJobOpenQuestDialogInfo(
   MissionNaviTransitionBoardItem_o *v95; // [xsp+8h] [xbp-C8h]
   System_Collections_Generic_List_Enumerator_object__o v96; // [xsp+10h] [xbp-C0h] BYREF
   QuestEntity_o *entity; // [xsp+28h] [xbp-A8h] BYREF
-  System_Collections_Generic_HashSet_Enumerator_T__o v98; // [xsp+30h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v98; // [xsp+30h] [xbp-A0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v99; // [xsp+50h] [xbp-80h] BYREF
 
   if ( (byte_5970B1F & 1) == 0 )
@@ -1757,13 +1759,13 @@ LABEL_61:
     (System_Collections_Generic_HashSet_Enumerator_T__o *)&v96,
     v23,
     (const MethodInfo_42B49B4 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
-  v98 = (System_Collections_Generic_HashSet_Enumerator_T__o)v96;
+  v98 = v96;
   v96.fields._list = 0;
   *(_QWORD *)&v96.fields._index = &v98;
   while ( 1 )
   {
     v44 = System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
-            &v98,
+            (System_Collections_Generic_HashSet_Enumerator_T__o *)&v98,
             (const MethodInfo_40F5A3C *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__);
     if ( !v44 )
       break;
@@ -1815,7 +1817,7 @@ LABEL_61:
     }
   }
   System_Collections_Generic_HashSet_Enumerator_int___Dispose(
-    &v98,
+    (System_Collections_Generic_HashSet_Enumerator_T__o *)&v98,
     (const MethodInfo_40F5A38 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v61);

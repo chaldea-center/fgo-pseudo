@@ -1216,7 +1216,8 @@ void MultipleViewListViewManager__ModifyItem(
         (System_Collections_Generic_List_Enumerator_T__o *)&v43,
         (System_Collections_Generic_List_object__o *)Master_object,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-      v46 = *(System_Collections_Generic_List_Enumerator_object__o *)&v43.fields.currentCryptoKey;
+      v46.fields._current = (Il2CppObject *)v43.fields.fakeValue;
+      *(_OWORD *)&v46.fields._list = *(_OWORD *)&v43.fields.currentCryptoKey;
       v44 = 0;
       v45 = &v46;
       while ( 1 )
@@ -3097,7 +3098,7 @@ System_IAsyncResult_o *MultipleViewListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(MultipleViewListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

@@ -812,14 +812,19 @@ System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___o *ServantPhot
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_ValueTuple_int__int__int__o ServantPhotoEntity__GetOverrideFormList_d__7__System_Collections_Generic_IEnumerator__System_Int32_System_Int32_System_Int32___get_Current(
         ServantPhotoEntity__GetOverrideFormList_d__7_o *this,
         const MethodInfo *method)
 {
+  int32_t Item3; // w1
+  __int64 v3; // x0
   System_ValueTuple_int__int__int__o result; // 0:x0.12
 
-  result.fields.Item3 = this->fields.__2__current.fields.Item3;
-  *(_QWORD *)&result.fields.Item1 = *(_QWORD *)&this->fields.__2__current.fields.Item1;
+  Item3 = this->fields.__2__current.fields.Item3;
+  v3 = *(_QWORD *)&this->fields.__2__current.fields.Item1;
+  *(_QWORD *)&result.fields.Item1 = v3;
+  result.fields.Item3 = Item3;
   return result;
 }
 

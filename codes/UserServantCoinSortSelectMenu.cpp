@@ -192,8 +192,8 @@ void UserServantCoinSortSelectMenu__InitCategoryContainer(
   Il2CppObject *v21; // x21
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o BottomPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o BottomPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596BCD0 & 1) == 0 )
@@ -287,10 +287,10 @@ LABEL_27:
         if ( !v21 )
           goto LABEL_27;
         ServantFilterCategoryContainer__SetActive((ServantFilterCategoryContainer_o *)v21, 1, 0);
-        v25.fields.x = x;
-        v25.fields.y = y;
-        v25.fields.z = z;
-        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v21, v25, 0);
+        v24.fields.x = x;
+        v24.fields.y = y;
+        v24.fields.z = z;
+        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v21, v24, 0);
         ServantFilterCategoryContainer__Layout(
           (ServantFilterCategoryContainer_o *)v21,
           HIDWORD(v21[3].monitor) == v5,
@@ -1147,8 +1147,10 @@ void UserServantCoinSortSelectMenu__SetupButtonLayout(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *servantFilterRoot; // x0
-  System_Array_o *v5; // x20
-  const MethodInfo *v6; // x2
+  System_Array_o *v5; // x0
+  System_RuntimeFieldHandle_o v6; // x1
+  ListViewSort_FilterCategoryKind_array *v7; // x20
+  const MethodInfo *v8; // x2
 
   if ( (byte_596BCD3 & 1) == 0 )
   {
@@ -1161,18 +1163,19 @@ void UserServantCoinSortSelectMenu__SetupButtonLayout(
     goto LABEL_8;
   UnityEngine_GameObject__SetActive(servantFilterRoot, 0, 0);
   servantFilterRoot = (UnityEngine_GameObject_o *)this->fields.sortButtonGrid;
+  if ( !servantFilterRoot )
+    goto LABEL_8;
+  ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *))servantFilterRoot->klass[1]._1.element_class)(
+    servantFilterRoot,
+    servantFilterRoot->klass[1]._1.castClass);
+  servantFilterRoot = this->fields.servantFilterRoot;
   if ( !servantFilterRoot
-    || (((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *))servantFilterRoot->klass[1]._1.element_class)(
-          servantFilterRoot,
-          servantFilterRoot->klass[1]._1.castClass),
-        (servantFilterRoot = this->fields.servantFilterRoot) == 0)
     || (UnityEngine_GameObject__SetActive(servantFilterRoot, 1, 0),
         v5 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 4),
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-          v5,
-          (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0F9817BD50D95010EC11F3FB54C5CFCC06B1F6F9B8A1A053A0169143CC4F9805,
-          0),
-        UserServantCoinSortSelectMenu__InitCategoryContainer(this, (ListViewSort_FilterCategoryKind_array *)v5, v6),
+        v6.fields.value = Field__PrivateImplementationDetails__0F9817BD50D95010EC11F3FB54C5CFCC06B1F6F9B8A1A053A0169143CC4F9805,
+        v7 = (ListViewSort_FilterCategoryKind_array *)v5,
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v5, v6, 0),
+        UserServantCoinSortSelectMenu__InitCategoryContainer(this, v7, v8),
         (servantFilterRoot = (UnityEngine_GameObject_o *)this->fields.servantFilterScrollView) == 0) )
   {
 LABEL_8:
@@ -1527,7 +1530,7 @@ System_IAsyncResult_o *UserServantCoinSortSelectMenu_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

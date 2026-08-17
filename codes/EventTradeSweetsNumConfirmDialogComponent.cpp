@@ -722,6 +722,7 @@ void EventTradeSweetsNumConfirmDialogComponent__SerializeFieldNotNullCheck(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
         EventTradeSweetsNumConfirmDialogComponent_o *this,
         const MethodInfo *method)
@@ -753,42 +754,48 @@ void EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
   System_String_o *v27; // x0
   struct UILabel_array *v28; // x8
   struct System_Boolean_array *isShortage; // x9
-  unsigned int v32; // w26
-  unsigned int v33; // w10
+  float v30; // s0 OVERLAPPED
+  float v31; // s3
+  float v32; // s1
+  float v33; // s2
+  unsigned int v34; // w26
+  unsigned int v35; // w10
   struct UISprite_array *exchangeOriginItemIcon2; // x9
-  __int64 v35; // x27
-  CommonConsumeEntity_o *v36; // x8
-  int32_t v37; // w21
-  UISprite_o *v38; // x20
-  __int64 v39; // x2
-  struct CommonConsumeEntity_array *v40; // x8
-  CommonConsumeEntity_o *v41; // x8
-  int32_t v42; // w20
-  int32_t v43; // w21
-  struct CommonConsumeEntity_array *v44; // x8
-  Il2CppObject *v45; // x20
-  int32_t v46; // w0
+  __int64 v37; // x27
+  CommonConsumeEntity_o *v38; // x8
+  int32_t v39; // w21
+  UISprite_o *v40; // x20
+  __int64 v41; // x2
+  struct CommonConsumeEntity_array *v42; // x8
+  CommonConsumeEntity_o *v43; // x8
+  int32_t v44; // w20
+  int32_t v45; // w21
+  struct CommonConsumeEntity_array *v46; // x8
+  Il2CppObject *v47; // x20
+  int32_t v48; // w0
   struct UILabel_array *exchangeOriginCounts2; // x8
-  Il2CppObject *v48; // x21
-  UILabel_o *v49; // x22
-  System_String_o *v50; // x0
-  struct UILabel_array *v51; // x8
-  struct System_Boolean_array *v52; // x9
-  __int64 v55; // x1
-  __int64 v56; // x2
+  Il2CppObject *v50; // x21
+  UILabel_o *v51; // x22
+  System_String_o *v52; // x0
+  struct UILabel_array *v53; // x8
+  struct System_Boolean_array *v54; // x9
+  float v55; // s0 OVERLAPPED
+  float v56; // s3
+  float v57; // s1
+  float v58; // s2
+  __int64 v59; // x1
+  __int64 v60; // x2
   UILabel_o *exchangeDestinationLb; // x20
-  __int64 v58; // x1
-  __int64 v59; // x2
+  __int64 v62; // x1
+  __int64 v63; // x2
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
   GiftEntity_array *GiftListById; // x20
-  GiftEntity_o *v62; // x8
-  __int64 v63; // x2
+  GiftEntity_o *v66; // x8
+  __int64 v67; // x2
   UISprite_o *exchangeDestinationItemIcon; // x20
   int32_t klass; // w21
-  struct EventTradeGoodsEntity_o *v66; // x8
-  const MethodInfo *v67; // x1
-  UnityEngine_Color_o v68; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v69; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct EventTradeGoodsEntity_o *v70; // x8
+  const MethodInfo *v71; // x1
 
   if ( (byte_596AD94 & 1) == 0 )
   {
@@ -888,12 +895,12 @@ void EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
                         NumberFormat = (CommonConsumeEntity_o *)v28->m_Items[v9];
                         if ( NumberFormat )
                         {
-                          v68.fields.r = 1.0;
-                          v68.fields.a = 1.0;
+                          v30 = 1.0;
+                          v31 = 1.0;
                           ++v9;
-                          v68.fields.g = isShortage->m_Items[v12] ? 0.0 : 1.0;
-                          v68.fields.b = v68.fields.g;
-                          UIWidget__set_color((UIWidget_o *)NumberFormat, v68, 0);
+                          v32 = isShortage->m_Items[v12] ? 0.0 : 1.0;
+                          v33 = v32;
+                          UIWidget__set_color((UIWidget_o *)NumberFormat, *(UnityEngine_Color_o *)&v30, 0);
                           exchangeOriginItemList = this->fields.exchangeOriginItemList;
                           if ( exchangeOriginItemList )
                             continue;
@@ -919,84 +926,84 @@ void EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
   }
   else
   {
-    v32 = 0;
+    v34 = 0;
     while ( 1 )
     {
-      v33 = exchangeOriginItemList->max_length;
-      if ( (int)v32 >= (int)v33 )
+      v35 = exchangeOriginItemList->max_length;
+      if ( (int)v34 >= (int)v35 )
         break;
       exchangeOriginItemIcon2 = this->fields.exchangeOriginItemIcon2;
       if ( !exchangeOriginItemIcon2 )
         goto LABEL_71;
-      if ( v32 >= LODWORD(exchangeOriginItemIcon2->max_length) || v32 >= v33 )
+      if ( v34 >= LODWORD(exchangeOriginItemIcon2->max_length) || v34 >= v35 )
         goto LABEL_94;
-      v35 = (int)v32;
-      v36 = exchangeOriginItemList->m_Items[v32];
-      if ( v36 )
+      v37 = (int)v34;
+      v38 = exchangeOriginItemList->m_Items[v34];
+      if ( v38 )
       {
-        v37 = v36->fields.objectId;
-        v38 = exchangeOriginItemIcon2->m_Items[v32];
+        v39 = v38->fields.objectId;
+        v40 = exchangeOriginItemIcon2->m_Items[v34];
         if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v7);
-        NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(v38, v37, 0);
-        v40 = this->fields.exchangeOriginItemList;
-        if ( v40 )
+        NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(v40, v39, 0);
+        v42 = this->fields.exchangeOriginItemList;
+        if ( v42 )
         {
-          if ( v32 >= LODWORD(v40->max_length) )
+          if ( v34 >= LODWORD(v42->max_length) )
             goto LABEL_94;
-          v41 = v40->m_Items[v32];
-          if ( v41 )
+          v43 = v42->m_Items[v34];
+          if ( v43 )
           {
-            v42 = v41->fields.num;
+            v44 = v43->fields.num;
             if ( this->fields.makeCount <= 1 )
-              v43 = 1;
+              v45 = 1;
             else
-              v43 = this->fields.makeCount;
+              v45 = this->fields.makeCount;
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v39);
-            NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v43 * v42, 0);
-            v44 = this->fields.exchangeOriginItemList;
-            if ( v44 )
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v41);
+            NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v45 * v44, 0);
+            v46 = this->fields.exchangeOriginItemList;
+            if ( v46 )
             {
-              if ( v32 >= LODWORD(v44->max_length) )
+              if ( v34 >= LODWORD(v46->max_length) )
                 goto LABEL_94;
-              v45 = (Il2CppObject *)NumberFormat;
-              NumberFormat = v44->m_Items[v32];
+              v47 = (Il2CppObject *)NumberFormat;
+              NumberFormat = v46->m_Items[v34];
               if ( NumberFormat )
               {
-                v46 = CommonConsumeEntity__GetUserHasNum(NumberFormat, 0);
-                NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v46, 0);
+                v48 = CommonConsumeEntity__GetUserHasNum(NumberFormat, 0);
+                NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v48, 0);
                 exchangeOriginCounts2 = this->fields.exchangeOriginCounts2;
                 if ( exchangeOriginCounts2 )
                 {
-                  if ( v32 >= LODWORD(exchangeOriginCounts2->max_length) )
+                  if ( v34 >= LODWORD(exchangeOriginCounts2->max_length) )
                     goto LABEL_94;
-                  v48 = (Il2CppObject *)NumberFormat;
-                  v49 = exchangeOriginCounts2->m_Items[v32];
-                  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_14026/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0);
-                  NumberFormat = (CommonConsumeEntity_o *)System_String__Format_75697880(v50, v45, v48, 0);
-                  if ( v49 )
+                  v50 = (Il2CppObject *)NumberFormat;
+                  v51 = exchangeOriginCounts2->m_Items[v34];
+                  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_14026/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0);
+                  NumberFormat = (CommonConsumeEntity_o *)System_String__Format_75697880(v52, v47, v50, 0);
+                  if ( v51 )
                   {
-                    UILabel__set_text(v49, (System_String_o *)NumberFormat, 0);
-                    v51 = this->fields.exchangeOriginCounts2;
-                    if ( v51 )
+                    UILabel__set_text(v51, (System_String_o *)NumberFormat, 0);
+                    v53 = this->fields.exchangeOriginCounts2;
+                    if ( v53 )
                     {
-                      if ( v32 >= LODWORD(v51->max_length) )
+                      if ( v34 >= LODWORD(v53->max_length) )
                         goto LABEL_94;
-                      v52 = this->fields.isShortage;
-                      if ( v52 )
+                      v54 = this->fields.isShortage;
+                      if ( v54 )
                       {
-                        if ( v32 >= LODWORD(v52->max_length) )
+                        if ( v34 >= LODWORD(v54->max_length) )
                           goto LABEL_94;
-                        NumberFormat = (CommonConsumeEntity_o *)v51->m_Items[v32];
+                        NumberFormat = (CommonConsumeEntity_o *)v53->m_Items[v34];
                         if ( NumberFormat )
                         {
-                          v69.fields.r = 1.0;
-                          v69.fields.a = 1.0;
-                          ++v32;
-                          v69.fields.g = v52->m_Items[v35] ? 0.0 : 1.0;
-                          v69.fields.b = v69.fields.g;
-                          UIWidget__set_color((UIWidget_o *)NumberFormat, v69, 0);
+                          v55 = 1.0;
+                          v56 = 1.0;
+                          ++v34;
+                          v57 = v54->m_Items[v37] ? 0.0 : 1.0;
+                          v58 = v57;
+                          UIWidget__set_color((UIWidget_o *)NumberFormat, *(UnityEngine_Color_o *)&v55, 0);
                           exchangeOriginItemList = this->fields.exchangeOriginItemList;
                           if ( exchangeOriginItemList )
                             continue;
@@ -1024,13 +1031,13 @@ LABEL_71:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)NumberFormat, 0, 0);
   exchangeDestinationLb = this->fields.exchangeDestinationLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v55, v56);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v59, v60);
   NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14024/*"TRADE_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, 0);
   if ( !exchangeDestinationLb )
     goto LABEL_71;
   UILabel__set_text(exchangeDestinationLb, (System_String_o *)NumberFormat, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v58, v59);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v62, v63);
   NumberFormat = (CommonConsumeEntity_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_GiftMaster___);
   tradeGoodsEntity = this->fields.tradeGoodsEntity;
   if ( !tradeGoodsEntity )
@@ -1049,27 +1056,27 @@ LABEL_71:
   if ( !LODWORD(GiftListById->max_length) )
 LABEL_94:
     sub_2213CE4(NumberFormat);
-  v62 = GiftListById->m_Items[0];
-  if ( !v62 )
+  v66 = GiftListById->m_Items[0];
+  if ( !v66 )
     goto LABEL_71;
   if ( !NumberFormat )
     goto LABEL_71;
   NumberFormat = (CommonConsumeEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)NumberFormat,
-                                            v62->fields.objectId,
+                                            v66->fields.objectId,
                                             (const MethodInfo_3F10B30 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( !NumberFormat )
     goto LABEL_71;
   exchangeDestinationItemIcon = this->fields.exchangeDestinationItemIcon;
   klass = (int32_t)NumberFormat[1].klass;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v63);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v6, v67);
   NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(exchangeDestinationItemIcon, klass, 0);
-  v66 = this->fields.tradeGoodsEntity;
-  if ( !v66 )
+  v70 = this->fields.tradeGoodsEntity;
+  if ( !v70 )
     goto LABEL_71;
-  AtlasManager__SetItem(this->fields.exchangeDestinationPointIcon, v66->fields.eventPointItemId, 0);
-  EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(this, v67);
+  AtlasManager__SetItem(this->fields.exchangeDestinationPointIcon, v70->fields.eventPointItemId, 0);
+  EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(this, v71);
 }
 
 

@@ -114,7 +114,7 @@ void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, cons
   __int64 v11; // x24
   unsigned int *IlluminationObjects; // x25
   Il2CppObject *v13; // x21
-  __int64 transform; // x0
+  UnityEngine_GameObject_o *transform; // x0
   __int64 v15; // x1
   System_String_o *v16; // x2
   System_String_o *v17; // x3
@@ -147,10 +147,10 @@ void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, cons
   int32_t v44; // w5
   bool v45; // w6
   bool v46; // w7
-  __int64 v47; // x8
+  intptr_t m_CachedPtr; // x8
   _QWORD *v48; // x9
-  __int64 v49; // x10
-  __int64 v50; // x8
+  __int64 klass_low; // x10
+  intptr_t v50; // x8
   System_Collections_Generic_List_object__o *v51; // x20
   MissionNaviTransitionBoardItem_o *p_IlluminationDisp; // x19
   System_String_o *v53; // x2
@@ -160,18 +160,19 @@ void TitleIlluminationManager__Initialize(TitleIlluminationManager_o *this, cons
   bool v57; // w6
   bool v58; // w7
   System_Array_o *v59; // x19
-  __int64 v60; // x1
-  System_String_o *v61; // x2
-  System_String_o *v62; // x3
-  int32_t v63; // w4
-  int32_t v64; // w5
-  bool v65; // w6
-  bool v66; // w7
-  TitleIlluminationManager_c *v67; // x0
+  System_RuntimeFieldHandle_o v60; // x1
+  __int64 v61; // x1
+  System_String_o *v62; // x2
+  System_String_o *v63; // x3
+  int32_t v64; // w4
+  int32_t v65; // w5
+  bool v66; // w6
+  bool v67; // w7
+  TitleIlluminationManager_c *v68; // x0
   struct TitleIlluminationManager_StaticFields *static_fields; // x0
-  __int64 v69; // x0
-  __int128 v70; // [xsp+0h] [xbp-80h] BYREF
-  __int64 v71; // [xsp+10h] [xbp-70h]
+  __int64 v70; // x0
+  __int128 v71; // [xsp+0h] [xbp-80h] BYREF
+  __int64 v72; // [xsp+10h] [xbp-70h]
 
   if ( (byte_596DED0 & 1) == 0 )
   {
@@ -214,11 +215,11 @@ LABEL_37:
         sub_2213CDC(transform, v15);
       if ( v13 )
       {
-        transform = sub_2213BB4(v13, *(_QWORD *)(*(_QWORD *)IlluminationObjects + 64LL));
+        transform = (UnityEngine_GameObject_o *)sub_2213BB4(v13, *(_QWORD *)(*(_QWORD *)IlluminationObjects + 64LL));
         if ( !transform )
         {
-          v69 = sub_2213D00(0, v22);
-          sub_2213BA0(v69, 0);
+          v70 = sub_2213D00(0, v22);
+          sub_2213BA0(v70, 0);
         }
       }
       if ( v10 >= IlluminationObjects[6] )
@@ -266,61 +267,63 @@ LABEL_37:
     IlluminationPrefab = (Il2CppObject *)this->fields.IlluminationPrefab;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31, v32);
-    transform = (__int64)UnityEngine_Object__Instantiate_object_(
-                           IlluminationPrefab,
-                           (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
+                                              IlluminationPrefab,
+                                              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_37;
-    v36 = (UnityEngine_GameObject_o *)transform;
-    transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
+    v36 = transform;
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
     if ( !this->fields.TargetPanel )
       goto LABEL_37;
     v37 = (UnityEngine_Transform_o *)transform;
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.TargetPanel, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                              (UnityEngine_Component_o *)this->fields.TargetPanel,
+                                              0);
     if ( !v37 )
       goto LABEL_37;
     UnityEngine_Transform__set_parent(v37, (UnityEngine_Transform_o *)transform, 0);
-    transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v36, 0);
     v38 = (UnityEngine_Transform_o *)transform;
     if ( !byte_5969AE0 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( !v38 )
       goto LABEL_37;
     UnityEngine_Transform__set_localPosition(v38, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v36, 0);
     v39 = (UnityEngine_Transform_o *)transform;
     if ( !byte_5969AE0 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( !v39 )
       goto LABEL_37;
     UnityEngine_Transform__set_localEulerAngles(v39, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    transform = (__int64)UnityEngine_GameObject__get_transform(v36, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v36, 0);
     v40 = (UnityEngine_Transform_o *)transform;
     if ( !byte_5969AE5 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v40 )
       goto LABEL_37;
     UnityEngine_Transform__set_localScale(v40, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
     UnityEngine_GameObject__SetActive(v36, 0, 0);
-    transform = (__int64)*p_IlluminationPool;
+    transform = (UnityEngine_GameObject_o *)*p_IlluminationPool;
     if ( !*p_IlluminationPool )
       goto LABEL_37;
-    v47 = *(_QWORD *)(transform + 16);
+    m_CachedPtr = transform->fields.m_CachedPtr;
     v48 = Method_System_Collections_Generic_List_GameObject__Add__;
-    ++*(_DWORD *)(transform + 28);
-    if ( !v47 )
+    ++HIDWORD(transform[1].klass);
+    if ( !m_CachedPtr )
       goto LABEL_37;
-    v49 = *(int *)(transform + 24);
-    if ( (unsigned int)v49 >= *(_DWORD *)(v47 + 24) )
+    klass_low = SLODWORD(transform[1].klass);
+    if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)transform,
@@ -329,8 +332,8 @@ LABEL_37:
     }
     else
     {
-      v50 = v47 + 8 * v49;
-      *(_DWORD *)(transform + 24) = v49 + 1;
+      v50 = m_CachedPtr + 8 * klass_low;
+      LODWORD(transform[1].klass) = klass_low + 1;
       *(_QWORD *)(v50 + 32) = v36;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)(v50 + 32), (int32_t)v36, v41, v42, v43, v44, v45, v46);
     }
@@ -343,22 +346,20 @@ LABEL_37:
   p_IlluminationDisp = (MissionNaviTransitionBoardItem_o *)&this->fields.IlluminationDisp;
   sub_2213A04(p_IlluminationDisp, (int32_t)v51, v53, v54, v55, v56, v57, v58);
   p_IlluminationDisp->fields.index = 0;
-  v71 = 2;
-  v70 = xmmword_ED9788;
-  v59 = (System_Array_o *)sub_2213B28(int_____TypeInfo, &v70);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v59,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4,
-    0);
-  v67 = TitleIlluminationManager_TypeInfo;
+  v72 = 2;
+  v71 = xmmword_ED9788;
+  v59 = (System_Array_o *)sub_2213B28(int_____TypeInfo, &v71);
+  v60.fields.value = Field__PrivateImplementationDetails__EE4D0A4F971594530E111634A37EEDED3EB04BC91AD1767FFB6EEAB5B24A1CC4;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v59, v60, 0);
+  v68 = TitleIlluminationManager_TypeInfo;
   if ( !*(&TitleIlluminationManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, v60, v61);
-    v67 = TitleIlluminationManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TitleIlluminationManager_TypeInfo, v61, v62);
+    v68 = TitleIlluminationManager_TypeInfo;
   }
-  static_fields = v67->static_fields;
+  static_fields = v68->static_fields;
   static_fields->DirTable = (struct System_Int32_array *)v59;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->DirTable, (int32_t)v59, v61, v62, v63, v64, v65, v66);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->DirTable, (int32_t)v59, v62, v63, v64, v65, v66, v67);
 }
 
 

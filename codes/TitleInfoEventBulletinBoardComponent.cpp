@@ -195,7 +195,7 @@ void TitleInfoEventBulletinBoardComponent__AdjustLabelLocalPosition(
   UnityEngine_Object_o *v10; // x21
   UnityEngine_Object_o *v11; // x21
   TitleInfoEventBulletinBoardComponent_o *v12; // x21
-  float v13; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596E772 & 1) == 0 )
@@ -248,10 +248,10 @@ void TitleInfoEventBulletinBoardComponent__AdjustLabelLocalPosition(
                                                                0);
             if ( !this )
               break;
-            v13 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y));
+            localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
             GameObjectExtensions__SetLocalPositionY(
               (UnityEngine_GameObject_o *)v12,
-              v13 + v4->fields.rubyRelativePositionY,
+              localPosition.fields.y + v4->fields.rubyRelativePositionY,
               0);
           }
         }
@@ -2068,6 +2068,7 @@ System_Collections_IEnumerator_o *TitleInfoEventBulletinBoardComponent__SetWipeI
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596E770 & 1) == 0 )
   {
@@ -2081,8 +2082,9 @@ System_Collections_IEnumerator_o *TitleInfoEventBulletinBoardComponent__SetWipeI
   *(_QWORD *)(v8 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 40), (int32_t)this, v9, v10, v11, v12, v13, v14);
   *(_DWORD *)(v8 + 48) = id;
+  result = (System_Collections_IEnumerator_o *)v8;
   *(_BYTE *)(v8 + 32) = v7;
-  return (System_Collections_IEnumerator_o *)v8;
+  return result;
 }
 
 
@@ -2321,6 +2323,9 @@ UnityEngine_Vector3_o TitleInfoEventBulletinBoardComponent__localPosByDispType(
   struct UnityEngine_Vector3_o *p_EventLocalPos; // x8
   float *p_y; // x9
   float *p_z; // x10
+  float v9; // s2
+  float v10; // s1
+  float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596E76C & 1) == 0 )
@@ -2365,9 +2370,12 @@ UnityEngine_Vector3_o TitleInfoEventBulletinBoardComponent__localPosByDispType(
     p_y = &this->fields.TerminalFSLocalPos.fields.y;
     p_z = &this->fields.TerminalFSLocalPos.fields.z;
   }
-  result.fields.z = *p_z;
-  result.fields.y = *p_y;
-  result.fields.x = p_EventLocalPos->fields.x;
+  v9 = *p_z;
+  v10 = *p_y;
+  x = p_EventLocalPos->fields.x;
+  result.fields.z = v9;
+  result.fields.y = v10;
+  result.fields.x = x;
   return result;
 }
 
@@ -2509,6 +2517,7 @@ bool TitleInfoEventBulletinBoardComponent__SetWipeIconAndSvtNameLabel_d__53__Mov
   struct EventBulletinBoardEntity_o *v28; // x8
   struct EventBulletinBoardEntity_BulletinBoardInfo_array *v29; // x8
   EventBulletinBoardEntity_BulletinBoardInfo_o *v30; // x8
+  bool result; // w0
   float v32; // s8
   UnityEngine_WaitForSeconds_o *v33; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
@@ -2624,8 +2633,9 @@ LABEL_38:
           v3->fields.__2__current = (Il2CppObject *)v33;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
           sub_2213A04(p__2__current, (int32_t)v33, v35, v36, v37, v38, v39, v40);
+          result = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return 1;
+          return result;
         }
       }
       else if ( _4__this )
@@ -2681,8 +2691,9 @@ LABEL_34:
   v3->fields.__2__current = (Il2CppObject *)v42;
   v43 = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
   sub_2213A04(v43, (int32_t)v42, v44, v45, v46, v47, v48, v49);
+  result = 1;
   v43[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 

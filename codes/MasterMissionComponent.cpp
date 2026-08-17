@@ -6592,7 +6592,7 @@ LABEL_11:
 void MasterMissionComponent__playSvtVoice(MasterMissionComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *playBtnImg; // x20
-  __int64 voicePlayEffect; // x0
+  UnityEngine_GameObject_o *voicePlayEffect; // x0
   __int64 v5; // x1
   struct System_Collections_Generic_List_ServantVoiceData____o *voiceListRand; // x8
   UnityEngine_Transform_o *v7; // x20
@@ -6612,39 +6612,39 @@ void MasterMissionComponent__playSvtVoice(MasterMissionComponent_o *this, const 
   playBtnImg = (UnityEngine_Object_o *)this->fields.playBtnImg;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  voicePlayEffect = UnityEngine_Object__op_Inequality(playBtnImg, 0, 0);
-  if ( (voicePlayEffect & 1) != 0 )
+  voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(playBtnImg, 0, 0);
+  if ( ((unsigned __int8)voicePlayEffect & 1) != 0 )
   {
     voiceListRand = this->fields.voiceListRand;
     if ( !voiceListRand )
       goto LABEL_20;
     if ( voiceListRand->fields._size >= 1 )
     {
-      voicePlayEffect = (__int64)this->fields.voicePlayEffect;
+      voicePlayEffect = this->fields.voicePlayEffect;
       if ( !voicePlayEffect )
         goto LABEL_20;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)voicePlayEffect, 1, 0);
-      voicePlayEffect = (__int64)this->fields.voicePlayEffect;
+      UnityEngine_GameObject__SetActive(voicePlayEffect, 1, 0);
+      voicePlayEffect = this->fields.voicePlayEffect;
       if ( !voicePlayEffect )
         goto LABEL_20;
-      voicePlayEffect = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)voicePlayEffect, 0);
+      voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(voicePlayEffect, 0);
       v7 = (UnityEngine_Transform_o *)voicePlayEffect;
       if ( !byte_5969AE5 )
       {
-        voicePlayEffect = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        voicePlayEffect = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
       if ( !v7
         || (UnityEngine_Transform__set_localScale(v7, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
-            (voicePlayEffect = (__int64)this->fields.voicePlayEffect) == 0)
-        || (voicePlayEffect = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                         (UnityEngine_GameObject_o *)voicePlayEffect,
-                                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___)) == 0
+            (voicePlayEffect = this->fields.voicePlayEffect) == 0)
+        || (voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                            voicePlayEffect,
+                                                            (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___)) == 0
         || (UITweener__set_tweenFactor((UITweener_o *)voicePlayEffect, 0.0, 0),
-            (voicePlayEffect = (__int64)this->fields.voicePlayEffect) == 0)
-        || (voicePlayEffect = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                         (UnityEngine_GameObject_o *)voicePlayEffect,
-                                         (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___)) == 0 )
+            (voicePlayEffect = this->fields.voicePlayEffect) == 0)
+        || (voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                            voicePlayEffect,
+                                                            (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___)) == 0 )
       {
 LABEL_20:
         sub_2213CDC(voicePlayEffect, v5);
@@ -7143,7 +7143,7 @@ void MasterMissionComponent__setGuideSvtVoice(MasterMissionComponent_o *this, co
   __int64 v76; // [xsp+0h] [xbp-80h]
   System_Collections_Generic_List_Enumerator_object__o *v77; // [xsp+8h] [xbp-78h]
   System_Collections_Generic_List_Enumerator_object__o v78; // [xsp+10h] [xbp-70h] BYREF
-  __int64 voicePrefix; // [xsp+28h] [xbp-58h] BYREF
+  int32_t voicePrefix[2]; // [xsp+28h] [xbp-58h] BYREF
 
   if ( (byte_5973B5A & 1) == 0 )
   {
@@ -7167,7 +7167,7 @@ void MasterMissionComponent__setGuideSvtVoice(MasterMissionComponent_o *this, co
     sub_2213A60(&MasterMissionComponent_VoiceData_TypeInfo);
     byte_5973B5A = 1;
   }
-  voicePrefix = 0;
+  *(_QWORD *)voicePrefix = 0;
   memset(&v78, 0, sizeof(v78));
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -7217,14 +7217,14 @@ void MasterMissionComponent__setGuideSvtVoice(MasterMissionComponent_o *this, co
     goto LABEL_36;
   ServantLimitAddMaster__getVoiceIndex(
     (ServantLimitAddMaster_o *)MasterData_object,
-    (int32_t *)&voicePrefix + 1,
-    (int32_t *)&voicePrefix,
+    &voicePrefix[1],
+    voicePrefix,
     (int32_t)Instance,
     this->fields.currentEventSvtLimitCnt,
     0);
   if ( !v6 )
     goto LABEL_36;
-  Entity = ServantVoiceMaster__GetEntity((ServantVoiceMaster_o *)v6, SHIDWORD(voicePrefix), voicePrefix, 8, 0);
+  Entity = ServantVoiceMaster__GetEntity((ServantVoiceMaster_o *)v6, voicePrefix[1], voicePrefix[0], 8, 0);
   if ( !Entity )
     goto LABEL_24;
   v24 = Entity;
@@ -7686,7 +7686,7 @@ System_IAsyncResult_o *MasterMissionComponent_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

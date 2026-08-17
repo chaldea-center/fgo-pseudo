@@ -1,14 +1,16 @@
 void FriendOperationItemListViewManager___cctor(const MethodInfo *method)
 {
   Il2CppClass *v1; // x0
-  System_Array_o *v2; // x19
+  System_Array_o *v2; // x0
+  System_RuntimeFieldHandle_o v3; // x1
+  System_Array_o *v4; // x19
   struct FriendOperationItemListViewManager_StaticFields *static_fields; // x0
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
   if ( (byte_596B049 & 1) == 0 )
   {
@@ -20,13 +22,12 @@ void FriendOperationItemListViewManager___cctor(const MethodInfo *method)
   v1 = ListViewSort_FilterKind___TypeInfo;
   FriendOperationItemListViewManager_TypeInfo->static_fields->isInitSystem = 0;
   v2 = (System_Array_o *)sub_2213B20(v1, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v2,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__CECDD0BE7FC2683E9048A1EAA2B2C479E05BE86E55C4C967D9E866EDE0AD71AB,
-    0);
+  v3.fields.value = Field__PrivateImplementationDetails__CECDD0BE7FC2683E9048A1EAA2B2C479E05BE86E55C4C967D9E866EDE0AD71AB;
+  v4 = v2;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v2, v3, 0);
   static_fields = FriendOperationItemListViewManager_TypeInfo->static_fields;
-  static_fields->classFilter = (struct ListViewSort_FilterKind_array *)v2;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->classFilter, (int32_t)v2, v4, v5, v6, v7, v8, v9);
+  static_fields->classFilter = (struct ListViewSort_FilterKind_array *)v4;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->classFilter, (int32_t)v4, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -3586,7 +3587,7 @@ System_IAsyncResult_o *FriendOperationItemListViewManager_CallbackFunc__BeginInv
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(FriendOperationItemListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

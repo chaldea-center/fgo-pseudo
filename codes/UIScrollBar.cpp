@@ -7,6 +7,7 @@ void UIScrollBar___ctor(UIScrollBar_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIScrollBar__ForceUpdate(UIScrollBar_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mFG; // x20
@@ -25,19 +26,22 @@ void UIScrollBar__ForceUpdate(UIScrollBar_o *this, const MethodInfo *method)
   bool v16; // w21
   UIRect_o *isInverted; // x0
   __int64 v18; // x1
-  __int64 v22; // x1
+  float v19; // s3
+  float v20; // s0 OVERLAPPED
+  float v21; // s2
+  float v22; // s1
+  __int64 v23; // x1
   UnityEngine_Object_o *thumb; // x20
-  float v24; // s0
-  float v25; // s1
-  float v26; // s2
-  float v27; // s3
-  float v28; // s8
-  float v29; // s9
-  float v30; // s11
-  float v31; // s10
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  float v25; // s0
+  float v26; // s1
+  float v27; // s2
+  float v28; // s3
+  float v29; // s8
+  float v30; // s9
+  float v31; // s11
+  float v32; // s10
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5975061 & 1) == 0 )
   {
@@ -83,37 +87,37 @@ void UIScrollBar__ForceUpdate(UIScrollBar_o *this, const MethodInfo *method)
   {
     if ( !v15 )
       goto LABEL_40;
-    v34.fields.w = 1.0;
-    v34.fields.x = 1.0 - v13;
+    v19 = 1.0;
+    v20 = 1.0 - v13;
     if ( ((unsigned __int8)isInverted & 1) != 0 )
     {
-      v34.fields.z = 1.0 - v12;
+      v21 = 1.0 - v12;
     }
     else
     {
-      v34.fields.x = v12;
-      v34.fields.z = v13;
+      v20 = v12;
+      v21 = v13;
     }
-    v34.fields.y = 0.0;
+    v22 = 0.0;
   }
   else
   {
     if ( !v15 )
       goto LABEL_40;
-    v34.fields.z = 1.0;
-    v34.fields.w = 1.0 - v12;
+    v21 = 1.0;
+    v19 = 1.0 - v12;
     if ( ((unsigned __int8)isInverted & 1) != 0 )
-      v34.fields.y = 1.0 - v13;
+      v22 = 1.0 - v13;
     else
-      v34.fields.y = v12;
+      v22 = v12;
     if ( ((unsigned __int8)isInverted & 1) == 0 )
-      v34.fields.w = v13;
-    v34.fields.x = 0.0;
+      v19 = v13;
+    v20 = 0.0;
   }
-  UIWidget__set_drawRegion(v15, v34, 0);
+  UIWidget__set_drawRegion(v15, *(UnityEngine_Vector4_o *)&v20, 0);
   thumb = (UnityEngine_Object_o *)this->fields.thumb;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
   if ( UnityEngine_Object__op_Inequality(thumb, 0, 0) )
   {
     isInverted = (UIRect_o *)this->fields.mFG;
@@ -125,18 +129,18 @@ void UIScrollBar__ForceUpdate(UIScrollBar_o *this, const MethodInfo *method)
       isInverted = (UIRect_o *)this->fields.mFG;
       if ( isInverted )
       {
-        v28 = v24;
         v29 = v25;
         v30 = v26;
         v31 = v27;
+        v32 = v28;
         isInverted = (UIRect_o *)UIRect__get_cachedTransform(isInverted, 0);
         if ( isInverted )
         {
-          v32.fields.z = 0.0;
-          v32.fields.x = v28 + (float)((float)(v30 - v28) * 0.5);
-          v32.fields.y = v29 + (float)((float)(v31 - v29) * 0.5);
-          v33 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)isInverted, v32, 0);
-          UIProgressBar__SetThumbPosition((UIProgressBar_o *)this, v33, 0);
+          v33.fields.z = 0.0;
+          v33.fields.x = v29 + (float)((float)(v31 - v29) * 0.5);
+          v33.fields.y = v30 + (float)((float)(v32 - v30) * 0.5);
+          v34 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)isInverted, v33, 0);
+          UIProgressBar__SetThumbPosition((UIProgressBar_o *)this, v34, 0);
           return;
         }
       }
@@ -284,6 +288,7 @@ LABEL_34:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIScrollBar__OnDragBackground(
         UIScrollBar_o *this,
         UnityEngine_GameObject_o *go,
@@ -293,7 +298,8 @@ void UIScrollBar__OnDragBackground(
   UICamera_c *v5; // x0
   UnityEngine_GameObject_o *v6; // x1
   const MethodInfo *v7; // x2
-  UnityEngine_Vector2_o v9; // 0:s0.4,4:s1.4
+  float alpha; // s0 OVERLAPPED
+  float v9; // s1
 
   if ( (byte_5975063 & 1) == 0 )
   {
@@ -308,14 +314,15 @@ void UIScrollBar__OnDragBackground(
   }
   if ( v5->static_fields->currentScheme != 2 )
   {
-    v9.fields.x = UIProgressBar__get_alpha((UIProgressBar_o *)this, 0);
-    v9.fields.y = 1.0;
-    if ( v9.fields.x == 1.0 )
-      UISlider__OnDragBackground((UISlider_o *)this, v6, v9, v7);
+    alpha = UIProgressBar__get_alpha((UIProgressBar_o *)this, 0);
+    v9 = 1.0;
+    if ( alpha == 1.0 )
+      UISlider__OnDragBackground((UISlider_o *)this, v6, *(UnityEngine_Vector2_o *)&alpha, v7);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIScrollBar__OnDragForeground(
         UIScrollBar_o *this,
         UnityEngine_GameObject_o *go,
@@ -325,7 +332,8 @@ void UIScrollBar__OnDragForeground(
   UICamera_c *v5; // x0
   UnityEngine_GameObject_o *v6; // x1
   const MethodInfo *v7; // x2
-  UnityEngine_Vector2_o v9; // 0:s0.4,4:s1.4
+  float alpha; // s0 OVERLAPPED
+  float v9; // s1
 
   if ( (byte_5975065 & 1) == 0 )
   {
@@ -340,10 +348,10 @@ void UIScrollBar__OnDragForeground(
   }
   if ( v5->static_fields->currentScheme != 2 )
   {
-    v9.fields.x = UIProgressBar__get_alpha((UIProgressBar_o *)this, 0);
-    v9.fields.y = 1.0;
-    if ( v9.fields.x == 1.0 )
-      UISlider__OnDragForeground((UISlider_o *)this, v6, v9, v7);
+    alpha = UIProgressBar__get_alpha((UIProgressBar_o *)this, 0);
+    v9 = 1.0;
+    if ( alpha == 1.0 )
+      UISlider__OnDragForeground((UISlider_o *)this, v6, *(UnityEngine_Vector2_o *)&alpha, v7);
   }
 }
 

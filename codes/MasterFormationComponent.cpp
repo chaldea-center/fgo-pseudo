@@ -1799,7 +1799,7 @@ void MasterFormationComponent__setMstEquipIconList(MasterFormationComponent_o *t
   __int64 v11; // x2
   MissionNaviTransitionBoardItem_o *p_iconCenterChild; // x20
   UnityEngine_Object_o *iconCenterChild; // x21
-  __int64 iconLoopCtr; // x0
+  UnityEngine_Component_o *iconLoopCtr; // x0
   __int64 v15; // x1
   __int64 v16; // x2
   Il2CppObject *v17; // x0
@@ -1816,93 +1816,95 @@ void MasterFormationComponent__setMstEquipIconList(MasterFormationComponent_o *t
   int size; // w27
   const MethodInfo *v29; // x2
   float x; // s10
+  float y; // s8
+  float z; // s9
   struct UIScrollView_o *iconScroll; // x21
   MissionNaviTransitionBoardItem_o *p_onDragStarted; // x21
   System_Delegate_o *onDragStarted; // t1
-  UIScrollView_OnDragNotification_o *v34; // x23
-  System_Delegate_o *v35; // x0
-  System_String_o *v36; // x2
-  System_String_o *v37; // x3
-  int32_t v38; // w4
-  int32_t v39; // w5
-  bool v40; // w6
-  bool v41; // w7
-  System_Delegate_o *v42; // x8
-  System_Delegate_c *v43; // x1
-  struct UIWrapContent_o *v44; // x8
-  int v45; // w9
-  int v46; // w10
+  UIScrollView_OnDragNotification_o *v36; // x23
+  System_Delegate_o *v37; // x0
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  System_Delegate_o *v44; // x8
+  System_Delegate_c *v45; // x1
+  struct UIWrapContent_o *v46; // x8
+  int v47; // w9
+  int v48; // w10
   int32_t itemSize; // w9
   _BOOL4 isScrollEquipIcon; // w8
-  int v49; // w9
-  struct UIScrollView_o *v50; // x21
+  int v51; // w9
+  struct UIScrollView_o *v52; // x21
   MissionNaviTransitionBoardItem_o *p_onDragFinished; // x21
   System_Delegate_o *onDragFinished; // t1
-  UIScrollView_OnDragNotification_o *v53; // x23
-  System_Delegate_o *v54; // x0
-  int32_t v55; // w4
-  int32_t v56; // w5
-  bool v57; // w6
-  bool v58; // w7
+  UIScrollView_OnDragNotification_o *v55; // x23
+  System_Delegate_o *v56; // x0
+  int32_t v57; // w4
+  int32_t v58; // w5
+  bool v59; // w6
+  bool v60; // w7
   MissionNaviTransitionBoardItem_c *klass; // x20
-  System_Delegate_o *v60; // t1
-  SpringPanel_OnFinished_o *v61; // x22
-  System_Delegate_o *v62; // x0
-  int32_t v63; // w4
-  int32_t v64; // w5
-  bool v65; // w6
-  bool v66; // w7
-  __int64 v67; // x1
-  __int64 v68; // x2
+  System_Delegate_o *v62; // t1
+  SpringPanel_OnFinished_o *v63; // x22
+  System_Delegate_o *v64; // x0
+  int32_t v65; // w4
+  int32_t v66; // w5
+  bool v67; // w6
+  bool v68; // w7
+  __int64 v69; // x1
+  __int64 v70; // x2
   UILabel_o *scrollGuideLabel; // x20
-  System_Collections_Generic_List_object__o *v70; // x20
-  int v71; // w9
+  System_Collections_Generic_List_object__o *v72; // x20
+  int v73; // w9
   int32_t i; // w22
   UnityEngine_GameObject_o *equipIconPrefab; // x23
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_GameObject_o *v75; // x23
-  UnityEngine_Transform_o *v76; // x24
-  UnityEngine_Transform_o *v77; // x24
-  System_String_o *v78; // x0
-  System_String_o *v79; // x2
-  System_String_o *v80; // x3
-  int32_t v81; // w4
-  int32_t v82; // w5
-  bool v83; // w6
-  bool v84; // w7
+  UnityEngine_GameObject_o *v77; // x23
+  UnityEngine_Transform_o *v78; // x24
+  UnityEngine_Transform_o *v79; // x24
+  System_String_o *v80; // x0
+  System_String_o *v81; // x2
+  System_String_o *v82; // x3
+  int32_t v83; // w4
+  int32_t v84; // w5
+  bool v85; // w6
+  bool v86; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v86; // x9
-  __int64 v87; // x10
-  Il2CppClass **v88; // x0
-  System_String_o *v89; // x2
-  System_String_o *v90; // x3
-  int32_t v91; // w4
-  int32_t v92; // w5
-  bool v93; // w6
-  bool v94; // w7
+  _QWORD *v88; // x9
+  __int64 v89; // x10
+  Il2CppClass **v90; // x0
+  System_String_o *v91; // x2
+  System_String_o *v92; // x3
+  int32_t v93; // w4
+  int32_t v94; // w5
+  bool v95; // w6
+  bool v96; // w7
   System_Collections_Generic_List_object__o *mstEqIconList; // x8
-  struct System_Object_array *v96; // x9
-  _QWORD *v97; // x10
-  __int64 v98; // x11
-  MasterEquipIconComponent_o *v99; // x23
-  Il2CppClass **v100; // x0
+  struct System_Object_array *v98; // x9
+  _QWORD *v99; // x10
+  __int64 v100; // x11
+  MasterEquipIconComponent_o *v101; // x23
+  Il2CppClass **v102; // x0
   Il2CppObject *Item; // x0
-  int32_t v102; // w24
-  UserEquipEntity_o *v103; // x25
-  MasterEquipIconComponent_CallbackFunc_o *v104; // x26
-  const MethodInfo *v105; // x3
-  int64_t v106; // x2
-  int32_t v107; // w3
-  const MethodInfo *v108; // x6
-  const MethodInfo *v109; // x2
-  int32_t v110; // w21
-  struct UIWrapContent_o *v111; // x8
-  int v112; // [xsp+Ch] [xbp-84h]
-  int v113; // [xsp+18h] [xbp-78h]
-  int32_t v114; // [xsp+1Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v117; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v104; // w24
+  UserEquipEntity_o *v105; // x25
+  MasterEquipIconComponent_CallbackFunc_o *v106; // x26
+  const MethodInfo *v107; // x3
+  int64_t v108; // x2
+  int32_t v109; // w3
+  const MethodInfo *v110; // x6
+  const MethodInfo *v111; // x2
+  int32_t v112; // w21
+  struct UIWrapContent_o *v113; // x8
+  int v114; // [xsp+Ch] [xbp-84h]
+  int v115; // [xsp+18h] [xbp-78h]
+  int32_t v116; // [xsp+1Ch] [xbp-74h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v118; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v119; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B3C0 & 1) == 0 )
   {
@@ -1933,7 +1935,7 @@ void MasterFormationComponent__setMstEquipIconList(MasterFormationComponent_o *t
     sub_2213A60(&StringLiteral_5142/*"D3"*/);
     byte_596B3C0 = 1;
   }
-  v114 = 0;
+  v116 = 0;
   v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_MasterEquipIconComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
@@ -1944,13 +1946,13 @@ void MasterFormationComponent__setMstEquipIconList(MasterFormationComponent_o *t
   iconCenterChild = (UnityEngine_Object_o *)this->fields.iconCenterChild;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
-  iconLoopCtr = UnityEngine_Object__op_Equality(iconCenterChild, 0, 0);
-  if ( (iconLoopCtr & 1) != 0 )
+  iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(iconCenterChild, 0, 0);
+  if ( ((unsigned __int8)iconLoopCtr & 1) != 0 )
   {
-    iconLoopCtr = (__int64)this->fields.iconLoopCtr;
+    iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconLoopCtr;
     if ( !iconLoopCtr )
       goto LABEL_87;
-    iconLoopCtr = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)iconLoopCtr, 0);
+    iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(iconLoopCtr, 0);
     if ( !iconLoopCtr )
       goto LABEL_87;
     v17 = UnityEngine_GameObject__AddComponent_object_(
@@ -1975,26 +1977,28 @@ void MasterFormationComponent__setMstEquipIconList(MasterFormationComponent_o *t
   v24->fields.itemSize = 64;
   if ( !*(&v25->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v25, v15, v16);
-  iconLoopCtr = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8916/*"MASTER_EQUIP_ICON_TOUCH_TXT"*/, 0);
+  iconLoopCtr = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8916/*"MASTER_EQUIP_ICON_TOUCH_TXT"*/, 0);
   if ( !touchGuideLabel
     || (UILabel__set_text(touchGuideLabel, (System_String_o *)iconLoopCtr, 0),
         (currentList = this->fields.currentList) == 0)
-    || (iconLoopCtr = (__int64)this->fields.iconScroll) == 0
+    || (iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconScroll) == 0
     || (size = currentList->fields._size,
-        (iconLoopCtr = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconLoopCtr, 0)) == 0) )
+        (iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconLoopCtr, 0)) == 0) )
   {
 LABEL_87:
     sub_2213CDC(iconLoopCtr, v15);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconLoopCtr, 0);
   x = localPosition.fields.x;
-  iconLoopCtr = (__int64)MasterFormationComponent_TypeInfo;
+  y = localPosition.fields.y;
+  iconLoopCtr = (UnityEngine_Component_o *)MasterFormationComponent_TypeInfo;
+  z = localPosition.fields.z;
   if ( !*(&MasterFormationComponent_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(MasterFormationComponent_TypeInfo, v15, v29);
-    iconLoopCtr = (__int64)MasterFormationComponent_TypeInfo;
+    iconLoopCtr = (UnityEngine_Component_o *)MasterFormationComponent_TypeInfo;
   }
-  if ( size > *(_DWORD *)(*(_QWORD *)(iconLoopCtr + 184) + 4LL) )
+  if ( size > *(_DWORD *)(iconLoopCtr[7].fields.m_CachedPtr + 4) )
   {
     iconScroll = this->fields.iconScroll;
     this->fields.isScrollEquipIcon = 1;
@@ -2002,258 +2006,260 @@ LABEL_87:
       goto LABEL_87;
     onDragStarted = (System_Delegate_o *)iconScroll->fields.onDragStarted;
     p_onDragStarted = (MissionNaviTransitionBoardItem_o *)&iconScroll->fields.onDragStarted;
-    v34 = (UIScrollView_OnDragNotification_o *)sub_2213CCC(UIScrollView_OnDragNotification_TypeInfo);
+    v36 = (UIScrollView_OnDragNotification_o *)sub_2213CCC(UIScrollView_OnDragNotification_TypeInfo);
     UIScrollView_OnDragNotification___ctor(
-      v34,
+      v36,
       (Il2CppObject *)this,
       Method_MasterFormationComponent_OnIconDragStarted__,
       0);
-    v35 = System_Delegate__Combine(onDragStarted, (System_Delegate_o *)v34, 0);
-    v42 = v35;
-    if ( v35 )
+    v37 = System_Delegate__Combine(onDragStarted, (System_Delegate_o *)v36, 0);
+    v44 = v37;
+    if ( v37 )
     {
-      v43 = (System_Delegate_c *)UIScrollView_OnDragNotification_TypeInfo;
-      if ( (UIScrollView_OnDragNotification_c *)v35->klass != UIScrollView_OnDragNotification_TypeInfo )
+      v45 = (System_Delegate_c *)UIScrollView_OnDragNotification_TypeInfo;
+      if ( (UIScrollView_OnDragNotification_c *)v37->klass != UIScrollView_OnDragNotification_TypeInfo )
         goto LABEL_41;
-      p_onDragStarted->klass = (MissionNaviTransitionBoardItem_c *)v35;
-      if ( v35->klass != v43 )
+      p_onDragStarted->klass = (MissionNaviTransitionBoardItem_c *)v37;
+      if ( v37->klass != v45 )
         goto LABEL_41;
     }
     else
     {
       p_onDragStarted->klass = 0;
     }
-    sub_2213A04(p_onDragStarted, (int32_t)v35, v36, v37, v38, v39, v40, v41);
-    v50 = this->fields.iconScroll;
-    if ( !v50 )
+    sub_2213A04(p_onDragStarted, (int32_t)v37, v38, v39, v40, v41, v42, v43);
+    v52 = this->fields.iconScroll;
+    if ( !v52 )
       goto LABEL_87;
-    onDragFinished = (System_Delegate_o *)v50->fields.onDragFinished;
-    p_onDragFinished = (MissionNaviTransitionBoardItem_o *)&v50->fields.onDragFinished;
-    v53 = (UIScrollView_OnDragNotification_o *)sub_2213CCC(UIScrollView_OnDragNotification_TypeInfo);
+    onDragFinished = (System_Delegate_o *)v52->fields.onDragFinished;
+    p_onDragFinished = (MissionNaviTransitionBoardItem_o *)&v52->fields.onDragFinished;
+    v55 = (UIScrollView_OnDragNotification_o *)sub_2213CCC(UIScrollView_OnDragNotification_TypeInfo);
     UIScrollView_OnDragNotification___ctor(
-      v53,
+      v55,
       (Il2CppObject *)this,
       Method_MasterFormationComponent_OnIconDragFinished__,
       0);
-    v54 = System_Delegate__Combine(onDragFinished, (System_Delegate_o *)v53, 0);
-    v42 = v54;
-    if ( v54 )
+    v56 = System_Delegate__Combine(onDragFinished, (System_Delegate_o *)v55, 0);
+    v44 = v56;
+    if ( v56 )
     {
-      v43 = (System_Delegate_c *)UIScrollView_OnDragNotification_TypeInfo;
-      if ( (UIScrollView_OnDragNotification_c *)v54->klass != UIScrollView_OnDragNotification_TypeInfo )
+      v45 = (System_Delegate_c *)UIScrollView_OnDragNotification_TypeInfo;
+      if ( (UIScrollView_OnDragNotification_c *)v56->klass != UIScrollView_OnDragNotification_TypeInfo )
         goto LABEL_41;
-      p_onDragFinished->klass = (MissionNaviTransitionBoardItem_c *)v54;
-      if ( v54->klass != v43 )
+      p_onDragFinished->klass = (MissionNaviTransitionBoardItem_c *)v56;
+      if ( v56->klass != v45 )
         goto LABEL_41;
     }
     else
     {
       p_onDragFinished->klass = 0;
     }
-    sub_2213A04(p_onDragFinished, (int32_t)v54, v36, v37, v55, v56, v57, v58);
+    sub_2213A04(p_onDragFinished, (int32_t)v56, v38, v39, v57, v58, v59, v60);
     klass = p_iconCenterChild->klass;
     if ( !klass )
       goto LABEL_87;
-    v60 = *(System_Delegate_o **)&klass->_1.byval_arg.bits;
+    v62 = *(System_Delegate_o **)&klass->_1.byval_arg.bits;
     p_iconCenterChild = (MissionNaviTransitionBoardItem_o *)&klass->_1.byval_arg.bits;
-    v61 = (SpringPanel_OnFinished_o *)sub_2213CCC(SpringPanel_OnFinished_TypeInfo);
+    v63 = (SpringPanel_OnFinished_o *)sub_2213CCC(SpringPanel_OnFinished_TypeInfo);
     SpringPanel_OnFinished___ctor(
-      v61,
+      v63,
       (Il2CppObject *)this,
       Method_MasterFormationComponent_OnIconCenterOnChildFinished__,
       0);
-    v62 = System_Delegate__Combine(v60, (System_Delegate_o *)v61, 0);
-    v42 = v62;
-    if ( !v62 )
+    v64 = System_Delegate__Combine(v62, (System_Delegate_o *)v63, 0);
+    v44 = v64;
+    if ( !v64 )
       goto LABEL_42;
-    v43 = (System_Delegate_c *)SpringPanel_OnFinished_TypeInfo;
-    if ( (SpringPanel_OnFinished_c *)v62->klass == SpringPanel_OnFinished_TypeInfo )
+    v45 = (System_Delegate_c *)SpringPanel_OnFinished_TypeInfo;
+    if ( (SpringPanel_OnFinished_c *)v64->klass == SpringPanel_OnFinished_TypeInfo )
     {
-      p_iconCenterChild->klass = (MissionNaviTransitionBoardItem_c *)v62;
-      if ( v62->klass == v43 )
+      p_iconCenterChild->klass = (MissionNaviTransitionBoardItem_c *)v64;
+      if ( v64->klass == v45 )
       {
 LABEL_43:
-        sub_2213A04(p_iconCenterChild, (int32_t)v42, v36, v37, v63, v64, v65, v66);
-        iconLoopCtr = (__int64)this->fields.arrowInfo;
+        sub_2213A04(p_iconCenterChild, (int32_t)v44, v38, v39, v65, v66, v67, v68);
+        iconLoopCtr = (UnityEngine_Component_o *)this->fields.arrowInfo;
         if ( !iconLoopCtr )
           goto LABEL_87;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)iconLoopCtr, 1, 0);
         scrollGuideLabel = this->fields.scrollGuideLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v67, v68);
-        iconLoopCtr = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_8915/*"MASTER_EQUIP_ICON_SCROLL_TXT"*/, 0);
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v69, v70);
+        iconLoopCtr = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8915/*"MASTER_EQUIP_ICON_SCROLL_TXT"*/, 0);
         if ( !scrollGuideLabel )
           goto LABEL_87;
         UILabel__set_text(scrollGuideLabel, (System_String_o *)iconLoopCtr, 0);
         isScrollEquipIcon = this->fields.isScrollEquipIcon;
-        v49 = 2;
+        v51 = 2;
         goto LABEL_48;
       }
     }
 LABEL_41:
-    sub_221405C(v42, v43, v36, v37);
+    sub_221405C(v44, v45, v38, v39);
 LABEL_42:
     p_iconCenterChild->klass = 0;
     goto LABEL_43;
   }
-  v44 = this->fields.iconLoopCtr;
+  v46 = this->fields.iconLoopCtr;
   this->fields.isScrollEquipIcon = 0;
-  if ( !v44 )
+  if ( !v46 )
     goto LABEL_87;
-  v45 = size - 1;
+  v47 = size - 1;
   if ( size - 1 < 0 )
-    v45 = size;
-  v46 = v45 >> 1;
-  itemSize = v44->fields.itemSize;
-  x = (float)-(v46 * itemSize);
+    v47 = size;
+  v48 = v47 >> 1;
+  itemSize = v46->fields.itemSize;
+  x = (float)-(v48 * itemSize);
   isScrollEquipIcon = 0;
   if ( (size & 1) == 0 )
     x = x - (float)(itemSize / 2);
-  v49 = 1;
+  v51 = 1;
 LABEL_48:
-  v112 = v49;
+  v114 = v51;
   MasterFormationComponent__SetEnabledEquipIconScroll(this, isScrollEquipIcon, v29);
-  iconLoopCtr = (__int64)this->fields.iconCenterChild;
+  iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconCenterChild;
   if ( !iconLoopCtr )
     goto LABEL_87;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)iconLoopCtr, 0, 0);
-  v70 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v72 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v70,
+    v72,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  v71 = 0;
-  v114 = 0;
+  v73 = 0;
+  v116 = 0;
   do
   {
-    v113 = v71;
+    v115 = v73;
     if ( size >= 1 )
     {
       for ( i = 0; i != size; ++i )
       {
-        iconLoopCtr = (__int64)this->fields.iconLoopCtr;
+        iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconLoopCtr;
         if ( !iconLoopCtr )
           goto LABEL_87;
         equipIconPrefab = this->fields.equipIconPrefab;
-        transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconLoopCtr, 0);
-        iconLoopCtr = (__int64)BaseMonoBehaviour__createObject(
-                                 (BaseMonoBehaviour_o *)this,
-                                 equipIconPrefab,
-                                 transform,
-                                 0,
-                                 0);
+        transform = UnityEngine_Component__get_transform(iconLoopCtr, 0);
+        iconLoopCtr = (UnityEngine_Component_o *)BaseMonoBehaviour__createObject(
+                                                   (BaseMonoBehaviour_o *)this,
+                                                   equipIconPrefab,
+                                                   transform,
+                                                   0,
+                                                   0);
         if ( !iconLoopCtr )
           goto LABEL_87;
-        v75 = (UnityEngine_GameObject_o *)iconLoopCtr;
-        iconLoopCtr = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)iconLoopCtr, 0);
-        v76 = (UnityEngine_Transform_o *)iconLoopCtr;
+        v77 = (UnityEngine_GameObject_o *)iconLoopCtr;
+        iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                   (UnityEngine_GameObject_o *)iconLoopCtr,
+                                                   0);
+        v78 = (UnityEngine_Transform_o *)iconLoopCtr;
         if ( !byte_5969AE5 )
         {
-          iconLoopCtr = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          iconLoopCtr = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
-        if ( !v76 )
+        if ( !v78 )
           goto LABEL_87;
-        UnityEngine_Transform__set_localScale(v76, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-        iconLoopCtr = (__int64)UnityEngine_GameObject__get_transform(v75, 0);
+        UnityEngine_Transform__set_localScale(v78, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+        iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v77, 0);
         if ( !this->fields.iconLoopCtr )
           goto LABEL_87;
-        v77 = (UnityEngine_Transform_o *)iconLoopCtr;
-        iconLoopCtr = (__int64)UnityEngine_Component__get_transform(
-                                 (UnityEngine_Component_o *)this->fields.iconLoopCtr,
-                                 0);
+        v79 = (UnityEngine_Transform_o *)iconLoopCtr;
+        iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
+                                                   (UnityEngine_Component_o *)this->fields.iconLoopCtr,
+                                                   0);
         if ( !iconLoopCtr )
           goto LABEL_87;
-        v117 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconLoopCtr, 0);
-        if ( !v77 )
+        v118 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconLoopCtr, 0);
+        if ( !v79 )
           goto LABEL_87;
-        UnityEngine_Transform__set_localPosition(v77, v117, 0);
-        v78 = System_Int32__ToString_77138656((int32_t)&v114, (System_String_o *)StringLiteral_5142/*"D3"*/, 0);
-        UnityEngine_Object__set_name((UnityEngine_Object_o *)v75, v78, 0);
-        if ( !v70 )
+        UnityEngine_Transform__set_localPosition(v79, v118, 0);
+        v80 = System_Int32__ToString_77138656((int32_t)&v116, (System_String_o *)StringLiteral_5142/*"D3"*/, 0);
+        UnityEngine_Object__set_name((UnityEngine_Object_o *)v77, v80, 0);
+        if ( !v72 )
           goto LABEL_87;
-        items = v70->fields._items;
-        v86 = Method_System_Collections_Generic_List_GameObject__Add__;
-        ++v70->fields._version;
+        items = v72->fields._items;
+        v88 = Method_System_Collections_Generic_List_GameObject__Add__;
+        ++v72->fields._version;
         if ( !items )
           goto LABEL_87;
-        v87 = v70->fields._size;
-        if ( (unsigned int)v87 >= LODWORD(items->max_length) )
+        v89 = v72->fields._size;
+        if ( (unsigned int)v89 >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v70,
-            (Il2CppObject *)v75,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v86[4] + 192LL) + 112LL));
+            v72,
+            (Il2CppObject *)v77,
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
         }
         else
         {
-          v88 = &items->obj.klass + v87;
-          v70->fields._size = v87 + 1;
-          v88[4] = (Il2CppClass *)v75;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v88 + 4), (int32_t)v75, v79, v80, v81, v82, v83, v84);
+          v90 = &items->obj.klass + v89;
+          v72->fields._size = v89 + 1;
+          v90[4] = (Il2CppClass *)v77;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v90 + 4), (int32_t)v77, v81, v82, v83, v84, v85, v86);
         }
-        iconLoopCtr = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                 v75,
-                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MasterEquipIconComponent___);
+        iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                   v77,
+                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MasterEquipIconComponent___);
         mstEqIconList = (System_Collections_Generic_List_object__o *)this->fields.mstEqIconList;
         if ( !mstEqIconList )
           goto LABEL_87;
-        v96 = mstEqIconList->fields._items;
-        v97 = Method_System_Collections_Generic_List_MasterEquipIconComponent__Add__;
+        v98 = mstEqIconList->fields._items;
+        v99 = Method_System_Collections_Generic_List_MasterEquipIconComponent__Add__;
         ++mstEqIconList->fields._version;
-        if ( !v96 )
+        if ( !v98 )
           goto LABEL_87;
-        v98 = mstEqIconList->fields._size;
-        v99 = (MasterEquipIconComponent_o *)iconLoopCtr;
-        if ( (unsigned int)v98 >= LODWORD(v96->max_length) )
+        v100 = mstEqIconList->fields._size;
+        v101 = (MasterEquipIconComponent_o *)iconLoopCtr;
+        if ( (unsigned int)v100 >= LODWORD(v98->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             mstEqIconList,
             (Il2CppObject *)iconLoopCtr,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
         }
         else
         {
-          v100 = &v96->obj.klass + v98;
-          mstEqIconList->fields._size = v98 + 1;
-          v100[4] = (Il2CppClass *)v99;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v100 + 4), (int32_t)v99, v89, v90, v91, v92, v93, v94);
+          v102 = &v98->obj.klass + v100;
+          mstEqIconList->fields._size = v100 + 1;
+          v102[4] = (Il2CppClass *)v101;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v102 + 4), (int32_t)v101, v91, v92, v93, v94, v95, v96);
         }
-        iconLoopCtr = (__int64)this->fields.currentList;
+        iconLoopCtr = (UnityEngine_Component_o *)this->fields.currentList;
         if ( !iconLoopCtr )
           goto LABEL_87;
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)iconLoopCtr,
                  i,
                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UserEquipEntity__get_Item__);
-        v102 = v114;
-        v103 = (UserEquipEntity_o *)Item;
-        v104 = (MasterEquipIconComponent_CallbackFunc_o *)sub_2213CCC(MasterEquipIconComponent_CallbackFunc_TypeInfo);
+        v104 = v116;
+        v105 = (UserEquipEntity_o *)Item;
+        v106 = (MasterEquipIconComponent_CallbackFunc_o *)sub_2213CCC(MasterEquipIconComponent_CallbackFunc_TypeInfo);
         MasterEquipIconComponent_CallbackFunc___ctor(
-          v104,
+          v106,
           (Il2CppObject *)this,
           (intptr_t)Method_MasterFormationComponent_OnClickIcon__,
-          v105);
-        if ( !v99 )
+          v107);
+        if ( !v101 )
           goto LABEL_87;
-        MasterEquipIconComponent__SetEquipInfo(v99, v103, v106, v107, v102, v104, v108);
-        MasterEquipIconComponent__UpdateSelected(v99, this->fields.currentEquipId, v109);
-        ++v114;
+        MasterEquipIconComponent__SetEquipInfo(v101, v105, v108, v109, v104, v106, v110);
+        MasterEquipIconComponent__UpdateSelected(v101, this->fields.currentEquipId, v111);
+        ++v116;
       }
     }
-    v71 = v113 + 1;
+    v73 = v115 + 1;
   }
-  while ( v113 + 1 != v112 );
-  iconLoopCtr = (__int64)this->fields.iconLoopCtr;
+  while ( v115 + 1 != v114 );
+  iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconLoopCtr;
   if ( !iconLoopCtr )
     goto LABEL_87;
   UIWrapContent__SortAlphabetically((UIWrapContent_o *)iconLoopCtr, 0);
-  iconLoopCtr = (__int64)this->fields.iconLoopCtr;
+  iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconLoopCtr;
   if ( !iconLoopCtr )
     goto LABEL_87;
   UIWrapContent__resetScroll((UIWrapContent_o *)iconLoopCtr, 0);
   if ( this->fields.isScrollEquipIcon )
   {
-    iconLoopCtr = (__int64)this->fields.iconLoopCtr;
+    iconLoopCtr = (UnityEngine_Component_o *)this->fields.iconLoopCtr;
     if ( iconLoopCtr )
     {
       UIWrapContent__WrapContent((UIWrapContent_o *)iconLoopCtr, 0);
@@ -2261,32 +2267,34 @@ LABEL_48:
     }
     goto LABEL_87;
   }
-  if ( !v70 )
+  if ( !v72 )
     goto LABEL_87;
-  if ( v70->fields._size >= 1 )
+  if ( v72->fields._size >= 1 )
   {
-    v110 = 0;
+    v112 = 0;
     while ( 1 )
     {
-      iconLoopCtr = (__int64)System_Collections_Generic_List_object___get_Item(
-                               v70,
-                               v110,
-                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      iconLoopCtr = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
+                                                 v72,
+                                                 v112,
+                                                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !iconLoopCtr )
         break;
-      iconLoopCtr = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)iconLoopCtr, 0);
+      iconLoopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                 (UnityEngine_GameObject_o *)iconLoopCtr,
+                                                 0);
       if ( !iconLoopCtr )
         break;
-      v116.fields.x = x;
-      v116.fields.y = localPosition.fields.y;
-      v116.fields.z = localPosition.fields.z;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)iconLoopCtr, v116, 0);
-      v111 = this->fields.iconLoopCtr;
-      if ( !v111 )
+      v119.fields.x = x;
+      v119.fields.y = y;
+      v119.fields.z = z;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)iconLoopCtr, v119, 0);
+      v113 = this->fields.iconLoopCtr;
+      if ( !v113 )
         break;
-      ++v110;
-      x = x + (float)v111->fields.itemSize;
-      if ( v110 >= v70->fields._size )
+      ++v112;
+      x = x + (float)v113->fields.itemSize;
+      if ( v112 >= v72->fields._size )
         return;
     }
     goto LABEL_87;
@@ -2307,7 +2315,7 @@ void MasterFormationComponent__setMstEquipList(MasterFormationComponent_o *this,
   __int64 v11; // x2
   MissionNaviTransitionBoardItem_o *p_centerChild; // x20
   UnityEngine_Object_o *centerChild; // x21
-  __int64 loopCtr; // x0
+  UnityEngine_Component_o *loopCtr; // x0
   __int64 v15; // x1
   const MethodInfo *v16; // x2
   Il2CppObject *v17; // x0
@@ -2398,13 +2406,13 @@ void MasterFormationComponent__setMstEquipList(MasterFormationComponent_o *this,
   centerChild = (UnityEngine_Object_o *)this->fields.centerChild;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
-  loopCtr = UnityEngine_Object__op_Equality(centerChild, 0, 0);
-  if ( (loopCtr & 1) != 0 )
+  loopCtr = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(centerChild, 0, 0);
+  if ( ((unsigned __int8)loopCtr & 1) != 0 )
   {
-    loopCtr = (__int64)this->fields.loopCtr;
+    loopCtr = (UnityEngine_Component_o *)this->fields.loopCtr;
     if ( !loopCtr )
       goto LABEL_50;
-    loopCtr = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)loopCtr, 0);
+    loopCtr = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(loopCtr, 0);
     if ( !loopCtr )
       goto LABEL_50;
     v17 = UnityEngine_GameObject__AddComponent_object_(
@@ -2507,35 +2515,39 @@ LABEL_26:
       v51 = 0;
       while ( 1 )
       {
-        loopCtr = (__int64)this->fields.loopCtr;
+        loopCtr = (UnityEngine_Component_o *)this->fields.loopCtr;
         if ( !loopCtr )
           break;
         mstEquipInfoPrefab = this->fields.mstEquipInfoPrefab;
-        transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)loopCtr, 0);
-        loopCtr = (__int64)BaseMonoBehaviour__createObject(
-                             (BaseMonoBehaviour_o *)this,
-                             mstEquipInfoPrefab,
-                             transform,
-                             0,
-                             0);
+        transform = UnityEngine_Component__get_transform(loopCtr, 0);
+        loopCtr = (UnityEngine_Component_o *)BaseMonoBehaviour__createObject(
+                                               (BaseMonoBehaviour_o *)this,
+                                               mstEquipInfoPrefab,
+                                               transform,
+                                               0,
+                                               0);
         if ( !loopCtr )
           break;
         v54 = (UnityEngine_GameObject_o *)loopCtr;
-        loopCtr = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)loopCtr, 0);
+        loopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                               (UnityEngine_GameObject_o *)loopCtr,
+                                               0);
         v55 = (UnityEngine_Transform_o *)loopCtr;
         if ( !byte_5969AE5 )
         {
-          loopCtr = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          loopCtr = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
         if ( !v55 )
           break;
         UnityEngine_Transform__set_localScale(v55, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-        loopCtr = (__int64)UnityEngine_GameObject__get_transform(v54, 0);
+        loopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v54, 0);
         if ( !this->fields.loopCtr )
           break;
         v56 = (UnityEngine_Transform_o *)loopCtr;
-        loopCtr = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.loopCtr, 0);
+        loopCtr = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
+                                               (UnityEngine_Component_o *)this->fields.loopCtr,
+                                               0);
         if ( !loopCtr )
           break;
         localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)loopCtr, 0);
@@ -2544,9 +2556,9 @@ LABEL_26:
         UnityEngine_Transform__set_localPosition(v56, localPosition, 0);
         v57 = System_Int32__ToString_77138656((int32_t)&moveIdx, (System_String_o *)StringLiteral_5142/*"D3"*/, 0);
         UnityEngine_Object__set_name((UnityEngine_Object_o *)v54, v57, 0);
-        loopCtr = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                             v54,
-                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MasterEquipInfoComponent___);
+        loopCtr = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
+                                               v54,
+                                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MasterEquipInfoComponent___);
         mstEqInfoList = (System_Collections_Generic_List_object__o *)this->fields.mstEqInfoList;
         if ( !mstEqInfoList )
           break;
@@ -2571,13 +2583,13 @@ LABEL_26:
           v69[4] = (Il2CppClass *)v68;
           sub_2213A04((MissionNaviTransitionBoardItem_o *)(v69 + 4), (int32_t)v68, v58, v59, v60, v61, v62, v63);
         }
-        loopCtr = (__int64)this->fields.currentList;
+        loopCtr = (UnityEngine_Component_o *)this->fields.currentList;
         if ( !loopCtr )
           break;
-        loopCtr = (__int64)System_Collections_Generic_List_object___get_Item(
-                             (System_Collections_Generic_List_object__o *)loopCtr,
-                             v51,
-                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UserEquipEntity__get_Item__);
+        loopCtr = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
+                                               (System_Collections_Generic_List_object__o *)loopCtr,
+                                               v51,
+                                               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UserEquipEntity__get_Item__);
         if ( !v68 )
           break;
         MasterEquipInfoComponent__setEquipInfo(
@@ -2599,15 +2611,15 @@ LABEL_45:
     v50 = v73 + 1;
   }
   while ( v73 + 1 != v72 );
-  loopCtr = (__int64)this->fields.loopCtr;
+  loopCtr = (UnityEngine_Component_o *)this->fields.loopCtr;
   if ( !loopCtr )
     goto LABEL_50;
   UIWrapContent__SortAlphabetically((UIWrapContent_o *)loopCtr, 0);
-  loopCtr = (__int64)this->fields.loopCtr;
+  loopCtr = (UnityEngine_Component_o *)this->fields.loopCtr;
   if ( !loopCtr )
     goto LABEL_50;
   UIWrapContent__resetScroll((UIWrapContent_o *)loopCtr, 0);
-  loopCtr = (__int64)this->fields.loopCtr;
+  loopCtr = (UnityEngine_Component_o *)this->fields.loopCtr;
   if ( !loopCtr )
     goto LABEL_50;
   UIWrapContent__WrapContent((UIWrapContent_o *)loopCtr, 0);
@@ -3018,7 +3030,7 @@ System_IAsyncResult_o *MasterFormationComponent_NotificationDragState__BeginInvo
   v10[0] = flg;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

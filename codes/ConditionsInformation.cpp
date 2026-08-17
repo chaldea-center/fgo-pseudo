@@ -2387,7 +2387,7 @@ System_IAsyncResult_o *ConditionsInformation_ISCheckFunction__BeginInvoke(
 
   v7[0] = selfVals;
   v7[1] = entVals;
-  return sub_2213A14(this, v7, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v7, callback, object);
 }
 
 
@@ -2413,7 +2413,7 @@ bool ConditionsInformation_ISCheckFunction__Invoke(
         System_Int64_array *entVals,
         const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(intptr_t, System_Double_array *, System_Int64_array *, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, System_Double_array *, System_Int64_array *, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            selfVals,
            entVals,

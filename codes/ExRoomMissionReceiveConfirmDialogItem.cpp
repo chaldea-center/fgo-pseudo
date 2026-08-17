@@ -377,8 +377,9 @@ int32_t ExRoomMissionReceiveConfirmDialogItem__get_MissionId(
 {
   struct ExRoomMissionListOutput_o *exRoomMissionListOutput; // x8
   struct EventMissionEntity_o *EventMissionEntity_k__BackingField; // x8
+  System_Nullable_int__o v5; // x0
   int32_t id; // w1
-  __int64 v7; // [xsp+8h] [xbp-18h] BYREF
+  __int64 v8; // [xsp+8h] [xbp-18h] BYREF
 
   if ( (byte_596AF29 & 1) == 0 )
   {
@@ -392,13 +393,11 @@ int32_t ExRoomMissionReceiveConfirmDialogItem__get_MissionId(
   EventMissionEntity_k__BackingField = exRoomMissionListOutput->fields._EventMissionEntity_k__BackingField;
   if ( !EventMissionEntity_k__BackingField )
     return 0;
+  v5 = (System_Nullable_int__o)&v8;
   id = EventMissionEntity_k__BackingField->fields.id;
-  v7 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v7,
-    id,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  return HIDWORD(v7);
+  v8 = 0;
+  System_Nullable_int____ctor(v5, id, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  return HIDWORD(v8);
 }
 
 

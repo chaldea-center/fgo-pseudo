@@ -393,11 +393,17 @@ bool WebViewSpotComponent__get_IsOpening(WebViewSpotComponent_o *this, const Met
 
 UnityEngine_Vector3_o WebViewSpotComponent__get_ViewPosition(WebViewSpotComponent_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.viewPosition.fields.x;
-  result.fields.y = this->fields.viewPosition.fields.y;
-  result.fields.z = this->fields.viewPosition.fields.z;
+  x = this->fields.viewPosition.fields.x;
+  y = this->fields.viewPosition.fields.y;
+  z = this->fields.viewPosition.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

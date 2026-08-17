@@ -539,12 +539,12 @@ void FriendshipUpItemUseItem__SetLabelUpdate(FriendshipUpItemUseItem_o *this, co
   bool v27; // w7
   UnityEngine_Object_o *v28; // x21
   int mWidth; // w20
+  __int64 v30; // x2
+  float v31; // s0
   struct UILabel_o *friendshipUpStringLabel; // x8
   UnityEngine_GameObject_o *friendshipUpItemEnableTimeObj; // x19
-  FriendshipUpItemUseItem_c *v32; // x0
-  float v33; // s8
-  __int64 v34; // x2
-  float v35; // s0
+  FriendshipUpItemUseItem_c *v34; // x0
+  float v35; // s8
 
   if ( (byte_596BE6C & 1) == 0 )
   {
@@ -640,23 +640,23 @@ LABEL_24:
                                           0);
   if ( !friendshipUpEndedLabel )
     goto LABEL_31;
-  LODWORD(v35) = (unsigned int)UnityEngine_Transform__get_localScale(
+  LODWORD(v31) = (unsigned int)UnityEngine_Transform__get_localScale(
                                  (UnityEngine_Transform_o *)friendshipUpEndedLabel,
                                  0);
   friendshipUpStringLabel = this->fields.friendshipUpStringLabel;
   if ( !friendshipUpStringLabel )
     goto LABEL_31;
   friendshipUpItemEnableTimeObj = this->fields.friendshipUpItemEnableTimeObj;
-  v32 = FriendshipUpItemUseItem_TypeInfo;
-  v33 = (float)((float)(v35 * (float)mWidth) + (float)friendshipUpStringLabel->fields.mWidth) * 0.5;
+  v34 = FriendshipUpItemUseItem_TypeInfo;
+  v35 = (float)((float)(v31 * (float)mWidth) + (float)friendshipUpStringLabel->fields.mWidth) * 0.5;
   if ( !*(&FriendshipUpItemUseItem_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(FriendshipUpItemUseItem_TypeInfo, method, v34);
-    v32 = FriendshipUpItemUseItem_TypeInfo;
+    j_il2cpp_runtime_class_init_0(FriendshipUpItemUseItem_TypeInfo, method, v30);
+    v34 = FriendshipUpItemUseItem_TypeInfo;
   }
   GameObjectExtensions__SetLocalPosition_42891516(
     friendshipUpItemEnableTimeObj,
-    v32->static_fields->TIME_LABEL_STANDARD_POSITION_X - v33,
+    v34->static_fields->TIME_LABEL_STANDARD_POSITION_X - v35,
     -21.5,
     0);
 }
@@ -796,25 +796,29 @@ LABEL_8:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FriendshipUpItemUseItem__SetRemainTime(
         FriendshipUpItemUseItem_o *this,
         int64_t remainTime,
         UILabel_o *label,
         const MethodInfo *method)
 {
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v4; // s1
+  float v5; // s0 OVERLAPPED
+  float v6; // s3
+  float v7; // s2
 
   if ( !label )
     sub_2213CDC(this, remainTime);
-  v6.fields.g = 1.0;
-  v6.fields.r = 0.90196;
-  v6.fields.a = 1.0;
+  v4 = 1.0;
+  v5 = 0.90196;
+  v6 = 1.0;
   if ( (int)remainTime / 86400 < 1 )
-    v6.fields.g = 0.0;
+    v4 = 0.0;
   else
-    v6.fields.r = 1.0;
-  v6.fields.b = v6.fields.g;
-  UIWidget__set_color((UIWidget_o *)label, v6, 0);
+    v5 = 1.0;
+  v7 = v4;
+  UIWidget__set_color((UIWidget_o *)label, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 

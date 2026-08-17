@@ -12,7 +12,7 @@ bool NguiLocalizationManager__ContainsKey(System_String_o *key, const MethodInfo
   containsKeyFunc = NguiLocalizationManager_TypeInfo->static_fields->containsKeyFunc;
   if ( !containsKeyFunc )
     sub_2213CDC(key, method);
-  return ((bool (__fastcall *)(intptr_t, System_String_o *, intptr_t))containsKeyFunc->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, System_String_o *, intptr_t))containsKeyFunc->fields.invoke_impl)(
            containsKeyFunc->fields.method_code,
            v2,
            containsKeyFunc->fields.method);
@@ -33,10 +33,10 @@ System_String_o *NguiLocalizationManager__Get(System_String_o *key, const Method
   getFunc = NguiLocalizationManager_TypeInfo->static_fields->getFunc;
   if ( !getFunc )
     sub_2213CDC(key, method);
-  return ((System_String_o *(__fastcall *)(intptr_t, System_String_o *, intptr_t))getFunc->fields.invoke_impl)(
-           getFunc->fields.method_code,
-           v2,
-           getFunc->fields.method);
+  return (System_String_o *)((__int64 (__fastcall *)(intptr_t, System_String_o *, intptr_t))getFunc->fields.invoke_impl)(
+                              getFunc->fields.method_code,
+                              v2,
+                              getFunc->fields.method);
 }
 
 

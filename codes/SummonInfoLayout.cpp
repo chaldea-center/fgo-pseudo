@@ -18,7 +18,7 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   bool v12; // w6
   bool v13; // w7
   const MethodInfo *v14; // x1
-  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596CB0E & 1) == 0 )
   {

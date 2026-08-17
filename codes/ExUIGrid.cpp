@@ -17,7 +17,7 @@ void ExUIGrid__ResetPosition(
   float v10; // s8
   unsigned int v11; // w9
   int v12; // w25
-  UnityEngine_Vector2_o PivotOffset; // kr10_8
+  UnityEngine_Vector2_o PivotOffset; // kr00_8
   int v14; // w26
   float x; // s1
   float v16; // s2
@@ -37,26 +37,28 @@ void ExUIGrid__ResetPosition(
   float v30; // s9
   float v31; // s10
   int32_t arrangement; // w8
+  float v33; // s8
   float cellWidth; // s11
-  float v34; // s9
-  double v35; // d0
-  float v36; // s1
-  __int64 v37; // x8
-  float v38; // s0
+  float v35; // s9
+  double v36; // d0
+  float v37; // s1
+  __int64 v38; // x8
   float v39; // s0
+  float v40; // s0
   float cellHeight; // s11
-  float v41; // s10
-  double v42; // d0
-  float v43; // s1
-  __int64 v44; // x8
-  float v45; // s0
+  float v42; // s10
+  double v43; // d0
+  float v44; // s1
+  __int64 v45; // x8
   float v46; // s0
+  float v47; // s0
+  float v48; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  float v48; // [xsp+10h] [xbp-B0h]
+  float v50; // [xsp+10h] [xbp-B0h]
   double iptr; // [xsp+18h] [xbp-A8h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FC2 & 1) == 0 )
   {
@@ -107,7 +109,7 @@ LABEL_75:
           v16 = x;
         else
           v16 = 0.0;
-        v48 = v16;
+        v50 = v16;
         while ( 1 )
         {
           v17 = this->fields.maxPerLine;
@@ -142,7 +144,7 @@ LABEL_75:
             if ( !v19 )
               goto LABEL_75;
             v22 = v19->fields._size;
-            v25 = (float)(v48 * (float)(this->fields.cellWidth * (float)(v22 - 1))) + 0.0;
+            v25 = (float)(v50 * (float)(this->fields.cellWidth * (float)(v22 - 1))) + 0.0;
             y = (float)(this->fields.cellHeight * (float)(1 - v12))
               + (float)(PivotOffset.fields.y * (float)(0.0 - (float)(this->fields.cellHeight * (float)(1 - v12))));
           }
@@ -167,6 +169,7 @@ LABEL_72:
           v30 = localPosition.fields.x;
           v31 = localPosition.fields.y;
           arrangement = this->fields.arrangement;
+          v33 = localPosition.fields.z;
           if ( arrangement != 2 )
           {
             if ( arrangement == 1 )
@@ -188,37 +191,38 @@ LABEL_51:
           cellHeight = this->fields.cellHeight;
           if ( cellHeight <= 0.0 )
             goto LABEL_63;
-          v41 = localPosition.fields.y / cellHeight;
-          v42 = modf((float)(localPosition.fields.y / cellHeight), &iptr);
-          if ( (float)(localPosition.fields.y / cellHeight) >= 0.0 )
+          v42 = v31 / cellHeight;
+          v43 = modf(v42, &iptr);
+          if ( v42 >= 0.0 )
           {
-            if ( v42 == 0.5 )
+            if ( v43 == 0.5 )
             {
-              v43 = iptr;
-              v44 = (__int64)iptr;
-              v45 = 1.0;
+              v44 = iptr;
+              v45 = (__int64)iptr;
+              v46 = 1.0;
 LABEL_57:
-              v46 = v43 + v45;
-              if ( (v44 & 1) == 0 )
-                v46 = v43;
+              v47 = v44 + v46;
+              if ( (v45 & 1) == 0 )
+                v47 = v44;
               goto LABEL_62;
             }
-            v46 = floorf(v41 + 0.5);
+            v47 = floorf(v42 + 0.5);
           }
           else
           {
-            if ( v42 == -0.5 )
+            if ( v43 == -0.5 )
             {
-              v43 = iptr;
-              v44 = (__int64)iptr;
-              v45 = -1.0;
+              v44 = iptr;
+              v45 = (__int64)iptr;
+              v46 = -1.0;
               goto LABEL_57;
             }
-            v46 = ceilf(v41 + -0.5);
+            v47 = ceilf(v42 + -0.5);
           }
 LABEL_62:
-          v31 = cellHeight * v46;
+          v31 = cellHeight * v47;
 LABEL_63:
+          v48 = v33 - z;
           if ( !this->fields.animateSmoothly )
             goto LABEL_69;
           if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
@@ -226,10 +230,10 @@ LABEL_63:
           if ( UnityEngine_Application__get_isPlaying(0) )
           {
             gameObject = UnityEngine_Component__get_gameObject(v28, 0);
-            v51.fields.x = v30 - v25;
-            v51.fields.y = v31 - y;
-            v51.fields.z = localPosition.fields.z - z;
-            IsNullOrEmpty = (__int64)SpringPosition__Begin(gameObject, v51, 15.0, 0);
+            v53.fields.x = v30 - v25;
+            v53.fields.y = v31 - y;
+            v53.fields.z = v48;
+            IsNullOrEmpty = (__int64)SpringPosition__Begin(gameObject, v53, 15.0, 0);
             if ( !IsNullOrEmpty )
               goto LABEL_75;
             *(_WORD *)(IsNullOrEmpty + 49) = 257;
@@ -240,44 +244,44 @@ LABEL_69:
             IsNullOrEmpty = (__int64)UnityEngine_Component__get_transform(v28, 0);
             if ( !IsNullOrEmpty )
               goto LABEL_75;
-            v52.fields.x = v30 - v25;
-            v52.fields.y = v31 - y;
-            v52.fields.z = localPosition.fields.z - z;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v52, 0);
+            v54.fields.x = v30 - v25;
+            v54.fields.y = v31 - y;
+            v54.fields.z = v48;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsNullOrEmpty, v54, 0);
           }
           if ( ++v27 >= v19->fields._size )
             goto LABEL_72;
         }
-        v34 = localPosition.fields.x / cellWidth;
-        v35 = modf((float)(localPosition.fields.x / cellWidth), &iptr);
-        if ( (float)(localPosition.fields.x / cellWidth) >= 0.0 )
+        v35 = localPosition.fields.x / cellWidth;
+        v36 = modf((float)(localPosition.fields.x / cellWidth), &iptr);
+        if ( v35 >= 0.0 )
         {
-          if ( v35 == 0.5 )
+          if ( v36 == 0.5 )
           {
-            v36 = iptr;
-            v37 = (__int64)iptr;
-            v38 = 1.0;
+            v37 = iptr;
+            v38 = (__int64)iptr;
+            v39 = 1.0;
 LABEL_45:
-            v39 = v36 + v38;
-            if ( (v37 & 1) == 0 )
-              v39 = v36;
+            v40 = v37 + v39;
+            if ( (v38 & 1) == 0 )
+              v40 = v37;
             goto LABEL_50;
           }
-          v39 = floorf(v34 + 0.5);
+          v40 = floorf(v35 + 0.5);
         }
         else
         {
-          if ( v35 == -0.5 )
+          if ( v36 == -0.5 )
           {
-            v36 = iptr;
-            v37 = (__int64)iptr;
-            v38 = -1.0;
+            v37 = iptr;
+            v38 = (__int64)iptr;
+            v39 = -1.0;
             goto LABEL_45;
           }
-          v39 = ceilf(v34 + -0.5);
+          v40 = ceilf(v35 + -0.5);
         }
 LABEL_50:
-        v30 = cellWidth * v39;
+        v30 = cellWidth * v40;
         goto LABEL_51;
       }
     }

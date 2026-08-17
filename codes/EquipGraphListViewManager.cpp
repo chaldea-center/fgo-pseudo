@@ -5325,6 +5325,7 @@ LABEL_14:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EquipGraphListViewManager__SetSortButtonImage(EquipGraphListViewManager_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *sortKindLabel; // x20
@@ -5343,7 +5344,10 @@ void EquipGraphListViewManager__SetSortButtonImage(EquipGraphListViewManager_o *
   int32_t equipGraphType; // w21
   UnityEngine_Object_o *bonusFilterKindLabel; // x20
   UILabel_o *v18; // x20
-  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v19; // s0 OVERLAPPED
+  float v20; // s3
+  float v21; // s1
+  float v22; // s2
 
   if ( (byte_596FC7F & 1) == 0 )
   {
@@ -5439,13 +5443,13 @@ void EquipGraphListViewManager__SetSortButtonImage(EquipGraphListViewManager_o *
     sort = (ListViewSort_o *)this->fields.bonusFilterKindLabel;
     if ( !sort )
       goto LABEL_47;
-    v20.fields.r = 1.0;
-    v20.fields.a = 1.0;
+    v19 = 1.0;
+    v20 = 1.0;
     if ( equipGraphType == 1 )
-      v20.fields.r = 0.5;
-    v20.fields.g = v20.fields.r;
-    v20.fields.b = v20.fields.r;
-    UIWidget__set_color((UIWidget_o *)sort, v20, 0);
+      v19 = 0.5;
+    v21 = v19;
+    v22 = v19;
+    UIWidget__set_color((UIWidget_o *)sort, *(UnityEngine_Color_o *)&v19, 0);
   }
   if ( equipGraphType == 1 )
   {
@@ -6121,7 +6125,7 @@ System_IAsyncResult_o *EquipGraphListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(EquipGraphListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

@@ -226,8 +226,8 @@ void MissionNotifyComponent__FrameInOut(
   bool v48; // w7
   EasingObject_o *v49; // x19
   System_Action_o *v50; // x22
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v52; // 0:kr14_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A10B & 1) == 0 )
   {
@@ -268,9 +268,9 @@ void MissionNotifyComponent__FrameInOut(
   }
   else
   {
-    v37 = LocalPosition.fields.x;
+    v37 = x;
     mFrameOutPosY = mFrameInPosY;
-    v39 = LocalPosition.fields.z;
+    v39 = z;
     x = v52.fields.x;
     mFrameInPosY = this->fields.mFrameOutPosY;
     z = v52.fields.z;
@@ -1323,8 +1323,8 @@ void MissionNotifyComponent_StateFrameOut__update(
   MissionNotifyComponent_o *v34; // x19
   System_Action_o *v35; // x20
   const MethodInfo *v36; // x4
-  unsigned __int64 LocalPosition; // kr00_8
-  UnityEngine_Vector2_o v38; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v37; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A111 & 1) == 0 )
   {
@@ -1347,19 +1347,19 @@ void MissionNotifyComponent_StateFrameOut__update(
   if ( *(_BYTE *)(klass + 193) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)klass, 0);
-    LocalPosition = (unsigned __int64)GameObjectExtensions__GetLocalPosition(gameObject, 0);
+    LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0);
     if ( !*v14 )
       goto LABEL_25;
     *(float32x2_t *)(*v14 + 196) = vmul_f32(*(float32x2_t *)(*v14 + 196), vdup_n_s32(0x3F6147AEu));
     klass = *v14;
     if ( !*v14 )
       goto LABEL_25;
-    v17 = *(float *)&LocalPosition + *(float *)(klass + 196);
-    v18 = *((float *)&LocalPosition + 1) + *(float *)(klass + 200);
+    v17 = LocalPosition.fields.x + *(float *)(klass + 196);
+    v18 = LocalPosition.fields.y + *(float *)(klass + 200);
     v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)klass, 0);
-    v38.fields.x = v17;
-    v38.fields.y = v18;
-    GameObjectExtensions__SetLocalPosition_42891412(v19, v38, 0);
+    v37.fields.x = v17;
+    v37.fields.y = v18;
+    GameObjectExtensions__SetLocalPosition_42891412(v19, v37, 0);
     if ( !*v14 )
       goto LABEL_25;
     v20 = *(_QWORD *)(*v14 + 32);
@@ -1612,21 +1612,23 @@ void MissionNotifyComponent_StateShowing__update(
 {
   MissionNotifyComponent_StateShowing_o *v4; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  CTouch_c *v6; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
+  float x; // s8
+  CTouch_c *v9; // x0
+  float y; // s9
   UnityEngine_Camera_o *mCamera; // x21
   int mDragFrameCount; // w8
-  float32x2_t v9; // d0
-  float32x2_t v10; // d1
-  unsigned __int64 v11; // d0
-  float y; // s1
-  const MethodInfo *v13; // x2
-  float v14; // s8
-  float v15; // s9
-  UnityEngine_GameObject_o *v16; // x0
-  __int64 v17; // x1
-  __int64 v18; // x2
-  unsigned __int64 LocalPosition; // kr00_8
-  UnityEngine_Vector2_o v20; // 0:s0.4,4:s1.4
+  float32x2_t v13; // d0
+  float32x2_t v14; // d1
+  unsigned __int64 v15; // d0
+  float v16; // s1
+  const MethodInfo *v17; // x2
+  float v18; // s8
+  float v19; // s9
+  UnityEngine_GameObject_o *v20; // x0
+  UnityEngine_Vector2_o v21; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596A10F & 1) == 0 )
@@ -1641,41 +1643,43 @@ void MissionNotifyComponent_StateShowing__update(
     if ( that->fields.mIsPress || (float)(UnityEngine_Time__get_realtimeSinceStartup(0) - v4->fields.mStartTime) < 2.0 )
       return;
 LABEL_13:
-    MissionNotifyComponent__SetState(that, 3, v13);
+    MissionNotifyComponent__SetState(that, 3, v17);
     return;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0);
-  LocalPosition = (unsigned __int64)GameObjectExtensions__GetLocalPosition(gameObject, 0);
-  v6 = CTouch_TypeInfo;
+  LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0);
+  x = LocalPosition.fields.x;
+  v9 = CTouch_TypeInfo;
+  y = LocalPosition.fields.y;
   v4->fields.mTouchPosOld = v4->fields.mTouchPosNow;
   mCamera = that->fields.mCamera;
-  if ( !*(&v6->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(v6, v17, v18);
+  if ( !*(&v9->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v9, v6, v7);
   v4->fields.mTouchPosNow = CTouch__getScreenPosition_56116928(mCamera, 0);
   if ( UnityEngine_Input__get_touchCount(0) > 1 )
     v4->fields.mTouchPosNow = v4->fields.mTouchPosOld;
   mDragFrameCount = v4->fields.mDragFrameCount;
   if ( mDragFrameCount < 1 )
   {
-    *(float *)&v11 = v4->fields.mTouchPosDif.fields.x;
-    y = v4->fields.mTouchPosDif.fields.y;
+    *(float *)&v15 = v4->fields.mTouchPosDif.fields.x;
+    v16 = v4->fields.mTouchPosDif.fields.y;
   }
   else
   {
-    v9.n64_u64[0] = (unsigned __int64)v4->fields.mTouchPosNow;
-    v10.n64_u64[0] = (unsigned __int64)v4->fields.mTouchPosOld;
+    v13.n64_u64[0] = (unsigned __int64)v4->fields.mTouchPosNow;
+    v14.n64_u64[0] = (unsigned __int64)v4->fields.mTouchPosOld;
     v4->fields.mTouchPosDifOld = v4->fields.mTouchPosDif;
-    v11 = vsub_f32(v9, v10).n64_u64[0];
-    y = *((float *)&v11 + 1);
-    v4->fields.mTouchPosDif = (struct UnityEngine_Vector2_o)v11;
+    v15 = vsub_f32(v13, v14).n64_u64[0];
+    v16 = *((float *)&v15 + 1);
+    v4->fields.mTouchPosDif = (struct UnityEngine_Vector2_o)v15;
   }
-  v14 = *(float *)&LocalPosition + *(float *)&v11;
-  v15 = *((float *)&LocalPosition + 1) + y;
+  v18 = x + *(float *)&v15;
+  v19 = y + v16;
   v4->fields.mDragFrameCount = mDragFrameCount + 1;
-  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0);
-  v20.fields.x = v14;
-  v20.fields.y = v15;
-  GameObjectExtensions__SetLocalPosition_42891412(v16, v20, 0);
+  v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0);
+  v21.fields.x = v18;
+  v21.fields.y = v19;
+  GameObjectExtensions__SetLocalPosition_42891412(v20, v21, 0);
   if ( UnityEngine_Input__get_touchCount(0) >= 2 )
     goto LABEL_13;
 }
@@ -1709,18 +1713,18 @@ void MissionNotifyComponent___c__DisplayClass64_0___FrameInOut_b__0(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MissionNotifyComponent___c__DisplayClass64_0___FrameInOut_b__1(
         MissionNotifyComponent___c__DisplayClass64_0_o *this,
         const MethodInfo *method)
 {
   struct EasingObject_o *eo; // x8
   MissionNotifyComponent___c__DisplayClass64_0_o *v3; // x19
-  unsigned __int64 v4; // d0
+  unsigned __int64 v4; // d0 OVERLAPPED
   float v5; // s2
-  float v6; // s1
+  int v6; // s1
   struct MissionNotifyComponent_o *_4__this; // x8
   float mNow; // [xsp+0h] [xbp-20h]
-  UnityEngine_Vector3_o v9; // 0:kr00_12.12
 
   eo = this->fields.eo;
   if ( !eo )
@@ -1734,11 +1738,8 @@ void MissionNotifyComponent___c__DisplayClass64_0___FrameInOut_b__1(
            mNow)).n64_u64[0];
   v5 = this->fields.pos_from.fields.z
      + (float)(mNow * (float)(this->fields.pos_to.fields.z - this->fields.pos_from.fields.z));
-  v6 = *((float *)&v4 + 1);
-  LODWORD(v9.fields.x) = v4;
-  v9.fields.y = v6;
-  v9.fields.z = v5;
-  GameObjectExtensions__SetLocalPosition(this->fields.tgt_obj, v9, 0);
+  v6 = HIDWORD(v4);
+  GameObjectExtensions__SetLocalPosition(this->fields.tgt_obj, *(UnityEngine_Vector3_o *)&v4, 0);
   _4__this = v3->fields.__4__this;
   if ( !_4__this || (this = (MissionNotifyComponent___c__DisplayClass64_0_o *)_4__this->fields.baseSp) == 0 )
 LABEL_5:

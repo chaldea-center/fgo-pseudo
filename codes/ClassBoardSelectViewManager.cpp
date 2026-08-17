@@ -1350,7 +1350,7 @@ SchedulerTaskBase_o *ClassBoardSelectViewManager__GetTaskOfGoingToClassBoard(
   bool v77; // w6
   bool v78; // w7
   __int64 v80; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59747B7 & 1) == 0 )
   {
@@ -2089,7 +2089,7 @@ LABEL_13:
   ClassBoardUIController__SetItemList(
     classBoardUIController_k__BackingField,
     headerDlspItemIdArray,
-    *((AtlasManagerUnit_o **)this + 24),
+    (AtlasManagerUnit_o *)this[1].fields.m_CancellationTokenSource,
     0,
     0);
 }
@@ -2612,7 +2612,7 @@ LABEL_8:
   this = (ClassBoardSelectViewManager_o *)(*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v7)(
                                             resourceCatalog,
                                             *(_QWORD *)(v7 + 8));
-  if ( !this || (this = (ClassBoardSelectViewManager_o *)*((_QWORD *)this + 24)) == 0 )
+  if ( !this || (this = (ClassBoardSelectViewManager_o *)this[1].fields.m_CancellationTokenSource) == 0 )
 LABEL_13:
     sub_2213CDC(this, method);
   return AtlasManagerUnit__ValidateLoadSprite((AtlasManagerUnit_o *)this, (System_String_o *)StringLiteral_21627/*"img_txt_classscore_main"*/, 0);

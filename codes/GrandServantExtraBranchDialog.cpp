@@ -113,18 +113,17 @@ void GrandServantExtraBranchDialog__Open(
   __int64 v13; // x1
   struct UICommonButton_o *ex1Button; // x8
   __int64 v15; // kr00_8
-  float b; // s2
-  float a; // s3
+  __int64 v16; // kr08_8
   struct UICommonButton_o *ex2Button; // x8
-  UnityEngine_Color_o v19; // [xsp+0h] [xbp-50h] BYREF
+  UnityEngine_Color_o v18; // [xsp+0h] [xbp-50h] BYREF
 
   if ( (byte_596B31A & 1) == 0 )
   {
     sub_2213A60(&StringLiteral_435/*"#4D4D4D"*/);
     byte_596B31A = 1;
   }
-  *(_QWORD *)&v19.fields.r = 0;
-  *(_QWORD *)&v19.fields.b = 0;
+  *(_QWORD *)&v18.fields.r = 0;
+  *(_QWORD *)&v18.fields.b = 0;
   this->fields.callbackFunc = callback;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
@@ -137,23 +136,20 @@ void GrandServantExtraBranchDialog__Open(
     v7);
   ex1ButtonCover = (UICommonButton_o *)UnityEngine_ColorUtility__TryParseHtmlString(
                                          (System_String_o *)StringLiteral_435/*"#4D4D4D"*/,
-                                         &v19,
+                                         &v18,
                                          0);
   ex1Button = this->fields.ex1Button;
   if ( !ex1Button )
     goto LABEL_10;
-  v15 = *(_QWORD *)&v19.fields.r;
-  b = v19.fields.b;
-  a = v19.fields.a;
-  *(_QWORD *)&ex1Button->fields.specifyDisabledColor.fields.r = *(_QWORD *)&v19.fields.r;
-  ex1Button->fields.specifyDisabledColor.fields.b = b;
-  ex1Button->fields.specifyDisabledColor.fields.a = a;
+  v15 = *(_QWORD *)&v18.fields.r;
+  v16 = *(_QWORD *)&v18.fields.b;
+  *(_QWORD *)&ex1Button->fields.specifyDisabledColor.fields.r = *(_QWORD *)&v18.fields.r;
+  *(_QWORD *)&ex1Button->fields.specifyDisabledColor.fields.b = v16;
   ex2Button = this->fields.ex2Button;
   if ( !ex2Button )
     goto LABEL_10;
   *(_QWORD *)&ex2Button->fields.specifyDisabledColor.fields.r = v15;
-  ex2Button->fields.specifyDisabledColor.fields.b = b;
-  ex2Button->fields.specifyDisabledColor.fields.a = a;
+  *(_QWORD *)&ex2Button->fields.specifyDisabledColor.fields.b = v16;
   ex1ButtonCover = this->fields.ex1Button;
   if ( !ex1ButtonCover
     || (UICommonButton__SetButtonEnable(ex1ButtonCover, canSelectEx1, 1, 0),
@@ -329,7 +325,7 @@ System_IAsyncResult_o *GrandServantExtraBranchDialog_CallbackFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(GrandServantExtraBranchDialog_Result_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

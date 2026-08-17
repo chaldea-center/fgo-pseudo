@@ -537,40 +537,40 @@ void UserPresentListViewItemDraw__SetItemInfo(
   UILabel_o *resLimitedTimeLb; // x21
   UILabel_o *resLimitedTimeLbAlt; // x21
   UnityEngine_GameObject_o *v24; // x21
-  struct UILabel_o *v25; // x8
-  bool v26; // w1
-  UILabel_o *v27; // x21
-  int64_t v28; // x0
-  __int64 v29; // x1
-  __int64 v30; // x2
+  float v25; // s0
+  struct UILabel_o *v26; // x8
+  bool v27; // w1
+  UILabel_o *v28; // x21
+  int64_t v29; // x0
+  __int64 v30; // x1
+  __int64 v31; // x2
   UserPresentBoxEntity_o *usrPresentEnt; // x20
-  UserPresentBoxMaster_c *v32; // x0
-  __int64 v33; // x1
-  __int64 v34; // x2
-  UILabel_o *v35; // x20
-  UILabel_o *v36; // x19
-  __int64 v37; // x1
-  __int64 v38; // x2
+  UserPresentBoxMaster_c *v33; // x0
+  __int64 v34; // x1
+  __int64 v35; // x2
+  UILabel_o *v36; // x20
+  UILabel_o *v37; // x19
+  __int64 v38; // x1
+  __int64 v39; // x2
   UILabel_o *holdNumTitleLb; // x22
-  struct ItemEntity_o *v40; // x8
-  __int64 v41; // x2
+  struct ItemEntity_o *v41; // x8
   __int64 v42; // x2
-  LocalizationManager_c *v43; // x8
+  __int64 v43; // x2
+  LocalizationManager_c *v44; // x8
   int32_t num; // w22
-  struct ItemEntity_o *v45; // x8
+  struct ItemEntity_o *v46; // x8
   int type; // w8
-  __int64 v47; // x1
-  __int64 v48; // x2
+  __int64 v48; // x1
+  __int64 v49; // x2
   Il2CppObject *Master_object; // x21
-  long double v50; // q0
-  struct ItemEntity_o *v51; // x8
-  LocalizationManager_c *v52; // x0
-  __int64 v53; // x1
-  __int64 v54; // x2
+  long double v51; // q0
+  struct ItemEntity_o *v52; // x8
+  LocalizationManager_c *v53; // x0
+  __int64 v54; // x1
+  __int64 v55; // x2
   Il2CppObject *MasterData_object; // x21
-  long double v56; // q0
-  struct ItemEntity_o *v57; // x8
-  float v58; // s0
+  long double v57; // q0
+  struct ItemEntity_o *v58; // x8
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Color_o v60; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -669,7 +669,7 @@ void UserPresentListViewItemDraw__SetItemInfo(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
         holdNumTitleLb = this->fields.holdNumTitleLb;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v37, v38);
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v38, v39);
         Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_12590/*"SHOP_BUY_ITEM_HOLD"*/, 0);
         if ( !holdNumTitleLb )
           goto LABEL_116;
@@ -678,24 +678,24 @@ void UserPresentListViewItemDraw__SetItemInfo(
         if ( !Instance )
           goto LABEL_116;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-        v40 = item->fields.itemEnt;
-        if ( !v40 )
+        v41 = item->fields.itemEnt;
+        if ( !v41 )
           goto LABEL_116;
-        Instance = ItemMaster__isMana(v10, v40->fields.id, 0);
+        Instance = ItemMaster__isMana(v10, v41->fields.id, 0);
         if ( (Instance & 1) != 0 )
         {
           Instance = (int64_t)UserGameMaster__getSelfUserGame(0);
           if ( !Instance )
             goto LABEL_116;
-          v43 = LocalizationManager_TypeInfo;
+          v44 = LocalizationManager_TypeInfo;
           itemSelectTextLabel = this->fields.holdNumCntLb;
           num = *(_DWORD *)(Instance + 192);
 LABEL_112:
-          if ( *(&v43->_2.cctor_finished + 1) )
+          if ( *(&v44->_2.cctor_finished + 1) )
             goto LABEL_115;
-          v52 = v43;
+          v53 = v44;
 LABEL_114:
-          j_il2cpp_runtime_class_init_0(v52, v6, v42);
+          j_il2cpp_runtime_class_init_0(v53, v6, v43);
 LABEL_115:
           Instance = (int64_t)LocalizationManager__GetNumberFormat(num, 0);
           if ( !itemSelectTextLabel )
@@ -706,10 +706,10 @@ LABEL_15:
           UILabel__set_text(itemSelectTextLabel, v9, 0);
           goto LABEL_23;
         }
-        v45 = item->fields.itemEnt;
-        if ( !v45 )
+        v46 = item->fields.itemEnt;
+        if ( !v46 )
           goto LABEL_116;
-        type = v45->fields.type;
+        type = v46->fields.type;
         if ( type <= 21 )
         {
           if ( type != 2 && type != 17 )
@@ -720,19 +720,19 @@ LABEL_15:
           if ( type == 29 )
           {
             if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6, v41);
+              j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6, v42);
             Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
             if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-              *(__n128 *)&v50 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v47, v48);
-            Instance = sub_2417958(0, v50);
-            v51 = item->fields.itemEnt;
-            if ( !v51 || !Master_object )
+              *(__n128 *)&v51 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v48, v49);
+            Instance = sub_2417958(0, v51);
+            v52 = item->fields.itemEnt;
+            if ( !v52 || !Master_object )
               goto LABEL_116;
             Instance = UserSvtCoinMaster__TryGetEntity(
                          (UserSvtCoinMaster_o *)Master_object,
                          &entity,
                          Instance,
-                         v51->fields.value,
+                         v52->fields.value,
                          0);
             itemSelectTextLabel = this->fields.holdNumCntLb;
             if ( (Instance & 1) == 0 )
@@ -744,7 +744,7 @@ LABEL_15:
             }
             if ( !entity )
               goto LABEL_116;
-            v52 = LocalizationManager_TypeInfo;
+            v53 = LocalizationManager_TypeInfo;
             num = entity->fields.num;
             if ( *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
               goto LABEL_115;
@@ -755,7 +755,7 @@ LABEL_15:
             Instance = (int64_t)UserGameMaster__getSelfUserGame(0);
             if ( !Instance )
               goto LABEL_116;
-            v43 = LocalizationManager_TypeInfo;
+            v44 = LocalizationManager_TypeInfo;
             itemSelectTextLabel = this->fields.holdNumCntLb;
             num = *(_DWORD *)(Instance + 196);
             goto LABEL_112;
@@ -768,21 +768,21 @@ LABEL_105:
                                 (DataManager_o *)Instance,
                                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-            *(__n128 *)&v56 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v53, v54);
-          Instance = sub_2417958(0, v56);
-          v57 = item->fields.itemEnt;
-          if ( !v57 )
+            *(__n128 *)&v57 = j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v54, v55);
+          Instance = sub_2417958(0, v57);
+          v58 = item->fields.itemEnt;
+          if ( !v58 )
             goto LABEL_116;
           if ( !MasterData_object )
             goto LABEL_116;
           Instance = (int64_t)UserItemMaster__GetEntityDefinitely(
                                 (UserItemMaster_o *)MasterData_object,
                                 Instance,
-                                v57->fields.id,
+                                v58->fields.id,
                                 0);
           if ( !Instance )
             goto LABEL_116;
-          v43 = LocalizationManager_TypeInfo;
+          v44 = LocalizationManager_TypeInfo;
           itemSelectTextLabel = this->fields.holdNumCntLb;
           num = *(_DWORD *)(Instance + 28);
           goto LABEL_112;
@@ -790,7 +790,7 @@ LABEL_105:
         Instance = (int64_t)UserGameMaster__getSelfUserGame(0);
         if ( !Instance )
           goto LABEL_116;
-        v43 = LocalizationManager_TypeInfo;
+        v44 = LocalizationManager_TypeInfo;
         itemSelectTextLabel = this->fields.holdNumCntLb;
         num = *(_DWORD *)(Instance + 184);
         goto LABEL_112;
@@ -869,15 +869,15 @@ LABEL_23:
                           0);
     if ( !Instance )
       goto LABEL_116;
-    LODWORD(v58) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0);
-    v25 = this->fields.resLimitedTimeLb;
-    if ( !v25 )
+    LODWORD(v25) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0);
+    v26 = this->fields.resLimitedTimeLb;
+    if ( !v26 )
       goto LABEL_116;
-    GameObjectExtensions__SetLocalPositionX(v24, v58 - (float)v25->fields.mWidth, 0);
+    GameObjectExtensions__SetLocalPositionX(v24, v25 - (float)v26->fields.mWidth, 0);
     Instance = (int64_t)this->fields.resTimeLb;
     if ( !Instance )
       goto LABEL_116;
-    v26 = 1;
+    v27 = 1;
   }
   else
   {
@@ -890,12 +890,12 @@ LABEL_23:
     Instance = (int64_t)item->fields.usrPresentEnt;
     if ( !Instance )
       goto LABEL_116;
-    v27 = this->fields.resLimitedTimeLb;
-    v28 = UserPresentBoxEntity__expireAt((UserPresentBoxEntity_o *)Instance, 0);
-    Instance = (int64_t)LocalizationManager__GetRestTime2(v28, -1, 0);
-    if ( !v27 )
+    v28 = this->fields.resLimitedTimeLb;
+    v29 = UserPresentBoxEntity__expireAt((UserPresentBoxEntity_o *)Instance, 0);
+    Instance = (int64_t)LocalizationManager__GetRestTime2(v29, -1, 0);
+    if ( !v28 )
       goto LABEL_116;
-    UILabel__set_text(v27, (System_String_o *)Instance, 0);
+    UILabel__set_text(v28, (System_String_o *)Instance, 0);
     Instance = (int64_t)this->fields.resLimitedTimeLb;
     if ( !Instance )
       goto LABEL_116;
@@ -914,19 +914,19 @@ LABEL_23:
     Instance = (int64_t)this->fields.resTimeLb;
     if ( !Instance )
       goto LABEL_116;
-    v26 = 0;
+    v27 = 0;
   }
-  UILabel__set_applyGradient((UILabel_o *)Instance, v26, 0);
+  UILabel__set_applyGradient((UILabel_o *)Instance, v27, 0);
   usrPresentEnt = item->fields.usrPresentEnt;
   if ( usrPresentEnt )
   {
-    v32 = UserPresentBoxMaster_TypeInfo;
+    v33 = UserPresentBoxMaster_TypeInfo;
     if ( !*(&UserPresentBoxMaster_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(UserPresentBoxMaster_TypeInfo, v29, v30);
-      v32 = UserPresentBoxMaster_TypeInfo;
+      j_il2cpp_runtime_class_init_0(UserPresentBoxMaster_TypeInfo, v30, v31);
+      v33 = UserPresentBoxMaster_TypeInfo;
     }
-    if ( UserPresentBoxEntity__IsEnableFlag(usrPresentEnt, v32->static_fields->INDEFINITE_PERIOD, 0) )
+    if ( UserPresentBoxEntity__IsEnableFlag(usrPresentEnt, v33->static_fields->INDEFINITE_PERIOD, 0) )
     {
       Instance = (int64_t)this->fields.resLimitedTimeLbAlt;
       if ( !Instance )
@@ -940,21 +940,21 @@ LABEL_23:
         goto LABEL_116;
       if ( !UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)Instance, 0) )
       {
-        v35 = this->fields.resTimeLb;
+        v36 = this->fields.resTimeLb;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v33, v34);
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34, v35);
         Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13980/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0);
-        if ( !v35 )
+        if ( !v36 )
           goto LABEL_116;
-        UILabel__set_text(v35, (System_String_o *)Instance, 0);
-      }
-      v36 = this->fields.resLimitedTimeLb;
-      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v33, v34);
-      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13981/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0);
-      if ( v36 )
-      {
         UILabel__set_text(v36, (System_String_o *)Instance, 0);
+      }
+      v37 = this->fields.resLimitedTimeLb;
+      if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34, v35);
+      Instance = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13981/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0);
+      if ( v37 )
+      {
+        UILabel__set_text(v37, (System_String_o *)Instance, 0);
         return;
       }
 LABEL_116:

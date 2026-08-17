@@ -65,7 +65,7 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
   UnityEngine_Object_o *mWidget; // x21
   __int64 v5; // x1
   __int64 v6; // x2
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
   System_String_o *v9; // x2
   System_String_o *v10; // x3
@@ -81,10 +81,10 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
   bool v20; // w6
   bool v21; // w7
   ScrollArrowComponent_c *v22; // x0
-  __int64 v23; // x8
+  intptr_t m_CachedPtr; // x8
   _QWORD *v24; // x9
-  __int64 v25; // x10
-  __int64 v26; // x8
+  __int64 klass_low; // x10
+  intptr_t v26; // x8
   __int64 v27; // x1
   __int64 v28; // x2
   Il2CppObject *v29; // x20
@@ -95,7 +95,7 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
   float z; // s10
   UnityEngine_GameObject_o *v35; // x0
   const MethodInfo *v36; // x1
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D04A & 1) == 0 )
   {
@@ -112,11 +112,11 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
   if ( UnityEngine_Object__op_Equality(mWidget, 0, 0) )
   {
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_37;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)gameObject,
+                         gameObject,
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     this->fields.mWidget = (struct UIWidget_o *)Component_object;
     sub_2213A04(
@@ -135,7 +135,7 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
     j_il2cpp_runtime_class_init_0(ScrollArrowComponent_TypeInfo, v5, v6);
     v15 = ScrollArrowComponent_TypeInfo;
   }
-  gameObject = (__int64)v15->static_fields->_arrowList;
+  gameObject = (UnityEngine_GameObject_o *)v15->static_fields->_arrowList;
   if ( !gameObject )
 LABEL_37:
     sub_2213CDC(gameObject, v5);
@@ -150,16 +150,16 @@ LABEL_37:
       j_il2cpp_runtime_class_init_0(ScrollArrowComponent_TypeInfo, v5, v16);
       v22 = ScrollArrowComponent_TypeInfo;
     }
-    gameObject = (__int64)v22->static_fields->_arrowList;
+    gameObject = (UnityEngine_GameObject_o *)v22->static_fields->_arrowList;
     if ( !gameObject )
       goto LABEL_37;
-    v23 = *(_QWORD *)(gameObject + 16);
+    m_CachedPtr = gameObject->fields.m_CachedPtr;
     v24 = Method_System_Collections_Generic_List_ScrollArrowComponent__Add__;
-    ++*(_DWORD *)(gameObject + 28);
-    if ( !v23 )
+    ++HIDWORD(gameObject[1].klass);
+    if ( !m_CachedPtr )
       goto LABEL_37;
-    v25 = *(int *)(gameObject + 24);
-    if ( (unsigned int)v25 >= *(_DWORD *)(v23 + 24) )
+    klass_low = SLODWORD(gameObject[1].klass);
+    if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)gameObject,
@@ -168,26 +168,26 @@ LABEL_37:
     }
     else
     {
-      v26 = v23 + 8 * v25;
-      *(_DWORD *)(gameObject + 24) = v25 + 1;
+      v26 = m_CachedPtr + 8 * klass_low;
+      LODWORD(gameObject[1].klass) = klass_low + 1;
       *(_QWORD *)(v26 + 32) = this;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)(v26 + 32), (int32_t)this, v16, v17, v18, v19, v20, v21);
     }
   }
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_37;
   v29 = UnityEngine_GameObject__GetComponent_object_(
-          (UnityEngine_GameObject_o *)gameObject,
+          gameObject,
           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27, v28);
-  gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v29, 0, 0);
-  if ( (gameObject & 1) != 0 )
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v29, 0, 0);
+  if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !byte_5969AE0 )
     {
-      gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     directionType = this->fields.directionType;

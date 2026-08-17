@@ -2,14 +2,16 @@ void BattleResultEventFortificationItemComponent___ctor(
         BattleResultEventFortificationItemComponent_o *this,
         const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
-  const MethodInfo *v10; // x1
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct System_Int32_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  const MethodInfo *v12; // x1
 
   if ( (byte_5974476 & 1) == 0 )
   {
@@ -19,15 +21,14 @@ void BattleResultEventFortificationItemComponent___ctor(
     byte_5974476 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1,
-    0);
-  this->fields.workTypeOrder = (struct System_Int32_array *)v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.workTypeOrder, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v4.fields.value = Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1;
+  v5 = (struct System_Int32_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.workTypeOrder = v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.workTypeOrder, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   if ( !*(&BattleResultEventItemComponent_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo, v10);
-  BattleResultEventItemComponent___ctor((BattleResultEventItemComponent_o *)this, v10);
+    j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo, v12);
+  BattleResultEventItemComponent___ctor((BattleResultEventItemComponent_o *)this, v12);
 }
 
 

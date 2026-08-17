@@ -1263,7 +1263,7 @@ void BattleWaveInfoData_BattleDataSaveData__SetData(
   bool v7; // w7
   long double v8; // q0
   BattleWaveInfoData_BattleDataSaveData_o *v10; // x20
-  struct BattleCommandData_array *FixedCommands; // x1
+  Il2CppClass *FixedCommands; // x1
   _QWORD *v12; // x20
   __int64 v13; // x8
   __int64 v14; // x0
@@ -1274,7 +1274,7 @@ void BattleWaveInfoData_BattleDataSaveData__SetData(
     this = (BattleWaveInfoData_BattleDataSaveData_o *)sub_2213A60(&Method_System_Array_Empty_BattleCommandData___);
     byte_59702A2 = 1;
   }
-  FixedCommands = v10->fields.FixedCommands;
+  FixedCommands = (Il2CppClass *)v10->fields.FixedCommands;
   if ( !FixedCommands )
   {
     v12 = Method_System_Array_Empty_BattleCommandData___;
@@ -1290,13 +1290,13 @@ void BattleWaveInfoData_BattleDataSaveData__SetData(
     if ( !*(_DWORD *)(v14 + 228) )
       *(__n128 *)&v8 = j_il2cpp_runtime_class_init_0(v14, FixedCommands);
     this = *(BattleWaveInfoData_BattleDataSaveData_o **)(v12[7] + 16LL);
-    if ( (*(_WORD *)((char *)this + 309) & 1) == 0 )
+    if ( (*(_WORD *)((_BYTE *)&this[9].fields.FixedCommands + 5) & 1) == 0 )
       this = (BattleWaveInfoData_BattleDataSaveData_o *)sub_224B908(v8);
-    FixedCommands = (struct BattleCommandData_array *)**((_QWORD **)this + 23);
+    FixedCommands = this[5].fields.addedEntryCondUniqueIds->obj.klass;
   }
   if ( !data )
     sub_2213CDC(this, FixedCommands);
-  data->fields.fixedCommands = FixedCommands;
+  data->fields.fixedCommands = (struct BattleCommandData_array *)FixedCommands;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&data->fields.fixedCommands,
     (int32_t)FixedCommands,
@@ -1322,6 +1322,7 @@ BattleWaveInfoData_BattleItemInfo_SaveData_o *BattleWaveInfoData_BattleItemInfo_
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  BattleWaveInfoData_BattleItemInfo_SaveData_o *result; // x0
 
   if ( (byte_59702A1 & 1) == 0 )
   {
@@ -1332,8 +1333,9 @@ BattleWaveInfoData_BattleItemInfo_SaveData_o *BattleWaveInfoData_BattleItemInfo_
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     sub_2213CDC(v4, v5);
+  result = (BattleWaveInfoData_BattleItemInfo_SaveData_o *)v3;
   *(BattleWaveInfoData_BattleItemInfo_Fields *)(v3 + 16) = this->fields;
-  return (BattleWaveInfoData_BattleItemInfo_SaveData_o *)v3;
+  return result;
 }
 
 

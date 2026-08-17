@@ -53,6 +53,7 @@ void EventInfoPointGaugeControl___ctor(EventInfoPointGaugeControl_o *this, const
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *EventInfoPointGaugeControl__CreateEventPointGaugePrefab(
         EventInfoPointGaugeControl_o *this,
         System_Nullable_Vector3__o pos,
@@ -70,26 +71,25 @@ UnityEngine_GameObject_o *EventInfoPointGaugeControl__CreateEventPointGaugePrefa
   Il2CppObject *v14; // x22
   bool v15; // w8
   __int64 v16; // x1
-  float x; // s0
-  EventInfoPointGaugeControl_c *v18; // x0
+  __int64 v17; // kr00_8
+  float x; // s0 OVERLAPPED
+  EventInfoPointGaugeControl_c *v19; // x0
+  struct EventInfoPointGaugeControl_StaticFields *static_fields; // x8
   Il2CppObject *Component_object; // x0
   struct EventInfoPointGaugeComponent_o **p_EventPointGaugeComponent_k__BackingField; // x20
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   struct UnityEngine_GameObject_o *EffectParent; // x0
-  System_String_o *v28; // x2
-  System_String_o *v29; // x3
-  int32_t v30; // w4
-  int32_t v31; // w5
-  bool v32; // w6
-  bool v33; // w7
-  UnityEngine_Vector3_o v34; // 0:kr00_12.12
-  UnityEngine_Vector3_o EVENT_POINT_GAUGE_POSITION; // 0:kr14_12.12
-  __int64 v36; // 0:s1.4,4:s2.4
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
 
   v5 = *(_QWORD *)&pos.fields.value.fields.y;
   v6 = *(_QWORD *)&pos.fields.hasValue;
@@ -130,24 +130,22 @@ UnityEngine_GameObject_o *EventInfoPointGaugeControl__CreateEventPointGaugePrefa
       GameObjectExtensions__SafeSetParent_42897308((UnityEngine_GameObject_o *)v14, this->fields.eventRoot, 0);
       if ( (_BYTE)v6 )
       {
-        v36 = v5;
+        v17 = v5;
         x = *((float *)&v6 + 1);
       }
       else
       {
-        v18 = EventInfoPointGaugeControl_TypeInfo;
+        v19 = EventInfoPointGaugeControl_TypeInfo;
         if ( !*(&EventInfoPointGaugeControl_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(EventInfoPointGaugeControl_TypeInfo, v16);
-          v18 = EventInfoPointGaugeControl_TypeInfo;
+          v19 = EventInfoPointGaugeControl_TypeInfo;
         }
-        EVENT_POINT_GAUGE_POSITION = v18->static_fields->EVENT_POINT_GAUGE_POSITION;
-        x = EVENT_POINT_GAUGE_POSITION.fields.x;
-        v36 = *(_QWORD *)&EVENT_POINT_GAUGE_POSITION.fields.y;
+        static_fields = v19->static_fields;
+        x = static_fields->EVENT_POINT_GAUGE_POSITION.fields.x;
+        v17 = *(_QWORD *)&static_fields->EVENT_POINT_GAUGE_POSITION.fields.y;
       }
-      v34.fields.x = x;
-      *(_QWORD *)&v34.fields.y = v36;
-      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v14, v34, 0);
+      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v14, *(UnityEngine_Vector3_o *)&x, 0);
       if ( v14 )
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
@@ -158,12 +156,12 @@ UnityEngine_GameObject_o *EventInfoPointGaugeControl__CreateEventPointGaugePrefa
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields._EventPointGaugeComponent_k__BackingField,
           (int32_t)Component_object,
-          v21,
-          v22,
           v23,
           v24,
           v25,
-          v26);
+          v26,
+          v27,
+          v28);
         eventInfoAssetData = (AssetData_o *)this->fields._EventPointGaugeComponent_k__BackingField;
         if ( eventInfoAssetData )
         {
@@ -181,12 +179,12 @@ UnityEngine_GameObject_o *EventInfoPointGaugeControl__CreateEventPointGaugePrefa
             sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields.eventPointGaugeEffectParent,
               (int32_t)EffectParent,
-              v28,
-              v29,
               v30,
               v31,
               v32,
-              v33);
+              v33,
+              v34,
+              v35);
             return (UnityEngine_GameObject_o *)v14;
           }
         }
@@ -2293,7 +2291,7 @@ System_IAsyncResult_o *EventInfoPointGaugeControl_assetLoadFinish__BeginInvoke(
   v10 = eventId;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

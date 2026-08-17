@@ -383,6 +383,7 @@ LABEL_42:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SkillUpExtraResultWindowComponent__SetupLayout(
         SkillUpExtraResultWindowComponent_o *this,
         bool isExtra,
@@ -400,7 +401,8 @@ void SkillUpExtraResultWindowComponent__SetupLayout(
   float v14; // s10
   float v15; // s11
   UnityEngine_Object_o *v16; // x20
-  UnityEngine_Vector2_o v18; // 0:s0.4,4:s1.4
+  float v17; // s1 OVERLAPPED
+  float v18; // s0
 
   if ( (byte_596A193 & 1) == 0 )
   {
@@ -433,14 +435,17 @@ void SkillUpExtraResultWindowComponent__SetupLayout(
         if ( !IsNullOrEmpty )
         {
           if ( isExtra )
-            v18.fields.y = v15;
+            v17 = v15;
           else
-            v18.fields.y = v13;
+            v17 = v13;
           if ( isExtra )
-            v18.fields.x = v14;
+            v18 = v14;
           else
-            v18.fields.x = v12;
-          GameObjectExtensions__SetLocalPosition_42891412((UnityEngine_GameObject_o *)v16, v18, 0);
+            v18 = v12;
+          GameObjectExtensions__SetLocalPosition_42891412(
+            (UnityEngine_GameObject_o *)v16,
+            *(UnityEngine_Vector2_o *)(&v17 - 1),
+            0);
         }
         LODWORD(max_length) = layoutDatas->max_length;
         ++v10;

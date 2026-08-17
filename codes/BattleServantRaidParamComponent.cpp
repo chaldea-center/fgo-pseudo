@@ -116,6 +116,7 @@ System_String_o *BattleServantRaidParamComponent__get_RaidHPFormat(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleServantRaidParamComponent__setData(
         BattleServantRaidParamComponent_o *this,
         BattleServantData_o *battleServantData,
@@ -125,29 +126,35 @@ void BattleServantRaidParamComponent__setData(
   DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
   __int64 v8; // x1
   Il2CppObject *SingleEntity; // x22
+  float v10; // s0 OVERLAPPED
+  float v11; // s1
   UIWidget_o *raidhplabel; // x23
-  EventBossStatusUiEntity_o *v14; // x22
-  UILabel_o *v16; // x23
+  float v13; // s2
+  float v14; // s3
+  EventBossStatusUiEntity_o *v15; // x22
+  int v16; // s0 OVERLAPPED
+  int v17; // s1
   UILabel_o *v18; // x23
+  int v19; // s2
+  int v20; // s3
+  UILabel_o *v21; // x23
+  UnityEngine_Vector2_o TextEffectDistance; // kr00_8
   unsigned int GaugeId; // w0
   unsigned int hpBarType; // w8
-  __int64 v21; // x1
-  UIAtlas_o *v22; // x22
+  __int64 v25; // x1
+  UIAtlas_o *v26; // x22
   UISprite_o *raidDownNormalSprite; // x23
-  Il2CppObject *v24; // x0
-  UISprite_o *raidDownLastSprite; // x23
-  Il2CppObject *v26; // x0
-  UISprite_o *raidDownEndSprite; // x22
   Il2CppObject *v28; // x0
-  const MethodInfo *v29; // x3
-  const MethodInfo *v30; // x1
-  int32_t v31; // [xsp+4h] [xbp-4Ch] BYREF
-  int32_t v32; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v33; // [xsp+Ch] [xbp-44h] BYREF
-  UnityEngine_Vector2_o TextEffectDistance; // 0:s0.4,4:s1.4
-  UnityEngine_Color_o TextColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o TextEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UISprite_o *raidDownLastSprite; // x23
+  Il2CppObject *v30; // x0
+  UISprite_o *raidDownEndSprite; // x22
+  Il2CppObject *v32; // x0
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x1
+  int32_t v35; // [xsp+4h] [xbp-4Ch] BYREF
+  int32_t v36; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v37; // [xsp+Ch] [xbp-44h] BYREF
+  UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_597425B & 1) == 0 )
   {
@@ -192,37 +199,40 @@ void BattleServantRaidParamComponent__setData(
                                                                   (int32_t)SingleEntity[6].monitor,
                                                                   battleServantData->fields.raidId,
                                                                   0);
-  TextColor.fields.r = 1.0;
-  TextColor.fields.g = 1.0;
+  v10 = 1.0;
+  v11 = 1.0;
   raidhplabel = (UIWidget_o *)this->fields.raidhplabel;
-  TextColor.fields.b = 1.0;
-  TextColor.fields.a = 1.0;
-  v14 = (EventBossStatusUiEntity_o *)Master_object;
+  v13 = 1.0;
+  v14 = 1.0;
+  v15 = (EventBossStatusUiEntity_o *)Master_object;
   if ( Master_object )
-    TextColor = EventBossStatusUiEntity__GetTextColor((EventBossStatusUiEntity_o *)Master_object, TextColor, 0);
+    *(UnityEngine_Color_o *)&v10 = EventBossStatusUiEntity__GetTextColor(
+                                     (EventBossStatusUiEntity_o *)Master_object,
+                                     *(UnityEngine_Color_o *)&v10,
+                                     0);
   if ( !raidhplabel )
     goto LABEL_44;
-  UIWidget__set_color(raidhplabel, TextColor, 0);
-  TextEffectColor.fields.r = 0.0;
-  TextEffectColor.fields.g = 0.0;
-  v16 = this->fields.raidhplabel;
-  TextEffectColor.fields.b = 0.0;
-  if ( v14 )
+  UIWidget__set_color(raidhplabel, *(UnityEngine_Color_o *)&v10, 0);
+  v16 = 0;
+  v17 = 0;
+  v18 = this->fields.raidhplabel;
+  v19 = 0;
+  if ( v15 )
   {
-    TextEffectColor.fields.a = 0.0;
-    TextEffectColor = EventBossStatusUiEntity__GetTextEffectColor(v14, TextEffectColor, 0);
-    if ( !v16 )
+    v20 = 0;
+    *(UnityEngine_Color_o *)&v16 = EventBossStatusUiEntity__GetTextEffectColor(v15, *(UnityEngine_Color_o *)&v16, 0);
+    if ( !v18 )
       goto LABEL_44;
   }
   else
   {
-    v37.fields.a = 1.0;
-    if ( !v16 )
+    v38.fields.a = 1.0;
+    if ( !v18 )
       goto LABEL_44;
   }
-  UILabel__set_effectColor(v16, TextEffectColor, 0);
-  v18 = this->fields.raidhplabel;
-  if ( v14 )
+  UILabel__set_effectColor(v18, *(UnityEngine_Color_o *)&v16, 0);
+  v21 = this->fields.raidhplabel;
+  if ( v15 )
   {
     if ( !byte_596F578 )
     {
@@ -230,10 +240,10 @@ void BattleServantRaidParamComponent__setData(
       byte_596F578 = 1;
     }
     TextEffectDistance = EventBossStatusUiEntity__GetTextEffectDistance(
-                           v14,
+                           v15,
                            UnityEngine_Vector2_TypeInfo->static_fields->oneVector,
                            0);
-    if ( !v18 )
+    if ( !v21 )
       goto LABEL_44;
     goto LABEL_26;
   }
@@ -243,14 +253,14 @@ void BattleServantRaidParamComponent__setData(
     byte_596F578 = 1;
   }
   TextEffectDistance = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
-  if ( !v18 )
+  if ( !v21 )
 LABEL_44:
     sub_2213CDC(Master_object, v8);
 LABEL_26:
-  UILabel__set_effectDistance(v18, TextEffectDistance, 0);
-  if ( v14 )
+  UILabel__set_effectDistance(v21, TextEffectDistance, 0);
+  if ( v15 )
   {
-    GaugeId = EventBossStatusUiEntity__GetGaugeId(v14, 0);
+    GaugeId = EventBossStatusUiEntity__GetGaugeId(v15, 0);
     hpBarType = battleServantData->fields.hpBarType;
     if ( GaugeId == -1 )
       v8 = hpBarType;
@@ -268,7 +278,7 @@ LABEL_26:
     goto LABEL_44;
   BattleServantChangeBarComponent__setBarType((BattleServantChangeBarComponent_o *)Master_object, v8, 0, 0);
   if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v21);
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, v25);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)AssetManager__getAssetStorage(
                                                                   (System_String_o *)StringLiteral_3208/*"Battle/Common"*/,
                                                                   0);
@@ -285,14 +295,14 @@ LABEL_26:
                                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
   if ( !this->fields.raidDownNormalSprite )
     goto LABEL_44;
-  v22 = (UIAtlas_o *)Master_object;
+  v26 = (UIAtlas_o *)Master_object;
   UISprite__set_atlas(this->fields.raidDownNormalSprite, (UIAtlas_o *)Master_object, 0);
   raidDownNormalSprite = this->fields.raidDownNormalSprite;
-  v33 = this->fields.hpBarType;
-  v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v33);
+  v37 = this->fields.hpBarType;
+  v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v37);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat(
                                                                   (Il2CppObject *)StringLiteral_24137/*"raid_down_normal_"*/,
-                                                                  v24,
+                                                                  v28,
                                                                   0);
   if ( !raidDownNormalSprite )
     goto LABEL_44;
@@ -300,13 +310,13 @@ LABEL_26:
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.raidDownLastSprite;
   if ( !Master_object )
     goto LABEL_44;
-  UISprite__set_atlas((UISprite_o *)Master_object, v22, 0);
+  UISprite__set_atlas((UISprite_o *)Master_object, v26, 0);
   raidDownLastSprite = this->fields.raidDownLastSprite;
-  v32 = this->fields.hpBarType;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v32);
+  v36 = this->fields.hpBarType;
+  v30 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v36);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat(
                                                                   (Il2CppObject *)StringLiteral_24136/*"raid_down_last_"*/,
-                                                                  v26,
+                                                                  v30,
                                                                   0);
   if ( !raidDownLastSprite )
     goto LABEL_44;
@@ -314,19 +324,19 @@ LABEL_26:
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.raidDownEndSprite;
   if ( !Master_object )
     goto LABEL_44;
-  UISprite__set_atlas((UISprite_o *)Master_object, v22, 0);
+  UISprite__set_atlas((UISprite_o *)Master_object, v26, 0);
   raidDownEndSprite = this->fields.raidDownEndSprite;
-  v31 = this->fields.hpBarType;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v31);
+  v35 = this->fields.hpBarType;
+  v32 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v35);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat(
                                                                   (Il2CppObject *)StringLiteral_24135/*"raid_down_end_"*/,
-                                                                  v28,
+                                                                  v32,
                                                                   0);
   if ( !raidDownEndSprite )
     goto LABEL_44;
   UISprite__set_spriteName(raidDownEndSprite, (System_String_o *)Master_object, 0);
-  BattleServantParamComponent__setData((BattleServantParamComponent_o *)this, battleServantData, stageEntity, v29);
-  BattleServantRaidParamComponent__updateStateString(this, v30);
+  BattleServantParamComponent__setData((BattleServantParamComponent_o *)this, battleServantData, stageEntity, v33);
+  BattleServantRaidParamComponent__updateStateString(this, v34);
 }
 
 

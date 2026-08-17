@@ -169,6 +169,7 @@ bool ServantCombineControl__CheckIncrementLv(ServantCombineControl_o *this, int3
   int32_t v7; // w8
   int32_t totalExp; // w9
   int32_t v9; // w8
+  bool result; // w0
 
   if ( (byte_596A224 & 1) == 0 )
   {
@@ -201,8 +202,9 @@ LABEL_16:
   {
     if ( v7 != totalExp )
     {
+      result = 0;
       ++this->fields.checkLv;
-      return 0;
+      return result;
     }
     v9 = *((_DWORD *)baseData + 5) + 1;
   }
@@ -1874,7 +1876,7 @@ void ServantCombineControl__SetBaseSvtCardImg(
   CombineInfoComponent_o *combineInfoComp; // x0
   __int64 v20; // x2
   UserServantEntity_o *v21; // x8
-  int adjustHp; // w9
+  int32_t adjustHp; // w9
   int32_t v23; // w23
   int32_t v24; // w22
   int32_t v25; // w24
@@ -1883,7 +1885,7 @@ void ServantCombineControl__SetBaseSvtCardImg(
   int32_t v28; // w24
   __int64 v29; // x2
   UserServantEntity_o *v30; // x8
-  int adjustAtk; // w9
+  int32_t adjustAtk; // w9
   int32_t v32; // w23
   int32_t v33; // w22
   int32_t v34; // w24
@@ -1909,7 +1911,7 @@ void ServantCombineControl__SetBaseSvtCardImg(
   bool v54; // w7
   int32_t addParamMaxAdjust2[2]; // [xsp+18h] [xbp-68h] BYREF
   int32_t secondMaxAdjustAtk[2]; // [xsp+20h] [xbp-60h] BYREF
-  __int64 maxAjustAtk; // [xsp+28h] [xbp-58h] BYREF
+  int32_t maxAjustAtk[2]; // [xsp+28h] [xbp-58h] BYREF
 
   if ( (byte_596A21E & 1) == 0 )
   {
@@ -1924,7 +1926,7 @@ void ServantCombineControl__SetBaseSvtCardImg(
   }
   p_baseData = &this->fields.baseData;
   *(_QWORD *)secondMaxAdjustAtk = 0;
-  maxAjustAtk = 0;
+  *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
   this->fields.baseData = usrSvtData;
   sub_2213A04(
@@ -1949,14 +1951,14 @@ void ServantCombineControl__SetBaseSvtCardImg(
   CombineInfoComponent__setCurrentStatusInfo(combineInfoComp, *p_baseData, 0);
   combineInfoComp = (CombineInfoComponent_o *)*p_baseData;
   *(_QWORD *)secondMaxAdjustAtk = 0;
-  maxAjustAtk = 0;
+  *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
   if ( !combineInfoComp )
     goto LABEL_45;
   combineInfoComp = (CombineInfoComponent_o *)UserServantEntity__GetAdjustMax(
                                                 (UserServantEntity_o *)combineInfoComp,
-                                                (int32_t *)&maxAjustAtk + 1,
-                                                (int32_t *)&maxAjustAtk,
+                                                &maxAjustAtk[1],
+                                                maxAjustAtk,
                                                 &secondMaxAdjustAtk[1],
                                                 secondMaxAdjustAtk,
                                                 &addParamMaxAdjust2[1],
@@ -1966,9 +1968,9 @@ void ServantCombineControl__SetBaseSvtCardImg(
   if ( !*p_baseData )
     goto LABEL_45;
   adjustHp = v21->fields.adjustHp;
-  v23 = HIDWORD(maxAjustAtk);
-  v24 = HIDWORD(maxAjustAtk);
-  if ( adjustHp >= SHIDWORD(maxAjustAtk) )
+  v23 = maxAjustAtk[1];
+  v24 = maxAjustAtk[1];
+  if ( adjustHp >= maxAjustAtk[1] )
   {
     v25 = secondMaxAdjustAtk[1];
     if ( adjustHp >= secondMaxAdjustAtk[1] )
@@ -2023,9 +2025,9 @@ LABEL_16:
   if ( !*p_baseData )
     goto LABEL_45;
   adjustAtk = v30->fields.adjustAtk;
-  v32 = maxAjustAtk;
-  v33 = maxAjustAtk;
-  if ( adjustAtk >= (int)maxAjustAtk )
+  v32 = maxAjustAtk[0];
+  v33 = maxAjustAtk[0];
+  if ( adjustAtk >= maxAjustAtk[0] )
   {
     v34 = secondMaxAdjustAtk[0];
     if ( adjustAtk >= secondMaxAdjustAtk[0] )
@@ -2503,10 +2505,10 @@ void ServantCombineControl__SetCombineData(
   struct UserServantEntity_o *v65; // x1
   int32_t increLv; // w9
   struct UserServantEntity_o *v67; // x8
-  int v68; // w9
+  int32_t v68; // w9
   int32_t v69; // s0
   int32_t getHpAdjustVal; // w10
-  int v71; // w8
+  int32_t v71; // w8
   int32_t getAtkAdjustVal; // w9
   __int64 v73; // x2
   int32_t adjustHp; // w22
@@ -2515,7 +2517,7 @@ void ServantCombineControl__SetCombineData(
   int v77; // w25
   int32_t StatusUpAdjustHp; // w8
   int v79; // w23
-  int v80; // w22
+  int32_t v80; // w22
   int32_t v81; // w22
   int32_t v82; // w22
   int32_t v83; // w23
@@ -2528,7 +2530,7 @@ void ServantCombineControl__SetCombineData(
   int32_t v90; // w26
   int v91; // w9
   int v92; // w23
-  int v93; // w20
+  int32_t v93; // w20
   int32_t StatusUpAdjustAtk; // w8
   int v95; // w21
   int v96; // w9
@@ -2536,26 +2538,29 @@ void ServantCombineControl__SetCombineData(
   int32_t v98; // w20
   int32_t v99; // w21
   int32_t v100; // w1
-  char v102; // w20
-  int32_t v103; // w20
-  int v104; // w9
-  const MethodInfo *v105; // x1
+  float v101; // s1
+  float v102; // s0 OVERLAPPED
+  char v103; // w20
+  int32_t v104; // w20
+  int v105; // w9
+  float v106; // s2
+  float v107; // s3
+  const MethodInfo *v108; // x1
   int32_t increAmount; // [xsp+18h] [xbp-98h] BYREF
-  int32_t v107; // [xsp+1Ch] [xbp-94h] BYREF
-  __int64 v108; // [xsp+20h] [xbp-90h] BYREF
+  int32_t v110; // [xsp+1Ch] [xbp-94h] BYREF
+  __int64 v111; // [xsp+20h] [xbp-90h] BYREF
   int32_t addParamMaxAdjust2[2]; // [xsp+28h] [xbp-88h] BYREF
   int32_t secondMaxAdjustAtk[2]; // [xsp+30h] [xbp-80h] BYREF
-  __int64 maxAjustAtk; // [xsp+38h] [xbp-78h] BYREF
+  int32_t maxAjustAtk[2]; // [xsp+38h] [xbp-78h] BYREF
   int32_t lateExp[2]; // [xsp+40h] [xbp-70h] BYREF
   System_String_array *skillNameList; // [xsp+48h] [xbp-68h] BYREF
   System_Int32_array *idList; // [xsp+50h] [xbp-60h] BYREF
-  __int64 afterAtk; // [xsp+58h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v116; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v117; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v118; // 0:x0.16
-  UnityEngine_Color_o v119; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v120; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v121; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t afterAtk[2]; // [xsp+58h] [xbp-58h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v119; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v120; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v121; // 0:x0.16
+  UnityEngine_Color_o v122; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v123; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v9 = data;
   v10 = this;
@@ -2575,14 +2580,14 @@ void ServantCombineControl__SetCombineData(
     byte_596A222 = 1;
   }
   idList = 0;
-  afterAtk = 0;
+  *(_QWORD *)afterAtk = 0;
   *(_QWORD *)lateExp = 0;
   skillNameList = 0;
   *(_QWORD *)secondMaxAdjustAtk = 0;
-  maxAjustAtk = 0;
-  v108 = 0;
+  *(_QWORD *)maxAjustAtk = 0;
+  v111 = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
-  v107 = 0;
+  v110 = 0;
   if ( isUpdateMaterialGrid )
     ServantCombineControl__DestroyGrid(v10, (const MethodInfo *)data);
   if ( !v9 )
@@ -2619,9 +2624,9 @@ void ServantCombineControl__SetCombineData(
   v25 = *(_QWORD *)&baseData->fields.limitCount.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, data, v22);
-  *(_QWORD *)&v116.fields.currentCryptoKey = v24;
-  *(_QWORD *)&v116.fields.fakeValue = v25;
-  v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v116, 0);
+  *(_QWORD *)&v119.fields.currentCryptoKey = v24;
+  *(_QWORD *)&v119.fields.fakeValue = v25;
+  v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v119, 0);
   if ( v19 )
   {
     v27 = v26;
@@ -2634,9 +2639,9 @@ void ServantCombineControl__SetCombineData(
     spendQp = v9->fields.spendQp;
     qpLb = v10->fields.qpLb;
     v10->fields._spendQpVal_k__BackingField = spendQp;
-    v107 = spendQp;
+    v110 = spendQp;
     this = (ServantCombineControl_o *)System_Int32__ToString_77138656(
-                                        (int32_t)&v107,
+                                        (int32_t)&v110,
                                         (System_String_o *)StringLiteral_9617/*"N0"*/,
                                         0);
     if ( !qpLb )
@@ -2645,8 +2650,8 @@ void ServantCombineControl__SetCombineData(
     getExp = v9->fields.getExp;
     expLb = v10->fields.expLb;
     v10->fields._getExpVal_k__BackingField = getExp;
-    v107 = getExp;
-    this = (ServantCombineControl_o *)System_Int32__ToString((int32_t)&v107, 0);
+    v110 = getExp;
+    this = (ServantCombineControl_o *)System_Int32__ToString((int32_t)&v110, 0);
     if ( !expLb )
       goto LABEL_113;
     UILabel__set_text(expLb, (System_String_o *)this, 0);
@@ -2664,9 +2669,9 @@ void ServantCombineControl__SetCombineData(
     v37 = *(_QWORD *)&v34->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, data, v33);
-    *(_QWORD *)&v117.fields.currentCryptoKey = v36;
-    *(_QWORD *)&v117.fields.fakeValue = v37;
-    this = (ServantCombineControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v117, 0);
+    *(_QWORD *)&v120.fields.currentCryptoKey = v36;
+    *(_QWORD *)&v120.fields.fakeValue = v37;
+    this = (ServantCombineControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v120, 0);
     if ( !v35 )
       goto LABEL_113;
     this = (ServantCombineControl_o *)DataMasterBase_object__object__int___GetEntity(
@@ -2742,15 +2747,15 @@ void ServantCombineControl__SetCombineData(
       goto LABEL_113;
     CheckCombineResStatus__getCombineResStatus(
       (CheckCombineResStatus_o *)this,
-      (int32_t *)&afterAtk + 1,
-      (int32_t *)&afterAtk,
+      &afterAtk[1],
+      afterAtk,
       *p_baseData,
       *p_increLv,
       0);
     this = (ServantCombineControl_o *)*p_baseData;
-    v52 = v9->fields.getHpAdjustVal + HIDWORD(afterAtk);
-    LODWORD(afterAtk) = v9->fields.getAtkAdjustVal + afterAtk;
-    HIDWORD(afterAtk) = v52;
+    v52 = v9->fields.getHpAdjustVal + afterAtk[1];
+    afterAtk[0] += v9->fields.getAtkAdjustVal;
+    afterAtk[1] = v52;
     if ( !this )
       goto LABEL_113;
     UserServantEntity__getNextUseSkillInfo((UserServantEntity_o *)this, &idList, &skillNameList, *p_increLv, v27, 1, 0);
@@ -2774,9 +2779,9 @@ void ServantCombineControl__SetCombineData(
     v56 = *(_QWORD *)&v54->fields.limitCount.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, data, v53);
-    *(_QWORD *)&v118.fields.currentCryptoKey = v55;
-    *(_QWORD *)&v118.fields.fakeValue = v56;
-    v57 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v118, 0);
+    *(_QWORD *)&v121.fields.currentCryptoKey = v55;
+    *(_QWORD *)&v121.fields.fakeValue = v56;
+    v57 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v121, 0);
     v58 = sub_2213CCC(CombineSvtData_TypeInfo);
     CombineSvtData___ctor((CombineSvtData_o *)v58, 0);
     if ( !v58 )
@@ -2803,13 +2808,13 @@ void ServantCombineControl__SetCombineData(
       LevelMax,
       v10->fields.expType,
       0);
-    v68 = HIDWORD(afterAtk);
+    v68 = afterAtk[1];
     v69 = lateExp[1];
     getHpAdjustVal = v9->fields.getHpAdjustVal;
     this = (ServantCombineControl_o *)v10->fields.combineInfoComp;
     *(_DWORD *)(v58 + 40) = lateExp[0];
     *(_DWORD *)(v58 + 44) = v68;
-    v71 = afterAtk;
+    v71 = afterAtk[0];
     getAtkAdjustVal = v9->fields.getAtkAdjustVal;
     *(_DWORD *)(v58 + 36) = v69;
     *(_DWORD *)(v58 + 48) = getHpAdjustVal;
@@ -2820,14 +2825,14 @@ void ServantCombineControl__SetCombineData(
     CombineInfoComponent__setCombineResStatusInfo((CombineInfoComponent_o *)this, (CombineSvtData_o *)v58, 0);
     this = (ServantCombineControl_o *)*p_baseData;
     *(_QWORD *)secondMaxAdjustAtk = 0;
-    maxAjustAtk = 0;
+    *(_QWORD *)maxAjustAtk = 0;
     *(_QWORD *)addParamMaxAdjust2 = 0;
     if ( !this )
       goto LABEL_113;
     UserServantEntity__GetAdjustMax(
       (UserServantEntity_o *)this,
-      (int32_t *)&maxAjustAtk + 1,
-      (int32_t *)&maxAjustAtk,
+      &maxAjustAtk[1],
+      maxAjustAtk,
       &secondMaxAdjustAtk[1],
       secondMaxAdjustAtk,
       &addParamMaxAdjust2[1],
@@ -2845,11 +2850,11 @@ void ServantCombineControl__SetCombineData(
                                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     if ( !this )
       goto LABEL_113;
-    v119.fields.r = 1.0;
-    v119.fields.g = 1.0;
-    v119.fields.b = 1.0;
-    v119.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)this, v119, 0);
+    v122.fields.r = 1.0;
+    v122.fields.g = 1.0;
+    v122.fields.b = 1.0;
+    v122.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)this, v122, 0);
     this = (ServantCombineControl_o *)v10->fields.resAdjustAtkIconLabel;
     if ( !this )
       goto LABEL_113;
@@ -2858,11 +2863,11 @@ void ServantCombineControl__SetCombineData(
                                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
     if ( !this )
       goto LABEL_113;
-    v120.fields.r = 1.0;
-    v120.fields.g = 1.0;
-    v120.fields.b = 1.0;
-    v120.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)this, v120, 0);
+    v123.fields.r = 1.0;
+    v123.fields.g = 1.0;
+    v123.fields.b = 1.0;
+    v123.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)this, v123, 0);
     if ( !*p_baseData )
       goto LABEL_113;
     adjustHp = (*p_baseData)->fields.adjustHp;
@@ -2877,8 +2882,8 @@ void ServantCombineControl__SetCombineData(
     v77 = v9->fields.getHpAdjustVal;
     StatusUpAdjustHp = v75->static_fields->StatusUpAdjustHp;
     v79 = StatusUpAdjustHp * adjustHp;
-    v80 = HIDWORD(maxAjustAtk);
-    HIDWORD(v108) = v79;
+    v80 = maxAjustAtk[1];
+    HIDWORD(v111) = v79;
     if ( !v76 )
     {
       j_il2cpp_runtime_class_init_0(v75, data, v73);
@@ -2887,12 +2892,12 @@ void ServantCombineControl__SetCombineData(
     }
     if ( v79 < StatusUpAdjustHp * v80 )
     {
-      v81 = HIDWORD(maxAjustAtk);
+      v81 = maxAjustAtk[1];
       if ( *(&v75->_2.cctor_finished + 1) )
         goto LABEL_67;
       goto LABEL_66;
     }
-    v89 = HIDWORD(v108);
+    v89 = HIDWORD(v111);
     v90 = secondMaxAdjustAtk[1];
     if ( !*(&v75->_2.cctor_finished + 1) )
     {
@@ -2924,7 +2929,7 @@ LABEL_67:
       goto LABEL_113;
     v83 = (v77 & ~(v77 >> 31)) + v79;
     UIIconLabel__Set_48071660((UIIconLabel_o *)this, 44, v83, v82, 0, 0, 0, 0, 0, 0, 0);
-    if ( !System_Int32__Equals_77138484((int32_t)&v108 + 4, v83, 0) )
+    if ( !System_Int32__Equals_77138484((int32_t)&v111 + 4, v83, 0) )
     {
       this = (ServantCombineControl_o *)v10->fields.resAdjustHpIconLabel;
       if ( !this )
@@ -2954,10 +2959,10 @@ LABEL_67:
       v88 = *(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) == 0;
     }
     v92 = v9->fields.getAtkAdjustVal;
-    v93 = maxAjustAtk;
+    v93 = maxAjustAtk[0];
     StatusUpAdjustAtk = v86->static_fields->StatusUpAdjustAtk;
     v95 = StatusUpAdjustAtk * adjustAtk;
-    LODWORD(v108) = v95;
+    LODWORD(v111) = v95;
     if ( v88 )
     {
       j_il2cpp_runtime_class_init_0(v86, data, v85);
@@ -2967,30 +2972,30 @@ LABEL_67:
     v96 = *(&v86->_2.cctor_finished + 1);
     if ( v95 >= StatusUpAdjustAtk * v93 )
     {
-      v103 = secondMaxAdjustAtk[0];
+      v104 = secondMaxAdjustAtk[0];
       if ( !v96 )
       {
         j_il2cpp_runtime_class_init_0(v86, data, v85);
         v86 = BalanceConfig_TypeInfo;
         StatusUpAdjustAtk = BalanceConfig_TypeInfo->static_fields->StatusUpAdjustAtk;
       }
-      v104 = *(&v86->_2.cctor_finished + 1);
-      if ( v95 >= StatusUpAdjustAtk * v103 )
+      v105 = *(&v86->_2.cctor_finished + 1);
+      if ( v95 >= StatusUpAdjustAtk * v104 )
       {
         v97 = addParamMaxAdjust2[0];
-        if ( v104 )
+        if ( v105 )
           goto LABEL_89;
       }
       else
       {
         v97 = secondMaxAdjustAtk[0];
-        if ( v104 )
+        if ( v105 )
           goto LABEL_89;
       }
     }
     else
     {
-      v97 = maxAjustAtk;
+      v97 = maxAjustAtk[0];
       if ( v96 )
       {
 LABEL_89:
@@ -3000,7 +3005,7 @@ LABEL_89:
           goto LABEL_113;
         v99 = (v92 & ~(v92 >> 31)) + v95;
         UIIconLabel__Set_48071660((UIIconLabel_o *)this, 45, v99, v98, 0, 0, 0, 0, 0, 0, 0);
-        if ( !System_Int32__Equals_77138484((int32_t)&v108, v99, 0) )
+        if ( !System_Int32__Equals_77138484((int32_t)&v111, v99, 0) )
         {
           this = (ServantCombineControl_o *)v10->fields.resAdjustAtkIconLabel;
           if ( !this )
@@ -3020,23 +3025,23 @@ LABEL_89:
           {
             if ( this )
             {
-              v121.fields.r = 1.0;
-              v121.fields.g = 1.0;
-              v102 = 1;
+              v102 = 1.0;
+              v101 = 1.0;
+              v103 = 1;
               goto LABEL_107;
             }
           }
           else if ( this )
           {
-            v121.fields.g = 0.0;
-            v121.fields.r = 1.0;
-            v102 = 0;
+            v101 = 0.0;
+            v102 = 1.0;
+            v103 = 0;
 LABEL_107:
-            v121.fields.b = v121.fields.g;
-            v121.fields.a = v121.fields.r;
-            UIWidget__set_color((UIWidget_o *)this, v121, 0);
-            v10->fields._IsExeCombine_k__BackingField = v102;
-            ServantCombineControl__SetExeBtnState(v10, v105);
+            v106 = v101;
+            v107 = v102;
+            UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)&v102, 0);
+            v10->fields._IsExeCombine_k__BackingField = v103;
+            ServantCombineControl__SetExeBtnState(v10, v108);
             return;
           }
         }
@@ -3159,7 +3164,7 @@ SetCombineData_o *ServantCombineControl__SetCombineData_37686956(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v107; // [xsp+40h] [xbp-D0h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v108; // [xsp+60h] [xbp-B0h]
   int32_t addParamMaxAdjust2[2]; // [xsp+80h] [xbp-90h] BYREF
-  __int64 secondMaxAdjustAtk; // [xsp+88h] [xbp-88h] BYREF
+  int32_t secondMaxAdjustAtk[2]; // [xsp+88h] [xbp-88h] BYREF
   int32_t maxAjustAtk[2]; // [xsp+98h] [xbp-78h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v112; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v113; // 0:x0.16
@@ -3191,7 +3196,7 @@ SetCombineData_o *ServantCombineControl__SetCombineData_37686956(
   }
   *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
-  secondMaxAdjustAtk = 0;
+  *(_QWORD *)secondMaxAdjustAtk = 0;
   v5 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
@@ -3479,8 +3484,8 @@ LABEL_103:
                (UserServantEntity_o *)Instance,
                &maxAjustAtk[1],
                maxAjustAtk,
-               (int32_t *)&secondMaxAdjustAtk + 1,
-               (int32_t *)&secondMaxAdjustAtk,
+               &secondMaxAdjustAtk[1],
+               secondMaxAdjustAtk,
                &addParamMaxAdjust2[1],
                addParamMaxAdjust2,
                0);
@@ -3489,7 +3494,7 @@ LABEL_103:
     v81 = this->fields.baseData;
     if ( !v81 )
       goto LABEL_103;
-    v82 = v81->fields.adjustHp >= SHIDWORD(secondMaxAdjustAtk) && v81->fields.adjustAtk >= (int)secondMaxAdjustAtk;
+    v82 = v81->fields.adjustHp >= secondMaxAdjustAtk[1] && v81->fields.adjustAtk >= secondMaxAdjustAtk[0];
     *(_BYTE *)(v70 + 45) = v82;
   }
   v83 = (System_Collections_Generic_List_long__o *)sub_2213CCC(System_Collections_Generic_List_long__TypeInfo);

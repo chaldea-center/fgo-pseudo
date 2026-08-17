@@ -114,8 +114,10 @@ bool EventNoticeControl__GetIsNeedToInfoUpdate(
         bool isNeedToUpdate,
         const MethodInfo *method)
 {
+  bool result; // w0
   int32_t size; // w22
   int32_t v10; // w21
+  EventNoticeControl_o *v11; // x8
 
   if ( (byte_5974AE4 & 1) == 0 )
   {
@@ -140,6 +142,7 @@ LABEL_15:
                                      (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
     if ( !this )
       goto LABEL_15;
+    v11 = this;
     if ( !BYTE1(this->fields.eventRemainLabel) )
       break;
 LABEL_12:
@@ -152,8 +155,9 @@ LABEL_12:
       return 1;
     goto LABEL_12;
   }
-  BYTE1(this->fields.eventRemainLabel) = 1;
-  return 1;
+  result = 1;
+  BYTE1(v11->fields.eventRemainLabel) = 1;
+  return result;
 }
 
 

@@ -930,14 +930,14 @@ void SupportSelectListViewObject__UpdateAlphaMask(SupportSelectListViewObject_o 
   __int64 v11; // x1
   void *transform; // x0
   float v13; // s8
-  struct ListViewItemSeed_o *v14; // x8
-  float v15; // s0
-  float v16; // s1
-  float v17; // s8
+  float v14; // s0
+  struct ListViewItemSeed_o *v15; // x8
+  float v16; // s0
+  float v17; // s1
+  float v18; // s8
   float maxAlphaRate; // s9
-  float v19; // s8
-  const MethodInfo *v20; // x2
-  float v21; // s0
+  float v20; // s8
+  const MethodInfo *v21; // x2
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596CC8A & 1) == 0 )
@@ -972,29 +972,29 @@ void SupportSelectListViewObject__UpdateAlphaMask(SupportSelectListViewObject_o 
           transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
           if ( !transform )
             goto LABEL_31;
-          LODWORD(v21) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
-          v14 = this->fields.itemSeed;
-          if ( !v14 )
+          LODWORD(v14) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+          v15 = this->fields.itemSeed;
+          if ( !v15 )
             goto LABEL_31;
           transform = this->fields.maskSprite;
-          v15 = fabsf(v13 + v21) / v14->fields.arrangementPich.fields.x;
-          v16 = 1.0;
-          if ( v15 <= 1.0 )
-            v16 = v15;
-          v17 = v15 >= 0.0 ? v16 : 0.0;
+          v16 = fabsf(v13 + v14) / v15->fields.arrangementPich.fields.x;
+          v17 = 1.0;
+          if ( v16 <= 1.0 )
+            v17 = v16;
+          v18 = v16 >= 0.0 ? v17 : 0.0;
           if ( !transform )
             goto LABEL_31;
           maxAlphaRate = this->fields.maxAlphaRate;
           transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0);
           if ( !transform )
             goto LABEL_31;
-          v19 = maxAlphaRate * v17;
-          if ( v19 > 0.05 != UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)transform, 0) )
-            SupportSelectListViewObject__UpdateCollider(this, v19 <= 0.05, v20);
+          v20 = maxAlphaRate * v18;
+          if ( v20 > 0.05 != UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)transform, 0) )
+            SupportSelectListViewObject__UpdateCollider(this, v20 <= 0.05, v21);
           transform = this->fields.maskSprite;
           if ( !transform
             || (transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0)) == 0
-            || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, v19 > 0.05, 0),
+            || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, v20 > 0.05, 0),
                 (transform = this->fields.maskSprite) == 0) )
           {
 LABEL_31:
@@ -1002,7 +1002,7 @@ LABEL_31:
           }
           v22.fields.r = *((float *)transform + 37);
           v22.fields.g = *((float *)transform + 38);
-          v22.fields.a = v19;
+          v22.fields.a = v20;
           v22.fields.b = *((float *)transform + 39);
           UIWidget__set_color((UIWidget_o *)transform, v22, 0);
         }

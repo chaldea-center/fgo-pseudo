@@ -48,6 +48,10 @@ UnityEngine_Rect_o MapCamera__GetWorldRect(MapCamera_o *this, UnityEngine_Vector
   float y; // s8
   float x; // s9
   float ZoomSize; // s0
+  float v8; // s2
+  float v9; // s3
+  float v10; // s0
+  float v11; // s1
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   mZoom = this->fields.mZoom;
@@ -56,10 +60,14 @@ UnityEngine_Rect_o MapCamera__GetWorldRect(MapCamera_o *this, UnityEngine_Vector
   y = cam_pos.fields.y;
   x = cam_pos.fields.x;
   ZoomSize = MapZoom__GetZoomSize(mZoom, 0);
-  result.fields.m_Width = ZoomSize * this->fields._windowSize_k__BackingField.fields.x;
-  result.fields.m_Height = ZoomSize * this->fields._windowSize_k__BackingField.fields.y;
-  result.fields.m_XMin = x - (float)(result.fields.m_Width * 0.5);
-  result.fields.m_YMin = y - (float)(result.fields.m_Height * 0.5);
+  v8 = ZoomSize * this->fields._windowSize_k__BackingField.fields.x;
+  v9 = ZoomSize * this->fields._windowSize_k__BackingField.fields.y;
+  v10 = x - (float)(v8 * 0.5);
+  v11 = y - (float)(v9 * 0.5);
+  result.fields.m_Height = v9;
+  result.fields.m_Width = v8;
+  result.fields.m_YMin = v11;
+  result.fields.m_XMin = v10;
   return result;
 }
 
@@ -70,12 +78,20 @@ UnityEngine_Rect_o MapCamera__GetWorldRect_42932176(
         float scale,
         const MethodInfo *method)
 {
+  float v4; // s2
+  float v5; // s3
+  float v6; // s0
+  float v7; // s1
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_Width = this->fields._windowSize_k__BackingField.fields.x * scale;
-  result.fields.m_Height = this->fields._windowSize_k__BackingField.fields.y * scale;
-  result.fields.m_XMin = cam_pos.fields.x - (float)(result.fields.m_Width * 0.5);
-  result.fields.m_YMin = cam_pos.fields.y - (float)(result.fields.m_Height * 0.5);
+  v4 = this->fields._windowSize_k__BackingField.fields.x * scale;
+  v5 = this->fields._windowSize_k__BackingField.fields.y * scale;
+  v6 = cam_pos.fields.x - (float)(v4 * 0.5);
+  v7 = cam_pos.fields.y - (float)(v5 * 0.5);
+  result.fields.m_Height = v5;
+  result.fields.m_Width = v4;
+  result.fields.m_YMin = v7;
+  result.fields.m_XMin = v6;
   return result;
 }
 
@@ -186,6 +202,7 @@ bool MapCamera__IsMatchPosAndZoomSize(
   MapScroll_o *mZoom; // x0
   float y; // s8
   float x; // s9
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
 
   mZoom = (MapScroll_o *)this->fields.mZoom;
   if ( !mZoom )
@@ -201,7 +218,10 @@ bool MapCamera__IsMatchPosAndZoomSize(
     {
       mZoom = this->fields.mScrl;
       if ( mZoom )
-        return (float)(COERCE_FLOAT(LODWORD(MapScroll__GetScrlPosVec3(mZoom, 0).fields.y)) - y) == 0.0;
+      {
+        ScrlPosVec3 = MapScroll__GetScrlPosVec3(mZoom, 0);
+        return (float)(ScrlPosVec3.fields.y - y) == 0.0;
+      }
 LABEL_8:
       sub_2213CDC(mZoom, method);
     }
@@ -562,10 +582,11 @@ void MapCamera__StartAutoMove(
   float z; // s9
   float y; // s10
   float x; // s11
-  const MethodInfo *v13; // x6
-  System_Nullable_Vector3__o v14; // [xsp+0h] [xbp-60h] BYREF
-  System_Nullable_Vector3__o v15; // 0:x0.16
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  System_Nullable_float__o v13; // x3
+  const MethodInfo *v14; // x6
+  System_Nullable_Vector3__o v15; // [xsp+0h] [xbp-60h] BYREF
+  System_Nullable_Vector3__o v16; // 0:x0.16
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   z = screenPos.fields.z;
   y = screenPos.fields.y;
@@ -575,15 +596,16 @@ void MapCamera__StartAutoMove(
     sub_2213A60(&Method_System_Nullable_Vector3___ctor__);
     byte_596D0A5 = 1;
   }
-  v16.fields.x = x;
-  v16.fields.y = y;
-  *(_QWORD *)&v15.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-  v16.fields.z = z;
-  *(_QWORD *)&v15.fields.hasValue = &v14;
-  *(_QWORD *)&v14.fields.hasValue = 0;
-  *(_QWORD *)&v14.fields.value.fields.y = 0;
-  System_Nullable_Vector3____ctor(v15, v16, (const MethodInfo_45E9150 *)endAct);
-  MapCamera__StartAutoWork(this, sec, v14, 0, easeType, endAct, v13);
+  v17.fields.x = x;
+  v17.fields.y = y;
+  *(_QWORD *)&v16.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+  v17.fields.z = z;
+  *(_QWORD *)&v16.fields.hasValue = &v15;
+  *(_QWORD *)&v15.fields.hasValue = 0;
+  *(_QWORD *)&v15.fields.value.fields.y = 0;
+  System_Nullable_Vector3____ctor(v16, v17, (const MethodInfo_45E9150 *)endAct);
+  v13 = 0;
+  MapCamera__StartAutoWork(this, sec, v15, v13, easeType, endAct, v14);
 }
 
 
@@ -598,12 +620,13 @@ void MapCamera__StartAutoWork(
 {
   __int64 v11; // x23
   __int64 v12; // x24
+  System_Nullable_float__o v14; // x3
   MapZoom_o *SafeCameraDestination; // x0
-  __int64 v15; // x1
-  __int64 v16; // x2
-  MapCamera_c *v17; // x8
-  MapZoom_o *v18; // x22
-  System_Nullable_Vector3__o v19; // 0:x1.16
+  __int64 v16; // x1
+  __int64 v17; // x2
+  MapCamera_c *v18; // x8
+  MapZoom_o *v19; // x22
+  System_Nullable_Vector3__o v20; // 0:x1.16
 
   v11 = *(_QWORD *)&screenPos.fields.value.fields.y;
   v12 = *(_QWORD *)&screenPos.fields.hasValue;
@@ -618,35 +641,36 @@ void MapCamera__StartAutoWork(
       MapCameraViewAdjusterUtil_TypeInfo,
       *(_QWORD *)&screenPos.fields.hasValue,
       *(_QWORD *)&screenPos.fields.value.fields.y);
-  *(_QWORD *)&v19.fields.hasValue = v12;
-  *(_QWORD *)&v19.fields.value.fields.y = v11;
-  SafeCameraDestination = (MapZoom_o *)MapCameraViewAdjusterUtil__GetSafeCameraDestination(this, v19, size, 0);
-  v17 = MapCamera_TypeInfo;
-  v18 = SafeCameraDestination;
+  *(_QWORD *)&v20.fields.hasValue = v12;
+  *(_QWORD *)&v20.fields.value.fields.y = v11;
+  v14 = size;
+  SafeCameraDestination = (MapZoom_o *)MapCameraViewAdjusterUtil__GetSafeCameraDestination(this, v20, v14, 0);
+  v18 = MapCamera_TypeInfo;
+  v19 = SafeCameraDestination;
   if ( !*(&MapCamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MapCamera_TypeInfo, v15, v16);
-    v17 = MapCamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MapCamera_TypeInfo, v16, v17);
+    v18 = MapCamera_TypeInfo;
   }
-  if ( v17->static_fields->AUTO_WORK_DURATION_MIN >= sec )
+  if ( v18->static_fields->AUTO_WORK_DURATION_MIN >= sec )
   {
-    sec = v17->static_fields->AUTO_WORK_DURATION_MIN;
-    if ( !*(&v17->_2.cctor_finished + 1) )
+    sec = v18->static_fields->AUTO_WORK_DURATION_MIN;
+    if ( !*(&v18->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v17, v15, v16);
+      j_il2cpp_runtime_class_init_0(v18, v16, v17);
       sec = MapCamera_TypeInfo->static_fields->AUTO_WORK_DURATION_MIN;
     }
   }
-  if ( !v18
+  if ( !v19
     || (SafeCameraDestination = this->fields.mZoom) == 0
-    || (MapZoom__StartAutoZoom(SafeCameraDestination, *(&v18->fields.mZoomMargin + 1), sec, easeType, 0, 0),
+    || (MapZoom__StartAutoZoom(SafeCameraDestination, *(&v19->fields.mZoomMargin + 1), sec, easeType, 0, 0),
         (SafeCameraDestination = (MapZoom_o *)this->fields.mScrl) == 0) )
   {
-    sub_2213CDC(SafeCameraDestination, v15);
+    sub_2213CDC(SafeCameraDestination, v16);
   }
   MapScroll__StartAutoMove(
     (MapScroll_o *)SafeCameraDestination,
-    *(UnityEngine_Vector3_o *)&v18->fields.mZoomMax,
+    *(UnityEngine_Vector3_o *)&v19->fields.mZoomMax,
     sec,
     easeType,
     endAct,
@@ -662,23 +686,24 @@ void MapCamera__StartAutoZoom(
         System_Action_o *endAct,
         const MethodInfo *method)
 {
-  const MethodInfo *v11; // x6
+  System_Nullable_float__o p_sizea; // x0
+  System_Nullable_float__o v12; // x3
+  const MethodInfo *v13; // x6
   System_Nullable_float__o sizea; // [xsp+8h] [xbp-48h] BYREF
-  System_Nullable_Vector3__o v13; // 0:x1.16
+  System_Nullable_Vector3__o v15; // 0:x1.16
 
   if ( (byte_596D0A6 & 1) == 0 )
   {
     sub_2213A60(&Method_System_Nullable_float___ctor__);
     byte_596D0A6 = 1;
   }
+  p_sizea = (System_Nullable_float__o)&sizea;
   sizea = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&sizea,
-    size,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-  *(_QWORD *)&v13.fields.hasValue = 0;
-  *(_QWORD *)&v13.fields.value.fields.y = 0;
-  MapCamera__StartAutoWork(this, sec, v13, sizea, easeType, endAct, v11);
+  System_Nullable_float____ctor(p_sizea, size, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  v12 = sizea;
+  *(_QWORD *)&v15.fields.hasValue = 0;
+  *(_QWORD *)&v15.fields.value.fields.y = 0;
+  MapCamera__StartAutoWork(this, sec, v15, v12, easeType, endAct, v13);
 }
 
 
@@ -734,13 +759,21 @@ void MapCamera__UnInit(MapCamera_o *this, const MethodInfo *method)
 
 UnityEngine_Rect_o MapCamera__get_CameraRect(MapCamera_o *this, const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   MapCamera__CalcWorldRect(this, method);
-  result.fields.m_XMin = this->fields.mCameraRect.fields.m_XMin;
-  result.fields.m_YMin = this->fields.mCameraRect.fields.m_YMin;
-  result.fields.m_Width = this->fields.mCameraRect.fields.m_Width;
-  result.fields.m_Height = this->fields.mCameraRect.fields.m_Height;
+  m_XMin = this->fields.mCameraRect.fields.m_XMin;
+  m_YMin = this->fields.mCameraRect.fields.m_YMin;
+  m_Width = this->fields.mCameraRect.fields.m_Width;
+  m_Height = this->fields.mCameraRect.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = m_YMin;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
@@ -771,24 +804,40 @@ float MapCamera__get_MapBgRateW(MapCamera_o *this, const MethodInfo *method)
 
 UnityEngine_Rect_o MapCamera__get_MvBrakeRect(MapCamera_o *this, const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.mMvBrakeRect.fields.m_XMin;
-  result.fields.m_YMin = this->fields.mMvBrakeRect.fields.m_YMin;
-  result.fields.m_Width = this->fields.mMvBrakeRect.fields.m_Width;
-  result.fields.m_Height = this->fields.mMvBrakeRect.fields.m_Height;
+  m_XMin = this->fields.mMvBrakeRect.fields.m_XMin;
+  m_YMin = this->fields.mMvBrakeRect.fields.m_YMin;
+  m_Width = this->fields.mMvBrakeRect.fields.m_Width;
+  m_Height = this->fields.mMvBrakeRect.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = m_YMin;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
 
 UnityEngine_Rect_o MapCamera__get_MvLimitRect(MapCamera_o *this, const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.mMvLimitRect.fields.m_XMin;
-  result.fields.m_YMin = this->fields.mMvLimitRect.fields.m_YMin;
-  result.fields.m_Width = this->fields.mMvLimitRect.fields.m_Width;
-  result.fields.m_Height = this->fields.mMvLimitRect.fields.m_Height;
+  m_XMin = this->fields.mMvLimitRect.fields.m_XMin;
+  m_YMin = this->fields.mMvLimitRect.fields.m_YMin;
+  m_Width = this->fields.mMvLimitRect.fields.m_Width;
+  m_Height = this->fields.mMvLimitRect.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = m_YMin;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
@@ -807,10 +856,14 @@ MapZoom_o *MapCamera__get_Zoom(MapCamera_o *this, const MethodInfo *method)
 
 UnityEngine_Vector2_o MapCamera__get_windowSize(MapCamera_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields._windowSize_k__BackingField.fields.x;
-  result.fields.y = this->fields._windowSize_k__BackingField.fields.y;
+  x = this->fields._windowSize_k__BackingField.fields.x;
+  y = this->fields._windowSize_k__BackingField.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

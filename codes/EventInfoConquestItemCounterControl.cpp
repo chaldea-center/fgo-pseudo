@@ -704,6 +704,7 @@ bool EventInfoConquestItemCounterControl__playAnim_d__9__MoveNext(
   bool v17; // cc
   int32_t v18; // w10
   EventInfoConquestItemCounterComponent_o *v19; // x12
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
 
   _1__state = this->fields.__1__state;
@@ -785,8 +786,9 @@ LABEL_25:
   v10->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v10->fields.__2__current;
   sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

@@ -119,6 +119,7 @@ System_String_o *AccountDeletePasswordDialog__GetPasswordText(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector2_o AccountDeletePasswordDialog__GetScreenPosition(
         AccountDeletePasswordDialog_o *this,
         UnityEngine_Vector3_o pos,
@@ -131,11 +132,12 @@ UnityEngine_Vector2_o AccountDeletePasswordDialog__GetScreenPosition(
   __int64 v7; // x2
   UnityEngine_Object_o *main; // x19
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
+  float v10; // s0 OVERLAPPED
+  float v11; // s1
   UnityEngine_Camera_o *v12; // x0
   __int64 v13; // x1
-  unsigned __int64 v14; // kr00_8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
   z = pos.fields.z;
   y = pos.fields.y;
@@ -156,21 +158,21 @@ UnityEngine_Vector2_o AccountDeletePasswordDialog__GetScreenPosition(
       byte_59699C0 = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
+    v10 = static_fields->zeroVector.fields.x;
+    v11 = static_fields->zeroVector.fields.y;
   }
   else
   {
     v12 = UnityEngine_Camera__get_main(0);
     if ( !v12 )
       sub_2213CDC(0, v13);
-    v16.fields.x = x;
-    v16.fields.y = y;
-    v16.fields.z = z;
-    v14 = (unsigned __int64)UnityEngine_Camera__WorldToScreenPoint_83198204(v12, v16, 0);
-    result.fields.y = *((float *)&v14 + 1);
-    LODWORD(result.fields.x) = v14;
+    v15.fields.x = x;
+    v15.fields.y = y;
+    v15.fields.z = z;
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToScreenPoint_83198204(v12, v15, 0);
   }
+  result.fields.y = v11;
+  result.fields.x = v10;
   return result;
 }
 
@@ -773,6 +775,7 @@ System_Collections_IEnumerator_o *AccountDeletePasswordDialog__WaitForOpen(
         const MethodInfo *method)
 {
   __int64 v2; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969DE0 & 1) == 0 )
   {
@@ -781,8 +784,9 @@ System_Collections_IEnumerator_o *AccountDeletePasswordDialog__WaitForOpen(
   }
   v2 = sub_2213CCC(AccountDeletePasswordDialog__WaitForOpen_d__33_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
+  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  return result;
 }
 
 
@@ -803,6 +807,7 @@ bool AccountDeletePasswordDialog__WaitForOpen_d__33__MoveNext(
   __int64 v2; // x2
   unsigned int _1__state; // w8
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   __int64 v7; // x1
   __int64 v8; // x2
   System_String_o *WebViewAddress_48359816; // x19
@@ -842,6 +847,7 @@ bool AccountDeletePasswordDialog__WaitForOpen_d__33__MoveNext(
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       sub_2213A04(p__2__current, 0);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
     else
@@ -851,10 +857,11 @@ bool AccountDeletePasswordDialog__WaitForOpen_d__33__MoveNext(
       this->fields.__2__current = (Il2CppObject *)v10;
       v11 = &this->fields.__2__current;
       sub_2213A04(v11, v10);
+      result = 1;
       *((_DWORD *)v11 - 2) = 2;
     }
-    return 1;
   }
+  return result;
 }
 
 

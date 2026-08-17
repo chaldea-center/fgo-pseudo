@@ -1244,7 +1244,8 @@ bool EventDetailEntity__TryGetJumpSlotIdx(EventDetailEntity_o *this, int32_t *ju
   const MethodInfo *v26; // x4
   __int64 v27; // x1
   Il2CppObject *v28; // x20
-  CommonReleaseMaster_o *v30; // [xsp+8h] [xbp-68h]
+  int32_t v29; // w9
+  CommonReleaseMaster_o *v31; // [xsp+8h] [xbp-68h]
 
   if ( (byte_5970783 & 1) == 0 )
   {
@@ -1311,7 +1312,7 @@ LABEL_27:
       LOBYTE(script) = 0;
       return (char)script;
     }
-    v30 = (CommonReleaseMaster_o *)Item;
+    v31 = (CommonReleaseMaster_o *)Item;
     v13 = (Il2CppObject **)&StringLiteral_24794/*"slot"*/;
     v14 = &System_Convert_TypeInfo;
     v15 = 0;
@@ -1351,11 +1352,11 @@ LABEL_27:
               if ( !*(&v23->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(v23, v22);
               v6 = (unsigned int)System_Convert__ToInt32(v25, 0);
-              Item = (System_Collections_Generic_Dictionary_object__object__o *)v30;
-              if ( !v30 )
+              Item = (System_Collections_Generic_Dictionary_object__object__o *)v31;
+              if ( !v31 )
                 goto LABEL_33;
               Item = (System_Collections_Generic_Dictionary_object__object__o *)CommonReleaseMaster__IsOpen(
-                                                                                  v30,
+                                                                                  v31,
                                                                                   v6,
                                                                                   0,
                                                                                   0,
@@ -1377,8 +1378,9 @@ LABEL_27:
     if ( !*(&(*v14)->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(*v14, v27);
     LODWORD(script) = System_Convert__ToInt32(v28, 0);
-    *jumpSlotIdx = (unsigned int)script & ~((int)script >> 31);
+    v29 = (unsigned int)script & ~((int)script >> 31);
     LOBYTE(script) = (int)script >= 0;
+    *jumpSlotIdx = v29;
   }
   return (char)script;
 }

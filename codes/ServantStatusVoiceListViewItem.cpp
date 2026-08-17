@@ -308,15 +308,17 @@ bool ServantStatusVoiceListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
+  bool result; // w0
   int32_t firstPriority; // w9
   int32_t overwritePriority; // w10
 
+  result = 1;
   overwritePriority = this->fields.overwritePriority;
   firstPriority = this->fields.firstPriority;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue0 = -firstPriority;
   this->fields.sortValue1 = -overwritePriority;
-  return 1;
+  return result;
 }
 
 

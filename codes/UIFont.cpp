@@ -541,46 +541,48 @@ void UIFont__Trim(UIFont_o *this, const MethodInfo *method)
   const MethodInfo *v12; // x1
   int32_t v13; // w0
   struct UISpriteData_o *mSprite; // x8
+  float v15; // s9
   int y; // s13
+  float v17; // s8
   int height; // s11
   int width; // s14
   float x; // s12
-  float v19; // s15
-  double v20; // d10
-  __int64 v21; // x1
-  double v22; // d0
-  double v23; // d0
-  double v24; // d1
-  double v25; // d1
-  float v26; // s13
-  int32_t v27; // w20
-  float v28; // s15
-  double v29; // d10
-  float v30; // s14
-  __int64 v31; // x1
-  double v32; // d0
-  double v33; // d0
-  double v34; // d1
-  double v35; // d1
-  int32_t v36; // w21
-  float v37; // s12
-  double v38; // d9
-  __int64 v39; // x1
-  double v40; // d0
-  double v41; // d0
-  double v42; // d1
-  double v43; // d1
-  int32_t v44; // w22
-  float v45; // s9
-  double v46; // d8
-  double v47; // d0
-  double v48; // d0
-  double v49; // d1
-  double v50; // d1
-  int32_t v51; // w4
-  __int64 v52; // kr00_8
+  float v21; // s15
+  double v22; // d10
+  __int64 v23; // x1
+  double v24; // d0
+  double v25; // d0
+  double v26; // d1
+  double v27; // d1
+  float v28; // s13
+  int32_t v29; // w20
+  float v30; // s15
+  double v31; // d10
+  float v32; // s14
+  __int64 v33; // x1
+  double v34; // d0
+  double v35; // d0
+  double v36; // d1
+  double v37; // d1
+  int32_t v38; // w21
+  float v39; // s12
+  double v40; // d9
+  __int64 v41; // x1
+  double v42; // d0
+  double v43; // d0
+  double v44; // d1
+  double v45; // d1
+  int32_t v46; // w22
+  float v47; // s9
+  double v48; // d8
+  double v49; // d0
+  double v50; // d0
+  double v51; // d1
+  double v52; // d1
+  int32_t v53; // w4
   double iptr; // [xsp+48h] [xbp-38h] BYREF
-  UnityEngine_Rect_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_597524F & 1) == 0 )
   {
@@ -609,15 +611,17 @@ void UIFont__Trim(UIFont_o *this, const MethodInfo *method)
     v13 = ((__int64 (__fastcall *)(UIAtlas_o *, _QWORD))mAtlas->klass[1]._1.byval_arg.data)(
             mAtlas,
             *(_QWORD *)&mAtlas->klass[1]._1.byval_arg.bits);
-    v54.fields.m_XMin = m_XMin;
-    v54.fields.m_YMin = m_YMin;
-    v54.fields.m_Width = m_Width;
-    v54.fields.m_Height = m_Height;
-    v52 = *(_OWORD *)&NGUIMath__ConvertToPixels(v54, v11, v13, 1, 0);
+    v55.fields.m_XMin = m_XMin;
+    v55.fields.m_YMin = m_YMin;
+    v55.fields.m_Width = m_Width;
+    v55.fields.m_Height = m_Height;
+    v56 = NGUIMath__ConvertToPixels(v55, v11, v13, 1, 0);
     mSprite = this->fields.mSprite;
     if ( !mSprite )
       goto LABEL_82;
+    v15 = v56.fields.m_XMin;
     y = mSprite->fields.y;
+    v17 = v56.fields.m_YMin;
     width = mSprite->fields.width;
     height = mSprite->fields.height;
     x = (float)mSprite->fields.x;
@@ -626,159 +630,159 @@ void UIFont__Trim(UIFont_o *this, const MethodInfo *method)
       sub_2213A60(&System_Math_TypeInfo);
       byte_596A30A = 1;
     }
-    v19 = x - *(float *)&v52;
+    v21 = x - v15;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method);
-    v20 = v19;
-    v22 = modf(v19, &iptr);
-    if ( v19 >= 0.0 )
+    v22 = v21;
+    v24 = modf(v21, &iptr);
+    if ( v21 >= 0.0 )
     {
-      if ( v22 != 0.5 )
+      if ( v24 != 0.5 )
       {
-        v23 = floor(v20 + 0.5);
+        v25 = floor(v22 + 0.5);
         goto LABEL_26;
       }
-      v24 = 1.0;
-      v23 = iptr;
+      v26 = 1.0;
+      v25 = iptr;
     }
     else
     {
-      if ( v22 != -0.5 )
+      if ( v24 != -0.5 )
       {
-        v23 = ceil(v20 + -0.5);
+        v25 = ceil(v22 + -0.5);
         goto LABEL_26;
       }
-      v23 = iptr;
-      v24 = -1.0;
+      v25 = iptr;
+      v26 = -1.0;
     }
-    v25 = v23 + v24;
-    if ( ((__int64)v23 & 1) != 0 )
-      v23 = v25;
+    v27 = v25 + v26;
+    if ( ((__int64)v25 & 1) != 0 )
+      v25 = v27;
 LABEL_26:
-    v26 = (float)y;
-    if ( v23 == INFINITY )
-      v27 = 0x80000000;
+    v28 = (float)y;
+    if ( v25 == INFINITY )
+      v29 = 0x80000000;
     else
-      v27 = (int)v23;
+      v29 = (int)v25;
     if ( !byte_596A30A )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_596A30A = 1;
     }
-    v28 = v26 - *((float *)&v52 + 1);
+    v30 = v28 - v17;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v21);
-    v29 = v28;
-    v30 = (float)width;
-    v32 = modf(v28, &iptr);
-    if ( v28 >= 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v23);
+    v31 = v30;
+    v32 = (float)width;
+    v34 = modf(v30, &iptr);
+    if ( v30 >= 0.0 )
     {
-      if ( v32 != 0.5 )
+      if ( v34 != 0.5 )
       {
-        v33 = floor(v29 + 0.5);
+        v35 = floor(v31 + 0.5);
         goto LABEL_43;
       }
-      v34 = 1.0;
-      v33 = iptr;
+      v36 = 1.0;
+      v35 = iptr;
     }
     else
     {
-      if ( v32 != -0.5 )
+      if ( v34 != -0.5 )
       {
-        v33 = ceil(v29 + -0.5);
+        v35 = ceil(v31 + -0.5);
         goto LABEL_43;
       }
-      v33 = iptr;
-      v34 = -1.0;
+      v35 = iptr;
+      v36 = -1.0;
     }
-    v35 = v33 + v34;
-    if ( ((__int64)v33 & 1) != 0 )
-      v33 = v35;
+    v37 = v35 + v36;
+    if ( ((__int64)v35 & 1) != 0 )
+      v35 = v37;
 LABEL_43:
-    if ( v33 == INFINITY )
-      v36 = 0x80000000;
+    if ( v35 == INFINITY )
+      v38 = 0x80000000;
     else
-      v36 = (int)v33;
+      v38 = (int)v35;
     if ( !byte_596A30A )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_596A30A = 1;
     }
-    v37 = (float)(x + v30) - *(float *)&v52;
+    v39 = (float)(x + v32) - v15;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v31);
-    v38 = v37;
-    v40 = modf(v37, &iptr);
-    if ( v37 >= 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v33);
+    v40 = v39;
+    v42 = modf(v39, &iptr);
+    if ( v39 >= 0.0 )
     {
-      if ( v40 != 0.5 )
+      if ( v42 != 0.5 )
       {
-        v41 = floor(v38 + 0.5);
+        v43 = floor(v40 + 0.5);
         goto LABEL_60;
       }
-      v42 = 1.0;
-      v41 = iptr;
+      v44 = 1.0;
+      v43 = iptr;
     }
     else
     {
-      if ( v40 != -0.5 )
+      if ( v42 != -0.5 )
       {
-        v41 = ceil(v38 + -0.5);
+        v43 = ceil(v40 + -0.5);
         goto LABEL_60;
       }
-      v41 = iptr;
-      v42 = -1.0;
+      v43 = iptr;
+      v44 = -1.0;
     }
-    v43 = v41 + v42;
-    if ( ((__int64)v41 & 1) != 0 )
-      v41 = v43;
+    v45 = v43 + v44;
+    if ( ((__int64)v43 & 1) != 0 )
+      v43 = v45;
 LABEL_60:
-    if ( v41 == INFINITY )
-      v44 = 0x80000000;
+    if ( v43 == INFINITY )
+      v46 = 0x80000000;
     else
-      v44 = (int)v41;
+      v46 = (int)v43;
     if ( !byte_596A30A )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_596A30A = 1;
     }
-    v45 = (float)(v26 + (float)height) - *((float *)&v52 + 1);
+    v47 = (float)(v28 + (float)height) - v17;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v39);
-    v46 = v45;
-    v47 = modf(v45, &iptr);
-    if ( v45 >= 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v41);
+    v48 = v47;
+    v49 = modf(v47, &iptr);
+    if ( v47 >= 0.0 )
     {
-      if ( v47 != 0.5 )
+      if ( v49 != 0.5 )
       {
-        v48 = floor(v46 + 0.5);
+        v50 = floor(v48 + 0.5);
         goto LABEL_77;
       }
-      v49 = 1.0;
-      v48 = iptr;
+      v51 = 1.0;
+      v50 = iptr;
     }
     else
     {
-      if ( v47 != -0.5 )
+      if ( v49 != -0.5 )
       {
-        v48 = ceil(v46 + -0.5);
+        v50 = ceil(v48 + -0.5);
         goto LABEL_77;
       }
-      v48 = iptr;
-      v49 = -1.0;
+      v50 = iptr;
+      v51 = -1.0;
     }
-    v50 = v48 + v49;
-    if ( ((__int64)v48 & 1) != 0 )
-      v48 = v50;
+    v52 = v50 + v51;
+    if ( ((__int64)v50 & 1) != 0 )
+      v50 = v52;
 LABEL_77:
     mAtlas = (UIAtlas_o *)this->fields.mFont;
     if ( mAtlas )
     {
-      if ( v48 == INFINITY )
-        v51 = 0x80000000;
+      if ( v50 == INFINITY )
+        v53 = 0x80000000;
       else
-        v51 = (int)v48;
-      BMFont__Trim((BMFont_o *)mAtlas, v27, v36, v44, v51, 0);
+        v53 = (int)v50;
+      BMFont__Trim((BMFont_o *)mAtlas, v29, v38, v46, v53, 0);
       return;
     }
 LABEL_82:
@@ -804,7 +808,7 @@ void UIFont__UpdateUVRect(UIFont_o *this, const MethodInfo *method)
   int32_t v15; // w21
   int32_t v16; // w0
   const MethodInfo *v17; // x1
-  UnityEngine_Rect_o v18; // 0:kr00_16.16
+  UnityEngine_Rect_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5975254 & 1) == 0 )
@@ -847,13 +851,13 @@ void UIFont__UpdateUVRect(UIFont_o *this, const MethodInfo *method)
           v16 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))texture->klass[1]._1.byval_arg.data)(
                   texture,
                   *(_QWORD *)&texture->klass[1]._1.byval_arg.bits);
-          v19.fields.m_XMin = v11;
-          v19.fields.m_YMin = v12;
-          v19.fields.m_Width = v13;
-          v19.fields.m_Height = v14;
-          v18 = NGUIMath__ConvertToTexCoords(v19, v15, v16, 0);
+          v18.fields.m_XMin = v11;
+          v18.fields.m_YMin = v12;
+          v18.fields.m_Width = v13;
+          v18.fields.m_Height = v14;
+          v19 = NGUIMath__ConvertToTexCoords(v18, v15, v16, 0);
           v5 = (UIAtlas_o *)this->fields.mSprite;
-          this->fields.mUVRect = v18;
+          this->fields.mUVRect = v19;
           if ( v5 )
           {
             if ( UISpriteData__get_hasPadding((UISpriteData_o *)v5, 0) )
@@ -1766,7 +1770,8 @@ UnityEngine_Rect_o UIFont__get_uvRect(UIFont_o *this, const MethodInfo *method)
   UnityEngine_Object_o *mAtlas; // x20
   const MethodInfo *v9; // x1
   UISpriteData_o *sprite; // x0
-  UnityEngine_Rect_o uvRect; // 0:kr00_16.16
+  float v11; // s0
+  float v12; // s2
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5975241 & 1) == 0 )
@@ -1782,11 +1787,9 @@ UnityEngine_Rect_o UIFont__get_uvRect(UIFont_o *this, const MethodInfo *method)
     v5 = this->fields.mReplacement;
     if ( !v5 )
       sub_2213CDC(0, v4);
-    uvRect = UIFont__get_uvRect(v5, v4);
-    result.fields.m_YMin = uvRect.fields.m_YMin;
-    result.fields.m_Height = uvRect.fields.m_Height;
-    m_XMin = uvRect.fields.m_XMin;
-    m_Width = uvRect.fields.m_Width;
+    result = UIFont__get_uvRect(v5, v4);
+    m_XMin = result.fields.m_XMin;
+    m_Width = result.fields.m_Width;
   }
   else
   {
@@ -1814,8 +1817,10 @@ UnityEngine_Rect_o UIFont__get_uvRect(UIFont_o *this, const MethodInfo *method)
       result.fields.m_Height = 1.0;
     }
   }
-  result.fields.m_XMin = m_XMin;
-  result.fields.m_Width = m_Width;
+  v11 = m_XMin;
+  v12 = m_Width;
+  result.fields.m_Width = v12;
+  result.fields.m_XMin = v11;
   return result;
 }
 

@@ -244,7 +244,7 @@ System_String_o *ClassBoardLineModel__get_PrimaryKey(ClassBoardLineModel_o *this
   entity = this->fields.entity;
   if ( !entity )
     sub_2213CDC(0, method);
-  return ((System_String_o *(__fastcall *)(struct ClassBoardLineEntity_o *, const MethodInfo *))entity->klass->vtable._4_get_PrimaryKey.methodPtr)(
-           entity,
-           entity->klass->vtable._4_get_PrimaryKey.method);
+  return (System_String_o *)((__int64 (__fastcall *)(struct ClassBoardLineEntity_o *, const MethodInfo *))entity->klass->vtable._4_get_PrimaryKey.methodPtr)(
+                              entity,
+                              entity->klass->vtable._4_get_PrimaryKey.method);
 }

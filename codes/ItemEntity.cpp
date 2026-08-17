@@ -133,14 +133,16 @@ System_String_o *ItemEntity__GetDetail(ItemEntity_o *this, const MethodInfo *met
   __int64 v5; // x1
   int64_t endedAt; // x21
   System_DateTimeOffset_o v7; // kr00_16
-  const MethodInfo *v8; // x3
-  System_Globalization_CultureInfo_o *v9; // x21
-  const MethodInfo *v10; // x4
-  System_DateTimeOffset_o v12; // [xsp+8h] [xbp-48h] BYREF
-  __int64 v13; // [xsp+18h] [xbp-38h] BYREF
-  System_DateTimeOffset_o v14; // [xsp+20h] [xbp-30h] BYREF
-  System_DateTimeOffset_o v15; // 0:x0.16
-  System_DateTimeOffset_o v16; // 0:x0.16
+  System_TimeSpan_o v8; // x0
+  System_TimeSpan_o v9; // x2
+  const MethodInfo *v10; // x3
+  System_Globalization_CultureInfo_o *v11; // x21
+  const MethodInfo *v12; // x4
+  System_DateTimeOffset_o v14; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v15; // [xsp+18h] [xbp-38h] BYREF
+  System_DateTimeOffset_o v16; // [xsp+20h] [xbp-30h] BYREF
+  System_DateTimeOffset_o v17; // 0:x0.16
+  System_DateTimeOffset_o v18; // 0:x0.16
 
   if ( (byte_5970D0C & 1) == 0 )
   {
@@ -153,11 +155,11 @@ System_String_o *ItemEntity__GetDetail(ItemEntity_o *this, const MethodInfo *met
     byte_5970D0C = 1;
   }
   detail = this->fields.detail;
-  v14.fields._dateTime.fields._dateData = 0;
+  v16.fields._dateTime.fields._dateData = 0;
+  *(_QWORD *)&v16.fields._offsetMinutes = 0;
   *(_QWORD *)&v14.fields._offsetMinutes = 0;
-  *(_QWORD *)&v12.fields._offsetMinutes = 0;
-  v13 = 0;
-  v12.fields._dateTime.fields._dateData = 0;
+  v15 = 0;
+  v14.fields._dateTime.fields._dateData = 0;
   if ( !detail )
     goto LABEL_13;
   v4 = (System_String_o *)StringLiteral_16610/*"[endedAt]"*/;
@@ -167,18 +169,20 @@ System_String_o *ItemEntity__GetDetail(ItemEntity_o *this, const MethodInfo *met
     if ( !*(&System_DateTimeOffset_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTimeOffset_TypeInfo, v5);
     v7 = System_DateTimeOffset__FromUnixTimeSeconds(endedAt, 0);
-    v14 = v7;
+    v16 = v7;
     if ( !*(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, *(_QWORD *)&v7.fields._offsetMinutes);
-    System_TimeSpan___ctor_77242956((System_TimeSpan_o)&v13, 9, 0, 0, 0);
-    *(_QWORD *)&v15.fields._offsetMinutes = v13;
-    v15.fields._dateTime.fields._dateData = (uint64_t)&v14;
-    v12 = System_DateTimeOffset__ToOffset(v15, 0, v8);
-    v9 = (System_Globalization_CultureInfo_o *)sub_2213CCC(System_Globalization_CultureInfo_TypeInfo);
-    System_Globalization_CultureInfo___ctor_76757736(v9, (System_String_o *)StringLiteral_22091/*"ja-JP"*/, 0);
-    v16.fields._dateTime.fields._dateData = (uint64_t)&v12;
-    *(_QWORD *)&v16.fields._offsetMinutes = StringLiteral_26380/*"yyyy/M/d(ddd) HH:mm"*/;
-    detail = System_DateTimeOffset__ToString_77044136(v16, (System_String_o *)v9, 0, v10);
+    v8.fields._ticks = (int64_t)&v15;
+    System_TimeSpan___ctor_77242956(v8, 9, 0, 0, 0);
+    *(_QWORD *)&v17.fields._offsetMinutes = v15;
+    v17.fields._dateTime.fields._dateData = (uint64_t)&v16;
+    v9.fields._ticks = 0;
+    v14 = System_DateTimeOffset__ToOffset(v17, v9, v10);
+    v11 = (System_Globalization_CultureInfo_o *)sub_2213CCC(System_Globalization_CultureInfo_TypeInfo);
+    System_Globalization_CultureInfo___ctor_76757736(v11, (System_String_o *)StringLiteral_22091/*"ja-JP"*/, 0);
+    v18.fields._dateTime.fields._dateData = (uint64_t)&v14;
+    *(_QWORD *)&v18.fields._offsetMinutes = StringLiteral_26380/*"yyyy/M/d(ddd) HH:mm"*/;
+    detail = System_DateTimeOffset__ToString_77044136(v18, (System_String_o *)v11, 0, v12);
     if ( this->fields.detail )
       return System_String__Replace_75703400(this->fields.detail, v4, detail, 0);
 LABEL_13:

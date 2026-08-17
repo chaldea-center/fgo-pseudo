@@ -457,7 +457,10 @@ void ClassBoardLockOpenConfirmDialog__SetDecideButton(
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *decideBtn; // x0
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s0 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
 
   decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtn;
   if ( !isEnable )
@@ -468,9 +471,9 @@ void ClassBoardLockOpenConfirmDialog__SetDecideButton(
       decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
       if ( decideBtn )
       {
-        v7.fields.r = 0.5;
-        v7.fields.g = 0.5;
-        v7.fields.b = 0.5;
+        v5 = 0.5;
+        v6 = 0.5;
+        v7 = 0.5;
         goto LABEL_8;
       }
     }
@@ -483,12 +486,12 @@ LABEL_9:
   decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
   if ( !decideBtn )
     goto LABEL_9;
-  v7.fields.r = 1.0;
-  v7.fields.g = 1.0;
-  v7.fields.b = 1.0;
+  v5 = 1.0;
+  v6 = 1.0;
+  v7 = 1.0;
 LABEL_8:
-  v7.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)decideBtn, v7, 0);
+  v8 = 1.0;
+  UIWidget__set_color((UIWidget_o *)decideBtn, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 

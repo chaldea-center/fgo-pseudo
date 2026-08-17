@@ -721,16 +721,15 @@ int32_t BonusSelectSummonPartyOrganizationListViewItem__get_tdLevel(
 {
   UserServantEntity_o *userServantEntity; // x0
   int32_t v3; // w8
-  int32_t tdMaxLv; // [xsp+8h] [xbp-8h] BYREF
-  int32_t tdLv; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t tdMaxLv[2]; // [xsp+8h] [xbp-8h] BYREF
 
   userServantEntity = this->fields.userServantEntity;
   v3 = 1;
-  tdLv = 1;
+  tdMaxLv[1] = 1;
   if ( userServantEntity )
   {
-    UserServantEntity__getTreasureDeviceInfo_50192116(userServantEntity, &tdLv, &tdMaxLv, 0);
-    return tdLv;
+    UserServantEntity__getTreasureDeviceInfo_50192116(userServantEntity, &tdMaxLv[1], tdMaxLv, 0);
+    return tdMaxLv[1];
   }
   return v3;
 }

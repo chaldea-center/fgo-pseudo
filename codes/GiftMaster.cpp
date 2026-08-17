@@ -453,7 +453,8 @@ System_Collections_Generic_List_GiftEntity__o *GiftMaster__GetListById(
   int32_t *m_Items; // x27
   __int64 max_length_low; // x8
   int32_t max_length; // w1
-  __int64 v18; // [xsp+0h] [xbp-60h] BYREF
+  System_Nullable_int__o v17; // x0
+  __int64 v19; // [xsp+0h] [xbp-60h] BYREF
   Il2CppObject *value; // [xsp+8h] [xbp-58h] BYREF
 
   if ( (byte_5970CA7 & 1) == 0 )
@@ -543,14 +544,12 @@ System_Collections_Generic_List_GiftEntity__o *GiftMaster__GetListById(
         if ( PriorGiftNums )
         {
           max_length = PriorGiftNums->max_length;
-          v18 = 0;
-          System_Nullable_int____ctor(
-            (System_Nullable_int__o)&v18,
-            max_length,
-            (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-          if ( (_BYTE)v18 )
+          v17 = (System_Nullable_int__o)&v19;
+          v19 = 0;
+          System_Nullable_int____ctor(v17, max_length, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+          if ( (_BYTE)v19 )
           {
-            if ( v13 < v18 >> 32 )
+            if ( v13 < v19 >> 32 )
             {
               if ( v13 >= (unsigned __int64)LODWORD(PriorGiftNums->max_length) )
                 goto LABEL_33;

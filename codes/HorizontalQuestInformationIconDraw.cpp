@@ -274,10 +274,14 @@ void HorizontalQuestInformationIconDraw__SetDispType(
         HorizontalQuestInformationIconListComponent_o *iconListComponent,
         const MethodInfo *method)
 {
-  UnityEngine_Material_o *v11; // x20
-  UnityEngine_Material_o *v12; // x21
-  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  struct HorizontalQuestInformationIconDraw_StaticFields *static_fields; // x8
+  UnityEngine_Material_o *v13; // x20
+  UnityEngine_Material_o *v14; // x21
+  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596D303 & 1) == 0 )
   {
@@ -290,19 +294,19 @@ void HorizontalQuestInformationIconDraw__SetDispType(
     case 3:
       if ( !sp )
         goto LABEL_17;
-      v14.fields.r = 1.0;
-      v14.fields.g = 1.0;
-      v14.fields.b = 1.0;
-      v14.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)sp, v14, 0);
+      v15.fields.r = 1.0;
+      v15.fields.g = 1.0;
+      v15.fields.b = 1.0;
+      v15.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)sp, v15, 0);
       if ( !iconListComponent )
         goto LABEL_17;
-      v11 = HorizontalQuestInformationIconListComponent__NewChocoMaterialForSprite(
+      v13 = HorizontalQuestInformationIconListComponent__NewChocoMaterialForSprite(
               iconListComponent,
               *(const MethodInfo **)&dispTp);
-      v12 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_83274924(v12, v11, 0);
-      UISpriteAltMat__SetMaterialKeepTexture(sp, v12, 0);
+      v14 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_83274924(v14, v13, 0);
+      UISpriteAltMat__SetMaterialKeepTexture(sp, v14, 0);
       break;
     case 2:
       this = (HorizontalQuestInformationIconDraw_o *)HorizontalQuestInformationIconDraw_TypeInfo;
@@ -310,7 +314,11 @@ void HorizontalQuestInformationIconDraw__SetDispType(
         j_il2cpp_runtime_class_init_0(HorizontalQuestInformationIconDraw_TypeInfo, *(_QWORD *)&dispTp, sp);
       if ( sp )
       {
-        SHADOW_COLOR = HorizontalQuestInformationIconDraw_TypeInfo->static_fields->SHADOW_COLOR;
+        static_fields = HorizontalQuestInformationIconDraw_TypeInfo->static_fields;
+        b = static_fields->SHADOW_COLOR.fields.b;
+        a = static_fields->SHADOW_COLOR.fields.a;
+        r = static_fields->SHADOW_COLOR.fields.r;
+        g = static_fields->SHADOW_COLOR.fields.g;
         goto LABEL_12;
       }
 LABEL_17:
@@ -318,12 +326,12 @@ LABEL_17:
     case 1:
       if ( sp )
       {
-        SHADOW_COLOR.fields.r = 1.0;
-        SHADOW_COLOR.fields.g = 1.0;
-        SHADOW_COLOR.fields.b = 1.0;
-        SHADOW_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
 LABEL_12:
-        UIWidget__set_color((UIWidget_o *)sp, SHADOW_COLOR, 0);
+        UIWidget__set_color((UIWidget_o *)sp, *(UnityEngine_Color_o *)&r, 0);
         UISpriteAltMat__ResetMaterial(sp, 0);
         return;
       }
@@ -339,7 +347,11 @@ void HorizontalQuestInformationIconDraw__SetDispTypeEnemyTex(
         UITexture_o *texture,
         const MethodInfo *method)
 {
-  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  struct HorizontalQuestInformationIconDraw_StaticFields *static_fields; // x8
 
   if ( (byte_596D305 & 1) == 0 )
   {
@@ -356,7 +368,11 @@ void HorizontalQuestInformationIconDraw__SetDispTypeEnemyTex(
         j_il2cpp_runtime_class_init_0(HorizontalQuestInformationIconDraw_TypeInfo, *(_QWORD *)&dispTp, texture);
       if ( texture )
       {
-        SHADOW_COLOR = HorizontalQuestInformationIconDraw_TypeInfo->static_fields->SHADOW_COLOR;
+        static_fields = HorizontalQuestInformationIconDraw_TypeInfo->static_fields;
+        b = static_fields->SHADOW_COLOR.fields.b;
+        a = static_fields->SHADOW_COLOR.fields.a;
+        r = static_fields->SHADOW_COLOR.fields.r;
+        g = static_fields->SHADOW_COLOR.fields.g;
         goto LABEL_12;
       }
 LABEL_14:
@@ -365,12 +381,12 @@ LABEL_14:
 LABEL_6:
       if ( texture )
       {
-        SHADOW_COLOR.fields.r = 1.0;
-        SHADOW_COLOR.fields.g = 1.0;
-        SHADOW_COLOR.fields.b = 1.0;
-        SHADOW_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
 LABEL_12:
-        UIWidget__set_color((UIWidget_o *)texture, SHADOW_COLOR, 0);
+        UIWidget__set_color((UIWidget_o *)texture, *(UnityEngine_Color_o *)&r, 0);
         return;
       }
       goto LABEL_14;

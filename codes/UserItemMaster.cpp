@@ -170,10 +170,10 @@ LABEL_34:
 LABEL_16:
     v19 = sub_224BC3C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserItemEntity__TypeInfo, 2);
   }
-  return (*(UserItemEntity_o *(__fastcall **)(DataMasterBase_TMaster__TEntity__PKType__o *, System_String_o *, _QWORD))v19)(
-           v16,
-           PK,
-           *(_QWORD *)(v19 + 8));
+  return (UserItemEntity_o *)(*(__int64 (__fastcall **)(DataMasterBase_TMaster__TEntity__PKType__o *, System_String_o *, _QWORD))v19)(
+                               v16,
+                               PK,
+                               *(_QWORD *)(v19 + 8));
 }
 
 

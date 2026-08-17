@@ -92,6 +92,8 @@ void ObjectScaleEnabler__OnUpdate(ObjectScaleEnabler_o *this, const MethodInfo *
   __int64 v85; // x20
   System_Collections_IEnumerator_o *v86; // [xsp+28h] [xbp-48h]
   System_Collections_IEnumerator_o *v87; // [xsp+28h] [xbp-48h]
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v89; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FCBD & 1) == 0 )
   {
@@ -113,8 +115,8 @@ void ObjectScaleEnabler__OnUpdate(ObjectScaleEnabler_o *this, const MethodInfo *
   {
     if ( !visibleCheckTarget )
       goto LABEL_143;
-    if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)visibleCheckTarget, 0).fields.z)) <= 0.001
-      && this->fields.isChildVisible )
+    localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)visibleCheckTarget, 0);
+    if ( localScale.fields.z <= 0.001 && this->fields.isChildVisible )
     {
       if ( this->fields.suddenDeath )
       {
@@ -314,8 +316,8 @@ LABEL_89:
 LABEL_145:
       sub_2213CE4(transform);
     }
-    if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)visibleCheckTarget, 0).fields.z)) >= 1.0
-      && !this->fields.isChildVisible )
+    v89 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)visibleCheckTarget, 0);
+    if ( v89.fields.z >= 1.0 && !this->fields.isChildVisible )
     {
       if ( this->fields.suddenDeath )
       {

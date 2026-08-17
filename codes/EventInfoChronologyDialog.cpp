@@ -194,7 +194,8 @@ void EventInfoChronologyDialog__Layout(EventInfoChronologyDialog_o *this, const 
   UnityEngine_GameObject_o *v10; // x21
   float gridSpace; // s10
   float v12; // s10
-  float v13; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5970A88 & 1) == 0 )
   {
@@ -260,12 +261,11 @@ LABEL_22:
         goto LABEL_22;
       v10 = grid;
       gridSpace = this->fields.gridSpace;
-      v13 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v9, 0).fields.y));
-      GameObjectExtensions__SetLocalPositionY(v10, (float)(v4 - gridSpace) + (float)(v13 * -0.5), 0);
+      size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v9, 0);
+      GameObjectExtensions__SetLocalPositionY(v10, (float)(v4 - gridSpace) + (float)(size.fields.y * -0.5), 0);
       v12 = this->fields.gridSpace;
-      v4 = v4
-         - (float)(v12
-                 + COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v9, 0).fields.y)));
+      v14 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v9, 0);
+      v4 = v4 - (float)(v12 + v14.fields.y);
     }
     grid = this->fields.grid;
     ++v5;

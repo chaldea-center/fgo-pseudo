@@ -280,11 +280,17 @@ UnityEngine_Vector3_o TitleInfoSuperBossStatusComponent__GetBossGridPosition(
         TitleInfoSuperBossStatusComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.bossGridPosition.fields.x;
-  result.fields.y = this->fields.bossGridPosition.fields.y;
-  result.fields.z = this->fields.bossGridPosition.fields.z;
+  x = this->fields.bossGridPosition.fields.x;
+  y = this->fields.bossGridPosition.fields.y;
+  z = this->fields.bossGridPosition.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -425,16 +431,15 @@ void TitleInfoSuperBossStatusComponent__SetEntryAnim(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  float offsetY; // s0
-  TitleInfoSuperBossStatusComponent_c *v6; // x0
-  float v7; // s1
-  float32x2_t v8; // d0
+  __int64 v5; // x1
+  __int64 v6; // x2
+  TitleInfoSuperBossStatusComponent_c *v7; // x0
+  float v8; // s1
+  float32x2_t v9; // d0
   float32x2_t *static_fields; // x8
-  float v10; // s3
-  __int64 v11; // x1
-  __int64 v12; // x2
-  float v13; // s1
-  float v14; // [xsp+0h] [xbp-30h]
+  float v11; // s3
+  float v12; // [xsp+0h] [xbp-30h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F352 & 1) == 0 )
   {
@@ -445,26 +450,26 @@ void TitleInfoSuperBossStatusComponent__SetEntryAnim(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_9;
-  v13 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(transform, 0).fields.y));
-  offsetY = this->fields.offsetY;
-  v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  localPosition.fields.x = this->fields.offsetY;
+  v7 = TitleInfoSuperBossStatusComponent_TypeInfo;
   this->fields.inPos.fields.x = 0.0;
   this->fields.inPos.fields.z = 0.0;
-  v7 = v13 + offsetY;
-  this->fields.inPos.fields.y = v7;
-  if ( !*(&v6->_2.cctor_finished + 1) )
+  v8 = localPosition.fields.y + localPosition.fields.x;
+  this->fields.inPos.fields.y = v8;
+  if ( !*(&v7->_2.cctor_finished + 1) )
   {
-    v14 = v7;
-    j_il2cpp_runtime_class_init_0(v6, v11, v12);
-    v7 = v14;
-    v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
+    v12 = v8;
+    j_il2cpp_runtime_class_init_0(v7, v5, v6);
+    v8 = v12;
+    v7 = TitleInfoSuperBossStatusComponent_TypeInfo;
   }
-  v8.n64_u32[0] = 0;
-  static_fields = (float32x2_t *)v6->static_fields;
-  v10 = static_fields[3].n64_f32[0];
-  v8.n64_f32[1] = v7;
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v8, static_fields[2]);
-  this->fields.outPos.fields.z = v10 + 0.0;
+  v9.n64_u32[0] = 0;
+  static_fields = (float32x2_t *)v7->static_fields;
+  v11 = static_fields[3].n64_f32[0];
+  v9.n64_f32[1] = v8;
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v9, static_fields[2]);
+  this->fields.outPos.fields.z = v11 + 0.0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.outPos, 0),
@@ -542,17 +547,16 @@ void TitleInfoSuperBossStatusComponent__StartClearAnim(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  float offsetY; // s0
-  TitleInfoSuperBossStatusComponent_c *v6; // x0
-  float v7; // s1
-  float32x2_t v8; // d0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  TitleInfoSuperBossStatusComponent_c *v7; // x0
+  float v8; // s1
+  float32x2_t v9; // d0
   float32x2_t *static_fields; // x8
-  System_String_o *v10; // x1
-  float v11; // s3
-  __int64 v12; // x1
-  const MethodInfo *v13; // x2
-  float v14; // s1
-  float v15; // [xsp+0h] [xbp-30h]
+  System_String_o *v11; // x1
+  float v12; // s3
+  float v13; // [xsp+0h] [xbp-30h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F354 & 1) == 0 )
   {
@@ -563,28 +567,28 @@ void TitleInfoSuperBossStatusComponent__StartClearAnim(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     sub_2213CDC(0, v4);
-  v14 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(transform, 0).fields.y));
-  offsetY = this->fields.offsetY;
-  v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  localPosition.fields.x = this->fields.offsetY;
+  v7 = TitleInfoSuperBossStatusComponent_TypeInfo;
   this->fields.inPos.fields.x = 0.0;
   this->fields.inPos.fields.z = 0.0;
-  v7 = v14 + offsetY;
-  this->fields.inPos.fields.y = v7;
-  if ( !*(&v6->_2.cctor_finished + 1) )
+  v8 = localPosition.fields.y + localPosition.fields.x;
+  this->fields.inPos.fields.y = v8;
+  if ( !*(&v7->_2.cctor_finished + 1) )
   {
-    v15 = v7;
-    j_il2cpp_runtime_class_init_0(v6, v12, v13);
-    v7 = v15;
-    v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
+    v13 = v8;
+    j_il2cpp_runtime_class_init_0(v7, v5, v6);
+    v8 = v13;
+    v7 = TitleInfoSuperBossStatusComponent_TypeInfo;
   }
-  v8.n64_u32[0] = 0;
-  static_fields = (float32x2_t *)v6->static_fields;
-  v10 = (System_String_o *)StringLiteral_2378/*"AnimFrameOutEnd"*/;
-  v11 = static_fields[3].n64_f32[0];
-  v8.n64_f32[1] = v7;
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v8, static_fields[2]);
-  this->fields.outPos.fields.z = v11 + 0.0;
-  TitleInfoSuperBossStatusComponent__FrameOut(this, v10, v13);
+  v9.n64_u32[0] = 0;
+  static_fields = (float32x2_t *)v7->static_fields;
+  v11 = (System_String_o *)StringLiteral_2378/*"AnimFrameOutEnd"*/;
+  v12 = static_fields[3].n64_f32[0];
+  v9.n64_f32[1] = v8;
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v9, static_fields[2]);
+  this->fields.outPos.fields.z = v12 + 0.0;
+  TitleInfoSuperBossStatusComponent__FrameOut(this, v11, v6);
 }
 
 

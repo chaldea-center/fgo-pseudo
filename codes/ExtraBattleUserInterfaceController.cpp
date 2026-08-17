@@ -293,6 +293,8 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetOverKillPosAdjust(
   struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *exBattleUiDict; // x19
   System_String_o *AssetPath; // x0
   __int64 v10; // x1
+  float v11; // s0
+  float v12; // s1
   Il2CppObject *value; // [xsp+18h] [xbp-18h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -343,8 +345,10 @@ LABEL_12:
     }
   }
 LABEL_11:
-  result.fields.x = x;
-  result.fields.y = y;
+  v11 = x;
+  v12 = y;
+  result.fields.y = v12;
+  result.fields.x = v11;
   return result;
 }
 
@@ -361,6 +365,8 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceController__GetSkillSkipPosAdjust(
   struct System_Collections_Generic_Dictionary_string__ExtraBattleUserInterfaceComponent__o *exBattleUiDict; // x19
   System_String_o *AssetPath; // x0
   __int64 v10; // x1
+  float v11; // s0
+  float v12; // s1
   Il2CppObject *value; // [xsp+18h] [xbp-18h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -411,8 +417,10 @@ LABEL_12:
     }
   }
 LABEL_11:
-  result.fields.x = x;
-  result.fields.y = y;
+  v11 = x;
+  v12 = y;
+  result.fields.y = v12;
+  result.fields.x = v11;
   return result;
 }
 

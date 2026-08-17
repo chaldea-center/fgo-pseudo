@@ -2563,79 +2563,82 @@ void EventInfoCircleProgressControl__Setup(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventInfoCircleProgressControl__SetupDisp(EventInfoCircleProgressControl_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
   struct EventUiEntity_o *eventUiEntity; // x8
   EventInfoCircleProgressControl_o *v4; // x19
-  const MethodInfo *v6; // x2
-  struct EventUiEntity_o *v7; // x8
+  float v5; // s0 OVERLAPPED
+  int v6; // s2
+  int v7; // s1
   const MethodInfo *v8; // x2
+  struct EventUiEntity_o *v9; // x8
+  const MethodInfo *v10; // x2
   struct EventInfoCircleProgressObjectComponent_array *circleProgressList; // x8
   il2cpp_array_size_t max_length; // x21
-  __int64 v11; // x22
-  struct EventInfoCircleProgressObjectComponent_array *v12; // x8
-  Il2CppClass **v13; // x8
-  EventInfoCircleProgressObjectComponent_o *v14; // x20
-  const MethodInfo *v15; // x2
+  __int64 v13; // x22
+  struct EventInfoCircleProgressObjectComponent_array *v14; // x8
+  Il2CppClass **v15; // x8
+  EventInfoCircleProgressObjectComponent_o *v16; // x20
+  const MethodInfo *v17; // x2
   EventInfoCircleProgressControl_ProgressData_o *ProgressData; // x0
-  const MethodInfo *v17; // x3
-  struct EventUiEntity_o *v18; // x8
+  const MethodInfo *v19; // x3
+  struct EventUiEntity_o *v20; // x8
   UnityEngine_Component_o *extraCircleProgres; // x20
   int32_t extraCircleState; // w21
   float extraCircleHidePosX; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v23; // x3
-  const MethodInfo *v24; // x1
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v25; // x3
+  const MethodInfo *v26; // x1
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
     goto LABEL_18;
   v4 = this;
   EventInfoCircleProgressControl__LoadTitleState(this, eventUiEntity->fields.eventId, v2);
-  v25.fields.x = 0.0;
-  v25.fields.z = 0.0;
+  v5 = 0.0;
+  v6 = 0;
   if ( v4->fields.titleDispState == 1 )
-    v25.fields.x = 180.0;
-  v25.fields.y = 0.0;
-  GameObjectExtensions__SetLocalEulerAngle(v4->fields.titleBaseObject, v25, 0);
-  v7 = v4->fields.eventUiEntity;
-  if ( !v7 )
+    v5 = 180.0;
+  v7 = 0;
+  GameObjectExtensions__SetLocalEulerAngle(v4->fields.titleBaseObject, *(UnityEngine_Vector3_o *)&v5, 0);
+  v9 = v4->fields.eventUiEntity;
+  if ( !v9 )
     goto LABEL_18;
-  EventInfoCircleProgressControl__LoadProgressData(v4, v7->fields.eventId, v6);
+  EventInfoCircleProgressControl__LoadProgressData(v4, v9->fields.eventId, v8);
   circleProgressList = v4->fields.circleProgressList;
   if ( !circleProgressList )
     goto LABEL_18;
   max_length = circleProgressList->max_length;
   if ( (int)max_length >= 1 )
   {
-    v11 = 0;
+    v13 = 0;
     while ( 1 )
     {
-      v12 = v4->fields.circleProgressList;
-      if ( !v12 )
-        break;
-      if ( (unsigned int)v11 >= LODWORD(v12->max_length) )
-        sub_2213CE4(this);
-      v13 = &v12->obj.klass + v11;
-      v14 = (EventInfoCircleProgressObjectComponent_o *)v13[4];
+      v14 = v4->fields.circleProgressList;
       if ( !v14 )
         break;
-      EventInfoCircleProgressObjectComponent__SetActive((EventInfoCircleProgressObjectComponent_o *)v13[4], 1, v8);
-      ProgressData = EventInfoCircleProgressControl__GetProgressData(v4, v14->fields.circleId, v15);
-      EventInfoCircleProgressObjectComponent__Setup(v14, v4, ProgressData, v17);
-      if ( (_DWORD)max_length == (_DWORD)++v11 )
+      if ( (unsigned int)v13 >= LODWORD(v14->max_length) )
+        sub_2213CE4(this);
+      v15 = &v14->obj.klass + v13;
+      v16 = (EventInfoCircleProgressObjectComponent_o *)v15[4];
+      if ( !v16 )
+        break;
+      EventInfoCircleProgressObjectComponent__SetActive((EventInfoCircleProgressObjectComponent_o *)v15[4], 1, v10);
+      ProgressData = EventInfoCircleProgressControl__GetProgressData(v4, v16->fields.circleId, v17);
+      EventInfoCircleProgressObjectComponent__Setup(v16, v4, ProgressData, v19);
+      if ( (_DWORD)max_length == (_DWORD)++v13 )
         goto LABEL_12;
     }
 LABEL_18:
     sub_2213CDC(this, method);
   }
 LABEL_12:
-  v18 = v4->fields.eventUiEntity;
-  if ( !v18 )
+  v20 = v4->fields.eventUiEntity;
+  if ( !v20 )
     goto LABEL_18;
-  EventInfoCircleProgressControl__LoadProgressExtraData(v4, v18->fields.eventId, v8);
+  EventInfoCircleProgressControl__LoadProgressExtraData(v4, v20->fields.eventId, v10);
   extraCircleProgres = (UnityEngine_Component_o *)v4->fields.extraCircleProgres;
   if ( !extraCircleProgres )
     goto LABEL_18;
@@ -2655,8 +2658,8 @@ LABEL_12:
     (EventInfoCircleProgressObjectComponent_o *)extraCircleProgres,
     v4,
     v4->fields.progressExtraData,
-    v23);
-  EventInfoCircleProgressControl__SetupMuralButton(v4, v24);
+    v25);
+  EventInfoCircleProgressControl__SetupMuralButton(v4, v26);
 }
 
 
@@ -2871,7 +2874,7 @@ void EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_b__0(
     || (this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)EventInfoUIVoicePlayer__GetTargetVoiceData(
                                                                            uiVoicePlayer,
                                                                            2,
-                                                                           *(_DWORD *)(*((_QWORD *)this + 23) + 20LL),
+                                                                           HIDWORD(this[2].fields.__9__5->fields.method_ptr),
                                                                            0),
         (v5 = v2->fields.__4__this) == 0)
     || (method = (const MethodInfo *)this,
@@ -3001,7 +3004,7 @@ void EventInfoCircleProgressControl___c__DisplayClass35_0___PlayAnim_b__3(
   this = (EventInfoCircleProgressControl___c__DisplayClass35_0_o *)EventInfoUIVoicePlayer__GetTargetVoiceData(
                                                                      uiVoicePlayer,
                                                                      1,
-                                                                     *(_DWORD *)(*((_QWORD *)this + 23) + 20LL),
+                                                                     HIDWORD(this[2].fields.__9__5->fields.method_ptr),
                                                                      0);
   v5 = v2->fields.__4__this;
   if ( !v5 )

@@ -141,9 +141,9 @@ System_String_o *ResponseData__getErrorMessage(ResponseData_o *this, const Metho
                                (Il2CppObject *)StringLiteral_19438/*"detail"*/,
                                (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
-      return ((System_String_o *(__fastcall *)(ResponseData_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
-               this,
-               this->klass->vtable._3_ToString.method);
+      return (System_String_o *)((__int64 (__fastcall *)(ResponseData_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
+                                  this,
+                                  this->klass->vtable._3_ToString.method);
 LABEL_8:
     sub_2213CDC(this, method);
   }

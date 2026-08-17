@@ -23,25 +23,28 @@ void FSAutoScale__Awake(FSAutoScale_o *this, const MethodInfo *method)
   float v5; // s8
   float y; // s9
   const MethodInfo *v7; // x1
-  float z; // s2
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (LODWORD(v5) = (unsigned int)UnityEngine_Transform__get_localScale(transform, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
-    || (y = UnityEngine_Transform__get_localScale(transform, 0).fields.y,
+    || (localScale = UnityEngine_Transform__get_localScale(transform, 0),
+        y = localScale.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
     sub_2213CDC(transform, v4);
   }
-  z = UnityEngine_Transform__get_localScale(transform, 0).fields.z;
+  v9 = UnityEngine_Transform__get_localScale(transform, 0);
   this->fields.defaultScale.fields.x = v5;
   this->fields.defaultScale.fields.y = y;
-  this->fields.defaultScale.fields.z = z;
+  this->fields.defaultScale.fields.z = v9.fields.z;
   FSAutoScale__UpdateScale(this, v7);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *method)
 {
   int32_t width; // w20
@@ -49,9 +52,8 @@ void FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *method)
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
   float z; // s2
-  unsigned __int64 v8; // d0
-  float v9; // s1
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
+  unsigned __int64 v8; // d0 OVERLAPPED
+  int v9; // s1
 
   width = UnityEngine_Screen__get_width(0);
   v4 = (float)width / (float)UnityEngine_Screen__get_height(0);
@@ -72,9 +74,6 @@ LABEL_7:
   z = (float)(v4 / 1.7778) * this->fields.defaultScale.fields.z;
   v8 = vmul_n_f32(*(float32x2_t *)&this->fields.defaultScale.fields.x, v4 / 1.7778).n64_u64[0];
 LABEL_6:
-  v9 = *((float *)&v8 + 1);
-  LODWORD(v10.fields.x) = v8;
-  v10.fields.y = v9;
-  v10.fields.z = z;
-  UnityEngine_Transform__set_localScale(transform, v10, 0);
+  v9 = HIDWORD(v8);
+  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v8, 0);
 }

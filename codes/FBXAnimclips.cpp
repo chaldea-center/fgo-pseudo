@@ -36,10 +36,11 @@ void FBXAnimclips__loadAnimationEvents(FBXAnimclips_o *this, int32_t svtId, int3
   __int64 v9; // x1
   System_String_o *v10; // x19
   Il2CppType *v11; // x20
+  System_RuntimeTypeHandle_o v12; // x0
   System_Type_o *TypeFromHandle; // x0
-  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  v13 = svtId;
+  v14 = svtId;
   if ( (byte_596FBAA & 1) == 0 )
   {
     sub_2213A60(&Method_DataManager_GetMasterData_ServantMaster___);
@@ -58,14 +59,14 @@ void FBXAnimclips__loadAnimationEvents(FBXAnimclips_o *this, int32_t svtId, int3
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
     (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantMaster___);
-  v6 = System_Int32__ToString((int32_t)&v13, 0);
+  v6 = System_Int32__ToString((int32_t)&v14, 0);
   v7 = System_String__Concat_75694928(
          (System_String_o *)StringLiteral_13294/*"Servants/"*/,
          v6,
          (System_String_o *)StringLiteral_1171/*"/chr"*/,
          0);
   UnityEngine_Resources__Load_object_(v7, (const MethodInfo_39787F0 *)Method_UnityEngine_Resources_Load_GameObject___);
-  v8 = System_Int32__ToString((int32_t)&v13, 0);
+  v8 = System_Int32__ToString((int32_t)&v14, 0);
   v10 = System_String__Concat_75694928(
           (System_String_o *)StringLiteral_13294/*"Servants/"*/,
           v8,
@@ -74,6 +75,7 @@ void FBXAnimclips__loadAnimationEvents(FBXAnimclips_o *this, int32_t svtId, int3
   v11 = UnityEngine_TextAsset_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v9);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v11, 0);
+  v12.fields.value = (intptr_t)v11;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v12, 0);
   UnityEngine_Resources__Load_83400868(v10, TypeFromHandle, 0);
 }

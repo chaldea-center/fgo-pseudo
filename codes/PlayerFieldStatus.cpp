@@ -43,8 +43,8 @@ LABEL_13:
   this = (PlayerFieldStatus_o *)sub_2213B20(double___TypeInfo, 1);
   if ( !this )
     goto LABEL_13;
-  if ( !*((_DWORD *)this + 6) )
+  if ( !LODWORD(this[1].klass) )
     sub_2213CE4(this);
-  *((double *)this + 4) = (double)v12;
+  *(double *)&this[1].monitor = (double)v12;
   return (System_Double_array *)this;
 }

@@ -295,18 +295,20 @@ void ScrollMessageDialog__Open(
   float v51; // s8
   float v52; // s1
   UnityEngine_BoxCollider_o *v53; // x22
-  float v54; // s0
-  float v55; // s8
+  int v54; // s0
+  int v55; // s8
+  int v56; // s1 OVERLAPPED
+  int v57; // s0
+  float v58; // s2
   UnityEngine_Object_o *okBtnLabel; // x22
-  __int64 v57; // x1
-  __int64 v58; // x2
-  UILabel_o *v59; // x22
-  System_Action_c *v60; // x0
-  System_Action_o *v61; // x20
-  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v60; // x1
+  __int64 v61; // x2
+  UILabel_o *v62; // x22
+  System_Action_c *v63; // x0
+  System_Action_o *v64; // x20
+  UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v69; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A90C & 1) == 0 )
   {
@@ -393,11 +395,11 @@ void ScrollMessageDialog__Open(
       mPanel = scrollView->fields.mPanel;
       if ( !mPanel )
         goto LABEL_92;
-      v67.fields.x = *((float *)mPanel + 74);
-      v67.fields.y = *((float *)mPanel + 75);
-      v67.fields.w = 260.0;
-      v67.fields.z = *((float *)mPanel + 76);
-      UIPanel__set_baseClipRegion((UIPanel_o *)mPanel, v67, 0);
+      v69.fields.x = *((float *)mPanel + 74);
+      v69.fields.y = *((float *)mPanel + 75);
+      v69.fields.w = 260.0;
+      v69.fields.z = *((float *)mPanel + 76);
+      UIPanel__set_baseClipRegion((UIPanel_o *)mPanel, v69, 0);
       mPanel = this->fields.baseView;
       if ( !mPanel )
         goto LABEL_92;
@@ -482,10 +484,10 @@ void ScrollMessageDialog__Open(
     mPanel = UnityEngine_Component__get_transform((UnityEngine_Component_o *)mPanel, 0);
     if ( !mPanel )
       goto LABEL_92;
-    v64.fields.y = this->fields.MessageLabelDefaultPosition.fields.y;
-    v64.fields.x = (float)(this->fields.MessageLabelDefaultPosition.fields.x + -20.0) + (float)leftIndent;
-    v64.fields.z = this->fields.MessageLabelDefaultPosition.fields.z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)mPanel, v64, 0);
+    v67.fields.y = this->fields.MessageLabelDefaultPosition.fields.y;
+    v67.fields.x = (float)(this->fields.MessageLabelDefaultPosition.fields.x + -20.0) + (float)leftIndent;
+    v67.fields.z = this->fields.MessageLabelDefaultPosition.fields.z;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)mPanel, v67, 0);
     mPanel = this->fields.messageLabel;
     if ( !mPanel )
       goto LABEL_92;
@@ -549,10 +551,10 @@ LABEL_69:
                        *(_QWORD *)(*(_QWORD *)mPanel + 672LL));
     if ( !v49 )
       goto LABEL_92;
-    v65.fields.y = v52 * -0.5;
-    v65.fields.x = v51 * 0.5;
-    v65.fields.z = 0.0;
-    UnityEngine_BoxCollider__set_center(v49, v65, 0);
+    v68.fields.y = v52 * -0.5;
+    v68.fields.x = v51 * 0.5;
+    v68.fields.z = 0.0;
+    UnityEngine_BoxCollider__set_center(v49, v68, 0);
     mPanel = this->fields.messageLabel;
     if ( !mPanel )
       goto LABEL_92;
@@ -567,9 +569,9 @@ LABEL_69:
                        *(_QWORD *)(*(_QWORD *)mPanel + 672LL));
     if ( !v53 )
       goto LABEL_92;
-    v66.fields.x = v55;
-    v66.fields.z = 1.0;
-    UnityEngine_BoxCollider__set_size(v53, v66, 0);
+    v57 = v55;
+    v58 = 1.0;
+    UnityEngine_BoxCollider__set_size(v53, *(UnityEngine_Vector3_o *)(&v56 - 1), 0);
   }
 LABEL_83:
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
@@ -577,13 +579,13 @@ LABEL_83:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v37);
   if ( UnityEngine_Object__op_Inequality(okBtnLabel, 0, 0) )
   {
-    v59 = this->fields.okBtnLabel;
+    v62 = this->fields.okBtnLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v57, v58);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v60, v61);
     mPanel = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
-    if ( v59 )
+    if ( v62 )
     {
-      UILabel__set_text(v59, (System_String_o *)mPanel, 0);
+      UILabel__set_text(v62, (System_String_o *)mPanel, 0);
       goto LABEL_90;
     }
 LABEL_92:
@@ -596,11 +598,11 @@ LABEL_90:
   if ( !mPanel )
     goto LABEL_92;
   UIScrollView__ResetPosition((UIScrollView_o *)mPanel, 0);
-  v60 = System_Action_TypeInfo;
+  v63 = System_Action_TypeInfo;
   this->fields.isButtonEnable = 0;
-  v61 = (System_Action_o *)sub_2213CCC(v60);
-  System_Action___ctor(v61, (Il2CppObject *)this, Method_ScrollMessageDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v61, 0, 1, 0);
+  v64 = (System_Action_o *)sub_2213CCC(v63);
+  System_Action___ctor(v64, (Il2CppObject *)this, Method_ScrollMessageDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v64, 0, 1, 0);
 }
 
 
@@ -747,7 +749,7 @@ System_IAsyncResult_o *ScrollMessageDialog_ClickDelegate__BeginInvoke(
   v10[0] = isOk;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

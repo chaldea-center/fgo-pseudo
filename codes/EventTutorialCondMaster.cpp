@@ -248,7 +248,7 @@ bool EventTutorialCondMaster__isEnableCondition(
   char *v14; // x23
   EventTutorialCondMaster_o *v15; // x23
   unsigned __int64 v16; // x26
-  __int64 v17; // x8
+  struct System_String_o *MasterName_k__BackingField; // x8
   il2cpp_array_size_t v18; // x8
   int64_t v19; // x20
   unsigned __int64 v20; // x23
@@ -353,10 +353,10 @@ LABEL_28:
                                                     0);
               if ( !this )
                 goto LABEL_42;
-              v17 = *((_QWORD *)this + 12);
-              if ( !v17 )
+              MasterName_k__BackingField = this[1].fields._MasterName_k__BackingField;
+              if ( !MasterName_k__BackingField )
                 goto LABEL_42;
-              if ( *(_DWORD *)(v17 + 20) == 1 )
+              if ( *(_DWORD *)&MasterName_k__BackingField->fields._firstChar == 1 )
                 break;
               if ( (__int64)++v16 >= SLODWORD(v15->fields._MasterName_k__BackingField) )
                 goto LABEL_28;

@@ -1125,6 +1125,7 @@ bool AssetData__ReleaseData(AssetData_o *this, const MethodInfo *method)
   int32_t v50; // w5
   bool v51; // w6
   bool v52; // w7
+  bool result; // w0
 
   v8 = this;
   if ( (byte_596F734 & 1) == 0 )
@@ -1332,8 +1333,9 @@ LABEL_58:
   isSavedMemoryMode = OptionManager__isSavedMemoryMode(0);
 LABEL_63:
   v8->fields.entryCount = 0;
+  result = isSavedMemoryMode & 1;
   v8->fields.isLoadResources = 0;
-  return isSavedMemoryMode & 1;
+  return result;
 }
 
 
@@ -2225,6 +2227,7 @@ bool AssetData__SetAssetBundleData_d__71__MoveNext(
   int32_t v65; // w5
   bool v66; // w6
   bool v67; // w7
+  bool result; // w0
   System_String_o *v69; // x2
   System_String_o *v70; // x3
   int32_t v71; // w4
@@ -2415,8 +2418,9 @@ LABEL_24:
         v3->fields.__2__current = asyncRep_5__2;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)asyncRep_5__2, v62, v63, v64, v65, v66, v67);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 2;
-        return 1;
+        return result;
       }
 LABEL_41:
       sub_2213CDC(this, method);
@@ -2463,8 +2467,9 @@ LABEL_41:
   v3->fields.__2__current = v88;
   v89 = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
   sub_2213A04(v89, (int32_t)v88, v90, v91, v92, v93, v94, v95);
+  result = 1;
   v89[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

@@ -3109,15 +3109,21 @@ void SummonInfoControl__SetOneTimeExButton(
   UISprite_o *numImg; // x20
   struct SummonInfoControl_SummonObjInfo_o *v53; // x8
   struct SummonInfoControl_SummonObjParts_o *v54; // x8
-  struct SummonInfoControl_SummonObjInfo_o *v56; // x8
-  struct SummonInfoControl_SummonObjParts_o *v57; // x8
+  float v55; // s0 OVERLAPPED
+  float v56; // s3
+  float v57; // s1
+  float v58; // s2
   struct SummonInfoControl_SummonObjInfo_o *v59; // x8
   struct SummonInfoControl_SummonObjParts_o *v60; // x8
-  const MethodInfo *v61; // x6
-  struct SummonInfoControl_SummonObjInfo_o *v62; // x8
+  float v61; // s0 OVERLAPPED
+  float v62; // s3
+  float v63; // s1
+  float v64; // s2
+  struct SummonInfoControl_SummonObjInfo_o *v65; // x8
+  struct SummonInfoControl_SummonObjParts_o *v66; // x8
+  const MethodInfo *v67; // x6
+  struct SummonInfoControl_SummonObjInfo_o *v68; // x8
   GachaAppendEntity_o *appendEnt; // [xsp+8h] [xbp-38h] BYREF
-  UnityEngine_Color_o v64; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v65; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596CAF0 & 1) == 0 )
   {
@@ -3348,53 +3354,56 @@ void SummonInfoControl__SetOneTimeExButton(
                                                             Master_object = (GachaAppendMaster_o *)v54->fields.buttonImg;
                                                             if ( Master_object )
                                                             {
-                                                              v64.fields.r = 1.0;
-                                                              v64.fields.a = 1.0;
+                                                              v55 = 1.0;
+                                                              v56 = 1.0;
                                                               if ( !this->fields.isOneExUsePossible )
-                                                                v64.fields.r = 0.5;
-                                                              v64.fields.g = v64.fields.r;
-                                                              v64.fields.b = v64.fields.r;
-                                                              UIWidget__set_color((UIWidget_o *)Master_object, v64, 0);
-                                                              v56 = this->fields.oneExSummon;
-                                                              if ( v56 )
+                                                                v55 = 0.5;
+                                                              v57 = v55;
+                                                              v58 = v55;
+                                                              UIWidget__set_color(
+                                                                (UIWidget_o *)Master_object,
+                                                                *(UnityEngine_Color_o *)&v55,
+                                                                0);
+                                                              v59 = this->fields.oneExSummon;
+                                                              if ( v59 )
                                                               {
-                                                                v57 = v56->fields.single;
-                                                                if ( v57 )
+                                                                v60 = v59->fields.single;
+                                                                if ( v60 )
                                                                 {
-                                                                  Master_object = (GachaAppendMaster_o *)v57->fields.button;
+                                                                  Master_object = (GachaAppendMaster_o *)v60->fields.button;
                                                                   if ( Master_object )
                                                                   {
-                                                                    v65.fields.r = 1.0;
-                                                                    v65.fields.a = 1.0;
+                                                                    v61 = 1.0;
+                                                                    v62 = 1.0;
                                                                     if ( !this->fields.isOneExUsePossible )
-                                                                      v65.fields.r = 0.5;
-                                                                    v65.fields.g = v65.fields.r;
-                                                                    v65.fields.b = v65.fields.r;
+                                                                      v61 = 0.5;
+                                                                    v63 = v61;
+                                                                    v64 = v61;
                                                                     UIButtonColor__set_defaultColor(
                                                                       (UIButtonColor_o *)Master_object,
-                                                                      v65,
+                                                                      *(UnityEngine_Color_o *)&v61,
                                                                       0);
-                                                                    v59 = this->fields.oneExSummon;
-                                                                    if ( v59 )
+                                                                    v65 = this->fields.oneExSummon;
+                                                                    if ( v65 )
                                                                     {
-                                                                      v60 = v59->fields.single;
-                                                                      if ( v60 )
+                                                                      v66 = v65->fields.single;
+                                                                      if ( v66 )
                                                                       {
-                                                                        Master_object = (GachaAppendMaster_o *)v60->fields.numImg;
+                                                                        Master_object = (GachaAppendMaster_o *)v66->fields.numImg;
                                                                         if ( Master_object )
                                                                         {
                                                                           Master_object = (GachaAppendMaster_o *)(*(__int64 (__fastcall **)(GachaAppendMaster_o *, _QWORD))&Master_object->klass[1]._2.element_size)(Master_object, *(_QWORD *)&Master_object->klass[1]._2.static_fields_size);
-                                                                          v62 = this->fields.oneExSummon;
-                                                                          if ( v62 )
+                                                                          v68 = this->fields.oneExSummon;
+                                                                          if ( v68 )
                                                                           {
                                                                             SummonInfoControl__SetSummonGiftDisp(
                                                                               this,
-                                                                              v62->fields.single,
+                                                                              v68->fields.single,
                                                                               0,
                                                                               0,
                                                                               1,
                                                                               0,
-                                                                              v61);
+                                                                              v67);
                                                                             return;
                                                                           }
                                                                         }
@@ -5928,7 +5937,7 @@ System_IAsyncResult_o *SummonInfoControl_ClickDelegate__BeginInvoke(
   GachaRqParamData_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = paramData;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

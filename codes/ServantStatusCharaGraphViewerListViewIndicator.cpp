@@ -176,7 +176,7 @@ System_IAsyncResult_o *ServantStatusCharaGraphViewerListViewIndicator_OnModifyCe
   ServantStatusCharaGraphListViewItem_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = item;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

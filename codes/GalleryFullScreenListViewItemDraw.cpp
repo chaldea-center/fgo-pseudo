@@ -365,11 +365,11 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
   struct GalleryFullScreenListViewItem_o *v7; // x8
   struct GalleryFullScreenListViewItem_o *v8; // x8
   GalleryResourceEntity_o *GalleryResourceEntity_k__BackingField; // x8
-  MovieFileMerge_o *v10; // x21
+  MovieFileMerge_o *moviePlayerPrefab; // x21
   System_String_o *outputMergeFile; // x22
   GalleryFullScreenListViewItemDraw_o *v12; // x21
   struct GalleryFullScreenListViewItem_o *v13; // x8
-  Il2CppObject *moviePlayerPrefab; // x23
+  Il2CppObject *v14; // x23
   __int64 v15; // x1
   __int64 v16; // x2
   UnityEngine_Transform_o *transform; // x24
@@ -400,7 +400,7 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
   int32_t v42; // w5
   bool v43; // w6
   bool v44; // w7
-  struct UnityEngine_GameObject_o *busyAnim; // x1
+  intptr_t busyAnim; // x1
   struct UITexture_o *v46; // x8
   struct UITexture_o *v47; // x8
   System_String_o *v48; // x2
@@ -499,22 +499,22 @@ LABEL_10:
         GalleryResourceEntity_k__BackingField = v8->fields._GalleryResourceEntity_k__BackingField;
         if ( !GalleryResourceEntity_k__BackingField )
           goto LABEL_64;
-        v10 = (MovieFileMerge_o *)*((_QWORD *)this + 253);
+        moviePlayerPrefab = (MovieFileMerge_o *)this[10].fields.moviePlayerPrefab;
         this = (GalleryFullScreenListViewItemDraw_o *)GalleryResourceEntity__GetAssetPath(
                                                         GalleryResourceEntity_k__BackingField,
                                                         0);
-        if ( !v10 )
+        if ( !moviePlayerPrefab )
           goto LABEL_64;
-        MovieFileMerge__Initialize(v10, (System_String_o *)this, 0, 0);
-        outputMergeFile = v10->fields.outputMergeFile;
+        MovieFileMerge__Initialize(moviePlayerPrefab, (System_String_o *)this, 0, 0);
+        outputMergeFile = moviePlayerPrefab->fields.outputMergeFile;
         v12 = (GalleryFullScreenListViewItemDraw_o *)outputMergeFile;
 LABEL_23:
-        moviePlayerPrefab = (Il2CppObject *)v3->fields.moviePlayerPrefab;
+        v14 = (Il2CppObject *)v3->fields.moviePlayerPrefab;
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v3, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v15, v16);
         v18 = UnityEngine_Object__Instantiate_object__59717116(
-                moviePlayerPrefab,
+                v14,
                 transform,
                 (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
         v3->fields.moviePlayer = (struct CRIMoviePlayer_o *)v18;
@@ -550,9 +550,9 @@ LABEL_23:
             if ( this )
             {
               backBgTexture = v3->fields.backBgTexture;
-              *((_QWORD *)this + 25) = backBgTexture;
+              this[1].monitor = backBgTexture;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)((char *)this + 200),
+                (MissionNaviTransitionBoardItem_o *)&this[1].monitor,
                 (int32_t)backBgTexture,
                 v32,
                 v33,
@@ -563,17 +563,9 @@ LABEL_23:
               this = (GalleryFullScreenListViewItemDraw_o *)v3->fields.moviePlayer;
               if ( this )
               {
-                busyAnim = v3->fields.busyAnim;
-                *((_QWORD *)this + 26) = busyAnim;
-                sub_2213A04(
-                  (MissionNaviTransitionBoardItem_o *)((char *)this + 208),
-                  (int32_t)busyAnim,
-                  v39,
-                  v40,
-                  v41,
-                  v42,
-                  v43,
-                  v44);
+                busyAnim = (intptr_t)v3->fields.busyAnim;
+                this[1].fields.m_CachedPtr = busyAnim;
+                sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[1].fields, busyAnim, v39, v40, v41, v42, v43, v44);
                 this = (GalleryFullScreenListViewItemDraw_o *)v3->fields.moviePlayer;
                 if ( this )
                 {
@@ -1839,6 +1831,7 @@ bool GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__MoveNext(
   int32_t v62; // w5
   bool v63; // w6
   bool v64; // w7
+  bool result; // w0
   struct GalleryFullScreenListViewItemDraw___c__DisplayClass34_1_o *_8__1; // x8
   struct GalleryFullScreenListViewItemDraw___c__DisplayClass34_0_o *_8__2; // x8
   const MethodInfo *v68; // x1
@@ -2001,8 +1994,9 @@ LABEL_24:
                   v8->fields.__2__current = (Il2CppObject *)v57;
                   p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
                   sub_2213A04(p__2__current, (int32_t)v57, v59, v60, v61, v62, v63, v64);
+                  result = 1;
                   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-                  return 1;
+                  return result;
                 }
               }
             }
@@ -2025,8 +2019,9 @@ LABEL_29:
   v8->fields.__2__current = (Il2CppObject *)v71;
   v72 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v72, (int32_t)v71, v73, v74, v75, v76, v77, v78);
+  result = 1;
   v72[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 
@@ -2319,6 +2314,7 @@ bool GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__MoveNext(
   float deltaTime; // s0
   _BOOL4 setDataWait; // w8
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
@@ -2354,13 +2350,15 @@ LABEL_6:
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v8, v9, v10, v11, v12, v13);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
+  result = 0;
   *(_WORD *)&_4__this->fields.setDataWait = 0;
-  return 0;
+  return result;
 }
 
 

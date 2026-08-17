@@ -4798,10 +4798,12 @@ void PartyListViewItem__CheckAndAddDuplicationUserSvtId(
         const MethodInfo *method)
 {
   int32_t v8; // w1
-  int64_t v9; // x22
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_ValueTuple_int__bool__o v12; // x2
+  System_ValueTuple_int__bool__o p_value; // x0
+  int64_t v10; // x22
+  __int64 v11; // x0
+  __int64 v12; // x1
+  System_ValueTuple_int__bool__o v13; // x2
+  System_ValueTuple_int__bool__o v14; // x2
   System_ValueTuple_int__bool__o value; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596BF0D & 1) == 0 )
@@ -4813,22 +4815,24 @@ void PartyListViewItem__CheckAndAddDuplicationUserSvtId(
     byte_596BF0D = 1;
   }
   v8 = *orderIdx;
-  v9 = *userSvtId;
+  p_value = (System_ValueTuple_int__bool__o)&value;
+  v10 = *userSvtId;
   value = 0;
   System_ValueTuple_int__bool____ctor(
-    (System_ValueTuple_int__bool__o)&value,
+    p_value,
     v8,
     0,
     (const MethodInfo_3CECD7C *)Method_System_ValueTuple_int__bool___ctor__);
   if ( !duplicationUserSvtIdDictionary )
-    sub_2213CDC(v10, v11);
+    sub_2213CDC(v11, v12);
+  v13 = value;
   if ( !System_Collections_Generic_Dictionary_long__ValueTuple_int__bool____TryAdd(
           duplicationUserSvtIdDictionary,
-          v9,
-          value,
+          v10,
+          v13,
           (const MethodInfo_3FC1190 *)Method_System_Collections_Generic_Dictionary_long__ValueTuple_int__bool___TryAdd__) )
   {
-    v12 = (System_ValueTuple_int__bool__o)(*(_QWORD *)&System_Collections_Generic_Dictionary_long__ValueTuple_int__bool____get_Item(
+    v14 = (System_ValueTuple_int__bool__o)(*(_QWORD *)&System_Collections_Generic_Dictionary_long__ValueTuple_int__bool____get_Item(
                                                          duplicationUserSvtIdDictionary,
                                                          *userSvtId,
                                                          (const MethodInfo_3FBF648 *)Method_System_Collections_Generic_Dictionary_long__ValueTuple_int__bool___get_Item__)
@@ -4837,7 +4841,7 @@ void PartyListViewItem__CheckAndAddDuplicationUserSvtId(
     System_Collections_Generic_Dictionary_long__ValueTuple_int__bool____set_Item(
       duplicationUserSvtIdDictionary,
       *userSvtId,
-      v12,
+      v14,
       (const MethodInfo_3FBF6D4 *)Method_System_Collections_Generic_Dictionary_long__ValueTuple_int__bool___set_Item__);
   }
 }
@@ -4864,9 +4868,10 @@ bool PartyListViewItem__CheckAndUpdateDuplicationGrandQuestServant(PartyListView
   unsigned __int64 v19; // x24
   struct PartyOrganizationListViewItem_array *memberList; // x10
   PartyOrganizationListViewItem_o *v21; // x10
-  int32_t v22; // w0
-  bool v24; // [xsp+Ch] [xbp-84h]
-  __int64 v25; // [xsp+10h] [xbp-80h] BYREF
+  int32_t v22; // w1
+  System_Nullable_int__o v23; // x0
+  bool v25; // [xsp+Ch] [xbp-84h]
+  __int64 v26; // [xsp+10h] [xbp-80h] BYREF
   int32_t isChangeFriendShipSvtEquipSkill; // [xsp+1Ch] [xbp-74h] BYREF
   System_Int64_array *equipIdList; // [xsp+20h] [xbp-70h] BYREF
   UserServantEntity_o *userServantEntity; // [xsp+28h] [xbp-68h] BYREF
@@ -4890,7 +4895,7 @@ bool PartyListViewItem__CheckAndUpdateDuplicationGrandQuestServant(PartyListView
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v3, v4);
   Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantMaster___);
   v9 = 0;
-  v24 = 0;
+  v25 = 0;
   while ( 1 )
   {
     v10 = BalanceConfig_TypeInfo;
@@ -4900,7 +4905,7 @@ bool PartyListViewItem__CheckAndUpdateDuplicationGrandQuestServant(PartyListView
       v10 = BalanceConfig_TypeInfo;
     }
     if ( v9 >= v10->static_fields->DeckMemberMax )
-      return v24;
+      return v25;
     Member = (ServantEntity_o *)PartyListViewItem__GetMember(this, v9, v7);
     if ( !Member )
       goto LABEL_40;
@@ -4989,16 +4994,17 @@ LABEL_39:
                       if ( NotSamePartyKey )
                       {
                         v22 = ServantEntity__GetNotSamePartyKey((ServantEntity_o *)NotSamePartyKey, 0);
-                        v25 = 0;
+                        v23 = (System_Nullable_int__o)&v26;
+                        v26 = 0;
                         System_Nullable_int____ctor(
-                          (System_Nullable_int__o)&v25,
+                          v23,
                           v22,
                           (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
                         v16 = v18;
-                        if ( (_BYTE)v25 )
+                        if ( (_BYTE)v26 )
                         {
                           v16 = v18;
-                          if ( v18 == HIDWORD(v25) )
+                          if ( v18 == HIDWORD(v26) )
                             break;
                         }
                       }
@@ -5014,7 +5020,7 @@ LABEL_39:
 LABEL_34:
             isChangeFriendShipSvtEquipSkill = v16;
             PartyListViewItem__ClearMember(this, v19, v7);
-            v24 = 1;
+            v25 = 1;
           }
         }
       }
@@ -6992,8 +6998,8 @@ LABEL_97:
               while ( v38 < v35->fields._size );
               if ( (v37 & 1) != 0 )
               {
-                v33->fields._IsErrorNeedIndividuality_k__BackingField = 1;
                 LODWORD(questRestrictionInfo) = 23;
+                v33->fields._IsErrorNeedIndividuality_k__BackingField = 1;
                 return (int)questRestrictionInfo;
               }
             }
@@ -7265,7 +7271,7 @@ LABEL_24:
   v18 = 0;
   for ( i = 32; ; i += 8 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[1].monitor) )
     {
       j_il2cpp_runtime_class_init_0(this, eventId, v17);
       this = (PartyListViewItem_o *)BalanceConfig_TypeInfo;

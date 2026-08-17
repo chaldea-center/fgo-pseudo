@@ -1105,6 +1105,7 @@ bool LostAssetLoadCompensateLogic__CoroutineLoad_d__1__MoveNext(
   BattlePerformance_o *Perf_k__BackingField; // x23
   struct LostAssetLoadCompensateLogic___c__DisplayClass1_0_o *_8__1; // x8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   System_Collections_Generic_HashSet_Enumerator_T__o v34; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_HashSet_Enumerator_T__o v35; // [xsp+20h] [xbp-80h] BYREF
 
@@ -1203,8 +1204,9 @@ LABEL_26:
     v8->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
     sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   ActionExtensions__Call(v8->fields.finishCallback, 0);
   return 0;

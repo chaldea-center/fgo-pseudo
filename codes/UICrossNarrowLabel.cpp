@@ -11,6 +11,7 @@ void UICrossNarrowLabel___ctor(UICrossNarrowLabel_o *this, const MethodInfo *met
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UICrossNarrowLabel__SetCrossNarrowText(
         UICrossNarrowLabel_o *this,
         System_String_o *text,
@@ -22,8 +23,12 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   UnityEngine_Transform_o *transform; // x0
   __int64 v9; // x1
   int32_t baseWidth; // w20
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s9
+  float z; // s10
+  float v13; // s0 OVERLAPPED
+  float v14; // s1
+  float v15; // s2
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59720DC & 1) == 0 )
   {
@@ -49,15 +54,17 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   if ( !transform
     || (localScale = UnityEngine_Transform__get_localScale(transform, 0),
         baseWidth = this->fields.baseWidth,
+        y = localScale.fields.y,
+        z = localScale.fields.z,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
     sub_2213CDC(transform, v9);
   }
   if ( v7 <= (float)baseWidth )
-    v12.fields.x = 1.0;
+    v13 = 1.0;
   else
-    v12.fields.x = (float)baseWidth / v7;
-  v12.fields.y = localScale.fields.y;
-  v12.fields.z = localScale.fields.z;
-  UnityEngine_Transform__set_localScale(transform, v12, 0);
+    v13 = (float)baseWidth / v7;
+  v14 = y;
+  v15 = z;
+  UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&v13, 0);
 }

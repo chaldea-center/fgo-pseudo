@@ -313,15 +313,15 @@ void ServantEventBonusFilterController__InitItems(ServantEventBonusFilterControl
   __int64 v71; // x10
   Il2CppClass **v72; // x8
   UIWidget_o *v73; // x20
-  float v74; // s9
-  float v75; // s0
-  int32_t v76; // w1
-  UnityEngine_GameObject_o *v77; // x0
-  __int64 v78; // x2
-  float y; // s1
-  System_Collections_Generic_List_Enumerator_object__o v80; // [xsp+10h] [xbp-B0h] BYREF
+  __int64 v74; // x2
+  float y; // s9
+  float v76; // s0
+  int32_t v77; // w1
+  UnityEngine_GameObject_o *v78; // x0
+  System_Collections_Generic_List_Enumerator_object__o v79; // [xsp+10h] [xbp-B0h] BYREF
   SkillLvEntity_o *entity; // [xsp+28h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v82; // [xsp+30h] [xbp-90h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v81; // [xsp+30h] [xbp-90h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B1E7 & 1) == 0 )
   {
@@ -355,7 +355,7 @@ void ServantEventBonusFilterController__InitItems(ServantEventBonusFilterControl
     byte_596B1E7 = 1;
   }
   entity = 0;
-  memset(&v82, 0, sizeof(v82));
+  memset(&v81, 0, sizeof(v81));
   v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantEventBonusFilterItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
@@ -406,23 +406,23 @@ LABEL_66:
   if ( !BonusSkillFilterList )
     goto LABEL_66;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v80,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v79,
     BonusSkillFilterList,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventBonusFilterEntity__GetEnumerator__);
-  v82 = v80;
-  v80.fields._list = 0;
-  *(_QWORD *)&v80.fields._index = &v82;
+  v81 = v79;
+  v79.fields._list = 0;
+  *(_QWORD *)&v79.fields._index = &v81;
   while ( 1 )
   {
     v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v82,
+            &v81,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventBonusFilterEntity__MoveNext__);
     if ( !v22 )
       break;
-    current = v82.fields._current;
-    if ( !v82.fields._current )
+    current = v81.fields._current;
+    if ( !v81.fields._current )
       sub_2213CDC(v22, v23);
-    v25 = EventBonusFilterEntity__CheckBonusFilterType((EventBonusFilterEntity_o *)v82.fields._current, 4, 0);
+    v25 = EventBonusFilterEntity__CheckBonusFilterType((EventBonusFilterEntity_o *)v81.fields._current, 4, 0);
     if ( v25 )
     {
       if ( !v18 )
@@ -458,7 +458,7 @@ LABEL_66:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v82,
+    &v81,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventBonusFilterEntity__Dispose__);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v32, v33);
@@ -492,18 +492,18 @@ LABEL_66:
                                                                                      FriendshipUpCampaignInfo,
                                                                                      0);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v80,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v79,
     BonusSkillFilterList,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventBonusFilterEntity__GetEnumerator__);
   v39 = 0.0;
-  v82 = v80;
-  v80.fields._list = 0;
-  *(_QWORD *)&v80.fields._index = &v82;
+  v81 = v79;
+  v79.fields._list = 0;
+  *(_QWORD *)&v79.fields._index = &v81;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v82,
+            &v81,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventBonusFilterEntity__MoveNext__) )
   {
-    v42 = (EventBonusFilterEntity_o *)v82.fields._current;
+    v42 = (EventBonusFilterEntity_o *)v81.fields._current;
     itemPrefab = (Il2CppObject *)this->fields.itemPrefab;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40, v41);
@@ -565,7 +565,7 @@ LABEL_66:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v82,
+    &v81,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventBonusFilterEntity__Dispose__);
   Master_object = (EventMaster_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)this,
@@ -576,21 +576,21 @@ LABEL_66:
   Master_object = (EventMaster_o *)UnityEngine_GameObject__get_transform(this->fields.baseObject, 0);
   if ( !Master_object )
     goto LABEL_66;
-  y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Master_object, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Master_object, 0);
   Master_object = (EventMaster_o *)ServantEventBonusFilterController_TypeInfo;
-  v74 = y;
+  y = localPosition.fields.y;
   if ( !*(&ServantEventBonusFilterController_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantEventBonusFilterController_TypeInfo, v15, v78);
+    j_il2cpp_runtime_class_init_0(ServantEventBonusFilterController_TypeInfo, v15, v74);
   if ( !v73 )
     goto LABEL_66;
-  v75 = fabsf((float)(v39 + v74) + (float)ServantEventBonusFilterController_TypeInfo->static_fields->ADJUST_HEIGHT);
-  v76 = v75 == INFINITY ? 0x80000000 : (int)v75;
-  UIWidget__set_height(v73, v76, 0);
+  v76 = fabsf((float)(v39 + y) + (float)ServantEventBonusFilterController_TypeInfo->static_fields->ADJUST_HEIGHT);
+  v77 = v76 == INFINITY ? 0x80000000 : (int)v76;
+  UIWidget__set_height(v73, v77, 0);
   Master_object = (EventMaster_o *)this->fields.bottomLineSprite;
   if ( !Master_object )
     goto LABEL_66;
-  v77 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
-  GameObjectExtensions__SetLocalPositionY(v77, (float)-v73->fields.mHeight, 0);
+  v78 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
+  GameObjectExtensions__SetLocalPositionY(v78, (float)-v73->fields.mHeight, 0);
   UIWidget__set_height(v73, v73->fields.mHeight + 12, 0);
 }
 

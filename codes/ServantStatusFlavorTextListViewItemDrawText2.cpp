@@ -244,29 +244,38 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
   UnityEngine_GameObject_o *rubyPrefab; // x26
   UILabel_o *v27; // x24
   RubyLabelHelper_o *v28; // x23
-  UnityEngine_Vector2_o Size; // kr30_8
+  UnityEngine_Vector2_o Size; // kr00_8
   int32_t y; // w22
   __int64 v31; // x1
   __int64 v32; // x2
   UnityEngine_Object_o *baseCollider; // x23
   int v34; // w24
   __int64 v35; // x2
+  float v36; // s1
   UnityEngine_Object_o *baseSprite; // x22
-  int v37; // w22
-  float v38; // s11
-  __int64 v40; // x1
-  __int64 v41; // x2
+  int v38; // w22
+  float x; // s8
+  float v40; // s10
+  float z; // s9
+  float v42; // s11
+  float v43; // s0 OVERLAPPED
+  float v44; // s3
+  float v45; // s1
+  float v46; // s2
+  float v47; // s8
+  float v48; // s10
+  float v49; // s9
+  __int64 v50; // x1
+  __int64 v51; // x2
   UnityEngine_Object_o *newIcon; // x21
-  int32_t v44; // [xsp+2Ch] [xbp-54h] BYREF
-  UnityEngine_Vector3_o v45; // 0:kr00_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
-  UnityEngine_Vector3_o v47; // 0:kr20_12.12
-  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v53; // [xsp+2Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
 
-  v44 = profileNum;
+  v53 = profileNum;
   if ( (byte_596CB62 & 1) == 0 )
   {
     sub_2213A60(&UnityEngine_Object_TypeInfo);
@@ -288,7 +297,7 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
       if ( profileNum >= 1 && this->fields.profileNumMax >= profileNum )
       {
         v20 = this->fields.titleNumSprite;
-        v21 = System_Int32__ToString((int32_t)&v44, 0);
+        v21 = System_Int32__ToString((int32_t)&v53, 0);
         transform = System_String__Concat_75651716((System_String_o *)StringLiteral_21698/*"img_txt_profile"*/, v21, 0);
         if ( !v20 )
           goto LABEL_57;
@@ -350,14 +359,12 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
       transform = (System_String_o *)this->fields.baseCollider;
       if ( !transform )
         goto LABEL_57;
-      v45 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)transform, 0);
-      v50.fields.x = v45.fields.x;
-      v50.fields.z = v45.fields.z;
+      v54 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)transform, 0);
       transform = (System_String_o *)this->fields.baseCollider;
       if ( !transform )
         goto LABEL_57;
-      v50.fields.y = v45.fields.y + (float)v34;
-      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)transform, v50, 0);
+      v36 = v54.fields.y + (float)v34;
+      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)transform, v54, 0);
     }
     baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -377,44 +384,50 @@ void ServantStatusFlavorTextListViewItemDrawText2__SetItem(
       goto LABEL_57;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
     transform = (System_String_o *)this->fields.messageLabel;
-    v37 = v34 >= 0 ? v34 : v34 + 1;
+    v38 = v34 >= 0 ? v34 : v34 + 1;
     if ( !transform )
       goto LABEL_57;
+    x = localPosition.fields.x;
+    v40 = localPosition.fields.y;
+    z = localPosition.fields.z;
     transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
     if ( !transform )
       goto LABEL_57;
-    v48.fields.x = localPosition.fields.x;
-    v48.fields.z = localPosition.fields.z;
-    v38 = (float)(v37 >> 1);
-    v48.fields.y = localPosition.fields.y + v38;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v48, 0);
+    v56.fields.x = x;
+    v56.fields.z = z;
+    v42 = (float)(v38 >> 1);
+    v56.fields.y = v40 + v42;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v56, 0);
     transform = (System_String_o *)this->fields.titleBase;
     if ( !transform )
       goto LABEL_57;
-    v51.fields.r = 0.5;
-    v51.fields.a = 1.0;
+    v43 = 0.5;
+    v44 = 1.0;
     if ( isOpen )
-      v51.fields.r = 1.0;
-    v51.fields.g = v51.fields.r;
-    v51.fields.b = v51.fields.r;
-    UIWidget__set_color((UIWidget_o *)transform, v51, 0);
+      v43 = 1.0;
+    v45 = v43;
+    v46 = v43;
+    UIWidget__set_color((UIWidget_o *)transform, *(UnityEngine_Color_o *)&v43, 0);
     transform = (System_String_o *)this->fields.titleBase;
     if ( !transform
       || (transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0
-      || (v47 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
+      || (v57 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
           (transform = (System_String_o *)this->fields.titleBase) == 0)
-      || (transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0 )
+      || (v47 = v57.fields.x,
+          v48 = v57.fields.y,
+          v49 = v57.fields.z,
+          (transform = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0) )
     {
 LABEL_57:
       sub_2213CDC(transform, v17);
     }
-    v49.fields.y = v47.fields.y + v38;
-    v49.fields.x = v47.fields.x;
-    v49.fields.z = v47.fields.z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v49, 0);
+    v58.fields.y = v48 + v42;
+    v58.fields.x = v47;
+    v58.fields.z = v49;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v58, 0);
     newIcon = (UnityEngine_Object_o *)this->fields.newIcon;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40, v41);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v50, v51);
     if ( UnityEngine_Object__op_Inequality(newIcon, 0, 0) )
     {
       transform = (System_String_o *)this->fields.newIcon;

@@ -1,49 +1,55 @@
 void ServantStatusListViewManager___cctor(const MethodInfo *method)
 {
   Il2CppClass *v1; // x0
-  System_Array_o *v2; // x19
+  System_Array_o *v2; // x0
+  System_RuntimeFieldHandle_o v3; // x1
+  System_Array_o *v4; // x19
   struct ServantStatusListViewManager_StaticFields *static_fields; // x0
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
-  System_Array_o *v10; // x19
-  struct ServantStatusListViewManager_StaticFields *v11; // x0
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  System_Array_o *v18; // x19
-  struct ServantStatusListViewManager_StaticFields *v19; // x0
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
-  __int64 v26; // x0
-  __int64 v27; // x1
-  System_String_o *v28; // x2
-  System_String_o *v29; // x3
-  int32_t v30; // w4
-  int32_t v31; // w5
-  bool v32; // w6
-  bool v33; // w7
-  __int64 v34; // x1
-  ServantStatusListViewManager_c *v35; // x8
-  struct ServantStatusListViewManager_StaticFields *v36; // x0
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  struct ServantStatusListViewItemDraw_Kind_array *v43; // x1
-  struct ServantStatusListViewManager_StaticFields *v44; // x0
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  System_Array_o *v12; // x0
+  System_RuntimeFieldHandle_o v13; // x1
+  System_Array_o *v14; // x19
+  struct ServantStatusListViewManager_StaticFields *v15; // x0
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
+  System_Array_o *v22; // x0
+  System_RuntimeFieldHandle_o v23; // x1
+  System_Array_o *v24; // x19
+  struct ServantStatusListViewManager_StaticFields *v25; // x0
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  __int64 v32; // x0
+  __int64 v33; // x1
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  __int64 v40; // x1
+  ServantStatusListViewManager_c *v41; // x8
+  struct ServantStatusListViewManager_StaticFields *v42; // x0
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  int32_t v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  struct ServantStatusListViewItemDraw_Kind_array *v49; // x1
+  struct ServantStatusListViewManager_StaticFields *v50; // x0
 
   if ( (byte_596DF77 & 1) == 0 )
   {
@@ -57,52 +63,49 @@ void ServantStatusListViewManager___cctor(const MethodInfo *method)
   v1 = ServantStatusListViewItemDraw_Kind___TypeInfo;
   ServantStatusListViewManager_TypeInfo->static_fields->LIST_BLANK = 10;
   v2 = (System_Array_o *)sub_2213B20(v1, 15);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v2,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__999472C34694AC46126CF9CB75AE38A2FF5078D1462CE5523FA9BE90384625E7,
-    0);
+  v3.fields.value = Field__PrivateImplementationDetails__999472C34694AC46126CF9CB75AE38A2FF5078D1462CE5523FA9BE90384625E7;
+  v4 = v2;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v2, v3, 0);
   static_fields = ServantStatusListViewManager_TypeInfo->static_fields;
-  static_fields->normalKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v2;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->normalKindList, (int32_t)v2, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Array_o *)sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 15);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v10,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__90890B568BE5949487E4890DB56FB55081C81932511CEFD53045FD4B504E3CCE,
-    0);
-  v11 = ServantStatusListViewManager_TypeInfo->static_fields;
-  v11->grandKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v10;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11->grandKindList, (int32_t)v10, v12, v13, v14, v15, v16, v17);
-  v18 = (System_Array_o *)sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v18,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__C58AD080632E6C3FD9726F64BBE6FDC978983708E1C0EF3E75340759306C67FE,
-    0);
-  v19 = ServantStatusListViewManager_TypeInfo->static_fields;
-  v19->equipKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v18;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->equipKindList, (int32_t)v18, v20, v21, v22, v23, v24, v25);
-  v26 = sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 1);
-  if ( !v26 )
+  static_fields->normalKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v4;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->normalKindList, (int32_t)v4, v6, v7, v8, v9, v10, v11);
+  v12 = (System_Array_o *)sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 15);
+  v13.fields.value = Field__PrivateImplementationDetails__90890B568BE5949487E4890DB56FB55081C81932511CEFD53045FD4B504E3CCE;
+  v14 = v12;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v12, v13, 0);
+  v15 = ServantStatusListViewManager_TypeInfo->static_fields;
+  v15->grandKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v14;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15->grandKindList, (int32_t)v14, v16, v17, v18, v19, v20, v21);
+  v22 = (System_Array_o *)sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 3);
+  v23.fields.value = Field__PrivateImplementationDetails__C58AD080632E6C3FD9726F64BBE6FDC978983708E1C0EF3E75340759306C67FE;
+  v24 = v22;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v22, v23, 0);
+  v25 = ServantStatusListViewManager_TypeInfo->static_fields;
+  v25->equipKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v24;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->equipKindList, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+  v32 = sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 1);
+  if ( !v32 )
     goto LABEL_8;
-  v34 = v26;
-  if ( !*(_DWORD *)(v26 + 24) )
+  v40 = v32;
+  if ( !*(_DWORD *)(v32 + 24) )
     goto LABEL_9;
-  v35 = ServantStatusListViewManager_TypeInfo;
-  *(_DWORD *)(v26 + 32) = 12;
-  v36 = v35->static_fields;
-  v36->npcFollowerEquipKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v34;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v36->npcFollowerEquipKindList, v34, v28, v29, v30, v31, v32, v33);
-  v26 = sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 1);
-  if ( !v26 )
+  v41 = ServantStatusListViewManager_TypeInfo;
+  *(_DWORD *)(v32 + 32) = 12;
+  v42 = v41->static_fields;
+  v42->npcFollowerEquipKindList = (struct ServantStatusListViewItemDraw_Kind_array *)v40;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v42->npcFollowerEquipKindList, v40, v34, v35, v36, v37, v38, v39);
+  v32 = sub_2213B20(ServantStatusListViewItemDraw_Kind___TypeInfo, 1);
+  if ( !v32 )
 LABEL_8:
-    sub_2213CDC(v26, v27);
-  v43 = (struct ServantStatusListViewItemDraw_Kind_array *)v26;
-  if ( !*(_DWORD *)(v26 + 24) )
+    sub_2213CDC(v32, v33);
+  v49 = (struct ServantStatusListViewItemDraw_Kind_array *)v32;
+  if ( !*(_DWORD *)(v32 + 24) )
 LABEL_9:
-    sub_2213CE4(v26);
-  v44 = ServantStatusListViewManager_TypeInfo->static_fields;
-  v43->m_Items[0] = 14;
-  v44->commandCodeKindList = v43;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v44->commandCodeKindList, (int32_t)v43, v37, v38, v39, v40, v41, v42);
+    sub_2213CE4(v32);
+  v50 = ServantStatusListViewManager_TypeInfo->static_fields;
+  v49->m_Items[0] = 14;
+  v50->commandCodeKindList = v49;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v50->commandCodeKindList, (int32_t)v49, v43, v44, v45, v46, v47, v48);
 }
 
 
@@ -166,7 +169,7 @@ void ServantStatusListViewManager__CacheViewTopContentsAndGap(
   int32_t size; // w8
   struct UIScrollView_o *scrollView; // x8
   UnityEngine_Component_o *v6; // x20
-  UnityEngine_Vector2_o ViewSize; // kr20_8
+  UnityEngine_Vector2_o ViewSize; // kr00_8
   float y; // s9
   const MethodInfo *v9; // x1
   int v10; // w20
@@ -178,6 +181,8 @@ void ServantStatusListViewManager__CacheViewTopContentsAndGap(
   float v16; // s8
   const MethodInfo *v17; // x1
   float v18; // s0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596DF6C & 1) == 0 )
   {
@@ -204,10 +209,13 @@ void ServantStatusListViewManager__CacheViewTopContentsAndGap(
     goto LABEL_17;
   v6 = (UnityEngine_Component_o *)objectList;
   objectList = (System_Collections_Generic_List_object__o *)scrollView->fields.mPanel;
-  if ( !objectList
-    || (ViewSize = UIPanel__GetViewSize((UIPanel_o *)objectList, 0), !v6)
+  if ( !objectList )
+    goto LABEL_17;
+  ViewSize = UIPanel__GetViewSize((UIPanel_o *)objectList, 0);
+  if ( !v6
     || (objectList = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_transform(v6, 0)) == 0
-    || (y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectList, 0).fields.y,
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectList, 0),
+        y = localPosition.fields.y,
         objectList = (System_Collections_Generic_List_object__o *)ServantStatusListViewObject__GetSize(
                                                                     (ServantStatusListViewObject_o *)v6,
                                                                     v9),
@@ -236,7 +244,8 @@ LABEL_17:
                                                                 0);
     if ( !objectList )
       goto LABEL_17;
-    v16 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectList, 0).fields.y));
+    v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectList, 0);
+    v16 = v20.fields.y;
     v18 = vcvts_n_f32_s32(ServantStatusListViewObject__GetSize(v15, v17), 1u);
     if ( (float)(v14 + (float)(ViewSize.fields.y * -0.35)) > (float)(v16 - v18) )
     {
@@ -936,7 +945,7 @@ void ServantStatusListViewManager__LateUpdate(ServantStatusListViewManager_o *th
   int32_t v4; // w8
   struct UIScrollView_o *v5; // x8
   UnityEngine_Component_o *v6; // x20
-  UnityEngine_Vector2_o ViewSize; // kr20_8
+  UnityEngine_Vector2_o ViewSize; // kr00_8
   float y; // s9
   const MethodInfo *v9; // x1
   int v10; // w20
@@ -945,6 +954,8 @@ void ServantStatusListViewManager__LateUpdate(ServantStatusListViewManager_o *th
   const MethodInfo *v13; // x1
   float v14; // s1
   float v15; // s0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596DF69 & 1) == 0 )
   {
@@ -990,7 +1001,8 @@ void ServantStatusListViewManager__LateUpdate(ServantStatusListViewManager_o *th
                 scrollView = UnityEngine_Component__get_transform(v6, 0);
                 if ( scrollView )
                 {
-                  y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0).fields.y;
+                  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
+                  y = localPosition.fields.y;
                   scrollView = (void *)ServantStatusListViewObject__GetSize((ServantStatusListViewObject_o *)v6, v9);
                   if ( this->fields.objectList )
                   {
@@ -1005,7 +1017,8 @@ void ServantStatusListViewManager__LateUpdate(ServantStatusListViewManager_o *th
                       scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0);
                       if ( scrollView )
                       {
-                        v12 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0).fields.y;
+                        v17 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
+                        v12 = v17.fields.y;
                         scrollView = (void *)ServantStatusListViewObject__GetSize(v11, v13);
                         if ( this->fields.scrollBar )
                         {
@@ -2654,7 +2667,7 @@ System_IAsyncResult_o *ServantStatusListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(ServantStatusListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

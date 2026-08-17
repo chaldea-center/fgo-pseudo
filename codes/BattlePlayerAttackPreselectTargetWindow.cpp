@@ -83,7 +83,7 @@ void BattlePlayerAttackPreselectTargetWindow__CacheDecideButtonColors(
   UIButtonColor_o *v5; // x0
   struct UIButton_o *v6; // x8
   struct UnityEngine_Color_o pressed; // q0
-  UnityEngine_Color_o defaultColor; // 0:kr00_16.16
+  UnityEngine_Color_o defaultColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974139 & 1) == 0 )
   {
@@ -1167,8 +1167,7 @@ void BattlePlayerAttackPreselectTargetWindow__UpdateServantButtonPositions(
   const MethodInfo *v11; // x2
   char v12; // w22
   UnityEngine_Transform_o *v13; // x21
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974129 & 1) == 0 )
   {
@@ -1223,10 +1222,8 @@ LABEL_18:
             goto LABEL_18;
           v13 = (UnityEngine_Transform_o *)DisplayServantCount;
           localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)DisplayServantCount, 0);
-          v15.fields.y = localPosition.fields.y;
-          v15.fields.z = localPosition.fields.z;
-          v15.fields.x = (float)((float)v7 - v8) * 250.0;
-          UnityEngine_Transform__set_localPosition(v13, v15, 0);
+          localPosition.fields.x = (float)((float)v7 - v8) * 250.0;
+          UnityEngine_Transform__set_localPosition(v13, localPosition, 0);
           ++v7;
         }
       }

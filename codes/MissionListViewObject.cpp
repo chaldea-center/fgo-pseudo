@@ -95,12 +95,15 @@ void MissionListViewObject__EventExitMove(MissionListViewObject_o *this, const M
   __int64 v9; // x2
   UnityEngine_GameObject_o *v10; // x20
   ListViewObject_c *v11; // x0
-  UnityEngine_GameObject_o *v12; // x20
+  float v12; // s8
+  float v13; // s9
+  float v14; // s10
+  UnityEngine_GameObject_o *v15; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v14; // x1
-  UnityEngine_Vector3_o v15; // 0:kr14_12.12
+  __int64 v17; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596A0BB & 1) == 0 )
   {
@@ -131,29 +134,32 @@ void MissionListViewObject__EventExitMove(MissionListViewObject_o *this, const M
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
     if ( !parent )
       goto LABEL_15;
-    v15 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+    v19 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
     v10 = this->fields.dragObject;
     v11 = ListViewObject_TypeInfo;
+    v12 = v19.fields.x + 1000.0;
+    v13 = v19.fields.y + 0.0;
+    v14 = v19.fields.z + 0.0;
     if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, v8, v9);
       v11 = ListViewObject_TypeInfo;
     }
-    v17.fields.x = v15.fields.x + 1000.0;
-    v17.fields.y = v15.fields.y + 0.0;
-    v17.fields.z = v15.fields.z + 0.0;
-    transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v10, v11->static_fields->BASE_MOVE_TIME, v17, 0);
+    v20.fields.x = v12;
+    v20.fields.y = v13;
+    v20.fields.z = v14;
+    transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v10, v11->static_fields->BASE_MOVE_TIME, v20, 0);
     if ( !transform )
 LABEL_15:
       sub_2213CDC(transform, v5);
-    v12 = transform;
+    v15 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v12[3].monitor = gameObject;
-    sub_2213A04(&v12[3].monitor, gameObject);
-    v14 = StringLiteral_10280/*"OnCompleteEventExitMove"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_10280/*"OnCompleteEventExitMove"*/;
-    sub_2213A04(&v12[3].fields, v14);
+    v15[3].monitor = gameObject;
+    sub_2213A04(&v15[3].monitor, gameObject);
+    v17 = StringLiteral_10280/*"OnCompleteEventExitMove"*/;
+    v15[3].fields.m_CachedPtr = StringLiteral_10280/*"OnCompleteEventExitMove"*/;
+    sub_2213A04(&v15[3].fields, v17);
   }
 }
 
@@ -220,13 +226,17 @@ void MissionListViewObject__EventIntoMove(MissionListViewObject_o *this, const M
   UnityEngine_Transform_o *parent; // x20
   __int64 v5; // x1
   __int64 v6; // x2
-  ListViewObject_c *v7; // x0
-  UnityEngine_GameObject_o *v8; // x20
-  UnityEngine_GameObject_o *v9; // x20
+  float x; // s8
+  float y; // s9
+  ListViewObject_c *v9; // x0
+  float z; // s10
+  UnityEngine_GameObject_o *v11; // x20
+  UnityEngine_GameObject_o *v12; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v11; // x1
-  UnityEngine_Vector3_o v12; // 0:kr14_12.12
+  __int64 v14; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596A0B8 & 1) == 0 )
   {
@@ -247,26 +257,32 @@ void MissionListViewObject__EventIntoMove(MissionListViewObject_o *this, const M
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !parent )
     goto LABEL_11;
-  v12 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
-  v7 = ListViewObject_TypeInfo;
-  v8 = this->fields.dragObject;
+  v16 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+  x = v16.fields.x;
+  y = v16.fields.y;
+  v9 = ListViewObject_TypeInfo;
+  z = v16.fields.z;
+  v11 = this->fields.dragObject;
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, v5, v6);
-    v7 = ListViewObject_TypeInfo;
+    v9 = ListViewObject_TypeInfo;
   }
-  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v8, v7->static_fields->BASE_MOVE_TIME, v12, 0);
+  v17.fields.x = x;
+  v17.fields.y = y;
+  v17.fields.z = z;
+  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v11, v9->static_fields->BASE_MOVE_TIME, v17, 0);
   if ( !dragObject )
 LABEL_11:
     sub_2213CDC(dragObject, method);
-  v9 = dragObject;
+  v12 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v9[3].monitor = gameObject;
-  sub_2213A04(&v9[3].monitor, gameObject);
-  v11 = StringLiteral_10281/*"OnCompleteEventIntoMove"*/;
-  v9[3].fields.m_CachedPtr = StringLiteral_10281/*"OnCompleteEventIntoMove"*/;
-  sub_2213A04(&v9[3].fields, v11);
+  v12[3].monitor = gameObject;
+  sub_2213A04(&v12[3].monitor, gameObject);
+  v14 = StringLiteral_10281/*"OnCompleteEventIntoMove"*/;
+  v12[3].fields.m_CachedPtr = StringLiteral_10281/*"OnCompleteEventIntoMove"*/;
+  sub_2213A04(&v12[3].fields, v14);
 }
 
 

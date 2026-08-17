@@ -411,45 +411,50 @@ System_String_o *EventServantEntity__getEndTimeStr(EventServantEntity_o *this, c
   int64_t endedAt; // x19
   __int64 v5; // x1
   System_Object_array *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  System_String_o *v9; // x2
-  System_String_o *v10; // x3
-  int32_t v11; // w4
-  int32_t v12; // w5
-  bool v13; // w6
-  bool v14; // w7
-  Il2CppObject *v15; // x20
-  __int64 v16; // x1
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
-  Il2CppObject *v23; // x20
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
-  Il2CppObject *v30; // x20
-  System_String_o *v31; // x2
-  System_String_o *v32; // x3
-  int32_t v33; // w4
-  int32_t v34; // w5
-  bool v35; // w6
-  bool v36; // w7
-  Il2CppObject *v37; // x20
-  System_String_o *v38; // x2
-  System_String_o *v39; // x3
-  int32_t v40; // w4
-  int32_t v41; // w5
-  bool v42; // w6
-  bool v43; // w7
-  Il2CppObject *v44; // x20
-  __int64 v46; // x0
+  System_DateTime_o v7; // x0
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  Il2CppObject *v16; // x20
+  __int64 v17; // x1
+  System_DateTime_o v18; // x0
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  Il2CppObject *v25; // x20
+  System_DateTime_o v26; // x0
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  Il2CppObject *v33; // x20
+  System_DateTime_o v34; // x0
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  Il2CppObject *v41; // x20
+  System_DateTime_o v42; // x0
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  int32_t v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  Il2CppObject *v49; // x20
+  __int64 v51; // x0
   int32_t Minute; // [xsp+4h] [xbp-3Ch] BYREF
   int32_t Hour; // [xsp+8h] [xbp-38h] BYREF
   int32_t Day; // [xsp+Ch] [xbp-34h] BYREF
@@ -474,77 +479,82 @@ System_String_o *EventServantEntity__getEndTimeStr(EventServantEntity_o *this, c
   v6 = (System_Object_array *)sub_2213B20(object___TypeInfo, 5);
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v5);
-  Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-  v7 = j_il2cpp_value_box_0(qword_5984348, &Year);
+  v7.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v7, 0);
+  v8 = j_il2cpp_value_box_0(qword_5984348, &Year);
   if ( !v6 )
-    sub_2213CDC(v7, v8);
-  v15 = (Il2CppObject *)v7;
-  if ( v7 )
+    sub_2213CDC(v8, v9);
+  v16 = (Il2CppObject *)v8;
+  if ( v8 )
   {
-    v7 = sub_2213BB4(v7, v6->obj.klass->_1.element_class);
-    if ( !v7 )
+    v8 = sub_2213BB4(v8, v6->obj.klass->_1.element_class);
+    if ( !v8 )
       goto LABEL_25;
   }
   if ( !LODWORD(v6->max_length) )
     goto LABEL_24;
-  v6->m_Items[0] = v15;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)v6->m_Items, (int32_t)v15, v9, v10, v11, v12, v13, v14);
-  Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-  v7 = j_il2cpp_value_box_0(qword_5984348, &Month);
-  v23 = (Il2CppObject *)v7;
-  if ( v7 )
+  v6->m_Items[0] = v16;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)v6->m_Items, (int32_t)v16, v10, v11, v12, v13, v14, v15);
+  v18.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v18, 0);
+  v8 = j_il2cpp_value_box_0(qword_5984348, &Month);
+  v25 = (Il2CppObject *)v8;
+  if ( v8 )
   {
-    v7 = sub_2213BB4(v7, v6->obj.klass->_1.element_class);
-    if ( !v7 )
+    v8 = sub_2213BB4(v8, v6->obj.klass->_1.element_class);
+    if ( !v8 )
       goto LABEL_25;
   }
   if ( (v6->max_length & 0xFFFFFFFE) == 0 )
     goto LABEL_24;
-  v6->m_Items[1] = v23;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
-  Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-  v7 = j_il2cpp_value_box_0(qword_5984348, &Day);
-  v30 = (Il2CppObject *)v7;
-  if ( v7 )
+  v6->m_Items[1] = v25;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[1], (int32_t)v25, v19, v20, v21, v22, v23, v24);
+  v26.fields._dateData = (uint64_t)&dateData;
+  Day = System_DateTime__get_Day(v26, 0);
+  v8 = j_il2cpp_value_box_0(qword_5984348, &Day);
+  v33 = (Il2CppObject *)v8;
+  if ( v8 )
   {
-    v7 = sub_2213BB4(v7, v6->obj.klass->_1.element_class);
-    if ( !v7 )
+    v8 = sub_2213BB4(v8, v6->obj.klass->_1.element_class);
+    if ( !v8 )
       goto LABEL_25;
   }
   if ( LODWORD(v6->max_length) <= 2 )
     goto LABEL_24;
-  v6->m_Items[2] = v30;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[2], (int32_t)v30, v24, v25, v26, v27, v28, v29);
-  Hour = System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
-  v7 = j_il2cpp_value_box_0(qword_5984348, &Hour);
-  v37 = (Il2CppObject *)v7;
-  if ( v7 )
+  v6->m_Items[2] = v33;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[2], (int32_t)v33, v27, v28, v29, v30, v31, v32);
+  v34.fields._dateData = (uint64_t)&dateData;
+  Hour = System_DateTime__get_Hour(v34, 0);
+  v8 = j_il2cpp_value_box_0(qword_5984348, &Hour);
+  v41 = (Il2CppObject *)v8;
+  if ( v8 )
   {
-    v7 = sub_2213BB4(v7, v6->obj.klass->_1.element_class);
-    if ( !v7 )
+    v8 = sub_2213BB4(v8, v6->obj.klass->_1.element_class);
+    if ( !v8 )
       goto LABEL_25;
   }
   if ( (v6->max_length & 0xFFFFFFFC) == 0 )
     goto LABEL_24;
-  v6->m_Items[3] = v37;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[3], (int32_t)v37, v31, v32, v33, v34, v35, v36);
-  Minute = System_DateTime__get_Minute((System_DateTime_o)&dateData, 0);
-  v7 = j_il2cpp_value_box_0(qword_5984348, &Minute);
-  v44 = (Il2CppObject *)v7;
-  if ( v7 )
+  v6->m_Items[3] = v41;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[3], (int32_t)v41, v35, v36, v37, v38, v39, v40);
+  v42.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v42, 0);
+  v8 = j_il2cpp_value_box_0(qword_5984348, &Minute);
+  v49 = (Il2CppObject *)v8;
+  if ( v8 )
   {
-    v7 = sub_2213BB4(v7, v6->obj.klass->_1.element_class);
-    if ( !v7 )
+    v8 = sub_2213BB4(v8, v6->obj.klass->_1.element_class);
+    if ( !v8 )
     {
 LABEL_25:
-      v46 = sub_2213D00(v7, v16);
-      sub_2213BA0(v46, 0);
+      v51 = sub_2213D00(v8, v17);
+      sub_2213BA0(v51, 0);
     }
   }
   if ( LODWORD(v6->max_length) <= 4 )
 LABEL_24:
-    sub_2213CE4(v7);
-  v6->m_Items[4] = v44;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[4], (int32_t)v44, v38, v39, v40, v41, v42, v43);
+    sub_2213CE4(v8);
+  v6->m_Items[4] = v49;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v6->m_Items[4], (int32_t)v49, v43, v44, v45, v46, v47, v48);
   return System_String__Format_75698016((System_String_o *)StringLiteral_26546/*"{0}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/, v6, 0);
 }

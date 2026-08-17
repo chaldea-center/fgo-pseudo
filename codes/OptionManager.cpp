@@ -619,6 +619,7 @@ bool OptionManager__CheckOldLocal(const MethodInfo *method)
   bool v5; // w19
   OptionManager_c *v6; // x0
   struct OptionManager_StaticFields *static_fields; // x8
+  bool result; // w0
 
   if ( (byte_597001B & 1) == 0 )
   {
@@ -658,9 +659,10 @@ LABEL_12:
     v6 = OptionManager_TypeInfo;
   }
   static_fields = v6->static_fields;
+  result = v5;
   static_fields->isModify = v5;
   static_fields->isServerModify = v5;
-  return v5;
+  return result;
 }
 
 

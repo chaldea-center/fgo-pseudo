@@ -110,16 +110,21 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
   UnityEngine_GameObject_o *v8; // x20
   __int64 v9; // x1
   __int64 v10; // x2
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float w; // s11
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v12; // x1
-  UnityEngine_Transform_o *v13; // x21
-  UnityEngine_Quaternion_o v15; // 0:kr00_16.16
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v16; // x1
+  UnityEngine_Transform_o *v17; // x21
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v26; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_596E02F & 1) == 0 )
   {
@@ -132,19 +137,27 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
   v8 = 0;
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)prefab, 0, 0) )
   {
-    v16.fields.x = 0.0;
-    v16.fields.y = 0.0;
-    v16.fields.z = 0.0;
-    v15 = UnityEngine_Quaternion__Internal_FromEulerRad(v16, 0);
+    v19.fields.x = 0.0;
+    v19.fields.y = 0.0;
+    v19.fields.z = 0.0;
+    v25 = UnityEngine_Quaternion__Internal_FromEulerRad(v19, 0);
+    x = v25.fields.x;
+    y = v25.fields.y;
+    z = v25.fields.z;
+    w = v25.fields.w;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9, v10);
-    v17.fields.x = 0.0;
-    v17.fields.y = 0.0;
-    v17.fields.z = 0.0;
+    v20.fields.x = 0.0;
+    v20.fields.y = 0.0;
+    v20.fields.z = 0.0;
+    v26.fields.x = x;
+    v26.fields.y = y;
+    v26.fields.z = z;
+    v26.fields.w = w;
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59717424(
                                               (Il2CppObject *)prefab,
-                                              v17,
-                                              v15,
+                                              v20,
+                                              v26,
                                               (const MethodInfo_38F3730 *)Method_UnityEngine_Object_Instantiate_GameObject____91801600);
     if ( !transform )
       goto LABEL_18;
@@ -156,39 +169,39 @@ UnityEngine_GameObject_o *WarBoardServantPiecePartyBuffComponent__CreateObject(
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
     if ( !transform )
       goto LABEL_18;
-    v18.fields.x = 0.0;
-    v18.fields.y = 0.0;
-    v18.fields.z = 0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v18, 0);
+    v21.fields.x = 0.0;
+    v21.fields.y = 0.0;
+    v21.fields.z = 0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v21, 0);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
     if ( !transform )
       goto LABEL_18;
-    v19.fields.x = 0.0;
-    v19.fields.y = 0.0;
-    v19.fields.z = 0.0;
-    UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)transform, v19, 0);
+    v22.fields.x = 0.0;
+    v22.fields.y = 0.0;
+    v22.fields.z = 0.0;
+    UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)transform, v22, 0);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
     if ( !transform )
       goto LABEL_18;
-    v20.fields.x = 1.0;
-    v20.fields.y = 1.0;
-    v20.fields.z = 1.0;
-    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v20, 0);
+    v23.fields.x = 1.0;
+    v23.fields.y = 1.0;
+    v23.fields.z = 1.0;
+    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v23, 0);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)pos, 0, 0) )
     {
       transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0);
       if ( pos )
       {
-        v13 = (UnityEngine_Transform_o *)transform;
+        v17 = (UnityEngine_Transform_o *)transform;
         position = UnityEngine_Transform__get_position(pos, 0);
-        if ( v13 )
+        if ( v17 )
         {
-          UnityEngine_Transform__set_position(v13, position, 0);
+          UnityEngine_Transform__set_position(v17, position, 0);
           return v8;
         }
       }
 LABEL_18:
-      sub_2213CDC(transform, v12);
+      sub_2213CDC(transform, v16);
     }
   }
   return v8;

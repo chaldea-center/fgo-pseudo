@@ -149,6 +149,7 @@ UserSuperBossEntity_o *TitleInfoPersonalBossComponent__CreateDummyUserSuperBossE
   __int64 v9; // x2
   NetworkManager_c *v10; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
+  UserSuperBossEntity_o *result; // x0
 
   if ( (byte_596F33B & 1) == 0 )
   {
@@ -176,9 +177,10 @@ UserSuperBossEntity_o *TitleInfoPersonalBossComponent__CreateDummyUserSuperBossE
   static_fields = v10->static_fields;
   v7->fields.eventId = eventId;
   v7->fields.superBossId = id;
+  result = v7;
   v7->fields.damage = damange;
   v7->fields.userId = static_fields->userIdNumber;
-  return v7;
+  return result;
 }
 
 
@@ -2608,7 +2610,8 @@ void TitleInfoPersonalBossComponent___c__DisplayClass68_0___PlayHpRecoverEffect_
   if ( mNow < 0.0 )
     v5 = 0.0;
   v7 = (double)v4->fields.maxHp
-     * (float)(*((float *)this + 56) + (float)((float)(*((float *)this + 57) - *((float *)this + 56)) * v5));
+     * (float)(*(float *)&this[4].klass
+             + (float)((float)(*((float *)&this[4].klass + 1) - *(float *)&this[4].klass) * v5));
   if ( v7 == INFINITY )
     v8 = 0x8000000000000000LL;
   else

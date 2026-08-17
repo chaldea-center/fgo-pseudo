@@ -32,6 +32,7 @@ bool MainMenuBarButton__IsEnabled(MainMenuBarButton_o *this, const MethodInfo *m
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MainMenuBarButton__SetMode(MainMenuBarButton_o *this, int32_t mode, const MethodInfo *method)
 {
   __int64 v5; // x1
@@ -40,7 +41,10 @@ void MainMenuBarButton__SetMode(MainMenuBarButton_o *this, int32_t mode, const M
   __int64 v8; // x1
   Il2CppObject *v9; // x21
   Il2CppObject *v10; // x20
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v11; // s0 OVERLAPPED
+  float v12; // s3
+  float v13; // s1
+  float v14; // s2
 
   if ( (byte_597206D & 1) == 0 )
   {
@@ -74,8 +78,8 @@ void MainMenuBarButton__SetMode(MainMenuBarButton_o *this, int32_t mode, const M
       {
         if ( !v9 )
           goto LABEL_18;
-        v12.fields.a = 1.0;
-        v12.fields.r = 0.5;
+        v12 = 1.0;
+        v11 = 0.5;
       }
       else
       {
@@ -83,12 +87,12 @@ void MainMenuBarButton__SetMode(MainMenuBarButton_o *this, int32_t mode, const M
           goto LABEL_16;
         if ( !v9 )
           goto LABEL_18;
-        v12.fields.r = 1.0;
-        v12.fields.a = 1.0;
+        v11 = 1.0;
+        v12 = 1.0;
       }
-      v12.fields.g = v12.fields.r;
-      v12.fields.b = v12.fields.r;
-      UIWidget__set_color((UIWidget_o *)v9, v12, 0);
+      v13 = v11;
+      v14 = v11;
+      UIWidget__set_color((UIWidget_o *)v9, *(UnityEngine_Color_o *)&v11, 0);
 LABEL_16:
       if ( v10 )
       {

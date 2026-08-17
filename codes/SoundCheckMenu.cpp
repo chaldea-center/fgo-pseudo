@@ -2020,6 +2020,7 @@ bool SoundCheckMenu__allCheck_d__24__MoveNext(SoundCheckMenu__allCheck_d__24_o *
   struct SoundCheckMenu_o *_4__this; // x20
   System_Collections_IEnumerator_o *v11; // x0
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   System_Collections_IEnumerator_o *v14; // x0
   Il2CppObject **v15; // x19
   System_Collections_IEnumerator_o *v16; // x0
@@ -2049,8 +2050,9 @@ LABEL_7:
           this->fields.__2__current = 0;
           p__2__current = &this->fields.__2__current;
           sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
+          result = 1;
           *((_DWORD *)p__2__current - 2) = 1;
-          return 1;
+          return result;
         }
         _4__this->fields.checkCnt = 0;
         _4__this->fields.nextCheck = 1;
@@ -2071,8 +2073,9 @@ LABEL_12:
     this->fields.__2__current = 0;
     v15 = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)v15, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     *((_DWORD *)v15 - 2) = 2;
-    return 1;
+    return result;
   }
   _4__this->fields.checkCnt = 0;
   _4__this->fields.nextCheck = 1;

@@ -29,8 +29,11 @@ void AccountLinkageComponent__AutoDelinkAccountLinkage(AccountLinkageComponent_o
   System_String_o *v8; // x20
   Il2CppObject *Instance; // x21
   System_Action_o *v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
+  System_Nullable_int__o p_msgFontSize; // x0
+  __int64 v12; // x0
+  __int64 v13; // x1
+  System_Nullable_int__o v14; // x4
+  System_Nullable_float__o v15; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_596B3F4 & 1) == 0 )
@@ -60,13 +63,13 @@ void AccountLinkageComponent__AutoDelinkAccountLinkage(AccountLinkageComponent_o
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_AccountLinkageComponent__AutoDelinkAccountLinkage_b__27_0__, 0);
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&msgFontSize,
-    26,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
+  System_Nullable_int____ctor(p_msgFontSize, 26, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
   if ( !Instance )
-    sub_2213CDC(v11, v12);
-  CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v8, v10, 0, msgFontSize, 0, 0);
+    sub_2213CDC(v12, v13);
+  v14 = msgFontSize;
+  v15 = 0;
+  CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v8, v10, v15, v14, 0, 0);
 }
 
 
@@ -219,8 +222,11 @@ void AccountLinkageComponent__CloseWebViewCallback(AccountLinkageComponent_o *th
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
-  __int64 v22; // x0
-  __int64 v23; // x1
+  System_Nullable_int__o p_msgFontSize; // x0
+  __int64 v23; // x0
+  __int64 v24; // x1
+  System_Nullable_int__o v25; // x4
+  System_Nullable_float__o v26; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596B3EB & 1) == 0 )
@@ -266,13 +272,13 @@ void AccountLinkageComponent__CloseWebViewCallback(AccountLinkageComponent_o *th
       v15->__9__18_0 = _9__18_0;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15->__9__18_0, (int32_t)_9__18_0, v16, v17, v18, v19, v20, v21);
     }
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&msgFontSize,
-      30,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
+    System_Nullable_int____ctor(p_msgFontSize, 30, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
     if ( !v11 )
-      sub_2213CDC(v22, v23);
-    CommonUI__OpenAccountLinkageNotificationDialog(v11, v6, _9__18_0, 0, msgFontSize, 0, 0);
+      sub_2213CDC(v23, v24);
+    v25 = msgFontSize;
+    v26 = 0;
+    CommonUI__OpenAccountLinkageNotificationDialog(v11, v6, _9__18_0, v26, v25, 0, 0);
   }
   else
   {
@@ -294,6 +300,7 @@ void AccountLinkageComponent__ConfirmUnlinkAccountLinkage(AccountLinkageComponen
   AccountLinkageUnlinkConfirmDialog_ClickDelegate_o *v11; // x25
   __int64 v12; // x0
   __int64 v13; // x1
+  UnityEngine_Vector2Int_o v14; // x6
 
   if ( (byte_596B3F0 & 1) == 0 )
   {
@@ -326,15 +333,8 @@ void AccountLinkageComponent__ConfirmUnlinkAccountLinkage(AccountLinkageComponen
     0);
   if ( !Instance )
     sub_2213CDC(v12, v13);
-  CommonUI__OpenAccountLinkageUnlinkConfirmDlg(
-    (CommonUI_o *)Instance,
-    v4,
-    v7,
-    v8,
-    v9,
-    v11,
-    (UnityEngine_Vector2Int_o)0xF0000002BCLL,
-    0);
+  v14 = (UnityEngine_Vector2Int_o)0xF0000002BCLL;
+  CommonUI__OpenAccountLinkageUnlinkConfirmDlg((CommonUI_o *)Instance, v4, v7, v8, v9, v11, v14, 0);
 }
 
 
@@ -467,10 +467,14 @@ void AccountLinkageComponent__OnPartialMaintenance(
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
-  __int64 v19; // x0
-  __int64 v20; // x1
-  System_Nullable_int__o v21; // [xsp+0h] [xbp-50h] BYREF
-  System_Nullable_float__o v22; // [xsp+8h] [xbp-48h] BYREF
+  System_Nullable_float__o v19; // x0
+  System_Nullable_int__o v20; // x0
+  __int64 v21; // x0
+  __int64 v22; // x1
+  System_Nullable_float__o v23; // x3
+  System_Nullable_int__o v24; // x4
+  System_Nullable_int__o v25; // [xsp+0h] [xbp-50h] BYREF
+  System_Nullable_float__o v26; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_596B3F6 & 1) == 0 )
   {
@@ -506,19 +510,17 @@ void AccountLinkageComponent__OnPartialMaintenance(
     v12->__9__29_0 = _9__29_0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12->__9__29_0, (int32_t)_9__29_0, v13, v14, v15, v16, v17, v18);
   }
-  v22 = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&v22,
-    36.0,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-  v21 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v21,
-    26,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  v19 = (System_Nullable_float__o)&v26;
+  v26 = 0;
+  System_Nullable_float____ctor(v19, 36.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  v20 = (System_Nullable_int__o)&v25;
+  v25 = 0;
+  System_Nullable_int____ctor(v20, 26, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
   if ( !v8 )
-    sub_2213CDC(v19, v20);
-  CommonUI__OpenAccountLinkageNotificationDialog(v8, mainteMessage, _9__29_0, v22, v21, 0, 0);
+    sub_2213CDC(v21, v22);
+  v24 = v25;
+  v23 = v26;
+  CommonUI__OpenAccountLinkageNotificationDialog(v8, mainteMessage, _9__29_0, v23, v24, 0, 0);
 }
 
 
@@ -542,8 +544,11 @@ void AccountLinkageComponent__OnSiteMaintenance(AccountLinkageComponent_o *this,
   int32_t v17; // w5
   bool v18; // w6
   bool v19; // w7
-  __int64 v20; // x0
-  __int64 v21; // x1
+  System_Nullable_int__o p_msgFontSize; // x0
+  __int64 v21; // x0
+  __int64 v22; // x1
+  System_Nullable_int__o v23; // x4
+  System_Nullable_float__o v24; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596B3F5 & 1) == 0 )
@@ -586,13 +591,13 @@ void AccountLinkageComponent__OnSiteMaintenance(AccountLinkageComponent_o *this,
     v13->__9__28_0 = _9__28_0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->__9__28_0, (int32_t)_9__28_0, v14, v15, v16, v17, v18, v19);
   }
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&msgFontSize,
-    28,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
+  System_Nullable_int____ctor(p_msgFontSize, 28, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
   if ( !v9 )
-    sub_2213CDC(v20, v21);
-  CommonUI__OpenAccountLinkageNotificationDialog(v9, v4, _9__28_0, 0, msgFontSize, 0, 0);
+    sub_2213CDC(v21, v22);
+  v23 = msgFontSize;
+  v24 = 0;
+  CommonUI__OpenAccountLinkageNotificationDialog(v9, v4, _9__28_0, v24, v23, 0, 0);
 }
 
 
@@ -743,8 +748,11 @@ void AccountLinkageComponent__OverrideAccountLinkage(AccountLinkageComponent_o *
   System_String_o *v8; // x20
   Il2CppObject *Instance; // x21
   System_Action_o *v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
+  System_Nullable_int__o p_msgFontSize; // x0
+  __int64 v12; // x0
+  __int64 v13; // x1
+  System_Nullable_int__o v14; // x4
+  System_Nullable_float__o v15; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_596B3F3 & 1) == 0 )
@@ -774,13 +782,13 @@ void AccountLinkageComponent__OverrideAccountLinkage(AccountLinkageComponent_o *
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v10 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_AccountLinkageComponent__OverrideAccountLinkage_b__26_0__, 0);
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&msgFontSize,
-    24,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
+  System_Nullable_int____ctor(p_msgFontSize, 24, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
   if ( !Instance )
-    sub_2213CDC(v11, v12);
-  CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v8, v10, 0, msgFontSize, 0, 0);
+    sub_2213CDC(v12, v13);
+  v14 = msgFontSize;
+  v15 = 0;
+  CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v8, v10, v15, v14, 0, 0);
 }
 
 
@@ -1167,6 +1175,9 @@ void AccountLinkageComponent__SuccessedAccountLinkage(
   System_String_o *v11; // x20
   Il2CppObject *Instance; // x21
   System_Action_o *v13; // x22
+  System_Nullable_int__o p_msgFontSize; // x0
+  System_Nullable_int__o v15; // x4
+  System_Nullable_float__o v16; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = (Il2CppObject *)this;
@@ -1204,13 +1215,13 @@ void AccountLinkageComponent__SuccessedAccountLinkage(
     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v13 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v13, v4, Method_AccountLinkageComponent__SuccessedAccountLinkage_b__22_0__, 0);
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&msgFontSize,
-      30,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
+    System_Nullable_int____ctor(p_msgFontSize, 30, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
     if ( Instance )
     {
-      CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v11, v13, 0, msgFontSize, 0, 0);
+      v15 = msgFontSize;
+      v16 = 0;
+      CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v11, v13, v16, v15, 0, 0);
       AccountLinkageParams__ResetParams(0);
       return;
     }
@@ -1234,6 +1245,9 @@ void AccountLinkageComponent__UnlinkedAccountLinkage(
   System_String_o *v9; // x20
   Il2CppObject *Instance; // x21
   System_Action_o *v11; // x22
+  System_Nullable_int__o p_msgFontSize; // x0
+  System_Nullable_int__o v13; // x4
+  System_Nullable_float__o v14; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = (Il2CppObject *)this;
@@ -1268,13 +1282,13 @@ void AccountLinkageComponent__UnlinkedAccountLinkage(
     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v11 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(v11, v4, Method_AccountLinkageComponent__UnlinkedAccountLinkage_b__24_0__, 0);
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&msgFontSize,
-      26,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
+    System_Nullable_int____ctor(p_msgFontSize, 26, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
     if ( Instance )
     {
-      CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v9, v11, 0, msgFontSize, 0, 0);
+      v13 = msgFontSize;
+      v14 = 0;
+      CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v9, v11, v14, v13, 0, 0);
       return;
     }
 LABEL_12:

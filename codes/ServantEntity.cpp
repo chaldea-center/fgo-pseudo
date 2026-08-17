@@ -2527,7 +2527,9 @@ bool ServantEntity__IsAdditionExpandImage(ServantEntity_o *this, int32_t limitCo
 
 bool ServantEntity__IsBeastNotPlayable(ServantEntity_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
 
   if ( (byte_59711B4 & 1) == 0 )
   {
@@ -2537,12 +2539,11 @@ bool ServantEntity__IsBeastNotPlayable(ServantEntity_o *this, const MethodInfo *
     byte_59711B4 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__AEA87BA3ABCCD5D9980E5AFD091725F21D302AB6A2C3E9CB685B8C03384C843A,
-    0);
+  v4.fields.value = Field__PrivateImplementationDetails__AEA87BA3ABCCD5D9980E5AFD091725F21D302AB6A2C3E9CB685B8C03384C843A;
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
   return System_Linq_Enumerable__Contains_int_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)v3,
+           v5,
            this->fields.classId,
            (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
 }
@@ -2599,7 +2600,9 @@ bool ServantEntity__IsEnableSupportLimitCountToDispLimitCount(ServantEntity_o *t
 
 bool ServantEntity__IsExtra1(ServantEntity_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
 
   if ( (byte_59711B2 & 1) == 0 )
   {
@@ -2609,12 +2612,11 @@ bool ServantEntity__IsExtra1(ServantEntity_o *this, const MethodInfo *method)
     byte_59711B2 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__E6EAABD98BF7C3C83C4BE47DFFE7DAB88C8678CC17213D48C7B62ABF93F4E913,
-    0);
+  v4.fields.value = Field__PrivateImplementationDetails__E6EAABD98BF7C3C83C4BE47DFFE7DAB88C8678CC17213D48C7B62ABF93F4E913;
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
   return System_Linq_Enumerable__Contains_int_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)v3,
+           v5,
            this->fields.classId,
            (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
 }
@@ -2622,12 +2624,14 @@ bool ServantEntity__IsExtra1(ServantEntity_o *this, const MethodInfo *method)
 
 bool ServantEntity__IsExtra2(ServantEntity_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  __int64 v4; // x1
-  BalanceConfig_c *v5; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
-  const MethodInfo *v8; // x1
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
+  __int64 v6; // x1
+  BalanceConfig_c *v7; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v9; // x0
+  const MethodInfo *v10; // x1
 
   if ( (byte_59711B3 & 1) == 0 )
   {
@@ -2640,34 +2644,35 @@ bool ServantEntity__IsExtra2(ServantEntity_o *this, const MethodInfo *method)
     byte_59711B3 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__38F9E660D9115C0614E92C75E3E4A5CA8499743FB698CBC48AD941DBE60A0572,
-    0);
-  v5 = BalanceConfig_TypeInfo;
+  v4.fields.value = Field__PrivateImplementationDetails__38F9E660D9115C0614E92C75E3E4A5CA8499743FB698CBC48AD941DBE60A0572;
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  v7 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v4);
-    v5 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v6);
+    v7 = BalanceConfig_TypeInfo;
   }
-  v6 = System_Linq_Enumerable__Concat_int_(
-         (System_Collections_Generic_IEnumerable_TSource__o *)v3,
-         (System_Collections_Generic_IEnumerable_TSource__o *)v5->static_fields->PlayableBeastClassIds,
+  v8 = System_Linq_Enumerable__Concat_int_(
+         v5,
+         (System_Collections_Generic_IEnumerable_TSource__o *)v7->static_fields->PlayableBeastClassIds,
          (const MethodInfo_3875F9C *)Method_System_Linq_Enumerable_Concat_int___);
-  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_int_(
-                                                              v6,
+  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_int_(
+                                                              v8,
                                                               (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
   return System_Linq_Enumerable__Contains_int_(
-           v7,
+           v9,
            this->fields.classId,
            (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___)
-      || ServantEntity__IsBeastNotPlayable(this, v8);
+      || ServantEntity__IsBeastNotPlayable(this, v10);
 }
 
 
 bool ServantEntity__IsFourCavalry(ServantEntity_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
 
   if ( (byte_59711B1 & 1) == 0 )
   {
@@ -2677,12 +2682,11 @@ bool ServantEntity__IsFourCavalry(ServantEntity_o *this, const MethodInfo *metho
     byte_59711B1 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 8);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__5216277D43E44B2AC285818934F801B44410A500FCE72F41C7EEBAEE9AF671EE,
-    0);
+  v4.fields.value = Field__PrivateImplementationDetails__5216277D43E44B2AC285818934F801B44410A500FCE72F41C7EEBAEE9AF671EE;
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
   return System_Linq_Enumerable__Contains_int_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)v3,
+           v5,
            this->fields.classId,
            (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
 }
@@ -3315,7 +3319,9 @@ bool ServantEntity__IsSvtBuffTurnExtend(ServantEntity_o *this, const MethodInfo 
 
 bool ServantEntity__IsThreeKnights(ServantEntity_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
 
   if ( (byte_59711B0 & 1) == 0 )
   {
@@ -3325,12 +3331,11 @@ bool ServantEntity__IsThreeKnights(ServantEntity_o *this, const MethodInfo *meth
     byte_59711B0 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__485A314493EE28D5201FD3A672746051402D782E01F92E8D48232FB0B05497FA,
-    0);
+  v4.fields.value = Field__PrivateImplementationDetails__485A314493EE28D5201FD3A672746051402D782E01F92E8D48232FB0B05497FA;
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
   return System_Linq_Enumerable__Contains_int_(
-           (System_Collections_Generic_IEnumerable_TSource__o *)v3,
+           v5,
            this->fields.classId,
            (const MethodInfo_3876640 *)Method_System_Linq_Enumerable_Contains_int___);
 }
@@ -3567,6 +3572,7 @@ bool ServantEntity__TryGetOverwriteGrandGraphImage(
   System_Int32_array *v16; // x25
   il2cpp_array_size_t v17; // x8
   __int64 v18; // x1
+  int32_t v19; // w8
 
   if ( (byte_59711C0 & 1) == 0 )
   {
@@ -3631,8 +3637,9 @@ LABEL_20:
       if ( (v17 & 0xFFFFFFFE) == 0 )
 LABEL_22:
         sub_2213CE4(Master_object);
-      *overwrite = LimitCountUtility__ConvertLimitCountToStage(v16->m_Items[1], 0, 0);
+      v19 = LimitCountUtility__ConvertLimitCountToStage(v16->m_Items[1], 0, 0);
       LOBYTE(ScriptMultiArray_int) = 1;
+      *overwrite = v19;
     }
   }
   return (char)ScriptMultiArray_int;

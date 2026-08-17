@@ -204,6 +204,7 @@ void NGUIFader__setup(NGUIFader_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void NGUIFader__updateColor(NGUIFader_o *this, float deltaTime, const MethodInfo *method)
 {
   _BOOL4 isFading; // w8
@@ -211,8 +212,11 @@ void NGUIFader__updateColor(NGUIFader_o *this, float deltaTime, const MethodInfo
   float durTime; // s2
   float v7; // s0
   UIWidget_o *fadeWidget; // x0
+  float v9; // s3 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float r; // s0
   struct NGUIFader_OnFinished_o *finishedCallback; // x8
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   isFading = this->fields.isFading;
   v4 = this->fields.offsetTime + deltaTime;
@@ -235,13 +239,13 @@ void NGUIFader__updateColor(NGUIFader_o *this, float deltaTime, const MethodInfo
     if ( !fadeWidget )
       sub_2213CDC(0, method);
     if ( this->fields.isFadeIn )
-      v10.fields.a = 1.0 - v7;
+      v9 = 1.0 - v7;
     else
-      v10.fields.a = v7;
-    v10.fields.g = this->fields.color.fields.g;
-    v10.fields.b = this->fields.color.fields.b;
-    v10.fields.r = this->fields.color.fields.r;
-    UIWidget__set_color(fadeWidget, v10, 0);
+      v9 = v7;
+    g = this->fields.color.fields.g;
+    b = this->fields.color.fields.b;
+    r = this->fields.color.fields.r;
+    UIWidget__set_color(fadeWidget, *(UnityEngine_Color_o *)(&v9 - 3), 0);
     if ( !this->fields.isFading )
     {
       finishedCallback = this->fields.finishedCallback;
@@ -313,9 +317,9 @@ System_IAsyncResult_o *NGUIFader_OnFinished__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

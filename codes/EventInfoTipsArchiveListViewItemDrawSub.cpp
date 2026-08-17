@@ -20,7 +20,7 @@ int32_t EventInfoTipsArchiveListViewItemDrawSub__GetHeight(
   __int64 v4; // x1
   UnityEngine_BoxCollider_o *v5; // x0
   EventInfoTipsArchiveListViewItemDraw_c *v7; // x0
-  float v8; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972FEC & 1) == 0 )
   {
@@ -36,11 +36,11 @@ int32_t EventInfoTipsArchiveListViewItemDrawSub__GetHeight(
     v5 = this->fields.frameCollider;
     if ( !v5 )
       sub_2213CDC(0, v4);
-    v8 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size(v5, 0).fields.y));
-    if ( v8 == INFINITY )
+    size = UnityEngine_BoxCollider__get_size(v5, 0);
+    if ( size.fields.y == INFINITY )
       return 0x80000000;
     else
-      return (int)v8;
+      return (int)size.fields.y;
   }
   else
   {

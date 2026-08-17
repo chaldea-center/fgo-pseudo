@@ -29,7 +29,7 @@ void ScriptBackLogListViewItemDraw__SetItem(
           v5->fields.imagePrefab,
           v5->fields.playVoicePrefab,
           v5->fields.playVoiceEffect,
-          *((UnityEngine_Font_o **)this + 11),
+          (UnityEngine_Font_o *)this[1].fields.m_CachedPtr,
           0);
         return;
       }

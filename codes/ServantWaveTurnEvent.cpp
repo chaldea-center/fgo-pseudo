@@ -29,6 +29,7 @@ ServantWaveTurnEvent_SaveData_o *ServantWaveTurnEvent__ExportSaveData(
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  ServantWaveTurnEvent_SaveData_o *result; // x0
 
   if ( (byte_5973E3E & 1) == 0 )
   {
@@ -43,8 +44,9 @@ ServantWaveTurnEvent_SaveData_o *ServantWaveTurnEvent__ExportSaveData(
   if ( !v3 )
     sub_2213CDC(v4, v5);
   *(_DWORD *)(v3 + 16) = v4;
+  result = (ServantWaveTurnEvent_SaveData_o *)v3;
   *(ServantWaveTurnEvent_Fields *)(v3 + 20) = this->fields;
-  return (ServantWaveTurnEvent_SaveData_o *)v3;
+  return result;
 }
 
 

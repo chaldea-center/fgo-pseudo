@@ -13,11 +13,17 @@ void MoveObject__Awake(MoveObject_o *this, const MethodInfo *method)
 
 UnityEngine_Vector3_o MoveObject__Now(MoveObject_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.mNow.fields.x;
-  result.fields.y = this->fields.mNow.fields.y;
-  result.fields.z = this->fields.mNow.fields.z;
+  x = this->fields.mNow.fields.x;
+  y = this->fields.mNow.fields.y;
+  z = this->fields.mNow.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -57,7 +63,7 @@ void MoveObject__Play(
   bool v25; // w6
   bool v26; // w7
   System_Action_o *mProcessAct; // x0
-  UnityEngine_Vector3_o v28; // 0:kr00_12.12
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.mIsMoving = 1;
   this->fields.mFrom = from;
@@ -142,7 +148,7 @@ void MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
   float v8; // s8
   struct System_Action_o *mProcessAct; // x8
   struct System_Action_o *mEndAct; // x8
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( this->fields.mIsMoving && !this->fields.mIsPause )
   {

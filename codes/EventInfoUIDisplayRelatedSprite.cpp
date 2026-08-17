@@ -464,6 +464,7 @@ void EventInfoUIDisplayRelatedSprite___c___ctor(EventInfoUIDisplayRelatedSprite_
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__o EventInfoUIDisplayRelatedSprite___c___CheckAssertions_b__3_0(
         EventInfoUIDisplayRelatedSprite___c_o *this,
         EventInfoUIDisplayRelatedSprite_SpriteRelation_o *value,
@@ -471,6 +472,8 @@ System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__o EventIn
         const MethodInfo *method)
 {
   const MethodInfo_3CF7EFC *v4; // x4
+  struct EventInfoUIDisplayRelatedSprite_SpriteRelation_o *v7; // x0
+  __int64 v8; // x1
   struct EventInfoUIDisplayRelatedSprite_SpriteRelation_o *v9; // [xsp+0h] [xbp-40h] BYREF
   __int64 v10; // [xsp+8h] [xbp-38h]
   System_ValueTuple_object__int__o v11; // 0:x0.16
@@ -490,7 +493,9 @@ System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int__o EventIn
     (Il2CppObject *)(unsigned int)index,
     Method_System_ValueTuple_EventInfoUIDisplayRelatedSprite_SpriteRelation__int___ctor__,
     v4);
-  result.fields.Item1 = v9;
-  *(_QWORD *)&result.fields.Item2 = v10;
+  v7 = v9;
+  v8 = v10;
+  *(_QWORD *)&result.fields.Item2 = v8;
+  result.fields.Item1 = v7;
   return result;
 }

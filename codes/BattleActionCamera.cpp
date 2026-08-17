@@ -2343,7 +2343,7 @@ void BattleActionCamera__set_middleCameraDefaultClipRange(
 
 void BattleActionCamera__stopCameraAnimation(BattleActionCamera_o *this, const MethodInfo *method)
 {
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   Il2CppObject *Component_object; // x20
   __int64 v6; // x1
@@ -2359,22 +2359,25 @@ void BattleActionCamera__stopCameraAnimation(BattleActionCamera_o *this, const M
     sub_2213A60(&UnityEngine_Object_TypeInfo);
     byte_5972E5C = 1;
   }
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_25;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       (UnityEngine_GameObject_o *)gameObject,
+                       gameObject,
                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_25;
   v7 = UnityEngine_GameObject__GetComponent_object_(
-         (UnityEngine_GameObject_o *)gameObject,
+         gameObject,
          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
-  gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( (gameObject & 1) != 0 )
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
+                                             (UnityEngine_Object_o *)Component_object,
+                                             0,
+                                             0);
+  if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !Component_object )
       goto LABEL_25;
@@ -2384,39 +2387,39 @@ void BattleActionCamera__stopCameraAnimation(BattleActionCamera_o *this, const M
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
-    gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0);
-    if ( (gameObject & 1) != 0 )
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0);
+    if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
       if ( !v7 )
         goto LABEL_25;
       UnityEngine_Animation__Stop((UnityEngine_Animation_o *)v7, 0);
     }
   }
-  gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v8 = (UnityEngine_Transform_o *)gameObject;
   if ( !byte_5969AE0 )
   {
-    gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v8 )
     goto LABEL_25;
   UnityEngine_Transform__set_localPosition(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v9 = (UnityEngine_Transform_o *)gameObject;
   if ( !byte_5969AE5 )
   {
-    gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v9 )
     goto LABEL_25;
   UnityEngine_Transform__set_localScale(v9, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-  gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v10 = (UnityEngine_Transform_o *)gameObject;
   if ( !byte_5969AE0 )
   {
-    gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v10 )

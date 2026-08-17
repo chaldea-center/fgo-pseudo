@@ -247,7 +247,7 @@ System_IAsyncResult_o *CriFsRequest_DoneDelegate__BeginInvoke(
   CriFsRequest_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = request;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -285,6 +285,7 @@ void CriFsRequest__CheckDone_d__23___ctor(
 bool CriFsRequest__CheckDone_d__23__MoveNext(CriFsRequest__CheckDone_d__23_o *this, const MethodInfo *method)
 {
   struct CriFsRequest_o *_4__this; // x8
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   if ( this->fields.__1__state >= 2u )
@@ -298,8 +299,9 @@ bool CriFsRequest__CheckDone_d__23__MoveNext(CriFsRequest__CheckDone_d__23_o *th
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04(&this->fields.__2__current, 0);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

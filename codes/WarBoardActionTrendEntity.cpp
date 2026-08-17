@@ -262,14 +262,19 @@ int64_t WarBoardActionTrendEntity__get_TrendKey(WarBoardActionTrendEntity_o *thi
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Nullable_long__o WarBoardActionTrendEntity__get_trendKey(
         WarBoardActionTrendEntity_o *this,
         const MethodInfo *method)
 {
+  int64_t value; // x1
+  __int64 v3; // x0
   System_Nullable_long__o result; // 0:x0.16
 
-  result.fields.value = this->fields._trendKey_k__BackingField.fields.value;
-  *(_QWORD *)&result.fields.hasValue = *(_QWORD *)&this->fields._trendKey_k__BackingField.fields.hasValue;
+  value = this->fields._trendKey_k__BackingField.fields.value;
+  v3 = *(_QWORD *)&this->fields._trendKey_k__BackingField.fields.hasValue;
+  result.fields.value = value;
+  *(_QWORD *)&result.fields.hasValue = v3;
   return result;
 }
 

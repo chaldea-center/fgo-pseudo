@@ -207,19 +207,23 @@ System_String_o *MissionNaviTransitionConfirmDialog__GetQuestClosedMessageText(
   __int64 v16; // x1
   __int64 v17; // x2
   System_Object_array *v18; // x21
-  Il2CppObject *v19; // x22
-  __int64 v20; // x22
-  __int64 v21; // x22
+  System_DateTime_o v19; // x0
+  Il2CppObject *v20; // x22
+  System_DateTime_o v21; // x0
   __int64 v22; // x22
-  System_String_o *v23; // x0
+  System_DateTime_o v23; // x0
+  __int64 v24; // x22
+  System_DateTime_o v25; // x0
+  __int64 v26; // x22
+  System_String_o *v27; // x0
   QuestReleaseOverwriteEntity_o *EntityByQuestIdAndTime; // x0
-  QuestReleaseOverwriteEntity_o *v25; // x19
+  QuestReleaseOverwriteEntity_o *v29; // x19
   int32_t Minute; // [xsp+Ch] [xbp-64h] BYREF
   int32_t Hour; // [xsp+10h] [xbp-60h] BYREF
   int32_t Day; // [xsp+14h] [xbp-5Ch] BYREF
   int64_t QuestReleaseValue_k__BackingField; // [xsp+18h] [xbp-58h] BYREF
   uint64_t dateData; // [xsp+20h] [xbp-50h] BYREF
-  Il2CppObject *v32; // [xsp+28h] [xbp-48h] BYREF
+  Il2CppObject *v36; // [xsp+28h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-38h] BYREF
 
   if ( (byte_596A0EC & 1) == 0 )
@@ -241,7 +245,7 @@ System_String_o *MissionNaviTransitionConfirmDialog__GetQuestClosedMessageText(
   monitor = (System_String_o *)StringLiteral_1/*""*/;
   entity = 0;
   dateData = 0;
-  v32 = 0;
+  v36 = 0;
   if ( questInfo && questInfo->fields._QuestReleaseClosedID_k__BackingField >= 1 )
   {
     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
@@ -289,9 +293,9 @@ LABEL_32:
                                            0);
                 if ( EntityByQuestIdAndTime )
                 {
-                  v25 = EntityByQuestIdAndTime;
+                  v29 = EntityByQuestIdAndTime;
                   if ( !System_String__IsNullOrEmpty(EntityByQuestIdAndTime->fields.overlayClosedMessage, 0) )
-                    return v25->fields.overlayClosedMessage;
+                    return v29->fields.overlayClosedMessage;
                 }
                 return monitor;
               }
@@ -309,28 +313,32 @@ LABEL_39:
         v18 = (System_Object_array *)sub_2213B20(object___TypeInfo, 4);
         if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v16, v17);
-        LODWORD(QuestReleaseValue_k__BackingField) = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
+        v19.fields._dateData = (uint64_t)&dateData;
+        LODWORD(QuestReleaseValue_k__BackingField) = System_DateTime__get_Month(v19, 0);
         Instance = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &QuestReleaseValue_k__BackingField);
         if ( !v18 )
           goto LABEL_39;
-        v19 = Instance;
+        v20 = Instance;
         sub_1FFE8F8(v18, Instance);
-        sub_1FFE2C4(v18, 0, v19);
-        Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-        v20 = j_il2cpp_value_box_0(qword_5984348, &Day);
-        sub_1FFE8F8(v18, v20);
-        sub_1FFE2C4(v18, 1, v20);
-        Hour = System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
-        v21 = j_il2cpp_value_box_0(qword_5984348, &Hour);
-        sub_1FFE8F8(v18, v21);
-        sub_1FFE2C4(v18, 2, v21);
-        Minute = System_DateTime__get_Minute((System_DateTime_o)&dateData, 0);
-        v22 = j_il2cpp_value_box_0(qword_5984348, &Minute);
+        sub_1FFE2C4(v18, 0, v20);
+        v21.fields._dateData = (uint64_t)&dateData;
+        Day = System_DateTime__get_Day(v21, 0);
+        v22 = j_il2cpp_value_box_0(qword_5984348, &Day);
         sub_1FFE8F8(v18, v22);
-        sub_1FFE2C4(v18, 3, v22);
-        v23 = System_String__Format_75698016(monitor, v18, 0);
+        sub_1FFE2C4(v18, 1, v22);
+        v23.fields._dateData = (uint64_t)&dateData;
+        Hour = System_DateTime__get_Hour(v23, 0);
+        v24 = j_il2cpp_value_box_0(qword_5984348, &Hour);
+        sub_1FFE8F8(v18, v24);
+        sub_1FFE2C4(v18, 2, v24);
+        v25.fields._dateData = (uint64_t)&dateData;
+        Minute = System_DateTime__get_Minute(v25, 0);
+        v26 = j_il2cpp_value_box_0(qword_5984348, &Minute);
+        sub_1FFE8F8(v18, v26);
+        sub_1FFE2C4(v18, 3, v26);
+        v27 = System_String__Format_75698016(monitor, v18, 0);
 LABEL_31:
-        monitor = v23;
+        monitor = v27;
         goto LABEL_32;
       }
     }
@@ -352,20 +360,20 @@ LABEL_31:
         goto LABEL_39;
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-              &v32,
+              &v36,
               WarID_ByQuestID,
               (const MethodInfo_3F10B80 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
         goto LABEL_32;
-      Instance = v32;
-      if ( !v32 )
+      Instance = v36;
+      if ( !v36 )
         goto LABEL_39;
-      PrioredName = (Il2CppObject *)WarEntity__GetPrioredName((WarEntity_o *)v32, 0);
+      PrioredName = (Il2CppObject *)WarEntity__GetPrioredName((WarEntity_o *)v36, 0);
       goto LABEL_30;
     }
     QuestReleaseValue_k__BackingField = questInfo->fields._QuestReleaseValue_k__BackingField;
     PrioredName = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &QuestReleaseValue_k__BackingField);
 LABEL_30:
-    v23 = System_String__Format(monitor, PrioredName, 0);
+    v27 = System_String__Format(monitor, PrioredName, 0);
     goto LABEL_31;
   }
   return monitor;
@@ -388,6 +396,7 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetQuest
   const MethodInfo *v12; // x1
   Il2CppObject *ClosedMessageText; // x2
   const MethodInfo_3CF8CCC *v14; // x4
+  System_ValueTuple_object__object__o v15; // x0
   Il2CppObject *v16; // x20
   Il2CppObject *v17; // x21
   __int64 v18; // x1
@@ -405,10 +414,11 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetQuest
   int v30; // w8
   __int64 *v31; // x8
   System_String_o *v32; // x0
+  struct System_String_o *v33; // x0
+  struct System_String_o *v34; // x1
   struct System_String_o *v35; // [xsp+0h] [xbp-40h] BYREF
   struct System_String_o *v36; // [xsp+8h] [xbp-38h]
   System_String_o *challengeNaviName; // [xsp+18h] [xbp-28h] BYREF
-  System_ValueTuple_object__object__o v38; // 0:x0.16
   System_ValueTuple_string__string__o result; // 0:x0.16
 
   v6 = naviQuestEntity;
@@ -437,7 +447,7 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetQuest
                                                     0);
     if ( ((unsigned __int8)naviQuestEntity & 1) != 0 )
     {
-      v38.fields.Item2 = (Il2CppObject *)challengeNaviName;
+      v15.fields.Item2 = (Il2CppObject *)challengeNaviName;
     }
     else
     {
@@ -497,10 +507,10 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetQuest
         v32 = LocalizationManager__Get((System_String_o *)*v31, 0);
         v21 = (Il2CppObject *)System_String__Format_75697880(v32, v16, v17, 0);
       }
-      v38.fields.Item2 = v21;
+      v15.fields.Item2 = v21;
       challengeNaviName = (System_String_o *)v21;
     }
-    v38.fields.Item1 = (Il2CppObject *)&v35;
+    v15.fields.Item1 = (Il2CppObject *)&v35;
     v35 = 0;
     v36 = 0;
     ClosedMessageText = (Il2CppObject *)StringLiteral_1/*""*/;
@@ -524,10 +534,10 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetQuest
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, tempQuestInfo, isLocked);
     v11 = (Il2CppObject *)LocalizationManager__Get(MISSION_NAVI_NOT_OPEN_BOARD, 0);
     ClosedMessageText = (Il2CppObject *)MissionNaviTransitionConfirmDialog__GetClosedMessageText(closedMessageId, v12);
-    v38.fields.Item1 = (Il2CppObject *)&v35;
+    v15.fields.Item1 = (Il2CppObject *)&v35;
     v35 = 0;
     v36 = 0;
-    v38.fields.Item2 = v11;
+    v15.fields.Item2 = v11;
     goto LABEL_31;
   }
   if ( !v9 )
@@ -548,16 +558,18 @@ LABEL_44:
                                         tempQuestInfo,
                                         Mine,
                                         v25);
-  v38.fields.Item1 = (Il2CppObject *)&v35;
-  v38.fields.Item2 = v23;
+  v15.fields.Item1 = (Il2CppObject *)&v35;
+  v15.fields.Item2 = v23;
   v35 = 0;
   v36 = 0;
 LABEL_31:
   v26 = (Il2CppObject *)Method_System_ValueTuple_string__string___ctor__;
 LABEL_43:
-  System_ValueTuple_object__object____ctor(v38, ClosedMessageText, v26, v14);
-  result.fields.Item1 = v35;
-  result.fields.Item2 = v36;
+  System_ValueTuple_object__object____ctor(v15, ClosedMessageText, v26, v14);
+  v33 = v35;
+  v34 = v36;
+  result.fields.Item2 = v34;
+  result.fields.Item1 = v33;
   return result;
 }
 
@@ -577,6 +589,7 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetSpotN
   const MethodInfo *v11; // x1
   Il2CppObject *ClosedMessageText; // x2
   const MethodInfo_3CF8CCC *v13; // x4
+  System_ValueTuple_object__object__o v14; // x0
   Il2CppObject *v15; // x3
   SpotEntity_o *Mine; // x0
   __int64 v17; // x2
@@ -584,10 +597,11 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetSpotN
   MissionNaviTransitionConfirmDialog_c *v19; // x0
   System_String_o *MISSION_NAVI_NAME_COMMON; // x20
   System_String_o *v21; // x0
+  struct System_String_o *v22; // x0
+  struct System_String_o *v23; // x1
   struct System_String_o *v24; // [xsp+0h] [xbp-40h] BYREF
   struct System_String_o *v25; // [xsp+8h] [xbp-38h]
   System_String_o *challengeNaviName; // [xsp+18h] [xbp-28h] BYREF
-  System_ValueTuple_object__object__o v27; // 0:x0.16
   System_ValueTuple_string__string__o result; // 0:x0.16
 
   v6 = missionNaviTransitionEntity;
@@ -612,9 +626,9 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetSpotN
                                                                        0);
       if ( ((unsigned __int8)missionNaviTransitionEntity & 1) != 0 )
       {
-        v27.fields.Item2 = (Il2CppObject *)challengeNaviName;
+        v14.fields.Item2 = (Il2CppObject *)challengeNaviName;
 LABEL_23:
-        v27.fields.Item1 = (Il2CppObject *)&v24;
+        v14.fields.Item1 = (Il2CppObject *)&v24;
         v24 = 0;
         v25 = 0;
         ClosedMessageText = (Il2CppObject *)StringLiteral_1/*""*/;
@@ -648,8 +662,8 @@ LABEL_18:
           if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, spotInfo, v17);
           v21 = LocalizationManager__Get(MISSION_NAVI_NAME_COMMON, 0);
-          v27.fields.Item2 = (Il2CppObject *)System_String__Format(v21, v18, 0);
-          challengeNaviName = (System_String_o *)v27.fields.Item2;
+          v14.fields.Item2 = (Il2CppObject *)System_String__Format(v21, v18, 0);
+          challengeNaviName = (System_String_o *)v14.fields.Item2;
           goto LABEL_23;
         }
       }
@@ -671,15 +685,17 @@ LABEL_25:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, spotInfo, isLocked);
   v10 = (Il2CppObject *)LocalizationManager__Get(MISSION_NAVI_NOT_OPEN_BOARD, 0);
   ClosedMessageText = (Il2CppObject *)MissionNaviTransitionConfirmDialog__GetClosedMessageText(closedMessageId, v11);
-  v27.fields.Item1 = (Il2CppObject *)&v24;
-  v27.fields.Item2 = v10;
+  v14.fields.Item1 = (Il2CppObject *)&v24;
+  v14.fields.Item2 = v10;
   v24 = 0;
   v25 = 0;
   v15 = (Il2CppObject *)Method_System_ValueTuple_string__string___ctor__;
 LABEL_24:
-  System_ValueTuple_object__object____ctor(v27, ClosedMessageText, v15, v13);
-  result.fields.Item1 = v24;
-  result.fields.Item2 = v25;
+  System_ValueTuple_object__object____ctor(v14, ClosedMessageText, v15, v13);
+  v22 = v24;
+  v23 = v25;
+  result.fields.Item2 = v23;
+  result.fields.Item1 = v22;
   return result;
 }
 
@@ -699,6 +715,7 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetWarNa
   const MethodInfo *v11; // x1
   Il2CppObject *ClosedMessageText; // x2
   const MethodInfo_3CF8CCC *v13; // x4
+  System_ValueTuple_object__object__o v14; // x0
   Il2CppObject *v15; // x3
   __int64 v16; // x2
   MissionNaviTransitionConfirmDialog_c *v17; // x0
@@ -711,10 +728,11 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetWarNa
   MissionNaviTransitionConfirmDialog_c *v24; // x0
   System_String_o *MISSION_NAVI_NAME_COMMON; // x20
   System_String_o *v26; // x0
+  struct System_String_o *v27; // x0
+  struct System_String_o *v28; // x1
   struct System_String_o *v29; // [xsp+0h] [xbp-40h] BYREF
   struct System_String_o *v30; // [xsp+8h] [xbp-38h]
   System_String_o *challengeNaviName; // [xsp+18h] [xbp-28h] BYREF
-  System_ValueTuple_object__object__o v32; // 0:x0.16
   System_ValueTuple_string__string__o result; // 0:x0.16
 
   v6 = missionNaviTransitionEntity;
@@ -736,9 +754,9 @@ System_ValueTuple_string__string__o MissionNaviTransitionConfirmDialog__GetWarNa
     {
       if ( MissionNaviTransitionEntity__TryGetChallengeNaviName(v6, &challengeNaviName, 0) )
       {
-        v32.fields.Item2 = (Il2CppObject *)challengeNaviName;
+        v14.fields.Item2 = (Il2CppObject *)challengeNaviName;
 LABEL_30:
-        v32.fields.Item1 = (Il2CppObject *)&v29;
+        v14.fields.Item1 = (Il2CppObject *)&v29;
         v29 = 0;
         v30 = 0;
         ClosedMessageText = (Il2CppObject *)StringLiteral_1/*""*/;
@@ -762,7 +780,7 @@ LABEL_30:
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, warInfo, v16);
         v19 = (Il2CppObject *)LocalizationManager__Get(MISSION_NAVI_MAIN_QUEST, 0);
 LABEL_29:
-        v32.fields.Item2 = v19;
+        v14.fields.Item2 = v19;
         challengeNaviName = (System_String_o *)v19;
         goto LABEL_30;
       }
@@ -815,15 +833,17 @@ LABEL_32:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, warInfo, isLocked);
   v10 = (Il2CppObject *)LocalizationManager__Get(MISSION_NAVI_NOT_OPEN_BOARD, 0);
   ClosedMessageText = (Il2CppObject *)MissionNaviTransitionConfirmDialog__GetClosedMessageText(closedMessageId, v11);
-  v32.fields.Item1 = (Il2CppObject *)&v29;
-  v32.fields.Item2 = v10;
+  v14.fields.Item1 = (Il2CppObject *)&v29;
+  v14.fields.Item2 = v10;
   v29 = 0;
   v30 = 0;
   v15 = (Il2CppObject *)Method_System_ValueTuple_string__string___ctor__;
 LABEL_31:
-  System_ValueTuple_object__object____ctor(v32, ClosedMessageText, v15, v13);
-  result.fields.Item1 = v29;
-  result.fields.Item2 = v30;
+  System_ValueTuple_object__object____ctor(v14, ClosedMessageText, v15, v13);
+  v27 = v29;
+  v28 = v30;
+  result.fields.Item2 = v28;
+  result.fields.Item1 = v27;
   return result;
 }
 
@@ -957,10 +977,10 @@ void MissionNaviTransitionConfirmDialog__Open(
   UnityEngine_Transform_o *v78; // x0
   __int64 v79; // x1
   float v80; // s8
-  __int64 v81; // x0
+  UnityEngine_Transform_o *v81; // x0
   __int64 v82; // x1
   UnityEngine_Transform_o *v83; // x26
-  __int64 v84; // x0
+  UnityEngine_Transform_o *v84; // x0
   __int64 v85; // x1
   UnityEngine_Transform_o *v86; // x25
   __int64 v87; // x1
@@ -1254,21 +1274,21 @@ void MissionNaviTransitionConfirmDialog__Open(
     v106.fields.z = 0.0;
     v106.fields.y = v80;
     UnityEngine_Transform__set_localPosition(v78, v106, 0);
-    v81 = (__int64)UnityEngine_GameObject__get_transform(v74, 0);
-    v83 = (UnityEngine_Transform_o *)v81;
+    v81 = UnityEngine_GameObject__get_transform(v74, 0);
+    v83 = v81;
     if ( !byte_5969AE6 )
     {
-      v81 = sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
+      v81 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
       byte_5969AE6 = 1;
     }
     if ( !v83 )
       sub_2213CDC(v81, v82);
     UnityEngine_Transform__set_localRotation(v83, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0);
-    v84 = (__int64)UnityEngine_GameObject__get_transform(v74, 0);
-    v86 = (UnityEngine_Transform_o *)v84;
+    v84 = UnityEngine_GameObject__get_transform(v74, 0);
+    v86 = v84;
     if ( !byte_5969AE5 )
     {
-      v84 = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      v84 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v86 )
@@ -1519,9 +1539,9 @@ System_IAsyncResult_o *MissionNaviTransitionConfirmDialog_CloseDelegate__BeginIn
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

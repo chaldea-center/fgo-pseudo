@@ -283,6 +283,7 @@ bool EventInfoConquestItemCounterComponent__anim_d__21__MoveNext(
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
+  bool result; // w0
   EventInfoConquestItemCounterComponent_c *klass; // x8
   int64_t itemNum; // x1
   __int64 productNum; // x2
@@ -348,8 +349,9 @@ LABEL_19:
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, 0, v10, v11, v12, v13, v14, v15);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

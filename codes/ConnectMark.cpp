@@ -906,7 +906,7 @@ bool ConnectMark__InitServantProfileList(ConnectMark_o *this, const MethodInfo *
   ConnectMark_o *v65; // [xsp+8h] [xbp-78h]
   ServantCommentEntity_o *v66; // [xsp+10h] [xbp-70h]
   MissionNaviTransitionBoardItem_o *v67; // [xsp+18h] [xbp-68h]
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F1FA & 1) == 0 )
   {
@@ -1223,18 +1223,19 @@ void ConnectMark__LoadBackImage(ConnectMark_o *this, System_String_o *fileName, 
   __int64 v6; // x1
   __int64 v7; // x2
   Il2CppType *v8; // x21
+  System_RuntimeTypeHandle_o v9; // x0
   System_Type_o *TypeFromHandle; // x0
   UnityEngine_Object_o *_83400868; // x0
-  System_String_o *v11; // x2
-  System_String_o *v12; // x3
-  int32_t v13; // w4
-  int32_t v14; // w5
-  bool v15; // w6
-  bool v16; // w7
-  UnityEngine_Texture2D_c *v17; // x8
-  struct UnityEngine_Texture2D_o *v18; // x9
-  int32_t v19; // w1
-  __int64 v20; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  UnityEngine_Texture2D_c *v18; // x8
+  struct UnityEngine_Texture2D_o *v19; // x9
+  int32_t v20; // w1
+  __int64 v21; // x1
   struct UITexture_o *loadBackTexture; // x0
 
   if ( (byte_596F1F7 & 1) == 0 )
@@ -1252,38 +1253,39 @@ void ConnectMark__LoadBackImage(ConnectMark_o *this, System_String_o *fileName, 
     v8 = UnityEngine_Texture2D_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, v6, v7);
-    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v8, 0);
+    v9.fields.value = (intptr_t)v8;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
     _83400868 = UnityEngine_Resources__Load_83400868(fileName, TypeFromHandle, 0);
     if ( _83400868 )
     {
-      v17 = UnityEngine_Texture2D_TypeInfo;
+      v18 = UnityEngine_Texture2D_TypeInfo;
       if ( (UnityEngine_Texture2D_c *)_83400868->klass == UnityEngine_Texture2D_TypeInfo )
-        v18 = (struct UnityEngine_Texture2D_o *)_83400868;
-      else
-        v18 = 0;
-      this->fields.loadBackTextureData = v18;
-      if ( (UnityEngine_Texture2D_c *)_83400868->klass == v17 )
-        v19 = (int)_83400868;
+        v19 = (struct UnityEngine_Texture2D_o *)_83400868;
       else
         v19 = 0;
+      this->fields.loadBackTextureData = v19;
+      if ( (UnityEngine_Texture2D_c *)_83400868->klass == v18 )
+        v20 = (int)_83400868;
+      else
+        v20 = 0;
     }
     else
     {
-      v19 = 0;
+      v20 = 0;
       this->fields.loadBackTextureData = 0;
     }
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.loadBackTextureData,
-      v19,
-      v11,
+      v20,
       v12,
       v13,
       v14,
       v15,
-      v16);
+      v16,
+      v17);
     loadBackTexture = this->fields.loadBackTexture;
     if ( !loadBackTexture )
-      sub_2213CDC(0, v20);
+      sub_2213CDC(0, v21);
     ((void (__fastcall *)(struct UITexture_o *, struct UnityEngine_Texture2D_o *, const MethodInfo *))loadBackTexture->klass->vtable._27_set_mainTexture.methodPtr)(
       loadBackTexture,
       this->fields.loadBackTextureData,
@@ -1905,27 +1907,28 @@ void ConnectMark__SetDispMode(ConnectMark_o *this, const MethodInfo *method)
   const MethodInfo *v23; // x1
   const MethodInfo *v24; // x2
   TweenAlpha_o *v25; // x20
-  bool v26; // w0
+  System_Nullable_ConnectMarkFadeInLagType__o fadeInLagType; // x1
+  bool v27; // w0
   float value; // s0
   System_Collections_Generic_List_EventDelegate__o *onFinished; // x20
-  EventDelegate_Callback_o *v29; // x21
-  __int64 v30; // x1
-  __int64 v31; // x2
-  System_String_o *v32; // x2
-  System_String_o *v33; // x3
-  int32_t v34; // w4
-  int32_t v35; // w5
-  bool v36; // w6
-  bool v37; // w7
-  struct System_Collections_IEnumerator_o *v38; // x0
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
-  unsigned int v45; // w8
-  bool v46; // w1
+  EventDelegate_Callback_o *v30; // x21
+  __int64 v31; // x1
+  __int64 v32; // x2
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  struct System_Collections_IEnumerator_o *v39; // x0
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
+  unsigned int v46; // w8
+  bool v47; // w1
 
   if ( (byte_596F1F6 & 1) == 0 )
   {
@@ -2031,20 +2034,21 @@ LABEL_16:
       goto LABEL_50;
     HIDWORD(maskBase[2].klass) = 0;
     v25 = (TweenAlpha_o *)maskBase;
-    v26 = ConnectMark__NeedToShowMarkDefinitely((ConnectMark_o *)maskBase, this->fields.fadeInLagType, v24);
+    fadeInLagType = this->fields.fadeInLagType;
+    v27 = ConnectMark__NeedToShowMarkDefinitely((ConnectMark_o *)maskBase, fadeInLagType, v24);
     value = 1.0;
-    if ( !v26 )
+    if ( !v27 )
       value = TweenAlpha__get_value(v25, 0);
     v25->fields.from = value;
     v25->fields.to = 0.0;
     UITweener__ResetToBeginning((UITweener_o *)v25, 0);
     UITweener__PlayForward((UITweener_o *)v25, 0);
     onFinished = v25->fields.onFinished;
-    v29 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
-    EventDelegate_Callback___ctor(v29, (Il2CppObject *)this, Method_ConnectMark_OnEndAlphaTween__, 0);
+    v30 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(v30, (Il2CppObject *)this, Method_ConnectMark_OnEndAlphaTween__, 0);
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v30, v31);
-    EventDelegate__Set_56322328(onFinished, v29, 0);
+      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v31, v32);
+    EventDelegate__Set_56322328(onFinished, v30, 0);
     this->fields.fadeInLagType = 0;
   }
   markCRW = this->fields.progressBarCRW;
@@ -2052,23 +2056,23 @@ LABEL_16:
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, markCRW, 0);
     this->fields.progressBarCRW = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.progressBarCRW, 0, v32, v33, v34, v35, v36, v37);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.progressBarCRW, 0, v33, v34, v35, v36, v37, v38);
   }
   if ( v5 )
   {
     this->fields.isLoadCancel = 0;
     *(_WORD *)&this->fields.isBusy = 1;
-    v38 = ConnectMark__ProgressBarCR(this, (const MethodInfo *)markCRW);
-    this->fields.progressBarCRW = v38;
+    v39 = ConnectMark__ProgressBarCR(this, (const MethodInfo *)markCRW);
+    this->fields.progressBarCRW = v39;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.progressBarCRW,
-      (int32_t)v38,
-      v39,
+      (int32_t)v39,
       v40,
       v41,
       v42,
       v43,
-      v44);
+      v44,
+      v45);
     UnityEngine_MonoBehaviour__StartCoroutine_83444756(
       (UnityEngine_MonoBehaviour_o *)this,
       this->fields.progressBarCRW,
@@ -2085,13 +2089,13 @@ LABEL_16:
       goto LABEL_50;
     UnityEngine_GameObject__SetActive(maskBase, 0, 0);
   }
-  v45 = this->fields.mode;
-  if ( v45 > 9 || ((1 << v45) & 0x2A0) == 0 )
+  v46 = this->fields.mode;
+  if ( v46 > 9 || ((1 << v46) & 0x2A0) == 0 )
   {
     maskBase = this->fields.arrowInfo;
     if ( maskBase )
     {
-      v46 = 0;
+      v47 = 0;
       goto LABEL_45;
     }
 LABEL_50:
@@ -2100,9 +2104,9 @@ LABEL_50:
   maskBase = this->fields.arrowInfo;
   if ( !maskBase )
     goto LABEL_50;
-  v46 = 1;
+  v47 = 1;
 LABEL_45:
-  UnityEngine_GameObject__SetActive(maskBase, v46, 0);
+  UnityEngine_GameObject__SetActive(maskBase, v47, 0);
 }
 
 
@@ -2133,9 +2137,10 @@ void ConnectMark__SetDownloadCancelDialogData(
 void ConnectMark__SetMarkFadeInLag(ConnectMark_o *this, int32_t type, const MethodInfo *method)
 {
   struct System_Nullable_ConnectMarkFadeInLagType__o *p_fadeInLagType; // x20
-  struct System_Nullable_ConnectMarkFadeInLagType__o v6; // x8
+  System_Nullable_Int32Enum__o v6; // x0
+  struct System_Nullable_ConnectMarkFadeInLagType__o v7; // x8
   int32_t value; // w1
-  struct System_Nullable_ConnectMarkFadeInLagType__o v8; // [xsp+8h] [xbp-28h] BYREF
+  struct System_Nullable_ConnectMarkFadeInLagType__o v9; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596F1F3 & 1) == 0 )
   {
@@ -2145,17 +2150,18 @@ void ConnectMark__SetMarkFadeInLag(ConnectMark_o *this, int32_t type, const Meth
     byte_596F1F3 = 1;
   }
   p_fadeInLagType = &this->fields.fadeInLagType;
-  v6 = *p_fadeInLagType;
-  v8 = 0;
-  if ( v6.fields.hasValue )
-    value = v6.fields.value;
+  v6 = (System_Nullable_Int32Enum__o)&v9;
+  v7 = *p_fadeInLagType;
+  v9 = 0;
+  if ( v7.fields.hasValue )
+    value = v7.fields.value;
   else
     value = type;
   System_Nullable_Int32Enum____ctor(
-    (System_Nullable_Int32Enum__o)&v8,
+    v6,
     value,
     (const MethodInfo_45E4698 *)Method_System_Nullable_ConnectMarkFadeInLagType___ctor__);
-  *p_fadeInLagType = v8;
+  *p_fadeInLagType = v9;
 }
 
 
@@ -2744,64 +2750,65 @@ bool ConnectMark__MarkCR_d__83__MoveNext(ConnectMark__MarkCR_d__83_o *this, cons
   System_Collections_Generic_List_EventDelegate__o *klass; // x24
   EventDelegate_Callback_o *v69; // x25
   __int64 v70; // x1
-  __int64 v71; // x1
-  UnityEngine_Object_o *v72; // x23
+  System_Nullable_ConnectMarkFadeInLagType__o fadeInLagType; // x1
+  __int64 v72; // x1
   UnityEngine_Object_o *v73; // x23
   UnityEngine_Object_o *v74; // x23
-  int v75; // w8
-  SimpleAnimation_o *v76; // x21
-  __int64 v77; // x8
-  UnityEngine_Animation_o *v78; // x21
-  __int64 v79; // x0
-  System_String_o *v80; // x2
-  System_String_o *v81; // x3
-  int32_t v82; // w4
-  int32_t v83; // w5
-  bool v84; // w6
-  bool v85; // w7
-  struct System_String_o *v86; // x1
+  UnityEngine_Object_o *v75; // x23
+  int v76; // w8
+  SimpleAnimation_o *v77; // x21
+  __int64 v78; // x8
+  UnityEngine_Animation_o *v79; // x21
+  __int64 v80; // x0
+  System_String_o *v81; // x2
+  System_String_o *v82; // x3
+  int32_t v83; // w4
+  int32_t v84; // w5
+  bool v85; // w6
+  bool v86; // w7
+  struct System_String_o *v87; // x1
   UnityEngine_Object_o *an_5__3; // x21
-  UnityEngine_Animation_o *v88; // x22
+  UnityEngine_Animation_o *v89; // x22
   UILabel_o *markLabel; // x20
-  UnityEngine_WaitForEndOfFrame_o *v90; // x20
-  System_String_o *v91; // x2
-  System_String_o *v92; // x3
-  int32_t v93; // w4
-  int32_t v94; // w5
-  bool v95; // w6
-  bool v96; // w7
-  UnityEngine_Object_o *v97; // x21
-  UnityEngine_WaitForEndOfFrame_o *v98; // x20
-  System_String_o *v99; // x2
-  System_String_o *v100; // x3
-  int32_t v101; // w4
-  int32_t v102; // w5
-  bool v103; // w6
-  bool v104; // w7
-  UnityEngine_Object_o *v105; // x22
-  UnityEngine_Animation_o *v106; // x22
-  __int64 v107; // x8
-  UnityEngine_AnimationState_o *v108; // x22
+  UnityEngine_WaitForEndOfFrame_o *v91; // x20
+  System_String_o *v92; // x2
+  System_String_o *v93; // x3
+  int32_t v94; // w4
+  int32_t v95; // w5
+  bool v96; // w6
+  bool v97; // w7
+  UnityEngine_Object_o *v98; // x21
+  UnityEngine_WaitForEndOfFrame_o *v99; // x20
+  System_String_o *v100; // x2
+  System_String_o *v101; // x3
+  int32_t v102; // w4
+  int32_t v103; // w5
+  bool v104; // w6
+  bool v105; // w7
+  UnityEngine_Object_o *v106; // x22
+  UnityEngine_Animation_o *v107; // x22
+  __int64 v108; // x8
+  UnityEngine_AnimationState_o *v109; // x22
   System_String_o *name; // x0
-  System_String_o *v110; // x2
-  System_String_o *v111; // x3
-  int32_t v112; // w4
-  int32_t v113; // w5
-  bool v114; // w6
-  bool v115; // w7
-  UnityEngine_Animation_o *v116; // x22
+  System_String_o *v111; // x2
+  System_String_o *v112; // x3
+  int32_t v113; // w4
+  int32_t v114; // w5
+  bool v115; // w6
+  bool v116; // w7
+  UnityEngine_Animation_o *v117; // x22
   unsigned int mode; // w8
   RubyLabelHelper_o *rubyLabelHelper; // x0
-  unsigned int v119; // w8
-  UnityEngine_WaitForEndOfFrame_o *v120; // x20
-  System_String_o *v121; // x2
-  System_String_o *v122; // x3
-  int32_t v123; // w4
-  int32_t v124; // w5
-  bool v125; // w6
-  bool v126; // w7
-  bool v127; // w8
-  UnityEngine_Color_o v129; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  unsigned int v120; // w8
+  UnityEngine_WaitForEndOfFrame_o *v121; // x20
+  System_String_o *v122; // x2
+  System_String_o *v123; // x3
+  int32_t v124; // w4
+  int32_t v125; // w5
+  bool v126; // w6
+  bool v127; // w7
+  bool v128; // w8
+  UnityEngine_Color_o v130; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596FBF7 & 1) == 0 )
   {
@@ -2856,13 +2863,13 @@ bool ConnectMark__MarkCR_d__83__MoveNext(ConnectMark__MarkCR_d__83_o *this, cons
         tenText_5__4 = (UnityEngine_Animation_o *)this->fields._tenText_5__4;
         if ( !tenText_5__4 )
           goto LABEL_162;
-        v86 = SLODWORD(tenText_5__4->fields.m_CachedPtr) <= 2
+        v87 = SLODWORD(tenText_5__4->fields.m_CachedPtr) <= 2
             ? System_String__Concat_75651716((System_String_o *)tenText_5__4, (System_String_o *)StringLiteral_1063/*"."*/, 0)
             : (struct System_String_o *)StringLiteral_1/*""*/;
-        this->fields._tenText_5__4 = v86;
+        this->fields._tenText_5__4 = v87;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields._tenText_5__4,
-          (int32_t)v86,
+          (int32_t)v87,
           v2,
           v3,
           v4,
@@ -2877,18 +2884,18 @@ bool ConnectMark__MarkCR_d__83__MoveNext(ConnectMark__MarkCR_d__83_o *this, cons
         if ( !markLabel )
           goto LABEL_162;
         UILabel__set_text(markLabel, (System_String_o *)tenText_5__4, 0);
-        v90 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
-        UnityEngine_WaitForEndOfFrame___ctor(v90, 0);
-        this->fields.__2__current = (Il2CppObject *)v90;
+        v91 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        UnityEngine_WaitForEndOfFrame___ctor(v91, 0);
+        this->fields.__2__current = (Il2CppObject *)v91;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
-          (int32_t)v90,
-          v91,
+          (int32_t)v91,
           v92,
           v93,
           v94,
           v95,
-          v96);
+          v96,
+          v97);
         v37 = 7;
 LABEL_150:
         LOBYTE(tenText_5__4) = 1;
@@ -2994,10 +3001,10 @@ LABEL_167:
           }
           else
           {
-            v97 = (UnityEngine_Object_o *)this->fields._an_5__3;
+            v98 = (UnityEngine_Object_o *)this->fields._an_5__3;
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-            if ( UnityEngine_Object__op_Inequality(v97, 0, 0) )
+            if ( UnityEngine_Object__op_Inequality(v98, 0, 0) )
             {
               tenText_5__4 = this->fields._an_5__3;
               if ( !tenText_5__4 )
@@ -3008,18 +3015,18 @@ LABEL_167:
         }
       }
 LABEL_108:
-      v98 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
-      UnityEngine_WaitForEndOfFrame___ctor(v98, 0);
-      this->fields.__2__current = (Il2CppObject *)v98;
+      v99 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      UnityEngine_WaitForEndOfFrame___ctor(v99, 0);
+      this->fields.__2__current = (Il2CppObject *)v99;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
-        (int32_t)v98,
-        v99,
+        (int32_t)v99,
         v100,
         v101,
         v102,
         v103,
-        v104);
+        v104,
+        v105);
       v37 = 5;
       goto LABEL_150;
     }
@@ -3128,10 +3135,10 @@ LABEL_38:
     }
     else
     {
-      v88 = *p_an_5__3;
+      v89 = *p_an_5__3;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v88, 0, 0) )
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v89, 0, 0) )
       {
         tenText_5__4 = *p_an_5__3;
         if ( !*p_an_5__3 )
@@ -3152,11 +3159,11 @@ LABEL_38:
                                               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !tenText_5__4 )
     goto LABEL_162;
-  v129.fields.r = *((float *)&tenText_5__4[6].klass + 1);
-  v129.fields.g = *(float *)&tenText_5__4[6].monitor;
-  v129.fields.b = *((float *)&tenText_5__4[6].monitor + 1);
-  v129.fields.a = 0.005;
-  UIWidget__set_color((UIWidget_o *)tenText_5__4, v129, 0);
+  v130.fields.r = *((float *)&tenText_5__4[6].klass + 1);
+  v130.fields.g = *(float *)&tenText_5__4[6].monitor;
+  v130.fields.b = *((float *)&tenText_5__4[6].monitor + 1);
+  v130.fields.a = 0.005;
+  UIWidget__set_color((UIWidget_o *)tenText_5__4, v130, 0);
   tenText_5__4 = (UnityEngine_Animation_o *)_4__this->fields.markBase;
   if ( !tenText_5__4 )
     goto LABEL_162;
@@ -3172,7 +3179,8 @@ LABEL_38:
   if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v70);
   EventDelegate__Remove(klass, v69, 0);
-  v67->fields.delay = ConnectMark__GetFadeInLagSecondByLagType(_4__this, _4__this->fields.fadeInLagType, 0);
+  fadeInLagType = _4__this->fields.fadeInLagType;
+  v67->fields.delay = ConnectMark__GetFadeInLagSecondByLagType(_4__this, fadeInLagType, 0);
   v67[1].klass = (UITweener_c *)0x3F8000003BA3D70ALL;
   UITweener__ResetToBeginning(v67, 0);
   UITweener__PlayForward(v67, 0);
@@ -3180,55 +3188,55 @@ LABEL_38:
   if ( !tenText_5__4 )
     goto LABEL_162;
   UILabel__set_text((UILabel_o *)tenText_5__4, this->fields.message, 0);
-  v72 = (UnityEngine_Object_o *)this->fields._an_5__3;
+  v73 = (UnityEngine_Object_o *)this->fields._an_5__3;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v71);
-  if ( UnityEngine_Object__op_Inequality(v72, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v72);
+  if ( UnityEngine_Object__op_Inequality(v73, 0, 0) )
     goto LABEL_76;
-  v73 = (UnityEngine_Object_o *)*p_simpleAnimation_5__2;
+  v74 = (UnityEngine_Object_o *)*p_simpleAnimation_5__2;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  if ( UnityEngine_Object__op_Inequality(v73, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality(v74, 0, 0) )
   {
 LABEL_76:
-    v74 = (UnityEngine_Object_o *)*p_simpleAnimation_5__2;
-    v75 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
+    v75 = (UnityEngine_Object_o *)*p_simpleAnimation_5__2;
+    v76 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
     if ( v28 )
     {
-      if ( !v75 )
+      if ( !v76 )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-      if ( UnityEngine_Object__op_Inequality(v74, 0, 0) )
+      if ( UnityEngine_Object__op_Inequality(v75, 0, 0) )
       {
-        v76 = *p_simpleAnimation_5__2;
+        v77 = *p_simpleAnimation_5__2;
         tenText_5__4 = (UnityEngine_Animation_o *)ConnectMark_TypeInfo;
         if ( !*(&ConnectMark_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(ConnectMark_TypeInfo, method);
           tenText_5__4 = (UnityEngine_Animation_o *)ConnectMark_TypeInfo;
         }
-        v77 = *(_QWORD *)(tenText_5__4[7].fields.m_CachedPtr + 8);
-        if ( !v77 )
+        v78 = *(_QWORD *)(tenText_5__4[7].fields.m_CachedPtr + 8);
+        if ( !v78 )
           goto LABEL_162;
-        if ( *(_DWORD *)(v77 + 24) )
+        if ( *(_DWORD *)(v78 + 24) )
         {
-          if ( !v76 )
+          if ( !v77 )
             goto LABEL_162;
-          tenText_5__4 = (UnityEngine_Animation_o *)SimpleAnimation__get_Item(v76, *(System_String_o **)(v77 + 32), 0);
+          tenText_5__4 = (UnityEngine_Animation_o *)SimpleAnimation__get_Item(v77, *(System_String_o **)(v78 + 32), 0);
           if ( !tenText_5__4 )
             goto LABEL_162;
-          v78 = tenText_5__4;
+          v79 = tenText_5__4;
           sub_200B6E4(18, SimpleAnimation_State_TypeInfo, tenText_5__4, 2);
-          v79 = sub_200B5F0(9, SimpleAnimation_State_TypeInfo, v78);
-          _4__this->fields.markAnimationName = (struct System_String_o *)v79;
+          v80 = sub_200B5F0(9, SimpleAnimation_State_TypeInfo, v79);
+          _4__this->fields.markAnimationName = (struct System_String_o *)v80;
           sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&_4__this->fields.markAnimationName,
-            v79,
             v80,
             v81,
             v82,
             v83,
             v84,
-            v85);
+            v85,
+            v86);
 LABEL_114:
           tenText_5__4 = (UnityEngine_Animation_o *)*p_simpleAnimation_5__2;
           if ( !*p_simpleAnimation_5__2 )
@@ -3239,52 +3247,52 @@ LABEL_114:
 LABEL_163:
         sub_2213CE4(tenText_5__4);
       }
-      v105 = (UnityEngine_Object_o *)*p_an_5__3;
+      v106 = (UnityEngine_Object_o *)*p_an_5__3;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-      if ( !UnityEngine_Object__op_Inequality(v105, 0, 0) )
+      if ( !UnityEngine_Object__op_Inequality(v106, 0, 0) )
         goto LABEL_134;
-      v106 = *p_an_5__3;
+      v107 = *p_an_5__3;
       tenText_5__4 = (UnityEngine_Animation_o *)ConnectMark_TypeInfo;
       if ( !*(&ConnectMark_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(ConnectMark_TypeInfo, method);
         tenText_5__4 = (UnityEngine_Animation_o *)ConnectMark_TypeInfo;
       }
-      v107 = *(_QWORD *)(tenText_5__4[7].fields.m_CachedPtr + 8);
+      v108 = *(_QWORD *)(tenText_5__4[7].fields.m_CachedPtr + 8);
+      if ( !v108 )
+        goto LABEL_162;
+      if ( !*(_DWORD *)(v108 + 24) )
+        goto LABEL_163;
       if ( !v107 )
         goto LABEL_162;
-      if ( !*(_DWORD *)(v107 + 24) )
-        goto LABEL_163;
-      if ( !v106 )
-        goto LABEL_162;
       tenText_5__4 = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(
-                                                  v106,
-                                                  *(System_String_o **)(v107 + 32),
+                                                  v107,
+                                                  *(System_String_o **)(v108 + 32),
                                                   0);
       if ( !*p_an_5__3 )
         goto LABEL_162;
-      v108 = (UnityEngine_AnimationState_o *)tenText_5__4;
+      v109 = (UnityEngine_AnimationState_o *)tenText_5__4;
       UnityEngine_Animation__set_wrapMode(*p_an_5__3, 2, 0);
-      if ( !v108 )
+      if ( !v109 )
         goto LABEL_162;
-      name = UnityEngine_AnimationState__get_name(v108, 0);
+      name = UnityEngine_AnimationState__get_name(v109, 0);
       _4__this->fields.markAnimationName = name;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&_4__this->fields.markAnimationName,
         (int32_t)name,
-        v110,
         v111,
         v112,
         v113,
         v114,
-        v115);
+        v115,
+        v116);
     }
     else
     {
-      if ( !v75 )
+      if ( !v76 )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-      if ( UnityEngine_Object__op_Inequality(v74, 0, 0) )
+      if ( UnityEngine_Object__op_Inequality(v75, 0, 0) )
       {
         tenText_5__4 = (UnityEngine_Animation_o *)*p_simpleAnimation_5__2;
         if ( !*p_simpleAnimation_5__2 )
@@ -3293,10 +3301,10 @@ LABEL_163:
           goto LABEL_134;
         goto LABEL_114;
       }
-      v116 = *p_an_5__3;
+      v117 = *p_an_5__3;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-      if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v116, 0, 0) )
+      if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v117, 0, 0) )
         goto LABEL_134;
       tenText_5__4 = *p_an_5__3;
       if ( !*p_an_5__3 )
@@ -3330,8 +3338,8 @@ LABEL_134:
         if ( !tenText_5__4 )
           goto LABEL_162;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tenText_5__4, 0, 0);
-        v119 = _4__this->fields.mode;
-        if ( v119 <= 9 && ((1 << v119) & 0x2A0) != 0 )
+        v120 = _4__this->fields.mode;
+        if ( v120 <= 9 && ((1 << v120) & 0x2A0) != 0 )
         {
           tenText_5__4 = (UnityEngine_Animation_o *)_4__this->fields.arrowInfo;
           if ( !tenText_5__4 )
@@ -3350,9 +3358,9 @@ LABEL_146:
     }
     if ( mode == 2 )
     {
-      v127 = ConnectMark__SetTipMessage(_4__this, 0);
+      v128 = ConnectMark__SetTipMessage(_4__this, 0);
       tenText_5__4 = (UnityEngine_Animation_o *)_4__this->fields.tipsBase;
-      if ( v127 )
+      if ( v128 )
       {
         if ( !tenText_5__4 )
           goto LABEL_162;
@@ -3386,18 +3394,18 @@ LABEL_162:
 LABEL_147:
   if ( !System_String__IsNullOrEmpty(this->fields.message, 0) )
   {
-    v120 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
-    UnityEngine_WaitForEndOfFrame___ctor(v120, 0);
-    this->fields.__2__current = (Il2CppObject *)v120;
+    v121 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    UnityEngine_WaitForEndOfFrame___ctor(v121, 0);
+    this->fields.__2__current = (Il2CppObject *)v121;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
-      (int32_t)v120,
-      v121,
+      (int32_t)v121,
       v122,
       v123,
       v124,
       v125,
-      v126);
+      v126,
+      v127);
     v37 = 2;
     goto LABEL_150;
   }
@@ -3989,8 +3997,8 @@ LABEL_117:
     this->fields.__2__current = (Il2CppObject *)v67;
     v68 = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)v68, (int32_t)v67, v69, v70, v71, v72, v73, v74);
-    *((_DWORD *)v68 - 2) = 1;
     LOBYTE(progressBarSlider) = 1;
+    *((_DWORD *)v68 - 2) = 1;
     return (char)progressBarSlider;
   }
   if ( _1__state <= 6 )
@@ -4122,8 +4130,8 @@ LABEL_89:
 LABEL_147:
   if ( !_4__this )
     goto LABEL_154;
-  _4__this->fields.isBusy = 0;
   LOBYTE(progressBarSlider) = 0;
+  _4__this->fields.isBusy = 0;
   return (char)progressBarSlider;
 }
 

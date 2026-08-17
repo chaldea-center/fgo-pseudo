@@ -15,6 +15,7 @@ void BoostItemListViewItemDraw___ctor(BoostItemListViewItemDraw_o *this, const M
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BoostItemListViewItemDraw__SetItem(
         BoostItemListViewItemDraw_o *this,
         BoostItemListViewItem_o *item,
@@ -45,8 +46,12 @@ void BoostItemListViewItemDraw__SetItem(
   System_String_o *v26; // x0
   __int64 v27; // x2
   UIWidget_o *v28; // x20
-  int v32; // [xsp+Ch] [xbp-34h] BYREF
-  UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct UILabel_o *v29; // x8
+  float v30; // s0 OVERLAPPED
+  float v31; // s1
+  float v32; // s2
+  float v33; // s3
+  int v34; // [xsp+Ch] [xbp-34h] BYREF
 
   v5 = item;
   v6 = this;
@@ -59,7 +64,7 @@ void BoostItemListViewItemDraw__SetItem(
     this = (BoostItemListViewItemDraw_o *)sub_2213A60(&StringLiteral_21194/*"icon_race_"*/);
     byte_596BDE2 = 1;
   }
-  v32 = 0;
+  v34 = 0;
   if ( mode )
   {
     if ( !v5 )
@@ -67,7 +72,7 @@ void BoostItemListViewItemDraw__SetItem(
     itemEntity = (int32_t *)v5->fields.itemEntity;
     magnification = v5->fields.magnification;
     isCanNotSelect = v5->fields.isCanNotSelect;
-    v32 = magnification;
+    v34 = magnification;
     if ( !itemEntity )
       goto LABEL_34;
     this = (BoostItemListViewItemDraw_o *)v6->fields.itemIconInfo;
@@ -128,7 +133,7 @@ void BoostItemListViewItemDraw__SetItem(
     item = 0;
     if ( magnification >= 2 )
     {
-      v26 = System_Int32__ToString((int32_t)&v32, 0);
+      v26 = System_Int32__ToString((int32_t)&v34, 0);
       this = (BoostItemListViewItemDraw_o *)System_String__Concat_75651716(
                                               (System_String_o *)StringLiteral_21194/*"icon_race_"*/,
                                               v26,
@@ -148,26 +153,30 @@ LABEL_34:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, item, v27);
         this = (BoostItemListViewItemDraw_o *)BalanceConfig_TypeInfo;
       }
-      v33 = *(UnityEngine_Color_o *)(*((_QWORD *)this + 23) + 668LL);
+      v29 = this[1].fields.infoLabel;
+      v30 = *(float *)&v29->fields.mLastWidth;
+      v31 = *(float *)&v29->fields.mLastHeight;
+      v32 = *((float *)&v29->fields.mLastHeight + 1);
+      v33 = *(float *)&v29[1].klass;
       if ( !v28 )
         goto LABEL_34;
     }
     else
     {
-      v33.fields.a = 1.0;
-      v33.fields.b = 1.0;
-      v33.fields.g = 1.0;
-      v33.fields.r = 1.0;
+      v33 = 1.0;
+      v32 = 1.0;
+      v31 = 1.0;
+      v30 = 1.0;
       if ( !v28 )
         goto LABEL_34;
     }
-    UIWidget__set_color(v28, v33, 0);
+    UIWidget__set_color(v28, *(UnityEngine_Color_o *)&v30, 0);
     this = (BoostItemListViewItemDraw_o *)v6->fields.magnificationSprite;
     if ( !this )
       goto LABEL_34;
     this = (BoostItemListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !this )
       goto LABEL_34;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v32 > 1, 0);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v34 > 1, 0);
   }
 }

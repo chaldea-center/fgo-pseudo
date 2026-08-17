@@ -211,6 +211,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BuffMaster__GetEntityPara
   MethodInfo *_2_System_Func_BuffEntity__T__Invoke; // x1
   Il2CppMethodPointer methodPointer; // x0
   void (__fastcall *invoker_method)(Il2CppMethodPointer, MethodInfo *, void *, Il2CppObject **, char *); // x8
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v16; // x0
+  void *v17; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v18; // x20
   __int64 v19; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
@@ -255,12 +257,12 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BuffMaster__GetEntityPara
       v22 = entity;
       v23 = (char *)&v19 - ((actualSize + 15) & 0x1FFFFFFF0LL);
       invoker_method(methodPointer, _2_System_Func_BuffEntity__T__Invoke, monitor, &v22, v23);
-      result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                                 funcGetParam,
-                                                                                 (char *)&v19
-                                                                               - ((actualSize + 15) & 0x1FFFFFFF0LL),
-                                                                                 actualSize);
-      return result;
+      v16 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                        funcGetParam,
+                                                                        (char *)&v19
+                                                                      - ((actualSize + 15) & 0x1FFFFFFF0LL),
+                                                                        actualSize);
+      goto LABEL_14;
     }
 LABEL_13:
     sub_2213CDC(this, *(_QWORD *)&buffId);
@@ -270,7 +272,10 @@ LABEL_13:
   else
     v18 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
   memcpy((char *)&v19 - ((actualSize + 15) & 0x1FFFFFFF0LL), v18, actualSize);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(funcGetParam, v18, actualSize);
+  v16 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(funcGetParam, v18, actualSize);
+LABEL_14:
+  result.monitor = v17;
+  result.klass = v16;
   return result;
 }
 

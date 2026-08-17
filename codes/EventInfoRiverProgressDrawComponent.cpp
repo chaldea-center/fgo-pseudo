@@ -47,6 +47,7 @@ System_Collections_IEnumerator_o *EventInfoRiverProgressDrawComponent__PlayChang
   int32_t v18; // w5
   bool v19; // w6
   bool v20; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597261D & 1) == 0 )
   {
@@ -61,8 +62,9 @@ System_Collections_IEnumerator_o *EventInfoRiverProgressDrawComponent__PlayChang
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 32), (int32_t)this, v9, v10, v11, v12, v13, v14);
   *(_QWORD *)(v8 + 40) = endAction;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 40), (int32_t)endAction, v15, v16, v17, v18, v19, v20);
+  result = (System_Collections_IEnumerator_o *)v8;
   *(_BYTE *)(v8 + 48) = v7;
-  return (System_Collections_IEnumerator_o *)v8;
+  return result;
 }
 
 
@@ -687,9 +689,10 @@ bool EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19__MoveNext
   __int64 v39; // x1
   Il2CppObject *v40; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  float v43; // s1
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
   if ( (byte_5972621 & 1) == 0 )
@@ -764,9 +767,9 @@ bool EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19__MoveNext
               goto LABEL_41;
             GameObjectExtensions__SetLocalPosition_42891620(
               (UnityEngine_GameObject_o *)this,
-              position.fields.x,
-              position.fields.y - Component_object->fields.slideOutPosition.fields.y,
-              position.fields.z,
+              x,
+              y - Component_object->fields.slideOutPosition.fields.y,
+              z,
               0);
           }
           else
@@ -779,23 +782,24 @@ bool EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19__MoveNext
                                                                                             0);
             if ( !this )
               goto LABEL_41;
-            v43 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+            localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
             if ( !Component_object )
               goto LABEL_41;
             v36 = Component_object->fields.slideOutPosition.fields.y;
-            v37 = v43;
+            v37 = localPosition.fields.y;
             this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)UnityEngine_Component__get_transform(
                                                                                             (UnityEngine_Component_o *)_4__this,
                                                                                             0);
             if ( !this )
               goto LABEL_41;
+            v45 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
             y = v37 + v36;
-            z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+            z = v45.fields.z;
           }
-          v45.fields.x = x;
-          v45.fields.y = y;
-          v45.fields.z = z;
-          EventInfoUISlideAnimation__StartSlideAnim_52752912(Component_object, 0, v45, isFadeIn, 0);
+          v46.fields.x = x;
+          v46.fields.y = y;
+          v46.fields.z = z;
+          EventInfoUISlideAnimation__StartSlideAnim_52752912(Component_object, 0, v46, isFadeIn, 0);
         }
         if ( !v8->fields.isFadeIn )
         {

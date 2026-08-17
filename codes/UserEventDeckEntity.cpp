@@ -201,8 +201,12 @@ LABEL_16:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
         this = (UserEventDeckEntity_o *)BalanceConfig_TypeInfo;
       }
-      if ( id <= *(_DWORD *)(*((_QWORD *)this + 23) + 172LL) && v7->fields.isFollowerSvt && !v7->fields.npcFollowerSvtId )
+      if ( id <= *(_DWORD *)(*(_QWORD *)&this[4].fields.eventId + 172LL)
+        && v7->fields.isFollowerSvt
+        && !v7->fields.npcFollowerSvtId )
+      {
         return v7->fields.id;
+      }
     }
     deckInfo = v2->fields.deckInfo;
     ++v4;

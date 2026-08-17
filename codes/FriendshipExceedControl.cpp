@@ -585,12 +585,19 @@ LABEL_24:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FriendshipExceedControl__SetExecuteButtonState(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *combineTextImage; // x0
   UnityEngine_Behaviour_o *v4; // x20
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s3 OVERLAPPED
+  float v6; // s0
+  float v7; // s1
+  float v8; // s2
+  float v9; // s3 OVERLAPPED
+  float v10; // s0
+  float v11; // s1
+  float v12; // s2
 
   if ( (byte_5974AF5 & 1) == 0 )
   {
@@ -618,41 +625,41 @@ void FriendshipExceedControl__SetExecuteButtonState(FriendshipExceedControl_o *t
   if ( !v4 )
     goto LABEL_38;
   UnityEngine_Behaviour__set_enabled(v4, (bool)method, 0);
-  v7.fields.a = 1.0;
+  v5 = 1.0;
   combineTextImage = (UnityEngine_Component_o *)this->fields.combineButtonText;
   if ( this->fields.isBaseSelected && this->fields.isFriendshipRankMax && this->fields.isQpEnough )
   {
-    v7.fields.r = 0.5;
+    v6 = 0.5;
     if ( this->fields.isItemEnough )
-      v7.fields.r = 1.0;
+      v6 = 1.0;
   }
   else
   {
-    v7.fields.r = 0.5;
+    v6 = 0.5;
   }
   if ( !combineTextImage )
     goto LABEL_38;
-  v7.fields.g = v7.fields.r;
-  v7.fields.b = v7.fields.r;
-  UIWidget__set_color((UIWidget_o *)combineTextImage, v7, 0);
-  v8.fields.a = 1.0;
+  v7 = v6;
+  v8 = v6;
+  UIWidget__set_color((UIWidget_o *)combineTextImage, *(UnityEngine_Color_o *)(&v5 - 3), 0);
+  v9 = 1.0;
   combineTextImage = (UnityEngine_Component_o *)this->fields.combineButtonBg;
   if ( this->fields.isBaseSelected && this->fields.isFriendshipRankMax && this->fields.isQpEnough )
   {
-    v8.fields.r = 0.5;
+    v10 = 0.5;
     if ( this->fields.isItemEnough )
-      v8.fields.r = 1.0;
+      v10 = 1.0;
   }
   else
   {
-    v8.fields.r = 0.5;
+    v10 = 0.5;
   }
   if ( !combineTextImage )
 LABEL_38:
     sub_2213CDC(combineTextImage, method);
-  v8.fields.g = v8.fields.r;
-  v8.fields.b = v8.fields.r;
-  UIWidget__set_color((UIWidget_o *)combineTextImage, v8, 0);
+  v11 = v10;
+  v12 = v10;
+  UIWidget__set_color((UIWidget_o *)combineTextImage, *(UnityEngine_Color_o *)(&v9 - 3), 0);
   if ( this->fields.isBaseSelected
     && this->fields.isFriendshipRankMax
     && this->fields.isQpEnough
@@ -710,9 +717,12 @@ void FriendshipExceedControl__SetInfoMessage(FriendshipExceedControl_o *this, in
   __int64 *v6; // x8
   System_String_o *v7; // x0
   __int64 v8; // x1
-  int v12; // w8
-  __int64 *v13; // x8
-  UnityEngine_Color_o NORMAL_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  int v13; // w8
+  __int64 *v14; // x8
 
   if ( (byte_5974AF8 & 1) == 0 )
   {
@@ -731,10 +741,10 @@ void FriendshipExceedControl__SetInfoMessage(FriendshipExceedControl_o *this, in
       if ( this->fields.isItemEnough )
       {
         detailInfoLabel = this->fields.detailInfoLabel;
-        v12 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
+        v13 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
         if ( this->fields.isQpEnough )
         {
-          if ( !v12 )
+          if ( !v13 )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&state);
           v6 = &StringLiteral_6018/*"EXE_FRIENDSHIP_EXCEED_COMBINE_TXT"*/;
 LABEL_8:
@@ -745,24 +755,27 @@ LABEL_8:
             v7 = (System_String_o *)this->fields.detailInfoLabel;
             if ( v7 )
             {
-              NORMAL_COLOR = this->fields.NORMAL_COLOR;
+              r = this->fields.NORMAL_COLOR.fields.r;
+              g = this->fields.NORMAL_COLOR.fields.g;
+              b = this->fields.NORMAL_COLOR.fields.b;
+              a = this->fields.NORMAL_COLOR.fields.a;
 LABEL_30:
-              UIWidget__set_color((UIWidget_o *)v7, NORMAL_COLOR, 0);
+              UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&r, 0);
               return;
             }
           }
           goto LABEL_31;
         }
-        if ( !v12 )
+        if ( !v13 )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&state);
-        v13 = &StringLiteral_12706/*"SHORT_QP_INFO_MSG"*/;
+        v14 = &StringLiteral_12706/*"SHORT_QP_INFO_MSG"*/;
       }
       else
       {
         detailInfoLabel = this->fields.detailInfoLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&state);
-        v13 = &StringLiteral_12705/*"SHORT_ITEM_INFO_MSG"*/;
+        v14 = &StringLiteral_12705/*"SHORT_ITEM_INFO_MSG"*/;
       }
     }
     else
@@ -770,19 +783,19 @@ LABEL_30:
       detailInfoLabel = this->fields.detailInfoLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&state);
-      v13 = &StringLiteral_9163/*"MSG_FRIENDSHIP_EXCEED_BASE"*/;
+      v14 = &StringLiteral_9163/*"MSG_FRIENDSHIP_EXCEED_BASE"*/;
     }
-    v7 = LocalizationManager__Get((System_String_o *)*v13, 0);
+    v7 = LocalizationManager__Get((System_String_o *)*v14, 0);
     if ( detailInfoLabel )
     {
       UILabel__set_text(detailInfoLabel, v7, 0);
       v7 = (System_String_o *)this->fields.detailInfoLabel;
       if ( v7 )
       {
-        NORMAL_COLOR.fields.r = 1.0;
-        NORMAL_COLOR.fields.g = 1.0;
-        NORMAL_COLOR.fields.b = 1.0;
-        NORMAL_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
         goto LABEL_30;
       }
     }
@@ -969,6 +982,7 @@ LABEL_38:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FriendshipExceedControl__SetRequiredQpInfo(FriendshipExceedControl_o *this, const MethodInfo *method)
 {
   struct FriendshipEntity_o *FriendshipEntity_k__BackingField; // x9
@@ -976,7 +990,10 @@ void FriendshipExceedControl__SetRequiredQpInfo(FriendshipExceedControl_o *this,
   UILabel_o *requiredQpLabel; // x20
   System_String_o *v6; // x0
   __int64 v7; // x1
-  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v8; // s1 OVERLAPPED
+  float v9; // s3
+  float v10; // s0
+  float v11; // s2
 
   if ( (byte_5974AF1 & 1) == 0 )
   {
@@ -999,13 +1016,13 @@ void FriendshipExceedControl__SetRequiredQpInfo(FriendshipExceedControl_o *this,
   {
     sub_2213CDC(v6, v7);
   }
-  v9.fields.g = 1.0;
-  v9.fields.a = 1.0;
+  v8 = 1.0;
+  v9 = 1.0;
   if ( this->fields.userQp < this->fields.requiredQp )
-    v9.fields.g = 0.0;
-  v9.fields.r = 1.0;
-  v9.fields.b = v9.fields.g;
-  UIWidget__set_color((UIWidget_o *)v6, v9, 0);
+    v8 = 0.0;
+  v10 = 1.0;
+  v11 = v8;
+  UIWidget__set_color((UIWidget_o *)v6, *(UnityEngine_Color_o *)(&v8 - 1), 0);
   this->fields.isQpEnough = this->fields.userQp >= this->fields.requiredQp;
 }
 

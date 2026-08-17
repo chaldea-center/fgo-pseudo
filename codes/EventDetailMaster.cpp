@@ -220,9 +220,9 @@ LABEL_25:
         if ( (int)++v16 >= max_length )
           goto LABEL_22;
       }
+      LOBYTE(EnableExistEventRewardEntityList) = 1;
       *eventId = v17->fields.id;
       *grandWarId = *(&v19->fields._MasterKind_k__BackingField + 1);
-      LOBYTE(EnableExistEventRewardEntityList) = 1;
     }
     else
     {

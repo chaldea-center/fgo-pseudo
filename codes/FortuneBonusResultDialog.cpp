@@ -492,7 +492,7 @@ void FortuneBonusResultDialog__Open(
 {
   System_Action_o *v9; // x22
   __int64 v10; // x1
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   __int64 v12; // x1
   UnityEngine_Transform_o *v13; // x22
   UILabel_o *titleLabel; // x22
@@ -540,29 +540,29 @@ void FortuneBonusResultDialog__Open(
   }
   else
   {
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_25;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
-    gameObject = (__int64)this->fields.maskSprite;
+    UnityEngine_GameObject__SetActive(gameObject, 1, 0);
+    gameObject = (UnityEngine_GameObject_o *)this->fields.maskSprite;
     if ( !gameObject )
       goto LABEL_25;
     UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_18793/*"clear00"*/, 0);
-    gameObject = (__int64)BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
+    gameObject = (UnityEngine_GameObject_o *)BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
     if ( !gameObject )
       goto LABEL_25;
-    (*(void (__fastcall **)(__int64, _QWORD, float))(*(_QWORD *)gameObject + 440LL))(
+    ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))gameObject->klass[1]._1.element_class)(
       gameObject,
-      *(_QWORD *)(*(_QWORD *)gameObject + 448LL),
+      gameObject->klass[1]._1.castClass,
       1.0);
-    gameObject = (__int64)this->fields.baseWindow;
+    gameObject = this->fields.baseWindow;
     if ( !gameObject )
       goto LABEL_25;
-    gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
     v13 = (UnityEngine_Transform_o *)gameObject;
     if ( !byte_5969AE5 )
     {
-      gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v13 )
@@ -573,17 +573,17 @@ LABEL_25:
   titleLabel = this->fields.titleLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v10);
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6796/*"FORTUNE_BONUS_RESULT_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6796/*"FORTUNE_BONUS_RESULT_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_25;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   subTitleLabel = this->fields.subTitleLabel;
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6795/*"FORTUNE_BONUS_RESULT_SUBTITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6795/*"FORTUNE_BONUS_RESULT_SUBTITLE"*/, 0);
   if ( !subTitleLabel )
     goto LABEL_25;
   UILabel__set_text(subTitleLabel, (System_String_o *)gameObject, 0);
   okBtnLabel = this->fields.okBtnLabel;
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6792/*"FORTUNE_BONUS_RESULT_BUTTON"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6792/*"FORTUNE_BONUS_RESULT_BUTTON"*/, 0);
   if ( !okBtnLabel )
     goto LABEL_25;
   UILabel__set_text(okBtnLabel, (System_String_o *)gameObject, 0);
@@ -601,7 +601,7 @@ LABEL_25:
     v26 = lineSpriteArray->m_Items[v24];
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v12);
-    gameObject = AtlasManager__SetEventUI(v26, (System_String_o *)StringLiteral_18758/*"chronology_line"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI(v26, (System_String_o *)StringLiteral_18758/*"chronology_line"*/, 0);
     lineSpriteArray = this->fields.lineSpriteArray;
     ++v24;
     if ( !lineSpriteArray )

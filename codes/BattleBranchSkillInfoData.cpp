@@ -215,9 +215,9 @@ bool BattleBranchSkillInfoData__IsSatisfyCond(
 
 BaseMotionSkip_o *BattleBranchSkillInfoData__MakeSkillSkip(BattleBranchSkillInfoData_o *this, const MethodInfo *method)
 {
-  return ((BaseMotionSkip_o *(__fastcall *)(BattleBranchSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
-           this,
-           this->klass->vtable._17_CommonMakeSkillSkip.method);
+  return (BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleBranchSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
+                               this,
+                               this->klass->vtable._17_CommonMakeSkillSkip.method);
 }
 
 
@@ -240,7 +240,7 @@ int32_t BattleBranchSkillInfoData__get_chargeTurn(BattleBranchSkillInfoData_o *t
   v2 = *(_QWORD *)&this->fields._IconBuffId_k__BackingField;
   if ( !v2 )
     sub_2213CDC(0, method);
-  return (*(int32_t (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 408LL))(v2, *(_QWORD *)(*(_QWORD *)v2 + 416LL));
+  return (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 408LL))(v2, *(_QWORD *)(*(_QWORD *)v2 + 416LL));
 }
 
 

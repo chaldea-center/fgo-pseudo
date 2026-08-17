@@ -516,6 +516,7 @@ System_Collections_IEnumerator_o *UIStandFigureRender__ChangeFaceFade(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597222B & 1) == 0 )
   {
@@ -527,8 +528,9 @@ System_Collections_IEnumerator_o *UIStandFigureRender__ChangeFaceFade(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(float *)(v5 + 40) = time;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -585,7 +587,7 @@ void UIStandFigureRender__CopyFaceFadeMeshSimpleMesh(UIStandFigureRender_o *this
   UnityEngine_Object_o *v16; // x20
   UnityEngine_Component_o *v17; // x8
   UnityEngine_Transform_o *v18; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597222E & 1) == 0 )
@@ -727,15 +729,16 @@ void UIStandFigureRender__CopyFaceFadeMeshUseWithFaceMesh(UIStandFigureRender_o 
   System_Array_o *v13; // x26
   int klass; // w28
   System_Array_o *v15; // x0
-  UnityEngine_Material_o *v16; // x27
-  __int64 v17; // x1
-  UnityEngine_Object_o *v18; // x20
-  __int64 v19; // x1
-  UnityEngine_Object_o *v20; // x20
-  UnityEngine_Component_o *v21; // x8
-  UnityEngine_Transform_o *v22; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  System_RuntimeFieldHandle_o v16; // x1
+  UnityEngine_Material_o *v17; // x27
+  __int64 v18; // x1
+  UnityEngine_Object_o *v19; // x20
+  __int64 v20; // x1
+  UnityEngine_Object_o *v21; // x20
+  UnityEngine_Component_o *v22; // x8
+  UnityEngine_Transform_o *v23; // x19
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597222D & 1) == 0 )
   {
@@ -821,10 +824,8 @@ LABEL_71:
     v10 = (__int64)v15;
     if ( klass <= 29 )
     {
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-        v15,
-        (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__B2FA41D83A9D70155E3B2B709A37D6AEB00C3B8029BBA47C1E4A8D7F59CF366C,
-        0);
+      v16.fields.value = Field__PrivateImplementationDetails__B2FA41D83A9D70155E3B2B709A37D6AEB00C3B8029BBA47C1E4A8D7F59CF366C;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v15, v16, 0);
     }
     else
     {
@@ -889,9 +890,9 @@ LABEL_68:
     bodyFilter = (UnityEngine_MeshFilter_o *)this->fields.bodyRenderer;
     if ( !bodyFilter )
       goto LABEL_67;
-    v16 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
+    v17 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
     v12 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor_83274924(v12, v16, 0);
+    UnityEngine_Material___ctor_83274924(v12, v17, 0);
   }
   UnityEngine_Mesh__set_vertices(v6, (UnityEngine_Vector3_array *)vertices, 0);
   UnityEngine_Mesh__set_normals(v6, (UnityEngine_Vector3_array *)v13, 0);
@@ -901,18 +902,18 @@ LABEL_68:
   bodyFilter = (UnityEngine_MeshFilter_o *)this->fields.fadeRenderer;
   if ( !bodyFilter )
     goto LABEL_67;
-  v18 = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
+  v19 = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17);
-  if ( UnityEngine_Object__op_Inequality(v18, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
+  if ( UnityEngine_Object__op_Inequality(v19, 0, 0) )
   {
     bodyFilter = (UnityEngine_MeshFilter_o *)this->fields.fadeRenderer;
     if ( !bodyFilter )
       goto LABEL_67;
-    v20 = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
+    v21 = (UnityEngine_Object_o *)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19);
-    UnityEngine_Object__Destroy_83459800(v20, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
+    UnityEngine_Object__Destroy_83459800(v21, 0);
   }
   bodyFilter = (UnityEngine_MeshFilter_o *)this->fields.fadeRenderer;
   if ( !bodyFilter )
@@ -939,21 +940,21 @@ LABEL_68:
     || (bodyFilter = (UnityEngine_MeshFilter_o *)UnityEngine_GameObject__get_transform(
                                                    (UnityEngine_GameObject_o *)bodyFilter,
                                                    0),
-        (v21 = (UnityEngine_Component_o *)this->fields.bodyFilter) == 0)
-    || (v22 = (UnityEngine_Transform_o *)bodyFilter,
-        (bodyFilter = (UnityEngine_MeshFilter_o *)UnityEngine_Component__get_gameObject(v21, 0)) == 0)
+        (v22 = (UnityEngine_Component_o *)this->fields.bodyFilter) == 0)
+    || (v23 = (UnityEngine_Transform_o *)bodyFilter,
+        (bodyFilter = (UnityEngine_MeshFilter_o *)UnityEngine_Component__get_gameObject(v22, 0)) == 0)
     || (bodyFilter = (UnityEngine_MeshFilter_o *)UnityEngine_GameObject__get_transform(
                                                    (UnityEngine_GameObject_o *)bodyFilter,
                                                    0)) == 0
-    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)bodyFilter, 0), !v22) )
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)bodyFilter, 0), !v23) )
   {
 LABEL_67:
     sub_2213CDC(bodyFilter, method);
   }
-  v24.fields.z = localPosition.fields.z + -1.0;
-  v24.fields.x = localPosition.fields.x + 0.0;
-  v24.fields.y = localPosition.fields.y + 0.0;
-  UnityEngine_Transform__set_localPosition(v22, v24, 0);
+  v25.fields.z = localPosition.fields.z + -1.0;
+  v25.fields.x = localPosition.fields.x + 0.0;
+  v25.fields.y = localPosition.fields.y + 0.0;
+  UnityEngine_Transform__set_localPosition(v23, v25, 0);
 }
 
 
@@ -1392,12 +1393,16 @@ UnityEngine_Vector2_o UIStandFigureRender__GetBodySize(UIStandFigureRender_o *th
   int32_t BodySizeX; // w20
   const MethodInfo *v4; // x1
   int32_t BodySizeY; // w0
+  float v6; // s0
+  float v7; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   BodySizeX = UIStandFigureRender__get_BodySizeX(this, method);
   BodySizeY = UIStandFigureRender__get_BodySizeY(this, v4);
-  result.fields.x = (float)BodySizeX;
-  result.fields.y = (float)BodySizeY;
+  v6 = (float)BodySizeX;
+  v7 = (float)BodySizeY;
+  result.fields.y = v7;
+  result.fields.x = v6;
   return result;
 }
 
@@ -1405,8 +1410,10 @@ UnityEngine_Vector2_o UIStandFigureRender__GetBodySize(UIStandFigureRender_o *th
 UnityEngine_Vector2_o UIStandFigureRender__GetCenterOffset(UIStandFigureRender_o *this, const MethodInfo *method)
 {
   ManagerConfig_c *v2; // x0
+  float v3; // s0
   int HEIGHT; // w8
   int v5; // w8
+  float v6; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5972223 & 1) == 0 )
@@ -1420,13 +1427,15 @@ UnityEngine_Vector2_o UIStandFigureRender__GetCenterOffset(UIStandFigureRender_o
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
     v2 = ManagerConfig_TypeInfo;
   }
-  result.fields.x = 0.0;
+  v3 = 0.0;
   HEIGHT = v2->static_fields->HEIGHT;
   if ( HEIGHT <= 0 )
     v5 = -HEIGHT;
   else
     v5 = 1 - HEIGHT;
-  result.fields.y = (float)(v5 >> 1);
+  v6 = (float)(v5 >> 1);
+  result.fields.y = v6;
+  result.fields.x = v3;
   return result;
 }
 
@@ -1439,7 +1448,9 @@ UnityEngine_Vector2_o UIStandFigureRender__GetCharacterOffset(
 {
   Il2CppObject *Instance; // x0
   __int64 v8; // x1
+  float x; // s0
   UnityEngine_Vector2_o Offset; // kr00_8
+  float v11; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5972224 & 1) == 0 )
@@ -1457,8 +1468,10 @@ UnityEngine_Vector2_o UIStandFigureRender__GetCharacterOffset(
     sub_2213CDC(Instance, v8);
   }
   Offset = ServantScriptMaster__getOffset((ServantScriptMaster_o *)Instance, id, formId, offsetKind, 0);
-  result.fields.x = Offset.fields.x;
-  result.fields.y = Offset.fields.y + 1.0;
+  x = Offset.fields.x;
+  v11 = Offset.fields.y + 1.0;
+  result.fields.y = v11;
+  result.fields.x = x;
   return result;
 }
 
@@ -3311,21 +3324,23 @@ void UIStandFigureRender__SetCharacterRenderSimpleMesh(UIStandFigureRender_o *th
   int32_t v171; // w27
   const MethodInfo *v172; // x1
   float v173; // s0
-  System_Array_o *v174; // x24
-  __int64 v175; // x1
-  UnityEngine_Object_o *fadeFilter; // x21
+  System_Array_o *v174; // x0
+  System_RuntimeFieldHandle_o v175; // x1
+  System_Int32_array *v176; // x24
   __int64 v177; // x1
-  long double v178; // q0
-  long double v179; // q3
+  UnityEngine_Object_o *fadeFilter; // x21
+  __int64 v179; // x1
+  long double v180; // q0
+  long double v181; // q3
   UnityEngine_Object_o *fadeRenderer; // x21
-  UnityEngine_Mesh_o *v181; // x21
-  UnityEngine_Vector2_array *v182; // x0
-  UnityEngine_Vector2_array *v183; // x0
-  bool v184; // zf
+  UnityEngine_Mesh_o *v183; // x21
+  UnityEngine_Vector2_array *v184; // x0
+  UnityEngine_Vector2_array *v185; // x0
+  bool v186; // zf
   _BOOL4 isTalkMask; // w8
-  const MethodInfo *v186; // x1
-  const MethodInfo *v187; // x2
-  const MethodInfo *v188; // x2
+  const MethodInfo *v188; // x1
+  const MethodInfo *v189; // x2
+  const MethodInfo *v190; // x2
 
   if ( (byte_597222A & 1) == 0 )
   {
@@ -3767,11 +3782,10 @@ LABEL_100:
   *(float *)(v134 + 60) = (float)(v173 / (float)v169) - (float)((float)(v171 - 1) / (float)(int)Instance);
   UnityEngine_Mesh__set_uv2(v71, (UnityEngine_Vector2_array *)v134, 0);
   v174 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v174,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__17561EE993D63D39DEA46FA556F169AC25EA9094105A6E8EB18EACBD66ACD57E,
-    0);
-  UnityEngine_Mesh__set_triangles(v71, (System_Int32_array *)v174, 0);
+  v175.fields.value = Field__PrivateImplementationDetails__17561EE993D63D39DEA46FA556F169AC25EA9094105A6E8EB18EACBD66ACD57E;
+  v176 = (System_Int32_array *)v174;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v174, v175, 0);
+  UnityEngine_Mesh__set_triangles(v71, v176, 0);
   Instance = (__int64)this->fields.bodyFilter;
   if ( !Instance )
     goto LABEL_101;
@@ -3780,28 +3794,28 @@ LABEL_100:
   UnityEngine_Mesh__RecalculateBounds(v71, 0);
   fadeFilter = (UnityEngine_Object_o *)this->fields.fadeFilter;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v175);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v177);
   if ( UnityEngine_Object__op_Inequality(fadeFilter, 0, 0) )
   {
     fadeRenderer = (UnityEngine_Object_o *)this->fields.fadeRenderer;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v177);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v179);
     if ( UnityEngine_Object__op_Inequality(fadeRenderer, 0, 0) )
     {
-      v181 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
-      UnityEngine_Mesh___ctor(v181, 0);
+      v183 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
+      UnityEngine_Mesh___ctor(v183, 0);
       Instance = sub_2213B20(UnityEngine_Vector3___TypeInfo, *(unsigned int *)(v72 + 24));
-      if ( v181 )
+      if ( v183 )
       {
-        UnityEngine_Mesh__set_vertices(v181, (UnityEngine_Vector3_array *)Instance, 0);
-        v182 = (UnityEngine_Vector2_array *)sub_2213B20(UnityEngine_Vector2___TypeInfo, *(unsigned int *)(v94 + 24));
-        UnityEngine_Mesh__set_uv(v181, v182, 0);
-        v183 = (UnityEngine_Vector2_array *)sub_2213B20(UnityEngine_Vector2___TypeInfo, *(unsigned int *)(v134 + 24));
-        UnityEngine_Mesh__set_uv2(v181, v183, 0);
+        UnityEngine_Mesh__set_vertices(v183, (UnityEngine_Vector3_array *)Instance, 0);
+        v184 = (UnityEngine_Vector2_array *)sub_2213B20(UnityEngine_Vector2___TypeInfo, *(unsigned int *)(v94 + 24));
+        UnityEngine_Mesh__set_uv(v183, v184, 0);
+        v185 = (UnityEngine_Vector2_array *)sub_2213B20(UnityEngine_Vector2___TypeInfo, *(unsigned int *)(v134 + 24));
+        UnityEngine_Mesh__set_uv2(v183, v185, 0);
         Instance = (__int64)this->fields.fadeFilter;
         if ( Instance )
         {
-          UnityEngine_MeshFilter__set_sharedMesh((UnityEngine_MeshFilter_o *)Instance, v181, 0);
+          UnityEngine_MeshFilter__set_sharedMesh((UnityEngine_MeshFilter_o *)Instance, v183, 0);
           goto LABEL_95;
         }
       }
@@ -3810,25 +3824,25 @@ LABEL_101:
     }
   }
 LABEL_95:
-  LODWORD(v178) = 1.0;
-  *(float *)&v179 = this->fields.mColor.fields.a;
-  v184 = !this->fields.isShadow;
+  LODWORD(v180) = 1.0;
+  *(float *)&v181 = this->fields.mColor.fields.a;
+  v186 = !this->fields.isShadow;
   isTalkMask = this->fields.isTalkMask;
   this->fields.isBusyMoveAlpha = 0;
-  if ( !v184 )
-    *(float *)&v178 = 0.1;
+  if ( !v186 )
+    *(float *)&v180 = 0.1;
   if ( isTalkMask )
-    *(float *)&v178 = *(float *)&v178 * 0.5;
+    *(float *)&v180 = *(float *)&v180 * 0.5;
   ((void (__fastcall *)(UIStandFigureRender_o *, const MethodInfo *, long double, float, float, long double))this->klass->vtable._39_SetTweenColor.methodPtr)(
     this,
     this->klass->vtable._39_SetTweenColor.method,
-    v178,
-    *(float *)&v178,
-    *(float *)&v178,
-    v179);
-  UIStandFigureRender__SetFilterColor(this, this->fields.filterColor, v186);
-  UIStandFigureRender__SetFace_51103932(this, this->fields.faceType, 0.0, v187);
-  UIStandFigureRender__SetActive(this, 1, v188);
+    v180,
+    *(float *)&v180,
+    *(float *)&v180,
+    v181);
+  UIStandFigureRender__SetFilterColor(this, this->fields.filterColor, v188);
+  UIStandFigureRender__SetFace_51103932(this, this->fields.faceType, 0.0, v189);
+  UIStandFigureRender__SetActive(this, 1, v190);
 }
 
 
@@ -4849,19 +4863,24 @@ void UIStandFigureRender__SetDepth(UIStandFigureRender_o *this, float d, const M
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
-  unsigned __int64 localPosition; // kr00_8
-  UnityEngine_Vector3_o v8; // 0:kr14_12.12
+  float x; // s9
+  float y; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(transform, 0),
+    || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
+        x = localPosition.fields.x,
+        y = localPosition.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
     sub_2213CDC(transform, v6);
   }
-  *(_QWORD *)&v8.fields.x = localPosition;
-  v8.fields.z = -d;
-  UnityEngine_Transform__set_localPosition(transform, v8, 0);
+  v10.fields.z = -d;
+  v10.fields.x = x;
+  v10.fields.y = y;
+  UnityEngine_Transform__set_localPosition(transform, v10, 0);
 }
 
 
@@ -4989,36 +5008,39 @@ void UIStandFigureRender__SetFaceSimpleMesh(
   struct UnityEngine_Texture2D_array *v42; // x8
   struct UnityEngine_Texture2D_array *v43; // x8
   unsigned int v44; // w9
-  int32_t v48; // w8
-  int v49; // w23
+  float m_XMin; // s0 OVERLAPPED
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
+  int32_t v49; // w8
+  int v50; // w23
   int32_t m_Y; // w8
-  int v51; // w27
-  struct UnityEngine_Texture2D_array *v52; // x8
-  UIStandFigureRender_c *v53; // x0
-  struct UnityEngine_Texture2D_array *v54; // x8
-  int v55; // w0
-  double v56; // d2
-  float v57; // s1
-  float v58; // s0
-  float v59; // s2
-  int v60; // w8
-  float v61; // s3
-  float v62; // s2
-  float v63; // s4
-  Il2CppObject *v64; // x0
-  struct UnityEngine_Texture2D_array *v65; // x8
-  int32_t v66; // w1
-  const MethodInfo_473535C *v67; // x2
-  struct UnityEngine_Texture2D_array *v68; // x8
-  bool v69; // zf
-  UIStandFigureRender_c *v70; // x0
-  int v71; // w8
-  bool v72; // cc
-  int v73; // w9
-  float v74; // [xsp+Ch] [xbp-64h] BYREF
-  UnityEngine_Rect_o Item; // 0:kr00_16.16
-  UnityEngine_Vector4_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o faceRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int v52; // w27
+  struct UnityEngine_Texture2D_array *v53; // x8
+  UIStandFigureRender_c *v54; // x0
+  struct UnityEngine_Texture2D_array *v55; // x8
+  int v56; // w0
+  double v57; // d2
+  float v58; // s1
+  float v59; // s0
+  float v60; // s2
+  int v61; // w8
+  float v62; // s3
+  float v63; // s2
+  float v64; // s4
+  Il2CppObject *v65; // x0
+  struct UnityEngine_Texture2D_array *v66; // x8
+  int32_t v67; // w1
+  const MethodInfo_473535C *v68; // x2
+  struct UnityEngine_Texture2D_array *v69; // x8
+  bool v70; // zf
+  UIStandFigureRender_c *v71; // x0
+  int v72; // w8
+  bool v73; // cc
+  int v74; // w9
+  float v75; // [xsp+Ch] [xbp-64h] BYREF
+  UnityEngine_Rect_o Item; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v77; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5972230 & 1) == 0 )
   {
@@ -5071,12 +5093,12 @@ void UIStandFigureRender__SetFaceSimpleMesh(
       if ( !gameObject )
         goto LABEL_36;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
-      v74 = fadeTime;
-      v64 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984378, &v74);
+      v75 = fadeTime;
+      v65 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984378, &v75);
       gameObject = (__int64)UnityEngine_MonoBehaviour__StartCoroutine_83443952(
                               (UnityEngine_MonoBehaviour_o *)this,
                               (System_String_o *)StringLiteral_4527/*"ChangeFaceFade"*/,
-                              v64,
+                              v65,
                               0);
     }
     else
@@ -5242,8 +5264,8 @@ LABEL_45:
                 (UnityEngine_Texture_o *)v32->m_Items[v19],
                 0);
             }
-            v48 = this->fields.faceTextureSize.fields.m_X;
-            if ( v48 <= 0 )
+            v49 = this->fields.faceTextureSize.fields.m_X;
+            if ( v49 <= 0 )
             {
               gameObject = (__int64)UIStandFigureRender_TypeInfo;
               if ( !*(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1) )
@@ -5251,11 +5273,11 @@ LABEL_45:
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, v13);
                 gameObject = (__int64)UIStandFigureRender_TypeInfo;
               }
-              v49 = *(_DWORD *)(*(_QWORD *)(gameObject + 184) + 36LL);
+              v50 = *(_DWORD *)(*(_QWORD *)(gameObject + 184) + 36LL);
             }
             else
             {
-              v49 = v48 - 2;
+              v50 = v49 - 2;
             }
             m_Y = this->fields.faceTextureSize.fields.m_Y;
             if ( m_Y <= 0 )
@@ -5266,18 +5288,18 @@ LABEL_45:
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, v13);
                 gameObject = (__int64)UIStandFigureRender_TypeInfo;
               }
-              v51 = *(_DWORD *)(*(_QWORD *)(gameObject + 184) + 36LL);
+              v52 = *(_DWORD *)(*(_QWORD *)(gameObject + 184) + 36LL);
             }
             else
             {
-              v51 = m_Y - 3;
+              v52 = m_Y - 3;
             }
-            v52 = this->fields.textureList;
-            if ( !v52 )
+            v53 = this->fields.textureList;
+            if ( !v53 )
               goto LABEL_36;
-            if ( (unsigned int)v17 < LODWORD(v52->max_length) )
+            if ( (unsigned int)v17 < LODWORD(v53->max_length) )
             {
-              gameObject = (__int64)v52->m_Items[v17];
+              gameObject = (__int64)v53->m_Items[v17];
               if ( !gameObject )
                 goto LABEL_36;
               gameObject = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)gameObject + 408LL))(
@@ -5285,43 +5307,43 @@ LABEL_45:
                              *(_QWORD *)(*(_QWORD *)gameObject + 416LL));
               if ( (_DWORD)gameObject == 256 )
               {
-                v53 = UIStandFigureRender_TypeInfo;
+                v54 = UIStandFigureRender_TypeInfo;
                 if ( !*(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1) )
                   goto LABEL_141;
                 goto LABEL_142;
               }
-              v54 = this->fields.textureList;
-              if ( !v54 )
+              v55 = this->fields.textureList;
+              if ( !v55 )
                 goto LABEL_36;
-              if ( (unsigned int)v17 < LODWORD(v54->max_length) )
+              if ( (unsigned int)v17 < LODWORD(v55->max_length) )
               {
-                gameObject = (__int64)v54->m_Items[v17];
+                gameObject = (__int64)v55->m_Items[v17];
                 if ( !gameObject )
                   goto LABEL_36;
-                v55 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)gameObject + 408LL))(
+                v56 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)gameObject + 408LL))(
                         gameObject,
                         *(_QWORD *)(*(_QWORD *)gameObject + 416LL));
-                v56 = (double)v51;
-                v57 = (float)(v49 - 1);
-                v58 = (float)(v51 - 1);
-                if ( v55 == 512 )
+                v57 = (double)v52;
+                v58 = (float)(v50 - 1);
+                v59 = (float)(v52 - 1);
+                if ( v56 == 512 )
                 {
                   this->fields.faceRect.fields.m_XMin = 0.0029297;
-                  v59 = 510.5 - v56;
-                  this->fields.faceRect.fields.m_Width = v57 * 0.0019531;
-                  this->fields.faceRect.fields.m_Height = v58 * 0.0019531;
-                  this->fields.faceRect.fields.m_YMin = v59 * 0.0019531;
+                  v60 = 510.5 - v57;
+                  this->fields.faceRect.fields.m_Width = v58 * 0.0019531;
+                  this->fields.faceRect.fields.m_Height = v59 * 0.0019531;
+                  this->fields.faceRect.fields.m_YMin = v60 * 0.0019531;
                 }
                 else
                 {
-                  v60 = v9 + ~(v28 * v27);
-                  v61 = (float)this->fields.faceTextureSize.fields.m_Y * 0.00097656;
-                  v62 = 1022.5 - v56;
-                  v63 = (float)this->fields.faceTextureSize.fields.m_X * 0.00097656;
-                  this->fields.faceRect.fields.m_Width = v57 * 0.00097656;
-                  this->fields.faceRect.fields.m_Height = v58 * 0.00097656;
-                  this->fields.faceRect.fields.m_YMin = (float)(v62 * 0.00097656) - (float)(v61 * (float)(v60 / v26));
-                  this->fields.faceRect.fields.m_XMin = (float)(v63 * (float)(v60 % v26)) + 0.0014648;
+                  v61 = v9 + ~(v28 * v27);
+                  v62 = (float)this->fields.faceTextureSize.fields.m_Y * 0.00097656;
+                  v63 = 1022.5 - v57;
+                  v64 = (float)this->fields.faceTextureSize.fields.m_X * 0.00097656;
+                  this->fields.faceRect.fields.m_Width = v58 * 0.00097656;
+                  this->fields.faceRect.fields.m_Height = v59 * 0.00097656;
+                  this->fields.faceRect.fields.m_YMin = (float)(v63 * 0.00097656) - (float)(v62 * (float)(v61 / v26));
+                  this->fields.faceRect.fields.m_XMin = (float)(v64 * (float)(v61 % v26)) + 0.0014648;
                 }
                 goto LABEL_145;
               }
@@ -5402,12 +5424,12 @@ LABEL_45:
             (UnityEngine_Texture_o *)v43->m_Items[v19],
             0);
         }
-        v65 = this->fields.textureList;
-        if ( !v65 )
+        v66 = this->fields.textureList;
+        if ( !v66 )
           goto LABEL_36;
-        if ( (unsigned int)v17 < LODWORD(v65->max_length) )
+        if ( (unsigned int)v17 < LODWORD(v66->max_length) )
         {
-          gameObject = (__int64)v65->m_Items[v17];
+          gameObject = (__int64)v66->m_Items[v17];
           if ( !gameObject )
             goto LABEL_36;
           gameObject = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)gameObject + 408LL))(
@@ -5415,70 +5437,70 @@ LABEL_45:
                          *(_QWORD *)(*(_QWORD *)gameObject + 416LL));
           if ( (_DWORD)gameObject == 256 )
           {
-            v53 = UIStandFigureRender_TypeInfo;
+            v54 = UIStandFigureRender_TypeInfo;
             if ( !*(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1) )
             {
 LABEL_141:
-              j_il2cpp_runtime_class_init_0(v53, v13);
-              v53 = UIStandFigureRender_TypeInfo;
+              j_il2cpp_runtime_class_init_0(v54, v13);
+              v54 = UIStandFigureRender_TypeInfo;
             }
 LABEL_142:
-            gameObject = (__int64)v53->static_fields->faceRectTable2a;
+            gameObject = (__int64)v54->static_fields->faceRectTable2a;
             if ( !gameObject )
               goto LABEL_36;
-            v66 = 0;
-            v67 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
+            v67 = 0;
+            v68 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
 LABEL_144:
             this->fields.faceRect = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
                                       (System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *)gameObject,
-                                      v66,
-                                      v67);
+                                      v67,
+                                      v68);
             goto LABEL_145;
           }
-          v68 = this->fields.textureList;
-          if ( !v68 )
+          v69 = this->fields.textureList;
+          if ( !v69 )
             goto LABEL_36;
-          if ( (unsigned int)v17 < LODWORD(v68->max_length) )
+          if ( (unsigned int)v17 < LODWORD(v69->max_length) )
           {
-            gameObject = (__int64)v68->m_Items[v17];
+            gameObject = (__int64)v69->m_Items[v17];
             if ( !gameObject )
               goto LABEL_36;
-            v69 = (*(unsigned int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)gameObject + 408LL))(
+            v70 = (*(unsigned int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)gameObject + 408LL))(
                     gameObject,
                     *(_QWORD *)(*(_QWORD *)gameObject + 416LL)) == 512;
-            v70 = UIStandFigureRender_TypeInfo;
-            v71 = *(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1);
-            if ( v69 )
+            v71 = UIStandFigureRender_TypeInfo;
+            v72 = *(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1);
+            if ( v70 )
             {
-              if ( !v71 )
+              if ( !v72 )
               {
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, v13);
-                v70 = UIStandFigureRender_TypeInfo;
+                v71 = UIStandFigureRender_TypeInfo;
               }
-              gameObject = (__int64)v70->static_fields->faceRectTable2b;
+              gameObject = (__int64)v71->static_fields->faceRectTable2b;
               if ( !gameObject )
                 goto LABEL_36;
-              v72 = v41 < 3;
-              v73 = 3;
+              v73 = v41 < 3;
+              v74 = 3;
             }
             else
             {
-              if ( !v71 )
+              if ( !v72 )
               {
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, v13);
-                v70 = UIStandFigureRender_TypeInfo;
+                v71 = UIStandFigureRender_TypeInfo;
               }
-              gameObject = (__int64)v70->static_fields->faceRectTable2c;
+              gameObject = (__int64)v71->static_fields->faceRectTable2c;
               if ( !gameObject )
                 goto LABEL_36;
-              v72 = v41 < 15;
-              v73 = 15;
+              v73 = v41 < 15;
+              v74 = 15;
             }
-            v67 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
-            if ( v72 )
-              v66 = v41;
+            v68 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
+            if ( v73 )
+              v67 = v41;
             else
-              v66 = v73;
+              v67 = v74;
             goto LABEL_144;
           }
         }
@@ -5527,7 +5549,10 @@ LABEL_145:
                                           0);
                   if ( gameObject )
                   {
-                    faceRect = (UnityEngine_Vector4_o)this->fields.faceRect;
+                    m_Height = this->fields.faceRect.fields.m_Height;
+                    m_Width = this->fields.faceRect.fields.m_Width;
+                    m_YMin = this->fields.faceRect.fields.m_YMin;
+                    m_XMin = this->fields.faceRect.fields.m_XMin;
                     goto LABEL_151;
                   }
                 }
@@ -5542,14 +5567,14 @@ LABEL_91:
             gameObject = (__int64)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)gameObject, 0);
             if ( gameObject )
             {
-              v76.fields.x = 0.0;
-              v76.fields.y = 0.0;
-              v76.fields.z = 0.0;
-              v76.fields.w = 0.0;
+              v77.fields.x = 0.0;
+              v77.fields.y = 0.0;
+              v77.fields.z = 0.0;
+              v77.fields.w = 0.0;
               UnityEngine_Material__SetVector(
                 (UnityEngine_Material_o *)gameObject,
                 (System_String_o *)StringLiteral_16850/*"_FaceInfo"*/,
-                v76,
+                v77,
                 0);
               gameObject = (__int64)this->fields.bodyRenderer;
               if ( gameObject )
@@ -5557,15 +5582,15 @@ LABEL_91:
                 gameObject = (__int64)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)gameObject, 0);
                 if ( gameObject )
                 {
-                  faceRect.fields.x = 0.0;
-                  faceRect.fields.y = 0.0;
-                  faceRect.fields.z = 0.0;
-                  faceRect.fields.w = 0.0;
+                  m_XMin = 0.0;
+                  m_YMin = 0.0;
+                  m_Width = 0.0;
+                  m_Height = 0.0;
 LABEL_151:
                   UnityEngine_Material__SetVector(
                     (UnityEngine_Material_o *)gameObject,
                     (System_String_o *)StringLiteral_16860/*"_FaceTexOffset"*/,
-                    faceRect,
+                    *(UnityEngine_Vector4_o *)&m_XMin,
                     0);
                   return;
                 }
@@ -5660,63 +5685,69 @@ void UIStandFigureRender__SetFaceUseWithFaceMesh(
   struct UnityEngine_Texture2D_array *v36; // x8
   unsigned int v37; // w9
   System_Array_o *v38; // x25
-  __int64 v39; // x8
-  UnityEngine_Vector2_array *v40; // x27
-  unsigned int v41; // w8
-  float v42; // s1
-  struct UnityEngine_Texture2D_array *v43; // x8
-  int v44; // w9
-  int32_t v45; // w8
-  signed int v46; // w20
-  struct UnityEngine_Texture2D_array *v47; // x8
+  System_RuntimeFieldHandle_o v39; // x1
+  __int64 v40; // x8
+  UnityEngine_Vector2_array *v41; // x27
+  unsigned int v42; // w8
+  float v43; // s1
+  struct UnityEngine_Texture2D_array *v44; // x8
+  int v45; // w9
+  int32_t v46; // w8
+  signed int v47; // w20
   struct UnityEngine_Texture2D_array *v48; // x8
-  unsigned int v49; // w9
-  System_Array_o *v50; // x21
-  System_Array_o *v51; // x24
-  System_Array_o *v52; // x24
-  int32_t v53; // w8
-  int v54; // w24
+  struct UnityEngine_Texture2D_array *v49; // x8
+  unsigned int v50; // w9
+  System_Array_o *v51; // x21
+  System_RuntimeFieldHandle_o v52; // x1
+  System_Array_o *v53; // x24
+  System_RuntimeFieldHandle_o v54; // x1
+  System_Array_o *v55; // x24
+  System_RuntimeFieldHandle_o v56; // x1
+  int32_t v57; // w8
+  int v58; // w24
   int32_t m_Y; // w8
-  int v56; // w28
-  struct UnityEngine_Texture2D_array *v57; // x8
-  UIStandFigureRender_c *v58; // x0
+  int v60; // w28
+  struct UnityEngine_Texture2D_array *v61; // x8
+  UIStandFigureRender_c *v62; // x0
   struct UIStandFigureRender_StaticFields *static_fields; // x8
-  int32_t v60; // w1
-  const MethodInfo_473535C *v61; // x2
-  unsigned int v62; // w8
-  struct UnityEngine_Texture2D_array *v63; // x8
-  Il2CppClass **v64; // x8
-  double v65; // d2
-  float v66; // s0
-  float32x2_t v67; // d2
-  float v68; // s0
-  unsigned __int64 v69; // d1
+  int32_t v64; // w1
+  const MethodInfo_473535C *v65; // x2
+  unsigned int v66; // w8
+  struct UnityEngine_Texture2D_array *v67; // x8
+  Il2CppClass **v68; // x8
+  double v69; // d2
   float v70; // s0
-  bool v71; // zf
-  int v72; // w8
-  float v73; // s3
-  float v74; // s2
-  float v75; // s0
-  float v76; // s4
-  float v77; // s2
-  float v78; // s1
+  float32x2_t v71; // d2
+  float v72; // s0
+  unsigned __int64 v73; // d1
+  float v74; // s0
+  bool v75; // zf
+  int v76; // w8
+  float v77; // s3
+  float v78; // s2
+  float v79; // s0
+  float v80; // s4
+  float v81; // s2
+  float v82; // s1
   float m_YMin; // s1
-  Il2CppObject *v80; // x0
-  System_Array_o *v81; // x24
-  System_Array_o *v82; // x24
-  struct UnityEngine_Texture2D_array *v83; // x8
-  UIStandFigureRender_c *v84; // x0
-  struct UnityEngine_Texture2D_array *v85; // x8
-  Il2CppClass **v86; // x8
-  UIStandFigureRender_c *v87; // x0
-  int v88; // w8
-  bool v89; // cc
-  int v90; // w9
-  UnityEngine_Vector2_array *v91; // [xsp+8h] [xbp-78h]
-  int v92; // [xsp+18h] [xbp-68h]
-  float v93; // [xsp+1Ch] [xbp-64h] BYREF
-  UnityEngine_Rect_o v94; // 0:kr00_16.16
-  UnityEngine_Rect_o Item; // 0:kr10_16.16
+  Il2CppObject *v84; // x0
+  System_Array_o *v85; // x24
+  System_RuntimeFieldHandle_o v86; // x1
+  System_Array_o *v87; // x24
+  System_RuntimeFieldHandle_o v88; // x1
+  struct UnityEngine_Texture2D_array *v89; // x8
+  UIStandFigureRender_c *v90; // x0
+  struct UnityEngine_Texture2D_array *v91; // x8
+  Il2CppClass **v92; // x8
+  UIStandFigureRender_c *v93; // x0
+  int v94; // w8
+  bool v95; // cc
+  int v96; // w9
+  UnityEngine_Vector2_array *v97; // [xsp+8h] [xbp-78h]
+  int v98; // [xsp+18h] [xbp-68h]
+  float v99; // [xsp+1Ch] [xbp-64h] BYREF
+  UnityEngine_Rect_o v100; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o Item; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_597222F & 1) == 0 )
   {
@@ -5745,7 +5776,7 @@ void UIStandFigureRender__SetFaceUseWithFaceMesh(
       v10 = faceType;
     else
       v10 = 0;
-    v92 = v10;
+    v98 = v10;
     if ( !bodyFilter )
       goto LABEL_42;
     bodyFilter = (__int64)UnityEngine_MeshFilter__get_sharedMesh((UnityEngine_MeshFilter_o *)bodyFilter, 0);
@@ -5795,12 +5826,12 @@ void UIStandFigureRender__SetFaceUseWithFaceMesh(
       if ( !bodyFilter )
         goto LABEL_42;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bodyFilter, 1, 0);
-      v93 = fadeTime;
-      v80 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984378, &v93);
+      v99 = fadeTime;
+      v84 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984378, &v99);
       bodyFilter = (__int64)UnityEngine_MonoBehaviour__StartCoroutine_83443952(
                               (UnityEngine_MonoBehaviour_o *)this,
                               (System_String_o *)StringLiteral_4527/*"ChangeFaceFade"*/,
-                              v80,
+                              v84,
                               0);
     }
     else
@@ -5808,7 +5839,7 @@ void UIStandFigureRender__SetFaceUseWithFaceMesh(
 LABEL_22:
       UIStandFigureRender__StopChangeFaceFade(this, v14);
     }
-    v91 = uv;
+    v97 = uv;
     if ( this->fields.loadRequiredResource
       && (bodyFilter = (__int64)UIStandFigureRender__GetFaceImageNameByFaceType(
                                   this,
@@ -5902,12 +5933,12 @@ LABEL_51:
           bodyFilter = (__int64)UIStandFigureRender_TypeInfo;
           m_X = this->fields.faceTextureSize.fields.m_X;
         }
-        if ( v92 >= 1 )
+        if ( v98 >= 1 )
         {
           v29 = *(_DWORD **)(bodyFilter + 184);
           v30 = *v29 / m_X;
           v31 = v29[2] / this->fields.faceTextureSize.fields.m_Y * v30;
-          v32 = (v92 - 1) / v31;
+          v32 = (v98 - 1) / v31;
           v33 = this->fields.textureList;
           v34 = v32 + 1;
           if ( !this->fields.loadRequiredResource )
@@ -5967,24 +5998,20 @@ LABEL_51:
                 (UnityEngine_Texture_o *)v36->m_Items[v23],
                 0);
             }
-            v51 = (System_Array_o *)sub_2213B20(int___TypeInfo, 24);
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-              v51,
-              (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__C704C31E6D50D3F1817881CF7FCFEA73E47566854AF25F06E347E1E96289208A,
-              0);
+            v53 = (System_Array_o *)sub_2213B20(int___TypeInfo, 24);
+            v54.fields.value = Field__PrivateImplementationDetails__C704C31E6D50D3F1817881CF7FCFEA73E47566854AF25F06E347E1E96289208A;
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v53, v54, 0);
             if ( !v11 )
               goto LABEL_42;
-            UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v51, 0);
-            v52 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-              v52,
-              (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0CF9F952D56367FACB89C74C5386A574858313BFAE292C1435BDCC3FC122D9C8,
-              0);
+            UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v53, 0);
+            v55 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
+            v56.fields.value = Field__PrivateImplementationDetails__0CF9F952D56367FACB89C74C5386A574858313BFAE292C1435BDCC3FC122D9C8;
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v55, v56, 0);
             if ( !v12 )
               goto LABEL_42;
-            UnityEngine_Mesh__set_triangles(v12, (System_Int32_array *)v52, 0);
-            v53 = this->fields.faceTextureSize.fields.m_X;
-            if ( v53 <= 0 )
+            UnityEngine_Mesh__set_triangles(v12, (System_Int32_array *)v55, 0);
+            v57 = this->fields.faceTextureSize.fields.m_X;
+            if ( v57 <= 0 )
             {
               bodyFilter = (__int64)UIStandFigureRender_TypeInfo;
               if ( !*(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1) )
@@ -5992,11 +6019,11 @@ LABEL_51:
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, *(_QWORD *)&faceType);
                 bodyFilter = (__int64)UIStandFigureRender_TypeInfo;
               }
-              v54 = *(_DWORD *)(*(_QWORD *)(bodyFilter + 184) + 36LL);
+              v58 = *(_DWORD *)(*(_QWORD *)(bodyFilter + 184) + 36LL);
             }
             else
             {
-              v54 = v53 - 2;
+              v58 = v57 - 2;
             }
             m_Y = this->fields.faceTextureSize.fields.m_Y;
             if ( m_Y <= 0 )
@@ -6007,18 +6034,18 @@ LABEL_51:
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, *(_QWORD *)&faceType);
                 bodyFilter = (__int64)UIStandFigureRender_TypeInfo;
               }
-              v56 = *(_DWORD *)(*(_QWORD *)(bodyFilter + 184) + 36LL);
+              v60 = *(_DWORD *)(*(_QWORD *)(bodyFilter + 184) + 36LL);
             }
             else
             {
-              v56 = m_Y - 3;
+              v60 = m_Y - 3;
             }
-            v57 = this->fields.textureList;
-            if ( !v57 )
+            v61 = this->fields.textureList;
+            if ( !v61 )
               goto LABEL_42;
-            if ( (unsigned int)v21 >= LODWORD(v57->max_length) )
+            if ( (unsigned int)v21 >= LODWORD(v61->max_length) )
               goto LABEL_181;
-            bodyFilter = (__int64)v57->m_Items[v21];
+            bodyFilter = (__int64)v61->m_Items[v21];
             if ( !bodyFilter )
               goto LABEL_42;
             bodyFilter = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bodyFilter + 408LL))(
@@ -6026,86 +6053,86 @@ LABEL_51:
                            *(_QWORD *)(*(_QWORD *)bodyFilter + 416LL));
             if ( (_DWORD)bodyFilter == 256 )
             {
-              v58 = UIStandFigureRender_TypeInfo;
+              v62 = UIStandFigureRender_TypeInfo;
               if ( !*(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1) )
               {
                 j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, *(_QWORD *)&faceType);
-                v58 = UIStandFigureRender_TypeInfo;
+                v62 = UIStandFigureRender_TypeInfo;
               }
-              static_fields = v58->static_fields;
-              v40 = v91;
+              static_fields = v62->static_fields;
+              v41 = v97;
               goto LABEL_122;
             }
-            v63 = this->fields.textureList;
-            if ( v63 )
+            v67 = this->fields.textureList;
+            if ( v67 )
             {
-              if ( (unsigned int)v21 >= LODWORD(v63->max_length) )
+              if ( (unsigned int)v21 >= LODWORD(v67->max_length) )
                 goto LABEL_181;
-              v64 = &v63->obj.klass + v21;
-              v40 = v91;
-              bodyFilter = (__int64)v64[4];
+              v68 = &v67->obj.klass + v21;
+              v41 = v97;
+              bodyFilter = (__int64)v68[4];
               if ( bodyFilter )
               {
                 bodyFilter = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bodyFilter + 408LL))(
                                bodyFilter,
                                *(_QWORD *)(*(_QWORD *)bodyFilter + 416LL));
-                v65 = (double)v56;
-                v66 = (float)(v56 - 1);
+                v69 = (double)v60;
+                v70 = (float)(v60 - 1);
                 if ( (_DWORD)bodyFilter == 512 )
                 {
                   this->fields.faceRect.fields.m_XMin = 0.0029297;
-                  v67.n64_f32[0] = 510.5 - v65;
-                  v68 = v66 * 0.0019531;
-                  v67.n64_f32[1] = (float)(v54 - 1);
-                  this->fields.faceRect.fields.m_Height = v68;
-                  v69 = vmul_f32(v67, (float32x2_t)0x3B0000003B000000LL).n64_u64[0];
-                  *(_QWORD *)&this->fields.faceRect.fields.m_YMin = v69;
-                  if ( !v91 )
+                  v71.n64_f32[0] = 510.5 - v69;
+                  v72 = v70 * 0.0019531;
+                  v71.n64_f32[1] = (float)(v58 - 1);
+                  this->fields.faceRect.fields.m_Height = v72;
+                  v73 = vmul_f32(v71, (float32x2_t)0x3B0000003B000000LL).n64_u64[0];
+                  *(_QWORD *)&this->fields.faceRect.fields.m_YMin = v73;
+                  if ( !v97 )
                     goto LABEL_42;
-                  v62 = v91->max_length;
-                  if ( v62 <= 8 )
+                  v66 = v97->max_length;
+                  if ( v66 <= 8 )
                     goto LABEL_181;
-                  v70 = v68 + *(float *)&v69;
-                  v71 = v62 == 9;
-                  v91->m_Items[8].fields.x = 0.0029297;
+                  v74 = v72 + *(float *)&v73;
+                  v75 = v66 == 9;
+                  v97->m_Items[8].fields.x = 0.0029297;
                 }
                 else
                 {
-                  v72 = v92 + ~(v32 * v31);
-                  v73 = (float)this->fields.faceTextureSize.fields.m_Y * 0.00097656;
-                  v74 = 1022.5 - v65;
-                  v75 = v66 * 0.00097656;
-                  v76 = (float)this->fields.faceTextureSize.fields.m_X * 0.00097656;
-                  this->fields.faceRect.fields.m_Height = v75;
-                  v77 = (float)(v74 * 0.00097656) - (float)(v73 * (float)(v72 / v30));
-                  this->fields.faceRect.fields.m_Width = (float)(v54 - 1) * 0.00097656;
-                  v78 = (float)(v76 * (float)(v72 % v30)) + 0.0014648;
-                  this->fields.faceRect.fields.m_YMin = v77;
-                  this->fields.faceRect.fields.m_XMin = v78;
-                  if ( !v91 )
+                  v76 = v98 + ~(v32 * v31);
+                  v77 = (float)this->fields.faceTextureSize.fields.m_Y * 0.00097656;
+                  v78 = 1022.5 - v69;
+                  v79 = v70 * 0.00097656;
+                  v80 = (float)this->fields.faceTextureSize.fields.m_X * 0.00097656;
+                  this->fields.faceRect.fields.m_Height = v79;
+                  v81 = (float)(v78 * 0.00097656) - (float)(v77 * (float)(v76 / v30));
+                  this->fields.faceRect.fields.m_Width = (float)(v58 - 1) * 0.00097656;
+                  v82 = (float)(v80 * (float)(v76 % v30)) + 0.0014648;
+                  this->fields.faceRect.fields.m_YMin = v81;
+                  this->fields.faceRect.fields.m_XMin = v82;
+                  if ( !v97 )
                     goto LABEL_42;
-                  v62 = v91->max_length;
-                  if ( v62 <= 8 )
+                  v66 = v97->max_length;
+                  if ( v66 <= 8 )
                     goto LABEL_181;
-                  v70 = v75 + v77;
-                  v71 = v62 == 9;
-                  v91->m_Items[8].fields.x = v78;
+                  v74 = v79 + v81;
+                  v75 = v66 == 9;
+                  v97->m_Items[8].fields.x = v82;
                 }
-                v91->m_Items[8].fields.y = v70;
-                if ( v71 )
+                v97->m_Items[8].fields.y = v74;
+                if ( v75 )
                   goto LABEL_181;
 LABEL_139:
-                v40->m_Items[9] = (UnityEngine_Vector2_o)vadd_f32(
+                v41->m_Items[9] = (UnityEngine_Vector2_o)vadd_f32(
                                                            *(float32x2_t *)&this->fields.faceRect.fields.m_Width,
                                                            *(float32x2_t *)&this->fields.faceRect.fields.m_XMin).n64_u64[0];
-                if ( v62 <= 0xA )
+                if ( v66 <= 0xA )
                   goto LABEL_181;
-                v40->m_Items[10] = *(UnityEngine_Vector2_o *)&this->fields.faceRect.fields.m_XMin;
-                if ( v62 == 11 )
+                v41->m_Items[10] = *(UnityEngine_Vector2_o *)&this->fields.faceRect.fields.m_XMin;
+                if ( v66 == 11 )
                   goto LABEL_181;
                 m_YMin = this->fields.faceRect.fields.m_YMin;
-                v40->m_Items[11].fields.x = this->fields.faceRect.fields.m_Width + this->fields.faceRect.fields.m_XMin;
-                v40->m_Items[11].fields.y = m_YMin;
+                v41->m_Items[11].fields.x = this->fields.faceRect.fields.m_Width + this->fields.faceRect.fields.m_XMin;
+                v41->m_Items[11].fields.y = m_YMin;
                 goto LABEL_142;
               }
             }
@@ -6116,43 +6143,43 @@ LABEL_42:
         goto LABEL_94;
       }
     }
-    if ( v92 > 4 )
+    if ( v98 > 4 )
     {
-      v43 = this->fields.textureList;
-      if ( !v43 )
+      v44 = this->fields.textureList;
+      if ( !v44 )
         goto LABEL_42;
-      v44 = v43->max_length;
-      if ( v44 > 2 )
+      v45 = v44->max_length;
+      if ( v45 > 2 )
       {
-        v45 = ((unsigned int)(v92 - 5) >> 4) + 1;
-        if ( this->fields.loadRequiredResource || (v21 = 2 * v45, 2 * v45 < (unsigned int)v44) )
+        v46 = ((unsigned int)(v98 - 5) >> 4) + 1;
+        if ( this->fields.loadRequiredResource || (v21 = 2 * v46, 2 * v46 < (unsigned int)v45) )
         {
-          v46 = v92 + 16 * ~((unsigned int)(v92 - 5) >> 4) + 11;
+          v47 = v98 + 16 * ~((unsigned int)(v98 - 5) >> 4) + 11;
         }
         else
         {
-          v46 = 0;
-          v45 = 1;
+          v47 = 0;
+          v46 = 1;
           v21 = 2;
         }
-        if ( this->fields.faceTextureSelect != v45 )
+        if ( this->fields.faceTextureSelect != v46 )
         {
           bodyFilter = (__int64)this->fields.faceRenderer;
-          this->fields.faceTextureSelect = v45;
+          this->fields.faceTextureSelect = v46;
           if ( !bodyFilter )
             goto LABEL_42;
           bodyFilter = (__int64)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
-          v47 = this->fields.textureList;
-          if ( !v47 )
+          v48 = this->fields.textureList;
+          if ( !v48 )
             goto LABEL_42;
-          if ( (unsigned int)v21 >= LODWORD(v47->max_length) )
+          if ( (unsigned int)v21 >= LODWORD(v48->max_length) )
             goto LABEL_181;
           if ( !bodyFilter )
             goto LABEL_42;
           UnityEngine_Material__SetTexture(
             (UnityEngine_Material_o *)bodyFilter,
             (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
-            (UnityEngine_Texture_o *)v47->m_Items[v21],
+            (UnityEngine_Texture_o *)v48->m_Items[v21],
             0);
           bodyFilter = (__int64)this->fields.faceRenderer;
           if ( this->fields.loadRequiredResource )
@@ -6160,54 +6187,50 @@ LABEL_42:
             if ( !bodyFilter )
               goto LABEL_42;
             bodyFilter = (__int64)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
-            v48 = this->fields.textureList;
-            if ( !v48 )
+            v49 = this->fields.textureList;
+            if ( !v49 )
               goto LABEL_42;
-            v49 = v48->max_length;
+            v50 = v49->max_length;
           }
           else
           {
             if ( !bodyFilter )
               goto LABEL_42;
             bodyFilter = (__int64)UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)bodyFilter, 0);
-            v48 = this->fields.textureList;
-            if ( !v48 )
+            v49 = this->fields.textureList;
+            if ( !v49 )
               goto LABEL_42;
-            v49 = v48->max_length;
+            v50 = v49->max_length;
             v23 = v21 + 1;
           }
-          if ( v23 >= v49 )
+          if ( v23 >= v50 )
             goto LABEL_181;
           if ( !bodyFilter )
             goto LABEL_42;
           UnityEngine_Material__SetTexture(
             (UnityEngine_Material_o *)bodyFilter,
             (System_String_o *)StringLiteral_17011/*"_SubTex"*/,
-            (UnityEngine_Texture_o *)v48->m_Items[v23],
+            (UnityEngine_Texture_o *)v49->m_Items[v23],
             0);
         }
-        v81 = (System_Array_o *)sub_2213B20(int___TypeInfo, 24);
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-          v81,
-          (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__C704C31E6D50D3F1817881CF7FCFEA73E47566854AF25F06E347E1E96289208A,
-          0);
+        v85 = (System_Array_o *)sub_2213B20(int___TypeInfo, 24);
+        v86.fields.value = Field__PrivateImplementationDetails__C704C31E6D50D3F1817881CF7FCFEA73E47566854AF25F06E347E1E96289208A;
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v85, v86, 0);
         if ( !v11 )
           goto LABEL_42;
-        UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v81, 0);
-        v82 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-          v82,
-          (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0CF9F952D56367FACB89C74C5386A574858313BFAE292C1435BDCC3FC122D9C8,
-          0);
+        UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v85, 0);
+        v87 = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
+        v88.fields.value = Field__PrivateImplementationDetails__0CF9F952D56367FACB89C74C5386A574858313BFAE292C1435BDCC3FC122D9C8;
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v87, v88, 0);
         if ( !v12 )
           goto LABEL_42;
-        UnityEngine_Mesh__set_triangles(v12, (System_Int32_array *)v82, 0);
-        v83 = this->fields.textureList;
-        if ( !v83 )
+        UnityEngine_Mesh__set_triangles(v12, (System_Int32_array *)v87, 0);
+        v89 = this->fields.textureList;
+        if ( !v89 )
           goto LABEL_42;
-        if ( (unsigned int)v21 >= LODWORD(v83->max_length) )
+        if ( (unsigned int)v21 >= LODWORD(v89->max_length) )
           goto LABEL_181;
-        bodyFilter = (__int64)v83->m_Items[v21];
+        bodyFilter = (__int64)v89->m_Items[v21];
         if ( !bodyFilter )
           goto LABEL_42;
         bodyFilter = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bodyFilter + 408LL))(
@@ -6215,132 +6238,130 @@ LABEL_42:
                        *(_QWORD *)(*(_QWORD *)bodyFilter + 416LL));
         if ( (_DWORD)bodyFilter != 256 )
         {
-          v85 = this->fields.textureList;
-          if ( !v85 )
+          v91 = this->fields.textureList;
+          if ( !v91 )
             goto LABEL_42;
-          if ( (unsigned int)v21 >= LODWORD(v85->max_length) )
+          if ( (unsigned int)v21 >= LODWORD(v91->max_length) )
             goto LABEL_181;
-          v86 = &v85->obj.klass + v21;
-          v40 = v91;
-          bodyFilter = (__int64)v86[4];
+          v92 = &v91->obj.klass + v21;
+          v41 = v97;
+          bodyFilter = (__int64)v92[4];
           if ( !bodyFilter )
             goto LABEL_42;
-          v71 = (*(unsigned int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bodyFilter + 408LL))(
+          v75 = (*(unsigned int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bodyFilter + 408LL))(
                   bodyFilter,
                   *(_QWORD *)(*(_QWORD *)bodyFilter + 416LL)) == 512;
-          v87 = UIStandFigureRender_TypeInfo;
-          v88 = *(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1);
-          if ( v71 )
+          v93 = UIStandFigureRender_TypeInfo;
+          v94 = *(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1);
+          if ( v75 )
           {
-            if ( !v88 )
+            if ( !v94 )
             {
               j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, *(_QWORD *)&faceType);
-              v87 = UIStandFigureRender_TypeInfo;
+              v93 = UIStandFigureRender_TypeInfo;
             }
-            bodyFilter = (__int64)v87->static_fields->faceRectTable2b;
+            bodyFilter = (__int64)v93->static_fields->faceRectTable2b;
             if ( !bodyFilter )
               goto LABEL_42;
-            v89 = v46 < 3;
-            v90 = 3;
+            v95 = v47 < 3;
+            v96 = 3;
           }
           else
           {
-            if ( !v88 )
+            if ( !v94 )
             {
               j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, *(_QWORD *)&faceType);
-              v87 = UIStandFigureRender_TypeInfo;
+              v93 = UIStandFigureRender_TypeInfo;
             }
-            bodyFilter = (__int64)v87->static_fields->faceRectTable2c;
+            bodyFilter = (__int64)v93->static_fields->faceRectTable2c;
             if ( !bodyFilter )
               goto LABEL_42;
-            v89 = v46 < 15;
-            v90 = 15;
+            v95 = v47 < 15;
+            v96 = 15;
           }
-          v61 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
-          if ( v89 )
-            v60 = v46;
+          v65 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
+          if ( v95 )
+            v64 = v47;
           else
-            v60 = v90;
+            v64 = v96;
           goto LABEL_124;
         }
-        v84 = UIStandFigureRender_TypeInfo;
+        v90 = UIStandFigureRender_TypeInfo;
         if ( !*(&UIStandFigureRender_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(UIStandFigureRender_TypeInfo, *(_QWORD *)&faceType);
-          v84 = UIStandFigureRender_TypeInfo;
+          v90 = UIStandFigureRender_TypeInfo;
         }
-        static_fields = v84->static_fields;
-        v40 = v91;
+        static_fields = v90->static_fields;
+        v41 = v97;
 LABEL_122:
         bodyFilter = (__int64)static_fields->faceRectTable2a;
         if ( !bodyFilter )
           goto LABEL_42;
-        v60 = 0;
-        v61 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
+        v64 = 0;
+        v65 = (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__;
 LABEL_124:
         Item = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
                  (System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *)bodyFilter,
-                 v60,
-                 v61);
+                 v64,
+                 v65);
         this->fields.faceRect = Item;
-        if ( v40 )
+        if ( v41 )
         {
-          v62 = v40->max_length;
-          if ( v62 <= 8 )
+          v66 = v41->max_length;
+          if ( v66 <= 8 )
             goto LABEL_181;
-          v40->m_Items[8].fields.x = Item.fields.m_XMin;
-          v40->m_Items[8].fields.y = Item.fields.m_Height + Item.fields.m_YMin;
-          if ( v62 == 9 )
+          v41->m_Items[8].fields.x = Item.fields.m_XMin;
+          v41->m_Items[8].fields.y = Item.fields.m_Height + Item.fields.m_YMin;
+          if ( v66 == 9 )
             goto LABEL_181;
           goto LABEL_139;
         }
         goto LABEL_42;
       }
     }
-    else if ( v92 >= 1 )
+    else if ( v98 >= 1 )
     {
       v38 = (System_Array_o *)sub_2213B20(int___TypeInfo, 30);
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-        v38,
-        (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__94C874FA28321762FE0B763B3B91ADA545AE7016F89C17FE7468B0174990FADA,
-        0);
+      v39.fields.value = Field__PrivateImplementationDetails__94C874FA28321762FE0B763B3B91ADA545AE7016F89C17FE7468B0174990FADA;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v38, v39, 0);
       if ( v11 )
       {
         UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v38, 0);
         if ( v12 )
         {
           UnityEngine_Mesh__set_triangles(v12, 0, 0);
-          v39 = 456;
+          v40 = 456;
           if ( !this->fields.isWide )
-            v39 = 448;
-          bodyFilter = *(__int64 *)((char *)&this->klass + v39);
+            v40 = 448;
+          bodyFilter = *(__int64 *)((char *)&this->klass + v40);
           if ( bodyFilter )
           {
-            v94 = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
-                    (System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *)bodyFilter,
-                    v92 - 1,
-                    (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__);
-            v40 = v91;
-            this->fields.faceRect = v94;
+            v100 = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
+                     (System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *)bodyFilter,
+                     v98 - 1,
+                     (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__);
+            v41 = v97;
+            this->fields.faceRect = v100;
             if ( v13 )
             {
-              v41 = *(_DWORD *)(v13 + 24);
-              if ( v41 <= 8
-                || (*(float *)(v13 + 96) = v94.fields.m_XMin,
-                    *(float *)(v13 + 100) = v94.fields.m_Height + v94.fields.m_YMin,
-                    v41 == 9)
+              v42 = *(_DWORD *)(v13 + 24);
+              if ( v42 <= 8
+                || (*(float *)(v13 + 96) = v100.fields.m_XMin,
+                    *(float *)(v13 + 100) = v100.fields.m_Height + v100.fields.m_YMin,
+                    v42 == 9)
                 || (*(float32x2_t *)(v13 + 104) = vadd_f32(
                                                     *(float32x2_t *)&this->fields.faceRect.fields.m_Width,
                                                     *(float32x2_t *)&this->fields.faceRect.fields.m_XMin),
-                    v41 <= 0xA)
-                || (*(_QWORD *)(v13 + 112) = *(_QWORD *)&this->fields.faceRect.fields.m_XMin, v41 == 11) )
+                    v42 <= 0xA)
+                || (*(_QWORD *)(v13 + 112) = *(_QWORD *)&this->fields.faceRect.fields.m_XMin, v42 == 11) )
               {
 LABEL_181:
                 sub_2213CE4(bodyFilter);
               }
-              v42 = this->fields.faceRect.fields.m_YMin;
+              v43 = this->fields.faceRect.fields.m_YMin;
               *(float *)(v13 + 120) = this->fields.faceRect.fields.m_Width + this->fields.faceRect.fields.m_XMin;
-              *(float *)(v13 + 124) = v42;
+              *(float *)(v13 + 124) = v43;
               goto LABEL_142;
             }
           }
@@ -6349,21 +6370,19 @@ LABEL_181:
       goto LABEL_42;
     }
 LABEL_94:
-    v50 = (System_Array_o *)sub_2213B20(int___TypeInfo, 30);
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-      v50,
-      (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__069DF9CCFA1F4B655A076CAE43C0BECBCC82EE255C5C4E18D4A6AA1F8EF09131,
-      0);
+    v51 = (System_Array_o *)sub_2213B20(int___TypeInfo, 30);
+    v52.fields.value = Field__PrivateImplementationDetails__069DF9CCFA1F4B655A076CAE43C0BECBCC82EE255C5C4E18D4A6AA1F8EF09131;
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v51, v52, 0);
     if ( v11 )
     {
-      UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v50, 0);
-      v40 = v91;
+      UnityEngine_Mesh__set_triangles(v11, (System_Int32_array *)v51, 0);
+      v41 = v97;
       if ( v12 )
       {
         UnityEngine_Mesh__set_triangles(v12, 0, 0);
 LABEL_142:
         UnityEngine_Mesh__set_uv(v11, (UnityEngine_Vector2_array *)v13, 0);
-        UnityEngine_Mesh__set_uv(v12, v40, 0);
+        UnityEngine_Mesh__set_uv(v12, v41, 0);
         UnityEngine_Mesh__RecalculateNormals(v11, 0);
         UnityEngine_Mesh__RecalculateBounds(v11, 0);
         return;
@@ -7891,6 +7910,7 @@ bool UIStandFigureRender__ChangeFaceFade_d__135__MoveNext(
   int32_t v17; // w5
   bool v18; // w6
   bool v19; // w7
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -7972,8 +7992,9 @@ LABEL_31:
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 LABEL_34:
+          result = 0;
           _4__this->fields.faceFadeAlpha = 0.0;
-          return 0;
+          return result;
         }
       }
 LABEL_37:
@@ -8008,8 +8029,9 @@ LABEL_37:
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, 0, v14, v15, v16, v17, v18, v19);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 
@@ -8092,6 +8114,7 @@ bool UIStandFigureRender__ChaseParentAlpha_d__166__MoveNext(
   bool v24; // w7
   __int64 v25; // x1
   UnityEngine_Object_o *tex_5__2; // x21
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
   __int64 v29; // x1
   UnityEngine_Object_o *sharedMaterial; // x21
@@ -8249,8 +8272,9 @@ LABEL_25:
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, 0, v11, v12, v13, v14, v15, v16);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = v17;
-  return 1;
+  return result;
 }
 
 

@@ -1705,7 +1705,8 @@ void EventFortificationListViewManager__ModifyItem(
         (System_Collections_Generic_List_Enumerator_T__o *)&v25,
         (System_Collections_Generic_List_object__o *)Instance,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-      v28 = *(System_Collections_Generic_List_Enumerator_object__o *)&v25.fields.currentCryptoKey;
+      v28.fields._current = (Il2CppObject *)v25.fields.fakeValue;
+      *(_OWORD *)&v28.fields._list = *(_OWORD *)&v25.fields.currentCryptoKey;
       v26 = 0;
       v27 = &v28;
       while ( 1 )
@@ -2020,7 +2021,8 @@ void EventFortificationListViewManager__ModifyLockItem(
         (System_Collections_Generic_List_object__o *)Instance,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
       v13 = !isIconSizeChange && isInit;
-      v38 = *(System_Collections_Generic_List_Enumerator_object__o *)&v35.fields.currentCryptoKey;
+      v38.fields._current = (Il2CppObject *)v35.fields.fakeValue;
+      *(_OWORD *)&v38.fields._list = *(_OWORD *)&v35.fields.currentCryptoKey;
       v36 = 0;
       v37 = &v38;
       while ( 1 )
@@ -4991,7 +4993,7 @@ System_IAsyncResult_o *EventFortificationListViewManager_CallbackFunc__BeginInvo
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(EventFortificationListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -5084,7 +5086,7 @@ System_IAsyncResult_o *EventFortificationListViewManager_RequestCallbackFunc__Be
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

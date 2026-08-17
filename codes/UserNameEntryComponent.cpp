@@ -273,6 +273,7 @@ int32_t UserNameEntryComponent__getGendetType(UserNameEntryComponent_o *this, co
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *this, const MethodInfo *method)
 {
   UILineInput_o *entryNameInput; // x0
@@ -282,8 +283,11 @@ void UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *this, const
   uint16_t Chars; // w0
   __int64 v8; // x2
   bool IsNullOrEmpty; // w20
-  System_String_o *v11; // x0
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v10; // s0 OVERLAPPED
+  float v11; // s3
+  float v12; // s1
+  float v13; // s2
+  System_String_o *v14; // x0
 
   if ( (byte_596F446 & 1) == 0 )
   {
@@ -322,8 +326,8 @@ void UserNameEntryComponent__onChangeInput(UserNameEntryComponent_o *this, const
     entryNameInput = (UILineInput_o *)LocalizationManager__ReplaceNameTag(Text, 0, 0);
     if ( entryNameInput )
     {
-      v11 = System_String__Trim((System_String_o *)entryNameInput, 0);
-      IsNullOrEmpty = System_String__IsNullOrEmpty(v11, 0);
+      v14 = System_String__Trim((System_String_o *)entryNameInput, 0);
+      IsNullOrEmpty = System_String__IsNullOrEmpty(v14, 0);
       goto LABEL_13;
     }
 LABEL_22:
@@ -342,13 +346,13 @@ LABEL_13:
   entryNameInput = (UILineInput_o *)this->fields.confirmTxt;
   if ( !entryNameInput )
     goto LABEL_22;
-  v12.fields.r = 1.0;
-  v12.fields.a = 1.0;
+  v10 = 1.0;
+  v11 = 1.0;
   if ( IsNullOrEmpty )
-    v12.fields.r = 0.5;
-  v12.fields.g = v12.fields.r;
-  v12.fields.b = v12.fields.r;
-  UIWidget__set_color((UIWidget_o *)entryNameInput, v12, 0);
+    v10 = 0.5;
+  v12 = v10;
+  v13 = v10;
+  UIWidget__set_color((UIWidget_o *)entryNameInput, *(UnityEngine_Color_o *)&v10, 0);
 }
 
 

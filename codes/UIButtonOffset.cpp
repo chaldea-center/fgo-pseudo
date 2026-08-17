@@ -91,14 +91,15 @@ void UIButtonOffset__OnEnable(UIButtonOffset_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIButtonOffset__OnHover(UIButtonOffset_o *this, bool isOver, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   UnityEngine_Component_o *tweenTarget; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  float x; // s1
+  float x; // s1 OVERLAPPED
   float32x2_t v9; // d2
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
+  unsigned __int32 v10; // s3
 
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -115,9 +116,12 @@ void UIButtonOffset__OnHover(UIButtonOffset_o *this, bool isOver, const MethodIn
       x = x + this->fields.hover.fields.x;
       v9.n64_u64[0] = vadd_f32(v9, *(float32x2_t *)&this->fields.hover.fields.y).n64_u64[0];
     }
-    v10.fields.x = x;
-    *(float32x2_t *)&v10.fields.y = v9;
-    tweenTarget = (UnityEngine_Component_o *)TweenPosition__Begin(gameObject, this->fields.duration, v10, 0);
+    v10 = v9.n64_u32[1];
+    tweenTarget = (UnityEngine_Component_o *)TweenPosition__Begin(
+                                               gameObject,
+                                               this->fields.duration,
+                                               *(UnityEngine_Vector3_o *)&x,
+                                               0);
     if ( !tweenTarget )
 LABEL_10:
       sub_2213CDC(tweenTarget, v5);
@@ -126,6 +130,7 @@ LABEL_10:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIButtonOffset__OnPress(UIButtonOffset_o *this, bool isPressed, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
@@ -133,12 +138,12 @@ void UIButtonOffset__OnPress(UIButtonOffset_o *this, bool isPressed, const Metho
   UnityEngine_GameObject_o *gameObject; // x0
   float duration; // s8
   UnityEngine_GameObject_o *v9; // x20
-  float x; // s1
+  float x; // s1 OVERLAPPED
   float32x2_t v11; // d2
   __int64 v12; // x1
   UnityEngine_GameObject_o *v13; // x21
   bool IsHighlighted; // w0
-  UnityEngine_Vector3_o v15; // 0:kr00_12.12
+  unsigned __int32 v15; // s3
 
   if ( (byte_5974F9A & 1) == 0 )
   {
@@ -176,9 +181,8 @@ void UIButtonOffset__OnPress(UIButtonOffset_o *this, bool isPressed, const Metho
         v11.n64_u64[0] = vadd_f32(v11, *(float32x2_t *)&this->fields.hover.fields.y).n64_u64[0];
       }
     }
-    v15.fields.x = x;
-    *(float32x2_t *)&v15.fields.y = v11;
-    tweenTarget = (UnityEngine_Component_o *)TweenPosition__Begin(v9, duration, v15, 0);
+    v15 = v11.n64_u32[1];
+    tweenTarget = (UnityEngine_Component_o *)TweenPosition__Begin(v9, duration, *(UnityEngine_Vector3_o *)&x, 0);
     if ( !tweenTarget )
 LABEL_16:
       sub_2213CDC(tweenTarget, v5);

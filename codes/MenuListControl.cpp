@@ -24,17 +24,18 @@ void MenuListControl___ctor(MenuListControl_o *this, const MethodInfo *method)
   bool v9; // w7
   __int64 v10; // x1
   Il2CppType *v11; // x20
-  __int64 v12; // x1
+  System_RuntimeTypeHandle_o v12; // x0
+  __int64 v13; // x1
   System_Type_o *TypeFromHandle; // x20
   System_String_array *Names; // x0
-  __int64 v15; // x1
-  struct RestTimeNoticeControl_array *v16; // x0
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
+  __int64 v16; // x1
+  struct RestTimeNoticeControl_array *v17; // x0
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
 
   if ( (byte_5974B6F & 1) == 0 )
   {
@@ -53,23 +54,24 @@ void MenuListControl___ctor(MenuListControl_o *this, const MethodInfo *method)
   v11 = MenuListControl_CombineKind_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v10);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v11, 0);
+  v12.fields.value = (intptr_t)v11;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v12, 0);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v12);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v13);
   Names = System_Enum__GetNames(TypeFromHandle, 0);
   if ( !Names )
-    sub_2213CDC(0, v15);
-  v16 = (struct RestTimeNoticeControl_array *)sub_2213B20(RestTimeNoticeControl___TypeInfo, LODWORD(Names->max_length));
-  this->fields.restTimeNoticeList = v16;
+    sub_2213CDC(0, v16);
+  v17 = (struct RestTimeNoticeControl_array *)sub_2213B20(RestTimeNoticeControl___TypeInfo, LODWORD(Names->max_length));
+  this->fields.restTimeNoticeList = v17;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.restTimeNoticeList,
-    (int32_t)v16,
-    v17,
+    (int32_t)v17,
     v18,
     v19,
     v20,
     v21,
-    v22);
+    v22,
+    v23);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 

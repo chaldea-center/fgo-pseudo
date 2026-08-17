@@ -364,6 +364,8 @@ UnityEngine_Vector2_o ServantScriptMaster__getOffset(
   int monitor_high; // s1
   __int64 v13; // x9
   __int64 v14; // x10
+  float x; // s0
+  float y; // s1
   const MethodInfo *v17; // x2
   const MethodInfo *v18; // x3
   UnityEngine_Vector2_o Offset; // kr00_8
@@ -395,29 +397,31 @@ UnityEngine_Vector2_o ServantScriptMaster__getOffset(
                                                                     &v22,
                                                                     id,
                                                                     (const MethodInfo_3F131DC *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
-    if ( ((unsigned __int8)Master_object & 1) != 0 )
+    if ( ((unsigned __int8)Master_object & 1) == 0 )
     {
-      if ( v22 )
-      {
-        v13 = 28;
-        if ( v5 == 4 )
-        {
-          v13 = 36;
-          v14 = 32;
-        }
-        else
-        {
-          v14 = 24;
-        }
-        monitor_high = *(_DWORD *)((char *)&v22->klass + v13);
-        monitor = *(_DWORD *)((char *)&v22->klass + v14);
-        goto LABEL_27;
-      }
-      goto LABEL_35;
+      v5 = 1;
+      goto LABEL_31;
     }
-    v5 = 1;
+    if ( v22 )
+    {
+      v13 = 28;
+      if ( v5 == 4 )
+      {
+        v13 = 36;
+        v14 = 32;
+      }
+      else
+      {
+        v14 = 24;
+      }
+      monitor_high = *(_DWORD *)((char *)&v22->klass + v13);
+      monitor = *(_DWORD *)((char *)&v22->klass + v14);
+      goto LABEL_27;
+    }
+LABEL_35:
+    sub_2213CDC(Master_object, v10);
   }
-  else if ( v5 == 8 )
+  if ( v5 == 8 )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&id);
@@ -429,59 +433,61 @@ UnityEngine_Vector2_o ServantScriptMaster__getOffset(
                                                                     &v20,
                                                                     id,
                                                                     (const MethodInfo_3F131DC *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
-    if ( ((unsigned __int8)Master_object & 1) != 0 )
+    if ( ((unsigned __int8)Master_object & 1) == 0 )
     {
-      if ( v20 )
-      {
-        monitor = (int)v20[2].monitor;
-        monitor_high = HIDWORD(v20[2].monitor);
-        goto LABEL_27;
-      }
-LABEL_35:
-      sub_2213CDC(Master_object, v10);
+      v5 = 8;
+      goto LABEL_31;
     }
-    v5 = 8;
+    if ( v20 )
+    {
+      monitor = (int)v20[2].monitor;
+      monitor_high = HIDWORD(v20[2].monitor);
+      goto LABEL_27;
+    }
+    goto LABEL_35;
   }
-  else if ( v5 == 9 )
+  if ( v5 != 9 )
   {
-    if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&id);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
-    if ( !Master_object )
-      goto LABEL_35;
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__long___TryGetEntity(
-                                                                    Master_object,
-                                                                    &entity,
+LABEL_31:
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantScriptMaster__GetEntityWithRetryFormId0(
+                                                                    this,
                                                                     id,
-                                                                    (const MethodInfo_3F131DC *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
-    if ( ((unsigned __int8)Master_object & 1) != 0 )
+                                                                    formId,
+                                                                    *(const MethodInfo **)&offsetKind);
+    if ( Master_object
+      || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantScriptMaster__GetEntity(this, 1, 0, v18)) != 0 )
     {
-      if ( entity )
-      {
-        monitor = (int)entity[3].klass;
-        monitor_high = HIDWORD(entity[3].klass);
-LABEL_27:
-        result.fields.x = (float)monitor;
-        result.fields.y = (float)monitor_high;
-        return result;
-      }
-      goto LABEL_35;
+      Offset = ServantScriptEntity__getOffset((ServantScriptEntity_o *)Master_object, v5, v17);
+      y = Offset.fields.y;
+      x = Offset.fields.x;
+      goto LABEL_36;
     }
-    v5 = 9;
+    goto LABEL_35;
   }
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantScriptMaster__GetEntityWithRetryFormId0(
-                                                                  this,
-                                                                  id,
-                                                                  formId,
-                                                                  *(const MethodInfo **)&offsetKind);
+  if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, *(_QWORD *)&id);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantScriptAddMaster___);
   if ( !Master_object )
+    goto LABEL_35;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__long___TryGetEntity(
+                                                                  Master_object,
+                                                                  &entity,
+                                                                  id,
+                                                                  (const MethodInfo_3F131DC *)Method_DataMasterBase_ServantScriptAddMaster__ServantScriptAddEntity__long__TryGetEntity__);
+  if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantScriptMaster__GetEntity(this, 1, 0, v18);
-    if ( !Master_object )
-      goto LABEL_35;
+    v5 = 9;
+    goto LABEL_31;
   }
-  Offset = ServantScriptEntity__getOffset((ServantScriptEntity_o *)Master_object, v5, v17);
-  result.fields.y = Offset.fields.y;
-  result.fields.x = Offset.fields.x;
+  if ( !entity )
+    goto LABEL_35;
+  monitor = (int)entity[3].klass;
+  monitor_high = HIDWORD(entity[3].klass);
+LABEL_27:
+  x = (float)monitor;
+  y = (float)monitor_high;
+LABEL_36:
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }

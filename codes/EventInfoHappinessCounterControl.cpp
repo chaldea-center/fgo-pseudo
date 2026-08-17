@@ -279,6 +279,7 @@ void EventInfoHappinessCounterControl__Setup(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventInfoHappinessCounterControl__SetupEventPoint(
         EventInfoHappinessCounterControl_o *this,
         const MethodInfo *method)
@@ -289,13 +290,15 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
   __int64 v6; // x1
   UILabel_o *v7; // x20
   int64_t eventPoint; // x21
-  __int64 v10; // x8
-  __int64 v11; // x1
+  unsigned int localPosition; // s0 OVERLAPPED
+  int v10; // s2
+  __int64 v11; // x8
+  int v12; // s1
+  __int64 v13; // x1
   UnityEngine_Component_o *eventPointLabelRoot; // x8
-  char v13; // w19
-  bool v14; // w1
+  char v15; // w19
+  bool v16; // w1
   EventUiEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971CBD & 1) == 0 )
   {
@@ -330,20 +333,23 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
           Master_object = (System_String_o *)this->fields.eventPointLabelRoot;
           if ( Master_object )
           {
-            LODWORD(v16.fields.x) = (unsigned int)UnityEngine_Transform__get_localPosition(
-                                                    (UnityEngine_Transform_o *)Master_object,
-                                                    0);
+            localPosition = (unsigned int)UnityEngine_Transform__get_localPosition(
+                                            (UnityEngine_Transform_o *)Master_object,
+                                            0);
             Master_object = (System_String_o *)this->fields.eventPointLabelRoot;
             if ( Master_object )
             {
-              v16.fields.z = 0.0;
-              v10 = 148;
+              v10 = 0;
+              v11 = 148;
               if ( !this->fields.isHappinessPointCountStop )
-                v10 = 144;
-              v16.fields.y = *(float *)((char *)&this->klass + v10);
-              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Master_object, v16, 0);
+                v11 = 144;
+              v12 = *(_DWORD *)((char *)&this->klass + v11);
+              UnityEngine_Transform__set_localPosition(
+                (UnityEngine_Transform_o *)Master_object,
+                *(UnityEngine_Vector3_o *)&localPosition,
+                0);
               if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v11);
+                j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v13);
               Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventUiReleaseMaster___);
               if ( Master_object )
               {
@@ -354,13 +360,13 @@ void EventInfoHappinessCounterControl__SetupEventPoint(
                 eventPointLabelRoot = (UnityEngine_Component_o *)this->fields.eventPointLabelRoot;
                 if ( eventPointLabelRoot )
                 {
-                  v13 = (char)Master_object;
+                  v15 = (char)Master_object;
                   Master_object = (System_String_o *)UnityEngine_Component__get_gameObject(eventPointLabelRoot, 0);
                   if ( Master_object )
                   {
-                    v14 = v13 & 1;
+                    v16 = v15 & 1;
 LABEL_26:
-                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v14, 0);
+                    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v16, 0);
                     return;
                   }
                 }
@@ -379,7 +385,7 @@ LABEL_26:
                                                0);
           if ( Master_object )
           {
-            v14 = 0;
+            v16 = 0;
             goto LABEL_26;
           }
         }

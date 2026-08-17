@@ -346,55 +346,60 @@ void EventServantFatigueListViewManager__CreateList(
   Il2CppObject *fatigueRecoveryConfirmationDialogPrefab; // x24
   __int64 v55; // x1
   __int64 v56; // x2
-  UnityEngine_GameObject_o *v57; // x24
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float w; // s11
+  UnityEngine_GameObject_o *v61; // x24
   UnityEngine_Transform_o *transform; // x25
   Il2CppObject *Component_object; // x0
-  System_String_o *v60; // x2
-  System_String_o *v61; // x3
-  int32_t v62; // w4
-  int32_t v63; // w5
-  bool v64; // w6
-  bool v65; // w7
+  System_String_o *v64; // x2
+  System_String_o *v65; // x3
+  int32_t v66; // w4
+  int32_t v67; // w5
+  bool v68; // w6
+  bool v69; // w7
   unsigned int iconScaleKind; // w8
   struct ListViewItemSeed_o *normalSizeSeed; // x1
   UISprite_o *scaleChangeButtonSprite; // x23
-  System_Int32_array *v69; // x23
-  EventUpValSetupInfo_o *v70; // x21
-  const MethodInfo *v71; // x2
-  __int64 v72; // x2
-  __int64 v73; // x23
-  unsigned __int64 v74; // x28
-  __int64 v75; // x20
+  System_Int32_array *v73; // x23
+  EventUpValSetupInfo_o *v74; // x21
+  const MethodInfo *v75; // x2
+  __int64 v76; // x2
+  __int64 v77; // x23
+  unsigned __int64 v78; // x28
+  __int64 v79; // x20
   struct UserServantEntity_o *userServantEntity; // x8
-  UserServantEntity_o *v77; // x24
-  __int128 v78; // q1
-  int64_t v79; // x0
-  int32_t v80; // w26
-  int64_t v81; // x27
-  EventServantFatigueListViewItem_o *v82; // x25
-  const MethodInfo *v83; // x6
-  System_String_o *v84; // x2
-  System_String_o *v85; // x3
-  int32_t v86; // w4
-  int32_t v87; // w5
-  bool v88; // w6
-  bool v89; // w7
-  __int64 v90; // x8
-  _QWORD *v91; // x9
-  __int64 v92; // x10
-  __int64 v93; // x8
+  UserServantEntity_o *v81; // x24
+  __int128 v82; // q1
+  int64_t v83; // x0
+  int32_t v84; // w26
+  int64_t v85; // x27
+  EventServantFatigueListViewItem_o *v86; // x25
+  const MethodInfo *v87; // x6
+  System_String_o *v88; // x2
+  System_String_o *v89; // x3
+  int32_t v90; // w4
+  int32_t v91; // w5
+  bool v92; // w6
+  bool v93; // w7
+  __int64 v94; // x8
+  _QWORD *v95; // x9
+  __int64 v96; // x10
+  __int64 v97; // x8
   UILabel_o *emptyMessageLabel; // x20
-  const MethodInfo *v95; // x2
-  const MethodInfo *v96; // x1
+  const MethodInfo *v99; // x2
+  const MethodInfo *v100; // x1
   struct EventServantRecoveryFatigueItem_o **p_targetRecoveryFatigueItem; // [xsp+0h] [xbp-D0h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v99; // [xsp+10h] [xbp-C0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v100; // [xsp+30h] [xbp-A0h] BYREF
-  UnityEngine_Quaternion_o v101; // 0:kr00_16.16
-  UnityEngine_Vector3_o v102; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v103; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v104; // 0:s0.4,4:s1.4,8:s2.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v103; // [xsp+10h] [xbp-C0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v104; // [xsp+30h] [xbp-A0h] BYREF
   UnityEngine_Vector3_o v105; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v106; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v107; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v108; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v109; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v110; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v111; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_596AC87 & 1) == 0 )
   {
@@ -416,7 +421,7 @@ void EventServantFatigueListViewManager__CreateList(
   }
   v11 = EventServantFatigueListViewManager_TypeInfo;
   v12 = *(&EventServantFatigueListViewManager_TypeInfo->_2.cctor_finished + 1);
-  memset(&v100, 0, sizeof(v100));
+  memset(&v104, 0, sizeof(v104));
   if ( !v12 )
   {
     j_il2cpp_runtime_class_init_0(EventServantFatigueListViewManager_TypeInfo, *(_QWORD *)&eventId, targetItem);
@@ -510,63 +515,71 @@ void EventServantFatigueListViewManager__CreateList(
   sort = UnityEngine_Object__op_Equality(0, fatigueRecoveryConfirmationDialog, 0);
   if ( (sort & 1) != 0 )
   {
-    v102.fields.x = 0.0;
-    v102.fields.y = 0.0;
+    v105.fields.x = 0.0;
+    v105.fields.y = 0.0;
     fatigueRecoveryConfirmationDialogPrefab = (Il2CppObject *)this->fields.fatigueRecoveryConfirmationDialogPrefab;
-    v102.fields.z = 0.0;
-    v101 = UnityEngine_Quaternion__Internal_FromEulerRad(v102, 0);
+    v105.fields.z = 0.0;
+    v110 = UnityEngine_Quaternion__Internal_FromEulerRad(v105, 0);
+    x = v110.fields.x;
+    y = v110.fields.y;
+    z = v110.fields.z;
+    w = v110.fields.w;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v55, v56);
-    v103.fields.x = 0.0;
-    v103.fields.y = 0.0;
-    v103.fields.z = 0.0;
+    v106.fields.x = 0.0;
+    v106.fields.y = 0.0;
+    v106.fields.z = 0.0;
+    v111.fields.x = x;
+    v111.fields.y = y;
+    v111.fields.z = z;
+    v111.fields.w = w;
     sort = (__int64)UnityEngine_Object__Instantiate_object__59717424(
                       fatigueRecoveryConfirmationDialogPrefab,
-                      v103,
-                      v101,
+                      v106,
+                      v111,
                       (const MethodInfo_38F3730 *)Method_UnityEngine_Object_Instantiate_GameObject____91801600);
     if ( !sort )
       goto LABEL_61;
-    v57 = (UnityEngine_GameObject_o *)sort;
+    v61 = (UnityEngine_GameObject_o *)sort;
     transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)sort, 0);
     sort = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform )
       goto LABEL_61;
     UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)sort, 0);
-    sort = (__int64)UnityEngine_GameObject__get_transform(v57, 0);
+    sort = (__int64)UnityEngine_GameObject__get_transform(v61, 0);
     if ( !sort )
       goto LABEL_61;
-    v104.fields.x = 0.0;
-    v104.fields.y = 0.0;
-    v104.fields.z = 0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)sort, v104, 0);
-    sort = (__int64)UnityEngine_GameObject__get_transform(v57, 0);
+    v107.fields.x = 0.0;
+    v107.fields.y = 0.0;
+    v107.fields.z = 0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)sort, v107, 0);
+    sort = (__int64)UnityEngine_GameObject__get_transform(v61, 0);
     if ( !sort )
       goto LABEL_61;
-    v105.fields.x = 0.0;
-    v105.fields.y = 0.0;
-    v105.fields.z = 0.0;
-    UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)sort, v105, 0);
-    sort = (__int64)UnityEngine_GameObject__get_transform(v57, 0);
+    v108.fields.x = 0.0;
+    v108.fields.y = 0.0;
+    v108.fields.z = 0.0;
+    UnityEngine_Transform__set_eulerAngles((UnityEngine_Transform_o *)sort, v108, 0);
+    sort = (__int64)UnityEngine_GameObject__get_transform(v61, 0);
     if ( !sort )
       goto LABEL_61;
-    v106.fields.x = 1.0;
-    v106.fields.y = 1.0;
-    v106.fields.z = 1.0;
-    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)sort, v106, 0);
+    v109.fields.x = 1.0;
+    v109.fields.y = 1.0;
+    v109.fields.z = 1.0;
+    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)sort, v109, 0);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         v57,
+                         v61,
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_FatigueRecoveryConfirmationDialog___);
     this->fields.fatigueRecoveryConfirmationDialog = (struct FatigueRecoveryConfirmationDialog_o *)Component_object;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.fatigueRecoveryConfirmationDialog,
       (int32_t)Component_object,
-      v60,
-      v61,
-      v62,
-      v63,
       v64,
-      v65);
+      v65,
+      v66,
+      v67,
+      v68,
+      v69);
     sort = (__int64)this->fields.fatigueRecoveryConfirmationDialog;
     if ( !sort )
       goto LABEL_61;
@@ -615,13 +628,13 @@ LABEL_32:
   sort = sub_2213B20(int___TypeInfo, 1);
   if ( !sort )
     goto LABEL_61;
-  v69 = (System_Int32_array *)sort;
+  v73 = (System_Int32_array *)sort;
   if ( !*(_DWORD *)(sort + 24) )
     goto LABEL_62;
   *(_DWORD *)(sort + 32) = eventId;
-  v70 = (EventUpValSetupInfo_o *)sub_2213CCC(EventUpValSetupInfo_TypeInfo);
-  EventUpValSetupInfo___ctor_48741124(v70, v69, 1, 0, 0, 0);
-  EventServantFatigueListViewManager__SetUpBonusFilterButton(this, v70, v71);
+  v74 = (EventUpValSetupInfo_o *)sub_2213CCC(EventUpValSetupInfo_TypeInfo);
+  EventUpValSetupInfo___ctor_48741124(v74, v73, 1, 0, 0, 0);
+  EventServantFatigueListViewManager__SetUpBonusFilterButton(this, v74, v75);
   sort = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !sort )
     goto LABEL_61;
@@ -633,61 +646,61 @@ LABEL_32:
   sort = (__int64)UserServantMaster__getOrganizationList((UserServantMaster_o *)sort, 0);
   if ( !sort )
     goto LABEL_61;
-  v73 = sort;
+  v77 = sort;
   if ( (int)*(_QWORD *)(sort + 24) >= 1 )
   {
-    v74 = 0;
-    v75 = (unsigned int)*(_QWORD *)(sort + 24);
-    while ( v74 < *(unsigned int *)(v73 + 24) )
+    v78 = 0;
+    v79 = (unsigned int)*(_QWORD *)(sort + 24);
+    while ( v78 < *(unsigned int *)(v77 + 24) )
     {
       if ( !*p_targetRecoveryFatigueItem )
         goto LABEL_61;
       userServantEntity = (*p_targetRecoveryFatigueItem)->fields.userServantEntity;
-      v77 = *(UserServantEntity_o **)(v73 + 32 + 8 * v74);
+      v81 = *(UserServantEntity_o **)(v77 + 32 + 8 * v78);
       if ( userServantEntity )
       {
-        v78 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
-        *(_OWORD *)&v100.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
-        *(_OWORD *)&v100.fields.fakeValue = v78;
+        v82 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
+        *(_OWORD *)&v104.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
+        *(_OWORD *)&v104.fields.fakeValue = v82;
       }
       else
       {
         if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v15, v72);
-        CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v100, -1, 0);
+          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v15, v76);
+        CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v104, -1, 0);
       }
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v15, v72);
-      v99 = v100;
-      v79 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v99, 0);
-      v80 = this->fields.eventId;
-      v81 = v79;
-      v82 = (EventServantFatigueListViewItem_o *)sub_2213CCC(EventServantFatigueListViewItem_TypeInfo);
-      EventServantFatigueListViewItem___ctor(v82, v77, v80, v81, v70, targetItem, v83);
+        j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v15, v76);
+      v103 = v104;
+      v83 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v103, 0);
+      v84 = this->fields.eventId;
+      v85 = v83;
+      v86 = (EventServantFatigueListViewItem_o *)sub_2213CCC(EventServantFatigueListViewItem_TypeInfo);
+      EventServantFatigueListViewItem___ctor(v86, v81, v84, v85, v74, targetItem, v87);
       sort = (__int64)this->fields.itemList;
       if ( !sort )
         goto LABEL_61;
-      v90 = *(_QWORD *)(sort + 16);
-      v91 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v94 = *(_QWORD *)(sort + 16);
+      v95 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++*(_DWORD *)(sort + 28);
-      if ( !v90 )
+      if ( !v94 )
         goto LABEL_61;
-      v92 = *(int *)(sort + 24);
-      if ( (unsigned int)v92 >= *(_DWORD *)(v90 + 24) )
+      v96 = *(int *)(sort + 24);
+      if ( (unsigned int)v96 >= *(_DWORD *)(v94 + 24) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)sort,
-          (Il2CppObject *)v82,
-          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
+          (Il2CppObject *)v86,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v95[4] + 192LL) + 112LL));
       }
       else
       {
-        v93 = v90 + 8 * v92;
-        *(_DWORD *)(sort + 24) = v92 + 1;
-        *(_QWORD *)(v93 + 32) = v82;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v93 + 32), (int32_t)v82, v84, v85, v86, v87, v88, v89);
+        v97 = v94 + 8 * v96;
+        *(_DWORD *)(sort + 24) = v96 + 1;
+        *(_QWORD *)(v97 + 32) = v86;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v97 + 32), (int32_t)v86, v88, v89, v90, v91, v92, v93);
       }
-      if ( v75 == ++v74 )
+      if ( v79 == ++v78 )
         goto LABEL_57;
     }
 LABEL_62:
@@ -696,15 +709,15 @@ LABEL_62:
 LABEL_57:
   emptyMessageLabel = this->fields.emptyMessageLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15, v72);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15, v76);
   sort = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_12319/*"SERVANT_SORT_FILTER_RESULT_EMPTY"*/, 0);
   if ( !emptyMessageLabel )
 LABEL_61:
     sub_2213CDC(sort, v15);
   UILabel__set_text(emptyMessageLabel, (System_String_o *)sort, 0);
-  EventServantFatigueListViewManager__SetStatusKind(this, this->fields.modeKind, v95);
+  EventServantFatigueListViewManager__SetStatusKind(this, this->fields.modeKind, v99);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
-  EventServantFatigueListViewManager__SetFilterButtonImage(this, v96);
+  EventServantFatigueListViewManager__SetFilterButtonImage(this, v100);
 }
 
 
@@ -1174,9 +1187,9 @@ LABEL_15:
 LABEL_13:
   if ( !v4 )
     goto LABEL_15;
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v4->klass->vtable._3_ToString.methodPtr)(
-           v4,
-           v4->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v4->klass->vtable._3_ToString.methodPtr)(
+                              v4,
+                              v4->klass->vtable._3_ToString.method);
 }
 
 
@@ -1995,7 +2008,8 @@ void EventServantFatigueListViewManager__ModifyItem(
         (System_Collections_Generic_List_Enumerator_T__o *)&v25,
         (System_Collections_Generic_List_object__o *)Instance,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-      v28 = *(System_Collections_Generic_List_Enumerator_object__o *)&v25.fields.currentCryptoKey;
+      v28.fields._current = (Il2CppObject *)v25.fields.fakeValue;
+      *(_OWORD *)&v28.fields._list = *(_OWORD *)&v25.fields.currentCryptoKey;
       v26 = 0;
       v27 = &v28;
       while ( 1 )
@@ -2317,7 +2331,8 @@ void EventServantFatigueListViewManager__ModifyLockItem(
         (System_Collections_Generic_List_object__o *)Instance,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
       v13 = !isIconSizeChange && isInit;
-      v45 = *(System_Collections_Generic_List_Enumerator_object__o *)&v42.fields.currentCryptoKey;
+      v45.fields._current = (Il2CppObject *)v42.fields.fakeValue;
+      *(_OWORD *)&v45.fields._list = *(_OWORD *)&v42.fields.currentCryptoKey;
       v43 = 0;
       v44 = &v45;
       while ( 1 )
@@ -5302,7 +5317,7 @@ System_IAsyncResult_o *EventServantFatigueListViewManager_CallbackFunc__BeginInv
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(EventServantFatigueListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -5395,7 +5410,7 @@ System_IAsyncResult_o *EventServantFatigueListViewManager_RequestCallbackFunc__B
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

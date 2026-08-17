@@ -46,15 +46,19 @@ float ObjectDomain__get_Y(ObjectDomain_o *this, const MethodInfo *method)
 
 UnityEngine_Vector3_o ObjectDomain__get_center(ObjectDomain_o *this, const MethodInfo *method)
 {
+  float v2; // s2
   unsigned __int64 v3; // d0
+  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.z = 0.0;
+  v2 = 0.0;
   v3 = vadd_f32(
          *(float32x2_t *)&this->fields._X_k__BackingField,
          vmul_f32(*(float32x2_t *)&this->fields._Width_k__BackingField, (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  result.fields.y = *((float *)&v3 + 1);
+  v4 = *((float *)&v3 + 1);
   result.fields.x = *(float *)&v3;
+  result.fields.z = v2;
+  result.fields.y = v4;
   return result;
 }
 

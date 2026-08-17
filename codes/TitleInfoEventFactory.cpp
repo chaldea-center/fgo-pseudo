@@ -779,7 +779,7 @@ void TitleInfoEventFactory__StartLvUpEffect(
   System_String_o *v62; // x0
   SimpleAnimation_o *v63; // x20
   System_String_o *name; // x0
-  UnityEngine_Vector3_o LvUpEffectOffset; // 0:kr00_12.12
+  UnityEngine_Vector3_o LvUpEffectOffset; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596E7A2 & 1) == 0 )

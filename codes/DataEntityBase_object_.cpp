@@ -16,7 +16,7 @@ System_String_o *DataEntityBase_object___get_PrimaryKey(
          this->klass[1]._1.gc_desc);
   if ( !v2 )
     sub_2213CDC(0, v3);
-  return (*(System_String_o *(__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 360LL))(
-           v2,
-           *(_QWORD *)(*(_QWORD *)v2 + 368LL));
+  return (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v2 + 360LL))(
+                              v2,
+                              *(_QWORD *)(*(_QWORD *)v2 + 368LL));
 }

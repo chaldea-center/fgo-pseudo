@@ -159,6 +159,8 @@ UnityEngine_Vector2_o UIVerticalImageRender__GetBodySize(UIVerticalImageRender_o
 {
   UIVerticalImageRender_c *v2; // x0
   struct UIVerticalImageRender_StaticFields *static_fields; // x8
+  float BODY_SIZE_X; // s0
+  float BODY_SIZE_Y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5972261 & 1) == 0 )
@@ -173,8 +175,10 @@ UnityEngine_Vector2_o UIVerticalImageRender__GetBodySize(UIVerticalImageRender_o
     v2 = UIVerticalImageRender_TypeInfo;
   }
   static_fields = v2->static_fields;
-  result.fields.x = (float)static_fields->BODY_SIZE_X;
-  result.fields.y = (float)static_fields->BODY_SIZE_Y;
+  BODY_SIZE_X = (float)static_fields->BODY_SIZE_X;
+  BODY_SIZE_Y = (float)static_fields->BODY_SIZE_Y;
+  result.fields.y = BODY_SIZE_Y;
+  result.fields.x = BODY_SIZE_X;
   return result;
 }
 
@@ -182,8 +186,10 @@ UnityEngine_Vector2_o UIVerticalImageRender__GetBodySize(UIVerticalImageRender_o
 UnityEngine_Vector2_o UIVerticalImageRender__GetCenterOffset(UIVerticalImageRender_o *this, const MethodInfo *method)
 {
   ManagerConfig_c *v2; // x0
+  float v3; // s0
   int HEIGHT; // w8
   int v5; // w8
+  float v6; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_597225F & 1) == 0 )
@@ -197,33 +203,43 @@ UnityEngine_Vector2_o UIVerticalImageRender__GetCenterOffset(UIVerticalImageRend
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, method);
     v2 = ManagerConfig_TypeInfo;
   }
-  result.fields.x = 0.0;
+  v3 = 0.0;
   HEIGHT = v2->static_fields->HEIGHT;
   if ( HEIGHT <= 0 )
     v5 = -HEIGHT;
   else
     v5 = 1 - HEIGHT;
-  result.fields.y = (float)(v5 >> 1);
+  v6 = (float)(v5 >> 1);
+  result.fields.y = v6;
+  result.fields.x = v3;
   return result;
 }
 
 
 UnityEngine_Vector2_o UIVerticalImageRender__GetCharacterOffset(const MethodInfo *method)
 {
+  float v1; // s0
+  float v2; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = 0.0;
-  result.fields.y = 0.0;
+  v1 = 0.0;
+  v2 = 0.0;
+  result.fields.y = v2;
+  result.fields.x = v1;
   return result;
 }
 
 
 UnityEngine_Vector2_o UIVerticalImageRender__GetCharacterOffsetMyroom(const MethodInfo *method)
 {
+  float v1; // s0
+  float v2; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = 0.0;
-  result.fields.y = 0.0;
+  v1 = 0.0;
+  v2 = 0.0;
+  result.fields.y = v2;
+  result.fields.x = v1;
   return result;
 }
 
@@ -738,7 +754,7 @@ void UIVerticalImageRender__SetCharacter(
 
 void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, const MethodInfo *method)
 {
-  __int64 bodyRenderer; // x0
+  char *bodyRenderer; // x0
   int v4; // w8
   int v5; // w8
   float v6; // s0
@@ -755,7 +771,7 @@ void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, co
   struct UnityEngine_Texture2D_array *v17; // x8
   UnityEngine_Mesh_o *v18; // x20
   UIVerticalImageRender_c *v19; // x8
-  __int64 v20; // x21
+  char *v20; // x21
   unsigned int v21; // w9
   struct UIVerticalImageRender_StaticFields *static_fields; // x8
   int LEFT_X; // s0
@@ -779,7 +795,7 @@ void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, co
   struct UIVerticalImageRender_StaticFields *v41; // x8
   int v42; // s0
   int v43; // s1
-  __int64 v44; // x21
+  char *v44; // x21
   unsigned int v45; // w9
   float32x2_t *v46; // x10
   float v47; // s1
@@ -831,13 +847,15 @@ void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, co
   float32x2_t v93; // d0
   float32x2_t v94; // d1
   __int64 v95; // d2
-  System_Array_o *v96; // x21
-  long double v97; // q0
-  long double v98; // q3
-  bool v99; // zf
+  System_Array_o *v96; // x0
+  System_RuntimeFieldHandle_o v97; // x1
+  System_Int32_array *v98; // x21
+  long double v99; // q0
+  long double v100; // q3
+  bool v101; // zf
   _BOOL4 isTalkMask; // w8
-  const MethodInfo *v101; // x1
-  const MethodInfo *v102; // x2
+  const MethodInfo *v103; // x1
+  const MethodInfo *v104; // x2
 
   if ( (byte_5972263 & 1) == 0 )
   {
@@ -859,16 +877,16 @@ void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, co
     sub_2213A60(&StringLiteral_24741/*"silhouette"*/);
     byte_5972263 = 1;
   }
-  bodyRenderer = (__int64)UIVerticalImageRender_TypeInfo;
+  bodyRenderer = (char *)UIVerticalImageRender_TypeInfo;
   if ( !*(&UIVerticalImageRender_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(UIVerticalImageRender_TypeInfo, method);
-    bodyRenderer = (__int64)UIVerticalImageRender_TypeInfo;
+    bodyRenderer = (char *)UIVerticalImageRender_TypeInfo;
   }
-  v4 = *(_DWORD *)(*(_QWORD *)(bodyRenderer + 184) + 28LL);
+  v4 = *(_DWORD *)(*((_QWORD *)bodyRenderer + 23) + 28LL);
   this->fields.dispTop.fields.x = 0.0;
   this->fields.dispTop.fields.y = (float)-v4;
-  v5 = *(_DWORD *)(*(_QWORD *)(bodyRenderer + 184) + 28LL);
+  v5 = *(_DWORD *)(*((_QWORD *)bodyRenderer + 23) + 28LL);
   this->fields.dispOffset.fields.x = 0.0;
   v6 = (float)-v5;
   textureList = this->fields.textureList;
@@ -930,13 +948,13 @@ void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, co
     (System_String_o *)StringLiteral_17011/*"_SubTex"*/,
     (UnityEngine_Texture_o *)v17->m_Items[1],
     0);
-  bodyRenderer = (__int64)this->fields.bodyRenderer;
+  bodyRenderer = (char *)this->fields.bodyRenderer;
   if ( !bodyRenderer )
     goto LABEL_70;
   UnityEngine_Renderer__set_material((UnityEngine_Renderer_o *)bodyRenderer, v15, 0);
   v18 = (UnityEngine_Mesh_o *)sub_2213CCC(UnityEngine_Mesh_TypeInfo);
   UnityEngine_Mesh___ctor(v18, 0);
-  bodyRenderer = sub_2213B20(UnityEngine_Vector3___TypeInfo, 8);
+  bodyRenderer = (char *)sub_2213B20(UnityEngine_Vector3___TypeInfo, 8);
   v19 = UIVerticalImageRender_TypeInfo;
   v20 = bodyRenderer;
   if ( !*(&UIVerticalImageRender_TypeInfo->_2.cctor_finished + 1) )
@@ -946,150 +964,150 @@ void UIVerticalImageRender__SetCharacterRender(UIVerticalImageRender_o *this, co
   }
   if ( !v20 )
     goto LABEL_70;
-  v21 = *(_DWORD *)(v20 + 24);
+  v21 = *((_DWORD *)v20 + 6);
   if ( !v21 )
     goto LABEL_69;
   static_fields = v19->static_fields;
   LEFT_X = static_fields->LEFT_X;
   TOP_Y = static_fields->TOP_Y;
-  *(_DWORD *)(v20 + 40) = 0;
-  *(float *)(v20 + 32) = (float)LEFT_X;
-  *(float *)(v20 + 36) = (float)TOP_Y;
+  *((_DWORD *)v20 + 10) = 0;
+  *((float *)v20 + 8) = (float)LEFT_X;
+  *((float *)v20 + 9) = (float)TOP_Y;
   if ( v21 == 1 )
     goto LABEL_69;
   v25.n64_u64[0] = *(unsigned __int64 *)&UIVerticalImageRender_TypeInfo->static_fields->RIGHT_X;
-  *(_DWORD *)(v20 + 52) = 0;
+  *((_DWORD *)v20 + 13) = 0;
   *(float32x2_t *)(v20 + 44) = vcvt_f32_s32(v25);
   if ( v21 <= 2 )
     goto LABEL_69;
   v26 = UIVerticalImageRender_TypeInfo->static_fields;
   v27 = v26->LEFT_X;
   BOTTOM_Y = v26->BOTTOM_Y;
-  *(_DWORD *)(v20 + 64) = 0;
-  *(float *)(v20 + 56) = (float)v27;
-  *(float *)(v20 + 60) = (float)BOTTOM_Y;
+  *((_DWORD *)v20 + 16) = 0;
+  *((float *)v20 + 14) = (float)v27;
+  *((float *)v20 + 15) = (float)BOTTOM_Y;
   if ( v21 == 3 )
     goto LABEL_69;
   v29 = UIVerticalImageRender_TypeInfo->static_fields;
   RIGHT_X = v29->RIGHT_X;
   v31 = v29->BOTTOM_Y;
-  *(_DWORD *)(v20 + 76) = 0;
-  *(float *)(v20 + 68) = (float)RIGHT_X;
-  *(float *)(v20 + 72) = (float)v31;
+  *((_DWORD *)v20 + 19) = 0;
+  *((float *)v20 + 17) = (float)RIGHT_X;
+  *((float *)v20 + 18) = (float)v31;
   if ( v21 <= 4 )
     goto LABEL_69;
   v32 = UIVerticalImageRender_TypeInfo->static_fields;
   v33 = v32->LEFT_X;
   v34 = v32->BOTTOM_Y;
-  *(_DWORD *)(v20 + 88) = 0;
-  *(float *)(v20 + 80) = (float)v33;
-  *(float *)(v20 + 84) = (float)v34;
+  *((_DWORD *)v20 + 22) = 0;
+  *((float *)v20 + 20) = (float)v33;
+  *((float *)v20 + 21) = (float)v34;
   if ( v21 == 5 )
     goto LABEL_69;
   v35 = UIVerticalImageRender_TypeInfo->static_fields;
   v36 = v35->RIGHT_X;
   v37 = v35->BOTTOM_Y;
-  *(_DWORD *)(v20 + 100) = 0;
-  *(float *)(v20 + 92) = (float)v36;
-  *(float *)(v20 + 96) = (float)v37;
+  *((_DWORD *)v20 + 25) = 0;
+  *((float *)v20 + 23) = (float)v36;
+  *((float *)v20 + 24) = (float)v37;
   if ( v21 <= 6 )
     goto LABEL_69;
   v38 = UIVerticalImageRender_TypeInfo->static_fields;
   v39 = v38->LEFT_X;
   BOTTOM_Y2 = v38->BOTTOM_Y2;
-  *(_DWORD *)(v20 + 112) = 0;
-  *(float *)(v20 + 104) = (float)v39;
-  *(float *)(v20 + 108) = (float)BOTTOM_Y2;
+  *((_DWORD *)v20 + 28) = 0;
+  *((float *)v20 + 26) = (float)v39;
+  *((float *)v20 + 27) = (float)BOTTOM_Y2;
   if ( v21 == 7 )
     goto LABEL_69;
   v41 = UIVerticalImageRender_TypeInfo->static_fields;
   v42 = v41->RIGHT_X;
   v43 = v41->BOTTOM_Y2;
-  *(_DWORD *)(v20 + 124) = 0;
-  *(float *)(v20 + 116) = (float)v42;
-  *(float *)(v20 + 120) = (float)v43;
+  *((_DWORD *)v20 + 31) = 0;
+  *((float *)v20 + 29) = (float)v42;
+  *((float *)v20 + 30) = (float)v43;
   if ( !v18 )
     goto LABEL_70;
   UnityEngine_Mesh__set_vertices(v18, (UnityEngine_Vector3_array *)v20, 0);
-  bodyRenderer = sub_2213B20(UnityEngine_Vector3___TypeInfo, 8);
+  bodyRenderer = (char *)sub_2213B20(UnityEngine_Vector3___TypeInfo, 8);
   v44 = bodyRenderer;
   if ( !byte_5969AE9 )
   {
-    bodyRenderer = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    bodyRenderer = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE9 = 1;
   }
   if ( !v44 )
 LABEL_70:
     sub_2213CDC(bodyRenderer, method);
-  v45 = *(_DWORD *)(v44 + 24);
+  v45 = *((_DWORD *)v44 + 6);
   if ( !v45 )
     goto LABEL_69;
   v46 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v47 = -v46[10].n64_f32[0];
-  *(float32x2_t *)(v44 + 32) = vneg_f32(v46[9]);
-  *(float *)(v44 + 40) = v47;
+  *((float32x2_t *)v44 + 4) = vneg_f32(v46[9]);
+  *((float *)v44 + 10) = v47;
   if ( (v45 & 0xFFFFFFFE) == 0 )
     goto LABEL_69;
   v48 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v49 = -v48[10].n64_f32[0];
   *(float32x2_t *)(v44 + 44) = vneg_f32(v48[9]);
-  *(float *)(v44 + 52) = v49;
+  *((float *)v44 + 13) = v49;
   if ( v45 <= 2 )
     goto LABEL_69;
   v50 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v51 = -v50[10].n64_f32[0];
-  *(float32x2_t *)(v44 + 56) = vneg_f32(v50[9]);
-  *(float *)(v44 + 64) = v51;
+  *((float32x2_t *)v44 + 7) = vneg_f32(v50[9]);
+  *((float *)v44 + 16) = v51;
   if ( (v45 & 0xFFFFFFFC) == 0 )
     goto LABEL_69;
   v52 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v53 = -v52[10].n64_f32[0];
   *(float32x2_t *)(v44 + 68) = vneg_f32(v52[9]);
-  *(float *)(v44 + 76) = v53;
+  *((float *)v44 + 19) = v53;
   if ( v45 <= 4 )
     goto LABEL_69;
   v54 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v55 = -v54[10].n64_f32[0];
-  *(float32x2_t *)(v44 + 80) = vneg_f32(v54[9]);
-  *(float *)(v44 + 88) = v55;
+  *((float32x2_t *)v44 + 10) = vneg_f32(v54[9]);
+  *((float *)v44 + 22) = v55;
   if ( v45 == 5 )
     goto LABEL_69;
   v56 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v57 = -v56[10].n64_f32[0];
   *(float32x2_t *)(v44 + 92) = vneg_f32(v56[9]);
-  *(float *)(v44 + 100) = v57;
+  *((float *)v44 + 25) = v57;
   if ( v45 <= 6 )
     goto LABEL_69;
   v58 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v59 = -v58[10].n64_f32[0];
-  *(float32x2_t *)(v44 + 104) = vneg_f32(v58[9]);
-  *(float *)(v44 + 112) = v59;
+  *((float32x2_t *)v44 + 13) = vneg_f32(v58[9]);
+  *((float *)v44 + 28) = v59;
   if ( (v45 & 0xFFFFFFF8) == 0 )
     goto LABEL_69;
   v60 = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
   v61 = -v60[10].n64_f32[0];
   *(float32x2_t *)(v44 + 116) = vneg_f32(v60[9]);
-  *(float *)(v44 + 124) = v61;
+  *((float *)v44 + 31) = v61;
   UnityEngine_Mesh__set_normals(v18, (UnityEngine_Vector3_array *)v44, 0);
-  bodyRenderer = sub_2213B20(UnityEngine_Vector2___TypeInfo, 8);
+  bodyRenderer = (char *)sub_2213B20(UnityEngine_Vector2___TypeInfo, 8);
   if ( !bodyRenderer )
     goto LABEL_70;
-  v62 = *(_DWORD *)(bodyRenderer + 24);
+  v62 = *((_DWORD *)bodyRenderer + 6);
   if ( !v62 )
     goto LABEL_69;
-  *(_QWORD *)(bodyRenderer + 32) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U;
+  *((_QWORD *)bodyRenderer + 4) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U;
   if ( v62 == 1 )
     goto LABEL_69;
   v63 = UIVerticalImageRender_TypeInfo->static_fields;
   BODY_V = v63->BODY_V;
-  *(float *)(bodyRenderer + 40) = v63->BODY_U + v63->BODY_W;
-  *(float *)(bodyRenderer + 44) = BODY_V;
+  *((float *)bodyRenderer + 10) = v63->BODY_U + v63->BODY_W;
+  *((float *)bodyRenderer + 11) = BODY_V;
   if ( v62 <= 2 )
     goto LABEL_69;
   v65 = UIVerticalImageRender_TypeInfo->static_fields;
   v66 = v65->BODY_V - v65->BODY_H;
-  *(float *)(bodyRenderer + 48) = v65->BODY_U;
-  *(float *)(bodyRenderer + 52) = v66;
+  *((_DWORD *)bodyRenderer + 12) = LODWORD(v65->BODY_U);
+  *((float *)bodyRenderer + 13) = v66;
   if ( v62 == 3 )
     goto LABEL_69;
   v67 = UIVerticalImageRender_TypeInfo->static_fields;
@@ -1097,22 +1115,22 @@ LABEL_70:
   v69.n64_u64[0] = *(unsigned __int64 *)&v67->BODY_W;
   LODWORD(v70) = vadd_f32(v68, v69).n64_u32[0];
   HIDWORD(v70) = vsub_f32(v68, v69).n64_u32[1];
-  *(_QWORD *)(bodyRenderer + 56) = v70;
+  *((_QWORD *)bodyRenderer + 7) = v70;
   if ( v62 <= 4 )
     goto LABEL_69;
-  *(_QWORD *)(bodyRenderer + 64) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U2;
+  *((_QWORD *)bodyRenderer + 8) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U2;
   if ( v62 == 5 )
     goto LABEL_69;
   v71 = UIVerticalImageRender_TypeInfo->static_fields;
   BODY_V2 = v71->BODY_V2;
-  *(float *)(bodyRenderer + 72) = v71->BODY_U2 + v71->BODY_W;
-  *(float *)(bodyRenderer + 76) = BODY_V2;
+  *((float *)bodyRenderer + 18) = v71->BODY_U2 + v71->BODY_W;
+  *((float *)bodyRenderer + 19) = BODY_V2;
   if ( v62 <= 6 )
     goto LABEL_69;
   v73 = UIVerticalImageRender_TypeInfo->static_fields;
   v74 = v73->BODY_V2 - v73->BODY_H;
-  *(float *)(bodyRenderer + 80) = v73->BODY_U2;
-  *(float *)(bodyRenderer + 84) = v74;
+  *((_DWORD *)bodyRenderer + 20) = LODWORD(v73->BODY_U2);
+  *((float *)bodyRenderer + 21) = v74;
   if ( v62 == 7 )
     goto LABEL_69;
   v75 = UIVerticalImageRender_TypeInfo->static_fields;
@@ -1120,27 +1138,27 @@ LABEL_70:
   v77.n64_u64[0] = *(unsigned __int64 *)&v75->BODY_W;
   LODWORD(v78) = vadd_f32(v76, v77).n64_u32[0];
   HIDWORD(v78) = vsub_f32(v76, v77).n64_u32[1];
-  *(_QWORD *)(bodyRenderer + 88) = v78;
+  *((_QWORD *)bodyRenderer + 11) = v78;
   UnityEngine_Mesh__set_uv(v18, (UnityEngine_Vector2_array *)bodyRenderer, 0);
-  bodyRenderer = sub_2213B20(UnityEngine_Vector2___TypeInfo, 8);
+  bodyRenderer = (char *)sub_2213B20(UnityEngine_Vector2___TypeInfo, 8);
   if ( !bodyRenderer )
     goto LABEL_70;
-  v79 = *(_DWORD *)(bodyRenderer + 24);
+  v79 = *((_DWORD *)bodyRenderer + 6);
   if ( !v79 )
     goto LABEL_69;
-  *(_QWORD *)(bodyRenderer + 32) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U;
+  *((_QWORD *)bodyRenderer + 4) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U;
   if ( v79 == 1 )
     goto LABEL_69;
   v80 = UIVerticalImageRender_TypeInfo->static_fields;
   v81 = v80->BODY_V;
-  *(float *)(bodyRenderer + 40) = v80->BODY_U + v80->BODY_W;
-  *(float *)(bodyRenderer + 44) = v81;
+  *((float *)bodyRenderer + 10) = v80->BODY_U + v80->BODY_W;
+  *((float *)bodyRenderer + 11) = v81;
   if ( v79 <= 2 )
     goto LABEL_69;
   v82 = UIVerticalImageRender_TypeInfo->static_fields;
   v83 = v82->BODY_V - v82->BODY_H;
-  *(float *)(bodyRenderer + 48) = v82->BODY_U;
-  *(float *)(bodyRenderer + 52) = v83;
+  *((_DWORD *)bodyRenderer + 12) = LODWORD(v82->BODY_U);
+  *((float *)bodyRenderer + 13) = v83;
   if ( v79 == 3 )
     goto LABEL_69;
   v84 = UIVerticalImageRender_TypeInfo->static_fields;
@@ -1148,21 +1166,21 @@ LABEL_70:
   v86.n64_u64[0] = *(unsigned __int64 *)&v84->BODY_W;
   LODWORD(v87) = vadd_f32(v85, v86).n64_u32[0];
   HIDWORD(v87) = vsub_f32(v85, v86).n64_u32[1];
-  *(_QWORD *)(bodyRenderer + 56) = v87;
+  *((_QWORD *)bodyRenderer + 7) = v87;
   if ( v79 <= 4 )
     goto LABEL_69;
-  *(_QWORD *)(bodyRenderer + 64) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U2;
+  *((_QWORD *)bodyRenderer + 8) = *(_QWORD *)&UIVerticalImageRender_TypeInfo->static_fields->BODY_U2;
   if ( v79 == 5 )
     goto LABEL_69;
   v88 = UIVerticalImageRender_TypeInfo->static_fields;
   v89 = v88->BODY_V2;
-  *(float *)(bodyRenderer + 72) = v88->BODY_U2 + v88->BODY_W;
-  *(float *)(bodyRenderer + 76) = v89;
+  *((float *)bodyRenderer + 18) = v88->BODY_U2 + v88->BODY_W;
+  *((float *)bodyRenderer + 19) = v89;
   if ( v79 <= 6
     || (v90 = UIVerticalImageRender_TypeInfo->static_fields,
         v91 = v90->BODY_V2 - v90->BODY_H,
-        *(float *)(bodyRenderer + 80) = v90->BODY_U2,
-        *(float *)(bodyRenderer + 84) = v91,
+        *((_DWORD *)bodyRenderer + 20) = LODWORD(v90->BODY_U2),
+        *((float *)bodyRenderer + 21) = v91,
         v79 == 7) )
   {
 LABEL_69:
@@ -1173,38 +1191,37 @@ LABEL_69:
   v94.n64_u64[0] = *(unsigned __int64 *)&v92->BODY_W;
   LODWORD(v95) = vadd_f32(v93, v94).n64_u32[0];
   HIDWORD(v95) = vsub_f32(v93, v94).n64_u32[1];
-  *(_QWORD *)(bodyRenderer + 88) = v95;
+  *((_QWORD *)bodyRenderer + 11) = v95;
   UnityEngine_Mesh__set_uv2(v18, (UnityEngine_Vector2_array *)bodyRenderer, 0);
   v96 = (System_Array_o *)sub_2213B20(int___TypeInfo, 12);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v96,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__D34B481CF7365656E79A8F13CBD15BBF6B12B11B23727F2345088914BFC15F80,
-    0);
-  UnityEngine_Mesh__set_triangles(v18, (System_Int32_array *)v96, 0);
-  bodyRenderer = (__int64)this->fields.bodyFilter;
+  v97.fields.value = Field__PrivateImplementationDetails__D34B481CF7365656E79A8F13CBD15BBF6B12B11B23727F2345088914BFC15F80;
+  v98 = (System_Int32_array *)v96;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v96, v97, 0);
+  UnityEngine_Mesh__set_triangles(v18, v98, 0);
+  bodyRenderer = (char *)this->fields.bodyFilter;
   if ( !bodyRenderer )
     goto LABEL_70;
   UnityEngine_MeshFilter__set_mesh((UnityEngine_MeshFilter_o *)bodyRenderer, v18, 0);
   UnityEngine_Mesh__RecalculateNormals(v18, 0);
   UnityEngine_Mesh__RecalculateBounds(v18, 0);
-  LODWORD(v97) = 1.0;
-  *(float *)&v98 = this->fields.mColor.fields.a;
-  v99 = !this->fields.isShadow;
+  LODWORD(v99) = 1.0;
+  *(float *)&v100 = this->fields.mColor.fields.a;
+  v101 = !this->fields.isShadow;
   isTalkMask = this->fields.isTalkMask;
   this->fields.isBusyMoveAlpha = 0;
-  if ( !v99 )
-    *(float *)&v97 = 0.1;
+  if ( !v101 )
+    *(float *)&v99 = 0.1;
   if ( isTalkMask )
-    *(float *)&v97 = *(float *)&v97 * 0.5;
+    *(float *)&v99 = *(float *)&v99 * 0.5;
   ((void (__fastcall *)(UIVerticalImageRender_o *, const MethodInfo *, long double, float, float, long double))this->klass->vtable._39_SetTweenColor.methodPtr)(
     this,
     this->klass->vtable._39_SetTweenColor.method,
-    v97,
-    *(float *)&v97,
-    *(float *)&v97,
-    v98);
-  UIVerticalImageRender__SetFilterColor(this, this->fields.filterColor, v101);
-  UIVerticalImageRender__SetActive(this, 1, v102);
+    v99,
+    *(float *)&v99,
+    *(float *)&v99,
+    v100);
+  UIVerticalImageRender__SetFilterColor(this, this->fields.filterColor, v103);
+  UIVerticalImageRender__SetActive(this, 1, v104);
 }
 
 
@@ -1212,19 +1229,24 @@ void UIVerticalImageRender__SetDepth(UIVerticalImageRender_o *this, float d, con
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
-  unsigned __int64 localPosition; // kr00_8
-  UnityEngine_Vector3_o v8; // 0:kr14_12.12
+  float x; // s9
+  float y; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(transform, 0),
+    || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
+        x = localPosition.fields.x,
+        y = localPosition.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
     sub_2213CDC(transform, v6);
   }
-  *(_QWORD *)&v8.fields.x = localPosition;
-  v8.fields.z = -d;
-  UnityEngine_Transform__set_localPosition(transform, v8, 0);
+  v10.fields.z = -d;
+  v10.fields.x = x;
+  v10.fields.y = y;
+  UnityEngine_Transform__set_localPosition(transform, v10, 0);
 }
 
 

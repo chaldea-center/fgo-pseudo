@@ -193,7 +193,7 @@ void NoblePhantasmTargetOverwriteTransform__SaveOriginal(
 {
   __int64 v4; // x1
   UnityEngine_Transform_o *targetNode; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(this, targetActor, method);
   targetNode = this->fields.targetNode;

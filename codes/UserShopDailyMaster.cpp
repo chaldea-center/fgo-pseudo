@@ -56,6 +56,7 @@ UserShopDailyEntity_o *UserShopDailyMaster__GetEntityDefinitely(
   __int64 v19; // x0
   UserShopDailyEntity_o *v20; // x19
   const MethodInfo *v21; // x1
+  UserShopDailyEntity_o *result; // x0
 
   if ( (byte_597195F & 1) == 0 )
   {
@@ -101,8 +102,9 @@ LABEL_8:
     if ( v20 )
     {
       v20->fields.userId = userId;
+      result = v20;
       v20->fields.shopId = shopId;
-      return v20;
+      return result;
     }
 LABEL_21:
     sub_2213CDC(lookup, v9);
@@ -132,10 +134,10 @@ LABEL_21:
 LABEL_16:
     v19 = sub_224BC3C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopDailyEntity__TypeInfo, 2);
   }
-  return (*(UserShopDailyEntity_o *(__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
-           v16,
-           PK,
-           *(_QWORD *)(v19 + 8));
+  return (UserShopDailyEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
+                                    v16,
+                                    PK,
+                                    *(_QWORD *)(v19 + 8));
 }
 
 

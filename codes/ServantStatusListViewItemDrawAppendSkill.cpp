@@ -52,7 +52,7 @@ void ServantStatusListViewItemDrawAppendSkill__Awake(
   __int64 v6; // x2
   ServantStatusListViewItemDrawAppendSkill_c *v7; // x0
   float SKILL_BASE_POS_Y; // s0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
   if ( (byte_596D32B & 1) == 0 )

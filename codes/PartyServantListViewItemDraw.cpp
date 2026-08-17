@@ -763,48 +763,50 @@ void PartyServantListViewItemDraw__SetItem(
   UILabel_o *v70; // x21
   System_String_o *v71; // x23
   Il2CppObject *v72; // x0
-  float v73; // s10
-  UnityEngine_Vector2_o v74; // x2
-  float v75; // s11
-  UIWidget_o *v76; // x21
-  unsigned int v77; // w9
-  int32_t v78; // w1
-  float v79; // s12
-  __int64 v80; // x1
-  __int64 v81; // x2
-  UISprite_o *svtPointIconSprite; // x21
-  __int64 v83; // x8
-  _QWORD *v84; // x9
-  __int64 v85; // x10
-  __int64 v86; // x8
-  SwitchUIWidgetComponent_o *switchInfoComp; // x21
-  QuestRestrictionInfo_o *v88; // x0
-  __int64 v89; // x2
-  __int64 v90; // x1
-  __int64 v91; // x2
-  struct UILabel_o *wavePartyLabel; // x20
-  System_String_o *v93; // x1
-  UILabel_o *v94; // x0
-  __int64 v95; // x1
-  __int64 v96; // x2
-  struct UILabel_o *v97; // x21
-  System_String_o *v98; // x22
-  Il2CppObject *v99; // x23
-  Il2CppObject *v100; // x0
-  System_String_o *v101; // x0
-  int32_t OrganizedWave_k__BackingField; // w8
-  System_String_o *v103; // x20
-  Il2CppObject *v104; // x0
-  unsigned int v105; // s0
+  float y; // s8
+  float z; // s9
+  unsigned int v75; // s0
+  float v76; // s10
+  UnityEngine_Vector2_o v77; // x2
+  float v78; // s11
+  UIWidget_o *v79; // x21
+  unsigned int v80; // w9
+  int32_t v81; // w1
   unsigned int localScale; // s0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v107; // [xsp+20h] [xbp-100h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v108; // [xsp+40h] [xbp-E0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v109; // [xsp+60h] [xbp-C0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v110; // [xsp+80h] [xbp-A0h] BYREF
+  float v83; // s12
+  __int64 v84; // x1
+  __int64 v85; // x2
+  UISprite_o *svtPointIconSprite; // x21
+  __int64 v87; // x8
+  _QWORD *v88; // x9
+  __int64 v89; // x10
+  __int64 v90; // x8
+  SwitchUIWidgetComponent_o *switchInfoComp; // x21
+  QuestRestrictionInfo_o *v92; // x0
+  __int64 v93; // x2
+  __int64 v94; // x1
+  __int64 v95; // x2
+  struct UILabel_o *wavePartyLabel; // x20
+  System_String_o *v97; // x1
+  UILabel_o *v98; // x0
+  __int64 v99; // x1
+  __int64 v100; // x2
+  struct UILabel_o *v101; // x21
+  System_String_o *v102; // x22
+  Il2CppObject *v103; // x23
+  Il2CppObject *v104; // x0
+  System_String_o *v105; // x0
+  int32_t OrganizedWave_k__BackingField; // w8
+  System_String_o *v107; // x20
+  Il2CppObject *v108; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v109; // [xsp+20h] [xbp-100h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v110; // [xsp+40h] [xbp-E0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v111; // [xsp+60h] [xbp-C0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v112; // [xsp+80h] [xbp-A0h] BYREF
   int32_t MaxWave_k__BackingField; // [xsp+A8h] [xbp-78h] BYREF
   int32_t SvtPointRank_k__BackingField; // [xsp+ACh] [xbp-74h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v114; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v116; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596C21F & 1) == 0 )
   {
@@ -874,20 +876,20 @@ void PartyServantListViewItemDraw__SetItem(
     if ( userServantEntity )
     {
       v16 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
-      *(_OWORD *)&v110.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v110.fields.fakeValue = v16;
+      *(_OWORD *)&v112.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v112.fields.fakeValue = v16;
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, svtPointComp, v12);
-      v109 = v110;
-      IsRestrictionActiveGrandBoard = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v109, 0);
+      v111 = v112;
+      IsRestrictionActiveGrandBoard = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v111, 0);
       v17 = item->fields.userServantEntity;
       if ( !v17 )
         goto LABEL_143;
       v18 = *(_OWORD *)&v17->fields.id.fields.fakeValue;
-      *(_OWORD *)&v108.fields.currentCryptoKey = *(_OWORD *)&v17->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v108.fields.fakeValue = v18;
+      *(_OWORD *)&v110.fields.currentCryptoKey = *(_OWORD *)&v17->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v110.fields.fakeValue = v18;
       if ( IsRestrictionActiveGrandBoard == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(
-                                              &v108,
+                                              &v110,
                                               0) )
       {
         IsGrandServant = 1;
@@ -1083,8 +1085,8 @@ LABEL_143:
           v69 = (Il2CppObject *)LocalizationManager__Get(v68, 0);
           v70 = this->fields.svtPointInfoLabel;
           v71 = LocalizationManager__Get((System_String_o *)StringLiteral_10706/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, 0);
-          LODWORD(v110.fields.currentCryptoKey) = item->fields._SvtPoint_k__BackingField;
-          v72 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v110);
+          LODWORD(v112.fields.currentCryptoKey) = item->fields._SvtPoint_k__BackingField;
+          v72 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v112);
           IsRestrictionActiveGrandBoard = (int64_t)System_String__Format_75697880(v71, v69, v72, 0);
           if ( !v70 )
             goto LABEL_143;
@@ -1115,31 +1117,33 @@ LABEL_143:
           IsRestrictionActiveGrandBoard = (int64_t)this->fields.svtPointInfoLabel;
           if ( !IsRestrictionActiveGrandBoard )
             goto LABEL_143;
+          y = localPosition.fields.y;
+          z = localPosition.fields.z;
           IsRestrictionActiveGrandBoard = (int64_t)UnityEngine_Component__get_transform(
                                                      (UnityEngine_Component_o *)IsRestrictionActiveGrandBoard,
                                                      0);
           if ( !IsRestrictionActiveGrandBoard )
             goto LABEL_143;
-          v105 = (unsigned int)UnityEngine_Transform__get_localPosition(
-                                 (UnityEngine_Transform_o *)IsRestrictionActiveGrandBoard,
-                                 0);
+          v75 = (unsigned int)UnityEngine_Transform__get_localPosition(
+                                (UnityEngine_Transform_o *)IsRestrictionActiveGrandBoard,
+                                0);
           IsRestrictionActiveGrandBoard = (int64_t)this->fields.svtPointInfoLabel;
           if ( !IsRestrictionActiveGrandBoard )
             goto LABEL_143;
-          v73 = *(float *)&v105;
-          LODWORD(v75) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)IsRestrictionActiveGrandBoard, 0);
-          v76 = (UIWidget_o *)this->fields.svtPointInfoLabel;
+          v76 = *(float *)&v75;
+          LODWORD(v78) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)IsRestrictionActiveGrandBoard, 0);
+          v79 = (UIWidget_o *)this->fields.svtPointInfoLabel;
           IsRestrictionActiveGrandBoard = (int64_t)System_Math_TypeInfo;
           if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
             ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(
               System_Math_TypeInfo,
               svtPointComp,
-              v74);
-          if ( !v76 )
+              v77);
+          if ( !v79 )
             goto LABEL_143;
-          v77 = vcvtps_s32_f32(v75);
-          v78 = ceilf(v75) == INFINITY ? 0x80000000 : v77;
-          UIWidget__set_width(v76, v78, 0);
+          v80 = vcvtps_s32_f32(v78);
+          v81 = ceilf(v78) == INFINITY ? 0x80000000 : v80;
+          UIWidget__set_width(v79, v81, 0);
           IsRestrictionActiveGrandBoard = (int64_t)this->fields.svtPointInfoLabel;
           if ( !IsRestrictionActiveGrandBoard )
             goto LABEL_143;
@@ -1162,45 +1166,45 @@ LABEL_143:
           IsRestrictionActiveGrandBoard = (int64_t)this->fields.svtPointBaseObj;
           if ( !IsRestrictionActiveGrandBoard )
             goto LABEL_143;
-          v79 = *(float *)&localScale;
+          v83 = *(float *)&localScale;
           IsRestrictionActiveGrandBoard = (int64_t)UnityEngine_GameObject__get_transform(
                                                      (UnityEngine_GameObject_o *)IsRestrictionActiveGrandBoard,
                                                      0);
           if ( !IsRestrictionActiveGrandBoard )
             goto LABEL_143;
-          v114.fields.y = localPosition.fields.y;
-          v114.fields.z = localPosition.fields.z;
-          v114.fields.x = -(float)(v73 + (float)(v75 * v79));
-          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsRestrictionActiveGrandBoard, v114, 0);
+          v116.fields.y = y;
+          v116.fields.z = z;
+          v116.fields.x = -(float)(v76 + (float)(v78 * v83));
+          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsRestrictionActiveGrandBoard, v116, 0);
           svtPointIconSprite = this->fields.svtPointIconSprite;
           if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v80, v81);
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v84, v85);
           AtlasManager__SetEventUI(svtPointIconSprite, (System_String_o *)StringLiteral_20646/*"func_group_icon_1028"*/, 0);
         }
         IsRestrictionActiveGrandBoard = (int64_t)this->fields.switchInfoList;
         if ( !IsRestrictionActiveGrandBoard )
           goto LABEL_143;
-        v83 = *(_QWORD *)(IsRestrictionActiveGrandBoard + 16);
+        v87 = *(_QWORD *)(IsRestrictionActiveGrandBoard + 16);
         svtPointComp = (Il2CppObject *)this->fields.costComp;
-        v84 = Method_System_Collections_Generic_List_UIWidget__Add__;
+        v88 = Method_System_Collections_Generic_List_UIWidget__Add__;
         ++*(_DWORD *)(IsRestrictionActiveGrandBoard + 28);
-        if ( !v83 )
+        if ( !v87 )
           goto LABEL_143;
-        v85 = *(int *)(IsRestrictionActiveGrandBoard + 24);
-        if ( (unsigned int)v85 >= *(_DWORD *)(v83 + 24) )
+        v89 = *(int *)(IsRestrictionActiveGrandBoard + 24);
+        if ( (unsigned int)v89 >= *(_DWORD *)(v87 + 24) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)IsRestrictionActiveGrandBoard,
             svtPointComp,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
         }
         else
         {
-          v86 = v83 + 8 * v85;
-          *(_DWORD *)(IsRestrictionActiveGrandBoard + 24) = v85 + 1;
-          *(_QWORD *)(v86 + 32) = svtPointComp;
+          v90 = v87 + 8 * v89;
+          *(_DWORD *)(IsRestrictionActiveGrandBoard + 24) = v89 + 1;
+          *(_QWORD *)(v90 + 32) = svtPointComp;
           sub_2213A04(
-            (MissionNaviTransitionBoardItem_o *)(v86 + 32),
+            (MissionNaviTransitionBoardItem_o *)(v90 + 32),
             (int32_t)svtPointComp,
             v53,
             v54,
@@ -1221,8 +1225,8 @@ LABEL_143:
         SwitchUIWidgetComponent__Set(switchInfoComp, (UIWidget_array *)IsRestrictionActiveGrandBoard, 0, 0);
         if ( item->fields._OrganizedWave_k__BackingField >= 1 )
         {
-          v88 = item->fields.questRestrictionInfo;
-          if ( v88 && QuestRestrictionInfo__IsWaveSetupSwitchParty(v88, 0) )
+          v92 = item->fields.questRestrictionInfo;
+          if ( v92 && QuestRestrictionInfo__IsWaveSetupSwitchParty(v92, 0) )
           {
             IsRestrictionActiveGrandBoard = (int64_t)this->fields.wavePartyCondensedLabel;
             if ( !IsRestrictionActiveGrandBoard )
@@ -1255,31 +1259,31 @@ LABEL_143:
               FlashingIconComponent__Clear((FlashingIconComponent_o *)IsRestrictionActiveGrandBoard, 0);
               wavePartyLabel = this->fields.wavePartyLabel;
               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v90, v91);
+                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v94, v95);
               IsRestrictionActiveGrandBoard = (int64_t)LocalizationManager__Get(
                                                          (System_String_o *)StringLiteral_16148/*"WAVE_BATTLE_SERVANT_PARTY_ACTIVE"*/,
                                                          0);
               if ( !wavePartyLabel )
                 goto LABEL_143;
-              v93 = (System_String_o *)IsRestrictionActiveGrandBoard;
-              v94 = wavePartyLabel;
+              v97 = (System_String_o *)IsRestrictionActiveGrandBoard;
+              v98 = wavePartyLabel;
               goto LABEL_140;
             }
-            v97 = this->fields.wavePartyLabel;
+            v101 = this->fields.wavePartyLabel;
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, svtPointComp, v89);
-            v101 = LocalizationManager__Get((System_String_o *)StringLiteral_16147/*"WAVE_BATTLE_SERVANT_PARTY"*/, 0);
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, svtPointComp, v93);
+            v105 = LocalizationManager__Get((System_String_o *)StringLiteral_16147/*"WAVE_BATTLE_SERVANT_PARTY"*/, 0);
             OrganizedWave_k__BackingField = item->fields._OrganizedWave_k__BackingField;
-            v103 = v101;
-            v104 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(OrganizedWave_k__BackingField, 0);
-            IsRestrictionActiveGrandBoard = (int64_t)System_String__Format(v103, v104, 0);
-            if ( !v97 )
+            v107 = v105;
+            v108 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(OrganizedWave_k__BackingField, 0);
+            IsRestrictionActiveGrandBoard = (int64_t)System_String__Format(v107, v108, 0);
+            if ( !v101 )
               goto LABEL_143;
 LABEL_139:
-            v93 = (System_String_o *)IsRestrictionActiveGrandBoard;
-            v94 = v97;
+            v97 = (System_String_o *)IsRestrictionActiveGrandBoard;
+            v98 = v101;
 LABEL_140:
-            UILabel__set_text(v94, v93, 0);
+            UILabel__set_text(v98, v97, 0);
             IsRestrictionActiveGrandBoard = (int64_t)this->fields.wavePartyIcon;
             if ( IsRestrictionActiveGrandBoard )
             {
@@ -1301,16 +1305,16 @@ LABEL_140:
             if ( !IsRestrictionActiveGrandBoard )
               goto LABEL_143;
             UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)IsRestrictionActiveGrandBoard, 1, 0);
-            v97 = this->fields.wavePartyLabel;
+            v101 = this->fields.wavePartyLabel;
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v95, v96);
-            v98 = LocalizationManager__Get((System_String_o *)StringLiteral_16152/*"WAVE_BATTLE_SERVANT_WAVE"*/, 0);
-            LODWORD(v110.fields.currentCryptoKey) = item->fields._OrganizedWave_k__BackingField;
-            v99 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v110);
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v99, v100);
+            v102 = LocalizationManager__Get((System_String_o *)StringLiteral_16152/*"WAVE_BATTLE_SERVANT_WAVE"*/, 0);
+            LODWORD(v112.fields.currentCryptoKey) = item->fields._OrganizedWave_k__BackingField;
+            v103 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v112);
             MaxWave_k__BackingField = item->fields._MaxWave_k__BackingField;
-            v100 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &MaxWave_k__BackingField);
-            IsRestrictionActiveGrandBoard = (int64_t)System_String__Format_75697880(v98, v99, v100, 0);
-            if ( !v97 )
+            v104 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &MaxWave_k__BackingField);
+            IsRestrictionActiveGrandBoard = (int64_t)System_String__Format_75697880(v102, v103, v104, 0);
+            if ( !v101 )
               goto LABEL_143;
             goto LABEL_139;
           }
@@ -1350,12 +1354,12 @@ LABEL_146:
         v27 = (UserServantGrandEntity_o *)IsRestrictionActiveGrandBoard;
         v28 = *(_OWORD *)&v26->fields.id.fields.fakeValue;
         v29 = *(_QWORD *)(IsRestrictionActiveGrandBoard + 32);
-        *(_OWORD *)&v110.fields.currentCryptoKey = *(_OWORD *)&v26->fields.id.fields.currentCryptoKey;
-        *(_OWORD *)&v110.fields.fakeValue = v28;
+        *(_OWORD *)&v112.fields.currentCryptoKey = *(_OWORD *)&v26->fields.id.fields.currentCryptoKey;
+        *(_OWORD *)&v112.fields.fakeValue = v28;
         if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, svtPointComp, v25);
-        v107 = v110;
-        IsGrandServant = v29 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v107, 0);
+        v109 = v112;
+        IsGrandServant = v29 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v109, 0);
         equipIdList = UserServantGrandEntity__GetEquipUserServantIdList(v27, 0);
         EquipFriendShipSkillChange_k__BackingField = UserServantGrandEntity__IsChangeFriendShipSvtEquipSkill(v27, 0);
         goto LABEL_34;
@@ -1367,6 +1371,7 @@ LABEL_146:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void PartyServantListViewItemDraw__SetMaskMessage(
         PartyServantListViewItemDraw_o *this,
         System_String_o *message,
@@ -1382,24 +1387,31 @@ void PartyServantListViewItemDraw__SetMaskMessage(
   __int64 v14; // x2
   UIWidget_o *v15; // x23
   System_String_o *v16; // x23
-  float v18; // s0
-  float v19; // s8
-  UnityEngine_Transform_o *v20; // x20
+  float v17; // s0 OVERLAPPED
+  float v18; // s3
+  float v19; // s1
+  float v20; // s2
+  float v21; // s0
+  float v22; // s8
+  UnityEngine_Transform_o *v23; // x20
   float maskMessageWidth; // s0
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
+  float x; // s0 OVERLAPPED
+  float z; // s2
+  float y; // s1
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  struct UnityEngine_Vector3_StaticFields *v29; // x8
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
   System_Collections_Generic_List_object__o *messageLabelList; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v32; // x10
+  _QWORD *v38; // x10
   __int64 size; // x11
-  Il2CppClass **v34; // x0
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  Il2CppClass **v40; // x0
+  UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v9 = message;
   if ( (byte_596C224 & 1) == 0 )
@@ -1427,11 +1439,11 @@ void PartyServantListViewItemDraw__SetMaskMessage(
     maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !maskSprite )
       goto LABEL_52;
-    v36.fields.r = 1.0;
-    v36.fields.g = 1.0;
-    v36.fields.b = 1.0;
-    v36.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)maskSprite, v36, 0);
+    v41.fields.r = 1.0;
+    v41.fields.g = 1.0;
+    v41.fields.b = 1.0;
+    v41.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)maskSprite, v41, 0);
     v15 = (UIWidget_o *)this->fields.maskSprite;
     maskSprite = (UnityEngine_Component_o *)PartyServantListViewItemDraw_TypeInfo;
     if ( !*(&PartyServantListViewItemDraw_TypeInfo->_2.cctor_finished + 1) )
@@ -1469,19 +1481,19 @@ void PartyServantListViewItemDraw__SetMaskMessage(
     maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !maskSprite )
       goto LABEL_52;
-    v37.fields.r = 0.0;
+    v17 = 0.0;
     if ( maskName )
     {
-      v37.fields.r = 1.0;
-      v37.fields.a = 1.0;
+      v17 = 1.0;
+      v18 = 1.0;
     }
     else
     {
-      v37.fields.a = 0.623;
+      v18 = 0.623;
     }
-    v37.fields.g = v37.fields.r;
-    v37.fields.b = v37.fields.r;
-    UIWidget__set_color((UIWidget_o *)maskSprite, v37, 0);
+    v19 = v17;
+    v20 = v17;
+    UIWidget__set_color((UIWidget_o *)maskSprite, *(UnityEngine_Color_o *)&v17, 0);
     maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
     if ( !maskSprite )
       goto LABEL_52;
@@ -1526,15 +1538,18 @@ void PartyServantListViewItemDraw__SetMaskMessage(
     if ( maskSprite )
     {
       maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(maskSprite, 0);
-      v20 = (UnityEngine_Transform_o *)maskSprite;
+      v23 = (UnityEngine_Transform_o *)maskSprite;
       if ( !byte_5969AE5 )
       {
         maskSprite = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
-      if ( v20 )
+      if ( v23 )
       {
-        oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+        static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+        y = static_fields->oneVector.fields.y;
+        z = static_fields->oneVector.fields.z;
+        x = static_fields->oneVector.fields.x;
         goto LABEL_47;
       }
     }
@@ -1543,39 +1558,42 @@ LABEL_52:
   }
   if ( !maskSprite )
     goto LABEL_52;
-  LODWORD(v18) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)maskSprite, 0);
+  LODWORD(v21) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)maskSprite, 0);
   maskSprite = (UnityEngine_Component_o *)this->fields.maskMessageLabel;
   if ( !maskSprite )
     goto LABEL_52;
-  v19 = v18;
+  v22 = v21;
   maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(maskSprite, 0);
-  v20 = (UnityEngine_Transform_o *)maskSprite;
+  v23 = (UnityEngine_Transform_o *)maskSprite;
   maskMessageWidth = (float)this->fields.maskMessageWidth;
-  if ( v19 <= maskMessageWidth )
+  if ( v22 <= maskMessageWidth )
   {
     if ( !byte_5969AE5 )
     {
       maskSprite = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
-    oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+    v29 = UnityEngine_Vector3_TypeInfo->static_fields;
+    x = v29->oneVector.fields.x;
+    y = v29->oneVector.fields.y;
+    z = v29->oneVector.fields.z;
   }
   else
   {
-    oneVector.fields.x = maskMessageWidth / v19;
-    oneVector.fields.z = 1.0;
-    oneVector.fields.y = 1.0;
+    x = maskMessageWidth / v22;
+    z = 1.0;
+    y = 1.0;
   }
-  if ( !v20 )
+  if ( !v23 )
     goto LABEL_52;
 LABEL_47:
-  UnityEngine_Transform__set_localScale(v20, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v23, *(UnityEngine_Vector3_o *)&x, 0);
   messageLabelList = (System_Collections_Generic_List_object__o *)this->fields.messageLabelList;
   if ( !messageLabelList )
     goto LABEL_52;
   items = messageLabelList->fields._items;
   message = (System_String_o *)this->fields.maskMessageLabel;
-  v32 = Method_System_Collections_Generic_List_UIWidget__Add__;
+  v38 = Method_System_Collections_Generic_List_UIWidget__Add__;
   ++messageLabelList->fields._version;
   if ( !items )
     goto LABEL_52;
@@ -1585,14 +1603,14 @@ LABEL_47:
     System_Collections_Generic_List_object___AddWithResize(
       messageLabelList,
       (Il2CppObject *)message,
-      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
   }
   else
   {
-    v34 = &items->obj.klass + size;
-    v34[4] = (Il2CppClass *)message;
+    v40 = &items->obj.klass + size;
+    v40[4] = (Il2CppClass *)message;
     messageLabelList->fields._size = size + 1;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v34 + 4), (int32_t)message, v24, v25, v26, v27, v28, v29);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v40 + 4), (int32_t)message, v30, v31, v32, v33, v34, v35);
   }
 }
 
@@ -1999,6 +2017,7 @@ LABEL_9:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void PartyServantListViewItemDraw__SetWarningMessage(
         PartyServantListViewItemDraw_o *this,
         System_String_o *message,
@@ -2011,18 +2030,22 @@ void PartyServantListViewItemDraw__SetWarningMessage(
   float v9; // s8
   UnityEngine_Transform_o *v10; // x20
   float warningMessageWidth; // s0
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
+  float x; // s0 OVERLAPPED
+  float z; // s2
+  float y; // s1
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  struct UnityEngine_Vector3_StaticFields *v16; // x8
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
   System_Collections_Generic_List_object__o *messageLabelList; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v22; // x10
+  _QWORD *v25; // x10
   __int64 size; // x11
-  Il2CppClass **v24; // x0
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
+  Il2CppClass **v27; // x0
 
   v5 = message;
   if ( (byte_596C225 & 1) == 0 )
@@ -2076,7 +2099,10 @@ void PartyServantListViewItemDraw__SetWarningMessage(
       }
       if ( v10 )
       {
-        oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+        static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+        y = static_fields->oneVector.fields.y;
+        z = static_fields->oneVector.fields.z;
+        x = static_fields->oneVector.fields.x;
         goto LABEL_25;
       }
     }
@@ -2100,24 +2126,27 @@ LABEL_30:
       maskSprite = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
-    oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+    v16 = UnityEngine_Vector3_TypeInfo->static_fields;
+    x = v16->oneVector.fields.x;
+    y = v16->oneVector.fields.y;
+    z = v16->oneVector.fields.z;
   }
   else
   {
-    oneVector.fields.x = warningMessageWidth / v9;
-    oneVector.fields.z = 1.0;
-    oneVector.fields.y = 1.0;
+    x = warningMessageWidth / v9;
+    z = 1.0;
+    y = 1.0;
   }
   if ( !v10 )
     goto LABEL_30;
 LABEL_25:
-  UnityEngine_Transform__set_localScale(v10, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v10, *(UnityEngine_Vector3_o *)&x, 0);
   messageLabelList = (System_Collections_Generic_List_object__o *)this->fields.messageLabelList;
   if ( !messageLabelList )
     goto LABEL_30;
   items = messageLabelList->fields._items;
   message = (System_String_o *)this->fields.warningMessageLabel;
-  v22 = Method_System_Collections_Generic_List_UIWidget__Add__;
+  v25 = Method_System_Collections_Generic_List_UIWidget__Add__;
   ++messageLabelList->fields._version;
   if ( !items )
     goto LABEL_30;
@@ -2127,14 +2156,14 @@ LABEL_25:
     System_Collections_Generic_List_object___AddWithResize(
       messageLabelList,
       (Il2CppObject *)message,
-      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
   }
   else
   {
-    v24 = &items->obj.klass + size;
-    v24[4] = (Il2CppClass *)message;
+    v27 = &items->obj.klass + size;
+    v27[4] = (Il2CppClass *)message;
     messageLabelList->fields._size = size + 1;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v24 + 4), (int32_t)message, v14, v15, v16, v17, v18, v19);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 4), (int32_t)message, v17, v18, v19, v20, v21, v22);
   }
 }
 

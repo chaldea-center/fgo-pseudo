@@ -338,7 +338,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Create(intptr_t *installer, const M
     v3 = (void *)sub_2214114(v5);
     off_5969768 = v3;
   }
-  return ((int32_t (__fastcall *)(intptr_t *, const MethodInfo *))v3)(installer, method);
+  return ((__int64 (__fastcall *)(intptr_t *, const MethodInfo *))v3)(installer, method);
 }
 
 
@@ -362,7 +362,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Destroy(intptr_t installer, const M
     v3 = (void *)sub_2214114(v5);
     off_5969770 = v3;
   }
-  return ((int32_t (__fastcall *)(intptr_t, const MethodInfo *))v3)(installer, method);
+  return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v3)(installer, method);
 }
 
 
@@ -386,7 +386,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_ExecuteMain(const MethodInfo *metho
     v1 = (void *)sub_2214114(v3);
     off_5969760 = v1;
   }
-  return ((int32_t (*)(void))v1)();
+  return ((__int64 (*)(void))v1)();
 }
 
 
@@ -410,7 +410,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Finalize(const MethodInfo *method)
     v1 = (void *)sub_2214114(v3);
     off_5969758 = v1;
   }
-  return ((int32_t (*)(void))v1)();
+  return ((__int64 (*)(void))v1)();
 }
 
 
@@ -434,7 +434,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_GetCRC32(intptr_t installer, uint32
     v5 = (void *)sub_2214114(v7);
     off_5969790 = v5;
   }
-  return ((int32_t (__fastcall *)(intptr_t, uint32_t *, const MethodInfo *))v5)(installer, crc32, method);
+  return ((__int64 (__fastcall *)(intptr_t, uint32_t *, const MethodInfo *))v5)(installer, crc32, method);
 }
 
 
@@ -461,7 +461,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_GetStatusInfo(
     v5 = (void *)sub_2214114(v7);
     off_5969788 = v5;
   }
-  return ((int32_t (__fastcall *)(intptr_t, CriFsWebInstaller_StatusInfo_o *, const MethodInfo *))v5)(
+  return ((__int64 (__fastcall *)(intptr_t, CriFsWebInstaller_StatusInfo_o *, const MethodInfo *))v5)(
            installer,
            status,
            method);
@@ -507,7 +507,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Initialize(
     *(_QWORD *)&v28 = 0x200000000LL;
     DWORD2(v28) = 8;
     BYTE12(v28) = 0;
-    off_5969750 = (int32_t (__fastcall *)(_QWORD))sub_2214114(v26);
+    off_5969750 = (__int64 (__fastcall *)(_QWORD))sub_2214114(v26);
   }
   numInstallers = config->fields.numInstallers;
   proxyHost = config->fields.proxyHost;
@@ -602,7 +602,7 @@ int32_t CriFsWebInstaller__criFsWebInstaller_Stop(intptr_t installer, const Meth
     v3 = (void *)sub_2214114(v5);
     off_5969780 = v3;
   }
-  return ((int32_t (__fastcall *)(intptr_t, const MethodInfo *))v3)(installer, method);
+  return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v3)(installer, method);
 }
 
 
@@ -683,5 +683,5 @@ void CriFsWebInstaller__set_isInitialized(bool value, const MethodInfo *method)
 CriFsWebInstaller_ModulePlatformConfig_o CriFsWebInstaller_ModulePlatformConfig__get_defaultConfig(
         const MethodInfo *method)
 {
-  return 0;
+  return (CriFsWebInstaller_ModulePlatformConfig_o)0;
 }

@@ -674,11 +674,11 @@ void ServantEquipEffectFilterController__RefreshContainers(
   float v63; // s0
   int v64; // w9
   UnityEngine_GameObject_o *v65; // x0
-  float y; // s1
-  System_Collections_Generic_List_Enumerator_T__o v67; // [xsp+18h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v68; // [xsp+30h] [xbp-A0h] BYREF
-  FunctionCategoryMaster_o *v69; // [xsp+58h] [xbp-78h]
-  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
+  System_Collections_Generic_List_Enumerator_T__o v66; // [xsp+18h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v67; // [xsp+30h] [xbp-A0h] BYREF
+  FunctionCategoryMaster_o *v68; // [xsp+58h] [xbp-78h]
+  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B1DA & 1) == 0 )
   {
@@ -700,7 +700,7 @@ void ServantEquipEffectFilterController__RefreshContainers(
     sub_2213A60(&StringLiteral_4859/*"Container_"*/);
     byte_596B1DA = 1;
   }
-  memset(&v68, 0, sizeof(v68));
+  memset(&v67, 0, sizeof(v67));
   v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ServantEquipEffectFilterContainer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
@@ -724,18 +724,18 @@ void ServantEquipEffectFilterController__RefreshContainers(
     goto LABEL_44;
   v16 = (FunctionCategoryMaster_o *)MasterData_object;
   System_Collections_Generic_List_Int32Enum___GetEnumerator(
-    &v67,
+    &v66,
     (System_Collections_Generic_List_T__o *)this->fields.displayGroups,
     (const MethodInfo_446A538 *)Method_System_Collections_Generic_List_FunctionCategoryEntity_GroupType__GetEnumerator__);
   v17 = 0;
-  v68 = v67;
+  v67 = v66;
 LABEL_10:
   v18 = v17;
   while ( System_Collections_Generic_List_Enumerator_Int32Enum___MoveNext(
-            &v68,
+            &v67,
             (const MethodInfo_40F6F90 *)Method_System_Collections_Generic_List_Enumerator_FunctionCategoryEntity_GroupType__MoveNext__) )
   {
-    current = (int32_t)v68.fields._current;
+    current = (int32_t)v67.fields._current;
     containerPrefab = (Il2CppObject *)this->fields.containerPrefab;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
@@ -756,10 +756,10 @@ LABEL_10:
         sub_2213CDC(0, v28);
       UnityEngine_Transform__SetParent_83492444(transform, this->fields.containerHolder, 0, 0);
       v29 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v17, 0);
-      LODWORD(v67.fields._current) = current;
-      v67.fields._list = (struct System_Collections_Generic_List_T__o *)FunctionCategoryEntity_GroupType_TypeInfo;
-      *(_QWORD *)&v67.fields._index = -1;
-      v30 = System_Enum__ToString((System_Enum_o *)&v67, 0);
+      LODWORD(v66.fields._current) = current;
+      v66.fields._list = (struct System_Collections_Generic_List_T__o *)FunctionCategoryEntity_GroupType_TypeInfo;
+      *(_QWORD *)&v66.fields._index = -1;
+      v30 = System_Enum__ToString((System_Enum_o *)&v66, 0);
       v31 = System_String__Concat_75651716((System_String_o *)StringLiteral_4859/*"Container_"*/, v30, 0);
       if ( !v29 )
         sub_2213CDC(v31, v31);
@@ -770,7 +770,7 @@ LABEL_10:
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v34, v35);
       v37 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v18, 0, 0);
-      v69 = v16;
+      v68 = v16;
       if ( v37 )
       {
         if ( !byte_5969AE0 )
@@ -803,20 +803,20 @@ LABEL_10:
         (Il2CppObject *)this,
         (intptr_t)Method_ServantEquipEffectFilterController_OnClick_Category__,
         0);
-      v70.fields.x = x;
-      v70.fields.y = v46;
-      v70.fields.z = v45;
+      v69.fields.x = x;
+      v69.fields.y = v46;
+      v69.fields.z = v45;
       ServantEquipEffectFilterContainer__Init(
         (ServantEquipEffectFilterContainer_o *)v17,
         EntitiesByGroupType,
         current,
         sort,
-        v70,
+        v69,
         v48,
         this->fields.categoryFlag,
         v49);
       v57 = *v39;
-      v16 = v69;
+      v16 = v68;
       if ( !*v39
         || (items = v57->fields._items,
             v59 = Method_System_Collections_Generic_List_ServantEquipEffectFilterContainer__Add__,
@@ -845,7 +845,7 @@ LABEL_10:
     }
   }
   System_Collections_Generic_List_Enumerator_Int32Enum___Dispose(
-    &v68,
+    &v67,
     (const MethodInfo_40F6F8C *)Method_System_Collections_Generic_List_Enumerator_FunctionCategoryEntity_GroupType__Dispose__);
   MasterData_object = (DataManager_o *)UnityEngine_Component__GetComponent_object_(
                                          (UnityEngine_Component_o *)this,
@@ -858,10 +858,10 @@ LABEL_10:
                                          0);
   if ( !MasterData_object )
     goto LABEL_44;
-  y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)MasterData_object, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)MasterData_object, 0);
   if ( !v18 || !v62 )
     goto LABEL_44;
-  v63 = fabsf(y + *((float *)&v18[5].monitor + 1));
+  v63 = fabsf(localPosition.fields.y + *((float *)&v18[5].monitor + 1));
   v64 = (int)v63;
   if ( v63 == INFINITY )
     v64 = 0x80000000;

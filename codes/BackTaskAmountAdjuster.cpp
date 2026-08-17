@@ -178,6 +178,7 @@ bool BackTaskAmountAdjuster__Execute_d__9__MoveNext(
   bool v26; // w6
   bool v27; // w7
   int v28; // w8
+  bool result; // w0
 
   v2 = this;
   if ( (byte_597256A & 1) == 0 )
@@ -261,8 +262,9 @@ LABEL_19:
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current, v14, v16, v17, v18, v19, v20, v21);
   v28 = 1;
 LABEL_26:
+  result = 1;
   v2->fields.__1__state = v28;
-  return 1;
+  return result;
 }
 
 

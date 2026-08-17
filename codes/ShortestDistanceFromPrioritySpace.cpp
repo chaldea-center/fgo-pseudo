@@ -46,7 +46,7 @@ float ShortestDistanceFromPrioritySpace__GetRatingBase(
     ratingBase = v9->fields.ratingBase;
     if ( ratingBase )
     {
-      v14 = *((_DWORD *)this + 6) - 1;
+      v14 = LODWORD(this[1].klass) - 1;
       v15 = ratingBase->fields.adjustmentValueA1 + 1;
       evalValue_k__BackingField = (float)targetSquare->fields._evalValue_k__BackingField;
       if ( (float)((float)((float)v15 - (float)v14) * evalValue_k__BackingField) >= 0.0 )

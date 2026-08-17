@@ -77,7 +77,10 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
   struct UISprite_array *tdSpeedButtonSpriteList; // x8
   System_String_o **v26; // x8
   struct UIRangeLabel_array *tdSpeedRangeLabelList; // x8
-  UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v28; // s0 OVERLAPPED
+  float v29; // s1
+  float v30; // s2
+  float v31; // s3
 
   if ( (byte_596D332 & 1) == 0 )
   {
@@ -167,22 +170,22 @@ LABEL_45:
         if ( !v18 )
           break;
         if ( v23 == (_DWORD)v22 )
-          v31.fields.r = v14;
+          v28 = v14;
         else
-          v31.fields.r = v9;
+          v28 = v9;
         if ( v23 == (_DWORD)v22 )
-          v31.fields.g = v15;
+          v29 = v15;
         else
-          v31.fields.g = v10;
+          v29 = v10;
         if ( v23 == (_DWORD)v22 )
-          v31.fields.b = v16;
+          v30 = v16;
         else
-          v31.fields.b = v11;
+          v30 = v11;
         if ( v23 == (_DWORD)v22 )
-          v31.fields.a = v17;
+          v31 = v17;
         else
-          v31.fields.a = v12;
-        UIRangeLabel__set_effectColor((UIRangeLabel_o *)v18, v31, 0);
+          v31 = v12;
+        UIRangeLabel__set_effectColor((UIRangeLabel_o *)v18, *(UnityEngine_Color_o *)&v28, 0);
         if ( (_DWORD)max_length == (_DWORD)++v22 )
           return;
       }

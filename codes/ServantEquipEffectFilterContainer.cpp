@@ -389,11 +389,10 @@ void ServantEquipEffectFilterContainer__SetBottomPosition(
   float v12; // s0
   int v13; // w9
   const MethodInfo *v14; // x1
-  float x; // s0
-  float z; // s2
-  float y; // s1
-  UnityEngine_Vector3_o v18; // 0:kr00_12.12
-  UnityEngine_Vector3_o Position; // 0:kr14_12.12
+  float v15; // s0 OVERLAPPED
+  float v16; // s2
+  float v17; // s1
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596B1CC & 1) == 0 )
@@ -421,10 +420,9 @@ void ServantEquipEffectFilterContainer__SetBottomPosition(
                                                   0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
-    Position = ServantEquipEffectFilterContainer__get_Position(v4, *(const MethodInfo **)&displayCount);
-    x = Position.fields.x;
-    y = Position.fields.y;
-    z = Position.fields.z;
+    *(UnityEngine_Vector3_o *)&v15 = ServantEquipEffectFilterContainer__get_Position(
+                                       v4,
+                                       *(const MethodInfo **)&displayCount);
     goto LABEL_16;
   }
   if ( !Component_object || (v11 = v4->fields.grid) == 0 )
@@ -435,17 +433,18 @@ LABEL_17:
   if ( v12 == INFINITY )
     v13 = 0x80000000;
   UIWidget__set_height((UIWidget_o *)Component_object, v13 + HIDWORD(Component_object[10].monitor), 0);
-  v18 = ServantEquipEffectFilterContainer__get_Position(v4, v14);
-  x = v18.fields.x + 0.0;
-  z = v18.fields.z + 0.0;
-  y = v18.fields.y + (float)-HIDWORD(Component_object[10].monitor);
+  Position = ServantEquipEffectFilterContainer__get_Position(v4, v14);
+  v15 = Position.fields.x + 0.0;
+  v16 = Position.fields.z + 0.0;
+  v17 = Position.fields.y + (float)-HIDWORD(Component_object[10].monitor);
 LABEL_16:
-  v4->fields._BottomPosition_k__BackingField.fields.x = x;
-  v4->fields._BottomPosition_k__BackingField.fields.y = y;
-  v4->fields._BottomPosition_k__BackingField.fields.z = z;
+  v4->fields._BottomPosition_k__BackingField.fields.x = v15;
+  v4->fields._BottomPosition_k__BackingField.fields.y = v17;
+  v4->fields._BottomPosition_k__BackingField.fields.z = v16;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantEquipEffectFilterContainer__SetCollider(
         ServantEquipEffectFilterContainer_o *this,
         const MethodInfo *method)
@@ -458,8 +457,9 @@ void ServantEquipEffectFilterContainer__SetCollider(
   __int64 v8; // x2
   __int64 v9; // x0
   __int64 v10; // x1
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  int v11; // s0 OVERLAPPED
+  int v13; // s2
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B1CD & 1) == 0 )
   {
@@ -491,12 +491,12 @@ void ServantEquipEffectFilterContainer__SetCollider(
       {
         sub_2213CDC(v9, v10);
       }
-      v12.fields.z = 0.0;
-      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)v6, v12, 0);
-      v13.fields.z = 0.0;
-      v13.fields.y = (float)Component_object[43] * -0.5;
-      v13.fields.x = 0.0;
-      UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)v6, v13, 0);
+      v13 = 0;
+      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)v6, *(UnityEngine_Vector3_o *)&v11, 0);
+      v14.fields.z = 0.0;
+      v14.fields.y = (float)Component_object[43] * -0.5;
+      v14.fields.x = 0.0;
+      UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)v6, v14, 0);
     }
   }
 }
@@ -673,15 +673,15 @@ void ServantEquipEffectFilterContainer__SetupHeader(
   int v20; // w23
   UnityEngine_Transform_o *v21; // x20
   struct UILabel_o *v22; // x8
-  int32_t v23; // w20
-  UnityEngine_Transform_o *v24; // x21
-  struct UILabel_o *v25; // x8
+  float v23; // s0
+  int32_t v24; // w20
+  UnityEngine_Transform_o *v25; // x21
+  struct UILabel_o *v26; // x8
   System_Enum_o v27; // [xsp+8h] [xbp-48h] BYREF
   int32_t v28; // [xsp+18h] [xbp-38h]
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v30; // 0:kr14_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B1CA & 1) == 0 )
   {
@@ -759,50 +759,48 @@ LABEL_13:
   if ( !leftLineSptite )
     goto LABEL_35;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)leftLineSptite, 0);
-  v32.fields.y = localPosition.fields.y;
-  v32.fields.z = localPosition.fields.z;
   v22 = this->fields.titleLabel;
   if ( !v22 )
     goto LABEL_35;
   if ( !v21 )
     goto LABEL_35;
-  v32.fields.x = localPosition.fields.x
-               - (float)(ServantEquipEffectFilterContainer_TypeInfo->static_fields->TITLE_LINE_SPRITE_SPACE
-                       + v22->fields.mWidth / 2);
-  UnityEngine_Transform__set_localPosition(v21, v32, 0);
+  v23 = localPosition.fields.x
+      - (float)(ServantEquipEffectFilterContainer_TypeInfo->static_fields->TITLE_LINE_SPRITE_SPACE
+              + v22->fields.mWidth / 2);
+  UnityEngine_Transform__set_localPosition(v21, localPosition, 0);
   leftLineSptite = (System_String_o *)this->fields.leftLineSptite;
   if ( !leftLineSptite )
     goto LABEL_35;
-  v23 = (v19 >> 1) - (v20 >> 1);
-  UIWidget__set_width((UIWidget_o *)leftLineSptite, v23, 0);
+  v24 = (v19 >> 1) - (v20 >> 1);
+  UIWidget__set_width((UIWidget_o *)leftLineSptite, v24, 0);
   leftLineSptite = (System_String_o *)this->fields.rightLineSptite;
   if ( !leftLineSptite )
     goto LABEL_35;
   leftLineSptite = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)leftLineSptite, 0);
   if ( !this->fields.titleLabel )
     goto LABEL_35;
-  v24 = (UnityEngine_Transform_o *)leftLineSptite;
+  v25 = (UnityEngine_Transform_o *)leftLineSptite;
   leftLineSptite = (System_String_o *)UnityEngine_Component__get_transform(
                                         (UnityEngine_Component_o *)this->fields.titleLabel,
                                         0);
   if ( !leftLineSptite )
     goto LABEL_35;
   v30 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)leftLineSptite, 0);
-  v25 = this->fields.titleLabel;
-  if ( !v25 )
+  v26 = this->fields.titleLabel;
+  if ( !v26 )
     goto LABEL_35;
-  if ( !v24 )
+  if ( !v25 )
     goto LABEL_35;
   v31.fields.z = v30.fields.z + 0.0;
   v31.fields.y = v30.fields.y + 0.0;
   v31.fields.x = v30.fields.x
                + (float)(ServantEquipEffectFilterContainer_TypeInfo->static_fields->TITLE_LINE_SPRITE_SPACE
-                       + v25->fields.mWidth / 2);
-  UnityEngine_Transform__set_localPosition(v24, v31, 0);
+                       + v26->fields.mWidth / 2);
+  UnityEngine_Transform__set_localPosition(v25, v31, 0);
   leftLineSptite = (System_String_o *)this->fields.rightLineSptite;
   if ( !leftLineSptite )
     goto LABEL_35;
-  UIWidget__set_width((UIWidget_o *)leftLineSptite, v23, 0);
+  UIWidget__set_width((UIWidget_o *)leftLineSptite, v24, 0);
 }
 
 
@@ -810,11 +808,17 @@ UnityEngine_Vector3_o ServantEquipEffectFilterContainer__get_BottomPosition(
         ServantEquipEffectFilterContainer_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields._BottomPosition_k__BackingField.fields.x;
-  result.fields.y = this->fields._BottomPosition_k__BackingField.fields.y;
-  result.fields.z = this->fields._BottomPosition_k__BackingField.fields.z;
+  x = this->fields._BottomPosition_k__BackingField.fields.x;
+  y = this->fields._BottomPosition_k__BackingField.fields.y;
+  z = this->fields._BottomPosition_k__BackingField.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

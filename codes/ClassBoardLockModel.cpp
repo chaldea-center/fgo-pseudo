@@ -266,11 +266,14 @@ LABEL_43:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ClassBoardCondData_o ClassBoardLockModel__get_CondData(ClassBoardLockModel_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
   struct ClassBoardSquareEntity_o *entity; // x8
+  __int64 v5; // x0
+  int32_t v6; // w1
   __int64 v7; // [xsp+0h] [xbp-20h] BYREF
   int32_t v8; // [xsp+8h] [xbp-18h]
   ClassBoardCondData_o v9; // 0:x0.12
@@ -284,8 +287,10 @@ ClassBoardCondData_o ClassBoardLockModel__get_CondData(ClassBoardLockModel_o *th
   v7 = 0;
   v8 = 0;
   ClassBoardCondData___ctor_55441084(v9, v2, v3);
-  *(_QWORD *)&result.fields.Type = v7;
-  result.fields.Num = v8;
+  v5 = v7;
+  v6 = v8;
+  *(_QWORD *)&result.fields.Type = v5;
+  result.fields.Num = v6;
   return result;
 }
 

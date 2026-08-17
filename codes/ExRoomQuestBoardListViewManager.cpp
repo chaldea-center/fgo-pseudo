@@ -743,7 +743,7 @@ void ExRoomQuestBoardListViewManager__UpdateScrollEnabled(
   __int64 v2; // x2
   UnityEngine_Object_o *scrollView; // x20
   int v5; // w8
-  __int64 gameObject; // x0
+  UnityEngine_Behaviour_o *gameObject; // x0
   __int64 v7; // x1
   struct UIScrollView_o *v8; // x8
   bool CanScrollList; // w8
@@ -770,21 +770,21 @@ void ExRoomQuestBoardListViewManager__UpdateScrollEnabled(
   isRight = 0;
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
-  gameObject = UnityEngine_Object__op_Equality(scrollView, 0, 0);
-  if ( (gameObject & 1) != 0 )
+  gameObject = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Equality(scrollView, 0, 0);
+  if ( ((unsigned __int8)gameObject & 1) != 0 )
     return;
   v8 = this->fields.scrollView;
   if ( !v8 )
     goto LABEL_25;
   v8->fields.disableDragIfFits = 1;
   CanScrollList = ListViewManager__GetCanScrollList((ListViewManager_o *)this, &isTop, &isBottom, &isLeft, &isRight, 0);
-  gameObject = (__int64)this->fields.scrollView;
+  gameObject = (UnityEngine_Behaviour_o *)this->fields.scrollView;
   if ( CanScrollList )
   {
     if ( !gameObject )
       goto LABEL_25;
     v10 = isBottom || isTop || isLeft || isRight;
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, isBottom || isTop || isLeft || isRight, 0);
+    UnityEngine_Behaviour__set_enabled(gameObject, isBottom || isTop || isLeft || isRight, 0);
     if ( v10 )
     {
       v12 = 1;
@@ -795,16 +795,16 @@ void ExRoomQuestBoardListViewManager__UpdateScrollEnabled(
   {
     if ( !gameObject )
       goto LABEL_25;
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 0, 0);
+    UnityEngine_Behaviour__set_enabled(gameObject, 0, 0);
   }
-  gameObject = (__int64)this->fields.scrollView;
+  gameObject = (UnityEngine_Behaviour_o *)this->fields.scrollView;
   if ( !gameObject )
     goto LABEL_25;
   UIScrollView__DisableSpring((UIScrollView_o *)gameObject, 0);
   v13 = this->fields.scrollView;
   if ( !byte_5969AE0 )
   {
-    gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    gameObject = (UnityEngine_Behaviour_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v13 )
@@ -817,10 +817,12 @@ LABEL_18:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v11);
   if ( UnityEngine_Object__op_Inequality(scrollBar, 0, 0) )
   {
-    gameObject = (__int64)this->fields.scrollBar;
+    gameObject = (UnityEngine_Behaviour_o *)this->fields.scrollBar;
     if ( gameObject )
     {
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+      gameObject = (UnityEngine_Behaviour_o *)UnityEngine_Component__get_gameObject(
+                                                (UnityEngine_Component_o *)gameObject,
+                                                0);
       if ( gameObject )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, v12, 0);

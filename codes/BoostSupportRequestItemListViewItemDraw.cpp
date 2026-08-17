@@ -564,6 +564,7 @@ void BoostSupportRequestItemListViewItemDraw__SetViewConsumptionIcon(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BoostSupportRequestItemListViewItemDraw__setConsumeItemIconList(
         BoostSupportRequestItemListViewItemDraw_o *this,
         BoostSupportRequsetItemListViewItem_o *item,
@@ -585,14 +586,17 @@ void BoostSupportRequestItemListViewItemDraw__setConsumeItemIconList(
   UILabel_o *v18; // x21
   struct UILabel_array *v19; // x8
   UIWidget_o *v20; // x21
-  struct UISprite_array *v23; // x8
-  struct UILabel_array *v24; // x8
+  float v21; // s0 OVERLAPPED
+  float v22; // s3
+  float v23; // s1
+  float v24; // s2
   struct UISprite_array *v25; // x8
-  __int64 v26; // x22
-  struct UILabel_array *v27; // x8
-  struct UISprite_array *v28; // x8
+  struct UILabel_array *v26; // x8
+  struct UISprite_array *v27; // x8
+  __int64 v28; // x22
   struct UILabel_array *v29; // x8
-  UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct UISprite_array *v30; // x8
+  struct UILabel_array *v31; // x8
 
   if ( (byte_5969E6B & 1) == 0 )
   {
@@ -669,26 +673,26 @@ LABEL_55:
                                                         0);
         if ( !v20 )
           break;
-        v30.fields.r = 1.0;
-        v30.fields.a = 1.0;
-        v30.fields.g = ((unsigned __int8)consumptionLabel & 1) != 0 ? 1.0 : 0.0;
-        v30.fields.b = v30.fields.g;
-        UIWidget__set_color(v20, v30, 0);
-        v23 = this->fields.itemIcon;
-        if ( !v23 )
+        v21 = 1.0;
+        v22 = 1.0;
+        v23 = ((unsigned __int8)consumptionLabel & 1) != 0 ? 1.0 : 0.0;
+        v24 = v23;
+        UIWidget__set_color(v20, *(UnityEngine_Color_o *)&v21, 0);
+        v25 = this->fields.itemIcon;
+        if ( !v25 )
           break;
-        if ( v11 >= LODWORD(v23->max_length) )
+        if ( v11 >= LODWORD(v25->max_length) )
           goto LABEL_55;
-        consumptionLabel = (UnityEngine_Component_o *)*((_QWORD *)&v23->obj.klass + v9);
+        consumptionLabel = (UnityEngine_Component_o *)*((_QWORD *)&v25->obj.klass + v9);
         if ( !consumptionLabel )
           break;
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)consumptionLabel, 1, 0);
-        v24 = this->fields.itemNumLabel;
-        if ( !v24 )
+        v26 = this->fields.itemNumLabel;
+        if ( !v26 )
           break;
-        if ( v11 >= LODWORD(v24->max_length) )
+        if ( v11 >= LODWORD(v26->max_length) )
           goto LABEL_55;
-        consumptionLabel = (UnityEngine_Component_o *)*((_QWORD *)&v24->obj.klass + v9);
+        consumptionLabel = (UnityEngine_Component_o *)*((_QWORD *)&v26->obj.klass + v9);
         if ( !consumptionLabel )
           break;
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)consumptionLabel, 1, 0);
@@ -700,43 +704,43 @@ LABEL_51:
       sub_2213CDC(consumptionLabel, item);
     }
 LABEL_38:
-    v25 = this->fields.itemIcon;
-    if ( !v25 )
+    v27 = this->fields.itemIcon;
+    if ( !v27 )
       goto LABEL_51;
-    v26 = 8LL * (int)max_length + 32;
-    while ( (int)max_length < SLODWORD(v25->max_length) )
+    v28 = 8LL * (int)max_length + 32;
+    while ( (int)max_length < SLODWORD(v27->max_length) )
     {
-      v27 = this->fields.itemNumLabel;
-      if ( !v27 )
+      v29 = this->fields.itemNumLabel;
+      if ( !v29 )
         goto LABEL_51;
-      if ( (unsigned int)max_length >= LODWORD(v27->max_length) )
+      if ( (unsigned int)max_length >= LODWORD(v29->max_length) )
         goto LABEL_55;
-      consumptionLabel = *(UnityEngine_Component_o **)((char *)&v27->obj.klass + v26);
+      consumptionLabel = *(UnityEngine_Component_o **)((char *)&v29->obj.klass + v28);
       if ( consumptionLabel )
       {
         UILabel__set_text((UILabel_o *)consumptionLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
-        v28 = this->fields.itemIcon;
-        if ( v28 )
+        v30 = this->fields.itemIcon;
+        if ( v30 )
         {
-          if ( (unsigned int)max_length >= LODWORD(v28->max_length) )
+          if ( (unsigned int)max_length >= LODWORD(v30->max_length) )
             goto LABEL_55;
-          consumptionLabel = *(UnityEngine_Component_o **)((char *)&v28->obj.klass + v26);
+          consumptionLabel = *(UnityEngine_Component_o **)((char *)&v30->obj.klass + v28);
           if ( consumptionLabel )
           {
             UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)consumptionLabel, 0, 0);
-            v29 = this->fields.itemNumLabel;
-            if ( v29 )
+            v31 = this->fields.itemNumLabel;
+            if ( v31 )
             {
-              if ( (unsigned int)max_length >= LODWORD(v29->max_length) )
+              if ( (unsigned int)max_length >= LODWORD(v31->max_length) )
                 goto LABEL_55;
-              consumptionLabel = *(UnityEngine_Component_o **)((char *)&v29->obj.klass + v26);
+              consumptionLabel = *(UnityEngine_Component_o **)((char *)&v31->obj.klass + v28);
               if ( consumptionLabel )
               {
                 UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)consumptionLabel, 0, 0);
-                v25 = this->fields.itemIcon;
+                v27 = this->fields.itemIcon;
                 LODWORD(max_length) = max_length + 1;
-                v26 += 8;
-                if ( v25 )
+                v28 += 8;
+                if ( v27 )
                   continue;
               }
             }

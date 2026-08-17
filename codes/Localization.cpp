@@ -1012,7 +1012,7 @@ bool Localization__LoadCSV_56347376(
   Il2CppClass *v48; // x1
   Il2CppClass **v49; // x0
   System_Collections_Generic_Dictionary_object__object__o *v50; // x23
-  Il2CppObject *key; // x24
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   __int64 v52; // x0
   __int64 v53; // x1
   System_String_o *v54; // x2
@@ -1093,10 +1093,9 @@ bool Localization__LoadCSV_56347376(
   int32_t v130; // w5
   bool v131; // w6
   bool v132; // w7
-  __int64 v133; // [xsp+8h] [xbp-C8h]
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v134; // [xsp+10h] [xbp-C0h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v133; // [xsp+10h] [xbp-C0h] BYREF
   System_Object_array *array; // [xsp+38h] [xbp-98h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v136; // [xsp+40h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v135; // [xsp+40h] [xbp-90h] BYREF
 
   if ( (byte_59750D5 & 1) == 0 )
   {
@@ -1123,7 +1122,7 @@ bool Localization__LoadCSV_56347376(
     byte_59750D5 = 1;
   }
   array = 0;
-  memset(&v136, 0, sizeof(v136));
+  memset(&v135, 0, sizeof(v135));
   if ( !bytes )
     return 0;
   v6 = sub_2213CCC(ByteReader_TypeInfo);
@@ -1132,7 +1131,7 @@ bool Localization__LoadCSV_56347376(
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v6 + 16), (int32_t)bytes, v7, v8, v9, v10, v11, v12);
   CSV = ByteReader__ReadCSV((ByteReader_o *)v6, v13);
   if ( !CSV )
-    goto LABEL_108;
+    goto LABEL_107;
   v16 = (BetterList_T__o *)CSV;
   if ( *((int *)CSV + 6) < 2 )
     return 0;
@@ -1164,7 +1163,7 @@ bool Localization__LoadCSV_56347376(
   }
   static_fields = (struct Localization_StaticFields *)*((_QWORD *)CSV + 23);
   if ( !static_fields->localizationHasBeenSet )
-    goto LABEL_112;
+    goto LABEL_111;
   if ( !merge )
   {
     if ( !*((_DWORD *)CSV + 57) )
@@ -1174,7 +1173,7 @@ bool Localization__LoadCSV_56347376(
       static_fields = Localization_TypeInfo->static_fields;
     }
     if ( !static_fields->mMerging )
-      goto LABEL_112;
+      goto LABEL_111;
   }
   if ( !*((_DWORD *)CSV + 57) )
   {
@@ -1183,14 +1182,14 @@ bool Localization__LoadCSV_56347376(
   }
   mLanguages = *(struct System_String_array **)(*((_QWORD *)CSV + 23) + 24LL);
   if ( !mLanguages )
-    goto LABEL_112;
+    goto LABEL_111;
   if ( !*((_DWORD *)CSV + 57) )
   {
     j_il2cpp_runtime_class_init_0(CSV, v15);
     CSV = Localization_TypeInfo;
     mLanguages = Localization_TypeInfo->static_fields->mLanguages;
     if ( !mLanguages )
-      goto LABEL_108;
+      goto LABEL_107;
   }
   if ( mLanguages->max_length )
   {
@@ -1198,16 +1197,15 @@ bool Localization__LoadCSV_56347376(
     v23 = v22;
     if ( v16->fields.size >= 1 )
     {
-      v133 = v6;
       v24 = 0;
       v25 = (MissionNaviTransitionBoardItem_o *)(v22 + 32);
       do
       {
         CSV = BetterList_object___get_Item(v16, v24, (const MethodInfo_3E6F7E8 *)Method_BetterList_string__get_Item__);
         if ( !v23 )
-          goto LABEL_108;
+          goto LABEL_107;
         if ( v24 >= *(unsigned int *)(v23 + 24) )
-          goto LABEL_109;
+          goto LABEL_108;
         v25->klass = (MissionNaviTransitionBoardItem_c *)CSV;
         sub_2213A04(v25, (int32_t)CSV, v26, v27, v28, v29, v30, v31);
         size = v16->fields.size;
@@ -1235,7 +1233,7 @@ bool Localization__LoadCSV_56347376(
             CSV = &v37->mLanguages;
             v38 = v39;
             if ( !v39 )
-              goto LABEL_108;
+              goto LABEL_107;
             max_length = v38->max_length;
             System_Array__Resize_object_(
               (System_Object_array **)CSV,
@@ -1244,9 +1242,9 @@ bool Localization__LoadCSV_56347376(
             v41 = Localization_TypeInfo->static_fields->mLanguages;
             CSV = BetterList_object___get_Item(v16, i, (const MethodInfo_3E6F7E8 *)Method_BetterList_string__get_Item__);
             if ( !v41 )
-              goto LABEL_108;
+              goto LABEL_107;
             if ( (unsigned int)max_length >= LODWORD(v41->max_length) )
-              goto LABEL_109;
+              goto LABEL_108;
             v48 = (Il2CppClass *)CSV;
             v49 = &v41->obj.klass + (int)max_length;
             v49[4] = v48;
@@ -1257,20 +1255,20 @@ bool Localization__LoadCSV_56347376(
               (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
             CSV = Localization_TypeInfo->static_fields->mDictionary;
             if ( !CSV )
-              goto LABEL_108;
+              goto LABEL_107;
             System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-              &v134,
+              &v133,
               (System_Collections_Generic_Dictionary_object__object__o *)CSV,
               (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__string____GetEnumerator__);
-            v136 = v134;
-            v134.fields._dictionary = 0;
-            *(_QWORD *)&v134.fields._version = &v136;
+            v135 = v133;
+            v133.fields._dictionary = 0;
+            *(_QWORD *)&v133.fields._version = &v135;
             while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-                      &v136,
+                      &v135,
                       (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string____MoveNext__) )
             {
-              key = v136.fields._current.fields.key;
-              array = (System_Object_array *)v136.fields._current.fields.value;
+              current = v135.fields._current;
+              array = (System_Object_array *)v135.fields._current.fields.value;
               System_Array__Resize_object_(
                 &array,
                 max_length + 1,
@@ -1287,12 +1285,12 @@ bool Localization__LoadCSV_56347376(
                 sub_2213CDC(v62, v63);
               System_Collections_Generic_Dictionary_object__object___Add(
                 v50,
-                key,
+                current.fields.key,
                 &array->obj,
                 (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__string____Add__);
             }
             System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-              &v136,
+              &v135,
               (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string____Dispose__);
             v71 = Localization_TypeInfo;
             if ( !*(&Localization_TypeInfo->_2.cctor_finished + 1) )
@@ -1314,12 +1312,11 @@ bool Localization__LoadCSV_56347376(
           }
         }
       }
-      v6 = v133;
     }
   }
   else
   {
-LABEL_112:
+LABEL_111:
     if ( !*((_DWORD *)CSV + 57) )
     {
       j_il2cpp_runtime_class_init_0(CSV, v15);
@@ -1327,7 +1324,7 @@ LABEL_112:
     }
     CSV = *(void **)(*((_QWORD *)CSV + 23) + 40LL);
     if ( !CSV )
-      goto LABEL_108;
+      goto LABEL_107;
     System_Collections_Generic_Dictionary_object__object___Clear(
       (System_Collections_Generic_Dictionary_object__object__o *)CSV,
       (const MethodInfo_3FFDD98 *)Method_System_Collections_Generic_Dictionary_string__string____Clear__);
@@ -1366,9 +1363,9 @@ LABEL_112:
         v98 = v97->static_fields->mLanguages;
         CSV = BetterList_object___get_Item(v16, v95, (const MethodInfo_3E6F7E8 *)Method_BetterList_string__get_Item__);
         if ( !v98 )
-          goto LABEL_108;
+          goto LABEL_107;
         if ( v95 >= LODWORD(v98->max_length) )
-          goto LABEL_109;
+          goto LABEL_108;
         *(Il2CppClass **)((char *)&v98->obj.klass + v96) = (Il2CppClass *)CSV;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)((char *)v98 + v96),
@@ -1382,9 +1379,9 @@ LABEL_112:
         v105 = Localization_TypeInfo->static_fields;
         v106 = v105->mLanguages;
         if ( !v106 )
-          goto LABEL_108;
+          goto LABEL_107;
         if ( v95 >= LODWORD(v106->max_length) )
-LABEL_109:
+LABEL_108:
           sub_2213CE4(CSV);
         if ( System_String__op_Equality(*(System_String_o **)((char *)&v106->obj.klass + v96), v105->mLanguage, 0) )
         {
@@ -1417,7 +1414,7 @@ LABEL_109:
     }
     v110 = *(struct System_String_array **)(*((_QWORD *)CSV + 23) + 24LL);
     if ( !v110 )
-      goto LABEL_108;
+      goto LABEL_107;
     if ( (__int64)j >= SLODWORD(v110->max_length) )
       break;
     if ( !*((_DWORD *)CSV + 57) )
@@ -1425,12 +1422,12 @@ LABEL_109:
       j_il2cpp_runtime_class_init_0(CSV, v15);
       v110 = Localization_TypeInfo->static_fields->mLanguages;
       if ( !v110 )
-        goto LABEL_108;
+        goto LABEL_107;
     }
     if ( j >= LODWORD(v110->max_length) )
-      goto LABEL_109;
-    if ( !v108 )
       goto LABEL_108;
+    if ( !v108 )
+      goto LABEL_107;
     System_Collections_Generic_Dictionary_object__int___Add(
       v108,
       (Il2CppObject *)v110->m_Items[j],
@@ -1488,7 +1485,7 @@ LABEL_109:
   v124->mMerging = 1;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v124->onLocalize, 0, v113, v114, v115, v116, v117, v118);
   if ( !onLocalize )
-LABEL_108:
+LABEL_107:
     sub_2213CDC(CSV, v15);
   ((void (__fastcall *)(intptr_t, intptr_t))onLocalize->fields.invoke_impl)(
     onLocalize->fields.method_code,
@@ -2316,7 +2313,7 @@ System_IAsyncResult_o *Localization_LoadFunction__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = path;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -2334,10 +2331,10 @@ System_Byte_array *Localization_LoadFunction__Invoke(
         System_String_o *path,
         const MethodInfo *method)
 {
-  return ((System_Byte_array *(__fastcall *)(intptr_t, System_String_o *, intptr_t))this->fields.invoke_impl)(
-           this->fields.method_code,
-           path,
-           this->fields.method);
+  return (System_Byte_array *)((__int64 (__fastcall *)(intptr_t, System_String_o *, intptr_t))this->fields.invoke_impl)(
+                                this->fields.method_code,
+                                path,
+                                this->fields.method);
 }
 
 
@@ -2400,9 +2397,9 @@ System_IAsyncResult_o *Localization_OnLocalizeNotification__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

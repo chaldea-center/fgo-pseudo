@@ -248,10 +248,16 @@ UnityEngine_Vector3_o HakkenshiAnimationPlayer__get_LocalPosition(
         HakkenshiAnimationPlayer_o *this,
         const MethodInfo *method)
 {
+  float v2; // s2
+  float localPositionX; // s0
+  float localPositionY; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.z = 0.0;
-  result.fields.x = this->fields.localPositionX;
-  result.fields.y = this->fields.localPositionY;
+  v2 = 0.0;
+  localPositionX = this->fields.localPositionX;
+  localPositionY = this->fields.localPositionY;
+  result.fields.z = v2;
+  result.fields.y = localPositionY;
+  result.fields.x = localPositionX;
   return result;
 }

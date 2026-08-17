@@ -707,6 +707,7 @@ LABEL_16:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MaterialCollectionMenu__SetTabKind(
         MaterialCollectionMenu_o *this,
         int32_t kind,
@@ -743,43 +744,49 @@ void MaterialCollectionMenu__SetTabKind(
   System_String_o *v34; // x27
   Il2CppObject *v35; // x28
   Il2CppObject *v36; // x0
-  bool v40; // w27
-  System_String_o **v41; // x8
-  __int64 *v42; // x8
-  __int64 v43; // x1
-  __int64 v44; // x2
-  UserServantCollectionEntity_array *v45; // x24
+  float v37; // s3
+  float v38; // s2
+  float v39; // s1
+  float v40; // s0 OVERLAPPED
+  bool v41; // w27
+  System_String_o **v42; // x8
+  __int64 *v43; // x8
+  __int64 v44; // x1
+  __int64 v45; // x2
+  UserServantCollectionEntity_array *v46; // x24
   UILabel_o *servantEquipTabLabel; // x23
-  System_String_o *v47; // x25
-  Il2CppObject *v48; // x26
-  Il2CppObject *v49; // x0
-  System_String_o **v53; // x8
-  __int64 *v54; // x8
-  __int64 v55; // x1
-  __int64 v56; // x2
-  UserCommandCodeCollectionEntity_array *v57; // x22
+  System_String_o *v48; // x25
+  Il2CppObject *v49; // x26
+  Il2CppObject *v50; // x0
+  float v51; // s3
+  float v52; // s2
+  float v53; // s1
+  float v54; // s0 OVERLAPPED
+  System_String_o **v55; // x8
+  __int64 *v56; // x8
+  __int64 v57; // x1
+  __int64 v58; // x2
+  UserCommandCodeCollectionEntity_array *v59; // x22
   UILabel_o *commandCodeTabLabel; // x21
-  System_String_o *v59; // x23
-  Il2CppObject *v60; // x24
-  Il2CppObject *v61; // x0
-  const MethodInfo *v62; // x2
-  int32_t v63; // w1
+  System_String_o *v61; // x23
+  Il2CppObject *v62; // x24
+  Il2CppObject *v63; // x0
+  const MethodInfo *v64; // x2
+  int32_t v65; // w1
   struct MaterialCollectionServantListViewManager_o *materialCollectionServantListViewManager; // x21
-  MaterialCollectionServantListViewManager_CallbackFunc_o *v65; // x22
-  const MethodInfo *v66; // x3
-  System_String_o *v67; // x2
-  System_String_o *v68; // x3
-  int32_t v69; // w4
-  int32_t v70; // w5
-  bool v71; // w6
-  bool v72; // w7
-  int32_t v73; // w1
-  UserCommandCodeCollectionMaster_o *v74; // [xsp+8h] [xbp-B8h]
+  MaterialCollectionServantListViewManager_CallbackFunc_o *v67; // x22
+  const MethodInfo *v68; // x3
+  System_String_o *v69; // x2
+  System_String_o *v70; // x3
+  int32_t v71; // w4
+  int32_t v72; // w5
+  bool v73; // w6
+  bool v74; // w7
+  int32_t v75; // w1
+  UserCommandCodeCollectionMaster_o *v76; // [xsp+8h] [xbp-B8h]
   int max_length; // [xsp+10h] [xbp-B0h] BYREF
-  int32_t v76; // [xsp+14h] [xbp-ACh] BYREF
+  int32_t v78; // [xsp+14h] [xbp-ACh] BYREF
   int32_t findSum[2]; // [xsp+18h] [xbp-A8h] BYREF
-  UnityEngine_Color_o v78; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v79; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v80; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596B687 & 1) == 0 )
@@ -815,7 +822,7 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_88;
-  v74 = (UserCommandCodeCollectionMaster_o *)DataManager__GetMasterData_object_(
+  v76 = (UserCommandCodeCollectionMaster_o *)DataManager__GetMasterData_object_(
                                                Instance,
                                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserCommandCodeCollectionMaster___);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
@@ -899,8 +906,8 @@ void MaterialCollectionMenu__SetTabKind(
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v30, v31);
   v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3481/*"CHARA_GRAPH_TAB_SERVANT"*/, 0);
-  v76 = findSum[0];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(qword_5984348, &v76);
+  v78 = findSum[0];
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(qword_5984348, &v78);
   if ( !v33 )
     goto LABEL_88;
   v35 = (Il2CppObject *)Instance;
@@ -910,25 +917,25 @@ void MaterialCollectionMenu__SetTabKind(
   if ( !servantTabLabel )
     goto LABEL_88;
   UILabel__set_text(servantTabLabel, (System_String_o *)Instance, 0);
-  v78.fields.a = v23;
-  v78.fields.b = v24;
+  v37 = v23;
+  v38 = v24;
   Instance = (DataManager_o *)this->fields.servantTabLabel;
-  v78.fields.g = v21;
-  v78.fields.r = v22;
+  v39 = v21;
+  v40 = v22;
   if ( kind )
   {
-    v78.fields.a = v18;
-    v78.fields.b = v17;
-    v78.fields.g = v16;
-    v78.fields.r = v15;
+    v37 = v18;
+    v38 = v17;
+    v39 = v16;
+    v40 = v15;
   }
   if ( !Instance )
     goto LABEL_88;
-  UILabel__set_effectColor((UILabel_o *)Instance, v78, 0);
+  UILabel__set_effectColor((UILabel_o *)Instance, *(UnityEngine_Color_o *)&v40, 0);
   Instance = (DataManager_o *)this->fields.servantTabButton;
   if ( !Instance )
     goto LABEL_88;
-  v40 = v27 || v28;
+  v41 = v27 || v28;
   ((void (__fastcall *)(DataManager_o *, _QWORD, bool, Il2CppClass **))Instance->klass[1]._1.nestedTypes)(
     Instance,
     0,
@@ -952,16 +959,16 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)this->fields.servantEquipTabSprite;
   if ( !Instance )
     goto LABEL_88;
-  v41 = (System_String_o **)(kind == 1 ? &StringLiteral_18208/*"btn_bg_19"*/ : &StringLiteral_18206/*"btn_bg_12"*/);
-  UISprite__set_spriteName((UISprite_o *)Instance, *v41, 0);
+  v42 = (System_String_o **)(kind == 1 ? &StringLiteral_18208/*"btn_bg_19"*/ : &StringLiteral_18206/*"btn_bg_12"*/);
+  UISprite__set_spriteName((UISprite_o *)Instance, *v42, 0);
   Instance = (DataManager_o *)this->fields.servantEquipTabStrSp;
   if ( !Instance )
     goto LABEL_88;
-  v42 = &StringLiteral_18330/*"btn_txt_craftessence_off"*/;
+  v43 = &StringLiteral_18330/*"btn_txt_craftessence_off"*/;
   if ( kind == 1 )
-    v42 = &StringLiteral_18331/*"btn_txt_craftessence_on"*/;
-  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v42, 0);
-  v45 = UserServantCollectionMaster__getCollectionList(
+    v43 = &StringLiteral_18331/*"btn_txt_craftessence_on"*/;
+  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v43, 0);
+  v46 = UserServantCollectionMaster__getCollectionList(
           (UserServantCollectionMaster_o *)MasterData_object,
           &findSum[1],
           findSum,
@@ -970,34 +977,34 @@ void MaterialCollectionMenu__SetTabKind(
           0);
   servantEquipTabLabel = this->fields.servantEquipTabLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v43, v44);
-  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_3482/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0);
-  v76 = findSum[0];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(qword_5984348, &v76);
-  if ( !v45 )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v44, v45);
+  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_3482/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0);
+  v78 = findSum[0];
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(qword_5984348, &v78);
+  if ( !v46 )
     goto LABEL_88;
-  v48 = (Il2CppObject *)Instance;
-  max_length = v45->max_length;
-  v49 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &max_length);
-  Instance = (DataManager_o *)System_String__Format_75697880(v47, v48, v49, 0);
+  v49 = (Il2CppObject *)Instance;
+  max_length = v46->max_length;
+  v50 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &max_length);
+  Instance = (DataManager_o *)System_String__Format_75697880(v48, v49, v50, 0);
   if ( !servantEquipTabLabel )
     goto LABEL_88;
   UILabel__set_text(servantEquipTabLabel, (System_String_o *)Instance, 0);
-  v79.fields.a = v23;
-  v79.fields.b = v24;
+  v51 = v23;
+  v52 = v24;
   Instance = (DataManager_o *)this->fields.servantEquipTabLabel;
-  v79.fields.g = v21;
-  v79.fields.r = v22;
+  v53 = v21;
+  v54 = v22;
   if ( kind != 1 )
   {
-    v79.fields.a = v18;
-    v79.fields.b = v17;
-    v79.fields.g = v16;
-    v79.fields.r = v15;
+    v51 = v18;
+    v52 = v17;
+    v53 = v16;
+    v54 = v15;
   }
   if ( !Instance )
     goto LABEL_88;
-  UILabel__set_effectColor((UILabel_o *)Instance, v79, 0);
+  UILabel__set_effectColor((UILabel_o *)Instance, *(UnityEngine_Color_o *)&v54, 0);
   Instance = (DataManager_o *)this->fields.servantEquipTabButton;
   if ( !Instance )
     goto LABEL_88;
@@ -1024,31 +1031,31 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)this->fields.commandCodeTabSprite;
   if ( !Instance )
     goto LABEL_88;
-  v53 = (System_String_o **)(kind == 2 ? &StringLiteral_18208/*"btn_bg_19"*/ : &StringLiteral_18206/*"btn_bg_12"*/);
-  UISprite__set_spriteName((UISprite_o *)Instance, *v53, 0);
+  v55 = (System_String_o **)(kind == 2 ? &StringLiteral_18208/*"btn_bg_19"*/ : &StringLiteral_18206/*"btn_bg_12"*/);
+  UISprite__set_spriteName((UISprite_o *)Instance, *v55, 0);
   Instance = (DataManager_o *)this->fields.commandCodeTabStrSp;
   if ( !Instance )
     goto LABEL_88;
-  v54 = &StringLiteral_18326/*"btn_txt_cc_off"*/;
+  v56 = &StringLiteral_18326/*"btn_txt_cc_off"*/;
   if ( kind == 2 )
-    v54 = &StringLiteral_18327/*"btn_txt_cc_on"*/;
-  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v54, 0);
-  Instance = (DataManager_o *)v74;
-  if ( !v74 )
+    v56 = &StringLiteral_18327/*"btn_txt_cc_on"*/;
+  UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v56, 0);
+  Instance = (DataManager_o *)v76;
+  if ( !v76 )
     goto LABEL_88;
-  v57 = UserCommandCodeCollectionMaster__getCollectionList(v74, &findSum[1], findSum, 0);
+  v59 = UserCommandCodeCollectionMaster__getCollectionList(v76, &findSum[1], findSum, 0);
   commandCodeTabLabel = this->fields.commandCodeTabLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v55, v56);
-  v59 = LocalizationManager__Get((System_String_o *)StringLiteral_3480/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0);
-  v76 = findSum[0];
-  Instance = (DataManager_o *)j_il2cpp_value_box_0(qword_5984348, &v76);
-  if ( !v57 )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v57, v58);
+  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_3480/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0);
+  v78 = findSum[0];
+  Instance = (DataManager_o *)j_il2cpp_value_box_0(qword_5984348, &v78);
+  if ( !v59 )
     goto LABEL_88;
-  v60 = (Il2CppObject *)Instance;
-  max_length = v57->max_length;
-  v61 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &max_length);
-  Instance = (DataManager_o *)System_String__Format_75697880(v59, v60, v61, 0);
+  v62 = (Il2CppObject *)Instance;
+  max_length = v59->max_length;
+  v63 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &max_length);
+  Instance = (DataManager_o *)System_String__Format_75697880(v61, v62, v63, 0);
   if ( !commandCodeTabLabel )
     goto LABEL_88;
   UILabel__set_text(commandCodeTabLabel, (System_String_o *)Instance, 0);
@@ -1073,23 +1080,23 @@ void MaterialCollectionMenu__SetTabKind(
   Instance = (DataManager_o *)((__int64 (__fastcall *)(DataManager_o *, _QWORD, bool, Il2CppClass **))Instance->klass[1]._1.nestedTypes)(
                                 Instance,
                                 0,
-                                v40,
+                                v41,
                                 Instance->klass[1]._1.implementedInterfaces);
-  if ( !v40 && this->fields.tabKind == kind )
+  if ( !v41 && this->fields.tabKind == kind )
     goto LABEL_82;
   if ( kind == 2 )
   {
     Instance = (DataManager_o *)this->fields.materialCollectionServantListViewManager;
     if ( !Instance )
       goto LABEL_88;
-    v63 = 3;
+    v65 = 3;
   }
   else if ( kind == 1 )
   {
     Instance = (DataManager_o *)this->fields.materialCollectionServantListViewManager;
     if ( !Instance )
       goto LABEL_88;
-    v63 = 1;
+    v65 = 1;
   }
   else
   {
@@ -1098,42 +1105,42 @@ void MaterialCollectionMenu__SetTabKind(
     Instance = (DataManager_o *)this->fields.materialCollectionServantListViewManager;
     if ( !Instance )
       goto LABEL_88;
-    v63 = 0;
+    v65 = 0;
   }
-  MaterialCollectionServantListViewManager__CreateList((MaterialCollectionServantListViewManager_o *)Instance, v63, v62);
+  MaterialCollectionServantListViewManager__CreateList((MaterialCollectionServantListViewManager_o *)Instance, v65, v64);
 LABEL_82:
   materialCollectionServantListViewManager = this->fields.materialCollectionServantListViewManager;
   if ( this->fields.state != 2 )
   {
     if ( materialCollectionServantListViewManager )
     {
-      v73 = 1;
+      v75 = 1;
       goto LABEL_87;
     }
 LABEL_88:
     sub_2213CDC(Instance, v10);
   }
-  v65 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_2213CCC(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
+  v67 = (MaterialCollectionServantListViewManager_CallbackFunc_o *)sub_2213CCC(MaterialCollectionServantListViewManager_CallbackFunc_TypeInfo);
   MaterialCollectionServantListViewManager_CallbackFunc___ctor(
-    v65,
+    v67,
     (Il2CppObject *)this,
     Method_MaterialCollectionMenu_OnSelectServant__,
-    v66);
+    v68);
   if ( !materialCollectionServantListViewManager )
     goto LABEL_88;
-  materialCollectionServantListViewManager->fields.callbackFunc = v65;
+  materialCollectionServantListViewManager->fields.callbackFunc = v67;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&materialCollectionServantListViewManager->fields.callbackFunc,
-    (int32_t)v65,
-    v67,
-    v68,
+    (int32_t)v67,
     v69,
     v70,
     v71,
-    v72);
-  v73 = 2;
+    v72,
+    v73,
+    v74);
+  v75 = 2;
 LABEL_87:
-  MaterialCollectionServantListViewManager__SetMode_39957704(materialCollectionServantListViewManager, v73, v62);
+  MaterialCollectionServantListViewManager__SetMode_39957704(materialCollectionServantListViewManager, v75, v64);
   this->fields.tabKind = kind;
   this->fields.isInitTab = 1;
 }
@@ -1301,7 +1308,7 @@ System_IAsyncResult_o *MaterialCollectionMenu_CallbackFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(MaterialCollectionMenu_ResultKind_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

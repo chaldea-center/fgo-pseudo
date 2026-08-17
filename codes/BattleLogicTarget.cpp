@@ -2714,7 +2714,7 @@ int32_t BattleLogicTarget___c___GetShuffleArrayEachPriorityDesc_b__19_1(
 LABEL_8:
     v7 = sub_224BC3C(group, System_Linq_IGrouping_int__UpHateData__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__UpHateData__o *, _QWORD))v7)(group, *(_QWORD *)(v7 + 8));
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__UpHateData__o *, _QWORD))v7)(group, *(_QWORD *)(v7 + 8));
 }
 
 

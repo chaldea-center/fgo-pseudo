@@ -1270,15 +1270,17 @@ void QuestRewardItemAction__SetupMultipleQuestRewardInfo(
   __int64 v77; // x21
   UISprite_o **m_Items; // x25
   ServantFaceIconComponent_o **v79; // x27
-  const MethodInfo *v80; // x3
+  float x; // s8
+  float z; // s9
+  const MethodInfo *v82; // x3
   il2cpp_array_size_t max_length; // x8
-  il2cpp_array_size_t v82; // x8
+  il2cpp_array_size_t v84; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  int32_t v84; // w8
-  const MethodInfo *v85; // x1
-  __int64 v86; // x0
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v88; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v86; // w8
+  const MethodInfo *v87; // x1
+  __int64 v88; // x0
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D3DC & 1) == 0 )
   {
@@ -1354,8 +1356,8 @@ void QuestRewardItemAction__SetupMultipleQuestRewardInfo(
     transform = (ServantFaceIconComponent_o *)sub_2213BB4(this->fields.mItemLabel, transform->klass->_1.element_class);
     if ( !transform )
     {
-      v86 = sub_2213D00(0, v36);
-      sub_2213BA0(v86, 0);
+      v88 = sub_2213D00(0, v36);
+      sub_2213BA0(v88, 0);
     }
   }
   if ( !LODWORD(v35->fields.m_CancellationTokenSource) )
@@ -1489,15 +1491,17 @@ LABEL_60:
     transform = (ServantFaceIconComponent_o *)m_Items[v77];
     if ( !transform )
       goto LABEL_60;
+    x = position.fields.x;
+    z = position.fields.z;
     transform = (ServantFaceIconComponent_o *)UnityEngine_Component__get_transform(
                                                 (UnityEngine_Component_o *)transform,
                                                 0);
     if ( !transform )
       goto LABEL_60;
-    v88.fields.y = 0.0;
-    v88.fields.x = position.fields.x;
-    v88.fields.z = position.fields.z;
-    UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, v88, 0);
+    v90.fields.y = 0.0;
+    v90.fields.x = x;
+    v90.fields.z = z;
+    UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, v90, 0);
     if ( questInfoReward->fields.type == 1 )
     {
       if ( (unsigned int)v77 >= LODWORD(mItemSpList_3->max_length) )
@@ -1553,10 +1557,10 @@ LABEL_60:
     {
       if ( !mServantFaceIconList_3 )
         goto LABEL_60;
-      v82 = mServantFaceIconList_3->max_length;
-      if ( v82 )
+      v84 = mServantFaceIconList_3->max_length;
+      if ( v84 )
       {
-        if ( (unsigned int)v77 >= (unsigned int)v82 )
+        if ( (unsigned int)v77 >= (unsigned int)v84 )
           goto LABEL_61;
         transform = v79[v77];
         if ( !transform )
@@ -1587,20 +1591,20 @@ LABEL_60:
         0,
         0);
     }
-    v84 = questInfoReward->fields.num;
+    v86 = questInfoReward->fields.num;
     ++v77;
-    if ( v84 >= 4 )
-      v84 = 4;
-    if ( v84 <= 2 )
-      v84 = 2;
+    if ( v86 >= 4 )
+      v86 = 4;
+    if ( v86 <= 2 )
+      v86 = 2;
   }
-  while ( (unsigned int)v77 < v84 );
+  while ( (unsigned int)v77 < v86 );
   QuestRewardItemAction__SetClearTextLabel(
     (QuestRewardItemAction_o *)transform,
     this->fields.mItemLabel,
     questInfoReward,
-    v80);
-  QuestRewardItemAction__CommonSetUpEndAction(this, v85);
+    v82);
+  QuestRewardItemAction__CommonSetUpEndAction(this, v87);
 }
 
 
@@ -2262,16 +2266,22 @@ void QuestRewardItemAction_StateItemLabel__begin(
   bool v30; // w7
   __int64 v31; // x1
   __int64 v32; // x2
-  ManagerConfig_c *v33; // x0
+  float y; // s8
+  ManagerConfig_c *v34; // x0
+  float z; // s9
   int WIDTH; // w25
-  MoveObject_o *v35; // x21
-  System_Action_o *v36; // x22
-  System_Action_o *v37; // x23
-  _QWORD *v38; // x0
-  System_Reflection_MethodBase_o *v39; // x0
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v41; // 0:kr14_12.12
-  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  MoveObject_o *v37; // x21
+  float x; // s10
+  float v39; // s11
+  float v40; // s12
+  System_Action_o *v41; // x22
+  System_Action_o *v42; // x23
+  _QWORD *v43; // x0
+  System_Reflection_MethodBase_o *v44; // x0
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v48; // 0:s3.4,4:s4.4,8:s5.4
 
   if ( (byte_596D3EA & 1) == 0 )
   {
@@ -2323,32 +2333,40 @@ void QuestRewardItemAction_StateItemLabel__begin(
   *(_QWORD *)(v4 + 24) = Component_object;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v4 + 24), (int32_t)Component_object, v25, v26, v27, v28, v29, v30);
   LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v4 + 16), 0);
-  v33 = ManagerConfig_TypeInfo;
+  y = LocalPosition.fields.y;
+  v34 = ManagerConfig_TypeInfo;
+  z = LocalPosition.fields.z;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v31, v32);
-    v33 = ManagerConfig_TypeInfo;
+    v34 = ManagerConfig_TypeInfo;
   }
-  WIDTH = v33->static_fields->WIDTH;
-  v41 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v4 + 16), 0);
-  v35 = *(MoveObject_o **)(v4 + 24);
-  v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  WIDTH = v34->static_fields->WIDTH;
+  v46 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v4 + 16), 0);
+  v37 = *(MoveObject_o **)(v4 + 24);
+  x = v46.fields.x;
+  v39 = v46.fields.y;
+  v40 = v46.fields.z;
+  v41 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v36,
+    v41,
     (Il2CppObject *)v4,
     Method_QuestRewardItemAction_StateItemLabel___c__DisplayClass1_0__begin_b__0__,
     0);
-  v37 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v42 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v37,
+    v42,
     (Il2CppObject *)v4,
     Method_QuestRewardItemAction_StateItemLabel___c__DisplayClass1_0__begin_b__1__,
     0);
-  if ( !v35
-    || (v42.fields.x = (float)WIDTH,
-        v42.fields.y = LocalPosition.fields.y,
-        v42.fields.z = LocalPosition.fields.z,
-        MoveObject__Play(v35, v42, v41, 0.25, v36, v37, 0.0, 17, 0),
+  if ( !v37
+    || (v47.fields.x = (float)WIDTH,
+        v47.fields.y = y,
+        v47.fields.z = z,
+        v48.fields.x = x,
+        v48.fields.y = v39,
+        v48.fields.z = v40,
+        MoveObject__Play(v37, v47, v48, 0.25, v41, v42, 0.0, 17, 0),
         !*(_QWORD *)v13) )
   {
 LABEL_20:
@@ -2356,11 +2374,11 @@ LABEL_20:
   }
   if ( *(_BYTE *)(*(_QWORD *)v13 + 217LL) )
   {
-    v38 = Method_QuestRewardItemAction_StateItemLabel_begin__;
+    v43 = Method_QuestRewardItemAction_StateItemLabel_begin__;
     if ( (*((_BYTE *)Method_QuestRewardItemAction_StateItemLabel_begin__ + 83) & 2) != 0 )
-      v38 = (_QWORD *)sub_2213A78(Method_QuestRewardItemAction_StateItemLabel_begin__);
-    v39 = (System_Reflection_MethodBase_o *)sub_2213A44(v38, v38[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v39, 4, 0, 0);
+      v43 = (_QWORD *)sub_2213A78(Method_QuestRewardItemAction_StateItemLabel_begin__);
+    v44 = (System_Reflection_MethodBase_o *)sub_2213A44(v43, v43[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v44, 4, 0, 0);
   }
 }
 
@@ -2682,7 +2700,7 @@ void QuestRewardItemAction_StatePlay__update(
   System_Reflection_MethodBase_o *v21; // x0
   _OWORD v22[2]; // [xsp+0h] [xbp-70h] BYREF
   __int128 v23; // [xsp+20h] [xbp-50h] BYREF
-  __int128 i; // [xsp+30h] [xbp-40h]
+  UIWidget_o *v24[2]; // [xsp+30h] [xbp-40h]
 
   if ( (byte_596D3E9 & 1) == 0 )
   {
@@ -2696,7 +2714,7 @@ void QuestRewardItemAction_StatePlay__update(
     byte_596D3E9 = 1;
   }
   v23 = 0u;
-  i = 0u;
+  *(_OWORD *)v24 = 0u;
   if ( !that )
     goto LABEL_44;
   appearEffObjDispList = that->fields.appearEffObjDispList;
@@ -2747,17 +2765,19 @@ LABEL_14:
   *(_QWORD *)&v22[0] = 0;
   *((_QWORD *)&v22[0] + 1) = &v23;
   v23 = v11;
-  for ( i = v22[1]; ; UIWidget__set_color(*((UIWidget_o **)&i + 1), *(UnityEngine_Color_o *)(i + 148), 0) )
+  *(_OWORD *)v24 = v22[1];
+  while ( 1 )
   {
     v12 = System_Collections_Generic_List_Enumerator_ValueTuple_object__object____MoveNext(
             (System_Collections_Generic_List_Enumerator_T__o *)&v23,
             (const MethodInfo_40EA4FC *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_UISprite__UITexture___MoveNext__);
     if ( !v12 )
       break;
-    if ( !(_QWORD)i )
+    if ( !v24[0] )
       sub_2213CDC(v12, v13);
-    if ( !*((_QWORD *)&i + 1) )
+    if ( !v24[1] )
       sub_2213CDC(0, v13);
+    UIWidget__set_color(v24[1], v24[0]->fields.mColor, 0);
   }
   System_Collections_Generic_List_Enumerator_ValueTuple_object__object____Dispose(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
@@ -3034,7 +3054,7 @@ void QuestRewardItemAction_StateTitleSprite___c__DisplayClass0_0___begin_b__0(
   struct QuestRewardItemAction_o *v28; // x8
   System_Collections_Generic_List_T__o *titleSpriteToTextureList; // x22
   __int64 v30; // x0
-  System_ValueTuple_object__object__o v31; // x1
+  System_ValueTuple_object__object__o v31; // x1 OVERLAPPED
   System_String_o *v32; // x3
   int32_t v33; // w4
   int32_t v34; // w5

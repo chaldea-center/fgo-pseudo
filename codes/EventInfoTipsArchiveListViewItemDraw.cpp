@@ -146,7 +146,7 @@ void EventInfoTipsArchiveListViewItemDraw__SetItem(
   const MethodInfo *v40; // x1
   int32_t Height; // w0
   int v42; // w8
-  float v43; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   v9 = id;
   v10 = this;
@@ -263,8 +263,8 @@ LABEL_28:
       if ( FrameCollider )
       {
         v38 = this;
-        v43 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size(FrameCollider, 0).fields.y));
-        GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v38, v43 * -0.5, 0);
+        size = UnityEngine_BoxCollider__get_size(FrameCollider, 0);
+        GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v38, size.fields.y * -0.5, 0);
         this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.partitionSprite;
         if ( this )
         {

@@ -71,6 +71,7 @@ void BattleCameraFullScaleSetter__AdjustPanelSize(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleCameraFullScaleSetter__CalcScale(BattleCameraFullScaleSetter_o *this, const MethodInfo *method)
 {
   BattleCameraFullScaleSetter_o *v2; // x19
@@ -82,13 +83,13 @@ void BattleCameraFullScaleSetter__CalcScale(BattleCameraFullScaleSetter_o *this,
   BattleCameraFullScaleSetter_o *v8; // x20
   float v9; // s2
   float32x2_t v10; // d1
-  unsigned __int64 v11; // d0
+  unsigned __int64 v11; // d0 OVERLAPPED
   float DefaultFov; // s10
   __int64 v13; // x1
   float v14; // s8
   float z; // s9
   float v16; // s0
-  UnityEngine_Vector3_o v17; // 0:kr00_12.12
+  int v17; // s1
 
   v2 = this;
   if ( (byte_59731A4 & 1) == 0 )
@@ -179,9 +180,8 @@ LABEL_26:
   v10.n64_u32[1] = LODWORD(v2->fields.baseScale);
   v11 = vmul_f32(v10, *(float32x2_t *)&v2->fields.adjustPanelScale.fields.x).n64_u64[0];
 LABEL_25:
-  *(_QWORD *)&v17.fields.x = v11;
-  v17.fields.z = v9;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v8, v17, 0);
+  v17 = HIDWORD(v11);
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v8, *(UnityEngine_Vector3_o *)&v11, 0);
 }
 
 
@@ -231,7 +231,7 @@ void BattleCameraFullScaleSetter__Initialize(
   Il2CppObject *v44; // x22
   UnityEngine_Object_o *v45; // x21
   const MethodInfo *v46; // x1
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59731A3 & 1) == 0 )
   {

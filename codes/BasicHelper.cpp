@@ -996,6 +996,7 @@ System_Collections_IEnumerator_o *BasicHelper__DelayCall(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_59722C2 & 1) == 0 )
   {
@@ -1009,8 +1010,9 @@ System_Collections_IEnumerator_o *BasicHelper__DelayCall(
   *(float *)(v8 + 32) = delay;
   *(_QWORD *)(v8 + 40) = action;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 40), (int32_t)action, v9, v10, v11, v12, v13, v14);
+  result = (System_Collections_IEnumerator_o *)v8;
   *(_BYTE *)(v8 + 36) = v7;
-  return (System_Collections_IEnumerator_o *)v8;
+  return result;
 }
 
 
@@ -1340,9 +1342,9 @@ System_Collections_Generic_IEnumerable_T__o *BasicHelper__ExcludeNull___Il2CppFu
     sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)v23->static_fields + 8), v9, v15, v16, v17, v18, v19, v20);
     v7 = method->rgctx_data;
   }
-  return ((System_Collections_Generic_IEnumerable_T__o *(__fastcall *)(System_Collections_Generic_IEnumerable_T__o *, __int64))v7->_6_System_Linq_Enumerable_Where_T_->methodPointer)(
-           sequence,
-           v9);
+  return (System_Collections_Generic_IEnumerable_T__o *)((__int64 (__fastcall *)(System_Collections_Generic_IEnumerable_T__o *, __int64))v7->_6_System_Linq_Enumerable_Where_T_->methodPointer)(
+                                                          sequence,
+                                                          v9);
 }
 
 
@@ -4310,6 +4312,7 @@ Il2CppObject *BasicHelper__GetValue_Int32Enum__object_(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___Il2CppFullySharedGenericType_(
         System_Collections_Generic_Dictionary_string__object__o *dic,
         System_String_o *key,
@@ -4325,6 +4328,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___I
   long double v13; // q0
   Il2CppClass *v14; // x1
   const void *v15; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v16; // x0
+  void *v17; // x1
   _QWORD v18[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -4361,19 +4366,23 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___I
       if ( (*((_WORD *)&v14->_2.bitflags2 + 1) & 1) == 0 )
         v14 = (Il2CppClass *)sub_224B908(v13);
       v15 = (const void *)sub_2213BC4(Item, v14, (char *)v18 - ((actualSize + 15) & 0x1FFFFFFF0LL));
-      result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(monitor, v15, actualSize);
-      return result;
+      v16 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(monitor, v15, actualSize);
+      goto LABEL_13;
     }
     _0_T = method->rgctx_data->_0_T;
   }
   if ( (_0_T->_1.byval_arg.bits & 0x80000000) == 0 )
     klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)v18;
   memcpy((char *)v18 - ((actualSize + 15) & 0x1FFFFFFF0LL), klass, actualSize);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, klass, actualSize);
+  v16 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, klass, actualSize);
+LABEL_13:
+  result.monitor = v17;
+  result.klass = v16;
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_(
         System_Collections_Generic_Dictionary_K__V__o *dic,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o key,
@@ -4401,6 +4410,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___I
   __int64 *v23; // x1
   __int64 v24; // x0
   void (__fastcall *v25)(__int64, __int64 *, System_Collections_Generic_Dictionary_K__V__o *, char **, char *); // x8
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v26; // x0
+  void *v27; // x1
   void **v28; // x21
   unsigned __int64 v29; // [xsp+0h] [xbp-40h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // [xsp+8h] [xbp-38h]
@@ -4464,12 +4475,11 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___I
       v34 = v14;
       v35 = (char *)&v29 - ((v13 + 15) & 0x1FFFFFFF0LL);
       v25(v24, v23, dic, &v34, v35);
-      result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                                 klass,
-                                                                                 (char *)&v29
-                                                                               - ((v13 + 15) & 0x1FFFFFFF0LL),
-                                                                                 v13);
-      return result;
+      v26 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                        klass,
+                                                                        (char *)&v29 - ((v13 + 15) & 0x1FFFFFFF0LL),
+                                                                        v13);
+      goto LABEL_21;
     }
     v11 = v21[4];
   }
@@ -4478,7 +4488,10 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__GetValue___I
   else
     v28 = v6;
   memcpy((char *)&v29 - ((v13 + 15) & 0x1FFFFFFF0LL), v28, v13);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(klass, v28, v13);
+  v26 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(klass, v28, v13);
+LABEL_21:
+  result.monitor = v27;
+  result.klass = v26;
   return result;
 }
 
@@ -4814,7 +4827,11 @@ UnityEngine_Color_o BasicHelper__GetValue_object__Color_(
   float b; // s9
   float g; // s10
   float r; // s11
-  UnityEngine_Color_o Item; // 0:kr00_16.16
+  float v11; // s2
+  float v12; // s3
+  float v13; // s0
+  float v14; // s1
+  UnityEngine_Color_o Item; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = def.fields.a;
@@ -4838,10 +4855,14 @@ UnityEngine_Color_o BasicHelper__GetValue_object__Color_(
     b = Item.fields.b;
     a = Item.fields.a;
   }
-  result.fields.b = b;
-  result.fields.a = a;
-  result.fields.r = r;
-  result.fields.g = g;
+  v11 = b;
+  v12 = a;
+  v13 = r;
+  v14 = g;
+  result.fields.a = v12;
+  result.fields.b = v11;
+  result.fields.g = v14;
+  result.fields.r = v13;
   return result;
 }
 
@@ -4950,6 +4971,7 @@ int32_t BasicHelper__IndexValue_Int32Enum_(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_KeyValuePair_object__int__o BasicHelper__IndexValue_KeyValuePair_object__int__(
         System_Collections_Generic_List_T__o *list,
         int32_t index,
@@ -4958,6 +4980,8 @@ System_Collections_Generic_KeyValuePair_object__int__o BasicHelper__IndexValue_K
 {
   __int64 v5; // x19
   Il2CppObject *key; // x21
+  Il2CppObject *v9; // x0
+  __int64 v10; // x1
   System_Collections_Generic_KeyValuePair_object__int__o Item; // kr00_16
   System_Collections_Generic_KeyValuePair_object__int__o result; // 0:x0.16
 
@@ -4972,21 +4996,24 @@ System_Collections_Generic_KeyValuePair_object__int__o BasicHelper__IndexValue_K
   {
     sub_224B964(method);
     if ( !list )
-      goto LABEL_8;
-  }
-  if ( (index & 0x80000000) == 0 && list->fields._size > index )
-  {
-    Item = System_Collections_Generic_List_KeyValuePair_object__int____get_Item(
-             list,
-             index,
-             (const MethodInfo_43C3F1C *)method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item);
-    *(_QWORD *)&result.fields.value = *(_QWORD *)&Item.fields.value;
-    result.fields.key = Item.fields.key;
-    return result;
-  }
+    {
 LABEL_8:
-  result.fields.key = key;
-  *(_QWORD *)&result.fields.value = v5;
+      v9 = key;
+      v10 = v5;
+      goto LABEL_9;
+    }
+  }
+  if ( index < 0 || list->fields._size <= index )
+    goto LABEL_8;
+  Item = System_Collections_Generic_List_KeyValuePair_object__int____get_Item(
+           list,
+           index,
+           (const MethodInfo_43C3F1C *)method->rgctx_data->_2_System_Collections_Generic_List_T__get_Item);
+  v10 = *(_QWORD *)&Item.fields.value;
+  v9 = Item.fields.key;
+LABEL_9:
+  *(_QWORD *)&result.fields.value = v10;
+  result.fields.key = v9;
   return result;
 }
 
@@ -5009,6 +5036,7 @@ ListViewSort_BonusFilterInfo_o *BasicHelper__IndexValue_ListViewSort_BonusFilter
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *array,
         int32_t index,
@@ -5020,6 +5048,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue__
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x20
   Il2CppClass *_1_T; // x8
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v11; // x1
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v12; // x0
+  void *v13; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v14; // [xsp+8h] [xbp-38h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -5046,11 +5076,14 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue__
                                                                     + (unsigned int)array->obj.klass->_2.native_size
                                                                     * (unsigned __int64)(unsigned int)index);
   }
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v11, _1_T->_2.actualSize);
+  v12 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v11, _1_T->_2.actualSize);
+  result.monitor = v13;
+  result.klass = v12;
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue___Il2CppFullySharedGenericType__58805608(
         System_Collections_Generic_List_T__o *list,
         int32_t index,
@@ -5067,6 +5100,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue__
   MethodInfo *_2_System_Collections_Generic_List_T__get_Item; // x1
   Il2CppMethodPointer methodPointer; // x0
   void (__fastcall *invoker_method)(Il2CppMethodPointer, MethodInfo *, System_Collections_Generic_List_T__o *, int32_t **, char *); // x9
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v17; // x0
+  void *v18; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v19; // x21
   __int64 v20; // [xsp+0h] [xbp-30h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v21; // [xsp+8h] [xbp-28h] BYREF
@@ -5101,12 +5136,12 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue__
       v22 = &v24;
       v23 = (char *)&v20 - ((actualSize + 15) & 0x1FFFFFFF0LL);
       invoker_method(methodPointer, _2_System_Collections_Generic_List_T__get_Item, list, &v22, v23);
-      result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                                 monitor,
-                                                                                 (char *)&v20
-                                                                               - ((actualSize + 15) & 0x1FFFFFFF0LL),
-                                                                                 actualSize);
-      return result;
+      v17 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                        monitor,
+                                                                        (char *)&v20
+                                                                      - ((actualSize + 15) & 0x1FFFFFFF0LL),
+                                                                        actualSize);
+      goto LABEL_12;
     }
     _3_T = v13->_3_T;
   }
@@ -5115,7 +5150,10 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__IndexValue__
   else
     v19 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
   memcpy((char *)&v20 - ((actualSize + 15) & 0x1FFFFFFF0LL), v19, actualSize);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v19, actualSize);
+  v17 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v19, actualSize);
+LABEL_12:
+  result.monitor = v18;
+  result.klass = v17;
   return result;
 }
 
@@ -5405,7 +5443,8 @@ float BasicHelper__LastKeyTime(UnityEngine_AnimationCurve_o *self, float def, co
       &v7,
       keys,
       (const MethodInfo_3885754 *)Method_System_Linq_Enumerable_LastOrDefault_Keyframe___);
-    v8 = v7;
+    *(_OWORD *)&v8.fields.m_Time = *(_OWORD *)&v7.fields.m_Time;
+    *(_OWORD *)&v8.fields.m_OutTangent = *(_OWORD *)&v7.fields.m_OutTangent;
     return UnityEngine_Keyframe__get_time(&v8, 0);
   }
   return def;
@@ -7273,6 +7312,7 @@ bool BasicHelper__DelayCall_d__36__MoveNext(BasicHelper__DelayCall_d__36_o *this
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
 
   if ( (byte_59722CC & 1) == 0 )
   {
@@ -7299,8 +7339,9 @@ LABEL_8:
       this->fields.__2__current = (Il2CppObject *)v6;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     goto LABEL_8;
   }
@@ -7365,7 +7406,7 @@ bool BasicHelper__DelayCall_d__37_ShowAllEx_DamageFuncArgument___MoveNext(
   int32_t _1__state; // w21
   BasicHelper__DelayCall_d__37_T__c *klass; // x8
   __int128 v6; // q0
-  __int64 v7; // x9
+  void *monitor; // x9
   System_Action_T__o *action; // x0
   const MethodInfo_3700040 *_3_ActionExtensions_Call_T; // x2
   float delay; // s8
@@ -7391,11 +7432,11 @@ bool BasicHelper__DelayCall_d__37_ShowAllEx_DamageFuncArgument___MoveNext(
       klass = method->klass;
       v6 = *(_OWORD *)&this->fields.arg;
       this->fields.__1__state = -1;
-      v7 = *((_QWORD *)this + 8);
+      monitor = this[1].monitor;
       action = this->fields.action;
       _3_ActionExtensions_Call_T = (const MethodInfo_3700040 *)klass->rgctx_data->_3_ActionExtensions_Call_T_;
       *(_OWORD *)&v19.fields.perf = v6;
-      *(_QWORD *)&v19.fields.damageIndex = v7;
+      *(_QWORD *)&v19.fields.damageIndex = monitor;
       ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(action, &v19, _3_ActionExtensions_Call_T);
     }
   }
@@ -7692,6 +7733,7 @@ bool BasicHelper__DelayCall_d__38__MoveNext(BasicHelper__DelayCall_d__38_o *this
   bool v7; // w7
   int32_t _1__state; // w8
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -7711,8 +7753,9 @@ bool BasicHelper__DelayCall_d__38__MoveNext(BasicHelper__DelayCall_d__38_o *this
     p__2__current = &this->fields.__2__current;
     this->fields._count_5__2 = _1__state + 1;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   ActionExtensions__Call(this->fields.action, 0);
   return 0;
@@ -8217,6 +8260,7 @@ System_Collections_Generic_IEnumerator_T__o *BasicHelper__ToIterator_d__32___Il2
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__ToIterator_d__32___Il2CppFullySharedGenericType___System_Collections_Generic_IEnumerator_T__get_Current(
         BasicHelper__ToIterator_d__32_T__o *this,
         const MethodInfo_3F3CEDC *method)
@@ -8225,12 +8269,16 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper__ToIterator_d
   _QWORD *v4; // x8
   size_t v5; // x20
   const void *v6; // x1
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v7; // x0
+  void *v8; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
   v4 = *(_QWORD **)(*(_QWORD *)(v2 + 32) + 192LL);
   v5 = *(unsigned int *)(v4[3] + 252LL);
   v6 = (const void *)sub_2213A88(this, *(_QWORD *)(*v4 + 128LL) + 32LL);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove((void *)method, v6, v5);
+  v7 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove((void *)method, v6, v5);
+  result.monitor = v8;
+  result.klass = v7;
   return result;
 }
 
@@ -8239,7 +8287,7 @@ System_Collections_IEnumerator_o *BasicHelper__ToIterator_d__32___Il2CppFullySha
         BasicHelper__ToIterator_d__32_T__o *this,
         const MethodInfo_3F3D148 *method)
 {
-  return ((System_Collections_IEnumerator_o *(__fastcall *)(BasicHelper__ToIterator_d__32_T__o *))method->klass->rgctx_data->_6_BasicHelper__ToIterator_d__32_T__System_Collections_Generic_IEnumerable_T__GetEnumerator->methodPointer)(this);
+  return (System_Collections_IEnumerator_o *)((__int64 (__fastcall *)(BasicHelper__ToIterator_d__32_T__o *))method->klass->rgctx_data->_6_BasicHelper__ToIterator_d__32_T__System_Collections_Generic_IEnumerable_T__GetEnumerator->methodPointer)(this);
 }
 
 
@@ -8306,6 +8354,7 @@ bool BasicHelper__ToIterator_d__32_float___MoveNext(
   int32_t loopCount; // w8
   __int64 v7; // x8
   float v8; // s0
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -8332,9 +8381,10 @@ bool BasicHelper__ToIterator_d__32_float___MoveNext(
   if ( !v7 )
     sub_2213CDC(this, v5);
   v8 = (*(float (__fastcall **)(_QWORD))(v7 + 24))(*(_QWORD *)(v7 + 64));
+  result = 1;
   *((float *)&this->fields.__1__state + 1) = v8;
   this->fields.__1__state = 1;
-  return 1;
+  return result;
 }
 
 
@@ -8466,6 +8516,7 @@ bool BasicHelper__ToIterator_d__32_object___MoveNext(
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
+  bool result; // w0
 
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -8495,8 +8546,9 @@ bool BasicHelper__ToIterator_d__32_object___MoveNext(
   this->fields.__2__current = v8;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v8, v10, v11, v12, v13, v14, v15);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -8612,6 +8664,7 @@ bool BasicHelper__WaitCallUntilSatisfyFunc_d__39__MoveNext(
   int32_t v10; // w5
   bool v11; // w6
   bool v12; // w7
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   _1__state = this->fields.__1__state;
@@ -8645,8 +8698,9 @@ bool BasicHelper__WaitCallUntilSatisfyFunc_d__39__MoveNext(
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v7, v8, v9, v10, v11, v12);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -8855,6 +8909,7 @@ void BasicHelper___c__23___Il2CppFullySharedGenericType____Il2CppFullySharedGene
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper___c__23___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType____Remove_b__23_0(
         BasicHelper___c__23_K__V__o *this,
         System_Collections_Generic_KeyValuePair_K__V__o pair,
@@ -8867,6 +8922,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper___c__23___Il2
   MethodInfo *_4_System_Collections_Generic_KeyValuePair_K__V__get_Key; // x1
   Il2CppMethodPointer methodPointer; // x0
   void (__fastcall *invoker_method)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD); // x8
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v10; // x0
+  void *v11; // x1
   _QWORD v12[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -8880,11 +8937,12 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BasicHelper___c__23___Il2
   invoker_method = (void (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD))_4_System_Collections_Generic_KeyValuePair_K__V__get_Key->invoker_method;
   v12[0] = (char *)v12 - ((actualSize + 15) & 0x1FFFFFFF0LL);
   invoker_method(methodPointer, _4_System_Collections_Generic_KeyValuePair_K__V__get_Key, key, v12, v12[0]);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                             value,
-                                                                             (char *)v12
-                                                                           - ((actualSize + 15) & 0x1FFFFFFF0LL),
-                                                                             actualSize);
+  v10 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    value,
+                                                                    (char *)v12 - ((actualSize + 15) & 0x1FFFFFFF0LL),
+                                                                    actualSize);
+  result.monitor = v11;
+  result.klass = v10;
   return result;
 }
 

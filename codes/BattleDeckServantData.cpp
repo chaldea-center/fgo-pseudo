@@ -1062,9 +1062,9 @@ System_Nullable_bool__o BattleDeckServantData__IsVoiceEnabledOnBreakShift(
   const MethodInfo *v4; // x3
   int32_t Script; // w0
   System_Nullable_bool__o *v6; // x0
-  System_Nullable_bool__o *v7; // x0
-  System_Nullable_bool__o v8; // [xsp+8h] [xbp-28h] BYREF
-  System_Nullable_bool__o v9; // [xsp+Ch] [xbp-24h] BYREF
+  System_Nullable_bool__o *v8; // x0
+  System_Nullable_bool__o v9; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_bool__o v10; // [xsp+Ch] [xbp-24h] BYREF
 
   if ( (byte_59733CF & 1) == 0 )
   {
@@ -1072,31 +1072,28 @@ System_Nullable_bool__o BattleDeckServantData__IsVoiceEnabledOnBreakShift(
     sub_2213A60(&StringLiteral_19864/*"enableBreakShiftVoice"*/);
     byte_59733CF = 1;
   }
-  if ( BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19864/*"enableBreakShiftVoice"*/, v2) )
+  if ( !BattleDeckServantData__isScript(this, (System_String_o *)StringLiteral_19864/*"enableBreakShiftVoice"*/, v2) )
+    return (System_Nullable_bool__o)0;
+  Script = BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19864/*"enableBreakShiftVoice"*/, 1, v4);
+  if ( !Script )
   {
-    Script = BattleDeckServantData__getScript(this, (System_String_o *)StringLiteral_19864/*"enableBreakShiftVoice"*/, 1, v4);
-    if ( !Script )
-    {
-      v7 = &v8;
-      v8 = 0;
-      System_Nullable_bool____ctor(
-        (System_Nullable_bool__o)v7,
-        0,
-        (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
-      return v8;
-    }
-    if ( Script == 1 )
-    {
-      v6 = &v9;
-      v9 = 0;
-      System_Nullable_bool____ctor(
-        (System_Nullable_bool__o)v6,
-        1,
-        (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
-      return v9;
-    }
+    v8 = &v9;
+    v9 = 0;
+    System_Nullable_bool____ctor(
+      (System_Nullable_bool__o)v8,
+      0,
+      (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+    return v9;
   }
-  return 0;
+  if ( Script != 1 )
+    return (System_Nullable_bool__o)0;
+  v6 = &v10;
+  v10 = 0;
+  System_Nullable_bool____ctor(
+    (System_Nullable_bool__o)v6,
+    1,
+    (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+  return v10;
 }
 
 
@@ -2997,9 +2994,9 @@ System_String_o *BattleDeckServantData___c___GetScriptStringArrayParam_b__79_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
-           x,
-           x->klass->vtable[3].method);
+  return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
+                              x,
+                              x->klass->vtable[3].method);
 }
 
 

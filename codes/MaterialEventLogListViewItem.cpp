@@ -89,7 +89,7 @@ bool MaterialEventLogListViewItem__IsItemMatchFilter(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(MaterialEventLogListViewItem_o *, ListViewSort_o *, const MethodInfo *))this->klass->vtable._5_IsMatchFilter.methodPtr)(
+  return ((__int64 (__fastcall *)(MaterialEventLogListViewItem_o *, ListViewSort_o *, const MethodInfo *))this->klass->vtable._5_IsMatchFilter.methodPtr)(
            this,
            sort,
            this->klass->vtable._5_IsMatchFilter.method);

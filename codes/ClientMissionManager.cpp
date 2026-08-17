@@ -577,25 +577,24 @@ void ClientMissionManager__SendRequest(
   const MethodInfo *v8; // x1
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__o *progressDictionary; // x0
   int32_t getEnumeratorRetType; // w23
-  Il2CppObject *value; // x24
-  Il2CppObject *key; // x25
-  EventMissionProgressRequest_Argument_ProgressData_o *v13; // x22
-  __int64 v14; // x0
-  __int64 v15; // x1
-  System_String_o *v16; // x2
-  System_String_o *v17; // x3
-  int32_t v18; // w4
-  int32_t v19; // w5
-  bool v20; // w6
-  bool v21; // w7
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  EventMissionProgressRequest_Argument_ProgressData_o *v12; // x22
+  __int64 v13; // x0
+  __int64 v14; // x1
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  Il2CppClass **v25; // x0
+  Il2CppClass **v24; // x0
   int64_t deemedTime; // x22
-  EventMissionProgressRequest_Argument_o *v27; // x23
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v28; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v29; // [xsp+30h] [xbp-90h] BYREF
+  EventMissionProgressRequest_Argument_o *v26; // x23
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v27; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v28; // [xsp+30h] [xbp-90h] BYREF
 
   if ( (byte_596FE6A & 1) == 0 )
   {
@@ -616,7 +615,7 @@ void ClientMissionManager__SendRequest(
     byte_596FE6A = 1;
   }
   v5 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
-  memset(&v29, 0, sizeof(v29));
+  memset(&v28, 0, sizeof(v28));
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, callback);
   Request_object = NetworkManager__getRequest_object_(
@@ -630,57 +629,56 @@ void ClientMissionManager__SendRequest(
   if ( !progressDictionary )
     goto LABEL_24;
   System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int___GetEnumerator(
-    &v28,
+    &v27,
     progressDictionary,
     (const MethodInfo_406CBD4 *)Method_System_Collections_Generic_Dictionary_ClientMissionManager_ProgressDictionaryKey__int__GetEnumerator__);
-  v29 = v28;
-  v28.fields._dictionary = 0;
-  *(_QWORD *)&v28.fields._version = &v29;
+  v28 = v27;
+  v27.fields._dictionary = 0;
+  *(_QWORD *)&v27.fields._version = &v28;
   while ( System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int___MoveNext(
-            &v29,
+            &v28,
             (const MethodInfo_417DCB8 *)Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__MoveNext__) )
   {
-    getEnumeratorRetType = v29.fields._getEnumeratorRetType;
-    if ( v29.fields._getEnumeratorRetType )
+    getEnumeratorRetType = v28.fields._getEnumeratorRetType;
+    if ( v28.fields._getEnumeratorRetType )
     {
-      key = v29.fields._current.fields.key;
-      value = v29.fields._current.fields.value;
-      v13 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_2213CCC(EventMissionProgressRequest_Argument_ProgressData_TypeInfo);
+      current = v28.fields._current;
+      v12 = (EventMissionProgressRequest_Argument_ProgressData_o *)sub_2213CCC(EventMissionProgressRequest_Argument_ProgressData_TypeInfo);
       EventMissionProgressRequest_Argument_ProgressData___ctor(
-        v13,
-        (int32_t)key,
-        SHIDWORD(key),
-        (int32_t)value,
-        SHIDWORD(value),
+        v12,
+        (int32_t)current.fields.key,
+        SHIDWORD(current.fields.key),
+        (int32_t)current.fields.value,
+        SHIDWORD(current.fields.value),
         getEnumeratorRetType,
         0);
       if ( !v7
         || (items = v7->fields._items,
-            v23 = Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__Add__,
+            v22 = Method_System_Collections_Generic_List_EventMissionProgressRequest_Argument_ProgressData__Add__,
             ++v7->fields._version,
             !items) )
       {
-        sub_2213CDC(v14, v15);
+        sub_2213CDC(v13, v14);
       }
       size = v7->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v7,
-          (Il2CppObject *)v13,
-          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+          (Il2CppObject *)v12,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
-        v25 = &items->obj.klass + size;
+        v24 = &items->obj.klass + size;
         v7->fields._size = size + 1;
-        v25[4] = (Il2CppClass *)v13;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v13, v16, v17, v18, v19, v20, v21);
+        v24[4] = (Il2CppClass *)v12;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v24 + 4), (int32_t)v12, v15, v16, v17, v18, v19, v20);
       }
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int___Dispose(
-    &v29,
+    &v28,
     (const MethodInfo_417DDF4 *)Method_System_Collections_Generic_Dictionary_Enumerator_ClientMissionManager_ProgressDictionaryKey__int__Dispose__);
   if ( !v7 )
     goto LABEL_24;
@@ -693,15 +691,15 @@ void ClientMissionManager__SendRequest(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v8);
       deemedTime = NetworkManager__getTime(0);
     }
-    v27 = (EventMissionProgressRequest_Argument_o *)sub_2213CCC(EventMissionProgressRequest_Argument_TypeInfo);
+    v26 = (EventMissionProgressRequest_Argument_o *)sub_2213CCC(EventMissionProgressRequest_Argument_TypeInfo);
     EventMissionProgressRequest_Argument___ctor(
-      v27,
+      v26,
       deemedTime,
       (System_Collections_Generic_IReadOnlyList_EventMissionProgressRequest_Argument_ProgressData__o *)v7,
       0);
     if ( Request_object )
     {
-      EventMissionProgressRequest__beginRequest((EventMissionProgressRequest_o *)Request_object, v27, 0);
+      EventMissionProgressRequest__beginRequest((EventMissionProgressRequest_o *)Request_object, v26, 0);
       goto LABEL_22;
     }
 LABEL_24:

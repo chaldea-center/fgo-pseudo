@@ -778,7 +778,7 @@ bool GiftButtonCtrl__get_isEnabled(GiftButtonCtrl_o *this, const MethodInfo *met
   giftButton = this->fields.giftButton;
   if ( !giftButton )
     sub_2213CDC(0, method);
-  return ((bool (__fastcall *)(struct UIButton_o *, const MethodInfo *))giftButton->klass->vtable._4_get_isEnabled.methodPtr)(
+  return ((__int64 (__fastcall *)(struct UIButton_o *, const MethodInfo *))giftButton->klass->vtable._4_get_isEnabled.methodPtr)(
            giftButton,
            giftButton->klass->vtable._4_get_isEnabled.method);
 }

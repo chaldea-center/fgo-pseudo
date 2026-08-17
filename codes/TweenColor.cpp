@@ -185,18 +185,21 @@ void TweenColor__Cache(TweenColor_o *this, const MethodInfo *method)
 void TweenColor__OnUpdate(TweenColor_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
   float v4; // s1
+  UnityEngine_Color_o v5; // q0 OVERLAPPED
+  float g; // s1
+  __int64 v7; // kr00_8
 
   v4 = 1.0;
   if ( factor <= 1.0 )
     v4 = factor;
   if ( factor < 0.0 )
     v4 = 0.0;
-  TweenColor__set_value(
-    this,
-    (UnityEngine_Color_o)vaddq_f32(
-                           (float32x4_t)this->fields.from,
-                           vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v4)),
-    (const MethodInfo *)isFinished);
+  v5 = (UnityEngine_Color_o)vaddq_f32(
+                              (float32x4_t)this->fields.from,
+                              vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v4));
+  g = v5.fields.g;
+  v7 = *(_QWORD *)&v5.fields.b;
+  TweenColor__set_value(this, v5, (const MethodInfo *)isFinished);
 }
 
 
@@ -231,18 +234,20 @@ UnityEngine_Color_o TweenColor__get_color(TweenColor_o *this, const MethodInfo *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mWidget; // x20
   UnityEngine_Material_o *v4; // x0
   __int64 v5; // x1
   struct UIWidget_o *v6; // x8
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Object_o *mMat; // x20
   UnityEngine_Object_o *mSr; // x20
   UnityEngine_Object_o *mLight; // x20
-  UnityEngine_Color_o color; // 0:kr00_16.16
-  UnityEngine_Color_o v15; // 0:kr10_16.16
-  UnityEngine_Color_o v16; // 0:kr20_16.16
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59751E7 & 1) == 0 )
@@ -256,75 +261,70 @@ UnityEngine_Color_o TweenColor__get_value(TweenColor_o *this, const MethodInfo *
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   v4 = (UnityEngine_Material_o *)UnityEngine_Object__op_Inequality(mWidget, 0, 0);
-  if ( ((unsigned __int8)v4 & 1) != 0 )
+  if ( ((unsigned __int8)v4 & 1) == 0 )
   {
-    v6 = this->fields.mWidget;
-    if ( v6 )
+    mMat = (UnityEngine_Object_o *)this->fields.mMat;
+    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+    if ( UnityEngine_Object__op_Inequality(mMat, 0, 0) )
     {
-      result.fields.r = v6->fields.mColor.fields.r;
-      result.fields.g = v6->fields.mColor.fields.g;
-      result.fields.b = v6->fields.mColor.fields.b;
-      result.fields.a = v6->fields.mColor.fields.a;
-      return result;
+      v4 = this->fields.mMat;
+      if ( v4 )
+      {
+        *(UnityEngine_Color_o *)&r = UnityEngine_Material__get_color(v4, 0);
+        goto LABEL_27;
+      }
+    }
+    else
+    {
+      mSr = (UnityEngine_Object_o *)this->fields.mSr;
+      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+      if ( UnityEngine_Object__op_Inequality(mSr, 0, 0) )
+      {
+        v4 = (UnityEngine_Material_o *)this->fields.mSr;
+        if ( v4 )
+        {
+          *(UnityEngine_Color_o *)&r = UnityEngine_SpriteRenderer__get_color((UnityEngine_SpriteRenderer_o *)v4, 0);
+          goto LABEL_27;
+        }
+      }
+      else
+      {
+        mLight = (UnityEngine_Object_o *)this->fields.mLight;
+        if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+        if ( !UnityEngine_Object__op_Inequality(mLight, 0, 0) )
+        {
+          r = 0.0;
+          g = 0.0;
+          b = 0.0;
+          a = 1.0;
+          goto LABEL_27;
+        }
+        v4 = (UnityEngine_Material_o *)this->fields.mLight;
+        if ( v4 )
+        {
+          *(UnityEngine_Color_o *)&r = UnityEngine_Light__get_color((UnityEngine_Light_o *)v4, 0);
+          goto LABEL_27;
+        }
+      }
     }
 LABEL_26:
     sub_2213CDC(v4, v5);
   }
-  mMat = (UnityEngine_Object_o *)this->fields.mMat;
-  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
-  if ( UnityEngine_Object__op_Inequality(mMat, 0, 0) )
-  {
-    v4 = this->fields.mMat;
-    if ( !v4 )
-      goto LABEL_26;
-    color = UnityEngine_Material__get_color(v4, 0);
-    result.fields.r = color.fields.r;
-    result.fields.g = color.fields.g;
-    result.fields.b = color.fields.b;
-    result.fields.a = color.fields.a;
-  }
-  else
-  {
-    mSr = (UnityEngine_Object_o *)this->fields.mSr;
-    if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
-    if ( UnityEngine_Object__op_Inequality(mSr, 0, 0) )
-    {
-      v4 = (UnityEngine_Material_o *)this->fields.mSr;
-      if ( !v4 )
-        goto LABEL_26;
-      v15 = UnityEngine_SpriteRenderer__get_color((UnityEngine_SpriteRenderer_o *)v4, 0);
-      result.fields.r = v15.fields.r;
-      result.fields.g = v15.fields.g;
-      result.fields.b = v15.fields.b;
-      result.fields.a = v15.fields.a;
-    }
-    else
-    {
-      mLight = (UnityEngine_Object_o *)this->fields.mLight;
-      if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
-      if ( UnityEngine_Object__op_Inequality(mLight, 0, 0) )
-      {
-        v4 = (UnityEngine_Material_o *)this->fields.mLight;
-        if ( !v4 )
-          goto LABEL_26;
-        v16 = UnityEngine_Light__get_color((UnityEngine_Light_o *)v4, 0);
-        result.fields.r = v16.fields.r;
-        result.fields.g = v16.fields.g;
-        result.fields.b = v16.fields.b;
-        result.fields.a = v16.fields.a;
-      }
-      else
-      {
-        result.fields.r = 0.0;
-        result.fields.g = 0.0;
-        result.fields.b = 0.0;
-        result.fields.a = 1.0;
-      }
-    }
-  }
+  v6 = this->fields.mWidget;
+  if ( !v6 )
+    goto LABEL_26;
+  r = v6->fields.mColor.fields.r;
+  g = v6->fields.mColor.fields.g;
+  b = v6->fields.mColor.fields.b;
+  a = v6->fields.mColor.fields.a;
+LABEL_27:
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

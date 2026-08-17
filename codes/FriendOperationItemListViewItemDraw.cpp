@@ -765,61 +765,65 @@ void FriendOperationItemListViewItemDraw__SetItem(
   int32_t ServantId; // w0
   System_Int32_array *commandCardParam; // x24
   int32_t v141; // w25
-  __int64 v142; // x1
-  __int64 v143; // x2
-  UISprite_o *offerBackSprite; // x21
+  float x; // s8
+  float z; // s9
+  __int64 v144; // x1
   __int64 v145; // x2
-  int32_t v146; // w8
-  __int64 *v147; // x8
-  __int64 v148; // x1
-  __int64 v149; // x2
+  UISprite_o *offerBackSprite; // x21
+  __int64 v147; // x2
+  int32_t v148; // w8
+  __int64 *v149; // x8
+  float v150; // s8
+  float v151; // s9
+  __int64 v152; // x1
+  __int64 v153; // x2
   UILabel_o *cancelLabel; // x21
-  OtherUserGameEntity_o *v151; // x21
+  OtherUserGameEntity_o *v155; // x21
   int32_t Kind_47388836; // w21
   System_String_o *SupportBgImage; // x0
-  __int64 v154; // x1
-  __int64 v155; // x2
-  UISprite_o *baseSpr; // x23
-  System_String_o *v157; // x22
   __int64 v158; // x1
   __int64 v159; // x2
+  UISprite_o *baseSpr; // x23
+  System_String_o *v161; // x22
+  __int64 v162; // x1
+  __int64 v163; // x2
   UnityEngine_Object_o *gradeIcon; // x22
-  const MethodInfo *v161; // x2
-  float v162; // s0
-  float v163; // s8
-  float v164; // s0
-  float v165; // s9
-  UnityEngine_GameObject_o *v166; // x0
+  const MethodInfo *v165; // x2
+  float v166; // s0
+  float v167; // s8
+  float v168; // s0
+  float v169; // s9
+  UnityEngine_GameObject_o *v170; // x0
   float LocalPositionX; // s0
-  float v168; // s10
-  UnityEngine_GameObject_o *v169; // x0
-  __int64 v170; // x1
-  __int64 v171; // x2
+  float v172; // s10
+  UnityEngine_GameObject_o *v173; // x0
+  __int64 v174; // x1
+  __int64 v175; // x2
   UnityEngine_Object_o *pushSpr; // x21
-  __int64 v173; // x2
-  __int64 v174; // x8
-  __int64 v175; // x8
-  struct OtherUserGameEntity_o *v176; // x9
+  __int64 v177; // x2
+  __int64 v178; // x8
+  __int64 v179; // x8
+  struct OtherUserGameEntity_o *v180; // x9
   UnityEngine_Object_o *openClassBoardNumLabel; // x21
-  __int64 v178; // x1
-  __int64 v179; // x2
-  Il2CppObject **v180; // x10
-  Il2CppObject *v181; // x21
-  Il2CppObject *v182; // x0
+  __int64 v182; // x1
+  __int64 v183; // x2
+  Il2CppObject **v184; // x10
+  Il2CppObject *v185; // x21
+  Il2CppObject *v186; // x0
   UnityEngine_Object_o *classBoardOpenButton; // x21
-  __int64 v184; // x1
-  __int64 v185; // x2
+  __int64 v188; // x1
+  __int64 v189; // x2
   UISprite_o *classBoardBackSprite; // x20
   int32_t OpenClassBoardNum_k__BackingField; // [xsp+24h] [xbp-8Ch] BYREF
-  SkillInfo_array *v188; // [xsp+28h] [xbp-88h] BYREF
+  SkillInfo_array *v192; // [xsp+28h] [xbp-88h] BYREF
   SkillInfo_array *skillInfoList; // [xsp+30h] [xbp-80h] BYREF
   TreasureDvcInfo_o *tdInfo; // [xsp+38h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v192; // 0:kr14_12.12
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v193; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v194; // 0:x0.16
-  UnityEngine_Vector3_o v195; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v196; // 0:s0.4,4:s1.4,8:s2.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v195; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v196; // 0:x0.16
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v198; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v199; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v200; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B028 & 1) == 0 )
   {
@@ -853,7 +857,7 @@ void FriendOperationItemListViewItemDraw__SetItem(
   rangeSprite = (UnityEngine_Object_o *)this->fields.rangeSprite;
   skillInfoList = 0;
   tdInfo = 0;
-  v188 = 0;
+  v192 = 0;
   v8 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
   if ( !item )
   {
@@ -942,9 +946,9 @@ void FriendOperationItemListViewItemDraw__SetItem(
     v83 = *(_QWORD *)&equipTarget1->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, skillInfoUiWidget, v19);
-    *(_QWORD *)&v193.fields.currentCryptoKey = v82;
-    *(_QWORD *)&v193.fields.fakeValue = v83;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v193, 0) )
+    *(_QWORD *)&v195.fields.currentCryptoKey = v82;
+    *(_QWORD *)&v195.fields.fakeValue = v83;
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v195, 0) )
     {
 LABEL_28:
       ServantLeaderInfo__SetEquipImagePartsGroupIdxs(v20, 0);
@@ -1302,7 +1306,7 @@ LABEL_127:
 LABEL_156:
   if ( item->fields.servantEntity )
   {
-    gameObject = FriendOperationItemListViewItem__GetAppendSkillInfo(item, &v188, v80);
+    gameObject = FriendOperationItemListViewItem__GetAppendSkillInfo(item, &v192, v80);
     appendSkillIconList = this->fields.appendSkillIconList;
     if ( !appendSkillIconList )
       goto LABEL_201;
@@ -1318,14 +1322,14 @@ LABEL_156:
       v106 = 0;
       do
       {
-        if ( v188 )
+        if ( v192 )
         {
-          v107 = LODWORD(v188->max_length);
+          v107 = LODWORD(v192->max_length);
           if ( (__int64)v106 < (int)v107 )
           {
             if ( v106 >= v107 )
               goto LABEL_347;
-            v108 = v188->m_Items[v106];
+            v108 = v192->m_Items[v106];
             if ( v108 && v108->fields.id >= 1 )
               v105 = v106 + 1;
           }
@@ -1355,9 +1359,9 @@ LABEL_156:
       }
       else
       {
-        if ( !v188 )
+        if ( !v192 )
           goto LABEL_201;
-        if ( v115 >= LODWORD(v188->max_length) )
+        if ( v115 >= LODWORD(v192->max_length) )
           goto LABEL_347;
         v116 = this->fields.appendSkillBaseList;
         if ( !v116 )
@@ -1367,7 +1371,7 @@ LABEL_156:
         gameObject = *((_QWORD *)&v116->obj.klass + v114);
         if ( !gameObject )
           goto LABEL_201;
-        v117 = (int32_t *)*((_QWORD *)&v188->obj.klass + v114);
+        v117 = (int32_t *)*((_QWORD *)&v192->obj.klass + v114);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
         v118 = this->fields.appendSkillIconList;
         if ( !v118 )
@@ -1503,9 +1507,9 @@ LABEL_156:
       v137 = *(_QWORD *)&v20->fields.svtId.fields.fakeValue;
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, skillInfoUiWidget, v133);
-      *(_QWORD *)&v194.fields.currentCryptoKey = v136;
-      *(_QWORD *)&v194.fields.fakeValue = v137;
-      v138 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v194, 0);
+      *(_QWORD *)&v196.fields.currentCryptoKey = v136;
+      *(_QWORD *)&v196.fields.fakeValue = v137;
+      v138 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v196, 0);
       ServantId = ServantLeaderInfo__GetServantId(v20, -1, 0);
       commandCardParam = v20->fields.commandCardParam;
       v141 = ServantId;
@@ -1533,13 +1537,15 @@ LABEL_156:
   gameObject = (__int64)this->fields.removeButton;
   if ( !gameObject )
     goto LABEL_201;
+  x = localPosition.fields.x;
+  z = localPosition.fields.z;
   gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
   if ( !gameObject )
     goto LABEL_201;
-  v195.fields.x = localPosition.fields.x;
-  v195.fields.z = localPosition.fields.z;
-  v195.fields.y = -45.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v195, 0);
+  v198.fields.x = x;
+  v198.fields.z = z;
+  v198.fields.y = -45.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v198, 0);
   gameObject = (__int64)this->fields.removeButton;
   if ( !gameObject )
     goto LABEL_201;
@@ -1605,17 +1611,17 @@ LABEL_156:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   offerBackSprite = this->fields.offerBackSprite;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v142, v143);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v144, v145);
   AtlasManager__SetDownloadCommonSprite(offerBackSprite, (System_String_o *)StringLiteral_18215/*"btn_bg_26_2"*/, 0);
   AtlasManager__SetDownloadCommonSprite(this->fields.removeBackSprite, (System_String_o *)StringLiteral_18216/*"btn_bg_27_2"*/, 0);
   AtlasManager__SetDownloadCommonSprite(this->fields.registBackSprite, (System_String_o *)StringLiteral_18215/*"btn_bg_26_2"*/, 0);
   AtlasManager__SetDownloadCommonSprite(this->fields.removeBackSprite2, (System_String_o *)StringLiteral_18216/*"btn_bg_27_2"*/, 0);
-  v146 = item->fields.kind;
-  if ( v146 <= 2 )
+  v148 = item->fields.kind;
+  if ( v148 <= 2 )
   {
-    if ( v146 )
+    if ( v148 )
     {
-      if ( v146 == 1 )
+      if ( v148 == 1 )
       {
         gameObject = (__int64)this->fields.cancelButton;
         if ( !gameObject )
@@ -1626,14 +1632,14 @@ LABEL_156:
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
         cancelLabel = this->fields.cancelLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v148, v149);
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v152, v153);
         gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6810/*"FRIEND_BUTTON_CANCEL"*/, 0);
         if ( !cancelLabel )
           goto LABEL_201;
         UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0);
         goto LABEL_301;
       }
-      if ( v146 != 2 )
+      if ( v148 != 2 )
         goto LABEL_301;
       gameObject = (__int64)this->fields.acceptButton;
       if ( !gameObject )
@@ -1658,9 +1664,9 @@ LABEL_156:
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
     goto LABEL_301;
   }
-  if ( v146 > 7 )
+  if ( v148 > 7 )
   {
-    if ( v146 == 8 )
+    if ( v148 == 8 )
     {
       gameObject = (__int64)this->fields.removeButton2;
       if ( !gameObject )
@@ -1679,11 +1685,11 @@ LABEL_156:
       gameObject = (__int64)this->fields.loginDataSpr;
       if ( !gameObject )
         goto LABEL_201;
-      v147 = &StringLiteral_21318/*"img_blacklist_recorddate"*/;
+      v149 = &StringLiteral_21318/*"img_blacklist_recorddate"*/;
     }
     else
     {
-      if ( v146 != 9 )
+      if ( v148 != 9 )
         goto LABEL_301;
       gameObject = (__int64)this->fields.removeButton;
       if ( !gameObject )
@@ -1698,17 +1704,19 @@ LABEL_156:
       gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
       if ( !gameObject )
         goto LABEL_201;
-      v192 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+      v199 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
       gameObject = (__int64)this->fields.removeButton;
       if ( !gameObject )
         goto LABEL_201;
+      v150 = v199.fields.x;
+      v151 = v199.fields.z;
       gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
       if ( !gameObject )
         goto LABEL_201;
-      v196.fields.y = 0.0;
-      v196.fields.x = v192.fields.x;
-      v196.fields.z = v192.fields.z;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v196, 0);
+      v200.fields.y = 0.0;
+      v200.fields.x = v150;
+      v200.fields.z = v151;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v200, 0);
       gameObject = (__int64)this->fields.offerButton;
       if ( !gameObject )
         goto LABEL_201;
@@ -1726,10 +1734,10 @@ LABEL_156:
       gameObject = (__int64)this->fields.removeMarkSpr;
       if ( !gameObject )
         goto LABEL_201;
-      v147 = &StringLiteral_21176/*"icon_follow"*/;
+      v149 = &StringLiteral_21176/*"icon_follow"*/;
     }
   }
-  else if ( v146 == 3 )
+  else if ( v148 == 3 )
   {
     gameObject = (__int64)this->fields.removeButton;
     if ( !gameObject )
@@ -1748,11 +1756,11 @@ LABEL_156:
     gameObject = (__int64)this->fields.removeMarkSpr;
     if ( !gameObject )
       goto LABEL_201;
-    v147 = &StringLiteral_21177/*"icon_friend"*/;
+    v149 = &StringLiteral_21177/*"icon_friend"*/;
   }
   else
   {
-    if ( v146 != 7 )
+    if ( v148 != 7 )
       goto LABEL_301;
     gameObject = (__int64)this->fields.registButton;
     if ( !gameObject )
@@ -1764,55 +1772,55 @@ LABEL_156:
     gameObject = (__int64)this->fields.loginDataSpr;
     if ( !gameObject )
       goto LABEL_201;
-    v147 = &StringLiteral_21319/*"img_blacklist_requestdate"*/;
+    v149 = &StringLiteral_21319/*"img_blacklist_requestdate"*/;
   }
-  UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)*v147, 0);
+  UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)*v149, 0);
 LABEL_301:
-  v151 = item->fields.otherUserGameEntity;
+  v155 = item->fields.otherUserGameEntity;
   if ( !*(&Grade_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(Grade_TypeInfo, skillInfoUiWidget, v145);
-  Kind_47388836 = Grade__GetKind_47388836(v151, 0);
+    j_il2cpp_runtime_class_init_0(Grade_TypeInfo, skillInfoUiWidget, v147);
+  Kind_47388836 = Grade__GetKind_47388836(v155, 0);
   SupportBgImage = Grade__GetSupportBgImage(Kind_47388836, 0);
   baseSpr = this->fields.baseSpr;
-  v157 = SupportBgImage;
+  v161 = SupportBgImage;
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v154, v155);
-  AtlasManager__SetGradeIcon(baseSpr, v157, 0);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v158, v159);
+  AtlasManager__SetGradeIcon(baseSpr, v161, 0);
   gradeIcon = (UnityEngine_Object_o *)this->fields.gradeIcon;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v158, v159);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v162, v163);
   if ( UnityEngine_Object__op_Inequality(gradeIcon, 0, 0) )
   {
     gameObject = (__int64)this->fields.playerNameLabel;
     if ( !gameObject )
       goto LABEL_201;
-    LODWORD(v162) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)gameObject, 0);
+    LODWORD(v166) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)gameObject, 0);
     gameObject = (__int64)this->fields.gradeIcon;
     if ( !gameObject )
       goto LABEL_201;
-    v163 = v162;
-    LODWORD(v164) = *(_QWORD *)&UserGradeComponent__GetGradeLocalSize((UserGradeComponent_o *)gameObject, 0);
+    v167 = v166;
+    LODWORD(v168) = *(_QWORD *)&UserGradeComponent__GetGradeLocalSize((UserGradeComponent_o *)gameObject, 0);
     gameObject = (__int64)this->fields.playerNameLabel;
     if ( !gameObject )
       goto LABEL_201;
-    v165 = v164;
-    v166 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-    LocalPositionX = GameObjectExtensions__GetLocalPositionX(v166, 0);
+    v169 = v168;
+    v170 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+    LocalPositionX = GameObjectExtensions__GetLocalPositionX(v170, 0);
     gameObject = (__int64)this->fields.gradeIcon;
     if ( !gameObject )
       goto LABEL_201;
-    v168 = LocalPositionX;
-    v169 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-    GameObjectExtensions__SetLocalPositionX(v169, (float)(v165 * 0.5) + (float)(v163 + v168), 0);
+    v172 = LocalPositionX;
+    v173 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+    GameObjectExtensions__SetLocalPositionX(v173, (float)(v169 * 0.5) + (float)(v167 + v172), 0);
     gameObject = (__int64)this->fields.gradeIcon;
     if ( !gameObject )
       goto LABEL_201;
     UserGradeComponent__Set((UserGradeComponent_o *)gameObject, Kind_47388836, 0);
   }
-  FriendOperationItemListViewItemDraw__UpdateLockUI(this, item, v161);
+  FriendOperationItemListViewItemDraw__UpdateLockUI(this, item, v165);
   pushSpr = (UnityEngine_Object_o *)this->fields.pushSpr;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v170, v171);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v174, v175);
   if ( !UnityEngine_Object__op_Inequality(pushSpr, 0, 0) )
     goto LABEL_329;
   gameObject = (__int64)this->fields.pushSpr;
@@ -1825,10 +1833,10 @@ LABEL_301:
   gameObject = (__int64)item->fields.otherUserGameEntity;
   if ( !gameObject )
     goto LABEL_201;
-  v174 = *(_QWORD *)(gameObject + 104);
-  if ( !v174 )
+  v178 = *(_QWORD *)(gameObject + 104);
+  if ( !v178 )
     goto LABEL_201;
-  if ( !*(_DWORD *)(v174 + 24) )
+  if ( !*(_DWORD *)(v178 + 24) )
 LABEL_347:
     sub_2213CE4(gameObject);
   gameObject = (__int64)OtherUserGameEntity__getServantLeaderInfo(
@@ -1836,18 +1844,18 @@ LABEL_347:
                           item->fields.classPos,
                           1,
                           item->fields.displayServantType,
-                          *(_DWORD *)(v174 + 32),
+                          *(_DWORD *)(v178 + 32),
                           item->fields._FollowerGrandGraphId_k__BackingField,
                           0);
   if ( gameObject )
   {
-    v175 = *(_QWORD *)(gameObject + 40);
-    if ( v175 >= 1 )
+    v179 = *(_QWORD *)(gameObject + 40);
+    if ( v179 >= 1 )
     {
-      v176 = item->fields.otherUserGameEntity;
-      if ( !v176 )
+      v180 = item->fields.otherUserGameEntity;
+      if ( !v180 )
         goto LABEL_201;
-      if ( v176->fields.pushUserSvtId == v175 )
+      if ( v180->fields.pushUserSvtId == v179 )
       {
         gameObject = (__int64)this->fields.pushSpr;
         if ( !gameObject )
@@ -1862,24 +1870,24 @@ LABEL_347:
 LABEL_329:
   openClassBoardNumLabel = (UnityEngine_Object_o *)this->fields.openClassBoardNumLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, skillInfoUiWidget, v173);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, skillInfoUiWidget, v177);
   if ( UnityEngine_Object__op_Inequality(openClassBoardNumLabel, 0, 0)
     && (item->fields._OpenClassBoardNum_k__BackingField & 0x80000000) == 0 )
   {
-    v180 = (Il2CppObject **)&StringLiteral_6674/*"FFFFFF"*/;
+    v184 = (Il2CppObject **)&StringLiteral_6674/*"FFFFFF"*/;
     if ( item->fields._IsMaxOpenClassBoard_k__BackingField )
-      v180 = (Il2CppObject **)&StringLiteral_6673/*"FFFF00"*/;
-    v181 = *v180;
+      v184 = (Il2CppObject **)&StringLiteral_6673/*"FFFF00"*/;
+    v185 = *v184;
     OpenClassBoardNum_k__BackingField = item->fields._OpenClassBoardNum_k__BackingField;
-    v182 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &OpenClassBoardNum_k__BackingField);
-    gameObject = (__int64)System_String__Format_75697880((System_String_o *)StringLiteral_16650/*"[{0}]+{1}[-]"*/, v181, v182, 0);
+    v186 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &OpenClassBoardNum_k__BackingField);
+    gameObject = (__int64)System_String__Format_75697880((System_String_o *)StringLiteral_16650/*"[{0}]+{1}[-]"*/, v185, v186, 0);
     if ( !this->fields.openClassBoardNumLabel )
       goto LABEL_201;
     UILabel__set_text(this->fields.openClassBoardNumLabel, (System_String_o *)gameObject, 0);
   }
   classBoardOpenButton = (UnityEngine_Object_o *)this->fields.classBoardOpenButton;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v178, v179);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v182, v183);
   if ( UnityEngine_Object__op_Inequality(classBoardOpenButton, 0, 0) )
   {
     gameObject = (__int64)this->fields.classBoardOpenButton;
@@ -1894,7 +1902,7 @@ LABEL_329:
       0);
     classBoardBackSprite = this->fields.classBoardBackSprite;
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v184, v185);
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v188, v189);
     AtlasManager__SetDownloadCommonSprite(classBoardBackSprite, (System_String_o *)StringLiteral_18217/*"btn_bg_29_2"*/, 0);
     gameObject = (__int64)this->fields.classBoardBackSprite;
     if ( !gameObject )
@@ -2016,6 +2024,7 @@ LABEL_12:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FriendOperationItemListViewItemDraw__setMessageButtonUI(
         FriendOperationItemListViewItemDraw_o *this,
         FriendOperationItemListViewItem_o *item,
@@ -2024,12 +2033,18 @@ void FriendOperationItemListViewItemDraw__setMessageButtonUI(
 {
   FriendOperationItemListViewItem_o *v5; // x21
   FriendOperationItemListViewItemDraw_o *v6; // x20
+  float v7; // s0 OVERLAPPED
+  float v8; // s3
   struct OtherUserGameEntity_o *otherUserGameEntity; // x22
-  __int64 v10; // x2
+  float v10; // s1
+  float v11; // s2
+  float v12; // s0 OVERLAPPED
+  float v13; // s3
+  float v14; // s1
+  float v15; // s2
+  __int64 v16; // x2
   UILabel_o *messageLabel; // x21
-  System_String_o **v12; // x8
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_String_o **v18; // x8
 
   v5 = item;
   v6 = this;
@@ -2047,24 +2062,24 @@ void FriendOperationItemListViewItemDraw__setMessageButtonUI(
   this = (FriendOperationItemListViewItemDraw_o *)v6->fields.messageLabel;
   if ( !this )
     goto LABEL_22;
-  v13.fields.r = 1.0;
-  v13.fields.a = 1.0;
+  v7 = 1.0;
+  v8 = 1.0;
   otherUserGameEntity = v5->fields.otherUserGameEntity;
   if ( !isDisp )
-    v13.fields.r = 0.73725;
-  v13.fields.g = v13.fields.r;
-  v13.fields.b = v13.fields.r;
-  UIWidget__set_color((UIWidget_o *)this, v13, 0);
+    v7 = 0.73725;
+  v10 = v7;
+  v11 = v7;
+  UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)&v7, 0);
   this = (FriendOperationItemListViewItemDraw_o *)v6->fields.messageLabel;
   if ( !this )
     goto LABEL_22;
-  v14.fields.r = 0.0;
-  v14.fields.a = 1.0;
+  v12 = 0.0;
+  v13 = 1.0;
   if ( !isDisp )
-    v14.fields.r = 0.50196;
-  v14.fields.g = v14.fields.r;
-  v14.fields.b = v14.fields.r;
-  UILabel__set_effectColor((UILabel_o *)this, v14, 0);
+    v12 = 0.50196;
+  v14 = v12;
+  v15 = v12;
+  UILabel__set_effectColor((UILabel_o *)this, *(UnityEngine_Color_o *)&v12, 0);
   messageLabel = v6->fields.messageLabel;
   if ( isDisp )
   {
@@ -2075,7 +2090,7 @@ void FriendOperationItemListViewItemDraw__setMessageButtonUI(
   else
   {
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v10);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v16);
     this = (FriendOperationItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6818/*"FRIEND_HIDE_MESSAGE"*/, 0);
     item = (FriendOperationItemListViewItem_o *)this;
   }
@@ -2089,10 +2104,10 @@ void FriendOperationItemListViewItemDraw__setMessageButtonUI(
 LABEL_22:
     sub_2213CDC(this, item);
   }
-  v12 = (System_String_o **)&StringLiteral_18270/*"btn_message_off"*/;
+  v18 = (System_String_o **)&StringLiteral_18270/*"btn_message_off"*/;
   if ( !isDisp )
-    v12 = (System_String_o **)&StringLiteral_18271/*"btn_message_on"*/;
-  UISprite__set_spriteName((UISprite_o *)this, *v12, 0);
+    v18 = (System_String_o **)&StringLiteral_18271/*"btn_message_on"*/;
+  UISprite__set_spriteName((UISprite_o *)this, *v18, 0);
 }
 
 

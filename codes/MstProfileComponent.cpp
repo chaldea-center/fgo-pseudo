@@ -16,13 +16,15 @@ void MstProfileComponent___cctor(const MethodInfo *method)
 
 void MstProfileComponent___ctor(MstProfileComponent_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct ImageItem_Id_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
   if ( (byte_596B66F & 1) == 0 )
   {
@@ -31,12 +33,11 @@ void MstProfileComponent___ctor(MstProfileComponent_o *this, const MethodInfo *m
     byte_596B66F = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(ImageItem_Id___TypeInfo, 8);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0D341DD08B8546E625271CE1A64255FADBDC46FAF35DEB8DBA11B35A7F4CDD91,
-    0);
-  this->fields.dispItemInfoList = (struct ImageItem_Id_array *)v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dispItemInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v4.fields.value = Field__PrivateImplementationDetails__0D341DD08B8546E625271CE1A64255FADBDC46FAF35DEB8DBA11B35A7F4CDD91;
+  v5 = (struct ImageItem_Id_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.dispItemInfoList = v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.dispItemInfoList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -1302,13 +1303,17 @@ LABEL_24:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MstProfileComponent__messageSetup(MstProfileComponent_o *this, const MethodInfo *method)
 {
   void *SelfUserGame; // x0
   __int64 v4; // x1
   System_String_o *v5; // x20
   __int64 v6; // x2
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v7; // s3
+  float v8; // s0 OVERLAPPED
+  float v9; // s1
+  float v10; // s2
 
   if ( (byte_596B64C & 1) == 0 )
   {
@@ -1332,10 +1337,10 @@ void MstProfileComponent__messageSetup(MstProfileComponent_o *this, const Method
       SelfUserGame = this->fields.messageLabel;
       if ( SelfUserGame )
       {
-        v10.fields.a = 1.0;
-        v10.fields.r = 0.6;
-        v10.fields.g = 0.6;
-        v10.fields.b = 0.6;
+        v7 = 1.0;
+        v8 = 0.6;
+        v9 = 0.6;
+        v10 = 0.6;
         goto LABEL_13;
       }
     }
@@ -1349,12 +1354,12 @@ LABEL_15:
   SelfUserGame = this->fields.messageLabel;
   if ( !SelfUserGame )
     goto LABEL_15;
-  v10.fields.r = 1.0;
-  v10.fields.g = 1.0;
-  v10.fields.b = 1.0;
-  v10.fields.a = 1.0;
+  v8 = 1.0;
+  v9 = 1.0;
+  v10 = 1.0;
+  v7 = 1.0;
 LABEL_13:
-  UIWidget__set_color((UIWidget_o *)SelfUserGame, v10, 0);
+  UIWidget__set_color((UIWidget_o *)SelfUserGame, *(UnityEngine_Color_o *)&v8, 0);
   SelfUserGame = this->fields.messageLabel;
   if ( !SelfUserGame )
     goto LABEL_15;
@@ -1975,7 +1980,7 @@ void MstProfileComponent__setGenderInfo(MstProfileComponent_o *this, const Metho
 
 void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const MethodInfo *method)
 {
-  __int64 itemListGrid; // x0
+  UnityEngine_Component_o *itemListGrid; // x0
   struct ImageItem_Id_array *dispItemInfoList; // x8
   unsigned __int64 v5; // x25
   unsigned __int64 max_length_low; // x9
@@ -1992,13 +1997,15 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
     sub_2213A60(&Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
     byte_596B65A = 1;
   }
-  itemListGrid = (__int64)this->fields.itemListGrid;
+  itemListGrid = (UnityEngine_Component_o *)this->fields.itemListGrid;
   if ( !itemListGrid )
     goto LABEL_17;
-  itemListGrid = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)itemListGrid, 0);
+  itemListGrid = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(itemListGrid, 0);
   if ( !itemListGrid )
     goto LABEL_17;
-  itemListGrid = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)itemListGrid, 0);
+  itemListGrid = (UnityEngine_Component_o *)UnityEngine_Transform__get_childCount(
+                                              (UnityEngine_Transform_o *)itemListGrid,
+                                              0);
   if ( (int)itemListGrid > 0 )
     return;
   dispItemInfoList = this->fields.dispItemInfoList;
@@ -2012,29 +2019,36 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
       break;
     if ( v5 >= max_length_low )
       sub_2213CE4(itemListGrid);
-    itemListGrid = (__int64)this->fields.itemListGrid;
+    itemListGrid = (UnityEngine_Component_o *)this->fields.itemListGrid;
     if ( itemListGrid )
     {
       mstItemInfo = this->fields.mstItemInfo;
       v8 = dispItemInfoList->m_Items[v5];
-      transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)itemListGrid, 0);
-      itemListGrid = (__int64)BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, mstItemInfo, transform, 0, 0);
+      transform = UnityEngine_Component__get_transform(itemListGrid, 0);
+      itemListGrid = (UnityEngine_Component_o *)BaseMonoBehaviour__createObject(
+                                                  (BaseMonoBehaviour_o *)this,
+                                                  mstItemInfo,
+                                                  transform,
+                                                  0,
+                                                  0);
       if ( itemListGrid )
       {
         v10 = (UnityEngine_GameObject_o *)itemListGrid;
-        itemListGrid = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)itemListGrid, 0);
+        itemListGrid = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)itemListGrid,
+                                                    0);
         v11 = (UnityEngine_Transform_o *)itemListGrid;
         if ( !byte_5969AE5 )
         {
-          itemListGrid = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          itemListGrid = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
         if ( v11 )
         {
           UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-          itemListGrid = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                    v10,
-                                    (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
+          itemListGrid = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                      v10,
+                                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_MstHaveItemInfoComponent___);
           if ( itemListGrid )
           {
             MstHaveItemInfoComponent__setItemInfo(
@@ -2052,26 +2066,26 @@ void MstProfileComponent__setHaveItemInfo(MstProfileComponent_o *this, const Met
     }
     goto LABEL_17;
   }
-  itemListGrid = (__int64)this->fields.itemListGrid;
+  itemListGrid = (UnityEngine_Component_o *)this->fields.itemListGrid;
   if ( !itemListGrid )
     goto LABEL_17;
-  itemListGrid = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)itemListGrid, 0);
+  itemListGrid = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(itemListGrid, 0);
   v13 = (UnityEngine_Transform_o *)itemListGrid;
   if ( !byte_5969AE5 )
   {
-    itemListGrid = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    itemListGrid = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v13
     || (UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
-        (itemListGrid = (__int64)this->fields.itemListGrid) == 0) )
+        (itemListGrid = (UnityEngine_Component_o *)this->fields.itemListGrid) == 0) )
   {
 LABEL_17:
     sub_2213CDC(itemListGrid, method);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)itemListGrid + 440LL))(
+  ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))itemListGrid->klass[1]._1.element_class)(
     itemListGrid,
-    *(_QWORD *)(*(_QWORD *)itemListGrid + 448LL));
+    itemListGrid->klass[1]._1.castClass);
 }
 
 
@@ -2793,9 +2807,9 @@ System_IAsyncResult_o *MstProfileComponent_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

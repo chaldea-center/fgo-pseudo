@@ -93,9 +93,9 @@ System_String_o *SelectTdCommandController__GetMessageOnSelected(
                                           SelectTreasureDeviceInfo_k__BackingField->fields.messageOnSelected,
                                           0);
   if ( ((unsigned __int8)this & 1) != 0 )
-    return ((System_String_o *(__fastcall *)(SelectTdCommandController_o *, const MethodInfo *))v3->klass->vtable._7_GetDefaultMessageOnSelected.methodPtr)(
-             v3,
-             v3->klass->vtable._7_GetDefaultMessageOnSelected.method);
+    return (System_String_o *)((__int64 (__fastcall *)(SelectTdCommandController_o *, const MethodInfo *))v3->klass->vtable._7_GetDefaultMessageOnSelected.methodPtr)(
+                                v3,
+                                v3->klass->vtable._7_GetDefaultMessageOnSelected.method);
   v5 = v3->fields._SelectTreasureDeviceInfo_k__BackingField;
   if ( !v5 )
 LABEL_6:
@@ -186,11 +186,17 @@ UnityEngine_Vector3_o SelectTdCommandController__GetNowTypeFrameOffset(
         SelectTdCommandController_o *this,
         const MethodInfo *method)
 {
+  float v2; // s0
+  float v3; // s2
+  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = 0.0;
-  result.fields.z = 0.0;
-  result.fields.y = 4.0;
+  v2 = 0.0;
+  v3 = 0.0;
+  v4 = 4.0;
+  result.fields.z = v3;
+  result.fields.y = v4;
+  result.fields.x = v2;
   return result;
 }
 
@@ -210,9 +216,9 @@ System_String_o *SelectTdCommandController__GetTitle(SelectTdCommandController_o
                                           SelectTreasureDeviceInfo_k__BackingField->fields.title,
                                           0);
   if ( ((unsigned __int8)this & 1) != 0 )
-    return ((System_String_o *(__fastcall *)(SelectTdCommandController_o *, const MethodInfo *))v3->klass->vtable._6_GetDefaultTitle.methodPtr)(
-             v3,
-             v3->klass->vtable._6_GetDefaultTitle.method);
+    return (System_String_o *)((__int64 (__fastcall *)(SelectTdCommandController_o *, const MethodInfo *))v3->klass->vtable._6_GetDefaultTitle.methodPtr)(
+                                v3,
+                                v3->klass->vtable._6_GetDefaultTitle.method);
   v6 = v3->fields._SelectTreasureDeviceInfo_k__BackingField;
   if ( !v6 )
 LABEL_6:

@@ -530,7 +530,8 @@ System_Type_o *FGOSwapShaderPropertyWhenEnemy__ToRendererType(int32_t rendererTy
   __int64 v2; // x2
   __int64 v4; // x0
   Il2CppType **v5; // x8
-  System_RuntimeTypeHandle_o v6; // x19
+  intptr_t v6; // x19
+  System_RuntimeTypeHandle_o v7; // x0
 
   if ( (byte_596F533 & 1) == 0 )
   {
@@ -574,8 +575,9 @@ System_Type_o *FGOSwapShaderPropertyWhenEnemy__ToRendererType(int32_t rendererTy
   v4 = qword_59843E0;
   v5 = &UnityEngine_SpriteRenderer_var;
 LABEL_14:
-  v6.fields.value = (intptr_t)*v5;
+  v6 = (intptr_t)*v5;
   if ( !*(_DWORD *)(v4 + 228) )
     j_il2cpp_runtime_class_init_0(v4, method, v2);
-  return System_Type__GetTypeFromHandle(v6, 0);
+  v7.fields.value = v6;
+  return System_Type__GetTypeFromHandle(v7, 0);
 }

@@ -71,12 +71,14 @@ void UserItemListViewItem__Finalize(UserItemListViewItem_o *this, const MethodIn
 
 bool UserItemListViewItem__SetSortValue(UserItemListViewItem_o *this, ListViewSort_o *sort, const MethodInfo *method)
 {
+  bool result; // w0
   int64_t dispPriority; // x9
 
+  result = 1;
   dispPriority = this->fields.dispPriority;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue1 = dispPriority;
-  return 1;
+  return result;
 }
 
 

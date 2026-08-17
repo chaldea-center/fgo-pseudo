@@ -100,25 +100,28 @@ void PartyOrganizationUIDragDropListViewDrop__DragDumpStart(
   UnityEngine_Transform_o *transform; // x0
   __int64 v7; // x1
   UnityEngine_GameObject_o *v8; // x8
+  float x; // s8
+  float y; // s9
+  float z; // s10
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Transform_o *v10; // x20
+  UnityEngine_Transform_o *v13; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  int32_t v18; // w1
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v26; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Color_o v27; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
+  int32_t v21; // w1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Color_o v30; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   if ( (byte_596C1CF & 1) == 0 )
   {
@@ -133,11 +136,11 @@ void PartyOrganizationUIDragDropListViewDrop__DragDumpStart(
     j_il2cpp_runtime_class_init_0(PartyOrganizationUIDragDropListViewDrop_TypeInfo, method, v2);
     v4 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
   }
-  v27.fields.r = 0.0;
-  v27.fields.g = 0.0;
-  v27.fields.b = 0.0;
-  v27.fields.a = 0.0;
-  transform = (UnityEngine_Transform_o *)TweenColor__Begin(dragObject, v4->static_fields->ACTION_TIME, v27, 0);
+  v30.fields.r = 0.0;
+  v30.fields.g = 0.0;
+  v30.fields.b = 0.0;
+  v30.fields.a = 0.0;
+  transform = (UnityEngine_Transform_o *)TweenColor__Begin(dragObject, v4->static_fields->ACTION_TIME, v30, 0);
   if ( !transform )
     goto LABEL_12;
   v8 = this->fields.dragObject;
@@ -148,31 +151,34 @@ void PartyOrganizationUIDragDropListViewDrop__DragDumpStart(
   if ( !transform )
     goto LABEL_12;
   localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   if ( !byte_596C21D )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_596C21D = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v26.fields.z = localPosition.fields.z + (float)(static_fields->downVector.fields.z * 50.0);
-  v26.fields.x = localPosition.fields.x + (float)(static_fields->downVector.fields.x * 50.0);
-  v26.fields.y = localPosition.fields.y + (float)(static_fields->downVector.fields.y * 50.0);
+  v29.fields.z = z + (float)(static_fields->downVector.fields.z * 50.0);
+  v29.fields.x = x + (float)(static_fields->downVector.fields.x * 50.0);
+  v29.fields.y = y + (float)(static_fields->downVector.fields.y * 50.0);
   transform = (UnityEngine_Transform_o *)TweenPosition__Begin(
                                            this->fields.dragObject,
                                            PartyOrganizationUIDragDropListViewDrop_TypeInfo->static_fields->ACTION_TIME,
-                                           v26,
+                                           v29,
                                            0);
   if ( !transform )
 LABEL_12:
     sub_2213CDC(transform, v7);
-  v10 = transform;
+  v13 = transform;
   LODWORD(transform[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v10[3].monitor = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10[3].monitor, (int32_t)gameObject, v12, v13, v14, v15, v16, v17);
-  v18 = StringLiteral_5555/*"DragDumpEnd"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_5555/*"DragDumpEnd"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10[3].fields, v18, v19, v20, v21, v22, v23, v24);
+  v13[3].monitor = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[3].monitor, (int32_t)gameObject, v15, v16, v17, v18, v19, v20);
+  v21 = StringLiteral_5555/*"DragDumpEnd"*/;
+  v13[3].fields.m_CachedPtr = StringLiteral_5555/*"DragDumpEnd"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[3].fields, v21, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -335,25 +341,29 @@ void PartyOrganizationUIDragDropListViewDrop__DragReturnStart(
   UnityEngine_Transform_o *v7; // x21
   __int64 v8; // x1
   __int64 v9; // x2
-  PartyOrganizationUIDragDropListViewDrop_c *v10; // x0
-  UnityEngine_GameObject_o *v11; // x20
-  UnityEngine_GameObject_o *v12; // x20
+  float x; // s8
+  float y; // s9
+  PartyOrganizationUIDragDropListViewDrop_c *v12; // x0
+  float z; // s10
+  UnityEngine_GameObject_o *v14; // x20
+  UnityEngine_GameObject_o *v15; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
-  int32_t v20; // w1
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
-  UnityEngine_Vector3_o v27; // 0:kr14_12.12
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  int32_t v23; // w1
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596C1CC & 1) == 0 )
   {
@@ -392,26 +402,32 @@ void PartyOrganizationUIDragDropListViewDrop__DragReturnStart(
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !v7 )
     goto LABEL_18;
-  v27 = UnityEngine_Transform__InverseTransformPoint(v7, position, 0);
-  v10 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
-  v11 = this->fields.dragObject;
+  v31 = UnityEngine_Transform__InverseTransformPoint(v7, position, 0);
+  x = v31.fields.x;
+  y = v31.fields.y;
+  v12 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
+  z = v31.fields.z;
+  v14 = this->fields.dragObject;
   if ( !*(&PartyOrganizationUIDragDropListViewDrop_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(PartyOrganizationUIDragDropListViewDrop_TypeInfo, v8, v9);
-    v10 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
+    v12 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
   }
-  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v11, v10->static_fields->ACTION_TIME, v27, 0);
+  v32.fields.x = x;
+  v32.fields.y = y;
+  v32.fields.z = z;
+  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v14, v12->static_fields->ACTION_TIME, v32, 0);
   if ( !dragObject )
 LABEL_18:
     sub_2213CDC(dragObject, method);
-  v12 = dragObject;
+  v15 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v12[3].monitor = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12[3].monitor, (int32_t)gameObject, v14, v15, v16, v17, v18, v19);
-  v20 = StringLiteral_5558/*"DragReturnMoveEnd"*/;
-  v12[3].fields.m_CachedPtr = StringLiteral_5558/*"DragReturnMoveEnd"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12[3].fields, v20, v21, v22, v23, v24, v25, v26);
+  v15[3].monitor = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[3].monitor, (int32_t)gameObject, v17, v18, v19, v20, v21, v22);
+  v23 = StringLiteral_5558/*"DragReturnMoveEnd"*/;
+  v15[3].fields.m_CachedPtr = StringLiteral_5558/*"DragReturnMoveEnd"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[3].fields, v23, v24, v25, v26, v27, v28, v29);
 }
 
 
@@ -971,13 +987,20 @@ void PartyOrganizationUIDragDropListViewDrop__DragSwapStart(
   UnityEngine_Transform_o *v17; // x21
   __int64 v18; // x1
   __int64 v19; // x2
-  PartyOrganizationUIDragDropListViewDrop_c *v20; // x0
-  UnityEngine_GameObject_o *v21; // x21
+  float x; // s8
+  float y; // s9
+  PartyOrganizationUIDragDropListViewDrop_c *v22; // x0
+  float z; // s10
+  UnityEngine_GameObject_o *v24; // x21
   PartyOrganizationListViewDropObject_o *dropObject; // x21
-  System_Action_o *v23; // x22
-  UnityEngine_Vector3_o v24; // 0:kr14_12.12
-  UnityEngine_Vector3_o v25; // 0:kr34_12.12
+  System_Action_o *v26; // x22
+  float v27; // s4
+  float v28; // s5
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v33; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596C1D1 & 1) == 0 )
   {
@@ -1029,15 +1052,21 @@ void PartyOrganizationUIDragDropListViewDrop__DragSwapStart(
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !v17 )
     goto LABEL_26;
-  v24 = UnityEngine_Transform__InverseTransformPoint(v17, position, 0);
-  v20 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
-  v21 = this->fields.dragObject;
+  v30 = UnityEngine_Transform__InverseTransformPoint(v17, position, 0);
+  x = v30.fields.x;
+  y = v30.fields.y;
+  v22 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
+  z = v30.fields.z;
+  v24 = this->fields.dragObject;
   if ( !*(&PartyOrganizationUIDragDropListViewDrop_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(PartyOrganizationUIDragDropListViewDrop_TypeInfo, v18, v19);
-    v20 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
+    v22 = PartyOrganizationUIDragDropListViewDrop_TypeInfo;
   }
-  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v21, v20->static_fields->ACTION_TIME, v24, 0);
+  v32.fields.x = x;
+  v32.fields.y = y;
+  v32.fields.z = z;
+  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v24, v22->static_fields->ACTION_TIME, v32, 0);
   if ( !dragObject )
     goto LABEL_26;
   LODWORD(dragObject[1].monitor) = 3;
@@ -1048,15 +1077,20 @@ void PartyOrganizationUIDragDropListViewDrop__DragSwapStart(
     goto LABEL_26;
   UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   dropObject = this->fields.dropObject;
-  v23 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-  System_Action___ctor(v23, (Il2CppObject *)this, Method_PartyOrganizationUIDragDropListViewDrop_DragSwapMoveEnd__, 0);
+  v26 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v26, (Il2CppObject *)this, Method_PartyOrganizationUIDragDropListViewDrop_DragSwapMoveEnd__, 0);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v14, 0);
   if ( !dragObject )
     goto LABEL_26;
-  v25 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+  v31 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !dropObject )
     goto LABEL_26;
-  PartyOrganizationListViewDropObject__Init(dropObject, 6, v23, 0.0, v25, this->fields.isEquipSwap, 0);
+  v27 = v31.fields.y;
+  v28 = v31.fields.z;
+  v33.fields.x = v31.fields.x;
+  v33.fields.y = v27;
+  v33.fields.z = v28;
+  PartyOrganizationListViewDropObject__Init(dropObject, 6, v26, 0.0, v33, this->fields.isEquipSwap, 0);
   dragObject = (UnityEngine_GameObject_o *)this->fields.dropObject;
   if ( this->fields.isEquipSwap )
   {

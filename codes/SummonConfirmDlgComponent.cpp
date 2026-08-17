@@ -3561,11 +3561,11 @@ void SummonConfirmDlgComponent__SetBonusTextPos(SummonConfirmDlgComponent_o *thi
   int v11; // w25
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v13; // x0
-  float v14; // s8
-  int v15; // w21
-  UnityEngine_GameObject_o *v16; // x0
-  int v17; // w8
   unsigned int localPosition; // s0
+  float v15; // s8
+  int v16; // w21
+  UnityEngine_GameObject_o *v17; // x0
+  int v18; // w8
 
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -3604,12 +3604,12 @@ void SummonConfirmDlgComponent__SetBonusTextPos(SummonConfirmDlgComponent_o *thi
   this = (SummonConfirmDlgComponent_o *)v5->fields.messageLabel;
   if ( !this )
     goto LABEL_31;
-  v14 = *(float *)&localPosition;
-  v15 = v7 + mWidth + addMsgBgSprite;
-  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPositionX(v16, (float)(v14 + (float)(v8 >> 1)) + (float)(v11 >> 1), 0);
-  v17 = v15 >= 0 ? v15 : v15 + 1;
-  GameObjectExtensions__SetLocalPositionX(v5->fields.bonusMsgInfo, (float)(v10 - (v17 >> 1)), 0);
+  v15 = *(float *)&localPosition;
+  v16 = v7 + mWidth + addMsgBgSprite;
+  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  GameObjectExtensions__SetLocalPositionX(v17, (float)(v15 + (float)(v8 >> 1)) + (float)(v11 >> 1), 0);
+  v18 = v16 >= 0 ? v16 : v16 + 1;
+  GameObjectExtensions__SetLocalPositionX(v5->fields.bonusMsgInfo, (float)(v10 - (v18 >> 1)), 0);
   this = (SummonConfirmDlgComponent_o *)v5->fields.titleLabel;
   if ( !this )
     goto LABEL_31;
@@ -4326,7 +4326,7 @@ System_IAsyncResult_o *SummonConfirmDlgComponent_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

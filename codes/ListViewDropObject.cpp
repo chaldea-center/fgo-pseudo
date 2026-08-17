@@ -58,16 +58,24 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
   UnityEngine_Transform_o *v19; // x23
   UnityEngine_Transform_o *v20; // x23
   UnityEngine_Transform_o *v21; // x23
-  UnityEngine_GameObject_o *v22; // x21
-  const MethodInfo *v23; // x1
-  const MethodInfo *v24; // x2
-  unsigned __int64 v26; // kr40_8
-  unsigned __int64 localPosition; // kr50_8
-  UnityEngine_Vector3_o v28; // 0:kr20_12.12
-  UnityEngine_Vector3_o v29; // 0:kr60_12.12
-  UnityEngine_Vector3_o v30; // 0:kr74_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v25; // s8
+  float v26; // s9
+  UnityEngine_GameObject_o *v27; // x21
+  float v28; // s8
+  float v29; // s9
+  const MethodInfo *v30; // x1
+  const MethodInfo *v31; // x2
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FD6 & 1) == 0 )
   {
@@ -142,35 +150,48 @@ UnityEngine_GameObject_o *ListViewDropObject__CreateDragObject(ListViewDropObjec
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_29;
-  v28 = UnityEngine_Transform__TransformPoint_83496448((UnityEngine_Transform_o *)transform, 1.0, 1.0, 0.0, 0);
+  v35 = UnityEngine_Transform__TransformPoint_83496448((UnityEngine_Transform_o *)transform, 1.0, 1.0, 0.0, 0);
+  x = v35.fields.x;
+  y = v35.fields.y;
+  z = v35.fields.z;
   transform = (__int64)UnityEngine_Component__get_transform(v18, 0);
   if ( !transform )
     goto LABEL_29;
-  v26 = (unsigned __int64)UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)transform, v28, 0);
+  v36.fields.x = x;
+  v36.fields.y = y;
+  v36.fields.z = z;
+  v37 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)transform, v36, 0);
+  v25 = v37.fields.x;
+  v26 = v37.fields.y;
   transform = (__int64)UnityEngine_Component__get_transform(v18, 0);
   if ( !transform )
     goto LABEL_29;
-  *(_QWORD *)&v29.fields.x = v26;
-  v29.fields.z = 1.0;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v29, 0);
+  v38.fields.x = v25;
+  v38.fields.y = v26;
+  v38.fields.z = 1.0;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v38, 0);
   transform = (__int64)UnityEngine_Component__get_gameObject(v18, 0);
-  if ( !v9
-    || (v22 = (UnityEngine_GameObject_o *)transform, transform = UnityEngine_GameObject__get_layer(v9, 0), !v22)
-    || (UnityEngine_GameObject__set_layer(v22, transform, 0),
+  if ( !v9 )
+    goto LABEL_29;
+  v27 = (UnityEngine_GameObject_o *)transform;
+  transform = UnityEngine_GameObject__get_layer(v9, 0);
+  if ( !v27
+    || (UnityEngine_GameObject__set_layer(v27, transform, 0),
         (transform = (__int64)UnityEngine_Component__get_transform(v18, 0)) == 0)
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
-                                            (UnityEngine_Transform_o *)transform,
-                                            0),
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
+        v28 = localPosition.fields.x,
+        v29 = localPosition.fields.y,
         (transform = (__int64)UnityEngine_Component__get_transform(v18, 0)) == 0) )
   {
 LABEL_29:
     sub_2213CDC(transform, v4);
   }
-  *(_QWORD *)&v30.fields.x = localPosition;
-  v30.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v30, 0);
-  ListViewObject__SetBaseTransform((ListViewObject_o *)v18, v23);
-  ListViewObject__SetVisible((ListViewObject_o *)v18, 1, v24);
+  v40.fields.z = 0.0;
+  v40.fields.x = v28;
+  v40.fields.y = v29;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v40, 0);
+  ListViewObject__SetBaseTransform((ListViewObject_o *)v18, v30);
+  ListViewObject__SetVisible((ListViewObject_o *)v18, 1, v31);
   ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, Il2CppClass *))v18->klass[1]._1.declaringType)(
     v18,
     0,

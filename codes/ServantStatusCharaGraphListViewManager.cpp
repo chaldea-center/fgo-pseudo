@@ -406,6 +406,7 @@ void ServantStatusCharaGraphListViewManager__DragBackOff(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector2_o ServantStatusCharaGraphListViewManager__GetSreenPosition(
         ServantStatusCharaGraphListViewManager_o *this,
         UnityEngine_Vector3_o worldPos,
@@ -418,9 +419,10 @@ UnityEngine_Vector2_o ServantStatusCharaGraphListViewManager__GetSreenPosition(
   _BOOL8 v8; // x0
   __int64 v9; // x1
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
-  unsigned __int64 v13; // kr00_8
+  float v11; // s0 OVERLAPPED
+  float v12; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   z = worldPos.fields.z;
   y = worldPos.fields.y;
@@ -441,24 +443,25 @@ UnityEngine_Vector2_o ServantStatusCharaGraphListViewManager__GetSreenPosition(
       byte_59699C0 = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
+    v11 = static_fields->zeroVector.fields.x;
+    v12 = static_fields->zeroVector.fields.y;
   }
   else
   {
     if ( !cam )
       sub_2213CDC(v8, v9);
-    v15.fields.x = x;
-    v15.fields.y = y;
-    v15.fields.z = z;
-    v13 = (unsigned __int64)UnityEngine_Camera__WorldToScreenPoint_83198204(cam, v15, 0);
-    result.fields.y = *((float *)&v13 + 1);
-    LODWORD(result.fields.x) = v13;
+    v14.fields.x = x;
+    v14.fields.y = y;
+    v14.fields.z = z;
+    *(UnityEngine_Vector3_o *)&v11 = UnityEngine_Camera__WorldToScreenPoint_83198204(cam, v14, 0);
   }
+  result.fields.y = v12;
+  result.fields.x = v11;
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o ServantStatusCharaGraphListViewManager__GetWorldPosition(
         ServantStatusCharaGraphListViewManager_o *this,
         UnityEngine_Vector2_o screenPos,
@@ -470,8 +473,10 @@ UnityEngine_Vector3_o ServantStatusCharaGraphListViewManager__GetWorldPosition(
   _BOOL8 v7; // x0
   __int64 v8; // x1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Vector3_o v13; // 0:kr00_12.12
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  float v10; // s0 OVERLAPPED
+  float v11; // s1
+  float z; // s2
+  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   y = screenPos.fields.y;
@@ -492,22 +497,22 @@ UnityEngine_Vector3_o ServantStatusCharaGraphListViewManager__GetWorldPosition(
       byte_5969AE0 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
-    result.fields.z = static_fields->zeroVector.fields.z;
+    v10 = static_fields->zeroVector.fields.x;
+    v11 = static_fields->zeroVector.fields.y;
+    z = static_fields->zeroVector.fields.z;
   }
   else
   {
     if ( !cam )
       sub_2213CDC(v7, v8);
-    v14.fields.z = 0.0;
-    v14.fields.x = x;
-    v14.fields.y = y;
-    v13 = UnityEngine_Camera__ScreenToWorldPoint_83198228(cam, v14, 0);
-    result.fields.x = v13.fields.x;
-    result.fields.y = v13.fields.y;
-    result.fields.z = v13.fields.z;
+    v13.fields.z = 0.0;
+    v13.fields.x = x;
+    v13.fields.y = y;
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__ScreenToWorldPoint_83198228(cam, v13, 0);
   }
+  result.fields.z = z;
+  result.fields.y = v11;
+  result.fields.x = v10;
   return result;
 }
 
@@ -1125,135 +1130,172 @@ void ServantStatusCharaGraphListViewManager__OnDragUpdate(
   int32_t width; // w21
   int32_t height; // w22
   float x; // s9
+  float z; // s10
+  float v16; // s12
+  float y; // s8
   int32_t touchCount; // w25
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float y; // s15
-  const MethodInfo *v18; // x2
+  float v20; // s15
+  const MethodInfo *v21; // x2
   bool IsAbleToPinch; // w24
-  float v20; // s14
-  float v21; // s15
-  ServantStatusCharaGraphListViewManager_o *v22; // x0
-  const MethodInfo *v23; // x2
-  ServantStatusCharaGraphListViewManager_o *v24; // x0
-  const MethodInfo *v25; // x2
-  int32_t v26; // w8
+  float v23; // s14
+  float v24; // s15
+  float v25; // s12
+  ServantStatusCharaGraphListViewManager_o *v26; // x0
+  const MethodInfo *v27; // x2
+  ServantStatusCharaGraphListViewManager_o *v28; // x0
+  const MethodInfo *v29; // x2
+  float v30; // s8
+  float v31; // s9
+  float v32; // s10
+  int32_t v33; // w8
   float Axis; // s13
-  _BOOL4 v28; // w25
+  _BOOL4 v35; // w25
   _BOOL8 MouseButton; // x0
-  float v30; // s14
-  ServantStatusCharaGraphListViewManager_o *v31; // x0
-  float v32; // s9
-  float v33; // s10
-  float v34; // s13
-  UnityEngine_Vector2_o v35; // kr140_8
-  UnityEngine_Vector2_o v36; // kr190_8
-  float v37; // s8
+  float v37; // s14
   ServantStatusCharaGraphListViewManager_o *v38; // x0
-  const MethodInfo *v39; // x2
-  ServantStatusCharaGraphListViewManager_o *v40; // x0
-  const MethodInfo *v41; // x2
+  float v39; // s9
+  float v40; // s10
+  float v41; // s11
+  float v42; // s13
+  float v43; // s15
+  UnityEngine_Vector2_o v44; // kr00_8
+  UnityEngine_Vector2_o v45; // kr08_8
+  float v46; // s8
+  ServantStatusCharaGraphListViewManager_o *v47; // x0
+  const MethodInfo *v48; // x2
+  ServantStatusCharaGraphListViewManager_o *v49; // x0
+  const MethodInfo *v50; // x2
+  float v51; // s14
+  float v52; // s10
+  float v53; // s15
   int32_t oldTouchCount; // w8
-  char v43; // w24
-  float v44; // s8
-  float v45; // s4
-  float v46; // s2
-  float v47; // s3
-  float v48; // s0
-  float v49; // s12
-  float baseScale; // s8
-  float v51; // s0
-  UnityEngine_Vector2_o v52; // kr198_8
-  _BOOL4 v53; // w8
-  _BOOL4 v54; // w9
-  float v55; // s14
-  int v56; // w8
-  float v57; // s13
+  char v55; // w24
+  float v56; // s8
+  float v57; // s4
   float v58; // s2
+  float v59; // s3
+  float v60; // s0
+  float v61; // s12
+  float baseScale; // s8
+  float v63; // s0
+  UnityEngine_Vector2_o v64; // kr10_8
+  _BOOL4 v65; // w8
+  _BOOL4 v66; // w9
+  float v67; // s14
+  float v68; // s15
+  int v69; // w8
+  float v70; // s13
+  float v71; // s9
+  float v72; // s10
+  float v73; // s11
   int emptyMessageLabel; // w8
-  int32_t v60; // w1
-  float v61; // s15
-  float v62; // s10
-  ServantStatusCharaGraphListViewManager_o *v63; // x0
-  const MethodInfo *v64; // x2
-  ServantStatusCharaGraphListViewManager_o *v65; // x0
-  const MethodInfo *v66; // x2
-  ServantStatusCharaGraphListViewManager_o *v67; // x0
-  const MethodInfo *v68; // x2
-  ServantStatusCharaGraphListViewManager_o *v69; // x0
-  const MethodInfo *v70; // x2
-  UnityEngine_Vector2_o v71; // kr1B8_8
-  ServantStatusCharaGraphListViewManager_o *v72; // x0
-  const MethodInfo *v73; // x2
-  UnityEngine_Vector2_o v74; // kr1C0_8
-  int v75; // w8
-  int v76; // w9
-  float v77; // s3
-  float v78; // s0
-  float v79; // s8
-  float v80; // s9
-  int v81; // w9
-  float v82; // s0
-  float v83; // s1
-  float v84; // s1
-  float v85; // s0
-  float v86; // s0
-  float v87; // s1
-  UnityEngine_Vector2_o v88; // kr1C8_8
-  UnityEngine_Vector2_o v89; // kr1D0_8
-  float v90; // s0
-  float v91; // s1
+  int32_t v75; // w1
+  unsigned int v76; // s0
+  float v77; // s8
+  float v78; // s9
+  float v79; // s10
+  float v80; // s15
+  float v81; // s12
+  float v82; // s10
+  ServantStatusCharaGraphListViewManager_o *v83; // x0
+  const MethodInfo *v84; // x2
+  float v85; // s8
+  float v86; // s9
+  ServantStatusCharaGraphListViewManager_o *v87; // x0
+  const MethodInfo *v88; // x2
+  float v89; // s11
+  ServantStatusCharaGraphListViewManager_o *v90; // x0
+  const MethodInfo *v91; // x2
+  float v92; // s9
+  ServantStatusCharaGraphListViewManager_o *v93; // x0
+  const MethodInfo *v94; // x2
+  UnityEngine_Vector2_o v95; // kr20_8
+  float v96; // s12
+  float v97; // s15
+  ServantStatusCharaGraphListViewManager_o *v98; // x0
+  const MethodInfo *v99; // x2
+  UnityEngine_Vector2_o v100; // kr28_8
+  int v101; // w8
+  int v102; // w9
+  float v103; // s3
+  float v104; // s0
+  float v105; // s9
+  int v106; // w9
+  float v107; // s0
+  float v108; // s1
+  float v109; // s1
+  float v110; // s0
+  float v111; // s0
+  float v112; // s0
+  float v113; // s1
+  UnityEngine_Vector2_o v114; // kr30_8
+  UnityEngine_Vector2_o v115; // kr38_8
+  float v116; // s0
+  float v117; // s1
   float baseTouchSqrMagnitude; // s8
-  unsigned __int64 mousePosition; // kr110_8
-  unsigned int v94; // s0
+  float v119; // [xsp+4h] [xbp-1BCh]
+  float v120; // [xsp+8h] [xbp-1B8h]
   UnityEngine_Vector2_o SreenPosition; // [xsp+Ch] [xbp-1B4h]
-  float v96; // [xsp+10h] [xbp-1B0h]
-  float v97; // [xsp+10h] [xbp-1B0h]
-  UnityEngine_Vector3_o v98; // [xsp+14h] [xbp-1ACh]
-  unsigned __int64 v99; // [xsp+14h] [xbp-1ACh]
-  unsigned __int64 position; // [xsp+1Ch] [xbp-1A4h]
+  float v122; // [xsp+10h] [xbp-1B0h]
+  float v123; // [xsp+10h] [xbp-1B0h]
+  UnityEngine_Vector3_o v124; // [xsp+14h] [xbp-1ACh]
+  float v125; // [xsp+14h] [xbp-1ACh]
+  float v126; // [xsp+18h] [xbp-1A8h]
+  float position; // [xsp+1Ch] [xbp-1A4h]
   float value; // [xsp+20h] [xbp-1A0h]
-  float v102; // [xsp+24h] [xbp-19Ch]
-  float v103; // [xsp+24h] [xbp-19Ch]
-  float v104; // [xsp+28h] [xbp-198h]
-  float v105; // [xsp+2Ch] [xbp-194h]
-  float v106; // [xsp+34h] [xbp-18Ch]
+  float valuea; // [xsp+20h] [xbp-1A0h]
+  float v130; // [xsp+24h] [xbp-19Ch]
+  float v131; // [xsp+24h] [xbp-19Ch]
+  float v132; // [xsp+28h] [xbp-198h]
+  float v133; // [xsp+28h] [xbp-198h]
+  float v134; // [xsp+2Ch] [xbp-194h]
+  float v135; // [xsp+2Ch] [xbp-194h]
+  float v136; // [xsp+30h] [xbp-190h]
+  float v137; // [xsp+30h] [xbp-190h]
+  float v138; // [xsp+34h] [xbp-18Ch]
   float m_Height; // [xsp+38h] [xbp-188h]
+  float v140; // [xsp+38h] [xbp-188h]
   float m_XMin; // [xsp+3Ch] [xbp-184h]
-  UnityEngine_Touch_o v109; // [xsp+40h] [xbp-180h] BYREF
-  UnityEngine_Touch_o v110; // [xsp+90h] [xbp-130h] BYREF
+  UnityEngine_Touch_o v142; // [xsp+40h] [xbp-180h] BYREF
+  UnityEngine_Touch_o v143; // [xsp+90h] [xbp-130h] BYREF
   UnityEngine_Touch_o dest; // [xsp+E0h] [xbp-E0h] BYREF
-  float z; // [xsp+178h] [xbp-48h]
-  float v113; // [xsp+17Ch] [xbp-44h]
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v115; // 0:kr34_12.12
-  UnityEngine_Vector3_o v116; // 0:kr54_12.12
-  UnityEngine_Vector3_o v117; // 0:kr60_12.12
-  UnityEngine_Vector3_o v118; // 0:kr74_12.12
-  UnityEngine_Vector3_o v119; // 0:kr94_12.12
-  UnityEngine_Vector3_o v120; // 0:krA0_12.12
-  UnityEngine_Vector3_o v121; // 0:krB4_12.12
-  UnityEngine_Vector3_o v122; // 0:krD4_12.12
-  UnityEngine_Vector3_o v123; // 0:krE0_12.12
-  UnityEngine_Vector3_o v124; // 0:kr100_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr120_12.12
-  UnityEngine_Vector3_o v126; // 0:kr134_12.12
-  UnityEngine_Vector3_o v127; // 0:kr160_12.12
-  UnityEngine_Vector3_o v128; // 0:kr174_12.12
-  UnityEngine_Vector3_o v129; // 0:kr180_12.12
-  UnityEngine_Vector2_o v130; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v131; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v132; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v133; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v134; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v135; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v136; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v137; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v138; // 0:s0.4,4:s1.4,8:s2.4
+  float v145; // [xsp+178h] [xbp-48h]
+  float v146; // [xsp+17Ch] [xbp-44h]
+  UnityEngine_Vector2_o v147; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v148; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v149; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o WorldPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v140; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v141; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v142; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v143; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v153; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v154; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v155; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v156; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v157; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v158; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v159; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v160; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v161; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v162; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v163; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v164; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v165; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v166; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v167; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v168; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v170; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v171; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v172; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v173; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v174; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v175; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v176; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v177; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v178; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v179; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v180; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = this;
   if ( (byte_596C2D7 & 1) == 0 )
@@ -1264,8 +1306,8 @@ void ServantStatusCharaGraphListViewManager__OnDragUpdate(
     byte_596C2D7 = 1;
   }
   actionObject = v3->fields.actionObject;
-  memset(&v109, 0, sizeof(v109));
-  memset(&v110, 0, sizeof(v110));
+  memset(&v142, 0, sizeof(v142));
+  memset(&v143, 0, sizeof(v143));
   memset(&dest, 0, sizeof(dest));
   if ( !actionObject )
     goto LABEL_149;
@@ -1304,7 +1346,10 @@ void ServantStatusCharaGraphListViewManager__OnDragUpdate(
         goto LABEL_149;
       localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0);
       x = localScale.fields.x;
-      mousePosition = (unsigned __int64)UnityEngine_Input__get_mousePosition(0);
+      z = localScale.fields.z;
+      mousePosition = UnityEngine_Input__get_mousePosition(0);
+      v16 = mousePosition.fields.x;
+      y = mousePosition.fields.y;
       touchCount = UnityEngine_Input__get_touchCount(0);
       if ( !byte_5969AE0 )
       {
@@ -1315,27 +1360,27 @@ void ServantStatusCharaGraphListViewManager__OnDragUpdate(
       if ( !this )
         goto LABEL_149;
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      y = static_fields->zeroVector.fields.y;
-      v113 = static_fields->zeroVector.fields.x;
-      z = static_fields->zeroVector.fields.z;
+      v20 = static_fields->zeroVector.fields.y;
+      v146 = static_fields->zeroVector.fields.x;
+      v145 = static_fields->zeroVector.fields.z;
       IsAbleToPinch = ServantStatusCharaGraphViewer__IsAbleToPinch((ServantStatusCharaGraphViewer_o *)this, method);
-      v106 = m_Width;
+      v138 = m_Width;
       if ( touchCount )
       {
-        v20 = y;
+        v23 = v20;
         v3->fields.isOldMousePosition = 0;
         if ( touchCount != 2 )
         {
-          v21 = z;
+          v24 = v145;
           if ( touchCount != 1 )
           {
             oldTouchCount = v3->fields.oldTouchCount;
-            v43 = 0;
+            v55 = 0;
             Axis = 0.0;
-            v44 = 0.0;
+            v56 = 0.0;
             v3->fields.oldTouchCount = 0;
             v3->fields.isTouchScale = 0;
-            v28 = oldTouchCount > 0;
+            v35 = oldTouchCount > 0;
             goto LABEL_69;
           }
           this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_Input__get_touches(0);
@@ -1343,35 +1388,39 @@ void ServantStatusCharaGraphListViewManager__OnDragUpdate(
             goto LABEL_149;
           if ( LODWORD(this->fields.m_CancellationTokenSource) )
           {
+            v25 = x;
             memmove(&dest, &this->fields.dropObjectList, 0x44u);
-            v130 = UnityEngine_Touch__get_position(&dest, 0);
-            WorldPosition = ServantStatusCharaGraphListViewManager__GetWorldPosition(v22, v130, v3->fields.camera, v23);
+            v147 = UnityEngine_Touch__get_position(&dest, 0);
+            WorldPosition = ServantStatusCharaGraphListViewManager__GetWorldPosition(v26, v147, v3->fields.camera, v27);
             if ( !parent )
               goto LABEL_149;
-            v115 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, WorldPosition, 0);
+            v153 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, WorldPosition, 0);
             if ( v3->fields.oldTouchCount == 1 )
             {
-              v140 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
-                       v24,
+              v30 = v153.fields.x;
+              v31 = v153.fields.y;
+              v32 = v153.fields.z;
+              v154 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
+                       v28,
                        v3->fields.oldTouchPosition,
                        v3->fields.camera,
-                       v25);
-              v116 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v140, 0);
-              v20 = v115.fields.y - v116.fields.y;
-              v113 = v115.fields.x - v116.fields.x;
-              z = v115.fields.z - v116.fields.z;
+                       v29);
+              v155 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v154, 0);
+              v23 = v31 - v155.fields.y;
+              v146 = v30 - v155.fields.x;
+              v145 = v32 - v155.fields.z;
             }
             else
             {
               v3->fields.oldTouchCount = 1;
             }
-            x = localScale.fields.x;
-            v52 = UnityEngine_Touch__get_position(&dest, 0);
-            v21 = z;
-            v28 = 0;
-            v43 = 0;
-            v44 = 0.0;
-            v3->fields.oldTouchPosition = v52;
+            x = v25;
+            v64 = UnityEngine_Touch__get_position(&dest, 0);
+            v24 = v145;
+            v35 = 0;
+            v55 = 0;
+            v56 = 0.0;
+            v3->fields.oldTouchPosition = v64;
             Axis = 0.0;
             v3->fields.isTouchScale = 0;
 LABEL_69:
@@ -1385,27 +1434,27 @@ LABEL_69:
               {
                 if ( emptyMessageLabel == 1 )
                 {
-                  v60 = 2;
+                  v75 = 2;
 LABEL_76:
-                  ServantStatusCharaGraphViewer__SetDispType((ServantStatusCharaGraphViewer_o *)this, v60, v18);
+                  ServantStatusCharaGraphViewer__SetDispType((ServantStatusCharaGraphViewer_o *)this, v75, v21);
                 }
               }
               else if ( emptyMessageLabel == 2 )
               {
-                v60 = 1;
+                v75 = 1;
                 goto LABEL_76;
               }
             }
-            if ( (v43 & 1) != 0 && v44 > 0.0 && v3->fields.isTouchScale )
+            if ( (v55 & 1) != 0 && v56 > 0.0 && v3->fields.isTouchScale )
             {
               this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                    (UnityEngine_GameObject_o *)dragObject,
                                                                    0);
               if ( !this )
                 goto LABEL_149;
-              v94 = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0);
-              v3->fields.baseTouchSqrMagnitude = v44;
-              LODWORD(v3->fields.baseTouchScale) = v94;
+              v76 = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0);
+              v3->fields.baseTouchSqrMagnitude = v56;
+              LODWORD(v3->fields.baseTouchScale) = v76;
             }
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
@@ -1413,134 +1462,150 @@ LABEL_76:
             if ( !this )
               goto LABEL_149;
             localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+            v77 = localPosition.fields.x;
+            v78 = localPosition.fields.y;
+            v79 = localPosition.fields.z;
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
             if ( !this )
               goto LABEL_149;
-            v134.fields.z = v21 + localPosition.fields.z;
-            v61 = v113;
-            v134.fields.y = v20 + localPosition.fields.y;
-            v134.fields.x = v113 + localPosition.fields.x;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v134, 0);
+            v170.fields.z = v24 + v79;
+            v80 = v146;
+            v170.fields.y = v23 + v78;
+            v81 = m_YMin;
+            v170.fields.x = v146 + v77;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v170, 0);
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
             if ( !this )
               goto LABEL_149;
-            v62 = (float)width;
-            v126 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0);
+            v82 = (float)width;
+            v171 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0);
+            v85 = v171.fields.x;
+            v86 = v171.fields.y;
+            v133 = v171.fields.z;
             if ( !byte_59699C0 )
             {
-              v63 = (ServantStatusCharaGraphListViewManager_o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+              v83 = (ServantStatusCharaGraphListViewManager_o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
               byte_59699C0 = 1;
             }
-            z = v20;
-            position = (unsigned __int64)ServantStatusCharaGraphListViewManager__GetWorldPosition(
-                                           v63,
-                                           UnityEngine_Vector2_TypeInfo->static_fields->zeroVector,
-                                           v3->fields.camera,
-                                           v64);
-            v132.fields.x = (float)width;
-            v132.fields.y = (float)height;
-            v99 = (unsigned __int64)ServantStatusCharaGraphListViewManager__GetWorldPosition(
-                                      v65,
-                                      v132,
-                                      v3->fields.camera,
-                                      v66);
+            v145 = v23;
+            v172 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
+                     v83,
+                     UnityEngine_Vector2_TypeInfo->static_fields->zeroVector,
+                     v3->fields.camera,
+                     v84);
+            position = v172.fields.x;
+            valuea = v172.fields.y;
+            v172.fields.x = (float)width;
+            v172.fields.y = (float)height;
+            v173 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
+                     v87,
+                     *(UnityEngine_Vector2_o *)&v172.fields.x,
+                     v3->fields.camera,
+                     v88);
+            v125 = v173.fields.x;
+            v126 = v173.fields.y;
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
             if ( !this )
               goto LABEL_149;
-            v127 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0);
-            SreenPosition = ServantStatusCharaGraphListViewManager__GetSreenPosition(v67, v127, v3->fields.camera, v68);
+            v89 = v80;
+            v135 = v86;
+            v174 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0);
+            v119 = v174.fields.x;
+            v120 = v174.fields.y;
+            SreenPosition = ServantStatusCharaGraphListViewManager__GetSreenPosition(v90, v174, v3->fields.camera, v91);
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
-            if ( !this
-              || (v135.fields.z = 0.0,
-                  v135.fields.y = m_YMin + m_Height,
-                  v135.fields.x = m_XMin,
-                  v128 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v135, 0),
-                  v71 = ServantStatusCharaGraphListViewManager__GetSreenPosition(v69, v128, v3->fields.camera, v70),
-                  (this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
-                                                                        (UnityEngine_GameObject_o *)dragObject,
-                                                                        0)) == 0) )
-            {
+            if ( !this )
+              goto LABEL_149;
+            v175.fields.z = 0.0;
+            v175.fields.y = v81 + m_Height;
+            v175.fields.x = m_XMin;
+            v176 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v175, 0);
+            v92 = v176.fields.x;
+            v140 = v176.fields.y;
+            v95 = ServantStatusCharaGraphListViewManager__GetSreenPosition(v93, v176, v3->fields.camera, v94);
+            this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
+                                                                 (UnityEngine_GameObject_o *)dragObject,
+                                                                 0);
+            if ( !this )
 LABEL_149:
               sub_2213CDC(this, method);
-            }
-            v136.fields.z = 0.0;
-            v136.fields.y = m_YMin;
-            v136.fields.x = m_XMin + v106;
-            v129 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v136, 0);
-            v74 = ServantStatusCharaGraphListViewManager__GetSreenPosition(v72, v129, v3->fields.camera, v73);
-            v75 = Axis < 0.0 || v28;
-            if ( v61 > 0.0 )
-              v76 = 1;
+            v177.fields.z = 0.0;
+            v177.fields.y = v81;
+            v177.fields.x = m_XMin + v138;
+            v178 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v177, 0);
+            v96 = v178.fields.x;
+            v97 = v178.fields.y;
+            v100 = ServantStatusCharaGraphListViewManager__GetSreenPosition(v98, v178, v3->fields.camera, v99);
+            v101 = Axis < 0.0 || v35;
+            if ( v89 > 0.0 )
+              v102 = 1;
             else
-              v76 = v75;
-            if ( (float)(v74.fields.x - v71.fields.x) <= v62 )
+              v102 = v101;
+            if ( (float)(v100.fields.x - v95.fields.x) <= v82 )
             {
-              v77 = (float)height;
-              if ( SreenPosition.fields.x <= (float)(v62 * 0.5) )
-                v76 = 0;
-              if ( v76 != 1 )
+              v103 = (float)height;
+              if ( SreenPosition.fields.x <= (float)(v82 * 0.5) )
+                v102 = 0;
+              if ( v102 != 1 )
               {
-                v80 = v126.fields.y;
-                v79 = v126.fields.x;
-                if ( ((v61 >= 0.0) & ~v75) != 0 || SreenPosition.fields.x >= (float)(v62 * 0.5) )
+                v105 = v135;
+                if ( ((v89 >= 0.0) & ~v101) != 0 || SreenPosition.fields.x >= (float)(v82 * 0.5) )
                   goto LABEL_107;
-                v78 = (float)((float)(*(float *)&position + *(float *)&v99) * 0.5) - v127.fields.x;
+                v104 = (float)((float)(position + v125) * 0.5) - v119;
                 goto LABEL_106;
               }
-              v78 = (float)((float)(*(float *)&position + *(float *)&v99) * 0.5) - v127.fields.x;
+              v104 = (float)((float)(position + v125) * 0.5) - v119;
             }
             else
             {
-              v77 = (float)height;
-              if ( v71.fields.x <= 0.0 )
-                v76 = 0;
-              if ( v76 != 1 )
+              v103 = (float)height;
+              if ( v95.fields.x <= 0.0 )
+                v102 = 0;
+              if ( v102 != 1 )
               {
-                if ( ((v61 >= 0.0) & ~v75) != 0 )
+                if ( ((v89 >= 0.0) & ~v101) != 0 )
                 {
-                  v80 = v126.fields.y;
-                  v79 = v126.fields.x;
+                  v105 = v135;
                 }
                 else
                 {
-                  v80 = v126.fields.y;
-                  v79 = v126.fields.x;
-                  if ( v74.fields.x < v62 )
+                  v105 = v135;
+                  if ( v100.fields.x < v82 )
                   {
-                    v78 = *(float *)&v99 - v129.fields.x;
+                    v104 = v125 - v96;
                     goto LABEL_106;
                   }
                 }
 LABEL_107:
-                if ( z > 0.0 )
-                  v81 = 1;
+                if ( v145 > 0.0 )
+                  v106 = 1;
                 else
-                  v81 = v75;
-                if ( (float)(v74.fields.y - v71.fields.y) > v77 )
+                  v106 = v101;
+                if ( (float)(v100.fields.y - v95.fields.y) > v103 )
                 {
-                  if ( v71.fields.y <= 0.0 )
-                    v81 = 0;
-                  if ( v81 == 1 )
+                  if ( v95.fields.y <= 0.0 )
+                    v106 = 0;
+                  if ( v106 == 1 )
                   {
-                    v82 = *((float *)&position + 1);
-                    v83 = v128.fields.y;
+                    v107 = valuea;
+                    v108 = v140;
 LABEL_132:
-                    v86 = v82 - v83;
+                    v111 = v107 - v108;
                     goto LABEL_133;
                   }
-                  if ( ((z >= 0.0) & ~v75) == 0 && v74.fields.y < v77 )
+                  if ( ((v145 >= 0.0) & ~v101) == 0 && v100.fields.y < v103 )
                   {
-                    v86 = *((float *)&v99 + 1) - v129.fields.y;
+                    v111 = v126 - v97;
 LABEL_133:
-                    v80 = v80 + v86;
+                    v105 = v105 + v111;
                   }
 LABEL_134:
                   this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
@@ -1548,49 +1613,48 @@ LABEL_134:
                                                                        0);
                   if ( this )
                   {
-                    v137.fields.x = v79;
-                    v137.fields.y = v80;
-                    v137.fields.z = v126.fields.z;
-                    UnityEngine_Transform__set_position((UnityEngine_Transform_o *)this, v137, 0);
+                    v179.fields.x = v85;
+                    v179.fields.y = v105;
+                    v179.fields.z = v133;
+                    UnityEngine_Transform__set_position((UnityEngine_Transform_o *)this, v179, 0);
                     return;
                   }
                   goto LABEL_149;
                 }
-                v84 = 0.5;
-                if ( SreenPosition.fields.y <= (float)(v77 * 0.5) )
-                  v81 = 0;
-                if ( v81 == 1 )
+                v109 = 0.5;
+                if ( SreenPosition.fields.y <= (float)(v103 * 0.5) )
+                  v106 = 0;
+                if ( v106 == 1 )
                 {
-                  v85 = *((float *)&position + 1) + *((float *)&v99 + 1);
+                  v110 = valuea + v126;
                 }
                 else
                 {
-                  if ( ((z >= 0.0) & ~v75) != 0 || SreenPosition.fields.y >= (float)(v77 * 0.5) )
+                  if ( ((v145 >= 0.0) & ~v101) != 0 || SreenPosition.fields.y >= (float)(v103 * 0.5) )
                     goto LABEL_134;
-                  v85 = *((float *)&position + 1) + *((float *)&v99 + 1);
-                  v84 = 0.5;
+                  v110 = valuea + v126;
+                  v109 = 0.5;
                 }
-                v82 = v85 * v84;
-                v83 = v127.fields.y;
+                v107 = v110 * v109;
+                v108 = v120;
                 goto LABEL_132;
               }
-              v78 = *(float *)&position - v128.fields.x;
+              v104 = position - v92;
             }
-            v80 = v126.fields.y;
-            v79 = v126.fields.x;
+            v105 = v135;
 LABEL_106:
-            v79 = v79 + v78;
+            v85 = v85 + v104;
             goto LABEL_107;
           }
 LABEL_150:
           sub_2213CE4(this);
         }
-        v21 = z;
+        v24 = v145;
         if ( !IsAbleToPinch )
         {
-          v28 = 0;
-          v44 = 0.0;
-          v43 = 0;
+          v35 = 0;
+          v56 = 0.0;
+          v55 = 0;
           Axis = 0.0;
           goto LABEL_69;
         }
@@ -1599,234 +1663,257 @@ LABEL_150:
           goto LABEL_149;
         if ( !LODWORD(this->fields.m_CancellationTokenSource) )
           goto LABEL_150;
-        memmove(&v110, &this->fields.dropObjectList, 0x44u);
+        v43 = v23;
+        memmove(&v143, &this->fields.dropObjectList, 0x44u);
         this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_Input__get_touches(0);
         if ( !this )
           goto LABEL_149;
         if ( ((__int64)this->fields.m_CancellationTokenSource & 0xFFFFFFFE) == 0 )
           goto LABEL_150;
-        v105 = localScale.fields.x;
-        memmove(&v109, (char *)&this->fields.seed + 4, 0x44u);
-        v35 = UnityEngine_Touch__get_position(&v110, 0);
-        v36 = UnityEngine_Touch__get_position(&v109, 0);
-        v37 = (float)(v35.fields.y + v36.fields.y) * 0.5;
-        v131.fields.x = (float)(v35.fields.x + v36.fields.x) * 0.5;
-        v131.fields.y = v37;
-        v120 = ServantStatusCharaGraphListViewManager__GetWorldPosition(v38, v131, v3->fields.camera, v39);
+        v134 = x;
+        memmove(&v142, (char *)&this->fields.seed + 4, 0x44u);
+        v44 = UnityEngine_Touch__get_position(&v143, 0);
+        v45 = UnityEngine_Touch__get_position(&v142, 0);
+        v46 = (float)(v44.fields.y + v45.fields.y) * 0.5;
+        v149.fields.x = (float)(v44.fields.x + v45.fields.x) * 0.5;
+        v149.fields.y = v46;
+        v160 = ServantStatusCharaGraphListViewManager__GetWorldPosition(v47, v149, v3->fields.camera, v48);
         if ( !parent )
           goto LABEL_149;
-        v98 = v120;
-        value = localScale.fields.z;
-        v121 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v120, 0);
-        v32 = v121.fields.x;
+        v124 = v160;
+        value = z;
+        v161 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v160, 0);
+        v39 = v161.fields.x;
+        v51 = v161.fields.y;
+        v52 = v161.fields.z;
         if ( v3->fields.oldTouchCount == 2 )
         {
-          v142 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
-                   v40,
+          v53 = m_YMin;
+          v162 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
+                   v49,
                    v3->fields.oldTouchPosition,
                    v3->fields.camera,
-                   v41);
-          v122 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v142, 0);
-          v113 = v121.fields.x - v122.fields.x;
-          z = v121.fields.y - v122.fields.y;
-          v96 = v121.fields.z - v122.fields.z;
+                   v50);
+          v163 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v162, 0);
+          v146 = v39 - v163.fields.x;
+          v145 = v51 - v163.fields.y;
+          v122 = v52 - v163.fields.z;
         }
         else
         {
-          v87 = z;
+          v112 = v43;
+          v53 = m_YMin;
+          v113 = v145;
           v3->fields.isTouchScale = 0;
           v3->fields.oldTouchCount = 2;
-          v96 = v87;
-          z = v20;
+          v122 = v113;
+          v145 = v112;
         }
         Axis = 0.0;
-        v3->fields.oldTouchPosition.fields.x = (float)(v35.fields.x + v36.fields.x) * 0.5;
-        v3->fields.oldTouchPosition.fields.y = v37;
-        v88 = UnityEngine_Touch__get_position(&v110, 0);
-        v89 = UnityEngine_Touch__get_position(&v109, 0);
-        v90 = (float)(v88.fields.x - v89.fields.x) * (float)(v88.fields.x - v89.fields.x);
-        v91 = (float)(v88.fields.y - v89.fields.y) * (float)(v88.fields.y - v89.fields.y);
-        v44 = v90 + v91;
+        v3->fields.oldTouchPosition.fields.x = (float)(v44.fields.x + v45.fields.x) * 0.5;
+        v3->fields.oldTouchPosition.fields.y = v46;
+        v114 = UnityEngine_Touch__get_position(&v143, 0);
+        v115 = UnityEngine_Touch__get_position(&v142, 0);
+        v116 = (float)(v114.fields.x - v115.fields.x) * (float)(v114.fields.x - v115.fields.x);
+        v117 = (float)(v114.fields.y - v115.fields.y) * (float)(v114.fields.y - v115.fields.y);
+        v56 = v116 + v117;
         if ( !v3->fields.isTouchScale )
         {
-          v28 = 0;
-          v43 = 0;
-          if ( v44 <= 0.0 )
+          m_YMin = v53;
+          v35 = 0;
+          v55 = 0;
+          if ( v56 <= 0.0 )
           {
-            v21 = v96;
-            v20 = z;
-            x = localScale.fields.x;
+            v24 = v122;
+            v23 = v145;
+            x = v134;
           }
           else
           {
-            x = localScale.fields.x;
-            v21 = v96;
-            v20 = z;
+            x = v134;
+            v24 = v122;
+            v23 = v145;
             v3->fields.isTouchScale = 1;
-            v3->fields.baseTouchScale = localScale.fields.x;
-            v3->fields.baseTouchSqrMagnitude = v44;
+            v3->fields.baseTouchScale = v134;
+            v3->fields.baseTouchSqrMagnitude = v56;
           }
           goto LABEL_69;
         }
-        v104 = v90 + v91;
+        v132 = v116 + v117;
+        m_YMin = v53;
         baseTouchSqrMagnitude = v3->fields.baseTouchSqrMagnitude;
         if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method, v18);
-        v28 = 0;
-        v47 = z;
-        v45 = v96;
-        v46 = v121.fields.z;
-        v33 = v121.fields.y;
-        Axis = (float)(sqrtf(v104 / baseTouchSqrMagnitude) * v3->fields.baseTouchScale) - localScale.fields.x;
-        v48 = v113;
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method, v21);
+        v35 = 0;
+        v59 = v145;
+        v57 = v122;
+        v58 = v52;
+        v40 = v51;
+        Axis = (float)(sqrtf(v132 / baseTouchSqrMagnitude) * v3->fields.baseTouchScale) - v134;
+        v60 = v146;
       }
       else
       {
-        v26 = v3->fields.oldTouchCount;
+        v33 = v3->fields.oldTouchCount;
         Axis = 0.0;
-        value = localScale.fields.z;
+        value = z;
         v3->fields.isTouchScale = 0;
         v3->fields.oldTouchCount = 0;
-        v28 = v26 > 0;
-        if ( *(float *)&mousePosition >= 0.0
-          && *(float *)&mousePosition <= (float)UnityEngine_Screen__get_width(0)
-          && *((float *)&mousePosition + 1) >= 0.0
-          && (IsAbleToPinch & (*((float *)&mousePosition + 1) <= (float)UnityEngine_Screen__get_height(0))) == 1 )
+        v35 = v33 > 0;
+        if ( v16 >= 0.0
+          && v16 <= (float)UnityEngine_Screen__get_width(0)
+          && y >= 0.0
+          && (IsAbleToPinch & (y <= (float)UnityEngine_Screen__get_height(0))) == 1 )
         {
           Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9548/*"Mouse ScrollWheel"*/, 0);
         }
         MouseButton = UnityEngine_Input__GetMouseButton(0, 0);
-        v105 = localScale.fields.x;
+        v134 = x;
         if ( MouseButton
           || (MouseButton = UnityEngine_Input__GetMouseButton(1, 0))
           || (MouseButton = UnityEngine_Input__GetMouseButton(2, 0)) )
         {
-          v30 = v113;
-          v102 = Axis;
-          v117 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
+          v148.fields.x = v16;
+          v148.fields.y = y;
+          v37 = v146;
+          v130 = Axis;
+          v136 = m_YMin;
+          v156 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
                    (ServantStatusCharaGraphListViewManager_o *)MouseButton,
-                   (UnityEngine_Vector2_o)mousePosition,
+                   v148,
                    v3->fields.camera,
-                   v18);
+                   v21);
           if ( !parent )
             goto LABEL_149;
-          v98 = v117;
-          v118 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v117, 0);
-          v32 = v118.fields.x;
-          v33 = v118.fields.y;
+          v124 = v156;
+          v157 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v156, 0);
+          v39 = v157.fields.x;
+          v40 = v157.fields.y;
+          v41 = v157.fields.z;
           if ( v3->fields.isOldMousePosition )
           {
-            v141 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
-                     v31,
+            v158 = ServantStatusCharaGraphListViewManager__GetWorldPosition(
+                     v38,
                      v3->fields.oldMousePosition,
                      v3->fields.camera,
-                     v18);
-            v119 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v141, 0);
-            v30 = v118.fields.x - v119.fields.x;
-            y = v118.fields.y - v119.fields.y;
-            v34 = v118.fields.z - v119.fields.z;
+                     v21);
+            v159 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v158, 0);
+            v37 = v39 - v159.fields.x;
+            v20 = v40 - v159.fields.y;
+            v42 = v41 - v159.fields.z;
           }
           else
           {
-            v34 = z;
+            v42 = v145;
             v3->fields.isOldMousePosition = 1;
           }
-          v45 = v34;
-          Axis = v102;
-          v46 = v118.fields.z;
-          v3->fields.oldMousePosition = (struct UnityEngine_Vector2_o)mousePosition;
-          v47 = y;
-          v104 = 0.0;
-          v48 = v30;
+          v57 = v42;
+          Axis = v130;
+          v58 = v41;
+          m_YMin = v136;
+          v3->fields.oldMousePosition.fields.x = v16;
+          v59 = v20;
+          v3->fields.oldMousePosition.fields.y = y;
+          v132 = 0.0;
+          v60 = v37;
         }
         else
         {
-          v46 = z;
-          v33 = y;
-          v47 = y;
+          v58 = v145;
+          v40 = v20;
+          v59 = v20;
           v3->fields.isOldMousePosition = 0;
-          v45 = v46;
-          v98.fields.y = y;
-          v98.fields.z = v46;
-          v104 = 0.0;
-          v48 = v113;
-          v32 = v113;
-          v98.fields.x = v113;
+          v57 = v58;
+          v124.fields.y = v20;
+          v124.fields.z = v58;
+          v132 = 0.0;
+          v60 = v146;
+          v39 = v146;
+          v124.fields.x = v146;
         }
       }
       if ( Axis == 0.0 )
       {
-        x = v105;
-        v43 = 0;
-        v21 = v45;
-        v20 = v47;
-        v113 = v48;
+        x = v134;
+        v55 = 0;
+        v24 = v57;
+        v23 = v59;
+        v146 = v60;
       }
       else
       {
-        v49 = v48;
+        v61 = v60;
         baseScale = v3->fields.baseScale;
-        v51 = v105 + Axis;
-        if ( Axis >= 0.0 || v51 >= baseScale )
+        v63 = v134 + Axis;
+        if ( Axis >= 0.0 || v63 >= baseScale )
         {
-          v53 = v51 > (float)(baseScale * 3.0);
-          v54 = Axis > 0.0;
-          v43 = v54 && v53;
-          if ( v54 && v53 )
+          v65 = v63 > (float)(baseScale * 3.0);
+          v66 = Axis > 0.0;
+          v55 = v66 && v65;
+          if ( v66 && v65 )
             baseScale = baseScale * 3.0;
           else
-            baseScale = v105 + Axis;
+            baseScale = v134 + Axis;
         }
         else
         {
-          v43 = 1;
+          v55 = 1;
         }
-        v55 = v32;
-        x = v105;
-        if ( v105 == baseScale )
+        v67 = v39;
+        x = v134;
+        v68 = v40;
+        if ( v134 == baseScale )
         {
-          v21 = v45;
-          v20 = v47;
+          v24 = v57;
+          v23 = v59;
         }
         else
         {
-          v56 = v3->fields.oldTouchCount;
-          v97 = v45;
-          z = v47;
-          if ( v56 > 0 || v3->fields.isOldMousePosition )
+          v69 = v3->fields.oldTouchCount;
+          v123 = v57;
+          v145 = v59;
+          if ( v69 > 0 || v3->fields.isOldMousePosition )
           {
-            v103 = Axis;
-            v57 = v46;
+            v131 = Axis;
+            v70 = v58;
+            v137 = m_YMin;
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
             if ( !this )
               goto LABEL_149;
-            v123 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v98, 0);
+            v164 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v124, 0);
+            v71 = v164.fields.x;
+            v72 = v164.fields.y;
+            v73 = v164.fields.z;
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
             if ( !this )
               goto LABEL_149;
-            v133.fields.x = baseScale;
-            v133.fields.y = baseScale;
-            v133.fields.z = value;
-            UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v133, 0);
+            v165.fields.x = baseScale;
+            v165.fields.y = baseScale;
+            v165.fields.z = value;
+            UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v165, 0);
             this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
                                                                  (UnityEngine_GameObject_o *)dragObject,
                                                                  0);
             if ( !this )
               goto LABEL_149;
-            v143 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v123, 0);
+            v166.fields.x = v71;
+            v166.fields.y = v72;
+            v166.fields.z = v73;
+            v167 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v166, 0);
             if ( !parent )
               goto LABEL_149;
-            v124 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v143, 0);
-            v58 = v57 - v124.fields.z;
-            Axis = v103;
+            v168 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)parent, v167, 0);
+            m_YMin = v137;
+            v168.fields.z = v70 - v168.fields.z;
+            Axis = v131;
             x = baseScale;
-            v113 = v49 + (float)(v55 - v124.fields.x);
-            v20 = z + (float)(v33 - v124.fields.y);
-            v21 = v97 + v58;
+            v146 = v61 + (float)(v67 - v168.fields.x);
+            v23 = v145 + (float)(v68 - v168.fields.y);
+            v24 = v123 + v168.fields.z;
             goto LABEL_68;
           }
           this = (ServantStatusCharaGraphListViewManager_o *)UnityEngine_GameObject__get_transform(
@@ -1834,18 +1921,18 @@ LABEL_150:
                                                                0);
           if ( !this )
             goto LABEL_149;
-          v138.fields.x = baseScale;
-          v138.fields.y = baseScale;
-          v138.fields.z = value;
-          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v138, 0);
+          v180.fields.x = baseScale;
+          v180.fields.y = baseScale;
+          v180.fields.z = value;
+          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v180, 0);
           x = baseScale;
-          v21 = v97;
-          v20 = z;
+          v24 = v123;
+          v23 = v145;
         }
-        v113 = v49;
+        v146 = v61;
       }
 LABEL_68:
-      v44 = v104;
+      v56 = v132;
       goto LABEL_69;
     }
   }
@@ -1938,16 +2025,16 @@ void ServantStatusCharaGraphListViewManager__OnEndMaxim(
   UnityEngine_GameObject_o *dragObject; // x0
   __int64 v11; // x1
   struct ServantStatusCharaGraphListViewObject_o *actionObject; // x8
+  const MethodInfo *v13; // x2
+  float v14; // s0
   ServantStatusCharaGraphViewer_o *charaGraphViewer; // x20
-  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *v14; // x21
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x2
+  ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *v16; // x21
+  const MethodInfo *v17; // x3
+  const MethodInfo *v18; // x2
   UIDragDropListViewBackMask_o *backMask; // x20
-  EventDelegate_Callback_c *v18; // x0
-  EventDelegate_Callback_o *v19; // x21
-  EventDelegate_Callback_o *v20; // x22
-  const MethodInfo *v21; // x2
-  float v22; // s0
+  EventDelegate_Callback_c *v20; // x0
+  EventDelegate_Callback_o *v21; // x21
+  EventDelegate_Callback_o *v22; // x22
 
   if ( (byte_596C2D4 & 1) == 0 )
   {
@@ -1970,46 +2057,46 @@ void ServantStatusCharaGraphListViewManager__OnEndMaxim(
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
   if ( !dragObject )
     goto LABEL_12;
-  LODWORD(v22) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)dragObject, 0);
+  LODWORD(v14) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)dragObject, 0);
   dragObject = (UnityEngine_GameObject_o *)this->fields.charaGraphViewer;
-  this->fields.baseScale = v22;
+  this->fields.baseScale = v14;
   if ( !dragObject )
     goto LABEL_12;
   if ( BYTE4(dragObject[2].monitor) )
   {
-    ServantStatusCharaGraphViewer__SetDispType((ServantStatusCharaGraphViewer_o *)dragObject, 2, v21);
+    ServantStatusCharaGraphViewer__SetDispType((ServantStatusCharaGraphViewer_o *)dragObject, 2, v13);
     charaGraphViewer = this->fields.charaGraphViewer;
-    v14 = (ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *)sub_2213CCC(ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_TypeInfo);
+    v16 = (ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_o *)sub_2213CCC(ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent_TypeInfo);
     ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEvent___ctor(
-      v14,
+      v16,
       (Il2CppObject *)this,
       Method_ServantStatusCharaGraphListViewManager_OnModifyViewerCenter__,
-      v15);
+      v17);
     if ( !charaGraphViewer )
       goto LABEL_12;
-    ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(charaGraphViewer, v14, v16);
+    ServantStatusCharaGraphViewer__SetModifyScrollViewCenter(charaGraphViewer, v16, v18);
   }
   backMask = this->fields.backMask;
   this->fields.isOldMousePosition = 0;
-  v18 = EventDelegate_Callback_TypeInfo;
+  v20 = EventDelegate_Callback_TypeInfo;
   this->fields.oldTouchCount = 0;
   this->fields.isTouchScale = 0;
-  v19 = (EventDelegate_Callback_o *)sub_2213CCC(v18);
+  v21 = (EventDelegate_Callback_o *)sub_2213CCC(v20);
   EventDelegate_Callback___ctor(
-    v19,
+    v21,
     (Il2CppObject *)this,
     (intptr_t)Method_ServantStatusCharaGraphListViewManager_OnClickMaxim__,
     0);
-  v20 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
+  v22 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
-    v20,
+    v22,
     (Il2CppObject *)this,
     Method_ServantStatusCharaGraphListViewManager_OnDragUpdate__,
     0);
   if ( !backMask )
 LABEL_12:
     sub_2213CDC(dragObject, v11);
-  UIDragDropListViewBackMask__DragStartMultiTouch(backMask, v19, v20, 0);
+  UIDragDropListViewBackMask__DragStartMultiTouch(backMask, v21, v22, 0);
 }
 
 
@@ -2802,7 +2889,7 @@ System_IAsyncResult_o *ServantStatusCharaGraphListViewManager_CallbackFunc__Begi
   v10 = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

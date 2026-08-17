@@ -1366,7 +1366,8 @@ void PhotoCampaignListViewManager__ModifyItem(
         (System_Collections_Generic_List_Enumerator_T__o *)&v44,
         (System_Collections_Generic_List_object__o *)Master_object,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-      v47 = *(System_Collections_Generic_List_Enumerator_object__o *)&v44.fields.currentCryptoKey;
+      v47.fields._current = (Il2CppObject *)v44.fields.fakeValue;
+      *(_OWORD *)&v47.fields._list = *(_OWORD *)&v44.fields.currentCryptoKey;
       v45 = 0;
       v46 = &v47;
       while ( 1 )
@@ -2929,7 +2930,7 @@ System_IAsyncResult_o *PhotoCampaignListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(PhotoCampaignListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

@@ -2049,10 +2049,10 @@ bool DebugTestRootComponent__StartNoblePhantasm(DebugTestRootComponent_o *this, 
   __int64 v100; // x1
   UnityEngine_Transform_o *v101; // x25
   UnityEngine_Transform_o *v102; // x0
-  __int64 v103; // x0
+  UnityEngine_Transform_o *v103; // x0
   __int64 v104; // x1
   UnityEngine_Transform_o *v105; // x25
-  __int64 v106; // x0
+  UnityEngine_Transform_o *v106; // x0
   __int64 v107; // x1
   UnityEngine_Transform_o *v108; // x24
   System_Collections_Generic_IEnumerator_T__o *v109; // x20
@@ -2343,21 +2343,21 @@ LABEL_42:
     if ( !v101 )
       sub_2213CDC(v102, v102);
     UnityEngine_Transform__set_parent(v101, v102, 0);
-    v103 = (__int64)UnityEngine_GameObject__get_transform(v67, 0);
-    v105 = (UnityEngine_Transform_o *)v103;
+    v103 = UnityEngine_GameObject__get_transform(v67, 0);
+    v105 = v103;
     if ( !byte_5969AE0 )
     {
-      v103 = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      v103 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( !v105 )
       sub_2213CDC(v103, v104);
     UnityEngine_Transform__set_localPosition(v105, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    v106 = (__int64)UnityEngine_GameObject__get_transform(v67, 0);
-    v108 = (UnityEngine_Transform_o *)v106;
+    v106 = UnityEngine_GameObject__get_transform(v67, 0);
+    v108 = v106;
     if ( !byte_5969AE5 )
     {
-      v106 = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      v106 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v108 )
@@ -3415,7 +3415,7 @@ System_IAsyncResult_o *DebugTestRootComponent_ScriptReloadCallback__BeginInvoke(
   v10 = jumpLine;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -3521,6 +3521,7 @@ bool DebugTestRootComponent__RequestFileCR_d__77__MoveNext(
   int32_t v67; // w5
   bool v68; // w6
   bool v69; // w7
+  bool result; // w0
   struct System_Action_string__o *successCallback; // x8
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-60h]
 
@@ -3642,8 +3643,9 @@ LABEL_40:
       this->fields.__2__current = (Il2CppObject *)v62;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v62, v64, v65, v66, v67, v68, v69);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
   }
   _8__1 = this->fields._loader_5__2;
@@ -3847,6 +3849,7 @@ bool DebugTestRootComponent__RequestScriptFileCR_d__76__MoveNext(
   int32_t v45; // w5
   bool v46; // w6
   bool v47; // w7
+  bool result; // w0
   System_String_o *orgPath_5__2; // x21
   Il2CppObject *v50; // x23
   System_Action_object__o *v51; // x22
@@ -3998,8 +4001,9 @@ bool DebugTestRootComponent__RequestScriptFileCR_d__76__MoveNext(
               this->fields.__2__current = v40;
               p__2__current = &this->fields.__2__current;
               sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v40, v42, v43, v44, v45, v46, v47);
+              result = 1;
               *((_DWORD *)p__2__current - 2) = 1;
-              return 1;
+              return result;
             }
           }
         }
@@ -4029,8 +4033,9 @@ LABEL_22:
   this->fields.__2__current = v53;
   v54 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v54, (int32_t)v53, v55, v56, v57, v58, v59, v60);
+  result = 1;
   *((_DWORD *)v54 - 2) = 2;
-  return 1;
+  return result;
 }
 
 
@@ -4586,7 +4591,7 @@ void DebugTestRootComponent___c__DisplayClass79_1___StartScript_b__2(
   struct DebugTestRootComponent___c__DisplayClass79_0_o *v15; // x26
   int32_t viewJumpLine; // w24
   ScriptManager_CallbackFunc_o *_9__4; // x25
-  int32_t v18; // w23
+  int32_t JumpLine; // w23
   System_String_o *v19; // x2
   System_String_o *v20; // x3
   int32_t v21; // w4
@@ -4659,7 +4664,7 @@ void DebugTestRootComponent___c__DisplayClass79_1___StartScript_b__2(
     goto LABEL_21;
   viewJumpLine = v2->fields.viewJumpLine;
   _9__4 = v15->fields.__9__4;
-  v18 = *(_DWORD *)(*((_QWORD *)this + 23) + 168LL);
+  JumpLine = this[5].fields.CS___8__locals1[1].fields.connectData.fields.JumpLine;
   if ( !_9__4 )
   {
     _9__4 = (ScriptManager_CallbackFunc_o *)sub_2213CCC(ScriptManager_CallbackFunc_TypeInfo);
@@ -4680,7 +4685,7 @@ LABEL_21:
   DebugTestRootComponent_ScriptReloadCallback___ctor(v26, v25, Method_DebugTestRootComponent_OnReloadScript__, v27);
   if ( !*(&ScriptManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo, v28, v29);
-  ScriptManager__DebugPlay_51776400((System_String_o *)v12, scriptData, orgData, v18, viewJumpLine, _9__4, v26, 0);
+  ScriptManager__DebugPlay_51776400((System_String_o *)v12, scriptData, orgData, JumpLine, viewJumpLine, _9__4, v26, 0);
 }
 
 
@@ -5108,7 +5113,7 @@ void DebugTestRootComponent___c__DisplayClass91_1___LoadFileScript_b__3(
     goto LABEL_21;
   viewJumpLine = v2->fields.viewJumpLine;
   _9__5 = v15->fields.__9__5;
-  v18 = *(_DWORD *)(*((_QWORD *)this + 23) + 168LL);
+  v18 = (int32_t)this[5].fields.CS___8__locals1[1].fields.scriptData;
   if ( !_9__5 )
   {
     _9__5 = (ScriptManager_CallbackFunc_o *)sub_2213CCC(ScriptManager_CallbackFunc_TypeInfo);

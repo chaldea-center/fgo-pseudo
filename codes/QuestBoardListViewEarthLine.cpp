@@ -72,30 +72,39 @@ UnityEngine_Vector3_o QuestBoardListViewEarthLine__GetEndScreenPosition(
 {
   UnityEngine_Component_o *mEarthPoint; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  float v5; // s10
-  unsigned __int64 Position; // kr00_8
+  float x; // s9
+  float y; // s8
+  float v7; // s10
+  float v8; // s1
+  float v9; // s0
+  float v10; // s2
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   mEarthPoint = (UnityEngine_Component_o *)this->fields.mEarthPoint;
   if ( !mEarthPoint
     || (gameObject = UnityEngine_Component__get_gameObject(mEarthPoint, 0),
-        Position = (unsigned __int64)GameObjectExtensions__GetPosition(gameObject, 0),
+        Position = GameObjectExtensions__GetPosition(gameObject, 0),
+        x = Position.fields.x,
+        y = Position.fields.y,
         (mEarthPoint = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (LODWORD(v5) = (unsigned int)UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mEarthPoint, 0),
+    || (LODWORD(v7) = (unsigned int)UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mEarthPoint, 0),
         (mEarthPoint = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0) )
   {
     sub_2213CDC(mEarthPoint, method);
   }
-  result.fields.y = *((float *)&Position + 1)
-                  / COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(
-                                           (UnityEngine_Transform_o *)mEarthPoint,
-                                           0).fields.y));
-  result.fields.x = *(float *)&Position / v5;
-  result.fields.z = 0.0;
+  lossyScale = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mEarthPoint, 0);
+  v8 = y / lossyScale.fields.y;
+  v9 = x / v7;
+  v10 = 0.0;
+  result.fields.z = v10;
+  result.fields.y = v8;
+  result.fields.x = v9;
   return result;
 }
 
@@ -104,13 +113,19 @@ UnityEngine_Vector3_o QuestBoardListViewEarthLine__GetStartScreenPosition(
         QuestBoardListViewEarthLine_o *this,
         const MethodInfo *method)
 {
-  unsigned __int64 ThisScreenPosition; // kr00_8
+  float v3; // s0
+  float v4; // s1
+  float v5; // s2
+  UnityEngine_Vector3_o ThisScreenPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  ThisScreenPosition = (unsigned __int64)QuestBoardListViewEarthLine__GetThisScreenPosition(this, method);
-  result.fields.x = *(float *)&ThisScreenPosition + this->fields.mLineStartPos.fields.x;
-  result.fields.y = *((float *)&ThisScreenPosition + 1) + this->fields.mLineStartPos.fields.y;
-  result.fields.z = this->fields.mLineStartPos.fields.z + 0.0;
+  ThisScreenPosition = QuestBoardListViewEarthLine__GetThisScreenPosition(this, method);
+  v3 = ThisScreenPosition.fields.x + this->fields.mLineStartPos.fields.x;
+  v4 = ThisScreenPosition.fields.y + this->fields.mLineStartPos.fields.y;
+  v5 = this->fields.mLineStartPos.fields.z + 0.0;
+  result.fields.z = v5;
+  result.fields.y = v4;
+  result.fields.x = v3;
   return result;
 }
 
@@ -138,25 +153,36 @@ UnityEngine_Vector3_o QuestBoardListViewEarthLine__GetThisScreenPosition(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  float x; // s9
+  float y; // s8
   UnityEngine_Transform_o *transform; // x0
-  __int64 v5; // x1
-  float v6; // s10
-  unsigned __int64 Position; // kr00_8
+  __int64 v7; // x1
+  float v8; // s10
+  float v9; // s1
+  float v10; // s0
+  float v11; // s2
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  Position = (unsigned __int64)GameObjectExtensions__GetPosition(gameObject, 0);
+  Position = GameObjectExtensions__GetPosition(gameObject, 0);
+  x = Position.fields.x;
+  y = Position.fields.y;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (LODWORD(v6) = (unsigned int)UnityEngine_Transform__get_lossyScale(transform, 0),
+    || (LODWORD(v8) = (unsigned int)UnityEngine_Transform__get_lossyScale(transform, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_2213CDC(transform, v5);
+    sub_2213CDC(transform, v7);
   }
-  result.fields.y = *((float *)&Position + 1)
-                  / COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(transform, 0).fields.y));
-  result.fields.x = *(float *)&Position / v6;
-  result.fields.z = 0.0;
+  lossyScale = UnityEngine_Transform__get_lossyScale(transform, 0);
+  v9 = y / lossyScale.fields.y;
+  v10 = x / v8;
+  v11 = 0.0;
+  result.fields.z = v11;
+  result.fields.y = v9;
+  result.fields.x = v10;
   return result;
 }
 
@@ -549,29 +575,31 @@ void QuestBoardListViewEarthLine_StateMain__update(
   UnityEngine_Renderer_o *mLineRenderer; // x21
   bool v9; // w8
   const MethodInfo *v10; // x1
-  const MethodInfo *v11; // x1
-  float v12; // s8
-  float32x2_t v13; // d4
-  float x; // s9
-  float32x2_t v15; // d10
-  float v16; // s11
-  float32x2_t v17; // d10
-  int32x2_t v18; // d1
+  float x; // s8
+  float y; // s9
+  const MethodInfo *v13; // x1
+  __int64 v14; // x2
+  float v15; // s8
+  float32x2_t v16; // d4
+  float v17; // s9
+  float32x2_t v18; // d10
+  float v19; // s11
+  float32x2_t v20; // d10
+  int32x2_t v21; // d1
   float mTgtRate; // s12
-  float v20; // s8
-  float32x2_t v21; // d9
-  float v22; // s13
-  float v23; // s2
-  float v24; // s0
-  float32x2_t v25; // d1
+  float v23; // s8
+  float32x2_t v24; // d9
+  float v25; // s13
+  float v26; // s2
+  float v27; // s0
+  float32x2_t v28; // d1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  unsigned __int64 EndScreenPosition; // kr00_8
-  __int64 v28; // x2
-  unsigned __int64 ThisScreenPosition; // kr30_8
   unsigned __int64 v30; // [xsp+0h] [xbp-70h]
   unsigned __int64 v31; // [xsp+0h] [xbp-70h]
   float v32; // [xsp+0h] [xbp-70h]
-  UnityEngine_Vector3_o v33; // 0:kr20_12.12
+  UnityEngine_Vector3_o EndScreenPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o ThisScreenPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
   realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
   if ( !that )
@@ -590,72 +618,75 @@ void QuestBoardListViewEarthLine_StateMain__update(
     v9 = !UnityEngine_Renderer__get_enabled((UnityEngine_Renderer_o *)that->fields.mLineRenderer, 0);
   }
   UnityEngine_Renderer__set_enabled(mLineRenderer, v9, 0);
-  EndScreenPosition = (unsigned __int64)QuestBoardListViewEarthLine__GetEndScreenPosition(that, v10);
-  ThisScreenPosition = (unsigned __int64)QuestBoardListViewEarthLine__GetThisScreenPosition(that, v11);
-  v13.n64_u32[1] = 0;
-  v12 = *(float *)&EndScreenPosition - *(float *)&ThisScreenPosition;
-  v13.n64_f32[0] = *((float *)&EndScreenPosition + 1) - *((float *)&ThisScreenPosition + 1);
+  EndScreenPosition = QuestBoardListViewEarthLine__GetEndScreenPosition(that, v10);
+  x = EndScreenPosition.fields.x;
+  y = EndScreenPosition.fields.y;
+  ThisScreenPosition = QuestBoardListViewEarthLine__GetThisScreenPosition(that, v13);
+  v16.n64_u32[1] = 0;
+  v15 = x - ThisScreenPosition.fields.x;
+  v16.n64_f32[0] = y - ThisScreenPosition.fields.y;
   if ( this->fields.mTgtRate < 1.0 )
   {
-    x = that->fields.mLineStartPos.fields.x;
-    v15.n64_u64[0] = *(unsigned __int64 *)&that->fields.mLineStartPos.fields.y;
+    v17 = that->fields.mLineStartPos.fields.x;
+    v18.n64_u64[0] = *(unsigned __int64 *)&that->fields.mLineStartPos.fields.y;
     if ( !byte_5969AE2 )
     {
-      v30 = v13.n64_u64[0];
+      v30 = v16.n64_u64[0];
       sub_2213A60(&System_Math_TypeInfo);
-      v13.n64_u64[0] = v30;
+      v16.n64_u64[0] = v30;
       byte_5969AE2 = 1;
     }
-    v16 = v12 - x;
-    v17.n64_u64[0] = vsub_f32(v13, v15).n64_u64[0];
+    v19 = v15 - v17;
+    v20.n64_u64[0] = vsub_f32(v16, v18).n64_u64[0];
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v28);
-    v18.n64_u64[0] = vmul_f32(v17, v17).n64_u64[0];
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v14);
+    v21.n64_u64[0] = vmul_f32(v20, v20).n64_u64[0];
     mTgtRate = this->fields.mTgtRate;
-    v20 = that->fields.mLineStartPos.fields.x;
-    v21.n64_u64[0] = *(unsigned __int64 *)&that->fields.mLineStartPos.fields.y;
-    v22 = (float)((float)(v16 * v16) + v18.n64_f32[0]) + v18.n64_f32[1];
+    v23 = that->fields.mLineStartPos.fields.x;
+    v24.n64_u64[0] = *(unsigned __int64 *)&that->fields.mLineStartPos.fields.y;
+    v25 = (float)((float)(v19 * v19) + v21.n64_f32[0]) + v21.n64_f32[1];
     if ( !byte_5969AE3 )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_5969AE3 = 1;
     }
-    v18.n64_f32[0] = sqrtf(v22);
+    v21.n64_f32[0] = sqrtf(v25);
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     {
-      v31 = v18.n64_u64[0];
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v28);
-      v18.n64_u64[0] = v31;
+      v31 = v21.n64_u64[0];
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v14);
+      v21.n64_u64[0] = v31;
     }
-    v23 = v18.n64_f32[0] * mTgtRate;
-    if ( v18.n64_f32[0] <= 0.00001 )
+    v26 = v21.n64_f32[0] * mTgtRate;
+    if ( v21.n64_f32[0] <= 0.00001 )
     {
       if ( !byte_5969AE0 )
       {
-        v32 = v18.n64_f32[0] * mTgtRate;
+        v32 = v21.n64_f32[0] * mTgtRate;
         sub_2213A60(&UnityEngine_Vector3_TypeInfo);
-        v23 = v32;
+        v26 = v32;
         byte_5969AE0 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      v24 = static_fields->zeroVector.fields.x;
-      v25.n64_u64[0] = *(unsigned __int64 *)&static_fields->zeroVector.fields.y;
+      v27 = static_fields->zeroVector.fields.x;
+      v28.n64_u64[0] = *(unsigned __int64 *)&static_fields->zeroVector.fields.y;
     }
     else
     {
-      v24 = v16 / v18.n64_f32[0];
-      v25.n64_u64[0] = vdiv_f32(v17, vdup_lane_s32(v18, 0)).n64_u64[0];
+      v27 = v19 / v21.n64_f32[0];
+      v28.n64_u64[0] = vdiv_f32(v20, vdup_lane_s32(v21, 0)).n64_u64[0];
     }
-    v12 = v20 + (float)(v23 * v24);
-    v13.n64_u64[0] = vadd_f32(v21, vmul_n_f32(v25, v23)).n64_u64[0];
+    v15 = v23 + (float)(v26 * v27);
+    v16.n64_u64[0] = vadd_f32(v24, vmul_n_f32(v28, v26)).n64_u64[0];
   }
   v5 = that->fields.mLineRenderer;
   if ( !v5 )
 LABEL_24:
     sub_2213CDC(v5, v6);
-  v33.fields.x = v12;
-  *(float32x2_t *)&v33.fields.y = v13;
-  UnityEngine_LineRenderer__SetPosition(v5, 1, v33, 0);
+  v35.fields.x = v15;
+  LODWORD(v35.fields.z) = v16.n64_u32[1];
+  LODWORD(v35.fields.y) = v16.n64_u32[0];
+  UnityEngine_LineRenderer__SetPosition(v5, 1, v35, 0);
 }
 
 

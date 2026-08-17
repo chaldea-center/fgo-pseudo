@@ -1585,63 +1585,65 @@ void SkillUpResultWindowComponent__OpenSkillUpResultInfo(
   ServantSkillStrengthStatus_o *v94; // x22
   UILabel_o *skillAftTitleLb; // x28
   int32_t v96; // w20
-  UILabel_o *v97; // x22
-  __int64 v98; // x2
-  System_String_o *v99; // x1
+  UnityEngine_Vector2Int_o v97; // x6
+  UILabel_o *v98; // x22
+  __int64 v99; // x2
+  System_String_o *v100; // x1
   UILabel_o *skillAfterDetailScrollLabel; // x0
-  UILabel_o *v101; // x21
-  __int64 v102; // x1
-  __int64 v103; // x2
+  UILabel_o *v102; // x21
+  __int64 v103; // x1
+  __int64 v104; // x2
   UILabel_o *skillBefTitleLb; // x21
-  System_String_o *v105; // x22
-  System_String_o *v106; // x20
-  int32_t v107; // w9
-  Il2CppObject *v108; // x0
-  System_String_o *v109; // x0
-  int32_t v110; // w21
+  System_String_o *v106; // x22
+  System_String_o *v107; // x20
+  int32_t v108; // w9
+  Il2CppObject *v109; // x0
+  System_String_o *v110; // x0
   int32_t v111; // w21
+  int32_t v112; // w21
   ServantSkillEntity_o *EntityFromSkillId; // x0
-  int32_t v113; // w21
+  int32_t v114; // w21
   UnityEngine_Object_o *skillBefForceReleaseLb; // x22
-  System_String_o *v115; // x1
+  System_String_o *v116; // x1
   int32_t StrengthStatus; // w0
-  __int64 v117; // x1
-  __int64 v118; // x2
-  int32_t v119; // w21
-  int32_t v120; // w22
-  ServantSkillEntity_o *v121; // x0
-  ServantSkillEntity_o *v122; // x20
-  int32_t v123; // w0
+  __int64 v118; // x1
+  __int64 v119; // x2
+  int32_t v120; // w21
+  int32_t v121; // w22
+  ServantSkillEntity_o *v122; // x0
+  ServantSkillEntity_o *v123; // x20
+  int32_t v124; // w0
   UnityEngine_Object_o *servantSkillStrengthStatusBefore; // x23
   struct ServantSkillStrengthStatus_o **p_servantSkillStrengthStatusBefore; // x20
-  __int64 v126; // x2
-  System_String_o *v127; // x23
-  UnityEngine_Transform_o *v128; // x0
-  Il2CppObject *v129; // x0
-  System_String_o *v130; // x2
-  System_String_o *v131; // x3
-  int32_t v132; // w4
-  int32_t v133; // w5
-  bool v134; // w6
-  bool v135; // w7
-  UILabel_o *v136; // x20
-  __int64 v137; // x21
-  int32_t v138; // w20
-  System_Action_o *v139; // x20
-  int v140; // [xsp+20h] [xbp-F0h]
-  int32_t v141; // [xsp+24h] [xbp-ECh]
-  ServantSkillMaster_o *v142; // [xsp+28h] [xbp-E8h]
+  __int64 v127; // x2
+  System_String_o *v128; // x23
+  UnityEngine_Transform_o *v129; // x0
+  Il2CppObject *v130; // x0
+  System_String_o *v131; // x2
+  System_String_o *v132; // x3
+  int32_t v133; // w4
+  int32_t v134; // w5
+  bool v135; // w6
+  bool v136; // w7
+  UnityEngine_Vector2Int_o v137; // x6
+  UILabel_o *v138; // x20
+  __int64 v139; // x21
+  int32_t v140; // w20
+  System_Action_o *v141; // x20
+  int v142; // [xsp+20h] [xbp-F0h]
+  int32_t v143; // [xsp+24h] [xbp-ECh]
+  ServantSkillMaster_o *v144; // [xsp+28h] [xbp-E8h]
   int32_t lv; // [xsp+34h] [xbp-DCh]
   System_String_o *str1; // [xsp+38h] [xbp-D8h]
   int32_t svtId; // [xsp+44h] [xbp-CCh]
   int skillLv; // [xsp+48h] [xbp-C8h]
-  int32_t v147; // [xsp+50h] [xbp-C0h] BYREF
+  int32_t v149; // [xsp+50h] [xbp-C0h] BYREF
   int32_t EffectChargeTurn; // [xsp+54h] [xbp-BCh] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+58h] [xbp-B8h] BYREF
   System_String_o *detail; // [xsp+60h] [xbp-B0h] BYREF
   System_String_o *name; // [xsp+68h] [xbp-A8h] BYREF
-  UnityEngine_Color_o v152; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v153; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v154; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v155; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = multiSkillDisplayTitleBgColor.fields.a;
   b = multiSkillDisplayTitleBgColor.fields.b;
@@ -1731,11 +1733,11 @@ void SkillUpResultWindowComponent__OpenSkillUpResultInfo(
       gameObject = (UnityEngine_GameObject_o *)this->fields.multiSkillDisplayTitleLabel;
       if ( !gameObject )
         goto LABEL_175;
-      v152.fields.r = v26;
-      v152.fields.g = v25;
-      v152.fields.b = v23;
-      v152.fields.a = v22;
-      UIWidget__set_color((UIWidget_o *)gameObject, v152, 0);
+      v154.fields.r = v26;
+      v154.fields.g = v25;
+      v154.fields.b = v23;
+      v154.fields.a = v22;
+      UIWidget__set_color((UIWidget_o *)gameObject, v154, 0);
     }
     if ( (float)((float)(a * a) + (float)((float)(b * b) + (float)((float)(r * r) + (float)(g * g)))) >= 1.0e-10 )
     {
@@ -1747,11 +1749,11 @@ void SkillUpResultWindowComponent__OpenSkillUpResultInfo(
         gameObject = (UnityEngine_GameObject_o *)this->fields.multiSkillDisplayTitleBgSprite;
         if ( !gameObject )
           goto LABEL_175;
-        v153.fields.r = r;
-        v153.fields.g = g;
-        v153.fields.a = a;
-        v153.fields.b = b;
-        UIWidget__set_color((UIWidget_o *)gameObject, v153, 0);
+        v155.fields.r = r;
+        v155.fields.g = g;
+        v155.fields.a = a;
+        v155.fields.b = b;
+        UIWidget__set_color((UIWidget_o *)gameObject, v155, 0);
       }
     }
     if ( !this->fields.changedLayout )
@@ -1848,8 +1850,8 @@ LABEL_36:
       name = ServantLimitAddEntity__GetOverwriteSkillName(entity, v53->fields.id, name, 0);
     }
   }
-  v142 = (ServantSkillMaster_o *)v56;
-  v140 = targetLv - 1;
+  v144 = (ServantSkillMaster_o *)v56;
+  v142 = targetLv - 1;
   v60 = targetIdOld >= 1 ? skillLv : targetLv - 1;
   lv = v60;
   if ( v57 )
@@ -1876,7 +1878,7 @@ LABEL_36:
     v65 = isDispLv;
     UnityEngine_GameObject__SetActive(skillAfter, 0, 0);
     gameObject = (UnityEngine_GameObject_o *)this->fields.skillIconBef;
-    v66 = v142;
+    v66 = v144;
     if ( !gameObject )
       goto LABEL_175;
     SkillIconComponent__Set_48067596((SkillIconComponent_o *)gameObject, targetId, targetLv, 0);
@@ -1896,7 +1898,7 @@ LABEL_36:
   {
     if ( !skillAfter )
       goto LABEL_175;
-    v141 = targetIdOld;
+    v143 = targetIdOld;
     UnityEngine_GameObject__SetActive(skillAfter, 1, 0);
     gameObject = (UnityEngine_GameObject_o *)this->fields.skillIconAft;
     if ( !gameObject )
@@ -1919,8 +1921,8 @@ LABEL_36:
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v38, v72);
       v74 = LocalizationManager__Get((System_String_o *)StringLiteral_2107/*"APPEND_SKILL_RESULT_AFTER_LV"*/, 0);
-      v147 = targetLv;
-      v75 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v147);
+      v149 = targetLv;
+      v75 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v149);
       v76 = System_String__Format(v74, v75, 0);
       name = System_String__Concat_75651716(v73, v76, 0);
     }
@@ -1932,7 +1934,7 @@ LABEL_36:
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v77, v78);
     v80 = UnityEngine_Object__op_Inequality(skillAftForceReleaseLb, 0, 0);
-    targetIdOld = v141;
+    targetIdOld = v143;
     if ( v80 )
     {
       gameObject = (UnityEngine_GameObject_o *)this->fields.skillAftForceReleaseLb;
@@ -1951,7 +1953,7 @@ LABEL_36:
         v82 = (System_String_o *)StringLiteral_1/*""*/;
       UILabel__set_text((UILabel_o *)gameObject, v82, 0);
       v63 = isDispLv;
-      targetIdOld = v141;
+      targetIdOld = v143;
     }
     if ( v57 && IconCnt >= 1 )
     {
@@ -1990,6 +1992,7 @@ LABEL_36:
       v96 = lv;
       if ( !v94 )
         goto LABEL_175;
+      v97 = (UnityEngine_Vector2Int_o)0x1200000014LL;
       ServantSkillStrengthStatus__Set(
         v94,
         skillAftTitleLb,
@@ -1997,22 +2000,22 @@ LABEL_36:
         v57->fields.skillNum,
         20,
         -9,
-        (UnityEngine_Vector2Int_o)0x1200000014LL,
+        v97,
         280,
         this->fields.skillAftForceReleaseLb,
         0);
-      targetIdOld = v141;
+      targetIdOld = v143;
     }
     else
     {
       v96 = lv;
       if ( isForceRelease && !IconCnt )
       {
-        v97 = this->fields.skillAftTitleLb;
+        v98 = this->fields.skillAftTitleLb;
         gameObject = (UnityEngine_GameObject_o *)System_String__Concat_75651716(name, str1, 0);
-        if ( !v97 )
+        if ( !v98 )
           goto LABEL_175;
-        UILabel__set_text(v97, (System_String_o *)gameObject, 0);
+        UILabel__set_text(v98, (System_String_o *)gameObject, 0);
       }
       gameObject = (UnityEngine_GameObject_o *)this->fields.skillAftTitleLb;
       if ( !gameObject )
@@ -2023,12 +2026,12 @@ LABEL_36:
     if ( targetIdOld < 1 )
     {
       v65 = v63;
-      SkillEntity__getSkillMessageInfo(v53, &name, &detail, v140, 0);
+      SkillEntity__getSkillMessageInfo(v53, &name, &detail, v142, 0);
       gameObject = (UnityEngine_GameObject_o *)this->fields.skillIconBef;
       if ( !gameObject )
         goto LABEL_175;
-      SkillIconComponent__Set_48067596((SkillIconComponent_o *)gameObject, targetId, v140, 0);
-      v66 = v142;
+      SkillIconComponent__Set_48067596((SkillIconComponent_o *)gameObject, targetId, v142, 0);
+      v66 = v144;
       v69 = isForceRelease;
     }
     else
@@ -2042,28 +2045,28 @@ LABEL_36:
         goto LABEL_175;
       v53 = (SkillEntity_o *)gameObject;
       SkillEntity__getSkillMessageInfo((SkillEntity_o *)gameObject, &name, &detail, skillLv, 0);
-      v66 = v142;
+      v66 = v144;
       v69 = isForceRelease;
       if ( !isRelease && !isForceRelease )
       {
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v38, v98);
-        v99 = LocalizationManager__Get((System_String_o *)StringLiteral_12740/*"SKILL_COMBINE_EFFFECT_UNRELEASE"*/, 0);
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v38, v99);
+        v100 = LocalizationManager__Get((System_String_o *)StringLiteral_12740/*"SKILL_COMBINE_EFFFECT_UNRELEASE"*/, 0);
         skillAfterDetailScrollLabel = this->fields.skillAfterDetailScrollLabel;
-        detail = v99;
-        UILabelHelper__SetLabelWithScroll(skillAfterDetailScrollLabel, v99, 4, 0);
+        detail = v100;
+        UILabelHelper__SetLabelWithScroll(skillAfterDetailScrollLabel, v100, 4, 0);
       }
       gameObject = (UnityEngine_GameObject_o *)this->fields.skillIconBef;
       if ( !gameObject )
         goto LABEL_175;
       SkillIconComponent__Set_48067596((SkillIconComponent_o *)gameObject, targetIdOld, skillLv, 0);
     }
-    v101 = this->fields.skillBefChargeTimeLb;
+    v102 = this->fields.skillBefChargeTimeLb;
     EffectChargeTurn = SkillEntity__getEffectChargeTurn(v53, v96, 0);
     gameObject = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&EffectChargeTurn, 0);
-    if ( !v101 )
+    if ( !v102 )
       goto LABEL_175;
-    UILabel__set_text(v101, (System_String_o *)gameObject, 0);
+    UILabel__set_text(v102, (System_String_o *)gameObject, 0);
     beforeChargeTimeInfo = this->fields.beforeChargeTimeInfo;
     gameObject = (UnityEngine_GameObject_o *)SkillEntity__getEffectChargeTurn(v53, v96, 0);
     if ( !beforeChargeTimeInfo )
@@ -2085,46 +2088,46 @@ LABEL_175:
   if ( v65 )
   {
     skillBefTitleLb = this->fields.skillBefTitleLb;
-    v105 = name;
+    v106 = name;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v102, v103);
-    v106 = LocalizationManager__Get((System_String_o *)StringLiteral_2108/*"APPEND_SKILL_RESULT_LV"*/, 0);
-    v107 = skillLv;
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v103, v104);
+    v107 = LocalizationManager__Get((System_String_o *)StringLiteral_2108/*"APPEND_SKILL_RESULT_LV"*/, 0);
+    v108 = skillLv;
     if ( isOpen )
-      v107 = targetLv;
-    v147 = v107;
-    v108 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v147);
-    v109 = System_String__Format(v106, v108, 0);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Concat_75651716(v105, v109, 0);
+      v108 = targetLv;
+    v149 = v108;
+    v109 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v149);
+    v110 = System_String__Format(v107, v109, 0);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Concat_75651716(v106, v110, 0);
     if ( !skillBefTitleLb )
       goto LABEL_175;
     UILabel__set_text(skillBefTitleLb, (System_String_o *)gameObject, 0);
   }
   if ( v57 )
   {
-    v110 = v57->fields.skillNum;
+    v111 = v57->fields.skillNum;
     if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v102, v103);
-    v111 = ServantSkillStrengthStatus__GetIconCnt(v110, 0);
+      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v103, v104);
+    v112 = ServantSkillStrengthStatus__GetIconCnt(v111, 0);
     if ( targetIdOld >= 1 )
     {
       EntityFromSkillId = ServantSkillMaster__getEntityFromSkillId(v66, svtId, v54, targetIdOld, 0);
       if ( EntityFromSkillId )
       {
-        v113 = EntityFromSkillId->fields.skillNum;
+        v114 = EntityFromSkillId->fields.skillNum;
         if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v102, v103);
-        v111 = ServantSkillStrengthStatus__GetIconCnt(v113, 0);
+          j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v103, v104);
+        v112 = ServantSkillStrengthStatus__GetIconCnt(v114, 0);
       }
     }
   }
   else
   {
-    v111 = 0;
+    v112 = 0;
   }
   skillBefForceReleaseLb = (UnityEngine_Object_o *)this->fields.skillBefForceReleaseLb;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v102, v103);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v103, v104);
   if ( UnityEngine_Object__op_Inequality(skillBefForceReleaseLb, 0, 0) )
   {
     gameObject = (UnityEngine_GameObject_o *)this->fields.skillBefForceReleaseLb;
@@ -2133,73 +2136,74 @@ LABEL_175:
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !gameObject )
       goto LABEL_175;
-    UnityEngine_GameObject__SetActive(gameObject, v69 && v111 > 0, 0);
+    UnityEngine_GameObject__SetActive(gameObject, v69 && v112 > 0, 0);
     gameObject = (UnityEngine_GameObject_o *)this->fields.skillBefForceReleaseLb;
     if ( !gameObject )
       goto LABEL_175;
     if ( v69 )
-      v115 = str1;
+      v116 = str1;
     else
-      v115 = (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text((UILabel_o *)gameObject, v115, 0);
+      v116 = (System_String_o *)StringLiteral_1/*""*/;
+    UILabel__set_text((UILabel_o *)gameObject, v116, 0);
   }
-  if ( v57 && v111 >= 1 )
+  if ( v57 && v112 >= 1 )
   {
     StrengthStatus = ServantSkillEntity__GetStrengthStatus(v57, -1, 0);
-    v119 = v57->fields.skillNum;
-    v120 = StrengthStatus;
+    v120 = v57->fields.skillNum;
+    v121 = StrengthStatus;
     if ( targetIdOld >= 1 )
     {
-      v121 = ServantSkillMaster__getEntityFromSkillId(v66, svtId, v54, targetIdOld, 0);
-      if ( v121 )
+      v122 = ServantSkillMaster__getEntityFromSkillId(v66, svtId, v54, targetIdOld, 0);
+      if ( v122 )
       {
-        v122 = v121;
-        v123 = ServantSkillEntity__GetStrengthStatus(v121, -1, 0);
-        v119 = v122->fields.skillNum;
-        v120 = v123;
+        v123 = v122;
+        v124 = ServantSkillEntity__GetStrengthStatus(v122, -1, 0);
+        v120 = v123->fields.skillNum;
+        v121 = v124;
       }
     }
     servantSkillStrengthStatusBefore = (UnityEngine_Object_o *)this->fields.servantSkillStrengthStatusBefore;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v117, v118);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v118, v119);
     p_servantSkillStrengthStatusBefore = &this->fields.servantSkillStrengthStatusBefore;
     if ( !UnityEngine_Object__op_Equality(servantSkillStrengthStatusBefore, 0, 0) )
       goto LABEL_158;
     if ( !*(&ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v38, v126);
+      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo, v38, v127);
     gameObject = (UnityEngine_GameObject_o *)this->fields.skillBefTitleLb;
     if ( gameObject )
     {
-      v127 = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
-      v128 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
-      gameObject = BaseMonoBehaviour__createObject_48153028((BaseMonoBehaviour_o *)this, v127, v128, 0, 0);
+      v128 = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
+      v129 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
+      gameObject = BaseMonoBehaviour__createObject_48153028((BaseMonoBehaviour_o *)this, v128, v129, 0, 0);
       if ( gameObject )
       {
-        v129 = UnityEngine_GameObject__GetComponent_object_(
+        v130 = UnityEngine_GameObject__GetComponent_object_(
                  gameObject,
                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-        *p_servantSkillStrengthStatusBefore = (struct ServantSkillStrengthStatus_o *)v129;
+        *p_servantSkillStrengthStatusBefore = (struct ServantSkillStrengthStatus_o *)v130;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.servantSkillStrengthStatusBefore,
-          (int32_t)v129,
-          v130,
+          (int32_t)v130,
           v131,
           v132,
           v133,
           v134,
-          v135);
+          v135,
+          v136);
 LABEL_158:
         gameObject = (UnityEngine_GameObject_o *)*p_servantSkillStrengthStatusBefore;
         if ( !*p_servantSkillStrengthStatusBefore )
           goto LABEL_175;
+        v137 = (UnityEngine_Vector2Int_o)0x1200000014LL;
         ServantSkillStrengthStatus__Set(
           (ServantSkillStrengthStatus_o *)gameObject,
           this->fields.skillBefTitleLb,
+          v121,
           v120,
-          v119,
           20,
           -9,
-          (UnityEngine_Vector2Int_o)0x1200000014LL,
+          v137,
           280,
           this->fields.skillBefForceReleaseLb,
           0);
@@ -2208,13 +2212,13 @@ LABEL_158:
     }
     goto LABEL_175;
   }
-  if ( v69 && !v111 )
+  if ( v69 && !v112 )
   {
-    v136 = this->fields.skillBefTitleLb;
+    v138 = this->fields.skillBefTitleLb;
     gameObject = (UnityEngine_GameObject_o *)System_String__Concat_75651716(name, str1, 0);
-    if ( !v136 )
+    if ( !v138 )
       goto LABEL_175;
-    UILabel__set_text(v136, (System_String_o *)gameObject, 0);
+    UILabel__set_text(v138, (System_String_o *)gameObject, 0);
   }
   gameObject = (UnityEngine_GameObject_o *)this->fields.skillBefTitleLb;
   if ( !gameObject )
@@ -2225,18 +2229,18 @@ LABEL_166:
   if ( !gameObject )
     goto LABEL_175;
   if ( isOpen )
-    v137 = 216;
+    v139 = 216;
   else
-    v137 = 168;
+    v139 = 168;
   if ( isOpen )
-    v138 = 10;
+    v140 = 10;
   else
-    v138 = 4;
+    v140 = 4;
   UnityEngine_GameObject__SetActive(gameObject, isOpen, 0);
-  UILabelHelper__SetLabelWithScroll(*(UILabel_o **)((char *)&this->klass + v137), detail, v138, 0);
-  v139 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-  System_Action___ctor(v139, (Il2CppObject *)this, Method_SkillUpResultWindowComponent_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v139, 0, 0, 0);
+  UILabelHelper__SetLabelWithScroll(*(UILabel_o **)((char *)&this->klass + v139), detail, v140, 0);
+  v141 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v141, (Il2CppObject *)this, Method_SkillUpResultWindowComponent_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v141, 0, 0, 0);
 }
 
 

@@ -285,7 +285,8 @@ System_Int64_array *WarBoardBattleEvent__GetForceDeadSvtIdArray(WarBoardBattleEv
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)Data_k__BackingField,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BattleServantData__GetEnumerator__);
-  v23 = *(System_Collections_Generic_List_Enumerator_object__o *)&v20.fields.currentCryptoKey;
+  v23.fields._current = (Il2CppObject *)v20.fields.fakeValue;
+  *(_OWORD *)&v23.fields._list = *(_OWORD *)&v20.fields.currentCryptoKey;
   v21 = 0;
   v22 = &v23;
   while ( 1 )
@@ -1043,8 +1044,8 @@ bool WarBoardBattleEvent__InitBGData(
   v7 = WarBoardBattleInfo_k__BackingField->fields.bgType;
   if ( v7 >= 1 )
   {
+    result = 1;
     *bgType = v7;
-    return 1;
   }
   return result;
 }
@@ -1723,6 +1724,8 @@ BattleWarBoardInfo_WarBoardMasterInfo_o *WarBoardBattleEvent__MakeMasterInfo(
   const MethodInfo_3814BE4 *v22; // x3
   int32_t v23; // w0
   const MethodInfo_3814BE4 *v24; // x3
+  int32_t v25; // w8
+  BattleWarBoardInfo_WarBoardMasterInfo_o *result; // x0
 
   if ( (byte_5973465 & 1) == 0 )
   {
@@ -1755,9 +1758,11 @@ BattleWarBoardInfo_WarBoardMasterInfo_o *WarBoardBattleEvent__MakeMasterInfo(
   v23 = BasicHelper__IndexValue_int_(sealedArray, 1, 0, v22);
   v24 = (const MethodInfo_3814BE4 *)Method_BasicHelper_IndexValue_int____91713824;
   v12->fields.skill2SealedTurn = v23;
-  v12->fields.skill3SealedTurn = BasicHelper__IndexValue_int_(sealedArray, 2, 0, v24);
+  v25 = BasicHelper__IndexValue_int_(sealedArray, 2, 0, v24);
+  result = v12;
+  v12->fields.skill3SealedTurn = v25;
   v12->fields.commandSpellNum = spellNum;
-  return v12;
+  return result;
 }
 
 

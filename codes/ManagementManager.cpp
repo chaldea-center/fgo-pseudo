@@ -698,6 +698,7 @@ System_Collections_IEnumerator_o *ManagementManager__SetupFirebaseAppCheck(
         const MethodInfo *method)
 {
   __int64 v2; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596FF64 & 1) == 0 )
   {
@@ -706,8 +707,9 @@ System_Collections_IEnumerator_o *ManagementManager__SetupFirebaseAppCheck(
   }
   v2 = sub_2213CCC(ManagementManager__SetupFirebaseAppCheck_d__41_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
+  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  return result;
 }
 
 
@@ -716,6 +718,7 @@ System_Collections_IEnumerator_o *ManagementManager__SetupFirebaseCrashlytics(
         const MethodInfo *method)
 {
   __int64 v2; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596FF65 & 1) == 0 )
   {
@@ -724,8 +727,9 @@ System_Collections_IEnumerator_o *ManagementManager__SetupFirebaseCrashlytics(
   }
   v2 = sub_2213CCC(ManagementManager__SetupFirebaseCrashlytics_d__42_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
+  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  return result;
 }
 
 
@@ -736,10 +740,11 @@ void ManagementManager__Start(ManagementManager_o *this, const MethodInfo *metho
   __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x20
   Il2CppType *v7; // x21
+  System_RuntimeTypeHandle_o v8; // x0
   System_Type_o *TypeFromHandle; // x0
-  const MethodInfo *v9; // x1
-  const MethodInfo *v10; // x3
-  System_Collections_IEnumerator_o *v11; // x1
+  const MethodInfo *v10; // x1
+  const MethodInfo *v11; // x3
+  System_Collections_IEnumerator_o *v12; // x1
 
   if ( (byte_596FF5D & 1) == 0 )
   {
@@ -767,13 +772,14 @@ void ManagementManager__Start(ManagementManager_o *this, const MethodInfo *metho
   v7 = UnityGamingServicesBehaviour_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v5);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v7, 0);
+  v8.fields.value = (intptr_t)v7;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
   if ( !gameObject )
     sub_2213CDC(TypeFromHandle, TypeFromHandle);
   UnityEngine_GameObject__AddComponent(gameObject, TypeFromHandle, 0);
-  ManagementManager__createMovieObj(this, v9);
-  v11 = ManagementManager__startCheckAll(this, 0, 0, v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v11, 0);
+  ManagementManager__createMovieObj(this, v10);
+  v12 = ManagementManager__startCheckAll(this, 0, 0, v11);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v12, 0);
 }
 
 
@@ -1324,6 +1330,7 @@ System_Collections_IEnumerator_o *ManagementManager__startCheckAll(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596FF62 & 1) == 0 )
   {
@@ -1337,8 +1344,9 @@ System_Collections_IEnumerator_o *ManagementManager__startCheckAll(
   *(_QWORD *)(v8 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 40), (int32_t)this, v9, v10, v11, v12, v13, v14);
   *(_BYTE *)(v8 + 32) = v7;
+  result = (System_Collections_IEnumerator_o *)v8;
   *(_BYTE *)(v8 + 56) = isLogin;
-  return (System_Collections_IEnumerator_o *)v8;
+  return result;
 }
 
 
@@ -1733,8 +1741,8 @@ LABEL_54:
             this->fields.__2__current = v103;
             v104 = &this->fields.__2__current;
             sub_2213A04((MissionNaviTransitionBoardItem_o *)v104, (int32_t)v103, v105, v106, v107, v108, v109, v110);
-            *((_DWORD *)v104 - 2) = 1;
             LOBYTE(Master_object) = 1;
+            *((_DWORD *)v104 - 2) = 1;
             return (char)Master_object;
           }
         }
@@ -2530,6 +2538,7 @@ bool ManagementManager__SetupFirebaseAppCheck_d__41__MoveNext(
   System_String_o *AppCheckPrevMessageKey_k__BackingField; // x0
   FirebaseScript_c *v18; // x0
   Il2CppObject **v19; // x19
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
   __int64 v22; // x1
   float time; // s8
@@ -2602,8 +2611,9 @@ LABEL_14:
         this->fields.__2__current = 0;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
+        result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
-        return 1;
+        return result;
       }
       if ( !*(&v12->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(v12, method);
@@ -2664,8 +2674,9 @@ LABEL_42:
         this->fields.__2__current = 0;
         v19 = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)v19, 0, v2, v3, v4, v5, v6, v7);
+        result = 1;
         *((_DWORD *)v19 - 2) = 2;
-        return 1;
+        return result;
       }
       time = UnityEngine_Time__get_time(0);
       if ( !*(&FirebaseScript_TypeInfo->_2.cctor_finished + 1) )
@@ -2814,6 +2825,7 @@ bool ManagementManager__SetupFirebaseCrashlytics_d__42__MoveNext(
   FirebaseScript_c *v10; // x0
   Il2CppObject *Instance; // x0
   __int64 v12; // x1
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   if ( (byte_596FF83 & 1) == 0 )
@@ -2865,8 +2877,9 @@ bool ManagementManager__SetupFirebaseCrashlytics_d__42__MoveNext(
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v3, v4, v5, v6, v7);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -3254,6 +3267,7 @@ bool ManagementManager__startCheckAll_d__39__MoveNext(
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
+  bool result; // w0
   const MethodInfo_47A29F8 *v23; // x0
   System_Reflection_MethodBase_o *v24; // x0
   MissionNaviTransitionBoardItem_o *v25; // x29
@@ -3328,7 +3342,7 @@ bool ManagementManager__startCheckAll_d__39__MoveNext(
   int32_t v94; // w5
   bool v95; // w6
   bool v96; // w7
-  int32_t v97; // w8
+  int32_t monitor; // w8
   NetworkManager_ResultCallbackFunc_o *v98; // x21
   const MethodInfo *v99; // x3
   __int64 v100; // x1
@@ -3777,8 +3791,9 @@ bool ManagementManager__startCheckAll_d__39__MoveNext(
       v8->fields.__2__current = (Il2CppObject *)v14;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       sub_2213A04(p__2__current, (int32_t)v14, v16, v17, v18, v19, v20, v21);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     case 1:
       v8->fields.__1__state = -1;
 LABEL_120:
@@ -4125,11 +4140,11 @@ LABEL_399:
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
         this = (ManagementManager__startCheckAll_d__39_o *)DataManager_TypeInfo;
       }
-      v97 = *(_DWORD *)(*((_QWORD *)this + 23) + 56LL);
-      v8->fields._readMasterVersionResult_5__6 = v97;
-      if ( v97 != 1 )
+      monitor = (int32_t)this[1].fields._waitForServerTime_5__7[3].monitor;
+      v8->fields._readMasterVersionResult_5__6 = monitor;
+      if ( monitor != 1 )
       {
-        if ( !*((_DWORD *)this + 57) )
+        if ( !*(&this[2].fields.__1__state + 1) )
           j_il2cpp_runtime_class_init_0(this, method);
         DataManager__ClearCacheAll(0);
       }
@@ -4802,7 +4817,7 @@ LABEL_232:
         j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method);
         this = (ManagementManager__startCheckAll_d__39_o *)FSUtility_TypeInfo;
       }
-      if ( **((_BYTE **)this + 23) )
+      if ( this[1].fields._waitForServerTime_5__7->klass )
       {
         v217 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v217, 0);
@@ -4896,7 +4911,7 @@ LABEL_268:
       this = (ManagementManager__startCheckAll_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_416;
-      if ( *((_BYTE *)this + 960) )
+      if ( LOBYTE(this[9].fields.__2__current) )
       {
         v251 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v251, 0);
@@ -4931,7 +4946,7 @@ LABEL_279:
       this = (ManagementManager__startCheckAll_d__39_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
       if ( !this )
         goto LABEL_416;
-      if ( *((_BYTE *)this + 633) )
+      if ( BYTE1(this[6].monitor) )
       {
         v265 = (UnityEngine_WaitForEndOfFrame_o *)sub_2213CCC(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v265, 0);
@@ -5186,7 +5201,7 @@ LABEL_302:
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
         this = (ManagementManager__startCheckAll_d__39_o *)TerminalPramsManager_TypeInfo;
       }
-      if ( *(_BYTE *)(*((_QWORD *)this + 23) + 648LL) )
+      if ( LOBYTE(this[1].fields._waitForServerTime_5__7[40].monitor) )
       {
         if ( !_4__this )
           goto LABEL_416;

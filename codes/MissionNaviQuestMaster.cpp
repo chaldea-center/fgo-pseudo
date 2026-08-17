@@ -304,7 +304,7 @@ int32_t MissionNaviQuestMaster___c___GetOpenQuestByNaviQuestMasterId_b__1_2(
 LABEL_8:
     v7 = sub_224BC3C(group, System_Linq_IGrouping_int__MissionNaviQuestEntity__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__MissionNaviQuestEntity__o *, _QWORD))v7)(
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__MissionNaviQuestEntity__o *, _QWORD))v7)(
            group,
            *(_QWORD *)(v7 + 8));
 }

@@ -195,7 +195,10 @@ void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const
   int32_t mWidth; // w22
   UnityEngine_Transform_o *transform; // x21
   float y; // s8
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  float v9; // s0
+  float v10; // s1
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !label )
     goto LABEL_11;
@@ -220,16 +223,17 @@ void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const
     label = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
     if ( label )
     {
-      y = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)label, 0).fields.y;
+      localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)label, 0);
+      y = localScale.fields.y;
       label = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
       if ( label )
       {
-        v9.fields.z = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)label, 0).fields.z;
+        v12 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)label, 0);
         if ( transform )
         {
-          v9.fields.x = (float)maxWidth / (float)mWidth;
-          v9.fields.y = y;
-          UnityEngine_Transform__set_localScale(transform, v9, 0);
+          v9 = (float)maxWidth / (float)mWidth;
+          v10 = y;
+          UnityEngine_Transform__set_localScale(transform, v12, 0);
           return;
         }
       }

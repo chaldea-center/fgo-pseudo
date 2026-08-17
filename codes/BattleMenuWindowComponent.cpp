@@ -341,6 +341,7 @@ void BattleMenuWindowComponent__Open(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleMenuWindowComponent__OpenImpl(
         BattleMenuWindowComponent_o *this,
         BattleWindowComponent_EndCall_o *call,
@@ -371,8 +372,11 @@ void BattleMenuWindowComponent__OpenImpl(
   int32_t wavecount; // w25
   int v28; // w25
   float a; // s8
-  _BOOL4 v30; // w23
-  float b; // s2
+  unsigned __int64 v30; // kr00_8
+  _BOOL4 v31; // w23
+  float b; // s2 OVERLAPPED
+  float v33; // s3
+  UnityEngine_Color_o v34; // kr10_16
   __int64 v35; // x1
   UILabel_o *waveRestartExplanationLabel; // x24
   __int64 v37; // x1
@@ -385,17 +389,14 @@ void BattleMenuWindowComponent__OpenImpl(
   bool v44; // w7
   int32_t v45; // w1
   UnityEngine_Color_o v46; // [xsp+0h] [xbp-60h] BYREF
-  UnityEngine_Color_o v47; // 0:kr00_16.16
-  __int64 v48; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5973F5C & 1) == 0 )
   {
@@ -509,11 +510,11 @@ void BattleMenuWindowComponent__OpenImpl(
                                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !checkRetireWindow )
       goto LABEL_114;
-    v51.fields.r = 0.5;
-    v51.fields.g = 0.5;
-    v51.fields.b = 0.5;
-    v51.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)checkRetireWindow, v51, 0);
+    v49.fields.r = 0.5;
+    v49.fields.g = 0.5;
+    v49.fields.b = 0.5;
+    v49.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)checkRetireWindow, v49, 0);
     checkRetireWindow = (BattleWindowComponent_o *)this->fields.RetireButton;
     if ( !checkRetireWindow )
       goto LABEL_114;
@@ -541,11 +542,11 @@ LABEL_52:
                                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !checkRetireWindow )
       goto LABEL_114;
-    v56.fields.r = 1.0;
-    v56.fields.g = 1.0;
-    v56.fields.b = 1.0;
-    v56.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)checkRetireWindow, v56, 0);
+    v54.fields.r = 1.0;
+    v54.fields.g = 1.0;
+    v54.fields.b = 1.0;
+    v54.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)checkRetireWindow, v54, 0);
     checkRetireWindow = (BattleWindowComponent_o *)this->fields.RetireButton;
     if ( !checkRetireWindow )
       goto LABEL_114;
@@ -584,21 +585,21 @@ LABEL_52:
   {
     if ( !v20 )
       goto LABEL_114;
-    v52.fields.r = 0.29804;
-    v52.fields.a = 1.0;
-    v52.fields.g = 0.29804;
-    v52.fields.b = 0.29804;
-    UIWidget__set_color((UIWidget_o *)v20, v52, 0);
+    v50.fields.r = 0.29804;
+    v50.fields.a = 1.0;
+    v50.fields.g = 0.29804;
+    v50.fields.b = 0.29804;
+    UIWidget__set_color((UIWidget_o *)v20, v50, 0);
   }
   checkRetireWindow = (BattleWindowComponent_o *)this->fields.RetireButton;
   if ( !checkRetireWindow )
     goto LABEL_114;
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)checkRetireWindow, 0);
-  v53.fields.a = 1.0;
-  v53.fields.r = 0.29804;
-  v53.fields.g = 0.29804;
-  v53.fields.b = 0.29804;
-  CommonFunction__SetColorAllChild(transform, 0, v53, 0);
+  v51.fields.a = 1.0;
+  v51.fields.r = 0.29804;
+  v51.fields.g = 0.29804;
+  v51.fields.b = 0.29804;
+  CommonFunction__SetColorAllChild(transform, 0, v51, 0);
   checkRetireWindow = (BattleWindowComponent_o *)this->fields.data;
   if ( !checkRetireWindow )
     goto LABEL_114;
@@ -607,20 +608,20 @@ LABEL_52:
     checkRetireWindow = (BattleWindowComponent_o *)this->fields.itemListBtnSpr;
     if ( !checkRetireWindow )
       goto LABEL_114;
-    v54.fields.r = 0.29804;
-    v54.fields.g = 0.29804;
-    v54.fields.b = 0.29804;
-    v54.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)checkRetireWindow, v54, 0);
+    v52.fields.r = 0.29804;
+    v52.fields.g = 0.29804;
+    v52.fields.b = 0.29804;
+    v52.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)checkRetireWindow, v52, 0);
     checkRetireWindow = (BattleWindowComponent_o *)this->fields.itemListBtnSpr;
     if ( !checkRetireWindow )
       goto LABEL_114;
     v22 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)checkRetireWindow, 0);
-    v55.fields.r = 0.29804;
-    v55.fields.g = 0.29804;
-    v55.fields.b = 0.29804;
-    v55.fields.a = 1.0;
-    CommonFunction__SetColorAllChild(v22, 0, v55, 0);
+    v53.fields.r = 0.29804;
+    v53.fields.g = 0.29804;
+    v53.fields.b = 0.29804;
+    v53.fields.a = 1.0;
+    CommonFunction__SetColorAllChild(v22, 0, v53, 0);
   }
 LABEL_53:
   checkRetireWindow = (BattleWindowComponent_o *)this->fields.waveRestartButton;
@@ -658,10 +659,10 @@ LABEL_53:
                                                            0);
           if ( checkRetireWindow )
           {
-            v49.fields.z = 0.0;
-            v49.fields.x = 260.0;
-            v49.fields.y = 80.0;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)checkRetireWindow, v49, 0);
+            v47.fields.z = 0.0;
+            v47.fields.x = 260.0;
+            v47.fields.y = 80.0;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)checkRetireWindow, v47, 0);
             checkRetireWindow = (BattleWindowComponent_o *)this->fields.waveRestartButton;
             if ( checkRetireWindow )
             {
@@ -715,34 +716,29 @@ LABEL_53:
                   {
 LABEL_76:
                     b = 1.0;
-                    HIDWORD(v48) = 1.0;
-                    v30 = 0;
-                    LODWORD(v48) = 1.0;
+                    v31 = 0;
+                    v30 = __PAIR64__(1.0, 1.0);
                   }
                   else
                   {
 LABEL_75:
-                    v48 = *(_QWORD *)&v46.fields.r;
-                    v30 = 1;
-                    b = v46.fields.b;
+                    v30 = *(_QWORD *)&v46.fields.r;
+                    v31 = 1;
                     a = v46.fields.a;
+                    b = v46.fields.b;
                   }
                   if ( v25 )
                   {
-                    *(_QWORD *)&v47.fields.r = v48;
-                    v47.fields.b = b;
-                    v47.fields.a = a;
-                    UIWidget__set_color(v25, v47, 0);
-                    v57.fields.a = 1.0;
-                    v57.fields.b = 1.0;
+                    v33 = a;
+                    UIWidget__set_color(v25, *(UnityEngine_Color_o *)(&b - 2), 0);
                     checkRetireWindow = (BattleWindowComponent_o *)this->fields.waveRestartButtonLabel;
-                    v57.fields.g = 1.0;
-                    v57.fields.r = 1.0;
-                    if ( v30 )
-                      v57 = v46;
+                    *(_QWORD *)&v34.fields.r = __PAIR64__(1.0, 1.0);
+                    *(_QWORD *)&v34.fields.b = __PAIR64__(1.0, 1.0);
+                    if ( v31 )
+                      v34 = v46;
                     if ( checkRetireWindow )
                     {
-                      UIWidget__set_color((UIWidget_o *)checkRetireWindow, v57, 0);
+                      UIWidget__set_color((UIWidget_o *)checkRetireWindow, v34, 0);
                       waveRestartExplanationLabel = this->fields.waveRestartExplanationLabel;
                       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v35);
@@ -760,7 +756,7 @@ LABEL_75:
                                                                            0);
                           if ( checkRetireWindow )
                           {
-                            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkRetireWindow, v30, 0);
+                            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkRetireWindow, v31, 0);
                             checkRetireWindow = (BattleWindowComponent_o *)this->fields.classChartSp;
                             if ( checkRetireWindow )
                             {
@@ -896,12 +892,12 @@ LABEL_111:
                                                                 checkRetireWindow = (BattleWindowComponent_o *)this->fields.toggleButtonsRoot;
                                                                 if ( checkRetireWindow )
                                                                 {
-                                                                  v50.fields.z = 0.0;
-                                                                  v50.fields.x = 210.0;
-                                                                  v50.fields.y = -45.0;
+                                                                  v48.fields.z = 0.0;
+                                                                  v48.fields.x = 210.0;
+                                                                  v48.fields.y = -45.0;
                                                                   UnityEngine_Transform__set_localPosition(
                                                                     (UnityEngine_Transform_o *)checkRetireWindow,
-                                                                    v50,
+                                                                    v48,
                                                                     0);
                                                                   goto LABEL_113;
                                                                 }

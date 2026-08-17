@@ -107,6 +107,7 @@ LABEL_5:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
@@ -126,23 +127,26 @@ void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const Metho
   UILabel_o *v17; // x20
   const MethodInfo *v18; // x2
   const MethodInfo *v19; // x1
+  float v20; // s0 OVERLAPPED
+  float v21; // s1
+  float v22; // s2
   UILabel_o *timeOverLabel; // x20
   UILabel_o *numLabel; // x20
-  __int64 v24; // x1
-  __int64 v25; // x2
+  __int64 v25; // x1
+  __int64 v26; // x2
   UILabel_o *timeUnitLabel; // x20
-  const MethodInfo *v27; // x2
-  __int64 v28; // x8
-  RemainTimeComponent_o *v29; // x0
-  bool v30; // w1
-  UILabel_o *v31; // x20
-  __int64 v32; // x1
-  __int64 v33; // x2
-  UILabel_o *v34; // x20
-  signed __int64 v35; // [xsp+0h] [xbp-40h] BYREF
-  unsigned __int64 v36; // [xsp+8h] [xbp-38h] BYREF
-  unsigned __int64 v37; // [xsp+18h] [xbp-28h] BYREF
-  UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  const MethodInfo *v28; // x2
+  __int64 v29; // x8
+  RemainTimeComponent_o *v30; // x0
+  bool v31; // w1
+  UILabel_o *v32; // x20
+  __int64 v33; // x1
+  __int64 v34; // x2
+  UILabel_o *v35; // x20
+  float v36; // s3
+  signed __int64 v37; // [xsp+0h] [xbp-40h] BYREF
+  unsigned __int64 v38; // [xsp+8h] [xbp-38h] BYREF
+  unsigned __int64 v39; // [xsp+18h] [xbp-28h] BYREF
 
   if ( (byte_596C9F2 & 1) == 0 )
   {
@@ -156,10 +160,10 @@ void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const Metho
     byte_596C9F2 = 1;
   }
   remainLabel = this->fields.remainLabel;
-  v37 = 0;
+  v39 = 0;
   v5 = *(&LocalizationManager_TypeInfo->_2.cctor_finished + 1);
-  v35 = 0;
-  v36 = 0;
+  v37 = 0;
+  v38 = 0;
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v2);
   v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13966/*"TIME_REST6_HEAD"*/, 0);
@@ -188,61 +192,61 @@ void RemainTimeComponent__SetRemainTime(RemainTimeComponent_o *this, const Metho
     }
     goto LABEL_32;
   }
-  v37 = v13 / 0x3C;
+  v39 = v13 / 0x3C;
   if ( v13 <= 0xE0F )
   {
     numLabel = this->fields.numLabel;
-    v6 = System_Int64__ToString((int64_t)&v37, 0);
+    v6 = System_Int64__ToString((int64_t)&v39, 0);
     if ( numLabel )
     {
       UILabel__set_text(numLabel, v6, 0);
       timeUnitLabel = this->fields.timeUnitLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24, v25);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25, v26);
       v6 = LocalizationManager__Get((System_String_o *)StringLiteral_14000/*"TIME_STR_MINUTES"*/, 0);
       if ( timeUnitLabel )
       {
         UILabel__set_text(timeUnitLabel, v6, 0);
-        v28 = v37;
-        v29 = this;
-        v30 = 0;
+        v29 = v39;
+        v30 = this;
+        v31 = 0;
 LABEL_30:
-        RemainTimeComponent__AdjustLayout(v29, (float)v28, v30, v27);
-        v38.fields.b = 0.0;
-        v38.fields.r = 1.0;
-        v38.fields.g = 1.0;
+        RemainTimeComponent__AdjustLayout(v30, (float)v29, v31, v28);
+        v22 = 0.0;
+        v20 = 1.0;
+        v21 = 1.0;
         goto LABEL_31;
       }
     }
 LABEL_32:
     sub_2213CDC(v6, v7);
   }
-  v36 = v13 / 0xE10;
+  v38 = v13 / 0xE10;
   if ( v13 >> 7 <= 0x2A2 )
   {
-    v31 = this->fields.numLabel;
-    v6 = System_Int64__ToString((int64_t)&v36, 0);
-    if ( v31 )
+    v32 = this->fields.numLabel;
+    v6 = System_Int64__ToString((int64_t)&v38, 0);
+    if ( v32 )
     {
-      UILabel__set_text(v31, v6, 0);
-      v34 = this->fields.timeUnitLabel;
+      UILabel__set_text(v32, v6, 0);
+      v35 = this->fields.timeUnitLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32, v33);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v33, v34);
       v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13999/*"TIME_STR_HOURS"*/, 0);
-      if ( v34 )
+      if ( v35 )
       {
-        UILabel__set_text(v34, v6, 0);
-        v28 = v36;
-        v29 = this;
-        v30 = 1;
+        UILabel__set_text(v35, v6, 0);
+        v29 = v38;
+        v30 = this;
+        v31 = 1;
         goto LABEL_30;
       }
     }
     goto LABEL_32;
   }
   v14 = this->fields.numLabel;
-  v35 = v13 / 0x15180;
-  v6 = System_Int64__ToString((int64_t)&v35, 0);
+  v37 = v13 / 0x15180;
+  v6 = System_Int64__ToString((int64_t)&v37, 0);
   if ( !v14 )
     goto LABEL_32;
   UILabel__set_text(v14, v6, 0);
@@ -253,13 +257,13 @@ LABEL_32:
   if ( !v17 )
     goto LABEL_32;
   UILabel__set_text(v17, v6, 0);
-  RemainTimeComponent__AdjustLayout(this, (float)v35, 0, v18);
-  v38.fields.r = 1.0;
-  v38.fields.g = 1.0;
-  v38.fields.b = 1.0;
+  RemainTimeComponent__AdjustLayout(this, (float)v37, 0, v18);
+  v20 = 1.0;
+  v21 = 1.0;
+  v22 = 1.0;
 LABEL_31:
-  v38.fields.a = 1.0;
-  RemainTimeComponent__SetLabelsColor(this, v38, v19);
+  v36 = 1.0;
+  RemainTimeComponent__SetLabelsColor(this, *(UnityEngine_Color_o *)&v20, v19);
 }
 
 

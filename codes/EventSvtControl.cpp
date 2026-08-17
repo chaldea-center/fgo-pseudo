@@ -87,33 +87,36 @@ void EventSvtControl__EndPerformance(
   struct System_Action_o **p_performanceEndAction; // x20
   __int64 v20; // x1
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v22; // x1
-  __int64 v23; // x2
+  float x; // s10
+  float y; // s8
+  float z; // s9
+  __int64 v25; // x1
+  __int64 v26; // x2
   Il2CppObject *ComponentInChildren_object; // x21
-  __int64 v25; // x2
-  struct System_Action_o *v26; // x8
-  UnityEngine_GameObject_o *v27; // x20
-  EventSvtControl_c *v28; // x0
-  float v29; // s10
+  __int64 v28; // x2
+  struct System_Action_o *v29; // x8
   UnityEngine_GameObject_o *v30; // x20
+  EventSvtControl_c *v31; // x0
+  float v32; // s10
+  UnityEngine_GameObject_o *v33; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v32; // x2
-  System_String_o *v33; // x3
-  int32_t v34; // w4
-  int32_t v35; // w5
-  bool v36; // w6
-  bool v37; // w7
-  int32_t v38; // w1
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
-  EventSvtControl_o *v45; // x0
-  const MethodInfo *v46; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v48; // 0:s1.4,4:s2.4,8:s3.4
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  int32_t v41; // w1
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
+  int32_t v45; // w5
+  bool v46; // w6
+  bool v47; // w7
+  EventSvtControl_o *v48; // x0
+  const MethodInfo *v49; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v51; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596A7B9 & 1) == 0 )
   {
@@ -149,8 +152,8 @@ LABEL_21:
     v18 = System_Action_TypeInfo;
     if ( v11->klass != System_Action_TypeInfo || (this->fields.performanceEndAction = v11, v11->klass != v18) )
     {
-      v45 = (EventSvtControl_o *)sub_221405C(v11, v18, v12, v13);
-      EventSvtControl__CallPerformanceEndAction(v45, v46);
+      v48 = (EventSvtControl_o *)sub_221405C(v11, v18, v12, v13);
+      EventSvtControl__CallPerformanceEndAction(v48, v49);
       return;
     }
     p_performanceEndAction = &this->fields.performanceEndAction;
@@ -170,11 +173,14 @@ LABEL_21:
 LABEL_28:
     sub_2213CDC(transform, v20);
   }
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                  transform,
                                  (const MethodInfo_38B711C *)Method_UnityEngine_GameObject_GetComponentInChildren_UITexture___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25, v26);
   transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
                                             (UnityEngine_Object_o *)ComponentInChildren_object,
                                             0,
@@ -183,47 +189,47 @@ LABEL_28:
   {
     if ( ComponentInChildren_object )
     {
-      v27 = this->fields.objectRef;
-      v28 = EventSvtControl_TypeInfo;
-      v29 = localPosition.fields.x - (float)SLODWORD(ComponentInChildren_object[10].monitor);
+      v30 = this->fields.objectRef;
+      v31 = EventSvtControl_TypeInfo;
+      v32 = x - (float)SLODWORD(ComponentInChildren_object[10].monitor);
       if ( !*(&EventSvtControl_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(EventSvtControl_TypeInfo, v20, v25);
-        v28 = EventSvtControl_TypeInfo;
+        j_il2cpp_runtime_class_init_0(EventSvtControl_TypeInfo, v20, v28);
+        v31 = EventSvtControl_TypeInfo;
       }
-      v48.fields.x = v29;
-      v48.fields.y = localPosition.fields.y;
-      v48.fields.z = localPosition.fields.z;
-      transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v27, v28->static_fields->BASE_MOVE_TIME, v48, 0);
+      v51.fields.x = v32;
+      v51.fields.y = y;
+      v51.fields.z = z;
+      transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v30, v31->static_fields->BASE_MOVE_TIME, v51, 0);
       if ( transform )
       {
-        v30 = transform;
+        v33 = transform;
         LODWORD(transform[1].monitor) = 3;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        v30[3].monitor = gameObject;
+        v33[3].monitor = gameObject;
         sub_2213A04(
-          (MissionNaviTransitionBoardItem_o *)&v30[3].monitor,
+          (MissionNaviTransitionBoardItem_o *)&v33[3].monitor,
           (int32_t)gameObject,
-          v32,
-          v33,
-          v34,
           v35,
           v36,
-          v37);
-        v38 = StringLiteral_4098/*"CallPerformanceEndAction"*/;
-        v30[3].fields.m_CachedPtr = StringLiteral_4098/*"CallPerformanceEndAction"*/;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30[3].fields, v38, v39, v40, v41, v42, v43, v44);
+          v37,
+          v38,
+          v39,
+          v40);
+        v41 = StringLiteral_4098/*"CallPerformanceEndAction"*/;
+        v33[3].fields.m_CachedPtr = StringLiteral_4098/*"CallPerformanceEndAction"*/;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33[3].fields, v41, v42, v43, v44, v45, v46, v47);
         return;
       }
     }
     goto LABEL_28;
   }
-  v26 = *p_performanceEndAction;
+  v29 = *p_performanceEndAction;
   if ( *p_performanceEndAction )
   {
-    method_code = v26->fields.method_code;
-    v8 = v26->fields.method;
-    invoke_impl = (void (__fastcall *)(intptr_t, intptr_t))v26->fields.invoke_impl;
+    method_code = v29->fields.method_code;
+    v8 = v29->fields.method;
+    invoke_impl = (void (__fastcall *)(intptr_t, intptr_t))v29->fields.invoke_impl;
     goto LABEL_21;
   }
 }
@@ -2680,7 +2686,7 @@ bool EventSvtControl__TryGetPlayableVoiceInfoList(
   __int64 v46; // x1
   Il2CppObject *Weight; // x2
   const MethodInfo_43A099C *v48; // x4
-  System_Collections_Generic_KeyValuePair_object__int__o v49; // x1
+  System_Collections_Generic_KeyValuePair_object__int__o v49; // x1 OVERLAPPED
   System_String_o *v50; // x3
   int32_t v51; // w4
   int32_t v52; // w5
@@ -5330,6 +5336,7 @@ bool EventSvtControl__PlayPerformanceProc_d__74__MoveNext(
   int32_t v32; // w5
   bool v33; // w6
   bool v34; // w7
+  bool result; // w0
   struct EventSvtControl___c__DisplayClass74_0_o *_8__1; // x8
   Il2CppObject *v37; // x20
   System_Func_bool__o *v38; // x21
@@ -5406,8 +5413,9 @@ LABEL_18:
       v2->fields.__2__current = (Il2CppObject *)v27;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
       sub_2213A04(p__2__current, (int32_t)v27, v29, v30, v31, v32, v33, v34);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
 LABEL_11:
     if ( _4__this )
@@ -5437,8 +5445,9 @@ LABEL_11:
               v2->fields.__2__current = (Il2CppObject *)v39;
               v40 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
               sub_2213A04(v40, (int32_t)v39, v41, v42, v43, v44, v45, v46);
+              result = 1;
               v40[-1].fields._BoardType_k__BackingField = 2;
-              return 1;
+              return result;
             }
             goto LABEL_18;
           }
@@ -5609,9 +5618,9 @@ void EventSvtControl___c__DisplayClass57_1___boxGachaPlayVoice_b__0(
   bool v7; // w7
   struct EventSvtControl___c__DisplayClass57_0_o *CS___8__locals1; // x8
   EventSvtControl___c__DisplayClass57_1_o *v9; // x19
-  struct ServantVoiceData_array *vdArray; // x1
+  struct System_Action_o *vdArray; // x1
   struct EventSvtControl___c__DisplayClass57_0_o *v11; // x8
-  __int64 v12; // x9
+  struct System_Action_o *_9__0; // x9
   bool skipPerformance; // w8
   struct EventSvtControl___c__DisplayClass57_0_o *v14; // x8
   struct System_Action_o *callBackStartPlay; // x8
@@ -5623,16 +5632,16 @@ void EventSvtControl___c__DisplayClass57_1___boxGachaPlayVoice_b__0(
   this = (EventSvtControl___c__DisplayClass57_1_o *)CS___8__locals1->fields.__4__this;
   if ( !this )
     goto LABEL_10;
-  vdArray = v9->fields.vdArray;
-  *((_QWORD *)this + 9) = vdArray;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 72), (int32_t)vdArray, v2, v3, v4, v5, v6, v7);
+  vdArray = (struct System_Action_o *)v9->fields.vdArray;
+  this[1].fields.__9__0 = vdArray;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[1].fields.__9__0, (int32_t)vdArray, v2, v3, v4, v5, v6, v7);
   v11 = v9->fields.CS___8__locals1;
   if ( !v11
     || (this = (EventSvtControl___c__DisplayClass57_1_o *)v11->fields.__4__this) == 0
-    || (v12 = *((_QWORD *)this + 9)) == 0
+    || (_9__0 = this[1].fields.__9__0) == 0
     || (skipPerformance = v11->fields.arg.fields.skipPerformance,
-        *((_DWORD *)this + 20) = *(_QWORD *)(v12 + 24),
-        *((_BYTE *)this + 218) = skipPerformance,
+        LODWORD(this[2].klass) = _9__0->fields.invoke_impl,
+        BYTE2(this[5].fields.vdArray) = skipPerformance,
         EventSvtControl__svtVoicePlay((EventSvtControl_o *)this, method),
         (v14 = v9->fields.CS___8__locals1) == 0) )
   {

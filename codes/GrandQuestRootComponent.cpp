@@ -317,26 +317,27 @@ System_Collections_Generic_List_MapControl_WarInfo__o *GrandQuestRootComponent__
   __int64 v12; // x1
   __int64 v13; // x2
   int32_t parentWarId; // w1
-  __int64 v15; // x22
-  BalanceConfig_c *v16; // x0
+  System_Nullable_int__o v15; // x0
+  __int64 v16; // x22
+  BalanceConfig_c *v17; // x0
   WarReleaseEntity_o *OpenEntity; // x22
-  Il2CppObject *v18; // x0
-  __int64 v19; // x1
+  Il2CppObject *v19; // x0
+  __int64 v20; // x1
   _BOOL8 IsActiveWar; // x0
-  __int64 v21; // x1
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
+  __int64 v22; // x1
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v29; // x9
+  _QWORD *v30; // x9
   __int64 size; // x10
-  Il2CppClass **v31; // x0
-  System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-80h] BYREF
-  __int64 v35; // [xsp+48h] [xbp-58h] BYREF
+  Il2CppClass **v32; // x0
+  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+20h] [xbp-80h] BYREF
+  __int64 v36; // [xsp+48h] [xbp-58h] BYREF
 
   if ( (byte_596B293 & 1) == 0 )
   {
@@ -357,7 +358,7 @@ System_Collections_Generic_List_MapControl_WarInfo__o *GrandQuestRootComponent__
     byte_596B293 = 1;
   }
   v3 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
-  memset(&v34, 0, sizeof(v34));
+  memset(&v35, 0, sizeof(v35));
   if ( !v3 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
   Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_WarReleaseMaster___);
@@ -369,61 +370,59 @@ System_Collections_Generic_List_MapControl_WarInfo__o *GrandQuestRootComponent__
   if ( !Instance || (Instance = (Il2CppObject *)Instance[4].klass) == 0 )
     sub_2213CDC(Instance, v7);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v33,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v34,
     (System_Collections_Generic_List_object__o *)Instance,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-  v34 = v33;
-  v33.fields._list = 0;
-  *(_QWORD *)&v33.fields._index = &v34;
+  v35 = v34;
+  v34.fields._list = 0;
+  *(_QWORD *)&v34.fields._index = &v35;
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v34,
+           &v35,
            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
     if ( !v8 )
       break;
-    current = v34.fields._current;
-    if ( !v34.fields._current )
+    current = v35.fields._current;
+    if ( !v35.fields._current )
       sub_2213CDC(v8, v9);
-    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v34.fields._current, 0);
+    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v35.fields._current, 0);
     if ( Mine )
     {
       parentWarId = Mine->fields.parentWarId;
-      v35 = 0;
-      System_Nullable_int____ctor(
-        (System_Nullable_int__o)&v35,
-        parentWarId,
-        (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-      v15 = v35;
+      v36 = 0;
+      v15 = (System_Nullable_int__o)&v36;
+      System_Nullable_int____ctor(v15, parentWarId, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+      v16 = v36;
     }
     else
     {
-      v15 = 0;
+      v16 = 0;
     }
-    v16 = BalanceConfig_TypeInfo;
+    v17 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v12, v13);
-      v16 = BalanceConfig_TypeInfo;
+      v17 = BalanceConfig_TypeInfo;
     }
-    if ( (_BYTE)v15 && v16->static_fields->GrandBoardWarId == HIDWORD(v15) )
+    if ( (_BYTE)v16 && v17->static_fields->GrandBoardWarId == HIDWORD(v16) )
     {
       if ( !Master_object )
-        sub_2213CDC(v16, v12);
+        sub_2213CDC(v17, v12);
       OpenEntity = WarReleaseMaster__GetOpenEntity((WarReleaseMaster_o *)Master_object, HIDWORD(current[1].klass), 0);
-      v18 = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_QuestTree__get_Instance__);
-      if ( !v18 )
-        sub_2213CDC(0, v19);
-      IsActiveWar = QuestTree__IsActiveWar((QuestTree_o *)v18, HIDWORD(current[1].klass), 0);
+      v19 = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      if ( !v19 )
+        sub_2213CDC(0, v20);
+      IsActiveWar = QuestTree__IsActiveWar((QuestTree_o *)v19, HIDWORD(current[1].klass), 0);
       if ( IsActiveWar || OpenEntity && (IsActiveWar = WarReleaseEntity__IsClose(OpenEntity, 0)) )
       {
         if ( !v5
           || (items = v5->fields._items,
-              v29 = Method_System_Collections_Generic_List_MapControl_WarInfo__Add__,
+              v30 = Method_System_Collections_Generic_List_MapControl_WarInfo__Add__,
               ++v5->fields._version,
               !items) )
         {
-          sub_2213CDC(IsActiveWar, v21);
+          sub_2213CDC(IsActiveWar, v22);
         }
         size = v5->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -431,20 +430,20 @@ System_Collections_Generic_List_MapControl_WarInfo__o *GrandQuestRootComponent__
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             current,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
-          v31 = &items->obj.klass + size;
+          v32 = &items->obj.klass + size;
           v5->fields._size = size + 1;
-          v31[4] = (Il2CppClass *)current;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v31 + 4), (int32_t)current, v22, v23, v24, v25, v26, v27);
+          v32[4] = (Il2CppClass *)current;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v32 + 4), (int32_t)current, v23, v24, v25, v26, v27, v28);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v34,
+    &v35,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
   return (System_Collections_Generic_List_MapControl_WarInfo__o *)v5;
 }

@@ -158,23 +158,28 @@ void ClassBoardEffectController__MoveCamera(
   float x; // s10
   MapCamera_o *mapCamera; // x23
   __int64 v18; // x1
+  System_Nullable_float__o v19; // x3
   UnityEngine_Transform_o *SafeCameraDestination; // x0
-  __int64 v20; // x1
-  UnityEngine_Transform_o *v21; // x23
-  float v22; // s9
-  float v23; // s10
-  float v24; // s8
-  float v25; // s0
-  float v26; // s1
-  float v27; // s3
+  __int64 v21; // x1
+  UnityEngine_Transform_o *v22; // x23
+  float v23; // s9
+  float v24; // s10
+  float v25; // s15
+  float v26; // s13
+  float v27; // s14
+  float v28; // s8
+  float v29; // s0
+  float v30; // s1
+  float v31; // s3
   float screenPos; // [xsp+4h] [xbp-9Ch]
-  float v29; // [xsp+8h] [xbp-98h]
-  float v30; // [xsp+Ch] [xbp-94h]
-  System_Nullable_Vector3__o v31; // [xsp+10h] [xbp-90h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  System_Nullable_Vector3__o v33; // 0:x0.16
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  float v33; // [xsp+8h] [xbp-98h]
+  float v34; // [xsp+Ch] [xbp-94h]
+  System_Nullable_Vector3__o v35; // [xsp+10h] [xbp-90h] BYREF
+  System_Nullable_Vector3__o v36; // 0:x0.16
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
 
   z = pos.fields.z;
   y = pos.fields.y;
@@ -185,73 +190,77 @@ void ClassBoardEffectController__MoveCamera(
     sub_2213A60(&Method_System_Nullable_Vector3___ctor__);
     byte_597467B = 1;
   }
-  v34.fields.x = x;
-  v34.fields.y = y;
-  *(_QWORD *)&v33.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-  v34.fields.z = z;
+  v37.fields.x = x;
+  v37.fields.y = y;
+  *(_QWORD *)&v36.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+  v37.fields.z = z;
   mapCamera = this->fields.mapCamera;
-  *(_QWORD *)&v33.fields.hasValue = &v31;
-  *(_QWORD *)&v31.fields.hasValue = 0;
-  *(_QWORD *)&v31.fields.value.fields.y = 0;
-  System_Nullable_Vector3____ctor(v33, v34, *(const MethodInfo_45E9150 **)&ease);
+  *(_QWORD *)&v36.fields.hasValue = &v35;
+  *(_QWORD *)&v35.fields.hasValue = 0;
+  *(_QWORD *)&v35.fields.value.fields.y = 0;
+  System_Nullable_Vector3____ctor(v36, v37, *(const MethodInfo_45E9150 **)&ease);
   if ( !*(&MapCameraViewAdjusterUtil_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo, v18);
+  v19 = 0;
   SafeCameraDestination = (UnityEngine_Transform_o *)MapCameraViewAdjusterUtil__GetSafeCameraDestination(
                                                        mapCamera,
-                                                       v31,
-                                                       0,
+                                                       v35,
+                                                       v19,
                                                        0);
   if ( !this->fields.mapCamera )
     goto LABEL_24;
-  v21 = SafeCameraDestination;
+  v22 = SafeCameraDestination;
   SafeCameraDestination = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.mapCamera, 0);
   if ( !SafeCameraDestination )
     goto LABEL_24;
   localPosition = UnityEngine_Transform__get_localPosition(SafeCameraDestination, 0);
-  if ( !v21 )
+  if ( !v22 )
     goto LABEL_24;
   SafeCameraDestination = (UnityEngine_Transform_o *)this->fields.mapCamera;
-  v29 = x;
-  v30 = y;
+  v33 = x;
+  v34 = y;
   if ( !SafeCameraDestination )
     goto LABEL_24;
-  v23 = *(float *)&v21->fields.m_CachedPtr;
-  v22 = *((float *)&v21->fields.m_CachedPtr + 1);
+  v24 = *(float *)&v22->fields.m_CachedPtr;
+  v23 = *((float *)&v22->fields.m_CachedPtr + 1);
+  v25 = localPosition.fields.x;
+  v26 = localPosition.fields.y;
+  v27 = localPosition.fields.z;
   screenPos = z;
   SafeCameraDestination = UnityEngine_Component__get_transform((UnityEngine_Component_o *)SafeCameraDestination, 0);
   if ( !SafeCameraDestination )
     goto LABEL_24;
-  v24 = UnityEngine_Transform__get_localPosition(SafeCameraDestination, 0).fields.z;
+  v39 = UnityEngine_Transform__get_localPosition(SafeCameraDestination, 0);
+  v28 = v39.fields.z;
   if ( !byte_5969ADE )
   {
     sub_2213A60(&System_Math_TypeInfo);
     byte_5969ADE = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v20);
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v21);
   SafeCameraDestination = (UnityEngine_Transform_o *)this->fields.mapCamera;
   if ( !SafeCameraDestination )
 LABEL_24:
-    sub_2213CDC(SafeCameraDestination, v20);
-  v25 = sqrtf(
-          (float)((float)((float)(localPosition.fields.x - v23) * (float)(localPosition.fields.x - v23))
-                + (float)((float)(localPosition.fields.y - v22) * (float)(localPosition.fields.y - v22)))
-        + (float)((float)(localPosition.fields.z - v24) * (float)(localPosition.fields.z - v24)))
+    sub_2213CDC(SafeCameraDestination, v21);
+  v29 = sqrtf(
+          (float)((float)((float)(v25 - v24) * (float)(v25 - v24)) + (float)((float)(v26 - v23) * (float)(v26 - v23)))
+        + (float)((float)(v27 - v28) * (float)(v27 - v28)))
       / (float)maxDistance;
-  if ( v25 <= secMax )
-    v26 = v25;
+  if ( v29 <= secMax )
+    v30 = v29;
   else
-    v26 = secMax;
-  if ( v25 < secMin )
-    v26 = secMin;
-  if ( v25 == 0.0 )
-    v27 = 0.0;
+    v30 = secMax;
+  if ( v29 < secMin )
+    v30 = secMin;
+  if ( v29 == 0.0 )
+    v31 = 0.0;
   else
-    v27 = v26;
-  v35.fields.x = v29;
-  v35.fields.y = v30;
-  v35.fields.z = screenPos;
-  MapCamera__StartAutoMove((MapCamera_o *)SafeCameraDestination, v35, v27, ease, callback, 0);
+    v31 = v30;
+  v40.fields.x = v33;
+  v40.fields.y = v34;
+  v40.fields.z = screenPos;
+  MapCamera__StartAutoMove((MapCamera_o *)SafeCameraDestination, v40, v31, ease, callback, 0);
 }
 
 

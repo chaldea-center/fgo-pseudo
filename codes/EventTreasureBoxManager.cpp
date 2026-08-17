@@ -28,14 +28,18 @@ void EventTreasureBoxManager__Init(
   bool v25; // w6
   bool v26; // w7
   ShopCurrencyInfoController_o *v27; // x27
+  float x; // s9
+  float y; // s8
+  float z; // s10
   UnityEngine_GameObject_o *gameObject; // x0
   struct EventTreasureBoxPanelComponent_array *treasureBoxList; // x8
-  __int64 v30; // x25
+  __int64 v33; // x25
   int max_length; // w9
-  EventTreasureBoxPanelComponent_o *v32; // x26
-  const MethodInfo *v33; // x6
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  EventTreasureBoxPanelComponent_o *v35; // x26
+  const MethodInfo *v36; // x6
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v39; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596ADAB & 1) == 0 )
   {
@@ -113,31 +117,37 @@ void EventTreasureBoxManager__Init(
   Instance = (DataManager_o *)this->fields.currencyInfoController;
   if ( !Instance )
     goto LABEL_26;
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   Instance = (DataManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
   if ( !Instance )
     goto LABEL_26;
-  v35.fields.z = 0.0;
-  v35.fields.x = -220.0;
-  v35.fields.y = -1000.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v35, 0);
+  v38.fields.z = 0.0;
+  v38.fields.x = -220.0;
+  v38.fields.y = -1000.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v38, 0);
   Instance = (DataManager_o *)this->fields.currencyInfoController;
   if ( !Instance
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0),
-        (Instance = (DataManager_o *)TweenPosition__Begin(gameObject, 0.4, localPosition, 0)) == 0)
+        v39.fields.x = x,
+        v39.fields.y = y,
+        v39.fields.z = z,
+        (Instance = (DataManager_o *)TweenPosition__Begin(gameObject, 0.4, v39, 0)) == 0)
     || (treasureBoxList = this->fields.treasureBoxList, *(_DWORD *)&Instance->fields._DispLog = 3, !treasureBoxList) )
   {
 LABEL_26:
     sub_2213CDC(Instance, v15);
   }
-  v30 = 0;
+  v33 = 0;
   while ( 1 )
   {
     max_length = treasureBoxList->max_length;
-    if ( (int)v30 >= max_length )
+    if ( (int)v33 >= max_length )
       break;
-    if ( (unsigned int)v30 >= max_length )
+    if ( (unsigned int)v33 >= max_length )
       sub_2213CE4(Instance);
-    v32 = treasureBoxList->m_Items[v30];
+    v35 = treasureBoxList->m_Items[v33];
     Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
@@ -149,20 +159,20 @@ LABEL_26:
         Instance = (DataManager_o *)TreasureBoxMaster__GetTreasureBoxData(
                                       (TreasureBoxMaster_o *)Instance,
                                       eventId,
-                                      v30,
+                                      v33,
                                       0);
-        if ( v32 )
+        if ( v35 )
         {
           EventTreasureBoxPanelComponent__Init(
-            v32,
+            v35,
             (TreasureBoxEntity_o *)Instance,
             svtId,
             drawAction,
             playVoice,
             requestCallBack,
-            v33);
+            v36);
           treasureBoxList = this->fields.treasureBoxList;
-          ++v30;
+          ++v33;
           if ( treasureBoxList )
             continue;
         }

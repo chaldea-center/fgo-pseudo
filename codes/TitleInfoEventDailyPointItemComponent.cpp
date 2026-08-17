@@ -375,6 +375,7 @@ System_Collections_IEnumerator_o *TitleInfoEventDailyPointItemComponent__PlayCou
   int32_t v14; // w5
   bool v15; // w6
   bool v16; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596E792 & 1) == 0 )
   {
@@ -388,8 +389,9 @@ System_Collections_IEnumerator_o *TitleInfoEventDailyPointItemComponent__PlayCou
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 32), (int32_t)label, v11, v12, v13, v14, v15, v16);
   *(_DWORD *)(v10 + 44) = to;
   *(_DWORD *)(v10 + 48) = from;
+  result = (System_Collections_IEnumerator_o *)v10;
   *(float *)(v10 + 40) = duration;
-  return (System_Collections_IEnumerator_o *)v10;
+  return result;
 }
 
 
@@ -415,6 +417,7 @@ System_Collections_IEnumerator_o *TitleInfoEventDailyPointItemComponent__PlayEff
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   z = position.fields.z;
   y = position.fields.y;
@@ -433,8 +436,9 @@ System_Collections_IEnumerator_o *TitleInfoEventDailyPointItemComponent__PlayEff
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 40), (int32_t)effectName, v16, v17, v18, v19, v20, v21);
   *(float *)(v9 + 48) = x;
   *(float *)(v9 + 52) = y;
+  result = (System_Collections_IEnumerator_o *)v9;
   *(float *)(v9 + 56) = z;
-  return (System_Collections_IEnumerator_o *)v9;
+  return result;
 }
 
 
@@ -452,6 +456,7 @@ System_Collections_IEnumerator_o *TitleInfoEventDailyPointItemComponent__PlaySub
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596E793 & 1) == 0 )
   {
@@ -465,8 +470,9 @@ System_Collections_IEnumerator_o *TitleInfoEventDailyPointItemComponent__PlaySub
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(float *)(v9 + 44) = fromAlpha;
   *(float *)(v9 + 48) = toAlpha;
+  result = (System_Collections_IEnumerator_o *)v9;
   *(float *)(v9 + 40) = duration;
-  return (System_Collections_IEnumerator_o *)v9;
+  return result;
 }
 
 
@@ -875,6 +881,7 @@ bool TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31__MoveNex
   int32_t v30; // w5
   bool v31; // w6
   bool v32; // w7
+  bool result; // w0
   int32_t to; // w9
   UILabel_o *v35; // x19
   Il2CppObject *v36; // x0
@@ -961,8 +968,9 @@ bool TitleInfoEventDailyPointItemComponent__PlayCountAnimation_IE_d__31__MoveNex
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v27, v28, v29, v30, v31, v32);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
 LABEL_30:
     sub_2213CDC(v24, v25);
@@ -1233,6 +1241,7 @@ bool TitleInfoEventDailyPointItemComponent__PlaySubLabelFadeAnimation_IE_d__32__
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
+  bool result; // w0
 
   v3 = this;
   if ( (byte_596E79C & 1) == 0 )
@@ -1272,8 +1281,9 @@ LABEL_11:
           v3->fields.__2__current = 0;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
           sub_2213A04(p__2__current, 0, v13, v14, v15, v16, v17, v18);
+          result = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return 1;
+          return result;
         }
       }
 LABEL_22:
@@ -1350,6 +1360,7 @@ void TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__2
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29__MoveNext(
         TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__29_o *this,
         const MethodInfo *method)
@@ -1443,19 +1454,19 @@ bool TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__2
   bool v89; // w6
   bool v90; // w7
   float v91; // s2
-  unsigned __int64 v92; // d0
+  unsigned __int64 v92; // d0 OVERLAPPED
   float v93; // s2
   System_String_o *v94; // x1
-  System_Collections_IEnumerator_o *v95; // x0
+  int v95; // s1
+  System_Collections_IEnumerator_o *v96; // x0
   UnityEngine_Coroutine_o *started; // x0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  System_String_o *v98; // x2
-  System_String_o *v99; // x3
-  int32_t v100; // w4
-  int32_t v101; // w5
-  bool v102; // w6
-  bool v103; // w7
-  UnityEngine_Vector3_o v104; // 0:kr00_12.12
+  System_String_o *v99; // x2
+  System_String_o *v100; // x3
+  int32_t v101; // w4
+  int32_t v102; // w5
+  bool v103; // w6
+  bool v104; // w7
 
   v4 = this;
   if ( (byte_596E79D & 1) == 0 )
@@ -1516,15 +1527,14 @@ bool TitleInfoEventDailyPointItemComponent__UpdateDailyPointUIWithEffect_IE_d__2
                   vmul_n_f32(*(float32x2_t *)&_4__this->fields.firstEffectPositionDiff.fields.x, v58)).n64_u64[0];
           v93 = _4__this->fields.firstEffectPosition.fields.z + v91;
           v94 = (System_String_o *)StringLiteral_17930/*"bit_dedicate_left_item_flash_1"*/;
+          v95 = HIDWORD(v92);
           *(_QWORD *)&v4->fields._position_5__5.fields.x = v92;
           v4->fields._position_5__5.fields.z = v93;
-          *(_QWORD *)&v104.fields.x = v92;
-          v104.fields.z = v93;
-          v95 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(_4__this, v94, v104, v2);
-          started = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)_4__this, v95, 0);
+          v96 = TitleInfoEventDailyPointItemComponent__PlayEffect_IE(_4__this, v94, *(UnityEngine_Vector3_o *)&v92, v2);
+          started = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)_4__this, v96, 0);
           v4->fields.__2__current = (Il2CppObject *)started;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
-          sub_2213A04(p__2__current, (int32_t)started, v98, v99, v100, v101, v102, v103);
+          sub_2213A04(p__2__current, (int32_t)started, v99, v100, v101, v102, v103, v104);
           v7 = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
           return v7;

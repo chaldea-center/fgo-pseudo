@@ -1,14 +1,16 @@
 void Crc32___cctor(const MethodInfo *method)
 {
   Il2CppClass *v1; // x0
-  System_Array_o *v2; // x19
+  System_Array_o *v2; // x0
+  System_RuntimeFieldHandle_o v3; // x1
+  System_Array_o *v4; // x19
   struct Crc32_StaticFields *static_fields; // x0
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
 
   if ( (byte_596FE77 & 1) == 0 )
   {
@@ -20,13 +22,12 @@ void Crc32___cctor(const MethodInfo *method)
   v1 = uint___TypeInfo;
   Crc32_TypeInfo->static_fields->CRC_UNIT = 256;
   v2 = (System_Array_o *)sub_2213B20(v1, 256);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v2,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86,
-    0);
+  v3.fields.value = Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86;
+  v4 = v2;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v2, v3, 0);
   static_fields = Crc32_TypeInfo->static_fields;
-  static_fields->CrcTable = (struct System_UInt32_array *)v2;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->CrcTable, (int32_t)v2, v4, v5, v6, v7, v8, v9);
+  static_fields->CrcTable = (struct System_UInt32_array *)v4;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&static_fields->CrcTable, (int32_t)v4, v6, v7, v8, v9, v10, v11);
 }
 
 

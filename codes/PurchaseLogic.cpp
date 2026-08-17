@@ -954,7 +954,7 @@ LABEL_10:
     v11 = sub_224BC3C(storeExtensionProvider, v8, v9);
   }
   v13 = sub_2213BAC(*(_QWORD *)(v11 + 8), v6);
-  return (*(UnityEngine_Purchasing_IAppleExtensions_o *(__fastcall **)(struct UnityEngine_Purchasing_IExtensionProvider_o *))(v13 + 8))(storeExtensionProvider);
+  return (UnityEngine_Purchasing_IAppleExtensions_o *)(*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IExtensionProvider_o *))(v13 + 8))(storeExtensionProvider);
 }
 
 
@@ -2410,35 +2410,36 @@ void PurchaseLogic__OnPurchaseFailed(
   bool v49; // w6
   bool v50; // w7
   Il2CppObject *v51; // x24
-  System_String_o *v52; // x2
-  System_String_o *v53; // x3
-  int32_t v54; // w4
-  int32_t v55; // w5
-  bool v56; // w6
-  bool v57; // w7
-  Il2CppObject *v58; // x24
-  __int64 v59; // x1
+  System_DateTime_o v52; // x0
+  System_String_o *v53; // x2
+  System_String_o *v54; // x3
+  int32_t v55; // w4
+  int32_t v56; // w5
+  bool v57; // w6
+  bool v58; // w7
+  Il2CppObject *v59; // x24
+  __int64 v60; // x1
   Il2CppObject *Instance; // x24
-  Il2CppObject *v61; // x24
-  PurchaseLogic_ProductFinishedAction_o *v62; // x25
-  const MethodInfo *v63; // x3
-  System_String_o *v64; // x2
-  System_String_o *v65; // x3
-  int32_t v66; // w4
-  int32_t v67; // w5
-  bool v68; // w6
-  bool v69; // w7
+  Il2CppObject *v62; // x24
+  PurchaseLogic_ProductFinishedAction_o *v63; // x25
+  const MethodInfo *v64; // x3
+  System_String_o *v65; // x2
+  System_String_o *v66; // x3
+  int32_t v67; // w4
+  int32_t v68; // w5
+  bool v69; // w6
+  bool v70; // w7
   struct UnityEngine_Purchasing_ProductMetadata_o *metadata_k__BackingField; // x8
-  const MethodInfo *v71; // x23
-  PurchaseBehaviour_c *v72; // x0
+  const MethodInfo *v72; // x23
+  PurchaseBehaviour_c *v73; // x0
   System_Collections_Generic_IEnumerable_TSource__o *BankShopEntityCollection; // x23
-  System_Func_object__bool__o *v74; // x24
-  Il2CppObject *v75; // x0
+  System_Func_object__bool__o *v75; // x24
+  Il2CppObject *v76; // x0
   int32_t klass; // w22
-  const MethodInfo *v77; // x7
-  int32_t v78; // w1
-  __int64 v79; // x0
-  int32_t v80; // [xsp+Ch] [xbp-54h] BYREF
+  const MethodInfo *v78; // x7
+  int32_t v79; // w1
+  __int64 v80; // x0
+  int32_t v81; // [xsp+Ch] [xbp-54h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-48h] BYREF
 
   if ( (byte_59700E7 & 1) == 0 )
@@ -2505,8 +2506,8 @@ void PurchaseLogic__OnPurchaseFailed(
         PurchaseLogic__RemoveDeferredPurchaseProductIdsInPlayerPrefs(this, *v19, v21);
         logErrorOutputAction = this->fields._logErrorOutputAction;
         v23 = *v19;
-        v80 = 4;
-        v24 = (Il2CppObject *)j_il2cpp_value_box_0(UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, &v80);
+        v81 = 4;
+        v24 = (Il2CppObject *)j_il2cpp_value_box_0(UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, &v81);
         IsAppleDevice = (__int64)System_String__Format_75697880(
                                    (System_String_o *)StringLiteral_5386/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/,
                                    (Il2CppObject *)v23,
@@ -2546,8 +2547,8 @@ LABEL_53:
     goto LABEL_54;
   v34->m_Items[0] = (Il2CppObject *)v33;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v34->m_Items, (int32_t)v33, v27, v28, v29, v30, v31, v32);
-  v80 = failureReason;
-  IsAppleDevice = j_il2cpp_value_box_0(UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, &v80);
+  v81 = failureReason;
+  IsAppleDevice = j_il2cpp_value_box_0(UnityEngine_Purchasing_PurchaseFailureReason_TypeInfo, &v81);
   v42 = (Il2CppObject *)IsAppleDevice;
   if ( IsAppleDevice )
   {
@@ -2574,26 +2575,24 @@ LABEL_53:
     goto LABEL_54;
   v34->m_Items[2] = v51;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34->m_Items[2], (int32_t)v51, v45, v46, v47, v48, v49, v50);
-  IsAppleDevice = (__int64)System_DateTime__ToString_77027772(
-                             (System_DateTime_o)&dateData,
-                             (System_String_o *)StringLiteral_26382/*"yyyy/MM/dd HH:mm:ss"*/,
-                             0);
-  v58 = (Il2CppObject *)IsAppleDevice;
+  v52.fields._dateData = (uint64_t)&dateData;
+  IsAppleDevice = (__int64)System_DateTime__ToString_77027772(v52, (System_String_o *)StringLiteral_26382/*"yyyy/MM/dd HH:mm:ss"*/, 0);
+  v59 = (Il2CppObject *)IsAppleDevice;
   if ( IsAppleDevice )
   {
     IsAppleDevice = sub_2213BB4(IsAppleDevice, v34->obj.klass->_1.element_class);
     if ( !IsAppleDevice )
     {
 LABEL_55:
-      v79 = sub_2213D00(IsAppleDevice, v35);
-      sub_2213BA0(v79, 0);
+      v80 = sub_2213D00(IsAppleDevice, v35);
+      sub_2213BA0(v80, 0);
     }
   }
   if ( (v34->max_length & 0xFFFFFFFC) == 0 )
 LABEL_54:
     sub_2213CE4(IsAppleDevice);
-  v34->m_Items[3] = v58;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34->m_Items[3], (int32_t)v58, v52, v53, v54, v55, v56, v57);
+  v34->m_Items[3] = v59;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34->m_Items[3], (int32_t)v59, v53, v54, v55, v56, v57, v58);
   IsAppleDevice = (__int64)System_String__Format_75698016((System_String_o *)StringLiteral_10353/*"OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}, Purchase StartTime: {2}, Purchase FailedTime: {3}"*/, v34, 0);
   if ( !sendReportOutputAction )
     goto LABEL_53;
@@ -2606,27 +2605,27 @@ LABEL_34:
   {
     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v59);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v60);
     IsAppleDevice = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0);
     if ( (IsAppleDevice & 1) != 0 )
     {
-      v61 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v62 = (PurchaseLogic_ProductFinishedAction_o *)sub_2213CCC(PurchaseLogic_ProductFinishedAction_TypeInfo);
+      v62 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v63 = (PurchaseLogic_ProductFinishedAction_o *)sub_2213CCC(PurchaseLogic_ProductFinishedAction_TypeInfo);
       PurchaseLogic_ProductFinishedAction___ctor(
+        v63,
         v62,
-        v61,
         (intptr_t)Method_CommonUI_OpenStonePurchaseReciveMenu___91729544,
-        v63);
-      this->fields._buyProductFinishedAction = v62;
+        v64);
+      this->fields._buyProductFinishedAction = v63;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields._buyProductFinishedAction,
-        (int32_t)v62,
-        v64,
+        (int32_t)v63,
         v65,
         v66,
         v67,
         v68,
-        v69);
+        v69,
+        v70);
     }
   }
   if ( product )
@@ -2635,30 +2634,30 @@ LABEL_34:
     if ( !metadata_k__BackingField )
       goto LABEL_53;
     product = *(UnityEngine_Purchasing_Product_o **)&metadata_k__BackingField->fields._localizedPrice_k__BackingField.fields.flags;
-    v71 = *(const MethodInfo **)&metadata_k__BackingField->fields._localizedPrice_k__BackingField.fields.lo;
+    v72 = *(const MethodInfo **)&metadata_k__BackingField->fields._localizedPrice_k__BackingField.fields.lo;
     if ( !*(&System_Decimal_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Decimal_TypeInfo, v9);
-    LODWORD(product) = System_Decimal__ToInt32((System_Decimal_o *)product, v71);
+    LODWORD(product) = System_Decimal__ToInt32((System_Decimal_o *)product, v72);
   }
-  v72 = PurchaseBehaviour_TypeInfo;
+  v73 = PurchaseBehaviour_TypeInfo;
   if ( !*(&PurchaseBehaviour_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo, v9);
-    v72 = PurchaseBehaviour_TypeInfo;
+    v73 = PurchaseBehaviour_TypeInfo;
   }
-  BankShopEntityCollection = (System_Collections_Generic_IEnumerable_TSource__o *)v72->static_fields->BankShopEntityCollection;
-  v74 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BankShopEntity__bool__TypeInfo);
+  BankShopEntityCollection = (System_Collections_Generic_IEnumerable_TSource__o *)v73->static_fields->BankShopEntityCollection;
+  v75 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_BankShopEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v74,
+    v75,
     (Il2CppObject *)v7,
     Method_PurchaseLogic___c__DisplayClass61_0__OnPurchaseFailed_b__0__,
     0);
-  v75 = System_Linq_Enumerable__FirstOrDefault_object__59254852(
+  v76 = System_Linq_Enumerable__FirstOrDefault_object__59254852(
           BankShopEntityCollection,
-          (System_Func_TSource__bool__o *)v74,
+          (System_Func_TSource__bool__o *)v75,
           (const MethodInfo_3882844 *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
-  if ( v75 )
-    klass = (int32_t)v75[1].klass;
+  if ( v76 )
+    klass = (int32_t)v76[1].klass;
   else
     klass = 0;
   ((void (__fastcall *)(PurchaseLogic_o *, _QWORD, const MethodInfo *))this->klass->vtable._23_ShowPurchaseFailedNotification.methodPtr)(
@@ -2666,10 +2665,10 @@ LABEL_34:
     (unsigned int)failureReason,
     this->klass->vtable._23_ShowPurchaseFailedNotification.method);
   if ( (unsigned int)failureReason > 6 )
-    v78 = 7;
+    v79 = 7;
   else
-    v78 = dword_EDA338[failureReason];
-  PurchaseLogic__ExecuteBuyProductFinishedActionAndClear(this, v78, (int32_t)product, 0, 0, klass, 0, v77);
+    v79 = dword_EDA338[failureReason];
+  PurchaseLogic__ExecuteBuyProductFinishedActionAndClear(this, v79, (int32_t)product, 0, 0, klass, 0, v78);
 }
 
 
@@ -4093,7 +4092,7 @@ System_IAsyncResult_o *PurchaseLogic_ProductFinishedAction__BeginInvoke(
   v13[3] = j_il2cpp_value_box_0(qword_5984348, &v16);
   v13[4] = j_il2cpp_value_box_0(qword_5984348, &v15);
   v13[5] = j_il2cpp_value_box_0(qword_5984328, v14);
-  return sub_2213A14(this, v13, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v13, callback, object);
 }
 
 

@@ -676,7 +676,7 @@ System_Nullable_bool__o SkillEntity__PreventInvisibleWhenInstantDeath(SkillEntit
   bool v4; // zf
   System_Nullable_bool__o *v5; // x0
   bool v6; // w1
-  System_Nullable_bool__o v7; // [xsp+Ch] [xbp-24h] BYREF
+  System_Nullable_bool__o v8; // [xsp+Ch] [xbp-24h] BYREF
 
   if ( (byte_597145C & 1) == 0 )
   {
@@ -685,17 +685,22 @@ System_Nullable_bool__o SkillEntity__PreventInvisibleWhenInstantDeath(SkillEntit
     byte_597145C = 1;
   }
   IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23950/*"preventInvisibleWhenInstantDeath"*/, -1, 0);
-  v7 = 0;
+  v8 = 0;
   if ( IntValue < 0 )
-    return 0;
-  v4 = IntValue == 0;
-  v5 = &v7;
-  v6 = !v4;
-  System_Nullable_bool____ctor(
-    (System_Nullable_bool__o)v5,
-    v6,
-    (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
-  return v7;
+  {
+    return (System_Nullable_bool__o)0;
+  }
+  else
+  {
+    v4 = IntValue == 0;
+    v5 = &v8;
+    v6 = !v4;
+    System_Nullable_bool____ctor(
+      (System_Nullable_bool__o)v5,
+      v6,
+      (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
+    return v8;
+  }
 }
 
 
@@ -830,8 +835,9 @@ bool SkillEntity__checkScript(SkillEntity_o *this, System_String_o *key, int32_t
   __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
   __int64 v10; // x2
-  SkillEntity_o *v11; // x0
-  const MethodInfo *v12; // x1
+  _QWORD *v11; // x8
+  SkillEntity_o *v12; // x0
+  const MethodInfo *v13; // x1
 
   if ( (byte_597143E & 1) == 0 )
   {
@@ -859,13 +865,14 @@ bool SkillEntity__checkScript(SkillEntity_o *this, System_String_o *key, int32_t
       }
       if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_5984368 + 64) )
       {
-        *param = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10);
+        v11 = (_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10);
         LOBYTE(script) = 1;
+        *param = *v11;
       }
       else
       {
         sub_221405C(Item, qword_5984368, v10);
-        LOBYTE(script) = (unsigned __int8)SkillEntity__getActIndividuality(v11, v12);
+        LOBYTE(script) = (unsigned __int8)SkillEntity__getActIndividuality(v12, v13);
       }
     }
     else

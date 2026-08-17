@@ -1,12 +1,14 @@
 void CharaGraphListViewManager___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct ListViewSort_ScaleType_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
 
   if ( (byte_596FABF & 1) == 0 )
   {
@@ -16,20 +18,19 @@ void CharaGraphListViewManager___cctor(const MethodInfo *method)
     byte_596FABF = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(ListViewSort_ScaleType___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__4636993D3E1DA4E9D6B8F87B79E8F7C6D018580D52661950EABC3845C5897A4D,
-    0);
-  CharaGraphListViewManager_TypeInfo->static_fields->IconScaleTypeRotation = (struct ListViewSort_ScaleType_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__4636993D3E1DA4E9D6B8F87B79E8F7C6D018580D52661950EABC3845C5897A4D;
+  v3 = (struct ListViewSort_ScaleType_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  CharaGraphListViewManager_TypeInfo->static_fields->IconScaleTypeRotation = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)CharaGraphListViewManager_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8,
+    v9);
 }
 
 
@@ -2174,7 +2175,7 @@ System_IAsyncResult_o *CharaGraphListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(CharaGraphListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -2244,7 +2245,7 @@ int64_t CharaGraphListViewManager___c___DistributeObjectIdByMatchCondOrNot_b__45
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((int64_t (__fastcall *)(CharaGraphListViewItemBase_o *, const MethodInfo *))x->klass->vtable._6_unknown.methodPtr)(
+  return ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, const MethodInfo *))x->klass->vtable._6_unknown.methodPtr)(
            x,
            x->klass->vtable._6_unknown.method);
 }
@@ -2257,7 +2258,7 @@ int64_t CharaGraphListViewManager___c___DistributeObjectIdByMatchCondOrNot_b__45
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((int64_t (__fastcall *)(CharaGraphListViewItemBase_o *, const MethodInfo *))x->klass->vtable._6_unknown.methodPtr)(
+  return ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, const MethodInfo *))x->klass->vtable._6_unknown.methodPtr)(
            x,
            x->klass->vtable._6_unknown.method);
 }

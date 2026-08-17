@@ -1255,7 +1255,7 @@ System_String_o *CatAndMouseGame__CatHome(
 {
   System_String_o *result; // x0
   __int64 v10; // x1
-  System_Byte_array *v11; // x19
+  System_String_o *v11; // x19
 
   if ( (byte_596FE59 & 1) == 0 )
   {
@@ -1268,10 +1268,10 @@ System_String_o *CatAndMouseGame__CatHome(
   result = (System_String_o *)CatAndMouseGame__CatHomeMain(data, home, info, isCompress, method);
   if ( result )
   {
-    v11 = (System_Byte_array *)result;
+    v11 = result;
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v10);
-    return System_Convert__ToBase64String(v11, 0);
+    return System_Convert__ToBase64String((System_Byte_array *)v11, 0);
   }
   return result;
 }
@@ -1559,7 +1559,7 @@ System_String_o *CatAndMouseGame__CatHomeZ2(
 {
   System_String_o *result; // x0
   __int64 v10; // x1
-  System_Byte_array *v11; // x19
+  System_String_o *v11; // x19
 
   if ( (byte_596FE5A & 1) == 0 )
   {
@@ -1572,10 +1572,10 @@ System_String_o *CatAndMouseGame__CatHomeZ2(
   result = (System_String_o *)CatAndMouseGame__CatHomeMainZ2(data, home, info, isCompress, method);
   if ( result )
   {
-    v11 = (System_Byte_array *)result;
+    v11 = result;
     if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v10);
-    return System_Convert__ToBase64String(v11, 0);
+    return System_Convert__ToBase64String((System_Byte_array *)v11, 0);
   }
   return result;
 }
@@ -2042,10 +2042,10 @@ LABEL_56:
   if ( !UTF8 )
 LABEL_61:
     sub_2213CDC(UTF8, v7);
-  return ((System_String_o *(__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._35_GetString.methodPtr)(
-           UTF8,
-           v35,
-           UTF8->klass->vtable._35_GetString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, const MethodInfo *))UTF8->klass->vtable._35_GetString.methodPtr)(
+                              UTF8,
+                              v35,
+                              UTF8->klass->vtable._35_GetString.method);
 }
 
 
@@ -4456,7 +4456,7 @@ System_Byte_array *CatAndMouseGame_DataDecryptor__ToByteArray(
   struct System_IO_MemoryStream_o *v7; // x8
   int v8; // w20
   _QWORD *v9; // x8
-  System_Byte_array *(*methodPtr)(void); // x2
+  __int64 (*methodPtr)(void); // x2
   struct System_IO_MemoryStream_o *memoryStream; // x0
   struct System_IO_MemoryStream_o *v12; // x8
   int v13; // w20
@@ -4532,16 +4532,16 @@ System_Byte_array *CatAndMouseGame_DataDecryptor__ToByteArray(
 LABEL_16:
       if ( v5 )
       {
-        methodPtr = (System_Byte_array *(*)(void))v5->klass->vtable._40_ToArray.methodPtr;
-        return methodPtr();
+        methodPtr = (__int64 (*)(void))v5->klass->vtable._40_ToArray.methodPtr;
+        return (System_Byte_array *)methodPtr();
       }
       goto LABEL_32;
     }
 LABEL_7:
     if ( v5 )
     {
-      methodPtr = (System_Byte_array *(*)(void))v5->klass->vtable._37_GetBuffer.methodPtr;
-      return methodPtr();
+      methodPtr = (__int64 (*)(void))v5->klass->vtable._37_GetBuffer.methodPtr;
+      return (System_Byte_array *)methodPtr();
     }
 LABEL_32:
     sub_2213CDC(v5, v6);

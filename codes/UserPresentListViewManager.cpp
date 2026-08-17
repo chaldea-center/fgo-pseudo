@@ -666,18 +666,18 @@ System_String_o *UserPresentListViewManager__GetAllPresentStrings(
                    (Il2CppObject *)v62[12].klass,
                    0);
       if ( v56 == ++v57 )
-        return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v54->klass->vtable._3_ToString.methodPtr)(
-                 v54,
-                 v54->klass->vtable._3_ToString.method);
+        return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v54->klass->vtable._3_ToString.methodPtr)(
+                                    v54,
+                                    v54->klass->vtable._3_ToString.method);
     }
 LABEL_53:
     sub_2213CDC(NameText, v14);
   }
   if ( !v54 )
     goto LABEL_53;
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v54->klass->vtable._3_ToString.methodPtr)(
-           v54,
-           v54->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v54->klass->vtable._3_ToString.methodPtr)(
+                              v54,
+                              v54->klass->vtable._3_ToString.method);
 }
 
 
@@ -3607,7 +3607,7 @@ System_IAsyncResult_o *UserPresentListViewManager_CallbackFunc__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = result;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -3698,7 +3698,7 @@ System_IAsyncResult_o *UserPresentListViewManager_ReceiveCallbackFunc__BeginInvo
   v10[0] = isReceive;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

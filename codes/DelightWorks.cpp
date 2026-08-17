@@ -322,12 +322,12 @@ System_String_o *DelightWorks_Network_UnityWebRequestWWW__get_text(
   bytes_k__BackingField = this->fields._bytes_k__BackingField;
   if ( !bytes_k__BackingField || !TextEncoding )
     sub_2213CDC(TextEncoding, bytes_k__BackingField);
-  return ((System_String_o *(__fastcall *)(System_Text_Encoding_o *, struct System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))TextEncoding->klass->vtable._36_GetString.methodPtr)(
-           TextEncoding,
-           bytes_k__BackingField,
-           0,
-           LODWORD(bytes_k__BackingField->max_length),
-           TextEncoding->klass->vtable._36_GetString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, struct System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))TextEncoding->klass->vtable._36_GetString.methodPtr)(
+                              TextEncoding,
+                              bytes_k__BackingField,
+                              0,
+                              LODWORD(bytes_k__BackingField->max_length),
+                              TextEncoding->klass->vtable._36_GetString.method);
 }
 
 
@@ -690,9 +690,9 @@ void DelightWorks_Network_UnityWebRequestWWWSingleton__HandleNoRedirectRequestRe
           if ( !*(_DWORD *)(v15 + 228) )
             *(__n128 *)&v12 = j_il2cpp_runtime_class_init_0(v15, req, v6);
           this = *(DelightWorks_Network_UnityWebRequestWWWSingleton_o **)(v13[7] + 16LL);
-          if ( (*(_WORD *)((char *)this + 309) & 1) == 0 )
+          if ( (*(_WORD *)((_BYTE *)&this[9].fields.m_CachedPtr + 5) & 1) == 0 )
             this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_224B908(v12);
-          req = (UnityEngine_Networking_UnityWebRequest_o *)**((_QWORD **)this + 23);
+          req = (UnityEngine_Networking_UnityWebRequest_o *)this[5].fields.m_CancellationTokenSource->klass;
         }
         if ( !unityWebRequestWww )
           goto LABEL_34;
@@ -887,9 +887,9 @@ void DelightWorks_Network_UnityWebRequestWWWSingleton__HandleRequestResult(
     if ( !*(_DWORD *)(v23 + 228) )
       *(__n128 *)&v20 = j_il2cpp_runtime_class_init_0(v23, req, v14);
     this = *(DelightWorks_Network_UnityWebRequestWWWSingleton_o **)(v21[7] + 16LL);
-    if ( (*(_WORD *)((char *)this + 309) & 1) == 0 )
+    if ( (*(_WORD *)((_BYTE *)&this[9].fields.m_CachedPtr + 5) & 1) == 0 )
       this = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)sub_224B908(v20);
-    req = (UnityEngine_Networking_UnityWebRequest_o *)**((_QWORD **)this + 23);
+    req = (UnityEngine_Networking_UnityWebRequest_o *)this[5].fields.m_CancellationTokenSource->klass;
   }
   if ( !unityWebRequestWww )
 LABEL_24:
@@ -1147,6 +1147,7 @@ bool DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3__MoveNext(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
+  bool result; // w0
   UnityEngine_Networking_UnityWebRequest_o *req_5__2; // x0
   struct DelightWorks_Network_UnityWebRequestWWWSingleton_o *_4__this; // x20
   System_String_o *error; // x0
@@ -1204,8 +1205,9 @@ bool DelightWorks_Network_UnityWebRequestWWWSingleton__Get_d__3__MoveNext(
   v17 = v34;
   v34->fields.__2__current = v16;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->fields.__2__current, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+  result = 1;
   v34->fields.__1__state = 1;
-  return 1;
+  return result;
 }
 
 
@@ -1332,7 +1334,7 @@ bool DelightWorks_Network_UnityWebRequestWWWSingleton__PostNoRedirect_d__5__Move
   _BOOL8 v20; // x0
   __int64 v21; // x1
   const MethodInfo *v22; // x2
-  Il2CppObject *value; // x21
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   UnityEngine_Networking_UnityWebRequest_o *v24; // x19
   DelightWorks_Network_UnityWebRequestWWWSingleton_o *v25; // x20
   const MethodInfo *v26; // x2
@@ -1488,13 +1490,16 @@ LABEL_30:
         break;
       if ( !_4__this )
         sub_2213CDC(v20, v21);
-      value = v55.fields._current.fields.value;
+      current = v55.fields._current;
       v24 = v56->fields._req_5__2;
       v25 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
                                                                     (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)v20,
                                                                     (System_String_o *)v55.fields._current.fields.key,
                                                                     v22);
-      v27 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(v25, (System_String_o *)value, v26);
+      v27 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
+              v25,
+              (System_String_o *)current.fields.value,
+              v26);
       if ( !v24 )
         sub_2213CDC(v27, v28);
       UnityEngine_Networking_UnityWebRequest__SetRequestHeader(v24, (System_String_o *)v25, v27, 0);
@@ -1644,7 +1649,7 @@ bool DelightWorks_Network_UnityWebRequestWWWSingleton__Post_d__4__MoveNext(
   _BOOL8 v18; // x0
   __int64 v19; // x1
   const MethodInfo *v20; // x2
-  Il2CppObject *value; // x21
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   UnityEngine_Networking_UnityWebRequest_o *v22; // x19
   DelightWorks_Network_UnityWebRequestWWWSingleton_o *v23; // x20
   const MethodInfo *v24; // x2
@@ -1749,13 +1754,16 @@ LABEL_16:
         break;
       if ( !_4__this )
         sub_2213CDC(v18, v19);
-      value = v47.fields._current.fields.value;
+      current = v47.fields._current;
       v22 = v48->fields._req_5__2;
       v23 = (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
                                                                     (DelightWorks_Network_UnityWebRequestWWWSingleton_o *)v18,
                                                                     (System_String_o *)v47.fields._current.fields.key,
                                                                     v20);
-      v25 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(v23, (System_String_o *)value, v24);
+      v25 = DelightWorks_Network_UnityWebRequestWWWSingleton__FilterNonAsciiChar(
+              v23,
+              (System_String_o *)current.fields.value,
+              v24);
       if ( !v22 )
         sub_2213CDC(v25, v26);
       UnityEngine_Networking_UnityWebRequest__SetRequestHeader(v22, (System_String_o *)v23, v25, 0);

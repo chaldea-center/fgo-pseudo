@@ -530,14 +530,20 @@ bool AgeVerificationMenu__IsConcent(const MethodInfo *method)
   int64_t v13; // x0
   System_DateTime_o v14; // x1
   System_DateTime_o v15; // x2
+  System_DateTime_o v16; // x0
   int32_t Year; // w19
-  __int64 v17; // x1
-  __int64 v18; // x2
-  int32_t v19; // w19
-  __int64 v20; // x1
-  __int64 v21; // x2
+  System_DateTime_o v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x2
+  System_DateTime_o v21; // x0
+  int32_t v22; // w19
+  System_DateTime_o v23; // x0
+  __int64 v24; // x1
+  __int64 v25; // x2
+  System_DateTime_o v26; // x0
   int32_t Month; // w19
-  uint64_t v24; // [xsp+8h] [xbp-28h] BYREF
+  System_DateTime_o v28; // x0
+  uint64_t v30; // [xsp+8h] [xbp-28h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-18h] BYREF
 
   if ( (byte_596DFDB & 1) == 0 )
@@ -551,7 +557,7 @@ bool AgeVerificationMenu__IsConcent(const MethodInfo *method)
   }
   v3 = ManagerConfig_TypeInfo;
   dateData = 0;
-  v24 = 0;
+  v30 = 0;
   if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v1, v2);
@@ -585,25 +591,31 @@ bool AgeVerificationMenu__IsConcent(const MethodInfo *method)
                (System_String_o *)StringLiteral_1198/*"0"*/,
                0);
     v13 = System_Int64__Parse(String, 0);
-    v24 = NetworkManager__getDateTime_48347260(v13, 0).fields._dateData;
+    v30 = NetworkManager__getDateTime_48347260(v13, 0).fields._dateData;
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v14.fields._dateData, v15.fields._dateData);
-    Year = System_DateTime__get_Year((System_DateTime_o)&v24, 0);
-    if ( Year > System_DateTime__get_Year((System_DateTime_o)&dateData, 0) )
+    v16.fields._dateData = (uint64_t)&v30;
+    Year = System_DateTime__get_Year(v16, 0);
+    v18.fields._dateData = (uint64_t)&dateData;
+    if ( Year > System_DateTime__get_Year(v18, 0) )
     {
 LABEL_6:
       LOBYTE(Int) = 1;
       return Int;
     }
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v17, v18);
-    v19 = System_DateTime__get_Year((System_DateTime_o)&v24, 0);
-    if ( v19 == System_DateTime__get_Year((System_DateTime_o)&dateData, 0) )
+      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v19, v20);
+    v21.fields._dateData = (uint64_t)&v30;
+    v22 = System_DateTime__get_Year(v21, 0);
+    v23.fields._dateData = (uint64_t)&dateData;
+    if ( v22 == System_DateTime__get_Year(v23, 0) )
     {
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v20, v21);
-      Month = System_DateTime__get_Month((System_DateTime_o)&v24, 0);
-      LOBYTE(Int) = Month > System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
+        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v24, v25);
+      v26.fields._dateData = (uint64_t)&v30;
+      Month = System_DateTime__get_Month(v26, 0);
+      v28.fields._dateData = (uint64_t)&dateData;
+      LOBYTE(Int) = Month > System_DateTime__get_Month(v28, 0);
     }
     else
     {
@@ -1096,7 +1108,7 @@ System_IAsyncResult_o *AgeVerificationMenu_CallbackFunc__BeginInvoke(
   v10 = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

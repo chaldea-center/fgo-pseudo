@@ -17,7 +17,7 @@ void WaveBattleWaveInfoListManager__CreateList(
 {
   bool v17; // w27
   bool v18; // w29
-  __int64 scrollView; // x0
+  char *scrollView; // x0
   System_String_o *v20; // x2
   System_String_o *v21; // x3
   int32_t v22; // w4
@@ -93,44 +93,44 @@ void WaveBattleWaveInfoListManager__CreateList(
     sub_2213A60(&UnityEngine_Object_TypeInfo);
     byte_596C3EF = 1;
   }
-  scrollView = (__int64)this->fields.scrollView;
+  scrollView = (char *)this->fields.scrollView;
   this->fields.isOneWaveBattle = v17;
   this->fields.isSwitchPartyBattle = v18;
   if ( isOneWaveBattleFlg )
   {
     if ( !scrollView )
       goto LABEL_71;
-    scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+    scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
     if ( !scrollView )
       goto LABEL_71;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
-    scrollView = (__int64)this->fields.scrollViewParty;
+    scrollView = (char *)this->fields.scrollViewParty;
     if ( !scrollView )
       goto LABEL_71;
-    scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+    scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
     if ( !scrollView )
       goto LABEL_71;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 1, 0);
-    scrollView = (__int64)this->fields.scrollViewSeparateEnemy;
+    scrollView = (char *)this->fields.scrollViewSeparateEnemy;
     if ( !scrollView )
       goto LABEL_71;
-    scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
-    if ( !scrollView )
-      goto LABEL_71;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
-    scrollView = (__int64)this->fields.scrollViewSeparateParty;
-    if ( !scrollView )
-      goto LABEL_71;
-    scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+    scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
     if ( !scrollView )
       goto LABEL_71;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
-    scrollView = (__int64)this->fields.dragScrollView;
+    scrollView = (char *)this->fields.scrollViewSeparateParty;
+    if ( !scrollView )
+      goto LABEL_71;
+    scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+    if ( !scrollView )
+      goto LABEL_71;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
+    scrollView = (char *)this->fields.dragScrollView;
     if ( !scrollView )
       goto LABEL_71;
     scrollViewParty = this->fields.scrollViewParty;
 LABEL_50:
-    *(_QWORD *)(scrollView + 32) = scrollViewParty;
+    *((_QWORD *)scrollView + 4) = scrollViewParty;
     p_waveEnemyInfoComponentList = (struct System_Collections_Generic_List_WaveBattleWaveInfoComponent__o **)(scrollView + 32);
     goto LABEL_51;
   }
@@ -138,7 +138,7 @@ LABEL_50:
   {
     if ( !scrollView )
       goto LABEL_71;
-    scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+    scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
     if ( !scrollView )
       goto LABEL_71;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 1, 0);
@@ -147,10 +147,10 @@ LABEL_50:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36, v37);
     if ( UnityEngine_Object__op_Inequality(v38, 0, 0) )
     {
-      scrollView = (__int64)this->fields.scrollViewParty;
+      scrollView = (char *)this->fields.scrollViewParty;
       if ( !scrollView )
         goto LABEL_71;
-      scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+      scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
       if ( !scrollView )
         goto LABEL_71;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
@@ -160,10 +160,10 @@ LABEL_50:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, userDeckEntity, v39);
     if ( UnityEngine_Object__op_Inequality(scrollViewSeparateEnemy, 0, 0) )
     {
-      scrollView = (__int64)this->fields.scrollViewSeparateEnemy;
+      scrollView = (char *)this->fields.scrollViewSeparateEnemy;
       if ( !scrollView )
         goto LABEL_71;
-      scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+      scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
       if ( !scrollView )
         goto LABEL_71;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
@@ -173,15 +173,15 @@ LABEL_50:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, userDeckEntity, v41);
     if ( UnityEngine_Object__op_Inequality(scrollViewSeparateParty, 0, 0) )
     {
-      scrollView = (__int64)this->fields.scrollViewSeparateParty;
+      scrollView = (char *)this->fields.scrollViewSeparateParty;
       if ( !scrollView )
         goto LABEL_71;
-      scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+      scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
       if ( !scrollView )
         goto LABEL_71;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
     }
-    scrollView = (__int64)this->fields.dragScrollView;
+    scrollView = (char *)this->fields.dragScrollView;
     if ( !scrollView )
       goto LABEL_71;
     scrollViewParty = this->fields.scrollView;
@@ -189,44 +189,44 @@ LABEL_50:
   }
   if ( !scrollView )
     goto LABEL_71;
-  scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+  scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
   if ( !scrollView )
     goto LABEL_71;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
-  scrollView = (__int64)this->fields.scrollViewParty;
+  scrollView = (char *)this->fields.scrollViewParty;
   if ( !scrollView )
     goto LABEL_71;
-  scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+  scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
   if ( !scrollView )
     goto LABEL_71;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 0, 0);
-  scrollView = (__int64)this->fields.scrollViewSeparateEnemy;
+  scrollView = (char *)this->fields.scrollViewSeparateEnemy;
   if ( !scrollView )
     goto LABEL_71;
-  scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+  scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
   if ( !scrollView )
     goto LABEL_71;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 1, 0);
-  scrollView = (__int64)this->fields.scrollViewSeparateParty;
+  scrollView = (char *)this->fields.scrollViewSeparateParty;
   if ( !scrollView )
     goto LABEL_71;
-  scrollView = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
+  scrollView = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollView, 0);
   if ( !scrollView )
     goto LABEL_71;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 1, 0);
   boxCollider = this->fields.boxCollider;
   if ( !byte_5969AE0 )
   {
-    scrollView = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    scrollView = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !boxCollider )
     goto LABEL_71;
   UnityEngine_BoxCollider__set_size(boxCollider, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  scrollView = (__int64)this->fields.dragScrollView;
+  scrollView = (char *)this->fields.dragScrollView;
   if ( !scrollView )
     goto LABEL_71;
-  *(_QWORD *)(scrollView + 32) = 0;
+  *((_QWORD *)scrollView + 4) = 0;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(scrollView + 32), 0, v28, v29, v30, v31, v32, v33);
   v34 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_WaveBattleWaveInfoComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
@@ -290,11 +290,11 @@ LABEL_51:
     sub_2213A60(&NetworkManager_TypeInfo);
     byte_5969EF2 = 1;
   }
-  scrollView = (__int64)NetworkManager_TypeInfo;
+  scrollView = (char *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, userDeckEntity, v64);
-    scrollView = (__int64)NetworkManager_TypeInfo;
+    scrollView = (char *)NetworkManager_TypeInfo;
   }
   if ( !*p_questRestrictionInfo || !Master_object )
 LABEL_71:
@@ -302,7 +302,7 @@ LABEL_71:
   UserInterruptionQuestMaster__TryGetEntity(
     (UserInterruptionQuestMaster_o *)Master_object,
     &this->fields.userInterruptionQuest,
-    *(_QWORD *)(*(_QWORD *)(scrollView + 184) + 64LL),
+    *(_QWORD *)(*((_QWORD *)scrollView + 23) + 64LL),
     (*p_questRestrictionInfo)->fields.questId,
     (*p_questRestrictionInfo)->fields.questPhase,
     0);
@@ -326,7 +326,7 @@ LABEL_63:
     v74);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v75, v76);
-  scrollView = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ViewWaveEnemyMaster___);
+  scrollView = (char *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ViewWaveEnemyMaster___);
   if ( !*p_questRestrictionInfo || !scrollView )
     goto LABEL_71;
   EntityListFromQuestId = ViewWaveEnemyMaster__GetEntityListFromQuestId(
@@ -1744,21 +1744,22 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
   _BOOL4 isSwitchPartyBattle; // w8
   struct UserInterruptionQuestEntity_o *userInterruptionQuest; // x8
   struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *v7; // x8
+  System_Nullable_int__o v8; // x0
   int32_t size; // w1
   void *waveInfoList; // x0
-  __int64 v10; // x1
-  struct UserInterruptionQuestEntity_o *v11; // x8
-  int v12; // w23
+  __int64 v11; // x1
+  struct UserInterruptionQuestEntity_o *v12; // x8
+  int v13; // w23
   int32_t AlreadySortiePartyNum; // w21
-  System_Collections_Generic_List_object__o *v14; // x21
-  __int64 v15; // x8
-  float v16; // s8
-  int v17; // w25
-  __int64 v18; // x1
-  const MethodInfo *v19; // x2
-  bool v21; // w1
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-70h] BYREF
+  System_Collections_Generic_List_object__o *v15; // x21
+  __int64 v16; // x8
+  float v17; // s8
+  int v18; // w25
+  __int64 v19; // x1
+  const MethodInfo *v20; // x2
+  bool v22; // w1
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-70h] BYREF
 
   if ( (byte_596C3F5 & 1) == 0 )
   {
@@ -1777,25 +1778,23 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
     byte_596C3F5 = 1;
   }
   isSwitchPartyBattle = this->fields.isSwitchPartyBattle;
-  memset(&v23, 0, sizeof(v23));
+  memset(&v24, 0, sizeof(v24));
   if ( isSwitchPartyBattle )
   {
     userInterruptionQuest = this->fields.userInterruptionQuest;
     if ( userInterruptionQuest
       && (v7 = userInterruptionQuest->fields.waveInfoList) != 0
-      && (size = v7->fields._size,
-          v22.fields._list = 0,
-          System_Nullable_int____ctor(
-            (System_Nullable_int__o)&v22,
-            size,
-            (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__),
-          LOBYTE(v22.fields._list))
-      && SHIDWORD(v22.fields._list) >= wave )
+      && (v8 = (System_Nullable_int__o)&v23,
+          size = v7->fields._size,
+          v23.fields._list = 0,
+          System_Nullable_int____ctor(v8, size, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__),
+          LOBYTE(v23.fields._list))
+      && SHIDWORD(v23.fields._list) >= wave )
     {
-      v11 = this->fields.userInterruptionQuest;
-      if ( !v11 )
+      v12 = this->fields.userInterruptionQuest;
+      if ( !v12 )
         goto LABEL_42;
-      waveInfoList = v11->fields.waveInfoList;
+      waveInfoList = v12->fields.waveInfoList;
       if ( !waveInfoList )
         goto LABEL_42;
       waveInfoList = System_Collections_Generic_List_object___get_Item(
@@ -1804,7 +1803,7 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
                        (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Item__);
       if ( !waveInfoList || !this->fields.userInterruptionQuest )
         goto LABEL_42;
-      v12 = *((_DWORD *)waveInfoList + 13);
+      v13 = *((_DWORD *)waveInfoList + 13);
       AlreadySortiePartyNum = UserInterruptionQuestEntity__GetAlreadySortiePartyNum(
                                 this->fields.userInterruptionQuest,
                                 wave,
@@ -1815,10 +1814,10 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
       waveInfoList = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !waveInfoList )
         goto LABEL_42;
-      v14 = (System_Collections_Generic_List_object__o *)*((_QWORD *)waveInfoList + 22);
-      if ( !v14 )
+      v15 = (System_Collections_Generic_List_object__o *)*((_QWORD *)waveInfoList + 22);
+      if ( !v15 )
         goto LABEL_42;
-      if ( v14->fields._size >= wave )
+      if ( v15->fields._size >= wave )
       {
         waveInfoList = System_Collections_Generic_List_object___get_Item(
                          *((System_Collections_Generic_List_object__o **)waveInfoList + 22),
@@ -1826,57 +1825,57 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
                          (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BattleWaveInfoData__get_Item__);
         if ( !waveInfoList )
           goto LABEL_42;
-        v12 = *((_DWORD *)waveInfoList + 26);
+        v13 = *((_DWORD *)waveInfoList + 26);
         waveInfoList = System_Collections_Generic_List_object___get_Item(
-                         v14,
+                         v15,
                          wave - 1,
                          (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BattleWaveInfoData__get_Item__);
         if ( !waveInfoList )
           goto LABEL_42;
-        v15 = *((_QWORD *)waveInfoList + 14);
-        if ( !v15 )
+        v16 = *((_QWORD *)waveInfoList + 14);
+        if ( !v16 )
           goto LABEL_42;
-        AlreadySortiePartyNum = *(_DWORD *)(v15 + 24);
+        AlreadySortiePartyNum = *(_DWORD *)(v16 + 24);
       }
       else
       {
         AlreadySortiePartyNum = 0;
-        v12 = 1;
+        v13 = 1;
       }
     }
     waveInfoList = this->fields.waveInfoComponentList;
     if ( waveInfoList )
     {
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v23,
         (System_Collections_Generic_List_object__o *)waveInfoList,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_WaveBattleWaveInfoComponent__GetEnumerator__);
-      v16 = 0.0;
-      v17 = 1;
-      v23 = v22;
-      v22.fields._list = 0;
-      *(_QWORD *)&v22.fields._index = &v23;
+      v17 = 0.0;
+      v18 = 1;
+      v24 = v23;
+      v23.fields._list = 0;
+      *(_QWORD *)&v23.fields._index = &v24;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v23,
+                &v24,
                 (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_WaveBattleWaveInfoComponent__MoveNext__) )
       {
-        if ( v17 >= v12 )
+        if ( v18 >= v13 )
         {
-          if ( !v23.fields._current )
-            sub_2213CDC(0, v18);
+          if ( !v24.fields._current )
+            sub_2213CDC(0, v19);
         }
         else
         {
-          if ( !v23.fields._current )
-            sub_2213CDC(0, v18);
-          v16 = v16 + *(float *)&v23.fields._current[11].klass;
+          if ( !v24.fields._current )
+            sub_2213CDC(0, v19);
+          v17 = v17 + *(float *)&v24.fields._current[11].klass;
         }
-        v21 = wave != 1 && v17 <= AlreadySortiePartyNum;
-        WaveBattleWaveInfoComponent__UpdatePartyState((WaveBattleWaveInfoComponent_o *)v23.fields._current, v21, v19);
-        ++v17;
+        v22 = wave != 1 && v18 <= AlreadySortiePartyNum;
+        WaveBattleWaveInfoComponent__UpdatePartyState((WaveBattleWaveInfoComponent_o *)v24.fields._current, v22, v20);
+        ++v18;
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v23,
+        &v24,
         (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_WaveBattleWaveInfoComponent__Dispose__);
       waveInfoList = this->fields.scrollViewSeparateParty;
       if ( waveInfoList )
@@ -1889,7 +1888,7 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
             waveInfoList,
             *(_QWORD *)(*(_QWORD *)waveInfoList + 480LL),
             0.0,
-            v16,
+            v17,
             0.0);
           waveInfoList = this->fields.scrollViewSeparateParty;
           if ( waveInfoList )
@@ -1901,7 +1900,7 @@ void WaveBattleWaveInfoListManager__UpdateSeparatePartyInfo(
       }
     }
 LABEL_42:
-    sub_2213CDC(waveInfoList, v10);
+    sub_2213CDC(waveInfoList, v11);
   }
 }
 
@@ -2132,7 +2131,7 @@ System_IAsyncResult_o *WaveBattleWaveInfoListManager_CallbackFunc__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

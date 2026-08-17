@@ -156,6 +156,8 @@ ClassBoardSave_ClassBoardSaveData_o *ClassBoardSave__GetSquareSaveKey(
   __int64 v11; // x9
   int32_t *v12; // x10
   __int64 v13; // x0
+  int v14; // w8
+  ClassBoardSave_ClassBoardSaveData_o *result; // x0
 
   if ( (byte_5974743 & 1) == 0 )
   {
@@ -210,10 +212,10 @@ LABEL_18:
 LABEL_15:
     v13 = sub_224BC3C(squareModel, IClassBoardSquareModel_TypeInfo, 0);
   }
-  *(_DWORD *)(v3 + 20) = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v13)(
-                           squareModel,
-                           *(_QWORD *)(v13 + 8));
-  return (ClassBoardSave_ClassBoardSaveData_o *)v3;
+  v14 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v13)(squareModel, *(_QWORD *)(v13 + 8));
+  result = (ClassBoardSave_ClassBoardSaveData_o *)v3;
+  *(_DWORD *)(v3 + 20) = v14;
+  return result;
 }
 
 

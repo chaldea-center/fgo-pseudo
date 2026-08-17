@@ -1,12 +1,14 @@
 void AutomaticSaleDlgComponent___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct System_Int32_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
 
   if ( (byte_596C961 & 1) == 0 )
   {
@@ -16,20 +18,19 @@ void AutomaticSaleDlgComponent___cctor(const MethodInfo *method)
     byte_596C961 = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(int___TypeInfo, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__9AB8EA006C25C887223D6AFCA548F88D37A644BA96E801F909C99641FFB609F7,
-    0);
-  AutomaticSaleDlgComponent_TypeInfo->static_fields->settingList = (struct System_Int32_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__9AB8EA006C25C887223D6AFCA548F88D37A644BA96E801F909C99641FFB609F7;
+  v3 = (struct System_Int32_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  AutomaticSaleDlgComponent_TypeInfo->static_fields->settingList = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)AutomaticSaleDlgComponent_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8,
+    v9);
 }
 
 
@@ -1107,7 +1108,7 @@ System_IAsyncResult_o *AutomaticSaleDlgComponent_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

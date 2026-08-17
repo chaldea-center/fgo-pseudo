@@ -78,7 +78,7 @@ void ListViewManager__BackLoopItem(ListViewManager_o *this, const MethodInfo *me
   ListViewItemSeed_o *v9; // x20
   __int64 v10; // x1
   UnityEngine_Object_o *prefab; // x19
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FF3 & 1) == 0 )
   {
@@ -173,8 +173,8 @@ void ListViewManager__CenterLoopItem(ListViewManager_o *this, ListViewItem_o *ce
   UnityEngine_Object_c *v30; // x0
   UnityEngine_Object_o *v31; // x24
   const MethodInfo *v32; // x3
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v34; // 0:kr14_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FF2 & 1) == 0 )
   {
@@ -362,7 +362,7 @@ void ListViewManager__CheckFocusItem(
   const MethodInfo *v6; // x4
   Il2CppMethodPointer methodPtr; // x9
   int32_t lastSelectIndex; // w21
-  System_Threading_CancellationToken_o v9; // x0
+  System_Threading_CancellationToken_o v9; // x3
   const MethodInfo *v10; // x4
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
   Cysharp_Threading_Tasks_UniTask_o v12; // 0:x0.16
@@ -638,22 +638,22 @@ bool ListViewManager__ClippingItem_50835204(ListViewManager_o *this, ListViewIte
   float y; // s3
   float v16; // s2
   float v17; // s0
-  unsigned __int64 localPosition; // kr00_8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !item )
     return 0;
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollView, 0)) == 0 )
     sub_2213CDC(scrollView, item);
-  localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
   x = item->fields.basePosition.fields.x;
-  v7 = this->fields.clipOffset.fields.x - *(float *)&localPosition;
+  v7 = this->fields.clipOffset.fields.x - localPosition.fields.x;
   v8 = this->fields.clipRange.fields.x * 0.5;
   v9 = v7 - v8;
   v10 = v7 + v8;
   if ( x < v9 || x > v10 )
     return 0;
-  v13 = this->fields.clipOffset.fields.y - *((float *)&localPosition + 1);
+  v13 = this->fields.clipOffset.fields.y - localPosition.fields.y;
   v14 = this->fields.clipRange.fields.y * 0.5;
   y = item->fields.basePosition.fields.y;
   v16 = v13 - v14;
@@ -678,21 +678,21 @@ void ListViewManager__ClippingItems(
   void *scrollView; // x0
   _BOOL4 isLoop; // w8
   float v15; // s4
-  float v16; // s0
-  float v17; // s3
-  float v18; // s1
-  float v19; // s13
-  float v20; // s14
-  float v21; // s15
-  float v22; // s10
-  int v23; // w8
-  const MethodInfo *v24; // x2
+  float v16; // s3
+  float v17; // s13
+  float v18; // s14
+  float v19; // s15
+  float v20; // s10
+  int v21; // w8
+  const MethodInfo *v22; // x2
   int32_t loopIndex; // w8
-  int32_t v26; // w9
-  void *v27; // x22
-  int32_t v28; // w23
-  float v29; // s11
-  float v30; // s12
+  int32_t v24; // w9
+  void *v25; // x22
+  int32_t v26; // w23
+  float v27; // s11
+  float v28; // s12
+  float y; // s9
+  float x; // s8
   float v31; // s0
   float v32; // s1
   float v33; // s0
@@ -786,7 +786,7 @@ void ListViewManager__ClippingItems(
   struct System_Collections_Generic_List_ListViewItem__o *itemSortList; // x8
   UnityEngine_Object_o *indicator; // x21
   struct ListViewItem_o *v126; // x2
-  unsigned __int64 localPosition; // kr00_8
+  float position; // [xsp+Ch] [xbp-E4h]
   float v128; // [xsp+10h] [xbp-E0h]
   float v129; // [xsp+10h] [xbp-E0h]
   float v130; // [xsp+14h] [xbp-DCh]
@@ -794,9 +794,11 @@ void ListViewManager__ClippingItems(
   System_Collections_Generic_List_Enumerator_object__o v132; // [xsp+30h] [xbp-C0h] BYREF
   float v133; // [xsp+98h] [xbp-58h]
   float v134; // [xsp+9Ch] [xbp-54h]
-  UnityEngine_Vector3_o v135; // 0:kr14_12.12
-  UnityEngine_Vector3_o v136; // 0:kr20_12.12
-  UnityEngine_Vector3_o v137; // 0:kr34_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v136; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v137; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v138; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v139; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FF1 & 1) == 0 )
   {
@@ -829,18 +831,18 @@ void ListViewManager__ClippingItems(
     scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0);
     if ( !scrollView )
       goto LABEL_121;
-    localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
     isLoop = this->fields.isLoop;
-    v15 = this->fields.clipOffset.fields.x - *(float *)&localPosition;
-    v16 = this->fields.clipRange.fields.x * 0.5;
-    v17 = this->fields.clipOffset.fields.y - *((float *)&localPosition + 1);
-    v18 = this->fields.clipRange.fields.y * 0.5;
-    v19 = v15 - v16;
-    v20 = v15 + v16;
+    v15 = this->fields.clipOffset.fields.x - localPosition.fields.x;
+    localPosition.fields.x = this->fields.clipRange.fields.x * 0.5;
+    v16 = this->fields.clipOffset.fields.y - localPosition.fields.y;
+    localPosition.fields.y = this->fields.clipRange.fields.y * 0.5;
+    v17 = v15 - localPosition.fields.x;
+    v18 = v15 + localPosition.fields.x;
     v130 = v15;
-    v21 = v17 + v18;
-    v22 = v17 - v18;
-    v133 = v17;
+    v19 = v16 + localPosition.fields.y;
+    v20 = v16 - localPosition.fields.y;
+    v133 = v16;
     if ( isLoop )
     {
       terminalIndex = (unsigned int)this->fields.terminalIndex;
@@ -849,8 +851,8 @@ void ListViewManager__ClippingItems(
         scrollView = this->fields.itemSortList;
         if ( !scrollView )
           goto LABEL_121;
-        v23 = *((_DWORD *)scrollView + 6);
-        if ( v23 >= 3 )
+        v21 = *((_DWORD *)scrollView + 6);
+        if ( v21 >= 3 )
         {
           if ( (_DWORD)terminalIndex )
             v45 = this->fields.terminalIndex;
@@ -873,17 +875,17 @@ void ListViewManager__ClippingItems(
           v48 = *((float *)v47 + 25);
           v49 = *((float *)v47 + 26);
           v50 = (char *)scrollView;
-          v52 = v49 <= v21 && v48 <= v20;
-          v53 = v52 && v48 >= v19;
-          if ( v49 < v22 )
+          v52 = v49 <= v19 && v48 <= v18;
+          v53 = v52 && v48 >= v17;
+          if ( v49 < v20 )
             v53 = 0;
           if ( !scrollView )
             goto LABEL_121;
           v54 = *((float *)scrollView + 25);
           v55 = *((float *)scrollView + 26);
-          v57 = v55 <= v21 && v54 <= v20;
-          v58 = v57 && v54 >= v19;
-          if ( v55 < v22 )
+          v57 = v55 <= v19 && v54 <= v18;
+          v58 = v57 && v54 >= v17;
+          if ( v55 < v20 )
             v58 = 0;
           if ( (v53 & v58 & 1) == 0 )
           {
@@ -914,12 +916,12 @@ void ListViewManager__ClippingItems(
               if ( !this->fields.seed )
                 goto LABEL_121;
               v67 = scrollView;
-              v137 = ListViewItemSeed__GetLocalPosition(this->fields.seed, terminalIndex, v66);
+              v139 = ListViewItemSeed__GetLocalPosition(this->fields.seed, terminalIndex, v66);
               v69 = UnityEngine_Object_TypeInfo;
-              *((_DWORD *)v50 + 25) = LODWORD(v137.fields.x);
-              *((_DWORD *)v50 + 26) = LODWORD(v137.fields.y);
+              *((_DWORD *)v50 + 25) = LODWORD(v139.fields.x);
+              *((_DWORD *)v50 + 26) = LODWORD(v139.fields.y);
               v70 = (UnityEngine_Object_o *)*((_QWORD *)v50 + 14);
-              *((_DWORD *)v50 + 27) = LODWORD(v137.fields.z);
+              *((_DWORD *)v50 + 27) = LODWORD(v139.fields.z);
               if ( !*(&v69->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(v69, v68);
               scrollView = (void *)UnityEngine_Object__op_Inequality(v70, 0, 0);
@@ -957,12 +959,12 @@ void ListViewManager__ClippingItems(
               if ( !this->fields.seed )
                 goto LABEL_121;
               v62 = scrollView;
-              v136 = ListViewItemSeed__GetLocalPosition(this->fields.seed, terminalIndex, v61);
+              v138 = ListViewItemSeed__GetLocalPosition(this->fields.seed, terminalIndex, v61);
               v64 = UnityEngine_Object_TypeInfo;
-              *((_DWORD *)v47 + 25) = LODWORD(v136.fields.x);
-              *((_DWORD *)v47 + 26) = LODWORD(v136.fields.y);
+              *((_DWORD *)v47 + 25) = LODWORD(v138.fields.x);
+              *((_DWORD *)v47 + 26) = LODWORD(v138.fields.y);
               v65 = (UnityEngine_Object_o *)*((_QWORD *)v47 + 14);
-              *((_DWORD *)v47 + 27) = LODWORD(v136.fields.z);
+              *((_DWORD *)v47 + 27) = LODWORD(v138.fields.z);
               if ( !*(&v64->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(v64, v63);
               scrollView = (void *)UnityEngine_Object__op_Inequality(v65, 0, 0);
@@ -983,7 +985,7 @@ void ListViewManager__ClippingItems(
             this->fields.terminalIndex = v46;
           }
         }
-        else if ( v23 == 2 && centerItem )
+        else if ( v21 == 2 && centerItem )
         {
           scrollView = System_Collections_Generic_List_object___get_Item(
                          (System_Collections_Generic_List_object__o *)scrollView,
@@ -992,20 +994,23 @@ void ListViewManager__ClippingItems(
           if ( !scrollView )
             goto LABEL_121;
           loopIndex = centerItem->fields.loopIndex;
-          v26 = *((_DWORD *)scrollView + 7);
-          v27 = scrollView;
+          v24 = *((_DWORD *)scrollView + 7);
+          v25 = scrollView;
           scrollView = this->fields.seed;
-          v28 = loopIndex >= v26 ? loopIndex + 1 : loopIndex - 1;
+          v26 = loopIndex >= v24 ? loopIndex + 1 : loopIndex - 1;
           if ( !scrollView )
             goto LABEL_121;
-          v29 = *((float *)v27 + 25);
-          v30 = *((float *)v27 + 26);
-          v135 = ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)scrollView, v28, v24);
+          v27 = *((float *)v25 + 25);
+          v28 = *((float *)v25 + 26);
+          v136 = ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)scrollView, v26, v22);
+          y = v136.fields.y;
+          x = v136.fields.x;
           scrollView = this->fields.scrollView;
-          v31 = v30 - v133;
-          if ( v30 <= v133 )
-            v31 = v133 - v30;
-          v32 = v135.fields.y <= v133 ? v133 - v135.fields.y : v135.fields.y - v133;
+          position = v136.fields.z;
+          v31 = v28 - v133;
+          if ( v28 <= v133 )
+            v31 = v133 - v28;
+          v32 = v136.fields.y <= v133 ? v133 - v136.fields.y : v136.fields.y - v133;
           if ( !scrollView )
             goto LABEL_121;
           v128 = v32;
@@ -1013,12 +1018,12 @@ void ListViewManager__ClippingItems(
           scrollView = (void *)UIScrollView__get_canMoveHorizontally((UIScrollView_o *)scrollView, 0);
           if ( !this->fields.scrollView )
             goto LABEL_121;
-          v33 = v29 - v130;
-          v34 = v135.fields.x - v130;
-          if ( v29 <= v130 )
-            v33 = v130 - v29;
-          if ( v135.fields.x <= v130 )
-            v34 = v130 - v135.fields.x;
+          v33 = v27 - v130;
+          v34 = x - v130;
+          if ( v27 <= v130 )
+            v33 = v130 - v27;
+          if ( x <= v130 )
+            v34 = v130 - x;
           v35 = v33 + 0.0;
           v36 = v34 + 0.0;
           if ( ((unsigned __int8)scrollView & 1) != 0 )
@@ -1039,19 +1044,22 @@ void ListViewManager__ClippingItems(
           if ( (float)(v38 + v41) < (float)(v37 + v40) )
           {
             v42 = UnityEngine_Object_TypeInfo;
-            *((_DWORD *)v27 + 7) = v28;
-            *((_DWORD *)v27 + 25) = LODWORD(v135.fields.x);
-            *((_DWORD *)v27 + 26) = LODWORD(v135.fields.y);
-            v43 = (UnityEngine_Object_o *)*((_QWORD *)v27 + 14);
-            *((_DWORD *)v27 + 27) = LODWORD(v135.fields.z);
+            *((_DWORD *)v25 + 7) = v26;
+            *((float *)v25 + 25) = x;
+            *((float *)v25 + 26) = y;
+            v43 = (UnityEngine_Object_o *)*((_QWORD *)v25 + 14);
+            *((float *)v25 + 27) = position;
             if ( !*(&v42->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(v42, terminalIndex);
             if ( UnityEngine_Object__op_Inequality(v43, 0, 0) )
             {
-              scrollView = (void *)*((_QWORD *)v27 + 14);
+              scrollView = (void *)*((_QWORD *)v25 + 14);
               if ( !scrollView )
                 goto LABEL_121;
-              ListViewObject__SetTransform((ListViewObject_o *)scrollView, v135, (const MethodInfo *)terminalIndex);
+              v137.fields.x = x;
+              v137.fields.y = y;
+              v137.fields.z = position;
+              ListViewObject__SetTransform((ListViewObject_o *)scrollView, v137, (const MethodInfo *)terminalIndex);
             }
           }
         }
@@ -1160,8 +1168,8 @@ LABEL_126:
       }
       else
       {
-        v86 = v82 <= v21 && v83 <= v20;
-        v84 = v82 >= v22 && v86 && v83 >= v19;
+        v86 = v82 <= v19 && v83 <= v18;
+        v84 = v82 >= v20 && v86 && v83 >= v17;
       }
       klass = v132.fields._current[7].klass;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -1860,7 +1868,7 @@ void ListViewManager__DispItem(
         int32_t addEmptyTarminal,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  SwitchParameterDisplayManager_o *Instance; // x0
   const MethodInfo *v10; // x1
   const MethodInfo *v11; // x1
   System_Collections_Generic_List_object__o *v12; // x23
@@ -1938,7 +1946,7 @@ void ListViewManager__DispItem(
   int32_t v84; // w5
   bool v85; // w6
   bool v86; // w7
-  __int64 v87; // x20
+  SwitchParameterDisplayManager_o *v87; // x20
   struct System_Object_array *items; // x8
   _QWORD *v89; // x9
   __int64 v90; // x10
@@ -1950,7 +1958,7 @@ void ListViewManager__DispItem(
   bool v96; // w6
   bool v97; // w7
   float v98; // s0
-  float v99; // s0
+  float DISP_TIME; // s0
   const MethodInfo_4483994 *v100; // x2
   __int64 v101; // x1
   UnityEngine_Object_c *v102; // x0
@@ -1980,10 +1988,10 @@ void ListViewManager__DispItem(
     sub_2213A60(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     byte_5971FE7 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+  Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
   if ( !Instance )
     goto LABEL_69;
-  SwitchParameterDisplayManager__Reset((SwitchParameterDisplayManager_o *)Instance, 0);
+  SwitchParameterDisplayManager__Reset(Instance, 0);
   ListViewManager__ReleaseObject(this, v11);
   v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ListViewItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
@@ -2011,13 +2019,13 @@ void ListViewManager__DispItem(
   v116 = size;
   if ( size >= 1 )
   {
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (SwitchParameterDisplayManager_o *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_69;
     v50 = (const MethodInfo_4483994 **)&Method_System_Collections_Generic_List_ListViewItem__get_Item__;
     if ( UIScrollView__get_canMoveHorizontally((UIScrollView_o *)Instance, 0) )
     {
-      Instance = (__int64)this->fields.itemList;
+      Instance = (SwitchParameterDisplayManager_o *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_69;
       Item = System_Collections_Generic_List_object___get_Item(
@@ -2034,7 +2042,7 @@ void ListViewManager__DispItem(
         v55,
         v56,
         v57);
-      Instance = (__int64)this->fields.itemList;
+      Instance = (SwitchParameterDisplayManager_o *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_69;
       v58 = System_Collections_Generic_List_object___get_Item(
@@ -2052,13 +2060,13 @@ void ListViewManager__DispItem(
         v63,
         v64);
     }
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (SwitchParameterDisplayManager_o *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_69;
     v114 = selectIndex;
     if ( UIScrollView__get_canMoveVertically((UIScrollView_o *)Instance, 0) )
     {
-      Instance = (__int64)this->fields.itemList;
+      Instance = (SwitchParameterDisplayManager_o *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_69;
       v65 = System_Collections_Generic_List_object___get_Item(
@@ -2067,7 +2075,7 @@ void ListViewManager__DispItem(
               (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       this->fields.topItem = (struct ListViewItem_o *)v65;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.topItem, (int32_t)v65, v66, v67, v68, v69, v70, v71);
-      Instance = (__int64)this->fields.itemList;
+      Instance = (SwitchParameterDisplayManager_o *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_69;
       v72 = System_Collections_Generic_List_object___get_Item(
@@ -2088,20 +2096,20 @@ void ListViewManager__DispItem(
     v79 = 0;
     do
     {
-      Instance = (__int64)this->fields.itemList;
+      Instance = (SwitchParameterDisplayManager_o *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_69;
       v80 = v50;
-      Instance = (__int64)System_Collections_Generic_List_object___get_Item(
-                            (System_Collections_Generic_List_object__o *)Instance,
-                            v79,
-                            *v50);
+      Instance = (SwitchParameterDisplayManager_o *)System_Collections_Generic_List_object___get_Item(
+                                                      (System_Collections_Generic_List_object__o *)Instance,
+                                                      v79,
+                                                      *v50);
       if ( !Instance )
         goto LABEL_69;
       v87 = Instance;
-      *(_DWORD *)(Instance + 24) = v79;
-      *(_DWORD *)(Instance + 28) = v79;
-      *(_BYTE *)(Instance + 96) = v22;
+      LODWORD(Instance->fields.m_CancellationTokenSource) = v79;
+      HIDWORD(Instance->fields.m_CancellationTokenSource) = v79;
+      LOBYTE(Instance[1].fields.FADE_TIME) = v22;
       if ( !v12 )
         goto LABEL_69;
       items = v12->fields._items;
@@ -2122,62 +2130,65 @@ void ListViewManager__DispItem(
         v91 = &items->obj.klass + v90;
         v12->fields._size = v90 + 1;
         v91[4] = (Il2CppClass *)v87;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v91 + 4), v87, v81, v82, v83, v84, v85, v86);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v91 + 4), (int32_t)v87, v81, v82, v83, v84, v85, v86);
       }
       if ( *p_topItem )
       {
-        v98 = *(float *)(v87 + 104);
-        Instance = (__int64)&this->fields.topItem;
+        v98 = *(float *)&v87[1].fields.state;
+        Instance = (SwitchParameterDisplayManager_o *)&this->fields.topItem;
         if ( v98 > (*p_topItem)->fields.basePosition.fields.y )
           goto LABEL_28;
         if ( !*p_bottomItem )
           goto LABEL_69;
-        Instance = (__int64)&this->fields.bottomItem;
+        Instance = (SwitchParameterDisplayManager_o *)&this->fields.bottomItem;
         if ( v98 < (*p_bottomItem)->fields.basePosition.fields.y )
         {
 LABEL_28:
-          *(_QWORD *)Instance = v87;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, v87, v92, v93, v94, v95, v96, v97);
+          Instance->klass = (SwitchParameterDisplayManager_c *)v87;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, (int32_t)v87, v92, v93, v94, v95, v96, v97);
         }
       }
       if ( *p_rightItem )
       {
-        v99 = *(float *)(v87 + 100);
-        Instance = (__int64)&this->fields.rightItem;
-        if ( v99 > (*p_rightItem)->fields.basePosition.fields.x )
+        DISP_TIME = v87[1].fields.DISP_TIME;
+        Instance = (SwitchParameterDisplayManager_o *)&this->fields.rightItem;
+        if ( DISP_TIME > (*p_rightItem)->fields.basePosition.fields.x )
           goto LABEL_33;
         if ( !*p_leftItem )
           goto LABEL_69;
-        Instance = (__int64)&this->fields.leftItem;
-        if ( v99 < (*p_leftItem)->fields.basePosition.fields.x )
+        Instance = (SwitchParameterDisplayManager_o *)&this->fields.leftItem;
+        if ( DISP_TIME < (*p_leftItem)->fields.basePosition.fields.x )
         {
 LABEL_33:
-          *(_QWORD *)Instance = v87;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, v87, v92, v93, v94, v95, v96, v97);
+          Instance->klass = (SwitchParameterDisplayManager_c *)v87;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, (int32_t)v87, v92, v93, v94, v95, v96, v97);
         }
       }
       ++v79;
       v50 = v80;
     }
     while ( v116 != v79 );
-    Instance = (__int64)System_Collections_Generic_List_object___get_Item(v12, 0, *v80);
+    Instance = (SwitchParameterDisplayManager_o *)System_Collections_Generic_List_object___get_Item(v12, 0, *v80);
     if ( !Instance
       || (v100 = *v80,
-          *(_BYTE *)(Instance + 96) = 1,
-          Instance = (__int64)System_Collections_Generic_List_object___get_Item(v12, index, v100),
+          LOBYTE(Instance[1].fields.FADE_TIME) = 1,
+          Instance = (SwitchParameterDisplayManager_o *)System_Collections_Generic_List_object___get_Item(
+                                                          v12,
+                                                          index,
+                                                          v100),
           selectIndex = v114,
           !Instance) )
     {
 LABEL_69:
       sub_2213CDC(Instance, v10);
     }
-    *(_BYTE *)(Instance + 96) = 1;
+    LOBYTE(Instance[1].fields.FADE_TIME) = 1;
     if ( v116 >= addEmptyTarminal )
     {
-      Instance = (__int64)System_Collections_Generic_List_object___get_Item(v12, index, *v80);
+      Instance = (SwitchParameterDisplayManager_o *)System_Collections_Generic_List_object___get_Item(v12, index, *v80);
       if ( !Instance )
         goto LABEL_69;
-      *(_BYTE *)(Instance + 97) = 1;
+      BYTE1(Instance[1].fields.FADE_TIME) = 1;
     }
   }
   this->fields.itemSortList = (struct System_Collections_Generic_List_ListViewItem__o *)v12;
@@ -2197,7 +2208,7 @@ LABEL_69:
     j_il2cpp_runtime_class_init_0(v102, v101);
   if ( UnityEngine_Object__op_Inequality(emptyMessageBase, 0, 0) )
   {
-    Instance = (__int64)this->fields.emptyMessageBase;
+    Instance = (SwitchParameterDisplayManager_o *)this->fields.emptyMessageBase;
     if ( !Instance )
       goto LABEL_69;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v116 < 1, 0);
@@ -2207,13 +2218,13 @@ LABEL_69:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   if ( UnityEngine_Object__op_Inequality(indicator, 0, 0) )
   {
-    Instance = (__int64)this->fields.indicator;
+    Instance = (SwitchParameterDisplayManager_o *)this->fields.indicator;
     if ( !Instance )
       goto LABEL_69;
-    (*(void (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)Instance + 376LL))(
+    ((void (__fastcall *)(SwitchParameterDisplayManager_o *, _QWORD, void *))Instance->klass[1]._1.image)(
       Instance,
       (unsigned int)v116,
-      *(_QWORD *)(*(_QWORD *)Instance + 384LL));
+      Instance->klass[1]._1.gc_desc);
     this->fields.isIndecatorRefresh = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
@@ -2221,7 +2232,7 @@ LABEL_69:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
   {
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (SwitchParameterDisplayManager_o *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_69;
     UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
@@ -2233,14 +2244,14 @@ LABEL_69:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v107);
   if ( UnityEngine_Object__op_Inequality(v108, 0, 0) )
   {
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (SwitchParameterDisplayManager_o *)this->fields.scrollView;
     if ( Instance )
     {
       UIScrollView__DisableSpring((UIScrollView_o *)Instance, 0);
       v109 = this->fields.scrollView;
       if ( !byte_5969AE0 )
       {
-        Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        Instance = (SwitchParameterDisplayManager_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
       if ( v109 )
@@ -2248,7 +2259,7 @@ LABEL_69:
         UIScrollView__set_currentMomentum(v109, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
         if ( selectIndex < 0 )
         {
-          Instance = (__int64)this->fields.scrollView;
+          Instance = (SwitchParameterDisplayManager_o *)this->fields.scrollView;
           if ( Instance )
           {
             UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
@@ -2261,7 +2272,7 @@ LABEL_69:
         {
           if ( ListViewManager__MoveCenterItem(this, selectIndex, 0, 0, 0.0, 0, v110) )
             return;
-          Instance = (__int64)this->fields.scrollView;
+          Instance = (SwitchParameterDisplayManager_o *)this->fields.scrollView;
           if ( Instance )
           {
             UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
@@ -2423,8 +2434,9 @@ Cysharp_Threading_Tasks_UniTask_o ListViewManager__FocusSelectItem(
   bool v28; // w6
   bool v29; // w7
   const MethodInfo *v30; // x1
-  Cysharp_Threading_Tasks_UniTask_o v33; // kr00_16
-  ListViewManager__FocusSelectItem_d__71_o v34; // [xsp+0h] [xbp-90h] BYREF
+  struct Cysharp_Threading_Tasks_IUniTaskSource_o *v31; // x0
+  __int64 v32; // x1
+  ListViewManager__FocusSelectItem_d__71_o v33; // [xsp+0h] [xbp-90h] BYREF
   Cysharp_Threading_Tasks_UniTask_o result; // 0:x0.16
 
   if ( (byte_5971FEA & 1) == 0 )
@@ -2432,9 +2444,9 @@ Cysharp_Threading_Tasks_UniTask_o ListViewManager__FocusSelectItem(
     sub_2213A60(&Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_ListViewManager__FocusSelectItem_d__71___);
     byte_5971FEA = 1;
   }
-  memset(&v34, 0, sizeof(v34));
+  memset(&v33, 0, sizeof(v33));
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v34.fields.__t__builder,
+    (MissionNaviTransitionBoardItem_o *)&v33.fields.__t__builder,
     0,
     *(System_String_o **)&index,
     (System_String_o *)cancellationToken.fields._source,
@@ -2442,21 +2454,21 @@ Cysharp_Threading_Tasks_UniTask_o ListViewManager__FocusSelectItem(
     v5,
     v6,
     v7);
-  v34.fields.__4__this = this;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34.fields.__4__this, (int32_t)this, v12, v13, v14, v15, v16, v17);
-  v34.fields.list = list;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34.fields.list, (int32_t)list, v18, v19, v20, v21, v22, v23);
-  v34.fields.index = index;
-  v34.fields.cancellationToken = cancellationToken;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34.fields.cancellationToken, 0, v24, v25, v26, v27, v28, v29);
-  v34.fields.__1__state = -1;
+  v33.fields.__4__this = this;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33.fields.__4__this, (int32_t)this, v12, v13, v14, v15, v16, v17);
+  v33.fields.list = list;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33.fields.list, (int32_t)list, v18, v19, v20, v21, v22, v23);
+  v33.fields.index = index;
+  v33.fields.cancellationToken = cancellationToken;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33.fields.cancellationToken, 0, v24, v25, v26, v27, v28, v29);
+  v33.fields.__1__state = -1;
   if ( !*((_QWORD *)Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_ListViewManager__FocusSelectItem_d__71___
         + 7) )
     sub_224B964(Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskMethodBuilder_Start_ListViewManager__FocusSelectItem_d__71___);
-  ListViewManager__FocusSelectItem_d__71__MoveNext(&v34, v30);
-  v33 = sub_307F42C(&v34.fields.__t__builder, 0);
-  *(_QWORD *)&result.fields.token = *(_QWORD *)&v33.fields.token;
-  result.fields.source = v33.fields.source;
+  ListViewManager__FocusSelectItem_d__71__MoveNext(&v33, v30);
+  v31 = (struct Cysharp_Threading_Tasks_IUniTaskSource_o *)sub_307F42C(&v33.fields.__t__builder, 0);
+  *(_QWORD *)&result.fields.token = v32;
+  result.fields.source = v31;
   return result;
 }
 
@@ -2472,7 +2484,7 @@ void ListViewManager__FowardLoopItem(ListViewManager_o *this, const MethodInfo *
   ListViewItemSeed_o *v9; // x20
   __int64 v10; // x1
   UnityEngine_Object_o *prefab; // x19
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FF4 & 1) == 0 )
   {
@@ -2550,16 +2562,20 @@ bool ListViewManager__GetCanScrollList(
   __int64 v13; // x1
   struct UIScrollView_o *v14; // x8
   UnityEngine_Object_o *mPanel; // x24
-  __int64 v16; // kr10_8
-  float v17; // s13
-  float v18; // s15
-  float v19; // s11
+  float x; // s9
+  float y; // s8
+  float z; // s11
+  float w; // s10
+  __int64 v20; // kr00_8
+  float v21; // s13
+  float v22; // s15
+  float v23; // s11
   bool result; // w0
-  float v21; // s10
-  __int64 v22; // [xsp+8h] [xbp-98h] BYREF
-  float v23; // [xsp+14h] [xbp-8Ch]
-  float v24; // [xsp+18h] [xbp-88h]
-  UnityEngine_Vector4_o finalClipRegion; // 0:kr00_16.16
+  float v25; // s10
+  __int64 v26; // [xsp+8h] [xbp-98h] BYREF
+  float v27; // [xsp+14h] [xbp-8Ch]
+  float v28; // [xsp+18h] [xbp-88h]
+  UnityEngine_Vector4_o finalClipRegion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5971FFC & 1) == 0 )
   {
@@ -2591,23 +2607,27 @@ bool ListViewManager__GetCanScrollList(
   v12 = this->fields.scrollView;
   if ( !v12 )
     goto LABEL_33;
+  x = finalClipRegion.fields.x;
+  y = finalClipRegion.fields.y;
+  z = finalClipRegion.fields.z;
+  w = finalClipRegion.fields.w;
   ((void (__fastcall *)(__int64 *__return_ptr, UIScrollView_o *, const MethodInfo *))v12->klass->vtable._4_get_bounds.methodPtr)(
-    &v22,
+    &v26,
     v12,
     v12->klass->vtable._4_get_bounds.method);
-  v16 = v22;
-  v18 = v23;
-  v17 = v24;
-  v19 = finalClipRegion.fields.z == 0.0 ? (float)UnityEngine_Screen__get_width(0) : finalClipRegion.fields.z * 0.5;
-  v21 = finalClipRegion.fields.w == 0.0 ? (float)UnityEngine_Screen__get_height(0) : finalClipRegion.fields.w * 0.5;
+  v20 = v26;
+  v22 = v27;
+  v21 = v28;
+  v23 = z == 0.0 ? (float)UnityEngine_Screen__get_width(0) : z * 0.5;
+  v25 = w == 0.0 ? (float)UnityEngine_Screen__get_height(0) : w * 0.5;
   v12 = this->fields.scrollView;
   if ( !v12 )
     goto LABEL_33;
   if ( UIScrollView__get_canMoveHorizontally(v12, 0) )
   {
-    if ( (float)(*(float *)&v16 - v18) < (float)(finalClipRegion.fields.x - v19) )
+    if ( (float)(*(float *)&v20 - v22) < (float)(x - v23) )
       *isLeft = 1;
-    if ( (float)(*(float *)&v16 + v18) > (float)(finalClipRegion.fields.x + v19) )
+    if ( (float)(*(float *)&v20 + v22) > (float)(x + v23) )
       *isRight = 1;
   }
   v12 = this->fields.scrollView;
@@ -2616,10 +2636,10 @@ LABEL_33:
     sub_2213CDC(v12, v13);
   if ( !UIScrollView__get_canMoveVertically(v12, 0) )
     return 1;
-  if ( (float)(*((float *)&v16 + 1) - v17) < (float)(finalClipRegion.fields.y - v21) )
+  if ( (float)(*((float *)&v20 + 1) - v21) < (float)(y - v25) )
     *isBottom = 1;
   result = 1;
-  if ( (float)(*((float *)&v16 + 1) + v17) > (float)(finalClipRegion.fields.y + v21) )
+  if ( (float)(*((float *)&v20 + 1) + v21) > (float)(y + v25) )
     *isTop = 1;
   return result;
 }
@@ -2689,8 +2709,11 @@ bool ListViewManager__GetFocusItemIndex(
         int32_t sum,
         const MethodInfo *method)
 {
+  bool result; // w0
+
+  result = 0;
   *index = -1;
-  return 0;
+  return result;
 }
 
 
@@ -3549,24 +3572,28 @@ LABEL_20:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ListViewManager__PushObjectOutSideClipPosition(ListViewManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_Stack_T__o *objectStock; // x0
   int size; // w21
   System_Collections_Generic_Stack_T__o *v5; // x20
-  unsigned __int64 localPosition; // kr00_8
   float y; // s9
+  float v7; // s8
   float v8; // s8
   float v9; // s9
   float v10; // s2
   float v11; // s11
   __int64 v12; // x22
   Il2CppObject **p_syncRoot; // x23
-  float v14; // s10
-  _QWORD v15[2]; // [xsp+8h] [xbp-68h] BYREF
-  float v16; // [xsp+18h] [xbp-58h]
-  UnityEngine_Vector3_o v17; // 0:kr14_12.12
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s8
+  float v15; // s10
+  float z; // s9
+  _QWORD v17[2]; // [xsp+8h] [xbp-68h] BYREF
+  float v18; // [xsp+18h] [xbp-58h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972005 & 1) == 0 )
   {
@@ -3591,31 +3618,30 @@ void ListViewManager__PushObjectOutSideClipPosition(ListViewManager_o *this, con
                                                                0);
       if ( objectStock )
       {
-        localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
-                                            (UnityEngine_Transform_o *)objectStock,
-                                            0);
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectStock, 0);
         objectStock = (System_Collections_Generic_Stack_T__o *)this->fields.scrollView;
         if ( objectStock )
         {
           y = this->fields.clipOffset.fields.y;
-          ((void (__fastcall *)(_QWORD *__return_ptr, System_Collections_Generic_Stack_T__o *, const MethodInfo *, float))objectStock->klass->vtable._4_System_Collections_Generic_IEnumerable_T__GetEnumerator.methodPtr)(
-            v15,
+          v7 = localPosition.fields.y;
+          ((void (__fastcall *)(_QWORD *__return_ptr, System_Collections_Generic_Stack_T__o *, const MethodInfo *, long double))objectStock->klass->vtable._4_System_Collections_Generic_IEnumerable_T__GetEnumerator.methodPtr)(
+            v17,
             objectStock,
             objectStock->klass->vtable._4_System_Collections_Generic_IEnumerable_T__GetEnumerator.method,
-            *(float *)&localPosition);
+            *(long double *)&localPosition.fields.x);
           objectStock = (System_Collections_Generic_Stack_T__o *)this->fields.scrollView;
           if ( objectStock )
           {
-            v8 = y - *((float *)&localPosition + 1);
-            v9 = *((float *)v15 + 1) + v16;
+            v8 = y - v7;
+            v9 = *((float *)v17 + 1) + v18;
             objectStock = (System_Collections_Generic_Stack_T__o *)((System_Collections_Generic_Stack_T__o *(__fastcall *)(_QWORD *__return_ptr, System_Collections_Generic_Stack_T__o *, const MethodInfo *))objectStock->klass->vtable._4_System_Collections_Generic_IEnumerable_T__GetEnumerator.methodPtr)(
-                                                                     v15,
+                                                                     v17,
                                                                      objectStock,
                                                                      objectStock->klass->vtable._4_System_Collections_Generic_IEnumerable_T__GetEnumerator.method);
             v10 = this->fields.clipRange.fields.y;
-            v11 = v8 <= (float)((float)(*((float *)v15 + 1) - v16) + v10)
+            v11 = v8 <= (float)((float)(*((float *)v17 + 1) - v18) + v10)
                 ? v9 - (float)(v10 * 0.5)
-                : (float)(*((float *)v15 + 1) - v16) + (float)(v10 * 0.5);
+                : (float)(*((float *)v17 + 1) - v18) + (float)(v10 * 0.5);
             if ( v5 )
             {
               v12 = 0;
@@ -3630,16 +3656,18 @@ void ListViewManager__PushObjectOutSideClipPosition(ListViewManager_o *this, con
                                                                          0);
                 if ( !objectStock )
                   goto LABEL_25;
-                v17 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectStock, 0);
+                v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)objectStock, 0);
                 objectStock = (System_Collections_Generic_Stack_T__o *)this->fields.scrollView;
                 if ( !objectStock )
                   goto LABEL_25;
-                v14 = v17.fields.y;
+                x = v20.fields.x;
+                v15 = v20.fields.y;
+                z = v20.fields.z;
                 objectStock = (System_Collections_Generic_Stack_T__o *)UIScrollView__get_canMoveVertically(
                                                                          (UIScrollView_o *)objectStock,
                                                                          0);
                 if ( ((unsigned __int8)objectStock & 1) != 0 )
-                  v14 = v11;
+                  v15 = v11;
                 if ( (unsigned int)v12 >= v5->fields._size )
                   break;
                 objectStock = (System_Collections_Generic_Stack_T__o *)p_syncRoot[v12];
@@ -3650,10 +3678,10 @@ void ListViewManager__PushObjectOutSideClipPosition(ListViewManager_o *this, con
                                                                          0);
                 if ( !objectStock )
                   goto LABEL_25;
-                v18.fields.x = v17.fields.x;
-                v18.fields.y = v14;
-                v18.fields.z = v17.fields.z;
-                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)objectStock, v18, 0);
+                v21.fields.x = x;
+                v21.fields.y = v15;
+                v21.fields.z = z;
+                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)objectStock, v21, 0);
                 if ( size == (_DWORD)++v12 )
                   return;
               }
@@ -4069,7 +4097,7 @@ bool ListViewManager__SetScrollView(
   float v7; // s11
   float v8; // s12
   UnityEngine_Object_o *scrollView; // x20
-  __int64 gameObject; // x0
+  UnityEngine_Component_o *gameObject; // x0
   __int64 v12; // x1
   struct UIScrollView_o *v13; // x8
   UnityEngine_Object_o *mPanel; // x20
@@ -4095,8 +4123,8 @@ bool ListViewManager__SetScrollView(
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  gameObject = UnityEngine_Object__op_Inequality(scrollView, 0, 0);
-  if ( (gameObject & 1) == 0 )
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(scrollView, 0, 0);
+  if ( ((unsigned __int8)gameObject & 1) == 0 )
     return 0;
   v13 = this->fields.scrollView;
   if ( !v13 )
@@ -4104,19 +4132,21 @@ bool ListViewManager__SetScrollView(
   mPanel = (UnityEngine_Object_o *)v13->fields.mPanel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
-  gameObject = UnityEngine_Object__op_Inequality(mPanel, 0, 0);
-  if ( (gameObject & 1) == 0 )
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(mPanel, 0, 0);
+  if ( ((unsigned __int8)gameObject & 1) == 0 )
     return 0;
   v15 = this->fields.scrollView;
   if ( !v15 )
     goto LABEL_23;
-  gameObject = (__int64)v15->fields.mPanel;
+  gameObject = (UnityEngine_Component_o *)v15->fields.mPanel;
   if ( !gameObject )
     goto LABEL_23;
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
   if ( !gameObject )
     goto LABEL_23;
-  gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+  gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                            (UnityEngine_GameObject_o *)gameObject,
+                                            0);
   if ( !gameObject )
     goto LABEL_23;
   v23.fields.x = v8;
@@ -4126,20 +4156,20 @@ bool ListViewManager__SetScrollView(
   v16 = this->fields.scrollView;
   if ( !v16 )
     goto LABEL_23;
-  gameObject = (__int64)v16->fields.mPanel;
+  gameObject = (UnityEngine_Component_o *)v16->fields.mPanel;
   if ( !gameObject )
     goto LABEL_23;
   v22.fields.x = x;
   v22.fields.y = y;
   UIPanel__set_clipOffset((UIPanel_o *)gameObject, v22, 0);
-  gameObject = (__int64)this->fields.scrollView;
+  gameObject = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !gameObject )
     goto LABEL_23;
   UIScrollView__DisableSpring((UIScrollView_o *)gameObject, 0);
   v17 = this->fields.scrollView;
   if ( !byte_5969AE0 )
   {
-    gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    gameObject = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v17 )
@@ -4292,7 +4322,7 @@ void ListViewManager__SortItem(
         int32_t addEmptyTarminal,
         const MethodInfo *method)
 {
-  __int64 Instance; // x0
+  char *Instance; // x0
   const MethodInfo *v10; // x1
   const MethodInfo *v11; // x1
   System_String_o *v12; // x2
@@ -4402,7 +4432,7 @@ void ListViewManager__SortItem(
   bool v116; // w7
   int32_t i; // w29
   const MethodInfo *v118; // x2
-  __int64 v119; // x20
+  float *v119; // x20
   System_String_o *v120; // x2
   System_String_o *v121; // x3
   int32_t v122; // w4
@@ -4435,7 +4465,7 @@ void ListViewManager__SortItem(
   int32_t index; // [xsp+14h] [xbp-9Ch]
   System_Collections_Generic_List_Enumerator_object__o v150; // [xsp+18h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v151; // [xsp+30h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FE9 & 1) == 0 )
   {
@@ -4458,22 +4488,22 @@ void ListViewManager__SortItem(
     byte_5971FE9 = 1;
   }
   memset(&v151, 0, sizeof(v151));
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
   if ( !Instance )
     goto LABEL_92;
   v148 = addEmptyTarminal;
   SwitchParameterDisplayManager__Reset((SwitchParameterDisplayManager_o *)Instance, 0);
   ListViewManager__ReleaseObject(this, v11);
-  Instance = (__int64)this->fields.sort;
+  Instance = (char *)this->fields.sort;
   if ( !Instance )
     goto LABEL_92;
-  *(_QWORD *)(Instance + 32) = this;
+  *((_QWORD *)Instance + 4) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(Instance + 32), (int32_t)this, v12, v13, v14, v15, v16, v17);
   v18 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_ListViewItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_ListViewItem___ctor__);
-  Instance = (__int64)this->fields.itemList;
+  Instance = (char *)this->fields.itemList;
   if ( Instance )
   {
     System_Collections_Generic_List_object___GetEnumerator(
@@ -4610,12 +4640,12 @@ LABEL_31:
   index = v38 - 1;
   if ( v38 >= 1 )
   {
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (char *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_92;
     if ( UIScrollView__get_canMoveHorizontally((UIScrollView_o *)Instance, 0) )
     {
-      Instance = (__int64)this->fields.itemList;
+      Instance = (char *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_92;
       Item = System_Collections_Generic_List_object___get_Item(
@@ -4632,7 +4662,7 @@ LABEL_31:
         v93,
         v94,
         v95);
-      Instance = (__int64)this->fields.itemList;
+      Instance = (char *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_92;
       v96 = System_Collections_Generic_List_object___get_Item(
@@ -4650,13 +4680,13 @@ LABEL_31:
         v101,
         v102);
     }
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (char *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_92;
     v147 = selectIndex;
     if ( UIScrollView__get_canMoveVertically((UIScrollView_o *)Instance, 0) )
     {
-      Instance = (__int64)this->fields.itemList;
+      Instance = (char *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_92;
       v103 = System_Collections_Generic_List_object___get_Item(
@@ -4673,7 +4703,7 @@ LABEL_31:
         v107,
         v108,
         v109);
-      Instance = (__int64)this->fields.itemList;
+      Instance = (char *)this->fields.itemList;
       if ( !Instance )
         goto LABEL_92;
       v110 = System_Collections_Generic_List_object___get_Item(
@@ -4693,77 +4723,77 @@ LABEL_31:
     }
     for ( i = 0; i != v38; ++i )
     {
-      Instance = (__int64)System_Collections_Generic_List_object___get_Item(
-                            v18,
-                            i,
-                            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+      Instance = (char *)System_Collections_Generic_List_object___get_Item(
+                           v18,
+                           i,
+                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( !Instance )
         goto LABEL_92;
-      *(_DWORD *)(Instance + 24) = i;
-      *(_DWORD *)(Instance + 28) = i;
-      v119 = Instance;
-      *(_BYTE *)(Instance + 96) = v35;
-      Instance = (__int64)this->fields.seed;
+      *((_DWORD *)Instance + 6) = i;
+      *((_DWORD *)Instance + 7) = i;
+      v119 = (float *)Instance;
+      Instance[96] = v35;
+      Instance = (char *)this->fields.seed;
       if ( !Instance )
         goto LABEL_92;
       LocalPosition = ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)Instance, i, v118);
-      *(UnityEngine_Vector3_o *)(v119 + 100) = LocalPosition;
+      *(UnityEngine_Vector3_o *)(v119 + 25) = LocalPosition;
       if ( *p_topItem )
       {
-        Instance = (__int64)&this->fields.topItem;
+        Instance = (char *)&this->fields.topItem;
         if ( LocalPosition.fields.y > (*p_topItem)->fields.basePosition.fields.y )
           goto LABEL_50;
         if ( !*p_bottomItem )
           goto LABEL_92;
-        Instance = (__int64)&this->fields.bottomItem;
+        Instance = (char *)&this->fields.bottomItem;
         if ( LocalPosition.fields.y < (*p_bottomItem)->fields.basePosition.fields.y )
         {
 LABEL_50:
           *(_QWORD *)Instance = v119;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, v119, v120, v121, v122, v123, v124, v125);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, (int32_t)v119, v120, v121, v122, v123, v124, v125);
         }
       }
       if ( *p_rightItem )
       {
-        v126 = *(float *)(v119 + 100);
-        Instance = (__int64)&this->fields.rightItem;
+        v126 = v119[25];
+        Instance = (char *)&this->fields.rightItem;
         if ( v126 > (*p_rightItem)->fields.basePosition.fields.x )
           goto LABEL_55;
         if ( !*p_leftItem )
           goto LABEL_92;
-        Instance = (__int64)&this->fields.leftItem;
+        Instance = (char *)&this->fields.leftItem;
         if ( v126 < (*p_leftItem)->fields.basePosition.fields.x )
         {
 LABEL_55:
           *(_QWORD *)Instance = v119;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, v119, v120, v121, v122, v123, v124, v125);
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)Instance, (int32_t)v119, v120, v121, v122, v123, v124, v125);
         }
       }
     }
-    Instance = (__int64)System_Collections_Generic_List_object___get_Item(
-                          v18,
-                          0,
-                          (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    Instance = (char *)System_Collections_Generic_List_object___get_Item(
+                         v18,
+                         0,
+                         (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( !Instance
       || (v127 = (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__,
-          *(_BYTE *)(Instance + 96) = 1,
-          Instance = (__int64)System_Collections_Generic_List_object___get_Item(v18, index, v127),
+          Instance[96] = 1,
+          Instance = (char *)System_Collections_Generic_List_object___get_Item(v18, index, v127),
           selectIndex = v147,
           !Instance) )
     {
 LABEL_92:
       sub_2213CDC(Instance, v10);
     }
-    *(_BYTE *)(Instance + 96) = 1;
+    Instance[96] = 1;
     if ( v38 >= v148 )
     {
-      Instance = (__int64)System_Collections_Generic_List_object___get_Item(
-                            v18,
-                            index,
-                            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+      Instance = (char *)System_Collections_Generic_List_object___get_Item(
+                           v18,
+                           index,
+                           (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( !Instance )
         goto LABEL_92;
-      *(_BYTE *)(Instance + 97) = 1;
+      Instance[97] = 1;
     }
   }
   this->fields.itemSortList = (struct System_Collections_Generic_List_ListViewItem__o *)v18;
@@ -4783,7 +4813,7 @@ LABEL_92:
     j_il2cpp_runtime_class_init_0(v129, v128);
   if ( UnityEngine_Object__op_Inequality(emptyMessageBase, 0, 0) )
   {
-    Instance = (__int64)this->fields.emptyMessageBase;
+    Instance = (char *)this->fields.emptyMessageBase;
     if ( !Instance )
       goto LABEL_92;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, v38 < 1, 0);
@@ -4793,10 +4823,10 @@ LABEL_92:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   if ( UnityEngine_Object__op_Inequality(indicator, 0, 0) )
   {
-    Instance = (__int64)this->fields.indicator;
+    Instance = (char *)this->fields.indicator;
     if ( !Instance )
       goto LABEL_92;
-    (*(void (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)Instance + 376LL))(
+    (*(void (__fastcall **)(char *, _QWORD, _QWORD))(*(_QWORD *)Instance + 376LL))(
       Instance,
       (unsigned int)v38,
       *(_QWORD *)(*(_QWORD *)Instance + 384LL));
@@ -4807,7 +4837,7 @@ LABEL_92:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
   if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
   {
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (char *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_92;
     UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
@@ -4817,24 +4847,24 @@ LABEL_92:
   ((void (__fastcall *)(ListViewManager_o *, const MethodInfo *))this->klass->vtable._5_SetSortButtonImage.methodPtr)(
     this,
     this->klass->vtable._5_SetSortButtonImage.method);
-  Instance = (__int64)this->fields.sort;
+  Instance = (char *)this->fields.sort;
   if ( !Instance )
     goto LABEL_92;
-  *(_QWORD *)(Instance + 32) = 0;
+  *((_QWORD *)Instance + 4) = 0;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(Instance + 32), 0, v134, v135, v136, v137, v138, v139);
   v141 = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v140);
   if ( UnityEngine_Object__op_Inequality(v141, 0, 0) )
   {
-    Instance = (__int64)this->fields.scrollView;
+    Instance = (char *)this->fields.scrollView;
     if ( !Instance )
       goto LABEL_92;
     UIScrollView__DisableSpring((UIScrollView_o *)Instance, 0);
     v142 = this->fields.scrollView;
     if ( !byte_5969AE0 )
     {
-      Instance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      Instance = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( !v142 )
@@ -4842,7 +4872,7 @@ LABEL_92:
     UIScrollView__set_currentMomentum(v142, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     if ( selectIndex < 0 )
     {
-      Instance = (__int64)this->fields.scrollView;
+      Instance = (char *)this->fields.scrollView;
       if ( !Instance )
         goto LABEL_92;
       UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
@@ -4851,7 +4881,7 @@ LABEL_92:
     }
     else if ( !ListViewManager__MoveCenterItem(this, selectIndex, 0, 0, 0.0, 0, v143) )
     {
-      Instance = (__int64)this->fields.scrollView;
+      Instance = (char *)this->fields.scrollView;
       if ( Instance )
       {
         UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
@@ -4870,8 +4900,11 @@ void ListViewManager__Update(ListViewManager_o *this, const MethodInfo *method)
   UnityEngine_Component_o *transform; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x3
+  float x; // s8
+  float y; // s9
+  float z; // s10
   UnityEngine_Object_o *indicator; // x20
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FF5 & 1) == 0 )
   {
@@ -4890,6 +4923,9 @@ void ListViewManager__Update(ListViewManager_o *this, const MethodInfo *method)
     if ( !transform )
       goto LABEL_27;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    x = localPosition.fields.x;
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
     if ( !this->fields.isScrollRefresh
       && localPosition.fields.x == this->fields.oldScrollPosition.fields.x
       && localPosition.fields.y == this->fields.oldScrollPosition.fields.y
@@ -4942,7 +4978,9 @@ LABEL_27:
     else
     {
       ListViewManager__ClippingItems(this, 1, 1, v7);
-      this->fields.oldScrollPosition = localPosition;
+      this->fields.oldScrollPosition.fields.x = x;
+      this->fields.oldScrollPosition.fields.y = y;
+      this->fields.oldScrollPosition.fields.z = z;
       this->fields.isScrollRefresh = 0;
     }
   }
@@ -4952,13 +4990,17 @@ LABEL_27:
 UnityEngine_Vector2_o ListViewManager__getPitch(ListViewManager_o *this, const MethodInfo *method)
 {
   struct ListViewItemSeed_o *seed; // x8
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   seed = this->fields.seed;
   if ( !seed )
     sub_2213CDC(this, method);
-  result.fields.x = seed->fields.arrangementPich.fields.x;
-  result.fields.y = seed->fields.arrangementPich.fields.y;
+  x = seed->fields.arrangementPich.fields.x;
+  y = seed->fields.arrangementPich.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -5229,64 +5271,65 @@ void ListViewManager__FocusSelectItem_d__71__MoveNext(
   ListViewManager__FocusSelectItem_d__71_o *v2; // x19
   int32_t _1__state; // w8
   struct ListViewManager_o *_4__this; // x22
-  System_Threading_CancellationToken_o v5; // x20
-  System_String_o *v6; // x2
-  System_String_o *v7; // x3
-  int32_t v8; // w4
-  int32_t v9; // w5
-  bool v10; // w6
-  bool v11; // w7
-  Cysharp_Threading_Tasks_UniTask_o v12; // kr10_16
+  struct System_Threading_CancellationTokenSource_o *source; // x20
+  System_Threading_CancellationToken_o v6; // x1
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
+  Cysharp_Threading_Tasks_UniTask_o v13; // kr10_16
   struct Cysharp_Threading_Tasks_UniTask_Awaiter_o u__1; // q0
   Cysharp_Threading_Tasks_IUniTaskSource_c *klass; // x8
-  __int64 v15; // x9
+  __int64 v16; // x9
   int *p_offset; // x10
-  __int64 v17; // x0
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
-  Cysharp_Threading_Tasks_IUniTaskSource_c *v24; // x8
-  __int64 v25; // x9
-  Cysharp_Threading_Tasks_IUniTaskSource_c **v26; // x10
-  __int64 v27; // x0
+  __int64 v18; // x0
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  Cysharp_Threading_Tasks_IUniTaskSource_c *v25; // x8
+  __int64 v26; // x9
+  Cysharp_Threading_Tasks_IUniTaskSource_c **v27; // x10
+  __int64 v28; // x0
   UnityEngine_Object_o *scrollBar; // x20
-  _BOOL8 v29; // x0
-  __int64 v30; // x1
-  struct UIScrollBar_o *v31; // x20
+  _BOOL8 v30; // x0
+  __int64 v31; // x1
+  struct UIScrollBar_o *v32; // x20
   int32_t index; // w9
   struct ListViewItemSeed_o *seed; // x8
-  int v34; // w21
+  int v35; // w21
   float x; // s8
-  System_Math_c *v36; // x0
-  float v37; // s8
+  System_Math_c *v37; // x0
+  float v38; // s8
   struct System_Collections_Generic_List_ListViewItem__o *list; // x8
-  struct ListViewItemSeed_o *v39; // x9
+  struct ListViewItemSeed_o *v40; // x9
   int size; // w20
-  float v41; // s9
+  float v42; // s9
   UnityEngine_Component_o *scrollView; // x0
   Il2CppObject *Component_object; // x0
-  __int64 v44; // x1
   __int64 v45; // x1
+  __int64 v46; // x1
   float height; // s0
-  UIProgressBar_o *v47; // x0
-  float v48; // s0
-  struct Cysharp_Threading_Tasks_UniTask_Awaiter_o v49; // q0
-  ListViewManager_c *v50; // x8
+  UIProgressBar_o *v48; // x0
+  float v49; // s0
+  struct Cysharp_Threading_Tasks_UniTask_Awaiter_o v50; // q0
+  ListViewManager_c *v51; // x8
   unsigned int naturalAligment; // w9
-  __int64 v52; // x11
   __int64 v53; // x11
+  __int64 v54; // x11
   float Float; // s0
-  int v55; // w9
+  int v56; // w9
   struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *runnerPromise; // x19
-  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c *v57; // x8
-  __int64 v58; // x9
-  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **v59; // x10
-  __int64 v60; // x0
+  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c *v58; // x8
+  __int64 v59; // x9
+  Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **v60; // x10
+  __int64 v61; // x0
   Cysharp_Threading_Tasks_UniTask_o task; // [xsp+10h] [xbp-70h] BYREF
-  Cysharp_Threading_Tasks_UniTask_o v62; // [xsp+20h] [xbp-60h] BYREF
+  Cysharp_Threading_Tasks_UniTask_o v63; // [xsp+20h] [xbp-60h] BYREF
 
   v2 = this;
   if ( (byte_597200C & 1) == 0 )
@@ -5307,13 +5350,14 @@ void ListViewManager__FocusSelectItem_d__71__MoveNext(
   task = (Cysharp_Threading_Tasks_UniTask_o)0LL;
   if ( _1__state )
   {
-    v5.fields._source = v2->fields.cancellationToken.fields._source;
+    source = v2->fields.cancellationToken.fields._source;
     if ( !*(&Cysharp_Threading_Tasks_UniTask_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(Cysharp_Threading_Tasks_UniTask_TypeInfo, method);
-    v62 = Cysharp_Threading_Tasks_UniTask__Yield(9, v5, 0, 0);
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v62, 0, v6, v7, v8, v9, v10, v11);
-    v12 = v62;
-    task = v62;
+    v6.fields._source = source;
+    v63 = Cysharp_Threading_Tasks_UniTask__Yield(9, v6, 0, 0);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v63, 0, v7, v8, v9, v10, v11, v12);
+    v13 = v63;
+    task = v63;
     if ( !byte_597201D )
     {
       sub_2213A60(&Cysharp_Threading_Tasks_UniTask_TypeInfo);
@@ -5324,45 +5368,45 @@ void ListViewManager__FocusSelectItem_d__71__MoveNext(
       j_il2cpp_runtime_class_init_0(Cysharp_Threading_Tasks_UniTask_TypeInfo, method);
     if ( byte_597201E )
     {
-      if ( !v12.fields.source )
+      if ( !v13.fields.source )
         goto LABEL_22;
     }
     else
     {
       this = (ListViewManager__FocusSelectItem_d__71_o *)sub_2213A60(&Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo);
       byte_597201E = 1;
-      if ( !v12.fields.source )
+      if ( !v13.fields.source )
         goto LABEL_22;
     }
-    klass = v12.fields.source->klass;
-    v15 = *(unsigned __int16 *)&v12.fields.source->klass->_2.rank;
-    if ( *(_WORD *)&v12.fields.source->klass->_2.rank )
+    klass = v13.fields.source->klass;
+    v16 = *(unsigned __int16 *)&v13.fields.source->klass->_2.rank;
+    if ( *(_WORD *)&v13.fields.source->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((Cysharp_Threading_Tasks_IUniTaskSource_c **)p_offset - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
       {
-        --v15;
+        --v16;
         p_offset += 4;
-        if ( !v15 )
+        if ( !v16 )
           goto LABEL_19;
       }
-      v17 = (__int64)&klass->vtable[*p_offset];
+      v18 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_19:
-      v17 = sub_224BC3C(v12.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 0);
+      v18 = sub_224BC3C(v13.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 0);
     }
-    this = (ListViewManager__FocusSelectItem_d__71_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v17)(
-                                                         v12.fields.source,
-                                                         *(unsigned int *)&v12.fields.token,
-                                                         *(_QWORD *)(v17 + 8));
+    this = (ListViewManager__FocusSelectItem_d__71_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v18)(
+                                                         v13.fields.source,
+                                                         *(unsigned int *)&v13.fields.token,
+                                                         *(_QWORD *)(v18 + 8));
     if ( !(_DWORD)this )
     {
-      v49 = (struct Cysharp_Threading_Tasks_UniTask_Awaiter_o)task;
+      v50 = (struct Cysharp_Threading_Tasks_UniTask_Awaiter_o)task;
       v2->fields.__1__state = 0;
-      v2->fields.__u__1 = v49;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__u__1, 0, v18, v19, v20, v21, v22, v23);
+      v2->fields.__u__1 = v50;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__u__1, 0, v19, v20, v21, v22, v23, v24);
       sub_307F5E4(
         &v2->fields.__t__builder,
         &task,
@@ -5387,56 +5431,56 @@ LABEL_22:
   }
   if ( task.fields.source )
   {
-    v24 = task.fields.source->klass;
-    v25 = *(unsigned __int16 *)&task.fields.source->klass->_2.rank;
+    v25 = task.fields.source->klass;
+    v26 = *(unsigned __int16 *)&task.fields.source->klass->_2.rank;
     if ( *(_WORD *)&task.fields.source->klass->_2.rank )
     {
-      v26 = (Cysharp_Threading_Tasks_IUniTaskSource_c **)&v24->_1.interfaceOffsets->offset;
-      while ( *(v26 - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
+      v27 = (Cysharp_Threading_Tasks_IUniTaskSource_c **)&v25->_1.interfaceOffsets->offset;
+      while ( *(v27 - 1) != Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo )
       {
-        --v25;
-        v26 += 2;
-        if ( !v25 )
+        --v26;
+        v27 += 2;
+        if ( !v26 )
           goto LABEL_29;
       }
-      v27 = (__int64)&v24->vtable[*(_DWORD *)v26 + 2];
+      v28 = (__int64)&v25->vtable[*(_DWORD *)v27 + 2];
     }
     else
     {
 LABEL_29:
-      v27 = sub_224BC3C(task.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 2);
+      v28 = sub_224BC3C(task.fields.source, Cysharp_Threading_Tasks_IUniTaskSource_TypeInfo, 2);
     }
-    this = (ListViewManager__FocusSelectItem_d__71_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v27)(
+    this = (ListViewManager__FocusSelectItem_d__71_o *)(*(__int64 (__fastcall **)(struct Cysharp_Threading_Tasks_IUniTaskSource_o *, _QWORD, _QWORD))v28)(
                                                          task.fields.source,
                                                          (unsigned __int16)task.fields.token,
-                                                         *(_QWORD *)(v27 + 8));
+                                                         *(_QWORD *)(v28 + 8));
   }
   if ( !_4__this )
     sub_2213CDC(this, method);
   scrollBar = (UnityEngine_Object_o *)_4__this->fields.scrollBar;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  v29 = UnityEngine_Object__op_Inequality(scrollBar, 0, 0);
-  if ( v29 )
+  v30 = UnityEngine_Object__op_Inequality(scrollBar, 0, 0);
+  if ( v30 )
   {
-    v31 = _4__this->fields.scrollBar;
-    if ( !v31 )
-      sub_2213CDC(v29, v30);
-    if ( v31->fields.mSize <= 0.98 )
+    v32 = _4__this->fields.scrollBar;
+    if ( !v32 )
+      sub_2213CDC(v30, v31);
+    if ( v32->fields.mSize <= 0.98 )
     {
       index = v2->fields.index;
       if ( index < 0 )
       {
-        v50 = _4__this->klass;
+        v51 = _4__this->klass;
         naturalAligment = _4__this->klass->_2.naturalAligment;
-        v52 = EquipGraphListViewManager_TypeInfo->_2.naturalAligment;
-        if ( naturalAligment >= (unsigned int)v52
-          && (EquipGraphListViewManager_c *)v50->_2.typeHierarchy[v52 - 1] == EquipGraphListViewManager_TypeInfo
-          || (v53 = SupportServantEquipListViewManager_TypeInfo->_2.naturalAligment, naturalAligment >= (unsigned int)v53)
-          && (SupportServantEquipListViewManager_c *)v50->_2.typeHierarchy[v53 - 1] == SupportServantEquipListViewManager_TypeInfo )
+        v53 = EquipGraphListViewManager_TypeInfo->_2.naturalAligment;
+        if ( naturalAligment >= (unsigned int)v53
+          && (EquipGraphListViewManager_c *)v51->_2.typeHierarchy[v53 - 1] == EquipGraphListViewManager_TypeInfo
+          || (v54 = SupportServantEquipListViewManager_TypeInfo->_2.naturalAligment, naturalAligment >= (unsigned int)v54)
+          && (SupportServantEquipListViewManager_c *)v51->_2.typeHierarchy[v54 - 1] == SupportServantEquipListViewManager_TypeInfo )
         {
           Float = UnityEngine_PlayerPrefs__GetFloat((System_String_o *)StringLiteral_13747/*"SvtEqScrollBarValue"*/, 0.0, 0);
-          UIProgressBar__set_value((UIProgressBar_o *)v31, Float, 0);
+          UIProgressBar__set_value((UIProgressBar_o *)v32, Float, 0);
           UnityEngine_PlayerPrefs__SetFloat((System_String_o *)StringLiteral_13747/*"SvtEqScrollBarValue"*/, 0.0, 0);
         }
         else
@@ -5448,49 +5492,49 @@ LABEL_29:
       else
       {
         seed = _4__this->fields.seed;
-        v34 = index + 1;
+        v35 = index + 1;
         v2->fields.index = index + 1;
         if ( !seed )
-          sub_2213CDC(v29, v30);
+          sub_2213CDC(v30, v31);
         x = seed->fields.arrangementVolume.fields.x;
-        v36 = System_Math_TypeInfo;
+        v37 = System_Math_TypeInfo;
         if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v30);
-        v37 = ceilf((float)v34 / x);
-        if ( v37 > 1.0 )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v31);
+        v38 = ceilf((float)v35 / x);
+        if ( v38 > 1.0 )
         {
           list = v2->fields.list;
           if ( !list )
-            sub_2213CDC(v36, v30);
-          v39 = _4__this->fields.seed;
-          if ( !v39 )
-            sub_2213CDC(v36, v30);
+            sub_2213CDC(v37, v31);
+          v40 = _4__this->fields.seed;
+          if ( !v40 )
+            sub_2213CDC(v37, v31);
           size = list->fields._size;
-          v41 = v39->fields.arrangementVolume.fields.x;
+          v42 = v40->fields.arrangementVolume.fields.x;
           if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v30);
+            j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v31);
           scrollView = (UnityEngine_Component_o *)_4__this->fields.scrollView;
           if ( !scrollView )
-            sub_2213CDC(0, v30);
+            sub_2213CDC(0, v31);
           Component_object = UnityEngine_Component__GetComponent_object_(
                                scrollView,
                                (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
           if ( !Component_object )
-            sub_2213CDC(0, v44);
-          height = UIPanel__get_height((UIPanel_o *)Component_object, 0);
-          v47 = (UIProgressBar_o *)_4__this->fields.scrollBar;
-          if ( !v47 )
             sub_2213CDC(0, v45);
-          v48 = ((v37 + 1.0) * 156.0 + -70.0 - height) / (ceilf((float)size / v41) * 156.0 - height);
-          UIProgressBar__set_value(v47, v48, 0);
+          height = UIPanel__get_height((UIPanel_o *)Component_object, 0);
+          v48 = (UIProgressBar_o *)_4__this->fields.scrollBar;
+          if ( !v48 )
+            sub_2213CDC(0, v46);
+          v49 = ((v38 + 1.0) * 156.0 + -70.0 - height) / (ceilf((float)size / v42) * 156.0 - height);
+          UIProgressBar__set_value(v48, v49, 0);
         }
       }
     }
   }
-  v55 = (unsigned __int8)byte_5972021;
+  v56 = (unsigned __int8)byte_5972021;
   _4__this->fields.lastSelectIndex = -1;
   v2->fields.__1__state = -2;
-  if ( !v55 )
+  if ( !v56 )
   {
     sub_2213A60(&Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo);
     byte_5972021 = 1;
@@ -5498,28 +5542,28 @@ LABEL_29:
   runnerPromise = v2->fields.__t__builder.fields.runnerPromise;
   if ( runnerPromise )
   {
-    v57 = runnerPromise->klass;
-    v58 = *(unsigned __int16 *)&runnerPromise->klass->_2.rank;
+    v58 = runnerPromise->klass;
+    v59 = *(unsigned __int16 *)&runnerPromise->klass->_2.rank;
     if ( *(_WORD *)&runnerPromise->klass->_2.rank )
     {
-      v59 = (Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **)&v57->_1.interfaceOffsets->offset;
-      while ( *(v59 - 1) != Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo )
+      v60 = (Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_c **)&v58->_1.interfaceOffsets->offset;
+      while ( *(v60 - 1) != Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo )
       {
-        --v58;
-        v59 += 2;
-        if ( !v58 )
+        --v59;
+        v60 += 2;
+        if ( !v59 )
           goto LABEL_65;
       }
-      v60 = (__int64)&v57->vtable[*(_DWORD *)v59 + 2];
+      v61 = (__int64)&v58->vtable[*(_DWORD *)v60 + 2];
     }
     else
     {
 LABEL_65:
-      v60 = sub_224BC3C(runnerPromise, Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo, 2);
+      v61 = sub_224BC3C(runnerPromise, Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_TypeInfo, 2);
     }
-    (*(void (__fastcall **)(struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *, _QWORD))v60)(
+    (*(void (__fastcall **)(struct Cysharp_Threading_Tasks_CompilerServices_IStateMachineRunnerPromise_o *, _QWORD))v61)(
       runnerPromise,
-      *(_QWORD *)(v60 + 8));
+      *(_QWORD *)(v61 + 8));
   }
 }
 

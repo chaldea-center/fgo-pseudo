@@ -1217,7 +1217,8 @@ void LimitCntUpControl__SetLimitUpInfo(LimitCntUpControl_o *this, const MethodIn
       (System_Collections_Generic_List_Enumerator_T__o *)&v75,
       combineEventList,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    v76 = *(System_Collections_Generic_List_Enumerator_object__o *)&v75.fields.currentCryptoKey;
+    *(_OWORD *)&v76.fields._list = *(_OWORD *)&v75.fields.currentCryptoKey;
+    v76.fields._current = (Il2CppObject *)v75.fields.fakeValue;
     v75.fields.currentCryptoKey = 0;
     v75.fields.hiddenValue = (int64_t)&v76;
     while ( 1 )

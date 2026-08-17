@@ -60,21 +60,25 @@ void CriFsLoader__DecompressData(
         const MethodInfo *method)
 {
   CriFsLoader_o *v7; // x22
-  System_Runtime_InteropServices_GCHandle_o v10; // x23
+  intptr_t p_srcGch; // x23
   intptr_t handle; // x19
-  intptr_t v12; // x23
-  intptr_t v13; // x3
-  const MethodInfo *v14; // x5
+  System_Runtime_InteropServices_GCHandle_o v12; // x0
+  intptr_t v13; // x23
+  System_Runtime_InteropServices_GCHandle_o v14; // x0
+  intptr_t v15; // x3
+  const MethodInfo *v16; // x5
 
   v7 = this;
   this->fields.srcGch = System_Runtime_InteropServices_GCHandle__Alloc_76321116(&srcBuffer->obj, 3, 0);
-  v10.fields.handle = (intptr_t)&v7->fields.srcGch;
+  p_srcGch = (intptr_t)&v7->fields.srcGch;
   v7->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_76321116(&dstBuffer->obj, 3, 0);
   v7 = (CriFsLoader_o *)((char *)v7 + 40);
   handle = v7[-1].fields.srcGch.fields.handle;
-  v12 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v10, 0);
-  v13 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject((System_Runtime_InteropServices_GCHandle_o)v7, 0);
-  CriFsLoader__criFsLoader_DecompressData(handle, v12, srcSize, v13, dstSize, v14);
+  v12.fields.handle = p_srcGch;
+  v13 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v12, 0);
+  v14.fields.handle = (intptr_t)v7;
+  v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v14, 0);
+  CriFsLoader__criFsLoader_DecompressData(handle, v13, srcSize, v15, dstSize, v16);
 }
 
 
@@ -104,6 +108,7 @@ void CriFsLoader__Dispose_36989476(CriFsLoader_o *this, bool disposing, const Me
   System_Runtime_InteropServices_GCHandle_o v7; // x0
   struct System_Runtime_InteropServices_GCHandle_o *p_srcGch; // x19
   intptr_t v9; // t1
+  System_Runtime_InteropServices_GCHandle_o v10; // x0
 
   if ( (byte_5969576 & 1) == 0 )
   {
@@ -129,7 +134,10 @@ void CriFsLoader__Dispose_36989476(CriFsLoader_o *this, bool disposing, const Me
     v9 = this->fields.srcGch.fields.handle;
     p_srcGch = &this->fields.srcGch;
     if ( v9 )
-      System_Runtime_InteropServices_GCHandle__Free((System_Runtime_InteropServices_GCHandle_o)p_srcGch, 0);
+    {
+      v10.fields.handle = (intptr_t)p_srcGch;
+      System_Runtime_InteropServices_GCHandle__Free(v10, 0);
+    }
   }
 }
 
@@ -150,6 +158,7 @@ int32_t CriFsLoader__GetStatus(CriFsLoader_o *this, const MethodInfo *method)
   System_Runtime_InteropServices_GCHandle_o v5; // x0
   struct System_Runtime_InteropServices_GCHandle_o *p_srcGch; // x19
   intptr_t v7; // t1
+  System_Runtime_InteropServices_GCHandle_o v8; // x0
   int32_t status; // [xsp+Ch] [xbp-14h] BYREF
 
   handle = this->fields.handle;
@@ -164,7 +173,10 @@ int32_t CriFsLoader__GetStatus(CriFsLoader_o *this, const MethodInfo *method)
     v7 = this->fields.srcGch.fields.handle;
     p_srcGch = &this->fields.srcGch;
     if ( v7 )
-      System_Runtime_InteropServices_GCHandle__Free((System_Runtime_InteropServices_GCHandle_o)p_srcGch, 0);
+    {
+      v8.fields.handle = (intptr_t)p_srcGch;
+      System_Runtime_InteropServices_GCHandle__Free(v8, 0);
+    }
   }
   return status;
 }
@@ -181,29 +193,29 @@ void CriFsLoader__Load(
 {
   struct System_Runtime_InteropServices_GCHandle_o *p_dstGch; // x23
   intptr_t handle; // x25
-  intptr_t v15; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x7
+  System_Runtime_InteropServices_GCHandle_o v15; // x0
+  intptr_t v16; // x0
+  __int64 v17; // x1
+  const MethodInfo *v18; // x7
 
   this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_76321116(&buffer->obj, 3, 0);
   p_dstGch = &this->fields.dstGch;
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = p_dstGch[-1].fields.handle;
-  v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(
-          (System_Runtime_InteropServices_GCHandle_o)p_dstGch,
-          0);
+  v15.fields.handle = (intptr_t)p_dstGch;
+  v16 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v15, 0);
   if ( !buffer )
-    sub_2213CDC(v15, v16);
+    sub_2213CDC(v16, v17);
   CriFsLoader__criFsLoader_Load(
     handle,
     (intptr_t)binder,
     path,
     fileOffset,
     loadSize,
-    v15,
+    v16,
     SLODWORD(buffer->max_length),
-    v17);
+    v18);
 }
 
 
@@ -218,29 +230,29 @@ void CriFsLoader__LoadById(
 {
   struct System_Runtime_InteropServices_GCHandle_o *p_dstGch; // x23
   intptr_t handle; // x25
-  intptr_t v15; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x7
+  System_Runtime_InteropServices_GCHandle_o v15; // x0
+  intptr_t v16; // x0
+  __int64 v17; // x1
+  const MethodInfo *v18; // x7
 
   this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_76321116(&buffer->obj, 3, 0);
   p_dstGch = &this->fields.dstGch;
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = p_dstGch[-1].fields.handle;
-  v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(
-          (System_Runtime_InteropServices_GCHandle_o)p_dstGch,
-          0);
+  v15.fields.handle = (intptr_t)p_dstGch;
+  v16 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v15, 0);
   if ( !buffer )
-    sub_2213CDC(v15, v16);
+    sub_2213CDC(v16, v17);
   CriFsLoader__criFsLoader_LoadById(
     handle,
     (intptr_t)binder,
     id,
     fileOffset,
     loadSize,
-    v15,
+    v16,
     SLODWORD(buffer->max_length),
-    v17);
+    v18);
 }
 
 
@@ -255,29 +267,29 @@ void CriFsLoader__LoadWithoutDecompression(
 {
   struct System_Runtime_InteropServices_GCHandle_o *p_dstGch; // x23
   intptr_t handle; // x25
-  intptr_t v15; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x7
+  System_Runtime_InteropServices_GCHandle_o v15; // x0
+  intptr_t v16; // x0
+  __int64 v17; // x1
+  const MethodInfo *v18; // x7
 
   this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_76321116(&buffer->obj, 3, 0);
   p_dstGch = &this->fields.dstGch;
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = p_dstGch[-1].fields.handle;
-  v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(
-          (System_Runtime_InteropServices_GCHandle_o)p_dstGch,
-          0);
+  v15.fields.handle = (intptr_t)p_dstGch;
+  v16 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v15, 0);
   if ( !buffer )
-    sub_2213CDC(v15, v16);
+    sub_2213CDC(v16, v17);
   CriFsLoader__criFsLoader_LoadWithoutDecompression(
     handle,
     (intptr_t)binder,
     path,
     fileOffset,
     loadSize,
-    v15,
+    v16,
     SLODWORD(buffer->max_length),
-    v17);
+    v18);
 }
 
 
@@ -292,29 +304,29 @@ void CriFsLoader__LoadWithoutDecompressionById(
 {
   struct System_Runtime_InteropServices_GCHandle_o *p_dstGch; // x23
   intptr_t handle; // x25
-  intptr_t v15; // x0
-  __int64 v16; // x1
-  const MethodInfo *v17; // x7
+  System_Runtime_InteropServices_GCHandle_o v15; // x0
+  intptr_t v16; // x0
+  __int64 v17; // x1
+  const MethodInfo *v18; // x7
 
   this->fields.dstGch = System_Runtime_InteropServices_GCHandle__Alloc_76321116(&buffer->obj, 3, 0);
   p_dstGch = &this->fields.dstGch;
   if ( binder )
     binder = (CriFsBinder_o *)binder->fields.handle;
   handle = p_dstGch[-1].fields.handle;
-  v15 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(
-          (System_Runtime_InteropServices_GCHandle_o)p_dstGch,
-          0);
+  v15.fields.handle = (intptr_t)p_dstGch;
+  v16 = System_Runtime_InteropServices_GCHandle__AddrOfPinnedObject(v15, 0);
   if ( !buffer )
-    sub_2213CDC(v15, v16);
+    sub_2213CDC(v16, v17);
   CriFsLoader__criFsLoader_LoadWithoutDecompressionById(
     handle,
     (intptr_t)binder,
     id,
     fileOffset,
     loadSize,
-    v15,
+    v16,
     SLODWORD(buffer->max_length),
-    v17);
+    v18);
 }
 
 
@@ -358,7 +370,7 @@ int32_t CriFsLoader__criFsLoader_Create(intptr_t *loader, const MethodInfo *meth
     v3 = (void *)sub_2214114(v5, method);
     off_5969578 = v3;
   }
-  return ((int32_t (__fastcall *)(intptr_t *, const MethodInfo *))v3)(loader, method);
+  return ((__int64 (__fastcall *)(intptr_t *, const MethodInfo *))v3)(loader, method);
 }
 
 
@@ -388,7 +400,7 @@ int32_t CriFsLoader__criFsLoader_DecompressData(
     v8 = (void *)sub_2214114(v13, src);
     off_59695C0 = v8;
   }
-  return ((int32_t (__fastcall *)(intptr_t, intptr_t, int64_t, intptr_t, int64_t, const MethodInfo *))v8)(
+  return ((__int64 (__fastcall *)(intptr_t, intptr_t, int64_t, intptr_t, int64_t, const MethodInfo *))v8)(
            loader,
            src,
            src_size,
@@ -418,7 +430,7 @@ int32_t CriFsLoader__criFsLoader_Destroy(intptr_t loader, const MethodInfo *meth
     v3 = (void *)sub_2214114(v5, method);
     off_5969580 = v3;
   }
-  return ((int32_t (__fastcall *)(intptr_t, const MethodInfo *))v3)(loader, method);
+  return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v3)(loader, method);
 }
 
 
@@ -442,7 +454,7 @@ int32_t CriFsLoader__criFsLoader_GetStatus(intptr_t loader, int32_t *status, con
     v5 = (void *)sub_2214114(v7, status);
     off_59695A0 = v5;
   }
-  return ((int32_t (__fastcall *)(intptr_t, int32_t *, const MethodInfo *))v5)(loader, status, method);
+  return ((__int64 (__fastcall *)(intptr_t, int32_t *, const MethodInfo *))v5)(loader, status, method);
 }
 
 
@@ -528,7 +540,7 @@ int32_t CriFsLoader__criFsLoader_LoadById(
     v10 = (void *)sub_2214114(v17, binder);
     off_5969590 = v10;
   }
-  return ((int32_t (__fastcall *)(intptr_t, intptr_t, _QWORD, int64_t, int64_t, intptr_t, int64_t, const MethodInfo *))v10)(
+  return ((__int64 (__fastcall *)(intptr_t, intptr_t, _QWORD, int64_t, int64_t, intptr_t, int64_t, const MethodInfo *))v10)(
            loader,
            binder,
            (unsigned int)id,
@@ -622,7 +634,7 @@ int32_t CriFsLoader__criFsLoader_LoadWithoutDecompressionById(
     v10 = (void *)sub_2214114(v17, binder);
     off_59695B8 = v10;
   }
-  return ((int32_t (__fastcall *)(intptr_t, intptr_t, _QWORD, int64_t, int64_t, intptr_t, int64_t, const MethodInfo *))v10)(
+  return ((__int64 (__fastcall *)(intptr_t, intptr_t, _QWORD, int64_t, int64_t, intptr_t, int64_t, const MethodInfo *))v10)(
            loader,
            binder,
            (unsigned int)id,
@@ -654,7 +666,7 @@ int32_t CriFsLoader__criFsLoader_SetReadUnitSize(intptr_t loader, int64_t unit_s
     v5 = (void *)sub_2214114(v7, unit_size);
     off_59695A8 = v5;
   }
-  return ((int32_t (__fastcall *)(intptr_t, int64_t, const MethodInfo *))v5)(loader, unit_size, method);
+  return ((__int64 (__fastcall *)(intptr_t, int64_t, const MethodInfo *))v5)(loader, unit_size, method);
 }
 
 
@@ -678,5 +690,5 @@ int32_t CriFsLoader__criFsLoader_Stop(intptr_t loader, const MethodInfo *method)
     v3 = (void *)sub_2214114(v5, method);
     off_5969598 = v3;
   }
-  return ((int32_t (__fastcall *)(intptr_t, const MethodInfo *))v3)(loader, method);
+  return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v3)(loader, method);
 }

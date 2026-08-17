@@ -1463,14 +1463,15 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
   UnityEngine_Object_o *startPartyLabel; // x22
   bool v60; // w1
   struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *waveInfoList; // x8
+  System_Nullable_int__o v62; // x0
   int32_t size; // w1
-  __int64 v63; // x2
+  __int64 v64; // x2
   int32_t StartPartyNumber; // w21
-  UILabel_o *v65; // x20
-  System_String_o *v66; // x22
-  Il2CppObject *v67; // x0
-  __int64 v71; // [xsp+10h] [xbp-70h] BYREF
-  int32_t v72; // [xsp+1Ch] [xbp-64h] BYREF
+  UILabel_o *v66; // x20
+  System_String_o *v67; // x22
+  Il2CppObject *v68; // x0
+  __int64 v72; // [xsp+10h] [xbp-70h] BYREF
+  int32_t v73; // [xsp+1Ch] [xbp-64h] BYREF
 
   if ( (byte_596C3DA & 1) == 0 )
   {
@@ -1536,10 +1537,10 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v21, v22);
   v25 = LocalizationManager__Get((System_String_o *)StringLiteral_16156/*"WAVE_BATTLE_WAVE_INFO_SWITCH_PARTY"*/, 0);
-  LODWORD(v71) = this->fields.wave;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v71);
-  v72 = maxWave;
-  v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v72);
+  LODWORD(v72) = this->fields.wave;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v72);
+  v73 = maxWave;
+  v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v73);
   enemyTextSprite = System_String__Format_75697880(v25, v26, v27, 0);
   if ( !waveNumLabel )
     goto LABEL_77;
@@ -1661,14 +1662,12 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
       }
       if ( userInterruptionQuest
         && (waveInfoList = userInterruptionQuest->fields.waveInfoList) != 0
-        && (size = waveInfoList->fields._size,
-            v71 = 0,
-            System_Nullable_int____ctor(
-              (System_Nullable_int__o)&v71,
-              size,
-              (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__),
-            (_BYTE)v71)
-        && SHIDWORD(v71) >= v34 )
+        && (v62 = (System_Nullable_int__o)&v72,
+            size = waveInfoList->fields._size,
+            v72 = 0,
+            System_Nullable_int____ctor(v62, size, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__),
+            (_BYTE)v72)
+        && SHIDWORD(v72) >= v34 )
       {
         StartPartyNumber = UserInterruptionQuestEntity__GetStartPartyNumber(userInterruptionQuest, v34, 0);
       }
@@ -1695,15 +1694,15 @@ void WaveBattleWaveInfoComponent__SetSeparateEnemyInfo(
           StartPartyNumber = 1;
         }
       }
-      v65 = this->fields.startPartyLabel;
+      v66 = this->fields.startPartyLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v29, v63);
-      v66 = LocalizationManager__Get((System_String_o *)StringLiteral_16153/*"WAVE_BATTLE_START_PARTY"*/, 0);
-      v67 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(StartPartyNumber, 0);
-      enemyTextSprite = System_String__Format(v66, v67, 0);
-      if ( v65 )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v29, v64);
+      v67 = LocalizationManager__Get((System_String_o *)StringLiteral_16153/*"WAVE_BATTLE_START_PARTY"*/, 0);
+      v68 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(StartPartyNumber, 0);
+      enemyTextSprite = System_String__Format(v67, v68, 0);
+      if ( v66 )
       {
-        UILabel__set_text(v65, (System_String_o *)enemyTextSprite, 0);
+        UILabel__set_text(v66, (System_String_o *)enemyTextSprite, 0);
         enemyTextSprite = this->fields.startPartyObject;
         if ( enemyTextSprite )
         {
@@ -2883,7 +2882,7 @@ System_IAsyncResult_o *WaveBattleWaveInfoComponent_CallbackFunc__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

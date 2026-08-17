@@ -824,7 +824,7 @@ LABEL_17:
     sub_2213CDC(this, quest);
   EntityFromId = UserQuestMaster__getEntityFromId(
                    userQuestMst,
-                   *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+                   (int64_t)this[5].fields.userQuestMst->fields.sb,
                    quest->fields.questId,
                    0);
   if ( EntityFromId )

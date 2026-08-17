@@ -101,8 +101,9 @@ System_ValueTuple_int__int__o BattleBgMaster__GetBgResourceIdType(
   int v10; // w1
   int32_t v11; // w2
   const MethodInfo_3CEDC64 *v12; // x3
+  System_ValueTuple_int__int__o v13; // x0
   BattleBgEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
-  System_ValueTuple_int__int__o v14; // [xsp+18h] [xbp-28h] BYREF
+  System_ValueTuple_int__int__o v16; // [xsp+18h] [xbp-28h] BYREF
 
   if ( (byte_5970447 & 1) == 0 )
   {
@@ -120,18 +121,20 @@ System_ValueTuple_int__int__o BattleBgMaster__GetBgResourceIdType(
   {
     v11 = *(_DWORD *)((char *)off_18 + (_QWORD)entity + 4);
     v12 = (const MethodInfo_3CEDC64 *)Method_System_ValueTuple_int__int___ctor__;
-    v14 = 0;
+    v13 = (System_ValueTuple_int__int__o)&v16;
+    v16 = 0;
   }
   else
   {
 LABEL_7:
     v12 = (const MethodInfo_3CEDC64 *)Method_System_ValueTuple_int__int___ctor__;
-    v14 = 0;
+    v16 = 0;
+    v13 = (System_ValueTuple_int__int__o)&v16;
     v10 = bgId;
     v11 = bgType;
   }
-  System_ValueTuple_int__int____ctor((System_ValueTuple_int__int__o)&v14, v10, v11, v12);
-  return v14;
+  System_ValueTuple_int__int____ctor(v13, v10, v11, v12);
+  return v16;
 }
 
 

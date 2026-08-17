@@ -69,59 +69,65 @@ TweenScale_o *TweenScale__Begin(
 // local variable allocation has failed, the output may be wrong!
 void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
-  __int64 v5; // x1
+  float v5; // s4
+  float v6; // s3
+  unsigned __int64 v7; // d0 OVERLAPPED
+  float v8; // s2
+  int v9; // s1
+  __int64 v10; // x1
   UITable_o **p_mTable; // x20
   UnityEngine_Object_o *mTable; // x21
-  __int64 v8; // x1
-  __int64 v9; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
   UnityEngine_GameObject_o *gameObject; // x21
-  Il2CppObject *v11; // x0
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  __int64 v18; // x1
-  UnityEngine_Object_o *v19; // x21
-  float v20; // [xsp+0h] [xbp-40h]
-  UnityEngine_Vector3_o v21; // 0:kr00_12.12
+  Il2CppObject *v16; // x0
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  __int64 v23; // x1
+  UnityEngine_Object_o *v24; // x21
+  float v25; // [xsp+0h] [xbp-40h]
 
   if ( (byte_59751F9 & 1) == 0 )
   {
-    v20 = factor;
+    v25 = factor;
     sub_2213A60(&Method_NGUITools_FindInParents_UITable___);
     sub_2213A60(&NGUITools_TypeInfo);
     sub_2213A60(&UnityEngine_Object_TypeInfo);
-    factor = v20;
+    factor = v25;
     byte_59751F9 = 1;
   }
-  *(float32x2_t *)&v21.fields.x = vadd_f32(
-                                    vmul_n_f32(*(float32x2_t *)&this->fields.from.fields.x, 1.0 - factor),
-                                    vmul_n_f32(*(float32x2_t *)&this->fields.to.fields.x, factor));
-  v21.fields.z = (float)((float)(1.0 - factor) * this->fields.from.fields.z)
-               + (float)(this->fields.to.fields.z * factor);
-  TweenScale__set_value(this, v21, (const MethodInfo *)isFinished);
+  v5 = this->fields.to.fields.z * factor;
+  v6 = (float)(1.0 - factor) * this->fields.from.fields.z;
+  v7 = vadd_f32(
+         vmul_n_f32(*(float32x2_t *)&this->fields.from.fields.x, 1.0 - factor),
+         vmul_n_f32(*(float32x2_t *)&this->fields.to.fields.x, factor)).n64_u64[0];
+  v8 = v6 + v5;
+  v9 = HIDWORD(v7);
+  TweenScale__set_value(this, *(UnityEngine_Vector3_o *)&v7, (const MethodInfo *)isFinished);
   if ( this->fields.updateTable )
   {
     p_mTable = &this->fields.mTable;
     mTable = (UnityEngine_Object_o *)this->fields.mTable;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10);
     if ( !UnityEngine_Object__op_Equality(mTable, 0, 0) )
       goto LABEL_14;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v9);
-    v11 = NGUITools__FindInParents_object_(
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v14);
+    v16 = NGUITools__FindInParents_object_(
             gameObject,
             (const MethodInfo_38F0B48 *)Method_NGUITools_FindInParents_UITable___);
-    *p_mTable = (UITable_o *)v11;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTable, (int32_t)v11, v12, v13, v14, v15, v16, v17);
-    v19 = (UnityEngine_Object_o *)*p_mTable;
+    *p_mTable = (UITable_o *)v16;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTable, (int32_t)v16, v17, v18, v19, v20, v21, v22);
+    v24 = (UnityEngine_Object_o *)*p_mTable;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
-    if ( UnityEngine_Object__op_Equality(v19, 0, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+    if ( UnityEngine_Object__op_Equality(v24, 0, 0) )
     {
       this->fields.updateTable = 0;
     }
@@ -129,7 +135,7 @@ void TweenScale__OnUpdate(TweenScale_o *this, float factor, bool isFinished, con
     {
 LABEL_14:
       if ( !*p_mTable )
-        sub_2213CDC(0, v8);
+        sub_2213CDC(0, v13);
       UITable__set_repositionNow(*p_mTable, 1, 0);
     }
   }

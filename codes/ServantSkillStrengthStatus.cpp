@@ -365,6 +365,7 @@ void ServantSkillStrengthStatus__SetVertical(
   UnityEngine_GameObject_o *v25; // x25
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BB25 & 1) == 0 )
   {
@@ -417,12 +418,9 @@ void ServantSkillStrengthStatus__SetVertical(
                                                            0);
                 if ( gameObject )
                 {
+                  localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
                   v17 = 0;
-                  v18 = (float)(COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localScale(
-                                                       (UnityEngine_Transform_o *)gameObject,
-                                                       0).fields.y))
-                              * (float)mHeight)
-                      * 0.75;
+                  v18 = (float)(localScale.fields.y * (float)mHeight) * 0.75;
                   while ( 1 )
                   {
                     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -460,8 +458,8 @@ void ServantSkillStrengthStatus__SetVertical(
                                                                0);
                     if ( !gameObject )
                       break;
-                    localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
-                    GameObjectExtensions__SetLocalScale(v25, localScale, 0);
+                    v28 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+                    GameObjectExtensions__SetLocalScale(v25, v28, 0);
                     UIWidget__set_depth((UIWidget_o *)v22, uISprite->fields.mDepth, 0);
                     UIWidget__set_pivot((UIWidget_o *)v22, uISprite->fields.mPivot, 0);
                     GameObjectExtensions__SetLocalPosition_42891516(v20, 0.0, v18 * (float)v17, 0);

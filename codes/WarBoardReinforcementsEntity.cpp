@@ -174,10 +174,12 @@ bool WarBoardReinforcementsEntity__TryGetOverwriteValue(
         const MethodInfo *method)
 {
   int32_t IntValue; // w8
+  bool result; // w0
 
   IntValue = EntityScriptUtil__GetIntValue(this->fields.script, key, -1, 0);
+  result = IntValue != -1;
   *value = IntValue;
-  return IntValue != -1;
+  return result;
 }
 
 

@@ -7,7 +7,8 @@ void CoinRoomUtility___cctor(const MethodInfo *method)
   bool v5; // w6
   bool v6; // w7
   int32_t v7; // w1
-  uint64_t v8; // [xsp+8h] [xbp-28h] BYREF
+  System_DateTime_o v8; // x0
+  uint64_t v9; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_597486F & 1) == 0 )
   {
@@ -18,10 +19,11 @@ void CoinRoomUtility___cctor(const MethodInfo *method)
   v7 = StringLiteral_4701/*"CoinRoom"*/;
   CoinRoomUtility_TypeInfo->static_fields->ASSET_NAME = (struct System_String_o *)StringLiteral_4701/*"CoinRoom"*/;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)CoinRoomUtility_TypeInfo->static_fields, v7, v1, v2, v3, v4, v5, v6);
+  v8.fields._dateData = (uint64_t)&v9;
   CoinRoomUtility_TypeInfo->static_fields->EFFECT_FADE_TIME = 0.5;
-  v8 = 0;
-  System_DateTime___ctor_77014684((System_DateTime_o)&v8, 1970, 1, 1, 0, 0, 0, 1, 0);
-  CoinRoomUtility_TypeInfo->static_fields->UnixEpoch.fields._dateData = v8;
+  v9 = 0;
+  System_DateTime___ctor_77014684(v8, 1970, 1, 1, 0, 0, 0, 1, 0);
+  CoinRoomUtility_TypeInfo->static_fields->UnixEpoch.fields._dateData = v9;
 }
 
 
@@ -511,17 +513,25 @@ int64_t CoinRoomUtility__NextMonthUnixTime(const MethodInfo *method)
   __int64 v1; // x1
   int v2; // w8
   System_DateTime_o v3; // x1
+  System_DateTime_o v4; // x0
   int32_t Year; // w19
-  int32_t Month; // w0
   System_DateTime_o v6; // x0
-  System_DateTime_o v7; // x1
-  CoinRoomUtility_c *v8; // x8
-  System_TimeSpan_o v9; // x1
+  int32_t Month; // w2
+  System_DateTime_o v8; // x0
+  System_DateTime_o v9; // x0
+  System_DateTime_o v10; // x0
+  System_DateTime_o v11; // x0
+  System_DateTime_o v12; // x1
+  CoinRoomUtility_c *v13; // x8
+  System_DateTime_o v14; // x0
+  System_DateTime_o v15; // x1
+  System_TimeSpan_o v16; // x1
+  System_TimeSpan_o v17; // x0
   double TotalSeconds; // d0
-  __int64 v12; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v20; // [xsp+8h] [xbp-48h] BYREF
   int64_t ticks; // [xsp+10h] [xbp-40h] BYREF
-  __int64 v14; // [xsp+18h] [xbp-38h] BYREF
-  uint64_t v15; // [xsp+20h] [xbp-30h] BYREF
+  __int64 v22; // [xsp+18h] [xbp-38h] BYREF
+  uint64_t v23; // [xsp+20h] [xbp-30h] BYREF
   uint64_t dateData; // [xsp+28h] [xbp-28h] BYREF
 
   if ( (byte_597486E & 1) == 0 )
@@ -532,34 +542,42 @@ int64_t CoinRoomUtility__NextMonthUnixTime(const MethodInfo *method)
     sub_2213A60(&System_TimeSpan_TypeInfo);
     byte_597486E = 1;
   }
-  v15 = 0;
+  v23 = 0;
   dateData = 0;
   v2 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
   ticks = 0;
-  v14 = 0;
+  v22 = 0;
   if ( !v2 )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v1);
   dateData = NetworkManager__getServerDateTime(0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v3.fields._dateData);
-  Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-  Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-  v12 = 0;
-  System_DateTime___ctor_77013752((System_DateTime_o)&v12, Year, Month, 1, 0);
-  v14 = v12;
-  v15 = System_DateTime__AddMonths((System_DateTime_o)&v14, 1, 0).fields._dateData;
-  v6.fields._dateData = System_DateTime__ToUniversalTime((System_DateTime_o)&v15, 0).fields._dateData;
-  v8 = CoinRoomUtility_TypeInfo;
-  v15 = v6.fields._dateData;
+  v4.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v4, 0);
+  v6.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v6, 0);
+  v8.fields._dateData = (uint64_t)&v20;
+  v20 = 0;
+  System_DateTime___ctor_77013752(v8, Year, Month, 1, 0);
+  v9.fields._dateData = (uint64_t)&v22;
+  v22 = v20;
+  v23 = System_DateTime__AddMonths(v9, 1, 0).fields._dateData;
+  v10.fields._dateData = (uint64_t)&v23;
+  v11.fields._dateData = System_DateTime__ToUniversalTime(v10, 0).fields._dateData;
+  v13 = CoinRoomUtility_TypeInfo;
+  v23 = v11.fields._dateData;
   if ( !*(&CoinRoomUtility_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo, v7.fields._dateData);
-    v8 = CoinRoomUtility_TypeInfo;
+    j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo, v12.fields._dateData);
+    v13 = CoinRoomUtility_TypeInfo;
   }
-  ticks = System_DateTime__Subtract((System_DateTime_o)&v15, v8->static_fields->UnixEpoch, 0).fields._ticks;
+  v14.fields._dateData = (uint64_t)&v23;
+  v15.fields._dateData = v13->static_fields->UnixEpoch.fields._dateData;
+  ticks = System_DateTime__Subtract(v14, v15, 0).fields._ticks;
   if ( !*(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v9.fields._ticks);
-  TotalSeconds = System_TimeSpan__get_TotalSeconds((System_TimeSpan_o)&ticks, 0);
+    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v16.fields._ticks);
+  v17.fields._ticks = (int64_t)&ticks;
+  TotalSeconds = System_TimeSpan__get_TotalSeconds(v17, 0);
   if ( TotalSeconds >= 0.0 )
     return (unsigned int)TotalSeconds;
   else

@@ -557,6 +557,7 @@ BattleServantData_SaveData_o *AiNpcBattleServantData__getSaveData(
   int32_t v26; // w5
   bool v27; // w6
   bool v28; // w7
+  BattleServantData_SaveData_o *result; // x0
 
   if ( (byte_597376D & 1) == 0 )
   {
@@ -603,8 +604,9 @@ BattleServantData_SaveData_o *AiNpcBattleServantData__getSaveData(
     sub_2213CDC(v21, v22);
   v9->fields.npcAiStates = (struct AiState_SaveData_array *)v21;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->fields.npcAiStates, (int32_t)v21, v23, v24, v25, v26, v27, v28);
+  result = v9;
   *(_QWORD *)&v9->fields.npcActCount = *(_QWORD *)&this->fields._ActCount_k__BackingField;
-  return v9;
+  return result;
 }
 
 

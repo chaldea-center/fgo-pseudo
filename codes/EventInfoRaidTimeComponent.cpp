@@ -14,19 +14,25 @@ System_String_o *EventInfoRaidTimeComponent__GetRestTime(
   System_DateTime_o v6; // x20
   System_DateTime_o v7; // x1
   System_DateTime_o v8; // x19
-  System_TimeSpan_o v9; // x1
+  System_DateTime_o v9; // x0
+  System_DateTime_o v10; // x1
+  System_TimeSpan_o v11; // x1
+  System_TimeSpan_o v12; // x0
   int32_t Hours; // w19
+  System_TimeSpan_o v14; // x0
   EventInfoRaidTimeComponent_o *Days; // x0
-  int32_t v12; // w19
-  const MethodInfo *v13; // x2
+  int32_t v16; // w19
+  const MethodInfo *v17; // x2
   System_String_o *RestTimeColorStr; // x0
-  System_String_o *v15; // x20
-  Il2CppObject *v16; // x19
-  Il2CppObject *v17; // x21
-  Il2CppObject *v18; // x0
+  System_String_o *v19; // x20
+  Il2CppObject *v20; // x19
+  System_TimeSpan_o v21; // x0
+  Il2CppObject *v22; // x21
+  System_TimeSpan_o v23; // x0
+  Il2CppObject *v24; // x0
   int32_t Seconds; // [xsp+4h] [xbp-3Ch] BYREF
   int32_t Minutes; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v22; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v28; // [xsp+Ch] [xbp-34h] BYREF
   int64_t ticks; // [xsp+18h] [xbp-28h] BYREF
 
   if ( (byte_5972606 & 1) == 0 )
@@ -46,21 +52,27 @@ System_String_o *EventInfoRaidTimeComponent__GetRestTime(
   v8.fields._dateData = NetworkManager__getDateTime_48347260(at, 0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v7.fields._dateData);
-  ticks = System_DateTime__op_Subtraction_77030584(v8, v6, 0).fields._ticks;
+  v9.fields._dateData = v8.fields._dateData;
+  v10.fields._dateData = v6.fields._dateData;
+  ticks = System_DateTime__op_Subtraction_77030584(v9, v10, 0).fields._ticks;
   if ( !*(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v9.fields._ticks);
-  Hours = System_TimeSpan__get_Hours((System_TimeSpan_o)&ticks, 0);
-  Days = (EventInfoRaidTimeComponent_o *)System_TimeSpan__get_Days((System_TimeSpan_o)&ticks, 0);
-  v12 = Hours + 24 * (_DWORD)Days;
-  RestTimeColorStr = EventInfoRaidTimeComponent__GetRestTimeColorStr(Days, v12, v13);
-  v15 = System_String__Concat_75651716(RestTimeColorStr, (System_String_o *)StringLiteral_26450/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, 0);
-  v22 = v12;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v22);
-  Minutes = System_TimeSpan__get_Minutes((System_TimeSpan_o)&ticks, 0);
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Minutes);
-  Seconds = System_TimeSpan__get_Seconds((System_TimeSpan_o)&ticks, 0);
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
-  return System_String__Format_75697948(v15, v16, v17, v18, 0);
+    j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v11.fields._ticks);
+  v12.fields._ticks = (int64_t)&ticks;
+  Hours = System_TimeSpan__get_Hours(v12, 0);
+  v14.fields._ticks = (int64_t)&ticks;
+  Days = (EventInfoRaidTimeComponent_o *)System_TimeSpan__get_Days(v14, 0);
+  v16 = Hours + 24 * (_DWORD)Days;
+  RestTimeColorStr = EventInfoRaidTimeComponent__GetRestTimeColorStr(Days, v16, v17);
+  v19 = System_String__Concat_75651716(RestTimeColorStr, (System_String_o *)StringLiteral_26450/*"{0:D2}:{1:D2}:{2:D2}[-]"*/, 0);
+  v28 = v16;
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v28);
+  v21.fields._ticks = (int64_t)&ticks;
+  Minutes = System_TimeSpan__get_Minutes(v21, 0);
+  v22 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Minutes);
+  v23.fields._ticks = (int64_t)&ticks;
+  Seconds = System_TimeSpan__get_Seconds(v23, 0);
+  v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
+  return System_String__Format_75697948(v19, v20, v22, v24, 0);
 }
 
 

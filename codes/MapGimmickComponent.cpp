@@ -139,19 +139,23 @@ void MapGimmickComponent__BeginGimmickFocus(
   struct MapCamera_o *v13; // x8
   struct MapCamera_o *v14; // x8
   struct MapZoom_o *mZoom; // x8
-  __int64 v16; // x2
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  __int64 v19; // x2
   float orthographicSize; // s11
-  TerminalSceneComponent_c *v18; // x0
-  const MethodInfo *v19; // x3
-  System_Collections_IEnumerator_o *v20; // x0
+  TerminalSceneComponent_c *v21; // x0
+  const MethodInfo *v22; // x3
+  System_Collections_IEnumerator_o *v23; // x0
   struct UnityEngine_Coroutine_o *started; // x1
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
-  UnityEngine_Vector3_o ScrlPosVec3; // 0:kr00_12.12
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D109 & 1) == 0 )
   {
@@ -189,45 +193,51 @@ void MapGimmickComponent__BeginGimmickFocus(
               mScrl = (MapScroll_o *)mZoom->fields.mCamera;
               if ( mScrl )
               {
+                x = ScrlPosVec3.fields.x;
+                y = ScrlPosVec3.fields.y;
+                z = ScrlPosVec3.fields.z;
                 orthographicSize = UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)mScrl, 0);
                 if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
-                  j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, mFocusCoroutine, v16);
+                  j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, mFocusCoroutine, v19);
                 if ( !byte_596A090 )
                 {
                   sub_2213A60(&TerminalSceneComponent_TypeInfo);
                   byte_596A090 = 1;
                 }
-                v18 = TerminalSceneComponent_TypeInfo;
+                v21 = TerminalSceneComponent_TypeInfo;
                 if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
                 {
-                  j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, mFocusCoroutine, v16);
-                  v18 = TerminalSceneComponent_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, mFocusCoroutine, v19);
+                  v21 = TerminalSceneComponent_TypeInfo;
                 }
-                mScrl = (MapScroll_o *)v18->static_fields->mInstance;
+                mScrl = (MapScroll_o *)v21->static_fields->mInstance;
                 if ( mScrl )
                 {
                   TerminalSceneComponent__SetActionBGColl((TerminalSceneComponent_o *)mScrl, 1, 0, 0);
-                  v20 = MapGimmickComponent__CoWaitGimmickFocusEnd(
+                  v32.fields.x = x;
+                  v32.fields.y = y;
+                  v32.fields.z = z;
+                  v23 = MapGimmickComponent__CoWaitGimmickFocusEnd(
                           this,
                           mapGimmickEntity,
                           touchEffectComponent,
-                          ScrlPosVec3,
+                          v32,
                           orthographicSize,
-                          v19);
+                          v22);
                   started = UnityEngine_MonoBehaviour__StartCoroutine_83444756(
                               (UnityEngine_MonoBehaviour_o *)this,
-                              v20,
+                              v23,
                               0);
                   this->fields.mFocusCoroutine = started;
                   sub_2213A04(
                     (MissionNaviTransitionBoardItem_o *)&this->fields.mFocusCoroutine,
                     (int32_t)started,
-                    v22,
-                    v23,
-                    v24,
                     v25,
                     v26,
-                    v27);
+                    v27,
+                    v28,
+                    v29,
+                    v30);
                   return;
                 }
               }
@@ -267,12 +277,14 @@ float MapGimmickComponent__CalcMoveTimeByDistance(
   const MethodInfo *v10; // x1
   float result; // s0
   struct MapCamera_o *v12; // x8
-  float v13; // s0
-  float v14; // s1
-  float v15; // s8
-  __int64 v16; // x1
-  __int64 v17; // x2
-  unsigned __int64 ScrlPosVec3; // kr00_8
+  __int64 v13; // x1
+  __int64 v14; // x2
+  float v15; // s10
+  float v16; // s11
+  float v17; // s0
+  float v18; // s1
+  float v19; // s8
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
 
   y = targetPos.fields.y;
   x = targetPos.fields.x;
@@ -291,28 +303,26 @@ float MapGimmickComponent__CalcMoveTimeByDistance(
     v12 = this->fields.mMapCamera;
     if ( !v12 || (mScrl = v12->fields.mScrl) == 0 )
       sub_2213CDC(mScrl, v10);
-    ScrlPosVec3 = (unsigned __int64)MapScroll__GetScrlPosVec3(mScrl, v10);
+    ScrlPosVec3 = MapScroll__GetScrlPosVec3(mScrl, v10);
+    v15 = ScrlPosVec3.fields.x;
+    v16 = ScrlPosVec3.fields.y;
     if ( !byte_59699BF )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_59699BF = 1;
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v16, v17);
-    v13 = MapGimmickEntity__GetTouchFocusCameraMoveBaseDistance(mapGimmickEntity, 0)
-        / fmaxf(
-            sqrtf(
-              (float)((float)(*(float *)&ScrlPosVec3 - x) * (float)(*(float *)&ScrlPosVec3 - x))
-            + (float)((float)(*((float *)&ScrlPosVec3 + 1) - y) * (float)(*((float *)&ScrlPosVec3 + 1) - y))),
-            1.0);
-    v14 = 1.5;
-    if ( v13 <= 1.5 )
-      v14 = v13;
-    if ( v13 >= 0.5 )
-      v15 = v14;
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v13, v14);
+    v17 = MapGimmickEntity__GetTouchFocusCameraMoveBaseDistance(mapGimmickEntity, 0)
+        / fmaxf(sqrtf((float)((float)(v15 - x) * (float)(v15 - x)) + (float)((float)(v16 - y) * (float)(v16 - y))), 1.0);
+    v18 = 1.5;
+    if ( v17 <= 1.5 )
+      v18 = v17;
+    if ( v17 >= 0.5 )
+      v19 = v18;
     else
-      v15 = 0.5;
-    return MapGimmickEntity__GetTouchFocusCameraMoveBaseDuration(mapGimmickEntity, 0) * v15;
+      v19 = 0.5;
+    return MapGimmickEntity__GetTouchFocusCameraMoveBaseDuration(mapGimmickEntity, 0) * v19;
   }
   return result;
 }
@@ -346,18 +356,16 @@ void MapGimmickComponent__CameraMoveTouchGimmick(
   int32_t v26; // w20
   MapCamera_o *v27; // x19
   const MethodInfo_45E9150 *v28; // x2
-  float v29; // s0
-  float v30; // s1
-  float v31; // s2
-  System_Nullable_Vector3__o v32; // [xsp+0h] [xbp-70h] BYREF
+  System_Nullable_float__o p_size; // x0
+  System_Nullable_float__o v30; // x3
+  System_Nullable_Vector3__o v31; // [xsp+0h] [xbp-70h] BYREF
   System_Nullable_float__o size; // [xsp+18h] [xbp-58h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v35; // 0:kr20_12.12
-  UnityEngine_Vector3_o v36; // 0:kr34_12.12
-  System_Nullable_Vector3__o v37; // 0:x0.16
-  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  System_Nullable_Vector3__o v33; // 0:x0.16
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D10A & 1) == 0 )
   {
@@ -419,10 +427,7 @@ void MapGimmickComponent__CameraMoveTouchGimmick(
                 position = UnityEngine_Transform__get_position(transform, 0);
                 if ( !v21 )
                   goto LABEL_31;
-                v35 = UnityEngine_Transform__InverseTransformPoint(v21, position, 0);
-                v29 = v35.fields.x;
-                v30 = v35.fields.y;
-                v31 = v35.fields.z;
+                v36 = UnityEngine_Transform__InverseTransformPoint(v21, position, 0);
               }
               else
               {
@@ -434,38 +439,37 @@ void MapGimmickComponent__CameraMoveTouchGimmick(
                 if ( !transform )
                   goto LABEL_31;
                 v36 = UnityEngine_Transform__get_position(transform, 0);
-                v29 = v36.fields.x;
-                v30 = v36.fields.y;
-                v31 = v36.fields.z;
               }
-              x = v29;
-              y = v30;
-              z = v31;
+              x = v36.fields.x;
+              y = v36.fields.y;
+              z = v36.fields.z;
             }
             TouchFocusCameraZoomSize = MapGimmickEntity__GetTouchFocusCameraZoomSize(mapGimmickEntity, 0);
+            v37.fields.x = x;
+            v37.fields.y = y;
+            v37.fields.z = z;
+            v24 = MapGimmickComponent__CalcMoveTimeByDistance(this, mapGimmickEntity, v37, v23);
+            TouchFocusCameraEasingType = MapGimmickEntity__GetTouchFocusCameraEasingType(mapGimmickEntity, 0);
             v38.fields.x = x;
             v38.fields.y = y;
             v38.fields.z = z;
-            v24 = MapGimmickComponent__CalcMoveTimeByDistance(this, mapGimmickEntity, v38, v23);
-            TouchFocusCameraEasingType = MapGimmickEntity__GetTouchFocusCameraEasingType(mapGimmickEntity, 0);
-            v39.fields.x = x;
-            v39.fields.y = y;
-            v39.fields.z = z;
             v26 = TouchFocusCameraEasingType;
             v27 = this->fields.mMapCamera;
-            *(_QWORD *)&v37.fields.hasValue = &v32;
-            *(_QWORD *)&v32.fields.hasValue = 0;
-            *(_QWORD *)&v32.fields.value.fields.y = 0;
-            *(_QWORD *)&v37.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-            System_Nullable_Vector3____ctor(v37, v39, v28);
+            *(_QWORD *)&v33.fields.hasValue = &v31;
+            *(_QWORD *)&v31.fields.hasValue = 0;
+            *(_QWORD *)&v31.fields.value.fields.y = 0;
+            *(_QWORD *)&v33.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+            System_Nullable_Vector3____ctor(v33, v38, v28);
+            p_size = (System_Nullable_float__o)&size;
             size = 0;
             System_Nullable_float____ctor(
-              (System_Nullable_float__o)&size,
+              p_size,
               TouchFocusCameraZoomSize,
               (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
             if ( v27 )
             {
-              MapCamera__StartAutoWork(v27, v24, v32, size, v26, 0, 0);
+              v30 = size;
+              MapCamera__StartAutoWork(v27, v24, v31, v30, v26, 0, 0);
               return;
             }
           }
@@ -535,6 +539,7 @@ System_Collections_IEnumerator_o *MapGimmickComponent__CoWaitGimmickFocusEnd(
   int32_t v29; // w5
   bool v30; // w6
   bool v31; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   z = beforePosition.fields.z;
   y = beforePosition.fields.y;
@@ -563,9 +568,10 @@ System_Collections_IEnumerator_o *MapGimmickComponent__CoWaitGimmickFocusEnd(
     v31);
   *(float *)(v13 + 56) = x;
   *(float *)(v13 + 60) = y;
+  result = (System_Collections_IEnumerator_o *)v13;
   *(float *)(v13 + 64) = z;
   *(float *)(v13 + 68) = beforeZoomSize;
-  return (System_Collections_IEnumerator_o *)v13;
+  return result;
 }
 
 
@@ -640,7 +646,7 @@ CommonEffectComponent_o *MapGimmickComponent__GetCommonEffectComponent(
     if ( this )
     {
       v12 = (MapEffectComponent_o *)this;
-      *((_DWORD *)this + 54) = 1141899264;
+      LODWORD(this[1].fields.mDispSeName) = 1141899264;
       gameObject = UnityEngine_Component__get_gameObject(v6, 0);
       MapEffectComponent__Setup(v12, gameObject, mapCamera, v14);
       return (CommonEffectComponent_o *)v12;
@@ -1192,7 +1198,7 @@ void MapGimmickComponent__OnGimmickTouched(
   const MethodInfo *v11; // x3
   __int64 v12; // x2
   Il2CppObject *Instance; // x21
-  __int64 v14; // x8
+  UISprite_c *klass; // x8
   __int64 v15; // x8
 
   v8 = this;
@@ -1226,10 +1232,10 @@ void MapGimmickComponent__OnGimmickTouched(
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, mapGimmickEntity, v12);
       this = (MapGimmickComponent_o *)TerminalSceneComponent_TypeInfo;
     }
-    v14 = **((_QWORD **)this + 23);
-    if ( v14 )
+    klass = this[1].fields.mSprite->klass;
+    if ( klass )
     {
-      v15 = *(_QWORD *)(v14 + 264);
+      v15 = *(_QWORD *)&klass->_2.static_fields_size;
       if ( v15 )
       {
         this = *(MapGimmickComponent_o **)(v15 + 344);
@@ -1636,7 +1642,7 @@ void MapGimmickComponent__SetMoveAnim(
   System_Action_o *v37; // x21
   EasingObject_o *v38; // x22
   System_Action_o *v39; // x23
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = posTo.fields.z;
   y = posTo.fields.y;
@@ -1898,82 +1904,86 @@ void MapGimmickComponent__Setup(
   float v89; // s8
   UnityEngine_GameObject_o *gameObject; // x0
   long double v91; // q0
-  __int64 v92; // x1
-  __int64 v93; // x2
-  Il2CppObject *Component_object; // x24
+  float y; // s9
+  float x; // s8
+  float z; // s10
   __int64 v95; // x1
   __int64 v96; // x2
-  UnityEngine_Object_o *v97; // x24
-  __int64 v98; // x25
-  System_String_o *v99; // x2
-  System_String_o *v100; // x3
-  int32_t v101; // w4
-  int32_t v102; // w5
-  bool v103; // w6
-  bool v104; // w7
-  __int64 v105; // x2
-  System_Action_c *v106; // x8
-  __int64 v107; // x8
-  int32_t v108; // w26
-  DataManager_o *v109; // x23
-  Il2CppObject *v110; // x0
-  System_String_o *v111; // x2
-  System_String_o *v112; // x3
-  int32_t v113; // w4
-  int32_t v114; // w5
-  bool v115; // w6
-  bool v116; // w7
-  __int64 v117; // x8
-  EventMissionMaster_o *v118; // x23
+  Il2CppObject *Component_object; // x24
+  __int64 v98; // x1
+  __int64 v99; // x2
+  UnityEngine_Object_o *v100; // x24
+  __int64 v101; // x25
+  System_String_o *v102; // x2
+  System_String_o *v103; // x3
+  int32_t v104; // w4
+  int32_t v105; // w5
+  bool v106; // w6
+  bool v107; // w7
+  __int64 v108; // x2
+  System_Action_c *v109; // x8
+  __int64 v110; // x8
+  int32_t v111; // w26
+  DataManager_o *v112; // x23
+  Il2CppObject *v113; // x0
+  System_String_o *v114; // x2
+  System_String_o *v115; // x3
+  int32_t v116; // w4
+  int32_t v117; // w5
+  bool v118; // w6
+  bool v119; // w7
+  __int64 v120; // x8
+  EventMissionMaster_o *v121; // x23
   EventMissionEntity_array *EventMissionList_49055168; // x0
-  System_String_o *v120; // x2
-  System_String_o *v121; // x3
-  int32_t v122; // w4
-  int32_t v123; // w5
-  bool v124; // w6
-  bool v125; // w7
-  System_Collections_Generic_List_EventDelegate__o *v126; // x23
-  EventDelegate_Callback_o *v127; // x24
-  __int64 v128; // x1
-  __int64 v129; // x2
-  int32_t v130; // w0
+  System_String_o *v123; // x2
+  System_String_o *v124; // x3
+  int32_t v125; // w4
+  int32_t v126; // w5
+  bool v127; // w6
+  bool v128; // w7
+  System_Collections_Generic_List_EventDelegate__o *v129; // x23
+  EventDelegate_Callback_o *v130; // x24
+  __int64 v131; // x1
+  __int64 v132; // x2
+  int32_t v133; // w0
   int actionEffectId; // t1
-  System_String_o *v132; // x0
-  MapGimmickComponent_o *v133; // x0
-  const MethodInfo *v134; // x4
-  __int64 v135; // x1
-  __int64 v136; // x2
-  UnityEngine_Object_o *v137; // x20
+  System_String_o *v135; // x0
+  MapGimmickComponent_o *v136; // x0
+  const MethodInfo *v137; // x4
   __int64 v138; // x1
   __int64 v139; // x2
-  Il2CppObject *v140; // x20
+  UnityEngine_Object_o *v140; // x20
   __int64 v141; // x1
   __int64 v142; // x2
-  Il2CppObject *v143; // x0
-  System_String_o *v144; // x2
-  System_String_o *v145; // x3
-  int32_t v146; // w4
-  int32_t v147; // w5
-  bool v148; // w6
-  bool v149; // w7
-  UnityEngine_GameObject_o *v150; // x20
-  UnityEngine_GameObject_o *v151; // x0
+  Il2CppObject *v143; // x20
+  __int64 v144; // x1
+  __int64 v145; // x2
+  Il2CppObject *v146; // x0
+  System_String_o *v147; // x2
+  System_String_o *v148; // x3
+  int32_t v149; // w4
+  int32_t v150; // w5
+  bool v151; // w6
+  bool v152; // w7
+  UnityEngine_GameObject_o *v153; // x20
+  UnityEngine_GameObject_o *v154; // x0
   int32_t UseAnimFromScript; // w0
-  MapGimmickComponent_o *v153; // x0
-  const MethodInfo *v154; // x2
+  MapGimmickComponent_o *v156; // x0
+  const MethodInfo *v157; // x2
   _BOOL8 HasTouchedLoopAnimation; // x0
-  const MethodInfo *v156; // x2
-  CommonEffectComponent_o *v157; // x24
-  System_Action_o *v158; // x26
-  System_String_o *v159; // x2
-  System_String_o *v160; // x3
-  int32_t v161; // w4
-  int32_t v162; // w5
-  bool v163; // w6
-  bool v164; // w7
-  UnityEngine_Color_o v165; // [xsp+0h] [xbp-90h] BYREF
+  const MethodInfo *v159; // x2
+  CommonEffectComponent_o *v160; // x24
+  System_Action_o *v161; // x26
+  System_String_o *v162; // x2
+  System_String_o *v163; // x3
+  int32_t v164; // w4
+  int32_t v165; // w5
+  bool v166; // w6
+  bool v167; // w7
+  UnityEngine_Color_o v168; // [xsp+0h] [xbp-90h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o TouchSize; // 0:kr00_12.12
+  UnityEngine_Vector3_o TouchSize; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v171; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D0F5 & 1) == 0 )
   {
@@ -2007,8 +2017,8 @@ void MapGimmickComponent__Setup(
     sub_2213A60(&StringLiteral_9265/*"MapGimmickActionEffect_"*/);
     byte_596D0F5 = 1;
   }
-  *(_QWORD *)&v165.fields.r = 0;
-  *(_QWORD *)&v165.fields.b = 0;
+  *(_QWORD *)&v168.fields.r = 0;
+  *(_QWORD *)&v168.fields.b = 0;
   entity = 0;
   v15 = sub_2213CCC(MapGimmickComponent___c__DisplayClass30_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0);
@@ -2131,11 +2141,11 @@ void MapGimmickComponent__Setup(
     GameObjectExtensions__SetLocalScale_42893524(gameObject, v89, 0);
     if ( !System_String__IsNullOrEmpty(v59, 0) )
     {
-      UnityEngine_ColorUtility__TryParseHtmlString(v59, &v165, 0);
+      UnityEngine_ColorUtility__TryParseHtmlString(v59, &v168, 0);
       IsMonoColorRect = (MapGimmickEntity_o *)this->fields.mSprite;
       if ( !IsMonoColorRect )
         goto LABEL_140;
-      UIWidget__set_color((UIWidget_o *)IsMonoColorRect, v165, 0);
+      UIWidget__set_color((UIWidget_o *)IsMonoColorRect, v168, 0);
     }
     IsMonoColorRect = (MapGimmickEntity_o *)this->fields.mSprite;
     if ( !IsMonoColorRect )
@@ -2278,37 +2288,37 @@ void MapGimmickComponent__Setup(
         if ( !*p_commonEffectComponent )
           goto LABEL_140;
         CommonEffectComponent__ResetPrewarmParticleList((CommonEffectComponent_o *)IsMonoColorRect, 0);
-        HasTouchedLoopAnimation = MapGimmickComponent__HasTouchedLoopAnimation(v153, *p_commonEffectComponent, v154);
+        HasTouchedLoopAnimation = MapGimmickComponent__HasTouchedLoopAnimation(v156, *p_commonEffectComponent, v157);
         if ( HasTouchedLoopAnimation
           && MapGimmickComponent__IsGimmickTouchedOnServer(
                (MapGimmickComponent_o *)HasTouchedLoopAnimation,
                mg_inf->fields.mapGimmickId,
-               v156) )
+               v159) )
         {
           IsMonoColorRect = (MapGimmickEntity_o *)*p_commonEffectComponent;
           if ( !*p_commonEffectComponent )
             goto LABEL_140;
           CommonEffectComponent__ForceTouchedLoop((CommonEffectComponent_o *)IsMonoColorRect, 0);
         }
-        v157 = *p_commonEffectComponent;
-        v158 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+        v160 = *p_commonEffectComponent;
+        v161 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
-          v158,
+          v161,
           (Il2CppObject *)v15,
           Method_MapGimmickComponent___c__DisplayClass30_0__Setup_b__0__,
           0);
-        if ( !v157 )
+        if ( !v160 )
           goto LABEL_140;
-        v157->fields.touchCallback = v158;
+        v160->fields.touchCallback = v161;
         sub_2213A04(
-          (MissionNaviTransitionBoardItem_o *)&v157->fields.touchCallback,
-          (int32_t)v158,
-          v159,
-          v160,
-          v161,
+          (MissionNaviTransitionBoardItem_o *)&v160->fields.touchCallback,
+          (int32_t)v161,
           v162,
           v163,
-          v164);
+          v164,
+          v165,
+          v166,
+          v167);
         IsMonoColorRect = *(MapGimmickEntity_o **)v43;
         if ( !*(_QWORD *)v43 )
           goto LABEL_140;
@@ -2326,8 +2336,13 @@ void MapGimmickComponent__Setup(
   if ( !*(_QWORD *)v43 )
     goto LABEL_140;
   TouchSize = MapGimmickEntity__GetTouchSize(IsMonoColorRect, 0);
-  if ( TouchSize.fields.x <= 0.0 || TouchSize.fields.y <= 0.0 )
+  if ( TouchSize.fields.x <= 0.0 )
     goto LABEL_107;
+  y = TouchSize.fields.y;
+  if ( TouchSize.fields.y <= 0.0 )
+    goto LABEL_107;
+  x = TouchSize.fields.x;
+  z = TouchSize.fields.z;
   IsMonoColorRect = (MapGimmickEntity_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !IsMonoColorRect )
     goto LABEL_140;
@@ -2335,7 +2350,7 @@ void MapGimmickComponent__Setup(
                        (UnityEngine_GameObject_o *)IsMonoColorRect,
                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v92, v93);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v95, v96);
   IsMonoColorRect = (MapGimmickEntity_o *)UnityEngine_Object__op_Equality(
                                             (UnityEngine_Object_o *)Component_object,
                                             0,
@@ -2352,23 +2367,26 @@ void MapGimmickComponent__Setup(
   }
   if ( !Component_object )
     goto LABEL_140;
-  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, TouchSize, 0);
+  v171.fields.x = x;
+  v171.fields.y = y;
+  v171.fields.z = z;
+  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v171, 0);
   IsMonoColorRect = (MapGimmickEntity_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !IsMonoColorRect )
     goto LABEL_140;
-  v97 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
-                                  (UnityEngine_GameObject_o *)IsMonoColorRect,
-                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
+  v100 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+                                   (UnityEngine_GameObject_o *)IsMonoColorRect,
+                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v95, v96);
-  if ( UnityEngine_Object__op_Equality(v97, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v98, v99);
+  if ( UnityEngine_Object__op_Equality(v100, 0, 0) )
   {
     IsMonoColorRect = (MapGimmickEntity_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !IsMonoColorRect )
       goto LABEL_140;
-    v97 = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
-                                    (UnityEngine_GameObject_o *)IsMonoColorRect,
-                                    (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_UIButton___);
+    v100 = (UnityEngine_Object_o *)UnityEngine_GameObject__AddComponent_object_(
+                                     (UnityEngine_GameObject_o *)IsMonoColorRect,
+                                     (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_UIButton___);
   }
   IsMonoColorRect = *(MapGimmickEntity_o **)v43;
   if ( !*(_QWORD *)v43 )
@@ -2376,14 +2394,14 @@ LABEL_140:
     sub_2213CDC(IsMonoColorRect, v17);
   if ( MapGimmickEntity__IsEventMissionScript(IsMonoColorRect, 0) )
   {
-    v98 = sub_2213CCC(MapGimmickComponent___c__DisplayClass30_1_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v98, 0);
-    if ( !v98 )
+    v101 = sub_2213CCC(MapGimmickComponent___c__DisplayClass30_1_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v101, 0);
+    if ( !v101 )
       goto LABEL_140;
-    *(_QWORD *)(v98 + 32) = v15;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v98 + 32), v15, v99, v100, v101, v102, v103, v104);
+    *(_QWORD *)(v101 + 32) = v15;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v101 + 32), v15, v102, v103, v104, v105, v106, v107);
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v17, v105);
+      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v17, v108);
     if ( !byte_596A090 )
     {
       sub_2213A60(&TerminalSceneComponent_TypeInfo);
@@ -2392,128 +2410,128 @@ LABEL_140:
     IsMonoColorRect = (MapGimmickEntity_o *)TerminalSceneComponent_TypeInfo;
     if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v17, v105);
+      j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v17, v108);
       IsMonoColorRect = (MapGimmickEntity_o *)TerminalSceneComponent_TypeInfo;
     }
-    v106 = **(System_Action_c ***)&IsMonoColorRect[1].fields.scale;
-    if ( !v106 )
+    v109 = **(System_Action_c ***)&IsMonoColorRect[1].fields.scale;
+    if ( !v109 )
       goto LABEL_140;
-    v107 = *(_QWORD *)&v106->_2.static_fields_size;
-    if ( !v107 )
+    v110 = *(_QWORD *)&v109->_2.static_fields_size;
+    if ( !v110 )
       goto LABEL_140;
-    IsMonoColorRect = *(MapGimmickEntity_o **)(v107 + 344);
+    IsMonoColorRect = *(MapGimmickEntity_o **)(v110 + 344);
     if ( !IsMonoColorRect )
       goto LABEL_140;
     IsMonoColorRect = (MapGimmickEntity_o *)MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)IsMonoColorRect, v17);
     if ( !IsMonoColorRect )
       goto LABEL_140;
-    v108 = IsMonoColorRect->fields.actionAnimTime;
+    v111 = IsMonoColorRect->fields.actionAnimTime;
     IsMonoColorRect = (MapGimmickEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !IsMonoColorRect )
       goto LABEL_140;
-    v109 = (DataManager_o *)IsMonoColorRect;
+    v112 = (DataManager_o *)IsMonoColorRect;
     IsMonoColorRect = (MapGimmickEntity_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)IsMonoColorRect,
                                               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventDetailMaster___);
     if ( !IsMonoColorRect )
       goto LABEL_140;
-    v110 = DataMasterBase_object__object__int___GetEntity(
+    v113 = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)IsMonoColorRect,
-             v108,
+             v111,
              (const MethodInfo_3F10B30 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    *(_QWORD *)(v98 + 16) = v110;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v98 + 16), (int32_t)v110, v111, v112, v113, v114, v115, v116);
+    *(_QWORD *)(v101 + 16) = v113;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v101 + 16), (int32_t)v113, v114, v115, v116, v117, v118, v119);
     IsMonoColorRect = (MapGimmickEntity_o *)DataManager__GetMasterData_object_(
-                                              v109,
+                                              v112,
                                               (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventMissionMaster___);
-    v117 = *(_QWORD *)(v98 + 32);
-    if ( !v117 )
+    v120 = *(_QWORD *)(v101 + 32);
+    if ( !v120 )
       goto LABEL_140;
-    v118 = (EventMissionMaster_o *)IsMonoColorRect;
-    IsMonoColorRect = *(MapGimmickEntity_o **)(v117 + 24);
+    v121 = (EventMissionMaster_o *)IsMonoColorRect;
+    IsMonoColorRect = *(MapGimmickEntity_o **)(v120 + 24);
     if ( !IsMonoColorRect )
       goto LABEL_140;
     IsMonoColorRect = (MapGimmickEntity_o *)MapGimmickEntity__GetEventMissionIdList(IsMonoColorRect, 0);
-    if ( !v118 )
+    if ( !v121 )
       goto LABEL_140;
     EventMissionList_49055168 = EventMissionMaster__getEventMissionList_49055168(
-                                  v118,
+                                  v121,
                                   (System_Collections_Generic_List_int__o *)IsMonoColorRect,
                                   0);
-    *(_QWORD *)(v98 + 24) = EventMissionList_49055168;
+    *(_QWORD *)(v101 + 24) = EventMissionList_49055168;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)(v98 + 24),
+      (MissionNaviTransitionBoardItem_o *)(v101 + 24),
       (int32_t)EventMissionList_49055168,
-      v120,
-      v121,
-      v122,
       v123,
       v124,
-      v125);
-    if ( !v97 )
-      goto LABEL_140;
-    v126 = (System_Collections_Generic_List_EventDelegate__o *)v97[8].monitor;
-    v127 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
-    EventDelegate_Callback___ctor(
+      v125,
+      v126,
       v127,
-      (Il2CppObject *)v98,
+      v128);
+    if ( !v100 )
+      goto LABEL_140;
+    v129 = (System_Collections_Generic_List_EventDelegate__o *)v100[8].monitor;
+    v130 = (EventDelegate_Callback_o *)sub_2213CCC(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(
+      v130,
+      (Il2CppObject *)v101,
       (intptr_t)Method_MapGimmickComponent___c__DisplayClass30_1__Setup_b__1__,
       0);
     if ( !*(&EventDelegate_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v128, v129);
-    EventDelegate__Add(v126, v127, 0);
+      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo, v131, v132);
+    EventDelegate__Add(v129, v130, 0);
   }
 LABEL_107:
   IsMonoColorRect = *(MapGimmickEntity_o **)v43;
   if ( !*(_QWORD *)v43 )
     goto LABEL_140;
   actionEffectId = IsMonoColorRect->fields.actionEffectId;
-  v130 = (_DWORD)IsMonoColorRect + 100;
+  v133 = (_DWORD)IsMonoColorRect + 100;
   if ( actionEffectId >= 1 )
   {
-    v132 = System_Int32__ToString(v130, 0);
-    v133 = (MapGimmickComponent_o *)System_String__Concat_75651716((System_String_o *)StringLiteral_9265/*"MapGimmickActionEffect_"*/, v132, 0);
-    v137 = (UnityEngine_Object_o *)MapGimmickComponent__GetEffectPrefab(
-                                     v133,
-                                     (System_String_o *)v133,
+    v135 = System_Int32__ToString(v133, 0);
+    v136 = (MapGimmickComponent_o *)System_String__Concat_75651716((System_String_o *)StringLiteral_9265/*"MapGimmickActionEffect_"*/, v135, 0);
+    v140 = (UnityEngine_Object_o *)MapGimmickComponent__GetEffectPrefab(
+                                     v136,
+                                     (System_String_o *)v136,
                                      assetData,
                                      multiAssetData,
-                                     v134);
+                                     v137);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v135, v136);
-    IsMonoColorRect = (MapGimmickEntity_o *)UnityEngine_Object__op_Inequality(v137, 0, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v138, v139);
+    IsMonoColorRect = (MapGimmickEntity_o *)UnityEngine_Object__op_Inequality(v140, 0, 0);
     if ( ((unsigned __int8)IsMonoColorRect & 1) != 0 )
     {
-      if ( !v137 )
+      if ( !v140 )
         goto LABEL_140;
-      v140 = UnityEngine_GameObject__GetComponent_object_(
-               (UnityEngine_GameObject_o *)v137,
+      v143 = UnityEngine_GameObject__GetComponent_object_(
+               (UnityEngine_GameObject_o *)v140,
                (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v138, v139);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v140, 0, 0) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v141, v142);
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v143, 0, 0) )
       {
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v141, v142);
-        v143 = UnityEngine_Object__Instantiate_object_(
-                 v140,
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v144, v145);
+        v146 = UnityEngine_Object__Instantiate_object_(
+                 v143,
                  (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_CommonEffectComponent___);
-        this->fields.actionEffect = (struct CommonEffectComponent_o *)v143;
+        this->fields.actionEffect = (struct CommonEffectComponent_o *)v146;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.actionEffect,
-          (int32_t)v143,
-          v144,
-          v145,
-          v146,
+          (int32_t)v146,
           v147,
           v148,
-          v149);
+          v149,
+          v150,
+          v151,
+          v152);
         IsMonoColorRect = (MapGimmickEntity_o *)this->fields.actionEffect;
         if ( IsMonoColorRect )
         {
-          v150 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0);
-          v151 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          GameObjectExtensions__SafeSetParent_42897308(v150, v151, 0);
+          v153 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsMonoColorRect, 0);
+          v154 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+          GameObjectExtensions__SafeSetParent_42897308(v153, v154, 0);
           IsMonoColorRect = (MapGimmickEntity_o *)this->fields.actionEffect;
           if ( IsMonoColorRect )
           {
@@ -3061,26 +3079,28 @@ bool MapGimmickComponent__CoWaitGimmickFocusEnd_d__63__MoveNext(
   int32_t TouchFocusCameraEasingType; // w21
   MapCamera_o *v42; // x22
   const MethodInfo_45E9150 *v43; // x2
+  System_Nullable_float__o p_size; // x0
   float beforeZoomSize; // s0
-  System_String_o *v45; // x3
-  int32_t v46; // w4
-  int32_t v47; // w5
-  bool v48; // w6
-  bool v49; // w7
-  TerminalSceneComponent_c *v50; // x0
-  __int64 v51; // x1
-  __int64 v52; // x2
-  UnityEngine_Object_o *v53; // x21
-  System_String_o *v54; // x2
-  System_String_o *v55; // x3
-  int32_t v56; // w4
-  int32_t v57; // w5
-  bool v58; // w6
-  bool v59; // w7
-  struct CommonEffectComponent_o *v60; // x8
-  System_Nullable_Vector3__o v62; // [xsp+0h] [xbp-50h] BYREF
+  System_Nullable_float__o v46; // x3
+  System_String_o *v47; // x3
+  int32_t v48; // w4
+  int32_t v49; // w5
+  bool v50; // w6
+  bool v51; // w7
+  TerminalSceneComponent_c *v52; // x0
+  __int64 v53; // x1
+  __int64 v54; // x2
+  UnityEngine_Object_o *v55; // x21
+  System_String_o *v56; // x2
+  System_String_o *v57; // x3
+  int32_t v58; // w4
+  int32_t v59; // w5
+  bool v60; // w6
+  bool v61; // w7
+  struct CommonEffectComponent_o *v62; // x8
+  System_Nullable_Vector3__o v64; // [xsp+0h] [xbp-50h] BYREF
   System_Nullable_float__o size; // [xsp+18h] [xbp-38h] BYREF
-  System_Nullable_Vector3__o v64; // 0:x0.16
+  System_Nullable_Vector3__o v66; // 0:x0.16
   UnityEngine_Vector3_o beforePosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D113 & 1) == 0 )
@@ -3135,8 +3155,8 @@ LABEL_64:
         this->fields.__2__current = 0;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v10, v11, v12, v13, v14, v15);
-        *((_DWORD *)p__2__current - 2) = 1;
         LOBYTE(touchEffectComponent) = 1;
+        *((_DWORD *)p__2__current - 2) = 1;
         return (char)touchEffectComponent;
       }
     }
@@ -3230,22 +3250,24 @@ LABEL_32:
   TouchFocusCameraEasingType = MapGimmickEntity__GetTouchFocusCameraEasingType(
                                  (MapGimmickEntity_o *)touchEffectComponent,
                                  0);
-  *(_QWORD *)&v64.fields.hasValue = &v62;
+  *(_QWORD *)&v66.fields.hasValue = &v64;
   beforePosition = this->fields.beforePosition;
   v42 = _4__this->fields.mMapCamera;
-  *(_QWORD *)&v62.fields.hasValue = 0;
-  *(_QWORD *)&v62.fields.value.fields.y = 0;
-  *(_QWORD *)&v64.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-  System_Nullable_Vector3____ctor(v64, beforePosition, v43);
+  *(_QWORD *)&v64.fields.hasValue = 0;
+  *(_QWORD *)&v64.fields.value.fields.y = 0;
+  *(_QWORD *)&v66.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+  System_Nullable_Vector3____ctor(v66, beforePosition, v43);
+  p_size = (System_Nullable_float__o)&size;
   beforeZoomSize = this->fields.beforeZoomSize;
   size = 0;
   System_Nullable_float____ctor(
-    (System_Nullable_float__o)&size,
+    p_size,
     beforeZoomSize,
     (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   if ( !v42 )
     goto LABEL_64;
-  MapCamera__StartAutoWork(v42, v40, v62, size, TouchFocusCameraEasingType, 0, 0);
+  v46 = size;
+  MapCamera__StartAutoWork(v42, v40, v64, v46, TouchFocusCameraEasingType, 0, 0);
 LABEL_46:
   touchEffectComponent = (UnityEngine_Component_o *)_4__this->fields.mMapCamera;
   if ( !touchEffectComponent )
@@ -3254,7 +3276,7 @@ LABEL_46:
   {
     this->fields.__2__current = 0;
     v22 = &this->fields.__2__current;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)v22, 0, (System_String_o *)v38, v45, v46, v47, v48, v49);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)v22, 0, (System_String_o *)v38, v47, v48, v49, v50, v51);
     v29 = 4;
     goto LABEL_49;
   }
@@ -3266,29 +3288,29 @@ LABEL_50:
     sub_2213A60(&TerminalSceneComponent_TypeInfo);
     byte_596A090 = 1;
   }
-  v50 = TerminalSceneComponent_TypeInfo;
+  v52 = TerminalSceneComponent_TypeInfo;
   if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v38);
-    v50 = TerminalSceneComponent_TypeInfo;
+    v52 = TerminalSceneComponent_TypeInfo;
   }
-  touchEffectComponent = (UnityEngine_Component_o *)v50->static_fields->mInstance;
+  touchEffectComponent = (UnityEngine_Component_o *)v52->static_fields->mInstance;
   if ( !touchEffectComponent )
     goto LABEL_64;
   TerminalSceneComponent__SetActionBGColl((TerminalSceneComponent_o *)touchEffectComponent, 0, 0, 0);
-  v53 = (UnityEngine_Object_o *)this->fields.touchEffectComponent;
+  v55 = (UnityEngine_Object_o *)this->fields.touchEffectComponent;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v51, v52);
-  touchEffectComponent = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v53, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v53, v54);
+  touchEffectComponent = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v55, 0, 0);
   if ( ((unsigned __int8)touchEffectComponent & 1) != 0 )
   {
-    v60 = this->fields.touchEffectComponent;
-    if ( !v60 )
+    v62 = this->fields.touchEffectComponent;
+    if ( !v62 )
       goto LABEL_64;
-    v60->fields.isTouched = 0;
+    v62->fields.isTouched = 0;
   }
   _4__this->fields.mFocusCoroutine = 0;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&_4__this->fields.mFocusCoroutine, 0, v54, v55, v56, v57, v58, v59);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&_4__this->fields.mFocusCoroutine, 0, v56, v57, v58, v59, v60, v61);
   LOBYTE(touchEffectComponent) = 0;
   return (char)touchEffectComponent;
 }
@@ -3648,6 +3670,7 @@ void MapGimmickComponent___c__DisplayClass50_0___SetMoveAnim_b__0(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MapGimmickComponent___c__DisplayClass50_0___SetMoveAnim_b__1(
         MapGimmickComponent___c__DisplayClass50_0_o *this,
         const MethodInfo *method)
@@ -3658,10 +3681,9 @@ void MapGimmickComponent___c__DisplayClass50_0___SetMoveAnim_b__1(
   float mNow; // s1
   float z; // s3
   float v8; // s4
-  unsigned __int64 v9; // d0
+  unsigned __int64 v9; // d0 OVERLAPPED
   float v10; // s2
-  float v11; // s1
-  UnityEngine_Vector3_o v12; // 0:kr00_12.12
+  int v11; // s1
 
   _4__this = (UnityEngine_Component_o *)this->fields.__4__this;
   if ( !_4__this
@@ -3688,9 +3710,6 @@ void MapGimmickComponent___c__DisplayClass50_0___SetMoveAnim_b__1(
            vsub_f32(*(float32x2_t *)&this->fields.posTo.fields.x, *(float32x2_t *)&this->fields.posFrom.fields.x),
            v5)).n64_u64[0];
   v10 = z + v8;
-  v11 = *((float *)&v9 + 1);
-  LODWORD(v12.fields.x) = v9;
-  v12.fields.y = v11;
-  v12.fields.z = v10;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)_4__this, v12, 0);
+  v11 = HIDWORD(v9);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)_4__this, *(UnityEngine_Vector3_o *)&v9, 0);
 }

@@ -194,18 +194,21 @@ System_String_o *ScrPlayerBP__GetTimeStr(ScrPlayerBP_o *this, int64_t time, cons
 void ScrPlayerBP__SetRpRecoverBtnEnable(ScrPlayerBP_o *this, bool is_enable, const MethodInfo *method)
 {
   UIWidget_o *mRpRecoverBtnSp; // x0
-  UnityEngine_Color_o v5; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v4; // s0 OVERLAPPED
+  float v5; // s3
+  float v6; // s1
+  float v7; // s2
 
   mRpRecoverBtnSp = (UIWidget_o *)this->fields.mRpRecoverBtnSp;
   if ( !mRpRecoverBtnSp )
     sub_2213CDC(0, is_enable);
-  v5.fields.r = 0.5;
-  v5.fields.a = 1.0;
+  v4 = 0.5;
+  v5 = 1.0;
   if ( is_enable )
-    v5.fields.r = 1.0;
-  v5.fields.g = v5.fields.r;
-  v5.fields.b = v5.fields.r;
-  UIWidget__set_color(mRpRecoverBtnSp, v5, 0);
+    v4 = 1.0;
+  v6 = v4;
+  v7 = v4;
+  UIWidget__set_color(mRpRecoverBtnSp, *(UnityEngine_Color_o *)&v4, 0);
 }
 
 

@@ -282,14 +282,20 @@ UnityEngine_Vector3_o MapGimmickEntity__GetLocalPositionOnMapModel(MapGimmickEnt
   int32_t x; // s8
   int32_t y; // s9
   int32_t z; // w0
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   x = this->fields.x;
   y = this->fields.y;
   z = MapGimmickEntity__get_z(this, method);
-  result.fields.x = (float)x;
-  result.fields.y = (float)y;
-  result.fields.z = (float)z;
+  v5 = (float)x;
+  v6 = (float)y;
+  v7 = (float)z;
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -557,6 +563,9 @@ UnityEngine_Vector3_o MapGimmickEntity__GetTouchSize(MapGimmickEntity_o *this, c
   int32_t IntFromScript; // w20
   const MethodInfo *v5; // x2
   int32_t v6; // w0
+  float v7; // s0
+  float v8; // s1
+  float v9; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5970D53 & 1) == 0 )
@@ -567,9 +576,12 @@ UnityEngine_Vector3_o MapGimmickEntity__GetTouchSize(MapGimmickEntity_o *this, c
   }
   IntFromScript = MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_25438/*"touchW"*/, v2);
   v6 = MapGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_25436/*"touchH"*/, v5);
-  result.fields.x = (float)IntFromScript;
-  result.fields.y = (float)v6;
-  result.fields.z = 0.0;
+  v7 = (float)IntFromScript;
+  v8 = (float)v6;
+  v9 = 0.0;
+  result.fields.z = v9;
+  result.fields.y = v8;
+  result.fields.x = v7;
   return result;
 }
 

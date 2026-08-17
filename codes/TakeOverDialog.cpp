@@ -441,8 +441,8 @@ void TakeOverDialog__SetSlider(TakeOverDialog_o *this, bool sliderOn, const Meth
   __int64 v7; // x1
   __int64 v8; // x2
   TakeOverDialog_c *v9; // x0
-  UnityEngine_Color_o v13; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v10; // kr00_16
+  UnityEngine_Color_o v11; // [xsp+0h] [xbp-30h] BYREF
 
   if ( (byte_5969E24 & 1) == 0 )
   {
@@ -452,8 +452,8 @@ void TakeOverDialog__SetSlider(TakeOverDialog_o *this, bool sliderOn, const Meth
     byte_5969E24 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
-  *(_QWORD *)&v13.fields.r = 0;
-  *(_QWORD *)&v13.fields.b = 0;
+  *(_QWORD *)&v11.fields.r = 0;
+  *(_QWORD *)&v11.fields.b = 0;
   if ( !sliderSprite )
     goto LABEL_14;
   v6 = &StringLiteral_21575/*"img_slider_thumb"*/;
@@ -466,20 +466,18 @@ void TakeOverDialog__SetSlider(TakeOverDialog_o *this, bool sliderOn, const Meth
     j_il2cpp_runtime_class_init_0(TakeOverDialog_TypeInfo, v7, v8);
     v9 = TakeOverDialog_TypeInfo;
   }
-  UnityEngine_ColorUtility__TryParseHtmlString(v9->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v13, 0);
+  UnityEngine_ColorUtility__TryParseHtmlString(v9->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v11, 0);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   if ( !sliderSprite )
     goto LABEL_14;
   sliderSprite->klass->vtable._14_OnEnable.methodPtr();
-  v14.fields.a = 1.0;
-  v14.fields.b = 1.0;
   sliderSprite = (UISprite_o *)this->fields.decideButton;
-  v14.fields.g = 1.0;
-  v14.fields.r = 1.0;
+  *(_QWORD *)&v10.fields.r = __PAIR64__(1.0, 1.0);
+  *(_QWORD *)&v10.fields.b = __PAIR64__(1.0, 1.0);
   if ( !sliderOn )
-    v14 = v13;
+    v10 = v11;
   if ( !sliderSprite
-    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v14, 0),
+    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v10, 0),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_14:
@@ -641,7 +639,7 @@ System_IAsyncResult_o *TakeOverDialog_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

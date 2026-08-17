@@ -1320,7 +1320,7 @@ bool WarBoardAIEvalCalcurater__JudgeSatisfyingTrend(
 LABEL_21:
     sub_2213CDC(this, route);
   }
-  klass = *((_DWORD *)this + 6);
+  klass = (int)this[1].klass;
   v9 = this;
   if ( klass >= 1 )
   {

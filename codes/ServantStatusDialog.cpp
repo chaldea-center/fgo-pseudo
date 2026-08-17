@@ -9048,6 +9048,7 @@ void ServantStatusDialog__Open_41413616(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusDialog__PlayBattleEffect(
         ServantStatusDialog_o *this,
         ServantStatusDialog_BattleActorData_o *battleActorData,
@@ -9062,60 +9063,62 @@ void ServantStatusDialog__PlayBattleEffect(
   bool v11; // w6
   bool v12; // w7
   const MethodInfo *v13; // x1
-  __int64 transform; // x0
+  UnityEngine_Component_o *transform; // x0
   UnityEngine_Component_o *v15; // x21
   __int64 v16; // x1
   __int64 v17; // x2
   Il2CppObject *Component_object; // x22
-  float v19; // s8
+  unsigned int localScale; // s0
+  float v20; // s8
   int32_t svtId; // w23
   int32_t limitCount; // w24
-  __int64 v22; // x1
-  __int64 v23; // x2
+  __int64 v23; // x1
+  __int64 v24; // x2
   UnityEngine_GameObject_o *gameObject; // x21
-  UnityEngine_GameObject_o *v25; // x21
-  Il2CppObject *v26; // x22
-  float32x2_t v27; // d9
-  float v28; // s8
-  UnityEngine_Transform_o *v29; // x25
+  UnityEngine_GameObject_o *v26; // x21
+  Il2CppObject *v27; // x22
+  float32x2_t v28; // d9
+  float v29; // s8
+  unsigned __int64 v30; // d0 OVERLAPPED
+  float v31; // s2
+  int v32; // s1
+  UnityEngine_Transform_o *v33; // x25
   struct ServantStatusListViewItem_o *mainInfo; // x8
   struct ServantEntity_o *svtEntity; // x8
   int32_t battleSize; // w25
-  System_Collections_Generic_Dictionary_int__float__o *v33; // x26
-  UnityEngine_Transform_o *v34; // x27
+  System_Collections_Generic_Dictionary_int__float__o *v37; // x26
+  UnityEngine_Transform_o *v38; // x27
   float Item; // s8
-  float v36; // s9
-  float v37; // s0
-  __int64 v38; // x1
-  __int64 v39; // x2
-  UnityEngine_TextAsset_o *Manager__loadAnimEvents; // x0
-  Il2CppObject *v41; // x23
+  float v40; // s9
+  float v41; // s0
   __int64 v42; // x1
   __int64 v43; // x2
-  Il2CppObject *v44; // x24
-  __int64 v45; // x2
-  System_String_o *v46; // x2
-  System_String_o *v47; // x3
-  int32_t v48; // w4
-  int32_t v49; // w5
-  bool v50; // w6
-  bool v51; // w7
-  System_String_o *v52; // x2
-  System_String_o *v53; // x3
-  int32_t v54; // w4
-  int32_t v55; // w5
-  bool v56; // w6
-  bool v57; // w7
-  __int64 v58; // x1
-  __int64 v59; // x2
-  int32_t v60; // w19
-  unsigned int localScale; // s0
-  System_String_o *v62; // [xsp+0h] [xbp-80h] BYREF
+  UnityEngine_TextAsset_o *Manager__loadAnimEvents; // x0
+  Il2CppObject *v45; // x23
+  __int64 v46; // x1
+  __int64 v47; // x2
+  Il2CppObject *v48; // x24
+  __int64 v49; // x2
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  System_String_o *v56; // x2
+  System_String_o *v57; // x3
+  int32_t v58; // w4
+  int32_t v59; // w5
+  bool v60; // w6
+  bool v61; // w7
+  __int64 v62; // x1
+  __int64 v63; // x2
+  int32_t v64; // w19
+  System_String_o *v65; // [xsp+0h] [xbp-80h] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o v64; // 0:kr14_12.12
-  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596C337 & 1) == 0 )
   {
@@ -9138,7 +9141,7 @@ void ServantStatusDialog__PlayBattleEffect(
     byte_596C337 = 1;
   }
   battleChrCamera = (UnityEngine_Object_o *)this->fields.battleChrCamera;
-  v62 = 0;
+  v65 = 0;
   entity = 0;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, battleActorData, method);
@@ -9157,13 +9160,13 @@ void ServantStatusDialog__PlayBattleEffect(
     ServantStatusDialog__DestroyBattleChr(this, v13);
     return;
   }
-  transform = (__int64)this->fields.battleChrCamera;
+  transform = (UnityEngine_Component_o *)this->fields.battleChrCamera;
   if ( !transform )
     goto LABEL_14;
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
   if ( !transform )
     goto LABEL_14;
-  v15 = (UnityEngine_Component_o *)transform;
+  v15 = transform;
   while ( 1 )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
@@ -9171,97 +9174,114 @@ void ServantStatusDialog__PlayBattleEffect(
                          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIRoot___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16, v17);
-    transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-    if ( (transform & 1) != 0 )
+    transform = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
+                                             (UnityEngine_Object_o *)Component_object,
+                                             0,
+                                             0);
+    if ( ((unsigned __int8)transform & 1) != 0 )
       break;
-    transform = (__int64)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)v15, 0);
-    v15 = (UnityEngine_Component_o *)transform;
+    transform = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)v15, 0);
+    v15 = transform;
     if ( !transform )
       goto LABEL_14;
   }
   if ( !Component_object )
     goto LABEL_14;
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
+                                           (UnityEngine_Component_o *)Component_object,
+                                           0);
   if ( !transform )
     goto LABEL_14;
   localScale = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)transform, 0);
-  transform = (__int64)this->fields.battleChrCamera;
+  transform = (UnityEngine_Component_o *)this->fields.battleChrCamera;
   if ( !transform )
     goto LABEL_14;
-  v19 = *(float *)&localScale;
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+  v20 = *(float *)&localScale;
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
   if ( !transform )
     goto LABEL_14;
-  v65.fields.x = 1.0 / v19;
-  v65.fields.y = 1.0 / v19;
-  v65.fields.z = 1.0 / v19;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v65, 0);
+  v67.fields.x = 1.0 / v20;
+  v67.fields.y = 1.0 / v20;
+  v67.fields.z = 1.0 / v20;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v67, 0);
   if ( !battleActorData )
     goto LABEL_14;
   svtId = battleActorData->fields.svtId;
   limitCount = battleActorData->fields.limitCount;
   ServantStatusDialog__DestroyBattleChr(this, v6);
-  transform = (__int64)this->fields.battleChrCamera;
+  transform = (UnityEngine_Component_o *)this->fields.battleChrCamera;
   if ( !transform )
     goto LABEL_14;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0);
+  gameObject = UnityEngine_Component__get_gameObject(transform, 0);
   if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v22, v23);
-  transform = (__int64)ServantAssetLoadManager__loadBattleActor(&v62, gameObject, svtId, limitCount, 0, 0);
+    j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v23, v24);
+  transform = (UnityEngine_Component_o *)ServantAssetLoadManager__loadBattleActor(
+                                           &v65,
+                                           gameObject,
+                                           svtId,
+                                           limitCount,
+                                           0,
+                                           0);
   if ( !transform )
     goto LABEL_14;
-  v25 = (UnityEngine_GameObject_o *)transform;
-  v26 = UnityEngine_GameObject__AddComponent_object_(
+  v26 = (UnityEngine_GameObject_o *)transform;
+  v27 = UnityEngine_GameObject__AddComponent_object_(
           (UnityEngine_GameObject_o *)transform,
           (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_BattleFBXComponent___);
-  transform = (__int64)UnityEngine_GameObject__get_transform(v25, 0);
-  if ( !v26 )
+  transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v26, 0);
+  if ( !v27 )
     goto LABEL_14;
-  BattleFBXComponent__set_RootTransform((BattleFBXComponent_o *)v26, (UnityEngine_Transform_o *)transform, 0);
-  transform = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  BattleFBXComponent__set_RootTransform((BattleFBXComponent_o *)v27, (UnityEngine_Transform_o *)transform, 0);
+  transform = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !transform )
     goto LABEL_14;
-  transform = (__int64)DataManager__GetMasterData_object_(
-                         (DataManager_o *)transform,
-                         (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+  transform = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
+                                           (DataManager_o *)transform,
+                                           (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
   if ( !transform )
     goto LABEL_14;
-  transform = ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)transform, &entity, svtId, limitCount, 0);
-  if ( (transform & 1) != 0 )
+  transform = (UnityEngine_Component_o *)ServantLimitAddMaster__TryGetEntity(
+                                           (ServantLimitAddMaster_o *)transform,
+                                           &entity,
+                                           svtId,
+                                           limitCount,
+                                           0);
+  if ( ((unsigned __int8)transform & 1) != 0 )
   {
     if ( !entity )
       goto LABEL_14;
-    v27.n64_u64[0] = vmul_f32(vcvt_f32_s32(*(int32x2_t *)&entity->fields.battleCharaOffsetX), vdup_n_s32(0x3C23D70Au)).n64_u64[0];
-    v28 = (float)entity->fields.battleCharaOffsetZ * 0.01;
+    v28.n64_u64[0] = vmul_f32(vcvt_f32_s32(*(int32x2_t *)&entity->fields.battleCharaOffsetX), vdup_n_s32(0x3C23D70Au)).n64_u64[0];
+    v29 = (float)entity->fields.battleCharaOffsetZ * 0.01;
   }
   else
   {
-    v27.n64_u64[0] = 0;
-    v28 = 0.0;
+    v28.n64_u64[0] = 0;
+    v29 = 0.0;
   }
-  transform = (__int64)UnityEngine_GameObject__get_transform(v25, 0);
+  transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v26, 0);
   if ( !transform )
     goto LABEL_14;
-  *(float32x2_t *)&v64.fields.x = vadd_f32(v27, *(float32x2_t *)&this->fields.CHARA_BASE_POSITION.fields.x);
-  v64.fields.z = v28 + this->fields.CHARA_BASE_POSITION.fields.z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v64, 0);
-  transform = (__int64)UnityEngine_GameObject__get_transform(v25, 0);
+  v30 = vadd_f32(v28, *(float32x2_t *)&this->fields.CHARA_BASE_POSITION.fields.x).n64_u64[0];
+  v31 = v29 + this->fields.CHARA_BASE_POSITION.fields.z;
+  v32 = HIDWORD(v30);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v30, 0);
+  transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v26, 0);
   if ( !transform )
     goto LABEL_14;
-  v66.fields.x = 0.0;
-  v66.fields.z = 0.0;
-  v66.fields.y = 270.0;
-  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)transform, v66, 0);
-  transform = (__int64)UnityEngine_GameObject__get_transform(v25, 0);
-  v29 = (UnityEngine_Transform_o *)transform;
+  v68.fields.x = 0.0;
+  v68.fields.z = 0.0;
+  v68.fields.y = 270.0;
+  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)transform, v68, 0);
+  transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(v26, 0);
+  v33 = (UnityEngine_Transform_o *)transform;
   if ( !byte_5969AE5 )
   {
-    transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    transform = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
-  if ( !v29 )
+  if ( !v33 )
     goto LABEL_14;
-  UnityEngine_Transform__set_localScale(v29, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+  UnityEngine_Transform__set_localScale(v33, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   mainInfo = this->fields.mainInfo;
   if ( mainInfo )
   {
@@ -9269,117 +9289,117 @@ void ServantStatusDialog__PlayBattleEffect(
     if ( svtEntity )
     {
       battleSize = svtEntity->fields.battleSize;
-      v33 = (System_Collections_Generic_Dictionary_int__float__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__float__TypeInfo);
+      v37 = (System_Collections_Generic_Dictionary_int__float__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__float__TypeInfo);
       System_Collections_Generic_Dictionary_int__float____ctor(
-        v33,
+        v37,
         (const MethodInfo_3FA21D4 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
-      if ( !v33 )
+      if ( !v37 )
         goto LABEL_14;
       System_Collections_Generic_Dictionary_int__float___Add(
-        v33,
+        v37,
         5,
         0.75,
         (const MethodInfo_3FA2B80 *)Method_System_Collections_Generic_Dictionary_int__float__Add__);
       System_Collections_Generic_Dictionary_int__float___Add(
-        v33,
+        v37,
         8,
         0.75,
         (const MethodInfo_3FA2B80 *)Method_System_Collections_Generic_Dictionary_int__float__Add__);
       System_Collections_Generic_Dictionary_int__float___Add(
-        v33,
+        v37,
         9,
         0.75,
         (const MethodInfo_3FA2B80 *)Method_System_Collections_Generic_Dictionary_int__float__Add__);
       if ( System_Collections_Generic_Dictionary_int__float___ContainsKey(
-             v33,
+             v37,
              battleSize,
              (const MethodInfo_3FA2D78 *)Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__) )
       {
-        v34 = UnityEngine_GameObject__get_transform(v25, 0);
+        v38 = UnityEngine_GameObject__get_transform(v26, 0);
         Item = System_Collections_Generic_Dictionary_int__float___get_Item(
-                 v33,
+                 v37,
                  battleSize,
                  (const MethodInfo_3FA2AE4 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
-        v36 = System_Collections_Generic_Dictionary_int__float___get_Item(
-                v33,
+        v40 = System_Collections_Generic_Dictionary_int__float___get_Item(
+                v37,
                 battleSize,
                 (const MethodInfo_3FA2AE4 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
-        v37 = System_Collections_Generic_Dictionary_int__float___get_Item(
-                v33,
+        v41 = System_Collections_Generic_Dictionary_int__float___get_Item(
+                v37,
                 battleSize,
                 (const MethodInfo_3FA2AE4 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
-        if ( !v34 )
+        if ( !v38 )
           goto LABEL_14;
-        v67.fields.z = v37;
-        v67.fields.x = Item;
-        v67.fields.y = v36;
-        UnityEngine_Transform__set_localScale(v34, v67, 0);
+        v69.fields.z = v41;
+        v69.fields.x = Item;
+        v69.fields.y = v40;
+        UnityEngine_Transform__set_localScale(v38, v69, 0);
       }
     }
   }
-  BattleFBXComponent__SetEvolutionLevel((BattleFBXComponent_o *)v26, svtId, limitCount, 0);
-  if ( BattleFBXComponent__IsYTransparenceShader((BattleFBXComponent_o *)v26, 0) )
+  BattleFBXComponent__SetEvolutionLevel((BattleFBXComponent_o *)v27, svtId, limitCount, 0);
+  if ( BattleFBXComponent__IsYTransparenceShader((BattleFBXComponent_o *)v27, 0) )
     BattleFBXComponent__SetTempShaderFloatProperty(
-      (BattleFBXComponent_o *)v26,
+      (BattleFBXComponent_o *)v27,
       5000.0,
       (System_String_o *)StringLiteral_17293/*"_y0"*/,
       0);
   if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v38, v39);
+    j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v42, v43);
   Manager__loadAnimEvents = ServantAssetLoadManager__loadAnimEvents(svtId, limitCount, 0, 0);
-  BattleFBXComponent__loadAnimationEvents((BattleFBXComponent_o *)v26, Manager__loadAnimEvents, svtId, limitCount, 0);
-  BattleFBXComponent__SetWrapMode((BattleFBXComponent_o *)v26, this->fields.defaultAnimationName, 2, 0);
-  BattleFBXComponent__playAnimation((BattleFBXComponent_o *)v26, this->fields.defaultAnimationName, 0);
-  transform = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v26, 0);
+  BattleFBXComponent__loadAnimationEvents((BattleFBXComponent_o *)v27, Manager__loadAnimEvents, svtId, limitCount, 0);
+  BattleFBXComponent__SetWrapMode((BattleFBXComponent_o *)v27, this->fields.defaultAnimationName, 2, 0);
+  BattleFBXComponent__playAnimation((BattleFBXComponent_o *)v27, this->fields.defaultAnimationName, 0);
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v27, 0);
   if ( !transform
-    || (v41 = UnityEngine_GameObject__GetComponent_object_(
+    || (v45 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)transform,
                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___),
-        (transform = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v26, 0)) == 0) )
+        (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v27, 0)) == 0) )
   {
 LABEL_14:
     sub_2213CDC(transform, v6);
   }
-  v44 = UnityEngine_GameObject__GetComponent_object_(
+  v48 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)transform,
           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v42, v43);
-  transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v41, 0, 0);
-  if ( (transform & 1) == 0 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v46, v47);
+  transform = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v45, 0, 0);
+  if ( ((unsigned __int8)transform & 1) == 0 )
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v45);
-    transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v44, 0, 0);
-    if ( (transform & 1) == 0 )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v49);
+    transform = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v48, 0, 0);
+    if ( ((unsigned __int8)transform & 1) == 0 )
       goto LABEL_58;
-    if ( v44 )
+    if ( v48 )
     {
-      UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v44, 0);
+      UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v48, 0);
       goto LABEL_58;
     }
     goto LABEL_14;
   }
-  if ( !v41 )
+  if ( !v45 )
     goto LABEL_14;
-  SimpleAnimation__Sample((SimpleAnimation_o *)v41, 0);
+  SimpleAnimation__Sample((SimpleAnimation_o *)v45, 0);
 LABEL_58:
   this->fields.currentBattleActorData = battleActorData;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.currentBattleActorData,
     (int32_t)battleActorData,
-    v46,
-    v47,
-    v48,
-    v49,
     v50,
-    v51);
-  this->fields.battleActor = (struct BattleFBXComponent_o *)v26;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.battleActor, (int32_t)v26, v52, v53, v54, v55, v56, v57);
-  v60 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_3229/*"Battle2D"*/, 0);
+    v51,
+    v52,
+    v53,
+    v54,
+    v55);
+  this->fields.battleActor = (struct BattleFBXComponent_o *)v27;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.battleActor, (int32_t)v27, v56, v57, v58, v59, v60, v61);
+  v64 = UnityEngine_LayerMask__NameToLayer((System_String_o *)StringLiteral_3229/*"Battle2D"*/, 0);
   if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v58, v59);
-  NGUITools__SetLayer(v25, v60, 0);
+    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v62, v63);
+  NGUITools__SetLayer(v26, v64, 0);
 }
 
 
@@ -14394,7 +14414,7 @@ System_IAsyncResult_o *ServantStatusDialog_EndDelegate__BeginInvoke(
   v10[0] = isModify;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -14489,7 +14509,7 @@ System_IAsyncResult_o *ServantStatusDialog_EndIndividualityDelegate__BeginInvoke
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(qword_5984328, v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984328, v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -14586,7 +14606,7 @@ System_IAsyncResult_o *ServantStatusDialog_FormationEndDelegate__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(qword_5984328, v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -14688,7 +14708,7 @@ System_IAsyncResult_o *ServantStatusDialog_ResultDelegate__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(qword_5984328, v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984328, v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

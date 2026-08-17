@@ -202,7 +202,7 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
   LocalizationManager_c *v16; // x0
   UILabel_o *titleLabel; // x22
   int v18; // w8
-  __int64 gameObject; // x0
+  System_String_o *gameObject; // x0
   __int64 v20; // x1
   UILabel_o *titleDetailLabel; // x22
   __int64 v22; // x1
@@ -218,8 +218,8 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
   int32_t v32; // w5
   bool v33; // w6
   bool v34; // w7
-  __int64 v35; // x8
-  __int64 v36; // x22
+  System_String_c *klass; // x8
+  System_String_o *v36; // x22
   unsigned __int64 v37; // x28
   RecoverEntity_o *v38; // x25
   UnityEngine_GameObject_o *itemListObj; // x24
@@ -236,9 +236,9 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
   int32_t v50; // w5
   bool v51; // w6
   bool v52; // w7
-  __int64 v53; // x8
+  System_String_Fields fields; // x8
   _QWORD *v54; // x9
-  __int64 v55; // x10
+  __int64 klass_low; // x10
   __int64 v56; // x8
   System_Action_o *v57; // x20
   bool v58; // [xsp+8h] [xbp-68h]
@@ -279,16 +279,16 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
   this->fields.needAp = needAp;
   if ( !v18 )
     j_il2cpp_runtime_class_init_0(v16, v14, v15);
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2119/*"APRECV_TITILE_TXT"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_2119/*"APRECV_TITILE_TXT"*/, 0);
   if ( !titleLabel )
     goto LABEL_39;
-  UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
+  UILabel__set_text(titleLabel, gameObject, 0);
   titleDetailLabel = this->fields.titleDetailLabel;
-  gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2118/*"APRECV_TITILE_DETAIL_TXT"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_2118/*"APRECV_TITILE_DETAIL_TXT"*/, 0);
   if ( !titleDetailLabel )
     goto LABEL_39;
-  UILabel__set_text(titleDetailLabel, (System_String_o *)gameObject, 0);
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  UILabel__set_text(titleDetailLabel, gameObject, 0);
+  gameObject = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_39;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
@@ -299,7 +299,7 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
     j_il2cpp_runtime_class_init_0(v24, v22, v23);
   if ( UnityEngine_Object__op_Inequality(apSeedExchangeMgr, 0, 0) )
   {
-    gameObject = (__int64)this->fields.apSeedExchangeMgr;
+    gameObject = (System_String_o *)this->fields.apSeedExchangeMgr;
     if ( !gameObject )
       goto LABEL_39;
     TerminalApSeedExchangeManager__Initialize((TerminalApSeedExchangeManager_o *)gameObject, 0);
@@ -309,7 +309,7 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v26);
   if ( UnityEngine_Object__op_Inequality(tradeApButton, 0, 0) )
   {
-    gameObject = (__int64)this->fields.tradeApButton;
+    gameObject = (System_String_o *)this->fields.tradeApButton;
     if ( !gameObject )
       goto LABEL_39;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 1, 0);
@@ -328,44 +328,49 @@ void RecoverDlgComponent__OpenApRecvItemDlg(
     v32,
     v33,
     v34);
-  gameObject = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  gameObject = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject
-    || (gameObject = (__int64)DataManager__GetMasterData_object_(
-                                (DataManager_o *)gameObject,
-                                (const MethodInfo_385636C *)Method_DataManager_GetMasterData_RecoverMaster___)) == 0
+    || (gameObject = (System_String_o *)DataManager__GetMasterData_object_(
+                                          (DataManager_o *)gameObject,
+                                          (const MethodInfo_385636C *)Method_DataManager_GetMasterData_RecoverMaster___)) == 0
     || (v58 = canMaskTouchClose,
-        (gameObject = (__int64)RecoverMaster__getRecvEntityList((RecoverMaster_o *)gameObject, 1, 0)) == 0)
-    || (gameObject = (__int64)System_Collections_Generic_List_object___ToArray(
-                                (System_Collections_Generic_List_object__o *)gameObject,
-                                (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__)) == 0 )
+        (gameObject = (System_String_o *)RecoverMaster__getRecvEntityList((RecoverMaster_o *)gameObject, 1, 0)) == 0)
+    || (gameObject = (System_String_o *)System_Collections_Generic_List_object___ToArray(
+                                          (System_Collections_Generic_List_object__o *)gameObject,
+                                          (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_RecoverEntity__ToArray__)) == 0 )
   {
 LABEL_39:
     sub_2213CDC(gameObject, v20);
   }
-  v35 = *(_QWORD *)(gameObject + 24);
+  klass = gameObject[1].klass;
   v36 = gameObject;
-  if ( (int)v35 >= 1 )
+  if ( (int)klass >= 1 )
   {
     v37 = 0;
     do
     {
-      if ( v37 >= (unsigned int)v35 )
+      if ( v37 >= (unsigned int)klass )
         sub_2213CE4(gameObject);
-      gameObject = (__int64)this->fields.itemListInfoGrid;
+      gameObject = (System_String_o *)this->fields.itemListInfoGrid;
       if ( !gameObject )
         goto LABEL_39;
-      v38 = *(RecoverEntity_o **)(v36 + 32 + 8 * v37);
+      v38 = (RecoverEntity_o *)*((_QWORD *)&v36[1].monitor + v37);
       itemListObj = this->fields.itemListObj;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
-      gameObject = (__int64)BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, itemListObj, transform, 0, 0);
+      gameObject = (System_String_o *)BaseMonoBehaviour__createObject(
+                                        (BaseMonoBehaviour_o *)this,
+                                        itemListObj,
+                                        transform,
+                                        0,
+                                        0);
       if ( !gameObject )
         goto LABEL_39;
       v41 = (UnityEngine_GameObject_o *)gameObject;
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (System_String_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
       v42 = (UnityEngine_Transform_o *)gameObject;
       if ( !byte_5969AE0 )
       {
-        gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        gameObject = (System_String_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
       if ( !v42 )
@@ -383,16 +388,16 @@ LABEL_39:
       if ( !Component_object )
         goto LABEL_39;
       RecoverItemComponent__setAPRecvItemInfo((RecoverItemComponent_o *)Component_object, v38, needAp, this, v44, v46);
-      gameObject = (__int64)this->fields.recoverItemList;
+      gameObject = (System_String_o *)this->fields.recoverItemList;
       if ( !gameObject )
         goto LABEL_39;
-      v53 = *(_QWORD *)(gameObject + 16);
+      fields = gameObject->fields;
       v54 = Method_System_Collections_Generic_List_RecoverItemComponent__Add__;
-      ++*(_DWORD *)(gameObject + 28);
-      if ( !v53 )
+      ++HIDWORD(gameObject[1].klass);
+      if ( !*(_QWORD *)&fields )
         goto LABEL_39;
-      v55 = *(int *)(gameObject + 24);
-      if ( (unsigned int)v55 >= *(_DWORD *)(v53 + 24) )
+      klass_low = SLODWORD(gameObject[1].klass);
+      if ( (unsigned int)klass_low >= *(_DWORD *)(*(_QWORD *)&fields + 24LL) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)gameObject,
@@ -401,8 +406,8 @@ LABEL_39:
       }
       else
       {
-        v56 = v53 + 8 * v55;
-        *(_DWORD *)(gameObject + 24) = v55 + 1;
+        v56 = *(_QWORD *)&fields + 8 * klass_low;
+        LODWORD(gameObject[1].klass) = klass_low + 1;
         *(_QWORD *)(v56 + 32) = Component_object;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v56 + 32),
@@ -415,11 +420,11 @@ LABEL_39:
           v52);
       }
       UnityEngine_GameObject__SetActive(v41, 1, 0);
-      LODWORD(v35) = *(_DWORD *)(v36 + 24);
+      LODWORD(klass) = v36[1].klass;
     }
-    while ( (__int64)++v37 < (int)v35 );
+    while ( (__int64)++v37 < (int)klass );
   }
-  gameObject = (__int64)this->fields.itemListInfoGrid;
+  gameObject = (System_String_o *)this->fields.itemListInfoGrid;
   if ( !gameObject )
     goto LABEL_39;
   UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0);
@@ -1012,7 +1017,7 @@ System_IAsyncResult_o *RecoverDlgComponent_CallbackFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(RecoverDlgComponent_Result_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

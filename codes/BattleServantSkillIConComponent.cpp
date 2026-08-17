@@ -310,31 +310,34 @@ void BattleServantSkillIConComponent__SetSkillInfo(
   UnityEngine_Object_o *turnNoLabelBase; // x25
   const MethodInfo *v19; // x2
   bool IsAvailable; // w8
-  const MethodInfo *v22; // x2
-  const MethodInfo *v23; // x1
-  int32_t ChargeTurn; // w0
+  float v21; // s0 OVERLAPPED
+  float v22; // s3
+  float v23; // s1
+  float v24; // s2
   const MethodInfo *v25; // x2
+  const MethodInfo *v26; // x1
+  int32_t ChargeTurn; // w0
+  const MethodInfo *v28; // x2
   UnityEngine_Object_o *noActSprite; // x24
-  const MethodInfo *v27; // x1
+  const MethodInfo *v30; // x1
   UnityEngine_Object_o *defaultNoActAtlas; // x25
-  System_String_o *v29; // x2
-  System_String_o *v30; // x3
-  int32_t v31; // w4
-  char v32; // w5
-  bool v33; // w6
-  bool v34; // w7
-  struct UISprite_o *v35; // x8
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  char v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  struct UISprite_o *v38; // x8
   struct UIAtlas_o *mAtlas; // x1
-  const MethodInfo *v37; // x1
-  const MethodInfo *v38; // x2
-  const MethodInfo *v39; // x4
   const MethodInfo *v40; // x1
   const MethodInfo *v41; // x2
-  UISprite_o *v42; // x22
+  const MethodInfo *v42; // x4
   const MethodInfo *v43; // x1
-  const MethodInfo *v44; // x1
-  const MethodInfo *v45; // x1
-  UnityEngine_Color_o v46; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  const MethodInfo *v44; // x2
+  UISprite_o *v45; // x22
+  const MethodInfo *v46; // x1
+  const MethodInfo *v47; // x1
+  const MethodInfo *v48; // x1
 
   v10 = sealSkillTurn;
   if ( (byte_597426C & 1) == 0 )
@@ -397,23 +400,23 @@ void BattleServantSkillIConComponent__SetSkillInfo(
       {
         if ( !root )
           goto LABEL_51;
-        v46.fields.r = 1.0;
-        v46.fields.a = 1.0;
+        v21 = 1.0;
+        v22 = 1.0;
       }
       else
       {
         if ( !root )
           goto LABEL_51;
-        v46.fields.a = 1.0;
-        v46.fields.r = 0.5;
+        v22 = 1.0;
+        v21 = 0.5;
       }
-      v46.fields.g = v46.fields.r;
-      v46.fields.b = v46.fields.r;
-      UIWidget__set_color((UIWidget_o *)root, v46, 0);
-      BattleServantSkillIConComponent__setCollider(this, 1, v22);
-      BattleServantSkillIConComponent__updateFlashSkill(this, v23);
+      v23 = v21;
+      v24 = v21;
+      UIWidget__set_color((UIWidget_o *)root, *(UnityEngine_Color_o *)&v21, 0);
+      BattleServantSkillIConComponent__setCollider(this, 1, v25);
+      BattleServantSkillIConComponent__updateFlashSkill(this, v26);
       ChargeTurn = BattleSkillInfoData__getChargeTurn(skillInfo, 0);
-      BattleServantSkillIConComponent__changeTurnCount(this, ChargeTurn, v25);
+      BattleServantSkillIConComponent__changeTurnCount(this, ChargeTurn, v28);
     }
   }
   noActSprite = (UnityEngine_Object_o *)this->fields.noActSprite;
@@ -423,24 +426,24 @@ void BattleServantSkillIConComponent__SetSkillInfo(
   {
     defaultNoActAtlas = (UnityEngine_Object_o *)this->fields.defaultNoActAtlas;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30);
     root = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(defaultNoActAtlas, 0, 0);
     if ( ((unsigned __int8)root & 1) != 0 )
     {
-      v35 = this->fields.noActSprite;
-      if ( !v35 )
+      v38 = this->fields.noActSprite;
+      if ( !v38 )
         goto LABEL_51;
-      mAtlas = v35->fields.mAtlas;
+      mAtlas = v38->fields.mAtlas;
       this->fields.defaultNoActAtlas = mAtlas;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.defaultNoActAtlas,
         (int32_t)mAtlas,
-        v29,
-        v30,
-        v31,
         v32,
         v33,
-        v34);
+        v34,
+        v35,
+        v36,
+        v37);
     }
     root = (UnityEngine_GameObject_o *)this->fields.noActSprite;
     if ( noActTurn | v10 )
@@ -452,12 +455,12 @@ void BattleServantSkillIConComponent__SetSkillInfo(
         {
           UnityEngine_GameObject__SetActive(root, 1, 0);
           this->fields.flashFlg = 0;
-          BattleServantSkillIConComponent__updateFlashSkill(this, v37);
+          BattleServantSkillIConComponent__updateFlashSkill(this, v40);
           if ( !v10 || noActTurn )
           {
             if ( v10 || !noActTurn )
             {
-              BattleServantSkillIConComponent__startChangeSealActSprite(this, noActTurn, v10, 0, v39);
+              BattleServantSkillIConComponent__startChangeSealActSprite(this, noActTurn, v10, 0, v42);
               if ( isActSkill )
                 goto LABEL_48;
               goto LABEL_47;
@@ -465,8 +468,8 @@ void BattleServantSkillIConComponent__SetSkillInfo(
             BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(
               this,
               (System_String_o *)StringLiteral_21204/*"icon_sealact_skill"*/,
-              v38);
-            BattleServantSkillIConComponent__stopSealActSprite(this, v44);
+              v41);
+            BattleServantSkillIConComponent__stopSealActSprite(this, v47);
             v10 = noActTurn;
           }
           else
@@ -474,18 +477,18 @@ void BattleServantSkillIConComponent__SetSkillInfo(
             BattleServantSkillIConComponent__UpdateNoActSpriteByDefaultAtlas(
               this,
               (System_String_o *)StringLiteral_21203/*"icon_sealact_seal"*/,
-              v38);
-            BattleServantSkillIConComponent__stopSealActSprite(this, v40);
+              v41);
+            BattleServantSkillIConComponent__stopSealActSprite(this, v43);
             if ( IsSealSkillSelect )
             {
-              v42 = this->fields.noActSprite;
+              v45 = this->fields.noActSprite;
               if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v27);
-              AtlasManager__SetEventSprite(v42, (System_String_o *)StringLiteral_21202/*"icon_sealact_disable"*/, 0);
+                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v30);
+              AtlasManager__SetEventSprite(v45, (System_String_o *)StringLiteral_21202/*"icon_sealact_disable"*/, 0);
               if ( isActSkill )
                 goto LABEL_48;
 LABEL_47:
-              BattleServantSkillIConComponent__setTurnLabel(this, v10, v41);
+              BattleServantSkillIConComponent__setTurnLabel(this, v10, v44);
               goto LABEL_48;
             }
           }
@@ -501,7 +504,7 @@ LABEL_47:
       if ( root )
       {
         UnityEngine_GameObject__SetActive(root, 0, 0);
-        BattleServantSkillIConComponent__stopSealActSprite(this, v43);
+        BattleServantSkillIConComponent__stopSealActSprite(this, v46);
         goto LABEL_48;
       }
     }
@@ -509,8 +512,8 @@ LABEL_51:
     sub_2213CDC(root, v14);
   }
 LABEL_48:
-  BattleServantSkillIConComponent__UpdateRankUpEffectState(this, v27);
-  BattleServantSkillIConComponent__SetUseCond(this, v45);
+  BattleServantSkillIConComponent__UpdateRankUpEffectState(this, v30);
+  BattleServantSkillIConComponent__SetUseCond(this, v48);
 }
 
 
@@ -1181,7 +1184,7 @@ void BattleServantSkillIConComponent__setCollider(
         bool flg,
         const MethodInfo *method)
 {
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   __int64 v6; // x1
   __int64 v7; // x1
   Il2CppObject *Component_object; // x21
@@ -1196,40 +1199,43 @@ void BattleServantSkillIConComponent__setCollider(
     sub_2213A60(&UnityEngine_Object_TypeInfo);
     byte_597426B = 1;
   }
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_20;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       (UnityEngine_GameObject_o *)gameObject,
+                       gameObject,
                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-  gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( (gameObject & 1) != 0 )
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
+                                             (UnityEngine_Object_o *)Component_object,
+                                             0,
+                                             0);
+  if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !Component_object )
       goto LABEL_20;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, flg, 0);
   }
-  gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_20:
     sub_2213CDC(gameObject, v6);
   v10 = UnityEngine_GameObject__GetComponent_object_(
-          (UnityEngine_GameObject_o *)gameObject,
+          gameObject,
           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0) && !flg )
   {
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( gameObject )
     {
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       v11 = (UnityEngine_Transform_o *)gameObject;
       if ( !byte_5969AE5 )
       {
-        gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
       if ( v11 )

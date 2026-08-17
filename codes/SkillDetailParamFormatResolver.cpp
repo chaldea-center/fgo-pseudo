@@ -260,6 +260,7 @@ bool SkillDetailParamFormatResolver__TryGetFuncIndex(
   System_String_o *v6; // x0
   int32_t *v7; // x1
   int32_t *v8; // x21
+  bool result; // w0
 
   *endFuncIndex = 0;
   if ( !rawString )
@@ -283,9 +284,10 @@ LABEL_13:
   if ( v8[6] < 2 )
   {
 LABEL_10:
+    result = 1;
     --*v5;
     --*endFuncIndex;
-    return 1;
+    return result;
   }
   v6 = (System_String_o *)*((_QWORD *)v8 + 5);
   v7 = endFuncIndex;

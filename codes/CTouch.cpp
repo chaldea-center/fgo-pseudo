@@ -80,6 +80,8 @@ UnityEngine_Vector2_o CTouch__GetTouchPos(const MethodInfo *method)
   int32_t ValidTouchLastID; // w0
   UnityEngine_Vector2_o position; // kr00_8
   struct UnityEngine_Vector2_StaticFields *v10; // x8
+  float v11; // s0
+  float v12; // s1
   UnityEngine_Touch_o src; // [xsp+Ch] [xbp-C4h] BYREF
   UnityEngine_Touch_o dest; // [xsp+50h] [xbp-80h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
@@ -131,8 +133,10 @@ UnityEngine_Vector2_o CTouch__GetTouchPos(const MethodInfo *method)
       }
     }
   }
-  result.fields.x = x;
-  result.fields.y = y;
+  v11 = x;
+  v12 = y;
+  result.fields.y = v12;
+  result.fields.x = v11;
   return result;
 }
 
@@ -720,6 +724,8 @@ UnityEngine_Vector2_o CTouch__getPosNow(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5974EE0 & 1) == 0 )
@@ -734,8 +740,10 @@ UnityEngine_Vector2_o CTouch__getPosNow(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  result.fields.x = static_fields->mPosNow.fields.x;
-  result.fields.y = static_fields->mPosNow.fields.y;
+  x = static_fields->mPosNow.fields.x;
+  y = static_fields->mPosNow.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -745,6 +753,8 @@ UnityEngine_Vector2_o CTouch__getScrPosDelta(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5974EE6 & 1) == 0 )
@@ -759,8 +769,10 @@ UnityEngine_Vector2_o CTouch__getScrPosDelta(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  result.fields.x = static_fields->mScrPosDelta.fields.x;
-  result.fields.y = static_fields->mScrPosDelta.fields.y;
+  x = static_fields->mScrPosDelta.fields.x;
+  y = static_fields->mScrPosDelta.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -810,6 +822,8 @@ UnityEngine_Vector2_o CTouch__getScrPosDeltaOld(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5974EE7 & 1) == 0 )
@@ -824,8 +838,10 @@ UnityEngine_Vector2_o CTouch__getScrPosDeltaOld(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  result.fields.x = static_fields->mScrPosDeltaOld.fields.x;
-  result.fields.y = static_fields->mScrPosDeltaOld.fields.y;
+  x = static_fields->mScrPosDeltaOld.fields.x;
+  y = static_fields->mScrPosDeltaOld.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -835,6 +851,8 @@ UnityEngine_Vector2_o CTouch__getScreenPosition(const MethodInfo *method)
   __int64 v1; // x1
   CTouch_c *v2; // x0
   struct CTouch_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5974EE2 & 1) == 0 )
@@ -849,8 +867,10 @@ UnityEngine_Vector2_o CTouch__getScreenPosition(const MethodInfo *method)
     v2 = CTouch_TypeInfo;
   }
   static_fields = v2->static_fields;
-  result.fields.x = static_fields->mScrPosNow.fields.x;
-  result.fields.y = static_fields->mScrPosNow.fields.y;
+  x = static_fields->mScrPosNow.fields.x;
+  y = static_fields->mScrPosNow.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -861,6 +881,8 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116428(UnityEngine_Vector2_o t
   float y; // s8
   float x; // s9
   CTouch_c *v5; // x0
+  float v6; // s0
+  float v7; // s1
   UnityEngine_Vector2_o ScreenPosition_56116540; // kr00_8
   UnityEngine_Vector2_o v9; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
@@ -881,8 +903,10 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116428(UnityEngine_Vector2_o t
   v9.fields.x = x;
   v9.fields.y = y;
   ScreenPosition_56116540 = CTouch__getScreenPosition_56116540(v9, v5->static_fields->mScreenCam, v2);
-  result.fields.y = ScreenPosition_56116540.fields.y;
-  result.fields.x = ScreenPosition_56116540.fields.x;
+  v7 = ScreenPosition_56116540.fields.y;
+  v6 = ScreenPosition_56116540.fields.x;
+  result.fields.y = v7;
+  result.fields.x = v6;
   return result;
 }
 
@@ -896,16 +920,19 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116540(
   float x; // s9
   __int64 v6; // x1
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
+  float v8; // s1
   float v9; // s8
   CTouch_c *v10; // x0
   UnityEngine_Camera_o *mScreenCam; // x0
   float v12; // s9
   float v13; // s10
-  float v14; // s8
   unsigned int lossyScale; // s0
+  float v15; // s8
+  float v16; // s0
   UnityEngine_Ray_o v17; // [xsp+8h] [xbp-58h] BYREF
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   y = tch_pos.fields.y;
   x = tch_pos.fields.x;
@@ -926,7 +953,7 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116540(
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     v9 = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
+    v8 = static_fields->zeroVector.fields.y;
   }
   else
   {
@@ -952,7 +979,7 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116540(
                                                   0)) == 0)
       || (lossyScale = (unsigned int)UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mScreenCam, 0),
           (mScreenCam = CTouch_TypeInfo->static_fields->mScreenCam) == 0)
-      || (v14 = *(float *)&lossyScale,
+      || (v15 = *(float *)&lossyScale,
           (mScreenCam = (UnityEngine_Camera_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)mScreenCam,
                                                   0)) == 0) )
@@ -960,13 +987,13 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116540(
 LABEL_20:
       sub_2213CDC(mScreenCam, v6);
     }
-    v9 = v13 / v14;
-    result.fields.y = v12
-                    / COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(
-                                             (UnityEngine_Transform_o *)mScreenCam,
-                                             0).fields.y));
+    v9 = v13 / v15;
+    v20 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)mScreenCam, 0);
+    v8 = v12 / v20.fields.y;
   }
-  result.fields.x = v9;
+  v16 = v9;
+  result.fields.y = v8;
+  result.fields.x = v16;
   return result;
 }
 
@@ -975,6 +1002,8 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116928(UnityEngine_Camera_o *c
 {
   CTouch_c *v2; // x0
   const MethodInfo *v3; // x1
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o ScreenPosition_56116540; // kr00_8
   UnityEngine_Vector2_o TouchPos; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
@@ -989,8 +1018,10 @@ UnityEngine_Vector2_o CTouch__getScreenPosition_56116928(UnityEngine_Camera_o *c
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo, method);
   TouchPos = CTouch__GetTouchPos((const MethodInfo *)v2);
   ScreenPosition_56116540 = CTouch__getScreenPosition_56116540(TouchPos, CTouch_TypeInfo->static_fields->mScreenCam, v3);
-  result.fields.y = ScreenPosition_56116540.fields.y;
-  result.fields.x = ScreenPosition_56116540.fields.x;
+  y = ScreenPosition_56116540.fields.y;
+  x = ScreenPosition_56116540.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -2045,9 +2076,9 @@ System_IAsyncResult_o *CTouch_TouchEventHandler__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

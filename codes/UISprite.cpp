@@ -247,14 +247,20 @@ void UISprite__OnFill(
   float v38; // s9
   int32_t v39; // w24
   int32_t v40; // w0
-  int32_t v41; // w24
-  int32_t v42; // w0
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
+  int32_t v45; // w24
+  int32_t v46; // w0
   unsigned int size; // w23
   struct UIWidget_OnPostFillCallback_o *onPostFill; // x8
-  UnityEngine_Rect_o v45; // 0:kr00_16.16
-  UnityEngine_Rect_o v46; // 0:kr10_16.16
-  UnityEngine_Rect_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v49; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v54; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
   if ( (byte_59752BD & 1) == 0 )
   {
@@ -318,26 +324,35 @@ void UISprite__OnFill(
       v40 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
               v10,
               *(_QWORD *)&v10->klass[1]._1.byval_arg.bits);
-      v47.fields.m_XMin = v34;
-      v47.fields.m_YMin = v37;
-      v47.fields.m_Width = v32;
-      v47.fields.m_Height = v31;
-      v45 = NGUIMath__ConvertToTexCoords(v47, v39, v40, 0);
-      v41 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v10->klass[1]._1.image)(
+      v49.fields.m_XMin = v34;
+      v49.fields.m_YMin = v37;
+      v49.fields.m_Width = v32;
+      v49.fields.m_Height = v31;
+      v50 = NGUIMath__ConvertToTexCoords(v49, v39, v40, 0);
+      m_XMin = v50.fields.m_XMin;
+      m_YMin = v50.fields.m_YMin;
+      m_Width = v50.fields.m_Width;
+      m_Height = v50.fields.m_Height;
+      v45 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, void *))v10->klass[1]._1.image)(
               v10,
               v10->klass[1]._1.gc_desc);
-      v42 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
+      v46 = ((__int64 (__fastcall *)(UnityEngine_Object_o *, _QWORD))v10->klass[1]._1.byval_arg.data)(
               v10,
               *(_QWORD *)&v10->klass[1]._1.byval_arg.bits);
-      v48.fields.m_XMin = v36;
-      v48.fields.m_YMin = v35;
-      v48.fields.m_Width = v38;
-      v48.fields.m_Height = v33;
-      v46 = NGUIMath__ConvertToTexCoords(v48, v41, v42, 0);
+      v51.fields.m_XMin = v36;
+      v51.fields.m_YMin = v35;
+      v51.fields.m_Width = v38;
+      v51.fields.m_Height = v33;
+      v52 = NGUIMath__ConvertToTexCoords(v51, v45, v46, 0);
       if ( verts )
       {
+        v54 = v52;
         size = verts->fields.size;
-        UIBasicSprite__Fill((UIBasicSprite_o *)this, verts, uvs, cols, v45, v46, 0);
+        v53.fields.m_XMin = m_XMin;
+        v53.fields.m_YMin = m_YMin;
+        v53.fields.m_Width = m_Width;
+        v53.fields.m_Height = m_Height;
+        UIBasicSprite__Fill((UIBasicSprite_o *)this, verts, uvs, cols, v53, v54, 0);
         onPostFill = this->fields.onPostFill;
         if ( onPostFill )
           ((void (__fastcall *)(intptr_t, UISprite_o *, _QWORD, BetterList_Vector3__o *, BetterList_Vector2__o *, BetterList_Color32__o *, intptr_t))onPostFill->fields.invoke_impl)(
@@ -468,28 +483,32 @@ UIAtlas_o *UISprite__get_atlas(UISprite_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector4_o UISprite__get_border(UISprite_o *this, const MethodInfo *method)
 {
   UISpriteData_o *AtlasSprite; // x0
-  UnityEngine_Vector4_o border; // 0:kr00_16.16
+  float borderLeft; // s0 OVERLAPPED
+  float borderRight; // s2
+  float borderBottom; // s1
+  float borderTop; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   AtlasSprite = UISprite__GetAtlasSprite(this, method);
   if ( AtlasSprite )
   {
-    result.fields.x = (float)AtlasSprite->fields.borderLeft;
-    result.fields.z = (float)AtlasSprite->fields.borderRight;
-    result.fields.y = (float)AtlasSprite->fields.borderBottom;
-    result.fields.w = (float)AtlasSprite->fields.borderTop;
+    borderLeft = (float)AtlasSprite->fields.borderLeft;
+    borderRight = (float)AtlasSprite->fields.borderRight;
+    borderBottom = (float)AtlasSprite->fields.borderBottom;
+    borderTop = (float)AtlasSprite->fields.borderTop;
   }
   else
   {
-    border = UIWidget__get_border((UIWidget_o *)this, 0);
-    result.fields.x = border.fields.x;
-    result.fields.y = border.fields.y;
-    result.fields.z = border.fields.z;
-    result.fields.w = border.fields.w;
+    *(UnityEngine_Vector4_o *)&borderLeft = UIWidget__get_border((UIWidget_o *)this, 0);
   }
+  result.fields.w = borderTop;
+  result.fields.z = borderRight;
+  result.fields.y = borderBottom;
+  result.fields.x = borderLeft;
   return result;
 }
 
@@ -527,6 +546,9 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
   float32x4_t v38; // q5
   float32x4_t v39; // q3
   float32x4_t v40; // q0
+  float v41; // s1
+  float v42; // s2
+  float v43; // s3
   unsigned int v44; // [xsp+0h] [xbp-80h]
   unsigned int v45; // [xsp+10h] [xbp-70h]
   unsigned int v46; // [xsp+20h] [xbp-60h]
@@ -635,10 +657,13 @@ UnityEngine_Vector4_o UISprite__get_drawingDimensions(UISprite_o *this, const Me
             vbicq_s8(
               vbslq_s8(vcgtq_f32((float32x4_t)this->fields.mDrawRegion, _Q1), _Q1, (int8x16_t)this->fields.mDrawRegion),
               vcltzq_f32((float32x4_t)this->fields.mDrawRegion))));
-  LODWORD(result.fields.y) = v40.n128_u32[1];
-  LODWORD(result.fields.w) = v40.n128_u32[3];
-  LODWORD(result.fields.z) = v40.n128_u32[2];
+  v41 = v40.n128_f32[1];
+  v43 = v40.n128_f32[3];
+  v42 = v40.n128_f32[2];
   result.fields.x = v40.n128_f32[0];
+  result.fields.w = v43;
+  result.fields.z = v42;
+  result.fields.y = v41;
   return result;
 }
 

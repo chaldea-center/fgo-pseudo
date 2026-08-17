@@ -45,7 +45,8 @@ int32_t DialogMessageEntity__GetMsgFontSize(
 System_Nullable_float__o DialogMessageEntity__GetMsgPosY(DialogMessageEntity_o *this, const MethodInfo *method)
 {
   float FloatValue; // s0
-  System_Nullable_float__o v4; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_float__o v4; // x0
+  System_Nullable_float__o v6; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_597067C & 1) == 0 )
   {
@@ -53,15 +54,18 @@ System_Nullable_float__o DialogMessageEntity__GetMsgPosY(DialogMessageEntity_o *
     sub_2213A60(&StringLiteral_22799/*"msgPosY"*/);
     byte_597067C = 1;
   }
-  if ( !EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_22799/*"msgPosY"*/, 0) )
-    return 0;
-  FloatValue = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_22799/*"msgPosY"*/, 0.0, 0);
-  v4 = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&v4,
-    FloatValue,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-  return v4;
+  if ( EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_22799/*"msgPosY"*/, 0) )
+  {
+    FloatValue = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_22799/*"msgPosY"*/, 0.0, 0);
+    v4 = (System_Nullable_float__o)&v6;
+    v6 = 0;
+    System_Nullable_float____ctor(v4, FloatValue, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    return v6;
+  }
+  else
+  {
+    return (System_Nullable_float__o)0LL;
+  }
 }
 
 

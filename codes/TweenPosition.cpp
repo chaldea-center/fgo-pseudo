@@ -120,10 +120,9 @@ void TweenPosition__OnUpdate(TweenPosition_o *this, float factor, bool isFinishe
 {
   float v4; // s1
   float v5; // s4
-  unsigned __int64 v6; // d0
+  unsigned __int64 v6; // d0 OVERLAPPED
   float v7; // s2
-  float v8; // s1
-  UnityEngine_Vector3_o v9; // 0:kr00_12.12
+  int v8; // s1
 
   v4 = (float)(1.0 - factor) * this->fields.from.fields.z;
   v5 = this->fields.to.fields.z * factor;
@@ -131,11 +130,8 @@ void TweenPosition__OnUpdate(TweenPosition_o *this, float factor, bool isFinishe
          vmul_n_f32(*(float32x2_t *)&this->fields.from.fields.x, 1.0 - factor),
          vmul_n_f32(*(float32x2_t *)&this->fields.to.fields.x, factor)).n64_u64[0];
   v7 = v4 + v5;
-  v8 = *((float *)&v6 + 1);
-  LODWORD(v9.fields.x) = v6;
-  v9.fields.y = v8;
-  v9.fields.z = v7;
-  TweenPosition__set_value(this, v9, (const MethodInfo *)isFinished);
+  v8 = HIDWORD(v6);
+  TweenPosition__set_value(this, *(UnityEngine_Vector3_o *)&v6, (const MethodInfo *)isFinished);
 }
 
 
@@ -204,32 +200,19 @@ UnityEngine_Vector3_o TweenPosition__get_value(TweenPosition_o *this, const Meth
   _BOOL4 worldSpace; // w19
   UnityEngine_Transform_o *cachedTransform; // x0
   __int64 v4; // x1
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   worldSpace = this->fields.worldSpace;
   cachedTransform = TweenPosition__get_cachedTransform(this, method);
   if ( worldSpace )
   {
     if ( cachedTransform )
-    {
-      position = UnityEngine_Transform__get_position(cachedTransform, 0);
-      result.fields.x = position.fields.x;
-      result.fields.y = position.fields.y;
-      result.fields.z = position.fields.z;
-      return result;
-    }
+      return UnityEngine_Transform__get_position(cachedTransform, 0);
 LABEL_6:
     sub_2213CDC(cachedTransform, v4);
   }
   if ( !cachedTransform )
     goto LABEL_6;
-  localPosition = UnityEngine_Transform__get_localPosition(cachedTransform, 0);
-  result.fields.x = localPosition.fields.x;
-  result.fields.y = localPosition.fields.y;
-  result.fields.z = localPosition.fields.z;
-  return result;
+  return UnityEngine_Transform__get_localPosition(cachedTransform, 0);
 }
 
 
@@ -249,9 +232,9 @@ void TweenPosition__set_value(TweenPosition_o *this, UnityEngine_Vector3_o value
   const MethodInfo *v8; // x1
   UnityEngine_Transform_o *cachedTransform; // x0
   _BOOL4 worldSpace; // w20
-  unsigned __int64 localPosition; // kr00_8
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = value.fields.z;
   y = value.fields.y;
@@ -278,10 +261,10 @@ LABEL_9:
     {
       if ( cachedTransform )
       {
-        v12.fields.x = x;
-        v12.fields.y = y;
-        v12.fields.z = z;
-        UnityEngine_Transform__set_position(cachedTransform, v12, 0);
+        v11.fields.x = x;
+        v11.fields.y = y;
+        v11.fields.z = z;
+        UnityEngine_Transform__set_position(cachedTransform, v11, 0);
         return;
       }
 LABEL_16:
@@ -289,17 +272,17 @@ LABEL_16:
     }
     if ( !cachedTransform )
       goto LABEL_16;
-    v13.fields.x = x;
-    v13.fields.y = y;
-    v13.fields.z = z;
-    UnityEngine_Transform__set_localPosition(cachedTransform, v13, 0);
+    v12.fields.x = x;
+    v12.fields.y = y;
+    v12.fields.z = z;
+    UnityEngine_Transform__set_localPosition(cachedTransform, v12, 0);
   }
   else
   {
     cachedTransform = TweenPosition__get_cachedTransform(this, v8);
     if ( !cachedTransform )
       goto LABEL_16;
-    localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(cachedTransform, 0);
-    NGUIMath__MoveRect(this->fields.mRect, x - *(float *)&localPosition, y - *((float *)&localPosition + 1), 0);
+    localPosition = UnityEngine_Transform__get_localPosition(cachedTransform, 0);
+    NGUIMath__MoveRect(this->fields.mRect, x - localPosition.fields.x, y - localPosition.fields.y, 0);
   }
 }

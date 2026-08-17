@@ -11,18 +11,19 @@ void ExtraBattleUserInterfaceData___cctor(const MethodInfo *method)
   ExtraBattleUserInterfaceData_c *v9; // x8
   __int64 v10; // x1
   Il2CppType *v11; // x19
-  __int64 v12; // x1
+  System_RuntimeTypeHandle_o v12; // x0
+  __int64 v13; // x1
   System_Type_o *TypeFromHandle; // x19
   System_Array_o *Values; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
-  System_Int32Enum_array *v16; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
+  System_Int32Enum_array *v17; // x0
   struct ExtraBattleUserInterfaceData_StaticFields *static_fields; // x8
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
 
   if ( (byte_5973894 & 1) == 0 )
   {
@@ -45,27 +46,28 @@ void ExtraBattleUserInterfaceData___cctor(const MethodInfo *method)
   v11 = ExtraBattleUserInterfaceData_LabelType_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v10);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v11, 0);
+  v12.fields.value = (intptr_t)v11;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v12, 0);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v12);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v13);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
-  v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
+  v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
                                                                (System_Collections_IEnumerable_o *)Values,
                                                                (const MethodInfo_3868A20 *)Method_System_Linq_Enumerable_Cast_ExtraBattleUserInterfaceData_LabelType___);
-  v16 = System_Linq_Enumerable__ToArray_Int32Enum_(
-          v15,
+  v17 = System_Linq_Enumerable__ToArray_Int32Enum_(
+          v16,
           (const MethodInfo_389BA1C *)Method_System_Linq_Enumerable_ToArray_ExtraBattleUserInterfaceData_LabelType___);
   static_fields = ExtraBattleUserInterfaceData_TypeInfo->static_fields;
-  static_fields->AllLabelTypes = (struct ExtraBattleUserInterfaceData_LabelType_array *)v16;
+  static_fields->AllLabelTypes = (struct ExtraBattleUserInterfaceData_LabelType_array *)v17;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->AllLabelTypes,
-    (int32_t)v16,
-    v18,
+    (int32_t)v17,
     v19,
     v20,
     v21,
     v22,
-    v23);
+    v23,
+    v24);
 }
 
 

@@ -837,11 +837,10 @@ bool WarBoardCondType__SquareIndexGroupSvtNumAbove(
         const MethodInfo *method)
 {
   const MethodInfo *v4; // x5
-  int32_t destServantCount; // [xsp+8h] [xbp-8h] BYREF
-  int32_t srcServantCount; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t destServantCount[2]; // [xsp+8h] [xbp-8h] BYREF
 
-  WarBoardCondType__SetSquareServantCount(isPlayer, srcId, destId, &srcServantCount, &destServantCount, v4);
-  return srcServantCount >= destServantCount;
+  WarBoardCondType__SetSquareServantCount(isPlayer, srcId, destId, &destServantCount[1], destServantCount, v4);
+  return destServantCount[1] >= destServantCount[0];
 }
 
 
@@ -852,11 +851,10 @@ bool WarBoardCondType__SquareIndexGroupSvtNumBelow(
         const MethodInfo *method)
 {
   const MethodInfo *v4; // x5
-  int32_t destServantCount; // [xsp+8h] [xbp-8h] BYREF
-  int32_t srcServantCount; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t destServantCount[2]; // [xsp+8h] [xbp-8h] BYREF
 
-  WarBoardCondType__SetSquareServantCount(isPlayer, srcId, destId, &srcServantCount, &destServantCount, v4);
-  return srcServantCount <= destServantCount;
+  WarBoardCondType__SetSquareServantCount(isPlayer, srcId, destId, &destServantCount[1], destServantCount, v4);
+  return destServantCount[1] <= destServantCount[0];
 }
 
 

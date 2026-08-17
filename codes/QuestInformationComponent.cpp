@@ -170,10 +170,15 @@ void QuestInformationComponent__Awake(QuestInformationComponent_o *this, const M
   __int64 v11; // x2
   float OffsetX; // s0
   float v13; // s13
-  UnityEngine_Vector3_o center; // 0:kr00_12.12
-  UnityEngine_Vector3_o size; // 0:kr14_12.12
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v17; // s11
+  float v18; // s12
+  float v19; // s8
+  UnityEngine_Vector3_o center; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D37A & 1) == 0 )
   {
@@ -204,15 +209,21 @@ void QuestInformationComponent__Awake(QuestInformationComponent_o *this, const M
       {
         v13 = ceilf(OffsetX);
         center = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
+        x = center.fields.x;
+        y = center.fields.y;
+        z = center.fields.z;
         size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)Component_object, 0);
-        v16.fields.y = center.fields.y;
-        v16.fields.x = (float)(v13 * 0.5) + center.fields.x;
-        v16.fields.z = center.fields.z;
-        UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, v16, 0);
-        v17.fields.y = size.fields.y;
-        v17.fields.z = size.fields.z;
-        v17.fields.x = v13 + size.fields.x;
-        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v17, 0);
+        v17 = size.fields.y;
+        v18 = v13 + size.fields.x;
+        size.fields.y = y;
+        size.fields.x = (float)(v13 * 0.5) + x;
+        v19 = size.fields.z;
+        size.fields.z = z;
+        UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, size, 0);
+        v22.fields.y = v17;
+        v22.fields.z = v19;
+        v22.fields.x = v18;
+        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v22, 0);
         return;
       }
 LABEL_15:
@@ -252,9 +263,9 @@ void QuestInformationComponent__CloseWindow(QuestInformationComponent_o *this, b
   TerminalSceneComponent_c *v8; // x0
   UnityEngine_Object_o *mInstance; // x20
   __int64 v10; // x2
-  __int64 v11; // x8
+  UnityEngine_GameObject_c *klass; // x8
   UnityEngine_Object_o *v12; // x20
-  __int64 v13; // x8
+  UnityEngine_GameObject_c *v13; // x8
   TerminalSceneComponent_c *v14; // x0
   __int64 v15; // x2
   TerminalSceneComponent_c *v16; // x0
@@ -314,10 +325,10 @@ void QuestInformationComponent__CloseWindow(QuestInformationComponent_o *this, b
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, isPlaySe, v10);
         this = (QuestInformationComponent_o *)TerminalSceneComponent_TypeInfo;
       }
-      v11 = **((_QWORD **)this + 23);
-      if ( !v11 )
+      klass = this[1].fields.window->klass;
+      if ( !klass )
         goto LABEL_54;
-      v12 = *(UnityEngine_Object_o **)(v11 + 264);
+      v12 = *(UnityEngine_Object_o **)&klass->_2.static_fields_size;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isPlaySe, v10);
       if ( UnityEngine_Object__op_Inequality(v12, 0, 0) )
@@ -335,10 +346,10 @@ void QuestInformationComponent__CloseWindow(QuestInformationComponent_o *this, b
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, isPlaySe, v10);
           this = (QuestInformationComponent_o *)TerminalSceneComponent_TypeInfo;
         }
-        v13 = **((_QWORD **)this + 23);
+        v13 = this[1].fields.window->klass;
         if ( !v13 )
           goto LABEL_54;
-        this = *(QuestInformationComponent_o **)(v13 + 264);
+        this = *(QuestInformationComponent_o **)&v13->_2.static_fields_size;
         if ( !this )
           goto LABEL_54;
         ScrTerminalMap__SetVisibilitySpotWebView((ScrTerminalMap_o *)this, 1, 1, 0);
@@ -453,36 +464,38 @@ bool QuestInformationComponent__FrameInOut(
   bool v56; // w20
   float y; // s11
   float z; // s9
+  float v60; // s13
+  float v61; // s14
   Il2CppObject *Component_object; // x0
-  System_String_o *v61; // x2
-  System_String_o *v62; // x3
-  int32_t v63; // w4
-  int32_t v64; // w5
-  bool v65; // w6
-  bool v66; // w7
-  __int64 v67; // x1
-  __int64 v68; // x2
-  QuestInformationComponent_c *v69; // x0
-  float v70; // s0
-  float v71; // s10
-  float v72; // s12
-  float v73; // s13
-  int v74; // w9
-  MoveObject_o *v75; // x22
-  int32_t v76; // w8
+  System_String_o *v63; // x2
+  System_String_o *v64; // x3
+  int32_t v65; // w4
+  int32_t v66; // w5
+  bool v67; // w6
+  bool v68; // w7
+  __int64 v69; // x1
+  __int64 v70; // x2
+  QuestInformationComponent_c *v71; // x0
+  float v72; // s0
+  float v73; // s10
+  float v74; // s12
+  float v75; // s13
+  int v76; // w9
+  MoveObject_o *v77; // x22
+  int32_t v78; // w8
   float FRAME_IN_OUT_MV_SPD_TIME; // s14
-  System_Action_o *v78; // x21
-  System_Action_o *v79; // x23
-  __int64 v80; // x2
-  TerminalPramsManager_c *v81; // x0
+  System_Action_o *v80; // x21
+  System_Action_o *v81; // x23
+  __int64 v82; // x2
+  TerminalPramsManager_c *v83; // x0
   ListViewSort_c *klass; // x8
-  __int64 v83; // x8
+  __int64 v85; // x8
   float from; // [xsp+4h] [xbp-9Ch]
   double iptr; // [xsp+8h] [xbp-98h] BYREF
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v87; // 0:kr14_12.12
-  UnityEngine_Vector3_o v88; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v89; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v89; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v91; // 0:s3.4,4:s4.4,8:s5.4
 
   if ( (byte_596D381 & 1) == 0 )
   {
@@ -578,87 +591,89 @@ LABEL_29:
     LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v7 + 16), 0);
     y = LocalPosition.fields.y;
     z = LocalPosition.fields.z;
-    v87 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v7 + 16), 0);
+    v89 = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)*(_QWORD *)(v7 + 16), 0);
+    v60 = v89.fields.y;
+    v61 = v89.fields.z;
     Component_object = GameObjectExtensions__SafeGetComponent_object_(
                          *(UnityEngine_GameObject_o **)(v7 + 16),
                          (const MethodInfo_38B8770 *)Method_GameObjectExtensions_SafeGetComponent_MoveObject___);
     *(_QWORD *)(v7 + 24) = Component_object;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)Component_object, v61, v62, v63, v64, v65, v66);
-    v69 = QuestInformationComponent_TypeInfo;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)Component_object, v63, v64, v65, v66, v67, v68);
+    v71 = QuestInformationComponent_TypeInfo;
     if ( is_framein )
-      v70 = v87.fields.z;
+      v72 = v61;
     else
-      v70 = LocalPosition.fields.z;
+      v72 = z;
     if ( is_framein )
-      v71 = v87.fields.y;
+      v73 = v60;
     else
-      v71 = LocalPosition.fields.y;
+      v73 = y;
     if ( is_framein )
-      v72 = (float)FRAME_OUT_POS_X;
+      v74 = (float)FRAME_OUT_POS_X;
     else
-      v72 = (float)v40;
+      v74 = (float)v40;
     if ( is_framein )
     {
-      v73 = (float)v40;
+      v75 = (float)v40;
     }
     else
     {
-      z = v87.fields.z;
-      y = v87.fields.y;
-      v73 = (float)FRAME_OUT_POS_X;
+      z = v61;
+      y = v60;
+      v75 = (float)FRAME_OUT_POS_X;
     }
-    v74 = *(&QuestInformationComponent_TypeInfo->_2.cctor_finished + 1);
-    v75 = *(MoveObject_o **)(v7 + 24);
+    v76 = *(&QuestInformationComponent_TypeInfo->_2.cctor_finished + 1);
+    v77 = *(MoveObject_o **)(v7 + 24);
     if ( is_framein )
-      v76 = 1;
+      v78 = 1;
     else
-      v76 = 2;
-    this->fields.dispAnimState = v76;
-    from = v70;
-    if ( !v74 )
+      v78 = 2;
+    this->fields.dispAnimState = v78;
+    from = v72;
+    if ( !v76 )
     {
-      j_il2cpp_runtime_class_init_0(v69, v67, v68);
-      v69 = QuestInformationComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v71, v69, v70);
+      v71 = QuestInformationComponent_TypeInfo;
     }
-    FRAME_IN_OUT_MV_SPD_TIME = v69->static_fields->FRAME_IN_OUT_MV_SPD_TIME;
-    v78 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    FRAME_IN_OUT_MV_SPD_TIME = v71->static_fields->FRAME_IN_OUT_MV_SPD_TIME;
+    v80 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
-      v78,
+      v80,
       (Il2CppObject *)v7,
       Method_QuestInformationComponent___c__DisplayClass43_0__FrameInOut_b__0__,
       0);
-    v79 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    v81 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
-      v79,
+      v81,
       (Il2CppObject *)v7,
       Method_QuestInformationComponent___c__DisplayClass43_0__FrameInOut_b__1__,
       0);
-    if ( v75 )
+    if ( v77 )
     {
-      v88.fields.x = v72;
-      v88.fields.z = from;
-      v88.fields.y = v71;
-      v89.fields.x = v73;
-      v89.fields.y = y;
-      v89.fields.z = z;
-      MoveObject__Play(v75, v88, v89, FRAME_IN_OUT_MV_SPD_TIME, v78, v79, 0.0, 17, 0);
+      v90.fields.x = v74;
+      v90.fields.z = from;
+      v90.fields.y = v73;
+      v91.fields.x = v75;
+      v91.fields.y = y;
+      v91.fields.z = z;
+      MoveObject__Play(v77, v90, v91, FRAME_IN_OUT_MV_SPD_TIME, v80, v81, 0.0, 17, 0);
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v80);
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v82);
       if ( !byte_596D31C )
       {
         sub_2213A60(&TerminalPramsManager_TypeInfo);
         byte_596D31C = 1;
       }
-      v81 = TerminalPramsManager_TypeInfo;
+      v83 = TerminalPramsManager_TypeInfo;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v80);
-        v81 = TerminalPramsManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v82);
+        v83 = TerminalPramsManager_TypeInfo;
       }
-      if ( v81->static_fields->_IsBackQuestBoardDisable_k__BackingField )
+      if ( v83->static_fields->_IsBackQuestBoardDisable_k__BackingField )
         return 1;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v9, v80);
+        j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v9, v82);
       if ( !byte_596A090 )
       {
         sub_2213A60(&TerminalSceneComponent_TypeInfo);
@@ -667,16 +682,16 @@ LABEL_29:
       v8 = (QuestBoardListViewManager_o *)TerminalSceneComponent_TypeInfo;
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v9, v80);
+        j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, v9, v82);
         v8 = (QuestBoardListViewManager_o *)TerminalSceneComponent_TypeInfo;
       }
       klass = v8->fields.sort->klass;
       if ( klass )
       {
-        v83 = *(_QWORD *)&klass->_2.element_size;
-        if ( v83 )
+        v85 = *(_QWORD *)&klass->_2.element_size;
+        if ( v85 )
         {
-          v8 = *(QuestBoardListViewManager_o **)(v83 + 328);
+          v8 = *(QuestBoardListViewManager_o **)(v85 + 328);
           if ( v8 )
           {
             v56 = 1;

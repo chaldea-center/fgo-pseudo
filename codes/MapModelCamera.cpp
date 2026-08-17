@@ -59,7 +59,7 @@ UnityEngine_GameObject_o *MapModelCamera__RayCast_42972988(
   UnityEngine_Ray_o v24; // [xsp+0h] [xbp-C0h] BYREF
   UnityEngine_Ray_o v25; // [xsp+18h] [xbp-A8h] BYREF
   UnityEngine_RaycastHit_o v26; // [xsp+30h] [xbp-90h] BYREF
-  UnityEngine_Vector3_o v27; // 0:kr00_12.12
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -81,15 +81,15 @@ UnityEngine_GameObject_o *MapModelCamera__RayCast_42972988(
   renderTextureCamera = (UnityEngine_Camera_o *)UnityEngine_GameObject__get_transform(renderTextureUI, 0);
   if ( !renderTextureCamera )
     goto LABEL_19;
-  v28.fields.x = x;
-  v28.fields.y = y;
-  v28.fields.z = z;
-  v27 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)renderTextureCamera, v28, 0);
+  v27.fields.x = x;
+  v27.fields.y = y;
+  v27.fields.z = z;
+  v28 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)renderTextureCamera, v27, 0);
   if ( !v12 )
     goto LABEL_19;
-  v29.fields.z = (float)(v8 * 0.5) + v27.fields.z;
-  v29.fields.y = (float)(v9 * 0.5) + v27.fields.y;
-  v29.fields.x = (float)(v10 * 0.5) + v27.fields.x;
+  v29.fields.z = (float)(v8 * 0.5) + v28.fields.z;
+  v29.fields.y = (float)(v9 * 0.5) + v28.fields.y;
+  v29.fields.x = (float)(v10 * 0.5) + v28.fields.x;
   UnityEngine_Camera__ScreenPointToRay_83198808(&v25, v12, v29, 0);
   if ( !*(&UnityEngine_Physics_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo, v13, v14);

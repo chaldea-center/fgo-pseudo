@@ -17,17 +17,19 @@ void BattleConcatLabelSkillNameComponent__Adjust(BattleConcatLabelSkillNameCompo
   __int64 v10; // x1
   struct UISprite_o *bgSprite; // x8
   int v12; // w21
-  UnityEngine_Vector2_o pivotOffset; // kr18_8
-  struct UISprite_o *v14; // x8
+  float x; // s10
+  float v14; // s11
+  UnityEngine_Vector2_o pivotOffset; // kr08_8
+  struct UISprite_o *v16; // x8
   int mWidth; // s2
   float mHeight; // s4
-  float v17; // s0
-  int32_t paddingRubbyLabelHeight; // w9
   float v19; // s0
+  int32_t paddingRubbyLabelHeight; // w9
+  float v21; // s0
   System_Collections_Generic_IEnumerable_T__o *battleMessages; // x19
-  System_Action_object__o *v21; // x21
-  unsigned __int64 localPosition; // kr10_8
-  UnityEngine_Vector2_o v23; // 0:s0.4,4:s1.4
+  System_Action_object__o *v23; // x21
+  UnityEngine_Vector2_o v24; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973F19 & 1) == 0 )
   {
@@ -43,9 +45,9 @@ void BattleConcatLabelSkillNameComponent__Adjust(BattleConcatLabelSkillNameCompo
   y = v6.fields.y;
   if ( this->fields.paddingRubbyLabelHeight )
     y = v6.fields.y + BattleConcatLabelSkillNameComponent__GetMaxRubbyPadding(this, v5);
-  v23.fields.x = v6.fields.x;
-  v23.fields.y = y;
-  BattleConcatLabelMessageComponent__ResizeBg((BattleConcatLabelMessageComponent_o *)this, v23, v5);
+  v24.fields.x = v6.fields.x;
+  v24.fields.y = y;
+  BattleConcatLabelMessageComponent__ResizeBg((BattleConcatLabelMessageComponent_o *)this, v24, v5);
   TopRubyHeight = (UnityEngine_Component_o *)BattleConcatLabelSkillNameComponent__GetTopRubyHeight(this, v8);
   bgSprite = this->fields.bgSprite;
   if ( !bgSprite )
@@ -55,42 +57,42 @@ void BattleConcatLabelSkillNameComponent__Adjust(BattleConcatLabelSkillNameCompo
   TopRubyHeight = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !TopRubyHeight
     || (TopRubyHeight = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(TopRubyHeight, 0)) == 0
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
-                                            (UnityEngine_Transform_o *)TopRubyHeight,
-                                            0),
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)TopRubyHeight, 0),
         (TopRubyHeight = (UnityEngine_Component_o *)this->fields.bgSprite) == 0)
-    || (pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)TopRubyHeight, 0), (v14 = this->fields.bgSprite) == 0)
+    || (x = localPosition.fields.x,
+        v14 = localPosition.fields.y,
+        pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)TopRubyHeight, 0),
+        (v16 = this->fields.bgSprite) == 0)
     || !v3 )
   {
 LABEL_15:
     sub_2213CDC(TopRubyHeight, v10);
   }
-  mWidth = v14->fields.mWidth;
-  mHeight = (float)v14->fields.mHeight;
+  mWidth = v16->fields.mWidth;
+  mHeight = (float)v16->fields.mHeight;
   *(_DWORD *)(v3 + 24) = 0;
-  v17 = (float)(*((float *)&localPosition + 1) + (float)((float)(1.0 - pivotOffset.fields.y) * mHeight))
-      - (float)((float)(mHeight - y) * 0.5);
-  *(float *)(v3 + 16) = (float)(*(float *)&localPosition + (float)((float)((float)mWidth - v6.fields.x) * 0.5))
+  v19 = (float)(v14 + (float)((float)(1.0 - pivotOffset.fields.y) * mHeight)) - (float)((float)(mHeight - y) * 0.5);
+  *(float *)(v3 + 16) = (float)(x + (float)((float)((float)mWidth - v6.fields.x) * 0.5))
                       - (float)(pivotOffset.fields.x * (float)mWidth);
-  *(float *)(v3 + 20) = v17;
+  *(float *)(v3 + 20) = v19;
   if ( v12 >= 1 )
   {
     paddingRubbyLabelHeight = this->fields.paddingRubbyLabelHeight;
-    v19 = v17 + (float)((float)v12 * -0.5);
-    *(float *)(v3 + 20) = v19;
+    v21 = v19 + (float)((float)v12 * -0.5);
+    *(float *)(v3 + 20) = v21;
     if ( paddingRubbyLabelHeight )
-      *(float *)(v3 + 20) = v19 - (float)paddingRubbyLabelHeight;
+      *(float *)(v3 + 20) = v21 - (float)paddingRubbyLabelHeight;
   }
   battleMessages = (System_Collections_Generic_IEnumerable_T__o *)this->fields.battleMessages;
-  v21 = (System_Action_object__o *)sub_2213CCC(System_Action_WrapLineMessage__TypeInfo);
+  v23 = (System_Action_object__o *)sub_2213CCC(System_Action_WrapLineMessage__TypeInfo);
   System_Action_object____ctor(
-    v21,
+    v23,
     (Il2CppObject *)v3,
     Method_BattleConcatLabelSkillNameComponent___c__DisplayClass4_0__Adjust_b__0__,
     0);
   BasicHelper__ForEach_object_(
     battleMessages,
-    (System_Action_T__o *)v21,
+    (System_Action_T__o *)v23,
     (const MethodInfo_381282C *)Method_BasicHelper_ForEach_WrapLineMessage___);
 }
 
@@ -114,8 +116,8 @@ float BattleConcatLabelSkillNameComponent__GetMaxRubbyPadding(
   __int64 v15; // x8
   UnityEngine_GameObject_o *v16; // x22
   float v17; // s8
-  float v19; // s1
-  struct WrapLineMessage_array *v20; // [xsp+8h] [xbp-68h]
+  struct WrapLineMessage_array *v19; // [xsp+8h] [xbp-68h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973F1A & 1) == 0 )
   {
@@ -138,7 +140,7 @@ float BattleConcatLabelSkillNameComponent__GetMaxRubbyPadding(
   {
     v8 = 0;
     v9 = 0;
-    v20 = this->fields.battleMessages;
+    v19 = this->fields.battleMessages;
     while ( 1 )
     {
       if ( v8 >= max_length_low )
@@ -188,10 +190,11 @@ LABEL_32:
                                                       0);
             if ( !DispLabelArray )
               goto LABEL_31;
-            v19 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(
-                                         (UnityEngine_Transform_o *)DispLabelArray,
-                                         0).fields.y));
-            GameObjectExtensions__SetLocalPositionY(v16, v19 + (float)this->fields.paddingRubbyLabelHeight, 0);
+            localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)DispLabelArray, 0);
+            GameObjectExtensions__SetLocalPositionY(
+              v16,
+              localPosition.fields.y + (float)this->fields.paddingRubbyLabelHeight,
+              0);
             if ( !v3 )
               goto LABEL_31;
             v17 = *(float *)(v14 + 76);
@@ -220,9 +223,9 @@ LABEL_32:
       System_Collections_Generic_HashSet_float___Clear(
         v3,
         (const MethodInfo_42C35B8 *)Method_System_Collections_Generic_HashSet_float__Clear__);
-      battleMessages = v20;
+      battleMessages = v19;
       ++v8;
-      max_length_low = LODWORD(v20->max_length);
+      max_length_low = LODWORD(v19->max_length);
       if ( (int)v8 >= (int)max_length_low )
         return (float)(this->fields.paddingRubbyLabelHeight * v9);
     }

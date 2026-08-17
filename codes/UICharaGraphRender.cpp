@@ -39,242 +39,244 @@ void UICharaGraphRender___cctor(const MethodInfo *method)
   bool v37; // w7
   UICharaGraphRender_c *v38; // x8
   Il2CppClass *v39; // x0
-  System_Array_o *v40; // x19
-  struct UICharaGraphRender_StaticFields *v41; // x0
-  System_String_o *v42; // x2
-  System_String_o *v43; // x3
-  int32_t v44; // w4
-  int32_t v45; // w5
-  bool v46; // w6
-  bool v47; // w7
-  System_String_o *v48; // x2
-  System_String_o *v49; // x3
-  int32_t v50; // w4
-  int32_t v51; // w5
-  bool v52; // w6
-  bool v53; // w7
-  __int64 v54; // x19
-  int32_t v55; // w1
-  System_String_o *v56; // x2
-  System_String_o *v57; // x3
-  int32_t v58; // w4
-  int32_t v59; // w5
-  bool v60; // w6
-  bool v61; // w7
-  int32_t v62; // w1
-  System_String_o *v63; // x2
-  System_String_o *v64; // x3
-  int32_t v65; // w4
-  int32_t v66; // w5
-  bool v67; // w6
-  bool v68; // w7
-  int32_t v69; // w1
-  System_String_o *v70; // x2
-  System_String_o *v71; // x3
-  int32_t v72; // w4
-  int32_t v73; // w5
-  bool v74; // w6
-  bool v75; // w7
-  int32_t v76; // w1
-  System_String_o *v77; // x2
-  System_String_o *v78; // x3
-  int32_t v79; // w4
-  int32_t v80; // w5
-  bool v81; // w6
-  bool v82; // w7
-  int32_t v83; // w1
-  System_String_o *v84; // x2
-  System_String_o *v85; // x3
-  int32_t v86; // w4
-  int32_t v87; // w5
-  bool v88; // w6
-  bool v89; // w7
-  int32_t v90; // w1
-  struct UICharaGraphRender_StaticFields *v91; // x0
-  System_String_o *v92; // x2
-  System_String_o *v93; // x3
-  int32_t v94; // w4
-  int32_t v95; // w5
-  bool v96; // w6
-  bool v97; // w7
-  System_String_o *v98; // x2
-  System_String_o *v99; // x3
-  int32_t v100; // w4
-  int32_t v101; // w5
-  bool v102; // w6
-  bool v103; // w7
-  __int64 v104; // x19
-  int32_t v105; // w1
-  System_String_o *v106; // x2
-  System_String_o *v107; // x3
-  int32_t v108; // w4
-  int32_t v109; // w5
-  bool v110; // w6
-  bool v111; // w7
-  int32_t v112; // w1
-  System_String_o *v113; // x2
-  System_String_o *v114; // x3
-  int32_t v115; // w4
-  int32_t v116; // w5
-  bool v117; // w6
-  bool v118; // w7
-  int32_t v119; // w1
-  System_String_o *v120; // x2
-  System_String_o *v121; // x3
-  int32_t v122; // w4
-  int32_t v123; // w5
-  bool v124; // w6
-  bool v125; // w7
-  int32_t v126; // w1
-  System_String_o *v127; // x2
-  System_String_o *v128; // x3
-  int32_t v129; // w4
-  int32_t v130; // w5
-  bool v131; // w6
-  bool v132; // w7
-  int32_t v133; // w1
-  System_String_o *v134; // x2
-  System_String_o *v135; // x3
-  int32_t v136; // w4
-  int32_t v137; // w5
-  bool v138; // w6
-  bool v139; // w7
-  int32_t v140; // w1
-  System_String_o *v141; // x2
-  System_String_o *v142; // x3
-  int32_t v143; // w4
-  int32_t v144; // w5
-  bool v145; // w6
-  bool v146; // w7
-  int32_t v147; // w1
-  System_String_o *v148; // x2
-  System_String_o *v149; // x3
-  int32_t v150; // w4
-  int32_t v151; // w5
-  bool v152; // w6
-  bool v153; // w7
-  int32_t v154; // w1
-  struct UICharaGraphRender_StaticFields *v155; // x0
-  System_String_o *v156; // x2
-  System_String_o *v157; // x3
-  int32_t v158; // w4
-  int32_t v159; // w5
-  bool v160; // w6
-  bool v161; // w7
-  System_String_o *v162; // x2
-  System_String_o *v163; // x3
-  int32_t v164; // w4
-  int32_t v165; // w5
-  bool v166; // w6
-  bool v167; // w7
-  __int64 v168; // x19
-  int32_t v169; // w1
-  System_String_o *v170; // x2
-  System_String_o *v171; // x3
-  int32_t v172; // w4
-  int32_t v173; // w5
-  bool v174; // w6
-  bool v175; // w7
-  int32_t v176; // w1
-  System_String_o *v177; // x2
-  System_String_o *v178; // x3
-  int32_t v179; // w4
-  int32_t v180; // w5
-  bool v181; // w6
-  bool v182; // w7
-  int32_t v183; // w1
-  System_String_o *v184; // x2
-  System_String_o *v185; // x3
-  int32_t v186; // w4
-  int32_t v187; // w5
-  bool v188; // w6
-  bool v189; // w7
-  int32_t v190; // w1
-  System_String_o *v191; // x2
-  System_String_o *v192; // x3
-  int32_t v193; // w4
-  int32_t v194; // w5
-  bool v195; // w6
-  bool v196; // w7
-  int32_t v197; // w1
-  System_String_o *v198; // x2
-  System_String_o *v199; // x3
-  int32_t v200; // w4
-  int32_t v201; // w5
-  bool v202; // w6
-  bool v203; // w7
-  int32_t v204; // w1
-  System_String_o *v205; // x2
-  System_String_o *v206; // x3
-  int32_t v207; // w4
-  int32_t v208; // w5
-  bool v209; // w6
-  bool v210; // w7
-  int32_t v211; // w1
-  System_String_o *v212; // x2
-  System_String_o *v213; // x3
-  int32_t v214; // w4
-  int32_t v215; // w5
-  bool v216; // w6
-  bool v217; // w7
-  int32_t v218; // w1
-  struct UICharaGraphRender_StaticFields *v219; // x0
-  System_String_o *v220; // x2
-  System_String_o *v221; // x3
-  int32_t v222; // w4
-  int32_t v223; // w5
-  bool v224; // w6
-  bool v225; // w7
-  System_String_o *v226; // x2
-  System_String_o *v227; // x3
-  int32_t v228; // w4
-  int32_t v229; // w5
-  bool v230; // w6
-  bool v231; // w7
-  __int64 v232; // x19
-  int32_t v233; // w1
-  System_String_o *v234; // x2
-  System_String_o *v235; // x3
-  int32_t v236; // w4
-  int32_t v237; // w5
-  bool v238; // w6
-  bool v239; // w7
-  int32_t v240; // w1
-  System_String_o *v241; // x2
-  System_String_o *v242; // x3
-  int32_t v243; // w4
-  int32_t v244; // w5
-  bool v245; // w6
-  bool v246; // w7
-  int32_t v247; // w1
-  System_String_o *v248; // x2
-  System_String_o *v249; // x3
-  int32_t v250; // w4
-  int32_t v251; // w5
-  bool v252; // w6
-  bool v253; // w7
-  int32_t v254; // w1
-  System_String_o *v255; // x2
-  System_String_o *v256; // x3
-  int32_t v257; // w4
-  int32_t v258; // w5
-  bool v259; // w6
-  bool v260; // w7
-  int32_t v261; // w1
-  System_String_o *v262; // x2
-  System_String_o *v263; // x3
-  int32_t v264; // w4
-  int32_t v265; // w5
-  bool v266; // w6
-  bool v267; // w7
-  int32_t v268; // w1
-  struct UICharaGraphRender_StaticFields *v269; // x0
-  System_String_o *v270; // x2
-  System_String_o *v271; // x3
-  int32_t v272; // w4
-  int32_t v273; // w5
-  bool v274; // w6
-  bool v275; // w7
+  System_Array_o *v40; // x0
+  System_RuntimeFieldHandle_o v41; // x1
+  System_Array_o *v42; // x19
+  struct UICharaGraphRender_StaticFields *v43; // x0
+  System_String_o *v44; // x2
+  System_String_o *v45; // x3
+  int32_t v46; // w4
+  int32_t v47; // w5
+  bool v48; // w6
+  bool v49; // w7
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  __int64 v56; // x19
+  int32_t v57; // w1
+  System_String_o *v58; // x2
+  System_String_o *v59; // x3
+  int32_t v60; // w4
+  int32_t v61; // w5
+  bool v62; // w6
+  bool v63; // w7
+  int32_t v64; // w1
+  System_String_o *v65; // x2
+  System_String_o *v66; // x3
+  int32_t v67; // w4
+  int32_t v68; // w5
+  bool v69; // w6
+  bool v70; // w7
+  int32_t v71; // w1
+  System_String_o *v72; // x2
+  System_String_o *v73; // x3
+  int32_t v74; // w4
+  int32_t v75; // w5
+  bool v76; // w6
+  bool v77; // w7
+  int32_t v78; // w1
+  System_String_o *v79; // x2
+  System_String_o *v80; // x3
+  int32_t v81; // w4
+  int32_t v82; // w5
+  bool v83; // w6
+  bool v84; // w7
+  int32_t v85; // w1
+  System_String_o *v86; // x2
+  System_String_o *v87; // x3
+  int32_t v88; // w4
+  int32_t v89; // w5
+  bool v90; // w6
+  bool v91; // w7
+  int32_t v92; // w1
+  struct UICharaGraphRender_StaticFields *v93; // x0
+  System_String_o *v94; // x2
+  System_String_o *v95; // x3
+  int32_t v96; // w4
+  int32_t v97; // w5
+  bool v98; // w6
+  bool v99; // w7
+  System_String_o *v100; // x2
+  System_String_o *v101; // x3
+  int32_t v102; // w4
+  int32_t v103; // w5
+  bool v104; // w6
+  bool v105; // w7
+  __int64 v106; // x19
+  int32_t v107; // w1
+  System_String_o *v108; // x2
+  System_String_o *v109; // x3
+  int32_t v110; // w4
+  int32_t v111; // w5
+  bool v112; // w6
+  bool v113; // w7
+  int32_t v114; // w1
+  System_String_o *v115; // x2
+  System_String_o *v116; // x3
+  int32_t v117; // w4
+  int32_t v118; // w5
+  bool v119; // w6
+  bool v120; // w7
+  int32_t v121; // w1
+  System_String_o *v122; // x2
+  System_String_o *v123; // x3
+  int32_t v124; // w4
+  int32_t v125; // w5
+  bool v126; // w6
+  bool v127; // w7
+  int32_t v128; // w1
+  System_String_o *v129; // x2
+  System_String_o *v130; // x3
+  int32_t v131; // w4
+  int32_t v132; // w5
+  bool v133; // w6
+  bool v134; // w7
+  int32_t v135; // w1
+  System_String_o *v136; // x2
+  System_String_o *v137; // x3
+  int32_t v138; // w4
+  int32_t v139; // w5
+  bool v140; // w6
+  bool v141; // w7
+  int32_t v142; // w1
+  System_String_o *v143; // x2
+  System_String_o *v144; // x3
+  int32_t v145; // w4
+  int32_t v146; // w5
+  bool v147; // w6
+  bool v148; // w7
+  int32_t v149; // w1
+  System_String_o *v150; // x2
+  System_String_o *v151; // x3
+  int32_t v152; // w4
+  int32_t v153; // w5
+  bool v154; // w6
+  bool v155; // w7
+  int32_t v156; // w1
+  struct UICharaGraphRender_StaticFields *v157; // x0
+  System_String_o *v158; // x2
+  System_String_o *v159; // x3
+  int32_t v160; // w4
+  int32_t v161; // w5
+  bool v162; // w6
+  bool v163; // w7
+  System_String_o *v164; // x2
+  System_String_o *v165; // x3
+  int32_t v166; // w4
+  int32_t v167; // w5
+  bool v168; // w6
+  bool v169; // w7
+  __int64 v170; // x19
+  int32_t v171; // w1
+  System_String_o *v172; // x2
+  System_String_o *v173; // x3
+  int32_t v174; // w4
+  int32_t v175; // w5
+  bool v176; // w6
+  bool v177; // w7
+  int32_t v178; // w1
+  System_String_o *v179; // x2
+  System_String_o *v180; // x3
+  int32_t v181; // w4
+  int32_t v182; // w5
+  bool v183; // w6
+  bool v184; // w7
+  int32_t v185; // w1
+  System_String_o *v186; // x2
+  System_String_o *v187; // x3
+  int32_t v188; // w4
+  int32_t v189; // w5
+  bool v190; // w6
+  bool v191; // w7
+  int32_t v192; // w1
+  System_String_o *v193; // x2
+  System_String_o *v194; // x3
+  int32_t v195; // w4
+  int32_t v196; // w5
+  bool v197; // w6
+  bool v198; // w7
+  int32_t v199; // w1
+  System_String_o *v200; // x2
+  System_String_o *v201; // x3
+  int32_t v202; // w4
+  int32_t v203; // w5
+  bool v204; // w6
+  bool v205; // w7
+  int32_t v206; // w1
+  System_String_o *v207; // x2
+  System_String_o *v208; // x3
+  int32_t v209; // w4
+  int32_t v210; // w5
+  bool v211; // w6
+  bool v212; // w7
+  int32_t v213; // w1
+  System_String_o *v214; // x2
+  System_String_o *v215; // x3
+  int32_t v216; // w4
+  int32_t v217; // w5
+  bool v218; // w6
+  bool v219; // w7
+  int32_t v220; // w1
+  struct UICharaGraphRender_StaticFields *v221; // x0
+  System_String_o *v222; // x2
+  System_String_o *v223; // x3
+  int32_t v224; // w4
+  int32_t v225; // w5
+  bool v226; // w6
+  bool v227; // w7
+  System_String_o *v228; // x2
+  System_String_o *v229; // x3
+  int32_t v230; // w4
+  int32_t v231; // w5
+  bool v232; // w6
+  bool v233; // w7
+  __int64 v234; // x19
+  int32_t v235; // w1
+  System_String_o *v236; // x2
+  System_String_o *v237; // x3
+  int32_t v238; // w4
+  int32_t v239; // w5
+  bool v240; // w6
+  bool v241; // w7
+  int32_t v242; // w1
+  System_String_o *v243; // x2
+  System_String_o *v244; // x3
+  int32_t v245; // w4
+  int32_t v246; // w5
+  bool v247; // w6
+  bool v248; // w7
+  int32_t v249; // w1
+  System_String_o *v250; // x2
+  System_String_o *v251; // x3
+  int32_t v252; // w4
+  int32_t v253; // w5
+  bool v254; // w6
+  bool v255; // w7
+  int32_t v256; // w1
+  System_String_o *v257; // x2
+  System_String_o *v258; // x3
+  int32_t v259; // w4
+  int32_t v260; // w5
+  bool v261; // w6
+  bool v262; // w7
+  int32_t v263; // w1
+  System_String_o *v264; // x2
+  System_String_o *v265; // x3
+  int32_t v266; // w4
+  int32_t v267; // w5
+  bool v268; // w6
+  bool v269; // w7
+  int32_t v270; // w1
+  struct UICharaGraphRender_StaticFields *v271; // x0
+  System_String_o *v272; // x2
+  System_String_o *v273; // x3
+  int32_t v274; // w4
+  int32_t v275; // w5
+  bool v276; // w6
+  bool v277; // w7
 
   if ( (byte_59720B4 & 1) == 0 )
   {
@@ -403,199 +405,198 @@ void UICharaGraphRender___cctor(const MethodInfo *method)
   UICharaGraphRender_TypeInfo->static_fields->servantEquipBodyRect = *(struct UnityEngine_Rect_o *)&UICharaGraphRender_TypeInfo->static_fields->SERVANT_EQUIP_BODY_U;
   *(_QWORD *)&v38->static_fields->SERVANT_NAME_UV_DIFF_Y = 0x43E800000LL;
   v40 = (System_Array_o *)sub_2213B20(v39, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v40,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C,
-    0);
-  v41 = UICharaGraphRender_TypeInfo->static_fields;
-  v41->SERVANT_NAME_TARGET_LIMIT_COUNT = (struct System_Int32_array *)v40;
+  v41.fields.value = Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C;
+  v42 = v40;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v40, v41, 0);
+  v43 = UICharaGraphRender_TypeInfo->static_fields;
+  v43->SERVANT_NAME_TARGET_LIMIT_COUNT = (struct System_Int32_array *)v42;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v41->SERVANT_NAME_TARGET_LIMIT_COUNT,
-    (int32_t)v40,
-    v42,
-    v43,
+    (MissionNaviTransitionBoardItem_o *)&v43->SERVANT_NAME_TARGET_LIMIT_COUNT,
+    (int32_t)v42,
     v44,
     v45,
     v46,
-    v47);
+    v47,
+    v48,
+    v49);
   v3 = sub_2213B20(string___TypeInfo, 6);
   if ( !v3 )
     goto LABEL_50;
-  v54 = v3;
+  v56 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_49;
-  v55 = StringLiteral_17306/*"a"*/;
+  v57 = StringLiteral_17306/*"a"*/;
   *(_QWORD *)(v3 + 32) = StringLiteral_17306/*"a"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v55, v48, v49, v50, v51, v52, v53);
-  if ( (*(_DWORD *)(v54 + 24) & 0xFFFFFFFE) == 0 )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v57, v50, v51, v52, v53, v54, v55);
+  if ( (*(_DWORD *)(v56 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_49;
-  v62 = StringLiteral_17306/*"a"*/;
-  *(_QWORD *)(v54 + 40) = StringLiteral_17306/*"a"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v54 + 40), v62, v56, v57, v58, v59, v60, v61);
-  if ( *(_DWORD *)(v54 + 24) <= 2u )
+  v64 = StringLiteral_17306/*"a"*/;
+  *(_QWORD *)(v56 + 40) = StringLiteral_17306/*"a"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v56 + 40), v64, v58, v59, v60, v61, v62, v63);
+  if ( *(_DWORD *)(v56 + 24) <= 2u )
     goto LABEL_49;
-  v69 = StringLiteral_17686/*"b"*/;
-  *(_QWORD *)(v54 + 48) = StringLiteral_17686/*"b"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v54 + 48), v69, v63, v64, v65, v66, v67, v68);
-  if ( (*(_DWORD *)(v54 + 24) & 0xFFFFFFFC) == 0 )
+  v71 = StringLiteral_17686/*"b"*/;
+  *(_QWORD *)(v56 + 48) = StringLiteral_17686/*"b"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v56 + 48), v71, v65, v66, v67, v68, v69, v70);
+  if ( (*(_DWORD *)(v56 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_49;
-  v76 = StringLiteral_17686/*"b"*/;
-  *(_QWORD *)(v54 + 56) = StringLiteral_17686/*"b"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v54 + 56), v76, v70, v71, v72, v73, v74, v75);
-  if ( *(_DWORD *)(v54 + 24) <= 4u )
+  v78 = StringLiteral_17686/*"b"*/;
+  *(_QWORD *)(v56 + 56) = StringLiteral_17686/*"b"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v56 + 56), v78, v72, v73, v74, v75, v76, v77);
+  if ( *(_DWORD *)(v56 + 24) <= 4u )
     goto LABEL_49;
-  v83 = (int)StringLiteral_18457/*"c"*/;
-  *(_QWORD *)(v54 + 64) = StringLiteral_18457/*"c"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v54 + 64), v83, v77, v78, v79, v80, v81, v82);
-  if ( *(_DWORD *)(v54 + 24) <= 5u )
+  v85 = (int)StringLiteral_18457/*"c"*/;
+  *(_QWORD *)(v56 + 64) = StringLiteral_18457/*"c"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v56 + 64), v85, v79, v80, v81, v82, v83, v84);
+  if ( *(_DWORD *)(v56 + 24) <= 5u )
     goto LABEL_49;
-  v90 = (int)StringLiteral_18457/*"c"*/;
-  *(_QWORD *)(v54 + 72) = StringLiteral_18457/*"c"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v54 + 72), v90, v84, v85, v86, v87, v88, v89);
-  v91 = UICharaGraphRender_TypeInfo->static_fields;
-  v91->bodyTextureNameTable = (struct System_String_array *)v54;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v91->bodyTextureNameTable, v54, v92, v93, v94, v95, v96, v97);
+  v92 = (int)StringLiteral_18457/*"c"*/;
+  *(_QWORD *)(v56 + 72) = StringLiteral_18457/*"c"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v56 + 72), v92, v86, v87, v88, v89, v90, v91);
+  v93 = UICharaGraphRender_TypeInfo->static_fields;
+  v93->bodyTextureNameTable = (struct System_String_array *)v56;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v93->bodyTextureNameTable, v56, v94, v95, v96, v97, v98, v99);
   v3 = sub_2213B20(string___TypeInfo, 8);
   if ( !v3 )
     goto LABEL_50;
-  v104 = v3;
+  v106 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_49;
-  v105 = StringLiteral_20570/*"frame0"*/;
+  v107 = StringLiteral_20570/*"frame0"*/;
   *(_QWORD *)(v3 + 32) = StringLiteral_20570/*"frame0"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v105, v98, v99, v100, v101, v102, v103);
-  if ( (*(_DWORD *)(v104 + 24) & 0xFFFFFFFE) == 0 )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v107, v100, v101, v102, v103, v104, v105);
+  if ( (*(_DWORD *)(v106 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_49;
-  v112 = StringLiteral_20571/*"frame1"*/;
-  *(_QWORD *)(v104 + 40) = StringLiteral_20571/*"frame1"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 40), v112, v106, v107, v108, v109, v110, v111);
-  if ( *(_DWORD *)(v104 + 24) <= 2u )
+  v114 = StringLiteral_20571/*"frame1"*/;
+  *(_QWORD *)(v106 + 40) = StringLiteral_20571/*"frame1"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 40), v114, v108, v109, v110, v111, v112, v113);
+  if ( *(_DWORD *)(v106 + 24) <= 2u )
     goto LABEL_49;
-  v119 = StringLiteral_20576/*"frame2"*/;
-  *(_QWORD *)(v104 + 48) = StringLiteral_20576/*"frame2"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 48), v119, v113, v114, v115, v116, v117, v118);
-  if ( (*(_DWORD *)(v104 + 24) & 0xFFFFFFFC) == 0 )
+  v121 = StringLiteral_20576/*"frame2"*/;
+  *(_QWORD *)(v106 + 48) = StringLiteral_20576/*"frame2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 48), v121, v115, v116, v117, v118, v119, v120);
+  if ( (*(_DWORD *)(v106 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_49;
-  v126 = StringLiteral_20577/*"frame3"*/;
-  *(_QWORD *)(v104 + 56) = StringLiteral_20577/*"frame3"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 56), v126, v120, v121, v122, v123, v124, v125);
-  if ( *(_DWORD *)(v104 + 24) <= 4u )
+  v128 = StringLiteral_20577/*"frame3"*/;
+  *(_QWORD *)(v106 + 56) = StringLiteral_20577/*"frame3"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 56), v128, v122, v123, v124, v125, v126, v127);
+  if ( *(_DWORD *)(v106 + 24) <= 4u )
     goto LABEL_49;
-  v133 = StringLiteral_20578/*"frame4"*/;
-  *(_QWORD *)(v104 + 64) = StringLiteral_20578/*"frame4"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 64), v133, v127, v128, v129, v130, v131, v132);
-  if ( *(_DWORD *)(v104 + 24) <= 5u )
+  v135 = StringLiteral_20578/*"frame4"*/;
+  *(_QWORD *)(v106 + 64) = StringLiteral_20578/*"frame4"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 64), v135, v129, v130, v131, v132, v133, v134);
+  if ( *(_DWORD *)(v106 + 24) <= 5u )
     goto LABEL_49;
-  v140 = StringLiteral_20579/*"frame5"*/;
-  *(_QWORD *)(v104 + 72) = StringLiteral_20579/*"frame5"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 72), v140, v134, v135, v136, v137, v138, v139);
-  if ( *(_DWORD *)(v104 + 24) <= 6u )
+  v142 = StringLiteral_20579/*"frame5"*/;
+  *(_QWORD *)(v106 + 72) = StringLiteral_20579/*"frame5"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 72), v142, v136, v137, v138, v139, v140, v141);
+  if ( *(_DWORD *)(v106 + 24) <= 6u )
     goto LABEL_49;
-  v147 = StringLiteral_20580/*"frame6"*/;
-  *(_QWORD *)(v104 + 80) = StringLiteral_20580/*"frame6"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 80), v147, v141, v142, v143, v144, v145, v146);
-  if ( (*(_DWORD *)(v104 + 24) & 0xFFFFFFF8) == 0 )
+  v149 = StringLiteral_20580/*"frame6"*/;
+  *(_QWORD *)(v106 + 80) = StringLiteral_20580/*"frame6"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 80), v149, v143, v144, v145, v146, v147, v148);
+  if ( (*(_DWORD *)(v106 + 24) & 0xFFFFFFF8) == 0 )
     goto LABEL_49;
-  v154 = StringLiteral_20581/*"frame7"*/;
-  *(_QWORD *)(v104 + 88) = StringLiteral_20581/*"frame7"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v104 + 88), v154, v148, v149, v150, v151, v152, v153);
-  v155 = UICharaGraphRender_TypeInfo->static_fields;
-  v155->baseFrameList = (struct System_String_array *)v104;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v155->baseFrameList, v104, v156, v157, v158, v159, v160, v161);
+  v156 = StringLiteral_20581/*"frame7"*/;
+  *(_QWORD *)(v106 + 88) = StringLiteral_20581/*"frame7"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v106 + 88), v156, v150, v151, v152, v153, v154, v155);
+  v157 = UICharaGraphRender_TypeInfo->static_fields;
+  v157->baseFrameList = (struct System_String_array *)v106;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v157->baseFrameList, v106, v158, v159, v160, v161, v162, v163);
   v3 = sub_2213B20(string___TypeInfo, 8);
   if ( !v3 )
     goto LABEL_50;
-  v168 = v3;
+  v170 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_49;
-  v169 = StringLiteral_20574/*"frame10002"*/;
+  v171 = StringLiteral_20574/*"frame10002"*/;
   *(_QWORD *)(v3 + 32) = StringLiteral_20574/*"frame10002"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v169, v162, v163, v164, v165, v166, v167);
-  if ( (*(_DWORD *)(v168 + 24) & 0xFFFFFFFE) == 0 )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v171, v164, v165, v166, v167, v168, v169);
+  if ( (*(_DWORD *)(v170 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_49;
-  v176 = StringLiteral_20572/*"frame10000"*/;
-  *(_QWORD *)(v168 + 40) = StringLiteral_20572/*"frame10000"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 40), v176, v170, v171, v172, v173, v174, v175);
-  if ( *(_DWORD *)(v168 + 24) <= 2u )
+  v178 = StringLiteral_20572/*"frame10000"*/;
+  *(_QWORD *)(v170 + 40) = StringLiteral_20572/*"frame10000"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 40), v178, v172, v173, v174, v175, v176, v177);
+  if ( *(_DWORD *)(v170 + 24) <= 2u )
     goto LABEL_49;
-  v183 = StringLiteral_20572/*"frame10000"*/;
-  *(_QWORD *)(v168 + 48) = StringLiteral_20572/*"frame10000"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 48), v183, v177, v178, v179, v180, v181, v182);
-  if ( (*(_DWORD *)(v168 + 24) & 0xFFFFFFFC) == 0 )
+  v185 = StringLiteral_20572/*"frame10000"*/;
+  *(_QWORD *)(v170 + 48) = StringLiteral_20572/*"frame10000"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 48), v185, v179, v180, v181, v182, v183, v184);
+  if ( (*(_DWORD *)(v170 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_49;
-  v190 = StringLiteral_20572/*"frame10000"*/;
-  *(_QWORD *)(v168 + 56) = StringLiteral_20572/*"frame10000"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 56), v190, v184, v185, v186, v187, v188, v189);
-  if ( *(_DWORD *)(v168 + 24) <= 4u )
+  v192 = StringLiteral_20572/*"frame10000"*/;
+  *(_QWORD *)(v170 + 56) = StringLiteral_20572/*"frame10000"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 56), v192, v186, v187, v188, v189, v190, v191);
+  if ( *(_DWORD *)(v170 + 24) <= 4u )
     goto LABEL_49;
-  v197 = StringLiteral_20573/*"frame10001"*/;
-  *(_QWORD *)(v168 + 64) = StringLiteral_20573/*"frame10001"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 64), v197, v191, v192, v193, v194, v195, v196);
-  if ( *(_DWORD *)(v168 + 24) <= 5u
-    || (v204 = StringLiteral_20573/*"frame10001"*/,
-        *(_QWORD *)(v168 + 72) = StringLiteral_20573/*"frame10001"*/,
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 72), v204, v198, v199, v200, v201, v202, v203),
-        *(_DWORD *)(v168 + 24) <= 6u)
-    || (v211 = StringLiteral_20575/*"frame10003"*/,
-        *(_QWORD *)(v168 + 80) = StringLiteral_20575/*"frame10003"*/,
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 80), v211, v205, v206, v207, v208, v209, v210),
-        (*(_DWORD *)(v168 + 24) & 0xFFFFFFF8) == 0) )
+  v199 = StringLiteral_20573/*"frame10001"*/;
+  *(_QWORD *)(v170 + 64) = StringLiteral_20573/*"frame10001"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 64), v199, v193, v194, v195, v196, v197, v198);
+  if ( *(_DWORD *)(v170 + 24) <= 5u
+    || (v206 = StringLiteral_20573/*"frame10001"*/,
+        *(_QWORD *)(v170 + 72) = StringLiteral_20573/*"frame10001"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 72), v206, v200, v201, v202, v203, v204, v205),
+        *(_DWORD *)(v170 + 24) <= 6u)
+    || (v213 = StringLiteral_20575/*"frame10003"*/,
+        *(_QWORD *)(v170 + 80) = StringLiteral_20575/*"frame10003"*/,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 80), v213, v207, v208, v209, v210, v211, v212),
+        (*(_DWORD *)(v170 + 24) & 0xFFFFFFF8) == 0) )
   {
 LABEL_49:
     sub_2213CE4(v3);
   }
-  v218 = StringLiteral_20575/*"frame10003"*/;
-  *(_QWORD *)(v168 + 88) = StringLiteral_20575/*"frame10003"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v168 + 88), v218, v212, v213, v214, v215, v216, v217);
-  v219 = UICharaGraphRender_TypeInfo->static_fields;
-  v219->BaseGrandFrameList = (struct System_String_array *)v168;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v219->BaseGrandFrameList, v168, v220, v221, v222, v223, v224, v225);
+  v220 = StringLiteral_20575/*"frame10003"*/;
+  *(_QWORD *)(v170 + 88) = StringLiteral_20575/*"frame10003"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v170 + 88), v220, v214, v215, v216, v217, v218, v219);
+  v221 = UICharaGraphRender_TypeInfo->static_fields;
+  v221->BaseGrandFrameList = (struct System_String_array *)v170;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v221->BaseGrandFrameList, v170, v222, v223, v224, v225, v226, v227);
   v3 = sub_2213B20(string___TypeInfo, 6);
   if ( !v3 )
 LABEL_50:
     sub_2213CDC(v3, v4);
-  v232 = v3;
+  v234 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_49;
-  v233 = StringLiteral_20570/*"frame0"*/;
+  v235 = StringLiteral_20570/*"frame0"*/;
   *(_QWORD *)(v3 + 32) = StringLiteral_20570/*"frame0"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v233, v226, v227, v228, v229, v230, v231);
-  if ( (*(_DWORD *)(v232 + 24) & 0xFFFFFFFE) == 0 )
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), v235, v228, v229, v230, v231, v232, v233);
+  if ( (*(_DWORD *)(v234 + 24) & 0xFFFFFFFE) == 0 )
     goto LABEL_49;
-  v240 = StringLiteral_20571/*"frame1"*/;
-  *(_QWORD *)(v232 + 40) = StringLiteral_20571/*"frame1"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v232 + 40), v240, v234, v235, v236, v237, v238, v239);
-  if ( *(_DWORD *)(v232 + 24) <= 2u )
+  v242 = StringLiteral_20571/*"frame1"*/;
+  *(_QWORD *)(v234 + 40) = StringLiteral_20571/*"frame1"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v234 + 40), v242, v236, v237, v238, v239, v240, v241);
+  if ( *(_DWORD *)(v234 + 24) <= 2u )
     goto LABEL_49;
-  v247 = StringLiteral_20571/*"frame1"*/;
-  *(_QWORD *)(v232 + 48) = StringLiteral_20571/*"frame1"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v232 + 48), v247, v241, v242, v243, v244, v245, v246);
-  if ( (*(_DWORD *)(v232 + 24) & 0xFFFFFFFC) == 0 )
+  v249 = StringLiteral_20571/*"frame1"*/;
+  *(_QWORD *)(v234 + 48) = StringLiteral_20571/*"frame1"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v234 + 48), v249, v243, v244, v245, v246, v247, v248);
+  if ( (*(_DWORD *)(v234 + 24) & 0xFFFFFFFC) == 0 )
     goto LABEL_49;
-  v254 = StringLiteral_20576/*"frame2"*/;
-  *(_QWORD *)(v232 + 56) = StringLiteral_20576/*"frame2"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v232 + 56), v254, v248, v249, v250, v251, v252, v253);
-  if ( *(_DWORD *)(v232 + 24) <= 4u )
+  v256 = StringLiteral_20576/*"frame2"*/;
+  *(_QWORD *)(v234 + 56) = StringLiteral_20576/*"frame2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v234 + 56), v256, v250, v251, v252, v253, v254, v255);
+  if ( *(_DWORD *)(v234 + 24) <= 4u )
     goto LABEL_49;
-  v261 = StringLiteral_20577/*"frame3"*/;
-  *(_QWORD *)(v232 + 64) = StringLiteral_20577/*"frame3"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v232 + 64), v261, v255, v256, v257, v258, v259, v260);
-  if ( *(_DWORD *)(v232 + 24) <= 5u )
+  v263 = StringLiteral_20577/*"frame3"*/;
+  *(_QWORD *)(v234 + 64) = StringLiteral_20577/*"frame3"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v234 + 64), v263, v257, v258, v259, v260, v261, v262);
+  if ( *(_DWORD *)(v234 + 24) <= 5u )
     goto LABEL_49;
-  v268 = StringLiteral_20577/*"frame3"*/;
-  *(_QWORD *)(v232 + 72) = StringLiteral_20577/*"frame3"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v232 + 72), v268, v262, v263, v264, v265, v266, v267);
-  v269 = UICharaGraphRender_TypeInfo->static_fields;
-  v269->commandCodeBaseFrameList = (struct System_String_array *)v232;
+  v270 = StringLiteral_20577/*"frame3"*/;
+  *(_QWORD *)(v234 + 72) = StringLiteral_20577/*"frame3"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v234 + 72), v270, v264, v265, v266, v267, v268, v269);
+  v271 = UICharaGraphRender_TypeInfo->static_fields;
+  v271->commandCodeBaseFrameList = (struct System_String_array *)v234;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v269->commandCodeBaseFrameList,
-    v232,
-    v270,
-    v271,
+    (MissionNaviTransitionBoardItem_o *)&v271->commandCodeBaseFrameList,
+    v234,
     v272,
     v273,
     v274,
-    v275);
+    v275,
+    v276,
+    v277);
 }
 
 
@@ -1001,6 +1002,8 @@ UnityEngine_Vector2_o UICharaGraphRender__GetBodySize(UICharaGraphRender_o *this
   int *p_SERVANT_EQUIP_BODY_SIZE_X; // x8
   int *p_SERVANT_EQUIP_BODY_SIZE_Y; // x9
   struct UICharaGraphRender_StaticFields *v8; // x9
+  float v9; // s0
+  float v10; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_59720A9 & 1) == 0 )
@@ -1032,8 +1035,10 @@ UnityEngine_Vector2_o UICharaGraphRender__GetBodySize(UICharaGraphRender_o *this
     p_SERVANT_EQUIP_BODY_SIZE_X = &v8->SERVANT_BODY_SIZE_X;
     p_SERVANT_EQUIP_BODY_SIZE_Y = &v8->SERVANT_BODY_SIZE_Y;
   }
-  result.fields.x = (float)*p_SERVANT_EQUIP_BODY_SIZE_X;
-  result.fields.y = (float)*p_SERVANT_EQUIP_BODY_SIZE_Y;
+  v9 = (float)*p_SERVANT_EQUIP_BODY_SIZE_X;
+  v10 = (float)*p_SERVANT_EQUIP_BODY_SIZE_Y;
+  result.fields.y = v10;
+  result.fields.x = v9;
   return result;
 }
 
@@ -1054,6 +1059,7 @@ UnityEngine_Texture2D_o *UICharaGraphRender__GetBodyTexture(
   System_String_o *v12; // x0
   __int64 v13; // x1
   Il2CppObject *Object_object__58532980; // x22
+  UnityEngine_Texture2D_o *result; // x0
   System_String_o *v16; // x1
 
   v4 = this;
@@ -1112,8 +1118,9 @@ LABEL_20:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__58532980, 0, 0) )
   {
+    result = (UnityEngine_Texture2D_o *)Object_object__58532980;
     v4->fields.textureImageLimitCount = v4->fields.imageLimitCount;
-    return (UnityEngine_Texture2D_o *)Object_object__58532980;
+    return result;
   }
   v4->fields.textureImageLimitCount = 0;
   LastName = AssetData__get_LastName(data, 0);
@@ -1127,13 +1134,17 @@ LABEL_19:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Rect_o UICharaGraphRender__GetBodyUvRect(UICharaGraphRender_o *this, const MethodInfo *method)
 {
   UICharaGraphRender_c *v3; // x0
   int v4; // w8
   float *p_OTHER_IMAGE_LIMIT_COUNT; // x8
+  float v6; // s0 OVERLAPPED
+  float v7; // s1
+  float v8; // s2
+  float v9; // s3
   System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *servantBodyRectTable; // x0
-  UnityEngine_Rect_o Item; // 0:kr00_16.16
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59720AA & 1) == 0 )
@@ -1152,10 +1163,10 @@ UnityEngine_Rect_o UICharaGraphRender__GetBodyUvRect(UICharaGraphRender_o *this,
       v3 = UICharaGraphRender_TypeInfo;
     }
     p_OTHER_IMAGE_LIMIT_COUNT = (float *)&v3->static_fields->OTHER_IMAGE_LIMIT_COUNT;
-    result.fields.m_XMin = p_OTHER_IMAGE_LIMIT_COUNT[18];
-    result.fields.m_YMin = p_OTHER_IMAGE_LIMIT_COUNT[19];
-    result.fields.m_Width = p_OTHER_IMAGE_LIMIT_COUNT[20];
-    result.fields.m_Height = p_OTHER_IMAGE_LIMIT_COUNT[21];
+    v6 = p_OTHER_IMAGE_LIMIT_COUNT[18];
+    v7 = p_OTHER_IMAGE_LIMIT_COUNT[19];
+    v8 = p_OTHER_IMAGE_LIMIT_COUNT[20];
+    v9 = p_OTHER_IMAGE_LIMIT_COUNT[21];
   }
   else
   {
@@ -1167,15 +1178,15 @@ UnityEngine_Rect_o UICharaGraphRender__GetBodyUvRect(UICharaGraphRender_o *this,
     servantBodyRectTable = v3->static_fields->servantBodyRectTable;
     if ( !servantBodyRectTable )
       sub_2213CDC(0, method);
-    Item = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
-             servantBodyRectTable,
-             this->fields.textureImageLimitCount,
-             (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__);
-    result.fields.m_XMin = Item.fields.m_XMin;
-    result.fields.m_YMin = Item.fields.m_YMin;
-    result.fields.m_Width = Item.fields.m_Width;
-    result.fields.m_Height = Item.fields.m_Height;
+    *(UnityEngine_Rect_o *)&v6 = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
+                                   servantBodyRectTable,
+                                   this->fields.textureImageLimitCount,
+                                   (const MethodInfo_473535C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__);
   }
+  result.fields.m_Height = v9;
+  result.fields.m_Width = v8;
+  result.fields.m_YMin = v7;
+  result.fields.m_XMin = v6;
   return result;
 }
 
@@ -1472,6 +1483,10 @@ UnityEngine_Rect_o UICharaGraphRender__GetNameUvRect(
   int v17; // w19
   UICharaGraphRender_c *v18; // x0
   struct UICharaGraphRender_StaticFields *static_fields; // x8
+  float v20; // s0
+  float v21; // s1
+  float v22; // s2
+  float v23; // s3
   ServantLimitEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -1537,10 +1552,14 @@ LABEL_18:
     }
   }
 LABEL_17:
-  result.fields.m_XMin = m_XMin;
-  result.fields.m_YMin = m_YMin;
-  result.fields.m_Width = m_Width;
-  result.fields.m_Height = m_Height;
+  v20 = m_XMin;
+  v21 = m_YMin;
+  v22 = m_Width;
+  v23 = m_Height;
+  result.fields.m_Height = v23;
+  result.fields.m_Width = v22;
+  result.fields.m_YMin = v21;
+  result.fields.m_XMin = v20;
   return result;
 }
 

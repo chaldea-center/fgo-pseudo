@@ -25,42 +25,44 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
   float unscaledDeltaTime; // s0
   UnityEngine_Transform_o *mTrans; // x0
   float v6; // s10
-  System_String_o *v7; // x2
-  System_String_o *v8; // x3
-  int32_t v9; // w4
-  int32_t v10; // w5
-  bool v11; // w6
-  bool v12; // w7
-  float x; // s10
-  float y; // s11
+  float x; // s8
+  float y; // s9
+  System_String_o *v9; // x2
+  System_String_o *v10; // x3
+  int32_t v11; // w4
+  int32_t v12; // w5
+  bool v13; // w6
+  bool v14; // w7
+  float v15; // s10
+  float v16; // s11
   float z; // s12
-  float v16; // s13
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
-  __int64 v23; // x1
+  float v18; // s13
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
+  __int64 v25; // x1
   UnityEngine_Object_o *mDrag; // x20
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
   struct SpringPanel_OnFinished_o *onFinished; // x8
-  System_String_o *v32; // x2
-  System_String_o *v33; // x3
-  int32_t v34; // w4
-  int32_t v35; // w5
-  bool v36; // w6
-  bool v37; // w7
-  unsigned __int64 localPosition; // kr00_8
-  UnityEngine_Vector3_o v39; // 0:kr20_12.12
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
   UnityEngine_Vector2_o v40; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597516C & 1) == 0 )
   {
@@ -73,23 +75,25 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
   if ( !mTrans )
     goto LABEL_20;
   v6 = unscaledDeltaTime;
-  localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(mTrans, 0);
+  localPosition = UnityEngine_Transform__get_localPosition(mTrans, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_20;
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
   v42 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  v39 = NGUIMath__SpringLerp_56364876(v42, this->fields.target, this->fields.strength, v6, 0);
-  x = this->fields.target.fields.x;
-  y = this->fields.target.fields.y;
+  v43 = NGUIMath__SpringLerp_56364876(v42, this->fields.target, this->fields.strength, v6, 0);
+  v15 = this->fields.target.fields.x;
+  v16 = this->fields.target.fields.y;
   z = this->fields.target.fields.z;
-  v16 = (float)((float)((float)(v39.fields.x - x) * (float)(v39.fields.x - x))
-              + (float)((float)(v39.fields.y - y) * (float)(v39.fields.y - y)))
-      + (float)((float)(v39.fields.z - z) * (float)(v39.fields.z - z));
-  if ( v16 >= 0.01 )
+  v18 = (float)((float)((float)(v43.fields.x - v15) * (float)(v43.fields.x - v15))
+              + (float)((float)(v43.fields.y - v16) * (float)(v43.fields.y - v16)))
+      + (float)((float)(v43.fields.z - z) * (float)(v43.fields.z - z));
+  if ( v18 >= 0.01 )
   {
-    z = v39.fields.z;
-    y = v39.fields.y;
-    x = v39.fields.x;
+    z = v43.fields.z;
+    v16 = v43.fields.y;
+    v15 = v43.fields.x;
   }
   else
   {
@@ -97,40 +101,40 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
       (int32_t)this,
-      v7,
-      v8,
       v9,
       v10,
       v11,
-      v12);
+      v12,
+      v13,
+      v14);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
     SpringPanel_TypeInfo->static_fields->current = 0;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
       0,
-      v17,
-      v18,
       v19,
       v20,
       v21,
-      v22);
+      v22,
+      v23,
+      v24);
   }
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_20;
-  v41.fields.x = x;
-  v41.fields.y = y;
-  v41.fields.z = z;
-  UnityEngine_Transform__set_localPosition(mTrans, v41, 0);
+  v44.fields.x = v15;
+  v44.fields.y = v16;
+  v44.fields.z = z;
+  UnityEngine_Transform__set_localPosition(mTrans, v44, 0);
   mTrans = (UnityEngine_Transform_o *)this->fields.mPanel;
   if ( !mTrans )
     goto LABEL_20;
-  v40.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(x - *(float *)&localPosition);
-  v40.fields.y = *(float *)&mTrans[14].klass - (float)(y - *((float *)&localPosition + 1));
+  v40.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(v15 - x);
+  v40.fields.y = *(float *)&mTrans[14].klass - (float)(v16 - y);
   UIPanel__set_clipOffset((UIPanel_o *)mTrans, v40, 0);
   mDrag = (UnityEngine_Object_o *)this->fields.mDrag;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25);
   if ( UnityEngine_Object__op_Inequality(mDrag, 0, 0) )
   {
     mTrans = (UnityEngine_Transform_o *)this->fields.mDrag;
@@ -141,18 +145,18 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
       0,
       *(_QWORD *)&mTrans->klass[1]._1.this_arg.bits);
   }
-  if ( v16 < 0.01 && this->fields.onFinished )
+  if ( v18 < 0.01 && this->fields.onFinished )
   {
     SpringPanel_TypeInfo->static_fields->current = this;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
       (int32_t)this,
-      v25,
-      v26,
       v27,
       v28,
       v29,
-      v30);
+      v30,
+      v31,
+      v32);
     onFinished = this->fields.onFinished;
     if ( onFinished )
     {
@@ -163,12 +167,12 @@ void SpringPanel__AdvanceTowardsPosition(SpringPanel_o *this, const MethodInfo *
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)SpringPanel_TypeInfo->static_fields,
         0,
-        v32,
-        v33,
         v34,
         v35,
         v36,
-        v37);
+        v37,
+        v38,
+        v39);
       return;
     }
 LABEL_20:
@@ -475,9 +479,9 @@ System_IAsyncResult_o *SpringPanel_OnFinished__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

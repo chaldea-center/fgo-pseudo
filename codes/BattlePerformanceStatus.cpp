@@ -288,6 +288,7 @@ System_Collections_IEnumerator_o *BattlePerformanceStatus__DoCreateCriticalEffec
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597410B & 1) == 0 )
   {
@@ -299,8 +300,9 @@ System_Collections_IEnumerator_o *BattlePerformanceStatus__DoCreateCriticalEffec
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(float *)(v5 + 32) = waitTime;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -342,6 +344,8 @@ UnityEngine_Vector2_o BattlePerformanceStatus__GetExBattleUiOverKillPosAdjust(
         const MethodInfo *method)
 {
   BattlePerformanceEnemy_o *enemyPref; // x0
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o OverKillPosAdjust; // kr00_8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -354,8 +358,10 @@ UnityEngine_Vector2_o BattlePerformanceStatus__GetExBattleUiOverKillPosAdjust(
   OverKillPosAdjust = ExtraBattleUserInterfaceController__GetOverKillPosAdjust(
                         (ExtraBattleUserInterfaceController_o *)enemyPref,
                         0);
-  result.fields.y = OverKillPosAdjust.fields.y;
-  result.fields.x = OverKillPosAdjust.fields.x;
+  y = OverKillPosAdjust.fields.y;
+  x = OverKillPosAdjust.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -365,6 +371,8 @@ UnityEngine_Vector2_o BattlePerformanceStatus__GetExBattleUiSkillSkipPosAdjust(
         const MethodInfo *method)
 {
   BattlePerformanceEnemy_o *enemyPref; // x0
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o SkillSkipPosAdjust; // kr00_8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -377,8 +385,10 @@ UnityEngine_Vector2_o BattlePerformanceStatus__GetExBattleUiSkillSkipPosAdjust(
   SkillSkipPosAdjust = ExtraBattleUserInterfaceController__GetSkillSkipPosAdjust(
                          (ExtraBattleUserInterfaceController_o *)enemyPref,
                          0);
-  result.fields.y = SkillSkipPosAdjust.fields.y;
-  result.fields.x = SkillSkipPosAdjust.fields.x;
+  y = SkillSkipPosAdjust.fields.y;
+  x = SkillSkipPosAdjust.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -565,18 +575,21 @@ void BattlePerformanceStatus__GorgeousStarCommonFunc(
   int v8; // w8
   int16_t v9; // w21
   UnityEngine_ParticleSystem_o *v10; // x22
+  UnityEngine_ParticleSystem_MainModule_o v11; // x0
   float constant; // s8
-  float v12; // s0
-  const MethodInfo_47A29F8 *v13; // x0
+  UnityEngine_ParticleSystem_MainModule_o v13; // x0
+  float v14; // s0
+  const MethodInfo_47A29F8 *v15; // x0
   struct UnityEngine_ParticleSystem_Burst_array *tempBurst; // x8
-  UnityEngine_ParticleSystem_o *v15; // x20
-  struct UnityEngine_ParticleSystem_Burst_array *v16; // x22
-  UnityEngine_ParticleSystem_EmissionModule_o v17; // x0
-  UnityEngine_ParticleSystem_Burst_array *v18; // x1
-  UnityEngine_ParticleSystem_MinMaxCurve_o v19; // [xsp+8h] [xbp-B8h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v20; // [xsp+28h] [xbp-98h] BYREF
-  struct UnityEngine_ParticleSystem_o *v21; // [xsp+48h] [xbp-78h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v22; // [xsp+50h] [xbp-70h] BYREF
+  UnityEngine_ParticleSystem_o *v17; // x20
+  struct UnityEngine_ParticleSystem_Burst_array *v18; // x22
+  UnityEngine_ParticleSystem_EmissionModule_o v19; // x0
+  UnityEngine_ParticleSystem_Burst_array *v20; // x1
+  UnityEngine_ParticleSystem_EmissionModule_o v21; // x0
+  UnityEngine_ParticleSystem_MinMaxCurve_o v22; // [xsp+8h] [xbp-B8h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v23; // [xsp+28h] [xbp-98h] BYREF
+  struct UnityEngine_ParticleSystem_o *v24; // [xsp+48h] [xbp-78h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v25; // [xsp+50h] [xbp-70h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+78h] [xbp-48h] BYREF
 
   if ( (byte_597410C & 1) == 0 )
@@ -586,8 +599,8 @@ void BattlePerformanceStatus__GorgeousStarCommonFunc(
     byte_597410C = 1;
   }
   m_ParticleSystem = 0;
-  v21 = 0;
-  memset(&v22, 0, sizeof(v22));
+  v24 = 0;
+  memset(&v25, 0, sizeof(v25));
   if ( !byte_596AEF6 )
   {
     sub_2213A60(&System_Math_TypeInfo);
@@ -612,22 +625,18 @@ void BattlePerformanceStatus__GorgeousStarCommonFunc(
     goto LABEL_25;
   v10 = ComponentInChildren_object;
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(ComponentInChildren_object, 0).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MainModule__get_startDelay(
-    &v20,
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    0);
-  v22 = v20;
-  constant = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v22, 0);
+  v11.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startDelay(&v23, v11, 0);
+  v25 = v23;
+  constant = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v25, 0);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v10, 0).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MainModule__get_startLifetime(
-    &v19,
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    0);
-  v22 = v19;
-  v12 = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v22, 0);
-  v13 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__;
-  this->fields.gorgeousStarEffectTime = constant + v12;
-  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)SingletonMonoBehaviour_object___get_Instance(v13);
+  v13.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startLifetime(&v22, v13, 0);
+  v25 = v22;
+  v14 = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v25, 0);
+  v15 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_BattleSequenceManager__get_Instance__;
+  this->fields.gorgeousStarEffectTime = constant + v14;
+  ComponentInChildren_object = (UnityEngine_ParticleSystem_o *)SingletonMonoBehaviour_object___get_Instance(v15);
   if ( !ComponentInChildren_object )
     goto LABEL_25;
   if ( *((float *)&ComponentInChildren_object[15].klass + 1) < 1.0 )
@@ -648,25 +657,26 @@ void BattlePerformanceStatus__GorgeousStarCommonFunc(
     goto LABEL_25;
   if ( !LODWORD(tempBurst->max_length) )
     goto LABEL_26;
-  v15 = ComponentInChildren_object;
+  v17 = ComponentInChildren_object;
   UnityEngine_ParticleSystem_Burst__set_time(tempBurst->m_Items, 0.0, 0);
-  v16 = this->fields.tempBurst;
-  if ( !v16 )
+  v18 = this->fields.tempBurst;
+  if ( !v18 )
     goto LABEL_25;
-  if ( !LODWORD(v16->max_length)
-    || (UnityEngine_ParticleSystem_Burst__set_maxCount(v16->m_Items, v9, 0), !LODWORD(v16->max_length)) )
+  if ( !LODWORD(v18->max_length)
+    || (UnityEngine_ParticleSystem_Burst__set_maxCount(v18->m_Items, v9, 0), !LODWORD(v18->max_length)) )
   {
 LABEL_26:
     sub_2213CE4(ComponentInChildren_object);
   }
-  UnityEngine_ParticleSystem_Burst__set_minCount(v16->m_Items, v9, 0);
-  if ( !v15 )
+  UnityEngine_ParticleSystem_Burst__set_minCount(v18->m_Items, v9, 0);
+  if ( !v17 )
 LABEL_25:
     sub_2213CDC(ComponentInChildren_object, starEffectPrefab);
-  v17.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_emission(v15, 0).fields.m_ParticleSystem;
-  v18 = this->fields.tempBurst;
-  v21 = v17.fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_EmissionModule__SetBursts((UnityEngine_ParticleSystem_EmissionModule_o)&v21, v18, 0);
+  v19.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_emission(v17, 0).fields.m_ParticleSystem;
+  v20 = this->fields.tempBurst;
+  v24 = v19.fields.m_ParticleSystem;
+  v21.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v24;
+  UnityEngine_ParticleSystem_EmissionModule__SetBursts(v21, v20, 0);
 }
 
 
@@ -1503,9 +1513,13 @@ void BattlePerformanceStatus__changeLayer(
   BattlePerformanceStatus_o *v5; // x20
   UnityEngine_Camera_o *actorcamera; // x21
   struct BattlePerformance_o *v7; // x8
-  UnityEngine_Vector3_o v8; // 0:kr20_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   perf = this->fields.perf;
   if ( !perf )
@@ -1515,17 +1529,28 @@ void BattlePerformanceStatus__changeLayer(
   v5 = this;
   actorcamera = perf->fields.actorcamera;
   this = (BattlePerformanceStatus_o *)UnityEngine_GameObject__get_transform(obj, 0);
-  if ( !this
-    || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0), !actorcamera)
-    || (v10 = UnityEngine_Camera__WorldToViewportPoint_83198212(actorcamera, position, 0), (v7 = v5->fields.perf) == 0)
+  if ( !this )
+    goto LABEL_9;
+  position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0);
+  if ( !actorcamera )
+    goto LABEL_9;
+  v12 = UnityEngine_Camera__WorldToViewportPoint_83198212(actorcamera, position, 0);
+  v7 = v5->fields.perf;
+  if ( !v7
     || (this = (BattlePerformanceStatus_o *)v7->fields.uicamera) == 0
-    || (v8 = UnityEngine_Camera__ViewportToWorldPoint_83198220((UnityEngine_Camera_o *)this, v10, 0),
+    || (v13 = UnityEngine_Camera__ViewportToWorldPoint_83198220((UnityEngine_Camera_o *)this, v12, 0),
+        x = v13.fields.x,
+        y = v13.fields.y,
+        z = v13.fields.z,
         (this = (BattlePerformanceStatus_o *)UnityEngine_GameObject__get_transform(obj, 0)) == 0) )
   {
 LABEL_9:
     sub_2213CDC(this, obj);
   }
-  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)this, v8, 0);
+  v14.fields.x = x;
+  v14.fields.y = y;
+  v14.fields.z = z;
+  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)this, v14, 0);
 }
 
 
@@ -2514,9 +2539,9 @@ System_IAsyncResult_o *BattlePerformanceStatus_TouchEventDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

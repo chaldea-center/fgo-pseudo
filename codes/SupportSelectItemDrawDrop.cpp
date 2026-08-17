@@ -23,25 +23,29 @@ void SupportSelectItemDrawDrop__DoReturnMove(SupportSelectItemDrawDrop_o *this, 
   UnityEngine_Transform_o *v6; // x20
   __int64 v7; // x1
   __int64 v8; // x2
-  SupportSelectItemDrawDrop_c *v9; // x0
+  float x; // s8
+  float y; // s9
+  SupportSelectItemDrawDrop_c *v11; // x0
+  float z; // s10
   UnityEngine_GameObject_o *dragObject; // x20
-  UnityEngine_Component_o *v11; // x20
+  UnityEngine_Component_o *v14; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v13; // x2
-  System_String_o *v14; // x3
-  int32_t v15; // w4
-  int32_t v16; // w5
-  bool v17; // w6
-  bool v18; // w7
-  int32_t v19; // w1
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
-  UnityEngine_Vector3_o v26; // 0:kr14_12.12
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
+  int32_t v22; // w1
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596CC5E & 1) == 0 )
   {
@@ -66,26 +70,32 @@ void SupportSelectItemDrawDrop__DoReturnMove(SupportSelectItemDrawDrop_o *this, 
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)ListViewObj, 0);
   if ( !v6 )
     goto LABEL_12;
-  v26 = UnityEngine_Transform__InverseTransformPoint(v6, position, 0);
-  v9 = SupportSelectItemDrawDrop_TypeInfo;
+  v30 = UnityEngine_Transform__InverseTransformPoint(v6, position, 0);
+  x = v30.fields.x;
+  y = v30.fields.y;
+  v11 = SupportSelectItemDrawDrop_TypeInfo;
+  z = v30.fields.z;
   dragObject = this->fields.dragObject;
   if ( !*(&SupportSelectItemDrawDrop_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(SupportSelectItemDrawDrop_TypeInfo, v7, v8);
-    v9 = SupportSelectItemDrawDrop_TypeInfo;
+    v11 = SupportSelectItemDrawDrop_TypeInfo;
   }
-  ListViewObj = (UnityEngine_Component_o *)TweenPosition__Begin(dragObject, v9->static_fields->ACTION_TIME, v26, 0);
+  v31.fields.x = x;
+  v31.fields.y = y;
+  v31.fields.z = z;
+  ListViewObj = (UnityEngine_Component_o *)TweenPosition__Begin(dragObject, v11->static_fields->ACTION_TIME, v31, 0);
   if ( !ListViewObj )
 LABEL_12:
     sub_2213CDC(ListViewObj, v4);
-  v11 = ListViewObj;
+  v14 = ListViewObj;
   LODWORD(ListViewObj[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v11[3].monitor = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14, v15, v16, v17, v18);
-  v19 = StringLiteral_10311/*"OnFinishedReturnMove"*/;
-  v11[3].fields.m_CachedPtr = StringLiteral_10311/*"OnFinishedReturnMove"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11[3].fields, v19, v20, v21, v22, v23, v24, v25);
+  v14[3].monitor = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14[3].monitor, (int32_t)gameObject, v16, v17, v18, v19, v20, v21);
+  v22 = StringLiteral_10311/*"OnFinishedReturnMove"*/;
+  v14[3].fields.m_CachedPtr = StringLiteral_10311/*"OnFinishedReturnMove"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v14[3].fields, v22, v23, v24, v25, v26, v27, v28);
 }
 
 
@@ -99,36 +109,40 @@ void SupportSelectItemDrawDrop__DoSwapMove(
   UnityEngine_Transform_o *v7; // x21
   __int64 v8; // x1
   __int64 v9; // x2
-  UnityEngine_GameObject_o *v10; // x21
-  SupportSelectItemDrawDrop_c *v11; // x0
-  UnityEngine_GameObject_o *v12; // x21
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_GameObject_o *v13; // x21
+  SupportSelectItemDrawDrop_c *v14; // x0
+  UnityEngine_GameObject_o *v15; // x21
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
-  int32_t v20; // w1
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
-  const MethodInfo *v27; // x1
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  int32_t v23; // w1
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  const MethodInfo *v30; // x1
   UnityEngine_Component_o *ListViewObj; // x21
   struct SupportSelectListViewDropObject_o **p_dropObject; // x19
-  System_String_o *v30; // x2
-  System_String_o *v31; // x3
-  int32_t v32; // w4
-  int32_t v33; // w5
-  bool v34; // w6
-  bool v35; // w7
-  SupportSelectListViewDropObject_o *v36; // x19
-  UnityEngine_Vector3_o v37; // 0:kr14_12.12
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  SupportSelectListViewDropObject_o *v39; // x19
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596CC5C & 1) == 0 )
   {
@@ -157,42 +171,48 @@ void SupportSelectItemDrawDrop__DoSwapMove(
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
     if ( !v7 )
       goto LABEL_21;
-    v37 = UnityEngine_Transform__InverseTransformPoint(v7, position, 0);
-    v10 = this->fields.dragObject;
-    v11 = SupportSelectItemDrawDrop_TypeInfo;
+    v41 = UnityEngine_Transform__InverseTransformPoint(v7, position, 0);
+    x = v41.fields.x;
+    y = v41.fields.y;
+    z = v41.fields.z;
+    v13 = this->fields.dragObject;
+    v14 = SupportSelectItemDrawDrop_TypeInfo;
     if ( !*(&SupportSelectItemDrawDrop_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(SupportSelectItemDrawDrop_TypeInfo, v8, v9);
-      v11 = SupportSelectItemDrawDrop_TypeInfo;
+      v14 = SupportSelectItemDrawDrop_TypeInfo;
     }
-    dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v10, v11->static_fields->ACTION_TIME, v37, 0);
+    v43.fields.x = x;
+    v43.fields.y = y;
+    v43.fields.z = z;
+    dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v13, v14->static_fields->ACTION_TIME, v43, 0);
     if ( !dragObject )
       goto LABEL_21;
-    v12 = dragObject;
+    v15 = dragObject;
     LODWORD(dragObject[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v12[3].monitor = gameObject;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12[3].monitor, (int32_t)gameObject, v14, v15, v16, v17, v18, v19);
-    v20 = StringLiteral_10312/*"OnFinishedSwapMove"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_10312/*"OnFinishedSwapMove"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12[3].fields, v20, v21, v22, v23, v24, v25, v26);
-    ListViewObj = (UnityEngine_Component_o *)SupportSelectItemDrawDrop__GetListViewObj(this, v27);
+    v15[3].monitor = gameObject;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[3].monitor, (int32_t)gameObject, v17, v18, v19, v20, v21, v22);
+    v23 = StringLiteral_10312/*"OnFinishedSwapMove"*/;
+    v15[3].fields.m_CachedPtr = StringLiteral_10312/*"OnFinishedSwapMove"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[3].fields, v23, v24, v25, v26, v27, v28, v29);
+    ListViewObj = (UnityEngine_Component_o *)SupportSelectItemDrawDrop__GetListViewObj(this, v30);
     this->fields.dropObject = target;
     p_dropObject = &this->fields.dropObject;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_dropObject, (int32_t)target, v30, v31, v32, v33, v34, v35);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_dropObject, (int32_t)target, v33, v34, v35, v36, v37, v38);
     if ( !*p_dropObject
       || (dragObject = (UnityEngine_GameObject_o *)(*p_dropObject)->fields.memberObject) == 0
       || (SupportSelectObject__HideEquip((SupportSelectObject_o *)dragObject, 0), !ListViewObj)
-      || (v36 = *p_dropObject,
+      || (v39 = *p_dropObject,
           (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(ListViewObj, 0)) == 0)
-      || (v39 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !v36) )
+      || (v42 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !v39) )
     {
 LABEL_21:
       sub_2213CDC(dragObject, v5);
     }
     SupportSelectListViewDropObject__DoSwap(
-      v36,
       v39,
+      v42,
       SupportSelectItemDrawDrop_TypeInfo->static_fields->ACTION_TIME,
       v5);
   }
@@ -616,7 +636,7 @@ void SupportSelectItemDrawDrop__OnFinishedSwapMove(SupportSelectItemDrawDrop_o *
   PartyOrganizationUtility_o *v135; // [xsp+58h] [xbp-98h]
   int v136; // [xsp+58h] [xbp-98h]
   int32_t maxLength[2]; // [xsp+60h] [xbp-90h] BYREF
-  __int64 minFontSize; // [xsp+68h] [xbp-88h] BYREF
+  int32_t minFontSize[2]; // [xsp+68h] [xbp-88h] BYREF
   int32_t actMaxRarity[2]; // [xsp+70h] [xbp-80h] BYREF
   System_String_o *v140; // [xsp+78h] [xbp-78h] BYREF
   System_String_o *skillName; // [xsp+88h] [xbp-68h] BYREF
@@ -652,7 +672,7 @@ void SupportSelectItemDrawDrop__OnFinishedSwapMove(SupportSelectItemDrawDrop_o *
   *(_QWORD *)actMaxRarity = 0;
   v140 = 0;
   *(_QWORD *)maxLength = 0;
-  minFontSize = 0;
+  *(_QWORD *)minFontSize = 0;
   v3 = sub_2213CCC(SupportSelectItemDrawDrop___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
@@ -985,8 +1005,8 @@ LABEL_44:
     {
       PartyOrganizationUtility__DecisionFontSize(
         (PartyOrganizationUtility_o *)LeaderInfo,
-        (int32_t *)&minFontSize + 1,
-        (int32_t *)&minFontSize,
+        &minFontSize[1],
+        minFontSize,
         v120,
         0);
       if ( *(_QWORD *)v109 )
@@ -1035,8 +1055,8 @@ LABEL_44:
               v128,
               v129,
               v130,
-              SHIDWORD(minFontSize),
-              minFontSize,
+              minFontSize[1],
+              minFontSize[0],
               v123,
               728,
               2,

@@ -1125,8 +1125,8 @@ LABEL_33:
     v32,
     v33,
     v34);
-  this->fields.__1__state = 1;
   LOBYTE(miniProgressBarBase) = 1;
+  this->fields.__1__state = 1;
   return (char)miniProgressBarBase;
 }
 

@@ -83,6 +83,7 @@ OtherUserServantLimitCountManager_LimitCountStageData_o *OtherUserServantLimitCo
   const MethodInfo *v30; // x6
   int32_t v31; // w19
   __int64 v32; // x20
+  OtherUserServantLimitCountManager_LimitCountStageData_o *result; // x0
   int32_t maxLimitCountStageHasReward[2]; // [xsp+8h] [xbp-68h] BYREF
 
   if ( (byte_596BB0C & 1) == 0 )
@@ -162,12 +163,13 @@ OtherUserServantLimitCountManager_LimitCountStageData_o *OtherUserServantLimitCo
   System_Object___ctor((Il2CppObject *)v32, 0);
   *(_DWORD *)(v32 + 16) = v15;
   *(_DWORD *)(v32 + 20) = v24;
+  result = (OtherUserServantLimitCountManager_LimitCountStageData_o *)v32;
   *(_DWORD *)(v32 + 24) = OptionAfter;
   *(_DWORD *)(v32 + 28) = v25;
   *(_DWORD *)(v32 + 32) = v27;
   *(_DWORD *)(v32 + 36) = v29;
   *(_DWORD *)(v32 + 40) = v31;
-  return (OtherUserServantLimitCountManager_LimitCountStageData_o *)v32;
+  return result;
 }
 
 
@@ -204,6 +206,7 @@ OtherUserServantLimitCountManager_LimitCountStageData_o *OtherUserServantLimitCo
   int32_t v31; // w23
   int v32; // w20
   __int64 v33; // x19
+  OtherUserServantLimitCountManager_LimitCountStageData_o *result; // x0
   int32_t maxLimitCountStage; // [xsp+Ch] [xbp-54h] BYREF
 
   if ( (byte_596BB0D & 1) == 0 )
@@ -295,12 +298,13 @@ LABEL_18:
   System_Object___ctor((Il2CppObject *)v33, 0);
   *(_DWORD *)(v33 + 16) = v31;
   *(_DWORD *)(v33 + 20) = v32;
+  result = (OtherUserServantLimitCountManager_LimitCountStageData_o *)v33;
   *(_DWORD *)(v33 + 24) = v24;
   *(_DWORD *)(v33 + 28) = v24;
   *(_DWORD *)(v33 + 36) = v20;
   *(_DWORD *)(v33 + 40) = v20;
   *(_DWORD *)(v33 + 32) = v24;
-  return (OtherUserServantLimitCountManager_LimitCountStageData_o *)v33;
+  return result;
 }
 
 

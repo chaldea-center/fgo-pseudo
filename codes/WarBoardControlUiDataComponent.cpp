@@ -30,27 +30,29 @@ void WarBoardControlUiDataComponent___cctor(const MethodInfo *method)
 
 void WarBoardControlUiDataComponent___ctor(WarBoardControlUiDataComponent_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
-  System_Collections_Generic_List_object__o *v10; // x20
-  System_String_o *v11; // x2
-  System_String_o *v12; // x3
-  int32_t v13; // w4
-  int32_t v14; // w5
-  bool v15; // w6
-  bool v16; // w7
-  System_Collections_Generic_List_object__o *v17; // x20
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct System_Single_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  System_Collections_Generic_List_object__o *v12; // x20
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  System_Collections_Generic_List_object__o *v19; // x20
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
 
   if ( (byte_596DF0D & 1) == 0 )
   {
@@ -63,32 +65,31 @@ void WarBoardControlUiDataComponent___ctor(WarBoardControlUiDataComponent_o *thi
     byte_596DF0D = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(float___TypeInfo, 7);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__64464566F592BAB0A74DD80EB47024C0ECA2BB914D37B27E78F5532363736E1B,
-    0);
-  this->fields.AdjustOffsetY = (struct System_Single_array *)v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.AdjustOffsetY, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_WarBoardControlUiDataComponent_UiData__TypeInfo);
+  v4.fields.value = Field__PrivateImplementationDetails__64464566F592BAB0A74DD80EB47024C0ECA2BB914D37B27E78F5532363736E1B;
+  v5 = (struct System_Single_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.AdjustOffsetY = v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.AdjustOffsetY, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_WarBoardControlUiDataComponent_UiData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
+    v12,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_WarBoardControlUiDataComponent_UiData___ctor__);
-  this->fields.listUiData = (struct System_Collections_Generic_List_WarBoardControlUiDataComponent_UiData__o *)v10;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.listUiData, (int32_t)v10, v11, v12, v13, v14, v15, v16);
-  v17 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
+  this->fields.listUiData = (struct System_Collections_Generic_List_WarBoardControlUiDataComponent_UiData__o *)v12;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.listUiData, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  v19 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v17,
+    v19,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
-  this->fields.listUiDataKey = (struct System_Collections_Generic_List_string__o *)v17;
+  this->fields.listUiDataKey = (struct System_Collections_Generic_List_string__o *)v19;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.listUiDataKey,
-    (int32_t)v17,
-    v18,
-    v19,
+    (int32_t)v19,
     v20,
     v21,
     v22,
-    v23);
+    v23,
+    v24,
+    v25);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -1709,6 +1710,7 @@ System_Collections_IEnumerator_o *WarBoardControlUiDataComponent__StartOnExistsO
   int32_t v20; // w5
   bool v21; // w6
   bool v22; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596DF04 & 1) == 0 )
   {
@@ -1724,8 +1726,9 @@ System_Collections_IEnumerator_o *WarBoardControlUiDataComponent__StartOnExistsO
   *(_BYTE *)(v10 + 48) = isDisp;
   *(_QWORD *)(v10 + 40) = targetObject;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 40), (int32_t)targetObject, v17, v18, v19, v20, v21, v22);
+  result = (System_Collections_IEnumerator_o *)v10;
   *(_BYTE *)(v10 + 49) = v9;
-  return (System_Collections_IEnumerator_o *)v10;
+  return result;
 }
 
 
@@ -1788,8 +1791,10 @@ void WarBoardControlUiDataComponent__UpdateAdjustObjects(
   __int64 v8; // x21
   float v9; // s8
   UnityEngine_GameObject_o *v10; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s10
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   AdjustType = (UnityEngine_Transform_o *)WarBoardControlUiDataComponent__GetAdjustType(this, method);
   AdjustOffsetY = this->fields.AdjustOffsetY;
@@ -1815,13 +1820,15 @@ LABEL_12:
       if ( !AdjustType )
         goto LABEL_12;
       localPosition = UnityEngine_Transform__get_localPosition(AdjustType, 0);
+      x = localPosition.fields.x;
+      z = localPosition.fields.z;
       AdjustType = UnityEngine_GameObject__get_transform(v10, 0);
       if ( !AdjustType )
         goto LABEL_12;
-      v12.fields.x = localPosition.fields.x;
-      v12.fields.y = v9;
-      v12.fields.z = localPosition.fields.z;
-      UnityEngine_Transform__set_localPosition(AdjustType, v12, 0);
+      v14.fields.x = x;
+      v14.fields.y = v9;
+      v14.fields.z = z;
+      UnityEngine_Transform__set_localPosition(AdjustType, v14, 0);
       max_length = adjustObjects->max_length;
       if ( (int)++v8 >= max_length )
         return;
@@ -2189,6 +2196,7 @@ bool WarBoardControlUiDataComponent__PlayEndUiDataAnim_d__42__MoveNext(
   bool v22; // w6
   bool v23; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   struct WarBoardControlUiDataComponent_UiData_o *uiData; // x8
   struct UnityEngine_GameObject_array *animationObjects; // x22
   int max_length; // w8
@@ -2328,8 +2336,9 @@ LABEL_15:
       v3->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
       sub_2213A04(p__2__current, 0, v19, (System_String_o *)v13, v20, v21, v22, v23);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     goto LABEL_19;
   }
@@ -2414,6 +2423,7 @@ bool WarBoardControlUiDataComponent__PlayStartUiDataAnim_d__41__MoveNext(
   bool v22; // w6
   bool v23; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   v3 = this;
   if ( (byte_596DF10 & 1) == 0 )
@@ -2489,8 +2499,9 @@ LABEL_15:
           v3->fields.__2__current = 0;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
           sub_2213A04(p__2__current, 0, v19, (System_String_o *)v13, v20, v21, v22, v23);
+          result = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return 1;
+          return result;
         }
         if ( _4__this )
           goto LABEL_20;
@@ -2593,6 +2604,7 @@ bool WarBoardControlUiDataComponent__StartOnExistsOtherTurnAnimation_d__37__Move
   bool v36; // w6
   bool v37; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   const MethodInfo *v40; // x3
   __int64 *v41; // x8
   System_String_o *v42; // x0
@@ -2813,8 +2825,9 @@ LABEL_45:
         v3->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
         sub_2213A04(p__2__current, 0, v32, (System_String_o *)v33, v34, v35, v36, v37);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
       goto LABEL_54;
     }

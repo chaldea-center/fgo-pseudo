@@ -329,6 +329,7 @@ void UISliderWithButton__OnPressBackground(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UISliderWithButton__OnPressForeground(
         UISliderWithButton_o *this,
         UnityEngine_GameObject_o *go,
@@ -337,29 +338,31 @@ void UISliderWithButton__OnPressForeground(
 {
   UICamera_c *v6; // x0
   UnityEngine_Transform_o *thumb; // x0
-  __int64 v9; // x1
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
-  UICamera_c *v16; // x0
+  float v8; // s0 OVERLAPPED
+  float v9; // s1
+  float v10; // s2
+  __int64 v11; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  UICamera_c *v18; // x0
   struct UnityEngine_Camera_o *currentCamera; // x1
-  __int64 v18; // x1
+  __int64 v20; // x1
   UnityEngine_Object_o *mFG; // x20
-  bool v20; // w0
-  float v21; // s0
-  __int64 v22; // x1
+  bool v22; // w0
+  float v23; // s0
+  __int64 v24; // x1
   float value; // s0
-  UICamera_c *v24; // x0
-  float v25; // s8
+  UICamera_c *v26; // x0
+  float v27; // s8
   struct UIProgressBar_OnDragFinished_o *onDragFinished; // x8
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59721D5 & 1) == 0 )
   {
@@ -380,72 +383,72 @@ void UISliderWithButton__OnPressForeground(
     {
       if ( thumb )
       {
-        v27.fields.x = 2.0;
-        v27.fields.y = 2.0;
-        v27.fields.z = 1.0;
-        UnityEngine_Transform__set_localScale(thumb, v27, 0);
+        v29.fields.x = 2.0;
+        v29.fields.y = 2.0;
+        v29.fields.z = 1.0;
+        UnityEngine_Transform__set_localScale(thumb, v29, 0);
         thumb = (UnityEngine_Transform_o *)this->fields.mBG;
         if ( thumb )
         {
           thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
           if ( thumb )
           {
-            v28.fields.x = 1.0;
-            v28.fields.y = 2.0;
-            v28.fields.z = 1.0;
-            UnityEngine_Transform__set_localScale(thumb, v28, 0);
+            v30.fields.x = 1.0;
+            v30.fields.y = 2.0;
+            v30.fields.z = 1.0;
+            UnityEngine_Transform__set_localScale(thumb, v30, 0);
             thumb = (UnityEngine_Transform_o *)this->fields.mFG;
             if ( thumb )
             {
               thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
               if ( thumb )
               {
-                v29.fields.x = 1.0;
-                v29.fields.y = 2.0;
+                v8 = 1.0;
+                v9 = 2.0;
 LABEL_20:
-                v29.fields.z = 1.0;
-                UnityEngine_Transform__set_localScale(thumb, v29, 0);
-                v16 = UICamera_TypeInfo;
+                v10 = 1.0;
+                UnityEngine_Transform__set_localScale(thumb, *(UnityEngine_Vector3_o *)&v8, 0);
+                v18 = UICamera_TypeInfo;
                 if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
                 {
-                  j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v9);
-                  v16 = UICamera_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v11);
+                  v18 = UICamera_TypeInfo;
                 }
-                currentCamera = v16->static_fields->currentCamera;
+                currentCamera = v18->static_fields->currentCamera;
                 this->fields.mCam = currentCamera;
                 sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&this->fields.mCam,
                   (int32_t)currentCamera,
-                  v10,
-                  v11,
                   v12,
                   v13,
                   v14,
-                  v15);
+                  v15,
+                  v16,
+                  v17);
                 if ( isPressed )
                 {
                   mFG = (UnityEngine_Object_o *)this->fields.mFG;
                   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
-                  v20 = UnityEngine_Object__op_Equality(mFG, 0, 0);
-                  v21 = 0.0;
-                  if ( !v20 )
+                    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
+                  v22 = UnityEngine_Object__op_Equality(mFG, 0, 0);
+                  v23 = 0.0;
+                  if ( !v22 )
                   {
                     value = UIProgressBar__get_value((UIProgressBar_o *)this, 0);
-                    v24 = UICamera_TypeInfo;
-                    v25 = value;
+                    v26 = UICamera_TypeInfo;
+                    v27 = value;
                     if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
                     {
-                      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v22);
-                      v24 = UICamera_TypeInfo;
+                      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v24);
+                      v26 = UICamera_TypeInfo;
                     }
-                    v21 = v25
+                    v23 = v27
                         - UIProgressBar__ScreenToValue(
                             (UIProgressBar_o *)this,
-                            v24->static_fields->lastTouchPosition,
+                            v26->static_fields->lastTouchPosition,
                             0);
                   }
-                  this->fields.mOffset = v21;
+                  this->fields.mOffset = v23;
                 }
                 else
                 {
@@ -464,28 +467,28 @@ LABEL_20:
     }
     else if ( thumb )
     {
-      v30.fields.x = 1.0;
-      v30.fields.y = 1.0;
-      v30.fields.z = 1.0;
-      UnityEngine_Transform__set_localScale(thumb, v30, 0);
+      v31.fields.x = 1.0;
+      v31.fields.y = 1.0;
+      v31.fields.z = 1.0;
+      UnityEngine_Transform__set_localScale(thumb, v31, 0);
       thumb = (UnityEngine_Transform_o *)this->fields.mBG;
       if ( thumb )
       {
         thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
         if ( thumb )
         {
-          v31.fields.x = 1.0;
-          v31.fields.y = 1.0;
-          v31.fields.z = 1.0;
-          UnityEngine_Transform__set_localScale(thumb, v31, 0);
+          v32.fields.x = 1.0;
+          v32.fields.y = 1.0;
+          v32.fields.z = 1.0;
+          UnityEngine_Transform__set_localScale(thumb, v32, 0);
           thumb = (UnityEngine_Transform_o *)this->fields.mFG;
           if ( thumb )
           {
             thumb = UnityEngine_Component__get_transform((UnityEngine_Component_o *)thumb, 0);
             if ( thumb )
             {
-              v29.fields.x = 1.0;
-              v29.fields.y = 1.0;
+              v8 = 1.0;
+              v9 = 1.0;
               goto LABEL_20;
             }
           }

@@ -241,8 +241,8 @@ void ServantStatusFlavorTextListViewItemDrawParam__SetItem(
   UILabel_o *v15; // x21
   const MethodInfo *v16; // x1
   int32_t v17; // w21
-  UnityEngine_Vector3_o size; // 0:kr20_12.12
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  float v18; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -292,13 +292,11 @@ void ServantStatusFlavorTextListViewItemDrawParam__SetItem(
                   if ( gameObject )
                   {
                     size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)gameObject, 0);
-                    v20.fields.x = size.fields.x;
-                    v20.fields.z = size.fields.z;
                     gameObject = (UnityEngine_Component_o *)this->fields.baseCollider;
                     if ( gameObject )
                     {
-                      v20.fields.y = (float)v17;
-                      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, v20, 0);
+                      v18 = (float)v17;
+                      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, size, 0);
                       goto LABEL_20;
                     }
                   }

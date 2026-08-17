@@ -188,13 +188,15 @@ bool EventPointItemListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   struct EventRewardEntity_o *eventRewardEnt; // x9
+  bool result; // w0
 
   eventRewardEnt = this->fields.eventRewardEnt;
   *(_WORD *)&this->fields.isTermination = 0;
   if ( !eventRewardEnt )
     sub_2213CDC(this, sort);
+  result = 1;
   this->fields.sortValue1 = eventRewardEnt->fields.point;
-  return 1;
+  return result;
 }
 
 

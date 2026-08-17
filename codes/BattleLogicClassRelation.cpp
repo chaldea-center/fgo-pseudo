@@ -675,7 +675,7 @@ void BattleLogicClassRelation_OldAttackOverwriteProcess__exec(
   if ( !AtkRateData_k__BackingField )
 LABEL_13:
     sub_2213CDC(this, logic);
-  v15 = **((_DWORD **)this + 23);
+  v15 = *(_DWORD *)this[11].monitor;
   if ( AtkRateData_k__BackingField->fields._Priority_k__BackingField < v15 )
   {
     v16 = val;
@@ -756,7 +756,7 @@ void BattleLogicClassRelation_OldDefenseOverwriteProcess__exec(
   if ( !DefRateData_k__BackingField )
 LABEL_13:
     sub_2213CDC(this, logic);
-  v15 = *(_DWORD *)(*((_QWORD *)this + 23) + 4LL);
+  v15 = *((_DWORD *)this[11].monitor + 1);
   if ( DefRateData_k__BackingField->fields._Priority_k__BackingField < v15 )
   {
     v16 = val;

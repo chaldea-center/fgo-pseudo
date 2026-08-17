@@ -46,6 +46,7 @@ System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *WarBoardSta
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *result; // x0
 
   if ( (byte_5971ACE & 1) == 0 )
   {
@@ -58,8 +59,9 @@ System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *WarBoardSta
   *(_DWORD *)(v5 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *)v5;
   *(_DWORD *)(v5 + 52) = stageId;
-  return (System_Collections_Generic_IEnumerable_WarBoardStageLayoutEntity__o *)v5;
+  return result;
 }
 
 
@@ -112,6 +114,7 @@ bool WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3__MoveNext(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
 
   v2 = this;
@@ -158,8 +161,9 @@ LABEL_17:
         v2->fields.__2__current = (struct WarBoardStageLayoutEntity_o *)Item;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)Item, v6, v7, v8, v9, v10, v11);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
 LABEL_13:
       this = (WarBoardStageLayoutMaster__GetWarBoardStageLayoutEntities_d__3_o *)(unsigned int)v2->fields._count_5__2;
@@ -185,6 +189,7 @@ System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *WarBoardSta
   int32_t v10; // w5
   bool v11; // w6
   bool v12; // w7
+  System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *result; // x0
 
   if ( (byte_5971AD0 & 1) == 0 )
   {
@@ -209,8 +214,9 @@ System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *WarBoardSta
     v4->fields.__4__this = _4__this;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v7, v8, v9, v10, v11, v12);
   }
+  result = (System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *)v4;
   v4->fields.stageId = this->fields.__3__stageId;
-  return (System_Collections_Generic_IEnumerator_WarBoardStageLayoutEntity__o *)v4;
+  return result;
 }
 
 

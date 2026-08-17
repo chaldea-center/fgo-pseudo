@@ -8,7 +8,7 @@ void BattleFieldParamComponent___ctor(BattleFieldParamComponent_o *this, const M
 
 void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this, const MethodInfo *method)
 {
-  __int64 root; // x0
+  UnityEngine_GameObject_o *root; // x0
   UnityEngine_Transform_o *v4; // x20
   struct BattleFieldEnvironmentData_o *data; // x8
   struct BattleData_o *Data_k__BackingField; // x8
@@ -29,14 +29,14 @@ void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this
   }
   if ( this->fields.data )
   {
-    root = (__int64)this->fields.root;
+    root = this->fields.root;
     if ( root )
     {
-      root = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)root, 0);
+      root = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(root, 0);
       v4 = (UnityEngine_Transform_o *)root;
       if ( !byte_5969AE0 )
       {
-        root = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        root = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
       if ( v4 )
@@ -57,42 +57,42 @@ void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this
                 raidInfo = battleInfo->fields.raidInfo;
                 if ( raidInfo && raidInfo->max_length )
                 {
-                  root = (__int64)Data_k__BackingField->fields.quest_ent;
+                  root = (UnityEngine_GameObject_o *)Data_k__BackingField->fields.quest_ent;
                   if ( !root )
                     goto LABEL_34;
-                  root = QuestEntity__HasFlag((QuestEntity_o *)root, 0x2000000, 0);
-                  if ( (root & 1) == 0 )
+                  root = (UnityEngine_GameObject_o *)QuestEntity__HasFlag((QuestEntity_o *)root, 0x2000000, 0);
+                  if ( ((unsigned __int8)root & 1) == 0 )
                   {
-                    root = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                    root = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                     if ( !root )
                       goto LABEL_34;
-                    root = (__int64)DataManager__GetMasterData_object_(
-                                      (DataManager_o *)root,
-                                      (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventRaidMaster___);
+                    root = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
+                                                         (DataManager_o *)root,
+                                                         (const MethodInfo_385636C *)Method_DataManager_GetMasterData_EventRaidMaster___);
                     v10 = battle_ent->fields.battleInfo;
                     if ( !v10 )
                       goto LABEL_34;
                     v11 = (EventRaidMaster_o *)root;
                     eventId = battle_ent->fields.eventId;
-                    root = BattleInfoData__getRaidId(v10, 0);
+                    root = (UnityEngine_GameObject_o *)BattleInfoData__getRaidId(v10, 0);
                     if ( !v11 )
                       goto LABEL_34;
-                    root = (__int64)EventRaidMaster__GetEntity(v11, eventId, root, 0);
+                    root = (UnityEngine_GameObject_o *)EventRaidMaster__GetEntity(v11, eventId, (int32_t)root, 0);
                     if ( root )
                     {
                       v13 = this->fields.data;
                       if ( !v13 )
                         goto LABEL_34;
-                      root = (__int64)v13->fields._Data_k__BackingField;
+                      root = (UnityEngine_GameObject_o *)v13->fields._Data_k__BackingField;
                       if ( !root )
                         goto LABEL_34;
-                      root = BattleData__isRaidConnection((BattleData_o *)root, 0);
-                      if ( (root & 1) != 0 )
+                      root = (UnityEngine_GameObject_o *)BattleData__isRaidConnection((BattleData_o *)root, 0);
+                      if ( ((unsigned __int8)root & 1) != 0 )
                       {
-                        root = (__int64)this->fields.root;
+                        root = this->fields.root;
                         if ( !root )
                           goto LABEL_34;
-                        root = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)root, 0);
+                        root = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(root, 0);
                         if ( !root )
                           goto LABEL_34;
                         UnityEngine_Transform__set_localPosition(
@@ -106,7 +106,7 @@ void BattleFieldParamComponent__InitUpdateView(BattleFieldParamComponent_o *this
                 v14 = this->fields.data;
                 if ( v14 )
                 {
-                  root = (__int64)v14->fields._Data_k__BackingField;
+                  root = (UnityEngine_GameObject_o *)v14->fields._Data_k__BackingField;
                   if ( root )
                   {
                     if ( !BattleData__IsWarBoard((BattleData_o *)root, 0) )
@@ -115,10 +115,10 @@ LABEL_32:
                       BattleFieldParamComponent__UpdateView(this, method);
                       return;
                     }
-                    root = (__int64)this->fields.root;
+                    root = this->fields.root;
                     if ( root )
                     {
-                      root = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)root, 0);
+                      root = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(root, 0);
                       if ( root )
                       {
                         UnityEngine_Transform__set_localPosition(

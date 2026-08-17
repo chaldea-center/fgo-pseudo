@@ -806,14 +806,14 @@ bool BattleActionData__AddFieldServantUpdateIntervalBuff(
         v11);
       endcameraname = (int)v6->fields.endcameraname;
       if ( (int)++v7 >= endcameraname )
-        return ((bool (__fastcall *)(Il2CppObject *, const MethodInfo *))v4->klass->vtable[5].methodPtr)(
+        return ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))v4->klass->vtable[5].methodPtr)(
                  v4,
                  v4->klass->vtable[5].method);
     }
 LABEL_12:
     sub_2213CDC(this, data);
   }
-  return ((bool (__fastcall *)(Il2CppObject *, const MethodInfo *))v4->klass->vtable[5].methodPtr)(
+  return ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))v4->klass->vtable[5].methodPtr)(
            v4,
            v4->klass->vtable[5].method);
 }
@@ -5519,13 +5519,13 @@ System_Collections_Generic_HashSet_BattleServantData__o *BattleActionData__Updat
   __int64 v4; // x1
   System_Collections_Generic_Dictionary_TKey__TValue__o *IntervalBuffDict_k__BackingField; // x0
   __int64 v6; // x1
-  __int64 v7; // x0
+  System_Collections_Generic_List_object__o *v7; // x0
   Il2CppObject *v8; // x21
   __int64 v10; // [xsp+0h] [xbp-80h]
   __int128 *v11; // [xsp+8h] [xbp-78h]
   __int128 v12; // [xsp+10h] [xbp-70h] BYREF
   System_Action_T__o *action[2]; // [xsp+20h] [xbp-60h]
-  __int128 v14; // [xsp+30h] [xbp-50h]
+  System_Collections_Generic_List_object__o *v14[2]; // [xsp+30h] [xbp-50h]
 
   if ( (byte_5972E7B & 1) == 0 )
   {
@@ -5545,7 +5545,7 @@ System_Collections_Generic_HashSet_BattleServantData__o *BattleActionData__Updat
     byte_5972E7B = 1;
   }
   *(_OWORD *)action = 0u;
-  v14 = 0u;
+  *(_OWORD *)v14 = 0u;
   v12 = 0u;
   v3 = (System_Collections_Generic_HashSet_object__o *)sub_2213CCC(System_Collections_Generic_HashSet_BattleServantData__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
@@ -5568,11 +5568,11 @@ System_Collections_Generic_HashSet_BattleServantData__o *BattleActionData__Updat
               (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&v12,
               (const MethodInfo_41492A4 *)Method_System_Collections_Generic_Dictionary_Enumerator_KeyValuePair_BattleServantData__Action_BattleBuffData_BuffData____List_BattleBuffData_BuffData___MoveNext__) )
     {
-      v7 = v14;
+      v7 = v14[0];
       v8 = (Il2CppObject *)action[0];
-      if ( (_QWORD)v14 )
+      if ( v14[0] )
         System_Collections_Generic_List_object___ForEach(
-          (System_Collections_Generic_List_object__o *)v14,
+          v14[0],
           action[1],
           (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__ForEach__);
       if ( v8 )
@@ -6100,6 +6100,7 @@ void BattleActionData__addReflectAttackSideEffect(
   struct System_Collections_Generic_KeyValuePair_int__int__array *items; // x8
   _QWORD *v7; // x9
   __int64 size; // x10
+  System_Collections_Generic_KeyValuePair_int__int__o v9; // x1
 
   if ( (byte_5972ECE & 1) == 0 )
   {
@@ -6118,9 +6119,10 @@ void BattleActionData__addReflectAttackSideEffect(
   size = attackSideEffectedSvtIds->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
+    v9 = pairAttackAndTarget;
     System_Collections_Generic_List_KeyValuePair_int__int____AddWithResize(
       attackSideEffectedSvtIds,
-      pairAttackAndTarget,
+      v9,
       *(const MethodInfo_43B9FB4 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
@@ -7726,7 +7728,7 @@ int32_t BattleActionData__getSkillCutInId(BattleActionData_o *this, const Method
 
   skillInfo = this->fields.skillInfo;
   if ( skillInfo )
-    LODWORD(skillInfo) = ((int32_t (__fastcall *)(struct BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._9_getCutInId.methodPtr)(
+    LODWORD(skillInfo) = ((__int64 (__fastcall *)(struct BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._9_getCutInId.methodPtr)(
                            skillInfo,
                            skillInfo->klass->vtable._9_getCutInId.method);
   return (int)skillInfo;
@@ -8420,6 +8422,7 @@ bool BattleActionData__isReflectedAttackSideEffect(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_KeyValuePair_int__int___o *attackSideEffectedSvtIds; // x0
+  System_Collections_Generic_KeyValuePair_int__int__o v6; // x1
 
   if ( (byte_5972ECD & 1) == 0 )
   {
@@ -8429,9 +8432,10 @@ bool BattleActionData__isReflectedAttackSideEffect(
   attackSideEffectedSvtIds = this->fields.attackSideEffectedSvtIds;
   if ( !attackSideEffectedSvtIds )
     sub_2213CDC(0, pairAttackAndTarget);
+  v6 = pairAttackAndTarget;
   return System_Collections_Generic_List_KeyValuePair_int__int____Contains(
            attackSideEffectedSvtIds,
-           pairAttackAndTarget,
+           v6,
            (const MethodInfo_43BA334 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___Contains__);
 }
 
@@ -10165,13 +10169,13 @@ System_String_o *BattleActionData_AfterChangeField__GetPriorityBgmName(
 {
   BattleActionData_AfterChangeField_o *v6; // x20
   struct BattleBuffData_FieldChangeData_o *fieldChange; // x8
-  BattleActionData_AfterChangeField_o *v8; // x22
+  _QWORD *monitor; // x22
   BattleFieldEnvironmentData_o *FieldEnvData; // x0
   BattleData_o *data; // x23
   BattleBuffData_FieldChangeData_o *v11; // x24
   BattleFieldEnvironmentData_o *v12; // x21
   Generator_BGMFromFieldChangeBGBuff_o *v13; // x22
-  struct BattleBuffData_FieldChangeData_o *v14; // x8
+  __int64 v14; // x8
 
   v6 = this;
   if ( (byte_59730EA & 1) == 0 )
@@ -10187,7 +10191,7 @@ System_String_o *BattleActionData_AfterChangeField__GetPriorityBgmName(
   fieldChange = v6->fields.fieldChange;
   if ( !fieldChange )
     goto LABEL_13;
-  v8 = (BattleActionData_AfterChangeField_o *)*((_QWORD *)this + 9);
+  monitor = this[1].monitor;
   this = (BattleActionData_AfterChangeField_o *)System_String__IsNullOrEmpty(fieldChange->fields.bgmName, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
@@ -10205,14 +10209,14 @@ System_String_o *BattleActionData_AfterChangeField__GetPriorityBgmName(
                                                     2,
                                                     v6->fields.addBgmArg,
                                                     v12->klass->vtable._6_AddBGM.method);
-    v8 = this;
+    monitor = &this->klass;
   }
-  if ( !v8 )
+  if ( !monitor )
 LABEL_13:
     sub_2213CDC(this, perf);
-  v14 = v8->fields.fieldChange;
+  v14 = monitor[6];
   if ( v14 )
-    return *(System_String_o **)&v14->fields.bgId;
+    return *(System_String_o **)(v14 + 24);
   return defBgmName;
 }
 
@@ -10630,7 +10634,7 @@ LABEL_15:
   if ( !*(_DWORD *)(v13 + 228) )
     *(__n128 *)&v8 = j_il2cpp_runtime_class_init_0(v13, ratio);
   this = *(BattleActionData_AttackDamageData_o **)(v11[7] + 16LL);
-  if ( (*(_WORD *)((char *)this + 309) & 1) == 0 )
+  if ( (*(_WORD *)((_BYTE *)&this[1].fields.defbufflist + 5) & 1) == 0 )
     this = (BattleActionData_AttackDamageData_o *)sub_224B908(v8);
   v9 = **(System_Int32_array ***)&this->fields._ReactiveDamageGainHpBuffExecuteEffectId_k__BackingField;
   if ( !v10 )
@@ -11625,19 +11629,18 @@ void BattleActionData_BuffData__SetSaveTpTurn(
         int32_t value,
         const MethodInfo *method)
 {
-  struct System_Nullable_int__o v5; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v5; // x0
+  struct System_Nullable_int__o v6; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5972EF1 & 1) == 0 )
   {
     sub_2213A60(&Method_System_Nullable_int___ctor__);
     byte_5972EF1 = 1;
   }
-  v5 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v5,
-    value,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  this->fields._SaveTpTurnValue_k__BackingField = v5;
+  v5 = (System_Nullable_int__o)&v6;
+  v6 = 0;
+  System_Nullable_int____ctor(v5, value, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  this->fields._SaveTpTurnValue_k__BackingField = v6;
 }
 
 
@@ -13256,10 +13259,10 @@ BattleAction_BasePlayShiftGauge_o *BattleActionData_DownShiftGaugeData__get_Play
   BattleAction_PlayDownShiftGaugeMain___ctor(v3, 0);
   if ( !v3 )
     sub_2213CDC(v4, v5);
-  return ((BattleAction_BasePlayShiftGauge_o *(__fastcall *)(BattleAction_PlayDownShiftGaugeMain_o *, BattleActionData_DownShiftGaugeData_o *, const MethodInfo *))v3->klass->vtable._7_Init.methodPtr)(
-           v3,
-           this,
-           v3->klass->vtable._7_Init.method);
+  return (BattleAction_BasePlayShiftGauge_o *)((__int64 (__fastcall *)(BattleAction_PlayDownShiftGaugeMain_o *, BattleActionData_DownShiftGaugeData_o *, const MethodInfo *))v3->klass->vtable._7_Init.methodPtr)(
+                                                v3,
+                                                this,
+                                                v3->klass->vtable._7_Init.method);
 }
 
 
@@ -13574,7 +13577,8 @@ void BattleActionData_FieldBuffData__SetApplyTargetUpdateAfterShowBuff(
   BattleBuffData_BuffData_o *v35; // x23
   int32_t FieldBuffApplyTarget; // w21
   int32_t v37; // w1
-  __int64 v38; // [xsp+8h] [xbp-58h] BYREF
+  System_Nullable_int__o v38; // x0
+  __int64 v39; // [xsp+8h] [xbp-58h] BYREF
 
   if ( (byte_5972EFC & 1) == 0 )
   {
@@ -13665,14 +13669,12 @@ LABEL_25:
       if ( Entity )
       {
         v37 = Entity[26];
-        v38 = 0;
-        System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v38,
-          v37,
-          (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-        if ( (_BYTE)v38 )
+        v38 = (System_Nullable_int__o)&v39;
+        v39 = 0;
+        System_Nullable_int____ctor(v38, v37, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+        if ( (_BYTE)v39 )
         {
-          if ( SHIDWORD(v38) >= 1 )
+          if ( SHIDWORD(v39) >= 1 )
           {
             switch ( FieldBuffApplyTarget )
             {
@@ -14498,12 +14500,20 @@ UnityEngine_Color_o BattleActionData_ShiftServant_WeaponData__get_Color(
         BattleActionData_ShiftServant_WeaponData_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._Color_k__BackingField.fields.r;
-  result.fields.g = this->fields._Color_k__BackingField.fields.g;
-  result.fields.b = this->fields._Color_k__BackingField.fields.b;
-  result.fields.a = this->fields._Color_k__BackingField.fields.a;
+  r = this->fields._Color_k__BackingField.fields.r;
+  g = this->fields._Color_k__BackingField.fields.g;
+  b = this->fields._Color_k__BackingField.fields.b;
+  a = this->fields._Color_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -15149,10 +15159,10 @@ BattleAction_BasePlayShiftGauge_o *BattleActionData_UpShiftGaugeData__get_PlayMa
   BattleAction_PlayUpShiftGaugeUpMain___ctor(v3, 0);
   if ( !v3 )
     sub_2213CDC(v4, v5);
-  return ((BattleAction_BasePlayShiftGauge_o *(__fastcall *)(BattleAction_PlayUpShiftGaugeUpMain_o *, BattleActionData_UpShiftGaugeData_o *, const MethodInfo *))v3->klass->vtable._7_Init.methodPtr)(
-           v3,
-           this,
-           v3->klass->vtable._7_Init.method);
+  return (BattleAction_BasePlayShiftGauge_o *)((__int64 (__fastcall *)(BattleAction_PlayUpShiftGaugeUpMain_o *, BattleActionData_UpShiftGaugeData_o *, const MethodInfo *))v3->klass->vtable._7_Init.methodPtr)(
+                                                v3,
+                                                this,
+                                                v3->klass->vtable._7_Init.method);
 }
 
 

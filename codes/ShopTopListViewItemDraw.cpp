@@ -1541,6 +1541,7 @@ bool ShopTopListViewItemDraw__CreateCoinRoomAsset_d__49__MoveNext(
   bool v19; // w6
   bool v20; // w7
   const MethodInfo *v21; // x1
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x20
 
   v8 = this;
@@ -1604,8 +1605,9 @@ LABEL_12:
   v8->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

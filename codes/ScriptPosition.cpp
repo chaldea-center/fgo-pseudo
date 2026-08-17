@@ -84,6 +84,9 @@ UnityEngine_Vector3_o ScriptPosition__GetCharaOffset(int32_t index, const Method
   struct UnityEngine_Vector2_array *charaOffsetList; // x8
   struct UnityEngine_Vector2_array *v5; // x8
   float *v6; // x8
+  float v7; // s2
+  float v8; // s0
+  float v9; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59728EE & 1) == 0 )
@@ -121,20 +124,25 @@ LABEL_15:
   if ( (unsigned int)index >= LODWORD(v5->max_length) )
     sub_2213CE4(v3);
   v6 = (float *)(&v5->obj.klass + (unsigned int)index);
-  result.fields.z = 0.0;
-  result.fields.x = v6[8];
-  result.fields.y = v6[9];
+  v7 = 0.0;
+  v8 = v6[8];
+  v9 = v6[9];
+  result.fields.z = v7;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
 
 UnityEngine_Vector3_o ScriptPosition__GetCharaOffset_51899824(float x, float y, const MethodInfo *method)
 {
+  float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.z = 0.0;
-  result.fields.x = x;
+  v3 = 0.0;
+  result.fields.z = v3;
   result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -145,6 +153,9 @@ UnityEngine_Vector3_o ScriptPosition__GetPosition(int32_t index, const MethodInf
   struct UnityEngine_Vector2_array *positionList; // x8
   struct UnityEngine_Vector2_array *v5; // x8
   float *v6; // x8
+  float v7; // s2
+  float v8; // s0
+  float v9; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59728ED & 1) == 0 )
@@ -182,19 +193,24 @@ LABEL_15:
   if ( (unsigned int)index >= LODWORD(v5->max_length) )
     sub_2213CE4(v3);
   v6 = (float *)(&v5->obj.klass + (unsigned int)index);
-  result.fields.z = 0.0;
-  result.fields.x = v6[8];
-  result.fields.y = v6[9];
+  v7 = 0.0;
+  v8 = v6[8];
+  v9 = v6[9];
+  result.fields.z = v7;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
 
 UnityEngine_Vector3_o ScriptPosition__GetPosition_51899636(float x, float y, const MethodInfo *method)
 {
+  float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.z = 0.0;
-  result.fields.x = x;
+  v3 = 0.0;
+  result.fields.z = v3;
   result.fields.y = y;
+  result.fields.x = x;
   return result;
 }

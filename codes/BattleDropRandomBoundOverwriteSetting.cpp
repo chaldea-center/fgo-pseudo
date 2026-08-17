@@ -278,10 +278,16 @@ UnityEngine_Vector3_o BattleDropRandomBoundOverwriteSetting__get_ObjectScaleRati
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.objectScaleRatio.fields.x;
-  result.fields.y = this->fields.objectScaleRatio.fields.y;
-  result.fields.z = this->fields.objectScaleRatio.fields.z;
+  x = this->fields.objectScaleRatio.fields.x;
+  y = this->fields.objectScaleRatio.fields.y;
+  z = this->fields.objectScaleRatio.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }

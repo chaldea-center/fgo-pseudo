@@ -72,7 +72,7 @@ LABEL_11:
     sub_2213CDC(this, subMemberArray);
   if ( !*(_DWORD *)&this->fields._IsEnemy_k__BackingField )
     sub_2213CE4(this);
-  return (BattleServantData_o *)*((_QWORD *)this + 4);
+  return (BattleServantData_o *)this[1].klass;
 }
 
 
@@ -215,10 +215,10 @@ BattleServantData_o *RestockServantLogic__GetImmediateRestockServant(
     HIDWORD(v12[1].klass) = v13;
     BYTE1(v12[1].monitor) = 1;
   }
-  return ((BattleServantData_o *(__fastcall *)(Il2CppObject *, BattleData_o *, const MethodInfo *))v12->klass->vtable[4].methodPtr)(
-           v12,
-           battleData,
-           v12->klass->vtable[4].method);
+  return (BattleServantData_o *)((__int64 (__fastcall *)(Il2CppObject *, BattleData_o *, const MethodInfo *))v12->klass->vtable[4].methodPtr)(
+                                  v12,
+                                  battleData,
+                                  v12->klass->vtable[4].method);
 }
 
 

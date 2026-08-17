@@ -102,7 +102,7 @@ void BattleResultItemComponent__AddItemNewLine(BattleResultItemComponent_o *this
   int v11; // w20
   int v12; // w21
   float v13; // s9
-  float y; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
@@ -167,13 +167,13 @@ void BattleResultItemComponent__AddItemNewLine(BattleResultItemComponent_o *this
       this = (BattleResultItemComponent_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v4, 0);
       if ( this )
       {
-        y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
         v10 = v2->fields.itemWindow;
         if ( v10 )
         {
           v11 = 0;
           v12 = v5 + 1;
-          v13 = y + -113.57;
+          v13 = localPosition.fields.y + -113.57;
           do
           {
             this = (BattleResultItemComponent_o *)v10->fields.itemObjectList;
@@ -2002,14 +2002,20 @@ void BattleResultItemComponent__StartPresenterAnimation(
 {
   UnityEngine_GameObject_o *addItemSvtAnimationObj; // x0
   struct BattleViewItemlistComponent_o *itemWindow; // x8
-  const MethodInfo *v7; // x2
-  struct BattleViewItemlistComponent_o *v8; // x8
+  float x; // s10
+  float y; // s8
+  float z; // s9
+  const MethodInfo *v10; // x2
+  struct BattleViewItemlistComponent_o *v11; // x8
   struct System_Collections_Generic_List_GameObject__o *itemObjectList; // x8
-  System_Collections_IEnumerator_o *v10; // x1
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  float v13; // s8
+  float v14; // s10
+  float v15; // s9
+  System_Collections_IEnumerator_o *v16; // x1
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59744E8 & 1) == 0 )
   {
@@ -2040,17 +2046,20 @@ void BattleResultItemComponent__StartPresenterAnimation(
   addItemSvtAnimationObj = this->fields.addItemSvtAnimationObj;
   if ( !addItemSvtAnimationObj )
     goto LABEL_19;
+  x = position.fields.x;
+  y = position.fields.y;
+  z = position.fields.z;
   addItemSvtAnimationObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(addItemSvtAnimationObj, 0);
   if ( !addItemSvtAnimationObj )
     goto LABEL_19;
-  v13.fields.y = position.fields.y;
-  v13.fields.z = position.fields.z;
-  v13.fields.x = position.fields.x + 0.05;
-  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)addItemSvtAnimationObj, v13, 0);
-  v8 = this->fields.itemWindow;
-  if ( !v8 )
+  v18.fields.y = y;
+  v18.fields.z = z;
+  v18.fields.x = x + 0.05;
+  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)addItemSvtAnimationObj, v18, 0);
+  v11 = this->fields.itemWindow;
+  if ( !v11 )
     goto LABEL_19;
-  itemObjectList = v8->fields.itemObjectList;
+  itemObjectList = v11->fields.itemObjectList;
   if ( !itemObjectList )
     goto LABEL_19;
   if ( itemObjectList->fields._size >= 8 )
@@ -2067,15 +2076,18 @@ void BattleResultItemComponent__StartPresenterAnimation(
         addItemSvtAnimationObj = this->fields.addItemSvtAnimationObj;
         if ( addItemSvtAnimationObj )
         {
+          v13 = localPosition.fields.x;
+          v14 = localPosition.fields.y;
+          v15 = localPosition.fields.z;
           addItemSvtAnimationObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                  addItemSvtAnimationObj,
                                                                  0);
           if ( addItemSvtAnimationObj )
           {
-            v14.fields.z = localPosition.fields.z;
-            v14.fields.y = localPosition.fields.y + 9.0;
-            v14.fields.x = localPosition.fields.x;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)addItemSvtAnimationObj, v14, 0);
+            v20.fields.z = v15;
+            v20.fields.y = v14 + 9.0;
+            v20.fields.x = v13;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)addItemSvtAnimationObj, v20, 0);
             goto LABEL_18;
           }
         }
@@ -2085,8 +2097,8 @@ LABEL_19:
     sub_2213CDC(addItemSvtAnimationObj, callback);
   }
 LABEL_18:
-  v10 = BattleResultItemComponent__PlayVoiceCoroutine(this, callback, v7);
-  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v10, 0);
+  v16 = BattleResultItemComponent__PlayVoiceCoroutine(this, callback, v10);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v16, 0);
 }
 
 
@@ -3406,6 +3418,7 @@ bool BattleResultItemComponent__PlayVoiceCoroutine_d__57__MoveNext(
   int32_t v24; // w5
   bool v25; // w6
   bool v26; // w7
+  bool result; // w0
   System_Collections_IEnumerator_o *v28; // x0
   System_Random_o *v29; // x21
   struct System_String_array *voiceIds; // x8
@@ -3472,8 +3485,9 @@ bool BattleResultItemComponent__PlayVoiceCoroutine_d__57__MoveNext(
         v8->fields.__2__current = (Il2CppObject *)v19;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)v19, v21, v22, v23, v24, v25, v26);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
     }
     v28 = BattleResultItemComponent__PlayItemIconEffectCoroutine(_4__this, 0);
@@ -3544,8 +3558,9 @@ LABEL_30:
   v8->fields.__2__current = 0;
   v44 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v44, 0, v2, v3, v4, v5, v6, v7);
+  result = 1;
   v44[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 

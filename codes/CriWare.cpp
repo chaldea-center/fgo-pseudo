@@ -24,7 +24,7 @@ int32_t CriWare_Common__CRIWARE0F286CE1(const MethodInfo *method)
     v1 = (void *)sub_2214114(v3);
     off_5969B40 = v1;
   }
-  return ((int32_t (*)(void))v1)();
+  return ((__int64 (*)(void))v1)();
 }
 
 

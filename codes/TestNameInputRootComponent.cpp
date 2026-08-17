@@ -76,13 +76,14 @@ void TestNameInputRootComponent__onChangeInput(TestNameInputRootComponent_o *thi
   UILineInput_o *signupIntegerInput2; // x0
   System_String_o *v11; // x0
   int32_t v12; // w3
-  __int64 v13; // x1
-  bool v14; // w20
+  System_DateTime_o v13; // x0
+  __int64 v14; // x1
+  bool v15; // w20
   UnityEngine_Behaviour_o *signupDecideButton; // x0
-  __int64 v16; // x1
-  struct UIButton_o *v17; // x0
-  __int64 v18; // [xsp+8h] [xbp-38h] BYREF
-  int v19; // [xsp+18h] [xbp-28h]
+  __int64 v17; // x1
+  struct UIButton_o *v18; // x0
+  __int64 v19; // [xsp+8h] [xbp-38h] BYREF
+  int v20; // [xsp+18h] [xbp-28h]
 
   if ( (byte_596DE7E & 1) == 0 )
   {
@@ -90,7 +91,7 @@ void TestNameInputRootComponent__onChangeInput(TestNameInputRootComponent_o *thi
     byte_596DE7E = 1;
   }
   signupLineInput1 = this->fields.signupLineInput1;
-  v19 = 0;
+  v20 = 0;
   if ( !signupLineInput1 )
     sub_2213CDC(0, method);
   Text = UILineInput__GetText(signupLineInput1, 0);
@@ -104,20 +105,21 @@ void TestNameInputRootComponent__onChangeInput(TestNameInputRootComponent_o *thi
     sub_2213CDC(0, v8);
   v11 = UILineInput__GetText(signupIntegerInput2, 0);
   v12 = System_Int32__Parse(v11, 0);
-  v18 = 0;
-  System_DateTime___ctor_77013752((System_DateTime_o)&v18, 2000, v9, v12, 0);
-  v14 = System_String__op_Inequality(Text, (System_String_o *)StringLiteral_1/*""*/, 0);
+  v19 = 0;
+  v13.fields._dateData = (uint64_t)&v19;
+  System_DateTime___ctor_77013752(v13, 2000, v9, v12, 0);
+  v15 = System_String__op_Inequality(Text, (System_String_o *)StringLiteral_1/*""*/, 0);
   signupDecideButton = (UnityEngine_Behaviour_o *)this->fields.signupDecideButton;
   if ( !signupDecideButton )
-    sub_2213CDC(0, v13);
-  UnityEngine_Behaviour__set_enabled(signupDecideButton, v14, 0);
-  v17 = this->fields.signupDecideButton;
-  if ( !v17 )
-    sub_2213CDC(0, v16);
-  ((void (__fastcall *)(struct UIButton_o *, bool, const MethodInfo *))v17->klass->vtable._5_set_isEnabled.methodPtr)(
-    v17,
-    v14,
-    v17->klass->vtable._5_set_isEnabled.method);
+    sub_2213CDC(0, v14);
+  UnityEngine_Behaviour__set_enabled(signupDecideButton, v15, 0);
+  v18 = this->fields.signupDecideButton;
+  if ( !v18 )
+    sub_2213CDC(0, v17);
+  ((void (__fastcall *)(struct UIButton_o *, bool, const MethodInfo *))v18->klass->vtable._5_set_isEnabled.methodPtr)(
+    v18,
+    v15,
+    v18->klass->vtable._5_set_isEnabled.method);
 }
 
 

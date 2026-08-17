@@ -201,6 +201,7 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   struct OutlineEffectSettings_StaticFields *v35; // x9
   float v36; // s1
   struct OutlineEffectSettings_StaticFields *v37; // x8
+  OutlineEffectSettings_o *result; // x0
   Il2CppClass *v39; // d1
   float v40; // s2
 
@@ -357,6 +358,7 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
     v15 = OutlineEffectSettings_TypeInfo;
   }
   v37 = v15->static_fields;
+  result = (OutlineEffectSettings_o *)Instance_object;
   v39 = *(Il2CppClass **)&v37->_DefaultGaussianBloomSilhouetteScale_k__BackingField.fields.x;
   v40 = v37->_DefaultGaussianBloomSilhouetteScale_k__BackingField.fields.z;
   *(_OWORD *)&Instance_object[5].monitor = xmmword_E9DC50;
@@ -367,7 +369,7 @@ OutlineEffectSettings_o *OutlineEffectSettings__get_Default(const MethodInfo *me
   *(_OWORD *)&Instance_object[7].monitor = xmmword_E9BD10;
   LODWORD(Instance_object[14].monitor) = 1065353216;
   *(_OWORD *)&Instance_object[13].monitor = xmmword_E9C4A0;
-  return (OutlineEffectSettings_o *)Instance_object;
+  return result;
 }
 
 
@@ -377,6 +379,9 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteB
   __int64 v2; // x2
   OutlineEffectSettings_c *v3; // x0
   float *p_x; // x8
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BDA9 & 1) == 0 )
@@ -391,9 +396,12 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteB
     v3 = OutlineEffectSettings_TypeInfo;
   }
   p_x = &v3->static_fields->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
-  result.fields.x = p_x[6];
-  result.fields.y = p_x[7];
-  result.fields.z = p_x[8];
+  v5 = p_x[6];
+  v6 = p_x[7];
+  v7 = p_x[8];
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -404,6 +412,9 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteG
   __int64 v2; // x2
   OutlineEffectSettings_c *v3; // x0
   float *p_x; // x8
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BDA8 & 1) == 0 )
@@ -418,9 +429,12 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteG
     v3 = OutlineEffectSettings_TypeInfo;
   }
   p_x = &v3->static_fields->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
-  result.fields.x = p_x[3];
-  result.fields.y = p_x[4];
-  result.fields.z = p_x[5];
+  v5 = p_x[3];
+  v6 = p_x[4];
+  v7 = p_x[5];
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -431,6 +445,9 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteR
   __int64 v2; // x2
   OutlineEffectSettings_c *v3; // x0
   float *p_x; // x8
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BDA7 & 1) == 0 )
@@ -445,9 +462,12 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteR
     v3 = OutlineEffectSettings_TypeInfo;
   }
   p_x = &v3->static_fields->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
-  result.fields.x = *p_x;
-  result.fields.y = p_x[1];
-  result.fields.z = p_x[2];
+  v5 = *p_x;
+  v6 = p_x[1];
+  v7 = p_x[2];
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -458,6 +478,9 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteS
   __int64 v2; // x2
   OutlineEffectSettings_c *v3; // x0
   float *p_x; // x8
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BDAA & 1) == 0 )
@@ -472,9 +495,12 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultGaussianBloomSilhouetteS
     v3 = OutlineEffectSettings_TypeInfo;
   }
   p_x = &v3->static_fields->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
-  result.fields.x = p_x[9];
-  result.fields.y = p_x[10];
-  result.fields.z = p_x[11];
+  v5 = p_x[9];
+  v6 = p_x[10];
+  v7 = p_x[11];
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -626,6 +652,9 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultVertexOffset(const Metho
   __int64 v2; // x2
   OutlineEffectSettings_c *v3; // x0
   float *p_x; // x8
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BDAC & 1) == 0 )
@@ -640,9 +669,12 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultVertexOffset(const Metho
     v3 = OutlineEffectSettings_TypeInfo;
   }
   p_x = &v3->static_fields->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
-  result.fields.x = p_x[15];
-  result.fields.y = p_x[16];
-  result.fields.z = p_x[17];
+  v5 = p_x[15];
+  v6 = p_x[16];
+  v7 = p_x[17];
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -653,6 +685,9 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultVertexScale(const Method
   __int64 v2; // x2
   OutlineEffectSettings_c *v3; // x0
   float *p_x; // x8
+  float v5; // s0
+  float v6; // s1
+  float v7; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BDAB & 1) == 0 )
@@ -667,8 +702,11 @@ UnityEngine_Vector3_o OutlineEffectSettings__get_DefaultVertexScale(const Method
     v3 = OutlineEffectSettings_TypeInfo;
   }
   p_x = &v3->static_fields->_DefaultGaussianBloomSilhouetteRed_k__BackingField.fields.x;
-  result.fields.x = p_x[12];
-  result.fields.y = p_x[13];
-  result.fields.z = p_x[14];
+  v5 = p_x[12];
+  v6 = p_x[13];
+  v7 = p_x[14];
+  result.fields.z = v7;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }

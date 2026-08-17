@@ -60,6 +60,7 @@ int32_t ServantStatusListViewItemDrawSkill__GetKind(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawSkill__SetItem(
         ServantStatusListViewItemDrawSkill_o *this,
         ServantStatusListViewItem_o *item,
@@ -154,13 +155,14 @@ void ServantStatusListViewItemDrawSkill__SetItem(
   unsigned int v92; // w9
   int32_t v93; // w1
   UnityEngine_BoxCollider_o *baseCollider; // x20
-  bool v96; // [xsp+0h] [xbp-90h]
-  int32_t v97; // [xsp+4h] [xbp-8Ch]
-  int32_t v98; // [xsp+8h] [xbp-88h]
+  int v95; // s0 OVERLAPPED
+  int v97; // s2
+  bool v98; // [xsp+0h] [xbp-90h]
+  int32_t v99; // [xsp+4h] [xbp-8Ch]
+  int32_t v100; // [xsp+8h] [xbp-88h]
   int32_t limitCount; // [xsp+Ch] [xbp-84h]
   ServantLimitAddEntity_o *entity; // [xsp+10h] [xbp-80h] BYREF
   SkillInfo_array *skillInfoList; // [xsp+18h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o v102; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -232,7 +234,7 @@ void ServantStatusListViewItemDrawSkill__SetItem(
         SvtId = ServantStatusListViewItem__GetSvtId(item, !v28, 0);
         limitCount = ServantStatusListViewItem__get_LimitCount(item, 0);
         DispLimitCountStageSealAfter = ServantStatusListViewItem__GetDispLimitCountStageSealAfter(item, v29 & 1, 0);
-        v98 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(DispLimitCountStageSealAfter, 0);
+        v100 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(DispLimitCountStageSealAfter, 0);
         ServantStatusListViewItem__GetSkillInfo(item, &skillInfoList, v29 & 1, 0);
         if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)skillInfoList, 0) )
           return;
@@ -331,12 +333,12 @@ LABEL_117:
         svtEntity = LimitCountUtility__ConvertStageToLimitCount(limitCount, DispLimitCountStageSealAfter, 0, 0);
         if ( Master_object )
         {
-          v97 = SvtId;
+          v99 = SvtId;
           ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Master_object, &entity, SvtId, svtEntity, 0);
           v55 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
           svtEntity = (__int64)BalanceConfig_TypeInfo;
           v56 = 0;
-          v96 = 0;
+          v98 = 0;
           v57 = 0;
           v58 = v33;
           for ( i = 4; ; ++i )
@@ -364,11 +366,11 @@ LABEL_117:
                   goto LABEL_116;
                 svtEntity = (__int64)ServantSkillAddMaster__GetEnableEntity(
                                        (ServantSkillAddMaster_o *)v55,
-                                       v97,
+                                       v99,
                                        limitCount,
                                        id,
                                        0,
-                                       v98,
+                                       v100,
                                        svtEntity & 1,
                                        0);
                 v63 = this->fields.skillList;
@@ -444,7 +446,7 @@ LABEL_117:
                   v76 = *((_QWORD *)&v75->obj.klass + i);
                   if ( !v76 )
                     goto LABEL_116;
-                  v96 = *(_BYTE *)(v76 + 68) != 0;
+                  v98 = *(_BYTE *)(v76 + 68) != 0;
                 }
               }
             }
@@ -477,7 +479,7 @@ LABEL_117:
                 }
                 v82 = v81->static_fields;
                 v79 = v79 + (float)v82->CombineAdjustHeight;
-                if ( v96 )
+                if ( v98 )
                 {
                   if ( !*(&v81->_2.cctor_finished + 1) )
                   {
@@ -542,8 +544,8 @@ LABEL_117:
                             *(_QWORD *)(*(_QWORD *)svtEntity + 672LL));
               if ( baseCollider )
               {
-                v102.fields.z = 0.0;
-                UnityEngine_BoxCollider__set_size(baseCollider, v102, 0);
+                v97 = 0;
+                UnityEngine_BoxCollider__set_size(baseCollider, *(UnityEngine_Vector3_o *)&v95, 0);
                 svtEntity = (__int64)this->fields.baseSprite;
                 if ( svtEntity )
                 {

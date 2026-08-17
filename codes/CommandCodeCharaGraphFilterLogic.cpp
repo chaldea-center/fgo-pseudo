@@ -10,14 +10,20 @@ bool CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(
 {
   const MethodInfo *v3; // x1
 
-  return (((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
-            this,
-            this->klass->vtable._5_IsMatchRarityFilter.method)
-        & 1) != 0
-      && CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(this, v3)
-      && ((bool (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._6_IsMatchSelectedItemFilter.methodPtr)(
-           this,
-           this->klass->vtable._6_IsMatchSelectedItemFilter.method);
+  if ( (((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
+          this,
+          this->klass->vtable._5_IsMatchRarityFilter.method)
+      & 1) != 0
+    && CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(this, v3) )
+  {
+    return ((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._6_IsMatchSelectedItemFilter.methodPtr)(
+             this,
+             this->klass->vtable._6_IsMatchSelectedItemFilter.method);
+  }
+  else
+  {
+    return 0;
+  }
 }
 
 

@@ -727,7 +727,8 @@ LABEL_28:
       v45.fields._current = v31;
       if ( !v32 )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v29);
-      v42 = *(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)&v45.fields._dictionary;
+      *(_OWORD *)&v42.fields.currentCryptoKey = *(_OWORD *)&v45.fields._dictionary;
+      *(struct System_Collections_Generic_KeyValuePair_TKey__TValue__o *)&v42.fields.fakeValue = v45.fields._current;
       v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v42, 0);
       if ( !v30 )
         sub_2213CDC(v33, v34);

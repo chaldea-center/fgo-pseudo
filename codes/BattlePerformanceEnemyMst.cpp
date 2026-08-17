@@ -125,6 +125,7 @@ System_Collections_IEnumerator_o *BattlePerformanceEnemyMst__LoadAssetCoroutine(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597403F & 1) == 0 )
   {
@@ -136,8 +137,9 @@ System_Collections_IEnumerator_o *BattlePerformanceEnemyMst__LoadAssetCoroutine(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 40) = mstFaceId;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -688,6 +690,7 @@ void BattlePerformanceEnemyMst__releaseMasterVoice(BattlePerformanceEnemyMst_o *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattlePerformanceEnemyMst__updateCommandSpellIcon(BattlePerformanceEnemyMst_o *this, const MethodInfo *method)
 {
   BattlePerformanceEnemyMst_o *v2; // x19
@@ -697,16 +700,17 @@ void BattlePerformanceEnemyMst__updateCommandSpellIcon(BattlePerformanceEnemyMst
   StageEntity_o *v6; // x20
   System_Int32_array *EnemyMasterCommandSpellIconSize; // x21
   BattlePerformanceEnemyMst_c *v8; // x0
-  UnityEngine_Vector2_o DEFAULT_COMMAND_SPELL_ICON_SIZE; // d0
+  UnityEngine_Vector2_o DEFAULT_COMMAND_SPELL_ICON_SIZE; // d0 OVERLAPPED
+  float y; // s1
   System_Single_array *EnemyMasterCommandSpellIconPosition; // x20
-  BattlePerformanceEnemyMst_c *v11; // x0
+  BattlePerformanceEnemyMst_c *v12; // x0
   struct BattlePerformanceEnemyMst_StaticFields *static_fields; // x9
   float *m_Items; // x8
   float *p_y; // x9
-  float v15; // s8
-  float v16; // s9
+  float v16; // s8
+  float v17; // s9
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Vector2_o v18; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v19; // 0:s0.4,4:s1.4
 
   v2 = this;
   if ( (byte_597403C & 1) == 0 )
@@ -763,6 +767,7 @@ LABEL_27:
   this = (BattlePerformanceEnemyMst_o *)v2->fields.commandSpellIcon;
   if ( !this )
     goto LABEL_27;
+  y = DEFAULT_COMMAND_SPELL_ICON_SIZE.fields.y;
   CommandSpellIconComponent__SetSize((CommandSpellIconComponent_o *)this, DEFAULT_COMMAND_SPELL_ICON_SIZE, 0);
   EnemyMasterCommandSpellIconPosition = StageEntity__GetEnemyMasterCommandSpellIconPosition(v6, 0);
   this = (BattlePerformanceEnemyMst_o *)BasicHelper__IsNullOrEmpty(
@@ -781,25 +786,25 @@ LABEL_27:
 LABEL_28:
     sub_2213CE4(this);
   }
-  v11 = BattlePerformanceEnemyMst_TypeInfo;
+  v12 = BattlePerformanceEnemyMst_TypeInfo;
   if ( !*(&BattlePerformanceEnemyMst_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(BattlePerformanceEnemyMst_TypeInfo, method);
-    v11 = BattlePerformanceEnemyMst_TypeInfo;
+    v12 = BattlePerformanceEnemyMst_TypeInfo;
   }
-  static_fields = v11->static_fields;
+  static_fields = v12->static_fields;
   m_Items = (float *)&static_fields->DEFAULT_COMMAND_SPELL_ICON_POSITION;
   p_y = &static_fields->DEFAULT_COMMAND_SPELL_ICON_POSITION.fields.y;
 LABEL_25:
   this = (BattlePerformanceEnemyMst_o *)v2->fields.commandSpellIcon;
   if ( !this )
     goto LABEL_27;
-  v15 = *m_Items;
-  v16 = *p_y;
+  v16 = *m_Items;
+  v17 = *p_y;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v18.fields.x = v15;
-  v18.fields.y = v16;
-  GameObjectExtensions__SetLocalPosition_42891412(gameObject, v18, 0);
+  v19.fields.x = v16;
+  v19.fields.y = v17;
+  GameObjectExtensions__SetLocalPosition_42891412(gameObject, v19, 0);
 }
 
 
@@ -980,8 +985,8 @@ void BattlePerformanceEnemyMst___c__DisplayClass25_0___changeMasterFace_b__0(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
-  __int64 v12; // x8
-  System_String_o *v13; // x21
+  struct BattlePerformanceEnemyMst_o *v12; // x8
+  System_String_o *m_CancellationTokenSource; // x21
 
   v3 = data;
   v4 = this;
@@ -1017,20 +1022,20 @@ void BattlePerformanceEnemyMst___c__DisplayClass25_0___changeMasterFace_b__0(
   this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)v4->fields.__4__this;
   if ( !this )
     goto LABEL_13;
-  v12 = *((_QWORD *)this + 10);
+  v12 = this[2].fields.__4__this;
   if ( v12 )
   {
-    v13 = *(System_String_o **)(v12 + 24);
+    m_CancellationTokenSource = (System_String_o *)v12->fields.m_CancellationTokenSource;
     if ( !*(&AssetManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo, data);
-    AssetManager__releaseAssetStorage(v13, 0);
+    AssetManager__releaseAssetStorage(m_CancellationTokenSource, 0);
     this = (BattlePerformanceEnemyMst___c__DisplayClass25_0_o *)v4->fields.__4__this;
     if ( !this )
 LABEL_13:
       sub_2213CDC(this, data);
   }
-  *((_QWORD *)this + 10) = v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 80), (int32_t)v3, v6, v7, v8, v9, v10, v11);
+  this[2].fields.__4__this = (struct BattlePerformanceEnemyMst_o *)v3;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[2].fields, (int32_t)v3, v6, v7, v8, v9, v10, v11);
 }
 
 

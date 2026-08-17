@@ -45,6 +45,7 @@ System_Collections_Generic_IEnumerable_int__o *BattleBgEntity__GetAllSpecialShad
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_Generic_IEnumerable_int__o *result; // x0
 
   if ( (byte_597043C & 1) == 0 )
   {
@@ -57,8 +58,9 @@ System_Collections_Generic_IEnumerable_int__o *BattleBgEntity__GetAllSpecialShad
   *(_DWORD *)(v5 + 24) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_Generic_IEnumerable_int__o *)v5;
   *(_DWORD *)(v5 + 44) = defId;
-  return (System_Collections_Generic_IEnumerable_int__o *)v5;
+  return result;
 }
 
 
@@ -321,6 +323,7 @@ System_Collections_Generic_IEnumerator_int__o *BattleBgEntity__GetAllSpecialShad
   int32_t v10; // w5
   bool v11; // w6
   bool v12; // w7
+  System_Collections_Generic_IEnumerator_int__o *result; // x0
 
   if ( (byte_5970441 & 1) == 0 )
   {
@@ -345,8 +348,9 @@ System_Collections_Generic_IEnumerator_int__o *BattleBgEntity__GetAllSpecialShad
     v4->fields.__4__this = _4__this;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v7, v8, v9, v10, v11, v12);
   }
+  result = (System_Collections_Generic_IEnumerator_int__o *)v4;
   v4->fields.defId = this->fields.__3__defId;
-  return (System_Collections_Generic_IEnumerator_int__o *)v4;
+  return result;
 }
 
 

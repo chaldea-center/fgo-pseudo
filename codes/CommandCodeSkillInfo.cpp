@@ -5,6 +5,7 @@ void CommandCodeSkillInfo___ctor(CommandCodeSkillInfo_o *this, const MethodInfo 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommandCodeSkillInfo__Set(
         CommandCodeSkillInfo_o *this,
         int32_t commandCodeId,
@@ -42,7 +43,9 @@ void CommandCodeSkillInfo__Set(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v37; // x22
   const MethodInfo *v38; // x2
   UnityEngine_Transform_o *v39; // x22
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  unsigned int localPosition; // s0 OVERLAPPED
+  int v41; // s2
+  float DetailObjHeight; // s1
 
   if ( (byte_596FB60 & 1) == 0 )
   {
@@ -164,14 +167,12 @@ void CommandCodeSkillInfo__Set(
       Instance = UnityEngine_GameObject__get_transform(this->fields.DetailObj, 0);
       if ( !Instance )
         goto LABEL_36;
-      LODWORD(v40.fields.x) = (unsigned int)UnityEngine_Transform__get_localPosition(
-                                              (UnityEngine_Transform_o *)Instance,
-                                              0);
+      localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0);
       if ( !v39 )
         goto LABEL_36;
-      v40.fields.z = 0.0;
-      v40.fields.y = this->fields.DetailObjHeight;
-      UnityEngine_Transform__set_localPosition(v39, v40, 0);
+      v41 = 0;
+      DetailObjHeight = this->fields.DetailObjHeight;
+      UnityEngine_Transform__set_localPosition(v39, *(UnityEngine_Vector3_o *)&localPosition, 0);
     }
     Instance = this->fields.SkillIconComp;
     if ( Instance )

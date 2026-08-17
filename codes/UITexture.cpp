@@ -218,6 +218,7 @@ LABEL_11:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
@@ -234,7 +235,10 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
   float v14; // s1
   float v15; // s3
   bool v16; // nf
-  UnityEngine_Vector4_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v17; // s0 OVERLAPPED
+  float v18; // s1
+  float v19; // s2
+  float v20; // s3
 
   if ( (byte_59752DB & 1) == 0 )
   {
@@ -267,22 +271,22 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
       v15 = v13 * 0.5;
       v16 = v9 < v14;
       if ( v9 < v14 )
-        v20.fields.x = v12 * 0.5;
+        v17 = v12 * 0.5;
       else
-        v20.fields.x = 0.0;
+        v17 = 0.0;
       if ( v16 )
-        v20.fields.y = 0.0;
+        v18 = 0.0;
       else
-        v20.fields.y = v15;
+        v18 = v15;
       if ( v16 )
-        v20.fields.z = 1.0 - (float)(v12 * 0.5);
+        v19 = 1.0 - (float)(v12 * 0.5);
       else
-        v20.fields.z = 1.0;
+        v19 = 1.0;
       if ( v16 )
-        v20.fields.w = 1.0;
+        v20 = 1.0;
       else
-        v20.fields.w = 1.0 - v15;
-      UIWidget__set_drawRegion((UIWidget_o *)this, v20, 0);
+        v20 = 1.0 - v15;
+      UIWidget__set_drawRegion((UIWidget_o *)this, *(UnityEngine_Vector4_o *)&v17, 0);
     }
   }
 }
@@ -290,12 +294,20 @@ void UITexture__OnUpdate(UITexture_o *this, const MethodInfo *method)
 
 UnityEngine_Vector4_o UITexture__get_border(UITexture_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
+  float w; // s3
   UnityEngine_Vector4_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.x = this->fields.mBorder.fields.x;
-  result.fields.y = this->fields.mBorder.fields.y;
-  result.fields.z = this->fields.mBorder.fields.z;
-  result.fields.w = this->fields.mBorder.fields.w;
+  x = this->fields.mBorder.fields.x;
+  y = this->fields.mBorder.fields.y;
+  z = this->fields.mBorder.fields.z;
+  w = this->fields.mBorder.fields.w;
+  result.fields.w = w;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -331,6 +343,9 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
   float32x4_t v35; // q5
   float32x4_t v36; // q1
   float32x4_t v38; // q0
+  float v39; // s1
+  float v40; // s2
+  float v41; // s3
   float v42; // [xsp+0h] [xbp-70h]
   float v43; // [xsp+10h] [xbp-60h]
   float v44; // [xsp+20h] [xbp-50h]
@@ -432,10 +447,13 @@ UnityEngine_Vector4_o UITexture__get_drawingDimensions(UITexture_o *this, const 
             vbicq_s8(
               vbslq_s8(vcgtq_f32((float32x4_t)this->fields.mDrawRegion, _Q3), _Q3, (int8x16_t)this->fields.mDrawRegion),
               vcltzq_f32((float32x4_t)this->fields.mDrawRegion))));
-  LODWORD(result.fields.y) = v38.n128_u32[1];
-  LODWORD(result.fields.w) = v38.n128_u32[3];
-  LODWORD(result.fields.z) = v38.n128_u32[2];
+  v39 = v38.n128_f32[1];
+  v41 = v38.n128_f32[3];
+  v40 = v38.n128_f32[2];
   result.fields.x = v38.n128_f32[0];
+  result.fields.w = v41;
+  result.fields.z = v40;
+  result.fields.y = v39;
   return result;
 }
 
@@ -593,12 +611,20 @@ UnityEngine_Shader_o *UITexture__get_shader(UITexture_o *this, const MethodInfo 
 
 UnityEngine_Rect_o UITexture__get_uvRect(UITexture_o *this, const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.mRect.fields.m_XMin;
-  result.fields.m_YMin = this->fields.mRect.fields.m_YMin;
-  result.fields.m_Width = this->fields.mRect.fields.m_Width;
-  result.fields.m_Height = this->fields.mRect.fields.m_Height;
+  m_XMin = this->fields.mRect.fields.m_XMin;
+  m_YMin = this->fields.mRect.fields.m_YMin;
+  m_Width = this->fields.mRect.fields.m_Width;
+  m_Height = this->fields.mRect.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = m_YMin;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 

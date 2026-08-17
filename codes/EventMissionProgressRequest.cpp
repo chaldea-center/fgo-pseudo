@@ -119,7 +119,7 @@ System_Collections_Generic_List_ValueTuple_string__string___o *EventMissionProgr
   Il2CppObject *v7; // x2
   const MethodInfo_3CF8CCC *v8; // x4
   Il2CppObject *v9; // x0
-  System_ValueTuple_object__object__o v10; // x1
+  System_ValueTuple_object__object__o v10; // x1 OVERLAPPED
   System_String_o *v11; // x3
   int32_t v12; // w4
   int32_t v13; // w5

@@ -87,18 +87,21 @@ void TweenRendererColor__Cache(TweenRendererColor_o *this, const MethodInfo *met
 void TweenRendererColor__OnUpdate(TweenRendererColor_o *this, float factor, bool isFinished, const MethodInfo *method)
 {
   float v4; // s1
+  UnityEngine_Color_o v5; // q0 OVERLAPPED
+  float g; // s1
+  __int64 v7; // kr00_8
 
   v4 = 1.0;
   if ( factor <= 1.0 )
     v4 = factor;
   if ( factor < 0.0 )
     v4 = 0.0;
-  TweenRendererColor__set_value(
-    this,
-    (UnityEngine_Color_o)vaddq_f32(
-                           (float32x4_t)this->fields.from,
-                           vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v4)),
-    (const MethodInfo *)isFinished);
+  v5 = (UnityEngine_Color_o)vaddq_f32(
+                              (float32x4_t)this->fields.from,
+                              vmulq_n_f32(vsubq_f32((float32x4_t)this->fields.to, (float32x4_t)this->fields.from), v4));
+  g = v5.fields.g;
+  v7 = *(_QWORD *)&v5.fields.b;
+  TweenRendererColor__set_value(this, v5, (const MethodInfo *)isFinished);
 }
 
 
@@ -138,7 +141,10 @@ UnityEngine_Color_o TweenRendererColor__get_value(TweenRendererColor_o *this, co
   UnityEngine_Object_o *mTweenRenderer; // x20
   __int64 v4; // x1
   struct UITweenRenderer_o *v5; // x0
-  UnityEngine_Color_o v10; // 0:kr00_16.16
+  float v6; // s0
+  float v7; // s1
+  float v8; // s2
+  float v9; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5972093 & 1) == 0 )
@@ -156,21 +162,21 @@ UnityEngine_Color_o TweenRendererColor__get_value(TweenRendererColor_o *this, co
     v5 = this->fields.mTweenRenderer;
     if ( !v5 )
       sub_2213CDC(0, v4);
-    v10 = ((UnityEngine_Color_o (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *))v5->klass->vtable._40_GetTweenColor.methodPtr)(
-            v5,
-            v5->klass->vtable._40_GetTweenColor.method);
-    result.fields.r = v10.fields.r;
-    result.fields.g = v10.fields.g;
-    result.fields.b = v10.fields.b;
-    result.fields.a = v10.fields.a;
+    ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *))v5->klass->vtable._40_GetTweenColor.methodPtr)(
+      v5,
+      v5->klass->vtable._40_GetTweenColor.method);
   }
   else
   {
-    result.fields.r = 0.0;
-    result.fields.g = 0.0;
-    result.fields.b = 0.0;
-    result.fields.a = 1.0;
+    v6 = 0.0;
+    v7 = 0.0;
+    v8 = 0.0;
+    v9 = 1.0;
   }
+  result.fields.a = v9;
+  result.fields.b = v8;
+  result.fields.g = v7;
+  result.fields.r = v6;
   return result;
 }
 

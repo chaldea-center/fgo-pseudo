@@ -376,7 +376,7 @@ System_IAsyncResult_o *UIEventListener_BoolDelegate__BeginInvoke(
   v10[0] = go;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984328, v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -477,7 +477,7 @@ System_IAsyncResult_o *UIEventListener_FloatDelegate__BeginInvoke(
   v10[0] = go;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984378, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -583,7 +583,7 @@ System_IAsyncResult_o *UIEventListener_KeyCodeDelegate__BeginInvoke(
   v11[2] = 0;
   v11[0] = go;
   v11[1] = j_il2cpp_value_box_0(UnityEngine_KeyCode_TypeInfo, &v12);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -681,7 +681,7 @@ System_IAsyncResult_o *UIEventListener_ObjectDelegate__BeginInvoke(
 
   v7[0] = go;
   v7[1] = obj;
-  return sub_2213A14(this, v7, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v7, callback, object);
 }
 
 
@@ -787,7 +787,7 @@ System_IAsyncResult_o *UIEventListener_VectorDelegate__BeginInvoke(
   v11[2] = 0;
   v11[0] = go;
   v11[1] = j_il2cpp_value_box_0(UnityEngine_Vector2_TypeInfo, &v12);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -888,7 +888,7 @@ System_IAsyncResult_o *UIEventListener_VoidDelegate__BeginInvoke(
   UnityEngine_GameObject_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = go;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

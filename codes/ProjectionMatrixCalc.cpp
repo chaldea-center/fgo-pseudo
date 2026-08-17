@@ -88,7 +88,7 @@ void ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, const Method
   float v11; // s1
   float v12; // s8
   float y; // s9
-  float v14; // s10
+  float z; // s10
   __int64 v15; // x1
   UnityEngine_Material_array *materials; // x0
   __int64 v17; // x1
@@ -97,19 +97,20 @@ void ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, const Method
   __int64 v20; // x24
   UnityEngine_Material_o *v21; // x21
   System_String_o *shaderPropertyName_MatrixVP; // x1
-  float z; // s2
-  UnityEngine_Matrix4x4_o v24; // [xsp+0h] [xbp-2E0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+48h] [xbp-298h] BYREF
-  UnityEngine_Matrix4x4_o v26; // [xsp+60h] [xbp-280h] BYREF
-  UnityEngine_Matrix4x4_o v27; // [xsp+A0h] [xbp-240h] BYREF
-  UnityEngine_Matrix4x4_o v28; // [xsp+E0h] [xbp-200h] BYREF
-  UnityEngine_Matrix4x4_o v29; // [xsp+120h] [xbp-1C0h] BYREF
-  UnityEngine_Matrix4x4_o v30; // [xsp+160h] [xbp-180h] BYREF
-  UnityEngine_Matrix4x4_o v31; // [xsp+1A0h] [xbp-140h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v32[4]; // [xsp+1E0h] [xbp-100h] BYREF
-  UnityEngine_Matrix4x4_o v33; // [xsp+240h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Matrix4x4_o v23; // [xsp+0h] [xbp-2E0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+48h] [xbp-298h] BYREF
+  UnityEngine_Matrix4x4_o v25; // [xsp+60h] [xbp-280h] BYREF
+  UnityEngine_Matrix4x4_o v26; // [xsp+A0h] [xbp-240h] BYREF
+  UnityEngine_Matrix4x4_o v27; // [xsp+E0h] [xbp-200h] BYREF
+  UnityEngine_Matrix4x4_o v28; // [xsp+120h] [xbp-1C0h] BYREF
+  UnityEngine_Matrix4x4_o v29; // [xsp+160h] [xbp-180h] BYREF
+  UnityEngine_Matrix4x4_o v30; // [xsp+1A0h] [xbp-140h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v31[4]; // [xsp+1E0h] [xbp-100h] BYREF
+  UnityEngine_Matrix4x4_o v32; // [xsp+240h] [xbp-A0h] BYREF
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o forward; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974328 & 1) == 0 )
   {
@@ -120,39 +121,39 @@ void ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, const Method
     sub_2213A60(&Method_System_Collections_Generic_List_Renderer__get_Count__);
     byte_5974328 = 1;
   }
-  memset(v32, 0, 24);
-  memset(&v32[1].fields._index, 0, 64);
-  memset(&v33, 0, sizeof(v33));
+  memset(v31, 0, 24);
+  memset(&v31[1].fields._index, 0, 64);
+  memset(&v32, 0, sizeof(v32));
   ProjectionMatrixCalc__updateWorkRenderers(this, method);
   workRenderers = this->fields.workRenderers;
   if ( !workRenderers )
     goto LABEL_29;
   if ( workRenderers->fields._size < 1 )
     return;
-  v34.fields.x = 1.0;
-  v34.fields.y = 1.0;
-  v34.fields.z = -1.0;
-  UnityEngine_Matrix4x4__Scale(&v31, v34, 0);
+  v33.fields.x = 1.0;
+  v33.fields.y = 1.0;
+  v33.fields.z = -1.0;
+  UnityEngine_Matrix4x4__Scale(&v30, v33, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_29;
-  UnityEngine_Transform__get_worldToLocalMatrix(&v30, transform, 0);
-  v29 = v31;
+  UnityEngine_Transform__get_worldToLocalMatrix(&v29, transform, 0);
   v28 = v30;
-  v6 = UnityEngine_Matrix4x4__op_Multiply(&v33, &v29, &v28, 0);
+  v27 = v29;
+  v6 = UnityEngine_Matrix4x4__op_Multiply(&v32, &v28, &v27, 0);
   orthographicSize = this->fields._orthographicSize;
   v9 = -orthographicSize;
   if ( this->fields._useRendererBounds )
   {
     ProjectionMatrixCalc__calcRenderersBounds(
-      (UnityEngine_Bounds_o *)&v31,
+      (UnityEngine_Bounds_o *)&v30,
       (ProjectionMatrixCalc_o *)v6,
       this->fields.workRenderers,
       v7);
-    v10 = v9 - v31.fields.m30;
-    v11 = orthographicSize + v31.fields.m30;
-    v9 = v9 - v31.fields.m01;
-    orthographicSize = orthographicSize + v31.fields.m01;
+    v10 = v9 - v30.fields.m30;
+    v11 = orthographicSize + v30.fields.m30;
+    v9 = v9 - v30.fields.m01;
+    orthographicSize = orthographicSize + v30.fields.m01;
   }
   else
   {
@@ -160,7 +161,7 @@ void ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, const Method
     v10 = -orthographicSize;
   }
   UnityEngine_Matrix4x4__Ortho(
-    &v31,
+    &v30,
     v10,
     v11,
     v9,
@@ -168,37 +169,38 @@ void ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, const Method
     this->fields._nearClipPlane,
     this->fields._farClipPlane,
     0);
-  v26 = v33;
-  v27 = v31;
-  UnityEngine_Matrix4x4__op_Multiply(&v30, &v27, &v26, 0);
-  *(UnityEngine_Matrix4x4_o *)&v32[1].fields._index = v30;
+  v25 = v32;
+  v26 = v30;
+  UnityEngine_Matrix4x4__op_Multiply(&v29, &v26, &v25, 0);
+  *(UnityEngine_Matrix4x4_o *)&v31[1].fields._index = v29;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (LODWORD(v12) = (unsigned int)UnityEngine_Transform__get_forward(transform, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
-    || (y = UnityEngine_Transform__get_forward(transform, 0).fields.y,
+    || (forward = UnityEngine_Transform__get_forward(transform, 0),
+        y = forward.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
-    || (z = UnityEngine_Transform__get_forward(transform, 0).fields.z,
+    || (v35 = UnityEngine_Transform__get_forward(transform, 0),
         (transform = (UnityEngine_Transform_o *)this->fields.workRenderers) == 0) )
   {
 LABEL_29:
     sub_2213CDC(transform, v4);
   }
-  v14 = z;
+  z = v35.fields.z;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v25,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     (System_Collections_Generic_List_object__o *)transform,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-  v32[0] = v25;
-  *(_QWORD *)&v31.fields.m00 = 0;
-  *(_QWORD *)&v31.fields.m20 = v32;
+  v31[0] = v24;
+  *(_QWORD *)&v30.fields.m00 = 0;
+  *(_QWORD *)&v30.fields.m20 = v31;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            v32,
+            v31,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
-    if ( !v32[0].fields._current )
+    if ( !v31[0].fields._current )
       sub_2213CDC(0, v15);
-    materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)v32[0].fields._current, 0);
+    materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)v31[0].fields._current, 0);
     v18 = materials;
     if ( !materials )
       sub_2213CDC(0, v17);
@@ -214,13 +216,13 @@ LABEL_29:
         if ( !v21 )
           sub_2213CDC(materials, v17);
         shaderPropertyName_MatrixVP = this->fields._shaderPropertyName_MatrixVP;
-        v24 = *(UnityEngine_Matrix4x4_o *)&v32[1].fields._index;
-        UnityEngine_Material__SetMatrix(v21, shaderPropertyName_MatrixVP, &v24, 0);
-        v35.fields.w = 0.0;
-        v35.fields.x = v12;
-        v35.fields.y = y;
-        v35.fields.z = v14;
-        UnityEngine_Material__SetVector(v21, this->fields._shaderPropertyName_Pos, v35, 0);
+        v23 = *(UnityEngine_Matrix4x4_o *)&v31[1].fields._index;
+        UnityEngine_Material__SetMatrix(v21, shaderPropertyName_MatrixVP, &v23, 0);
+        v36.fields.w = 0.0;
+        v36.fields.x = v12;
+        v36.fields.y = y;
+        v36.fields.z = z;
+        UnityEngine_Material__SetVector(v21, this->fields._shaderPropertyName_Pos, v36, 0);
         max_length = v18->max_length;
         ++v20;
       }
@@ -228,7 +230,7 @@ LABEL_29:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    v32,
+    v31,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
 }
 

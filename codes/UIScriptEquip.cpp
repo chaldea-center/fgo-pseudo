@@ -168,8 +168,8 @@ void UIScriptEquip__EndSet(UIScriptEquip_o *this, const MethodInfo *method)
   UIScriptEquip_o *v4; // x19
   Il2CppClass **v5; // x8
   UIEquipGraphRender_o *v6; // x20
-  UnityEngine_Vector2_o CenterOffset; // kr40_8
-  float v8; // s10
+  UnityEngine_Vector2_o CenterOffset; // kr00_8
+  float z; // s10
   float v9; // s10
   float v10; // s10
   float v11; // s10
@@ -182,10 +182,10 @@ void UIScriptEquip__EndSet(UIScriptEquip_o *this, const MethodInfo *method)
   MissionNaviTransitionBoardItem_o *p_setCallback; // x19
   struct System_Action_o *v19; // x20
   struct System_Action_o *setCallback; // t1
-  float z; // s2
-  float v22; // s2
-  float v23; // s2
-  float v24; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
@@ -210,60 +210,60 @@ void UIScriptEquip__EndSet(UIScriptEquip_o *this, const MethodInfo *method)
   this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
-  z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   this = (UIScriptEquip_o *)v4->fields.baseSpecialEffect;
   if ( !this )
     goto LABEL_23;
-  v8 = z;
+  z = localPosition.fields.z;
   this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
-  v25.fields.x = CenterOffset.fields.x;
-  v25.fields.y = CenterOffset.fields.y;
-  v25.fields.z = v8;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v25, 0);
+  v22.fields.x = CenterOffset.fields.x;
+  v22.fields.y = CenterOffset.fields.y;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v22, 0);
   this = (UIScriptEquip_o *)v4->fields.baseEffect;
   if ( !this )
     goto LABEL_23;
   this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
-  v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+  v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   this = (UIScriptEquip_o *)v4->fields.baseEffect;
   if ( !this )
     goto LABEL_23;
-  v9 = v22;
+  v9 = v23.fields.z;
+  this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+  if ( !this )
+    goto LABEL_23;
+  v24.fields.x = CenterOffset.fields.x;
+  v24.fields.y = CenterOffset.fields.y;
+  v24.fields.z = v9;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v24, 0);
+  this = (UIScriptEquip_o *)v4->fields.baseEffectBack;
+  if ( !this )
+    goto LABEL_23;
+  this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+  if ( !this )
+    goto LABEL_23;
+  v25 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  this = (UIScriptEquip_o *)v4->fields.baseEffectBack;
+  if ( !this )
+    goto LABEL_23;
+  v10 = v25.fields.z;
   this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
   v26.fields.x = CenterOffset.fields.x;
   v26.fields.y = CenterOffset.fields.y;
-  v26.fields.z = v9;
+  v26.fields.z = v10;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v26, 0);
-  this = (UIScriptEquip_o *)v4->fields.baseEffectBack;
-  if ( !this )
-    goto LABEL_23;
-  this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-  if ( !this )
-    goto LABEL_23;
-  v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
-  this = (UIScriptEquip_o *)v4->fields.baseEffectBack;
-  if ( !this )
-    goto LABEL_23;
-  v10 = v23;
-  this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-  if ( !this )
-    goto LABEL_23;
-  v27.fields.x = CenterOffset.fields.x;
-  v27.fields.y = CenterOffset.fields.y;
-  v27.fields.z = v10;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v27, 0);
   this = (UIScriptEquip_o *)v4->fields.baseShadowEffect;
   if ( !this
     || (this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0
-    || (v24 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z,
+    || (v27 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
         (this = (UIScriptEquip_o *)v4->fields.baseShadowEffect) == 0)
-    || (v11 = v24,
+    || (v11 = v27.fields.z,
         (this = (UIScriptEquip_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0) )
   {
 LABEL_23:
@@ -436,8 +436,8 @@ void UIScriptEquip__SetDepth(UIScriptEquip_o *this, int32_t d, const MethodInfo 
   __int64 mainIndex; // x9
   UIScriptEquip_o *v5; // x21
   UIEquipGraphRender_o *v7; // x19
-  UnityEngine_Vector3_o v9; // 0:kr14_12.12
-  unsigned __int64 localPosition; // 0:s0.4,4:s1.4
+  float v8; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   equipGraphList = this->fields.equipGraphList;
   if ( !equipGraphList )
@@ -449,11 +449,10 @@ void UIScriptEquip__SetDepth(UIScriptEquip_o *this, int32_t d, const MethodInfo 
   this = (UIScriptEquip_o *)this->fields.baseDepth;
   if ( !this
     || (v7 = (UIEquipGraphRender_o *)equipGraphList->m_Items[mainIndex],
-        localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
         (this = (UIScriptEquip_o *)v5->fields.baseDepth) == 0)
-    || (*(_QWORD *)&v9.fields.x = localPosition,
-        v9.fields.z = (float)-d * 10.0,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v9, 0),
+    || (v8 = (float)-d * 10.0,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, localPosition, 0),
         !v7) )
   {
 LABEL_7:

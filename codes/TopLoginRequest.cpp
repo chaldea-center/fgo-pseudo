@@ -413,18 +413,18 @@ void TopLoginRequest__requestCompleted(
   Il2CppObject *v19; // x24
   System_String_o *name; // x22
   int32_t genderType; // w23
+  System_DateTime_o v22; // x0
   int32_t Month; // w25
-  Il2CppObject *v23; // x22
-  __int64 v24; // x1
-  __int64 v25; // x1
-  BalanceConfig_c *v26; // x0
+  System_DateTime_o v24; // x0
+  Il2CppObject *v25; // x22
+  __int64 v26; // x1
+  __int64 v27; // x1
+  BalanceConfig_c *v28; // x0
   int64_t NextDayTime_48348308; // x21
-  __int64 v28; // x1
-  int64_t v29; // x8
-  UserServantNewManager_c *v30; // x0
-  int v31; // w10
-  __int64 v32; // x1
-  __int64 v33; // x1
+  __int64 v30; // x1
+  int64_t v31; // x8
+  UserServantNewManager_c *v32; // x0
+  int v33; // w10
   __int64 v34; // x1
   __int64 v35; // x1
   __int64 v36; // x1
@@ -432,13 +432,15 @@ void TopLoginRequest__requestCompleted(
   __int64 v38; // x1
   __int64 v39; // x1
   __int64 v40; // x1
+  __int64 v41; // x1
+  __int64 v42; // x1
   Il2CppObject *success; // x20
-  System_String_o *v42; // x0
-  struct NetworkManager_ResultCallbackFunc_o *v43; // x8
-  ResponseFailData_o *v44; // x21
-  const MethodInfo *v45; // x2
+  System_String_o *v44; // x0
+  struct NetworkManager_ResultCallbackFunc_o *v45; // x8
+  ResponseFailData_o *v46; // x21
+  const MethodInfo *v47; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 v47; // x1
+  __int64 v49; // x1
   uint64_t dateData; // [xsp+8h] [xbp-58h] BYREF
 
   if ( (byte_59724FE & 1) == 0 )
@@ -484,17 +486,17 @@ void TopLoginRequest__requestCompleted(
   v9 = v7;
   if ( !ResponseData__checkError(v7, v7->fields.resCode, v8) )
   {
-    v44 = (ResponseFailData_o *)sub_2213CCC(ResponseFailData_TypeInfo);
-    ResponseFailData___ctor(v44, v9, v45);
+    v46 = (ResponseFailData_o *)sub_2213CCC(ResponseFailData_TypeInfo);
+    ResponseFailData___ctor(v46, v9, v47);
     TopLoginRequest_TypeInfo->static_fields->accessTime = 0;
-    if ( !v44 )
+    if ( !v46 )
       goto LABEL_67;
-    if ( System_String__op_Equality(v44->fields.action, (System_String_o *)StringLiteral_19510/*"do_signup"*/, 0) )
+    if ( System_String__op_Equality(v46->fields.action, (System_String_o *)StringLiteral_19510/*"do_signup"*/, 0) )
     {
       CallBack = this->fields.CallBack;
       if ( !CallBack )
         return;
-      v47 = StringLiteral_19510/*"do_signup"*/;
+      v49 = StringLiteral_19510/*"do_signup"*/;
       goto LABEL_65;
     }
 LABEL_63:
@@ -502,11 +504,11 @@ LABEL_63:
     TopLoginRequest_TypeInfo->static_fields->accessTime = 0;
     if ( !CallBack )
       return;
-    v47 = StringLiteral_23336/*"ng"*/;
+    v49 = StringLiteral_23336/*"ng"*/;
 LABEL_65:
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
       CallBack->fields.method_code,
-      v47,
+      v49,
       CallBack->fields.method);
     return;
   }
@@ -536,8 +538,10 @@ LABEL_65:
       genderType = v12->fields.genderType;
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v18);
-      Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-      Instance = (NetworkManager_o *)System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
+      v22.fields._dateData = (uint64_t)&dateData;
+      Month = System_DateTime__get_Month(v22, 0);
+      v24.fields._dateData = (uint64_t)&dateData;
+      Instance = (NetworkManager_o *)System_DateTime__get_Day(v24, 0);
       if ( !v19 )
         goto LABEL_67;
       NetworkManager__SetSignup_48337384((NetworkManager_o *)v19, name, genderType, Month, (int32_t)Instance, 0);
@@ -579,63 +583,63 @@ LABEL_27:
   if ( !Instance )
     goto LABEL_67;
   CrashReporter__SetFriendCode((CrashReporter_o *)Instance, v12->fields.friendCode, 0);
-  v23 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  v25 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   Instance = (NetworkManager_o *)System_Int64__ToString((int64_t)&v12->fields, 0);
-  if ( !v23 )
+  if ( !v25 )
     goto LABEL_67;
-  CrashReporter__SetUserId((CrashReporter_o *)v23, (System_String_o *)Instance, 0);
+  CrashReporter__SetUserId((CrashReporter_o *)v25, (System_String_o *)Instance, 0);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v24);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v26);
   NetworkManager__getTime(0);
-  v26 = BalanceConfig_TypeInfo;
+  v28 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v25);
-    v26 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v27);
+    v28 = BalanceConfig_TypeInfo;
   }
-  NextDayTime_48348308 = NetworkManager__getNextDayTime_48348308(v26->static_fields->RequestTopLoginResetTime1, 0, 0);
-  v29 = NetworkManager__getNextDayTime_48348308(BalanceConfig_TypeInfo->static_fields->RequestTopLoginResetTime2, 0, 0);
-  if ( NextDayTime_48348308 < v29 )
-    v29 = NextDayTime_48348308;
-  v30 = UserServantNewManager_TypeInfo;
-  v31 = *(&UserServantNewManager_TypeInfo->_2.cctor_finished + 1);
-  TopLoginRequest_TypeInfo->static_fields->accessTime = v29;
-  if ( !v31 )
-    j_il2cpp_runtime_class_init_0(v30, v28);
+  NextDayTime_48348308 = NetworkManager__getNextDayTime_48348308(v28->static_fields->RequestTopLoginResetTime1, 0, 0);
+  v31 = NetworkManager__getNextDayTime_48348308(BalanceConfig_TypeInfo->static_fields->RequestTopLoginResetTime2, 0, 0);
+  if ( NextDayTime_48348308 < v31 )
+    v31 = NextDayTime_48348308;
+  v32 = UserServantNewManager_TypeInfo;
+  v33 = *(&UserServantNewManager_TypeInfo->_2.cctor_finished + 1);
+  TopLoginRequest_TypeInfo->static_fields->accessTime = v31;
+  if ( !v33 )
+    j_il2cpp_runtime_class_init_0(v32, v30);
   UserServantNewManager__LoginProcess(0);
   if ( !*(&UserServantCollectionManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserServantCollectionManager_TypeInfo, v32);
+    j_il2cpp_runtime_class_init_0(UserServantCollectionManager_TypeInfo, v34);
   UserServantCollectionManager__LoginProcess(0);
   if ( !*(&ServantCommentManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo, v33);
+    j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo, v35);
   ServantCommentManager__LoginProcess(0);
   if ( !*(&UserEquipNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserEquipNewManager_TypeInfo, v34);
+    j_il2cpp_runtime_class_init_0(UserEquipNewManager_TypeInfo, v36);
   UserEquipNewManager__LoginProcess(0);
   if ( !*(&OtherUserNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(OtherUserNewManager_TypeInfo, v35);
+    j_il2cpp_runtime_class_init_0(OtherUserNewManager_TypeInfo, v37);
   OtherUserNewManager__LoginProcess(0);
   if ( !*(&UserCommandCodeNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo, v36);
+    j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo, v38);
   UserCommandCodeNewManager__LoginProcess(0);
   if ( !*(&UserCommandCodeCollectionManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserCommandCodeCollectionManager_TypeInfo, v37);
+    j_il2cpp_runtime_class_init_0(UserCommandCodeCollectionManager_TypeInfo, v39);
   UserCommandCodeCollectionManager__LoginProcess(0);
   SoundPlayerComponent__LoginProcess(0);
   if ( !*(&ServantProfileLimitCountManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo, v38);
+    j_il2cpp_runtime_class_init_0(ServantProfileLimitCountManager_TypeInfo, v40);
   ServantProfileLimitCountManager__UpdateProfileServantLimitCount(0);
   if ( !*(&ServantProfileEventJoinManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantProfileEventJoinManager_TypeInfo, v39);
+    j_il2cpp_runtime_class_init_0(ServantProfileEventJoinManager_TypeInfo, v41);
   ServantProfileEventJoinManager__UpdateProfileServantEventJoin(0);
   success = (Il2CppObject *)v9->fields.success;
   if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v40);
-  v42 = JsonManager__toJson(success, 0, 0, 0);
-  v43 = this->fields.CallBack;
-  if ( v43 )
-    ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))v43->fields.invoke_impl)(
-      v43->fields.method_code,
-      v42,
-      v43->fields.method);
+    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v42);
+  v44 = JsonManager__toJson(success, 0, 0, 0);
+  v45 = this->fields.CallBack;
+  if ( v45 )
+    ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))v45->fields.invoke_impl)(
+      v45->fields.method_code,
+      v44,
+      v45->fields.method);
 }

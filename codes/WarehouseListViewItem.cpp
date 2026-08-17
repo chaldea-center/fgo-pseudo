@@ -1693,7 +1693,7 @@ bool WarehouseListViewItem__SetSortValue(WarehouseListViewItem_o *this, ListView
   __int128 v44; // q1
   struct UserServantEntity_o *v45; // x8
   IconLabelInfo_o *iconLabelInfo2; // x20
-  int32_t v47; // w21
+  int32_t sortStr1; // w21
   bool IsMaterialTd; // w8
   int64_t hpReinforceValue; // x2
   int64_t hp; // x20
@@ -1708,7 +1708,7 @@ bool WarehouseListViewItem__SetSortValue(WarehouseListViewItem_o *this, ListView
   IconLabelInfo_o *v59; // x19
   int64_t atkReinforceValue; // x2
   int32_t v61; // w2
-  int64_t v62; // x20
+  int64_t sortStr1_low; // x20
   IconLabelInfo_o *iconLabelInfo1; // x21
   int64_t rarity; // x8
   int64_t cost; // x2
@@ -1729,7 +1729,7 @@ bool WarehouseListViewItem__SetSortValue(WarehouseListViewItem_o *this, ListView
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v81; // [xsp+10h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v82; // [xsp+30h] [xbp-60h]
   Il2CppObject *entity; // [xsp+50h] [xbp-40h] BYREF
-  __int64 tdMaxLv; // [xsp+58h] [xbp-38h] BYREF
+  int32_t tdMaxLv[2]; // [xsp+58h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
 
   v3 = sort;
@@ -1761,7 +1761,7 @@ bool WarehouseListViewItem__SetSortValue(WarehouseListViewItem_o *this, ListView
     byte_596E4D0 = 1;
   }
   entity = 0;
-  tdMaxLv = 0;
+  *(_QWORD *)tdMaxLv = 0;
   v4->fields.sortValue0 = 0;
   p_sortValue0 = &v4->fields.sortValue0;
   priority = v4->fields.priority;
@@ -2193,11 +2193,11 @@ LABEL_121:
       if ( !this )
         goto LABEL_216;
       iconLabelInfo2 = v4->fields.iconLabelInfo2;
-      v47 = *((_DWORD *)this + 100);
+      sortStr1 = (int32_t)this[1].fields.sortStr1;
       this = (WarehouseListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( !iconLabelInfo2 )
         goto LABEL_216;
-      IconLabelInfo__Set_47880948(iconLabelInfo2, 2, v47, (int32_t)this, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_47880948(iconLabelInfo2, 2, sortStr1, (int32_t)this, 0, 0, 0, 0, 0, 0);
       this = (WarehouseListViewItem_o *)v4->fields.userServantEntity;
       if ( !this )
         goto LABEL_216;
@@ -2213,29 +2213,25 @@ LABEL_121:
       this = (WarehouseListViewItem_o *)v4->fields.userServantEntity;
       if ( !this )
         goto LABEL_216;
-      v62 = *((int *)this + 100);
+      sortStr1_low = SLODWORD(this[1].fields.sortStr1);
       iconLabelInfo1 = v4->fields.iconLabelInfo1;
-      v4->fields.sortValue1 = v62;
+      v4->fields.sortValue1 = sortStr1_low;
       this = (WarehouseListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( !iconLabelInfo1 )
         goto LABEL_216;
-      IconLabelInfo__Set_47880948(iconLabelInfo1, 2, v62, (int32_t)this, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_47880948(iconLabelInfo1, 2, sortStr1_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
       goto LABEL_207;
     case 4:
       this = (WarehouseListViewItem_o *)v4->fields.userServantEntity;
       if ( !this )
         goto LABEL_216;
-      UserServantEntity__getTreasureDeviceInfo_50192116(
-        (UserServantEntity_o *)this,
-        (int32_t *)&tdMaxLv + 1,
-        (int32_t *)&tdMaxLv,
-        0);
-      v61 = HIDWORD(tdMaxLv);
+      UserServantEntity__getTreasureDeviceInfo_50192116((UserServantEntity_o *)this, &tdMaxLv[1], tdMaxLv, 0);
+      v61 = tdMaxLv[1];
       this = (WarehouseListViewItem_o *)v4->fields.iconLabelInfo1;
-      v4->fields.sortValue1 = SHIDWORD(tdMaxLv);
+      v4->fields.sortValue1 = tdMaxLv[1];
       if ( !this )
         goto LABEL_216;
-      IconLabelInfo__Set_47880948((IconLabelInfo_o *)this, 33, v61, tdMaxLv, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_47880948((IconLabelInfo_o *)this, 33, v61, tdMaxLv[0], 0, 0, 0, 0, 0, 0);
       goto LABEL_177;
     case 5:
       hp = v4->fields.hp;
@@ -2379,7 +2375,7 @@ LABEL_177:
       if ( !this )
         goto LABEL_216;
       v71 = v4->fields.iconLabelInfo2;
-      v72 = *((_DWORD *)this + 100);
+      v72 = (int32_t)this[1].fields.sortStr1;
       this = (WarehouseListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( !v71 )
         goto LABEL_216;
@@ -2477,7 +2473,7 @@ LABEL_190:
 LABEL_204:
       v59 = v4->fields.iconLabelInfo1;
 LABEL_205:
-      v79 = *((_DWORD *)this + 100);
+      v79 = (int32_t)this[1].fields.sortStr1;
       this = (WarehouseListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( !v59 )
         goto LABEL_216;

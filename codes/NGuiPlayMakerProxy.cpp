@@ -13,7 +13,8 @@ System_String_o *NGuiPlayMakerProxy__GetFsmEventEnumValue(System_Enum_o *value, 
   __int64 v6; // x2
   Il2CppType *v7; // x20
   System_Reflection_FieldInfo_o *v8; // x19
-  __int64 v9; // x0
+  System_RuntimeTypeHandle_o v9; // x0
+  __int64 v10; // x0
   void *monitor; // x8
   System_Enum_c *klass; // x8
 
@@ -37,15 +38,16 @@ System_String_o *NGuiPlayMakerProxy__GetFsmEventEnumValue(System_Enum_o *value, 
   v8 = Field;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v5, v6);
-  value = (System_Enum_o *)System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v7, 0);
+  v9.fields.value = (intptr_t)v7;
+  value = (System_Enum_o *)System_Type__GetTypeFromHandle(v9, 0);
   if ( !v8 )
     goto LABEL_14;
-  v9 = ((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, System_Enum_o *, _QWORD, const MethodInfo *))v8->klass->vtable._14_GetCustomAttributes.methodPtr)(
-         v8,
-         value,
-         0,
-         v8->klass->vtable._14_GetCustomAttributes.method);
-  value = (System_Enum_o *)sub_2213BB4(v9, PlayMakerUtils_FsmEvent___TypeInfo);
+  v10 = ((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, System_Enum_o *, _QWORD, const MethodInfo *))v8->klass->vtable._14_GetCustomAttributes.methodPtr)(
+          v8,
+          value,
+          0,
+          v8->klass->vtable._14_GetCustomAttributes.method);
+  value = (System_Enum_o *)sub_2213BB4(v10, PlayMakerUtils_FsmEvent___TypeInfo);
   if ( !value )
     goto LABEL_14;
   monitor = value[1].monitor;

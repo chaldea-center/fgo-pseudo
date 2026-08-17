@@ -38,6 +38,7 @@ void BattleCharaColorMatrixComponent___cctor(const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleCharaColorMatrixComponent___ctor(BattleCharaColorMatrixComponent_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
@@ -117,24 +118,15 @@ void BattleCharaColorMatrixComponent___ctor(BattleCharaColorMatrixComponent_o *t
   __int128 v77; // q2
   __int128 v78; // q3
   BattleCharaColorMatrixComponent_c *v79; // x8
-  __int128 *v80; // x8
-  __int128 v81; // q0
-  __int128 v82; // q2
-  __int128 v83; // q3
-  BattleCharaColorMatrixComponent_c *v84; // x8
-  __int128 *v85; // x8
-  __int128 v86; // q0
-  __int128 v87; // q2
-  __int128 v88; // q3
-  BattleCharaColorMatrixComponent_c *v89; // x8
-  __int128 *v90; // x8
-  __int128 v91; // q0
-  __int128 v92; // q2
-  __int128 v93; // q3
-  UnityEngine_Matrix4x4_o v94; // [xsp+0h] [xbp-A0h] BYREF
-  UnityEngine_Vector4_o Row; // 0:kr00_16.16
-  UnityEngine_Vector4_o v96; // 0:kr10_16.16
-  UnityEngine_Vector4_o v97; // 0:kr20_16.16
+  struct BattleCharaColorMatrixComponent_StaticFields *v80; // x8
+  BattleCharaColorMatrixComponent_c *v81; // x8
+  struct BattleCharaColorMatrixComponent_StaticFields *v82; // x8
+  BattleCharaColorMatrixComponent_c *v83; // x8
+  struct BattleCharaColorMatrixComponent_StaticFields *v84; // x8
+  UnityEngine_Matrix4x4_o v85; // [xsp+0h] [xbp-A0h] BYREF
+  UnityEngine_Vector4_o Row; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector4_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector4_o v88; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
   if ( (byte_5973F0D & 1) == 0 )
   {
@@ -161,7 +153,7 @@ void BattleCharaColorMatrixComponent___ctor(BattleCharaColorMatrixComponent_o *t
     sub_2213A60(&System_Collections_Generic_List_BattleCharaColorMatrixComponent_ParticleSystemState__TypeInfo);
     byte_5973F0D = 1;
   }
-  memset(&v94, 0, sizeof(v94));
+  memset(&v85, 0, sizeof(v85));
   v3 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_BattleCharaColorMatrixComponent_RendererMaterialState__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
@@ -312,44 +304,44 @@ void BattleCharaColorMatrixComponent___ctor(BattleCharaColorMatrixComponent_o *t
   v76 = static_fields[3];
   v78 = *static_fields;
   v77 = static_fields[1];
-  *(_OWORD *)&v94.fields.m02 = static_fields[2];
-  *(_OWORD *)&v94.fields.m03 = v76;
-  *(_OWORD *)&v94.fields.m00 = v78;
-  *(_OWORD *)&v94.fields.m01 = v77;
-  Row = UnityEngine_Matrix4x4__GetRow(&v94, 0, 0);
+  *(_OWORD *)&v85.fields.m02 = static_fields[2];
+  *(_OWORD *)&v85.fields.m03 = v76;
+  *(_OWORD *)&v85.fields.m00 = v78;
+  *(_OWORD *)&v85.fields.m01 = v77;
+  Row = UnityEngine_Matrix4x4__GetRow(&v85, 0, 0);
   v79 = BattleCharaColorMatrixComponent_TypeInfo;
   this->fields._colorMatRow0 = Row;
-  v80 = (__int128 *)v79->static_fields;
-  v81 = v80[3];
-  v82 = *v80;
-  v83 = v80[1];
-  *(_OWORD *)&v94.fields.m02 = v80[2];
-  *(_OWORD *)&v94.fields.m03 = v81;
-  *(_OWORD *)&v94.fields.m00 = v82;
-  *(_OWORD *)&v94.fields.m01 = v83;
-  v96 = UnityEngine_Matrix4x4__GetRow(&v94, 1, 0);
-  v84 = BattleCharaColorMatrixComponent_TypeInfo;
-  this->fields._colorMatRow1 = v96;
-  v85 = (__int128 *)v84->static_fields;
-  v86 = v85[3];
-  v87 = *v85;
-  v88 = v85[1];
-  *(_OWORD *)&v94.fields.m02 = v85[2];
-  *(_OWORD *)&v94.fields.m03 = v86;
-  *(_OWORD *)&v94.fields.m00 = v87;
-  *(_OWORD *)&v94.fields.m01 = v88;
-  v97 = UnityEngine_Matrix4x4__GetRow(&v94, 2, 0);
-  v89 = BattleCharaColorMatrixComponent_TypeInfo;
-  this->fields._colorMatRow2 = v97;
-  v90 = (__int128 *)v89->static_fields;
-  v91 = v90[3];
-  v92 = *v90;
-  v93 = v90[1];
-  *(_OWORD *)&v94.fields.m02 = v90[2];
-  *(_OWORD *)&v94.fields.m03 = v91;
-  *(_OWORD *)&v94.fields.m00 = v92;
-  *(_OWORD *)&v94.fields.m01 = v93;
-  this->fields._colorMatRow3 = UnityEngine_Matrix4x4__GetRow(&v94, 3, 0);
+  v80 = v79->static_fields;
+  Row = *(UnityEngine_Vector4_o *)&v80->SaturationColorMatrix.fields.m03;
+  *(UnityEngine_Vector4_o *)&Row.fields.z = *(UnityEngine_Vector4_o *)&v80->SaturationColorMatrix.fields.m00;
+  *(UnityEngine_Vector4_o *)&Row.fields.w = *(UnityEngine_Vector4_o *)&v80->SaturationColorMatrix.fields.m01;
+  *(_OWORD *)&v85.fields.m02 = *(_OWORD *)&v80->SaturationColorMatrix.fields.m02;
+  *(UnityEngine_Vector4_o *)&v85.fields.m03 = Row;
+  *(UnityEngine_Vector4_o *)&v85.fields.m00 = *(UnityEngine_Vector4_o *)&Row.fields.z;
+  *(UnityEngine_Vector4_o *)&v85.fields.m01 = *(UnityEngine_Vector4_o *)&Row.fields.w;
+  v87 = UnityEngine_Matrix4x4__GetRow(&v85, 1, 0);
+  v81 = BattleCharaColorMatrixComponent_TypeInfo;
+  this->fields._colorMatRow1 = v87;
+  v82 = v81->static_fields;
+  v87 = *(UnityEngine_Vector4_o *)&v82->SaturationColorMatrix.fields.m03;
+  *(UnityEngine_Vector4_o *)&v87.fields.z = *(UnityEngine_Vector4_o *)&v82->SaturationColorMatrix.fields.m00;
+  *(UnityEngine_Vector4_o *)&v87.fields.w = *(UnityEngine_Vector4_o *)&v82->SaturationColorMatrix.fields.m01;
+  *(_OWORD *)&v85.fields.m02 = *(_OWORD *)&v82->SaturationColorMatrix.fields.m02;
+  *(UnityEngine_Vector4_o *)&v85.fields.m03 = v87;
+  *(UnityEngine_Vector4_o *)&v85.fields.m00 = *(UnityEngine_Vector4_o *)&v87.fields.z;
+  *(UnityEngine_Vector4_o *)&v85.fields.m01 = *(UnityEngine_Vector4_o *)&v87.fields.w;
+  v88 = UnityEngine_Matrix4x4__GetRow(&v85, 2, 0);
+  v83 = BattleCharaColorMatrixComponent_TypeInfo;
+  this->fields._colorMatRow2 = v88;
+  v84 = v83->static_fields;
+  v88 = *(UnityEngine_Vector4_o *)&v84->SaturationColorMatrix.fields.m03;
+  *(UnityEngine_Vector4_o *)&v88.fields.z = *(UnityEngine_Vector4_o *)&v84->SaturationColorMatrix.fields.m00;
+  *(UnityEngine_Vector4_o *)&v88.fields.w = *(UnityEngine_Vector4_o *)&v84->SaturationColorMatrix.fields.m01;
+  *(_OWORD *)&v85.fields.m02 = *(_OWORD *)&v84->SaturationColorMatrix.fields.m02;
+  *(UnityEngine_Vector4_o *)&v85.fields.m03 = v88;
+  *(UnityEngine_Vector4_o *)&v85.fields.m00 = *(UnityEngine_Vector4_o *)&v88.fields.z;
+  *(UnityEngine_Vector4_o *)&v85.fields.m01 = *(UnityEngine_Vector4_o *)&v88.fields.w;
+  this->fields._colorMatRow3 = UnityEngine_Matrix4x4__GetRow(&v85, 3, 0);
   this->fields._matrixBlend = 1.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -2030,37 +2022,56 @@ void BattleCharaColorMatrixComponent__Change(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleCharaColorMatrixComponent__ConvertSimulationSpaceToLocal(
         BattleCharaColorMatrixComponent_o *this,
         UnityEngine_ParticleSystem_o *ps,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
+  UnityEngine_ParticleSystem_MainModule_o v4; // x0
+  UnityEngine_ParticleSystem_MainModule_o v5; // x0
+  UnityEngine_ParticleSystem_MainModule_o v6; // x0
+  __int64 v7; // x1
   UnityEngine_Object_o *customSimulationSpace; // x20
+  UnityEngine_ParticleSystem_MainModule_o v9; // x0
+  UnityEngine_ParticleSystem_MainModule_o v10; // x0
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float x; // s8
   float y; // s9
   float z; // s10
+  float v15; // s11
+  float v16; // s12
+  float v17; // s13
+  float v18; // s4
+  float v19; // s5
+  float v20; // s6
+  float w; // s7
+  float v22; // s4
+  float v23; // s5
+  float v24; // s6
+  UnityEngine_ParticleSystem_MainModule_o v25; // x0
+  UnityEngine_ParticleSystem_MainModule_o v26; // x0
+  UnityEngine_ParticleSystem_MainModule_o v27; // x0
   unsigned int particleCount; // w0
-  __int64 v11; // x20
-  int32_t v12; // w21
-  unsigned __int64 v13; // x23
-  UnityEngine_ParticleSystem_Particle_o *v14; // x22
-  UnityEngine_Vector3_o v15; // [xsp+0h] [xbp-210h]
-  UnityEngine_Matrix4x4_o v16; // [xsp+10h] [xbp-200h] BYREF
-  UnityEngine_Matrix4x4_o v17; // [xsp+50h] [xbp-1C0h] BYREF
-  UnityEngine_Matrix4x4_o v18; // [xsp+90h] [xbp-180h] BYREF
-  UnityEngine_Matrix4x4_o v19; // [xsp+D0h] [xbp-140h] BYREF
-  UnityEngine_Matrix4x4_o v20; // [xsp+110h] [xbp-100h] BYREF
-  UnityEngine_Matrix4x4_o v21; // [xsp+150h] [xbp-C0h] BYREF
+  __int64 v29; // x20
+  int32_t v30; // w21
+  unsigned __int64 v31; // x23
+  UnityEngine_ParticleSystem_Particle_o *v32; // x22
+  UnityEngine_Vector3_o v33; // [xsp+0h] [xbp-210h]
+  UnityEngine_Matrix4x4_o v34; // [xsp+10h] [xbp-200h] BYREF
+  UnityEngine_Matrix4x4_o v35; // [xsp+50h] [xbp-1C0h] BYREF
+  UnityEngine_Matrix4x4_o v36; // [xsp+90h] [xbp-180h] BYREF
+  UnityEngine_Matrix4x4_o v37; // [xsp+D0h] [xbp-140h] BYREF
+  UnityEngine_Matrix4x4_o v38; // [xsp+110h] [xbp-100h] BYREF
+  UnityEngine_Matrix4x4_o v39; // [xsp+150h] [xbp-C0h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+198h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o position; // 0:kr14_12.12
-  UnityEngine_Quaternion_o rotation; // 0:kr20_16.16
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o velocity; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
   if ( (byte_5973EEF & 1) == 0 )
   {
@@ -2069,36 +2080,32 @@ void BattleCharaColorMatrixComponent__ConvertSimulationSpaceToLocal(
     byte_5973EEF = 1;
   }
   m_ParticleSystem = 0;
-  memset(&v20, 0, sizeof(v20));
-  memset(&v21, 0, sizeof(v21));
+  memset(&v38, 0, sizeof(v38));
+  memset(&v39, 0, sizeof(v39));
   if ( !ps )
     goto LABEL_32;
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(ps, 0).fields.m_ParticleSystem;
-  if ( !UnityEngine_ParticleSystem_MainModule__get_simulationSpace(
-          (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-          0) )
+  v4.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  if ( !UnityEngine_ParticleSystem_MainModule__get_simulationSpace(v4, 0) )
     return;
-  if ( UnityEngine_ParticleSystem_MainModule__get_simulationSpace(
-         (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-         0) == 2 )
+  v5.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  if ( UnityEngine_ParticleSystem_MainModule__get_simulationSpace(v5, 0) == 2 )
   {
+    v6.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
     customSimulationSpace = (UnityEngine_Object_o *)UnityEngine_ParticleSystem_MainModule__get_customSimulationSpace(
-                                                      (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
+                                                      v6,
                                                       0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( UnityEngine_Object__op_Equality(customSimulationSpace, 0, 0) )
     {
-      UnityEngine_ParticleSystem_MainModule__set_simulationSpace(
-        (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-        0,
-        0);
+      v9.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      UnityEngine_ParticleSystem_MainModule__set_simulationSpace(v9, 0, 0);
       return;
     }
   }
-  if ( UnityEngine_ParticleSystem_MainModule__get_scalingMode(
-         (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-         0) == 2 )
+  v10.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  if ( UnityEngine_ParticleSystem_MainModule__get_scalingMode(v10, 0) == 2 )
   {
     if ( !byte_5969AE5 )
     {
@@ -2123,6 +2130,9 @@ void BattleCharaColorMatrixComponent__ConvertSimulationSpaceToLocal(
   this = (BattleCharaColorMatrixComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)ps, 0);
   if ( !this
     || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0),
+        v15 = position.fields.x,
+        v16 = position.fields.y,
+        v17 = position.fields.z,
         (this = (BattleCharaColorMatrixComponent_o *)UnityEngine_Component__get_transform(
                                                        (UnityEngine_Component_o *)ps,
                                                        0)) == 0) )
@@ -2131,68 +2141,80 @@ LABEL_32:
     sub_2213CDC(this, ps);
   }
   rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)this, 0);
-  *(_QWORD *)&v15.fields.y = __PAIR64__(LODWORD(z), LODWORD(y));
-  v15.fields.x = x;
-  UnityEngine_Matrix4x4__TRS(&v19, position, rotation, v15, 0);
-  v20 = v19;
-  UnityEngine_Matrix4x4__get_inverse(&v18, &v20, 0);
-  v21 = v18;
-  if ( UnityEngine_ParticleSystem_MainModule__get_simulationSpace(
-         (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-         0) == 2 )
+  v18 = rotation.fields.x;
+  v19 = rotation.fields.y;
+  v20 = rotation.fields.z;
+  w = rotation.fields.w;
+  rotation.fields.x = v15;
+  rotation.fields.y = v16;
+  *(_QWORD *)&v33.fields.y = __PAIR64__(LODWORD(z), LODWORD(y));
+  rotation.fields.z = v17;
+  v33.fields.x = x;
+  rotation.fields.w = v18;
+  v22 = v19;
+  v23 = v20;
+  v24 = w;
+  UnityEngine_Matrix4x4__TRS(
+    &v37,
+    *(UnityEngine_Vector3_o *)&rotation.fields.x,
+    *(UnityEngine_Quaternion_o *)&rotation.fields.w,
+    v33,
+    0);
+  v38 = v37;
+  UnityEngine_Matrix4x4__get_inverse(&v36, &v38, 0);
+  v25.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v39 = v36;
+  if ( UnityEngine_ParticleSystem_MainModule__get_simulationSpace(v25, 0) == 2 )
   {
-    v19 = v21;
-    this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem_MainModule__get_customSimulationSpace(
-                                                  (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                                                  0);
+    v26.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+    v37 = v39;
+    this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem_MainModule__get_customSimulationSpace(v26, 0);
     if ( !this )
       goto LABEL_32;
-    UnityEngine_Transform__get_localToWorldMatrix(&v18, (UnityEngine_Transform_o *)this, 0);
-    v17 = v19;
-    v16 = v18;
-    UnityEngine_Matrix4x4__op_Multiply(&v21, &v17, &v16, 0);
+    UnityEngine_Transform__get_localToWorldMatrix(&v36, (UnityEngine_Transform_o *)this, 0);
+    v35 = v37;
+    v34 = v36;
+    UnityEngine_Matrix4x4__op_Multiply(&v39, &v35, &v34, 0);
   }
-  UnityEngine_ParticleSystem_MainModule__set_simulationSpace(
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    0,
-    0);
+  v27.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__set_simulationSpace(v27, 0, 0);
   particleCount = UnityEngine_ParticleSystem__get_particleCount(ps, 0);
-  v11 = sub_2213B20(UnityEngine_ParticleSystem_Particle___TypeInfo, particleCount);
+  v29 = sub_2213B20(UnityEngine_ParticleSystem_Particle___TypeInfo, particleCount);
   this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem__GetParticles_83835248(
                                                 ps,
-                                                (UnityEngine_ParticleSystem_Particle_array *)v11,
+                                                (UnityEngine_ParticleSystem_Particle_array *)v29,
                                                 0);
-  v12 = (int)this;
+  v30 = (int)this;
   if ( (int)this >= 1 )
   {
-    if ( v11 )
+    if ( v29 )
     {
-      v13 = 0;
-      v14 = (UnityEngine_ParticleSystem_Particle_o *)(v11 + 32);
+      v31 = 0;
+      v32 = (UnityEngine_ParticleSystem_Particle_o *)(v29 + 32);
       do
       {
-        if ( v13 >= *(unsigned int *)(v11 + 24)
-          || (v26 = UnityEngine_ParticleSystem_Particle__get_position(v14, 0),
-              v27 = UnityEngine_Matrix4x4__MultiplyPoint3x4(&v21, v26, 0),
-              v13 >= *(unsigned int *)(v11 + 24))
-          || (UnityEngine_ParticleSystem_Particle__set_position(v14, v27, 0), v13 >= *(unsigned int *)(v11 + 24))
-          || (velocity = UnityEngine_ParticleSystem_Particle__get_velocity(v14, 0),
-              v29 = UnityEngine_Matrix4x4__MultiplyVector(&v21, velocity, 0),
-              v13 >= *(unsigned int *)(v11 + 24)) )
+        if ( v31 >= *(unsigned int *)(v29 + 24)
+          || (v43 = UnityEngine_ParticleSystem_Particle__get_position(v32, 0),
+              v44 = UnityEngine_Matrix4x4__MultiplyPoint3x4(&v39, v43, 0),
+              v31 >= *(unsigned int *)(v29 + 24))
+          || (UnityEngine_ParticleSystem_Particle__set_position(v32, v44, 0), v31 >= *(unsigned int *)(v29 + 24))
+          || (velocity = UnityEngine_ParticleSystem_Particle__get_velocity(v32, 0),
+              v46 = UnityEngine_Matrix4x4__MultiplyVector(&v39, velocity, 0),
+              v31 >= *(unsigned int *)(v29 + 24)) )
         {
           sub_2213CE4(this);
         }
-        UnityEngine_ParticleSystem_Particle__set_velocity(v14, v29, 0);
-        ++v13;
-        v14 = (UnityEngine_ParticleSystem_Particle_o *)((char *)v14 + 132);
+        UnityEngine_ParticleSystem_Particle__set_velocity(v32, v46, 0);
+        ++v31;
+        v32 = (UnityEngine_ParticleSystem_Particle_o *)((char *)v32 + 132);
       }
-      while ( v12 != v13 );
+      while ( v30 != v31 );
       goto LABEL_29;
     }
     goto LABEL_32;
   }
 LABEL_29:
-  UnityEngine_ParticleSystem__SetParticles_83834724(ps, (UnityEngine_ParticleSystem_Particle_array *)v11, v12, 0);
+  UnityEngine_ParticleSystem__SetParticles_83834724(ps, (UnityEngine_ParticleSystem_Particle_array *)v29, v30, 0);
 }
 
 
@@ -3473,7 +3495,7 @@ void BattleCharaColorMatrixComponent__RegisterEffectSheetAnimationState(
         UnityEngine_Renderer_o *renderer,
         const MethodInfo *method)
 {
-  __int64 trackedEffectSheetAnimations; // x0
+  struct System_Collections_Generic_HashSet_FGOEffectSheetAnimation__o *trackedEffectSheetAnimations; // x0
   __int64 v6; // x1
   __int64 v7; // x1
   Il2CppObject *Component_object; // x20
@@ -3520,8 +3542,8 @@ void BattleCharaColorMatrixComponent__RegisterEffectSheetAnimationState(
   scale = 0;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, renderer);
-  trackedEffectSheetAnimations = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)renderer, 0, 0);
-  if ( (trackedEffectSheetAnimations & 1) == 0 )
+  trackedEffectSheetAnimations = (struct System_Collections_Generic_HashSet_FGOEffectSheetAnimation__o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)renderer, 0, 0);
+  if ( ((unsigned __int8)trackedEffectSheetAnimations & 1) == 0 )
   {
     if ( !renderer )
       goto LABEL_25;
@@ -3532,25 +3554,22 @@ void BattleCharaColorMatrixComponent__RegisterEffectSheetAnimationState(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
     {
-      trackedEffectSheetAnimations = (__int64)this->fields._trackedEffectSheetAnimations;
+      trackedEffectSheetAnimations = this->fields._trackedEffectSheetAnimations;
       if ( trackedEffectSheetAnimations )
       {
-        trackedEffectSheetAnimations = System_Collections_Generic_HashSet_object___Add(
-                                         (System_Collections_Generic_HashSet_object__o *)trackedEffectSheetAnimations,
-                                         Component_object,
-                                         (const MethodInfo_42BB4C0 *)Method_System_Collections_Generic_HashSet_FGOEffectSheetAnimation__Add__);
-        if ( (trackedEffectSheetAnimations & 1) == 0 )
+        trackedEffectSheetAnimations = (struct System_Collections_Generic_HashSet_FGOEffectSheetAnimation__o *)System_Collections_Generic_HashSet_object___Add((System_Collections_Generic_HashSet_object__o *)trackedEffectSheetAnimations, Component_object, (const MethodInfo_42BB4C0 *)Method_System_Collections_Generic_HashSet_FGOEffectSheetAnimation__Add__);
+        if ( ((unsigned __int8)trackedEffectSheetAnimations & 1) == 0 )
           return;
         if ( !byte_596F578 )
         {
-          trackedEffectSheetAnimations = sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+          trackedEffectSheetAnimations = (struct System_Collections_Generic_HashSet_FGOEffectSheetAnimation__o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
           byte_596F578 = 1;
         }
         static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
         scale = static_fields->oneVector;
         if ( !byte_59699C0 )
         {
-          trackedEffectSheetAnimations = sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+          trackedEffectSheetAnimations = (struct System_Collections_Generic_HashSet_FGOEffectSheetAnimation__o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
           byte_59699C0 = 1;
           static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
         }
@@ -3581,12 +3600,10 @@ void BattleCharaColorMatrixComponent__RegisterEffectSheetAnimationState(
               v17);
             *(_QWORD *)(v11 + 24) = renderer;
             sub_2213A04((MissionNaviTransitionBoardItem_o *)(v11 + 24), (int32_t)renderer, v18, v19, v20, v21, v22, v23);
-            trackedEffectSheetAnimations = UnityEngine_Behaviour__get_enabled(
-                                             (UnityEngine_Behaviour_o *)Component_object,
-                                             0);
+            trackedEffectSheetAnimations = (struct System_Collections_Generic_HashSet_FGOEffectSheetAnimation__o *)UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)Component_object, 0);
             v31 = zeroVector;
             v30 = scale;
-            *(_BYTE *)(v11 + 32) = trackedEffectSheetAnimations & 1;
+            *(_BYTE *)(v11 + 32) = (unsigned __int8)trackedEffectSheetAnimations & 1;
             *(UnityEngine_Vector2_o *)(v11 + 36) = v30;
             *(UnityEngine_Vector2_o *)(v11 + 44) = v31;
             if ( effectSheetAnimationStates )
@@ -3642,19 +3659,21 @@ void BattleCharaColorMatrixComponent__RegisterParticleSystemState(
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
+  UnityEngine_ParticleSystem_MainModule_o v19; // x0
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
-  BattleCharaColorMatrixComponent_o *v29; // x0
-  const MethodInfo *v30; // x2
-  __int64 v31; // x1
+  Il2CppClass **v29; // x0
+  BattleCharaColorMatrixComponent_o *v30; // x0
+  const MethodInfo *v31; // x2
+  __int64 v32; // x1
+  UnityEngine_ParticleSystem_MainModule_o v33; // x0
   float duration; // s0
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-38h] BYREF
 
@@ -3693,14 +3712,15 @@ void BattleCharaColorMatrixComponent__RegisterParticleSystemState(
     *(_BYTE *)(v12 + 24) = UnityEngine_ParticleSystem__get_isPlaying(particleSystem, 0);
     *(_BYTE *)(v12 + 25) = UnityEngine_ParticleSystem__get_isPaused(particleSystem, 0);
     m_ParticleSystem = UnityEngine_ParticleSystem__get_main(particleSystem, 0).fields.m_ParticleSystem;
+    v19.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
     trackedParticleSystems = (struct System_Collections_Generic_HashSet_ParticleSystem__o *)UnityEngine_ParticleSystem_MainModule__get_simulationSpace(
-                                                                                              (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
+                                                                                              v19,
                                                                                               0);
     *(_DWORD *)(v12 + 28) = (_DWORD)trackedParticleSystems;
     if ( !particleSystemStates )
       goto LABEL_26;
     items = particleSystemStates->fields._items;
-    v26 = Method_System_Collections_Generic_List_BattleCharaColorMatrixComponent_ParticleSystemState__Add__;
+    v27 = Method_System_Collections_Generic_List_BattleCharaColorMatrixComponent_ParticleSystemState__Add__;
     ++particleSystemStates->fields._version;
     if ( !items )
       goto LABEL_26;
@@ -3710,24 +3730,24 @@ void BattleCharaColorMatrixComponent__RegisterParticleSystemState(
       System_Collections_Generic_List_object___AddWithResize(
         particleSystemStates,
         (Il2CppObject *)v12,
-        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
       if ( !pausePlaying )
         return;
     }
     else
     {
-      v28 = &items->obj.klass + size;
+      v29 = &items->obj.klass + size;
       particleSystemStates->fields._size = size + 1;
-      v28[4] = (Il2CppClass *)v12;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 4), v12, v19, v20, v21, v22, v23, v24);
+      v29[4] = (Il2CppClass *)v12;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v29 + 4), v12, v20, v21, v22, v23, v24, v25);
       if ( !pausePlaying )
         return;
     }
-    BattleCharaColorMatrixComponent__ConvertSimulationSpaceToLocal(v29, particleSystem, v30);
+    BattleCharaColorMatrixComponent__ConvertSimulationSpaceToLocal(v30, particleSystem, v31);
     if ( UnityEngine_ParticleSystem__get_isPlaying(particleSystem, 0) )
     {
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32);
       trackedParticleSystems = (struct System_Collections_Generic_HashSet_ParticleSystem__o *)UnityEngine_Object__op_Inequality(
                                                                                                 (UnityEngine_Object_o *)data,
                                                                                                 0,
@@ -3743,9 +3763,8 @@ LABEL_24:
         }
 LABEL_23:
         m_ParticleSystem = UnityEngine_ParticleSystem__get_main(particleSystem, 0).fields.m_ParticleSystem;
-        duration = UnityEngine_ParticleSystem_MainModule__get_duration(
-                     (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                     0);
+        v33.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+        duration = UnityEngine_ParticleSystem_MainModule__get_duration(v33, 0);
         UnityEngine_ParticleSystem__Simulate_83836764(particleSystem, duration, 0, 1, 0);
         goto LABEL_24;
       }
@@ -3762,6 +3781,7 @@ LABEL_26:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleCharaColorMatrixComponent__ResetSimulationSpace(
         BattleCharaColorMatrixComponent_o *this,
         UnityEngine_ParticleSystem_o *ps,
@@ -3769,33 +3789,48 @@ void BattleCharaColorMatrixComponent__ResetSimulationSpace(
         const MethodInfo *method)
 {
   int32_t SimulationSpace; // w8
-  __int64 v7; // x1
+  UnityEngine_ParticleSystem_MainModule_o v7; // x0
+  __int64 v8; // x1
   UnityEngine_Object_o *customSimulationSpace; // x21
+  UnityEngine_ParticleSystem_MainModule_o v10; // x0
+  UnityEngine_ParticleSystem_MainModule_o v11; // x0
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float x; // s8
   float y; // s9
   float z; // s10
-  int32_t v13; // w1
+  float v16; // s11
+  float v17; // s12
+  float v18; // s13
+  float v19; // s4
+  float v20; // s5
+  float v21; // s6
+  float w; // s7
+  float v23; // s4
+  float v24; // s5
+  float v25; // s6
+  int32_t v26; // w1
+  UnityEngine_ParticleSystem_MainModule_o v27; // x0
+  UnityEngine_ParticleSystem_MainModule_o v28; // x0
   unsigned int particleCount; // w0
-  __int64 v15; // x20
-  int32_t v16; // w21
-  unsigned __int64 v17; // x23
-  UnityEngine_ParticleSystem_Particle_o *v18; // x22
-  UnityEngine_Vector3_o v19; // [xsp+0h] [xbp-1E0h]
-  UnityEngine_Matrix4x4_o v20; // [xsp+10h] [xbp-1D0h] BYREF
-  UnityEngine_Matrix4x4_o v21; // [xsp+50h] [xbp-190h] BYREF
-  UnityEngine_Matrix4x4_o v22; // [xsp+98h] [xbp-148h] BYREF
-  UnityEngine_Matrix4x4_o v23; // [xsp+D8h] [xbp-108h] BYREF
+  __int64 v30; // x20
+  int32_t v31; // w21
+  unsigned __int64 v32; // x23
+  UnityEngine_ParticleSystem_Particle_o *v33; // x22
+  UnityEngine_Vector3_o v34; // [xsp+0h] [xbp-1E0h]
+  UnityEngine_Matrix4x4_o v35; // [xsp+10h] [xbp-1D0h] BYREF
+  UnityEngine_Matrix4x4_o v36; // [xsp+50h] [xbp-190h] BYREF
+  UnityEngine_Matrix4x4_o v37; // [xsp+98h] [xbp-148h] BYREF
+  UnityEngine_Matrix4x4_o v38; // [xsp+D8h] [xbp-108h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+118h] [xbp-C8h] BYREF
-  UnityEngine_Matrix4x4_o v25; // [xsp+120h] [xbp-C0h] BYREF
-  BattleCharaColorMatrixComponent_o *v26; // [xsp+168h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o position; // 0:kr14_12.12
-  UnityEngine_Quaternion_o rotation; // 0:kr20_16.16
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Matrix4x4_o v40; // [xsp+120h] [xbp-C0h] BYREF
+  BattleCharaColorMatrixComponent_o *v41; // [xsp+168h] [xbp-78h] BYREF
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o velocity; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
   if ( (byte_5973EF0 & 1) == 0 )
   {
@@ -3803,13 +3838,13 @@ void BattleCharaColorMatrixComponent__ResetSimulationSpace(
     this = (BattleCharaColorMatrixComponent_o *)sub_2213A60(&UnityEngine_ParticleSystem_Particle___TypeInfo);
     byte_5973EF0 = 1;
   }
-  v26 = 0;
+  v41 = 0;
   m_ParticleSystem = 0;
-  memset(&v25, 0, sizeof(v25));
+  memset(&v40, 0, sizeof(v40));
   if ( !ps )
     goto LABEL_33;
   this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem__get_main(ps, 0).fields.m_ParticleSystem;
-  v26 = this;
+  v41 = this;
   if ( !state )
     goto LABEL_33;
   SimulationSpace = state->fields.SimulationSpace;
@@ -3818,21 +3853,21 @@ void BattleCharaColorMatrixComponent__ResetSimulationSpace(
   if ( SimulationSpace == 2 )
   {
     m_ParticleSystem = UnityEngine_ParticleSystem__get_main(ps, 0).fields.m_ParticleSystem;
+    v7.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
     customSimulationSpace = (UnityEngine_Object_o *)UnityEngine_ParticleSystem_MainModule__get_customSimulationSpace(
-                                                      (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
+                                                      v7,
                                                       0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
     if ( UnityEngine_Object__op_Equality(customSimulationSpace, 0, 0) )
     {
-      UnityEngine_ParticleSystem_MainModule__set_simulationSpace(
-        (UnityEngine_ParticleSystem_MainModule_o)&v26,
-        state->fields.SimulationSpace,
-        0);
+      v10.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v41;
+      UnityEngine_ParticleSystem_MainModule__set_simulationSpace(v10, state->fields.SimulationSpace, 0);
       return;
     }
   }
-  if ( UnityEngine_ParticleSystem_MainModule__get_scalingMode((UnityEngine_ParticleSystem_MainModule_o)&v26, 0) == 2 )
+  v11.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v41;
+  if ( UnityEngine_ParticleSystem_MainModule__get_scalingMode(v11, 0) == 2 )
   {
     if ( !byte_5969AE5 )
     {
@@ -3857,6 +3892,9 @@ void BattleCharaColorMatrixComponent__ResetSimulationSpace(
   this = (BattleCharaColorMatrixComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)ps, 0);
   if ( !this
     || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)this, 0),
+        v16 = position.fields.x,
+        v17 = position.fields.y,
+        v18 = position.fields.z,
         (this = (BattleCharaColorMatrixComponent_o *)UnityEngine_Component__get_transform(
                                                        (UnityEngine_Component_o *)ps,
                                                        0)) == 0) )
@@ -3865,63 +3903,79 @@ LABEL_33:
     sub_2213CDC(this, ps);
   }
   rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)this, 0);
-  *(_QWORD *)&v19.fields.y = __PAIR64__(LODWORD(z), LODWORD(y));
-  v19.fields.x = x;
-  UnityEngine_Matrix4x4__TRS(&v25, position, rotation, v19, 0);
-  v13 = state->fields.SimulationSpace;
-  if ( v13 == 2 )
+  v19 = rotation.fields.x;
+  v20 = rotation.fields.y;
+  v21 = rotation.fields.z;
+  w = rotation.fields.w;
+  rotation.fields.x = v16;
+  rotation.fields.y = v17;
+  *(_QWORD *)&v34.fields.y = __PAIR64__(LODWORD(z), LODWORD(y));
+  rotation.fields.z = v18;
+  v34.fields.x = x;
+  rotation.fields.w = v19;
+  v23 = v20;
+  v24 = v21;
+  v25 = w;
+  UnityEngine_Matrix4x4__TRS(
+    &v40,
+    *(UnityEngine_Vector3_o *)&rotation.fields.x,
+    *(UnityEngine_Quaternion_o *)&rotation.fields.w,
+    v34,
+    0);
+  v26 = state->fields.SimulationSpace;
+  if ( v26 == 2 )
   {
     m_ParticleSystem = UnityEngine_ParticleSystem__get_main(ps, 0).fields.m_ParticleSystem;
-    this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem_MainModule__get_customSimulationSpace(
-                                                  (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                                                  0);
+    v27.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+    this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem_MainModule__get_customSimulationSpace(v27, 0);
     if ( !this )
       goto LABEL_33;
-    UnityEngine_Transform__get_worldToLocalMatrix(&v23, (UnityEngine_Transform_o *)this, 0);
-    v20 = v25;
-    v21 = v23;
-    UnityEngine_Matrix4x4__op_Multiply(&v22, &v21, &v20, 0);
-    v13 = state->fields.SimulationSpace;
-    v25 = v22;
+    UnityEngine_Transform__get_worldToLocalMatrix(&v38, (UnityEngine_Transform_o *)this, 0);
+    v35 = v40;
+    v36 = v38;
+    UnityEngine_Matrix4x4__op_Multiply(&v37, &v36, &v35, 0);
+    v26 = state->fields.SimulationSpace;
+    v40 = v37;
   }
-  UnityEngine_ParticleSystem_MainModule__set_simulationSpace((UnityEngine_ParticleSystem_MainModule_o)&v26, v13, 0);
+  v28.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v41;
+  UnityEngine_ParticleSystem_MainModule__set_simulationSpace(v28, v26, 0);
   particleCount = UnityEngine_ParticleSystem__get_particleCount(ps, 0);
-  v15 = sub_2213B20(UnityEngine_ParticleSystem_Particle___TypeInfo, particleCount);
+  v30 = sub_2213B20(UnityEngine_ParticleSystem_Particle___TypeInfo, particleCount);
   this = (BattleCharaColorMatrixComponent_o *)UnityEngine_ParticleSystem__GetParticles_83835248(
                                                 ps,
-                                                (UnityEngine_ParticleSystem_Particle_array *)v15,
+                                                (UnityEngine_ParticleSystem_Particle_array *)v30,
                                                 0);
-  v16 = (int)this;
+  v31 = (int)this;
   if ( (int)this >= 1 )
   {
-    if ( v15 )
+    if ( v30 )
     {
-      v17 = 0;
-      v18 = (UnityEngine_ParticleSystem_Particle_o *)(v15 + 32);
+      v32 = 0;
+      v33 = (UnityEngine_ParticleSystem_Particle_o *)(v30 + 32);
       do
       {
-        if ( v17 >= *(unsigned int *)(v15 + 24)
-          || (v30 = UnityEngine_ParticleSystem_Particle__get_position(v18, 0),
-              v31 = UnityEngine_Matrix4x4__MultiplyPoint3x4(&v25, v30, 0),
-              v17 >= *(unsigned int *)(v15 + 24))
-          || (UnityEngine_ParticleSystem_Particle__set_position(v18, v31, 0), v17 >= *(unsigned int *)(v15 + 24))
-          || (velocity = UnityEngine_ParticleSystem_Particle__get_velocity(v18, 0),
-              v33 = UnityEngine_Matrix4x4__MultiplyVector(&v25, velocity, 0),
-              v17 >= *(unsigned int *)(v15 + 24)) )
+        if ( v32 >= *(unsigned int *)(v30 + 24)
+          || (v44 = UnityEngine_ParticleSystem_Particle__get_position(v33, 0),
+              v45 = UnityEngine_Matrix4x4__MultiplyPoint3x4(&v40, v44, 0),
+              v32 >= *(unsigned int *)(v30 + 24))
+          || (UnityEngine_ParticleSystem_Particle__set_position(v33, v45, 0), v32 >= *(unsigned int *)(v30 + 24))
+          || (velocity = UnityEngine_ParticleSystem_Particle__get_velocity(v33, 0),
+              v47 = UnityEngine_Matrix4x4__MultiplyVector(&v40, velocity, 0),
+              v32 >= *(unsigned int *)(v30 + 24)) )
         {
           sub_2213CE4(this);
         }
-        UnityEngine_ParticleSystem_Particle__set_velocity(v18, v33, 0);
-        ++v17;
-        v18 = (UnityEngine_ParticleSystem_Particle_o *)((char *)v18 + 132);
+        UnityEngine_ParticleSystem_Particle__set_velocity(v33, v47, 0);
+        ++v32;
+        v33 = (UnityEngine_ParticleSystem_Particle_o *)((char *)v33 + 132);
       }
-      while ( v16 != v17 );
+      while ( v31 != v32 );
       goto LABEL_30;
     }
     goto LABEL_33;
   }
 LABEL_30:
-  UnityEngine_ParticleSystem__SetParticles_83834724(ps, (UnityEngine_ParticleSystem_Particle_array *)v15, v16, 0);
+  UnityEngine_ParticleSystem__SetParticles_83834724(ps, (UnityEngine_ParticleSystem_Particle_array *)v30, v31, 0);
 }
 
 
@@ -4467,7 +4521,7 @@ void BattleCharaColorMatrixComponent__SetColorMatrixInternal(
 {
   const MethodInfo *v7; // x1
   float v8; // s4
-  UnityEngine_Vector4_o Row; // 0:kr30_16.16
+  UnityEngine_Vector4_o Row; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   this->fields._colorMatRow0 = UnityEngine_Matrix4x4__GetRow(colorMatrix, 0, 0);
   this->fields._colorMatRow1 = UnityEngine_Matrix4x4__GetRow(colorMatrix, 1, 0);

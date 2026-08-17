@@ -121,7 +121,7 @@ void HakkenshiListController__CreateHakkenshiObject(HakkenshiListController_o *t
   __int64 v19; // x1
   UnityEngine_Transform_o *v20; // x0
   __int64 v21; // x1
-  __int64 v22; // x0
+  UnityEngine_Transform_o *v22; // x0
   __int64 v23; // x1
   UnityEngine_Transform_o *v24; // x22
   __int64 v25; // x1
@@ -199,11 +199,11 @@ void HakkenshiListController__CreateHakkenshiObject(HakkenshiListController_o *t
       v29.fields.y = *((float *)&Component_object[2].monitor + 1);
       v29.fields.z = 0.0;
       UnityEngine_Transform__set_localPosition(v20, v29, 0);
-      v22 = (__int64)UnityEngine_GameObject__get_transform(v16, 0);
-      v24 = (UnityEngine_Transform_o *)v22;
+      v22 = UnityEngine_GameObject__get_transform(v16, 0);
+      v24 = v22;
       if ( !byte_5969AE5 )
       {
-        v22 = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        v22 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
       if ( !v24 )
@@ -258,7 +258,8 @@ void HakkenshiListController__CreateHakkenshiWindow(
   UnityEngine_GameObject_o *gameObject; // x19
   HakkenshiListController_c *v32; // x8
   int32_t v33; // [xsp+Ch] [xbp-54h] BYREF
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A60D & 1) == 0 )
   {
@@ -301,7 +302,8 @@ void HakkenshiListController__CreateHakkenshiWindow(
     transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
     if ( !transform )
       goto LABEL_22;
-    z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0).fields.z;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    z = localPosition.fields.z;
     if ( !*(&EventItemWindowMaker_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(EventItemWindowMaker_TypeInfo, v24, v25);
     ItemBaseWindowX = EventItemWindowMaker__GetItemBaseWindowX(0);
@@ -315,10 +317,10 @@ void HakkenshiListController__CreateHakkenshiWindow(
 LABEL_22:
       sub_2213CDC(transform, v21);
     }
-    v34.fields.y = (float)v28;
-    v34.fields.x = ItemBaseWindowX;
-    v34.fields.z = z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v34, 0);
+    v35.fields.y = (float)v28;
+    v35.fields.x = ItemBaseWindowX;
+    v35.fields.z = z;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v35, 0);
   }
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v21, v22);

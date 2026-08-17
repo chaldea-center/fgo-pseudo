@@ -208,7 +208,7 @@ void SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this, const Meth
   int32_t v12; // w21
   _BOOL4 activeSelf; // w8
   _BOOL4 v14; // w10
-  __int64 v15; // x9
+  struct UILabel_o *cooltimeLb; // x9
   float v16; // s0
   int v17; // w20
   _BOOL4 v18; // w22
@@ -216,16 +216,16 @@ void SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this, const Meth
   SpotCooltimeComponent_o *v20; // x0
   const MethodInfo *v21; // x1
   const MethodInfo *v22; // x2
-  UILabel_o *cooltimeLb; // x22
+  UILabel_o *v23; // x22
   __int64 v24; // x1
   __int64 v25; // x2
   UnityEngine_Object_o *spotActiveGimmick; // x21
   __int64 v27; // x2
-  __int64 v28; // x8
+  struct UILabel_o *v28; // x8
   bool v29; // w1
   UnityEngine_Object_o *spotInactiveGimmick; // x21
   bool v31; // w1
-  __int64 v32; // x8
+  struct UILabel_o *v32; // x8
 
   v3 = this;
   if ( (byte_596A952 & 1) == 0 )
@@ -277,8 +277,8 @@ void SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this, const Meth
   v14 = v12 > 0;
   if ( !this )
     goto LABEL_54;
-  v15 = *((_QWORD *)this + 29);
-  if ( !v15 )
+  cooltimeLb = this[2].fields.cooltimeLb;
+  if ( !cooltimeLb )
     goto LABEL_54;
   v16 = 1.0;
   v17 = activeSelf && v14;
@@ -289,8 +289,8 @@ void SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this, const Meth
     v19 = 1;
   if ( v17 )
     v16 = 0.5;
-  *(_DWORD *)(v15 + 20) = v19;
-  *(_DWORD *)(v15 + 24) = v18;
+  HIDWORD(cooltimeLb->fields.m_CachedPtr) = v19;
+  LODWORD(cooltimeLb->fields.m_CancellationTokenSource) = v18;
   SrcSpotBasePrefab__SetContrast((SrcSpotBasePrefab_o *)this, v16, 0);
   if ( v18 )
   {
@@ -298,11 +298,11 @@ void SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this, const Meth
   }
   else
   {
-    cooltimeLb = v3->fields.cooltimeLb;
+    v23 = v3->fields.cooltimeLb;
     this = (SpotCooltimeComponent_o *)SpotCooltimeComponent__GetCooltimeText(v20, v12, v22);
-    if ( !cooltimeLb )
+    if ( !v23 )
       goto LABEL_54;
-    UILabel__set_text(cooltimeLb, (System_String_o *)this, 0);
+    UILabel__set_text(v23, (System_String_o *)this, 0);
   }
   this = (SpotCooltimeComponent_o *)v3->fields.targetSpot;
   if ( !this
@@ -326,10 +326,10 @@ LABEL_54:
       {
         if ( !this )
           goto LABEL_54;
-        v28 = *((_QWORD *)this + 17);
+        v28 = this[1].fields.cooltimeLb;
         if ( !v28 )
           goto LABEL_54;
-        v29 = *(_DWORD *)(v28 + 16) == 1;
+        v29 = LODWORD(v28->fields.m_CachedPtr) == 1;
       }
       else
       {
@@ -359,10 +359,10 @@ LABEL_54:
       {
         if ( !this )
           goto LABEL_54;
-        v32 = *((_QWORD *)this + 17);
+        v32 = this[1].fields.cooltimeLb;
         if ( !v32 )
           goto LABEL_54;
-        v31 = *(_DWORD *)(v32 + 16) == 1;
+        v31 = LODWORD(v32->fields.m_CachedPtr) == 1;
       }
       MapGimmickComponent__SetDispAnimQuick((MapGimmickComponent_o *)this, v31, 0);
       this = (SpotCooltimeComponent_o *)v3->fields.spotInactiveGimmick;
@@ -385,7 +385,7 @@ void SpotCooltimeComponent__UpdateQuestCount(SpotCooltimeComponent_o *this, cons
   struct EventQuestCooltimeEntity_o *cooltimeEntity; // x8
   MapControl_QuestInfo_o *QuestInfo; // x0
   __int64 v7; // x2
-  __int64 v8; // x8
+  MapGimmickComponent_c *klass; // x8
 
   v2 = this;
   if ( (byte_596A954 & 1) == 0 )
@@ -425,10 +425,10 @@ void SpotCooltimeComponent__UpdateQuestCount(SpotCooltimeComponent_o *this, cons
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v7);
           this = (SpotCooltimeComponent_o *)TerminalSceneComponent_TypeInfo;
         }
-        v8 = **((_QWORD **)this + 23);
-        if ( v8 )
+        klass = this[1].fields.spotInactiveGimmick->klass;
+        if ( klass )
         {
-          this = *(SpotCooltimeComponent_o **)(v8 + 256);
+          this = *(SpotCooltimeComponent_o **)&klass->_2.element_size;
           if ( this )
           {
             ScrTerminalListTop__UpdateList((ScrTerminalListTop_o *)this, 0);

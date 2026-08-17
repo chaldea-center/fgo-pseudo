@@ -423,6 +423,7 @@ void PartyServantSelectMenu__EndCloseTutorialArrow(PartyServantSelectMenu_o *thi
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void PartyServantSelectMenu__EndOpen(PartyServantSelectMenu_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
@@ -441,22 +442,26 @@ void PartyServantSelectMenu__EndOpen(PartyServantSelectMenu_o *this, const Metho
   bool IsUnderVista; // w22
   Il2CppObject *Instance; // x20
   System_Action_o *v18; // x21
+  float v19; // s3 OVERLAPPED
+  float v20; // s0 OVERLAPPED
+  float v21; // s4
+  int v22; // s1
+  int v23; // s5
+  int v24; // s6
   int32_t modeKind; // w1
   struct PartyServantListViewManager_o *partyServantListViewManager; // x20
-  PartyServantListViewManager_CallbackFunc_o *v22; // x21
-  const MethodInfo *v23; // x3
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
-  const MethodInfo *v30; // x2
+  PartyServantListViewManager_CallbackFunc_o *v27; // x21
+  const MethodInfo *v28; // x3
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  const MethodInfo *v35; // x2
   MissionNaviTransitionBoardItem_o *p_openCallbackFunc; // x19
-  struct System_Action_o *v32; // x20
+  struct System_Action_o *v37; // x20
   struct System_Action_o *openCallbackFunc; // t1
-  UnityEngine_Vector2_o v34; // 0:s0.4,4:s1.4
-  UnityEngine_Rect_o v35; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_596C266 & 1) == 0 )
   {
@@ -474,25 +479,25 @@ void PartyServantSelectMenu__EndOpen(PartyServantSelectMenu_o *this, const Metho
     this->fields.state = 2;
     PartyServantSelectMenu__SetTabKind(this, modeKind, 0, v2);
     partyServantListViewManager = this->fields.partyServantListViewManager;
-    v22 = (PartyServantListViewManager_CallbackFunc_o *)sub_2213CCC(PartyServantListViewManager_CallbackFunc_TypeInfo);
+    v27 = (PartyServantListViewManager_CallbackFunc_o *)sub_2213CCC(PartyServantListViewManager_CallbackFunc_TypeInfo);
     PartyServantListViewManager_CallbackFunc___ctor(
-      v22,
+      v27,
       (Il2CppObject *)this,
       (intptr_t)Method_PartyServantSelectMenu_OnSelectItem__,
-      v23);
+      v28);
     if ( partyServantListViewManager )
     {
-      partyServantListViewManager->fields.callbackFunc = v22;
+      partyServantListViewManager->fields.callbackFunc = v27;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&partyServantListViewManager->fields.callbackFunc,
-        (int32_t)v22,
-        v24,
-        v25,
-        v26,
-        v27,
-        v28,
-        v29);
-      PartyServantListViewManager__SetMode_41320688(partyServantListViewManager, 2, v30);
+        (int32_t)v27,
+        v29,
+        v30,
+        v31,
+        v32,
+        v33,
+        v34);
+      PartyServantListViewManager__SetMode_41320688(partyServantListViewManager, 2, v35);
       goto LABEL_16;
     }
 LABEL_19:
@@ -519,26 +524,32 @@ LABEL_19:
   System_Action___ctor(v18, (Il2CppObject *)this, Method_PartyServantSelectMenu_EndOpenTutorialArrow__, 0);
   if ( !Instance )
     goto LABEL_19;
-  v35.fields.m_XMin = -450.0;
-  v34.fields.x = -367.0;
-  v35.fields.m_YMin = -30.0;
+  v19 = -450.0;
+  v20 = -367.0;
+  v21 = -30.0;
   if ( IsUnderVista )
-    v34.fields.x = -375.0;
+    v20 = -375.0;
   else
-    v35.fields.m_XMin = -442.0;
-  v34.fields.y = 100.0;
-  v35.fields.m_Width = 150.0;
-  v35.fields.m_Height = 180.0;
-  CommonUI__OpenTutorialArrowMark((CommonUI_o *)Instance, v34, 0.0, v35, v18, 0);
+    v19 = -442.0;
+  v22 = 1120403456;
+  v23 = 1125515264;
+  v24 = 1127481344;
+  CommonUI__OpenTutorialArrowMark(
+    (CommonUI_o *)Instance,
+    *(UnityEngine_Vector2_o *)&v20,
+    0.0,
+    *(UnityEngine_Rect_o *)&v19,
+    v18,
+    0);
 LABEL_16:
   openCallbackFunc = this->fields.openCallbackFunc;
   p_openCallbackFunc = (MissionNaviTransitionBoardItem_o *)&this->fields.openCallbackFunc;
-  v32 = openCallbackFunc;
+  v37 = openCallbackFunc;
   if ( openCallbackFunc )
   {
     p_openCallbackFunc->klass = 0;
     sub_2213A04(p_openCallbackFunc, 0, v8, v9, v10, v11, v12, v13);
-    ((void (__fastcall *)(intptr_t, intptr_t))v32->fields.invoke_impl)(v32->fields.method_code, v32->fields.method);
+    ((void (__fastcall *)(intptr_t, intptr_t))v37->fields.invoke_impl)(v37->fields.method_code, v37->fields.method);
   }
 }
 
@@ -3145,7 +3156,7 @@ System_IAsyncResult_o *PartyServantSelectMenu_CallbackFunc__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(PartyServantSelectMenu_ResultKind_TypeInfo, &v12);
   v11[1] = item;
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -3238,7 +3249,7 @@ System_IAsyncResult_o *PartyServantSelectMenu_RequestCallbackFunc__BeginInvoke(
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

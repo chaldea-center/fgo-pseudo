@@ -9,13 +9,13 @@ void SummonHistoryListViewItemDraw__SetBonusMessagePosition(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *titleLabel; // x0
-  struct UILabel_o *v4; // x8
-  struct UISprite_o *bonusItemSpr; // x9
-  float v6; // s8
-  float mWidth; // s9
-  float v8; // s10
-  UnityEngine_GameObject_o *gameObject; // x0
   unsigned int localPosition; // s0
+  struct UILabel_o *v5; // x8
+  struct UISprite_o *bonusItemSpr; // x9
+  float v7; // s8
+  float mWidth; // s9
+  float v9; // s10
+  UnityEngine_GameObject_o *gameObject; // x0
 
   titleLabel = (UnityEngine_Component_o *)this->fields.titleLabel;
   if ( !titleLabel
@@ -24,17 +24,17 @@ void SummonHistoryListViewItemDraw__SetBonusMessagePosition(
                                                   (UnityEngine_GameObject_o *)titleLabel,
                                                   0)) == 0
     || (localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)titleLabel, 0),
-        (v4 = this->fields.titleLabel) == 0)
+        (v5 = this->fields.titleLabel) == 0)
     || (bonusItemSpr = this->fields.bonusItemSpr) == 0
     || (titleLabel = (UnityEngine_Component_o *)this->fields.messageLabel2) == 0 )
   {
     sub_2213CDC(titleLabel, method);
   }
-  v6 = *(float *)&localPosition;
+  v7 = *(float *)&localPosition;
   mWidth = (float)bonusItemSpr->fields.mWidth;
-  v8 = (float)v4->fields.mWidth;
+  v9 = (float)v5->fields.mWidth;
   gameObject = UnityEngine_Component__get_gameObject(titleLabel, 0);
-  GameObjectExtensions__SetLocalPositionX(gameObject, (float)((float)(v6 + v8) + mWidth) + 3.0, 0);
+  GameObjectExtensions__SetLocalPositionX(gameObject, (float)((float)(v7 + v9) + mWidth) + 3.0, 0);
 }
 
 
@@ -290,7 +290,7 @@ void SummonHistoryListViewItemDraw__SetItemIconPosition(
   if ( !this )
     goto LABEL_17;
   mWidth = (float)titleLabel->fields.mWidth;
-  v5 = (float)(*((_DWORD *)this + 42) / 2);
+  v5 = (float)(SLODWORD(this[1].fields.bonusItemSpr) / 2);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPositionX(gameObject, mWidth + v5, 0);
   this = (SummonHistoryListViewItemDraw_o *)v2->fields.bonusItemSpr;

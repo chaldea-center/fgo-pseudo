@@ -259,101 +259,104 @@ void InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o *this, con
   UILineInput_o *birthDayInput; // x0
   System_String_o *v9; // x0
   int32_t v10; // w20
-  __int64 v11; // x0
-  __int64 v12; // x1
+  System_DateTime_o v11; // x0
+  __int64 v12; // x0
+  __int64 v13; // x1
   struct System_Int32_array *paramList; // x8
   int max_length; // w9
-  _QWORD *v15; // x0
-  System_Reflection_MethodBase_o *v16; // x0
-  __int64 v17; // x1
-  __int64 v18; // x2
+  _QWORD *v16; // x0
+  System_Reflection_MethodBase_o *v17; // x0
+  __int64 v18; // x1
+  __int64 v19; // x2
   UserGameEntity_o *SelfUserGame; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
+  __int64 v21; // x1
+  __int64 v22; // x2
   int64_t birthDay; // x22
-  System_DateTime_o v23; // x0
-  System_DateTime_o v24; // x1
-  System_DateTime_o v25; // x2
+  System_DateTime_o v24; // x0
+  System_DateTime_o v25; // x1
+  System_DateTime_o v26; // x2
   InputUserBirthDayConfirmWindow_o *confirmWindow; // x22
-  System_String_o *v27; // x23
-  System_String_o *v28; // x24
-  __int64 v29; // x1
-  __int64 v30; // x2
-  System_Object_array *v31; // x25
+  System_String_o *v28; // x23
+  System_String_o *v29; // x24
+  __int64 v30; // x1
+  __int64 v31; // x2
+  System_Object_array *v32; // x25
+  System_DateTime_o v33; // x0
   InputUserBirthDayWindow_o *Month; // x0
-  const MethodInfo *v33; // x2
+  const MethodInfo *v35; // x2
   System_String_o *PaddingBirthday; // x0
-  __int64 v35; // x1
-  System_String_o *v36; // x2
-  System_String_o *v37; // x3
-  int32_t v38; // w4
-  int32_t v39; // w5
-  bool v40; // w6
-  bool v41; // w7
-  Il2CppObject *v42; // x26
-  __int64 v43; // x1
+  __int64 v37; // x1
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  Il2CppObject *v44; // x26
+  __int64 v45; // x1
+  System_DateTime_o v46; // x0
   InputUserBirthDayWindow_o *Day; // x0
-  const MethodInfo *v45; // x2
-  System_String_o *v46; // x0
-  System_String_o *v47; // x2
-  System_String_o *v48; // x3
-  int32_t v49; // w4
-  int32_t v50; // w5
-  bool v51; // w6
-  bool v52; // w7
-  Il2CppObject *v53; // x26
-  __int64 v54; // x1
-  InputUserBirthDayWindow_o *v55; // x0
-  const MethodInfo *v56; // x2
-  System_String_o *v57; // x0
-  System_String_o *v58; // x2
-  System_String_o *v59; // x3
-  int32_t v60; // w4
-  int32_t v61; // w5
-  bool v62; // w6
-  bool v63; // w7
-  Il2CppObject *v64; // x21
-  __int64 v65; // x1
-  InputUserBirthDayWindow_o *v66; // x0
-  const MethodInfo *v67; // x2
-  System_String_o *v68; // x0
-  System_String_o *v69; // x2
-  System_String_o *v70; // x3
-  int32_t v71; // w4
-  int32_t v72; // w5
-  bool v73; // w6
-  bool v74; // w7
-  Il2CppObject *v75; // x20
-  __int64 v76; // x1
-  System_String_o *v77; // x20
-  System_String_o *v78; // x21
-  InputUserBirthDayConfirmWindow_CallbackFunc_o *v79; // x24
-  const MethodInfo *v80; // x3
-  __int64 v81; // x1
-  __int64 v82; // x2
-  const MethodInfo *v83; // x7
-  InputUserBirthDayWindow_c *v84; // x0
-  _QWORD *v85; // x0
-  System_Reflection_MethodBase_o *v86; // x0
-  InputUserBirthDayConfirmWindow_o *v87; // x22
-  System_String_o *v88; // x23
-  System_String_o *v89; // x24
-  Il2CppObject *v90; // x21
-  Il2CppObject *v91; // x0
-  System_String_o *v92; // x20
-  System_String_o *v93; // x21
-  InputUserBirthDayConfirmWindow_CallbackFunc_o *v94; // x24
-  const MethodInfo *v95; // x3
-  __int64 v96; // x0
-  __int64 v97; // x1
-  const MethodInfo *v98; // x7
+  const MethodInfo *v48; // x2
+  System_String_o *v49; // x0
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  Il2CppObject *v56; // x26
+  __int64 v57; // x1
+  InputUserBirthDayWindow_o *v58; // x0
+  const MethodInfo *v59; // x2
+  System_String_o *v60; // x0
+  System_String_o *v61; // x2
+  System_String_o *v62; // x3
+  int32_t v63; // w4
+  int32_t v64; // w5
+  bool v65; // w6
+  bool v66; // w7
+  Il2CppObject *v67; // x21
+  __int64 v68; // x1
+  InputUserBirthDayWindow_o *v69; // x0
+  const MethodInfo *v70; // x2
+  System_String_o *v71; // x0
+  System_String_o *v72; // x2
+  System_String_o *v73; // x3
+  int32_t v74; // w4
+  int32_t v75; // w5
+  bool v76; // w6
+  bool v77; // w7
+  Il2CppObject *v78; // x20
+  __int64 v79; // x1
+  System_String_o *v80; // x20
+  System_String_o *v81; // x21
+  InputUserBirthDayConfirmWindow_CallbackFunc_o *v82; // x24
+  const MethodInfo *v83; // x3
+  __int64 v84; // x1
+  __int64 v85; // x2
+  const MethodInfo *v86; // x7
+  InputUserBirthDayWindow_c *v87; // x0
+  _QWORD *v88; // x0
+  System_Reflection_MethodBase_o *v89; // x0
+  InputUserBirthDayConfirmWindow_o *v90; // x22
+  System_String_o *v91; // x23
+  System_String_o *v92; // x24
+  Il2CppObject *v93; // x21
+  Il2CppObject *v94; // x0
+  System_String_o *v95; // x20
+  System_String_o *v96; // x21
+  InputUserBirthDayConfirmWindow_CallbackFunc_o *v97; // x24
+  const MethodInfo *v98; // x3
   __int64 v99; // x0
-  __int64 v100; // x0
-  __int64 v101; // x0
+  __int64 v100; // x1
+  const MethodInfo *v101; // x7
   __int64 v102; // x0
-  int32_t v103; // [xsp+44h] [xbp-6Ch] BYREF
-  __int64 v104; // [xsp+48h] [xbp-68h] BYREF
-  int v105; // [xsp+58h] [xbp-58h]
+  __int64 v103; // x0
+  __int64 v104; // x0
+  __int64 v105; // x0
+  int32_t v106; // [xsp+44h] [xbp-6Ch] BYREF
+  __int64 v107; // [xsp+48h] [xbp-68h] BYREF
+  int v108; // [xsp+58h] [xbp-58h]
   uint64_t dateData; // [xsp+68h] [xbp-48h] BYREF
 
   if ( (byte_596B63C & 1) == 0 )
@@ -375,7 +378,7 @@ void InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o *this, con
   }
   isInput = this->fields.isInput;
   dateData = 0;
-  v105 = 0;
+  v108 = 0;
   if ( isInput )
   {
     birthMonthInput = this->fields.birthMonthInput;
@@ -388,159 +391,162 @@ void InputUserBirthDayWindow__OnClickDecide(InputUserBirthDayWindow_o *this, con
       sub_2213CDC(0, v6);
     v9 = UILineInput__GetText(birthDayInput, 0);
     v10 = System_Int32__Parse(v9, 0);
-    v104 = 0;
-    System_DateTime___ctor_77013752((System_DateTime_o)&v104, 2000, v7, v10, 0);
+    v107 = 0;
+    v11.fields._dateData = (uint64_t)&v107;
+    System_DateTime___ctor_77013752(v11, 2000, v7, v10, 0);
     paramList = this->fields.paramList;
     if ( !paramList )
-      sub_2213CDC(v11, v12);
+      sub_2213CDC(v12, v13);
     max_length = paramList->max_length;
     if ( !max_length )
-      sub_2213CE4(v11);
+      sub_2213CE4(v12);
     paramList->m_Items[0] = v7;
     if ( max_length == 1 )
-      sub_2213CE4(v11);
+      sub_2213CE4(v12);
     paramList->m_Items[1] = v10;
-    v15 = Method_InputUserBirthDayWindow_OnClickDecide__;
+    v16 = Method_InputUserBirthDayWindow_OnClickDecide__;
     if ( (*((_BYTE *)Method_InputUserBirthDayWindow_OnClickDecide__ + 83) & 2) != 0 )
-      v15 = (_QWORD *)sub_2213A78(Method_InputUserBirthDayWindow_OnClickDecide__);
-    v16 = (System_Reflection_MethodBase_o *)sub_2213A44(v15, v15[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0, 0);
+      v16 = (_QWORD *)sub_2213A78(Method_InputUserBirthDayWindow_OnClickDecide__);
+    v17 = (System_Reflection_MethodBase_o *)sub_2213A44(v16, v16[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0);
     if ( this->fields.isResetBirthday )
     {
       SelfUserGame = UserGameMaster__getSelfUserGame(0);
       if ( !SelfUserGame )
-        sub_2213CDC(0, v20);
+        sub_2213CDC(0, v21);
       birthDay = SelfUserGame->fields.birthDay;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v20, v21);
-      v23.fields._dateData = NetworkManager__getDateTime_48347260(birthDay, 0).fields._dateData;
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v21, v22);
+      v24.fields._dateData = NetworkManager__getDateTime_48347260(birthDay, 0).fields._dateData;
       confirmWindow = this->fields.confirmWindow;
-      dateData = v23.fields._dateData;
+      dateData = v24.fields._dateData;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24.fields._dateData, v25.fields._dateData);
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_11570/*"RESET_BIRTHDAY_CONFIRM_TITLE"*/, 0);
-      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11569/*"RESET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0);
-      v31 = (System_Object_array *)sub_2213B20(object___TypeInfo, 4);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v25.fields._dateData, v26.fields._dateData);
+      v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11570/*"RESET_BIRTHDAY_CONFIRM_TITLE"*/, 0);
+      v29 = LocalizationManager__Get((System_String_o *)StringLiteral_11569/*"RESET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0);
+      v32 = (System_Object_array *)sub_2213B20(object___TypeInfo, 4);
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v29, v30);
-      Month = (InputUserBirthDayWindow_o *)System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-      PaddingBirthday = InputUserBirthDayWindow__getPaddingBirthday(Month, (int32_t)Month, v33);
-      if ( !v31 )
-        sub_2213CDC(PaddingBirthday, v35);
-      v42 = (Il2CppObject *)PaddingBirthday;
+        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v30, v31);
+      v33.fields._dateData = (uint64_t)&dateData;
+      Month = (InputUserBirthDayWindow_o *)System_DateTime__get_Month(v33, 0);
+      PaddingBirthday = InputUserBirthDayWindow__getPaddingBirthday(Month, (int32_t)Month, v35);
+      if ( !v32 )
+        sub_2213CDC(PaddingBirthday, v37);
+      v44 = (Il2CppObject *)PaddingBirthday;
       if ( PaddingBirthday )
       {
-        PaddingBirthday = (System_String_o *)sub_2213BB4(PaddingBirthday, v31->obj.klass->_1.element_class);
+        PaddingBirthday = (System_String_o *)sub_2213BB4(PaddingBirthday, v32->obj.klass->_1.element_class);
         if ( !PaddingBirthday )
         {
-          v99 = sub_2213D00(0, v43);
-          sub_2213BA0(v99, 0);
-        }
-      }
-      if ( !LODWORD(v31->max_length) )
-        sub_2213CE4(PaddingBirthday);
-      v31->m_Items[0] = v42;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)v31->m_Items, (int32_t)v42, v36, v37, v38, v39, v40, v41);
-      Day = (InputUserBirthDayWindow_o *)System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-      v46 = InputUserBirthDayWindow__getPaddingBirthday(Day, (int32_t)Day, v45);
-      v53 = (Il2CppObject *)v46;
-      if ( v46 )
-      {
-        v46 = (System_String_o *)sub_2213BB4(v46, v31->obj.klass->_1.element_class);
-        if ( !v46 )
-        {
-          v100 = sub_2213D00(0, v54);
-          sub_2213BA0(v100, 0);
-        }
-      }
-      if ( (v31->max_length & 0xFFFFFFFE) == 0 )
-        sub_2213CE4(v46);
-      v31->m_Items[1] = v53;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v31->m_Items[1], (int32_t)v53, v47, v48, v49, v50, v51, v52);
-      v57 = InputUserBirthDayWindow__getPaddingBirthday(v55, v7, v56);
-      v64 = (Il2CppObject *)v57;
-      if ( v57 )
-      {
-        v57 = (System_String_o *)sub_2213BB4(v57, v31->obj.klass->_1.element_class);
-        if ( !v57 )
-        {
-          v101 = sub_2213D00(0, v65);
-          sub_2213BA0(v101, 0);
-        }
-      }
-      if ( LODWORD(v31->max_length) <= 2 )
-        sub_2213CE4(v57);
-      v31->m_Items[2] = v64;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v31->m_Items[2], (int32_t)v64, v58, v59, v60, v61, v62, v63);
-      v68 = InputUserBirthDayWindow__getPaddingBirthday(v66, v10, v67);
-      v75 = (Il2CppObject *)v68;
-      if ( v68 )
-      {
-        v68 = (System_String_o *)sub_2213BB4(v68, v31->obj.klass->_1.element_class);
-        if ( !v68 )
-        {
-          v102 = sub_2213D00(0, v76);
+          v102 = sub_2213D00(0, v45);
           sub_2213BA0(v102, 0);
         }
       }
-      if ( (v31->max_length & 0xFFFFFFFC) == 0 )
-        sub_2213CE4(v68);
-      v31->m_Items[3] = v75;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v31->m_Items[3], (int32_t)v75, v69, v70, v71, v72, v73, v74);
-      v77 = System_String__Format_75698016(v28, v31, 0);
-      v78 = LocalizationManager__Get((System_String_o *)StringLiteral_12534/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0);
-      v79 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_2213CCC(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
+      if ( !LODWORD(v32->max_length) )
+        sub_2213CE4(PaddingBirthday);
+      v32->m_Items[0] = v44;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)v32->m_Items, (int32_t)v44, v38, v39, v40, v41, v42, v43);
+      v46.fields._dateData = (uint64_t)&dateData;
+      Day = (InputUserBirthDayWindow_o *)System_DateTime__get_Day(v46, 0);
+      v49 = InputUserBirthDayWindow__getPaddingBirthday(Day, (int32_t)Day, v48);
+      v56 = (Il2CppObject *)v49;
+      if ( v49 )
+      {
+        v49 = (System_String_o *)sub_2213BB4(v49, v32->obj.klass->_1.element_class);
+        if ( !v49 )
+        {
+          v103 = sub_2213D00(0, v57);
+          sub_2213BA0(v103, 0);
+        }
+      }
+      if ( (v32->max_length & 0xFFFFFFFE) == 0 )
+        sub_2213CE4(v49);
+      v32->m_Items[1] = v56;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v32->m_Items[1], (int32_t)v56, v50, v51, v52, v53, v54, v55);
+      v60 = InputUserBirthDayWindow__getPaddingBirthday(v58, v7, v59);
+      v67 = (Il2CppObject *)v60;
+      if ( v60 )
+      {
+        v60 = (System_String_o *)sub_2213BB4(v60, v32->obj.klass->_1.element_class);
+        if ( !v60 )
+        {
+          v104 = sub_2213D00(0, v68);
+          sub_2213BA0(v104, 0);
+        }
+      }
+      if ( LODWORD(v32->max_length) <= 2 )
+        sub_2213CE4(v60);
+      v32->m_Items[2] = v67;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v32->m_Items[2], (int32_t)v67, v61, v62, v63, v64, v65, v66);
+      v71 = InputUserBirthDayWindow__getPaddingBirthday(v69, v10, v70);
+      v78 = (Il2CppObject *)v71;
+      if ( v71 )
+      {
+        v71 = (System_String_o *)sub_2213BB4(v71, v32->obj.klass->_1.element_class);
+        if ( !v71 )
+        {
+          v105 = sub_2213D00(0, v79);
+          sub_2213BA0(v105, 0);
+        }
+      }
+      if ( (v32->max_length & 0xFFFFFFFC) == 0 )
+        sub_2213CE4(v71);
+      v32->m_Items[3] = v78;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v32->m_Items[3], (int32_t)v78, v72, v73, v74, v75, v76, v77);
+      v80 = System_String__Format_75698016(v29, v32, 0);
+      v81 = LocalizationManager__Get((System_String_o *)StringLiteral_12534/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0);
+      v82 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_2213CCC(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
       InputUserBirthDayConfirmWindow_CallbackFunc___ctor(
-        v79,
+        v82,
         (Il2CppObject *)this,
         Method_InputUserBirthDayWindow_OnConfirm__,
-        v80);
-      v84 = InputUserBirthDayWindow_TypeInfo;
+        v83);
+      v87 = InputUserBirthDayWindow_TypeInfo;
       if ( !*(&InputUserBirthDayWindow_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(InputUserBirthDayWindow_TypeInfo, v81, v82);
+        j_il2cpp_runtime_class_init_0(InputUserBirthDayWindow_TypeInfo, v84, v85);
       if ( !confirmWindow )
-        sub_2213CDC(v84, v81);
+        sub_2213CDC(v87, v84);
       InputUserBirthDayConfirmWindow__OpenConfirmWindow(
         confirmWindow,
-        v27,
-        v77,
-        v78,
-        v79,
+        v28,
+        v80,
+        v81,
+        v82,
         InputUserBirthDayWindow_TypeInfo->static_fields->RESET_BIRTH_DAY_CONFIRM_INFO_POSITION_Y,
         InputUserBirthDayWindow_TypeInfo->static_fields->RESET_BIRTH_DAY_CONFIRM_INFO_SPACING_Y,
-        v83);
+        v86);
     }
     else
     {
-      v87 = this->fields.confirmWindow;
+      v90 = this->fields.confirmWindow;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17, v18);
-      v88 = LocalizationManager__Get((System_String_o *)StringLiteral_12535/*"SET_BIRTHDAY_CONFIRM_TITLE"*/, 0);
-      v89 = LocalizationManager__Get((System_String_o *)StringLiteral_12533/*"SET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0);
-      LODWORD(v104) = v7;
-      v90 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v104);
-      v103 = v10;
-      v91 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v103);
-      v92 = System_String__Format_75697880(v89, v90, v91, 0);
-      v93 = LocalizationManager__Get((System_String_o *)StringLiteral_12534/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0);
-      v94 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_2213CCC(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
+      v91 = LocalizationManager__Get((System_String_o *)StringLiteral_12535/*"SET_BIRTHDAY_CONFIRM_TITLE"*/, 0);
+      v92 = LocalizationManager__Get((System_String_o *)StringLiteral_12533/*"SET_BIRTHDAY_CONFIRM_MESSAGE"*/, 0);
+      LODWORD(v107) = v7;
+      v93 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v107);
+      v106 = v10;
+      v94 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v106);
+      v95 = System_String__Format_75697880(v92, v93, v94, 0);
+      v96 = LocalizationManager__Get((System_String_o *)StringLiteral_12534/*"SET_BIRTHDAY_CONFIRM_NOTICE"*/, 0);
+      v97 = (InputUserBirthDayConfirmWindow_CallbackFunc_o *)sub_2213CCC(InputUserBirthDayConfirmWindow_CallbackFunc_TypeInfo);
       InputUserBirthDayConfirmWindow_CallbackFunc___ctor(
-        v94,
+        v97,
         (Il2CppObject *)this,
         Method_InputUserBirthDayWindow_OnConfirm__,
-        v95);
-      if ( !v87 )
-        sub_2213CDC(v96, v97);
-      InputUserBirthDayConfirmWindow__OpenConfirmWindow(v87, v88, v92, v93, v94, 30, 0, v98);
+        v98);
+      if ( !v90 )
+        sub_2213CDC(v99, v100);
+      InputUserBirthDayConfirmWindow__OpenConfirmWindow(v90, v91, v95, v96, v97, 30, 0, v101);
     }
   }
   else
   {
-    v85 = Method_InputUserBirthDayWindow_OnClickDecide__;
+    v88 = Method_InputUserBirthDayWindow_OnClickDecide__;
     if ( (*((_BYTE *)Method_InputUserBirthDayWindow_OnClickDecide__ + 83) & 2) != 0 )
-      v85 = (_QWORD *)sub_2213A78(Method_InputUserBirthDayWindow_OnClickDecide__);
-    v86 = (System_Reflection_MethodBase_o *)sub_2213A44(v85, v85[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v86, 2, 0, 0);
+      v88 = (_QWORD *)sub_2213A78(Method_InputUserBirthDayWindow_OnClickDecide__);
+    v89 = (System_Reflection_MethodBase_o *)sub_2213A44(v88, v88[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v89, 2, 0, 0);
   }
 }
 
@@ -957,7 +963,7 @@ System_IAsyncResult_o *InputUserBirthDayWindow_CallbackFunc__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(qword_5984328, v12);
   v11[1] = param;
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

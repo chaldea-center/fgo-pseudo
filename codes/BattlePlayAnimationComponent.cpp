@@ -171,6 +171,7 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent_SaveData__
   bool v16; // w6
   bool v17; // w7
   struct System_String_o *animName; // x1
+  BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
   sub_2213A04(
@@ -195,6 +196,7 @@ BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent_SaveData__
     v15,
     v16,
     v17);
+  result = this;
   this->fields.timeline = data->fields.timeline;
-  return this;
+  return result;
 }

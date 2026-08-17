@@ -195,7 +195,7 @@ void QuestRewardHeelPortraitAction__Setup(
   bool v15; // w7
   __int64 v16; // x1
   __int64 v17; // x2
-  __int64 Master_object; // x0
+  DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
   __int64 v19; // x1
   __int64 v20; // x2
   il2cpp_array_size_t max_length; // x8
@@ -287,7 +287,7 @@ void QuestRewardHeelPortraitAction__Setup(
     (const MethodInfo_37B9A78 *)Method_System_Array_Sort_QuestRewardInfo___);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v16, v17);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
   if ( !v3 )
     goto LABEL_49;
   max_length = v3->max_length;
@@ -296,7 +296,7 @@ void QuestRewardHeelPortraitAction__Setup(
     v22 = (const MethodInfo_38F34CC **)&Method_UnityEngine_Object_Instantiate_GameObject___;
     v23 = (const MethodInfo_38B6F40 **)&Method_UnityEngine_GameObject_GetComponent_UISprite___;
     v24 = (const MethodInfo_3F10B80 **)&Method_DataMasterBase_HeelPortraitMaster__HeelPortraitEntity__int__TryGetEntity__;
-    v25 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+    v25 = Master_object;
     v26 = 0;
     m_Items = v3->m_Items;
     v58 = v3->m_Items;
@@ -310,40 +310,50 @@ void QuestRewardHeelPortraitAction__Setup(
         portraitObj = (Il2CppObject *)this->fields.portraitObj;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
-        Master_object = (__int64)UnityEngine_Object__Instantiate_object_(portraitObj, *v22);
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Object__Instantiate_object_(
+                                                                        portraitObj,
+                                                                        *v22);
         if ( !Master_object )
           goto LABEL_49;
         v30 = (UnityEngine_GameObject_o *)Master_object;
-        Master_object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Master_object, 0);
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_GameObject__get_transform(
+                                                                        (UnityEngine_GameObject_o *)Master_object,
+                                                                        0);
         if ( !Master_object )
           goto LABEL_49;
         UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)Master_object, this->fields.listRoot, 0);
-        Master_object = (__int64)UnityEngine_GameObject__get_transform(v30, 0);
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_GameObject__get_transform(v30, 0);
         v31 = (UnityEngine_Transform_o *)Master_object;
         if ( !byte_5969AE0 )
         {
-          Master_object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
         if ( !v31 )
           goto LABEL_49;
         UnityEngine_Transform__set_localPosition(v31, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        Master_object = (__int64)UnityEngine_GameObject__get_transform(v30, 0);
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_GameObject__get_transform(v30, 0);
         v32 = (UnityEngine_Transform_o *)Master_object;
         if ( !byte_5969AE5 )
         {
-          Master_object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
         if ( !v32 )
           goto LABEL_49;
         UnityEngine_Transform__set_localScale(v32, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-        Master_object = (__int64)UnityEngine_GameObject__GetComponent_object_(v30, *v23);
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                        v30,
+                                                                        *v23);
         if ( !v25 )
           goto LABEL_49;
         v33 = (UISprite_o *)Master_object;
-        Master_object = DataMasterBase_object__object__int___TryGetEntity(v25, &entity, HIDWORD(v28[1].klass), *v24);
-        if ( (Master_object & 1) != 0 )
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
+                                                                        v25,
+                                                                        &entity,
+                                                                        HIDWORD(v28[1].klass),
+                                                                        *v24);
+        if ( ((unsigned __int8)Master_object & 1) != 0 )
         {
           if ( !entity )
             goto LABEL_49;
@@ -373,17 +383,17 @@ void QuestRewardHeelPortraitAction__Setup(
     }
     while ( (__int64)++v26 < (int)max_length );
   }
-  Master_object = (__int64)this->fields.listRoot;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.listRoot;
   if ( !Master_object )
     goto LABEL_49;
-  Master_object = (__int64)UnityEngine_Component__GetComponent_object_(
-                             (UnityEngine_Component_o *)Master_object,
-                             (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__GetComponent_object_(
+                                                                  (UnityEngine_Component_o *)Master_object,
+                                                                  (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
   if ( !Master_object )
     goto LABEL_49;
-  (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Master_object + 440LL))(
+  ((void (__fastcall *)(DataMasterBase_TMaster__TEntity__PKType__o *, const MethodInfo *))Master_object->klass->vtable._8_ReplacedForThread.methodPtr)(
     Master_object,
-    *(_QWORD *)(*(_QWORD *)Master_object + 448LL));
+    Master_object->klass->vtable._8_ReplacedForThread.method);
   p_screenTouchInfo = &this->fields.screenTouchInfo;
   screenTouchInfo = (UnityEngine_Object_o *)this->fields.screenTouchInfo;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -391,14 +401,16 @@ void QuestRewardHeelPortraitAction__Setup(
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0, 0) )
   {
     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    Master_object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__get_transform(
+                                                                    (UnityEngine_Component_o *)this,
+                                                                    0);
     if ( Instance )
     {
-      Master_object = (__int64)CommonUI__CreateScreeenTouchInfo(
-                                 (CommonUI_o *)Instance,
-                                 (UnityEngine_Transform_o *)Master_object,
-                                 0,
-                                 0);
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CommonUI__CreateScreeenTouchInfo(
+                                                                      (CommonUI_o *)Instance,
+                                                                      (UnityEngine_Transform_o *)Master_object,
+                                                                      0,
+                                                                      0);
       if ( Master_object )
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
@@ -421,14 +433,16 @@ LABEL_49:
     sub_2213CDC(Master_object, v19);
   }
 LABEL_45:
-  Master_object = (__int64)*p_screenTouchInfo;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)*p_screenTouchInfo;
   if ( !*p_screenTouchInfo )
     goto LABEL_49;
-  Master_object = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__get_gameObject(
+                                                                  (UnityEngine_Component_o *)Master_object,
+                                                                  0);
   if ( !Master_object )
     goto LABEL_49;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0);
-  Master_object = (__int64)*p_screenTouchInfo;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)*p_screenTouchInfo;
   if ( !*p_screenTouchInfo )
     goto LABEL_49;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);

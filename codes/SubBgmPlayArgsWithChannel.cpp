@@ -34,12 +34,16 @@ System_String_o *SubBgmPlayArgsWithChannel__BuildChannelName(
 BgmPlayArgs_o *SubBgmPlayArgsWithChannel__Clone(SubBgmPlayArgsWithChannel_o *this, const MethodInfo *method)
 {
   float Volume_k__BackingField; // s0
+  System_Nullable_float__o p_volume; // x0
   System_String_o *BgmName_k__BackingField; // x20
   int32_t ChannelId_k__BackingField; // w23
   float FadeTime_k__BackingField; // s8
   int64_t StartTime_k__BackingField; // x19
-  __int64 v8; // x21
-  const MethodInfo *v9; // x4
+  BgmPlayArgs_o *v9; // x0
+  System_Nullable_float__o v10; // x2
+  BgmPlayArgs_o *v11; // x21
+  const MethodInfo *v12; // x4
+  BgmPlayArgs_o *result; // x0
   System_Nullable_float__o volume; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596FE1A & 1) == 0 )
@@ -49,25 +53,23 @@ BgmPlayArgs_o *SubBgmPlayArgsWithChannel__Clone(SubBgmPlayArgsWithChannel_o *thi
     byte_596FE1A = 1;
   }
   Volume_k__BackingField = this->fields._Volume_k__BackingField;
+  p_volume = (System_Nullable_float__o)&volume;
   BgmName_k__BackingField = this->fields._BgmName_k__BackingField;
   ChannelId_k__BackingField = this->fields._ChannelId_k__BackingField;
   volume = 0;
   System_Nullable_float____ctor(
-    (System_Nullable_float__o)&volume,
+    p_volume,
     Volume_k__BackingField,
     (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
   StartTime_k__BackingField = this->fields._StartTime_k__BackingField;
-  v8 = sub_2213CCC(SubBgmPlayArgsWithChannel_TypeInfo);
-  BgmPlayArgs___ctor(
-    (BgmPlayArgs_o *)v8,
-    BgmName_k__BackingField,
-    volume,
-    FadeTime_k__BackingField,
-    StartTime_k__BackingField,
-    v9);
-  *(_DWORD *)(v8 + 40) = ChannelId_k__BackingField;
-  return (BgmPlayArgs_o *)v8;
+  v9 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgsWithChannel_TypeInfo);
+  v10 = volume;
+  v11 = v9;
+  BgmPlayArgs___ctor(v9, BgmName_k__BackingField, v10, FadeTime_k__BackingField, StartTime_k__BackingField, v12);
+  result = v11;
+  LODWORD(v11[1].klass) = ChannelId_k__BackingField;
+  return result;
 }
 
 

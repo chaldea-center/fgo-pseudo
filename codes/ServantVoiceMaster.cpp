@@ -643,7 +643,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
   System_Collections_Generic_List_ServantVoiceData____o *v48; // x0
   int32_t v49; // [xsp+Ch] [xbp-54h] BYREF
   Il2CppObject *result; // [xsp+10h] [xbp-50h] BYREF
-  __int64 voicePrefix; // [xsp+18h] [xbp-48h] BYREF
+  int32_t voicePrefix[2]; // [xsp+18h] [xbp-48h] BYREF
 
   if ( (byte_5971385 & 1) == 0 )
   {
@@ -655,7 +655,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
     byte_5971385 = 1;
   }
   result = 0;
-  voicePrefix = 0;
+  *(_QWORD *)voicePrefix = 0;
   v49 = 0;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -667,15 +667,15 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
     goto LABEL_18;
   ServantLimitAddMaster__getVoiceIndex(
     (ServantLimitAddMaster_o *)Instance,
-    (int32_t *)&voicePrefix + 1,
-    (int32_t *)&voicePrefix,
+    &voicePrefix[1],
+    voicePrefix,
     svtId,
     limitCount,
     0);
-  if ( !HIDWORD(voicePrefix) )
-    HIDWORD(voicePrefix) = svtId;
+  if ( !voicePrefix[1] )
+    voicePrefix[1] = svtId;
   v13 = sub_2213B20(string___TypeInfo, 5);
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&voicePrefix + 4, 0);
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&voicePrefix[1], 0);
   if ( !v13 )
     goto LABEL_18;
   if ( !*(_DWORD *)(v13 + 24) )
@@ -687,7 +687,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
   v26 = StringLiteral_1533/*":"*/;
   *(_QWORD *)(v13 + 40) = StringLiteral_1533/*":"*/;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 40), v26, v20, v21, v22, v23, v24, v25);
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&voicePrefix, 0);
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)voicePrefix, 0);
   if ( *(_DWORD *)(v13 + 24) <= 2u
     || (*(_QWORD *)(v13 + 48) = Instance,
         sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 48), (int32_t)Instance, v27, v28, v29, v30, v31, v32),
@@ -1134,7 +1134,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
   __int64 v51; // x0
   int32_t v53; // [xsp+Ch] [xbp-54h] BYREF
   ServantVoiceEntity_o *v54; // [xsp+10h] [xbp-50h] BYREF
-  __int64 voicePrefix; // [xsp+18h] [xbp-48h] BYREF
+  int32_t voicePrefix[2]; // [xsp+18h] [xbp-48h] BYREF
 
   if ( (byte_5971384 & 1) == 0 )
   {
@@ -1147,7 +1147,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
     byte_5971384 = 1;
   }
   v54 = 0;
-  voicePrefix = 0;
+  *(_QWORD *)voicePrefix = 0;
   v53 = 0;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -1159,13 +1159,13 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
     goto LABEL_23;
   ServantLimitAddMaster__getVoiceIndex(
     (ServantLimitAddMaster_o *)Instance,
-    (int32_t *)&voicePrefix + 1,
-    (int32_t *)&voicePrefix,
+    &voicePrefix[1],
+    voicePrefix,
     svtId,
     limitCount,
     0);
   v13 = sub_2213B20(string___TypeInfo, 5);
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&voicePrefix + 4, 0);
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&voicePrefix[1], 0);
   if ( !v13 )
     goto LABEL_23;
   if ( !*(_DWORD *)(v13 + 24) )
@@ -1177,7 +1177,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceMaster__getEn
   v26 = StringLiteral_1533/*":"*/;
   *(_QWORD *)(v13 + 40) = StringLiteral_1533/*":"*/;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 40), v26, v20, v21, v22, v23, v24, v25);
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&voicePrefix, 0);
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)voicePrefix, 0);
   if ( *(_DWORD *)(v13 + 24) <= 2u
     || (*(_QWORD *)(v13 + 48) = Instance,
         sub_2213A04((MissionNaviTransitionBoardItem_o *)(v13 + 48), (int32_t)Instance, v27, v28, v29, v30, v31, v32),

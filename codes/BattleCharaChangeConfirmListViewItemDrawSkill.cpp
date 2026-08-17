@@ -415,7 +415,7 @@ LABEL_37:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, item, v20);
         this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)BalanceConfig_TypeInfo;
       }
-      if ( i >= *(_DWORD *)(*((_QWORD *)this + 23) + 40LL) )
+      if ( i >= *(_DWORD *)(*(_QWORD *)&this[1].fields.dispMode + 40LL) )
       {
         ((void (__fastcall *)(BattleCharaChangeConfirmListViewItemDrawSkill_o *, const MethodInfo *))v6->klass->vtable._7_RePosition.methodPtr)(
           v6,

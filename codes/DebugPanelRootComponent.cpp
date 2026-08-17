@@ -1099,7 +1099,7 @@ LABEL_14:
 DebugMenuComponent_o *DebugPanelRootComponent__createMenu(DebugPanelRootComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *mst_selectmenu; // x19
-  __int64 transform; // x0
+  UnityEngine_GameObject_o *transform; // x0
   __int64 v5; // x1
   UnityEngine_GameObject_o *v6; // x19
   struct System_Collections_Generic_List_GameObject__o *list; // x8
@@ -1111,10 +1111,10 @@ DebugMenuComponent_o *DebugPanelRootComponent__createMenu(DebugPanelRootComponen
   int32_t v13; // w5
   bool v14; // w6
   bool v15; // w7
-  __int64 v16; // x8
+  intptr_t m_CachedPtr; // x8
   _QWORD *v17; // x9
-  __int64 v18; // x10
-  __int64 v19; // x8
+  __int64 klass_low; // x10
+  intptr_t v19; // x8
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971E98 & 1) == 0 )
@@ -1129,48 +1129,48 @@ DebugMenuComponent_o *DebugPanelRootComponent__createMenu(DebugPanelRootComponen
   mst_selectmenu = (Il2CppObject *)this->fields.mst_selectmenu;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
-  transform = (__int64)UnityEngine_Object__Instantiate_object_(
-                         mst_selectmenu,
-                         (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
+                                            mst_selectmenu,
+                                            (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !transform )
     goto LABEL_18;
-  v6 = (UnityEngine_GameObject_o *)transform;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0);
+  v6 = transform;
+  UnityEngine_GameObject__SetActive(transform, 1, 0);
   list = this->fields.list;
   if ( !list )
     goto LABEL_18;
   size = list->fields._size;
-  transform = (__int64)UnityEngine_GameObject__get_transform(v6, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v6, 0);
   if ( !transform )
     goto LABEL_18;
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)transform, this->fields.menuRoot, 0);
-  transform = (__int64)UnityEngine_GameObject__get_transform(v6, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v6, 0);
   if ( !transform )
     goto LABEL_18;
   v21.fields.x = 0.0;
   v21.fields.z = 0.0;
   v21.fields.y = (float)(-70 * size);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v21, 0);
-  transform = (__int64)UnityEngine_GameObject__get_transform(v6, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v6, 0);
   v9 = (UnityEngine_Transform_o *)transform;
   if ( !byte_5969AE5 )
   {
-    transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v9
     || (UnityEngine_Transform__set_localScale(v9, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
-        (transform = (__int64)this->fields.list) == 0)
-    || (v16 = *(_QWORD *)(transform + 16),
+        (transform = (UnityEngine_GameObject_o *)this->fields.list) == 0)
+    || (m_CachedPtr = transform->fields.m_CachedPtr,
         v17 = Method_System_Collections_Generic_List_GameObject__Add__,
-        ++*(_DWORD *)(transform + 28),
-        !v16) )
+        ++HIDWORD(transform[1].klass),
+        !m_CachedPtr) )
   {
 LABEL_18:
     sub_2213CDC(transform, v5);
   }
-  v18 = *(int *)(transform + 24);
-  if ( (unsigned int)v18 >= *(_DWORD *)(v16 + 24) )
+  klass_low = SLODWORD(transform[1].klass);
+  if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)transform,
@@ -1179,8 +1179,8 @@ LABEL_18:
   }
   else
   {
-    v19 = v16 + 8 * v18;
-    *(_DWORD *)(transform + 24) = v18 + 1;
+    v19 = m_CachedPtr + 8 * klass_low;
+    LODWORD(transform[1].klass) = klass_low + 1;
     *(_QWORD *)(v19 + 32) = v6;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 32), (int32_t)v6, v10, v11, v12, v13, v14, v15);
   }
@@ -1770,9 +1770,9 @@ System_IAsyncResult_o *DebugPanelRootComponent_menuDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -1859,7 +1859,7 @@ System_IAsyncResult_o *DebugPanelRootComponent_paramDelegate__BeginInvoke(
   v10 = param;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1956,7 +1956,7 @@ System_IAsyncResult_o *DebugPanelRootComponent_paramStrDelegate__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = param;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -2051,7 +2051,7 @@ System_IAsyncResult_o *DebugPanelRootComponent_paramtgrDelegate__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(qword_5984348, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984328, v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -2144,7 +2144,7 @@ System_IAsyncResult_o *DebugPanelRootComponent_tgrDelegate__BeginInvoke(
   v10[0] = flg;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

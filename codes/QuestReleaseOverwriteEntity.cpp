@@ -19,6 +19,7 @@ QuestReleaseEntity_o *QuestReleaseOverwriteEntity__ConvertToQuestReleaseEntity(
   const MethodInfo *v4; // x1
   __int64 v5; // x0
   __int64 v6; // x1
+  QuestReleaseEntity_o *result; // x0
   __int64 v8; // d0
   int32_t imagePriority; // w8
 
@@ -31,6 +32,7 @@ QuestReleaseEntity_o *QuestReleaseOverwriteEntity__ConvertToQuestReleaseEntity(
   QuestReleaseEntity___ctor((QuestReleaseEntity_o *)v3, v4);
   if ( !v3 )
     sub_2213CDC(v5, v6);
+  result = (QuestReleaseEntity_o *)v3;
   *(_DWORD *)(v3 + 16) = this->fields.questId;
   v8 = *(_QWORD *)&this->fields.condType;
   *(_QWORD *)(v3 + 32) = this->fields.condNum;
@@ -38,7 +40,7 @@ QuestReleaseEntity_o *QuestReleaseOverwriteEntity__ConvertToQuestReleaseEntity(
   imagePriority = this->fields.imagePriority;
   *(_DWORD *)(v3 + 40) = this->fields.closedMessageId;
   *(_DWORD *)(v3 + 44) = imagePriority;
-  return (QuestReleaseEntity_o *)v3;
+  return result;
 }
 
 

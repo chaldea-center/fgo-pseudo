@@ -2560,36 +2560,38 @@ void WarBoardPieceData__OnBpDamageFromMap(
   WarBoardManager_TaskList_o *v9; // x20
   const MethodInfo *v10; // x1
   struct WarBoardPieceBaseComponent_o *pieceComponent; // x23
-  struct WarBoardPieceBaseComponent_o *v12; // x0
-  __int64 v13; // x1
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
-  struct WarBoardManager_TaskList_array *v20; // x8
-  _QWORD *v21; // x9
-  __int64 v22; // x10
-  Il2CppClass **v23; // x0
-  const MethodInfo *v24; // x2
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
+  System_Nullable_float__o v12; // x0
+  struct WarBoardPieceBaseComponent_o *v13; // x0
+  __int64 v14; // x1
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
+  struct WarBoardManager_TaskList_array *v21; // x8
+  _QWORD *v22; // x9
+  __int64 v23; // x10
+  Il2CppClass **v24; // x0
+  const MethodInfo *v25; // x2
+  System_Nullable_float__o v26; // x0
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
   struct WarBoardManager_TaskList_array *items; // x8
-  _QWORD *v32; // x9
+  _QWORD *v34; // x9
   __int64 size; // x10
-  Il2CppClass **v34; // x0
+  Il2CppClass **v36; // x0
   struct BattleServantData_o *battleServant_k__BackingField; // x20
   unsigned int MaxHp; // w0
   int32_t type_k__BackingField; // w8
   struct WarBoardUserMasterData_o *serverMasterData_k__BackingField; // x8
   int32_t *p_squareIndex; // x8
   struct WarBoardUserServantData_o *serverServantData; // x8
-  __int64 v41; // [xsp+8h] [xbp-58h] BYREF
+  __int64 v43; // [xsp+8h] [xbp-58h] BYREF
 
   if ( (byte_596E2C3 & 1) == 0 )
   {
@@ -2606,23 +2608,21 @@ void WarBoardPieceData__OnBpDamageFromMap(
   pieceComponent = this->fields.pieceComponent;
   if ( ((breakPoint_k__BackingField - 1) & 0x80000000) != 0 )
   {
-    v41 = 0;
-    System_Nullable_float____ctor(
-      (System_Nullable_float__o)&v41,
-      1.0,
-      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    v26 = (System_Nullable_float__o)&v43;
+    v43 = 0;
+    System_Nullable_float____ctor(v26, 1.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
     if ( pieceComponent )
     {
-      v12 = (struct WarBoardPieceBaseComponent_o *)((__int64 (__fastcall *)(struct WarBoardPieceBaseComponent_o *, __int64, WarBoardManager_TaskList_o *, __int64, const MethodInfo *))pieceComponent->klass->vtable._32_OnDead.methodPtr)(
+      v13 = (struct WarBoardPieceBaseComponent_o *)((__int64 (__fastcall *)(struct WarBoardPieceBaseComponent_o *, __int64, WarBoardManager_TaskList_o *, __int64, const MethodInfo *))pieceComponent->klass->vtable._32_OnDead.methodPtr)(
                                                      pieceComponent,
-                                                     v41,
+                                                     v43,
                                                      v9,
                                                      1,
                                                      pieceComponent->klass->vtable._32_OnDead.method);
       if ( taskListDead )
       {
         items = taskListDead->fields._items;
-        v32 = Method_System_Collections_Generic_List_WarBoardManager_TaskList__Add__;
+        v34 = Method_System_Collections_Generic_List_WarBoardManager_TaskList__Add__;
         ++taskListDead->fields._version;
         if ( items )
         {
@@ -2632,14 +2632,14 @@ void WarBoardPieceData__OnBpDamageFromMap(
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)taskListDead,
               (Il2CppObject *)v9,
-              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
           }
           else
           {
-            v34 = &items->obj.klass + size;
+            v36 = &items->obj.klass + size;
             taskListDead->fields._size = size + 1;
-            v34[4] = (Il2CppClass *)v9;
-            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v34 + 4), (int32_t)v9, v25, v26, v27, v28, v29, v30);
+            v36[4] = (Il2CppClass *)v9;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v36 + 4), (int32_t)v9, v27, v28, v29, v30, v31, v32);
           }
           type_k__BackingField = this->fields._type_k__BackingField;
           this->fields._nowSquareIndex_k__BackingField = -1;
@@ -2663,19 +2663,17 @@ void WarBoardPieceData__OnBpDamageFromMap(
       }
     }
 LABEL_27:
-    sub_2213CDC(v12, v13);
+    sub_2213CDC(v13, v14);
   }
-  v41 = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&v41,
-    1.0,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  v12 = (System_Nullable_float__o)&v43;
+  v43 = 0;
+  System_Nullable_float____ctor(v12, 1.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   if ( !pieceComponent )
     goto LABEL_27;
-  v12 = (struct WarBoardPieceBaseComponent_o *)((__int64 (__fastcall *)(struct WarBoardPieceBaseComponent_o *, _QWORD, __int64, WarBoardManager_TaskList_o *, __int64, _QWORD, __int64, const MethodInfo *))pieceComponent->klass->vtable._31_OnBreak.methodPtr)(
+  v13 = (struct WarBoardPieceBaseComponent_o *)((__int64 (__fastcall *)(struct WarBoardPieceBaseComponent_o *, _QWORD, __int64, WarBoardManager_TaskList_o *, __int64, _QWORD, __int64, const MethodInfo *))pieceComponent->klass->vtable._31_OnBreak.methodPtr)(
                                                  pieceComponent,
                                                  breakPoint_k__BackingField,
-                                                 v41,
+                                                 v43,
                                                  v9,
                                                  0xFFFFFFFFLL,
                                                  0,
@@ -2683,25 +2681,25 @@ LABEL_27:
                                                  pieceComponent->klass->vtable._31_OnBreak.method);
   if ( !taskListBreak )
     goto LABEL_27;
-  v20 = taskListBreak->fields._items;
-  v21 = Method_System_Collections_Generic_List_WarBoardManager_TaskList__Add__;
+  v21 = taskListBreak->fields._items;
+  v22 = Method_System_Collections_Generic_List_WarBoardManager_TaskList__Add__;
   ++taskListBreak->fields._version;
-  if ( !v20 )
+  if ( !v21 )
     goto LABEL_27;
-  v22 = taskListBreak->fields._size;
-  if ( (unsigned int)v22 >= LODWORD(v20->max_length) )
+  v23 = taskListBreak->fields._size;
+  if ( (unsigned int)v23 >= LODWORD(v21->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)taskListBreak,
       (Il2CppObject *)v9,
-      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
-    v23 = &v20->obj.klass + v22;
-    taskListBreak->fields._size = v22 + 1;
-    v23[4] = (Il2CppClass *)v9;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v23 + 4), (int32_t)v9, v14, v15, v16, v17, v18, v19);
+    v24 = &v21->obj.klass + v23;
+    taskListBreak->fields._size = v23 + 1;
+    v24[4] = (Il2CppClass *)v9;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v24 + 4), (int32_t)v9, v15, v16, v17, v18, v19, v20);
   }
   battleServant_k__BackingField = this->fields._battleServant_k__BackingField;
   if ( battleServant_k__BackingField )
@@ -2713,20 +2711,20 @@ LABEL_27:
       battleServant_k__BackingField->klass->vtable._10_set_hp.method);
   }
 LABEL_24:
-  WarBoardPieceData__SetBreakPoint(this, this->fields._breakPoint_k__BackingField, v24);
-  v12 = this->fields.pieceComponent;
-  if ( !v12 )
+  WarBoardPieceData__SetBreakPoint(this, this->fields._breakPoint_k__BackingField, v25);
+  v13 = this->fields.pieceComponent;
+  if ( !v13 )
     goto LABEL_27;
-  ((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, bool, const MethodInfo *))v12->klass->vtable._15_ChangeStatus.methodPtr)(
-    v12,
+  ((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, bool, const MethodInfo *))v13->klass->vtable._15_ChangeStatus.methodPtr)(
+    v13,
     (int)(breakPoint_k__BackingField - 1) >= 0,
-    v12->klass->vtable._15_ChangeStatus.method);
-  v12 = this->fields.pieceComponent;
-  if ( !v12 )
+    v13->klass->vtable._15_ChangeStatus.method);
+  v13 = this->fields.pieceComponent;
+  if ( !v13 )
     goto LABEL_27;
-  ((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, const MethodInfo *))v12->klass->vtable._10_UpdateDisplayActionCount.methodPtr)(
-    v12,
-    v12->klass->vtable._10_UpdateDisplayActionCount.method);
+  ((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, const MethodInfo *))v13->klass->vtable._10_UpdateDisplayActionCount.methodPtr)(
+    v13,
+    v13->klass->vtable._10_UpdateDisplayActionCount.method);
 }
 
 
@@ -2739,15 +2737,17 @@ void WarBoardPieceData__OnDeadOnMap(
   const MethodInfo_45E6918 *v7; // x1
   unsigned int breakPoint_k__BackingField; // w22
   struct WarBoardPieceBaseComponent_o *pieceComponent; // x23
-  __int64 v10; // x0
-  __int64 v11; // x1
-  struct WarBoardPieceBaseComponent_o *v12; // x22
+  System_Nullable_float__o v10; // x0
+  __int64 v11; // x0
+  __int64 v12; // x1
+  struct WarBoardPieceBaseComponent_o *v13; // x22
+  System_Nullable_float__o v14; // x0
   int32_t type_k__BackingField; // w8
   struct WarBoardUserMasterData_o *serverMasterData_k__BackingField; // x8
   int32_t *p_squareIndex; // x8
   struct WarBoardUserServantData_o *serverServantData; // x8
-  __int64 v17; // [xsp+8h] [xbp-48h] BYREF
-  __int64 v18; // [xsp+18h] [xbp-38h] BYREF
+  __int64 v19; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v20; // [xsp+18h] [xbp-38h] BYREF
 
   if ( (byte_596E2BE & 1) == 0 )
   {
@@ -2757,35 +2757,34 @@ void WarBoardPieceData__OnDeadOnMap(
   v7 = (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__;
   breakPoint_k__BackingField = this->fields._breakPoint_k__BackingField;
   pieceComponent = this->fields.pieceComponent;
+  v10 = (System_Nullable_float__o)&v20;
   this->fields._isDead_k__BackingField = 1;
-  v18 = 0;
-  System_Nullable_float____ctor((System_Nullable_float__o)&v18, 1.0, v7);
+  v20 = 0;
+  System_Nullable_float____ctor(v10, 1.0, v7);
   if ( !pieceComponent
     || (((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, _QWORD, __int64, WarBoardManager_TaskList_o *, _QWORD, _QWORD, bool, const MethodInfo *))pieceComponent->klass->vtable._31_OnBreak.methodPtr)(
           pieceComponent,
           breakPoint_k__BackingField,
-          v18,
+          v20,
           taskList,
           breakPoint_k__BackingField - 1,
           0,
           cameraMove,
           pieceComponent->klass->vtable._31_OnBreak.method),
-        v12 = this->fields.pieceComponent,
-        v17 = 0,
-        System_Nullable_float____ctor(
-          (System_Nullable_float__o)&v17,
-          1.0,
-          (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__),
-        !v12) )
+        v13 = this->fields.pieceComponent,
+        v14 = (System_Nullable_float__o)&v19,
+        v19 = 0,
+        System_Nullable_float____ctor(v14, 1.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__),
+        !v13) )
   {
-    sub_2213CDC(v10, v11);
+    sub_2213CDC(v11, v12);
   }
-  ((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, __int64, WarBoardManager_TaskList_o *, bool, const MethodInfo *))v12->klass->vtable._32_OnDead.methodPtr)(
-    v12,
-    v17,
+  ((void (__fastcall *)(struct WarBoardPieceBaseComponent_o *, __int64, WarBoardManager_TaskList_o *, bool, const MethodInfo *))v13->klass->vtable._32_OnDead.methodPtr)(
+    v13,
+    v19,
     taskList,
     cameraMove,
-    v12->klass->vtable._32_OnDead.method);
+    v13->klass->vtable._32_OnDead.method);
   type_k__BackingField = this->fields._type_k__BackingField;
   this->fields._nowSquareIndex_k__BackingField = -1;
   if ( type_k__BackingField == 1 )
@@ -3430,11 +3429,12 @@ LABEL_24:
 void WarBoardPieceData__SetOverwriteActionType(WarBoardPieceData_o *this, int32_t actionType, const MethodInfo *method)
 {
   Il2CppType *v5; // x21
+  System_RuntimeTypeHandle_o v6; // x0
   System_Type_o *TypeFromHandle; // x21
-  __int64 v7; // x1
-  __int64 v8; // x2
-  Il2CppObject *v9; // x22
-  int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v8; // x1
+  __int64 v9; // x2
+  Il2CppObject *v10; // x22
+  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
   if ( (byte_596E2C5 & 1) == 0 )
   {
@@ -3444,12 +3444,13 @@ void WarBoardPieceData__SetOverwriteActionType(WarBoardPieceData_o *this, int32_
   v5 = WarBoardStageLayoutEntity_ActionType_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, *(_QWORD *)&actionType, method);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v5, 0);
-  v10 = actionType;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v10);
+  v6.fields.value = (intptr_t)v5;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
+  v11 = actionType;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v11);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v7, v8);
-  if ( System_Enum__IsDefined(TypeFromHandle, v9, 0) )
+    j_il2cpp_runtime_class_init_0(qword_5984398, v8, v9);
+  if ( System_Enum__IsDefined(TypeFromHandle, v10, 0) )
     this->fields._overwriteActionType_k__BackingField = actionType;
 }
 
@@ -5049,7 +5050,7 @@ int32_t WarBoardPieceData__get_CurrentHp(WarBoardPieceData_o *this, const Method
 
   battleServant_k__BackingField = this->fields._battleServant_k__BackingField;
   if ( battleServant_k__BackingField )
-    LODWORD(battleServant_k__BackingField) = ((int32_t (__fastcall *)(struct BattleServantData_o *, const MethodInfo *))battleServant_k__BackingField->klass->vtable._9_get_hp.methodPtr)(
+    LODWORD(battleServant_k__BackingField) = ((__int64 (__fastcall *)(struct BattleServantData_o *, const MethodInfo *))battleServant_k__BackingField->klass->vtable._9_get_hp.methodPtr)(
                                                battleServant_k__BackingField,
                                                battleServant_k__BackingField->klass->vtable._9_get_hp.method);
   return (int)battleServant_k__BackingField;

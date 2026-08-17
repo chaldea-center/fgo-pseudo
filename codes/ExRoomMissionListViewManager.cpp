@@ -1029,7 +1029,7 @@ void ExRoomMissionListViewManager__RestoreScrollViewState(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *scrollView; // x21
-  __int64 transform; // x0
+  UIScrollView_o *transform; // x0
   __int64 v7; // x1
   __int64 v8; // x2
   struct UIScrollView_o *v9; // x8
@@ -1046,8 +1046,8 @@ void ExRoomMissionListViewManager__RestoreScrollViewState(
     scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, state, method);
-    transform = UnityEngine_Object__op_Equality(scrollView, 0, 0);
-    if ( (transform & 1) == 0 )
+    transform = (UIScrollView_o *)UnityEngine_Object__op_Equality(scrollView, 0, 0);
+    if ( ((unsigned __int8)transform & 1) == 0 )
     {
       v9 = this->fields.scrollView;
       if ( v9 )
@@ -1057,14 +1057,14 @@ void ExRoomMissionListViewManager__RestoreScrollViewState(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
         if ( UnityEngine_Object__op_Equality(mPanel, 0, 0) )
           return;
-        transform = (__int64)this->fields.scrollView;
+        transform = this->fields.scrollView;
         if ( transform )
         {
-          UIScrollView__DisableSpring((UIScrollView_o *)transform, 0);
+          UIScrollView__DisableSpring(transform, 0);
           v11 = this->fields.scrollView;
           if ( !byte_5969AE0 )
           {
-            transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+            transform = (UIScrollView_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
             byte_5969AE0 = 1;
           }
           if ( v11 )
@@ -1073,10 +1073,12 @@ void ExRoomMissionListViewManager__RestoreScrollViewState(
             if ( mPanel )
             {
               UIPanel__set_clipOffset((UIPanel_o *)mPanel, state->fields.ClipOffset, 0);
-              transform = (__int64)this->fields.scrollView;
+              transform = this->fields.scrollView;
               if ( transform )
               {
-                transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+                transform = (UIScrollView_o *)UnityEngine_Component__get_transform(
+                                                (UnityEngine_Component_o *)transform,
+                                                0);
                 if ( transform )
                 {
                   UnityEngine_Transform__set_localPosition(
@@ -1106,6 +1108,7 @@ void ExRoomMissionListViewManager__SetProcessing(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ExRoomMissionListViewManager__UpdateHeader(
         ExRoomMissionListViewManager_o *this,
         ExRoomMissionListDisplayState_o *state,
@@ -1121,7 +1124,10 @@ void ExRoomMissionListViewManager__UpdateHeader(
   UnityEngine_Object_o *receiveAllButton; // x21
   __int64 v13; // x2
   UnityEngine_Object_o *receiveAllLabelSprite; // x21
-  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v15; // s0 OVERLAPPED
+  float v16; // s3
+  float v17; // s1
+  float v18; // s2
 
   if ( (byte_596AF1D & 1) == 0 )
   {
@@ -1168,13 +1174,13 @@ void ExRoomMissionListViewManager__UpdateHeader(
       v9 = (UICommonButton_o *)this->fields.receiveAllLabelSprite;
       if ( v9 )
       {
-        v16.fields.r = 1.0;
-        v16.fields.a = 1.0;
+        v15 = 1.0;
+        v16 = 1.0;
         if ( !state->fields._CanReceiveAll_k__BackingField )
-          v16.fields.r = 0.5;
-        v16.fields.g = v16.fields.r;
-        v16.fields.b = v16.fields.r;
-        UIWidget__set_color((UIWidget_o *)v9, v16, 0);
+          v15 = 0.5;
+        v17 = v15;
+        v18 = v15;
+        UIWidget__set_color((UIWidget_o *)v9, *(UnityEngine_Color_o *)&v15, 0);
         return;
       }
 LABEL_22:

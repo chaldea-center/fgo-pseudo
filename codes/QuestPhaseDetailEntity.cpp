@@ -68,8 +68,8 @@ bool QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
   UnityEngine_GameObject_o *gameObject; // x21
   struct System_Int32_array *v14; // x8
   struct System_Int32_array *v15; // x8
-  UnityEngine_Color_o v19; // [xsp+0h] [xbp-40h] BYREF
-  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v16; // kr00_16
+  UnityEngine_Color_o v17; // [xsp+0h] [xbp-40h] BYREF
 
   if ( (byte_5970EFC & 1) == 0 )
   {
@@ -77,8 +77,8 @@ bool QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
     sub_2213A60(&UnityEngine_Object_TypeInfo);
     byte_5970EFC = 1;
   }
-  *(_QWORD *)&v19.fields.r = 0;
-  *(_QWORD *)&v19.fields.b = 0;
+  *(_QWORD *)&v17.fields.r = 0;
+  *(_QWORD *)&v17.fields.b = 0;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, sprite);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0, 0) )
@@ -155,17 +155,15 @@ LABEL_37:
 LABEL_31:
   if ( System_String__IsNullOrEmpty(this->fields.imgColor, 0) )
   {
-    v20.fields.r = 1.0;
-    v20.fields.g = 1.0;
-    v20.fields.b = 1.0;
-    v20.fields.a = 1.0;
+    *(_QWORD *)&v16.fields.r = __PAIR64__(1.0, 1.0);
+    *(_QWORD *)&v16.fields.b = __PAIR64__(1.0, 1.0);
   }
   else
   {
-    UnityEngine_ColorUtility__TryParseHtmlString(this->fields.imgColor, &v19, 0);
-    v20 = v19;
+    UnityEngine_ColorUtility__TryParseHtmlString(this->fields.imgColor, &v17, 0);
+    v16 = v17;
   }
-  UIWidget__set_color((UIWidget_o *)sprite, v20, 0);
+  UIWidget__set_color((UIWidget_o *)sprite, v16, 0);
   return 1;
 }
 

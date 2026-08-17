@@ -24,6 +24,7 @@ void WarBoardTaskBase___ctor(WarBoardTaskBase_o *this, const MethodInfo *method)
 System_Collections_IEnumerator_o *WarBoardTaskBase__Execute(WarBoardTaskBase_o *this, const MethodInfo *method)
 {
   __int64 v2; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596E3C1 & 1) == 0 )
   {
@@ -32,8 +33,9 @@ System_Collections_IEnumerator_o *WarBoardTaskBase__Execute(WarBoardTaskBase_o *
   }
   v2 = sub_2213CCC(WarBoardTaskBase__Execute_d__15_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
+  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  return result;
 }
 
 
@@ -158,9 +160,9 @@ System_IAsyncResult_o *WarBoardTaskBase_TaskCallback__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

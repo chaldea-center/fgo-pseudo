@@ -87,8 +87,7 @@ void UIDragDropItem__OnDragDropMove(UIDragDropItem_o *this, UnityEngine_Vector2_
   UnityEngine_Transform_o *mTrans; // x19
   float y; // s8
   float x; // s9
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   mTrans = this->fields.mTrans;
   if ( !mTrans )
@@ -96,10 +95,10 @@ void UIDragDropItem__OnDragDropMove(UIDragDropItem_o *this, UnityEngine_Vector2_
   y = delta.fields.y;
   x = delta.fields.x;
   localPosition = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
-  v7.fields.x = x + localPosition.fields.x;
-  v7.fields.y = y + localPosition.fields.y;
-  v7.fields.z = localPosition.fields.z + 0.0;
-  UnityEngine_Transform__set_localPosition(mTrans, v7, 0);
+  localPosition.fields.x = x + localPosition.fields.x;
+  localPosition.fields.y = y + localPosition.fields.y;
+  localPosition.fields.z = localPosition.fields.z + 0.0;
+  UnityEngine_Transform__set_localPosition(mTrans, localPosition, 0);
 }
 
 
@@ -119,42 +118,42 @@ void UIDragDropItem__OnDragDropRelease(
   UnityEngine_Object_o *v13; // x21
   UnityEngine_Transform_o *mTrans; // x20
   UnityEngine_Object_o *monitor; // x22
+  int v16; // s2
   struct UnityEngine_Transform_o *parent; // x0
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
-  __int64 v23; // x1
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  __int64 v24; // x1
   UnityEngine_Transform_o *mParent; // x20
-  Il2CppObject *v25; // x0
+  Il2CppObject *v26; // x0
   struct UIGrid_o **p_mGrid; // x20
-  System_String_o *v27; // x2
-  System_String_o *v28; // x3
-  int32_t v29; // w4
-  int32_t v30; // w5
-  bool v31; // w6
-  bool v32; // w7
-  Il2CppObject *v33; // x0
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
+  Il2CppObject *v34; // x0
   struct UITable_o **p_mTable; // x21
-  System_String_o *v35; // x2
-  System_String_o *v36; // x3
-  int32_t v37; // w4
-  int32_t v38; // w5
-  bool v39; // w6
-  bool v40; // w7
-  __int64 v41; // x1
+  System_String_o *v36; // x2
+  System_String_o *v37; // x3
+  int32_t v38; // w4
+  int32_t v39; // w5
+  bool v40; // w6
+  bool v41; // w7
+  __int64 v42; // x1
   UnityEngine_Object_o *mDragScrollView; // x22
-  const MethodInfo *v43; // x1
-  System_Collections_IEnumerator_o *v44; // x0
-  __int64 v45; // x1
+  const MethodInfo *v44; // x1
+  System_Collections_IEnumerator_o *v45; // x0
+  __int64 v46; // x1
   UnityEngine_GameObject_o *gameObject; // x22
-  __int64 v47; // x1
-  UnityEngine_Object_o *v48; // x22
-  UnityEngine_Object_o *v49; // x21
-  UnityEngine_Vector3_o v51; // 0:kr14_12.12
-  unsigned __int64 localPosition; // 0:s0.4,4:s1.4
+  __int64 v48; // x1
+  UnityEngine_Object_o *v49; // x22
+  UnityEngine_Object_o *v50; // x21
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974FB9 & 1) == 0 )
   {
@@ -244,15 +243,12 @@ void UIDragDropItem__OnDragDropRelease(
       transform = (UnityEngine_Collider_o *)this->fields.mTrans;
       if ( !transform )
         goto LABEL_63;
-      localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
-                                          (UnityEngine_Transform_o *)transform,
-                                          0);
+      localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
       transform = (UnityEngine_Collider_o *)this->fields.mTrans;
       if ( !transform )
         goto LABEL_63;
-      *(_QWORD *)&v51.fields.x = localPosition;
-      v51.fields.z = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v51, 0);
+      v16 = 0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, localPosition, 0);
     }
     else
     {
@@ -268,53 +264,53 @@ void UIDragDropItem__OnDragDropRelease(
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mParent,
       (int32_t)parent,
-      v17,
       v18,
       v19,
       v20,
       v21,
-      v22);
+      v22,
+      v23);
     mParent = this->fields.mParent;
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v23);
-    v25 = NGUITools__FindInParents_object__59706528(
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v24);
+    v26 = NGUITools__FindInParents_object__59706528(
             mParent,
             (const MethodInfo_38F0CA0 *)Method_NGUITools_FindInParents_UIGrid____91798288);
-    this->fields.mGrid = (struct UIGrid_o *)v25;
+    this->fields.mGrid = (struct UIGrid_o *)v26;
     p_mGrid = &this->fields.mGrid;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mGrid, (int32_t)v25, v27, v28, v29, v30, v31, v32);
-    v33 = NGUITools__FindInParents_object__59706528(
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mGrid, (int32_t)v26, v28, v29, v30, v31, v32, v33);
+    v34 = NGUITools__FindInParents_object__59706528(
             this->fields.mParent,
             (const MethodInfo_38F0CA0 *)Method_NGUITools_FindInParents_UITable____91798376);
-    this->fields.mTable = (struct UITable_o *)v33;
+    this->fields.mTable = (struct UITable_o *)v34;
     p_mTable = &this->fields.mTable;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTable, (int32_t)v33, v35, v36, v37, v38, v39, v40);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mTable, (int32_t)v34, v36, v37, v38, v39, v40, v41);
     mDragScrollView = (UnityEngine_Object_o *)this->fields.mDragScrollView;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v41);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v42);
     if ( UnityEngine_Object__op_Inequality(mDragScrollView, 0, 0) )
     {
-      v44 = UIDragDropItem__EnableDragScrollView(this, v43);
-      UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v44, 0);
+      v45 = UIDragDropItem__EnableDragScrollView(this, v44);
+      UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v45, 0);
     }
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v45);
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v46);
     NGUITools__MarkParentAsChanged(gameObject, 0);
-    v48 = (UnityEngine_Object_o *)*p_mTable;
+    v49 = (UnityEngine_Object_o *)*p_mTable;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v47);
-    if ( UnityEngine_Object__op_Inequality(v48, 0, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v48);
+    if ( UnityEngine_Object__op_Inequality(v49, 0, 0) )
     {
       transform = (UnityEngine_Collider_o *)*p_mTable;
       if ( !*p_mTable )
         goto LABEL_63;
       UITable__set_repositionNow((UITable_o *)transform, 1, 0);
     }
-    v49 = (UnityEngine_Object_o *)*p_mGrid;
+    v50 = (UnityEngine_Object_o *)*p_mGrid;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-    if ( !UnityEngine_Object__op_Inequality(v49, 0, 0) )
+    if ( !UnityEngine_Object__op_Inequality(v50, 0, 0) )
       goto LABEL_62;
     transform = (UnityEngine_Collider_o *)*p_mGrid;
     if ( *p_mGrid )
@@ -379,17 +375,17 @@ void UIDragDropItem__OnDragDropStart(UIDragDropItem_o *this, const MethodInfo *m
   bool v40; // w7
   __int64 v41; // x1
   UnityEngine_Object_o *root; // x22
-  __int64 v43; // x1
+  int v43; // s2
+  __int64 v44; // x1
   Il2CppObject *Component_object; // x22
-  __int64 v45; // x1
-  Il2CppObject *v46; // x22
-  __int64 v47; // x1
+  __int64 v46; // x1
+  Il2CppObject *v47; // x22
+  __int64 v48; // x1
   UnityEngine_GameObject_o *gameObject; // x19
-  __int64 v49; // x1
-  UnityEngine_Object_o *v50; // x19
+  __int64 v50; // x1
   UnityEngine_Object_o *v51; // x19
-  UnityEngine_Vector3_o v53; // 0:kr14_12.12
-  unsigned __int64 localPosition; // 0:s0.4,4:s1.4
+  UnityEngine_Object_o *v52; // x19
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974FB8 & 1) == 0 )
   {
@@ -493,20 +489,19 @@ void UIDragDropItem__OnDragDropStart(UIDragDropItem_o *this, const MethodInfo *m
   }
   mTrans = (UnityEngine_Behaviour_o *)this->fields.mTrans;
   if ( !mTrans
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)mTrans, 0),
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)mTrans, 0),
         (mTrans = (UnityEngine_Behaviour_o *)this->fields.mTrans) == 0) )
   {
 LABEL_56:
     sub_2213CDC(mTrans, v4);
   }
-  *(_QWORD *)&v53.fields.x = localPosition;
-  v53.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)mTrans, v53, 0);
+  v43 = 0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)mTrans, localPosition, 0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v43);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v44);
   mTrans = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( ((unsigned __int8)mTrans & 1) != 0 )
   {
@@ -514,36 +509,36 @@ LABEL_56:
       goto LABEL_56;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
   }
-  v46 = UnityEngine_Component__GetComponent_object_(
+  v47 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v45);
-  mTrans = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v46, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v46);
+  mTrans = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v47, 0, 0);
   if ( ((unsigned __int8)mTrans & 1) != 0 )
   {
-    if ( !v46 )
+    if ( !v47 )
       goto LABEL_56;
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v46, 0, 0);
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)v47, 0, 0);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v47);
+    j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v48);
   NGUITools__MarkParentAsChanged(gameObject, 0);
-  v50 = (UnityEngine_Object_o *)*p_mTable;
+  v51 = (UnityEngine_Object_o *)*p_mTable;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v49);
-  if ( UnityEngine_Object__op_Inequality(v50, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v50);
+  if ( UnityEngine_Object__op_Inequality(v51, 0, 0) )
   {
     mTrans = (UnityEngine_Behaviour_o *)*p_mTable;
     if ( !*p_mTable )
       goto LABEL_56;
     UITable__set_repositionNow((UITable_o *)mTrans, 1, 0);
   }
-  v51 = (UnityEngine_Object_o *)*p_mGrid;
+  v52 = (UnityEngine_Object_o *)*p_mGrid;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
-  if ( UnityEngine_Object__op_Inequality(v51, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality(v52, 0, 0) )
   {
     mTrans = (UnityEngine_Behaviour_o *)*p_mGrid;
     if ( *p_mGrid )

@@ -425,9 +425,9 @@ System_String_o *SoundLogger__getLogBgm(const MethodInfo *method)
   Instance = SoundLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (SoundLogger_o *)Instance->fields.bgmLog) == 0 )
     sub_2213CDC(Instance, v4);
-  return ((System_String_o *(__fastcall *)(SoundLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
-           Instance,
-           Instance->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(SoundLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
+                              Instance,
+                              Instance->klass->vtable._3_ToString.method);
 }
 
 
@@ -449,9 +449,9 @@ System_String_o *SoundLogger__getLogSe(const MethodInfo *method)
   Instance = SoundLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (SoundLogger_o *)Instance->fields.seLog) == 0 )
     sub_2213CDC(Instance, v4);
-  return ((System_String_o *(__fastcall *)(SoundLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
-           Instance,
-           Instance->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(SoundLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
+                              Instance,
+                              Instance->klass->vtable._3_ToString.method);
 }
 
 
@@ -473,9 +473,9 @@ System_String_o *SoundLogger__getLogVoice(const MethodInfo *method)
   Instance = SoundLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (SoundLogger_o *)Instance->fields.voiceLog) == 0 )
     sub_2213CDC(Instance, v4);
-  return ((System_String_o *(__fastcall *)(SoundLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
-           Instance,
-           Instance->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(SoundLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
+                              Instance,
+                              Instance->klass->vtable._3_ToString.method);
 }
 
 
@@ -667,9 +667,9 @@ System_String_o *SoundLogger_BgmDetailInfo__ToStringAll(SoundLogger_BgmDetailInf
   log = this->fields.log;
   if ( !log )
     sub_2213CDC(0, method);
-  return ((System_String_o *(__fastcall *)(struct SoundLogger_Info_o *, const MethodInfo *))log->klass->vtable._3_ToString.methodPtr)(
-           log,
-           log->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(struct SoundLogger_Info_o *, const MethodInfo *))log->klass->vtable._3_ToString.methodPtr)(
+                              log,
+                              log->klass->vtable._3_ToString.method);
 }
 
 
@@ -813,9 +813,9 @@ LABEL_16:
   sb = this->fields.sb;
   if ( !sb )
     goto LABEL_19;
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))sb->klass->vtable._3_ToString.methodPtr)(
-           sb,
-           sb->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))sb->klass->vtable._3_ToString.methodPtr)(
+                              sb,
+                              sb->klass->vtable._3_ToString.method);
 }
 
 

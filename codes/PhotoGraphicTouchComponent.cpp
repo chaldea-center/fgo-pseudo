@@ -198,37 +198,43 @@ System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState__o PhotoG
   float v12; // s8
   float v13; // s9
   float v14; // s10
-  UnityEngine_Vector2_o v15; // x2
-  const MethodInfo_3D01BE0 *v16; // x5
-  UnityEngine_Vector2_o PivotOffset; // kr10_8
-  float v18; // s10
+  float x; // s9
+  float y; // s8
+  UnityEngine_Vector2_o v17; // x2
+  const MethodInfo_3D01BE0 *v18; // x5
+  UnityEngine_Vector2_o PivotOffset; // kr00_8
+  float v20; // s10
   float m_YMin; // s11
   float m_Height; // s12
   int32_t mHeight; // w23
-  float v22; // s13
-  float v23; // s13
-  _BOOL4 v24; // w8
-  unsigned int v25; // w10
-  float v26; // s8
-  int32_t v27; // w20
-  float v28; // s9
-  unsigned int v29; // w9
-  int32_t v30; // w2
-  __int64 v31; // x8
-  float v32; // s1
-  float v33; // s0
-  __int64 v34; // x8
-  __int64 v36; // x9
-  float v37; // s1
-  float v38; // s0
-  __int64 v39; // x9
-  int32_t v41; // w3
-  unsigned __int64 v44; // kr00_8
-  __int64 v45; // [xsp+0h] [xbp-80h] BYREF
-  int32_t v46; // [xsp+8h] [xbp-78h]
-  System_ValueTuple_int__int__Int32Enum__o v47; // 0:x0.12
+  float v24; // s13
+  float v25; // s13
+  _BOOL4 v26; // w8
+  unsigned int v27; // w10
+  float v28; // s0
+  float v29; // s8
+  int32_t v30; // w20
+  float v31; // s9
+  float v32; // s9
+  unsigned int v33; // w9
+  int32_t v34; // w2
+  __int64 v35; // x8
+  float v36; // s1
+  float v37; // s0
+  __int64 v38; // x8
+  __int64 v40; // x9
+  float v41; // s1
+  float v42; // s0
+  __int64 v43; // x9
+  int32_t v45; // w3
+  __int64 v46; // x0
+  int32_t v47; // w1
+  __int64 v48; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v49; // [xsp+8h] [xbp-78h]
+  System_ValueTuple_int__int__Int32Enum__o v50; // 0:x0.12
   System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState__o result; // 0:x0.12
-  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BC1F & 1) == 0 )
   {
@@ -254,90 +260,94 @@ System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState__o PhotoG
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
   if ( !gameObject )
     goto LABEL_43;
-  v49.fields.x = v12;
-  v49.fields.y = v13;
-  v49.fields.z = v14;
-  v44 = (unsigned __int64)UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)gameObject, v49, 0);
+  v52.fields.x = v12;
+  v52.fields.y = v13;
+  v52.fields.z = v14;
+  v53 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)gameObject, v52, 0);
+  x = v53.fields.x;
+  y = v53.fields.y;
   PivotOffset = NGUIMath__GetPivotOffset(uiTexture->fields.mPivot, 0);
-  v18 = (float)texWidth;
+  v20 = (float)texWidth;
   m_YMin = uiTexture->fields.mRect.fields.m_YMin;
   m_Height = uiTexture->fields.mRect.fields.m_Height;
   mHeight = uiTexture->fields.mHeight;
-  v22 = uiTexture->fields.mRect.fields.m_XMin
-      + (float)((float)(PivotOffset.fields.x + (float)(*(float *)&v44 / (float)uiTexture->fields.mWidth))
+  v24 = uiTexture->fields.mRect.fields.m_XMin
+      + (float)((float)(PivotOffset.fields.x + (float)(x / (float)uiTexture->fields.mWidth))
               * uiTexture->fields.mRect.fields.m_Width);
   if ( !byte_5969ADF )
   {
     sub_2213A60(&System_Math_TypeInfo);
     byte_5969ADF = 1;
   }
-  v23 = v22 * v18;
+  v25 = v24 * v20;
   if ( *(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
-    v24 = 0;
+    v26 = 0;
   }
   else
   {
-    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v15);
-    v24 = byte_5969ADF == 0;
+    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v17);
+    v26 = byte_5969ADF == 0;
   }
-  v25 = vcvtms_s32_f32(v23);
-  v26 = (float)texHeight;
-  if ( floorf(v23) == INFINITY )
-    v27 = 0x80000000;
+  v27 = vcvtms_s32_f32(v25);
+  v28 = y / (float)mHeight;
+  v29 = (float)texHeight;
+  if ( floorf(v25) == INFINITY )
+    v30 = 0x80000000;
   else
-    v27 = v25;
-  if ( v24 )
+    v30 = v27;
+  v31 = m_YMin + (float)((float)(PivotOffset.fields.y + v28) * m_Height);
+  if ( v26 )
   {
     sub_2213A60(&System_Math_TypeInfo);
     byte_5969ADF = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)System_Math_TypeInfo;
-  v28 = (float)(m_YMin
-              + (float)((float)(PivotOffset.fields.y + (float)(*((float *)&v44 + 1) / (float)mHeight)) * m_Height))
-      * v26;
+  v32 = v31 * v29;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v15);
-  v29 = vcvtms_s32_f32(v28);
-  v30 = floorf(v28) == INFINITY ? 0x80000000 : v29;
+    ((void (__fastcall *)(_QWORD, _QWORD, _QWORD))j_il2cpp_runtime_class_init_0)(System_Math_TypeInfo, uiTexture, v17);
+  v33 = vcvtms_s32_f32(v32);
+  v34 = floorf(v32) == INFINITY ? 0x80000000 : v33;
   if ( !targetTouchComponent )
 LABEL_43:
     sub_2213CDC(gameObject, uiTexture);
-  v31 = 104;
-  v32 = (float)v27;
+  v35 = 104;
+  v36 = (float)v30;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v31 = 88;
-  v33 = *(float *)((char *)&targetTouchComponent->klass + v31);
-  v34 = 108;
+    v35 = 88;
+  v37 = *(float *)((char *)&targetTouchComponent->klass + v35);
+  v38 = 108;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v34 = 92;
-  if ( (float)(v33 * v18) > v32 || (float)(*(float *)((char *)&targetTouchComponent->klass + v34) * v18) <= v32 )
+    v38 = 92;
+  if ( (float)(v37 * v20) > v36 || (float)(*(float *)((char *)&targetTouchComponent->klass + v38) * v20) <= v36 )
     goto LABEL_41;
-  v36 = 112;
+  v40 = 112;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v36 = 96;
-  v37 = (float)v30;
-  v38 = *(float *)((char *)&targetTouchComponent->klass + v36);
-  v39 = 116;
+    v40 = 96;
+  v41 = (float)v34;
+  v42 = *(float *)((char *)&targetTouchComponent->klass + v40);
+  v43 = 116;
   if ( !targetTouchComponent->fields.isMasterFigure )
-    v39 = 100;
-  if ( (float)(v38 * v26) > v37 || (float)(*(float *)((char *)&targetTouchComponent->klass + v39) * v26) <= v37 )
+    v43 = 100;
+  if ( (float)(v42 * v29) > v41 || (float)(*(float *)((char *)&targetTouchComponent->klass + v43) * v29) <= v41 )
 LABEL_41:
-    v41 = 0;
+    v45 = 0;
   else
-    v41 = 1;
-  *(_QWORD *)&v47.fields.Item1 = &v45;
-  v47.fields.Item3 = v27;
-  v46 = 0;
-  v45 = 0;
+    v45 = 1;
+  *(_QWORD *)&v50.fields.Item1 = &v48;
+  v50.fields.Item3 = v30;
+  v49 = 0;
+  v48 = 0;
   System_ValueTuple_int__int__Int32Enum____ctor(
-    v47,
-    v30,
-    v41,
+    v50,
+    v34,
+    v45,
     Method_System_ValueTuple_int__int__PhotoGraphicTouchComponent_PixelTouchState___ctor__,
-    v16);
-  *(_QWORD *)&result.fields.Item1 = v45;
-  result.fields.Item3 = v46;
+    v18);
+  v46 = v48;
+  v47 = v49;
+  *(_QWORD *)&result.fields.Item1 = v46;
+  result.fields.Item3 = v47;
   return result;
 }
 
@@ -424,7 +434,7 @@ PhotoGraphicTouchComponent_o *PhotoGraphicTouchComponent__GetPointedPhotoGraphic
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, method, size);
     this = (PhotoGraphicTouchComponent_o *)UICamera_TypeInfo;
   }
-  v6 = *((_QWORD *)this + 23);
+  v6 = *(_QWORD *)&this[1].fields.isMasterFigure;
   v7 = *(UnityEngine_Camera_o **)(v6 + 136);
   if ( !v7 )
     goto LABEL_43;
@@ -713,6 +723,7 @@ int32_t PhotoGraphicTouchComponent__IsTouched(
   UnityEngine_Vector2_o v65; // 0:s2.4,4:s3.4
   UnityEngine_Rect_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o Pixel; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
   if ( (byte_596BC1E & 1) == 0 )
@@ -940,7 +951,8 @@ LABEL_73:
   this = (PhotoGraphicTouchComponent_o *)v4->fields.pixelTexture;
   if ( !this )
     goto LABEL_73;
-  v44 = COERCE_FLOAT(LODWORD(UnityEngine_Texture2D__GetPixel((UnityEngine_Texture2D_o *)this, 0, 0, 0).fields.a)) <= 0.0;
+  Pixel = UnityEngine_Texture2D__GetPixel((UnityEngine_Texture2D_o *)this, 0, 0, 0);
+  v44 = Pixel.fields.a <= 0.0;
 LABEL_70:
   if ( !v44 )
     return Item3 | 2;

@@ -96,10 +96,12 @@ UnityEngine_Vector3_o ShopRootConstants__GetGiftButtonPos(bool isEvent, int32_t 
   float v22; // s1
   float32x2_t *v23; // x8
   unsigned __int64 v24; // d0
+  float v25; // s2
   float32x2_t v26; // d3
   unsigned __int32 v27; // s4
   float v28; // s9
   struct ShopRootConstants_StaticFields *v29; // x8
+  float v30; // s1
   unsigned __int32 v31; // [xsp+0h] [xbp-80h]
   float x; // [xsp+10h] [xbp-70h]
   float32x2_t v33; // [xsp+20h] [xbp-60h]
@@ -178,7 +180,7 @@ UnityEngine_Vector3_o ShopRootConstants__GetGiftButtonPos(bool isEvent, int32_t 
     v22 = v20->ClassBoardResetGiftPos.fields.z;
 LABEL_31:
     v24 = vadd_f32(v33, v21).n64_u64[0];
-    result.fields.z = z + v22;
+    v25 = z + v22;
     goto LABEL_35;
   }
   if ( isEvent )
@@ -208,10 +210,12 @@ LABEL_31:
   v29 = v18->static_fields;
   v26.n64_u32[1] = v27;
   v24 = vadd_f32(v26, vadd_f32(v33, *(float32x2_t *)&v29->DEFAULT_GIFT_POS.fields.x)).n64_u64[0];
-  result.fields.z = v28 + (float)(z + v29->DEFAULT_GIFT_POS.fields.z);
+  v25 = v28 + (float)(z + v29->DEFAULT_GIFT_POS.fields.z);
 LABEL_35:
-  result.fields.y = *((float *)&v24 + 1);
+  v30 = *((float *)&v24 + 1);
   result.fields.x = *(float *)&v24;
+  result.fields.z = v25;
+  result.fields.y = v30;
   return result;
 }
 
@@ -238,6 +242,7 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
   float v20; // s9
   struct ShopRootConstants_StaticFields *v21; // x8
   unsigned __int64 v22; // d0
+  float v23; // s2
   ShopRootConstants_c *v24; // x0
   float32x2_t *v25; // x8
   float32x2_t v26; // d0
@@ -246,6 +251,7 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
   struct ShopRootConstants_StaticFields *v29; // x8
   ShopRootConstants_c *v30; // x0
   struct ShopRootConstants_StaticFields *v31; // x8
+  float v32; // s1
   unsigned __int32 v33; // [xsp+0h] [xbp-70h]
   float x; // [xsp+10h] [xbp-60h]
   float32x2_t v35; // [xsp+20h] [xbp-50h]
@@ -336,7 +342,7 @@ UnityEngine_Vector3_o ShopRootConstants__GetHelpButtonPos(int32_t state, const M
       v27 = v29->ClassBoardResetHelpButtonPos.fields.z;
 LABEL_37:
       v22 = vadd_f32(v35, v26).n64_u64[0];
-      result.fields.z = z + v27;
+      v23 = z + v27;
       goto LABEL_38;
     }
 LABEL_34:
@@ -367,10 +373,12 @@ LABEL_34:
   v21 = v17->static_fields;
   v18.n64_u32[1] = v19;
   v22 = vadd_f32(v18, vadd_f32(v35, *(float32x2_t *)&v21->DEFAULT_HELP_BUTTON_POS.fields.x)).n64_u64[0];
-  result.fields.z = v20 + (float)(z + v21->DEFAULT_HELP_BUTTON_POS.fields.z);
+  v23 = v20 + (float)(z + v21->DEFAULT_HELP_BUTTON_POS.fields.z);
 LABEL_38:
-  result.fields.y = *((float *)&v22 + 1);
+  v32 = *((float *)&v22 + 1);
   result.fields.x = *(float *)&v22;
+  result.fields.z = v23;
+  result.fields.y = v32;
   return result;
 }
 

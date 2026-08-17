@@ -2413,6 +2413,7 @@ bool BattleLogicBattleScript_BattleScriptDataAiAct__TryGetBattleScriptActor(
   BattleScriptEntity_o *Entity; // x0
   const MethodInfo *v13; // x2
   int32_t v14; // w8
+  bool result; // w0
   BattleServantData_o *v16; // x0
   System_String_o *v17; // x2
   System_String_o *v18; // x3
@@ -2471,8 +2472,9 @@ bool BattleLogicBattleScript_BattleScriptDataAiAct__TryGetBattleScriptActor(
 LABEL_3:
       v14 = 1;
 LABEL_4:
+      result = 1;
       *actorType = v14;
-      return 1;
+      return result;
     }
 LABEL_14:
     sub_2213CDC(Entity, v11);

@@ -7,7 +7,7 @@ void BattleActorShakeComponent___ctor(BattleActorShakeComponent_o *this, const M
 
 void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const MethodInfo *method)
 {
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
   UnityEngine_Transform_o *v5; // x20
   float z; // s8
@@ -20,11 +20,11 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
 
   if ( !this->fields.IsAnimation )
   {
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-    v11 = (UnityEngine_Transform_o *)transform;
+    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+    v11 = transform;
     if ( !byte_5969AE0 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( v11 )
@@ -36,9 +36,9 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
   }
   if ( !this->fields.animationCurvel )
     return;
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !this->fields.animationCurvel
-    || (v5 = (UnityEngine_Transform_o *)transform,
+    || (v5 = transform,
         y = this->fields.vector.fields.y,
         z = this->fields.vector.fields.z,
         x = this->fields.vector.fields.x,

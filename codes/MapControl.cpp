@@ -851,6 +851,7 @@ MapControl_PhaseInfo_o *MapControl_QuestInfo__AddChild(
   _QWORD *v17; // x9
   __int64 size; // x10
   Il2CppClass **v19; // x8
+  MapControl_PhaseInfo_o *result; // x0
 
   if ( (byte_596D0B0 & 1) == 0 )
   {
@@ -887,8 +888,9 @@ MapControl_PhaseInfo_o *MapControl_QuestInfo__AddChild(
     v19[4] = (Il2CppClass *)v7;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)(v19 + 4), v7, v10, v11, v12, v13, v14, v15);
   }
+  result = (MapControl_PhaseInfo_o *)v7;
   ++this->fields.phaseCount;
-  return (MapControl_PhaseInfo_o *)v7;
+  return result;
 }
 
 
@@ -1516,11 +1518,13 @@ void MapControl_QuestInfo__SetDispType_42937600(
         QuestReleaseEntity_o *questReleaseEntity,
         const MethodInfo *method)
 {
+  System_Nullable_int__o v7; // x0
   int32_t type; // w1
-  unsigned __int64 v8; // x1
-  int32_t v9; // w8
+  unsigned __int64 v9; // x1
+  System_Nullable_Int32Enum__o v10; // x0
+  int32_t v11; // w8
   int32_t imagePriority; // w8
-  unsigned __int64 v11; // [xsp+8h] [xbp-28h] BYREF
+  unsigned __int64 v13; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596D0B4 & 1) == 0 )
   {
@@ -1534,27 +1538,26 @@ void MapControl_QuestInfo__SetDispType_42937600(
   this->fields.dispType = dispType;
   if ( questReleaseEntity )
   {
+    v7 = (System_Nullable_int__o)&v13;
     type = questReleaseEntity->fields.type;
-    v11 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v11,
-      type,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    if ( (_BYTE)v11 )
+    v13 = 0;
+    System_Nullable_int____ctor(v7, type, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    if ( (_BYTE)v13 )
     {
-      v8 = HIDWORD(v11);
-      v11 = 0;
+      v9 = HIDWORD(v13);
+      v10 = (System_Nullable_Int32Enum__o)&v13;
+      v13 = 0;
       System_Nullable_Int32Enum____ctor(
-        (System_Nullable_Int32Enum__o)&v11,
-        v8,
+        v10,
+        v9,
         (const MethodInfo_45E4698 *)Method_System_Nullable_CondType_Kind___ctor__);
-      v9 = HIDWORD(v11);
+      v11 = HIDWORD(v13);
     }
     else
     {
-      v9 = 0;
+      v11 = 0;
     }
-    this->fields._QuestReleaseType_k__BackingField = v9;
+    this->fields._QuestReleaseType_k__BackingField = v11;
     this->fields._QuestReleaseTargetID_k__BackingField = questReleaseEntity->fields.targetId;
     this->fields._QuestReleaseValue_k__BackingField = questReleaseEntity->fields.value;
     this->fields._QuestReleaseClosedID_k__BackingField = questReleaseEntity->fields.closedMessageId;
@@ -2513,7 +2516,7 @@ bool MapControl_RootInfo___c___GetOpenedWarInfoList_b__8_1(
         const MethodInfo *method)
 {
   __int64 v4; // x2
-  int v5; // w20
+  int monitor; // w20
   BalanceConfig_c *v6; // x0
 
   if ( (byte_596D0E4 & 1) == 0 )
@@ -2523,14 +2526,14 @@ bool MapControl_RootInfo___c___GetOpenedWarInfoList_b__8_1(
   }
   if ( !info || (this = (MapControl_RootInfo___c_o *)MapControl_WarInfo__GetMine(info, (const MethodInfo *)info)) == 0 )
     sub_2213CDC(this, info);
-  v5 = *((_DWORD *)this + 14);
+  monitor = (int)this[3].monitor;
   v6 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, info, v4);
     v6 = BalanceConfig_TypeInfo;
   }
-  return v5 == v6->static_fields->GrandBoardWarId && (info->fields.status & 1) == 0;
+  return monitor == v6->static_fields->GrandBoardWarId && (info->fields.status & 1) == 0;
 }
 
 

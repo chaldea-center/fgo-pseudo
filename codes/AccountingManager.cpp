@@ -50,14 +50,13 @@ void AccountingManager__AddExtraData(AccountingManager_o *this, System_String_o 
   __int64 v4; // x1
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
   __int64 v6; // x1
-  Il2CppObject *key; // x19
-  Il2CppObject *v8; // x21
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   Il2CppObject *Instance; // x0
-  __int64 v10; // x1
-  CrashReporter_o *v11; // x20
-  System_String_o *v12; // x0
-  __int64 v13; // x1
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v14; // [xsp+10h] [xbp-60h] BYREF
+  __int64 v9; // x1
+  CrashReporter_o *v10; // x20
+  System_String_o *v11; // x0
+  __int64 v12; // x1
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v13; // [xsp+10h] [xbp-60h] BYREF
 
   if ( (byte_59700AB & 1) == 0 )
   {
@@ -71,7 +70,7 @@ void AccountingManager__AddExtraData(AccountingManager_o *this, System_String_o 
     sub_2213A60(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     byte_59700AB = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v13, 0, sizeof(v13));
   if ( !System_String__IsNullOrEmpty(value, 0) )
   {
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
@@ -80,28 +79,27 @@ void AccountingManager__AddExtraData(AccountingManager_o *this, System_String_o 
     if ( !Dictionary )
       sub_2213CDC(0, v6);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v14,
+      &v13,
       (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
       (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v14,
+              &v13,
               (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
-      key = v14.fields._current.fields.key;
-      v8 = v14.fields._current.fields.value;
+      current = v13.fields._current;
       Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-      if ( !v8 )
-        sub_2213CDC(Instance, v10);
-      v11 = (CrashReporter_o *)Instance;
-      v12 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))v8->klass->vtable[3].methodPtr)(
-                                 v8,
-                                 v8->klass->vtable[3].method);
-      if ( !v11 )
-        sub_2213CDC(v12, v13);
-      CrashReporter__AddCustomKey(v11, (System_String_o *)key, v12, 0);
+      if ( !current.fields.value )
+        sub_2213CDC(Instance, v9);
+      v10 = (CrashReporter_o *)Instance;
+      v11 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
+                                 current.fields.value,
+                                 current.fields.value->klass->vtable[3].method);
+      if ( !v10 )
+        sub_2213CDC(v11, v12);
+      CrashReporter__AddCustomKey(v10, (System_String_o *)current.fields.key, v11, 0);
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v14,
+      &v13,
       (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   }
 }
@@ -979,7 +977,7 @@ System_IAsyncResult_o *AccountingManager_ResultCallbackfunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(AccountingManager_Result_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

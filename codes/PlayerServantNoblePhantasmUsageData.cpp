@@ -705,6 +705,7 @@ PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveDat
   int v3; // w21
   __int64 v4; // d8
   __int64 v5; // x19
+  PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_o *result; // x0
 
   v2 = *(__int64 **)&this.fields.servantId;
   if ( (byte_597431D & 1) == 0 )
@@ -717,8 +718,9 @@ PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveDat
   v5 = sub_2213CCC(PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_QWORD *)(v5 + 16) = v4;
+  result = (PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_o *)v5;
   *(_DWORD *)(v5 + 24) = v3;
-  return (PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_o *)v5;
+  return result;
 }
 
 
@@ -773,6 +775,7 @@ PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSav
 {
   int32_t useCount; // w21
   __int64 v4; // x19
+  PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_o *result; // x0
 
   if ( (byte_5974320 & 1) == 0 )
   {
@@ -782,8 +785,9 @@ PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSav
   useCount = this->fields.useCount;
   v4 = sub_2213CCC(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
+  result = (PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_o *)v4;
   *(_DWORD *)(v4 + 16) = useCount;
-  return (PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_o *)v4;
+  return result;
 }
 
 

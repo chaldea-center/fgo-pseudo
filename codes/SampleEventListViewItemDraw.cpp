@@ -82,7 +82,10 @@ void SampleEventListViewItemDraw__SetItem(
   __int64 v11; // x1
   __int64 v12; // x2
   Il2CppObject *Component_object; // x21
-  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v14; // s0 OVERLAPPED
+  float v15; // s3
+  float v16; // s1
+  float v17; // s2
 
   v5 = item;
   if ( (byte_596DE5F & 1) == 0 )
@@ -147,11 +150,11 @@ void SampleEventListViewItemDraw__SetItem(
   if ( !eventTextLabel )
 LABEL_27:
     sub_2213CDC(eventTextLabel, item);
-  v15.fields.r = 1.0;
-  v15.fields.a = 1.0;
+  v14 = 1.0;
+  v15 = 1.0;
   if ( mode == 1 )
-    v15.fields.r = 0.5;
-  v15.fields.g = v15.fields.r;
-  v15.fields.b = v15.fields.r;
-  UIWidget__set_color((UIWidget_o *)eventTextLabel, v15, 0);
+    v14 = 0.5;
+  v16 = v14;
+  v17 = v14;
+  UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v14, 0);
 }

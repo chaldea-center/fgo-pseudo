@@ -8,10 +8,12 @@ void SetUserBirthDayRequest__beginRequest(
 {
   Il2CppObject *Instance; // x0
   __int64 v12; // x1
-  __int64 v13; // x1
+  System_DateTime_o v13; // x0
+  __int64 v14; // x1
+  System_DateTime_o v15; // x0
   int64_t Time_48346468; // x0
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x1
+  const MethodInfo *v17; // x3
+  const MethodInfo *v18; // x1
   System_DateTime_o dateTime; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_59724E1 & 1) == 0 )
@@ -25,13 +27,15 @@ void SetUserBirthDayRequest__beginRequest(
   if ( !Instance )
     sub_2213CDC(0, v12);
   NetworkManager__SetSignup_48337384((NetworkManager_o *)Instance, normalName, genderType, month, day, 0);
+  v13.fields._dateData = (uint64_t)&dateTime;
   dateTime.fields._dateData = 0;
-  System_DateTime___ctor_77014684((System_DateTime_o)&dateTime, 2000, month, day, 0, 0, 0, 1, 0);
+  System_DateTime___ctor_77014684(v13, 2000, month, day, 0, 0, 0, 1, 0);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v13);
-  Time_48346468 = NetworkManager__getTime_48346468(dateTime, 0);
-  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_17901/*"birthDay"*/, Time_48346468, v15);
-  RequestBase__beginRequest((RequestBase_o *)this, v16);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v14);
+  v15.fields._dateData = dateTime.fields._dateData;
+  Time_48346468 = NetworkManager__getTime_48346468(v15, 0);
+  RequestBase__addField_51256716((RequestBase_o *)this, (System_String_o *)StringLiteral_17901/*"birthDay"*/, Time_48346468, v17);
+  RequestBase__beginRequest((RequestBase_o *)this, v18);
 }
 
 
@@ -68,12 +72,14 @@ void SetUserBirthDayRequest__requestCompleted(
   Il2CppObject *Instance; // x23
   System_String_o *m_CancellationTokenSource; // x22
   int32_t mAuGameServerPublicKey_high; // w21
+  System_DateTime_o v16; // x0
   int32_t Month; // w24
-  __int64 v17; // x1
+  System_DateTime_o v18; // x0
+  __int64 v19; // x1
   Il2CppObject *success; // x20
-  System_String_o *v19; // x0
+  System_String_o *v21; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v21; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v23; // x8
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_59724E2 & 1) == 0 )
@@ -105,8 +111,10 @@ void SetUserBirthDayRequest__requestCompleted(
     mAuGameServerPublicKey_high = HIDWORD(v10->fields.mAuGameServerPublicKey);
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v12);
-    Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-    SelfUserGame = (NetworkManager_o *)System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
+    v16.fields._dateData = (uint64_t)&dateData;
+    Month = System_DateTime__get_Month(v16, 0);
+    v18.fields._dateData = (uint64_t)&dateData;
+    SelfUserGame = (NetworkManager_o *)System_DateTime__get_Day(v18, 0);
     if ( !Instance
       || (NetworkManager__SetSignup_48337384(
             (NetworkManager_o *)Instance,
@@ -123,22 +131,22 @@ LABEL_21:
     NetworkManager__WriteSignup(SelfUserGame, 0);
     success = (Il2CppObject *)v7->fields.success;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v17);
-    v19 = JsonManager__toJson(success, 0, 0, 0);
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v19);
+    v21 = JsonManager__toJson(success, 0, 0, 0);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))CallBack->fields.invoke_impl)(
         CallBack->fields.method_code,
-        v19,
+        v21,
         CallBack->fields.method);
   }
   else
   {
-    v21 = this->fields.CallBack;
-    if ( v21 )
-      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v21->fields.invoke_impl)(
-        v21->fields.method_code,
+    v23 = this->fields.CallBack;
+    if ( v23 )
+      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v23->fields.invoke_impl)(
+        v23->fields.method_code,
         StringLiteral_23336/*"ng"*/,
-        v21->fields.method);
+        v23->fields.method);
   }
 }

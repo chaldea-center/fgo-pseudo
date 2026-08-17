@@ -5594,6 +5594,7 @@ bool CondType__IsContainWeekdays(int32_t condId, int32_t condNum, const MethodIn
   int64_t Time_48346468; // x0
   System_DateTime_o v8; // x1
   System_DateTime_o v9; // x2
+  System_DateTime_o v10; // x0
   uint64_t dateData; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596F62C & 1) == 0 )
@@ -5611,7 +5612,8 @@ bool CondType__IsContainWeekdays(int32_t condId, int32_t condNum, const MethodIn
   dateData = NetworkManager__getDateTime_48347260(Time_48346468 - 3600 * condNum, 0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v8.fields._dateData, v9.fields._dateData);
-  return ((unsigned int)condId >> (System_DateTime__get_DayOfWeek((System_DateTime_o)&dateData, 0) + 1)) & 1;
+  v10.fields._dateData = (uint64_t)&dateData;
+  return ((unsigned int)condId >> (System_DateTime__get_DayOfWeek(v10, 0) + 1)) & 1;
 }
 
 
@@ -7037,20 +7039,25 @@ bool CondType__IsEventTypeStartTimeToEndDate(int32_t eventType, int32_t overWrit
   int64_t v31; // x25
   System_DateTime_o v32; // x1
   System_DateTime_o v33; // x2
+  System_DateTime_o v34; // x0
   int32_t Year; // w25
+  System_DateTime_o v36; // x0
   int32_t Month; // w26
-  int32_t Day; // w0
-  __int64 v37; // x2
-  uint64_t v38; // x24
-  __int64 v39; // x20
-  __int64 v40; // x8
-  __int64 v41; // x9
-  int *v42; // x10
-  __int64 v43; // x0
+  System_DateTime_o v38; // x0
+  int32_t Day; // w3
+  System_DateTime_o v40; // x0
+  __int64 v41; // x2
+  uint64_t v42; // x24
+  System_DateTime_o v43; // x0
+  __int64 v44; // x20
+  __int64 v45; // x8
+  __int64 v46; // x9
+  int *v47; // x10
+  __int64 v48; // x0
   int minute; // [xsp+4h] [xbp-8Ch]
   System_DateTime_o dateTime; // [xsp+18h] [xbp-78h] BYREF
   uint64_t dateData; // [xsp+20h] [xbp-70h] BYREF
-  __int64 v48; // [xsp+28h] [xbp-68h]
+  __int64 v53; // [xsp+28h] [xbp-68h]
 
   if ( (byte_596F625 & 1) == 0 )
   {
@@ -7066,7 +7073,7 @@ bool CondType__IsEventTypeStartTimeToEndDate(int32_t eventType, int32_t overWrit
     byte_596F625 = 1;
   }
   dateData = 0;
-  v48 = 0;
+  v53 = 0;
   dateTime.fields._dateData = 0;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
@@ -7087,7 +7094,7 @@ LABEL_48:
   Enumerator = (__int64)System_Collections_ObjectModel_Collection_object___GetEnumerator(
                           datalist,
                           (const MethodInfo_3E94810 *)Method_System_Collections_ObjectModel_Collection_EventEntity__GetEnumerator__);
-  v48 = Enumerator;
+  v53 = Enumerator;
   if ( !Enumerator )
 LABEL_35:
     sub_2213CDC(Enumerator, v11);
@@ -7122,12 +7129,12 @@ LABEL_14:
     v23 = v21;
     if ( (v21 & 1) == 0 )
       break;
-    v24 = v48;
-    if ( !v48 )
+    v24 = v53;
+    if ( !v53 )
       sub_2213CDC(v21, v22);
-    v25 = *(_QWORD *)v48;
-    v26 = *(unsigned __int16 *)(*(_QWORD *)v48 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v48 + 302LL) )
+    v25 = *(_QWORD *)v53;
+    v26 = *(unsigned __int16 *)(*(_QWORD *)v53 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v53 + 302LL) )
     {
       v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
       while ( *((System_Collections_Generic_IEnumerator_EventEntity__c **)v27 - 1) != System_Collections_Generic_IEnumerator_EventEntity__TypeInfo )
@@ -7142,7 +7149,7 @@ LABEL_14:
     else
     {
 LABEL_22:
-      v28 = sub_224BC3C(v48, System_Collections_Generic_IEnumerator_EventEntity__TypeInfo, 0);
+      v28 = sub_224BC3C(v53, System_Collections_Generic_IEnumerator_EventEntity__TypeInfo, 0);
     }
     Enumerator = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v24, *(_QWORD *)(v28 + 8));
     v30 = Enumerator;
@@ -7154,49 +7161,54 @@ LABEL_22:
       dateData = NetworkManager__getDateTime_48347260(v31, 0).fields._dateData;
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v32.fields._dateData, v33.fields._dateData);
-      Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-      Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-      Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-      System_DateTime___ctor_77014300((System_DateTime_o)&dateTime, Year, Month, Day, v15 + v14, minute, v16, 0);
+      v34.fields._dateData = (uint64_t)&dateData;
+      Year = System_DateTime__get_Year(v34, 0);
+      v36.fields._dateData = (uint64_t)&dateData;
+      Month = System_DateTime__get_Month(v36, 0);
+      v38.fields._dateData = (uint64_t)&dateData;
+      Day = System_DateTime__get_Day(v38, 0);
+      v40.fields._dateData = (uint64_t)&dateTime;
+      System_DateTime___ctor_77014300(v40, Year, Month, Day, v15 + v14, minute, v16, 0);
       if ( *(_QWORD *)(v30 + 88) <= (__int64)v9 )
       {
-        v38 = dateTime.fields._dateData;
+        v42 = dateTime.fields._dateData;
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v37);
-        Enumerator = NetworkManager__getTime_48346468((System_DateTime_o)v38, 0);
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v41);
+        v43.fields._dateData = v42;
+        Enumerator = NetworkManager__getTime_48346468(v43, 0);
         if ( (__int64)v9 <= Enumerator )
           goto LABEL_37;
       }
     }
-    v13 = v48;
-    if ( !v48 )
+    v13 = v53;
+    if ( !v53 )
       goto LABEL_35;
   }
   v23 = 0;
 LABEL_37:
-  v39 = v48;
-  if ( v48 )
+  v44 = v53;
+  if ( v53 )
   {
-    v40 = *(_QWORD *)v48;
-    v41 = *(unsigned __int16 *)(*(_QWORD *)v48 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v48 + 302LL) )
+    v45 = *(_QWORD *)v53;
+    v46 = *(unsigned __int16 *)(*(_QWORD *)v53 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v53 + 302LL) )
     {
-      v42 = (int *)(*(_QWORD *)(v40 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
+      v47 = (int *)(*(_QWORD *)(v45 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v47 - 1) != System_IDisposable_TypeInfo )
       {
-        --v41;
-        v42 += 4;
-        if ( !v41 )
+        --v46;
+        v47 += 4;
+        if ( !v46 )
           goto LABEL_42;
       }
-      v43 = v40 + 16LL * *v42 + 312;
+      v48 = v45 + 16LL * *v47 + 312;
     }
     else
     {
 LABEL_42:
-      v43 = sub_224BC3C(v48, System_IDisposable_TypeInfo, 0);
+      v48 = sub_224BC3C(v53, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v43)(v39, *(_QWORD *)(v43 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v48)(v44, *(_QWORD *)(v48 + 8));
   }
   return v23 & 1;
 }
@@ -14776,11 +14788,12 @@ bool CondType__IsUserEventStatus(int32_t eventId, int32_t flag, const MethodInfo
   __int64 v11; // x2
   UserEventEntity_o *v12; // x20
   Il2CppType *v13; // x21
+  System_RuntimeTypeHandle_o v14; // x0
   System_Type_o *TypeFromHandle; // x21
-  __int64 v15; // x1
-  __int64 v16; // x2
-  Il2CppObject *v17; // x22
-  int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v16; // x1
+  __int64 v17; // x2
+  Il2CppObject *v18; // x22
+  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
   if ( (byte_596F60D & 1) == 0 )
   {
@@ -14824,12 +14837,13 @@ LABEL_20:
     v13 = EventStatus_Type_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, v10, v11);
-    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v13, 0);
-    v19 = flag;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(EventStatus_Type_TypeInfo, &v19);
+    v14.fields.value = (intptr_t)v13;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v14, 0);
+    v20 = flag;
+    v18 = (Il2CppObject *)j_il2cpp_value_box_0(EventStatus_Type_TypeInfo, &v20);
     if ( !*(_DWORD *)(qword_5984398 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_5984398, v15, v16);
-    LOBYTE(EntityDefinitely) = System_Enum__IsDefined(TypeFromHandle, v17, 0)
+      j_il2cpp_runtime_class_init_0(qword_5984398, v16, v17);
+    LOBYTE(EntityDefinitely) = System_Enum__IsDefined(TypeFromHandle, v18, 0)
                             && UserEventEntity__getEventFlag(v12, flag, 0);
   }
   return (unsigned __int8)EntityDefinitely & 1;
@@ -14847,11 +14861,12 @@ bool CondType__IsUserQuestStatus(int32_t questId, int32_t flag, const MethodInfo
   __int64 v11; // x2
   UserQuestEntity_o *v12; // x20
   Il2CppType *v13; // x21
+  System_RuntimeTypeHandle_o v14; // x0
   System_Type_o *TypeFromHandle; // x21
-  __int64 v15; // x1
-  __int64 v16; // x2
-  Il2CppObject *v17; // x22
-  int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v16; // x1
+  __int64 v17; // x2
+  Il2CppObject *v18; // x22
+  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
   if ( (byte_596F60E & 1) == 0 )
   {
@@ -14895,12 +14910,13 @@ LABEL_20:
     v13 = UserQuestEntity_StatusKind_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, v10, v11);
-    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v13, 0);
-    v19 = flag;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(UserQuestEntity_StatusKind_TypeInfo, &v19);
+    v14.fields.value = (intptr_t)v13;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v14, 0);
+    v20 = flag;
+    v18 = (Il2CppObject *)j_il2cpp_value_box_0(UserQuestEntity_StatusKind_TypeInfo, &v20);
     if ( !*(_DWORD *)(qword_5984398 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_5984398, v15, v16);
-    LOBYTE(EntityFromId) = System_Enum__IsDefined(TypeFromHandle, v17, 0)
+      j_il2cpp_runtime_class_init_0(qword_5984398, v16, v17);
+    LOBYTE(EntityFromId) = System_Enum__IsDefined(TypeFromHandle, v18, 0)
                         && UserQuestEntity__HasStatus_50129912(v12, flag, 0);
   }
   return (unsigned __int8)EntityFromId & 1;
@@ -14918,11 +14934,12 @@ bool CondType__IsUserShopStatus(int32_t shopId, int32_t flagKind, const MethodIn
   __int64 v11; // x2
   UserShopEntity_o *v12; // x20
   Il2CppType *v13; // x21
+  System_RuntimeTypeHandle_o v14; // x0
   System_Type_o *TypeFromHandle; // x21
-  __int64 v15; // x1
-  __int64 v16; // x2
-  Il2CppObject *v17; // x22
-  int32_t v19; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v16; // x1
+  __int64 v17; // x2
+  Il2CppObject *v18; // x22
+  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
   if ( (byte_596F624 & 1) == 0 )
   {
@@ -14966,12 +14983,13 @@ LABEL_20:
     v13 = UserShopFlag_FlagKind_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, v10, v11);
-    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v13, 0);
-    v19 = flagKind;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(UserShopFlag_FlagKind_TypeInfo, &v19);
+    v14.fields.value = (intptr_t)v13;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v14, 0);
+    v20 = flagKind;
+    v18 = (Il2CppObject *)j_il2cpp_value_box_0(UserShopFlag_FlagKind_TypeInfo, &v20);
     if ( !*(_DWORD *)(qword_5984398 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_5984398, v15, v16);
-    LOBYTE(EntityDefinitely) = System_Enum__IsDefined(TypeFromHandle, v17, 0)
+      j_il2cpp_runtime_class_init_0(qword_5984398, v16, v17);
+    LOBYTE(EntityDefinitely) = System_Enum__IsDefined(TypeFromHandle, v18, 0)
                             && UserShopEntity__CheckFlagKind(v12, flagKind, 0);
   }
   return (unsigned __int8)EntityDefinitely & 1;
@@ -16535,7 +16553,7 @@ System_IAsyncResult_o *CondType_CountDelegate__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(qword_5984348, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -16562,7 +16580,7 @@ int32_t CondType_CountDelegate__Invoke(
         int32_t level,
         const MethodInfo *method)
 {
-  return ((int32_t (__fastcall *)(intptr_t, int32_t, int32_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, int32_t, int32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            id,
            level,
@@ -16915,7 +16933,7 @@ int32_t CondType___c___IsReleaseRaidUiQuestClear_b__214_2(
 LABEL_8:
     v7 = sub_224BC3C(g, System_Linq_IGrouping_int__CommonReleaseEntity__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__CommonReleaseEntity__o *, _QWORD))v7)(
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__CommonReleaseEntity__o *, _QWORD))v7)(
            g,
            *(_QWORD *)(v7 + 8));
 }
@@ -17074,7 +17092,7 @@ int32_t CondType___c__DisplayClass193_0___CountServantTargetSkillLvClassNum_g__C
         const MethodInfo *method)
 {
   CondType___c__DisplayClass193_0_o *v3; // x19
-  __int64 v4; // x10
+  CondType___c__DisplayClass193_0_c *klass; // x10
   CondType___c__DisplayClass193_0_o *v5; // x8
   __int64 v6; // x9
   __int64 v7; // x0
@@ -17087,26 +17105,26 @@ int32_t CondType___c__DisplayClass193_0___CountServantTargetSkillLvClassNum_g__C
   {
     sub_2213CDC(this, collection);
   }
-  v4 = *((_QWORD *)this + 3);
+  klass = this[1].klass;
   v5 = this;
-  if ( (int)v4 < 1 )
+  if ( (int)klass < 1 )
   {
     LODWORD(v7) = 0;
   }
   else
   {
-    v6 = (unsigned int)v4 & ~((int)v4 >> 31);
+    v6 = (unsigned int)klass & ~((int)klass >> 31);
     v7 = 0;
-    v4 = (unsigned int)v4;
+    klass = (CondType___c__DisplayClass193_0_c *)(unsigned int)klass;
     p_monitor = &v5[1].monitor;
     do
     {
-      if ( !v4 )
+      if ( !klass )
         sub_2213CE4(v7);
       v9 = *(_DWORD *)p_monitor;
       p_monitor = (void **)((char *)p_monitor + 4);
       --v6;
-      --v4;
+      klass = (CondType___c__DisplayClass193_0_c *)((char *)klass - 1);
       if ( v9 < v3->fields.skillLv )
         v7 = (unsigned int)v7;
       else

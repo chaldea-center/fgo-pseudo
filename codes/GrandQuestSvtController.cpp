@@ -216,8 +216,9 @@ GrandQuestSvtController_FigureEasing_o *GrandQuestSvtController__CreateDefaultFi
   bool v26; // w6
   bool v27; // w7
   int v28; // w9
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v31; // 0:kr14_12.12
+  GrandQuestSvtController_FigureEasing_o *result; // x0
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B2A2 & 1) == 0 )
   {
@@ -278,9 +279,10 @@ LABEL_16:
   *(_QWORD *)(v3 + 32) = svtController;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 32), (int32_t)svtController, v22, v23, v24, v25, v26, v27);
   *(_QWORD *)(v3 + 52) = 0;
+  result = (GrandQuestSvtController_FigureEasing_o *)v3;
   *(_DWORD *)(v3 + 40) = 1056964608;
   *(_QWORD *)(v3 + 44) = 0;
-  return (GrandQuestSvtController_FigureEasing_o *)v3;
+  return result;
 }
 
 
@@ -835,9 +837,8 @@ void GrandQuestSvtController__SetFigureBaseSetting(GrandQuestSvtController_o *th
   UnityEngine_GameObject_o *v18; // x0
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B2A0 & 1) == 0 )
   {
@@ -894,18 +895,18 @@ void GrandQuestSvtController__SetFigureBaseSetting(GrandQuestSvtController_o *th
       sub_2213CDC(0, v12);
     v15 = UnityEngine_Component__get_gameObject(v14, 0);
     LocalPosition = GameObjectExtensions__GetLocalPosition(v15, 0);
-    v22.fields.x = LocalPosition.fields.x + (float)v6;
-    v22.fields.y = LocalPosition.fields.y + v7;
-    v22.fields.z = LocalPosition.fields.z + 0.0;
-    GameObjectExtensions__SetLocalPosition(gameObject, v22, 0);
+    LocalPosition.fields.x = LocalPosition.fields.x + (float)v6;
+    LocalPosition.fields.y = LocalPosition.fields.y + v7;
+    LocalPosition.fields.z = LocalPosition.fields.z + 0.0;
+    GameObjectExtensions__SetLocalPosition(gameObject, LocalPosition, 0);
     v17 = (UnityEngine_Component_o *)current[2].klass;
     if ( !v17 )
       sub_2213CDC(0, v16);
     v18 = UnityEngine_Component__get_gameObject(v17, 0);
-    v23.fields.x = v5;
-    v23.fields.y = v5;
-    v23.fields.z = 1.0;
-    GameObjectExtensions__SetLocalScale(v18, v23, 0);
+    v22.fields.x = v5;
+    v22.fields.y = v5;
+    v22.fields.z = 1.0;
+    GameObjectExtensions__SetLocalScale(v18, v22, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
@@ -1300,7 +1301,7 @@ void GrandQuestSvtController__SetServantPosition(
   GrandQuestClassSelectController_c *v20; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v; // [xsp+0h] [xbp-50h]
-  UnityEngine_Vector3_o v23; // 0:kr00_12.12
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   v7 = immediately;
   if ( (byte_596B29C & 1) == 0 )
@@ -1327,8 +1328,9 @@ LABEL_15:
     if ( svtController )
     {
       gameObject = UnityEngine_Component__get_gameObject(svtController, 0);
+      LODWORD(v23.fields.y) = v;
       v23.fields.x = x;
-      *(_QWORD *)&v23.fields.y = v;
+      v23.fields.z = *((float *)&v + 1);
       GameObjectExtensions__SetLocalPosition(gameObject, v23, 0);
       ActionExtensions__Call(callback, 0);
       return;
@@ -1857,26 +1859,30 @@ void GrandQuestSvtController___c__DisplayClass28_0___ExecFigureEasing_b__0(
   float mNow; // s8
   struct GrandQuestSvtController_FigureEasing_o *v7; // x8
   struct System_Single_array *scale; // x9
-  float v9; // s0
-  struct GrandQuestSvtController_FigureEasing_o *v10; // x8
+  float z; // s12
+  float x; // s10
+  float y; // s11
+  float v12; // s0
+  struct GrandQuestSvtController_FigureEasing_o *v13; // x8
   struct System_Single_array *alpha; // x9
-  float v12; // s9
-  float v13; // s0
+  float v15; // s9
+  float v16; // s0
   struct GrandQuestSvtController_o *_4__this; // x8
-  float v15; // s8
+  float v18; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct GrandQuestSvtController_o *v17; // x8
-  struct GrandQuestSvtController_o *v18; // x8
-  float v19; // s9
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
-  Il2CppObject *current; // x19
-  UnityEngine_GameObject_o *v23; // x0
+  struct GrandQuestSvtController_o *v20; // x8
+  struct GrandQuestSvtController_o *v21; // x8
+  float v22; // s9
+  _BOOL8 v23; // x0
   __int64 v24; // x1
-  __int64 v25; // x0
-  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+18h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o v27; // 0:kr00_12.12
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  Il2CppObject *current; // x19
+  UnityEngine_GameObject_o *v26; // x0
+  __int64 v27; // x1
+  __int64 v28; // x0
+  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+18h] [xbp-68h] BYREF
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
   if ( (byte_596B2AC & 1) == 0 )
@@ -1888,7 +1894,7 @@ void GrandQuestSvtController___c__DisplayClass28_0___ExecFigureEasing_b__0(
     byte_596B2AC = 1;
   }
   easing = v2->fields.easing;
-  memset(&v26, 0, sizeof(v26));
+  memset(&v29, 0, sizeof(v29));
   if ( !easing )
     goto LABEL_27;
   figureEasing = v2->fields.figureEasing;
@@ -1900,7 +1906,7 @@ void GrandQuestSvtController___c__DisplayClass28_0___ExecFigureEasing_b__0(
   if ( LODWORD(position->max_length) < 2 )
     goto LABEL_28;
   mNow = easing->fields.mNow;
-  v27 = Easing__Func(position->m_Items[0], position->m_Items[1], mNow, figureEasing->fields.easingTypePosition, 0);
+  v30 = Easing__Func(position->m_Items[0], position->m_Items[1], mNow, figureEasing->fields.easingTypePosition, 0);
   v7 = v2->fields.figureEasing;
   if ( !v7 )
     goto LABEL_27;
@@ -1909,68 +1915,74 @@ void GrandQuestSvtController___c__DisplayClass28_0___ExecFigureEasing_b__0(
     goto LABEL_27;
   if ( LODWORD(scale->max_length) < 2 )
     goto LABEL_28;
-  v9 = Easing__Func_56120036(scale->m_Items[0], scale->m_Items[1], mNow, v7->fields.easingTypeScale, 0);
-  v10 = v2->fields.figureEasing;
-  if ( !v10 || (alpha = v10->fields.alpha) == 0 )
+  z = v30.fields.z;
+  x = v30.fields.x;
+  y = v30.fields.y;
+  v12 = Easing__Func_56120036(scale->m_Items[0], scale->m_Items[1], mNow, v7->fields.easingTypeScale, 0);
+  v13 = v2->fields.figureEasing;
+  if ( !v13 || (alpha = v13->fields.alpha) == 0 )
 LABEL_27:
     sub_2213CDC(this, method);
   if ( LODWORD(alpha->max_length) < 2 )
 LABEL_28:
     sub_2213CE4(this);
-  v12 = v9;
-  v13 = Easing__Func_56120036(alpha->m_Items[0], alpha->m_Items[1], mNow, v10->fields.easingTypeAlpha, 0);
+  v15 = v12;
+  v16 = Easing__Func_56120036(alpha->m_Items[0], alpha->m_Items[1], mNow, v13->fields.easingTypeAlpha, 0);
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
     goto LABEL_27;
   this = (GrandQuestSvtController___c__DisplayClass28_0_o *)_4__this->fields.svtController;
   if ( !this )
     goto LABEL_27;
-  v15 = v13;
+  v18 = v16;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalPosition(gameObject, v27, 0);
-  v17 = v2->fields.__4__this;
-  if ( !v17 )
+  v31.fields.x = x;
+  v31.fields.y = y;
+  v31.fields.z = z;
+  GameObjectExtensions__SetLocalPosition(gameObject, v31, 0);
+  v20 = v2->fields.__4__this;
+  if ( !v20 )
     goto LABEL_27;
-  this = (GrandQuestSvtController___c__DisplayClass28_0_o *)v17->fields.svtFigureScaleRoot;
+  this = (GrandQuestSvtController___c__DisplayClass28_0_o *)v20->fields.svtFigureScaleRoot;
   if ( !this )
     goto LABEL_27;
-  v28.fields.x = v12;
-  v28.fields.y = v12;
-  v28.fields.z = 1.0;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v28, 0);
-  v18 = v2->fields.__4__this;
-  if ( !v18 )
+  v32.fields.x = v15;
+  v32.fields.y = v15;
+  v32.fields.z = 1.0;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v32, 0);
+  v21 = v2->fields.__4__this;
+  if ( !v21 )
     goto LABEL_27;
-  this = (GrandQuestSvtController___c__DisplayClass28_0_o *)v18->fields.listFigureR;
+  this = (GrandQuestSvtController___c__DisplayClass28_0_o *)v21->fields.listFigureR;
   if ( !this )
     goto LABEL_27;
-  v19 = (float)(v2->fields.bodySizeY * (float)((float)(v12 * v2->fields.servantScale) + -1.0)) / v12;
+  v22 = (float)(v2->fields.bodySizeY * (float)((float)(v15 * v2->fields.servantScale) + -1.0)) / v15;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     (System_Collections_Generic_List_object__o *)this,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UIStandFigureR__GetEnumerator__);
   while ( 1 )
   {
-    v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v26,
+    v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v29,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_UIStandFigureR__MoveNext__);
-    if ( !v20 )
+    if ( !v23 )
       break;
-    current = v26.fields._current;
-    if ( !v26.fields._current )
-      sub_2213CDC(v20, v21);
-    v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v26.fields._current, 0);
-    GameObjectExtensions__SetLocalPosition_42891620(v23, 0.0, v19, 0.0, 0);
-    v25 = *(__int64 *)((char *)&qword_20 + (_QWORD)current);
-    if ( !v25 )
-      sub_2213CDC(0, v24);
-    (*(void (__fastcall **)(__int64, _QWORD, float))(*(_QWORD *)v25 + 440LL))(
-      v25,
-      *(_QWORD *)(*(_QWORD *)v25 + 448LL),
-      v15);
+    current = v29.fields._current;
+    if ( !v29.fields._current )
+      sub_2213CDC(v23, v24);
+    v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v29.fields._current, 0);
+    GameObjectExtensions__SetLocalPosition_42891620(v26, 0.0, v22, 0.0, 0);
+    v28 = *(__int64 *)((char *)&qword_20 + (_QWORD)current);
+    if ( !v28 )
+      sub_2213CDC(0, v27);
+    (*(void (__fastcall **)(__int64, _QWORD, float))(*(_QWORD *)v28 + 440LL))(
+      v28,
+      *(_QWORD *)(*(_QWORD *)v28 + 448LL),
+      v18);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v26,
+    &v29,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_UIStandFigureR__Dispose__);
 }
 

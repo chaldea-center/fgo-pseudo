@@ -40,7 +40,7 @@ void UIMasterFaceTexture__EndLoadAsset(UIMasterFaceTexture_o *this, const Method
   struct UITexture_o *v27; // x20
   UnityEngine_Material_o *v28; // x20
   UITexture_o *v29; // x20
-  UnityEngine_Vector2_o BodySize; // kr10_8
+  UnityEngine_Vector2_o BodySize; // kr00_8
   int32_t v31; // w1
   int32_t v32; // w1
   System_String_o *v33; // x2

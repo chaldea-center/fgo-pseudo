@@ -306,8 +306,8 @@ void ServantBonusFilterEquipListViewItemDraw__SetItem_39497740(
   _QWORD *v54; // x9
   __int64 size; // x10
   Il2CppClass **v56; // x0
-  struct ServantBonusFilterEquipListViewItemDraw___c_StaticFields *static_fields; // x8
-  System_Comparison_T__o *_9__13_0; // x20
+  void *static_fields; // x8
+  System_Comparison_T__o *v58; // x20
   Il2CppObject *v59; // x21
   struct ServantBonusFilterEquipListViewItemDraw___c_StaticFields *v60; // x0
   System_String_o *v61; // x2
@@ -515,36 +515,37 @@ LABEL_47:
     j_il2cpp_runtime_class_init_0(ServantBonusFilterEquipListViewItemDraw___c_TypeInfo, equipEntity, v27);
     this = (ServantBonusFilterEquipListViewItemDraw_o *)ServantBonusFilterEquipListViewItemDraw___c_TypeInfo;
   }
-  static_fields = (struct ServantBonusFilterEquipListViewItemDraw___c_StaticFields *)*((_QWORD *)this + 23);
-  _9__13_0 = (System_Comparison_T__o *)static_fields->__9__13_0;
-  if ( !_9__13_0 )
+  static_fields = this[1].fields.skillTextLabel;
+  v58 = (System_Comparison_T__o *)*((_QWORD *)static_fields + 1);
+  if ( !v58 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[1].fields.saveGroupEquipKeys) )
     {
       j_il2cpp_runtime_class_init_0(this, equipEntity, v27);
       static_fields = ServantBonusFilterEquipListViewItemDraw___c_TypeInfo->static_fields;
     }
-    v59 = (Il2CppObject *)static_fields->__9;
-    _9__13_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventMargeItemUpValInfo__TypeInfo);
-    System_Comparison_object____ctor(
-      _9__13_0,
-      v59,
-      Method_ServantBonusFilterEquipListViewItemDraw___c__SetItem_b__13_0__,
-      0);
+    v59 = *(Il2CppObject **)static_fields;
+    v58 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventMargeItemUpValInfo__TypeInfo);
+    System_Comparison_object____ctor(v58, v59, Method_ServantBonusFilterEquipListViewItemDraw___c__SetItem_b__13_0__, 0);
     v60 = ServantBonusFilterEquipListViewItemDraw___c_TypeInfo->static_fields;
-    v60->__9__13_0 = (struct System_Comparison_EventMargeItemUpValInfo__o *)_9__13_0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v60->__9__13_0, (int32_t)_9__13_0, v61, v62, v63, v64, v65, v66);
+    v60->__9__13_0 = (struct System_Comparison_EventMargeItemUpValInfo__o *)v58;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v60->__9__13_0, (int32_t)v58, v61, v62, v63, v64, v65, v66);
   }
   if ( !v26 )
     goto LABEL_57;
   System_Collections_Generic_List_object___Sort_71849708(
     v26,
-    _9__13_0,
+    v58,
     (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventMargeItemUpValInfo__Sort__);
   this = (ServantBonusFilterEquipListViewItemDraw_o *)v19->fields.skillTextLabel;
   if ( !this )
     goto LABEL_57;
-  WrapControlText__textAdjust((UILabel_o *)this, *((System_String_o **)this + 52), *((_DWORD *)this + 106), 0, 0);
+  WrapControlText__textAdjust(
+    (UILabel_o *)this,
+    (System_String_o *)this[3].fields.skillIcon,
+    (int32_t)this[3].fields.skillTextLabel,
+    0,
+    0);
   eventUpValIcon = v19->fields.eventUpValIcon;
   this = (ServantBonusFilterEquipListViewItemDraw_o *)System_Collections_Generic_List_object___ToArray(
                                                         v26,

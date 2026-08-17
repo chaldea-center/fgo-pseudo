@@ -2948,7 +2948,8 @@ void ServantListViewManager__UpdateItemDisplayState(
     (System_Collections_Generic_List_Enumerator_T__o *)&v32,
     SelfUserGame,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v35 = *(System_Collections_Generic_List_Enumerator_object__o *)&v32.fields.currentCryptoKey;
+  v35.fields._current = (Il2CppObject *)v32.fields.fakeValue;
+  *(_OWORD *)&v35.fields._list = *(_OWORD *)&v32.fields.currentCryptoKey;
   v33 = 0;
   v34 = &v35;
   while ( 1 )
@@ -3518,7 +3519,7 @@ System_IAsyncResult_o *ServantListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(ServantListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

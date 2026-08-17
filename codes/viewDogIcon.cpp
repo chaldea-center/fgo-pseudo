@@ -325,30 +325,33 @@ void viewDogIcon__Set(
   Il2CppObject *v13; // x0
   System_String_o *onAnExpedition; // x0
   UILabel_o *onAnExpeditionLabel; // x24
-  __int64 v18; // x1
-  __int64 v19; // x2
+  float v16; // s0 OVERLAPPED
+  float v17; // s1
+  float v18; // s2
+  float v19; // s3
+  __int64 v20; // x1
+  __int64 v21; // x2
   UILabel_o *timeRequiredTextLabel; // x24
   UILabel_o *timeRequiredNumLabel; // x24
-  viewDogIcon_o *v22; // x0
-  const MethodInfo *v23; // x2
+  viewDogIcon_o *v24; // x0
+  const MethodInfo *v25; // x2
   struct EventExpeditionPieceEntity_o *EventExpeditionPieceEntity_k__BackingField; // x8
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
-  struct EventExpeditionPieceEntity_o *v31; // x8
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  struct EventExpeditionPieceEntity_o *v33; // x8
   UISprite_o *icon; // x22
-  Il2CppObject *v33; // x0
-  __int64 v34; // x1
-  __int64 v35; // x2
-  System_String_o *v36; // x23
+  Il2CppObject *v35; // x0
+  __int64 v36; // x1
+  __int64 v37; // x2
+  System_String_o *v38; // x23
   int32_t iconImageId; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v38; // [xsp+Ch] [xbp-54h] BYREF
-  UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v40; // [xsp+Ch] [xbp-54h] BYREF
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v9 = compatibilityPercent;
   if ( (byte_596A614 & 1) == 0 )
@@ -371,8 +374,8 @@ void viewDogIcon__Set(
         *(_QWORD *)&compatibilityPercent,
         *(_QWORD *)&timeRequiredNum);
     v12 = LocalizationManager__Get((System_String_o *)StringLiteral_6030/*"EXPEDITION_CONFIRM_DIALOG_COMPATIBILITY"*/, 0);
-    v38 = v9;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v38);
+    v40 = v9;
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v40);
     onAnExpedition = System_String__Format(v12, v13, 0);
     if ( !compatibilityLabel )
       goto LABEL_35;
@@ -404,46 +407,46 @@ void viewDogIcon__Set(
     onAnExpedition = (System_String_o *)this->fields.compatibilityLabel;
     if ( !onAnExpedition )
       goto LABEL_35;
-    v39.fields.r = 0.5;
-    v39.fields.g = 0.5;
-    v39.fields.b = 0.5;
-    v39.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)onAnExpedition, v39, 0);
+    v41.fields.r = 0.5;
+    v41.fields.g = 0.5;
+    v41.fields.b = 0.5;
+    v41.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)onAnExpedition, v41, 0);
     onAnExpedition = (System_String_o *)this->fields.nameLabel;
     if ( !onAnExpedition )
       goto LABEL_35;
-    v40.fields.r = 0.5;
-    v40.fields.g = 0.5;
-    v40.fields.b = 0.5;
+    v16 = 0.5;
+    v17 = 0.5;
+    v18 = 0.5;
   }
   else
   {
     onAnExpedition = (System_String_o *)this->fields.compatibilityLabel;
     if ( !onAnExpedition )
       goto LABEL_35;
-    v41.fields.r = 1.0;
-    v41.fields.g = 1.0;
-    v41.fields.b = 1.0;
-    v41.fields.a = 1.0;
-    UIWidget__set_color((UIWidget_o *)onAnExpedition, v41, 0);
+    v42.fields.r = 1.0;
+    v42.fields.g = 1.0;
+    v42.fields.b = 1.0;
+    v42.fields.a = 1.0;
+    UIWidget__set_color((UIWidget_o *)onAnExpedition, v42, 0);
     onAnExpedition = (System_String_o *)this->fields.nameLabel;
     if ( !onAnExpedition )
       goto LABEL_35;
-    v40.fields.r = 1.0;
-    v40.fields.g = 1.0;
-    v40.fields.b = 1.0;
+    v16 = 1.0;
+    v17 = 1.0;
+    v18 = 1.0;
   }
-  v40.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)onAnExpedition, v40, 0);
+  v19 = 1.0;
+  UIWidget__set_color((UIWidget_o *)onAnExpedition, *(UnityEngine_Color_o *)&v16, 0);
   timeRequiredTextLabel = this->fields.timeRequiredTextLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18, v19);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v20, v21);
   onAnExpedition = LocalizationManager__Get((System_String_o *)StringLiteral_6035/*"EXPEDITION_CONFIRM_DIALOG_TIME_REQUIRED"*/, 0);
   if ( !timeRequiredTextLabel )
     goto LABEL_35;
   UILabel__set_text(timeRequiredTextLabel, onAnExpedition, 0);
   timeRequiredNumLabel = this->fields.timeRequiredNumLabel;
-  onAnExpedition = viewDogIcon__GetExpeditionTimeLabel(v22, timeRequiredNum, v23);
+  onAnExpedition = viewDogIcon__GetExpeditionTimeLabel(v24, timeRequiredNum, v25);
   *(_QWORD *)&compatibilityPercent = onAnExpedition;
   if ( v9 >= 1 )
   {
@@ -468,28 +471,28 @@ void viewDogIcon__Set(
                                         0);
   if ( ((unsigned __int8)onAnExpedition & 1) == 0 )
     goto LABEL_34;
-  v31 = this->fields._EventExpeditionPieceEntity_k__BackingField;
-  if ( !v31 )
+  v33 = this->fields._EventExpeditionPieceEntity_k__BackingField;
+  if ( !v33 )
 LABEL_35:
     sub_2213CDC(onAnExpedition, *(_QWORD *)&compatibilityPercent);
   icon = this->fields.icon;
-  iconImageId = v31->fields.iconImageId;
-  v33 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &iconImageId);
-  v36 = System_String__Format((System_String_o *)StringLiteral_21230/*"icon_{0}"*/, v33, 0);
+  iconImageId = v33->fields.iconImageId;
+  v35 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &iconImageId);
+  v38 = System_String__Format((System_String_o *)StringLiteral_21230/*"icon_{0}"*/, v35, 0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v34, v35);
-  AtlasManager__SetEventUI_47569484(eventId, icon, v36, 0);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v36, v37);
+  AtlasManager__SetEventUI_47569484(eventId, icon, v38, 0);
 LABEL_34:
   this->fields.onClickPanel = callback;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.onClickPanel,
     (int32_t)callback,
-    v25,
-    v26,
     v27,
     v28,
     v29,
-    v30);
+    v30,
+    v31,
+    v32);
 }
 
 

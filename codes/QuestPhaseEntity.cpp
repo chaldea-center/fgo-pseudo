@@ -995,15 +995,20 @@ System_String_o *QuestPhaseEntity__GetMoviePlayTime(QuestPhaseEntity_o *this, co
   const MethodInfo *v2; // x3
   __int64 v4; // x1
   int32_t ScriptIntParam; // w19
-  bool v6; // cc
-  __int64 v7; // x1
-  int v8; // w8
-  Il2CppObject *v9; // x19
-  Il2CppObject *v10; // x0
-  Il2CppObject *v12; // x0
-  int32_t v13; // [xsp+8h] [xbp-38h] BYREF
+  System_TimeSpan_o v6; // x0
+  System_TimeSpan_o v7; // x0
+  bool v8; // cc
+  __int64 v9; // x1
+  int v10; // w8
+  System_TimeSpan_o v11; // x0
+  Il2CppObject *v12; // x19
+  System_TimeSpan_o v13; // x0
+  Il2CppObject *v14; // x0
+  System_TimeSpan_o v16; // x0
+  Il2CppObject *v17; // x0
+  int32_t v18; // [xsp+8h] [xbp-38h] BYREF
   int32_t Seconds; // [xsp+Ch] [xbp-34h] BYREF
-  __int64 v15; // [xsp+18h] [xbp-28h] BYREF
+  __int64 v20; // [xsp+18h] [xbp-28h] BYREF
 
   if ( (byte_5970FAB & 1) == 0 )
   {
@@ -1013,30 +1018,35 @@ System_String_o *QuestPhaseEntity__GetMoviePlayTime(QuestPhaseEntity_o *this, co
     sub_2213A60(&StringLiteral_26620/*"{0}秒"*/);
     byte_5970FAB = 1;
   }
-  v15 = 0;
+  v20 = 0;
   ScriptIntParam = QuestPhaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22780/*"moviePlayTime"*/, 0, v2);
   if ( !*(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v4);
-  System_TimeSpan___ctor_77242956((System_TimeSpan_o)&v15, 0, 0, ScriptIntParam, 0);
-  v6 = System_TimeSpan__get_Minutes((System_TimeSpan_o)&v15, 0) < 1;
-  v8 = *(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1);
-  if ( v6 )
+  v6.fields._ticks = (int64_t)&v20;
+  System_TimeSpan___ctor_77242956(v6, 0, 0, ScriptIntParam, 0);
+  v7.fields._ticks = (int64_t)&v20;
+  v8 = System_TimeSpan__get_Minutes(v7, 0) < 1;
+  v10 = *(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1);
+  if ( v8 )
   {
-    if ( !v8 )
-      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v7);
-    Seconds = System_TimeSpan__get_Seconds((System_TimeSpan_o)&v15, 0);
-    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
-    return System_String__Format((System_String_o *)StringLiteral_26620/*"{0}秒"*/, v12, 0);
+    if ( !v10 )
+      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v9);
+    v16.fields._ticks = (int64_t)&v20;
+    Seconds = System_TimeSpan__get_Seconds(v16, 0);
+    v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
+    return System_String__Format((System_String_o *)StringLiteral_26620/*"{0}秒"*/, v17, 0);
   }
   else
   {
-    if ( !v8 )
-      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v7);
-    Seconds = System_TimeSpan__get_Minutes((System_TimeSpan_o)&v15, 0);
-    v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
-    v13 = System_TimeSpan__get_Seconds((System_TimeSpan_o)&v15, 0);
-    v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v13);
-    return System_String__Format_75697880((System_String_o *)StringLiteral_26618/*"{0}分{1}秒"*/, v9, v10, 0);
+    if ( !v10 )
+      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v9);
+    v11.fields._ticks = (int64_t)&v20;
+    Seconds = System_TimeSpan__get_Minutes(v11, 0);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
+    v13.fields._ticks = (int64_t)&v20;
+    v18 = System_TimeSpan__get_Seconds(v13, 0);
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v18);
+    return System_String__Format_75697880((System_String_o *)StringLiteral_26618/*"{0}分{1}秒"*/, v12, v14, 0);
   }
 }
 
@@ -2150,122 +2160,123 @@ void QuestPhaseEntity__GetWaveStartMovieInfos(
   __int64 v43; // x24
   __int64 v44; // x26
   int32_t max_length; // w1
-  const MethodInfo *v46; // x2
-  unsigned __int64 v47; // x27
-  System_Int32_array *v48; // x8
-  System_String_o *v49; // x2
-  System_String_o *v50; // x3
-  int32_t v51; // w4
-  int32_t v52; // w5
-  bool v53; // w6
-  bool v54; // w7
-  unsigned int *v55; // x28
-  QuestPhaseEntity_o *v56; // x23
-  __int64 v57; // x1
-  MissionNaviTransitionBoardItem_o *v58; // x0
-  int32_t v59; // w1
-  System_String_o *v60; // x2
-  System_String_o *v61; // x3
-  int32_t v62; // w4
-  int32_t v63; // w5
-  bool v64; // w6
-  bool v65; // w7
-  System_String_o *v66; // x2
-  System_String_o *v67; // x3
-  int32_t v68; // w4
-  int32_t v69; // w5
-  bool v70; // w6
-  bool v71; // w7
-  System_Collections_Generic_Dictionary_int__object__o *v72; // x24
-  __int64 v73; // x1
+  System_Nullable_int__o v46; // x0
+  const MethodInfo *v47; // x2
+  unsigned __int64 v48; // x27
+  System_Int32_array *v49; // x8
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  unsigned int *v56; // x28
+  QuestPhaseEntity_o *v57; // x23
+  __int64 v58; // x1
+  MissionNaviTransitionBoardItem_o *v59; // x0
+  int32_t v60; // w1
+  System_String_o *v61; // x2
+  System_String_o *v62; // x3
+  int32_t v63; // w4
+  int32_t v64; // w5
+  bool v65; // w6
+  bool v66; // w7
+  System_String_o *v67; // x2
+  System_String_o *v68; // x3
+  int32_t v69; // w4
+  int32_t v70; // w5
+  bool v71; // w6
+  bool v72; // w7
+  System_Collections_Generic_Dictionary_int__object__o *v73; // x24
+  __int64 v74; // x1
   Il2CppObject *Item; // x25
-  __int64 v75; // x8
-  QuestPhaseEntity_o *v76; // x25
-  unsigned __int64 v77; // x22
-  __int64 v78; // x29
-  Il2CppObject *v79; // x2
-  System_Collections_Generic_HashSet_int__o *v80; // x26
-  System_Int32_array *v81; // x22
-  System_Collections_Generic_Dictionary_int__object__o *v82; // x25
-  il2cpp_array_size_t v83; // x8
-  unsigned __int64 v84; // x23
-  _BOOL8 v85; // x0
-  __int64 v86; // x1
+  __int64 v76; // x8
+  QuestPhaseEntity_o *v77; // x25
+  unsigned __int64 v78; // x22
+  __int64 v79; // x29
+  Il2CppObject *v80; // x2
+  System_Collections_Generic_HashSet_int__o *v81; // x26
+  System_Int32_array *v82; // x22
+  System_Collections_Generic_Dictionary_int__object__o *v83; // x25
+  il2cpp_array_size_t v84; // x8
+  unsigned __int64 v85; // x23
+  _BOOL8 v86; // x0
   __int64 v87; // x1
-  QuestPhaseEntity___c_c *v88; // x0
+  __int64 v88; // x1
+  QuestPhaseEntity___c_c *v89; // x0
   struct QuestPhaseEntity___c_StaticFields *static_fields; // x8
   System_Func_int__int__o *_9__68_0; // x27
-  Il2CppObject *v91; // x28
-  struct QuestPhaseEntity___c_StaticFields *v92; // x0
-  System_String_o *v93; // x2
-  System_String_o *v94; // x3
-  int32_t v95; // w4
-  int32_t v96; // w5
-  bool v97; // w6
-  bool v98; // w7
-  System_Collections_Generic_IEnumerable_TSource__o *v99; // x0
-  System_Int32_array *v100; // x0
-  System_String_o *v101; // x2
-  System_String_o *v102; // x3
-  int32_t v103; // w4
-  int32_t v104; // w5
-  bool v105; // w6
-  bool v106; // w7
-  BattleMovieParam_array *v107; // x29
-  System_String_array *v108; // x0
-  System_String_o *v109; // x2
-  System_String_o *v110; // x3
-  int32_t v111; // w4
-  int32_t v112; // w5
-  bool v113; // w6
-  bool v114; // w7
-  BattleMovieParam_array *v115; // x0
-  System_String_o *v116; // x2
-  System_String_o *v117; // x3
-  int32_t v118; // w4
-  int32_t v119; // w5
-  bool v120; // w6
-  bool v121; // w7
-  System_Int32_array *v122; // x2
-  __int64 v123; // x22
-  __int64 v124; // x28
-  unsigned __int64 v125; // x8
-  unsigned __int64 v126; // x23
-  int32_t v127; // w26
-  int32_t v128; // w27
-  System_String_o *v129; // x2
-  System_String_o *v130; // x3
-  int32_t v131; // w4
-  int32_t v132; // w5
-  bool v133; // w6
-  bool v134; // w7
-  System_String_array *v135; // x8
-  Il2CppObject **v136; // x9
-  Il2CppObject *v137; // x1
-  unsigned int *v138; // x25
-  BattleMovieParam_o *v139; // x27
-  System_String_o *v140; // x2
-  System_String_o *v141; // x3
-  int32_t v142; // w4
-  int32_t v143; // w5
-  bool v144; // w6
-  bool v145; // w7
-  unsigned int *v146; // x27
-  unsigned __int64 v147; // x9
-  _DWORD *v148; // x8
-  Il2CppObject *v149; // x26
+  Il2CppObject *v92; // x28
+  struct QuestPhaseEntity___c_StaticFields *v93; // x0
+  System_String_o *v94; // x2
+  System_String_o *v95; // x3
+  int32_t v96; // w4
+  int32_t v97; // w5
+  bool v98; // w6
+  bool v99; // w7
+  System_Collections_Generic_IEnumerable_TSource__o *v100; // x0
+  System_Int32_array *v101; // x0
+  System_String_o *v102; // x2
+  System_String_o *v103; // x3
+  int32_t v104; // w4
+  int32_t v105; // w5
+  bool v106; // w6
+  bool v107; // w7
+  BattleMovieParam_array *v108; // x29
+  System_String_array *v109; // x0
+  System_String_o *v110; // x2
+  System_String_o *v111; // x3
+  int32_t v112; // w4
+  int32_t v113; // w5
+  bool v114; // w6
+  bool v115; // w7
+  BattleMovieParam_array *v116; // x0
+  System_String_o *v117; // x2
+  System_String_o *v118; // x3
+  int32_t v119; // w4
+  int32_t v120; // w5
+  bool v121; // w6
+  bool v122; // w7
+  System_Int32_array *v123; // x2
+  __int64 v124; // x22
+  __int64 v125; // x28
+  unsigned __int64 v126; // x8
+  unsigned __int64 v127; // x23
+  int32_t v128; // w26
+  int32_t v129; // w27
+  System_String_o *v130; // x2
+  System_String_o *v131; // x3
+  int32_t v132; // w4
+  int32_t v133; // w5
+  bool v134; // w6
+  bool v135; // w7
+  System_String_array *v136; // x8
+  Il2CppObject **v137; // x9
+  Il2CppObject *v138; // x1
+  unsigned int *v139; // x25
+  BattleMovieParam_o *v140; // x27
+  System_String_o *v141; // x2
+  System_String_o *v142; // x3
+  int32_t v143; // w4
+  int32_t v144; // w5
+  bool v145; // w6
+  bool v146; // w7
+  unsigned int *v147; // x27
+  unsigned __int64 v148; // x9
+  _DWORD *v149; // x8
+  Il2CppObject *v150; // x26
   int klass; // w9
   int klass_high; // w9
   int monitor; // w9
-  __int64 v153; // x0
+  __int64 v154; // x0
   BattleData_o *btlData; // [xsp+8h] [xbp-C8h]
-  System_String_array *v155; // [xsp+10h] [xbp-C0h]
-  System_Collections_Generic_Dictionary_int__object__o *v156; // [xsp+18h] [xbp-B8h]
+  System_String_array *v156; // [xsp+10h] [xbp-C0h]
+  System_Collections_Generic_Dictionary_int__object__o *v157; // [xsp+18h] [xbp-B8h]
   System_Int32_array *array; // [xsp+20h] [xbp-B0h]
-  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v158; // [xsp+28h] [xbp-A8h] BYREF
-  Il2CppObject *v159; // [xsp+40h] [xbp-90h] BYREF
-  Il2CppObject *v160; // [xsp+48h] [xbp-88h] BYREF
-  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v161; // [xsp+50h] [xbp-80h] BYREF
+  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v159; // [xsp+28h] [xbp-A8h] BYREF
+  Il2CppObject *v160; // [xsp+40h] [xbp-90h] BYREF
+  Il2CppObject *v161; // [xsp+48h] [xbp-88h] BYREF
+  System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v162; // [xsp+50h] [xbp-80h] BYREF
   Il2CppObject *value; // [xsp+68h] [xbp-68h] BYREF
 
   v10 = this;
@@ -2307,9 +2318,9 @@ void QuestPhaseEntity__GetWaveStartMovieInfos(
     byte_5970F27 = 1;
   }
   value = 0;
-  memset(&v161, 0, sizeof(v161));
-  v159 = 0;
+  memset(&v162, 0, sizeof(v162));
   v160 = 0;
+  v161 = 0;
   if ( !battleData )
     goto LABEL_108;
   if ( BattleData__TryGetWaveStartMovieInfoCache(battleData, movieFiles, movieWaves, movieParams, 0) )
@@ -2359,55 +2370,56 @@ void QuestPhaseEntity__GetWaveStartMovieInfos(
           while ( 1 )
           {
             max_length = v42->max_length;
-            v158.fields._dictionary = 0;
+            v46 = (System_Nullable_int__o)&v159;
+            v159.fields._dictionary = 0;
             System_Nullable_int____ctor(
-              (System_Nullable_int__o)&v158,
+              v46,
               max_length,
               (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-            if ( !LOBYTE(v158.fields._dictionary) )
+            if ( !LOBYTE(v159.fields._dictionary) )
               break;
-            v47 = v43 - 8;
-            if ( v43 - 8 >= (__int64)v158.fields._dictionary >> 32 )
+            v48 = v43 - 8;
+            if ( v43 - 8 >= (__int64)v159.fields._dictionary >> 32 )
               break;
-            v48 = *movieWaves;
+            v49 = *movieWaves;
             if ( !*movieWaves )
               goto LABEL_108;
-            if ( v47 >= LODWORD(v48->max_length) )
+            if ( v48 >= LODWORD(v49->max_length) )
               goto LABEL_110;
             this = (QuestPhaseEntity_o *)QuestPhaseEntity__GetWaveStartMovieParam(
                                            v10,
-                                           *((_DWORD *)&v48->obj.klass + v43),
-                                           v46);
-            v55 = (unsigned int *)*movieParams;
+                                           *((_DWORD *)&v49->obj.klass + v43),
+                                           v47);
+            v56 = (unsigned int *)*movieParams;
             if ( this )
             {
-              if ( !v55 )
+              if ( !v56 )
                 goto LABEL_108;
-              v56 = this;
-              this = (QuestPhaseEntity_o *)sub_2213BB4(this, *(_QWORD *)(*(_QWORD *)v55 + 64LL));
+              v57 = this;
+              this = (QuestPhaseEntity_o *)sub_2213BB4(this, *(_QWORD *)(*(_QWORD *)v56 + 64LL));
               if ( !this )
               {
 LABEL_112:
-                v153 = sub_2213D00(this, v57);
-                sub_2213BA0(v153, 0);
+                v154 = sub_2213D00(this, v58);
+                sub_2213BA0(v154, 0);
               }
-              if ( v47 >= v55[6] )
+              if ( v48 >= v56[6] )
                 goto LABEL_110;
-              *(_QWORD *)&v55[v44] = v56;
-              v58 = (MissionNaviTransitionBoardItem_o *)&v55[v44];
-              v59 = (int)v56;
+              *(_QWORD *)&v56[v44] = v57;
+              v59 = (MissionNaviTransitionBoardItem_o *)&v56[v44];
+              v60 = (int)v57;
             }
             else
             {
-              if ( !v55 )
+              if ( !v56 )
                 goto LABEL_108;
-              if ( v47 >= v55[6] )
+              if ( v48 >= v56[6] )
                 goto LABEL_110;
-              v58 = (MissionNaviTransitionBoardItem_o *)&v55[v44];
-              v59 = 0;
-              *(_QWORD *)&v55[v44] = 0;
+              v59 = (MissionNaviTransitionBoardItem_o *)&v56[v44];
+              v60 = 0;
+              *(_QWORD *)&v56[v44] = 0;
             }
-            sub_2213A04(v58, v59, v49, v50, v51, v52, v53, v54);
+            sub_2213A04(v59, v60, v50, v51, v52, v53, v54, v55);
             v42 = *movieWaves;
             ++v43;
             v44 += 2;
@@ -2422,9 +2434,9 @@ LABEL_26:
     *movieFiles = 0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)movieFiles, 0, v27, v28, v29, v30, v31, v32);
     *movieWaves = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)movieWaves, 0, v60, v61, v62, v63, v64, v65);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)movieWaves, 0, v61, v62, v63, v64, v65, v66);
     *movieParams = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)movieParams, 0, v66, v67, v68, v69, v70, v71);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)movieParams, 0, v67, v68, v69, v70, v71, v72);
     return;
   }
   if ( v33 )
@@ -2435,13 +2447,13 @@ LABEL_28:
   BattleData__SetWaveStartMovieInfoCache(battleData, *movieFiles, *movieWaves, *movieParams, 0);
   if ( EntityScriptUtil__ScriptHasKey(v10->fields.script, (System_String_o *)StringLiteral_26163/*"waveStartMovieOverwrite"*/, 0) )
   {
-    v156 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__string__TypeInfo);
+    v157 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__string__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
-      v156,
+      v157,
       (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__string___ctor__);
-    v72 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__BattleMovieParam__TypeInfo);
+    v73 = (System_Collections_Generic_Dictionary_int__object__o *)sub_2213CCC(System_Collections_Generic_Dictionary_int__BattleMovieParam__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
-      v72,
+      v73,
       (const MethodInfo_3F9BAFC *)Method_System_Collections_Generic_Dictionary_int__BattleMovieParam___ctor__);
     this = (QuestPhaseEntity_o *)v10->fields.script;
     if ( !this )
@@ -2451,35 +2463,35 @@ LABEL_28:
              (Il2CppObject *)StringLiteral_26163/*"waveStartMovieOverwrite"*/,
              (const MethodInfo_3FFDB90 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v73);
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v74);
     this = (QuestPhaseEntity_o *)JsonManager__DeserializeArray_object_(
                                    Item,
                                    (const MethodInfo_38D3A34 *)Method_JsonManager_DeserializeArray_QuestPhaseEntity_MovieOverwriteData___);
     if ( this )
     {
-      v75 = *(_QWORD *)&this->fields.isNpcOnly;
-      v76 = this;
+      v76 = *(_QWORD *)&this->fields.isNpcOnly;
+      v77 = this;
       btlData = battleData;
-      if ( (int)v75 >= 1 )
+      if ( (int)v76 >= 1 )
       {
-        v77 = 0;
-        while ( v77 < (unsigned int)v75 )
+        v78 = 0;
+        while ( v78 < (unsigned int)v76 )
         {
-          v78 = *((_QWORD *)&v76->fields.battleBgType + v77);
-          if ( v78 )
+          v79 = *((_QWORD *)&v77->fields.battleBgType + v78);
+          if ( v79 )
           {
-            this = (QuestPhaseEntity_o *)v156;
-            if ( !v156 )
+            this = (QuestPhaseEntity_o *)v157;
+            if ( !v157 )
               goto LABEL_108;
             this = (QuestPhaseEntity_o *)System_Collections_Generic_Dictionary_int__object___TryGetValue(
-                                           v156,
-                                           *(_DWORD *)(v78 + 16),
+                                           v157,
+                                           *(_DWORD *)(v79 + 16),
                                            &value,
                                            (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
             if ( ((unsigned __int8)this & 1) == 0 )
             {
               this = (QuestPhaseEntity_o *)CommonReleaseExtension__IsOpenInBattle(
-                                             *(_DWORD *)(v78 + 20),
+                                             *(_DWORD *)(v79 + 20),
                                              btlData,
                                              0,
                                              0,
@@ -2488,26 +2500,26 @@ LABEL_28:
               if ( ((unsigned __int8)this & 1) != 0 )
               {
                 System_Collections_Generic_Dictionary_int__object___set_Item(
-                  v156,
-                  *(_DWORD *)(v78 + 16),
-                  *(Il2CppObject **)(v78 + 24),
+                  v157,
+                  *(_DWORD *)(v79 + 16),
+                  *(Il2CppObject **)(v79 + 24),
                   (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__string__set_Item__);
-                v79 = *(Il2CppObject **)(v78 + 32);
-                if ( v79 )
+                v80 = *(Il2CppObject **)(v79 + 32);
+                if ( v80 )
                 {
-                  if ( !v72 )
+                  if ( !v73 )
                     goto LABEL_108;
                   System_Collections_Generic_Dictionary_int__object___set_Item(
-                    v72,
-                    *(_DWORD *)(v78 + 16),
-                    v79,
+                    v73,
+                    *(_DWORD *)(v79 + 16),
+                    v80,
                     (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__BattleMovieParam__set_Item__);
                 }
               }
             }
           }
-          LODWORD(v75) = *(_DWORD *)&v76->fields.isNpcOnly;
-          if ( (__int64)++v77 >= (int)v75 )
+          LODWORD(v76) = *(_DWORD *)&v77->fields.isNpcOnly;
+          if ( (__int64)++v78 >= (int)v76 )
             goto LABEL_44;
         }
 LABEL_110:
@@ -2515,283 +2527,283 @@ LABEL_110:
       }
 LABEL_44:
       array = *movieWaves;
-      v80 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
+      v81 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
       System_Collections_Generic_HashSet_int____ctor(
-        v80,
+        v81,
         (const MethodInfo_42B3DF0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
-      v81 = *movieWaves;
-      v82 = v156;
+      v82 = *movieWaves;
+      v83 = v157;
       if ( *movieWaves )
       {
-        v83 = v81->max_length;
-        if ( (int)v83 >= 1 )
+        v84 = v82->max_length;
+        if ( (int)v84 >= 1 )
         {
-          v84 = 0;
-          while ( v84 < (unsigned int)v83 )
+          v85 = 0;
+          while ( v85 < (unsigned int)v84 )
           {
-            if ( !v80 )
+            if ( !v81 )
               goto LABEL_108;
             this = (QuestPhaseEntity_o *)System_Collections_Generic_HashSet_int___Add(
-                                           v80,
-                                           v81->m_Items[v84],
+                                           v81,
+                                           v82->m_Items[v85],
                                            (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
-            LODWORD(v83) = v81->max_length;
-            if ( (__int64)++v84 >= (int)v83 )
+            LODWORD(v84) = v82->max_length;
+            if ( (__int64)++v85 >= (int)v84 )
               goto LABEL_50;
           }
           goto LABEL_110;
         }
       }
 LABEL_50:
-      if ( v156 )
+      if ( v157 )
       {
         this = (QuestPhaseEntity_o *)System_Collections_Generic_Dictionary_int__object___get_Keys(
-                                       v156,
+                                       v157,
                                        (const MethodInfo_3F9C158 *)Method_System_Collections_Generic_Dictionary_int__string__get_Keys__);
         if ( this )
         {
           System_Collections_Generic_Dictionary_KeyCollection_int__object___GetEnumerator(
-            &v158,
+            &v159,
             (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)this,
             (const MethodInfo_437DCDC *)Method_System_Collections_Generic_Dictionary_KeyCollection_int__string__GetEnumerator__);
-          v161 = v158;
-          v158.fields._dictionary = 0;
-          *(_QWORD *)&v158.fields._index = &v161;
+          v162 = v159;
+          v159.fields._dictionary = 0;
+          *(_QWORD *)&v159.fields._index = &v162;
           while ( 1 )
           {
-            v85 = System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__object___MoveNext(
-                    &v161,
+            v86 = System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__object___MoveNext(
+                    &v162,
                     (const MethodInfo_415904C *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__string__MoveNext__);
-            if ( !v85 )
+            if ( !v86 )
               break;
-            if ( !v80 )
-              sub_2213CDC(v85, v86);
+            if ( !v81 )
+              sub_2213CDC(v86, v87);
             System_Collections_Generic_HashSet_int___Add(
-              v80,
-              (int32_t)v161.fields._currentKey,
+              v81,
+              (int32_t)v162.fields._currentKey,
               (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
           }
           System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__object___Dispose(
-            &v161,
+            &v162,
             (const MethodInfo_4159048 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__string__Dispose__);
-          v88 = QuestPhaseEntity___c_TypeInfo;
+          v89 = QuestPhaseEntity___c_TypeInfo;
           if ( !*(&QuestPhaseEntity___c_TypeInfo->_2.cctor_finished + 1) )
           {
-            j_il2cpp_runtime_class_init_0(QuestPhaseEntity___c_TypeInfo, v87);
-            v88 = QuestPhaseEntity___c_TypeInfo;
+            j_il2cpp_runtime_class_init_0(QuestPhaseEntity___c_TypeInfo, v88);
+            v89 = QuestPhaseEntity___c_TypeInfo;
           }
-          static_fields = v88->static_fields;
+          static_fields = v89->static_fields;
           _9__68_0 = static_fields->__9__68_0;
           if ( !_9__68_0 )
           {
-            if ( !*(&v88->_2.cctor_finished + 1) )
+            if ( !*(&v89->_2.cctor_finished + 1) )
             {
-              j_il2cpp_runtime_class_init_0(v88, v87);
+              j_il2cpp_runtime_class_init_0(v89, v88);
               static_fields = QuestPhaseEntity___c_TypeInfo->static_fields;
             }
-            v91 = (Il2CppObject *)static_fields->__9;
+            v92 = (Il2CppObject *)static_fields->__9;
             _9__68_0 = (System_Func_int__int__o *)sub_2213CCC(System_Func_int__int__TypeInfo);
             System_Func_int__int____ctor(
               _9__68_0,
-              v91,
+              v92,
               Method_QuestPhaseEntity___c__GetWaveStartMovieInfos_b__68_0__,
               0);
-            v92 = QuestPhaseEntity___c_TypeInfo->static_fields;
-            v92->__9__68_0 = _9__68_0;
+            v93 = QuestPhaseEntity___c_TypeInfo->static_fields;
+            v93->__9__68_0 = _9__68_0;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v92->__9__68_0,
+              (MissionNaviTransitionBoardItem_o *)&v93->__9__68_0,
               (int32_t)_9__68_0,
-              v93,
               v94,
               v95,
               v96,
               v97,
-              v98);
+              v98,
+              v99);
           }
-          v99 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_int__int_(
-                                                                       (System_Collections_Generic_IEnumerable_TSource__o *)v80,
-                                                                       (System_Func_TSource__TKey__o *)_9__68_0,
-                                                                       (const MethodInfo_3888900 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
-          v100 = System_Linq_Enumerable__ToArray_int_(
-                   v99,
+          v100 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_int__int_(
+                                                                        (System_Collections_Generic_IEnumerable_TSource__o *)v81,
+                                                                        (System_Func_TSource__TKey__o *)_9__68_0,
+                                                                        (const MethodInfo_3888900 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
+          v101 = System_Linq_Enumerable__ToArray_int_(
+                   v100,
                    (const MethodInfo_389B994 *)Method_System_Linq_Enumerable_ToArray_int___);
-          *movieWaves = v100;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)movieWaves, (int32_t)v100, v101, v102, v103, v104, v105, v106);
+          *movieWaves = v101;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)movieWaves, (int32_t)v101, v102, v103, v104, v105, v106, v107);
           if ( *movieWaves )
           {
-            v107 = *movieParams;
-            v155 = *movieFiles;
-            v108 = (System_String_array *)sub_2213B20(string___TypeInfo, LODWORD((*movieWaves)->max_length));
-            *movieFiles = v108;
+            v108 = *movieParams;
+            v156 = *movieFiles;
+            v109 = (System_String_array *)sub_2213B20(string___TypeInfo, LODWORD((*movieWaves)->max_length));
+            *movieFiles = v109;
             sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)movieFiles,
-              (int32_t)v108,
-              v109,
+              (int32_t)v109,
               v110,
               v111,
               v112,
               v113,
-              v114);
+              v114,
+              v115);
             if ( *movieWaves )
             {
-              v115 = (BattleMovieParam_array *)sub_2213B20(
+              v116 = (BattleMovieParam_array *)sub_2213B20(
                                                  BattleMovieParam___TypeInfo,
                                                  LODWORD((*movieWaves)->max_length));
-              *movieParams = v115;
+              *movieParams = v116;
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)movieParams,
-                (int32_t)v115,
-                v116,
+                (int32_t)v116,
                 v117,
                 v118,
                 v119,
                 v120,
-                v121);
-              v122 = *movieWaves;
+                v121,
+                v122);
+              v123 = *movieWaves;
               if ( *movieWaves )
               {
-                v123 = 8;
                 v124 = 8;
+                v125 = 8;
                 while ( 1 )
                 {
-                  v125 = LODWORD(v122->max_length);
-                  v126 = v124 - 8;
-                  if ( v124 - 8 >= (int)v125 )
+                  v126 = LODWORD(v123->max_length);
+                  v127 = v125 - 8;
+                  if ( v125 - 8 >= (int)v126 )
                   {
-                    BattleData__SetWaveStartMovieInfoCache(btlData, *movieFiles, v122, *movieParams, 0);
+                    BattleData__SetWaveStartMovieInfoCache(btlData, *movieFiles, v123, *movieParams, 0);
                     return;
                   }
-                  if ( v126 >= v125 )
+                  if ( v127 >= v126 )
                     goto LABEL_110;
-                  v127 = *((_DWORD *)&v122->obj.klass + v124);
-                  v128 = array
+                  v128 = *((_DWORD *)&v123->obj.klass + v125);
+                  v129 = array
                        ? System_Array__IndexOf_int_(
                            array,
-                           v127,
+                           v128,
                            (const MethodInfo_3A2E554 *)Method_System_Array_IndexOf_int___)
                        : -1;
                   this = (QuestPhaseEntity_o *)System_Collections_Generic_Dictionary_int__object___TryGetValue(
-                                                 v82,
-                                                 v127,
-                                                 &v160,
+                                                 v83,
+                                                 v128,
+                                                 &v161,
                                                  (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__string__TryGetValue__);
                   if ( ((unsigned __int8)this & 1) != 0 )
                     break;
-                  if ( (v128 & 0x80000000) == 0 && v155 && v128 < SLODWORD(v155->max_length) )
+                  if ( (v129 & 0x80000000) == 0 && v156 && v129 < SLODWORD(v156->max_length) )
                   {
-                    v135 = *movieFiles;
+                    v136 = *movieFiles;
                     if ( !*movieFiles )
                       goto LABEL_108;
-                    if ( v126 >= LODWORD(v135->max_length) )
+                    if ( v127 >= LODWORD(v136->max_length) )
                       goto LABEL_110;
-                    v136 = (Il2CppObject **)&v155->m_Items[v128];
+                    v137 = (Il2CppObject **)&v156->m_Items[v129];
                     goto LABEL_75;
                   }
 LABEL_76:
-                  if ( (v128 & 0x80000000) == 0 && v107 && v128 < SLODWORD(v107->max_length) )
+                  if ( (v129 & 0x80000000) == 0 && v108 && v129 < SLODWORD(v108->max_length) )
                   {
-                    v138 = (unsigned int *)*movieParams;
+                    v139 = (unsigned int *)*movieParams;
                     if ( !*movieParams )
                       goto LABEL_108;
-                    v139 = v107->m_Items[v128];
-                    if ( v139 )
+                    v140 = v108->m_Items[v129];
+                    if ( v140 )
                     {
-                      this = (QuestPhaseEntity_o *)sub_2213BB4(v139, *(_QWORD *)(*(_QWORD *)v138 + 64LL));
+                      this = (QuestPhaseEntity_o *)sub_2213BB4(v140, *(_QWORD *)(*(_QWORD *)v139 + 64LL));
                       if ( !this )
                         goto LABEL_112;
                     }
-                    if ( v126 >= v138[6] )
+                    if ( v127 >= v139[6] )
                       goto LABEL_110;
-                    *(_QWORD *)&v138[v123] = v139;
+                    *(_QWORD *)&v139[v124] = v140;
                     sub_2213A04(
-                      (MissionNaviTransitionBoardItem_o *)&v138[v123],
-                      (int32_t)v139,
-                      v129,
+                      (MissionNaviTransitionBoardItem_o *)&v139[v124],
+                      (int32_t)v140,
                       v130,
                       v131,
                       v132,
                       v133,
-                      v134);
-                    v82 = v156;
+                      v134,
+                      v135);
+                    v83 = v157;
                   }
-                  if ( !v72 )
+                  if ( !v73 )
                     goto LABEL_108;
                   this = (QuestPhaseEntity_o *)System_Collections_Generic_Dictionary_int__object___TryGetValue(
-                                                 v72,
-                                                 v127,
-                                                 &v159,
+                                                 v73,
+                                                 v128,
+                                                 &v160,
                                                  (const MethodInfo_3F9DF8C *)Method_System_Collections_Generic_Dictionary_int__BattleMovieParam__TryGetValue__);
                   if ( ((unsigned __int8)this & 1) != 0 )
                   {
-                    v146 = (unsigned int *)*movieParams;
+                    v147 = (unsigned int *)*movieParams;
                     if ( !*movieParams )
                       goto LABEL_108;
-                    v147 = v146[6];
-                    if ( v126 >= v147 )
+                    v148 = v147[6];
+                    if ( v127 >= v148 )
                       goto LABEL_110;
-                    v148 = *(_DWORD **)&v146[v123];
-                    v149 = v159;
-                    if ( v148 )
+                    v149 = *(_DWORD **)&v147[v124];
+                    v150 = v160;
+                    if ( v149 )
                     {
-                      if ( !v159 )
+                      if ( !v160 )
                         goto LABEL_108;
-                      klass = (int)v159[1].klass;
+                      klass = (int)v160[1].klass;
                       if ( (klass & 0x80000000) == 0 )
-                        v148[4] = klass;
-                      klass_high = HIDWORD(v149[1].klass);
+                        v149[4] = klass;
+                      klass_high = HIDWORD(v150[1].klass);
                       if ( (klass_high & 0x80000000) == 0 )
-                        v148[5] = klass_high;
-                      monitor = (int)v149[1].monitor;
+                        v149[5] = klass_high;
+                      monitor = (int)v150[1].monitor;
                       if ( (monitor & 0x80000000) == 0 )
-                        v148[6] = monitor;
+                        v149[6] = monitor;
                     }
                     else
                     {
-                      if ( v159 )
+                      if ( v160 )
                       {
-                        this = (QuestPhaseEntity_o *)sub_2213BB4(v159, *(_QWORD *)(*(_QWORD *)v146 + 64LL));
+                        this = (QuestPhaseEntity_o *)sub_2213BB4(v160, *(_QWORD *)(*(_QWORD *)v147 + 64LL));
                         if ( !this )
                           goto LABEL_112;
-                        v147 = v146[6];
+                        v148 = v147[6];
                       }
-                      if ( v126 >= v147 )
+                      if ( v127 >= v148 )
                         goto LABEL_110;
-                      *(_QWORD *)&v146[v123] = v149;
+                      *(_QWORD *)&v147[v124] = v150;
                       sub_2213A04(
-                        (MissionNaviTransitionBoardItem_o *)&v146[v123],
-                        (int32_t)v149,
-                        v140,
+                        (MissionNaviTransitionBoardItem_o *)&v147[v124],
+                        (int32_t)v150,
                         v141,
                         v142,
                         v143,
                         v144,
-                        v145);
+                        v145,
+                        v146);
                     }
                   }
-                  v122 = *movieWaves;
-                  v123 += 2;
-                  ++v124;
+                  v123 = *movieWaves;
+                  v124 += 2;
+                  ++v125;
                   if ( !*movieWaves )
                     goto LABEL_108;
                 }
-                v135 = *movieFiles;
+                v136 = *movieFiles;
                 if ( !*movieFiles )
                   goto LABEL_108;
-                if ( v126 >= LODWORD(v135->max_length) )
+                if ( v127 >= LODWORD(v136->max_length) )
                   goto LABEL_110;
-                v136 = &v160;
+                v137 = &v161;
 LABEL_75:
-                v137 = *v136;
-                *(Il2CppClass **)((char *)&v135->obj.klass + v123 * 4) = (Il2CppClass *)*v136;
+                v138 = *v137;
+                *(Il2CppClass **)((char *)&v136->obj.klass + v124 * 4) = (Il2CppClass *)*v137;
                 sub_2213A04(
-                  (MissionNaviTransitionBoardItem_o *)((char *)v135 + v123 * 4),
-                  (int32_t)v137,
-                  v129,
+                  (MissionNaviTransitionBoardItem_o *)((char *)v136 + v124 * 4),
+                  (int32_t)v138,
                   v130,
                   v131,
                   v132,
                   v133,
-                  v134);
+                  v134,
+                  v135);
                 goto LABEL_76;
               }
             }
@@ -4752,6 +4764,7 @@ bool QuestPhaseEntity__GetBattleSkillDropEffectIds_d__177__MoveNext(
   __int64 v17; // x0
   struct BattleSkillDropInfo_JsonConvertData_o *data_5__3; // x8
   int32_t breakEffectId; // w8
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p_data_5__3; // x19
   _BOOL8 BattleSkillDropInfoDict; // x0
   __int64 v23; // x1
@@ -4810,9 +4823,9 @@ bool QuestPhaseEntity__GetBattleSkillDropEffectIds_d__177__MoveNext(
     if ( !data_5__3 )
       sub_2213CDC(this, method);
     breakEffectId = data_5__3->fields.breakEffectId;
+    result = 1;
     v8->fields.__1__state = 2;
     v8->fields.__2__current = breakEffectId;
-    return 1;
   }
   else if ( _1__state )
   {
@@ -4925,10 +4938,11 @@ LABEL_31:
     if ( !v44 )
       sub_2213CDC(BattleSkillDropInfoDict, v23);
     appearEffectId = v44->fields.appearEffectId;
+    result = 1;
     v52->fields.__1__state = 1;
     v52->fields.__2__current = appearEffectId;
-    return 1;
   }
+  return result;
 }
 
 
@@ -5102,6 +5116,7 @@ bool QuestPhaseEntity__GetBattleSkillDropFunctionEntities_d__176__MoveNext(
   int32_t v24; // w20
   struct System_Int32_array *_7__wrap1; // x9
   int32_t max_length; // w10
+  bool result; // w0
   int32_t v28; // w1
   struct FunctionEntity_o **p__2__current; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
@@ -5200,8 +5215,9 @@ LABEL_23:
   this->fields.__2__current = (struct FunctionEntity_o *)entity;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, v28, v2, (System_String_o *)v3, v4, v5, v6, v7);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -5341,12 +5357,14 @@ bool QuestPhaseEntity__GetExBattleUiSkillEffectIds_d__198__MoveNext(
   int32_t v38; // w5
   bool v39; // w6
   bool v40; // w7
+  bool result; // w0
   int32_t v42; // w0
   QuestPhaseEntity__GetExBattleUiSkillEffectIds_d__198_o *v43; // x9
+  int32_t v44; // w8
   ExtraBattleUserInterfaceData_JsonConvertData_array *dataArray; // [xsp+18h] [xbp-28h] BYREF
-  QuestPhaseEntity__GetExBattleUiSkillEffectIds_d__198_o *v45; // [xsp+28h] [xbp-18h]
+  QuestPhaseEntity__GetExBattleUiSkillEffectIds_d__198_o *v46; // [xsp+28h] [xbp-18h]
 
-  v45 = this;
+  v46 = this;
   v3 = this;
   if ( (byte_5970FB9 & 1) == 0 )
   {
@@ -5397,10 +5415,10 @@ LABEL_14:
     v15 = (struct System_Collections_Generic_IEnumerator_int__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_int__o *, _QWORD))v14)(
                                                                     v10,
                                                                     *(_QWORD *)(v14 + 8));
-    v16 = v45;
-    v45->fields.__7__wrap1 = v15;
+    v16 = v46;
+    v46->fields.__7__wrap1 = v15;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16->fields.__7__wrap1, (int32_t)v15, v17, v18, v19, v20, v21, v22);
-    v3 = v45;
+    v3 = v46;
   }
   _7__wrap1 = v3->fields.__7__wrap1;
   v3->fields.__1__state = -3;
@@ -5430,15 +5448,15 @@ LABEL_22:
           *(_QWORD *)(v27 + 8))
       & 1) == 0 )
   {
-    QuestPhaseEntity__GetExBattleUiSkillEffectIds_d__198____m__Finally1(v45, v28);
-    v34 = v45;
-    v45->fields.__7__wrap1 = 0;
+    QuestPhaseEntity__GetExBattleUiSkillEffectIds_d__198____m__Finally1(v46, v28);
+    v34 = v46;
+    v46->fields.__7__wrap1 = 0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34->fields.__7__wrap1, 0, v35, v36, v37, v38, v39, v40);
     return 0;
   }
-  v29 = v45->fields.__7__wrap1;
+  v29 = v46->fields.__7__wrap1;
   if ( !v29 )
-    sub_2213CDC(v45, v28);
+    sub_2213CDC(v46, v28);
   v30 = v29->klass;
   v31 = *(unsigned __int16 *)&v29->klass->_2.rank;
   if ( *(_WORD *)&v29->klass->_2.rank )
@@ -5456,15 +5474,17 @@ LABEL_22:
   else
   {
 LABEL_30:
-    v33 = sub_224BC3C(v45->fields.__7__wrap1, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+    v33 = sub_224BC3C(v46->fields.__7__wrap1, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
   }
   v42 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_int__o *, _QWORD))v33)(
           v29,
           *(_QWORD *)(v33 + 8));
-  v43 = v45;
-  v45->fields.__1__state = 1;
-  v43->fields.__2__current = v42;
-  return 1;
+  v43 = v46;
+  v44 = v42;
+  result = 1;
+  v46->fields.__1__state = 1;
+  v43->fields.__2__current = v44;
+  return result;
 }
 
 
@@ -5715,9 +5735,9 @@ System_String_o *QuestPhaseEntity___c___getScriptStringArrayParam_b__39_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
-           x,
-           x->klass->vtable[3].method);
+  return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
+                              x,
+                              x->klass->vtable[3].method);
 }
 
 

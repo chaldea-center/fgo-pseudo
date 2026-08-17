@@ -90,13 +90,14 @@ void ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, const MethodInf
   float v33; // s1
   float v34; // s0
   System_Array_o *baseTriangles; // x21
+  System_RuntimeFieldHandle_o v36; // x1
   struct UnityEngine_Vector2_array *baseUvs; // x8
-  struct UnityEngine_Vector2_array *v37; // x8
-  __int64 v38; // x9
-  unsigned __int64 v39; // x11
-  unsigned __int64 v40; // x10
-  unsigned int v41; // [xsp+10h] [xbp-60h]
-  int32x2_t v42; // [xsp+20h] [xbp-50h]
+  struct UnityEngine_Vector2_array *v38; // x8
+  __int64 v39; // x9
+  unsigned __int64 v40; // x11
+  unsigned __int64 v41; // x10
+  unsigned int v42; // [xsp+10h] [xbp-60h]
+  int32x2_t v43; // [xsp+20h] [xbp-50h]
 
   if ( (byte_596FBA0 & 1) == 0 )
   {
@@ -138,14 +139,14 @@ void ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, const MethodInf
   v12 = vbsl_s8(vceq_f32(v11, vdup_n_s32(0x7F800000u)), (int8x8_t)0x8000000080000000LL, vcvt_s32_f32(v11)).n64_u64[0];
   if ( v12 != *(_QWORD *)&this->fields.mWidth || this->fields.isChangeMesh )
   {
-    v42.n64_u64[0] = v12;
+    v43.n64_u64[0] = v12;
     UIWidget__set_width((UIWidget_o *)this, v12, 0);
-    UIWidget__set_height((UIWidget_o *)this, v42.n64_i32[1], 0);
+    UIWidget__set_height((UIWidget_o *)this, v43.n64_i32[1], 0);
     meshFilter = this->fields.meshFilter;
     if ( !meshFilter )
       goto LABEL_50;
     mesh = UnityEngine_MeshFilter__get_mesh(meshFilter, 0);
-    v41 = *(_QWORD *)&UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
+    v42 = *(_QWORD *)&UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
     pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
     y = pivotOffset.fields.y;
     if ( this->fields.isUseUserMesh )
@@ -156,8 +157,8 @@ void ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, const MethodInf
       y = pivotOffset.fields.y;
     }
     baseVertexs = this->fields.baseVertexs;
-    v19.n64_u64[0] = vcvt_f32_s32(v42).n64_u64[0];
-    v20.n64_u64[0] = vmul_f32(v19, vneg_f32((float32x2_t)__PAIR64__(LODWORD(y), v41))).n64_u64[0];
+    v19.n64_u64[0] = vcvt_f32_s32(v43).n64_u64[0];
+    v20.n64_u64[0] = vmul_f32(v19, vneg_f32((float32x2_t)__PAIR64__(LODWORD(y), v42))).n64_u64[0];
     if ( baseVertexs && this->fields.baseUvs && this->fields.baseTriangles )
     {
       meshFilter = (struct UnityEngine_MeshFilter_o *)sub_2213B20(
@@ -203,31 +204,31 @@ void ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, const MethodInf
       meshFilter = (struct UnityEngine_MeshFilter_o *)sub_2213B20(
                                                         UnityEngine_Vector2___TypeInfo,
                                                         LODWORD(baseUvs->max_length));
-      v37 = this->fields.baseUvs;
-      if ( !v37 )
+      v38 = this->fields.baseUvs;
+      if ( !v38 )
         goto LABEL_50;
       v13 = meshFilter;
-      v38 = 4;
+      v39 = 4;
       while ( 1 )
       {
-        v39 = LODWORD(v37->max_length);
-        v40 = v38 - 4;
-        if ( v38 - 4 >= (int)v39 )
+        v40 = LODWORD(v38->max_length);
+        v41 = v39 - 4;
+        if ( v39 - 4 >= (int)v40 )
           break;
-        if ( v40 >= v39 )
+        if ( v41 >= v40 )
           goto LABEL_56;
         if ( meshFilter )
         {
-          if ( v40 >= LODWORD(meshFilter[1].klass) )
+          if ( v41 >= LODWORD(meshFilter[1].klass) )
             goto LABEL_56;
-          *((float32x2_t *)&meshFilter->klass + v38) = vadd_f32(
+          *((float32x2_t *)&meshFilter->klass + v39) = vadd_f32(
                                                          (float32x2_t)this->fields.uvOffset,
                                                          vmul_f32(
-                                                           (float32x2_t)*(&v37->obj.klass + v38),
+                                                           (float32x2_t)*(&v38->obj.klass + v39),
                                                            (float32x2_t)this->fields.uvSize));
-          ++v38;
-          v37 = this->fields.baseUvs;
-          if ( v37 )
+          ++v39;
+          v38 = this->fields.baseUvs;
+          if ( v38 )
             continue;
         }
         goto LABEL_50;
@@ -289,10 +290,8 @@ LABEL_56:
       if ( !this->fields.isUseUserMesh )
         goto LABEL_53;
       baseTriangles = (System_Array_o *)sub_2213B20(int___TypeInfo, 6);
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-        baseTriangles,
-        (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DB96679C1D0C73505AD9AF543CB906F56E002FE26A9E2CD34DA2FF02F61EBB53,
-        0);
+      v36.fields.value = Field__PrivateImplementationDetails__DB96679C1D0C73505AD9AF543CB906F56E002FE26A9E2CD34DA2FF02F61EBB53;
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(baseTriangles, v36, 0);
     }
     UnityEngine_Mesh__set_triangles(mesh, (System_Int32_array *)baseTriangles, 0);
 LABEL_53:

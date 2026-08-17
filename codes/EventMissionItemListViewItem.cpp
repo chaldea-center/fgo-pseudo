@@ -230,6 +230,7 @@ bool EventMissionItemListViewItem__SetSortValue(
   ListViewSort_o *v5; // x0
   int32_t v6; // w1
   struct EventMissionEntity_o *eventMissionEnt; // x8
+  bool result; // w0
 
   progStatus = this->fields.progStatus;
   v4 = this;
@@ -284,8 +285,9 @@ LABEL_18:
     eventMissionEnt = v4->fields.eventMissionEnt;
     if ( eventMissionEnt )
     {
+      result = 1;
       v4->fields.sortValue1 = eventMissionEnt->fields.dispNo;
-      return 1;
+      return result;
     }
 LABEL_21:
     sub_2213CDC(this, sort);

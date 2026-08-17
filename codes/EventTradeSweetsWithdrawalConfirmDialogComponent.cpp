@@ -214,42 +214,44 @@ void EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBase(
   UnityEngine_Component_o *exchangeOriginLb; // x0
   __int64 v4; // x1
   __int64 v5; // x2
-  __int64 v6; // x2
+  float y; // s8
+  float z; // s9
+  __int64 v8; // x2
   struct CommonConsumeEntity_array *exchangeOriginItemList; // x8
-  UserItemMaster_o *v8; // x20
-  unsigned int v9; // w25
-  unsigned int v10; // w10
+  UserItemMaster_o *v10; // x20
+  unsigned int v11; // w25
+  unsigned int v12; // w10
   struct UISprite_array *exchangeOriginItemIcon; // x9
-  CommonConsumeEntity_o *v12; // x8
-  int32_t v13; // w23
-  UISprite_o *v14; // x22
-  __int64 v15; // x2
-  struct CommonConsumeEntity_array *v16; // x8
-  CommonConsumeEntity_o *v17; // x8
-  __int64 v18; // x2
+  CommonConsumeEntity_o *v14; // x8
+  int32_t v15; // w23
+  UISprite_o *v16; // x22
+  __int64 v17; // x2
+  struct CommonConsumeEntity_array *v18; // x8
+  CommonConsumeEntity_o *v19; // x8
+  __int64 v20; // x2
   struct UILabel_array *exchangeOriginCounts; // x9
-  int64_t v20; // x23
-  UILabel_o *v21; // x22
-  struct UILabel_array *exchangeOriginCountKinds; // x8
+  int64_t v22; // x23
   UILabel_o *v23; // x22
+  struct UILabel_array *exchangeOriginCountKinds; // x8
+  UILabel_o *v25; // x22
   unsigned int max_length; // w10
   struct UISprite_array *exchangeOriginItemIcon2; // x9
-  CommonConsumeEntity_o *v26; // x8
+  CommonConsumeEntity_o *v28; // x8
   int32_t objectId; // w23
-  UISprite_o *v28; // x22
-  __int64 v29; // x2
-  struct CommonConsumeEntity_array *v30; // x8
-  CommonConsumeEntity_o *v31; // x8
-  __int64 v32; // x2
+  UISprite_o *v30; // x22
+  __int64 v31; // x2
+  struct CommonConsumeEntity_array *v32; // x8
+  CommonConsumeEntity_o *v33; // x8
+  __int64 v34; // x2
   struct UILabel_array *exchangeOriginCounts2; // x9
   int64_t klass_high; // x23
-  UILabel_o *v35; // x22
-  struct UILabel_array *exchangeOriginCountKinds2; // x8
   UILabel_o *v37; // x22
-  int v38; // w8
-  float v39; // s10
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  struct UILabel_array *exchangeOriginCountKinds2; // x8
+  UILabel_o *v39; // x22
+  int v40; // w8
+  float v41; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596AD9E & 1) == 0 )
   {
@@ -268,37 +270,39 @@ void EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBase(
   if ( !exchangeOriginLb )
     goto LABEL_64;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)exchangeOriginLb, 0);
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v4, v5);
   exchangeOriginLb = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   exchangeOriginItemList = this->fields.exchangeOriginItemList;
   if ( !exchangeOriginItemList )
     goto LABEL_64;
-  v8 = (UserItemMaster_o *)exchangeOriginLb;
-  v9 = 0;
+  v10 = (UserItemMaster_o *)exchangeOriginLb;
+  v11 = 0;
   if ( LODWORD(exchangeOriginItemList->max_length) != 3 )
   {
     while ( 1 )
     {
       max_length = exchangeOriginItemList->max_length;
-      if ( (int)v9 >= (int)max_length )
+      if ( (int)v11 >= (int)max_length )
         break;
       exchangeOriginItemIcon2 = this->fields.exchangeOriginItemIcon2;
       if ( !exchangeOriginItemIcon2 )
         goto LABEL_64;
-      if ( v9 >= LODWORD(exchangeOriginItemIcon2->max_length) || v9 >= max_length )
+      if ( v11 >= LODWORD(exchangeOriginItemIcon2->max_length) || v11 >= max_length )
 LABEL_74:
         sub_2213CE4(exchangeOriginLb);
-      v26 = exchangeOriginItemList->m_Items[v9];
-      if ( v26 )
+      v28 = exchangeOriginItemList->m_Items[v11];
+      if ( v28 )
       {
-        objectId = v26->fields.objectId;
-        v28 = exchangeOriginItemIcon2->m_Items[v9];
+        objectId = v28->fields.objectId;
+        v30 = exchangeOriginItemIcon2->m_Items[v11];
         if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v6);
-        AtlasManager__SetItem(v28, objectId, 0);
+          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v8);
+        AtlasManager__SetItem(v30, objectId, 0);
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v29);
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v31);
         if ( !byte_5969EF2 )
         {
           sub_2213A60(&NetworkManager_TypeInfo);
@@ -307,52 +311,52 @@ LABEL_74:
         exchangeOriginLb = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v29);
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v31);
           exchangeOriginLb = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
         }
-        v30 = this->fields.exchangeOriginItemList;
-        if ( v30 )
+        v32 = this->fields.exchangeOriginItemList;
+        if ( v32 )
         {
-          if ( v9 >= LODWORD(v30->max_length) )
+          if ( v11 >= LODWORD(v32->max_length) )
             goto LABEL_74;
-          v31 = v30->m_Items[v9];
-          if ( v31 )
+          v33 = v32->m_Items[v11];
+          if ( v33 )
           {
-            if ( v8 )
+            if ( v10 )
             {
               exchangeOriginLb = (UnityEngine_Component_o *)UserItemMaster__GetEntityDefinitely(
-                                                              v8,
+                                                              v10,
                                                               *(_QWORD *)(exchangeOriginLb[7].fields.m_CachedPtr + 64),
-                                                              v31->fields.objectId,
+                                                              v33->fields.objectId,
                                                               0);
               exchangeOriginCounts2 = this->fields.exchangeOriginCounts2;
               if ( exchangeOriginCounts2 )
               {
-                if ( v9 >= LODWORD(exchangeOriginCounts2->max_length) )
+                if ( v11 >= LODWORD(exchangeOriginCounts2->max_length) )
                   goto LABEL_74;
                 if ( exchangeOriginLb )
                 {
                   klass_high = SHIDWORD(exchangeOriginLb[1].klass);
-                  v35 = exchangeOriginCounts2->m_Items[v9];
+                  v37 = exchangeOriginCounts2->m_Items[v11];
                   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v32);
+                    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v34);
                   exchangeOriginLb = (UnityEngine_Component_o *)LocalizationManager__GetNumberFormatLong(klass_high, 0);
-                  if ( v35 )
+                  if ( v37 )
                   {
-                    UILabel__set_text(v35, (System_String_o *)exchangeOriginLb, 0);
+                    UILabel__set_text(v37, (System_String_o *)exchangeOriginLb, 0);
                     exchangeOriginCountKinds2 = this->fields.exchangeOriginCountKinds2;
                     if ( exchangeOriginCountKinds2 )
                     {
-                      if ( v9 >= LODWORD(exchangeOriginCountKinds2->max_length) )
+                      if ( v11 >= LODWORD(exchangeOriginCountKinds2->max_length) )
                         goto LABEL_74;
-                      v37 = exchangeOriginCountKinds2->m_Items[v9];
+                      v39 = exchangeOriginCountKinds2->m_Items[v11];
                       exchangeOriginLb = (UnityEngine_Component_o *)LocalizationManager__Get(
                                                                       (System_String_o *)StringLiteral_14059/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/,
                                                                       0);
-                      if ( v37 )
+                      if ( v39 )
                       {
-                        ++v9;
-                        UILabel__set_text(v37, (System_String_o *)exchangeOriginLb, 0);
+                        ++v11;
+                        UILabel__set_text(v39, (System_String_o *)exchangeOriginLb, 0);
                         exchangeOriginItemList = this->fields.exchangeOriginItemList;
                         if ( exchangeOriginItemList )
                           continue;
@@ -374,7 +378,7 @@ LABEL_74:
       exchangeOriginLb = (UnityEngine_Component_o *)this->fields.exchangeOriginDispObject;
       if ( exchangeOriginLb )
       {
-        v38 = -1032847360;
+        v40 = -1032847360;
         goto LABEL_71;
       }
     }
@@ -383,24 +387,24 @@ LABEL_64:
   }
   while ( 1 )
   {
-    v10 = exchangeOriginItemList->max_length;
-    if ( (int)v9 >= (int)v10 )
+    v12 = exchangeOriginItemList->max_length;
+    if ( (int)v11 >= (int)v12 )
       break;
     exchangeOriginItemIcon = this->fields.exchangeOriginItemIcon;
     if ( !exchangeOriginItemIcon )
       goto LABEL_64;
-    if ( v9 >= LODWORD(exchangeOriginItemIcon->max_length) || v9 >= v10 )
+    if ( v11 >= LODWORD(exchangeOriginItemIcon->max_length) || v11 >= v12 )
       goto LABEL_74;
-    v12 = exchangeOriginItemList->m_Items[v9];
-    if ( v12 )
+    v14 = exchangeOriginItemList->m_Items[v11];
+    if ( v14 )
     {
-      v13 = v12->fields.objectId;
-      v14 = exchangeOriginItemIcon->m_Items[v9];
+      v15 = v14->fields.objectId;
+      v16 = exchangeOriginItemIcon->m_Items[v11];
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v6);
-      AtlasManager__SetItem(v14, v13, 0);
+        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v8);
+      AtlasManager__SetItem(v16, v15, 0);
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v15);
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v17);
       if ( !byte_5969EF2 )
       {
         sub_2213A60(&NetworkManager_TypeInfo);
@@ -409,52 +413,52 @@ LABEL_64:
       exchangeOriginLb = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v15);
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v17);
         exchangeOriginLb = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
       }
-      v16 = this->fields.exchangeOriginItemList;
-      if ( v16 )
+      v18 = this->fields.exchangeOriginItemList;
+      if ( v18 )
       {
-        if ( v9 >= LODWORD(v16->max_length) )
+        if ( v11 >= LODWORD(v18->max_length) )
           goto LABEL_74;
-        v17 = v16->m_Items[v9];
-        if ( v17 )
+        v19 = v18->m_Items[v11];
+        if ( v19 )
         {
-          if ( v8 )
+          if ( v10 )
           {
             exchangeOriginLb = (UnityEngine_Component_o *)UserItemMaster__GetEntityDefinitely(
-                                                            v8,
+                                                            v10,
                                                             *(_QWORD *)(exchangeOriginLb[7].fields.m_CachedPtr + 64),
-                                                            v17->fields.objectId,
+                                                            v19->fields.objectId,
                                                             0);
             exchangeOriginCounts = this->fields.exchangeOriginCounts;
             if ( exchangeOriginCounts )
             {
-              if ( v9 >= LODWORD(exchangeOriginCounts->max_length) )
+              if ( v11 >= LODWORD(exchangeOriginCounts->max_length) )
                 goto LABEL_74;
               if ( exchangeOriginLb )
               {
-                v20 = SHIDWORD(exchangeOriginLb[1].klass);
-                v21 = exchangeOriginCounts->m_Items[v9];
+                v22 = SHIDWORD(exchangeOriginLb[1].klass);
+                v23 = exchangeOriginCounts->m_Items[v11];
                 if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v18);
-                exchangeOriginLb = (UnityEngine_Component_o *)LocalizationManager__GetNumberFormatLong(v20, 0);
-                if ( v21 )
+                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, method, v20);
+                exchangeOriginLb = (UnityEngine_Component_o *)LocalizationManager__GetNumberFormatLong(v22, 0);
+                if ( v23 )
                 {
-                  UILabel__set_text(v21, (System_String_o *)exchangeOriginLb, 0);
+                  UILabel__set_text(v23, (System_String_o *)exchangeOriginLb, 0);
                   exchangeOriginCountKinds = this->fields.exchangeOriginCountKinds;
                   if ( exchangeOriginCountKinds )
                   {
-                    if ( v9 >= LODWORD(exchangeOriginCountKinds->max_length) )
+                    if ( v11 >= LODWORD(exchangeOriginCountKinds->max_length) )
                       goto LABEL_74;
-                    v23 = exchangeOriginCountKinds->m_Items[v9];
+                    v25 = exchangeOriginCountKinds->m_Items[v11];
                     exchangeOriginLb = (UnityEngine_Component_o *)LocalizationManager__Get(
                                                                     (System_String_o *)StringLiteral_14059/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/,
                                                                     0);
-                    if ( v23 )
+                    if ( v25 )
                     {
-                      ++v9;
-                      UILabel__set_text(v23, (System_String_o *)exchangeOriginLb, 0);
+                      ++v11;
+                      UILabel__set_text(v25, (System_String_o *)exchangeOriginLb, 0);
                       exchangeOriginItemList = this->fields.exchangeOriginItemList;
                       if ( exchangeOriginItemList )
                         continue;
@@ -476,9 +480,9 @@ LABEL_64:
   exchangeOriginLb = (UnityEngine_Component_o *)this->fields.exchangeOriginDispObject2;
   if ( !exchangeOriginLb )
     goto LABEL_64;
-  v38 = -1023279104;
+  v40 = -1023279104;
 LABEL_71:
-  v39 = *(float *)&v38;
+  v41 = *(float *)&v40;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangeOriginLb, 0, 0);
   exchangeOriginLb = (UnityEngine_Component_o *)this->fields.exchangeOriginLb;
   if ( !exchangeOriginLb )
@@ -486,10 +490,10 @@ LABEL_71:
   exchangeOriginLb = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(exchangeOriginLb, 0);
   if ( !exchangeOriginLb )
     goto LABEL_64;
-  v41.fields.y = localPosition.fields.y;
-  v41.fields.z = localPosition.fields.z;
-  v41.fields.x = v39;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)exchangeOriginLb, v41, 0);
+  v43.fields.y = y;
+  v43.fields.z = z;
+  v43.fields.x = v41;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)exchangeOriginLb, v43, 0);
 }
 
 
@@ -502,49 +506,51 @@ void EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBaseAfter(
   UnityEngine_Component_o *exchangeOriginLbAfter; // x0
   __int64 v6; // x1
   __int64 v7; // x2
-  __int64 v8; // x2
+  float y; // s8
+  float z; // s9
+  __int64 v10; // x2
   struct CommonConsumeEntity_array *exchangeOriginItemList; // x8
-  UserItemMaster_o *v10; // x21
-  unsigned int v11; // w25
-  unsigned int v12; // w10
+  UserItemMaster_o *v12; // x21
+  unsigned int v13; // w25
+  unsigned int v14; // w10
   struct UISprite_array *exchangeOriginItemIconAfter; // x9
-  CommonConsumeEntity_o *v14; // x8
-  int32_t v15; // w24
-  UISprite_o *v16; // x23
-  __int64 v17; // x2
-  struct CommonConsumeEntity_array *v18; // x8
-  CommonConsumeEntity_o *v19; // x8
-  __int64 v20; // x2
+  CommonConsumeEntity_o *v16; // x8
+  int32_t v17; // w24
+  UISprite_o *v18; // x23
+  __int64 v19; // x2
+  struct CommonConsumeEntity_array *v20; // x8
+  CommonConsumeEntity_o *v21; // x8
+  __int64 v22; // x2
   struct UILabel_array *exchangeOriginCountsAfter; // x9
-  struct CommonConsumeEntity_array *v22; // x8
-  CommonConsumeEntity_o *v23; // x10
-  int v24; // w24
-  int32_t v25; // w27
-  UILabel_o *v26; // x23
-  struct UILabel_array *exchangeOriginCountKindsAfter; // x8
+  struct CommonConsumeEntity_array *v24; // x8
+  CommonConsumeEntity_o *v25; // x10
+  int v26; // w24
+  int32_t v27; // w27
   UILabel_o *v28; // x23
-  unsigned int v29; // w25
+  struct UILabel_array *exchangeOriginCountKindsAfter; // x8
+  UILabel_o *v30; // x23
+  unsigned int v31; // w25
   unsigned int max_length; // w10
   struct UISprite_array *exchangeOriginItemIcon2After; // x9
-  CommonConsumeEntity_o *v32; // x8
+  CommonConsumeEntity_o *v34; // x8
   int32_t objectId; // w24
-  UISprite_o *v34; // x23
-  __int64 v35; // x2
-  struct CommonConsumeEntity_array *v36; // x8
-  CommonConsumeEntity_o *v37; // x8
-  __int64 v38; // x2
+  UISprite_o *v36; // x23
+  __int64 v37; // x2
+  struct CommonConsumeEntity_array *v38; // x8
+  CommonConsumeEntity_o *v39; // x8
+  __int64 v40; // x2
   struct UILabel_array *exchangeOriginCounts2After; // x9
-  struct CommonConsumeEntity_array *v40; // x8
-  CommonConsumeEntity_o *v41; // x10
+  struct CommonConsumeEntity_array *v42; // x8
+  CommonConsumeEntity_o *v43; // x10
   int klass_high; // w24
   int32_t num; // w27
-  UILabel_o *v44; // x23
-  struct UILabel_array *exchangeOriginCountKinds2After; // x8
   UILabel_o *v46; // x23
-  int v47; // w8
-  float v48; // s10
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
+  struct UILabel_array *exchangeOriginCountKinds2After; // x8
+  UILabel_o *v48; // x23
+  int v49; // w8
+  float v50; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596AD9F & 1) == 0 )
   {
@@ -563,37 +569,39 @@ void EventTradeSweetsWithdrawalConfirmDialogComponent__SetExchangeBaseAfter(
   if ( !exchangeOriginLbAfter )
     goto LABEL_72;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)exchangeOriginLbAfter, 0);
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v6, v7);
   exchangeOriginLbAfter = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   exchangeOriginItemList = this->fields.exchangeOriginItemList;
   if ( !exchangeOriginItemList )
     goto LABEL_72;
-  v10 = (UserItemMaster_o *)exchangeOriginLbAfter;
+  v12 = (UserItemMaster_o *)exchangeOriginLbAfter;
   if ( LODWORD(exchangeOriginItemList->max_length) != 3 )
   {
-    v29 = 0;
+    v31 = 0;
     while ( 1 )
     {
       max_length = exchangeOriginItemList->max_length;
-      if ( (int)v29 >= (int)max_length )
+      if ( (int)v31 >= (int)max_length )
         break;
       exchangeOriginItemIcon2After = this->fields.exchangeOriginItemIcon2After;
       if ( !exchangeOriginItemIcon2After )
         goto LABEL_72;
-      if ( v29 >= LODWORD(exchangeOriginItemIcon2After->max_length) || v29 >= max_length )
+      if ( v31 >= LODWORD(exchangeOriginItemIcon2After->max_length) || v31 >= max_length )
 LABEL_82:
         sub_2213CE4(exchangeOriginLbAfter);
-      v32 = exchangeOriginItemList->m_Items[v29];
-      if ( v32 )
+      v34 = exchangeOriginItemList->m_Items[v31];
+      if ( v34 )
       {
-        objectId = v32->fields.objectId;
-        v34 = exchangeOriginItemIcon2After->m_Items[v29];
+        objectId = v34->fields.objectId;
+        v36 = exchangeOriginItemIcon2After->m_Items[v31];
         if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&completeNum, v8);
-        AtlasManager__SetItem(v34, objectId, 0);
+          j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&completeNum, v10);
+        AtlasManager__SetItem(v36, objectId, 0);
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v35);
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v37);
         if ( !byte_5969EF2 )
         {
           sub_2213A60(&NetworkManager_TypeInfo);
@@ -602,64 +610,64 @@ LABEL_82:
         exchangeOriginLbAfter = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
         if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v35);
+          j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v37);
           exchangeOriginLbAfter = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
         }
-        v36 = this->fields.exchangeOriginItemList;
-        if ( v36 )
+        v38 = this->fields.exchangeOriginItemList;
+        if ( v38 )
         {
-          if ( v29 >= LODWORD(v36->max_length) )
+          if ( v31 >= LODWORD(v38->max_length) )
             goto LABEL_82;
-          v37 = v36->m_Items[v29];
-          if ( v37 )
+          v39 = v38->m_Items[v31];
+          if ( v39 )
           {
-            if ( v10 )
+            if ( v12 )
             {
               exchangeOriginLbAfter = (UnityEngine_Component_o *)UserItemMaster__GetEntityDefinitely(
-                                                                   v10,
+                                                                   v12,
                                                                    *(_QWORD *)(exchangeOriginLbAfter[7].fields.m_CachedPtr
                                                                              + 64),
-                                                                   v37->fields.objectId,
+                                                                   v39->fields.objectId,
                                                                    0);
               exchangeOriginCounts2After = this->fields.exchangeOriginCounts2After;
               if ( exchangeOriginCounts2After )
               {
-                if ( v29 >= LODWORD(exchangeOriginCounts2After->max_length) )
+                if ( v31 >= LODWORD(exchangeOriginCounts2After->max_length) )
                   goto LABEL_82;
                 if ( exchangeOriginLbAfter )
                 {
-                  v40 = this->fields.exchangeOriginItemList;
-                  if ( v40 )
+                  v42 = this->fields.exchangeOriginItemList;
+                  if ( v42 )
                   {
-                    if ( v29 >= LODWORD(v40->max_length) )
+                    if ( v31 >= LODWORD(v42->max_length) )
                       goto LABEL_82;
-                    v41 = v40->m_Items[v29];
-                    if ( v41 )
+                    v43 = v42->m_Items[v31];
+                    if ( v43 )
                     {
                       klass_high = HIDWORD(exchangeOriginLbAfter[1].klass);
-                      num = v41->fields.num;
-                      v44 = exchangeOriginCounts2After->m_Items[v29];
+                      num = v43->fields.num;
+                      v46 = exchangeOriginCounts2After->m_Items[v31];
                       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&completeNum, v38);
+                        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&completeNum, v40);
                       exchangeOriginLbAfter = (UnityEngine_Component_o *)LocalizationManager__GetNumberFormatLong(
                                                                            klass_high + num * completeNum,
                                                                            0);
-                      if ( v44 )
+                      if ( v46 )
                       {
-                        UILabel__set_text(v44, (System_String_o *)exchangeOriginLbAfter, 0);
+                        UILabel__set_text(v46, (System_String_o *)exchangeOriginLbAfter, 0);
                         exchangeOriginCountKinds2After = this->fields.exchangeOriginCountKinds2After;
                         if ( exchangeOriginCountKinds2After )
                         {
-                          if ( v29 >= LODWORD(exchangeOriginCountKinds2After->max_length) )
+                          if ( v31 >= LODWORD(exchangeOriginCountKinds2After->max_length) )
                             goto LABEL_82;
-                          v46 = exchangeOriginCountKinds2After->m_Items[v29];
+                          v48 = exchangeOriginCountKinds2After->m_Items[v31];
                           exchangeOriginLbAfter = (UnityEngine_Component_o *)LocalizationManager__Get(
                                                                                (System_String_o *)StringLiteral_14059/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/,
                                                                                0);
-                          if ( v46 )
+                          if ( v48 )
                           {
-                            ++v29;
-                            UILabel__set_text(v46, (System_String_o *)exchangeOriginLbAfter, 0);
+                            ++v31;
+                            UILabel__set_text(v48, (System_String_o *)exchangeOriginLbAfter, 0);
                             exchangeOriginItemList = this->fields.exchangeOriginItemList;
                             if ( exchangeOriginItemList )
                               continue;
@@ -683,34 +691,34 @@ LABEL_82:
       exchangeOriginLbAfter = (UnityEngine_Component_o *)this->fields.exchangeOriginDispObjectAfter;
       if ( exchangeOriginLbAfter )
       {
-        v47 = -1032847360;
+        v49 = -1032847360;
         goto LABEL_79;
       }
     }
 LABEL_72:
     sub_2213CDC(exchangeOriginLbAfter, *(_QWORD *)&completeNum);
   }
-  v11 = 0;
+  v13 = 0;
   while ( 1 )
   {
-    v12 = exchangeOriginItemList->max_length;
-    if ( (int)v11 >= (int)v12 )
+    v14 = exchangeOriginItemList->max_length;
+    if ( (int)v13 >= (int)v14 )
       break;
     exchangeOriginItemIconAfter = this->fields.exchangeOriginItemIconAfter;
     if ( !exchangeOriginItemIconAfter )
       goto LABEL_72;
-    if ( v11 >= LODWORD(exchangeOriginItemIconAfter->max_length) || v11 >= v12 )
+    if ( v13 >= LODWORD(exchangeOriginItemIconAfter->max_length) || v13 >= v14 )
       goto LABEL_82;
-    v14 = exchangeOriginItemList->m_Items[v11];
-    if ( v14 )
+    v16 = exchangeOriginItemList->m_Items[v13];
+    if ( v16 )
     {
-      v15 = v14->fields.objectId;
-      v16 = exchangeOriginItemIconAfter->m_Items[v11];
+      v17 = v16->fields.objectId;
+      v18 = exchangeOriginItemIconAfter->m_Items[v13];
       if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&completeNum, v8);
-      AtlasManager__SetItem(v16, v15, 0);
+        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, *(_QWORD *)&completeNum, v10);
+      AtlasManager__SetItem(v18, v17, 0);
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v17);
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v19);
       if ( !byte_5969EF2 )
       {
         sub_2213A60(&NetworkManager_TypeInfo);
@@ -719,64 +727,64 @@ LABEL_72:
       exchangeOriginLbAfter = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v17);
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&completeNum, v19);
         exchangeOriginLbAfter = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
       }
-      v18 = this->fields.exchangeOriginItemList;
-      if ( v18 )
+      v20 = this->fields.exchangeOriginItemList;
+      if ( v20 )
       {
-        if ( v11 >= LODWORD(v18->max_length) )
+        if ( v13 >= LODWORD(v20->max_length) )
           goto LABEL_82;
-        v19 = v18->m_Items[v11];
-        if ( v19 )
+        v21 = v20->m_Items[v13];
+        if ( v21 )
         {
-          if ( v10 )
+          if ( v12 )
           {
             exchangeOriginLbAfter = (UnityEngine_Component_o *)UserItemMaster__GetEntityDefinitely(
-                                                                 v10,
+                                                                 v12,
                                                                  *(_QWORD *)(exchangeOriginLbAfter[7].fields.m_CachedPtr
                                                                            + 64),
-                                                                 v19->fields.objectId,
+                                                                 v21->fields.objectId,
                                                                  0);
             exchangeOriginCountsAfter = this->fields.exchangeOriginCountsAfter;
             if ( exchangeOriginCountsAfter )
             {
-              if ( v11 >= LODWORD(exchangeOriginCountsAfter->max_length) )
+              if ( v13 >= LODWORD(exchangeOriginCountsAfter->max_length) )
                 goto LABEL_82;
               if ( exchangeOriginLbAfter )
               {
-                v22 = this->fields.exchangeOriginItemList;
-                if ( v22 )
+                v24 = this->fields.exchangeOriginItemList;
+                if ( v24 )
                 {
-                  if ( v11 >= LODWORD(v22->max_length) )
+                  if ( v13 >= LODWORD(v24->max_length) )
                     goto LABEL_82;
-                  v23 = v22->m_Items[v11];
-                  if ( v23 )
+                  v25 = v24->m_Items[v13];
+                  if ( v25 )
                   {
-                    v24 = HIDWORD(exchangeOriginLbAfter[1].klass);
-                    v25 = v23->fields.num;
-                    v26 = exchangeOriginCountsAfter->m_Items[v11];
+                    v26 = HIDWORD(exchangeOriginLbAfter[1].klass);
+                    v27 = v25->fields.num;
+                    v28 = exchangeOriginCountsAfter->m_Items[v13];
                     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&completeNum, v20);
+                      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&completeNum, v22);
                     exchangeOriginLbAfter = (UnityEngine_Component_o *)LocalizationManager__GetNumberFormatLong(
-                                                                         v24 + v25 * completeNum,
+                                                                         v26 + v27 * completeNum,
                                                                          0);
-                    if ( v26 )
+                    if ( v28 )
                     {
-                      UILabel__set_text(v26, (System_String_o *)exchangeOriginLbAfter, 0);
+                      UILabel__set_text(v28, (System_String_o *)exchangeOriginLbAfter, 0);
                       exchangeOriginCountKindsAfter = this->fields.exchangeOriginCountKindsAfter;
                       if ( exchangeOriginCountKindsAfter )
                       {
-                        if ( v11 >= LODWORD(exchangeOriginCountKindsAfter->max_length) )
+                        if ( v13 >= LODWORD(exchangeOriginCountKindsAfter->max_length) )
                           goto LABEL_82;
-                        v28 = exchangeOriginCountKindsAfter->m_Items[v11];
+                        v30 = exchangeOriginCountKindsAfter->m_Items[v13];
                         exchangeOriginLbAfter = (UnityEngine_Component_o *)LocalizationManager__Get(
                                                                              (System_String_o *)StringLiteral_14059/*"TRADE_EVENT_WITHDRAWAL_DIALOG_COUNT_KIND"*/,
                                                                              0);
-                        if ( v28 )
+                        if ( v30 )
                         {
-                          ++v11;
-                          UILabel__set_text(v28, (System_String_o *)exchangeOriginLbAfter, 0);
+                          ++v13;
+                          UILabel__set_text(v30, (System_String_o *)exchangeOriginLbAfter, 0);
                           exchangeOriginItemList = this->fields.exchangeOriginItemList;
                           if ( exchangeOriginItemList )
                             continue;
@@ -800,9 +808,9 @@ LABEL_72:
   exchangeOriginLbAfter = (UnityEngine_Component_o *)this->fields.exchangeOriginDispObject2After;
   if ( !exchangeOriginLbAfter )
     goto LABEL_72;
-  v47 = -1023279104;
+  v49 = -1023279104;
 LABEL_79:
-  v48 = *(float *)&v47;
+  v50 = *(float *)&v49;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangeOriginLbAfter, 0, 0);
   exchangeOriginLbAfter = (UnityEngine_Component_o *)this->fields.exchangeOriginLbAfter;
   if ( !exchangeOriginLbAfter )
@@ -810,10 +818,10 @@ LABEL_79:
   exchangeOriginLbAfter = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(exchangeOriginLbAfter, 0);
   if ( !exchangeOriginLbAfter )
     goto LABEL_72;
-  v50.fields.y = localPosition.fields.y;
-  v50.fields.z = localPosition.fields.z;
-  v50.fields.x = v48;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)exchangeOriginLbAfter, v50, 0);
+  v52.fields.y = y;
+  v52.fields.z = z;
+  v52.fields.x = v50;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)exchangeOriginLbAfter, v52, 0);
 }
 
 

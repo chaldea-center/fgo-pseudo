@@ -335,11 +335,12 @@ int32_t WeightRate___Il2CppFullySharedGenericType___getCount(WeightRate_T__o *th
 
   list = this->fields.list;
   if ( list )
-    LODWORD(list) = ((int32_t (*)(void))method->klass->rgctx_data->_26_System_Collections_Generic_List_WeightRate_WeightSeed_T___get_Item->methodPointer)();
+    LODWORD(list) = ((__int64 (*)(void))method->klass->rgctx_data->_26_System_Collections_Generic_List_WeightRate_WeightSeed_T___get_Item->methodPointer)();
   return (int)list;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullySharedGenericType___getData(
         WeightRate_T__o *this,
         int32_t keywieght,
@@ -366,6 +367,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullyS
   const void *v24; // x25
   int v25; // w25
   const void *v26; // x24
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v27; // x0
+  void *v28; // x1
   _QWORD v30[3]; // [xsp+8h] [xbp-48h] BYREF
   System_Collections_Generic_List_Enumerator_T__o v31; // [xsp+20h] [xbp-30h] BYREF
   __int64 v32; // [xsp+38h] [xbp-18h] BYREF
@@ -440,11 +443,14 @@ LABEL_8:
   if ( v25 == 5 )
     v11 = (char *)&v30[-1] - ((v10 + 15) & 0x1FFFFFFF0LL);
   memcpy((char *)&v30[-1] - ((v10 + 15) & 0x1FFFFFFF0LL), v11, v10);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v11, v10);
+  v27 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v11, v10);
+  result.monitor = v28;
+  result.klass = v27;
   return result;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullySharedGenericType___getData_64628772(
         WeightRate_T__o *this,
         int32_t keyWeight,
@@ -489,6 +495,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullyS
   const void *v42; // x19
   int v43; // w19
   const void *v44; // x19
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v45; // x0
+  void *v46; // x1
   char *v47; // [xsp+0h] [xbp-90h] BYREF
   void *monitor; // [xsp+8h] [xbp-88h]
   __int64 v49; // [xsp+10h] [xbp-80h]
@@ -636,7 +644,9 @@ LABEL_18:
   if ( v43 == 8 )
     v35 = v47;
   memcpy((char *)&v47 - ((actualSize + 15) & 0x1FFFFFFF0LL), v35, actualSize);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(monitor, v35, actualSize);
+  v45 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(monitor, v35, actualSize);
+  result.monitor = v46;
+  result.klass = v45;
   return result;
 }
 

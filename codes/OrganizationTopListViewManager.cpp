@@ -34,15 +34,17 @@ void OrganizationTopListViewManager___cctor(const MethodInfo *method)
   int32_t v32; // w5
   bool v33; // w6
   bool v34; // w7
-  System_Array_o *v35; // x19
+  System_Array_o *v35; // x0
+  System_RuntimeFieldHandle_o v36; // x1
+  System_Array_o *v37; // x19
   struct OrganizationTopListViewManager_StaticFields *static_fields; // x0
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  __int64 v43; // x0
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
+  int32_t v42; // w5
+  bool v43; // w6
+  bool v44; // w7
+  __int64 v45; // x0
 
   if ( (byte_596BD73 & 1) == 0 )
   {
@@ -113,8 +115,8 @@ void OrganizationTopListViewManager___cctor(const MethodInfo *method)
     if ( !v4 )
     {
 LABEL_15:
-      v43 = sub_2213D00(v4, v12);
-      sub_2213BA0(v43, 0);
+      v45 = sub_2213D00(v4, v12);
+      sub_2213BA0(v45, 0);
     }
   }
   if ( LODWORD(v1->max_length) <= 2 )
@@ -133,21 +135,20 @@ LABEL_14:
     v33,
     v34);
   v35 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v35,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__4636993D3E1DA4E9D6B8F87B79E8F7C6D018580D52661950EABC3845C5897A4D,
-    0);
+  v36.fields.value = Field__PrivateImplementationDetails__4636993D3E1DA4E9D6B8F87B79E8F7C6D018580D52661950EABC3845C5897A4D;
+  v37 = v35;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v35, v36, 0);
   static_fields = OrganizationTopListViewManager_TypeInfo->static_fields;
-  static_fields->normalKindList = (struct System_Int32_array *)v35;
+  static_fields->normalKindList = (struct System_Int32_array *)v37;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->normalKindList,
-    (int32_t)v35,
-    v37,
-    v38,
+    (int32_t)v37,
     v39,
     v40,
     v41,
-    v42);
+    v42,
+    v43,
+    v44);
 }
 
 
@@ -1335,7 +1336,7 @@ System_IAsyncResult_o *OrganizationTopListViewManager_CallbackFunc__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = result;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

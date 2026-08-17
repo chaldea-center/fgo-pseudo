@@ -107,12 +107,20 @@ UnityEngine_Color_o SelecCommandWindowCommandCard__GetColorFromHex(
         int32_t b,
         const MethodInfo *method)
 {
+  float v4; // s0
+  float v5; // s1
+  float v6; // s2
+  float v7; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = (float)r / 255.0;
-  result.fields.g = (float)g / 255.0;
-  result.fields.b = (float)b / 255.0;
-  result.fields.a = 1.0;
+  v4 = (float)r / 255.0;
+  v5 = (float)g / 255.0;
+  v6 = (float)b / 255.0;
+  v7 = 1.0;
+  result.fields.a = v7;
+  result.fields.b = v6;
+  result.fields.g = v5;
+  result.fields.r = v4;
   return result;
 }
 

@@ -688,13 +688,13 @@ bool RecommendSupportEquipSelectListViewItem__SetSortValue(
   int v9; // w10
   __int64 v10; // x2
   int32_t sortKind; // w8
-  int64_t v12; // x20
+  int64_t iconLabelInfo1_high; // x20
   RecommendSupportEquipSelectListViewItem_o *v13; // x21
   int32_t v14; // w3
   int32_t v15; // w1
   int32_t bonusKind2; // w8
   int32_t v17; // w8
-  int64_t v18; // x20
+  int64_t categoryIdList_low; // x20
   IconLabelInfo_o *v19; // x21
   struct ListViewManager_o *manager; // x8
   __int64 naturalAligment; // x11
@@ -727,7 +727,7 @@ bool RecommendSupportEquipSelectListViewItem__SetSortValue(
   __int64 v48; // x21
   __int64 v49; // x22
   struct ServantEntity_o *v50; // x8
-  int32_t v51; // w20
+  int32_t categoryIdList; // w20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v53; // [xsp+10h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v54; // [xsp+30h] [xbp-50h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v55; // 0:x0.16
@@ -948,15 +948,15 @@ LABEL_102:
         this = (RecommendSupportEquipSelectListViewItem_o *)v4->fields.userSvtEntity;
         if ( this )
         {
-          v18 = *((int *)this + 100);
+          categoryIdList_low = SLODWORD(this[1].fields.categoryIdList);
           v19 = v4->fields.iconLabelInfo1;
-          v4->fields.sortValue1 = v18;
+          v4->fields.sortValue1 = categoryIdList_low;
           this = (RecommendSupportEquipSelectListViewItem_o *)UserServantEntity__getLevelMax(
                                                                 (UserServantEntity_o *)this,
                                                                 0);
           if ( v19 )
           {
-            IconLabelInfo__Set_47880948(v19, 2, v18, (int32_t)this, 0, 0, 0, 0, 0, 0);
+            IconLabelInfo__Set_47880948(v19, 2, categoryIdList_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
 LABEL_106:
             LOBYTE(this) = 1;
             return (char)this;
@@ -975,9 +975,9 @@ LABEL_108:
         this = (RecommendSupportEquipSelectListViewItem_o *)v4->fields.userSvtEntity;
         if ( !this )
           goto LABEL_108;
-        v12 = *((int *)this + 103);
+        iconLabelInfo1_high = SHIDWORD(this[1].fields.iconLabelInfo1);
         v28 = (RecommendSupportEquipSelectListViewItem_o *)v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v12;
+        v4->fields.sortValue1 = iconLabelInfo1_high;
         this = (RecommendSupportEquipSelectListViewItem_o *)UserServantEntity__get_HpBoostValue(
                                                               (UserServantEntity_o *)this,
                                                               0);
@@ -992,9 +992,9 @@ LABEL_108:
         this = (RecommendSupportEquipSelectListViewItem_o *)v4->fields.userSvtEntity;
         if ( !this )
           goto LABEL_108;
-        v12 = *((int *)this + 102);
+        iconLabelInfo1_high = SLODWORD(this[1].fields.iconLabelInfo1);
         v13 = (RecommendSupportEquipSelectListViewItem_o *)v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v12;
+        v4->fields.sortValue1 = iconLabelInfo1_high;
         this = (RecommendSupportEquipSelectListViewItem_o *)UserServantEntity__get_AtkBoostValue(
                                                               (UserServantEntity_o *)this,
                                                               0);
@@ -1004,7 +1004,7 @@ LABEL_108:
         this = v13;
         v15 = 5;
       }
-      LODWORD(cost) = v12;
+      LODWORD(cost) = iconLabelInfo1_high;
 LABEL_55:
       IconLabelInfo__Set_47880948((IconLabelInfo_o *)this, v15, cost, v14, 0, 0, 0, 0, 0, 0);
 LABEL_56:
@@ -1013,11 +1013,11 @@ LABEL_56:
         goto LABEL_108;
       iconLabelInfo1 = v4->fields.iconLabelInfo2;
 LABEL_104:
-      v51 = *((_DWORD *)this + 100);
+      categoryIdList = (int32_t)this[1].fields.categoryIdList;
       this = (RecommendSupportEquipSelectListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( iconLabelInfo1 )
       {
-        IconLabelInfo__Set_47880948(iconLabelInfo1, 2, v51, (int32_t)this, 0, 0, 0, 0, 0, 0);
+        IconLabelInfo__Set_47880948(iconLabelInfo1, 2, categoryIdList, (int32_t)this, 0, 0, 0, 0, 0, 0);
         goto LABEL_106;
       }
       goto LABEL_108;

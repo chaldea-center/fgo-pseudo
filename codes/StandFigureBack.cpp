@@ -671,26 +671,30 @@ void StandFigureBack__Fadeout(StandFigureBack_o *this, System_Action_o *callback
   UnityEngine_Object_o *closeTransform; // x20
   UnityEngine_Transform_o *v16; // x20
   __int64 v17; // x1
-  UnityEngine_GameObject_o *v18; // x20
-  StandFigureBack_c *v19; // x0
-  __int64 v20; // x1
-  TweenPosition_o *v21; // x20
-  UnityEngine_GameObject_o *v22; // x0
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  int32_t v29; // w1
-  System_String_o *v30; // x2
-  System_String_o *v31; // x3
-  int32_t v32; // w4
-  int32_t v33; // w5
-  bool v34; // w6
-  bool v35; // w7
-  UnityEngine_Vector3_o v36; // 0:kr14_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_GameObject_o *v21; // x20
+  StandFigureBack_c *v22; // x0
+  __int64 v23; // x1
+  TweenPosition_o *v24; // x20
+  UnityEngine_GameObject_o *v25; // x0
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  int32_t v32; // w1
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596FD60 & 1) == 0 )
   {
@@ -743,45 +747,51 @@ void StandFigureBack__Fadeout(StandFigureBack_o *this, System_Action_o *callback
         position = UnityEngine_Transform__get_position(this->fields.closeTransform, 0);
         if ( !v16 )
           goto LABEL_26;
-        v36 = UnityEngine_Transform__InverseTransformPoint(v16, position, 0);
-        v18 = this->fields.baseWindow;
-        v19 = StandFigureBack_TypeInfo;
+        v40 = UnityEngine_Transform__InverseTransformPoint(v16, position, 0);
+        x = v40.fields.x;
+        y = v40.fields.y;
+        z = v40.fields.z;
+        v21 = this->fields.baseWindow;
+        v22 = StandFigureBack_TypeInfo;
         if ( !*(&StandFigureBack_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(StandFigureBack_TypeInfo, v17);
-          v19 = StandFigureBack_TypeInfo;
+          v22 = StandFigureBack_TypeInfo;
         }
-        v21 = TweenPosition__Begin(v18, v19->static_fields->OPEN_TIME, v36, 0);
+        v41.fields.x = x;
+        v41.fields.y = y;
+        v41.fields.z = z;
+        v24 = TweenPosition__Begin(v21, v22->static_fields->OPEN_TIME, v41, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20);
-        gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0, 0);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+        gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v24, 0, 0);
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
-          if ( v21 )
+          if ( v24 )
           {
-            v21->fields.method = 3;
-            v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-            v21->fields.eventReceiver = v22;
+            v24->fields.method = 3;
+            v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+            v24->fields.eventReceiver = v25;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v21->fields.eventReceiver,
-              (int32_t)v22,
-              v23,
-              v24,
-              v25,
+              (MissionNaviTransitionBoardItem_o *)&v24->fields.eventReceiver,
+              (int32_t)v25,
               v26,
               v27,
-              v28);
-            v29 = StringLiteral_6259/*"EndFadeout"*/;
-            v21->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6259/*"EndFadeout"*/;
-            sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)&v21->fields.callWhenFinished,
+              v28,
               v29,
               v30,
-              v31,
+              v31);
+            v32 = StringLiteral_6259/*"EndFadeout"*/;
+            v24->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6259/*"EndFadeout"*/;
+            sub_2213A04(
+              (MissionNaviTransitionBoardItem_o *)&v24->fields.callWhenFinished,
               v32,
               v33,
               v34,
-              v35);
+              v35,
+              v36,
+              v37,
+              v38);
             return;
           }
 LABEL_26:
@@ -925,7 +935,7 @@ void StandFigureBack__InitStandFigure(StandFigureBack_o *this, System_Action_o *
   UnityEngine_Object_o *closeTransform; // x20
   UnityEngine_Transform_o *v20; // x8
   UnityEngine_Transform_o *v21; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FD54 & 1) == 0 )
@@ -1655,6 +1665,7 @@ bool StandFigureBack__WaitForLoadAllAssetBundle_d__33__MoveNext(
   void *v36; // x8
   UnityEngine_Behaviour_o *v37; // x0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v41; // [xsp+20h] [xbp-60h] BYREF
 
@@ -1771,8 +1782,9 @@ LABEL_22:
         v2->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
         sub_2213A04(p__2__current, 0, v28, v29, v30, v31, v32, v33);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
       this = (StandFigureBack__WaitForLoadAllAssetBundle_d__33_o *)_4__this->fields.standFigureCollectList;
       if ( this )

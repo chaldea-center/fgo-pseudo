@@ -62,6 +62,7 @@ bool FGOMeshExplodeFader__FadeOut_d__2__MoveNext(FGOMeshExplodeFader__FadeOut_d_
   float v11; // s0
   float t_5__2; // s8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   __int64 v15; // x1
   __int64 v16; // x2
   UnityEngine_Object_o *gameObject; // x19
@@ -102,8 +103,9 @@ LABEL_8:
     v2->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
     sub_2213A04(p__2__current, 0, v5, v6, v7, v8, v9, v10);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )

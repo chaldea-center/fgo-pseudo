@@ -1364,7 +1364,7 @@ LABEL_79:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v74);
         this = (WarBoardAI__Think_d__11_o *)BalanceConfig_TypeInfo;
       }
-      if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 960LL) )
+      if ( !LOBYTE(this[2].fields._allRouteList_5__2[24].klass) )
         goto LABEL_66;
       if ( !v73 )
         goto LABEL_187;
@@ -1414,12 +1414,12 @@ LABEL_77:
     }
     this = (WarBoardAI__Think_d__11_o *)BalanceConfig_TypeInfo;
 LABEL_66:
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[3].monitor) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v74);
       this = (WarBoardAI__Think_d__11_o *)BalanceConfig_TypeInfo;
     }
-    if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 961LL)
+    if ( !BYTE1(this[2].fields._allRouteList_5__2[24].klass)
       || (this = (WarBoardAI__Think_d__11_o *)WarBoardAI__CheckWasteRoute(
                                                 (WarBoardAI_o *)this,
                                                 (System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *)v73,

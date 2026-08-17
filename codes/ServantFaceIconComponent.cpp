@@ -107,8 +107,11 @@ void ServantFaceIconComponent__AdjustIconLabelPos(
   UnityEngine_Object_o *iconLabel; // x20
   __int64 v8; // x1
   UnityEngine_Component_o *transform; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s11
+  float y; // s12
+  float z; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FD13 & 1) == 0 )
   {
@@ -127,16 +130,19 @@ void ServantFaceIconComponent__AdjustIconLabelPos(
     if ( !transform )
       goto LABEL_14;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    x = localPosition.fields.x;
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
     if ( !this->fields.isAdjustIconLabelPos )
       this->fields.iconLabelInitPos = localPosition;
     transform = (UnityEngine_Component_o *)this->fields.iconLabel;
     if ( !transform || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0)) == 0 )
 LABEL_14:
       sub_2213CDC(transform, v8);
-    v11.fields.x = localPosition.fields.x + offsetX;
-    v11.fields.y = localPosition.fields.y + offsetY;
-    v11.fields.z = localPosition.fields.z;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v11, 0);
+    v14.fields.x = x + offsetX;
+    v14.fields.y = y + offsetY;
+    v14.fields.z = z;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v14, 0);
     this->fields.isAdjustIconLabelPos = 1;
   }
 }
@@ -153,7 +159,7 @@ void ServantFaceIconComponent__AdjustIconLabelScale(
   UnityEngine_Object_o *iconLabel; // x20
   __int64 v8; // x1
   UnityEngine_Component_o *transform; // x0
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   z = scale.fields.z;
@@ -228,8 +234,8 @@ void ServantFaceIconComponent__AdjustRaritySpritePosY(
 void ServantFaceIconComponent__Awake(ServantFaceIconComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *typeSprite; // x0
-  float v4; // s8
   unsigned int localPosition; // s0
+  float v5; // s8
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
   typeSprite = (UnityEngine_Component_o *)this->fields.typeSprite;
@@ -237,14 +243,14 @@ void ServantFaceIconComponent__Awake(ServantFaceIconComponent_o *this, const Met
     || (typeSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(typeSprite, 0)) == 0
     || (localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)typeSprite, 0),
         (typeSprite = (UnityEngine_Component_o *)this->fields.typeSprite) == 0)
-    || (v4 = *(float *)&localPosition,
+    || (v5 = *(float *)&localPosition,
         (typeSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(typeSprite, 0)) == 0) )
   {
     sub_2213CDC(typeSprite, method);
   }
   v6.fields.z = 0.0;
   v6.fields.y = -64.0;
-  v6.fields.x = v4;
+  v6.fields.x = v5;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)typeSprite, v6, 0);
 }
 
@@ -1408,7 +1414,11 @@ void ServantFaceIconComponent__ReSizeClassIcon(ServantFaceIconComponent_o *this,
   UnityEngine_Object_o *classSprite; // x20
   __int64 v4; // x1
   UnityEngine_Component_o *transform; // x0
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FD1B & 1) == 0 )
   {
@@ -1432,6 +1442,9 @@ void ServantFaceIconComponent__ReSizeClassIcon(ServantFaceIconComponent_o *this,
         transform = (UnityEngine_Component_o *)this->fields.classSprite;
         if ( transform )
         {
+          x = localScale.fields.x;
+          y = localScale.fields.y;
+          z = localScale.fields.z;
           UIWidget__set_pivot((UIWidget_o *)transform, 4, 0);
           transform = (UnityEngine_Component_o *)this->fields.classSprite;
           if ( transform )
@@ -1445,7 +1458,10 @@ void ServantFaceIconComponent__ReSizeClassIcon(ServantFaceIconComponent_o *this,
               transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
               if ( transform )
               {
-                UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, localScale, 0);
+                v10.fields.x = x;
+                v10.fields.y = y;
+                v10.fields.z = z;
+                UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v10, 0);
                 transform = (UnityEngine_Component_o *)this->fields.classSprite;
                 if ( transform )
                 {
@@ -1505,6 +1521,7 @@ void ServantFaceIconComponent__ResetIconLabelScale(ServantFaceIconComponent_o *t
   UnityEngine_Object_o *iconLabel; // x20
   __int64 v4; // x1
   UIIconLabel_o *transform; // x0
+  UnityEngine_Vector2Int_o textLabelInitSize; // x1
 
   if ( (byte_596FD16 & 1) == 0 )
   {
@@ -1520,7 +1537,8 @@ void ServantFaceIconComponent__ResetIconLabelScale(ServantFaceIconComponent_o *t
     {
       transform = this->fields.iconLabel;
       if ( !transform
-        || (UIIconLabel__SetTextLabelSize(transform, this->fields.textLabelInitSize, 0),
+        || (textLabelInitSize = this->fields.textLabelInitSize,
+            UIIconLabel__SetTextLabelSize(transform, textLabelInitSize, 0),
             (transform = this->fields.iconLabel) == 0)
         || (transform = (UIIconLabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0 )
       {

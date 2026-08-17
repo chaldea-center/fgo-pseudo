@@ -3083,7 +3083,7 @@ void CommandCardEquipmentControl__PlayLockEffect(
         const MethodInfo *method)
 {
   Il2CppObject *lockEffect; // x19
-  __int64 Component_object; // x0
+  CombineCommandCardComponent_o *Component_object; // x0
   __int64 v9; // x1
   System_String_o *v10; // x2
   System_String_o *v11; // x3
@@ -3108,22 +3108,22 @@ void CommandCardEquipmentControl__PlayLockEffect(
   lockEffect = (Il2CppObject *)this->fields.lockEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&lockCardIdx);
-  Component_object = (__int64)UnityEngine_Object__Instantiate_object_(
-                                lockEffect,
-                                (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Object__Instantiate_object_(
+                                                        lockEffect,
+                                                        (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Component_object )
     goto LABEL_20;
-  Component_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                (UnityEngine_GameObject_o *)Component_object,
-                                (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                        (UnityEngine_GameObject_o *)Component_object,
+                                                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
   if ( !Component_object )
     goto LABEL_20;
   v16 = (UnityEngine_Component_o *)Component_object;
   if ( callback )
   {
-    *(_QWORD *)(Component_object + 216) = callback;
+    Component_object->fields.tr_criticaleffect = (struct UnityEngine_GameObject_o *)callback;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)(Component_object + 216),
+      (MissionNaviTransitionBoardItem_o *)&Component_object->fields.tr_criticaleffect,
       (int32_t)callback,
       v10,
       v11,
@@ -3132,35 +3132,37 @@ void CommandCardEquipmentControl__PlayLockEffect(
       v14,
       v15);
   }
-  Component_object = (__int64)UnityEngine_Component__get_transform(v16, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(v16, 0);
   commandCardList = this->fields.commandCardList;
   if ( !commandCardList )
     goto LABEL_20;
   if ( LODWORD(commandCardList->max_length) <= lockCardIdx )
     sub_2213CE4(Component_object);
   v18 = (UnityEngine_Transform_o *)Component_object;
-  Component_object = (__int64)commandCardList->m_Items[lockCardIdx];
+  Component_object = commandCardList->m_Items[lockCardIdx];
   if ( !Component_object )
     goto LABEL_20;
-  Component_object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(
+                                                        (UnityEngine_Component_o *)Component_object,
+                                                        0);
   if ( !v18 )
     goto LABEL_20;
   UnityEngine_Transform__set_parent(v18, (UnityEngine_Transform_o *)Component_object, 0);
-  Component_object = (__int64)UnityEngine_Component__get_transform(v16, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(v16, 0);
   v19 = (UnityEngine_Transform_o *)Component_object;
   if ( !byte_5969AE0 )
   {
-    Component_object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Component_object = (CombineCommandCardComponent_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v19 )
     goto LABEL_20;
   UnityEngine_Transform__set_localPosition(v19, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  Component_object = (__int64)UnityEngine_Component__get_transform(v16, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(v16, 0);
   v20 = (UnityEngine_Transform_o *)Component_object;
   if ( !byte_5969AE5 )
   {
-    Component_object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Component_object = (CombineCommandCardComponent_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v20 )
@@ -3418,7 +3420,7 @@ void CommandCardEquipmentControl__PlayUnlockEffect(
         const MethodInfo *method)
 {
   Il2CppObject *unlockEffect; // x21
-  __int64 Component_object; // x0
+  CombineCommandCardComponent_o *Component_object; // x0
   __int64 v9; // x1
   System_String_o *v10; // x2
   System_String_o *v11; // x3
@@ -3444,22 +3446,22 @@ void CommandCardEquipmentControl__PlayUnlockEffect(
   unlockEffect = (Il2CppObject *)this->fields.unlockEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&unlockCardIdx);
-  Component_object = (__int64)UnityEngine_Object__Instantiate_object_(
-                                unlockEffect,
-                                (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Object__Instantiate_object_(
+                                                        unlockEffect,
+                                                        (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Component_object )
     goto LABEL_23;
-  Component_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                (UnityEngine_GameObject_o *)Component_object,
-                                (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                        (UnityEngine_GameObject_o *)Component_object,
+                                                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommandCodeEffectComponent___);
   if ( !Component_object )
     goto LABEL_23;
   v16 = (UnityEngine_Component_o *)Component_object;
   if ( callback )
   {
-    *(_QWORD *)(Component_object + 216) = callback;
+    Component_object->fields.tr_criticaleffect = (struct UnityEngine_GameObject_o *)callback;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)(Component_object + 216),
+      (MissionNaviTransitionBoardItem_o *)&Component_object->fields.tr_criticaleffect,
       (int32_t)callback,
       v10,
       v11,
@@ -3468,35 +3470,37 @@ void CommandCardEquipmentControl__PlayUnlockEffect(
       v14,
       v15);
   }
-  Component_object = (__int64)UnityEngine_Component__get_transform(v16, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(v16, 0);
   commandCardList = this->fields.commandCardList;
   if ( !commandCardList )
     goto LABEL_23;
   if ( LODWORD(commandCardList->max_length) <= unlockCardIdx )
     goto LABEL_24;
   v18 = (UnityEngine_Transform_o *)Component_object;
-  Component_object = (__int64)commandCardList->m_Items[unlockCardIdx];
+  Component_object = commandCardList->m_Items[unlockCardIdx];
   if ( !Component_object )
     goto LABEL_23;
-  Component_object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(
+                                                        (UnityEngine_Component_o *)Component_object,
+                                                        0);
   if ( !v18 )
     goto LABEL_23;
   UnityEngine_Transform__set_parent(v18, (UnityEngine_Transform_o *)Component_object, 0);
-  Component_object = (__int64)UnityEngine_Component__get_transform(v16, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(v16, 0);
   v19 = (UnityEngine_Transform_o *)Component_object;
   if ( !byte_5969AE0 )
   {
-    Component_object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Component_object = (CombineCommandCardComponent_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v19 )
     goto LABEL_23;
   UnityEngine_Transform__set_localPosition(v19, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  Component_object = (__int64)UnityEngine_Component__get_transform(v16, 0);
+  Component_object = (CombineCommandCardComponent_o *)UnityEngine_Component__get_transform(v16, 0);
   v20 = (UnityEngine_Transform_o *)Component_object;
   if ( !byte_5969AE5 )
   {
-    Component_object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    Component_object = (CombineCommandCardComponent_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v20
@@ -3509,10 +3513,10 @@ LABEL_23:
   if ( LODWORD(v21->max_length) <= unlockCardIdx )
 LABEL_24:
     sub_2213CE4(Component_object);
-  Component_object = (__int64)v21->m_Items[unlockCardIdx];
+  Component_object = v21->m_Items[unlockCardIdx];
   if ( !Component_object )
     goto LABEL_23;
-  CombineCommandCardComponent__HideUnlockInfo((CombineCommandCardComponent_o *)Component_object, 0);
+  CombineCommandCardComponent__HideUnlockInfo(Component_object, 0);
   CommandCodeEffectComponent__PlayAnimation((CommandCodeEffectComponent_o *)v16, v22);
 }
 
@@ -3945,6 +3949,7 @@ LABEL_10:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommandCardEquipmentControl__SetCommandCardList(CommandCardEquipmentControl_o *this, const MethodInfo *method)
 {
   __int64 baseUserServantEntity; // x0
@@ -3962,48 +3967,53 @@ void CommandCardEquipmentControl__SetCommandCardList(CommandCardEquipmentControl
   __int64 v15; // x27
   int64_t v16; // x25
   UnityEngine_GameObject_o *gameObject; // x0
+  float v18; // s1 OVERLAPPED
   float v19; // s0
-  __int64 (*v20)(void); // x9
+  int v20; // s2
+  float v21; // s0
+  __int64 (*v22)(void); // x9
   struct CombineCommandCardComponent_array *commandCardList; // x8
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v23; // x29
-  __int64 v24; // x28
+  unsigned __int64 v25; // x29
+  __int64 v26; // x28
   Il2CppClass *klass; // x8
   unsigned __int64 namespaze_low; // x9
-  int32_t v27; // w26
-  struct CombineCommandCardComponent_array *v28; // x8
-  CombineCommandCardComponent_o *v29; // x24
-  System_String_o *v30; // x2
-  System_String_o *v31; // x3
-  int32_t v32; // w4
-  int32_t v33; // w5
-  bool v34; // w6
-  bool v35; // w7
-  BattleCommandData_o *v36; // x25
+  int32_t v29; // w26
+  struct CombineCommandCardComponent_array *v30; // x8
+  CombineCommandCardComponent_o *v31; // x24
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  BattleCommandData_o *v38; // x25
   struct UserServantCommandCodeEntity_o *baseUserServantCommandCodeEntity; // x8
   struct System_Int64_array *userCommandCodeIds; // x9
-  Il2CppObject *v39; // x23
-  __int64 v40; // x21
-  __int64 v41; // x26
-  struct System_Int64_array *v42; // x8
-  int64_t v43; // x2
+  Il2CppObject *v41; // x23
+  __int64 v42; // x21
+  __int64 v43; // x26
+  struct System_Int64_array *v44; // x8
+  int64_t v45; // x2
   struct System_Int32_array *commandCardParam; // x8
-  int32_t v45; // w3
-  const MethodInfo *v46; // x2
-  bool v47; // zf
-  System_String_o *v49; // x2
-  System_String_o *v50; // x3
-  int32_t v51; // w4
-  int32_t v52; // w5
-  bool v53; // w6
-  bool v54; // w7
+  int32_t v47; // w3
+  const MethodInfo *v48; // x2
+  bool v49; // zf
+  float v50; // s3 OVERLAPPED
+  float v51; // s0
+  float v52; // s1
+  float v53; // s2
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
   struct System_Action_o *LoadAfterCallback; // x20
   int32_t limitCount; // [xsp+4h] [xbp-7Ch]
   UserServantCommandCardEntity_o *entity; // [xsp+8h] [xbp-78h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v58; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v59; // 0:x0.16
-  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v63; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v64; // 0:x0.16
 
   if ( (byte_5974A5E & 1) == 0 )
   {
@@ -4089,9 +4099,9 @@ void CommandCardEquipmentControl__SetCommandCardList(CommandCardEquipmentControl
   v16 = *(_QWORD *)(*(_QWORD *)(baseUserServantEntity + 184) + 64LL);
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-  *(_QWORD *)&v58.fields.currentCryptoKey = v14;
-  *(_QWORD *)&v58.fields.fakeValue = v15;
-  baseUserServantEntity = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v58, 0);
+  *(_QWORD *)&v63.fields.currentCryptoKey = v14;
+  *(_QWORD *)&v63.fields.fakeValue = v15;
+  baseUserServantEntity = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v63, 0);
   if ( !v12 )
     goto LABEL_69;
   UserServantCommandCardMaster__TryGetEntity(
@@ -4104,27 +4114,27 @@ void CommandCardEquipmentControl__SetCommandCardList(CommandCardEquipmentControl
   if ( !baseUserServantEntity )
     goto LABEL_69;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseUserServantEntity, 0);
-  v60.fields.y = -15.5;
+  v18 = -15.5;
   if ( this->fields._IsTransformServant_k__BackingField )
   {
-    v60.fields.y = -18.0;
-    v60.fields.x = -270.0;
+    v18 = -18.0;
+    v19 = -270.0;
   }
   else
   {
-    v60.fields.x = -258.0;
+    v19 = -258.0;
   }
-  v60.fields.z = 0.0;
-  GameObjectExtensions__SetLocalPosition(gameObject, v60, 0);
+  v20 = 0;
+  GameObjectExtensions__SetLocalPosition(gameObject, *(UnityEngine_Vector3_o *)(&v18 - 1), 0);
   baseUserServantEntity = (__int64)this->fields.cardBaseGrid;
   if ( !baseUserServantEntity )
     goto LABEL_69;
-  v19 = 135.0;
+  v21 = 135.0;
   if ( !this->fields._IsTransformServant_k__BackingField )
-    v19 = 130.0;
-  v20 = *(__int64 (**)(void))(*(_QWORD *)baseUserServantEntity + 440LL);
-  *(float *)(baseUserServantEntity + 48) = v19;
-  baseUserServantEntity = v20();
+    v21 = 130.0;
+  v22 = *(__int64 (**)(void))(*(_QWORD *)baseUserServantEntity + 440LL);
+  *(float *)(baseUserServantEntity + 48) = v21;
+  baseUserServantEntity = v22();
   commandCardList = this->fields.commandCardList;
   if ( !commandCardList )
     goto LABEL_69;
@@ -4133,118 +4143,118 @@ void CommandCardEquipmentControl__SetCommandCardList(CommandCardEquipmentControl
   {
     if ( v10 )
     {
-      v23 = 0;
-      v24 = (unsigned int)max_length;
+      v25 = 0;
+      v26 = (unsigned int)max_length;
       while ( 1 )
       {
         klass = v10[9].klass;
         if ( klass )
         {
           namespaze_low = LODWORD(klass->_1.namespaze);
-          if ( (__int64)v23 < (int)namespaze_low )
+          if ( (__int64)v25 < (int)namespaze_low )
           {
-            if ( v23 >= namespaze_low )
+            if ( v25 >= namespaze_low )
               goto LABEL_70;
-            v27 = *((_DWORD *)&klass->_1.byval_arg.data + v23);
-            if ( (unsigned int)(v27 - 1) <= 2 )
+            v29 = *((_DWORD *)&klass->_1.byval_arg.data + v25);
+            if ( (unsigned int)(v29 - 1) <= 2 )
             {
-              v28 = this->fields.commandCardList;
-              if ( !v28 )
+              v30 = this->fields.commandCardList;
+              if ( !v30 )
                 break;
-              if ( v23 >= LODWORD(v28->max_length) )
+              if ( v25 >= LODWORD(v30->max_length) )
                 goto LABEL_70;
-              v29 = v28->m_Items[v23];
+              v31 = v30->m_Items[v25];
               baseUserServantEntity = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-              if ( !v29 )
+              if ( !v31 )
                 break;
-              v29->fields.target = (struct UnityEngine_GameObject_o *)baseUserServantEntity;
+              v31->fields.target = (struct UnityEngine_GameObject_o *)baseUserServantEntity;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)&v29->fields.target,
+                (MissionNaviTransitionBoardItem_o *)&v31->fields.target,
                 baseUserServantEntity,
-                v30,
-                v31,
                 v32,
                 v33,
                 v34,
-                v35);
-              v36 = (BattleCommandData_o *)sub_2213CCC(BattleCommandData_TypeInfo);
-              BattleCommandData___ctor_53637188(v36, v27, v5, limitCount, 0, -1, 0);
-              if ( !v36 )
+                v35,
+                v36,
+                v37);
+              v38 = (BattleCommandData_o *)sub_2213CCC(BattleCommandData_TypeInfo);
+              BattleCommandData___ctor_53637188(v38, v29, v5, limitCount, 0, -1, 0);
+              if ( !v38 )
                 break;
               baseUserServantCommandCodeEntity = this->fields.baseUserServantCommandCodeEntity;
-              v36->fields.markindex = v23;
-              v36->fields.servantCardIdsIndex = v23;
+              v38->fields.markindex = v25;
+              v38->fields.servantCardIdsIndex = v25;
               if ( baseUserServantCommandCodeEntity )
               {
                 userCommandCodeIds = baseUserServantCommandCodeEntity->fields.userCommandCodeIds;
                 if ( !userCommandCodeIds )
                   break;
-                if ( v23 >= LODWORD(userCommandCodeIds->max_length) )
+                if ( v25 >= LODWORD(userCommandCodeIds->max_length) )
 LABEL_70:
                   sub_2213CE4(baseUserServantEntity);
-                method = (const MethodInfo *)userCommandCodeIds->m_Items[v23];
-                v36->fields.userCommandCodeId = (int64_t)method;
+                method = (const MethodInfo *)userCommandCodeIds->m_Items[v25];
+                v38->fields.userCommandCodeId = (int64_t)method;
                 if ( (__int64)method >= 1 )
                 {
                   if ( !MasterData_object )
                     break;
-                  v39 = MasterData_object;
+                  v41 = MasterData_object;
                   baseUserServantEntity = (__int64)DataMasterBase_object__object__long___GetEntity(
                                                      (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                                      (int64_t)method,
                                                      (const MethodInfo_3F13190 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
                   if ( !baseUserServantEntity )
                     break;
-                  v41 = *(_QWORD *)(baseUserServantEntity + 80);
-                  v40 = *(_QWORD *)(baseUserServantEntity + 88);
+                  v43 = *(_QWORD *)(baseUserServantEntity + 80);
+                  v42 = *(_QWORD *)(baseUserServantEntity + 88);
                   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
                     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-                  *(_QWORD *)&v59.fields.currentCryptoKey = v41;
-                  *(_QWORD *)&v59.fields.fakeValue = v40;
-                  baseUserServantEntity = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v59, 0);
+                  *(_QWORD *)&v64.fields.currentCryptoKey = v43;
+                  *(_QWORD *)&v64.fields.fakeValue = v42;
+                  baseUserServantEntity = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v64, 0);
                   baseUserServantCommandCodeEntity = this->fields.baseUserServantCommandCodeEntity;
-                  MasterData_object = v39;
-                  v36->fields.commandCodeId = baseUserServantEntity;
+                  MasterData_object = v41;
+                  v38->fields.commandCodeId = baseUserServantEntity;
                   if ( !baseUserServantCommandCodeEntity )
                     break;
                 }
-                v42 = baseUserServantCommandCodeEntity->fields.userCommandCodeIds;
-                if ( !v42 )
+                v44 = baseUserServantCommandCodeEntity->fields.userCommandCodeIds;
+                if ( !v44 )
                   break;
-                if ( v23 >= LODWORD(v42->max_length) )
+                if ( v25 >= LODWORD(v44->max_length) )
                   goto LABEL_70;
-                v43 = v42->m_Items[v23];
+                v45 = v44->m_Items[v25];
               }
               else
               {
-                v43 = -1;
+                v45 = -1;
               }
               if ( entity && (commandCardParam = entity->fields.commandCardParam) != 0 )
               {
-                if ( v23 >= LODWORD(commandCardParam->max_length) )
+                if ( v25 >= LODWORD(commandCardParam->max_length) )
                   goto LABEL_70;
-                v45 = commandCardParam->m_Items[v23];
+                v47 = commandCardParam->m_Items[v25];
               }
               else
               {
-                v45 = 0;
+                v47 = 0;
               }
-              v36->fields.commandCardParam = v45;
-              CombineCommandCardComponent__DispCommandCard(v29, v36, v43, v45, 0, 0, 0);
-              v47 = !CommandCardEquipmentControl__IsTransformedServant(this, this->fields.displayTransformIndex, v46);
-              v61.fields.a = 1.0;
-              if ( v47 )
-                v61.fields.r = 1.0;
+              v38->fields.commandCardParam = v47;
+              CombineCommandCardComponent__DispCommandCard(v31, v38, v45, v47, 0, 0, 0);
+              v49 = !CommandCardEquipmentControl__IsTransformedServant(this, this->fields.displayTransformIndex, v48);
+              v50 = 1.0;
+              if ( v49 )
+                v51 = 1.0;
               else
-                v61.fields.r = 0.5;
-              v61.fields.g = v61.fields.r;
-              v61.fields.b = v61.fields.r;
-              CombineCommandCardComponent__SetColor(v29, v61, 0);
-              CombineCommandCardComponent__SetLayout(v29, this->fields.positionOffsetY, this->fields.scaleOffset, 0);
+                v51 = 0.5;
+              v52 = v51;
+              v53 = v51;
+              CombineCommandCardComponent__SetColor(v31, *(UnityEngine_Color_o *)(&v50 - 3), 0);
+              CombineCommandCardComponent__SetLayout(v31, this->fields.positionOffsetY, this->fields.scaleOffset, 0);
             }
           }
         }
-        if ( v24 == ++v23 )
+        if ( v26 == ++v25 )
           goto LABEL_66;
       }
     }
@@ -4257,7 +4267,7 @@ LABEL_66:
   if ( LoadAfterCallback )
   {
     this->fields.LoadAfterCallback = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.LoadAfterCallback, 0, v49, v50, v51, v52, v53, v54);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.LoadAfterCallback, 0, v54, v55, v56, v57, v58, v59);
     ((void (__fastcall *)(intptr_t, intptr_t))LoadAfterCallback->fields.invoke_impl)(
       LoadAfterCallback->fields.method_code,
       LoadAfterCallback->fields.method);
@@ -5675,6 +5685,7 @@ bool CommandCardEquipmentControl__PlayReplaceEffect_d__127__MoveNext(
   int32_t v28; // w5
   bool v29; // w6
   bool v30; // w7
+  bool result; // w0
   struct UserCommandCodeEntity_o *baseUserCommandCodeEntity; // x8
   __int64 v33; // x22
   __int64 v34; // x23
@@ -5759,8 +5770,9 @@ bool CommandCardEquipmentControl__PlayReplaceEffect_d__127__MoveNext(
               v2->fields.__2__current = (Il2CppObject *)v23;
               p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
               sub_2213A04(p__2__current, (int32_t)v23, v25, v26, v27, v28, v29, v30);
+              result = 1;
               p__2__current[-1].fields._BoardType_k__BackingField = 1;
-              return 1;
+              return result;
             }
           }
         }
@@ -5795,8 +5807,9 @@ LABEL_26:
   v2->fields.__2__current = (Il2CppObject *)v38;
   v39 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(v39, (int32_t)v38, v40, v41, v42, v43, v44, v45);
+  result = 1;
   v39[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 
@@ -5901,6 +5914,7 @@ bool CommandCardEquipmentControl__PlaySelfAttachReplaceEffect_d__128__MoveNext(
   int32_t v46; // w5
   bool v47; // w6
   bool v48; // w7
+  bool result; // w0
   System_Action_o *callback; // x0
   struct UserCommandCodeEntity_o *v51; // x8
   __int64 v52; // x22
@@ -6024,8 +6038,9 @@ LABEL_27:
             v2->fields.__2__current = (Il2CppObject *)v41;
             p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
             sub_2213A04(p__2__current, (int32_t)v41, v43, v44, v45, v46, v47, v48);
+            result = 1;
             p__2__current[-1].fields._BoardType_k__BackingField = 1;
-            return 1;
+            return result;
           }
           goto LABEL_39;
         }
@@ -6062,8 +6077,9 @@ LABEL_27:
   v2->fields.__2__current = (Il2CppObject *)v57;
   v58 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(v58, (int32_t)v57, v59, v60, v61, v62, v63, v64);
+  result = 1;
   v58[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 
@@ -6235,7 +6251,7 @@ void CommandCardEquipmentControl___c__DisplayClass94_0___OpenEquippedCommandCode
   this = (CommandCardEquipmentControl___c__DisplayClass94_0_o *)_4__this->fields.combineRootComponent;
   if ( !this )
     goto LABEL_9;
-  *((_BYTE *)this + 681) = 0;
+  BYTE1(this[21].monitor) = 0;
   if ( isDecide )
     CombineRootComponent__RequestSelfAttachReplaceCommandCode((CombineRootComponent_o *)this, 0);
   this = (CommandCardEquipmentControl___c__DisplayClass94_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
@@ -6267,7 +6283,7 @@ void CommandCardEquipmentControl___c__DisplayClass94_0___OpenEquippedCommandCode
   this = (CommandCardEquipmentControl___c__DisplayClass94_0_o *)_4__this->fields.combineRootComponent;
   if ( !this )
     goto LABEL_11;
-  *((_BYTE *)this + 681) = 0;
+  BYTE1(this[21].monitor) = 0;
   if ( isDecide )
   {
     if ( v4->fields.isCommandCardEmpty )

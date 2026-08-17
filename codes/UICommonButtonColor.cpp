@@ -918,6 +918,7 @@ float UICommonButtonColor__get_alpha(UICommonButtonColor_o *this, const MethodIn
   struct UnityEngine_GameObject_array *v8; // x8
   __int64 v9; // x1
   Il2CppObject *Component_object; // x20
+  float result; // s0
 
   v2 = this;
   if ( (byte_59720D3 & 1) == 0 )
@@ -967,9 +968,10 @@ LABEL_21:
           if ( !Component_object )
 LABEL_17:
             sub_2213CDC(this, method);
-          return ((float (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[7].methodPtr)(
-                   Component_object,
-                   Component_object->klass->vtable[7].method);
+          ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[7].methodPtr)(
+            Component_object,
+            Component_object->klass->vtable[7].method);
+          return result;
         }
       }
       tweenTargets = v2->fields.tweenTargets;

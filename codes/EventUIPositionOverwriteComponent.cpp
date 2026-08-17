@@ -69,6 +69,8 @@ UnityEngine_Vector2_o EventUIPositionOverwriteComponent__GetPosition(
   struct System_Collections_Generic_List_EventUIPositionOverwriteComponent_KeyPositionPairData__o *overwritePositionDic; // x19
   System_Func_object__bool__o *v18; // x20
   Il2CppObject *v19; // x0
+  float v20; // s0
+  float v21; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   y = defaultPosition.fields.y;
@@ -103,8 +105,10 @@ UnityEngine_Vector2_o EventUIPositionOverwriteComponent__GetPosition(
     x = *(float *)&v19[1].monitor;
     y = *((float *)&v19[1].monitor + 1);
   }
-  result.fields.x = x;
-  result.fields.y = y;
+  v20 = x;
+  v21 = y;
+  result.fields.y = v21;
+  result.fields.x = v20;
   return result;
 }
 

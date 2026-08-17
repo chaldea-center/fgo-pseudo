@@ -457,7 +457,7 @@ bool WarBoardAiTargetCacher___c__DisplayClass9_0___Register_b__0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((bool (__fastcall *)(TargetDetector_o *, struct IndividualityTargetDetector_o *, void *))x->klass[1]._1.image)(
+  return ((__int64 (__fastcall *)(TargetDetector_o *, struct IndividualityTargetDetector_o *, void *))x->klass[1]._1.image)(
            x,
            this->fields.newDetector,
            x->klass[1]._1.gc_desc);

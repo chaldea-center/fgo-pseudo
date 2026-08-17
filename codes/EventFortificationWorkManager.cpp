@@ -380,7 +380,8 @@ LABEL_95:
     (System_Collections_Generic_List_Enumerator_T__o *)&v71,
     (System_Collections_Generic_List_object__o *)this->fields.servantItemList,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventFortificationWorkItem__GetEnumerator__);
-  v76 = *(System_Collections_Generic_List_Enumerator_object__o *)&v71.fields.currentCryptoKey;
+  *(_OWORD *)&v76.fields._list = *(_OWORD *)&v71.fields.currentCryptoKey;
+  v76.fields._current = (Il2CppObject *)v71.fields.fakeValue;
   v72 = 0;
   v73 = &v76;
   while ( 1 )
@@ -1187,21 +1188,21 @@ void EventFortificationWorkManager__WidthAdjustmentOfTitle(
   __int64 v12; // x2
   UnityEngine_Object_o *titleRootObj; // x20
   __int64 v14; // x1
-  __int64 gameObject; // x0
-  int v16; // w20
-  int32_t addWidthForIcon; // s12
-  int v18; // w21
-  float v19; // s8
-  int v20; // w22
-  float v21; // s9
-  float v22; // s10
-  float v23; // s11
-  float v24; // s8
-  UnityEngine_Transform_o *v25; // x20
+  UnityEngine_Component_o *gameObject; // x0
+  int klass; // w20
   unsigned int localScale; // s0
-  unsigned int v27; // s0
-  unsigned int v28; // s0
-  float y; // s1
+  int32_t addWidthForIcon; // s12
+  int v19; // w21
+  float v20; // s8
+  unsigned int v21; // s0
+  int v22; // w22
+  float v23; // s9
+  unsigned int v24; // s0
+  float v25; // s10
+  float y; // s11
+  float v27; // s8
+  UnityEngine_Transform_o *v28; // x20
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -1230,96 +1231,114 @@ void EventFortificationWorkManager__WidthAdjustmentOfTitle(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
         if ( !UnityEngine_Object__op_Equality(titleRootObj, 0, 0) )
         {
-          gameObject = (__int64)this->fields.workTypeIcon;
+          gameObject = (UnityEngine_Component_o *)this->fields.workTypeIcon;
           if ( !gameObject )
             goto LABEL_40;
-          v16 = *(_DWORD *)(gameObject + 168);
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          klass = (int)gameObject[7].klass;
+          gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
           localScale = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
-          gameObject = (__int64)this->fields.teamNameLabel;
+          gameObject = (UnityEngine_Component_o *)this->fields.teamNameLabel;
           if ( !gameObject )
             goto LABEL_40;
           addWidthForIcon = this->fields.addWidthForIcon;
-          v18 = *(_DWORD *)(gameObject + 168);
-          v19 = *(float *)&localScale;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          v19 = (int)gameObject[7].klass;
+          v20 = *(float *)&localScale;
+          gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
-          v27 = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
-          gameObject = (__int64)this->fields.bgSprite;
+          v21 = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)this->fields.bgSprite;
           if ( !gameObject )
             goto LABEL_40;
-          v20 = *(_DWORD *)(gameObject + 168);
-          v21 = *(float *)&v27;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          v22 = (int)gameObject[7].klass;
+          v23 = *(float *)&v21;
+          gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
-          v28 = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
-          gameObject = (__int64)this->fields.titleRootObj;
+          v24 = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)this->fields.titleRootObj;
           if ( !gameObject )
             goto LABEL_40;
-          v22 = *(float *)&v28;
-          gameObject = (__int64)UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)gameObject, 0);
+          v25 = *(float *)&v24;
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_gameObject(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
-          y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0).fields.y;
-          gameObject = (__int64)this->fields.titleRootObj;
+          localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)this->fields.titleRootObj;
           if ( !gameObject )
             goto LABEL_40;
-          v23 = y;
-          gameObject = (__int64)UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)gameObject, 0);
+          y = localPosition.fields.y;
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_gameObject(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
           if ( !gameObject )
             goto LABEL_40;
-          v24 = (float)(v19 * (float)v16) + (float)addWidthForIcon;
+          v27 = (float)(v20 * (float)klass) + (float)addWidthForIcon;
           v30.fields.z = 0.0;
-          v30.fields.y = v23;
-          v30.fields.x = -(float)((float)((float)(v22 * (float)v20) * 0.5)
-                                - (float)((float)((float)(v22 * (float)v20) - (float)(v24 + (float)(v21 * (float)v18)))
+          v30.fields.y = y;
+          v30.fields.x = -(float)((float)((float)(v25 * (float)v22) * 0.5)
+                                - (float)((float)((float)(v25 * (float)v22) - (float)(v27 + (float)(v23 * (float)v19)))
                                         * 0.5));
           UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v30, 0);
-          gameObject = (__int64)this->fields.workTypeIcon;
+          gameObject = (UnityEngine_Component_o *)this->fields.workTypeIcon;
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
           if ( !gameObject )
             goto LABEL_40;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
-          v25 = (UnityEngine_Transform_o *)gameObject;
+          gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                    (UnityEngine_GameObject_o *)gameObject,
+                                                    0);
+          v28 = (UnityEngine_Transform_o *)gameObject;
           if ( !byte_5969AE0 )
           {
-            gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+            gameObject = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
             byte_5969AE0 = 1;
           }
-          if ( !v25
+          if ( !v28
             || (UnityEngine_Transform__set_localPosition(
-                  v25,
+                  v28,
                   UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
                   0),
-                (gameObject = (__int64)this->fields.teamNameLabel) == 0)
-            || (gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0
-            || (gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0)) == 0 )
+                (gameObject = (UnityEngine_Component_o *)this->fields.teamNameLabel) == 0)
+            || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0
+            || (gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
+                                                          (UnityEngine_GameObject_o *)gameObject,
+                                                          0)) == 0 )
           {
 LABEL_40:
             sub_2213CDC(gameObject, v14);
           }
-          v31.fields.x = v24;
+          v31.fields.x = v27;
           v31.fields.y = 0.0;
           v31.fields.z = 0.0;
           UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v31, 0);

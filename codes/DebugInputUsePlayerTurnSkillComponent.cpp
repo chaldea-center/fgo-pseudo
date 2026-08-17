@@ -25,31 +25,35 @@ void DebugInputUsePlayerTurnSkillComponent___cctor(const MethodInfo *method)
   int32_t v23; // w5
   bool v24; // w6
   bool v25; // w7
-  System_Array_o *v26; // x19
-  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v27; // x0
-  System_String_o *v28; // x2
-  System_String_o *v29; // x3
-  int32_t v30; // w4
-  int32_t v31; // w5
-  bool v32; // w6
-  bool v33; // w7
-  Il2CppClass *v34; // x0
-  __int64 v35; // x0
-  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v36; // x8
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  System_Array_o *v43; // x19
-  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v44; // x0
-  System_String_o *v45; // x2
-  System_String_o *v46; // x3
-  int32_t v47; // w4
-  int32_t v48; // w5
-  bool v49; // w6
-  bool v50; // w7
+  System_Array_o *v26; // x0
+  System_RuntimeFieldHandle_o v27; // x1
+  System_Array_o *v28; // x19
+  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v29; // x0
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  Il2CppClass *v36; // x0
+  __int64 v37; // x0
+  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v38; // x8
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
+  int32_t v42; // w5
+  bool v43; // w6
+  bool v44; // w7
+  System_Array_o *v45; // x0
+  System_RuntimeFieldHandle_o v46; // x1
+  System_Array_o *v47; // x19
+  struct DebugInputUsePlayerTurnSkillComponent_StaticFields *v48; // x0
+  System_String_o *v49; // x2
+  System_String_o *v50; // x3
+  int32_t v51; // w4
+  int32_t v52; // w5
+  bool v53; // w6
+  bool v54; // w7
 
   if ( (byte_5971E8A & 1) == 0 )
   {
@@ -76,35 +80,33 @@ void DebugInputUsePlayerTurnSkillComponent___cctor(const MethodInfo *method)
   v19->SelectedSkillIdxList = (struct System_Int32_array *)v18;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->SelectedSkillIdxList, v18, v20, v21, v22, v23, v24, v25);
   v26 = (System_Array_o *)sub_2213B20(BattleCommand_TYPE___TypeInfo, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v26,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DBA3401B79DDBA7DD7AE51264A01A80157347ACDBDF2EFB2F18600DD476CC9A9,
-    0);
-  v27 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
-  v27->SelectedCommandTypeList = (struct BattleCommand_TYPE_array *)v26;
+  v27.fields.value = Field__PrivateImplementationDetails__DBA3401B79DDBA7DD7AE51264A01A80157347ACDBDF2EFB2F18600DD476CC9A9;
+  v28 = v26;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v26, v27, 0);
+  v29 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
+  v29->SelectedCommandTypeList = (struct BattleCommand_TYPE_array *)v28;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v27->SelectedCommandTypeList,
-    (int32_t)v26,
-    v28,
-    v29,
+    (MissionNaviTransitionBoardItem_o *)&v29->SelectedCommandTypeList,
+    (int32_t)v28,
     v30,
     v31,
     v32,
-    v33);
-  v34 = bool___TypeInfo;
+    v33,
+    v34,
+    v35);
+  v36 = bool___TypeInfo;
   *(_WORD *)&DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields->requestUsePlayerTurnFlg = 256;
-  v35 = sub_2213B20(v34, 9);
-  v36 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
-  v36->RequestUseSkillToggle = (struct System_Boolean_array *)v35;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v36->RequestUseSkillToggle, v35, v37, v38, v39, v40, v41, v42);
-  v43 = (System_Array_o *)sub_2213B20(bool___TypeInfo, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v43,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__040A5A009F9B9D5E4771742174142E74FA2D3E0AAA3DF5717F01ADE338D75D0E,
-    0);
-  v44 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
-  v44->StarUseToggle = (struct System_Boolean_array *)v43;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v44->StarUseToggle, (int32_t)v43, v45, v46, v47, v48, v49, v50);
+  v37 = sub_2213B20(v36, 9);
+  v38 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
+  v38->RequestUseSkillToggle = (struct System_Boolean_array *)v37;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v38->RequestUseSkillToggle, v37, v39, v40, v41, v42, v43, v44);
+  v45 = (System_Array_o *)sub_2213B20(bool___TypeInfo, 9);
+  v46.fields.value = Field__PrivateImplementationDetails__040A5A009F9B9D5E4771742174142E74FA2D3E0AAA3DF5717F01ADE338D75D0E;
+  v47 = v45;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v45, v46, 0);
+  v48 = DebugInputUsePlayerTurnSkillComponent_TypeInfo->static_fields;
+  v48->StarUseToggle = (struct System_Boolean_array *)v47;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v48->StarUseToggle, (int32_t)v47, v49, v50, v51, v52, v53, v54);
 }
 
 
@@ -248,7 +250,7 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeRequestUseSkillToggle(
   v9 = settingInfoList->m_Items[v7];
   if ( !v9
     || (requestUseSkillToggle = v9->fields.requestUseSkillToggle) == 0
-    || (v11 = *(_QWORD *)(*((_QWORD *)this + 23) + 48LL),
+    || (v11 = *((_QWORD *)this[2].monitor + 6),
         this = (DebugInputUsePlayerTurnSkillComponent_o *)UIToggle__get_value(requestUseSkillToggle, 0),
         !v11) )
   {
@@ -314,7 +316,7 @@ void DebugInputUsePlayerTurnSkillComponent__ChangeStarToggle(
   v9 = settingInfoList->m_Items[v7];
   if ( !v9
     || (onStarToggle = v9->fields.onStarToggle) == 0
-    || (v11 = *(_QWORD *)(*((_QWORD *)this + 23) + 56LL),
+    || (v11 = *((_QWORD *)this[2].monitor + 7),
         this = (DebugInputUsePlayerTurnSkillComponent_o *)UIToggle__get_value(onStarToggle, 0),
         !v11) )
   {

@@ -453,59 +453,60 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   __int64 v64; // x1
   Il2CppObject *v65; // x20
   UnityEngine_Object_o *v66; // x19
-  System_Type_o *v67; // x0
+  System_RuntimeTypeHandle_o v67; // x0
+  System_Type_o *v68; // x0
   System_Delegate_o *Delegate_77450516; // x0
-  System_String_o *v69; // x2
-  System_String_o *v70; // x3
-  int32_t v71; // w4
-  int32_t v72; // w5
-  bool v73; // w6
-  bool v74; // w7
-  EventDelegate_Callback_c *v75; // x1
-  EventDelegate_c *v76; // x0
-  System_String_o *v77; // x2
-  System_String_o *v78; // x3
-  int32_t v79; // w4
-  int32_t v80; // w5
-  bool v81; // w6
-  bool v82; // w7
-  unsigned __int64 v83; // x22
-  __int64 v84; // x24
-  __int64 v85; // x25
-  unsigned int *v86; // x26
-  EventDelegate_Parameter_o *v87; // x20
-  const MethodInfo *v88; // x1
-  System_String_o *v89; // x2
-  System_String_o *v90; // x3
-  int32_t v91; // w4
-  int32_t v92; // w5
-  bool v93; // w6
-  bool v94; // w7
-  __int64 v95; // x1
+  System_String_o *v70; // x2
+  System_String_o *v71; // x3
+  int32_t v72; // w4
+  int32_t v73; // w5
+  bool v74; // w6
+  bool v75; // w7
+  EventDelegate_Callback_c *v76; // x1
+  EventDelegate_c *v77; // x0
+  System_String_o *v78; // x2
+  System_String_o *v79; // x3
+  int32_t v80; // w4
+  int32_t v81; // w5
+  bool v82; // w6
+  bool v83; // w7
+  unsigned __int64 v84; // x22
+  __int64 v85; // x24
+  __int64 v86; // x25
+  unsigned int *v87; // x26
+  EventDelegate_Parameter_o *v88; // x20
+  const MethodInfo *v89; // x1
+  System_String_o *v90; // x2
+  System_String_o *v91; // x3
+  int32_t v92; // w4
+  int32_t v93; // w5
+  bool v94; // w6
+  bool v95; // w7
+  __int64 v96; // x1
   const char *namespaze; // x22
-  __int64 v97; // x23
+  __int64 v98; // x23
   EventDelegate_c *klass; // x8
-  __int64 v99; // x9
-  __int64 v100; // x20
-  System_String_o *v101; // x2
-  System_String_o *v102; // x3
-  int32_t v103; // w4
-  int32_t v104; // w5
-  bool v105; // w6
-  bool v106; // w7
-  System_String_o *v107; // x2
-  System_String_o *v108; // x3
-  int32_t v109; // w4
-  int32_t v110; // w5
-  bool v111; // w6
-  bool v112; // w7
-  System_String_o *v113; // x2
-  System_String_o *v114; // x3
-  int32_t v115; // w4
-  int32_t v116; // w5
-  bool v117; // w6
-  bool v118; // w7
-  __int64 v119; // x0
+  __int64 v100; // x9
+  __int64 v101; // x20
+  System_String_o *v102; // x2
+  System_String_o *v103; // x3
+  int32_t v104; // w4
+  int32_t v105; // w5
+  bool v106; // w6
+  bool v107; // w7
+  System_String_o *v108; // x2
+  System_String_o *v109; // x3
+  int32_t v110; // w4
+  int32_t v111; // w5
+  bool v112; // w6
+  bool v113; // w7
+  System_String_o *v114; // x2
+  System_String_o *v115; // x3
+  int32_t v116; // w4
+  int32_t v117; // w5
+  bool v118; // w6
+  bool v119; // w7
+  __int64 v120; // x0
 
   if ( (byte_59750B9 & 1) == 0 )
   {
@@ -698,79 +699,79 @@ LABEL_72:
           namespaze = v61->_1.namespaze;
           if ( (int)namespaze < 1 )
             return;
-          v97 = 0;
+          v98 = 0;
           while ( 1 )
           {
             klass = this->klass;
             if ( !this->klass )
               goto LABEL_84;
-            if ( (unsigned int)v97 >= LODWORD(klass->_1.namespaze) )
+            if ( (unsigned int)v98 >= LODWORD(klass->_1.namespaze) )
               goto LABEL_85;
-            v99 = *p_mParameterInfos;
+            v100 = *p_mParameterInfos;
             if ( !*p_mParameterInfos )
               goto LABEL_84;
-            if ( (unsigned int)v97 >= *(_DWORD *)(v99 + 24) )
+            if ( (unsigned int)v98 >= *(_DWORD *)(v100 + 24) )
               goto LABEL_85;
-            v14 = *(System_Reflection_MethodInfo_o **)(v99 + 8 * v97 + 32);
+            v14 = *(System_Reflection_MethodInfo_o **)(v100 + 8 * v98 + 32);
             if ( !v14 )
               goto LABEL_84;
-            v100 = *((_QWORD *)&klass->_1.byval_arg.data + v97);
+            v101 = *((_QWORD *)&klass->_1.byval_arg.data + v98);
             v14 = (System_Reflection_MethodInfo_o *)((__int64 (__fastcall *)(System_Reflection_MethodInfo_o *, const MethodInfo *))v14->klass->vtable._11_get_Module.methodPtr)(
                                                       v14,
                                                       v14->klass->vtable._11_get_Module.method);
-            if ( !v100 )
+            if ( !v101 )
               goto LABEL_84;
-            *(_QWORD *)(v100 + 40) = v14;
+            *(_QWORD *)(v101 + 40) = v14;
             sub_2213A04(
-              (MissionNaviTransitionBoardItem_o *)(v100 + 40),
+              (MissionNaviTransitionBoardItem_o *)(v101 + 40),
               (int32_t)v14,
-              v101,
               v102,
               v103,
               v104,
               v105,
-              v106);
-            if ( (_DWORD)namespaze == (_DWORD)++v97 )
+              v106,
+              v107);
+            if ( (_DWORD)namespaze == (_DWORD)++v98 )
               return;
           }
         }
 LABEL_63:
-        v76 = (EventDelegate_c *)sub_2213B20(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v63 + 24));
-        this->klass = v76;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)this, (int32_t)v76, v77, v78, v79, v80, v81, v82);
+        v77 = (EventDelegate_c *)sub_2213B20(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v63 + 24));
+        this->klass = v77;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)this, (int32_t)v77, v78, v79, v80, v81, v82, v83);
         v61 = this->klass;
         if ( !this->klass )
           goto LABEL_84;
         if ( (int)v61->_1.namespaze >= 1 )
         {
-          v83 = 0;
-          v84 = (unsigned int)v61->_1.namespaze;
-          v85 = 8;
+          v84 = 0;
+          v85 = (unsigned int)v61->_1.namespaze;
+          v86 = 8;
           do
           {
-            v86 = (unsigned int *)this->klass;
-            v87 = (EventDelegate_Parameter_o *)sub_2213CCC(EventDelegate_Parameter_TypeInfo);
-            EventDelegate_Parameter___ctor(v87, v88);
-            if ( !v86 )
+            v87 = (unsigned int *)this->klass;
+            v88 = (EventDelegate_Parameter_o *)sub_2213CCC(EventDelegate_Parameter_TypeInfo);
+            EventDelegate_Parameter___ctor(v88, v89);
+            if ( !v87 )
               goto LABEL_84;
-            if ( v87 )
+            if ( v88 )
             {
-              v14 = (System_Reflection_MethodInfo_o *)sub_2213BB4(v87, *(_QWORD *)(*(_QWORD *)v86 + 64LL));
+              v14 = (System_Reflection_MethodInfo_o *)sub_2213BB4(v88, *(_QWORD *)(*(_QWORD *)v87 + 64LL));
               if ( !v14 )
               {
-                v119 = sub_2213D00(0, v95);
-                sub_2213BA0(v119, 0);
+                v120 = sub_2213D00(0, v96);
+                sub_2213BA0(v120, 0);
               }
             }
-            if ( v83 >= v86[6] )
+            if ( v84 >= v87[6] )
 LABEL_85:
               sub_2213CE4(v14);
-            *(_QWORD *)&v86[v85] = v87;
-            sub_2213A04((MissionNaviTransitionBoardItem_o *)&v86[v85], (int32_t)v87, v89, v90, v91, v92, v93, v94);
-            ++v83;
-            v85 += 2;
+            *(_QWORD *)&v87[v86] = v88;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)&v87[v86], (int32_t)v88, v90, v91, v92, v93, v94, v95);
+            ++v84;
+            v86 += 2;
           }
-          while ( v84 != v83 );
+          while ( v85 != v84 );
           v61 = this->klass;
           if ( !this->klass )
             goto LABEL_84;
@@ -785,20 +786,21 @@ LABEL_62:
     p_mParameterInfos = (__int64 *)EventDelegate_Callback_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, v13);
-    v67 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)p_mParameterInfos, 0);
+    v67.fields.value = (intptr_t)p_mParameterInfos;
+    v68 = System_Type__GetTypeFromHandle(v67, 0);
     Delegate_77450516 = System_Delegate__CreateDelegate_77450516(
-                          v67,
+                          v68,
                           (Il2CppObject *)this->fields.mTarget,
                           this->fields.mMethodName,
                           0);
     if ( Delegate_77450516 )
     {
-      v75 = EventDelegate_Callback_TypeInfo;
+      v76 = EventDelegate_Callback_TypeInfo;
       if ( (EventDelegate_Callback_c *)Delegate_77450516->klass != EventDelegate_Callback_TypeInfo
         || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_77450516,
-            (EventDelegate_Callback_c *)Delegate_77450516->klass != v75) )
+            (EventDelegate_Callback_c *)Delegate_77450516->klass != v76) )
       {
-        sub_221405C(Delegate_77450516, v75, v69);
+        sub_221405C(Delegate_77450516, v76, v70);
         goto LABEL_62;
       }
     }
@@ -809,16 +811,16 @@ LABEL_62:
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.mCachedCallback,
       (int32_t)Delegate_77450516,
-      v69,
       v70,
       v71,
       v72,
       v73,
-      v74);
+      v74,
+      v75);
     this->fields.mArgs = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mArgs, 0, v107, v108, v109, v110, v111, v112);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mArgs, 0, v108, v109, v110, v111, v112, v113);
     this->fields.mParameters = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v113, v114, v115, v116, v117, v118);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.mParameters, 0, v114, v115, v116, v117, v118, v119);
   }
 }
 
@@ -1280,9 +1282,9 @@ System_String_o *EventDelegate__GetMethodName(EventDelegate_Callback_o *callback
   {
     sub_2213CDC(callback, method);
   }
-  return ((System_String_o *(__fastcall *)(EventDelegate_Callback_o *, const MethodInfo *))callback->klass->vtable._8_GetObjectData.methodPtr)(
-           callback,
-           callback->klass->vtable._8_GetObjectData.method);
+  return (System_String_o *)((__int64 (__fastcall *)(EventDelegate_Callback_o *, const MethodInfo *))callback->klass->vtable._8_GetObjectData.methodPtr)(
+                              callback,
+                              callback->klass->vtable._8_GetObjectData.method);
 }
 
 
@@ -2030,9 +2032,9 @@ System_IAsyncResult_o *EventDelegate_Callback__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -2308,11 +2310,11 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
     {
       Type = (Il2CppObject *)this->fields.propInfo;
       if ( Type )
-        return ((Il2CppObject *(__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, _QWORD, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
-                 Type,
-                 this->fields.obj,
-                 0,
-                 Type->klass->vtable[25].method);
+        return (Il2CppObject *)((__int64 (__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, _QWORD, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
+                                 Type,
+                                 this->fields.obj,
+                                 0,
+                                 Type->klass->vtable[25].method);
     }
     else
     {
@@ -2343,10 +2345,10 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
       }
       Type = (Il2CppObject *)this->fields.fieldInfo;
       if ( Type )
-        return ((Il2CppObject *(__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
-                 Type,
-                 this->fields.obj,
-                 Type->klass->vtable[25].method);
+        return (Il2CppObject *)((__int64 (__fastcall *)(Il2CppObject *, struct UnityEngine_Object_o *, const MethodInfo *))Type->klass->vtable[25].methodPtr)(
+                                 Type,
+                                 this->fields.obj,
+                                 Type->klass->vtable[25].method);
     }
 LABEL_32:
     sub_2213CDC(Type, v18);

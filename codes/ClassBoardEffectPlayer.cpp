@@ -44,6 +44,7 @@ void ClassBoardEffectPlayer__End(ClassBoardEffectPlayer_o *this, const MethodInf
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ClassBoardEffectPlayer__GetData___Il2CppFullySharedGenericType_(
         ClassBoardEffectPlayer_o *this,
         const MethodInfo_381D654 *method)
@@ -56,6 +57,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ClassBoardEffectPlayer__G
   size_t v9; // x20
   Il2CppObject *data; // x21
   const void *v11; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v12; // x0
+  void *v13; // x1
   _QWORD v14[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -73,7 +76,9 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ClassBoardEffectPlayer__G
   if ( (*(_WORD *)(*v6 + 309) & 1) == 0 )
     v8 = sub_224B908(v3);
   v11 = (const void *)sub_2213BC4(data, v8, (char *)v14 - ((v9 + 15) & 0x1FFFFFFF0LL));
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v11, v9);
+  v12 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy((void *)method, v11, v9);
+  result.monitor = v13;
+  result.klass = v12;
   return result;
 }
 

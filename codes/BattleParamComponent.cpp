@@ -307,6 +307,7 @@ bool BattleParamComponent__playingEffect_d__16__MoveNext(
   bool v23; // w6
   bool v24; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   UnityEngine_Object_o *anim; // x21
   System_String_o *v28; // x2
   System_String_o *v29; // x3
@@ -411,8 +412,9 @@ LABEL_25:
         v2->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
         sub_2213A04(p__2__current, 0, v19, v20, v21, v22, v23, v24);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
     }
     else
@@ -439,8 +441,9 @@ LABEL_33:
           v2->fields.__2__current = 0;
           v36 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
           sub_2213A04(v36, 0, v28, v29, v30, v31, v32, v33);
+          result = 1;
           v36[-1].fields._BoardType_k__BackingField = 2;
-          return 1;
+          return result;
         }
       }
     }

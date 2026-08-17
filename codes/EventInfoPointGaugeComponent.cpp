@@ -450,27 +450,27 @@ void EventInfoPointGaugeComponent__SetupSubMarginX(
         float subMarginX,
         const MethodInfo *method)
 {
-  __int64 rootFSOffset; // x0
+  UnityEngine_Component_o *rootFSOffset; // x0
   UnityEngine_Transform_o *v6; // x20
 
-  rootFSOffset = (__int64)this->fields.rootFSOffset;
+  rootFSOffset = (UnityEngine_Component_o *)this->fields.rootFSOffset;
   if ( !rootFSOffset )
     goto LABEL_7;
-  rootFSOffset = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)rootFSOffset, 0);
+  rootFSOffset = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(rootFSOffset, 0);
   v6 = (UnityEngine_Transform_o *)rootFSOffset;
   if ( !byte_5969AE0 )
   {
-    rootFSOffset = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    rootFSOffset = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localPosition(v6, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0),
-        (rootFSOffset = (__int64)this->fields.rootFSOffset) == 0) )
+        (rootFSOffset = (UnityEngine_Component_o *)this->fields.rootFSOffset) == 0) )
   {
 LABEL_7:
     sub_2213CDC(rootFSOffset, method);
   }
-  *(float *)(rootFSOffset + 100) = subMarginX;
+  *((float *)&rootFSOffset[4].klass + 1) = subMarginX;
   FSOffset__UpdateOffset((FSOffset_o *)rootFSOffset, 0);
 }
 

@@ -657,17 +657,18 @@ void BattlePointGaugeManager__StartOpen(
 {
   bool hasValue; // w20
   const MethodInfo *v5; // x1
+  System_Nullable_int__o v6; // x0
   int32_t currentGaugeEntityIndex; // w1
-  const MethodInfo *v7; // x2
-  const MethodInfo *v8; // x1
+  const MethodInfo *v8; // x2
+  const MethodInfo *v9; // x1
   System_Collections_Generic_List_object__o *gaugeEntityList; // x0
-  int32_t v10; // w20
-  __int64 v11; // x1
+  int32_t v11; // w20
+  __int64 v12; // x1
   Il2CppObject *Item; // x21
-  System_Nullable_int__o v13; // [xsp+8h] [xbp-38h] BYREF
+  System_Nullable_int__o v14; // [xsp+8h] [xbp-38h] BYREF
 
   hasValue = index.fields.hasValue;
-  v13 = index;
+  v14 = index;
   if ( (byte_597415B & 1) == 0 )
   {
     sub_2213A60(&Method_System_Collections_Generic_List_BattlePointGaugeComponent__get_Count__);
@@ -680,28 +681,31 @@ void BattlePointGaugeManager__StartOpen(
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.gaugeEntityList, 0) )
   {
     if ( hasValue )
+    {
+      v6 = (System_Nullable_int__o)&v14;
       this->fields.currentGaugeEntityIndex = System_Nullable_int___get_Value(
-                                               (System_Nullable_int__o)&v13,
+                                               v6,
                                                (const MethodInfo_45E4324 *)Method_System_Nullable_int__get_Value__);
+    }
     BattlePointGaugeManager__NormalizeCurrentGaugeEntityIndex(this, v5);
     currentGaugeEntityIndex = this->fields.currentGaugeEntityIndex;
     this->fields.isGaugeOpened = 1;
     this->fields.state = 1;
     this->fields.timer = 0.0;
     this->fields.priorityHoldTimer = 0.0;
-    BattlePointGaugeManager__ShowOnlyGaugeImmediately(this, currentGaugeEntityIndex, v7);
+    BattlePointGaugeManager__ShowOnlyGaugeImmediately(this, currentGaugeEntityIndex, v8);
     gaugeEntityList = (System_Collections_Generic_List_object__o *)this->fields.gaugeEntityList;
     if ( !gaugeEntityList )
       goto LABEL_16;
-    v10 = 0;
-    while ( v10 < gaugeEntityList->fields._size )
+    v11 = 0;
+    while ( v11 < gaugeEntityList->fields._size )
     {
       Item = System_Collections_Generic_List_object___get_Item(
                gaugeEntityList,
-               v10,
+               v11,
                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BattlePointGaugeComponent__get_Item__);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
       if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0, 0) )
       {
         gaugeEntityList = (System_Collections_Generic_List_object__o *)this->fields.gaugeEntityList;
@@ -709,14 +713,14 @@ void BattlePointGaugeManager__StartOpen(
           goto LABEL_16;
         gaugeEntityList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                          gaugeEntityList,
-                                                                         v10,
+                                                                         v11,
                                                                          (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BattlePointGaugeComponent__get_Item__);
         if ( !gaugeEntityList )
           goto LABEL_16;
         LOBYTE(gaugeEntityList[5].fields._items) = 1;
       }
       gaugeEntityList = (System_Collections_Generic_List_object__o *)this->fields.gaugeEntityList;
-      ++v10;
+      ++v11;
       if ( !gaugeEntityList )
         goto LABEL_16;
     }
@@ -726,8 +730,8 @@ void BattlePointGaugeManager__StartOpen(
                                                                      (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_BattlePointGaugeComponent__get_Item__);
     if ( !gaugeEntityList )
 LABEL_16:
-      sub_2213CDC(gaugeEntityList, v8);
-    BattlePointGaugeComponent__StartOpen((BattlePointGaugeComponent_o *)gaugeEntityList, v8);
+      sub_2213CDC(gaugeEntityList, v9);
+    BattlePointGaugeComponent__StartOpen((BattlePointGaugeComponent_o *)gaugeEntityList, v9);
   }
 }
 

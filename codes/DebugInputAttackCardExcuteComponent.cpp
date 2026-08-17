@@ -23,14 +23,16 @@ void DebugInputAttackCardExcuteComponent___cctor(const MethodInfo *method)
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
-  System_Array_o *v24; // x19
-  struct DebugInputAttackCardExcuteComponent_StaticFields *v25; // x0
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
+  System_Array_o *v24; // x0
+  System_RuntimeFieldHandle_o v25; // x1
+  System_Array_o *v26; // x19
+  struct DebugInputAttackCardExcuteComponent_StaticFields *v27; // x0
+  System_String_o *v28; // x2
+  System_String_o *v29; // x3
+  int32_t v30; // w4
+  int32_t v31; // w5
+  bool v32; // w6
+  bool v33; // w7
 
   if ( (byte_5971E62 & 1) == 0 )
   {
@@ -61,13 +63,12 @@ void DebugInputAttackCardExcuteComponent___cctor(const MethodInfo *method)
   v17->CommandTypeTreasure = (struct System_Boolean_array *)v16;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->CommandTypeTreasure, v16, v18, v19, v20, v21, v22, v23);
   v24 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v24,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__45B8AAA32A382159A53DF88A29858D4A57855F2295AB57F8CF442BB9CB7CBD9D,
-    0);
-  v25 = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields;
-  v25->TreasureNpList = (struct System_Int32_array *)v24;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v25->TreasureNpList, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+  v25.fields.value = Field__PrivateImplementationDetails__45B8AAA32A382159A53DF88A29858D4A57855F2295AB57F8CF442BB9CB7CBD9D;
+  v26 = v24;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v24, v25, 0);
+  v27 = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields;
+  v27->TreasureNpList = (struct System_Int32_array *)v26;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v27->TreasureNpList, (int32_t)v26, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -128,9 +129,9 @@ void DebugInputAttackCardExcuteComponent__NpLeft(
 {
   DebugInputAttackCardExcuteComponent_o *v4; // x19
   int32_t v5; // w20
-  __int64 v6; // x24
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x24
   unsigned int v7; // w22
-  __int64 v8; // x25
+  char *v8; // x25
   _DWORD *v9; // x25
   int v10; // t1
   int32_t v11; // w20
@@ -163,22 +164,22 @@ void DebugInputAttackCardExcuteComponent__NpLeft(
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo, cardLabelName);
       this = (DebugInputAttackCardExcuteComponent_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    v6 = *(_QWORD *)(*((_QWORD *)this + 23) + 24LL);
-    if ( v6 )
+    m_CancellationTokenSource = this[1].fields.attackCardSelectWindow->fields.m_CancellationTokenSource;
+    if ( m_CancellationTokenSource )
     {
       v7 = v5 - 1;
-      if ( (unsigned int)(v5 - 1) >= *(_DWORD *)(v6 + 24) )
+      if ( (unsigned int)(v5 - 1) >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
         goto LABEL_22;
-      v8 = v6 + 4LL * (int)v7;
-      v10 = *(_DWORD *)(v8 + 32);
-      v9 = (_DWORD *)(v8 + 32);
+      v8 = (char *)m_CancellationTokenSource + 4 * (int)v7;
+      v10 = *((_DWORD *)v8 + 8);
+      v9 = v8 + 32;
       v11 = v10 - 100;
       v12 = System_Math_TypeInfo;
       *v9 = v10 - 100;
       if ( !*(&v12->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(v12, cardLabelName);
       this = (DebugInputAttackCardExcuteComponent_o *)System_Math__Max_77153260(v11, 100, 0);
-      if ( v7 >= *(_DWORD *)(v6 + 24) )
+      if ( v7 >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
         goto LABEL_22;
       treasureNpLabelList = v4->fields.treasureNpLabelList;
       *v9 = (_DWORD)this;
@@ -215,9 +216,9 @@ void DebugInputAttackCardExcuteComponent__NpRight(
 {
   DebugInputAttackCardExcuteComponent_o *v4; // x19
   int32_t v5; // w20
-  __int64 v6; // x24
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x24
   unsigned int v7; // w22
-  __int64 v8; // x25
+  char *v8; // x25
   _DWORD *v9; // x25
   int v10; // t1
   int32_t v11; // w20
@@ -250,22 +251,22 @@ void DebugInputAttackCardExcuteComponent__NpRight(
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo, cardLabelName);
       this = (DebugInputAttackCardExcuteComponent_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    v6 = *(_QWORD *)(*((_QWORD *)this + 23) + 24LL);
-    if ( v6 )
+    m_CancellationTokenSource = this[1].fields.attackCardSelectWindow->fields.m_CancellationTokenSource;
+    if ( m_CancellationTokenSource )
     {
       v7 = v5 - 1;
-      if ( (unsigned int)(v5 - 1) >= *(_DWORD *)(v6 + 24) )
+      if ( (unsigned int)(v5 - 1) >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
         goto LABEL_22;
-      v8 = v6 + 4LL * (int)v7;
-      v10 = *(_DWORD *)(v8 + 32);
-      v9 = (_DWORD *)(v8 + 32);
+      v8 = (char *)m_CancellationTokenSource + 4 * (int)v7;
+      v10 = *((_DWORD *)v8 + 8);
+      v9 = v8 + 32;
       v11 = v10 + 100;
       v12 = System_Math_TypeInfo;
       *v9 = v10 + 100;
       if ( !*(&v12->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(v12, cardLabelName);
       this = (DebugInputAttackCardExcuteComponent_o *)System_Math__Min_77153596(v11, 1000, 0);
-      if ( v7 >= *(_DWORD *)(v6 + 24) )
+      if ( v7 >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
         goto LABEL_22;
       treasureNpLabelList = v4->fields.treasureNpLabelList;
       *v9 = (_DWORD)this;
@@ -301,23 +302,23 @@ void DebugInputAttackCardExcuteComponent__OnEnable(
 {
   __int64 v3; // x25
   int v4; // w20
-  __int64 CommandTypeName; // x0
-  struct System_Int32_array *SelectedServantIdxList; // x8
+  UILabel_o *CommandTypeName; // x0
+  struct System_Int32_array *klass; // x8
   System_String_o *v7; // x0
   struct UILabel_array *servantIdxList; // x8
   struct UILabel_array *v9; // x8
   UILabel_o *v10; // x22
   struct UILabel_array *attackCardTypeNameList; // x8
   UILabel_o *v12; // x22
-  __int64 v13; // x9
-  __int64 v14; // x8
-  __int64 v15; // x9
+  struct UIWidget_OnDimensionsChanged_o *onChange; // x9
+  _DWORD *monitor; // x8
+  intptr_t method_ptr; // x9
   int32_t v16; // w23
   __int64 *v17; // x8
   System_String_o *v18; // x24
   struct UILabel_array *treasureNpLabelList; // x8
   UILabel_o *v20; // x22
-  __int64 v21; // x8
+  intptr_t invoke_impl; // x8
 
   if ( (byte_5971E5A & 1) == 0 )
   {
@@ -331,37 +332,37 @@ void DebugInputAttackCardExcuteComponent__OnEnable(
   v4 = 32;
   do
   {
-    CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+    CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     if ( !*(&DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo, method);
-      CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    SelectedServantIdxList = **(struct System_Int32_array ***)(CommandTypeName + 184);
-    if ( !SelectedServantIdxList )
+    klass = (struct System_Int32_array *)CommandTypeName->fields.onChange->klass;
+    if ( !klass )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= LODWORD(SelectedServantIdxList->max_length) )
+    if ( (unsigned int)v3 >= LODWORD(klass->max_length) )
       goto LABEL_46;
-    if ( SelectedServantIdxList->m_Items[v3] )
+    if ( klass->m_Items[v3] )
     {
-      if ( !*(_DWORD *)(CommandTypeName + 228) )
+      if ( !HIDWORD(CommandTypeName->fields.hitCheck) )
       {
         j_il2cpp_runtime_class_init_0(CommandTypeName, method);
-        SelectedServantIdxList = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields->SelectedServantIdxList;
-        if ( !SelectedServantIdxList )
+        klass = DebugInputAttackCardExcuteComponent_TypeInfo->static_fields->SelectedServantIdxList;
+        if ( !klass )
           goto LABEL_45;
       }
-      if ( (unsigned int)v3 >= LODWORD(SelectedServantIdxList->max_length) )
+      if ( (unsigned int)v3 >= LODWORD(klass->max_length) )
         goto LABEL_46;
-      v7 = System_Int32__ToString((int)SelectedServantIdxList + v4, 0);
-      CommandTypeName = (__int64)System_String__Concat_75651716(v7, (System_String_o *)StringLiteral_26900/*"番目"*/, 0);
+      v7 = System_Int32__ToString((int)klass + v4, 0);
+      CommandTypeName = (UILabel_o *)System_String__Concat_75651716(v7, (System_String_o *)StringLiteral_26900/*"番目"*/, 0);
       servantIdxList = this->fields.servantIdxList;
       if ( !servantIdxList )
         goto LABEL_45;
       if ( (unsigned int)v3 >= LODWORD(servantIdxList->max_length) )
         goto LABEL_46;
       method = (const MethodInfo *)CommandTypeName;
-      CommandTypeName = (__int64)servantIdxList->m_Items[v3];
+      CommandTypeName = servantIdxList->m_Items[v3];
       if ( !CommandTypeName )
         goto LABEL_45;
     }
@@ -375,42 +376,42 @@ void DebugInputAttackCardExcuteComponent__OnEnable(
       v10 = v9->m_Items[v3];
       if ( (byte_5971E58 & 1) == 0 )
       {
-        CommandTypeName = sub_2213A60(&StringLiteral_26815/*"サーヴァント指定なし"*/);
+        CommandTypeName = (UILabel_o *)sub_2213A60(&StringLiteral_26815/*"サーヴァント指定なし"*/);
         byte_5971E58 = 1;
       }
       if ( !v10 )
         goto LABEL_45;
-      CommandTypeName = (__int64)v10;
+      CommandTypeName = v10;
       method = (const MethodInfo *)StringLiteral_26815/*"サーヴァント指定なし"*/;
     }
-    UILabel__set_text((UILabel_o *)CommandTypeName, (System_String_o *)method, 0);
+    UILabel__set_text(CommandTypeName, (System_String_o *)method, 0);
     attackCardTypeNameList = this->fields.attackCardTypeNameList;
     if ( !attackCardTypeNameList )
       goto LABEL_45;
     if ( (unsigned int)v3 >= LODWORD(attackCardTypeNameList->max_length) )
 LABEL_46:
       sub_2213CE4(CommandTypeName);
-    CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+    CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     v12 = attackCardTypeNameList->m_Items[v3];
     if ( !*(&DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo, method);
-      CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    v13 = *(_QWORD *)(CommandTypeName + 184);
-    v14 = *(_QWORD *)(v13 + 8);
-    if ( !v14 )
+    onChange = CommandTypeName->fields.onChange;
+    monitor = onChange->monitor;
+    if ( !monitor )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= *(_DWORD *)(v14 + 24) )
+    if ( (unsigned int)v3 >= monitor[6] )
       goto LABEL_46;
-    v15 = *(_QWORD *)(v13 + 16);
-    if ( !v15 )
+    method_ptr = onChange->fields.method_ptr;
+    if ( !method_ptr )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= *(_DWORD *)(v15 + 24) )
+    if ( (unsigned int)v3 >= *(_DWORD *)(method_ptr + 24) )
       goto LABEL_46;
-    v16 = *(_DWORD *)(v14 + 4 * v3 + 32);
+    v16 = monitor[v3 + 8];
     v17 = &StringLiteral_26870/*"宝具"*/;
-    if ( !*(_BYTE *)(v15 + v3 + 32) )
+    if ( !*(_BYTE *)(method_ptr + v3 + 32) )
     {
       v17 = &StringLiteral_26804/*"カードタイプ指定なし"*/;
       if ( (byte_5971E59 & 1) == 0 )
@@ -423,7 +424,7 @@ LABEL_46:
     v18 = (System_String_o *)*v17;
     if ( !*(&BattleCommand_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo, method);
-    CommandTypeName = (__int64)BattleCommand__GetCommandTypeName(v16, v18, 0);
+    CommandTypeName = (UILabel_o *)BattleCommand__GetCommandTypeName(v16, v18, 0);
     if ( !v12 )
       goto LABEL_45;
     UILabel__set_text(v12, (System_String_o *)CommandTypeName, 0);
@@ -432,19 +433,19 @@ LABEL_46:
       goto LABEL_45;
     if ( (unsigned int)v3 >= LODWORD(treasureNpLabelList->max_length) )
       goto LABEL_46;
-    CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+    CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     v20 = treasureNpLabelList->m_Items[v3];
     if ( !*(&DebugInputAttackCardExcuteComponent_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(DebugInputAttackCardExcuteComponent_TypeInfo, method);
-      CommandTypeName = (__int64)DebugInputAttackCardExcuteComponent_TypeInfo;
+      CommandTypeName = (UILabel_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
     }
-    v21 = *(_QWORD *)(*(_QWORD *)(CommandTypeName + 184) + 24LL);
-    if ( !v21 )
+    invoke_impl = CommandTypeName->fields.onChange->fields.invoke_impl;
+    if ( !invoke_impl )
       goto LABEL_45;
-    if ( (unsigned int)v3 >= *(_DWORD *)(v21 + 24) )
+    if ( (unsigned int)v3 >= *(_DWORD *)(invoke_impl + 24) )
       goto LABEL_46;
-    CommandTypeName = (__int64)System_Int32__ToString((int)v21 + v4, 0);
+    CommandTypeName = (UILabel_o *)System_Int32__ToString((int)invoke_impl + v4, 0);
     if ( !v20 )
 LABEL_45:
       sub_2213CDC(CommandTypeName, method);
@@ -464,7 +465,7 @@ void DebugInputAttackCardExcuteComponent__OnSubmitNP(
 {
   int32_t v6; // w19
   int v7; // w9
-  __int64 v8; // x8
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
   int32_t result[2]; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5971E5F & 1) == 0 )
@@ -492,17 +493,17 @@ void DebugInputAttackCardExcuteComponent__OnSubmitNP(
     this = (DebugInputAttackCardExcuteComponent_o *)DebugInputAttackCardExcuteComponent_TypeInfo;
   }
   v7 = result[0];
-  v8 = *(_QWORD *)(*((_QWORD *)this + 23) + 24LL);
+  m_CancellationTokenSource = this[1].fields.attackCardSelectWindow->fields.m_CancellationTokenSource;
   if ( result[0] >= 1000 )
     v7 = 1000;
   if ( v7 <= 100 )
     v7 = 100;
-  if ( !v8 )
+  if ( !m_CancellationTokenSource )
 LABEL_18:
     sub_2213CDC(this, inputValue);
-  if ( (unsigned int)(v6 - 1) >= *(_DWORD *)(v8 + 24) )
+  if ( (unsigned int)(v6 - 1) >= LODWORD(m_CancellationTokenSource->fields._registeredCallbacksLists) )
     sub_2213CE4(this);
-  *(_DWORD *)(v8 + 4LL * (v6 - 1) + 32) = v7;
+  *((_DWORD *)&m_CancellationTokenSource->fields._registeredCallbacksLists + v6 + 1) = v7;
 }
 
 

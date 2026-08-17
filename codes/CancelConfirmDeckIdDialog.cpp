@@ -287,14 +287,16 @@ void CancelConfirmDeckIdDialog__Open(
   UnityEngine_BoxCollider_o *messageCollider; // x20
   float v32; // s1
   UnityEngine_BoxCollider_o *v33; // x20
-  float v34; // s0
-  float v35; // s8
+  int v34; // s0
+  int v35; // s8
+  int v36; // s1 OVERLAPPED
+  int v37; // s0
+  float v38; // s2
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  System_Action_c *v38; // x0
-  System_Action_o *v39; // x20
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_c *v41; // x0
+  System_Action_o *v42; // x20
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596CBE4 & 1) == 0 )
   {
@@ -382,10 +384,10 @@ void CancelConfirmDeckIdDialog__Open(
                                                *(_QWORD *)&gameObject->klass[1]._2.interfaces_count);
     if ( !messageCollider )
       goto LABEL_28;
-    v40.fields.z = 0.0;
-    v40.fields.y = v32 * -0.5;
-    v40.fields.x = 0.0;
-    UnityEngine_BoxCollider__set_center(messageCollider, v40, 0);
+    v43.fields.z = 0.0;
+    v43.fields.y = v32 * -0.5;
+    v43.fields.x = 0.0;
+    UnityEngine_BoxCollider__set_center(messageCollider, v43, 0);
     gameObject = (UnityEngine_GameObject_o *)this->fields.messageLabel;
     if ( !gameObject )
       goto LABEL_28;
@@ -402,9 +404,9 @@ void CancelConfirmDeckIdDialog__Open(
                                                *(_QWORD *)&gameObject->klass[1]._2.interfaces_count);
     if ( !v33 )
       goto LABEL_28;
-    v41.fields.x = v35;
-    v41.fields.z = 1.0;
-    UnityEngine_BoxCollider__set_size(v33, v41, 0);
+    v37 = v35;
+    v38 = 1.0;
+    UnityEngine_BoxCollider__set_size(v33, *(UnityEngine_Vector3_o *)(&v36 - 1), 0);
     gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton;
     if ( !gameObject )
       goto LABEL_28;
@@ -446,11 +448,11 @@ LABEL_28:
       sub_2213CDC(gameObject, v18);
     }
     UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0);
-    v38 = System_Action_TypeInfo;
+    v41 = System_Action_TypeInfo;
     this->fields.state = 1;
-    v39 = (System_Action_o *)sub_2213CCC(v38);
-    System_Action___ctor(v39, (Il2CppObject *)this, Method_CancelConfirmDeckIdDialog_EndOpen__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v39, 0, 0, 0);
+    v42 = (System_Action_o *)sub_2213CCC(v41);
+    System_Action___ctor(v42, (Il2CppObject *)this, Method_CancelConfirmDeckIdDialog_EndOpen__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v42, 0, 0, 0);
   }
 }
 
@@ -759,7 +761,7 @@ System_IAsyncResult_o *CancelConfirmDeckIdDialog_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

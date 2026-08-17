@@ -412,9 +412,7 @@ void BlankEarthShortcutButtonListViewObject__SetupDisp(
   const MethodInfo *v9; // x1
   const MethodInfo *v10; // x2
   BlankEarthShortcutButtonListViewItemDraw_o *transform; // x0
-  float listItemWidth; // s0
-  float frameOutPositionMultiple; // s2
-  float v14; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596CE35 & 1) == 0 )
   {
@@ -458,15 +456,15 @@ void BlankEarthShortcutButtonListViewObject__SetupDisp(
 LABEL_18:
       sub_2213CDC(transform, v9);
     }
-    v14 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0).fields.y));
-    listItemWidth = this->fields.listItemWidth;
-    frameOutPositionMultiple = this->fields.frameOutPositionMultiple;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    localPosition.fields.x = this->fields.listItemWidth;
+    localPosition.fields.z = this->fields.frameOutPositionMultiple;
     this->fields.inPos.fields.x = 0.0;
     this->fields.inPos.fields.z = 0.0;
-    this->fields.inPos.fields.y = v14;
+    this->fields.inPos.fields.y = localPosition.fields.y;
     this->fields.outPos.fields.z = 0.0;
-    this->fields.outPos.fields.x = (float)(listItemWidth * frameOutPositionMultiple) + 0.0;
-    this->fields.outPos.fields.y = v14 + 0.0;
+    this->fields.outPos.fields.x = (float)(localPosition.fields.x * localPosition.fields.z) + 0.0;
+    this->fields.outPos.fields.y = localPosition.fields.y + 0.0;
   }
 }
 

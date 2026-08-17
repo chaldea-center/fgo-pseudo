@@ -862,8 +862,9 @@ LABEL_30:
     (System_Collections_Generic_List_Enumerator_T__o *)&v25,
     (System_Collections_Generic_List_object__o *)Master_object,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v28 = *(System_Collections_Generic_List_Enumerator_object__o *)&v25.fields.currentCryptoKey;
+  *(_OWORD *)&v28.fields._list = *(_OWORD *)&v25.fields.currentCryptoKey;
   v8 = 0;
+  v28.fields._current = (Il2CppObject *)v25.fields.fakeValue;
   v26 = 0;
   v27 = &v28;
   while ( 1 )

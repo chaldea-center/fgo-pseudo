@@ -390,24 +390,27 @@ void EventQuestCooltimeComponent__SetSpot(
   __int64 v12; // x1
   __int64 v13; // x1
   __int64 v14; // x2
-  EventQuestCooltimeComponent_c *v15; // x0
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  EventQuestCooltimeComponent_c *v18; // x0
   float *p_x; // x8
   UnityEngine_GameObject_o *gameObject; // x23
-  const MethodInfo *v18; // x3
-  Il2CppObject *v19; // x22
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
+  const MethodInfo *v21; // x3
+  Il2CppObject *v22; // x22
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
   System_Collections_Generic_List_object__o *spotCooltimeList; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v28; // x10
+  _QWORD *v31; // x10
   __int64 size; // x11
-  Il2CppClass **v30; // x0
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  Il2CppClass **v33; // x0
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A94D & 1) == 0 )
   {
@@ -437,17 +440,20 @@ void EventQuestCooltimeComponent__SetSpot(
       if ( !transform )
         goto LABEL_23;
       position = UnityEngine_Transform__get_position(transform, 0);
-      v15 = EventQuestCooltimeComponent_TypeInfo;
+      x = position.fields.x;
+      y = position.fields.y;
+      z = position.fields.z;
+      v18 = EventQuestCooltimeComponent_TypeInfo;
       if ( !*(&EventQuestCooltimeComponent_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(EventQuestCooltimeComponent_TypeInfo, v13, v14);
-        v15 = EventQuestCooltimeComponent_TypeInfo;
+        v18 = EventQuestCooltimeComponent_TypeInfo;
       }
-      p_x = &v15->static_fields->DEFAULT_COOLTIME_POSITION_OFFSET.fields.x;
-      v32.fields.z = position.fields.z + p_x[2];
-      v32.fields.x = position.fields.x + *p_x;
-      v32.fields.y = position.fields.y + p_x[1];
-      GameObjectExtensions__SetPosition((UnityEngine_GameObject_o *)v10, v32, 0);
+      p_x = &v18->static_fields->DEFAULT_COOLTIME_POSITION_OFFSET.fields.x;
+      v35.fields.z = z + p_x[2];
+      v35.fields.x = x + *p_x;
+      v35.fields.y = y + p_x[1];
+      GameObjectExtensions__SetPosition((UnityEngine_GameObject_o *)v10, v35, 0);
       if ( !v10 )
         goto LABEL_23;
       gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v10, 0);
@@ -461,11 +467,11 @@ void EventQuestCooltimeComponent__SetSpot(
                                                (UnityEngine_GameObject_o *)v10,
                                                (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SpotCooltimeComponent___);
       if ( !transform
-        || (v19 = (Il2CppObject *)transform,
-            SpotCooltimeComponent__Setup((SpotCooltimeComponent_o *)transform, userCooltimeEntity, targetSpot, v18),
+        || (v22 = (Il2CppObject *)transform,
+            SpotCooltimeComponent__Setup((SpotCooltimeComponent_o *)transform, userCooltimeEntity, targetSpot, v21),
             (spotCooltimeList = (System_Collections_Generic_List_object__o *)this->fields.spotCooltimeList) == 0)
         || (items = spotCooltimeList->fields._items,
-            v28 = Method_System_Collections_Generic_List_SpotCooltimeComponent__Add__,
+            v31 = Method_System_Collections_Generic_List_SpotCooltimeComponent__Add__,
             ++spotCooltimeList->fields._version,
             !items) )
       {
@@ -477,15 +483,15 @@ LABEL_23:
       {
         System_Collections_Generic_List_object___AddWithResize(
           spotCooltimeList,
-          v19,
-          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          v22,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
       }
       else
       {
-        v30 = &items->obj.klass + size;
-        v30[4] = (Il2CppClass *)v19;
+        v33 = &items->obj.klass + size;
+        v33[4] = (Il2CppClass *)v22;
         spotCooltimeList->fields._size = size + 1;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 4), (int32_t)v19, v20, v21, v22, v23, v24, v25);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v22, v23, v24, v25, v26, v27, v28);
       }
     }
   }

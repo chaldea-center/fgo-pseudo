@@ -117,7 +117,7 @@ bool ReactTaskTargetNpc___c__DisplayClass1_0___ExistTargetPriority_b__0(
   creator = this->fields.creator;
   if ( !creator )
     sub_2213CDC(0, svt);
-  return ((bool (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, AiNpcBattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
+  return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, AiNpcBattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
            creator,
            this->fields.logic,
            svt,

@@ -303,15 +303,15 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
   bool v23; // w7
   const MethodInfo *v24; // x1
   float v25; // s9
-  struct System_Collections_Generic_List_GameObject__o *v26; // x8
-  float v27; // s8
+  unsigned int localPosition; // s0
+  struct System_Collections_Generic_List_GameObject__o *v27; // x8
+  float v28; // s8
   int size; // w23
   int32_t i; // w21
-  UnityEngine_GameObject_o *v30; // x22
+  UnityEngine_GameObject_o *v31; // x22
   UnityEngine_Transform_o *transform; // x0
-  int v32; // s10
-  System_Action_o *v33; // x20
-  unsigned int localPosition; // s0
+  int v33; // s10
+  System_Action_o *v34; // x20
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A246 & 1) == 0 )
@@ -364,11 +364,11 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
     if ( !gameObject )
       goto LABEL_21;
     localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
-    v26 = *p_resInfoList;
+    v27 = *p_resInfoList;
     if ( !*p_resInfoList )
       goto LABEL_21;
-    v27 = *(float *)&localPosition;
-    size = v26->fields._size;
+    v28 = *(float *)&localPosition;
+    size = v27->fields._size;
     if ( size >= 1 )
     {
       for ( i = 0; i != size; ++i )
@@ -382,24 +382,24 @@ void ServantCombineResultInfoComponent__OpenResultInfo(
                        (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
         if ( !this->fields.resultInfoGrid )
           goto LABEL_21;
-        v30 = (UnityEngine_GameObject_o *)gameObject;
+        v31 = (UnityEngine_GameObject_o *)gameObject;
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.resultInfoGrid, 0);
-        gameObject = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v30, transform, 0, 0);
+        gameObject = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v31, transform, 0, 0);
         if ( !gameObject )
           goto LABEL_21;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
       }
-      v26 = *p_resInfoList;
+      v27 = *p_resInfoList;
       if ( !*p_resInfoList )
         goto LABEL_21;
     }
     gameObject = this->fields.resultInfoGrid;
     if ( !gameObject
-      || (v32 = v26->fields._size,
+      || (v33 = v27->fields._size,
           (gameObject = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0)) == 0)
       || (v35.fields.z = this->fields.center.fields.z,
-          v35.fields.y = (float)((float)(v25 * 0.5) * (float)v32) + -25.0,
-          v35.fields.x = v27,
+          v35.fields.y = (float)((float)(v25 * 0.5) * (float)v33) + -25.0,
+          v35.fields.x = v28,
           UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v35, 0),
           (gameObject = this->fields.resultInfoGrid) == 0) )
     {
@@ -407,9 +407,9 @@ LABEL_21:
       sub_2213CDC(gameObject, v10);
     }
     UIGrid__set_repositionNow((UIGrid_o *)gameObject, 1, 0);
-    v33 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(v33, (Il2CppObject *)this, Method_ServantCombineResultInfoComponent_EndOpen__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v33, 0, 0, 0);
+    v34 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    System_Action___ctor(v34, (Il2CppObject *)this, Method_ServantCombineResultInfoComponent_EndOpen__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v34, 0, 0, 0);
   }
 }
 
@@ -490,7 +490,7 @@ void ServantCombineResultInfoComponent__setCenter(ServantCombineResultInfoCompon
   float v14; // s10
   float v15; // s2
   float v16; // s3
-  UnityEngine_Vector3_o v17; // 0:kr00_12.12
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A248 & 1) == 0 )
@@ -537,14 +537,14 @@ LABEL_20:
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)basePanel, 0);
     if ( !transform )
       goto LABEL_20;
-    v18.fields.x = v12;
-    v18.fields.y = v13;
-    v18.fields.z = v14;
-    v17 = UnityEngine_Transform__InverseTransformPoint(transform, v18, 0);
+    v17.fields.x = v12;
+    v17.fields.y = v13;
+    v17.fields.z = v14;
+    v18 = UnityEngine_Transform__InverseTransformPoint(transform, v17, 0);
     if ( v10 >= v9[3].n64_u32[0] )
       goto LABEL_19;
     ++v10;
-    *(UnityEngine_Vector3_o *)(p_fields - 2) = v17;
+    *(UnityEngine_Vector3_o *)(p_fields - 2) = v18;
     p_fields += 3;
   }
   while ( v10 != 4 );

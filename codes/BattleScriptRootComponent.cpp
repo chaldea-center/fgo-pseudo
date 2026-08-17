@@ -833,7 +833,7 @@ void BattleScriptRootComponent__EndRequestBattleScenario(
     goto LABEL_53;
   this = (BattleScriptRootComponent_o *)QuestMaster__getQuestEntity(
                                           (QuestMaster_o *)MasterData_object,
-                                          *(_DWORD *)(*((_QWORD *)this + 23) + 20LL),
+                                          *((_DWORD *)this[2].monitor + 5),
                                           0);
   if ( this )
   {
@@ -4015,6 +4015,7 @@ BattleScriptRootComponent_TalkScriptSaveInfo_o *BattleScriptRootComponent_TalkSc
   bool v19; // w7
   BattleSetupInfo_o *bSetupInfo; // x0
   BattleSetupInfo_BattleSetupSaveInfo_o *InfoForSave; // x1
+  BattleScriptRootComponent_TalkScriptSaveInfo_o *result; // x0
 
   if ( (byte_59745BF & 1) == 0 )
   {
@@ -4041,8 +4042,9 @@ BattleScriptRootComponent_TalkScriptSaveInfo_o *BattleScriptRootComponent_TalkSc
     InfoForSave = BattleSetupInfo__GetInfoForSave(bSetupInfo, 0);
   *(_QWORD *)(v3 + 48) = InfoForSave;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 48), (int32_t)InfoForSave, v14, v15, v16, v17, v18, v19);
+  result = (BattleScriptRootComponent_TalkScriptSaveInfo_o *)v3;
   *(_BYTE *)(v3 + 56) = this->fields._IsAfterOrganization_k__BackingField;
-  return (BattleScriptRootComponent_TalkScriptSaveInfo_o *)v3;
+  return result;
 }
 
 
@@ -5067,8 +5069,8 @@ LABEL_83:
       this->fields.__2__current = 0;
       v151 = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)v151, 0, v2, v3, v4, v5, v6, v7);
-      *((_DWORD *)v151 - 2) = 1;
       LOBYTE(questPhaseEntity_5__2) = 1;
+      *((_DWORD *)v151 - 2) = 1;
       return (char)questPhaseEntity_5__2;
     }
 LABEL_54:
@@ -5228,8 +5230,8 @@ LABEL_54:
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v185, v186, v187, v188, v189, v190, v191);
   v85 = 2;
 LABEL_82:
-  *((_DWORD *)p__2__current - 2) = v85;
   LOBYTE(questPhaseEntity_5__2) = 1;
+  *((_DWORD *)p__2__current - 2) = v85;
   return (char)questPhaseEntity_5__2;
 }
 
@@ -5319,6 +5321,7 @@ bool BattleScriptRootComponent__TransitionTerminalCoroutine_d__48__MoveNext(
   clsQuestCheck_o *v31; // x19
   __int64 v32; // x1
   long double v33; // q0
+  bool result; // w0
   TerminalPramsManager_c *v35; // x0
   TerminalPramsManager_c *v36; // x0
   System_Action_o *v37; // x21
@@ -5691,8 +5694,9 @@ LABEL_108:
   this->fields.__2__current = started;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)started, v41, v42, v43, v44, v45, v46);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

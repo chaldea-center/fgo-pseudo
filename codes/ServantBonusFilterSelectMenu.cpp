@@ -241,8 +241,10 @@ void ServantBonusFilterSelectMenu__MoveButton(
         int32_t x,
         const MethodInfo *method)
 {
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s8
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !button
     || (this = (ServantBonusFilterSelectMenu_o *)UnityEngine_Component__get_gameObject(
@@ -252,6 +254,8 @@ void ServantBonusFilterSelectMenu__MoveButton(
                                                    (UnityEngine_GameObject_o *)this,
                                                    0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
+        y = localPosition.fields.y,
+        z = localPosition.fields.z,
         (this = (ServantBonusFilterSelectMenu_o *)UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)button,
                                                     0)) == 0)
@@ -261,10 +265,10 @@ void ServantBonusFilterSelectMenu__MoveButton(
   {
     sub_2213CDC(this, button);
   }
-  v7.fields.x = (float)x;
-  v7.fields.y = localPosition.fields.y;
-  v7.fields.z = localPosition.fields.z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v7, 0);
+  v9.fields.x = (float)x;
+  v9.fields.y = y;
+  v9.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v9, 0);
 }
 
 
@@ -1406,7 +1410,7 @@ System_IAsyncResult_o *ServantBonusFilterSelectMenu_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

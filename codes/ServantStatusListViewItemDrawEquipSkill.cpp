@@ -114,7 +114,7 @@ void ServantStatusListViewItemDrawEquipSkill__Awake(
   struct UnityEngine_GameObject_array *skillBaseList; // x8
   ServantStatusListViewItemDrawEquipSkill_o *v3; // x19
   struct UnityEngine_GameObject_array *v4; // x8
-  float v5; // s8
+  float y; // s8
   int v6; // w9
   struct UISprite_o *baseSprite; // x9
   int v8; // w20
@@ -123,10 +123,10 @@ void ServantStatusListViewItemDrawEquipSkill__Awake(
   int v11; // w8
   float v12; // s8
   struct UnityEngine_GameObject_array *v13; // x8
-  float y; // s1
-  float v15; // s1
-  UnityEngine_Vector3_o localPosition; // 0:kr20_12.12
-  UnityEngine_Vector3_o v17; // 0:kr34_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   skillBaseList = this->fields.skillBaseList;
   if ( !skillBaseList )
@@ -142,7 +142,7 @@ void ServantStatusListViewItemDrawEquipSkill__Awake(
                                                           0);
     if ( !this )
       goto LABEL_23;
-    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
     v4 = v3->fields.skillBaseList;
     if ( !v4 )
       goto LABEL_23;
@@ -151,16 +151,16 @@ void ServantStatusListViewItemDrawEquipSkill__Awake(
     this = (ServantStatusListViewItemDrawEquipSkill_o *)v4->m_Items[1];
     if ( !this )
       goto LABEL_23;
-    v5 = y;
+    y = localPosition.fields.y;
     this = (ServantStatusListViewItemDrawEquipSkill_o *)UnityEngine_GameObject__get_transform(
                                                           (UnityEngine_GameObject_o *)this,
                                                           0);
     if ( !this )
       goto LABEL_23;
-    v15 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y));
+    v15 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
     skillBaseList = v3->fields.skillBaseList;
-    v6 = (int)(float)(v5 - v15);
-    if ( (float)(v5 - v15) == INFINITY )
+    v6 = (int)(float)(y - v15.fields.y);
+    if ( (float)(y - v15.fields.y) == INFINITY )
       v6 = 0x80000000;
     v3->fields.skillPitch = v6;
     if ( !skillBaseList )
@@ -183,13 +183,13 @@ void ServantStatusListViewItemDrawEquipSkill__Awake(
                                                         0);
   if ( !this )
     goto LABEL_23;
-  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-  v3->fields.titleBasePosition.fields.x = localPosition.fields.x;
+  v16 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  v3->fields.titleBasePosition.fields.x = v16.fields.x;
   v11 = v8 >= 0 ? v8 : v8 + 1;
   v12 = (float)(v11 >> 1);
   v13 = v3->fields.skillBaseList;
-  v3->fields.titleBasePosition.fields.y = localPosition.fields.y - v12;
-  v3->fields.titleBasePosition.fields.z = localPosition.fields.z;
+  v3->fields.titleBasePosition.fields.y = v16.fields.y - v12;
+  v3->fields.titleBasePosition.fields.z = v16.fields.z;
   if ( !v13 )
 LABEL_23:
     sub_2213CDC(this, method);

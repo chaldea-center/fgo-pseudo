@@ -142,7 +142,7 @@ void MasterEquipIconComponent__SetEquipInfo(
   int32_t genderImageId; // [xsp+4h] [xbp-4Ch] BYREF
   System_String_o *detail; // [xsp+8h] [xbp-48h] BYREF
   System_String_o *equipName; // [xsp+10h] [xbp-40h] BYREF
-  __int64 maxLv; // [xsp+18h] [xbp-38h] BYREF
+  int32_t maxLv[2]; // [xsp+18h] [xbp-38h] BYREF
 
   if ( (byte_596B3AC & 1) == 0 )
   {
@@ -151,7 +151,7 @@ void MasterEquipIconComponent__SetEquipInfo(
     byte_596B3AC = 1;
   }
   equipName = 0;
-  maxLv = 0;
+  *(_QWORD *)maxLv = 0;
   detail = 0;
   genderImageId = 0;
   this->fields.usrEquipData = usrEquipData;
@@ -177,14 +177,7 @@ void MasterEquipIconComponent__SetEquipInfo(
     v17);
   if ( !usrEquipData )
     goto LABEL_9;
-  UserEquipEntity__getEquipInfo(
-    usrEquipData,
-    (int32_t *)&maxLv + 1,
-    (int32_t *)&maxLv,
-    &equipName,
-    &detail,
-    &genderImageId,
-    0);
+  UserEquipEntity__getEquipInfo(usrEquipData, &maxLv[1], maxLv, &equipName, &detail, &genderImageId, 0);
   equipIconComp = this->fields.equipIconComp;
   if ( !equipIconComp )
     goto LABEL_9;
@@ -440,7 +433,7 @@ System_IAsyncResult_o *MasterEquipIconComponent_CallbackFunc__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(qword_5984348, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984368, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

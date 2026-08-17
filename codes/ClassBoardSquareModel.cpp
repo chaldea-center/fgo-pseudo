@@ -2455,14 +2455,20 @@ System_Collections_Generic_IReadOnlyCollection_IClassBoardLineModel__o *ClassBoa
 UnityEngine_Vector3_o ClassBoardSquareModel__get_Position(ClassBoardSquareModel_o *this, const MethodInfo *method)
 {
   struct ClassBoardSquareEntity_o *entity; // x8
+  float v3; // s2
+  float posX; // s0
+  float posY; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   entity = this->fields.entity;
   if ( !entity )
     sub_2213CDC(this, method);
-  result.fields.z = 0.0;
-  result.fields.x = (float)entity->fields.posX;
-  result.fields.y = (float)entity->fields.posY;
+  v3 = 0.0;
+  posX = (float)entity->fields.posX;
+  posY = (float)entity->fields.posY;
+  result.fields.z = v3;
+  result.fields.y = posY;
+  result.fields.x = posX;
   return result;
 }
 

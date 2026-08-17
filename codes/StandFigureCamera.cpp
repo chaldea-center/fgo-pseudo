@@ -103,8 +103,9 @@ void StandFigureCamera__DrawGameObjectWithCommandBuffer(
   StandFigureCamera_o *v14; // x22
   unsigned __int64 v15; // x27
   UnityEngine_Object_o *v16; // x23
-  Il2CppObject *v17; // x0
-  __int64 v18; // x1
+  UnityEngine_ParticleSystem_TrailModule_o v17; // x0
+  Il2CppObject *v18; // x0
+  __int64 v19; // x1
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-58h] BYREF
 
   if ( (byte_596F9EE & 1) == 0 )
@@ -129,10 +130,10 @@ void StandFigureCamera__DrawGameObjectWithCommandBuffer(
     return;
   if ( !Component_object )
   {
-    v17 = UnityEngine_GameObject__GetComponent_object_(
+    v18 = UnityEngine_GameObject__GetComponent_object_(
             gameObject,
             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    sub_2213CDC(v17, v18);
+    sub_2213CDC(v18, v19);
   }
   klass = Component_object->klass;
   v10 = UnityEngine_ParticleSystemRenderer_TypeInfo;
@@ -168,9 +169,8 @@ LABEL_29:
         if ( !v11 )
           goto LABEL_29;
         m_ParticleSystem = UnityEngine_ParticleSystem__get_trails((UnityEngine_ParticleSystem_o *)v11, 0).fields.m_ParticleSystem;
-        this = (StandFigureCamera_o *)UnityEngine_ParticleSystem_TrailModule__get_enabled(
-                                        (UnityEngine_ParticleSystem_TrailModule_o)&m_ParticleSystem,
-                                        0);
+        v17.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+        this = (StandFigureCamera_o *)UnityEngine_ParticleSystem_TrailModule__get_enabled(v17, 0);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !cmd )
@@ -438,7 +438,7 @@ void StandFigureCamera__InitRenderTextures(
   System_String_o *v11; // x0
   const MethodInfo_3CEBF78 *v12; // x4
   __int64 v13; // x0
-  System_ValueTuple_bool__object__o v14; // x1
+  System_ValueTuple_bool__object__o v14; // x1 OVERLAPPED
   System_String_o *v15; // x3
   int32_t v16; // w4
   int32_t v17; // w5
@@ -1066,7 +1066,7 @@ void StandFigureCamera__ReleaseRenderTextures(
         const MethodInfo *method)
 {
   __int128 v3; // [xsp+10h] [xbp-40h] BYREF
-  __int128 v4; // [xsp+20h] [xbp-30h]
+  UnityEngine_RenderTexture_o *temp[2]; // [xsp+20h] [xbp-30h]
 
   if ( (byte_596F9E0 & 1) == 0 )
   {
@@ -1077,7 +1077,7 @@ void StandFigureCamera__ReleaseRenderTextures(
     byte_596F9E0 = 1;
   }
   v3 = 0u;
-  v4 = 0u;
+  *(_OWORD *)temp = 0u;
   if ( renderTextureEffects )
   {
     System_Collections_Generic_List_ValueTuple_bool__object____GetEnumerator(
@@ -1087,7 +1087,7 @@ void StandFigureCamera__ReleaseRenderTextures(
     while ( System_Collections_Generic_List_Enumerator_ValueTuple_bool__object____MoveNext(
               (System_Collections_Generic_List_Enumerator_T__o *)&v3,
               (const MethodInfo_40E8C70 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___MoveNext__) )
-      UnityEngine_RenderTexture__ReleaseTemporary(*((UnityEngine_RenderTexture_o **)&v4 + 1), 0);
+      UnityEngine_RenderTexture__ReleaseTemporary(temp[1], 0);
     System_Collections_Generic_List_Enumerator_ValueTuple_bool__object____Dispose(
       (System_Collections_Generic_List_Enumerator_T__o *)&v3,
       (const MethodInfo_40E8C6C *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___Dispose__);
@@ -1253,73 +1253,77 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   UnityEngine_Object_o *v139; // x23
   __int64 v140; // x0
   __int64 v141; // x1
-  float v142; // s0
-  __int64 v143; // x1
-  __int64 v144; // x2
-  UnityEngine_Rendering_CommandBuffer_o *v145; // x21
-  UnityEngine_GameObject_o *v146; // x0
-  const MethodInfo *v147; // x3
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v145; // s0
+  __int64 v146; // x1
+  __int64 v147; // x2
   UnityEngine_Rendering_CommandBuffer_o *v148; // x21
-  UnityEngine_Rendering_RenderTargetIdentifier_o *v149; // x0
-  __int64 v150; // x1
-  __int64 v151; // x1
-  __int64 v152; // x1
-  UnityEngine_Rendering_CommandBuffer_o *v153; // x21
-  UnityEngine_GameObject_o *v154; // x0
-  const MethodInfo *v155; // x3
-  UnityEngine_Rendering_CommandBuffer_o *v156; // x19
-  UnityEngine_Rendering_RenderTargetIdentifier_o *v157; // x0
-  __int64 v158; // x1
-  UnityEngine_Rendering_CommandBuffer_o *v159; // x20
-  UnityEngine_GameObject_o *v160; // x0
-  const MethodInfo *v161; // x3
-  UnityEngine_Rendering_CommandBuffer_o *v162; // x19
-  __int64 v163; // x1
-  __int64 v164; // x2
-  UnityEngine_Rendering_CommandBuffer_o *v165; // x20
+  UnityEngine_GameObject_o *v149; // x0
+  const MethodInfo *v150; // x3
+  UnityEngine_Rendering_CommandBuffer_o *v151; // x21
+  UnityEngine_Rendering_RenderTargetIdentifier_o *v152; // x0
+  __int64 v153; // x1
+  __int64 v154; // x1
+  __int64 v155; // x1
+  UnityEngine_Rendering_CommandBuffer_o *v156; // x21
+  UnityEngine_GameObject_o *v157; // x0
+  const MethodInfo *v158; // x3
+  UnityEngine_Rendering_CommandBuffer_o *v159; // x19
+  UnityEngine_Rendering_RenderTargetIdentifier_o *v160; // x0
+  __int64 v161; // x1
+  UnityEngine_Rendering_CommandBuffer_o *v162; // x20
+  UnityEngine_GameObject_o *v163; // x0
+  const MethodInfo *v164; // x3
+  UnityEngine_Rendering_CommandBuffer_o *v165; // x19
+  __int64 v166; // x1
+  __int64 v167; // x2
+  UnityEngine_Rendering_CommandBuffer_o *v168; // x20
   UnityEngine_Rendering_CommandBuffer_c *klass; // x8
-  __int64 v167; // x9
+  __int64 v170; // x9
   int32_t *p_offset; // x10
-  __int64 v169; // x0
-  UnityEngine_Component_o *v170; // [xsp+10h] [xbp-5B0h]
-  UIStandFigureRender_o *v172; // [xsp+28h] [xbp-598h]
-  UnityEngine_Rendering_RenderTargetIdentifier_o v173; // [xsp+30h] [xbp-590h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v174; // [xsp+60h] [xbp-560h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v175; // [xsp+90h] [xbp-530h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v176; // [xsp+B8h] [xbp-508h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v177; // [xsp+E0h] [xbp-4E0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v178; // [xsp+110h] [xbp-4B0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v179; // [xsp+140h] [xbp-480h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v180; // [xsp+170h] [xbp-450h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v181; // [xsp+1A0h] [xbp-420h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v182; // [xsp+1D0h] [xbp-3F0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v183; // [xsp+200h] [xbp-3C0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v184; // [xsp+230h] [xbp-390h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v185; // [xsp+260h] [xbp-360h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v186; // [xsp+290h] [xbp-330h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v187; // [xsp+2C0h] [xbp-300h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v188; // [xsp+2F0h] [xbp-2D0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v189; // [xsp+320h] [xbp-2A0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v190; // [xsp+350h] [xbp-270h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v191; // [xsp+380h] [xbp-240h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v192; // [xsp+3B0h] [xbp-210h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v193; // [xsp+3E0h] [xbp-1E0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v194; // [xsp+410h] [xbp-1B0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v195; // [xsp+440h] [xbp-180h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v196; // [xsp+470h] [xbp-150h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v197; // [xsp+4A0h] [xbp-120h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v198; // [xsp+4D0h] [xbp-F0h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v199; // [xsp+500h] [xbp-C0h]
-  __int64 v200; // [xsp+528h] [xbp-98h]
+  __int64 v172; // x0
+  UnityEngine_Component_o *v173; // [xsp+10h] [xbp-5B0h]
+  UIStandFigureRender_o *v175; // [xsp+28h] [xbp-598h]
+  UnityEngine_Rendering_RenderTargetIdentifier_o v176; // [xsp+30h] [xbp-590h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v177; // [xsp+60h] [xbp-560h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v178; // [xsp+90h] [xbp-530h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v179; // [xsp+B8h] [xbp-508h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v180; // [xsp+E0h] [xbp-4E0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v181; // [xsp+110h] [xbp-4B0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v182; // [xsp+140h] [xbp-480h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v183; // [xsp+170h] [xbp-450h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v184; // [xsp+1A0h] [xbp-420h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v185; // [xsp+1D0h] [xbp-3F0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v186; // [xsp+200h] [xbp-3C0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v187; // [xsp+230h] [xbp-390h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v188; // [xsp+260h] [xbp-360h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v189; // [xsp+290h] [xbp-330h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v190; // [xsp+2C0h] [xbp-300h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v191; // [xsp+2F0h] [xbp-2D0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v192; // [xsp+320h] [xbp-2A0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v193; // [xsp+350h] [xbp-270h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v194; // [xsp+380h] [xbp-240h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v195; // [xsp+3B0h] [xbp-210h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v196; // [xsp+3E0h] [xbp-1E0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v197; // [xsp+410h] [xbp-1B0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v198; // [xsp+440h] [xbp-180h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v199; // [xsp+470h] [xbp-150h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v200; // [xsp+4A0h] [xbp-120h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v201; // [xsp+4D0h] [xbp-F0h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v202; // [xsp+500h] [xbp-C0h]
+  __int64 v203; // [xsp+528h] [xbp-98h]
   UnityEngine_Rendering_CommandBuffer_o **p_buffer; // [xsp+530h] [xbp-90h]
   UnityEngine_Rendering_CommandBuffer_o *buffer; // [xsp+538h] [xbp-88h] BYREF
-  UnityEngine_Material_o *v203; // [xsp+548h] [xbp-78h]
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Color_o v205; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v206; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v207; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v208; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Material_o *v206; // [xsp+548h] [xbp-78h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v208; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o v209; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v210; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v211; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v212; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v213; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596F9F0 & 1) == 0 )
   {
@@ -1344,7 +1348,7 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   v16 = (UnityEngine_Rendering_CommandBuffer_o *)sub_2213CCC(UnityEngine_Rendering_CommandBuffer_TypeInfo);
   UnityEngine_Rendering_CommandBuffer___ctor(v16, 0);
   buffer = v16;
-  v200 = 0;
+  v203 = 0;
   p_buffer = &buffer;
   if ( !v16 )
     sub_2213CDC(v17, v18);
@@ -1355,7 +1359,7 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   if ( !transform )
     sub_2213CDC(0, v22);
   Child = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(transform, 0, 0);
-  v172 = standFigure;
+  v175 = standFigure;
   if ( !Child )
     sub_2213CDC(0, v24);
   Component_object = UnityEngine_Component__GetComponent_object_(
@@ -1398,37 +1402,37 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   v49 = buffer;
   v50 = (UnityEngine_Component_o *)v48;
   v51 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
-          &v198,
+          &v201,
           (UnityEngine_Texture_o *)mainTexture,
           0);
-  v199 = v198;
+  v202 = v201;
   if ( !v49 )
     sub_2213CDC(v51, v52);
-  v197 = v199;
-  UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v49, &v197, 0);
+  v200 = v202;
+  UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v49, &v200, 0);
   if ( !buffer )
     sub_2213CDC(0, v53);
-  v205.fields.r = 0.0;
-  v205.fields.g = 0.0;
-  v205.fields.b = 0.0;
-  v205.fields.a = 0.0;
-  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v205, 0);
+  v209.fields.r = 0.0;
+  v209.fields.g = 0.0;
+  v209.fields.b = 0.0;
+  v209.fields.a = 0.0;
+  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v209, 0);
   if ( renderBack )
   {
     v55 = buffer;
-    v56 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(&v198, (UnityEngine_Texture_o *)rtBack, 0);
-    v199 = v198;
+    v56 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(&v201, (UnityEngine_Texture_o *)rtBack, 0);
+    v202 = v201;
     if ( !v55 )
       sub_2213CDC(v56, v57);
-    v196 = v199;
-    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v55, &v196, 0);
+    v199 = v202;
+    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v55, &v199, 0);
     if ( !buffer )
       sub_2213CDC(0, v58);
-    v206.fields.r = 0.0;
-    v206.fields.g = 0.0;
-    v206.fields.b = 0.0;
-    v206.fields.a = 0.0;
-    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v206, 0);
+    v210.fields.r = 0.0;
+    v210.fields.g = 0.0;
+    v210.fields.b = 0.0;
+    v210.fields.a = 0.0;
+    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v210, 0);
     if ( !v50 )
       sub_2213CDC(v59, v60);
     v61 = buffer;
@@ -1441,35 +1445,35 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v66, v67, v68);
     v69 = buffer;
     v70 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
-            &v195,
+            &v198,
             (UnityEngine_Texture_o *)mainTexture,
             0);
-    v198 = v195;
+    v201 = v198;
     if ( !v69 )
       sub_2213CDC(v70, v71);
-    v194 = v198;
-    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v69, &v194, 0);
+    v197 = v201;
+    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v69, &v197, 0);
   }
   if ( !buffer )
     sub_2213CDC(0, v54);
   UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83556192(buffer, 1, 512, 512, 0, 1, 16, 0);
   v72 = buffer;
-  v73 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 1, 0);
-  v199 = v198;
+  v73 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v201, 1, 0);
+  v202 = v201;
   if ( !v72 )
     sub_2213CDC(v73, v74);
-  v193 = v199;
-  UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v72, &v193, 0);
+  v196 = v202;
+  UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v72, &v196, 0);
   if ( !buffer )
     sub_2213CDC(0, v75);
-  v207.fields.r = 0.0;
-  v207.fields.g = 0.0;
-  v207.fields.b = 0.0;
-  v207.fields.a = 0.0;
-  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v207, 0);
+  v211.fields.r = 0.0;
+  v211.fields.g = 0.0;
+  v211.fields.b = 0.0;
+  v211.fields.a = 0.0;
+  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v211, 0);
   sharedMaterials = UnityEngine_Renderer__get_sharedMaterials((UnityEngine_Renderer_o *)v27, 0);
   v79 = sharedMaterials;
-  v170 = (UnityEngine_Component_o *)v45;
+  v173 = (UnityEngine_Component_o *)v45;
   if ( !sharedMaterials )
     sub_2213CDC(0, v77);
   max_length = sharedMaterials->max_length;
@@ -1505,7 +1509,7 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   UnityEngine_Material___ctor(v85, v83, 0);
   v86 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v86, v84, 0);
-  v203 = v86;
+  v206 = v86;
   if ( !buffer )
     sub_2213CDC(0, v87);
   UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_83556192(buffer, 2, 512, 512, 0, 1, 16, 0);
@@ -1534,70 +1538,70 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     GRAND_GlowIntensity + (float)(0.15 - fabsf(v97)),
     0);
   UnityEngine_Material__SetFloat(v85, (System_String_o *)StringLiteral_16783/*"_BlurSize"*/, this->fields.GRAND_GlowSize, 0);
-  v208.fields.r = 1.0;
-  v208.fields.g = 1.0;
-  v208.fields.b = 1.0;
-  v208.fields.a = 1.0;
-  UnityEngine_Material__SetColor(v85, (System_String_o *)StringLiteral_16813/*"_Color"*/, v208, 0);
+  v212.fields.r = 1.0;
+  v212.fields.g = 1.0;
+  v212.fields.b = 1.0;
+  v212.fields.a = 1.0;
+  UnityEngine_Material__SetColor(v85, (System_String_o *)StringLiteral_16813/*"_Color"*/, v212, 0);
   v98 = buffer;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 1, 0);
-  v199 = v198;
-  v99 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v195, 3, 0);
-  v198 = v195;
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v201, 1, 0);
+  v202 = v201;
+  v99 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 3, 0);
+  v201 = v198;
   if ( !v98 )
     sub_2213CDC(v99, v100);
-  v192 = v199;
-  v191 = v198;
-  UnityEngine_Rendering_CommandBuffer__Blit_83560304(v98, &v192, &v191, v85, 0, 0);
+  v195 = v202;
+  v194 = v201;
+  UnityEngine_Rendering_CommandBuffer__Blit_83560304(v98, &v195, &v194, v85, 0, 0);
   if ( this->fields.GRAND_GlowIterations - 1 >= 1 )
   {
     v101 = 0;
     do
     {
       v102 = buffer;
-      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 3, 0);
-      v199 = v198;
-      v103 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v195, 4, 0);
-      v198 = v195;
+      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v201, 3, 0);
+      v202 = v201;
+      v103 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 4, 0);
+      v201 = v198;
       if ( !v102 )
         sub_2213CDC(v103, v104);
-      v190 = v199;
-      v189 = v198;
-      UnityEngine_Rendering_CommandBuffer__Blit_83560304(v102, &v190, &v189, v85, 1, 0);
+      v193 = v202;
+      v192 = v201;
+      UnityEngine_Rendering_CommandBuffer__Blit_83560304(v102, &v193, &v192, v85, 1, 0);
       v105 = buffer;
-      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v188, 4, 0);
-      v195 = v188;
-      v106 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v187, 3, 0);
-      v188 = v187;
+      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v191, 4, 0);
+      v198 = v191;
+      v106 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v190, 3, 0);
+      v191 = v190;
       if ( !v105 )
         sub_2213CDC(v106, v107);
-      v186 = v195;
-      v185 = v188;
-      UnityEngine_Rendering_CommandBuffer__Blit_83560304(v105, &v186, &v185, v85, 0, 0);
+      v189 = v198;
+      v188 = v191;
+      UnityEngine_Rendering_CommandBuffer__Blit_83560304(v105, &v189, &v188, v85, 0, 0);
       ++v101;
     }
     while ( v101 < this->fields.GRAND_GlowIterations - 1 );
   }
   v108 = buffer;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 3, 0);
-  v199 = v198;
-  v109 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v195, 2, 0);
-  v198 = v195;
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v201, 3, 0);
+  v202 = v201;
+  v109 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v198, 2, 0);
+  v201 = v198;
   if ( !v108 )
     sub_2213CDC(v109, v110);
-  v184 = v199;
-  v183 = v198;
-  UnityEngine_Rendering_CommandBuffer__Blit_83560304(v108, &v184, &v183, v85, 1, 0);
+  v187 = v202;
+  v186 = v201;
+  UnityEngine_Rendering_CommandBuffer__Blit_83560304(v108, &v187, &v186, v85, 1, 0);
   v111 = buffer;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v188, 2, 0);
-  v195 = v188;
-  v112 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v187, 1, 0);
-  v188 = v187;
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v191, 2, 0);
+  v198 = v191;
+  v112 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v190, 1, 0);
+  v191 = v190;
   if ( !v111 )
     sub_2213CDC(v112, v113);
-  v182 = v195;
-  v181 = v188;
-  UnityEngine_Rendering_CommandBuffer__Blit_83560100(v111, &v182, &v181, 0);
+  v185 = v198;
+  v184 = v191;
+  UnityEngine_Rendering_CommandBuffer__Blit_83560100(v111, &v185, &v184, 0);
   if ( !buffer )
     sub_2213CDC(0, v114);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(buffer, 3, 0);
@@ -1607,10 +1611,10 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   if ( !buffer )
     sub_2213CDC(0, v116);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(buffer, 2, 0);
-  if ( !v203 )
+  if ( !v206 )
     sub_2213CDC(0, v117);
   UnityEngine_Material__SetFloat(
-    v203,
+    v206,
     (System_String_o *)StringLiteral_16898/*"_Intensity"*/,
     this->fields.GRAND_GlowApplicatorIntensity,
     0);
@@ -1622,31 +1626,31 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     this->fields.GRAND_GlowColor,
     0);
   v119 = buffer;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v180, 1, 0);
-  v187 = v180;
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548792(&v183, 1, 0);
+  v190 = v183;
   v120 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
-           &v179,
+           &v182,
            (UnityEngine_Texture_o *)mainTexture,
            0);
-  v180 = v179;
+  v183 = v182;
   if ( !v119 )
     sub_2213CDC(v120, v121);
-  v178 = v187;
-  v177 = v180;
-  UnityEngine_Rendering_CommandBuffer__Blit_83560196(v119, &v178, &v177, v203, 0);
+  v181 = v190;
+  v180 = v183;
+  UnityEngine_Rendering_CommandBuffer__Blit_83560196(v119, &v181, &v180, v206, 0);
   if ( !buffer )
     sub_2213CDC(0, v122);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(buffer, 1, 0);
   v123 = buffer;
   v124 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
-           &v176,
+           &v179,
            (UnityEngine_Texture_o *)mainTexture,
            0);
-  v179 = v176;
+  v182 = v179;
   if ( !v123 )
     sub_2213CDC(v124, v125);
-  v175 = v179;
-  UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v123, &v175, 0);
+  v178 = v182;
+  UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v123, &v178, 0);
   if ( !buffer )
     sub_2213CDC(0, v126);
   UnityEngine_Rendering_CommandBuffer__EnableShaderKeyword(buffer, (System_String_o *)StringLiteral_7275/*"GRAND"*/, 0);
@@ -1661,7 +1665,7 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     (System_String_o *)StringLiteral_16888/*"_GradientColor"*/,
     StandFigureCamera_TypeInfo->static_fields->figureRenderGradientColor,
     0);
-  if ( v172->fields.isHigh )
+  if ( v175->fields.isHigh )
   {
     GRAND_HighTextureGradientOffset = this->fields.GRAND_HighTextureGradientOffset;
     if ( buffer )
@@ -1715,86 +1719,92 @@ LABEL_69:
   if ( !v42 )
     sub_2213CDC(v140, v141);
   localPosition = UnityEngine_Transform__get_localPosition(v42, 0);
-  v142 = 512.0;
-  if ( !v172->fields.isHigh )
-    v142 = 0.0;
-  TransformHelper__SetLocalPositionY(v42, v142, 0);
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
+  v145 = 512.0;
+  if ( !v175->fields.isHigh )
+    v145 = 0.0;
+  TransformHelper__SetLocalPositionY(v42, v145, 0);
   if ( renderFront )
   {
-    v145 = buffer;
-    v146 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v42, 0);
-    StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v145, v146, v147);
     v148 = buffer;
-    v149 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
-             &v198,
+    v149 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v42, 0);
+    StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v148, v149, v150);
+    v151 = buffer;
+    v152 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
+             &v201,
              (UnityEngine_Texture_o *)rtFront,
              0);
-    v199 = v198;
-    if ( !v148 )
-      sub_2213CDC(v149, v150);
-    v174 = v199;
-    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v148, &v174, 0);
+    v202 = v201;
+    if ( !v151 )
+      sub_2213CDC(v152, v153);
+    v177 = v202;
+    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v151, &v177, 0);
     if ( !buffer )
-      sub_2213CDC(0, v151);
-    v209.fields.r = 0.0;
-    v209.fields.g = 0.0;
-    v209.fields.b = 0.0;
-    v209.fields.a = 0.0;
-    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v209, 0);
-    if ( !v170 )
-      sub_2213CDC(0, v152);
-    v153 = buffer;
-    v154 = UnityEngine_Component__get_gameObject(v170, 0);
-    StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v153, v154, v155);
+      sub_2213CDC(0, v154);
+    v213.fields.r = 0.0;
+    v213.fields.g = 0.0;
+    v213.fields.b = 0.0;
+    v213.fields.a = 0.0;
+    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget(buffer, 1, 1, v213, 0);
+    if ( !v173 )
+      sub_2213CDC(0, v155);
     v156 = buffer;
-    v157 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
-             &v195,
+    v157 = UnityEngine_Component__get_gameObject(v173, 0);
+    StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v156, v157, v158);
+    v159 = buffer;
+    v160 = UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_83548824(
+             &v198,
              (UnityEngine_Texture_o *)mainTexture,
              0);
-    v198 = v195;
-    if ( !v156 )
-      sub_2213CDC(v157, v158);
-    v173 = v198;
-    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v156, &v173, 0);
+    v201 = v198;
+    if ( !v159 )
+      sub_2213CDC(v160, v161);
+    v176 = v201;
+    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v159, &v176, 0);
   }
   else if ( renderBack )
   {
-    v159 = buffer;
-    v160 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v42, 0);
-    StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v159, v160, v161);
+    v162 = buffer;
+    v163 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v42, 0);
+    StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v162, v163, v164);
   }
-  v162 = buffer;
-  if ( !*(&UnityEngine_Graphics_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo, v143, v144);
-  UnityEngine_Graphics__ExecuteCommandBuffer(v162, 0);
-  UnityEngine_Transform__set_localPosition(v42, localPosition, 0);
-  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v163, v164);
-  UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v85, 0);
-  UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v203, 0);
   v165 = buffer;
+  if ( !*(&UnityEngine_Graphics_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo, v146, v147);
+  UnityEngine_Graphics__ExecuteCommandBuffer(v165, 0);
+  v208.fields.x = x;
+  v208.fields.y = y;
+  v208.fields.z = z;
+  UnityEngine_Transform__set_localPosition(v42, v208, 0);
+  if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v166, v167);
+  UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v85, 0);
+  UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)v206, 0);
+  v168 = buffer;
   if ( buffer )
   {
     klass = buffer->klass;
-    v167 = *(unsigned __int16 *)&buffer->klass->_2.rank;
+    v170 = *(unsigned __int16 *)&buffer->klass->_2.rank;
     if ( *(_WORD *)&buffer->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v167;
+        --v170;
         p_offset += 4;
-        if ( !v167 )
+        if ( !v170 )
           goto LABEL_100;
       }
-      v169 = (__int64)&klass->vtable + 16 * *p_offset;
+      v172 = (__int64)&klass->vtable + 16 * *p_offset;
     }
     else
     {
 LABEL_100:
-      v169 = sub_224BC3C(buffer, System_IDisposable_TypeInfo, 0);
+      v172 = sub_224BC3C(buffer, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(UnityEngine_Rendering_CommandBuffer_o *, _QWORD))v169)(v165, *(_QWORD *)(v169 + 8));
+    (*(void (__fastcall **)(UnityEngine_Rendering_CommandBuffer_o *, _QWORD))v172)(v168, *(_QWORD *)(v172 + 8));
   }
 }
 

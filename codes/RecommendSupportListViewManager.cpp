@@ -598,7 +598,7 @@ void RecommendSupportListViewManager___c__DisplayClass5_0___SetItem_b__0(
   this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !this )
     goto LABEL_14;
-  v12 = *((_BYTE *)this + 124) && v6->fields.index == i;
+  v12 = *((_BYTE *)&this[3].fields.index + 4) && v6->fields.index == i;
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, *(_QWORD *)&i, v11);
   this = (RecommendSupportListViewManager___c__DisplayClass5_0_o *)System_Convert__ToInt32_76657380(v12, 0);

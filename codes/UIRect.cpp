@@ -175,17 +175,23 @@ UnityEngine_Vector3_o UIRect__GetLocalPos(
   UnityEngine_Object_o *targetCam; // x22
   float z; // s8
   UnityEngine_Camera_o *v12; // x21
-  __int64 v13; // x1
+  float m_XMin; // s8
+  float m_YMin; // s9
+  float m_Width; // s10
+  float m_Height; // s11
+  float v17; // s1
+  float v18; // s0
+  __int64 v19; // x1
   float x; // s10
   float y; // s9
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v20; // 0:kr34_12.12
-  UnityEngine_Vector3_o v21; // 0:kr40_12.12
-  UnityEngine_Vector3_o v22; // 0:kr54_12.12
-  UnityEngine_Rect_o rect; // 0:kr10_16.16
+  float v22; // s2
+  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59751AA & 1) == 0 )
   {
@@ -215,31 +221,37 @@ UnityEngine_Vector3_o UIRect__GetLocalPos(
         if ( target )
         {
           v12 = ac->fields.targetCam;
+          m_XMin = rect.fields.m_XMin;
+          m_YMin = rect.fields.m_YMin;
+          m_Width = rect.fields.m_Width;
+          m_Height = rect.fields.m_Height;
           position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)target, 0);
           if ( v12 )
           {
-            v20 = UnityEngine_Camera__WorldToViewportPoint_83198212(v12, position, 0);
-            v25.fields.z = v20.fields.z;
+            v25 = UnityEngine_Camera__WorldToViewportPoint_83198212(v12, position, 0);
             target = this->fields.mCam;
             if ( target )
             {
-              v25.fields.y = rect.fields.m_YMin + (float)(rect.fields.m_Height * v20.fields.y);
-              v25.fields.x = rect.fields.m_XMin + (float)(rect.fields.m_Width * v20.fields.x);
-              v21 = UnityEngine_Camera__ViewportToWorldPoint_83198220(target, v25, 0);
-              x = v21.fields.x;
-              y = v21.fields.y;
-              z = v21.fields.z;
+              v17 = m_YMin + (float)(m_Height * v25.fields.y);
+              v18 = m_XMin + (float)(m_Width * v25.fields.x);
+              v26 = UnityEngine_Camera__ViewportToWorldPoint_83198220(target, v25, 0);
+              x = v26.fields.x;
+              y = v26.fields.y;
+              z = v26.fields.z;
               if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19);
               target = (UnityEngine_Camera_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)trans, 0, 0);
               if ( ((unsigned __int8)target & 1) == 0 )
                 goto LABEL_23;
               if ( trans )
               {
-                v22 = UnityEngine_Transform__InverseTransformPoint(trans, v21, 0);
-                x = v22.fields.x;
-                y = v22.fields.y;
-                z = v22.fields.z;
+                v27.fields.x = x;
+                v27.fields.y = y;
+                v27.fields.z = z;
+                v28 = UnityEngine_Transform__InverseTransformPoint(trans, v27, 0);
+                x = v28.fields.x;
+                y = v28.fields.y;
+                z = v28.fields.z;
 LABEL_23:
                 result.fields.x = floorf(x + 0.5);
                 result.fields.y = floorf(y + 0.5);
@@ -256,12 +268,11 @@ LABEL_25:
   target = (UnityEngine_Camera_o *)UIRect__get_cachedTransform(this, v9);
   if ( !target )
     goto LABEL_25;
-  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)target, 0);
-  result.fields.x = localPosition.fields.x;
-  result.fields.y = localPosition.fields.y;
-  z = localPosition.fields.z;
+  result = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)target, 0);
+  z = result.fields.z;
 LABEL_24:
-  result.fields.z = z;
+  v22 = z;
+  result.fields.z = v22;
   return result;
 }
 
@@ -278,17 +289,20 @@ UnityEngine_Vector3_array *UIRect__GetSides(
   float cameraRayDistance; // s8
   UnityEngine_Transform_o *cachedTransform; // x0
   __int64 v12; // x1
-  __int64 v13; // x21
-  unsigned __int64 v14; // x23
-  __int64 v15; // x8
-  __int64 v16; // x8
-  __int64 v17; // x21
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  __int64 v16; // x21
+  unsigned __int64 v17; // x23
+  __int64 v18; // x8
+  float *v19; // x8
+  __int64 v20; // x21
   unsigned __int64 i; // x22
-  __int64 v19; // x24
-  __int64 v20; // x23
-  UIRect_c *v21; // x0
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v23; // 0:kr14_12.12
+  __int64 v22; // x24
+  __int64 v23; // x23
+  UIRect_c *v24; // x0
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59751A9 & 1) == 0 )
   {
@@ -315,8 +329,11 @@ UnityEngine_Vector3_array *UIRect__GetSides(
 LABEL_32:
     sub_2213CDC(cachedTransform, v12);
   position = UnityEngine_Transform__get_position(cachedTransform, 0);
-  v13 = 0;
-  v14 = 0;
+  x = position.fields.x;
+  y = position.fields.y;
+  z = position.fields.z;
+  v16 = 0;
+  v17 = 0;
   do
   {
     cachedTransform = (UnityEngine_Transform_o *)UIRect_TypeInfo;
@@ -325,23 +342,25 @@ LABEL_32:
       j_il2cpp_runtime_class_init_0(UIRect_TypeInfo, v12);
       cachedTransform = (UnityEngine_Transform_o *)UIRect_TypeInfo;
     }
-    v15 = *(_QWORD *)cachedTransform[7].fields.m_CachedPtr;
-    if ( !v15 )
+    v18 = *(_QWORD *)cachedTransform[7].fields.m_CachedPtr;
+    if ( !v18 )
       goto LABEL_32;
-    if ( v14 >= *(unsigned int *)(v15 + 24) )
+    if ( v17 >= *(unsigned int *)(v18 + 24) )
 LABEL_33:
       sub_2213CE4(cachedTransform);
-    ++v14;
-    v16 = v15 + v13;
-    v13 += 12;
-    *(UnityEngine_Vector3_o *)(v16 + 32) = position;
+    ++v17;
+    v19 = (float *)(v18 + v16);
+    v16 += 12;
+    v19[8] = x;
+    v19[9] = y;
+    v19[10] = z;
   }
-  while ( v14 != 4 );
+  while ( v17 != 4 );
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)relativeTo, 0, 0) )
   {
-    v17 = 0;
+    v20 = 0;
     for ( i = 0; i != 4; ++i )
     {
       cachedTransform = (UnityEngine_Transform_o *)UIRect_TypeInfo;
@@ -350,28 +369,28 @@ LABEL_33:
         j_il2cpp_runtime_class_init_0(UIRect_TypeInfo, v12);
         cachedTransform = (UnityEngine_Transform_o *)UIRect_TypeInfo;
       }
-      v19 = *(_QWORD *)cachedTransform[7].fields.m_CachedPtr;
-      if ( !v19 )
+      v22 = *(_QWORD *)cachedTransform[7].fields.m_CachedPtr;
+      if ( !v22 )
         goto LABEL_32;
-      if ( i >= *(unsigned int *)(v19 + 24) )
+      if ( i >= *(unsigned int *)(v22 + 24) )
         goto LABEL_33;
       if ( !relativeTo )
         goto LABEL_32;
-      v20 = v19 + v17;
-      v23 = UnityEngine_Transform__InverseTransformPoint(relativeTo, *(UnityEngine_Vector3_o *)(v19 + v17 + 32), 0);
-      if ( i >= *(unsigned int *)(v19 + 24) )
+      v23 = v22 + v20;
+      v26 = UnityEngine_Transform__InverseTransformPoint(relativeTo, *(UnityEngine_Vector3_o *)(v22 + v20 + 32), 0);
+      if ( i >= *(unsigned int *)(v22 + 24) )
         goto LABEL_33;
-      v17 += 12;
-      *(UnityEngine_Vector3_o *)(v20 + 32) = v23;
+      v20 += 12;
+      *(UnityEngine_Vector3_o *)(v23 + 32) = v26;
     }
   }
-  v21 = UIRect_TypeInfo;
+  v24 = UIRect_TypeInfo;
   if ( !*(&UIRect_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(UIRect_TypeInfo, v12);
-    v21 = UIRect_TypeInfo;
+    v24 = UIRect_TypeInfo;
   }
-  return v21->static_fields->mSides;
+  return v24->static_fields->mSides;
 }
 
 
@@ -1451,26 +1470,48 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
   float v8; // s0
   UnityEngine_Transform_o *v9; // x21
   UnityEngine_Transform_o *v10; // x20
-  float v11; // s0
-  float x; // s11
-  float y; // s12
-  float z; // s13
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float w; // s11
+  float v15; // s11
+  float v16; // s12
+  float v17; // s13
+  float v18; // s0
+  float v19; // s11
+  float v20; // s12
+  float v21; // s13
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v16; // s2
-  float v17; // s0
-  float v18; // s1
-  float v19; // s2
-  struct UnityEngine_Vector3_StaticFields *v20; // x8
-  float v21; // s8
-  float v22; // s1
-  struct UnityEngine_Mathf_StaticFields *v23; // x8
-  float v24; // s0
-  UnityEngine_Vector3_o v25; // 0:kr10_12.12
-  UnityEngine_Vector3_o position; // 0:kr24_12.12
-  UnityEngine_Vector3_o v27; // 0:kr30_12.12
-  UnityEngine_Vector3_o v28; // 0:kr50_12.12
-  UnityEngine_Quaternion_o rotation; // 0:kr00_16.16
-  UnityEngine_Quaternion_o v30; // 0:kr40_16.16
+  float v23; // s8
+  float v24; // s14
+  float v25; // s15
+  float v26; // s9
+  float v27; // s14
+  float v28; // s15
+  float v29; // s8
+  float v30; // s2
+  float v31; // s0
+  float v32; // s1
+  float v33; // s2
+  struct UnityEngine_Vector3_StaticFields *v34; // x8
+  float v35; // s8
+  float v36; // s1
+  struct UnityEngine_Mathf_StaticFields *v37; // x8
+  float v38; // s0
+  float v39; // [xsp+0h] [xbp-90h]
+  float v40; // [xsp+4h] [xbp-8Ch]
+  float v41; // [xsp+8h] [xbp-88h]
+  float v42; // [xsp+Ch] [xbp-84h]
+  float v43; // [xsp+58h] [xbp-38h]
+  float v44; // [xsp+5Ch] [xbp-34h]
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59751A8 & 1) == 0 )
   {
@@ -1502,16 +1543,27 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
       goto LABEL_45;
     v10 = (UnityEngine_Transform_o *)cachedTransform;
     rotation = UnityEngine_Transform__get_rotation(v9, 0);
+    x = rotation.fields.x;
+    y = rotation.fields.y;
+    z = rotation.fields.z;
+    w = rotation.fields.w;
     if ( !byte_596CDEB )
     {
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_596CDEB = 1;
     }
-    v25 = UnityEngine_Quaternion__op_Multiply_83371700(
-            rotation,
-            UnityEngine_Vector3_TypeInfo->static_fields->backVector,
-            0);
+    v50.fields.x = x;
+    v50.fields.y = y;
+    v50.fields.z = z;
+    v50.fields.w = w;
+    v45 = UnityEngine_Quaternion__op_Multiply_83371700(v50, UnityEngine_Vector3_TypeInfo->static_fields->backVector, 0);
+    v15 = v45.fields.x;
+    v16 = v45.fields.y;
+    v17 = v45.fields.z;
     position = UnityEngine_Transform__get_position(v9, 0);
+    v43 = position.fields.y;
+    v44 = position.fields.x;
+    v42 = position.fields.z;
     if ( !byte_5969AE3 )
     {
       sub_2213A60(&System_Math_TypeInfo);
@@ -1520,10 +1572,8 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     cachedTransform = (UnityEngine_Camera_o *)System_Math_TypeInfo;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v5);
-    v11 = sqrtf(
-            (float)(v25.fields.z * v25.fields.z)
-          + (float)((float)(v25.fields.x * v25.fields.x) + (float)(v25.fields.y * v25.fields.y)));
-    if ( v11 <= 0.00001 )
+    v18 = sqrtf((float)(v17 * v17) + (float)((float)(v15 * v15) + (float)(v16 * v16)));
+    if ( v18 <= 0.00001 )
     {
       if ( !byte_5969AE0 )
       {
@@ -1531,29 +1581,43 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
         byte_5969AE0 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      x = static_fields->zeroVector.fields.x;
-      y = static_fields->zeroVector.fields.y;
-      z = static_fields->zeroVector.fields.z;
+      v19 = static_fields->zeroVector.fields.x;
+      v20 = static_fields->zeroVector.fields.y;
+      v21 = static_fields->zeroVector.fields.z;
     }
     else
     {
-      x = v25.fields.x / v11;
-      y = v25.fields.y / v11;
-      z = v25.fields.z / v11;
+      v19 = v15 / v18;
+      v20 = v16 / v18;
+      v21 = v17 / v18;
     }
     if ( !v10 )
       goto LABEL_45;
-    v27 = UnityEngine_Transform__get_position(v10, 0);
-    v30 = UnityEngine_Transform__get_rotation(v10, 0);
+    v47 = UnityEngine_Transform__get_position(v10, 0);
+    v39 = v47.fields.y;
+    v40 = v47.fields.x;
+    v41 = v47.fields.z;
+    v51 = UnityEngine_Transform__get_rotation(v10, 0);
+    v23 = v51.fields.x;
+    v24 = v51.fields.y;
+    v25 = v51.fields.z;
+    v26 = v51.fields.w;
     if ( !byte_5969AE9 )
     {
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE9 = 1;
     }
-    v28 = UnityEngine_Quaternion__op_Multiply_83371700(
-            v30,
+    v52.fields.x = v23;
+    v52.fields.y = v24;
+    v52.fields.z = v25;
+    v52.fields.w = v26;
+    v48 = UnityEngine_Quaternion__op_Multiply_83371700(
+            v52,
             UnityEngine_Vector3_TypeInfo->static_fields->forwardVector,
             0);
+    v27 = v48.fields.x;
+    v28 = v48.fields.y;
+    v29 = v48.fields.z;
     if ( !byte_5969AE3 )
     {
       sub_2213A60(&System_Math_TypeInfo);
@@ -1561,44 +1625,40 @@ float UIRect__get_cameraRayDistance(UIRect_o *this, const MethodInfo *method)
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v5);
-    v16 = sqrtf(
-            (float)(v28.fields.z * v28.fields.z)
-          + (float)((float)(v28.fields.x * v28.fields.x) + (float)(v28.fields.y * v28.fields.y)));
-    if ( v16 <= 0.00001 )
+    v30 = sqrtf((float)(v29 * v29) + (float)((float)(v27 * v27) + (float)(v28 * v28)));
+    if ( v30 <= 0.00001 )
     {
       if ( !byte_5969AE0 )
       {
         sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
-      v20 = UnityEngine_Vector3_TypeInfo->static_fields;
-      v17 = v20->zeroVector.fields.x;
-      v18 = v20->zeroVector.fields.y;
-      v19 = v20->zeroVector.fields.z;
+      v34 = UnityEngine_Vector3_TypeInfo->static_fields;
+      v31 = v34->zeroVector.fields.x;
+      v32 = v34->zeroVector.fields.y;
+      v33 = v34->zeroVector.fields.z;
     }
     else
     {
-      v17 = v28.fields.x / v16;
-      v18 = v28.fields.y / v16;
-      v19 = v28.fields.z / v16;
+      v31 = v27 / v30;
+      v32 = v28 / v30;
+      v33 = v29 / v30;
     }
-    v21 = (float)(z * v19) + (float)((float)(x * v17) + (float)(y * v18));
+    v35 = (float)(v21 * v33) + (float)((float)(v19 * v31) + (float)(v20 * v32));
     if ( !byte_5969AE4 )
     {
       sub_2213A60(&UnityEngine_Mathf_TypeInfo);
       byte_5969AE4 = 1;
     }
-    v22 = vabds_f32(0.0, v21);
-    v23 = UnityEngine_Mathf_TypeInfo->static_fields;
-    v24 = fmaxf(fabsf(v21), 0.0) * 0.000001;
-    if ( v24 <= (float)(v23->Epsilon * 8.0) )
-      v24 = v23->Epsilon * 8.0;
-    if ( v22 < v24
-      || (result = (float)((float)((float)(position.fields.z * z)
-                                 + (float)((float)(position.fields.x * x) + (float)(position.fields.y * y)))
-                         - (float)((float)(z * v27.fields.z)
-                                 + (float)((float)(x * v27.fields.x) + (float)(y * v27.fields.y))))
-                 / v21,
+    v36 = vabds_f32(0.0, v35);
+    v37 = UnityEngine_Mathf_TypeInfo->static_fields;
+    v38 = fmaxf(fabsf(v35), 0.0) * 0.000001;
+    if ( v38 <= (float)(v37->Epsilon * 8.0) )
+      v38 = v37->Epsilon * 8.0;
+    if ( v36 < v38
+      || (result = (float)((float)((float)(v42 * v21) + (float)((float)(v44 * v19) + (float)(v43 * v20)))
+                         - (float)((float)(v21 * v41) + (float)((float)(v19 * v40) + (float)(v20 * v39))))
+                 / v35,
           result <= 0.0) )
     {
 LABEL_10:
@@ -1650,7 +1710,7 @@ bool UIRect__get_isAnchored(UIRect_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   this = (UIRect_o *)UnityEngine_Object__op_Implicit(target, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
-    return ((bool (__fastcall *)(UIRect_o *, const MethodInfo *))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
+    return ((__int64 (__fastcall *)(UIRect_o *, const MethodInfo *))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
              v2,
              v2->klass->vtable._6_get_canBeAnchored.method);
   rightAnchor = v2->fields.rightAnchor;
@@ -1661,7 +1721,7 @@ bool UIRect__get_isAnchored(UIRect_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   this = (UIRect_o *)UnityEngine_Object__op_Implicit(v6, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
-    return ((bool (__fastcall *)(UIRect_o *, const MethodInfo *))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
+    return ((__int64 (__fastcall *)(UIRect_o *, const MethodInfo *))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
              v2,
              v2->klass->vtable._6_get_canBeAnchored.method);
   topAnchor = v2->fields.topAnchor;
@@ -1672,7 +1732,7 @@ bool UIRect__get_isAnchored(UIRect_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   this = (UIRect_o *)UnityEngine_Object__op_Implicit(v8, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
-    return ((bool (__fastcall *)(UIRect_o *, _QWORD))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
+    return ((__int64 (__fastcall *)(UIRect_o *, _QWORD))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
              v2,
              v2->klass->vtable._6_get_canBeAnchored.method);
   bottomAnchor = v2->fields.bottomAnchor;
@@ -1683,7 +1743,7 @@ LABEL_21:
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Implicit(v10, 0) )
-    return ((bool (__fastcall *)(UIRect_o *, _QWORD))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
+    return ((__int64 (__fastcall *)(UIRect_o *, _QWORD))v2->klass->vtable._6_get_canBeAnchored.methodPtr)(
              v2,
              v2->klass->vtable._6_get_canBeAnchored.method);
   return 0;
@@ -1956,10 +2016,10 @@ UnityEngine_Vector3_array *UIRect_AnchorPoint__GetSides(
   {
     v9 = (UnityEngine_Component_o *)this->fields.rect;
     if ( v9 )
-      return ((UnityEngine_Vector3_array *(__fastcall *)(UnityEngine_Component_o *, UnityEngine_Transform_o *, void *))v9->klass[1]._1.properties)(
-               v9,
-               relativeTo,
-               v9->klass[1]._1.methods);
+      return (UnityEngine_Vector3_array *)((__int64 (__fastcall *)(UnityEngine_Component_o *, UnityEngine_Transform_o *, void *))v9->klass[1]._1.properties)(
+                                            v9,
+                                            relativeTo,
+                                            v9->klass[1]._1.methods);
 LABEL_20:
     sub_2213CDC(v9, v8);
   }
@@ -2023,10 +2083,13 @@ void UIRect_AnchorPoint__SetHorizontal(
   float v12; // s8
   __int64 v13; // x1
   float x; // s9
-  float v15; // s8
-  unsigned int v16; // w9
-  int32_t v17; // w8
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  float y; // s10
+  float z; // s11
+  float v17; // s8
+  unsigned int v18; // w9
+  int32_t v19; // w8
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59751B6 & 1) == 0 )
   {
@@ -2043,6 +2106,8 @@ void UIRect_AnchorPoint__SetHorizontal(
       goto LABEL_29;
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)target, 0);
     x = position.fields.x;
+    y = position.fields.y;
+    z = position.fields.z;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
     target = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)parent, 0, 0);
@@ -2050,7 +2115,10 @@ void UIRect_AnchorPoint__SetHorizontal(
     {
       if ( !parent )
         goto LABEL_29;
-      LODWORD(x) = (unsigned int)UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+      v21.fields.x = x;
+      v21.fields.y = y;
+      v21.fields.z = z;
+      LODWORD(x) = (unsigned int)UnityEngine_Transform__InverseTransformPoint(parent, v21, 0);
     }
     v12 = localPos - x;
     goto LABEL_21;
@@ -2081,15 +2149,15 @@ LABEL_21:
     sub_2213A60(&System_Math_TypeInfo);
     byte_5969ADF = 1;
   }
-  v15 = v12 + 0.5;
+  v17 = v12 + 0.5;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v8);
-  v16 = vcvtms_s32_f32(v15);
-  if ( floorf(v15) == INFINITY )
-    v17 = 0x80000000;
+  v18 = vcvtms_s32_f32(v17);
+  if ( floorf(v17) == INFINITY )
+    v19 = 0x80000000;
   else
-    v17 = v16;
-  this->fields.absolute = v17;
+    v19 = v18;
+  this->fields.absolute = v19;
 }
 
 
@@ -2153,11 +2221,15 @@ void UIRect_AnchorPoint__SetVertical(
   float relative; // s1
   float v12; // s8
   __int64 v13; // x1
+  float x; // s10
   float y; // s9
-  float v15; // s8
-  unsigned int v16; // w9
-  int32_t v17; // w8
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  float z; // s11
+  float v17; // s8
+  unsigned int v18; // w9
+  int32_t v19; // w8
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59751B7 & 1) == 0 )
   {
@@ -2173,7 +2245,9 @@ void UIRect_AnchorPoint__SetVertical(
     if ( !target )
       goto LABEL_29;
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)target, 0);
+    x = position.fields.x;
     y = position.fields.y;
+    z = position.fields.z;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13);
     target = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)parent, 0, 0);
@@ -2181,7 +2255,11 @@ void UIRect_AnchorPoint__SetVertical(
     {
       if ( !parent )
         goto LABEL_29;
-      y = UnityEngine_Transform__InverseTransformPoint(parent, position, 0).fields.y;
+      v21.fields.x = x;
+      v21.fields.y = y;
+      v21.fields.z = z;
+      v22 = UnityEngine_Transform__InverseTransformPoint(parent, v21, 0);
+      y = v22.fields.y;
     }
     v12 = localPos - y;
     goto LABEL_21;
@@ -2212,15 +2290,15 @@ LABEL_21:
     sub_2213A60(&System_Math_TypeInfo);
     byte_5969ADF = 1;
   }
-  v15 = v12 + 0.5;
+  v17 = v12 + 0.5;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v8);
-  v16 = vcvtms_s32_f32(v15);
-  if ( floorf(v15) == INFINITY )
-    v17 = 0x80000000;
+  v18 = vcvtms_s32_f32(v17);
+  if ( floorf(v17) == INFINITY )
+    v19 = 0x80000000;
   else
-    v17 = v16;
-  this->fields.absolute = v17;
+    v19 = v18;
+  this->fields.absolute = v19;
 }
 
 

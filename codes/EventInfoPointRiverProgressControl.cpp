@@ -172,6 +172,7 @@ EventInfoPointRiverProgressControl_ProgressData_o *EventInfoPointRiverProgressCo
   __int64 v17; // x26
   __int64 v18; // x0
   __int64 v19; // x1
+  EventInfoPointRiverProgressControl_ProgressData_o *result; // x0
 
   if ( (byte_59725DA & 1) == 0 )
   {
@@ -184,13 +185,14 @@ EventInfoPointRiverProgressControl_ProgressData_o *EventInfoPointRiverProgressCo
     sub_2213CDC(v18, v19);
   *(_DWORD *)(v17 + 16) = id;
   *(_DWORD *)(v17 + 20) = releaseScenarioIndex;
+  result = (EventInfoPointRiverProgressControl_ProgressData_o *)v17;
   *(_QWORD *)(v17 + 24) = point;
   *(_QWORD *)(v17 + 32) = oldPoint;
   *(_QWORD *)(v17 + 40) = nextPoint;
   *(_BYTE *)(v17 + 48) = isScenarioRelease;
   *(_BYTE *)(v17 + 49) = isOpenFirstRiver;
   *(_BYTE *)(v17 + 50) = isFreeQuestClear;
-  return (EventInfoPointRiverProgressControl_ProgressData_o *)v17;
+  return result;
 }
 
 
@@ -1586,10 +1588,14 @@ void EventInfoPointRiverProgressControl__SetupDisp(
   struct EventUiEntity_o *v41; // x8
   const MethodInfo *v42; // x2
   const MethodInfo *v43; // x2
-  __int64 v44; // x1
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  __int64 v47; // x1
   Il2CppObject *Component_object; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = this;
   if ( (byte_59725CC & 1) == 0 )
@@ -1619,7 +1625,7 @@ void EventInfoPointRiverProgressControl__SetupDisp(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
   }
-  if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 498LL) )
+  if ( !BYTE2(this[1].klass->vtable._11_AfterRedisplay.method) )
   {
     progressData = v3->fields.progressData;
     if ( !progressData )
@@ -1728,7 +1734,7 @@ void EventInfoPointRiverProgressControl__SetupDisp(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
   }
-  if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 498LL) )
+  if ( !BYTE2(this[1].klass->vtable._11_AfterRedisplay.method) )
     goto LABEL_118;
   v21 = v3->fields.progressData;
   if ( !v21 )
@@ -1751,7 +1757,7 @@ LABEL_118:
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
         this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
       }
-      if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 498LL) )
+      if ( !BYTE2(this[1].klass->vtable._11_AfterRedisplay.method) )
       {
         v22 = v3->fields.progressData;
         if ( !v22 )
@@ -1883,7 +1889,7 @@ LABEL_88:
 LABEL_114:
     sub_2213CDC(this, method);
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !this[1].fields.animType )
     j_il2cpp_runtime_class_init_0(this, method);
   if ( !byte_596DB46 )
   {
@@ -1897,7 +1903,7 @@ LABEL_114:
     this = (EventInfoPointRiverProgressControl_o *)TerminalPramsManager_TypeInfo;
   }
   v41 = v3->fields.eventUiEntity;
-  *(_BYTE *)(*((_QWORD *)this + 23) + 498LL) = 0;
+  BYTE2(this[1].klass->vtable._11_AfterRedisplay.method) = 0;
   if ( !v41 )
     goto LABEL_114;
   this = (EventInfoPointRiverProgressControl_o *)v3->fields.progressShip;
@@ -1926,6 +1932,9 @@ LABEL_114:
   if ( !this )
     goto LABEL_114;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   this = (EventInfoPointRiverProgressControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0);
   if ( !this )
     goto LABEL_114;
@@ -1933,7 +1942,7 @@ LABEL_114:
                        (UnityEngine_GameObject_o *)this,
                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_EventInfoUISlideAnimation___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v44);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v47);
   this = (EventInfoPointRiverProgressControl_o *)UnityEngine_Object__op_Inequality(
                                                    (UnityEngine_Object_o *)Component_object,
                                                    0,
@@ -1942,11 +1951,10 @@ LABEL_114:
   {
     if ( !Component_object )
       goto LABEL_114;
-    EventInfoUISlideAnimation__SetAfterActionAndInPosition(
-      (EventInfoUISlideAnimation_o *)Component_object,
-      0,
-      localPosition,
-      0);
+    v51.fields.x = x;
+    v51.fields.y = y;
+    v51.fields.z = z;
+    EventInfoUISlideAnimation__SetAfterActionAndInPosition((EventInfoUISlideAnimation_o *)Component_object, 0, v51, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0);
     GameObjectExtensions__SetLocalPosition(gameObject, *(UnityEngine_Vector3_o *)&Component_object[3].monitor, 0);
   }
@@ -2416,7 +2424,7 @@ void EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayAnim_b__2(
   EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *v2; // x19
   struct EventInfoPointRiverProgressControl_o *_4__this; // x8
   struct EventInfoPointRiverProgressControl_o *v4; // x8
-  __int64 v5; // x8
+  EventInfoPointRiverProgressControl___c__DisplayClass26_0_c *klass; // x8
 
   v2 = this;
   if ( (byte_59725DE & 1) == 0 )
@@ -2436,8 +2444,8 @@ void EventInfoPointRiverProgressControl___c__DisplayClass26_0___PlayAnim_b__2(
     || (this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)v4->fields.maskPanel) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0),
         (this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)v2->fields.__4__this) == 0)
-    || (v5 = *((_QWORD *)this + 20)) == 0
-    || (*(_QWORD *)(v5 + 32) = *(_QWORD *)(v5 + 24),
+    || (klass = this[4].klass) == 0
+    || (klass->_1.byval_arg.data = (void *)klass->_1.namespaze,
         EventInfoPointRiverProgressControl__SaveAllData((EventInfoPointRiverProgressControl_o *)this, method),
         (this = (EventInfoPointRiverProgressControl___c__DisplayClass26_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__)) == 0) )
   {
@@ -2483,8 +2491,8 @@ void EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayMoveShip_b__
   struct EventInfoReleaseEventPointControl_o *releaseTermsObject; // x8
   const MethodInfo *v23; // x2
   bool IsClearFreeQuest; // w8
-  __int64 v25; // x8
-  __int64 v26; // x8
+  EventInfoPointRiverProgressControl___c__DisplayClass27_0_c *klass; // x8
+  EventInfoPointRiverProgressControl___c__DisplayClass27_0_c *v26; // x8
   struct EventInfoPointRiverProgressControl_o *v27; // x8
 
   v3 = this;
@@ -2522,7 +2530,7 @@ void EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayMoveShip_b__
       this = (EventInfoPointRiverProgressControl___c__DisplayClass27_0_o *)EventInfoPointRiverProgressControl_TypeInfo;
     }
     v10 = v3->fields.__4__this;
-    if ( ReleaseScenarioIndex >= *(_DWORD *)(*((_QWORD *)this + 23) + 8LL) )
+    if ( ReleaseScenarioIndex >= SLODWORD(this[4].fields.callback->monitor) )
     {
       if ( !v10 )
         goto LABEL_35;
@@ -2582,13 +2590,13 @@ void EventInfoPointRiverProgressControl___c__DisplayClass27_0___PlayMoveShip_b__
   this = (EventInfoPointRiverProgressControl___c__DisplayClass27_0_o *)v3->fields.__4__this;
   if ( !IsClearFreeQuest )
     goto LABEL_31;
-  if ( !this || (v25 = *((_QWORD *)this + 20)) == 0 )
+  if ( !this || (klass = this[4].klass) == 0 )
 LABEL_35:
     sub_2213CDC(this, method);
-  if ( *(_BYTE *)(v25 + 50) )
+  if ( BYTE2(klass->_1.this_arg.data) )
     goto LABEL_32;
-  this = (EventInfoPointRiverProgressControl___c__DisplayClass27_0_o *)*((_QWORD *)this + 13);
-  *(_BYTE *)(v25 + 50) = 1;
+  this = (EventInfoPointRiverProgressControl___c__DisplayClass27_0_o *)this[2].fields.callback;
+  BYTE2(klass->_1.this_arg.data) = 1;
   if ( !this )
     goto LABEL_35;
   EventInfoReleaseEventPointControl__PlayCheckInAnim((EventInfoReleaseEventPointControl_o *)this, 1, v23);
@@ -2597,10 +2605,10 @@ LABEL_31:
   if ( !this )
     goto LABEL_35;
 LABEL_32:
-  v26 = *((_QWORD *)this + 20);
+  v26 = this[4].klass;
   if ( !v26 )
     goto LABEL_35;
-  *(_QWORD *)(v26 + 32) = *(_QWORD *)(v26 + 24);
+  v26->_1.byval_arg.data = (void *)v26->_1.namespaze;
   EventInfoPointRiverProgressControl__SaveAllData((EventInfoPointRiverProgressControl_o *)this, method);
   v27 = v3->fields.__4__this;
   if ( !v27 )

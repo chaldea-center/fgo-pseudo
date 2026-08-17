@@ -24,7 +24,7 @@ void BattleDemoRootComponent__CreateActorObject(
         bool isPlayer,
         const MethodInfo *method)
 {
-  __int64 FieldMotion; // x0
+  void *FieldMotion; // x0
   const MethodInfo *v10; // x2
   il2cpp_array_size_t max_length; // x8
   int32_t v12; // w23
@@ -90,12 +90,12 @@ void BattleDemoRootComponent__CreateActorObject(
     sub_2213A60(&StringLiteral_16950/*"_PLAYER"*/);
     byte_5974575 = 1;
   }
-  FieldMotion = (__int64)this->fields.FieldMotion;
+  FieldMotion = this->fields.FieldMotion;
   if ( !FieldMotion
-    || (FieldMotion = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)FieldMotion, 0)) == 0
-    || (FieldMotion = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                 (UnityEngine_GameObject_o *)FieldMotion,
-                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleFieldMotionComponent___),
+    || (FieldMotion = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)FieldMotion, 0)) == 0
+    || (FieldMotion = UnityEngine_GameObject__GetComponent_object_(
+                        (UnityEngine_GameObject_o *)FieldMotion,
+                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleFieldMotionComponent___),
         !chrInfos) )
   {
 LABEL_44:
@@ -127,9 +127,9 @@ LABEL_45:
         actorPrefab = (Il2CppObject *)this->fields.actorPrefab;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17);
-        FieldMotion = (__int64)UnityEngine_Object__Instantiate_object_(
-                                 actorPrefab,
-                                 (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        FieldMotion = UnityEngine_Object__Instantiate_object_(
+                        actorPrefab,
+                        (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !actors )
           goto LABEL_44;
         v26 = v12 - uniqueIdStart;
@@ -137,58 +137,66 @@ LABEL_45:
           goto LABEL_45;
         v27 = (UnityEngine_GameObject_o *)FieldMotion;
         actors->m_Items[v26] = (UnityEngine_GameObject_o *)FieldMotion;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)&m_Items[v26], FieldMotion, v20, v21, v22, v23, v24, v25);
+        sub_2213A04(
+          (MissionNaviTransitionBoardItem_o *)&m_Items[v26],
+          (int32_t)FieldMotion,
+          v20,
+          v21,
+          v22,
+          v23,
+          v24,
+          v25);
         if ( !v27 )
           goto LABEL_44;
-        FieldMotion = (__int64)UnityEngine_GameObject__get_transform(v27, 0);
+        FieldMotion = UnityEngine_GameObject__get_transform(v27, 0);
         if ( !this->fields.Field )
           goto LABEL_44;
         v28 = (UnityEngine_Transform_o *)FieldMotion;
-        FieldMotion = (__int64)UnityEngine_GameObject__get_transform(this->fields.Field, 0);
+        FieldMotion = UnityEngine_GameObject__get_transform(this->fields.Field, 0);
         if ( !v28 )
           goto LABEL_44;
         UnityEngine_Transform__set_parent(v28, (UnityEngine_Transform_o *)FieldMotion, 0);
-        FieldMotion = (__int64)UnityEngine_GameObject__get_transform(v27, 0);
+        FieldMotion = UnityEngine_GameObject__get_transform(v27, 0);
         v29 = (UnityEngine_Transform_o *)FieldMotion;
         if ( !byte_5969AE0 )
         {
-          FieldMotion = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          FieldMotion = (void *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
         if ( !v29 )
           goto LABEL_44;
         UnityEngine_Transform__set_localPosition(v29, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        FieldMotion = (__int64)UnityEngine_GameObject__get_transform(v27, 0);
+        FieldMotion = UnityEngine_GameObject__get_transform(v27, 0);
         v30 = (UnityEngine_Transform_o *)FieldMotion;
         if ( !byte_5969AE0 )
         {
-          FieldMotion = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          FieldMotion = (void *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
         if ( !v30 )
           goto LABEL_44;
         UnityEngine_Transform__set_localEulerAngles(v30, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        FieldMotion = (__int64)UnityEngine_GameObject__get_transform(v27, 0);
+        FieldMotion = UnityEngine_GameObject__get_transform(v27, 0);
         v31 = (UnityEngine_Transform_o *)FieldMotion;
         if ( !byte_5969AE5 )
         {
-          FieldMotion = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          FieldMotion = (void *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
         if ( !v31 )
           goto LABEL_44;
         v32 = chrInfos;
         UnityEngine_Transform__set_localScale(v31, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-        FieldMotion = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                                 v27,
-                                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+        FieldMotion = UnityEngine_GameObject__GetComponent_object_(
+                        v27,
+                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
         if ( !FieldMotion )
           goto LABEL_44;
         performance = this->fields.performance;
         v40 = (BattleActorControl_o *)FieldMotion;
-        *(_QWORD *)(FieldMotion + 168) = performance;
+        *((_QWORD *)FieldMotion + 21) = performance;
         sub_2213A04(
-          (MissionNaviTransitionBoardItem_o *)(FieldMotion + 168),
+          (MissionNaviTransitionBoardItem_o *)FieldMotion + 1,
           (int32_t)performance,
           v33,
           v34,
@@ -237,17 +245,15 @@ LABEL_45:
           BattleActorControl__setTypePlayer(v40, 0);
           BattleActorControl__setServantData(v40, v41, 0);
           BattleActorControl__setDirLeft(v40, 0);
-          FieldMotion = (__int64)this->fields.actorCamera;
+          FieldMotion = this->fields.actorCamera;
           if ( !FieldMotion )
             goto LABEL_44;
-          FieldMotion = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)FieldMotion, 0);
+          FieldMotion = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)FieldMotion, 0);
           if ( !this->fields.CameraFsm )
             goto LABEL_44;
           v43 = (UnityEngine_GameObject_o *)FieldMotion;
           chrInfos = v32;
-          FieldMotion = (__int64)UnityEngine_Component__get_gameObject(
-                                   (UnityEngine_Component_o *)this->fields.CameraFsm,
-                                   0);
+          FieldMotion = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.CameraFsm, 0);
           v44 = this->fields.performance;
           if ( !v44 )
             goto LABEL_44;
@@ -269,17 +275,15 @@ LABEL_45:
           BattleActorControl__setTypeEnemy(v40, 0);
           BattleActorControl__setServantData(v40, v41, 0);
           BattleActorControl__setDirRight(v40, 0);
-          FieldMotion = (__int64)this->fields.actorCamera;
+          FieldMotion = this->fields.actorCamera;
           if ( !FieldMotion )
             goto LABEL_44;
-          FieldMotion = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)FieldMotion, 0);
+          FieldMotion = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)FieldMotion, 0);
           if ( !this->fields.CameraFsm )
             goto LABEL_44;
           v46 = (UnityEngine_GameObject_o *)FieldMotion;
           chrInfos = v32;
-          FieldMotion = (__int64)UnityEngine_Component__get_gameObject(
-                                   (UnityEngine_Component_o *)this->fields.CameraFsm,
-                                   0);
+          FieldMotion = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.CameraFsm, 0);
           v47 = this->fields.performance;
           if ( !v47 )
             goto LABEL_44;
@@ -2074,7 +2078,7 @@ void BattleDemoRootComponent___SetupBattleDemo_b__30_0(
         AssetData_o *aData,
         const MethodInfo *method)
 {
-  __int64 performance; // x0
+  BattleFieldMotionComponent_o *performance; // x0
   struct BattlePerformance_o *v6; // x8
   struct BattleFieldMotionComponent_array *fieldmotion; // x8
   struct PlayMakerFSM_o *Fsm; // x0
@@ -2115,16 +2119,16 @@ void BattleDemoRootComponent___SetupBattleDemo_b__30_0(
   int32_t v43; // w5
   bool v44; // w6
   bool v45; // w7
-  __int64 v46; // x8
-  __int64 v47; // x1
+  struct UnityEngine_Transform_o *fieldEffectTacticalTr; // x8
+  struct UnityEngine_Transform_o *klass; // x1
   System_String_o *v48; // x2
   System_String_o *v49; // x3
   int32_t v50; // w4
   int32_t v51; // w5
   bool v52; // w6
   bool v53; // w7
-  __int64 v54; // x8
-  __int64 v55; // x1
+  struct UnityEngine_Transform_o *v54; // x8
+  struct UnityEngine_Transform_o *m_CachedPtr; // x1
   System_String_o *v56; // x2
   System_String_o *v57; // x3
   int32_t v58; // w4
@@ -2169,11 +2173,11 @@ void BattleDemoRootComponent___SetupBattleDemo_b__30_0(
     sub_2213A60(&StringLiteral_11927/*"RootCameraPrefab"*/);
     byte_5974585 = 1;
   }
-  performance = (__int64)this->fields.performance;
+  performance = (BattleFieldMotionComponent_o *)this->fields.performance;
   if ( !performance )
     goto LABEL_34;
   BattlePerformance__loadStorageObjectCommonMotion((BattlePerformance_o *)performance, aData, 0);
-  performance = (__int64)this->fields.performance;
+  performance = (BattleFieldMotionComponent_o *)this->fields.performance;
   if ( !performance )
     goto LABEL_34;
   BattlePerformance__loadFieldMotion((BattlePerformance_o *)performance, aData, 0, 0);
@@ -2185,19 +2189,23 @@ void BattleDemoRootComponent___SetupBattleDemo_b__30_0(
     goto LABEL_34;
   if ( !LODWORD(fieldmotion->max_length) )
     sub_2213CE4(performance);
-  performance = (__int64)fieldmotion->m_Items[0];
+  performance = fieldmotion->m_Items[0];
   if ( !performance )
     goto LABEL_34;
-  Fsm = BattleFieldMotionComponent__getFsm((BattleFieldMotionComponent_o *)performance, 0);
+  Fsm = BattleFieldMotionComponent__getFsm(performance, 0);
   this->fields.FieldMotion = Fsm;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.FieldMotion, (int32_t)Fsm, v9, v10, v11, v12, v13, v14);
-  performance = (__int64)this->fields.GroundObject;
+  performance = (BattleFieldMotionComponent_o *)this->fields.GroundObject;
   if ( !performance )
     goto LABEL_34;
-  performance = (__int64)UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)performance, 0);
+  performance = (BattleFieldMotionComponent_o *)UnityEngine_GameObject__get_gameObject(
+                                                  (UnityEngine_GameObject_o *)performance,
+                                                  0);
   if ( !performance )
     goto LABEL_34;
-  performance = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)performance, 0);
+  performance = (BattleFieldMotionComponent_o *)UnityEngine_GameObject__get_transform(
+                                                  (UnityEngine_GameObject_o *)performance,
+                                                  0);
   if ( !aData )
     goto LABEL_34;
   v15 = (UnityEngine_Transform_o *)performance;
@@ -2223,63 +2231,97 @@ void BattleDemoRootComponent___SetupBattleDemo_b__30_0(
     v22,
     v23,
     v24);
-  performance = (__int64)this->fields.cameraObject;
+  performance = (BattleFieldMotionComponent_o *)this->fields.cameraObject;
   if ( !performance )
     goto LABEL_34;
   UnityEngine_Object__set_name((UnityEngine_Object_o *)performance, (System_String_o *)StringLiteral_11927/*"RootCameraPrefab"*/, 0);
-  performance = (__int64)this->fields.cameraObject;
+  performance = (BattleFieldMotionComponent_o *)this->fields.cameraObject;
   if ( !performance )
     goto LABEL_34;
-  performance = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)performance, 0);
+  performance = (BattleFieldMotionComponent_o *)UnityEngine_GameObject__get_transform(
+                                                  (UnityEngine_GameObject_o *)performance,
+                                                  0);
   v25 = (UnityEngine_Transform_o *)performance;
   if ( !byte_5969AE0 )
   {
-    performance = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    performance = (BattleFieldMotionComponent_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v25 )
     goto LABEL_34;
   UnityEngine_Transform__set_eulerAngles(v25, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  performance = (__int64)this->fields.cameraObject;
+  performance = (BattleFieldMotionComponent_o *)this->fields.cameraObject;
   if ( !performance )
     goto LABEL_34;
   v26 = this->fields.performance;
-  performance = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                           (UnityEngine_GameObject_o *)performance,
-                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
+  performance = (BattleFieldMotionComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                  (UnityEngine_GameObject_o *)performance,
+                                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_PlayMakerFSM___);
   if ( !v26 )
     goto LABEL_34;
   v26->fields.camerafsm = (struct PlayMakerFSM_o *)performance;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26->fields.camerafsm, performance, v27, v28, v29, v30, v31, v32);
-  performance = (__int64)this->fields.cameraObject;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v26->fields.camerafsm,
+    (int32_t)performance,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31,
+    v32);
+  performance = (BattleFieldMotionComponent_o *)this->fields.cameraObject;
   if ( !performance )
     goto LABEL_34;
   v33 = this->fields.performance;
-  performance = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                           (UnityEngine_GameObject_o *)performance,
-                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleActionCamera___);
+  performance = (BattleFieldMotionComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                  (UnityEngine_GameObject_o *)performance,
+                                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleActionCamera___);
   if ( !v33 )
     goto LABEL_34;
   v33->fields.actioncamera = (struct BattleActionCamera_o *)performance;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->fields.actioncamera, performance, v34, v35, v36, v37, v38, v39);
-  performance = (__int64)this->fields.performance;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v33->fields.actioncamera,
+    (int32_t)performance,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38,
+    v39);
+  performance = (BattleFieldMotionComponent_o *)this->fields.performance;
   if ( !performance )
     goto LABEL_34;
-  v46 = *(_QWORD *)(performance + 408);
-  if ( !v46 )
+  fieldEffectTacticalTr = performance[1].fields.fieldEffectTacticalTr;
+  if ( !fieldEffectTacticalTr )
     goto LABEL_34;
-  v47 = *(_QWORD *)(v46 + 72);
-  *(_QWORD *)(performance + 152) = v47;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(performance + 152), v47, v40, v41, v42, v43, v44, v45);
-  performance = (__int64)this->fields.performance;
+  klass = (struct UnityEngine_Transform_o *)fieldEffectTacticalTr[3].klass;
+  performance->fields.fieldEffectBattleTr = klass;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&performance->fields.fieldEffectBattleTr,
+    (int32_t)klass,
+    v40,
+    v41,
+    v42,
+    v43,
+    v44,
+    v45);
+  performance = (BattleFieldMotionComponent_o *)this->fields.performance;
   if ( !performance )
     goto LABEL_34;
-  v54 = *(_QWORD *)(performance + 408);
+  v54 = performance[1].fields.fieldEffectTacticalTr;
   if ( !v54 )
     goto LABEL_34;
-  v55 = *(_QWORD *)(v54 + 88);
-  *(_QWORD *)(performance + 168) = v55;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(performance + 168), v55, v48, v49, v50, v51, v52, v53);
+  m_CachedPtr = (struct UnityEngine_Transform_o *)v54[3].fields.m_CachedPtr;
+  performance->fields.fieldEffectNpTr = m_CachedPtr;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&performance->fields.fieldEffectNpTr,
+    (int32_t)m_CachedPtr,
+    v48,
+    v49,
+    v50,
+    v51,
+    v52,
+    v53);
   v62 = this->fields.performance;
   if ( !v62 )
     goto LABEL_34;
@@ -2323,16 +2365,18 @@ void BattleDemoRootComponent___SetupBattleDemo_b__30_0(
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p_CameraFsm, (int32_t)camerafsm, v74, v75, v76, v77, v78, v79);
   v83 = (__int64)*(p_CameraFsm - 7);
   if ( !v83
-    || (performance = *(_QWORD *)(v83 + 168)) == 0
+    || (performance = *(BattleFieldMotionComponent_o **)(v83 + 168)) == 0
     || (v84 = (__int64)*(p_CameraFsm - 4),
-        performance = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)performance, 0),
+        performance = (BattleFieldMotionComponent_o *)UnityEngine_Component__get_transform(
+                                                        (UnityEngine_Component_o *)performance,
+                                                        0),
         !v84) )
   {
 LABEL_34:
     sub_2213CDC(performance, aData);
   }
   *(_QWORD *)(v84 + 40) = performance;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v84 + 40), performance, v85, v86, v87, v88, v89, v90);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v84 + 40), (int32_t)performance, v85, v86, v87, v88, v89, v90);
 }
 
 
@@ -2586,8 +2630,8 @@ bool BattleDemoRootComponent__SetupBattleDemo_d__30__MoveNext(
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v15, v16, v17, v18, v19, v20);
-      *((_DWORD *)p__2__current - 2) = 1;
       LOBYTE(IsBusy) = 1;
+      *((_DWORD *)p__2__current - 2) = 1;
       return (char)IsBusy;
     }
     if ( !_4__this || (IsBusy = _4__this->fields.performance) == 0 )

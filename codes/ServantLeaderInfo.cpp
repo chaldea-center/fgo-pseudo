@@ -1588,15 +1588,12 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o ServantLeaderInfo__GetBaseFrie
   const MethodInfo *v7; // x4
   System_Int32_array *SkillIdList; // x20
   const MethodInfo *v9; // x1
-  __int64 v10; // x1
+  __int128 v10; // x0
   System_Int32_array *SkillLevelList; // x21
   unsigned __int64 i; // x23
-  _QWORD *p_image; // x0
-  int32_t v14; // w2
+  int32_t v13; // w2
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
-  System_Nullable_ValueTuple_FuncList_TYPE__int___o result; // 0:x0.12
-  System_Nullable_ValueTuple_FuncList_TYPE__int___o FriendPointUpTypeVal; // 0:kr00_12.12
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
   if ( (byte_5971D99 & 1) == 0 )
   {
@@ -1612,9 +1609,9 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o ServantLeaderInfo__GetBaseFrie
   entity = 0;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-  *(_QWORD *)&v19.fields.currentCryptoKey = v3;
-  *(_QWORD *)&v19.fields.fakeValue = v4;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v19, 0) >= 1 )
+  *(_QWORD *)&v16.fields.currentCryptoKey = v3;
+  *(_QWORD *)&v16.fields.fakeValue = v4;
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v16, 0) >= 1 )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
@@ -1628,49 +1625,44 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o ServantLeaderInfo__GetBaseFrie
     SkillLevelList = ServantLeaderInfo__getSkillLevelList(this, v9);
     for ( i = 0; ; ++i )
     {
-      p_image = &BalanceConfig_TypeInfo->_1.image;
+      *(_QWORD *)&v10 = BalanceConfig_TypeInfo;
       if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v10);
-        p_image = &BalanceConfig_TypeInfo->_1.image;
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *((_QWORD *)&v10 + 1));
+        *(_QWORD *)&v10 = BalanceConfig_TypeInfo;
       }
-      if ( (__int64)i >= *(int *)(p_image[23] + 40LL) )
+      if ( (__int64)i >= *(int *)(*(_QWORD *)(v10 + 184) + 40LL) )
         break;
       if ( !SkillIdList )
         goto LABEL_25;
       if ( i >= LODWORD(SkillIdList->max_length) )
         goto LABEL_26;
-      v14 = SkillIdList->m_Items[i];
-      if ( v14 >= 1 )
+      v13 = SkillIdList->m_Items[i];
+      if ( v13 >= 1 )
       {
         if ( !SkillLevelList )
           goto LABEL_25;
         if ( i >= LODWORD(SkillLevelList->max_length) )
 LABEL_26:
-          sub_2213CE4(p_image);
+          sub_2213CE4(v10);
         if ( !Master_object )
           goto LABEL_25;
-        if ( SkillLvMaster__TryGetEntity((SkillLvMaster_o *)Master_object, &entity, v14, SkillLevelList->m_Items[i], 0) )
+        if ( SkillLvMaster__TryGetEntity((SkillLvMaster_o *)Master_object, &entity, v13, SkillLevelList->m_Items[i], 0) )
         {
-          p_image = &entity->klass;
+          *(_QWORD *)&v10 = entity;
           if ( !entity )
 LABEL_25:
-            sub_2213CDC(p_image, v10);
-          FriendPointUpTypeVal = SkillLvEntity__GetFriendPointUpTypeVal(entity, 0);
-          result.fields.hasValue = FriendPointUpTypeVal.fields.hasValue;
-          result.fields.value.fields.Item1 = FriendPointUpTypeVal.fields.value.fields.Item1;
-          LODWORD(v10) = FriendPointUpTypeVal.fields.value.fields.Item2;
-          if ( FriendPointUpTypeVal.fields.hasValue )
-            goto LABEL_27;
+            sub_2213CDC(v10, *((_QWORD *)&v10 + 1));
+          *(System_Nullable_ValueTuple_FuncList_TYPE__int___o *)&v10 = SkillLvEntity__GetFriendPointUpTypeVal(entity, 0);
+          if ( (_BYTE)v10 )
+            return (System_Nullable_ValueTuple_FuncList_TYPE__int___o)v10;
         }
       }
     }
   }
-  *(_QWORD *)&result.fields.hasValue = 0;
-  LODWORD(v10) = 0;
-LABEL_27:
-  result.fields.value.fields.Item2 = v10;
-  return result;
+  *(_QWORD *)&v10 = 0;
+  DWORD2(v10) = 0;
+  return (System_Nullable_ValueTuple_FuncList_TYPE__int___o)v10;
 }
 
 
@@ -2113,15 +2105,17 @@ System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *ServantLeader
   __int64 v15; // x1
   const MethodInfo_45DF1F0 *v16; // x2
   Il2CppObject *v17; // x0
-  struct System_Object_array *v18; // x8
-  _QWORD *v19; // x9
-  __int64 v20; // x10
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
-  System_Nullable_ValueTuple_FuncList_TYPE__int___o FriendPointUpTypeVal; // [xsp+40h] [xbp-40h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
-  System_Nullable_T__o v26; // 0:x0.16
-  System_Nullable_T__o v27; // 0:x0.16
+  System_ValueTuple_Int32Enum__int__o v18; // x1
+  struct System_Object_array *v19; // x8
+  _QWORD *v20; // x9
+  __int64 v21; // x10
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-60h] BYREF
+  System_Nullable_ValueTuple_FuncList_TYPE__int___o v25; // [xsp+40h] [xbp-40h] BYREF
+  System_Nullable_ValueTuple_FuncList_TYPE__int___o FriendPointUpTypeVal; // 0:x0.12
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
+  System_Nullable_T__o v28; // 0:x0.16
+  System_Nullable_T__o v29; // 0:x0.16
 
   if ( (byte_5971D98 & 1) == 0 )
   {
@@ -2137,9 +2131,9 @@ System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *ServantLeader
     sub_2213A60(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     byte_5971D98 = 1;
   }
-  FriendPointUpTypeVal.fields.value.fields.Item2 = 0;
-  *(_QWORD *)&FriendPointUpTypeVal.fields.hasValue = 0;
-  memset(&v23, 0, sizeof(v23));
+  v25.fields.value.fields.Item2 = 0;
+  *(_QWORD *)&v25.fields.hasValue = 0;
+  memset(&v24, 0, sizeof(v24));
   v3 = (System_Collections_Generic_List_T__o *)sub_2213CCC(System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___TypeInfo);
   System_Collections_Generic_List_ValueTuple_Int32Enum__int_____ctor(
     v3,
@@ -2148,19 +2142,19 @@ System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *ServantLeader
   v6 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-  *(_QWORD *)&v25.fields.currentCryptoKey = v5;
-  *(_QWORD *)&v25.fields.fakeValue = v6;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v25, 0) >= 1 )
+  *(_QWORD *)&v27.fields.currentCryptoKey = v5;
+  *(_QWORD *)&v27.fields.fakeValue = v6;
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v27, 0) >= 1 )
   {
     *(System_Nullable_ValueTuple_FuncList_TYPE__int___o *)&v8 = ServantLeaderInfo__GetBaseFriendPointUpTypeVal(this, v7);
-    *(_QWORD *)&FriendPointUpTypeVal.fields.hasValue = v8;
-    FriendPointUpTypeVal.fields.value.fields.Item2 = DWORD2(v8);
+    *(_QWORD *)&v25.fields.hasValue = v8;
+    v25.fields.value.fields.Item2 = DWORD2(v8);
     if ( (_BYTE)v8 )
     {
-      v26.fields.value = (Il2CppObject *)Method_System_Nullable_ValueTuple_FuncList_TYPE__int___get_Value__;
-      *(_QWORD *)&v26.fields.hasValue = &FriendPointUpTypeVal;
+      v28.fields.value = (Il2CppObject *)Method_System_Nullable_ValueTuple_FuncList_TYPE__int___get_Value__;
+      *(_QWORD *)&v28.fields.hasValue = &v25;
       Value = (System_Collections_Generic_List_EquipTargetInfo__o *)System_Nullable_ValueTuple_Int32Enum__int____get_Value(
-                                                                      v26,
+                                                                      v28,
                                                                       v9);
       if ( !v3 )
         goto LABEL_26;
@@ -2175,7 +2169,7 @@ System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *ServantLeader
       {
         System_Collections_Generic_List_ValueTuple_Int32Enum__int____AddWithResize(
           v3,
-          (System_ValueTuple_Int32Enum__int__o)Value,
+          *(System_ValueTuple_Int32Enum__int__o *)((char *)&v8 + 8),
           *(const MethodInfo_43F9EF8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
       }
       else
@@ -2188,49 +2182,51 @@ System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *ServantLeader
     if ( Value )
     {
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v23,
         (System_Collections_Generic_List_object__o *)Value,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EquipTargetInfo__GetEnumerator__);
-      v23 = v22;
-      v22.fields._list = 0;
-      *(_QWORD *)&v22.fields._index = &v23;
+      v24 = v23;
+      v23.fields._list = 0;
+      *(_QWORD *)&v23.fields._index = &v24;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v23,
+                &v24,
                 (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EquipTargetInfo__MoveNext__) )
       {
-        if ( !v23.fields._current )
+        if ( !v24.fields._current )
           sub_2213CDC(0, v15);
-        FriendPointUpTypeVal = EquipTargetInfo__GetFriendPointUpTypeVal((EquipTargetInfo_o *)v23.fields._current, 0);
+        FriendPointUpTypeVal = EquipTargetInfo__GetFriendPointUpTypeVal((EquipTargetInfo_o *)v24.fields._current, 0);
+        v25 = FriendPointUpTypeVal;
         if ( FriendPointUpTypeVal.fields.hasValue )
         {
-          v27.fields.value = (Il2CppObject *)Method_System_Nullable_ValueTuple_FuncList_TYPE__int___get_Value__;
-          *(_QWORD *)&v27.fields.hasValue = &FriendPointUpTypeVal;
-          v17 = (Il2CppObject *)System_Nullable_ValueTuple_Int32Enum__int____get_Value(v27, v16);
+          v29.fields.value = (Il2CppObject *)Method_System_Nullable_ValueTuple_FuncList_TYPE__int___get_Value__;
+          *(_QWORD *)&v29.fields.hasValue = &v25;
+          v17 = (Il2CppObject *)System_Nullable_ValueTuple_Int32Enum__int____get_Value(v29, v16);
+          v18 = (System_ValueTuple_Int32Enum__int__o)v17;
           if ( !v3
-            || (v18 = v3->fields._items,
-                v19 = Method_System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___Add__,
+            || (v19 = v3->fields._items,
+                v20 = Method_System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___Add__,
                 ++v3->fields._version,
-                !v18) )
+                !v19) )
           {
             sub_2213CDC(v17, v17);
           }
-          v20 = v3->fields._size;
-          if ( (unsigned int)v20 >= LODWORD(v18->max_length) )
+          v21 = v3->fields._size;
+          if ( (unsigned int)v21 >= LODWORD(v19->max_length) )
           {
             System_Collections_Generic_List_ValueTuple_Int32Enum__int____AddWithResize(
               v3,
-              (System_ValueTuple_Int32Enum__int__o)v17,
-              *(const MethodInfo_43F9EF8 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+              v18,
+              *(const MethodInfo_43F9EF8 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
           }
           else
           {
-            v3->fields._size = v20 + 1;
-            v18->m_Items[v20] = v17;
+            v3->fields._size = v21 + 1;
+            v19->m_Items[v21] = v17;
           }
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v23,
+        &v24,
         (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EquipTargetInfo__Dispose__);
       return (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v3;
     }
@@ -4422,6 +4418,7 @@ bool ServantLeaderInfo__getEquipExpInfo(
   __int64 v11; // x24
   __int64 v12; // x1
   EquipTargetInfo_o *v13; // x0
+  bool result; // w0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v15; // 0:x0.16
 
   if ( (byte_5971DA3 & 1) == 0 )
@@ -4450,9 +4447,10 @@ bool ServantLeaderInfo__getEquipExpInfo(
 LABEL_9:
     *exp = 0;
     *lateExp = 0;
+    result = 0;
     *barExp = 0.0;
-    return 0;
   }
+  return result;
 }
 
 

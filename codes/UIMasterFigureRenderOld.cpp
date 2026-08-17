@@ -301,6 +301,8 @@ UnityEngine_Vector2_o UIMasterFigureRenderOld__GetBodySize(UIMasterFigureRenderO
 {
   UIMasterFigureRenderOld_c *v3; // x0
   System_Collections_ObjectModel_ReadOnlyCollection_Vector2__o *bodySizeTable; // x0
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o Item; // kr00_8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -323,8 +325,10 @@ UnityEngine_Vector2_o UIMasterFigureRenderOld__GetBodySize(UIMasterFigureRenderO
            bodySizeTable,
            this->fields.dispType,
            (const MethodInfo_474D048 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Vector2__get_Item__);
-  result.fields.y = Item.fields.y;
-  result.fields.x = Item.fields.x;
+  y = Item.fields.y;
+  x = Item.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -375,6 +379,10 @@ UnityEngine_Rect_o UIMasterFigureRenderOld__GetBodyUvRect(UIMasterFigureRenderOl
   float MAIN_SIZE_Y; // s5
   float MAIN_SIZE_X; // s3
   float v10; // s4
+  float v11; // s2
+  float v12; // s3
+  float v13; // s1
+  float v14; // s0
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5972182 & 1) == 0 )
@@ -408,13 +416,16 @@ UnityEngine_Rect_o UIMasterFigureRenderOld__GetBodyUvRect(UIMasterFigureRenderOl
   MAIN_SIZE_X = (float)static_fields->MAIN_SIZE_X;
   v10 = (float)(Item.fields.x + (float)((float)((float)((float)static_fields->BODY_SIZE_X - v6.fields.x) * 0.5) + 1.5))
       / MAIN_SIZE_X;
-  result.fields.m_Width = v6.fields.x / MAIN_SIZE_X;
-  result.fields.m_Height = v6.fields.y / MAIN_SIZE_Y;
-  result.fields.m_YMin = (float)((float)(Item.fields.y
-                                       + (float)((float)((float)static_fields->BODY_SIZE_Y - v6.fields.y) + 1.5))
-                               / MAIN_SIZE_Y)
-                       + 0.25;
-  result.fields.m_XMin = v10;
+  v11 = v6.fields.x / MAIN_SIZE_X;
+  v12 = v6.fields.y / MAIN_SIZE_Y;
+  v13 = (float)((float)(Item.fields.y + (float)((float)((float)static_fields->BODY_SIZE_Y - v6.fields.y) + 1.5))
+              / MAIN_SIZE_Y)
+      + 0.25;
+  v14 = v10;
+  result.fields.m_Height = v12;
+  result.fields.m_Width = v11;
+  result.fields.m_YMin = v13;
+  result.fields.m_XMin = v14;
   return result;
 }
 

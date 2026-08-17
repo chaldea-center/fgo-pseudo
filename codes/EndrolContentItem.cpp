@@ -274,16 +274,18 @@ void EndrolContentItem__SetDoubleColumnText(
   unsigned int v16; // w25
   struct UILabel_array *v17; // x8
   struct UILabel_array *v18; // x8
-  int32_t v20; // w8
-  __int64 v21; // x1
-  __int64 v22; // x2
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  int v19; // s0 OVERLAPPED
+  int v20; // s2
+  int32_t v21; // w8
+  float v22; // s1
+  __int64 v23; // x1
+  __int64 v24; // x2
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
 
   if ( (byte_596A48A & 1) == 0 )
   {
@@ -340,29 +342,29 @@ LABEL_17:
   transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_27;
-  v29.fields.x = 0.0;
-  v29.fields.z = 0.0;
-  v20 = fontSize >= 0 ? fontSize : fontSize + 1;
-  v29.fields.y = (float)(posY - (v20 >> 1));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v29, 0);
+  v19 = 0;
+  v20 = 0;
+  v21 = fontSize >= 0 ? fontSize : fontSize + 1;
+  v22 = (float)(posY - (v21 >> 1));
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v19, 0);
   transform = (UILabel_o *)this->fields.contentItemWidget;
   if ( !transform )
     goto LABEL_27;
   UIWidget__set_height((UIWidget_o *)transform, fontSize, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v21, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23, v24);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)rootComp, 0, 0) )
   {
     this->fields.rootComponent = rootComp;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)rootComp,
-      v23,
-      v24,
       v25,
       v26,
       v27,
-      v28);
+      v28,
+      v29,
+      v30);
   }
 }
 
@@ -456,16 +458,18 @@ void EndrolContentItem__SetText(
 {
   __int64 v13; // x1
   UILabel_o *textLabel; // x0
-  int32_t v16; // w8
-  __int64 v17; // x1
-  __int64 v18; // x2
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  int v15; // s0 OVERLAPPED
+  int v16; // s2
+  int32_t v17; // w8
+  float v18; // s1
+  __int64 v19; // x1
+  __int64 v20; // x2
+  System_String_o *v21; // x2
+  System_String_o *v22; // x3
+  int32_t v23; // w4
+  int32_t v24; // w5
+  bool v25; // w6
+  bool v26; // w7
 
   if ( (byte_596A488 & 1) == 0 )
   {
@@ -485,11 +489,11 @@ void EndrolContentItem__SetText(
   textLabel = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !textLabel )
     goto LABEL_17;
-  v25.fields.x = 0.0;
-  v25.fields.z = 0.0;
-  v16 = fontSize >= 0 ? fontSize : fontSize + 1;
-  v25.fields.y = (float)(posY - (v16 >> 1));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, v25, 0);
+  v15 = 0;
+  v16 = 0;
+  v17 = fontSize >= 0 ? fontSize : fontSize + 1;
+  v18 = (float)(posY - (v17 >> 1));
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, *(UnityEngine_Vector3_o *)&v15, 0);
   textLabel = this->fields.textLabel;
   if ( !textLabel
     || (UILabel__set_fontSize(textLabel, fontSize, 0), (textLabel = (UILabel_o *)this->fields.contentItemWidget) == 0)
@@ -500,19 +504,19 @@ LABEL_17:
   }
   UIWidget__set_pivot((UIWidget_o *)textLabel, pivot, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)rootComp, 0, 0) )
   {
     this->fields.rootComponent = rootComp;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)rootComp,
-      v19,
-      v20,
       v21,
       v22,
       v23,
-      v24);
+      v24,
+      v25,
+      v26);
   }
 }
 
@@ -549,16 +553,18 @@ void EndrolContentItem__SetTripleColumnText(
   unsigned int v31; // w26
   struct UILabel_array *v32; // x8
   struct UILabel_array *v33; // x8
-  int32_t v35; // w8
-  __int64 v36; // x1
-  __int64 v37; // x2
-  System_String_o *v38; // x2
-  System_String_o *v39; // x3
-  int32_t v40; // w4
-  int32_t v41; // w5
-  bool v42; // w6
-  bool v43; // w7
-  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
+  int v34; // s0 OVERLAPPED
+  int v35; // s2
+  int32_t v36; // w8
+  float v37; // s1
+  __int64 v38; // x1
+  __int64 v39; // x2
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
 
   if ( (byte_596A48B & 1) == 0 )
   {
@@ -646,29 +652,29 @@ LABEL_37:
   textLabel = (char *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !textLabel )
     goto LABEL_36;
-  v44.fields.x = 0.0;
-  v44.fields.z = 0.0;
-  v35 = fontSize >= 0 ? fontSize : fontSize + 1;
-  v44.fields.y = (float)(posY - (v35 >> 1));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, v44, 0);
+  v34 = 0;
+  v35 = 0;
+  v36 = fontSize >= 0 ? fontSize : fontSize + 1;
+  v37 = (float)(posY - (v36 >> 1));
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)textLabel, *(UnityEngine_Vector3_o *)&v34, 0);
   textLabel = (char *)this->fields.contentItemWidget;
   if ( !textLabel )
     goto LABEL_36;
   UIWidget__set_height((UIWidget_o *)textLabel, fontSize, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36, v37);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38, v39);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)rootComp, 0, 0) )
   {
     this->fields.rootComponent = rootComp;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.rootComponent,
       (int32_t)rootComp,
-      v38,
-      v39,
       v40,
       v41,
       v42,
-      v43);
+      v43,
+      v44,
+      v45);
   }
 }
 

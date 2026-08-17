@@ -154,7 +154,10 @@ void SaveDataDeleteConfirmDialog__UpdateDecideButton(
 {
   UIButtonColor_o *decideButtonColor; // x0
   _BOOL4 v5; // w21
-  UnityEngine_Color_o disabledColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
 
   decideButtonColor = this->fields.decideButtonColor;
   if ( !decideButtonColor )
@@ -165,10 +168,10 @@ LABEL_9:
   decideButtonColor = this->fields.decideButtonColor;
   if ( v5 )
   {
-    disabledColor.fields.r = 1.0;
-    disabledColor.fields.g = 1.0;
-    disabledColor.fields.b = 1.0;
-    disabledColor.fields.a = 1.0;
+    r = 1.0;
+    g = 1.0;
+    b = 1.0;
+    a = 1.0;
     if ( !decideButtonColor )
       goto LABEL_9;
   }
@@ -176,9 +179,12 @@ LABEL_9:
   {
     if ( !decideButtonColor )
       goto LABEL_9;
-    disabledColor = decideButtonColor->fields.disabledColor;
+    r = decideButtonColor->fields.disabledColor.fields.r;
+    g = decideButtonColor->fields.disabledColor.fields.g;
+    b = decideButtonColor->fields.disabledColor.fields.b;
+    a = decideButtonColor->fields.disabledColor.fields.a;
   }
-  UIButtonColor__set_defaultColor(decideButtonColor, disabledColor, 0);
+  UIButtonColor__set_defaultColor(decideButtonColor, *(UnityEngine_Color_o *)&r, 0);
   decideButtonColor = this->fields.decideButtonColor;
   if ( !decideButtonColor )
     goto LABEL_9;
@@ -255,7 +261,7 @@ System_IAsyncResult_o *SaveDataDeleteConfirmDialog_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

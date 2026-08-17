@@ -1,47 +1,55 @@
 void ImageLimitCount___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
-  System_Array_o *v8; // x19
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct System_Int32_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  System_Array_o *v10; // x0
+  System_RuntimeFieldHandle_o v11; // x1
+  System_Array_o *v12; // x19
   struct ImageLimitCount_StaticFields *static_fields; // x0
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
-  System_Array_o *v16; // x19
-  struct ImageLimitCount_StaticFields *v17; // x0
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
-  __int64 v24; // x0
-  __int64 v25; // x1
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
-  unsigned int v32; // w8
-  struct System_Int32_array *v33; // x1
-  struct ImageLimitCount_StaticFields *v34; // x0
-  System_Array_o *v35; // x19
-  struct ImageLimitCount_StaticFields *v36; // x0
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_Array_o *v20; // x0
+  System_RuntimeFieldHandle_o v21; // x1
+  System_Array_o *v22; // x19
+  struct ImageLimitCount_StaticFields *v23; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  __int64 v30; // x0
+  __int64 v31; // x1
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  unsigned int v38; // w8
+  struct System_Int32_array *v39; // x1
+  struct ImageLimitCount_StaticFields *v40; // x0
+  System_Array_o *v41; // x0
+  System_RuntimeFieldHandle_o v42; // x1
+  System_Array_o *v43; // x19
+  struct ImageLimitCount_StaticFields *v44; // x0
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
+  int32_t v48; // w5
+  bool v49; // w6
+  bool v50; // w7
 
   if ( (byte_596F6A2 & 1) == 0 )
   {
@@ -54,71 +62,67 @@ void ImageLimitCount___cctor(const MethodInfo *method)
     byte_596F6A2 = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__598CEB271FAC09B40101AAE5910D6939EFC22B105F7DF2AA77795704D4CC7911,
-    0);
-  ImageLimitCount_TypeInfo->static_fields->imageLimitCountList = (struct System_Int32_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__598CEB271FAC09B40101AAE5910D6939EFC22B105F7DF2AA77795704D4CC7911;
+  v3 = (struct System_Int32_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  ImageLimitCount_TypeInfo->static_fields->imageLimitCountList = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ImageLimitCount_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
-  v8 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v7,
     v8,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C,
-    0);
+    v9);
+  v10 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
+  v11.fields.value = Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C;
+  v12 = v10;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v10, v11, 0);
   static_fields = ImageLimitCount_TypeInfo->static_fields;
-  static_fields->minLimitCountList = (struct System_Int32_array *)v8;
+  static_fields->minLimitCountList = (struct System_Int32_array *)v12;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->minLimitCountList,
-    (int32_t)v8,
-    v10,
-    v11,
-    v12,
-    v13,
+    (int32_t)v12,
     v14,
-    v15);
-  v16 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v15,
     v16,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__E8845519DB154B41E620A98F949B9EDCEFB1F9060DC8290A9F7D2C3200ABD0CB,
-    0);
-  v17 = ImageLimitCount_TypeInfo->static_fields;
-  v17->maxLimitCountList = (struct System_Int32_array *)v16;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->maxLimitCountList, (int32_t)v16, v18, v19, v20, v21, v22, v23);
-  v24 = sub_2213B20(int___TypeInfo, 3);
-  if ( !v24 )
-    sub_2213CDC(0, v25);
-  v32 = *(_DWORD *)(v24 + 24);
-  v33 = (struct System_Int32_array *)v24;
-  if ( v32 <= 1 || (*(_DWORD *)(v24 + 36) = 2, v32 == 2) )
-    sub_2213CE4(v24);
-  v34 = ImageLimitCount_TypeInfo->static_fields;
-  v33->m_Items[2] = 4;
-  v34->maxDispLimitCountList = v33;
+    v17,
+    v18,
+    v19);
+  v20 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
+  v21.fields.value = Field__PrivateImplementationDetails__E8845519DB154B41E620A98F949B9EDCEFB1F9060DC8290A9F7D2C3200ABD0CB;
+  v22 = v20;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v20, v21, 0);
+  v23 = ImageLimitCount_TypeInfo->static_fields;
+  v23->maxLimitCountList = (struct System_Int32_array *)v22;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->maxLimitCountList, (int32_t)v22, v24, v25, v26, v27, v28, v29);
+  v30 = sub_2213B20(int___TypeInfo, 3);
+  if ( !v30 )
+    sub_2213CDC(0, v31);
+  v38 = *(_DWORD *)(v30 + 24);
+  v39 = (struct System_Int32_array *)v30;
+  if ( v38 <= 1 || (*(_DWORD *)(v30 + 36) = 2, v38 == 2) )
+    sub_2213CE4(v30);
+  v40 = ImageLimitCount_TypeInfo->static_fields;
+  v39->m_Items[2] = 4;
+  v40->maxDispLimitCountList = v39;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v34->maxDispLimitCountList,
-    (int32_t)v33,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31);
-  v35 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    (MissionNaviTransitionBoardItem_o *)&v40->maxDispLimitCountList,
+    (int32_t)v39,
+    v32,
+    v33,
+    v34,
     v35,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__3A795EE993DCFCD47AE2FD7282FAE2348DADC51429112235F8375626F9439A0B,
-    0);
-  v36 = ImageLimitCount_TypeInfo->static_fields;
-  v36->dispLimitCountList = (struct System_Int32_array *)v35;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v36->dispLimitCountList, (int32_t)v35, v37, v38, v39, v40, v41, v42);
+    v36,
+    v37);
+  v41 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
+  v42.fields.value = Field__PrivateImplementationDetails__3A795EE993DCFCD47AE2FD7282FAE2348DADC51429112235F8375626F9439A0B;
+  v43 = v41;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v41, v42, 0);
+  v44 = ImageLimitCount_TypeInfo->static_fields;
+  v44->dispLimitCountList = (struct System_Int32_array *)v43;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v44->dispLimitCountList, (int32_t)v43, v45, v46, v47, v48, v49, v50);
   ImageLimitCount_TypeInfo->static_fields->enemyLimitCountStart = 101;
 }
 
@@ -1055,6 +1059,7 @@ bool ImageLimitCount__TryGetGrandImageLimitCount(
   __int64 v9; // x2
   int v10; // w8
   Il2CppClass *klass; // x8
+  bool result; // w0
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
   v5 = limitCount;
@@ -1117,8 +1122,9 @@ LABEL_21:
 LABEL_19:
   v5 = *((_DWORD *)&klass->_1.byval_arg.data + v5);
 LABEL_20:
+  result = 1;
   *imageLimitCount = v5;
-  return 1;
+  return result;
 }
 
 
@@ -1135,6 +1141,7 @@ bool ImageLimitCount__TryGetRewardImageLimitCount(
   __int64 v9; // x2
   int v10; // w8
   Il2CppClass *klass; // x8
+  bool result; // w0
   int32_t value; // [xsp+Ch] [xbp-24h] BYREF
 
   v5 = svtLimitCnt;
@@ -1197,8 +1204,9 @@ LABEL_21:
 LABEL_19:
   v5 = *((_DWORD *)&klass->_1.byval_arg.data + v5);
 LABEL_20:
+  result = 1;
   *limitCount = v5;
-  return 1;
+  return result;
 }
 
 

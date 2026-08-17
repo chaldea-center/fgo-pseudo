@@ -1250,9 +1250,9 @@ System_IAsyncResult_o *CommandSpellWindowComponent_CloseButtonCallBack__BeginInv
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -1339,7 +1339,7 @@ System_IAsyncResult_o *CommandSpellWindowComponent_UseCommandSpellCallBack__Begi
   v10 = commandSpellId;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

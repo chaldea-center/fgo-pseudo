@@ -2291,7 +2291,7 @@ System_IAsyncResult_o *ServantCommentMaster_ProfileChangeDecideDelegate__BeginIn
   v13[1] = j_il2cpp_value_box_0(qword_5984348, &v15);
   v13[2] = j_il2cpp_value_box_0(qword_5984328, v14);
   v13[3] = finishCallback;
-  return sub_2213A14(this, v13, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v13, callback, object);
 }
 
 

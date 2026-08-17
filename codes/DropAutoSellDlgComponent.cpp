@@ -1,20 +1,24 @@
 void DropAutoSellDlgComponent___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
-  System_Array_o *v8; // x19
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct System_Int32_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  System_Array_o *v10; // x0
+  System_RuntimeFieldHandle_o v11; // x1
+  System_Array_o *v12; // x19
   struct DropAutoSellDlgComponent_StaticFields *static_fields; // x0
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
 
   if ( (byte_596BE42 & 1) == 0 )
   {
@@ -25,36 +29,34 @@ void DropAutoSellDlgComponent___cctor(const MethodInfo *method)
     byte_596BE42 = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__63859276EDC9733EDCD11B6E9B87C024B4519C893567720D95DA60C9850C22DE,
-    0);
-  DropAutoSellDlgComponent_TypeInfo->static_fields->settingKinds = (struct System_Int32_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__63859276EDC9733EDCD11B6E9B87C024B4519C893567720D95DA60C9850C22DE;
+  v3 = (struct System_Int32_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  DropAutoSellDlgComponent_TypeInfo->static_fields->settingKinds = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)DropAutoSellDlgComponent_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
-  v8 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v7,
     v8,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__01DE6A7D9D19E08202A552CCAB4AF80ECBBA6F323968DB42D518815A6D2A42E1,
-    0);
+    v9);
+  v10 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
+  v11.fields.value = Field__PrivateImplementationDetails__01DE6A7D9D19E08202A552CCAB4AF80ECBBA6F323968DB42D518815A6D2A42E1;
+  v12 = v10;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v10, v11, 0);
   static_fields = DropAutoSellDlgComponent_TypeInfo->static_fields;
-  static_fields->settingMasks = (struct System_Int32_array *)v8;
+  static_fields->settingMasks = (struct System_Int32_array *)v12;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->settingMasks,
-    (int32_t)v8,
-    v10,
-    v11,
-    v12,
-    v13,
+    (int32_t)v12,
     v14,
-    v15);
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
 }
 
 
@@ -1143,7 +1145,7 @@ System_IAsyncResult_o *DropAutoSellDlgComponent_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

@@ -22,7 +22,10 @@ void BattleServantHeadUpComponent__SetEnableTargetMark(
   UnityEngine_Object_o *v14; // x20
   __int64 v15; // x1
   Il2CppObject *v16; // x20
-  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v17; // s0 OVERLAPPED
+  float v18; // s3
+  float v19; // s1
+  float v20; // s2
 
   if ( (byte_59741CB & 1) == 0 )
   {
@@ -114,19 +117,19 @@ LABEL_36:
         {
           if ( !v16 )
             goto LABEL_36;
-          v18.fields.r = 1.0;
-          v18.fields.a = 1.0;
+          v17 = 1.0;
+          v18 = 1.0;
         }
         else
         {
           if ( !v16 )
             goto LABEL_36;
-          v18.fields.a = 0.0039216;
-          v18.fields.r = 0.50588;
+          v18 = 0.0039216;
+          v17 = 0.50588;
         }
-        v18.fields.g = v18.fields.r;
-        v18.fields.b = v18.fields.r;
-        UIWidget__set_color((UIWidget_o *)v16, v18, 0);
+        v19 = v17;
+        v20 = v17;
+        UIWidget__set_color((UIWidget_o *)v16, *(UnityEngine_Color_o *)&v17, 0);
       }
     }
   }

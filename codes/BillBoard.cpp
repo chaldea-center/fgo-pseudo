@@ -133,10 +133,15 @@ void BillBoard__UpdateBillboard(BillBoard_o *this, const MethodInfo *method)
   float z; // s9
   float y; // s11
   float v10; // s10
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v12; // 0:kr34_12.12
-  UnityEngine_Vector3_o v13; // 0:kr40_12.12
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  float v11; // s12
+  float v12; // s13
+  float v13; // s14
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FB43 & 1) == 0 )
   {
@@ -160,13 +165,15 @@ void BillBoard__UpdateBillboard(BillBoard_o *this, const MethodInfo *method)
     transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform )
       goto LABEL_22;
-    y = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0).fields.y;
+    v15 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
+    y = v15.fields.y;
     if ( this->fields.enableRotationZ )
     {
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !transform )
         goto LABEL_22;
-      v10 = UnityEngine_Transform__get_localEulerAngles((UnityEngine_Transform_o *)transform, 0).fields.z;
+      localEulerAngles = UnityEngine_Transform__get_localEulerAngles((UnityEngine_Transform_o *)transform, 0);
+      v10 = localEulerAngles.fields.z;
     }
     else
     {
@@ -177,22 +184,25 @@ void BillBoard__UpdateBillboard(BillBoard_o *this, const MethodInfo *method)
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !transform )
         goto LABEL_22;
-      v12 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
+      v17 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
+      v11 = v17.fields.x;
+      v12 = v17.fields.y;
+      v13 = v17.fields.z;
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !transform )
         goto LABEL_22;
-      v13 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
-      x = v13.fields.x - (float)(position.fields.x - v12.fields.x);
-      y = v13.fields.y - (float)(y - v12.fields.y);
-      z = v13.fields.z - (float)(position.fields.z - v12.fields.z);
+      v18 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
+      x = v18.fields.x - (float)(x - v11);
+      y = v18.fields.y - (float)(y - v12);
+      z = v18.fields.z - (float)(z - v13);
     }
     transform = (UnityEngine_Component_o *)this->fields.mTrf;
     if ( !transform )
       goto LABEL_22;
-    v14.fields.x = x;
-    v14.fields.y = y;
-    v14.fields.z = z;
-    UnityEngine_Transform__LookAt_83495412((UnityEngine_Transform_o *)transform, v14, 0);
+    v19.fields.x = x;
+    v19.fields.y = y;
+    v19.fields.z = z;
+    UnityEngine_Transform__LookAt_83495412((UnityEngine_Transform_o *)transform, v19, 0);
     if ( this->fields.enableRotationZ )
     {
       transform = (UnityEngine_Component_o *)this->fields.mTrf;

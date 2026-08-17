@@ -1,11 +1,14 @@
 BgmPlayArgs_o *SubBgmPlayArgs__Clone(SubBgmPlayArgs_o *this, const MethodInfo *method)
 {
   float Volume_k__BackingField; // s0
+  System_Nullable_float__o p_volume; // x0
   System_String_o *BgmName_k__BackingField; // x20
   float FadeTime_k__BackingField; // s8
   int64_t StartTime_k__BackingField; // x19
-  BgmPlayArgs_o *v7; // x21
-  const MethodInfo *v8; // x4
+  BgmPlayArgs_o *v8; // x0
+  System_Nullable_float__o v9; // x2
+  BgmPlayArgs_o *v10; // x21
+  const MethodInfo *v11; // x4
   System_Nullable_float__o volume; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596FE10 & 1) == 0 )
@@ -15,17 +18,20 @@ BgmPlayArgs_o *SubBgmPlayArgs__Clone(SubBgmPlayArgs_o *this, const MethodInfo *m
     byte_596FE10 = 1;
   }
   Volume_k__BackingField = this->fields._Volume_k__BackingField;
+  p_volume = (System_Nullable_float__o)&volume;
   BgmName_k__BackingField = this->fields._BgmName_k__BackingField;
   volume = 0;
   System_Nullable_float____ctor(
-    (System_Nullable_float__o)&volume,
+    p_volume,
     Volume_k__BackingField,
     (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
   StartTime_k__BackingField = this->fields._StartTime_k__BackingField;
-  v7 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
-  BgmPlayArgs___ctor(v7, BgmName_k__BackingField, volume, FadeTime_k__BackingField, StartTime_k__BackingField, v8);
-  return v7;
+  v8 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+  v9 = volume;
+  v10 = v8;
+  BgmPlayArgs___ctor(v8, BgmName_k__BackingField, v9, FadeTime_k__BackingField, StartTime_k__BackingField, v11);
+  return v10;
 }
 
 
@@ -44,18 +50,21 @@ SubBgmPlayArgs_array *SubBgmPlayArgs__ConvertFromEntityScript(
   int32_t v11; // w21
   float v12; // s0
   System_String_o *monitor; // x22
-  BgmPlayArgs_o *v14; // x21
-  const MethodInfo *v15; // x4
-  System_String_o *v16; // x2
-  System_String_o *v17; // x3
-  int32_t v18; // w4
-  int32_t v19; // w5
-  bool v20; // w6
-  bool v21; // w7
+  System_Nullable_float__o p_volume; // x0
+  BgmPlayArgs_o *v15; // x0
+  System_Nullable_float__o v16; // x2
+  Il2CppObject *v17; // x21
+  const MethodInfo *v18; // x4
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v26; // x9
   __int64 size; // x10
-  Il2CppClass **v25; // x0
+  Il2CppClass **v28; // x0
   System_Nullable_float__o volume; // [xsp+0h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
@@ -129,17 +138,20 @@ LABEL_29:
           if ( !entity )
             goto LABEL_28;
           monitor = (System_String_o *)entity[1].monitor;
+          p_volume = (System_Nullable_float__o)&volume;
           volume = 0;
           System_Nullable_float____ctor(
-            (System_Nullable_float__o)&volume,
+            p_volume,
             v12,
             (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-          v14 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
-          BgmPlayArgs___ctor(v14, monitor, volume, 0.0, 0, v15);
+          v15 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+          v16 = volume;
+          v17 = (Il2CppObject *)v15;
+          BgmPlayArgs___ctor(v15, monitor, v16, 0.0, 0, v18);
           if ( !v3 )
             goto LABEL_28;
           items = v3->fields._items;
-          v23 = Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__;
+          v26 = Method_System_Collections_Generic_List_SubBgmPlayArgs__Add__;
           ++v3->fields._version;
           if ( !items )
             goto LABEL_28;
@@ -148,15 +160,15 @@ LABEL_29:
           {
             System_Collections_Generic_List_object___AddWithResize(
               v3,
-              (Il2CppObject *)v14,
-              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+              v17,
+              *(const MethodInfo_4483C64 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
           }
           else
           {
-            v25 = &items->obj.klass + size;
+            v28 = &items->obj.klass + size;
             v3->fields._size = size + 1;
-            v25[4] = (Il2CppClass *)v14;
-            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v14, v16, v17, v18, v19, v20, v21);
+            v28[4] = (Il2CppClass *)v17;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v17, v19, v20, v21, v22, v23, v24);
           }
         }
       }

@@ -2364,6 +2364,7 @@ LABEL_83:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommandCardExceedControl__SetCommandCards(CommandCardExceedControl_o *this, const MethodInfo *method)
 {
   __int64 baseUserServantEntity; // x0
@@ -2376,40 +2377,45 @@ void CommandCardExceedControl__SetCommandCards(CommandCardExceedControl_o *this,
   int32_t LimitCountByImageLimitCostumeIn; // w21
   __int64 v11; // x22
   UnityEngine_GameObject_o *gameObject; // x0
+  float v13; // s1 OVERLAPPED
   float v14; // s0
-  __int64 (*v15)(void); // x9
+  int v15; // s2
+  float v16; // s0
+  __int64 (*v17)(void); // x9
   struct CombineCommandCardComponent_array *commandCardComponents; // x8
-  unsigned __int64 v17; // x27
+  unsigned __int64 v19; // x27
   unsigned __int64 max_length_low; // x9
-  __int64 v19; // x10
-  unsigned __int64 v20; // x11
-  int32_t v21; // w25
-  CombineCommandCardComponent_o *v22; // x23
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  BattleCommandData_o *v29; // x24
-  const MethodInfo *v30; // x2
+  __int64 v21; // x10
+  unsigned __int64 v22; // x11
+  int32_t v23; // w25
+  CombineCommandCardComponent_o *v24; // x23
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  BattleCommandData_o *v31; // x24
+  const MethodInfo *v32; // x2
   struct UserServantCommandCodeEntity_o *baseUserServantCommandCodeEntity; // x8
   struct System_Int64_array *userCommandCodeIds; // x8
-  int64_t v33; // x25
+  int64_t v35; // x25
   struct UserServantCommandCardEntity_o *baseUserServantCommandCardEntity; // x8
   struct System_Int32_array *commandCardParam; // x8
-  int32_t v36; // w3
-  const MethodInfo *v37; // x2
-  bool v38; // zf
-  System_String_o *v40; // x2
-  System_String_o *v41; // x3
-  int32_t v42; // w4
-  int32_t v43; // w5
-  bool v44; // w6
-  bool v45; // w7
+  int32_t v38; // w3
+  const MethodInfo *v39; // x2
+  bool v40; // zf
+  float v41; // s3 OVERLAPPED
+  float v42; // s0
+  float v43; // s1
+  float v44; // s2
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
+  int32_t v48; // w5
+  bool v49; // w6
+  bool v50; // w7
   struct System_Action_o *onAssetLoadEnd; // x20
-  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974AAB & 1) == 0 )
   {
@@ -2460,114 +2466,114 @@ void CommandCardExceedControl__SetCommandCards(CommandCardExceedControl_o *this,
     goto LABEL_45;
   v11 = baseUserServantEntity;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.cardBaseGrid, 0);
-  v47.fields.y = -15.5;
+  v13 = -15.5;
   if ( this->fields._IsTransformServant_k__BackingField )
   {
-    v47.fields.y = -18.0;
-    v47.fields.x = -270.0;
+    v13 = -18.0;
+    v14 = -270.0;
   }
   else
   {
-    v47.fields.x = -258.0;
+    v14 = -258.0;
   }
-  v47.fields.z = 0.0;
-  GameObjectExtensions__SetLocalPosition(gameObject, v47, 0);
+  v15 = 0;
+  GameObjectExtensions__SetLocalPosition(gameObject, *(UnityEngine_Vector3_o *)(&v13 - 1), 0);
   baseUserServantEntity = (__int64)this->fields.cardBaseGrid;
   if ( !baseUserServantEntity )
     goto LABEL_45;
-  v14 = 135.0;
+  v16 = 135.0;
   if ( !this->fields._IsTransformServant_k__BackingField )
-    v14 = 130.0;
-  v15 = *(__int64 (**)(void))(*(_QWORD *)baseUserServantEntity + 440LL);
-  *(float *)(baseUserServantEntity + 48) = v14;
-  baseUserServantEntity = v15();
+    v16 = 130.0;
+  v17 = *(__int64 (**)(void))(*(_QWORD *)baseUserServantEntity + 440LL);
+  *(float *)(baseUserServantEntity + 48) = v16;
+  baseUserServantEntity = v17();
   commandCardComponents = this->fields.commandCardComponents;
   if ( !commandCardComponents )
     goto LABEL_45;
-  v17 = 0;
+  v19 = 0;
   while ( 1 )
   {
     max_length_low = LODWORD(commandCardComponents->max_length);
-    if ( (__int64)v17 >= (int)max_length_low )
+    if ( (__int64)v19 >= (int)max_length_low )
       break;
     if ( !v11 )
       goto LABEL_45;
-    v19 = *(_QWORD *)(v11 + 144);
-    if ( !v19 )
+    v21 = *(_QWORD *)(v11 + 144);
+    if ( !v21 )
       break;
-    v20 = *(unsigned int *)(v19 + 24);
-    if ( (__int64)v17 >= (int)v20 )
+    v22 = *(unsigned int *)(v21 + 24);
+    if ( (__int64)v19 >= (int)v22 )
       break;
-    if ( v17 >= v20 )
+    if ( v19 >= v22 )
       goto LABEL_51;
-    v21 = *(_DWORD *)(v19 + 4 * v17 + 32);
-    if ( (unsigned int)(v21 - 1) <= 2 )
+    v23 = *(_DWORD *)(v21 + 4 * v19 + 32);
+    if ( (unsigned int)(v23 - 1) <= 2 )
     {
-      if ( v17 >= max_length_low )
+      if ( v19 >= max_length_low )
         goto LABEL_51;
-      v22 = commandCardComponents->m_Items[v17];
+      v24 = commandCardComponents->m_Items[v19];
       baseUserServantEntity = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      if ( !v22 )
+      if ( !v24 )
         goto LABEL_45;
-      v22->fields.target = (struct UnityEngine_GameObject_o *)baseUserServantEntity;
+      v24->fields.target = (struct UnityEngine_GameObject_o *)baseUserServantEntity;
       sub_2213A04(
-        (MissionNaviTransitionBoardItem_o *)&v22->fields.target,
+        (MissionNaviTransitionBoardItem_o *)&v24->fields.target,
         baseUserServantEntity,
-        v23,
-        v24,
         v25,
         v26,
         v27,
-        v28);
-      v29 = (BattleCommandData_o *)sub_2213CCC(BattleCommandData_TypeInfo);
-      BattleCommandData___ctor_53637188(v29, v21, v5, LimitCountByImageLimitCostumeIn, 0, -1, 0);
-      if ( !v29 )
+        v28,
+        v29,
+        v30);
+      v31 = (BattleCommandData_o *)sub_2213CCC(BattleCommandData_TypeInfo);
+      BattleCommandData___ctor_53637188(v31, v23, v5, LimitCountByImageLimitCostumeIn, 0, -1, 0);
+      if ( !v31 )
         goto LABEL_45;
       baseUserServantCommandCodeEntity = this->fields.baseUserServantCommandCodeEntity;
-      v29->fields.markindex = v17;
-      v29->fields.servantCardIdsIndex = v17;
+      v31->fields.markindex = v19;
+      v31->fields.servantCardIdsIndex = v19;
       if ( baseUserServantCommandCodeEntity
         && (userCommandCodeIds = baseUserServantCommandCodeEntity->fields.userCommandCodeIds) != 0 )
       {
-        if ( v17 >= LODWORD(userCommandCodeIds->max_length) )
+        if ( v19 >= LODWORD(userCommandCodeIds->max_length) )
           goto LABEL_51;
-        v33 = userCommandCodeIds->m_Items[v17] & ~(userCommandCodeIds->m_Items[v17] >> 63);
+        v35 = userCommandCodeIds->m_Items[v19] & ~(userCommandCodeIds->m_Items[v19] >> 63);
       }
       else
       {
-        v33 = 0;
+        v35 = 0;
       }
-      baseUserServantEntity = CommandCardExceedControl__GetCommandCodeId(this, v33, v30);
+      baseUserServantEntity = CommandCardExceedControl__GetCommandCodeId(this, v35, v32);
       baseUserServantCommandCardEntity = this->fields.baseUserServantCommandCardEntity;
       if ( baseUserServantCommandCardEntity
         && (commandCardParam = baseUserServantCommandCardEntity->fields.commandCardParam) != 0 )
       {
-        if ( v17 >= LODWORD(commandCardParam->max_length) )
+        if ( v19 >= LODWORD(commandCardParam->max_length) )
 LABEL_51:
           sub_2213CE4(baseUserServantEntity);
-        v36 = commandCardParam->m_Items[v17];
+        v38 = commandCardParam->m_Items[v19];
       }
       else
       {
-        v36 = 0;
+        v38 = 0;
       }
-      v29->fields.commandCodeId = baseUserServantEntity;
-      v29->fields.commandCardParam = v36;
-      v29->fields.userCommandCodeId = v33;
-      CombineCommandCardComponent__DispCommandCard(v22, v29, v33, v36, 1, 1, 0);
-      v38 = !CommandCardExceedControl__IsTransformedServant(this, this->fields.displayTransformIndex, v37);
-      v48.fields.a = 1.0;
-      if ( v38 )
-        v48.fields.r = 1.0;
+      v31->fields.commandCodeId = baseUserServantEntity;
+      v31->fields.commandCardParam = v38;
+      v31->fields.userCommandCodeId = v35;
+      CombineCommandCardComponent__DispCommandCard(v24, v31, v35, v38, 1, 1, 0);
+      v40 = !CommandCardExceedControl__IsTransformedServant(this, this->fields.displayTransformIndex, v39);
+      v41 = 1.0;
+      if ( v40 )
+        v42 = 1.0;
       else
-        v48.fields.r = 0.5;
-      v48.fields.g = v48.fields.r;
-      v48.fields.b = v48.fields.r;
-      CombineCommandCardComponent__SetColor(v22, v48, 0);
-      CombineCommandCardComponent__SetLayout(v22, this->fields.positionOffsetY, this->fields.scaleOffset, 0);
+        v42 = 0.5;
+      v43 = v42;
+      v44 = v42;
+      CombineCommandCardComponent__SetColor(v24, *(UnityEngine_Color_o *)(&v41 - 3), 0);
+      CombineCommandCardComponent__SetLayout(v24, this->fields.positionOffsetY, this->fields.scaleOffset, 0);
     }
     commandCardComponents = this->fields.commandCardComponents;
-    ++v17;
+    ++v19;
     if ( !commandCardComponents )
       goto LABEL_45;
   }
@@ -2586,7 +2592,7 @@ LABEL_45:
   if ( onAssetLoadEnd )
   {
     this->fields.onAssetLoadEnd = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onAssetLoadEnd, 0, v40, v41, v42, v43, v44, v45);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.onAssetLoadEnd, 0, v45, v46, v47, v48, v49, v50);
     ((void (__fastcall *)(intptr_t, intptr_t))onAssetLoadEnd->fields.invoke_impl)(
       onAssetLoadEnd->fields.method_code,
       onAssetLoadEnd->fields.method);
@@ -2661,6 +2667,7 @@ LABEL_11:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommandCardExceedControl__SetInfoMessageLabels(
         CommandCardExceedControl_o *this,
         int32_t stateType,
@@ -2683,12 +2690,15 @@ void CommandCardExceedControl__SetInfoMessageLabels(
   UILabel_o *userQpLabel; // x23
   __int64 v22; // x1
   UILabel_o *requiredQpLabel; // x23
-  const MethodInfo *v25; // x2
-  const MethodInfo *v26; // x1
+  float v24; // s1 OVERLAPPED
+  float v25; // s3
+  float v26; // s0
+  float v27; // s2
+  const MethodInfo *v28; // x2
+  const MethodInfo *v29; // x1
   struct UserServantCommandCardEntity_o *baseUserServantCommandCardEntity; // x8
-  CommandCardRankParamMaster_o *v28; // x24
+  CommandCardRankParamMaster_o *v31; // x24
   struct System_Int32_array *commandCardParam; // x25
-  UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974AA4 & 1) == 0 )
   {
@@ -2723,17 +2733,17 @@ LABEL_32:
                    (DataManager_o *)SelfUserGame,
                    (const MethodInfo_385636C *)Method_DataManager_GetMasterData_CommandCardRankParamMaster___);
   baseUserServantCommandCardEntity = this->fields.baseUserServantCommandCardEntity;
-  v28 = (CommandCardRankParamMaster_o *)SelfUserGame;
+  v31 = (CommandCardRankParamMaster_o *)SelfUserGame;
   if ( baseUserServantCommandCardEntity )
   {
     commandCardParam = baseUserServantCommandCardEntity->fields.commandCardParam;
-    SelfUserGame = (void *)CommandCardExceedControl__get_CardIndex(this, v26);
+    SelfUserGame = (void *)CommandCardExceedControl__get_CardIndex(this, v29);
     if ( !commandCardParam )
       goto LABEL_32;
     if ( (unsigned int)SelfUserGame >= LODWORD(commandCardParam->max_length) )
       sub_2213CE4(SelfUserGame);
     v10 = (MethodInfo *)(unsigned int)commandCardParam->m_Items[(int)SelfUserGame];
-    if ( !v28 )
+    if ( !v31 )
       goto LABEL_32;
   }
   else
@@ -2742,7 +2752,7 @@ LABEL_32:
     if ( !SelfUserGame )
       goto LABEL_32;
   }
-  SelfUserGame = CommandCardRankParamMaster__GetRankParamEntity(v28, (int32_t)v10, 0);
+  SelfUserGame = CommandCardRankParamMaster__GetRankParamEntity(v31, (int32_t)v10, 0);
   if ( !SelfUserGame )
     goto LABEL_32;
   v15 = *((_DWORD *)SelfUserGame + 11);
@@ -2790,14 +2800,14 @@ LABEL_8:
   SelfUserGame = this->fields.requiredQpLabel;
   if ( !SelfUserGame )
     goto LABEL_32;
-  v30.fields.g = 1.0;
-  v30.fields.a = 1.0;
+  v24 = 1.0;
+  v25 = 1.0;
   if ( v11 < v15 )
-    v30.fields.g = 0.0;
-  v30.fields.r = 1.0;
-  v30.fields.b = v30.fields.g;
-  UIWidget__set_color((UIWidget_o *)SelfUserGame, v30, 0);
-  CommandCardExceedControl__SetUseItemTitle(this, stateType, v25);
+    v24 = 0.0;
+  v26 = 1.0;
+  v27 = v24;
+  UIWidget__set_color((UIWidget_o *)SelfUserGame, *(UnityEngine_Color_o *)(&v24 - 1), 0);
+  CommandCardExceedControl__SetUseItemTitle(this, stateType, v28);
 }
 
 

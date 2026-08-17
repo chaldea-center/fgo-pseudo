@@ -1263,6 +1263,7 @@ System_Boolean_array *AutoOrganizationManager__GetAutoOrganizationSetting(
   __int64 v26; // x11
   unsigned __int64 v27; // x10
   int v28; // w14
+  System_Boolean_array *result; // x0
 
   if ( (byte_596BDC6 & 1) == 0 )
   {
@@ -1369,8 +1370,9 @@ LABEL_26:
     goto LABEL_40;
   }
 LABEL_39:
+  result = (System_Boolean_array *)v7;
   *settingUnitNum = v25;
-  return (System_Boolean_array *)v7;
+  return result;
 }
 
 

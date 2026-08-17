@@ -1044,6 +1044,7 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   bool v36; // w6
   bool v37; // w7
   int v38; // w8
+  bool result; // w0
   Il2CppObject *BaseCell; // x21
   DebugListSelectComponent__CreateListCoroutine_d__19_o *v41; // x21
   DebugListSelectComponent__CreateListCoroutine_d__19_o *v42; // x22
@@ -1202,8 +1203,9 @@ LABEL_11:
           if ( this )
           {
             UIScrollView__UpdateScrollbars((UIScrollView_o *)this, 0);
+            result = 0;
             *(_QWORD *)&_4__this->fields.showIndex = -1;
-            return 0;
+            return result;
           }
         }
       }
@@ -1302,8 +1304,9 @@ LABEL_29:
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, 0, v55, v56, v57, v58, v59, v60);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

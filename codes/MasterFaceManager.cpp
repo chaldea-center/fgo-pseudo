@@ -22,7 +22,11 @@ UIMasterFaceTexture_o *MasterFaceManager__CreateLocal(
   UnityEngine_GameObject_o *v8; // x22
   Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *transform; // x21
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F904 & 1) == 0 )
   {
@@ -49,6 +53,9 @@ UIMasterFaceTexture_o *MasterFaceManager__CreateLocal(
   if ( !gameObject )
     goto LABEL_16;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+  x = localScale.fields.x;
+  y = localScale.fields.y;
+  z = localScale.fields.z;
   UnityEngine_Object__set_name((UnityEngine_Object_o *)v8, (System_String_o *)StringLiteral_15347/*"UIMasterFace"*/, 0);
   if ( !parent )
     goto LABEL_16;
@@ -71,7 +78,10 @@ UIMasterFaceTexture_o *MasterFaceManager__CreateLocal(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v16.fields.x = x;
+  v16.fields.y = y;
+  v16.fields.z = z;
+  UnityEngine_Transform__set_localScale(transform, v16, 0);
   gameObject = UnityEngine_GameObject__get_gameObject(parent, 0);
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0), !Component_object) )

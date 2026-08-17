@@ -16,11 +16,12 @@ int32_t ExRoomMissionFilterSaveData__Load(const MethodInfo *method)
   __int64 v3; // x2
   Il2CppType *v4; // x20
   int32_t v5; // w19
+  System_RuntimeTypeHandle_o v6; // x0
   System_Type_o *TypeFromHandle; // x20
-  __int64 v7; // x1
-  __int64 v8; // x2
-  Il2CppObject *v9; // x21
-  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v8; // x1
+  __int64 v9; // x2
+  Il2CppObject *v10; // x21
+  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
 
   if ( (byte_596AEBB & 1) == 0 )
   {
@@ -33,12 +34,13 @@ int32_t ExRoomMissionFilterSaveData__Load(const MethodInfo *method)
   v5 = Int;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v2, v3);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v4, 0);
-  v11 = v5;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v11);
+  v6.fields.value = (intptr_t)v4;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
+  v12 = v5;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v12);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v7, v8);
-  if ( System_Enum__IsDefined(TypeFromHandle, v9, 0) )
+    j_il2cpp_runtime_class_init_0(qword_5984398, v8, v9);
+  if ( System_Enum__IsDefined(TypeFromHandle, v10, 0) )
     return v5;
   else
     return 0;

@@ -299,7 +299,7 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
   float y; // s13
   float z; // s11
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  __int64 v33; // kr10_8
+  __int64 v33; // kr00_8
   float v34; // s8
   float v35; // s14
   float v36; // s1
@@ -308,7 +308,7 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
   UIInput_c *v39; // x0
   UILabel_o *v40; // x19
   int32_t mDrawStart; // w20
-  const MethodInfo *v43; // x2
+  const MethodInfo *v42; // x2
   UnityEngine_Ray_o v44; // [xsp+8h] [xbp-98h] BYREF
   UnityEngine_Ray_o v45; // [xsp+20h] [xbp-80h] BYREF
   float v46; // [xsp+88h] [xbp-18h]
@@ -416,7 +416,7 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
       mDrawStart = v39->static_fields->mDrawStart;
       Point = UnityEngine_Ray__GetPoint(&v45, v38, 0);
       if ( v40 )
-        return UILabel__GetCharacterIndexAtPosition(v40, Point, 0, v43) + mDrawStart;
+        return UILabel__GetCharacterIndexAtPosition(v40, Point, 0, v42) + mDrawStart;
 LABEL_29:
       sub_2213CDC(label, method);
     }
@@ -1163,7 +1163,7 @@ void UIInput__SetPivotToLeft(UIInput_o *this, const MethodInfo *method)
   __int64 v5; // x1
   UnityEngine_Vector2_o v6; // 0:s0.4,4:s1.4
 
-  v6.fields.y = NGUIMath__GetPivotOffset(this->fields.mPivot, 0).fields.y;
+  v6.fields.y = NGUIMath__GetPivotOffset((int)this[192], 0).fields.y;
   v6.fields.x = 0.0;
   label = (UIWidget_o *)this->fields.label;
   Pivot = NGUIMath__GetPivot(v6, 0);
@@ -1180,7 +1180,7 @@ void UIInput__SetPivotToRight(UIInput_o *this, const MethodInfo *method)
   __int64 v5; // x1
   UnityEngine_Vector2_o v6; // 0:s0.4,4:s1.4
 
-  v6.fields.y = NGUIMath__GetPivotOffset(this->fields.mPivot, 0).fields.y;
+  v6.fields.y = NGUIMath__GetPivotOffset((int)this[192], 0).fields.y;
   v6.fields.x = 1.0;
   label = (UIWidget_o *)this->fields.label;
   Pivot = NGUIMath__GetPivot(v6, 0);
@@ -1479,12 +1479,12 @@ void UIInput__Update(UIInput_o *this, const MethodInfo *method)
   UICamera_c *v110; // x0
   struct UILabel_o *v111; // x8
   UnityEngine_Camera_o *v112; // x20
-  float v113; // s8
-  float v114; // s9
-  unsigned __int64 v115; // kr00_8
-  float v116; // s9
-  uint16_t v117; // [xsp+Ch] [xbp-54h] BYREF
-  UnityEngine_Vector2_o v118; // 0:s0.4,4:s1.4
+  float x; // s8
+  float y; // s9
+  float v115; // s9
+  uint16_t v116; // [xsp+Ch] [xbp-54h] BYREF
+  UnityEngine_Vector2_o v117; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o v118; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5975269 & 1) == 0 )
   {
@@ -1497,7 +1497,7 @@ void UIInput__Update(UIInput_o *this, const MethodInfo *method)
     sub_2213A60(&StringLiteral_1/*""*/);
     byte_5975269 = 1;
   }
-  v117 = 0;
+  v116 = 0;
   if ( UIInput__get_isSelected(this, method) )
   {
     if ( this->fields.mDoInit )
@@ -1674,12 +1674,12 @@ LABEL_105:
               do
               {
                 Chars = System_String__get_Chars(v47, v48, 0);
-                v117 = Chars;
+                v116 = Chars;
                 if ( Chars >= 0x20u && (Chars & 0xFFFC) != 0xF700 )
                 {
                   if ( !*(_DWORD *)(qword_5984388 + 228) )
                     j_il2cpp_runtime_class_init_0(qword_5984388, v8);
-                  v50 = System_Char__ToString((uint16_t)&v117, 0);
+                  v50 = System_Char__ToString((uint16_t)&v116, 0);
                   ((void (__fastcall *)(UIInput_o *, System_String_o *, const MethodInfo *))this->klass->vtable._6_Insert.methodPtr)(
                     this,
                     v50,
@@ -1954,12 +1954,9 @@ LABEL_163:
       {
         if ( !v112 )
           goto LABEL_163;
-        v115 = (unsigned __int64)UnityEngine_Camera__WorldToScreenPoint_83198204(
-                                   v112,
-                                   *(UnityEngine_Vector3_o *)(IsNullOrEmpty + 32),
-                                   0);
-        v114 = *((float *)&v115 + 1);
-        v113 = *(float *)&v115;
+        v118 = UnityEngine_Camera__WorldToScreenPoint_83198204(v112, *(UnityEngine_Vector3_o *)(IsNullOrEmpty + 32), 0);
+        x = v118.fields.x;
+        y = v118.fields.y;
         goto LABEL_162;
       }
     }
@@ -1976,14 +1973,14 @@ LABEL_158:
         goto LABEL_163;
       if ( *(_DWORD *)(IsNullOrEmpty + 24) )
       {
-        v113 = *(float *)(IsNullOrEmpty + 32);
-        v114 = *(float *)(IsNullOrEmpty + 36);
+        x = *(float *)(IsNullOrEmpty + 32);
+        y = *(float *)(IsNullOrEmpty + 36);
 LABEL_162:
-        v116 = (float)UnityEngine_Screen__get_height(0) - v114;
+        v115 = (float)UnityEngine_Screen__get_height(0) - y;
         UnityEngine_Input__set_imeCompositionMode(1, 0);
-        v118.fields.x = v113;
-        v118.fields.y = v116;
-        UnityEngine_Input__set_compositionCursorPos(v118, 0);
+        v117.fields.x = x;
+        v117.fields.y = v115;
+        UnityEngine_Input__set_compositionCursorPos(v117, 0);
 LABEL_57:
         UIInput__UpdateLabel(this, v39);
         v40 = UnityEngine_Input__get_inputString(0);
@@ -2758,9 +2755,9 @@ LABEL_19:
   if ( this->fields.characterLimit < 1 )
   {
     if ( v9 )
-      return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
-               v9,
-               v9->klass->vtable._3_ToString.method);
+      return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
+                                  v9,
+                                  v9->klass->vtable._3_ToString.method);
 LABEL_25:
     sub_2213CDC(IsNullOrEmpty, v6);
   }
@@ -2770,9 +2767,9 @@ LABEL_25:
   characterLimit = this->fields.characterLimit;
   if ( v18 > characterLimit )
     return System_Text_StringBuilder__ToString_75731808(v9, 0, characterLimit, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
-           v9,
-           v9->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
+                              v9,
+                              v9->klass->vtable._3_ToString.method);
 }
 
 
@@ -3495,7 +3492,7 @@ System_IAsyncResult_o *UIInput_OnValidate__BeginInvoke(
   v11 = (unsigned __int64)text;
   *((_QWORD *)&v11 + 1) = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984388, v13);
-  return sub_2213A14(this, &v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v11, callback, object);
 }
 
 
@@ -3522,7 +3519,7 @@ uint16_t UIInput_OnValidate__Invoke(
         uint16_t addedChar,
         const MethodInfo *method)
 {
-  return ((uint16_t (__fastcall *)(intptr_t, System_String_o *, int32_t, uint16_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, System_String_o *, int32_t, uint16_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            text,
            charIndex,

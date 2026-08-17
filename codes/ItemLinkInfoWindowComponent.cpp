@@ -1364,7 +1364,7 @@ int32_t ItemLinkInfoWindowComponent__GetTargetId(
   int32_t v12; // w8
   int32_t v14; // [xsp+Ch] [xbp-44h] BYREF
   int32_t v15[2]; // [xsp+10h] [xbp-40h] BYREF
-  __int64 v16; // [xsp+18h] [xbp-38h] BYREF
+  int32_t result[2]; // [xsp+18h] [xbp-38h] BYREF
   int32_t targetId[2]; // [xsp+28h] [xbp-28h] BYREF
 
   v4 = this;
@@ -1384,7 +1384,7 @@ int32_t ItemLinkInfoWindowComponent__GetTargetId(
   }
   *(_QWORD *)targetId = 0;
   *(_QWORD *)v15 = 0;
-  v16 = 0;
+  *(_QWORD *)result = 0;
   v14 = 0;
   if ( !ent )
     goto LABEL_59;
@@ -1417,15 +1417,15 @@ int32_t ItemLinkInfoWindowComponent__GetTargetId(
   this = (ItemLinkInfoWindowComponent_o *)System_Enum__TryParse_Int32Enum__59119168(
                                             basePanel,
                                             1,
-                                            (int32_t *)&v16 + 1,
+                                            &result[1],
                                             (const MethodInfo_3861640 *)Method_System_Enum_TryParse_SceneList_Type___);
   if ( ((unsigned __int8)this & 1) == 0 )
     goto LABEL_46;
-  if ( SHIDWORD(v16) <= 22 )
+  if ( result[1] <= 22 )
   {
-    if ( HIDWORD(v16) != 20 )
+    if ( result[1] != 20 )
     {
-      if ( HIDWORD(v16) != 22 || SLODWORD(v6->fields.m_CancellationTokenSource) < 2 )
+      if ( result[1] != 22 || SLODWORD(v6->fields.m_CancellationTokenSource) < 2 )
         goto LABEL_46;
       this = (ItemLinkInfoWindowComponent_o *)System_String__Compare_75683500(
                                                 (System_String_o *)v6->fields.basePanelList,
@@ -1484,16 +1484,16 @@ LABEL_60:
     v11 = System_Int32__TryParse((System_String_o *)v6->fields.basePanelList, &v14, 0);
     v12 = v14;
   }
-  else if ( HIDWORD(v16) == 72 )
+  else if ( result[1] == 72 )
   {
     if ( SLODWORD(v6->fields.m_CancellationTokenSource) < 2 )
       goto LABEL_46;
-    v11 = System_Int32__TryParse((System_String_o *)v6->fields.basePanelList, (int32_t *)&v16, 0);
-    v12 = v16;
+    v11 = System_Int32__TryParse((System_String_o *)v6->fields.basePanelList, result, 0);
+    v12 = result[0];
   }
   else
   {
-    if ( HIDWORD(v16) != 34 )
+    if ( result[1] != 34 )
       goto LABEL_46;
     m_CancellationTokenSource = v6->fields.m_CancellationTokenSource;
     if ( (int)m_CancellationTokenSource < 2 )
@@ -1925,9 +1925,9 @@ bool ItemLinkInfoWindowComponent__IsBoardActive(
   int32_t v26; // w1
   MapControl_SpotInfo_o *SpotInfo; // x0
   Il2CppObject *v28; // [xsp+0h] [xbp-40h] BYREF
-  __int64 key; // [xsp+8h] [xbp-38h] BYREF
+  int32_t key[2]; // [xsp+8h] [xbp-38h] BYREF
   int32_t result[2]; // [xsp+10h] [xbp-30h] BYREF
-  __int64 targetId; // [xsp+18h] [xbp-28h] BYREF
+  int32_t targetId[2]; // [xsp+18h] [xbp-28h] BYREF
 
   v4 = this;
   if ( (byte_5973AF3 & 1) == 0 )
@@ -1957,9 +1957,9 @@ bool ItemLinkInfoWindowComponent__IsBoardActive(
     byte_5973AF3 = 1;
   }
   *(_QWORD *)result = 0;
-  targetId = 0;
+  *(_QWORD *)targetId = 0;
   v28 = 0;
-  key = 0;
+  *(_QWORD *)key = 0;
   if ( !entity )
     goto LABEL_95;
   this = (ItemLinkInfoWindowComponent_o *)entity->fields.transitionParam;
@@ -1969,15 +1969,15 @@ bool ItemLinkInfoWindowComponent__IsBoardActive(
   this = (ItemLinkInfoWindowComponent_o *)ItemLinkInfoWindowComponent__TryGetExRoomTransitionParam(
                                             v4,
                                             v5,
-                                            (int32_t *)&targetId + 1,
-                                            (int32_t *)&targetId,
+                                            &targetId[1],
+                                            targetId,
                                             v6);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( HIDWORD(targetId) != 2 )
+    if ( targetId[1] != 2 )
       return 1;
-    v7 = targetId;
-    if ( (int)targetId < 1 || entity->fields.targetType == 21 )
+    v7 = targetId[0];
+    if ( targetId[0] < 1 || entity->fields.targetType == 21 )
       return 1;
     this = (ItemLinkInfoWindowComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( this )
@@ -2017,7 +2017,7 @@ LABEL_95:
       }
       return ItemDropEfficiencyEntity__IsLoginBonus(entity, 0);
     }
-    if ( SLODWORD(v5->max_length) >= 2 && System_Int32__TryParse(v5->m_Items[1], (int32_t *)&key, 0) )
+    if ( SLODWORD(v5->max_length) >= 2 && System_Int32__TryParse(v5->m_Items[1], key, 0) )
     {
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v19);
@@ -2027,7 +2027,7 @@ LABEL_95:
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              &v28,
-             key,
+             key[0],
              (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
       {
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
@@ -2035,7 +2035,7 @@ LABEL_95:
         this = (ItemLinkInfoWindowComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ShopMaster___);
         if ( !this )
           goto LABEL_95;
-        return ShopMaster__IsEventShopOpen((ShopMaster_o *)this, key, 0);
+        return ShopMaster__IsEventShopOpen((ShopMaster_o *)this, key[0], 0);
       }
     }
     return 0;
@@ -2159,7 +2159,7 @@ LABEL_96:
     return v8;
   if ( LODWORD(v5->max_length) <= 2 )
     goto LABEL_96;
-  this = (ItemLinkInfoWindowComponent_o *)System_Int32__TryParse(v5->m_Items[2], (int32_t *)&key + 1, 0);
+  this = (ItemLinkInfoWindowComponent_o *)System_Int32__TryParse(v5->m_Items[2], &key[1], 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( (v5->max_length & 0xFFFFFFFE) == 0 )
@@ -2174,7 +2174,7 @@ LABEL_96:
       this = (ItemLinkInfoWindowComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
       if ( !this )
         goto LABEL_95;
-      return clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)this, SHIDWORD(key), 0, 0);
+      return clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)this, key[1], 0, 0);
     }
     if ( (v5->max_length & 0xFFFFFFFE) == 0 )
       goto LABEL_96;
@@ -2188,7 +2188,7 @@ LABEL_96:
       this = (ItemLinkInfoWindowComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( !this )
         goto LABEL_95;
-      SpotInfo = QuestTree__GetSpotInfo((QuestTree_o *)this, SHIDWORD(key), 0);
+      SpotInfo = QuestTree__GetSpotInfo((QuestTree_o *)this, key[1], 0);
       if ( SpotInfo )
         return SpotInfo->fields.dispType == 1;
       return 0;
@@ -2201,7 +2201,7 @@ LABEL_96:
     this = (ItemLinkInfoWindowComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( !this )
       goto LABEL_95;
-    v26 = HIDWORD(key);
+    v26 = key[1];
     return QuestTree__IsActiveWar((QuestTree_o *)this, v26, 0);
   }
   return 1;
@@ -3351,7 +3351,7 @@ System_IAsyncResult_o *ItemLinkInfoWindowComponent_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -3746,7 +3746,7 @@ LABEL_41:
     if ( !this )
       goto LABEL_51;
     ItemLinkInfoListViewItemList = viewList;
-    *((_BYTE *)this + 188) = 1;
+    *((_BYTE *)&this[1].fields._i_5__6 + 4) = 1;
   }
   *(_QWORD *)(v63 + 48) = ItemLinkInfoListViewItemList;
   sub_2213A04(

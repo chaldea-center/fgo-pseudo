@@ -196,12 +196,14 @@ bool ServantCheckEquipListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
+  bool result; // w0
   int32_t partyIndex; // w9
 
+  result = 1;
   partyIndex = this->fields.partyIndex;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue0 = -partyIndex;
-  return 1;
+  return result;
 }
 
 

@@ -8,7 +8,11 @@ UnityEngine_Color_o MaterialExtensions__GetColorOrDefault(
   float b; // s9
   float g; // s10
   float r; // s11
-  UnityEngine_Color_o Color; // 0:kr00_16.16
+  float v10; // s2
+  float v11; // s3
+  float v12; // s0
+  float v13; // s1
+  UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !self )
@@ -25,9 +29,13 @@ UnityEngine_Color_o MaterialExtensions__GetColorOrDefault(
     b = Color.fields.b;
     a = Color.fields.a;
   }
-  result.fields.b = b;
-  result.fields.a = a;
-  result.fields.r = r;
-  result.fields.g = g;
+  v10 = b;
+  v11 = a;
+  v12 = r;
+  v13 = g;
+  result.fields.a = v11;
+  result.fields.b = v10;
+  result.fields.g = v13;
+  result.fields.r = v12;
   return result;
 }

@@ -709,15 +709,17 @@ bool ExRoomMissionListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
+  bool result; // w0
   int64_t displayOrder; // x9
 
+  result = 1;
   displayOrder = this->fields.displayOrder;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue0 = 0;
   this->fields.sortValue2 = 0;
   this->fields.sortValue1 = displayOrder;
   this->fields.sortValueLast = 0;
-  return 1;
+  return result;
 }
 
 

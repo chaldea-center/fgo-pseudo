@@ -2726,20 +2726,24 @@ void ServantSellConfirmMenu__SetLabelLocalPositionY(
         float y,
         const MethodInfo *method)
 {
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s10
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !label
     || (this = (ServantSellConfirmMenu_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)label, 0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
+        x = localPosition.fields.x,
+        z = localPosition.fields.z,
         (this = (ServantSellConfirmMenu_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)label, 0)) == 0) )
   {
     sub_2213CDC(this, label);
   }
-  v7.fields.y = y;
-  v7.fields.z = localPosition.fields.z;
-  v7.fields.x = localPosition.fields.x;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v7, 0);
+  v9.fields.y = y;
+  v9.fields.z = z;
+  v9.fields.x = x;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v9, 0);
 }
 
 

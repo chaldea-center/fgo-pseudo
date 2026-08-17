@@ -125,6 +125,7 @@ void SePlayer__Callback(SePlayer_o *this, const MethodInfo *method)
 
 bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, const MethodInfo *method)
 {
+  bool result; // w0
   UnityEngine_Object_c *v8; // x0
   UnityEngine_Object_o *source; // x20
   _BOOL8 v10; // x0
@@ -137,6 +138,7 @@ bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, cons
   const MethodInfo *v17; // x1
   CriAtomSource_o *v18; // x20
   float v19; // s0
+  float v20; // s0
 
   if ( (byte_59701BA & 1) == 0 )
   {
@@ -185,8 +187,10 @@ bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, cons
 LABEL_19:
     sub_2213CDC(v10, v11);
   }
-  this->fields.fadeBaseVolume = SePlayer__GetBaseVolume(this, v17);
-  return 1;
+  v20 = SePlayer__GetBaseVolume(this, v17);
+  result = 1;
+  this->fields.fadeBaseVolume = v20;
+  return result;
 }
 
 

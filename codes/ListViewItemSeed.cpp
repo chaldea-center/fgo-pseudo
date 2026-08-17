@@ -13,9 +13,12 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
 {
   ListViewItemSeed_o *v4; // x19
   float y; // s8
+  float v6; // s0
+  float v7; // s1
+  float v8; // s2
   float x; // s8
-  float v10; // s1
-  float v11; // s0
+  float v10; // s0
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
@@ -29,27 +32,31 @@ UnityEngine_Vector3_o ListViewItemSeed__GetBlank(
   this = (ListViewItemSeed_o *)UnityEngine_GameObject__GetComponent_object_(
                                  obj,
                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-  if ( v4->fields.arrangement )
+  if ( !v4->fields.arrangement )
   {
     if ( this )
     {
-      y = v4->fields.arrangementPich.fields.y;
-      v10 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0).fields.y));
-      result.fields.x = 0.0;
-      result.fields.y = y - v10;
-      result.fields.z = 10.0;
-      return result;
+      x = v4->fields.arrangementPich.fields.x;
+      v10 = COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
+      v7 = 0.0;
+      v6 = x - v10;
+      v8 = 0.0;
+      goto LABEL_10;
     }
 LABEL_9:
     sub_2213CDC(this, obj);
   }
   if ( !this )
     goto LABEL_9;
-  x = v4->fields.arrangementPich.fields.x;
-  v11 = COERCE_FLOAT(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0));
-  result.fields.y = 0.0;
-  result.fields.x = x - v11;
-  result.fields.z = 0.0;
+  y = v4->fields.arrangementPich.fields.y;
+  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
+  v6 = 0.0;
+  v7 = y - size.fields.y;
+  v8 = 10.0;
+LABEL_10:
+  result.fields.z = v8;
+  result.fields.y = v7;
+  result.fields.x = v6;
   return result;
 }
 

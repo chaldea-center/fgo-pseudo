@@ -566,7 +566,10 @@ void ClassBoardSquareOpenConfirmDialog__SetDecideButton(
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *decideBtn; // x0
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s0 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
 
   decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtn;
   if ( !isEnable )
@@ -577,9 +580,9 @@ void ClassBoardSquareOpenConfirmDialog__SetDecideButton(
       decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
       if ( decideBtn )
       {
-        v7.fields.r = 0.5;
-        v7.fields.g = 0.5;
-        v7.fields.b = 0.5;
+        v5 = 0.5;
+        v6 = 0.5;
+        v7 = 0.5;
         goto LABEL_8;
       }
     }
@@ -592,12 +595,12 @@ LABEL_9:
   decideBtn = (UnityEngine_Behaviour_o *)this->fields.decideBtnSprite;
   if ( !decideBtn )
     goto LABEL_9;
-  v7.fields.r = 1.0;
-  v7.fields.g = 1.0;
-  v7.fields.b = 1.0;
+  v5 = 1.0;
+  v6 = 1.0;
+  v7 = 1.0;
 LABEL_8:
-  v7.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)decideBtn, v7, 0);
+  v8 = 1.0;
+  UIWidget__set_color((UIWidget_o *)decideBtn, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 
@@ -615,11 +618,13 @@ void ClassBoardSquareOpenConfirmDialog__SetUiPosition(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v13; // x0
   UnityEngine_GameObject_o *v14; // x0
-  UnityEngine_GameObject_o *v17; // x0
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  float z; // s2
   UnityEngine_GameObject_o *v18; // x0
   UnityEngine_GameObject_o *v19; // x0
   UnityEngine_GameObject_o *v20; // x0
-  UnityEngine_Vector3_o itemDetailLabelPosContainQp; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v21; // x0
 
   if ( (byte_597475E & 1) == 0 )
   {
@@ -695,9 +700,11 @@ LABEL_31:
     if ( !baseWindow )
       goto LABEL_31;
     v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    itemDetailLabelPosContainQp = this->fields.itemDetailLabelPosContainQp;
+    x = this->fields.itemDetailLabelPosContainQp.fields.x;
+    y = this->fields.itemDetailLabelPosContainQp.fields.y;
+    z = this->fields.itemDetailLabelPosContainQp.fields.z;
 LABEL_29:
-    GameObjectExtensions__SetLocalPosition(v14, itemDetailLabelPosContainQp, 0);
+    GameObjectExtensions__SetLocalPosition(v14, *(UnityEngine_Vector3_o *)&x, 0);
     return;
   }
   if ( isContainQp && !isEnableOpen )
@@ -705,18 +712,20 @@ LABEL_29:
     baseWindow = this->fields.itemQpObj;
     if ( !baseWindow )
       goto LABEL_31;
-    v17 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v17, this->fields.itemQpObjPosContainQpDisable, 0);
+    v18 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v18, this->fields.itemQpObjPosContainQpDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemIconListGrid;
     if ( !baseWindow )
       goto LABEL_31;
-    v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v18, this->fields.itemIconListGridPosContainQpDisable, 0);
+    v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v19, this->fields.itemIconListGridPosContainQpDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemDetailLabel;
     if ( !baseWindow )
       goto LABEL_31;
     v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    itemDetailLabelPosContainQp = this->fields.itemDetailLabelPosContainQpDisable;
+    x = this->fields.itemDetailLabelPosContainQpDisable.fields.x;
+    y = this->fields.itemDetailLabelPosContainQpDisable.fields.y;
+    z = this->fields.itemDetailLabelPosContainQpDisable.fields.z;
     goto LABEL_29;
   }
   if ( !isContainQp && !isEnableOpen )
@@ -724,18 +733,20 @@ LABEL_29:
     baseWindow = this->fields.itemQpObj;
     if ( !baseWindow )
       goto LABEL_31;
-    v19 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v19, this->fields.itemQpObjPosDisable, 0);
+    v20 = UnityEngine_GameObject__get_gameObject(baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v20, this->fields.itemQpObjPosDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemIconListGrid;
     if ( !baseWindow )
       goto LABEL_31;
-    v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    GameObjectExtensions__SetLocalPosition(v20, this->fields.itemIconListGridPosDisable, 0);
+    v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
+    GameObjectExtensions__SetLocalPosition(v21, this->fields.itemIconListGridPosDisable, 0);
     baseWindow = (UnityEngine_GameObject_o *)this->fields.itemDetailLabel;
     if ( !baseWindow )
       goto LABEL_31;
     v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseWindow, 0);
-    itemDetailLabelPosContainQp = this->fields.itemDetailLabelPosDisable;
+    x = this->fields.itemDetailLabelPosDisable.fields.x;
+    y = this->fields.itemDetailLabelPosDisable.fields.y;
+    z = this->fields.itemDetailLabelPosDisable.fields.z;
     goto LABEL_29;
   }
 }

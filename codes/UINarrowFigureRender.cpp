@@ -186,6 +186,10 @@ UnityEngine_Rect_o UINarrowFigureRender__GetBodyUvRect(int32_t imageIndex, const
   int MAIN_SIZE_X; // s3
   float v13; // s3
   float v14; // s0
+  float v15; // s2
+  float v16; // s0
+  float v17; // s3
+  float v18; // s1
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59721B6 & 1) == 0 )
@@ -217,11 +221,15 @@ UnityEngine_Rect_o UINarrowFigureRender__GetBodyUvRect(int32_t imageIndex, const
   LODWORD(v7) = v7->MAIN_SIZE_Y;
   v13 = (float)MAIN_SIZE_X;
   v14 = (float)(Item.fields.x + (float)((float)((float)BODY_SIZE_X - x) * 0.5)) / v13;
-  result.fields.m_Width = x / v13;
-  result.fields.m_XMin = (float)(1.0 / v13) + v14;
-  result.fields.m_Height = y / (float)(int)v7;
-  result.fields.m_YMin = (float)((float)(Item.fields.y + (float)((float)BODY_SIZE_Y - y)) / (float)(int)v7)
-                       + (float)((float)((int)v7 - BODY_SIZE_Y) / (float)(int)v7);
+  v15 = x / v13;
+  v16 = (float)(1.0 / v13) + v14;
+  v17 = y / (float)(int)v7;
+  v18 = (float)((float)(Item.fields.y + (float)((float)BODY_SIZE_Y - y)) / (float)(int)v7)
+      + (float)((float)((int)v7 - BODY_SIZE_Y) / (float)(int)v7);
+  result.fields.m_Height = v17;
+  result.fields.m_Width = v15;
+  result.fields.m_YMin = v18;
+  result.fields.m_XMin = v16;
   return result;
 }
 
@@ -259,7 +267,7 @@ void UINarrowFigureRender__GetData(
   int32_t imageIndex; // [xsp+14h] [xbp-5Ch] BYREF
   int32_t imageLimitCount; // [xsp+18h] [xbp-58h] BYREF
   int32_t svtIda; // [xsp+1Ch] [xbp-54h] BYREF
-  UnityEngine_Rect_o BodyUvRect; // 0:kr00_16.16
+  UnityEngine_Rect_o BodyUvRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v10 = limitCountStage;
   v11 = svtId;

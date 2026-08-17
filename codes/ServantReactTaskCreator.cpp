@@ -522,7 +522,7 @@ bool ServantReactTaskCreator___c__DisplayClass20_0___CreateTasks_b__0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((bool (__fastcall *)(ReactTaskTarget_o *, struct ServantReactTaskCreator_o *, struct BattleLogic_o *, _QWORD, const MethodInfo *))x->klass->vtable._6_ExistPriorityUpToAny.methodPtr)(
+  return ((__int64 (__fastcall *)(ReactTaskTarget_o *, struct ServantReactTaskCreator_o *, struct BattleLogic_o *, _QWORD, const MethodInfo *))x->klass->vtable._6_ExistPriorityUpToAny.methodPtr)(
            x,
            this->fields.__4__this,
            this->fields.logic,

@@ -435,7 +435,7 @@ void EffectComponent__onFigureAssetLoad(EffectComponent_o *this, const MethodInf
 void EffectComponent__replaceFigure(EffectComponent_o *this, UnityEngine_GameObject_o *obj, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  __int64 NodeFromName; // x0
+  UnityEngine_Transform_o *NodeFromName; // x0
   __int64 v7; // x1
   UnityEngine_Transform_o *v8; // x21
   __int64 v9; // x1
@@ -459,13 +459,13 @@ void EffectComponent__replaceFigure(EffectComponent_o *this, UnityEngine_GameObj
     byte_59738DC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  NodeFromName = (__int64)TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_14324/*"Texture"*/, 1, 0);
+  NodeFromName = TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_14324/*"Texture"*/, 1, 0);
   if ( !NodeFromName )
     goto LABEL_18;
-  v8 = (UnityEngine_Transform_o *)NodeFromName;
-  NodeFromName = (__int64)UnityEngine_Component__GetComponent_object_(
-                            (UnityEngine_Component_o *)NodeFromName,
-                            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+  v8 = NodeFromName;
+  NodeFromName = (UnityEngine_Transform_o *)UnityEngine_Component__GetComponent_object_(
+                                              (UnityEngine_Component_o *)NodeFromName,
+                                              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UITexture___);
   if ( !NodeFromName )
     goto LABEL_18;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)NodeFromName, 0, 0);
@@ -476,34 +476,37 @@ void EffectComponent__replaceFigure(EffectComponent_o *this, UnityEngine_GameObj
                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
-  NodeFromName = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
-  if ( (NodeFromName & 1) != 0 )
+  NodeFromName = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
+                                              (UnityEngine_Object_o *)Component_object,
+                                              0,
+                                              0);
+  if ( ((unsigned __int8)NodeFromName & 1) != 0 )
   {
     if ( Component_object )
     {
-      NodeFromName = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+      NodeFromName = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
       if ( NodeFromName )
       {
-        UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)NodeFromName, v8, 0);
-        NodeFromName = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+        UnityEngine_Transform__set_parent(NodeFromName, v8, 0);
+        NodeFromName = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
         if ( NodeFromName )
         {
           v18.fields.z = 0.0;
           v18.fields.x = -280.0;
           v18.fields.y = 475.0;
-          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)NodeFromName, v18, 0);
-          NodeFromName = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+          UnityEngine_Transform__set_localPosition(NodeFromName, v18, 0);
+          NodeFromName = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
           if ( NodeFromName )
           {
             v19.fields.x = 0.0;
             v19.fields.y = 0.0;
             v19.fields.z = 0.0;
-            UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)NodeFromName, v19, 0);
-            NodeFromName = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
-            v11 = (UnityEngine_Transform_o *)NodeFromName;
+            UnityEngine_Transform__set_localEulerAngles(NodeFromName, v19, 0);
+            NodeFromName = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Component_object, 0);
+            v11 = NodeFromName;
             if ( !byte_5969AE5 )
             {
-              NodeFromName = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+              NodeFromName = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
               byte_5969AE5 = 1;
             }
             if ( v11 )

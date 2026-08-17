@@ -190,6 +190,7 @@ System_Collections_Generic_IEnumerable_int__o *LimitCountUtility__GetLimitCountS
   bool v5; // w21
   __int64 v6; // x20
   int32_t CurrentManagedThreadId; // w0
+  System_Collections_Generic_IEnumerable_int__o *result; // x0
 
   if ( (byte_596FC95 & 1) == 0 )
   {
@@ -203,8 +204,9 @@ System_Collections_Generic_IEnumerable_int__o *LimitCountUtility__GetLimitCountS
   CurrentManagedThreadId = System_Environment__get_CurrentManagedThreadId(0);
   *(_DWORD *)(v6 + 36) = maxLimitCountStage;
   *(_DWORD *)(v6 + 24) = CurrentManagedThreadId;
+  result = (System_Collections_Generic_IEnumerable_int__o *)v6;
   *(_BYTE *)(v6 + 29) = v5;
-  return (System_Collections_Generic_IEnumerable_int__o *)v6;
+  return result;
 }
 
 
@@ -453,6 +455,7 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
   int32_t l__initialThreadId; // w20
   LimitCountUtility__GetLimitCountStageList_d__21_o *v4; // x20
   bool _3__hasRewardStage; // w9
+  System_Collections_Generic_IEnumerator_int__o *result; // x0
 
   if ( (byte_596FC96 & 1) == 0 )
   {
@@ -474,9 +477,10 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
   _3__hasRewardStage = this->fields.__3__hasRewardStage;
+  result = (System_Collections_Generic_IEnumerator_int__o *)v4;
   v4->fields.maxLimitCountStage = this->fields.__3__maxLimitCountStage;
   v4->fields.hasRewardStage = _3__hasRewardStage;
-  return (System_Collections_Generic_IEnumerator_int__o *)v4;
+  return result;
 }
 
 

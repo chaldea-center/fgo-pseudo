@@ -198,15 +198,16 @@ void TradeRankUpDialog__Setup(
   __int64 v34; // x1
   UILabel_o *v35; // x22
   System_String_o *v36; // x24
+  System_Nullable_int__o v37; // x0
   int32_t max_length; // w1
-  __int64 v38; // x8
-  Il2CppObject *v39; // x0
-  const MethodInfo *v40; // x3
+  __int64 v39; // x8
+  Il2CppObject *v40; // x0
+  const MethodInfo *v41; // x3
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
-  UILabel_o *v42; // x21
-  unsigned __int64 v43; // x22
-  __int64 v44; // [xsp+8h] [xbp-68h] BYREF
-  int32_t v45; // [xsp+1Ch] [xbp-54h] BYREF
+  UILabel_o *v43; // x21
+  unsigned __int64 v44; // x22
+  __int64 v45; // [xsp+8h] [xbp-68h] BYREF
+  int32_t v46; // [xsp+1Ch] [xbp-54h] BYREF
 
   if ( (byte_5973074 & 1) == 0 )
   {
@@ -239,14 +240,14 @@ void TradeRankUpDialog__Setup(
       v14,
       v15);
     progressValue = eventProgressEntity->fields.progressValue;
-    LODWORD(v44) = progressValue - 1;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v44);
+    LODWORD(v45) = progressValue - 1;
+    v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v45);
     v19 = System_String__Format((System_String_o *)StringLiteral_14067/*"TRADE_RANK_NAME_{0}"*/, v17, 0);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v18);
     v20 = LocalizationManager__Get(v19, 0);
-    v45 = progressValue;
-    v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v45);
+    v46 = progressValue;
+    v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v46);
     v22 = System_String__Format((System_String_o *)StringLiteral_14067/*"TRADE_RANK_NAME_{0}"*/, v21, 0);
     v23 = LocalizationManager__Get(v22, 0);
     beforeRankLabel = (UnityEngine_Object_o *)this->fields.beforeRankLabel;
@@ -291,21 +292,19 @@ void TradeRankUpDialog__Setup(
         v36 = LocalizationManager__Get((System_String_o *)StringLiteral_14068/*"TRADE_RANK_UP_DIALOG_DESCRIPTION"*/, 0);
         if ( v33 )
         {
+          v37 = (System_Nullable_int__o)&v45;
           max_length = v33->max_length;
-          v44 = 0;
-          System_Nullable_int____ctor(
-            (System_Nullable_int__o)&v44,
-            max_length,
-            (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-          v38 = v44;
+          v45 = 0;
+          System_Nullable_int____ctor(v37, max_length, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+          v39 = v45;
         }
         else
         {
-          v38 = 0;
+          v39 = 0;
         }
-        v44 = v38;
-        v39 = (Il2CppObject *)j_il2cpp_value_box_0(System_Nullable_int__TypeInfo, &v44);
-        Master_object = (UILabel_o *)System_String__Format(v36, v39, 0);
+        v45 = v39;
+        v40 = (Il2CppObject *)j_il2cpp_value_box_0(System_Nullable_int__TypeInfo, &v45);
+        Master_object = (UILabel_o *)System_String__Format(v36, v40, 0);
         if ( !v35 )
           goto LABEL_43;
         UILabel__set_text(v35, (System_String_o *)Master_object, 0);
@@ -322,23 +321,23 @@ void TradeRankUpDialog__Setup(
         if ( Master_object )
         {
           m_CancellationTokenSource = Master_object->fields.m_CancellationTokenSource;
-          v42 = Master_object;
+          v43 = Master_object;
           if ( (int)m_CancellationTokenSource >= 1 )
           {
-            v43 = 0;
+            v44 = 0;
             do
             {
-              if ( v43 >= (unsigned int)m_CancellationTokenSource )
+              if ( v44 >= (unsigned int)m_CancellationTokenSource )
                 sub_2213CE4(Master_object);
               TradeRankUpDialog__CreateTradeGoodsObject(
                 this,
                 atlasList,
-                *((EventTradeGoodsEntity_o **)&v42->fields.leftAnchor + v43),
-                v40);
-              LODWORD(m_CancellationTokenSource) = v42->fields.m_CancellationTokenSource;
-              ++v43;
+                *((EventTradeGoodsEntity_o **)&v43->fields.leftAnchor + v44),
+                v41);
+              LODWORD(m_CancellationTokenSource) = v43->fields.m_CancellationTokenSource;
+              ++v44;
             }
-            while ( (__int64)v43 < (int)m_CancellationTokenSource );
+            while ( (__int64)v44 < (int)m_CancellationTokenSource );
           }
           return;
         }

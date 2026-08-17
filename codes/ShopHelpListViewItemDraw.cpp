@@ -49,11 +49,14 @@ UnityEngine_Vector3_o ShopHelpListViewItemDraw__GetInfoTextLabelPosition(
         bool isStone,
         const MethodInfo *method)
 {
+  float v5; // s0
+
   if ( (unsigned int)(lineCount - 1) < 3 )
     LODWORD(position.fields.y) = dword_ED94D4[lineCount - 1];
-  position.fields.x = 284.0;
+  v5 = 284.0;
   if ( isStone )
-    position.fields.x = 344.0;
+    v5 = 344.0;
+  position.fields.x = v5;
   return position;
 }
 
@@ -74,14 +77,14 @@ void ShopHelpListViewItemDraw__SetInfoTextLabel(
   ShopHelpListViewItemDraw_o *v12; // x21
   struct ShopHelpItemInfo_o *v13; // x8
   unsigned int v14; // w9
+  float v15; // s0
   __int64 v16; // x2
   struct ShopHelpItemInfo_o *v17; // x8
   int32_t Line_k__BackingField; // w9
   UIWidget_o *baseTextSprite; // x19
   int v20; // w8
-  int32_t *v21; // x8
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t *m_CancellationTokenSource; // x8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596C85E & 1) == 0 )
@@ -126,20 +129,18 @@ void ShopHelpListViewItemDraw__SetInfoTextLabel(
   if ( !this )
     goto LABEL_30;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-  v24.fields.y = localPosition.fields.y;
-  v24.fields.z = localPosition.fields.z;
   v13 = item->fields.info;
   if ( !v13 )
     goto LABEL_30;
   v14 = v13->fields._Line_k__BackingField - 1;
   if ( v14 <= 2 )
-    LODWORD(v24.fields.y) = dword_ED94D4[v14];
+    LODWORD(localPosition.fields.y) = dword_ED94D4[v14];
   if ( !v12 )
     goto LABEL_30;
-  v24.fields.x = 284.0;
+  v15 = 284.0;
   if ( v13->fields._Kind_k__BackingField == 6 )
-    v24.fields.x = 344.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v12, v24, 0);
+    v15 = 344.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v12, localPosition, 0);
   v17 = item->fields.info;
   if ( !v17 )
     goto LABEL_30;
@@ -154,7 +155,7 @@ void ShopHelpListViewItemDraw__SetInfoTextLabel(
       j_il2cpp_runtime_class_init_0(ShopHelpListViewItemDraw_TypeInfo, item, v16);
       this = (ShopHelpListViewItemDraw_o *)ShopHelpListViewItemDraw_TypeInfo;
     }
-    v21 = (int32_t *)(*((_QWORD *)this + 23) + 4LL);
+    m_CancellationTokenSource = (int32_t *)&this[2].fields.m_CancellationTokenSource->klass + 1;
   }
   else
   {
@@ -163,12 +164,12 @@ void ShopHelpListViewItemDraw__SetInfoTextLabel(
       j_il2cpp_runtime_class_init_0(ShopHelpListViewItemDraw_TypeInfo, item, v16);
       this = (ShopHelpListViewItemDraw_o *)ShopHelpListViewItemDraw_TypeInfo;
     }
-    v21 = (int32_t *)*((_QWORD *)this + 23);
+    m_CancellationTokenSource = (int32_t *)this[2].fields.m_CancellationTokenSource;
   }
   if ( !baseTextSprite )
 LABEL_30:
     sub_2213CDC(this, item);
-  UIWidget__set_height(baseTextSprite, *v21, 0);
+  UIWidget__set_height(baseTextSprite, *m_CancellationTokenSource, 0);
 }
 
 

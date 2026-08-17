@@ -449,7 +449,7 @@ bool RewardMiniPopupExecutor__IsBusy(RewardMiniPopupExecutor_o *this, const Meth
 
   currentPlayer = this->fields.currentPlayer;
   if ( currentPlayer )
-    LOBYTE(currentPlayer) = ((bool (__fastcall *)(struct RewardMiniPopup_RewardMiniPopupPlayerBase_o *, const MethodInfo *))currentPlayer->klass->vtable._5_IsBusy.methodPtr)(
+    LOBYTE(currentPlayer) = ((__int64 (__fastcall *)(struct RewardMiniPopup_RewardMiniPopupPlayerBase_o *, const MethodInfo *))currentPlayer->klass->vtable._5_IsBusy.methodPtr)(
                               currentPlayer,
                               currentPlayer->klass->vtable._5_IsBusy.method);
   return (char)currentPlayer;
@@ -874,6 +874,7 @@ bool RewardMiniPopupExecutor__WaitRewardMiniPopup_d__15__MoveNext(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  bool result; // w0
 
   v2 = this;
   if ( (byte_596A8D9 & 1) == 0 )
@@ -911,8 +912,9 @@ LABEL_10:
       v2->fields.__2__current = (Il2CppObject *)v7;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
       sub_2213A04(p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     goto LABEL_10;
   }

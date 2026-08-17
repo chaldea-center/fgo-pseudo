@@ -997,7 +997,10 @@ LABEL_15:
 void CampaignInfoDlg__SetDecideActive(CampaignInfoDlg_o *this, bool onOff, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DecideButton; // x0
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   if ( (byte_5969EAB & 1) == 0 )
   {
@@ -1018,13 +1021,13 @@ void CampaignInfoDlg__SetDecideActive(CampaignInfoDlg_o *this, bool onOff, const
   {
     sub_2213CDC(DecideButton, onOff);
   }
-  v7.fields.r = 0.5;
-  v7.fields.a = 1.0;
+  v6 = 0.5;
+  v7 = 1.0;
   if ( onOff )
-    v7.fields.r = 1.0;
-  v7.fields.g = v7.fields.r;
-  v7.fields.b = v7.fields.r;
-  UIWidget__set_color((UIWidget_o *)DecideButton, v7, 0);
+    v6 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color((UIWidget_o *)DecideButton, *(UnityEngine_Color_o *)&v6, 0);
 }
 
 
@@ -1371,7 +1374,7 @@ System_IAsyncResult_o *CampaignInfoDlg_onButtonDelgate__BeginInvoke(
   v10[0] = decide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

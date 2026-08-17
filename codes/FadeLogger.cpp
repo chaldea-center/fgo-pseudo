@@ -211,9 +211,9 @@ System_String_o *FadeLogger__GetFadeLog(const MethodInfo *method)
   Instance = FadeLogger__get_Instance((const MethodInfo *)v2);
   if ( !Instance || (Instance = (FadeLogger_o *)Instance->fields.fadeLog) == 0 )
     sub_2213CDC(Instance, v4);
-  return ((System_String_o *(__fastcall *)(FadeLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
-           Instance,
-           Instance->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(FadeLogger_o *, const MethodInfo *))Instance->klass->vtable._3_ToString.methodPtr)(
+                              Instance,
+                              Instance->klass->vtable._3_ToString.method);
 }
 
 
@@ -459,8 +459,8 @@ LABEL_16:
     sb = this->fields.sb;
     if ( !sb )
       goto LABEL_21;
-    return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))sb->klass->vtable._3_ToString.methodPtr)(
-             sb,
-             sb->klass->vtable._3_ToString.method);
+    return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))sb->klass->vtable._3_ToString.methodPtr)(
+                                sb,
+                                sb->klass->vtable._3_ToString.method);
   }
 }

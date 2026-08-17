@@ -194,9 +194,10 @@ bool ServantCostumeEntity__checkScript(
   __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
   __int64 v10; // x2
-  ServantCostumeEntity_o *v11; // x0
-  int32_t *v12; // x1
-  const MethodInfo *v13; // x2
+  _QWORD *v11; // x8
+  ServantCostumeEntity_o *v12; // x0
+  int32_t *v13; // x1
+  const MethodInfo *v14; // x2
 
   if ( (byte_5971166 & 1) == 0 )
   {
@@ -224,13 +225,14 @@ bool ServantCostumeEntity__checkScript(
       }
       if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_5984368 + 64) )
       {
-        *param = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10);
+        v11 = (_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10);
         LOBYTE(script) = 1;
+        *param = *v11;
       }
       else
       {
         sub_221405C(Item, qword_5984368, v10);
-        LOBYTE(script) = ServantCostumeEntity__checkBgmId(v11, v12, v13);
+        LOBYTE(script) = ServantCostumeEntity__checkBgmId(v12, v13, v14);
       }
     }
     else

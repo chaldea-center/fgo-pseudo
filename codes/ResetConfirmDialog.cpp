@@ -410,8 +410,8 @@ void ResetConfirmDialog__SetSlider(ResetConfirmDialog_o *this, bool sliderOn, co
   __int64 *v6; // x8
   __int64 v7; // x1
   ResetConfirmDialog_c *v8; // x0
-  UnityEngine_Color_o v12; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v9; // kr00_16
+  UnityEngine_Color_o v10; // [xsp+0h] [xbp-30h] BYREF
 
   if ( (byte_596FC10 & 1) == 0 )
   {
@@ -421,8 +421,8 @@ void ResetConfirmDialog__SetSlider(ResetConfirmDialog_o *this, bool sliderOn, co
     byte_596FC10 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
-  *(_QWORD *)&v12.fields.r = 0;
-  *(_QWORD *)&v12.fields.b = 0;
+  *(_QWORD *)&v10.fields.r = 0;
+  *(_QWORD *)&v10.fields.b = 0;
   if ( !sliderSprite )
     goto LABEL_14;
   v6 = &StringLiteral_21575/*"img_slider_thumb"*/;
@@ -435,20 +435,18 @@ void ResetConfirmDialog__SetSlider(ResetConfirmDialog_o *this, bool sliderOn, co
     j_il2cpp_runtime_class_init_0(ResetConfirmDialog_TypeInfo, v7);
     v8 = ResetConfirmDialog_TypeInfo;
   }
-  UnityEngine_ColorUtility__TryParseHtmlString(v8->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v12, 0);
+  UnityEngine_ColorUtility__TryParseHtmlString(v8->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v10, 0);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   if ( !sliderSprite )
     goto LABEL_14;
   sliderSprite->klass->vtable._14_OnEnable.methodPtr();
-  v13.fields.a = 1.0;
-  v13.fields.b = 1.0;
   sliderSprite = (UISprite_o *)this->fields.decideButton;
-  v13.fields.g = 1.0;
-  v13.fields.r = 1.0;
+  *(_QWORD *)&v9.fields.r = __PAIR64__(1.0, 1.0);
+  *(_QWORD *)&v9.fields.b = __PAIR64__(1.0, 1.0);
   if ( !sliderOn )
-    v13 = v12;
+    v9 = v10;
   if ( !sliderSprite
-    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v13, 0),
+    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v9, 0),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_14:
@@ -527,7 +525,7 @@ System_IAsyncResult_o *ResetConfirmDialog_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

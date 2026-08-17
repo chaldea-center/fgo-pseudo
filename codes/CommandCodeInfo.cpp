@@ -25,6 +25,7 @@ CommandCodeInfo_SaveData_o *CommandCodeInfo__GetSaveData(CommandCodeInfo_o *this
   __int64 v4; // x0
   __int64 v5; // x1
   void *v6; // d0
+  CommandCodeInfo_SaveData_o *result; // x0
 
   if ( (byte_5973878 & 1) == 0 )
   {
@@ -36,9 +37,10 @@ CommandCodeInfo_SaveData_o *CommandCodeInfo__GetSaveData(CommandCodeInfo_o *this
   if ( !v3 )
     sub_2213CDC(v4, v5);
   v6 = *(void **)&this->fields.userId;
+  result = (CommandCodeInfo_SaveData_o *)v3;
   v3[1].klass = (Il2CppClass *)this->fields.id;
   v3[1].monitor = v6;
-  return (CommandCodeInfo_SaveData_o *)v3;
+  return result;
 }
 
 

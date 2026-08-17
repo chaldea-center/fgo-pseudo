@@ -415,8 +415,8 @@ bool FunctionEntity__TryGetValsKeyValuePair(
       {
         if ( (unsigned int)v9 >= max_length || (*key = vals->m_Items[v9], (unsigned int)v10 >= max_length) )
           sub_2213CE4(0);
+        result = 1;
         *value = vals->m_Items[v10];
-        return 1;
       }
     }
   }

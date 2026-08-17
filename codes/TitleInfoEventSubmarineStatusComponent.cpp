@@ -76,12 +76,10 @@ UnityEngine_Vector3_o TitleInfoEventSubmarineStatusComponent__ConvertoPointToPos
   float v9; // s3
   int mWidth; // w8
   int32_t minPoint; // w10
-  UnityEngine_Vector3_o BasePosition; // 0:kr00_12.12
+  float v12; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  BasePosition = TitleInfoEventSubmarineStatusComponent__get_BasePosition(this, *(const MethodInfo **)&point);
-  result.fields.y = BasePosition.fields.y;
-  result.fields.z = BasePosition.fields.z;
+  result = TitleInfoEventSubmarineStatusComponent__get_BasePosition(this, *(const MethodInfo **)&point);
   gaugeBar = this->fields.gaugeBar;
   if ( !gaugeBar )
     sub_2213CDC(v5, v6);
@@ -95,7 +93,8 @@ UnityEngine_Vector3_o TitleInfoEventSubmarineStatusComponent__ConvertoPointToPos
     if ( point > minPoint )
       v9 = (float)(point - minPoint) / (float)(maxPoint - minPoint);
   }
-  result.fields.x = BasePosition.fields.x - (float)(v9 * (float)mWidth);
+  v12 = result.fields.x - (float)(v9 * (float)mWidth);
+  result.fields.x = v12;
   return result;
 }
 
@@ -241,9 +240,9 @@ System_String_o *TitleInfoEventSubmarineStatusComponent__CreateSaveData_46736808
   System_Text_StringBuilder__Append_75735064(v9, progressQuestId, 0);
   System_Text_StringBuilder__Append_75735064(v9, (System_String_o *)StringLiteral_869/*","*/, 0);
   System_Text_StringBuilder__Append_75735064(v9, isLastGoalPlayed, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
-           v9,
-           v9->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
+                              v9,
+                              v9->klass->vtable._3_ToString.method);
 }
 
 
@@ -2095,43 +2094,49 @@ void TitleInfoEventSubmarineStatusComponent__PlayProgressAnimation(
         TitleInfoEventSubmarineStatusComponent_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x2
-  __int64 v4; // x1
-  __int64 v5; // x2
-  char *shipPanelObj; // x0
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  const MethodInfo *v6; // x2
   __int64 v7; // x1
   __int64 v8; // x2
+  UnityEngine_GameObject_o *shipPanelObj; // x0
+  float v10; // s13
+  float v11; // s11
+  float v12; // s12
+  __int64 v13; // x1
+  __int64 v14; // x2
   Il2CppObject *Component_object; // x20
-  __int64 v10; // x2
-  __int64 v11; // x2
-  char *v12; // x20
-  TitleInfoEventSubmarineStatusComponent_c *v13; // x0
-  System_Collections_Generic_List_object__o *v14; // x21
+  __int64 v16; // x2
+  __int64 v17; // x2
+  UnityEngine_GameObject_o *v18; // x20
+  TitleInfoEventSubmarineStatusComponent_c *v19; // x0
+  System_Collections_Generic_List_object__o *klass; // x21
   float PROGRESS_ANIMATION_TIME; // s0
-  EventDelegate_c *v16; // x0
-  EventDelegate_o *v17; // x22
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
+  EventDelegate_c *v22; // x0
+  EventDelegate_o *v23; // x22
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v31; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  TitleInfoEventSubmarineStatusComponent_c *v28; // x0
-  __int64 v29; // x2
+  Il2CppClass **v33; // x0
+  TitleInfoEventSubmarineStatusComponent_c *v34; // x0
+  __int64 v35; // x2
   int32_t userOldPoint; // w8
-  int v31; // w9
+  int v37; // w9
   UnityEngine_Object_o *gateNextPointCounterLabel; // x20
   int32_t userPoint; // w8
-  int32_t v34; // w9
+  int32_t v40; // w9
   int32_t maxPoint; // w10
-  int v36; // w8
-  int v37; // w9
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v39; // 0:kr14_12.12
+  int v42; // w8
+  int v43; // w9
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F0D7 & 1) == 0 )
   {
@@ -2145,130 +2150,138 @@ void TitleInfoEventSubmarineStatusComponent__PlayProgressAnimation(
     byte_596F0D7 = 1;
   }
   LocalPosition = GameObjectExtensions__GetLocalPosition(this->fields.shipPanelObj, 0);
-  v39 = TitleInfoEventSubmarineStatusComponent__ConvertoPointToPosition(this, this->fields.userPoint, v3);
-  if ( LocalPosition.fields.x <= v39.fields.x )
+  x = LocalPosition.fields.x;
+  y = LocalPosition.fields.y;
+  z = LocalPosition.fields.z;
+  v45 = TitleInfoEventSubmarineStatusComponent__ConvertoPointToPosition(this, this->fields.userPoint, v6);
+  if ( x <= v45.fields.x )
   {
-    v28 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+    v34 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
     if ( !*(&TitleInfoEventSubmarineStatusComponent_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v4, v5);
-      v28 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo, v7, v8);
+      v34 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
     }
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
       (System_String_o *)StringLiteral_6273/*"EndProgressAnimation"*/,
-      v28->static_fields->PROGRESS_ANIMATION_TIME,
+      v34->static_fields->PROGRESS_ANIMATION_TIME,
       0);
   }
   else
   {
-    shipPanelObj = (char *)this->fields.shipPanelObj;
+    shipPanelObj = this->fields.shipPanelObj;
     if ( !shipPanelObj )
       goto LABEL_39;
+    v10 = v45.fields.x;
+    v11 = v45.fields.y;
+    v12 = v45.fields.z;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)shipPanelObj,
+                         shipPanelObj,
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
     {
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v10);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v16);
       UnityEngine_Object__Destroy_83459800((UnityEngine_Object_o *)Component_object, 0);
     }
-    shipPanelObj = (char *)this->fields.shipPanelObj;
+    shipPanelObj = this->fields.shipPanelObj;
     if ( !shipPanelObj )
       goto LABEL_39;
-    shipPanelObj = (char *)UnityEngine_GameObject__AddComponent_object_(
-                             (UnityEngine_GameObject_o *)shipPanelObj,
-                             (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    shipPanelObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
+                                                 shipPanelObj,
+                                                 (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
     if ( !shipPanelObj )
       goto LABEL_39;
-    v12 = shipPanelObj;
-    *(UnityEngine_Vector3_o *)(shipPanelObj + 128) = LocalPosition;
-    *((_DWORD *)shipPanelObj + 35) = LODWORD(v39.fields.x);
-    v13 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
-    *((_DWORD *)v12 + 36) = LODWORD(v39.fields.y);
-    *((_DWORD *)v12 + 37) = LODWORD(v39.fields.z);
-    if ( !*(&v13->_2.cctor_finished + 1) )
+    v18 = shipPanelObj;
+    *(float *)&shipPanelObj[5].monitor = x;
+    *((float *)&shipPanelObj[5].monitor + 1) = y;
+    *(float *)&shipPanelObj[5].fields.m_CachedPtr = z;
+    *((float *)&shipPanelObj[5].fields.m_CachedPtr + 1) = v10;
+    v19 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+    *(float *)&v18[6].klass = v11;
+    *((float *)&v18[6].klass + 1) = v12;
+    if ( !*(&v19->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v13, v4, v11);
-      v13 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19, v7, v17);
+      v19 = TitleInfoEventSubmarineStatusComponent_TypeInfo;
     }
-    v14 = (System_Collections_Generic_List_object__o *)*((_QWORD *)v12 + 9);
-    PROGRESS_ANIMATION_TIME = v13->static_fields->PROGRESS_ANIMATION_TIME;
-    v16 = EventDelegate_TypeInfo;
-    *((_DWORD *)v12 + 8) = 3;
-    *((float *)v12 + 14) = PROGRESS_ANIMATION_TIME;
-    v17 = (EventDelegate_o *)sub_2213CCC(v16);
-    EventDelegate___ctor_56337752(v17, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6273/*"EndProgressAnimation"*/, 0);
-    if ( !v14 )
+    klass = (System_Collections_Generic_List_object__o *)v18[3].klass;
+    PROGRESS_ANIMATION_TIME = v19->static_fields->PROGRESS_ANIMATION_TIME;
+    v22 = EventDelegate_TypeInfo;
+    LODWORD(v18[1].monitor) = 3;
+    *(float *)&v18[2].monitor = PROGRESS_ANIMATION_TIME;
+    v23 = (EventDelegate_o *)sub_2213CCC(v22);
+    EventDelegate___ctor_56337752(v23, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6273/*"EndProgressAnimation"*/, 0);
+    if ( !klass )
       goto LABEL_39;
-    items = v14->fields._items;
-    v25 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-    ++v14->fields._version;
+    items = klass->fields._items;
+    v31 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+    ++klass->fields._version;
     if ( !items )
       goto LABEL_39;
-    size = v14->fields._size;
+    size = klass->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v14,
-        (Il2CppObject *)v17,
-        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+        klass,
+        (Il2CppObject *)v23,
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
     }
     else
     {
-      v27 = &items->obj.klass + size;
-      v14->fields._size = size + 1;
-      v27[4] = (Il2CppClass *)v17;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 4), (int32_t)v17, v18, v19, v20, v21, v22, v23);
+      v33 = &items->obj.klass + size;
+      klass->fields._size = size + 1;
+      v33[4] = (Il2CppClass *)v23;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v23, v24, v25, v26, v27, v28, v29);
     }
-    UITweener__PlayForward((UITweener_o *)v12, 0);
+    UITweener__PlayForward((UITweener_o *)v18, 0);
   }
   if ( !this->fields.isCompleatedCount )
   {
     userOldPoint = this->fields.userOldPoint;
-    v31 = this->fields.userPoint - userOldPoint;
-    if ( v31 )
+    v37 = this->fields.userPoint - userOldPoint;
+    if ( v37 )
     {
-      shipPanelObj = (char *)this->fields.progressPointCounterLabel;
+      shipPanelObj = (UnityEngine_GameObject_o *)this->fields.progressPointCounterLabel;
       this->fields.isCompleatedCount = 1;
       if ( !shipPanelObj )
         goto LABEL_39;
-      *((_DWORD *)shipPanelObj + 14) = userOldPoint;
-      *((_DWORD *)shipPanelObj + 15) = v31;
+      LODWORD(shipPanelObj[2].monitor) = userOldPoint;
+      HIDWORD(shipPanelObj[2].monitor) = v37;
       UICounterLabel__PlayAnimation((UICounterLabel_o *)shipPanelObj, 0);
     }
   }
   gateNextPointCounterLabel = (UnityEngine_Object_o *)this->fields.gateNextPointCounterLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4, v29);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v35);
   if ( UnityEngine_Object__op_Inequality(gateNextPointCounterLabel, 0, 0) )
   {
-    v34 = this->fields.userOldPoint;
+    v40 = this->fields.userOldPoint;
     userPoint = this->fields.userPoint;
-    if ( v34 != userPoint )
+    if ( v40 != userPoint )
     {
       maxPoint = this->fields.maxPoint;
       if ( userPoint >= maxPoint )
         userPoint = this->fields.maxPoint;
-      v36 = userPoint - v34;
-      if ( v36 >= 1 )
+      v42 = userPoint - v40;
+      if ( v42 >= 1 )
       {
-        v37 = maxPoint - v34;
-        if ( v37 >= 1 )
+        v43 = maxPoint - v40;
+        if ( v43 >= 1 )
         {
-          shipPanelObj = (char *)this->fields.gateNextPointCounterLabel;
+          shipPanelObj = (UnityEngine_GameObject_o *)this->fields.gateNextPointCounterLabel;
           if ( shipPanelObj )
           {
-            *((_DWORD *)shipPanelObj + 14) = v37;
-            *((_DWORD *)shipPanelObj + 15) = -v36;
+            LODWORD(shipPanelObj[2].monitor) = v43;
+            HIDWORD(shipPanelObj[2].monitor) = -v42;
             UICounterLabel__PlayAnimation((UICounterLabel_o *)shipPanelObj, 0);
             return;
           }
 LABEL_39:
-          sub_2213CDC(shipPanelObj, v4);
+          sub_2213CDC(shipPanelObj, v7);
         }
       }
     }
@@ -3352,20 +3365,19 @@ UnityEngine_Vector3_o TitleInfoEventSubmarineStatusComponent__get_BasePosition(
   UnityEngine_Component_o *gaugeBar; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   struct UISprite_o *v5; // x8
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  float v6; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   gaugeBar = (UnityEngine_Component_o *)this->fields.gaugeBar;
   if ( !gaugeBar
     || (gameObject = UnityEngine_Component__get_gameObject(gaugeBar, 0),
-        LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0),
-        result.fields.y = LocalPosition.fields.y,
-        result.fields.z = LocalPosition.fields.z,
+        result = GameObjectExtensions__GetLocalPosition(gameObject, 0),
         (v5 = this->fields.gaugeBar) == 0) )
   {
     sub_2213CDC(gaugeBar, method);
   }
-  result.fields.x = LocalPosition.fields.x + (float)v5->fields.mWidth;
+  v6 = result.fields.x + (float)v5->fields.mWidth;
+  result.fields.x = v6;
   return result;
 }
 

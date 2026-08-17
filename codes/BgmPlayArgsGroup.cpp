@@ -107,21 +107,23 @@ void BgmPlayArgsGroup___ctor_48157840(
         int64_t startTime,
         const MethodInfo *method)
 {
-  const MethodInfo *v11; // x3
-  struct System_Collections_Generic_List_BgmPlayArgs__o *v12; // x0
-  System_String_o *v13; // x2
-  System_String_o *v14; // x3
-  int32_t v15; // w4
-  int32_t v16; // w5
-  bool v17; // w6
-  bool v18; // w7
-  const MethodInfo *v19; // x1
+  System_Nullable_float__o v11; // x1
+  const MethodInfo *v12; // x3
+  struct System_Collections_Generic_List_BgmPlayArgs__o *v13; // x0
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  const MethodInfo *v20; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
-  v12 = Analyzer_FileNameToBgmPlayArgsGroup__Analyze(toAnalyze, volumeNullable, fadeTime, startTime, v11);
-  this->fields._AllArgsList_k__BackingField = v12;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v12, v13, v14, v15, v16, v17, v18);
-  BgmPlayArgsGroup__Initialize(this, v19);
+  v11 = volumeNullable;
+  v13 = Analyzer_FileNameToBgmPlayArgsGroup__Analyze(toAnalyze, v11, fadeTime, startTime, v12);
+  this->fields._AllArgsList_k__BackingField = v13;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  BgmPlayArgsGroup__Initialize(this, v20);
 }
 
 
@@ -585,5 +587,7 @@ BgmPlayArgs_o *BgmPlayArgsGroup___c___NullExcludedClone_b__13_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((BgmPlayArgs_o *(__fastcall *)(BgmPlayArgs_o *, void *))x->klass[1]._1.image)(x, x->klass[1]._1.gc_desc);
+  return (BgmPlayArgs_o *)((__int64 (__fastcall *)(BgmPlayArgs_o *, void *))x->klass[1]._1.image)(
+                            x,
+                            x->klass[1]._1.gc_desc);
 }

@@ -53,20 +53,29 @@ void PhotoSettingButtonComponent__DispSettingButton(
   PhotoStandFigureComponent_o *v49; // x8
   struct ServantPhotoEntity_FaceData_array *v50; // x8
   int v51; // w8
-  float v52; // s8
-  PhotoStandFigureComponent_o *v53; // x8
+  float v52; // s3 OVERLAPPED
+  float v53; // s8
+  float v54; // s0
+  float v55; // s1
+  float v56; // s2
+  PhotoStandFigureComponent_o *v57; // x8
   struct ServantPhotoEntity_FaceData_array *FaceList_k__BackingField; // x8
   int max_length; // w8
-  float v56; // s8
-  PhotoStandFigureComponent_o *v57; // x8
-  struct ServantPhotoEntity_FaceData_array *v58; // x8
-  int v59; // w8
-  bool v60; // w21
-  UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v62; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v63; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v64; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v65; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v60; // s3 OVERLAPPED
+  float v61; // s8
+  float v62; // s0
+  float v63; // s1
+  float v64; // s2
+  PhotoStandFigureComponent_o *v65; // x8
+  struct ServantPhotoEntity_FaceData_array *v66; // x8
+  int v67; // w8
+  float v68; // s3 OVERLAPPED
+  float v69; // s0
+  float v70; // s1
+  float v71; // s2
+  bool v72; // w21
+  UnityEngine_Color_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v14 = isChangePos;
   if ( (byte_596BC3D & 1) == 0 )
@@ -192,10 +201,10 @@ void PhotoSettingButtonComponent__DispSettingButton(
           goto LABEL_89;
         if ( (unsigned int)isChangePos >= LODWORD(photoStandFigures->max_length) )
           goto LABEL_90;
-        v53 = photoStandFigures->m_Items[isChangePos];
-        if ( v53 )
+        v57 = photoStandFigures->m_Items[isChangePos];
+        if ( v57 )
         {
-          FaceList_k__BackingField = v53->fields._FaceList_k__BackingField;
+          FaceList_k__BackingField = v57->fields._FaceList_k__BackingField;
           if ( FaceList_k__BackingField )
           {
             max_length = FaceList_k__BackingField->max_length;
@@ -203,39 +212,39 @@ void PhotoSettingButtonComponent__DispSettingButton(
             this->fields.isEnableChangeServantFaceButtonLeft = max_length > 1;
             if ( switchBackgroundButton )
             {
-              v62.fields.a = 1.0;
-              v56 = max_length <= 1 ? 0.5 : 1.0;
-              v62.fields.r = v56;
-              v62.fields.g = v56;
-              v62.fields.b = v56;
-              UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v62, 0);
+              v60 = 1.0;
+              v61 = max_length <= 1 ? 0.5 : 1.0;
+              v62 = v61;
+              v63 = v61;
+              v64 = v61;
+              UIWidget__set_color((UIWidget_o *)switchBackgroundButton, *(UnityEngine_Color_o *)(&v60 - 3), 0);
               switchBackgroundButton = this->fields.changeServantFaceButtonLabelLeft;
               if ( switchBackgroundButton )
               {
-                v63.fields.r = v56;
-                v63.fields.g = v56;
-                v63.fields.b = v56;
-                v63.fields.a = 1.0;
-                UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v63, 0);
+                v73.fields.r = v61;
+                v73.fields.g = v61;
+                v73.fields.b = v61;
+                v73.fields.a = 1.0;
+                UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v73, 0);
                 if ( !isChangePos >= LODWORD(photoStandFigures->max_length) )
                   goto LABEL_90;
-                v57 = photoStandFigures->m_Items[!isChangePos];
-                if ( v57 )
+                v65 = photoStandFigures->m_Items[!isChangePos];
+                if ( v65 )
                 {
-                  v58 = v57->fields._FaceList_k__BackingField;
-                  if ( v58 )
+                  v66 = v65->fields._FaceList_k__BackingField;
+                  if ( v66 )
                   {
-                    v59 = v58->max_length;
+                    v67 = v66->max_length;
                     switchBackgroundButton = this->fields.changeServantFaceButtonRight;
-                    this->fields.isEnableChangeServantFaceButtonRight = v59 > 1;
+                    this->fields.isEnableChangeServantFaceButtonRight = v67 > 1;
                     if ( switchBackgroundButton )
                     {
-                      v64.fields.a = 1.0;
-                      v52 = v59 <= 1 ? 0.5 : 1.0;
-                      v64.fields.r = v52;
-                      v64.fields.g = v52;
-                      v64.fields.b = v52;
-                      UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v64, 0);
+                      v68 = 1.0;
+                      v53 = v67 <= 1 ? 0.5 : 1.0;
+                      v69 = v53;
+                      v70 = v53;
+                      v71 = v53;
+                      UIWidget__set_color((UIWidget_o *)switchBackgroundButton, *(UnityEngine_Color_o *)(&v68 - 3), 0);
                       switchBackgroundButton = this->fields.changeServantFaceButtonLabelRight;
                       if ( switchBackgroundButton )
                         goto LABEL_76;
@@ -334,21 +343,24 @@ void PhotoSettingButtonComponent__DispSettingButton(
                           this->fields.isEnableChangeServantFaceButton = v51 > 1;
                           if ( !switchBackgroundButton )
                             goto LABEL_89;
-                          v61.fields.a = 1.0;
-                          v52 = v51 <= 1 ? 0.5 : 1.0;
-                          v61.fields.r = v52;
-                          v61.fields.g = v52;
-                          v61.fields.b = v52;
-                          UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v61, 0);
+                          v52 = 1.0;
+                          v53 = v51 <= 1 ? 0.5 : 1.0;
+                          v54 = v53;
+                          v55 = v53;
+                          v56 = v53;
+                          UIWidget__set_color(
+                            (UIWidget_o *)switchBackgroundButton,
+                            *(UnityEngine_Color_o *)(&v52 - 3),
+                            0);
                           switchBackgroundButton = this->fields.changeServantFaceButtonLabel;
                           if ( !switchBackgroundButton )
                             goto LABEL_89;
 LABEL_76:
-                          v65.fields.r = v52;
-                          v65.fields.g = v52;
-                          v65.fields.b = v52;
-                          v65.fields.a = 1.0;
-                          UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v65, 0);
+                          v74.fields.r = v53;
+                          v74.fields.g = v53;
+                          v74.fields.b = v53;
+                          v74.fields.a = 1.0;
+                          UIWidget__set_color((UIWidget_o *)switchBackgroundButton, v74, 0);
                           goto LABEL_77;
                         }
 LABEL_90:
@@ -401,7 +413,7 @@ LABEL_77:
   switchBackgroundButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)switchBackgroundButton, 0);
   if ( !switchBackgroundButton )
     goto LABEL_89;
-  v60 = !isOneShot;
+  v72 = !isOneShot;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)switchBackgroundButton, !isOneShot, 0);
   switchBackgroundButton = this->fields.changeTargetButtonRight;
   if ( !switchBackgroundButton )
@@ -409,14 +421,14 @@ LABEL_77:
   switchBackgroundButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)switchBackgroundButton, 0);
   if ( !switchBackgroundButton )
     goto LABEL_89;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)switchBackgroundButton, v60, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)switchBackgroundButton, v72, 0);
   switchBackgroundButton = this->fields.layerChangeButton;
   if ( !switchBackgroundButton )
     goto LABEL_89;
   switchBackgroundButton = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)switchBackgroundButton, 0);
   if ( !switchBackgroundButton )
     goto LABEL_89;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)switchBackgroundButton, v20 != 0 && v60, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)switchBackgroundButton, v20 != 0 && v72, 0);
   switchBackgroundButton = this->fields.changePhotoFrameSizeButton;
   if ( !switchBackgroundButton )
     goto LABEL_89;

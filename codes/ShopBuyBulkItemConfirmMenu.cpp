@@ -282,16 +282,16 @@ bool ShopBuyBulkItemConfirmMenu__GetIsBuyable(
   int32_t m_CancellationTokenSource; // w20
   int32_t PresentBoxMax; // w8
   struct ShopEntity_o *v19; // x9
-  int32_t v20; // w19
+  int v20; // w19
   Il2CppObject *v21; // x19
   __int64 v22; // x1
   int32_t Sum; // w19
   BalanceConfig_c *v24; // x8
   int32_t UserItemMax; // w9
-  int v26; // w21
+  int32_t v26; // w21
   int32_t recordNum[2]; // [xsp+8h] [xbp-68h] BYREF
   int32_t buyCmdCodeNum[2]; // [xsp+10h] [xbp-60h] BYREF
-  __int64 buyServantNum; // [xsp+18h] [xbp-58h] BYREF
+  int32_t buyServantNum[2]; // [xsp+18h] [xbp-58h] BYREF
 
   if ( (byte_5972C6B & 1) == 0 )
   {
@@ -304,7 +304,7 @@ bool ShopBuyBulkItemConfirmMenu__GetIsBuyable(
   }
   Instance = 0;
   *(_QWORD *)buyCmdCodeNum = 0;
-  buyServantNum = 0;
+  *(_QWORD *)buyServantNum = 0;
   *(_QWORD *)recordNum = 0;
   if ( !isPreparation )
   {
@@ -371,18 +371,18 @@ LABEL_57:
     }
 LABEL_24:
     *(_QWORD *)buyCmdCodeNum = 0;
-    buyServantNum = 0;
+    *(_QWORD *)buyServantNum = 0;
     *(_QWORD *)recordNum = 0;
     ShopEntity__GetSum(
       shopEntity,
-      (int32_t *)&buyServantNum + 1,
-      (int32_t *)&buyServantNum,
+      &buyServantNum[1],
+      buyServantNum,
       &buyCmdCodeNum[1],
       buyCmdCodeNum,
       &recordNum[1],
       recordNum,
       0);
-    if ( buyCmdCodeNum[1] + (int)buyServantNum + buyCmdCodeNum[0] >= 1 )
+    if ( buyCmdCodeNum[1] + buyServantNum[0] + buyCmdCodeNum[0] >= 1 )
     {
       Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
@@ -416,7 +416,7 @@ LABEL_24:
       if ( v19->fields.purchaseType == 5 )
         v20 = recordNum[0];
       else
-        v20 = buyCmdCodeNum[1] + buyServantNum + buyCmdCodeNum[0];
+        v20 = buyCmdCodeNum[1] + buyServantNum[0] + buyCmdCodeNum[0];
       if ( !HIDWORD(Instance[1].fields.saveDataMapList) )
       {
         j_il2cpp_runtime_class_init_0(Instance, shopEntity);
@@ -425,7 +425,7 @@ LABEL_24:
       if ( v20 + m_CancellationTokenSource > PresentBoxMax )
         goto LABEL_54;
     }
-    if ( SHIDWORD(buyServantNum) < 1 )
+    if ( buyServantNum[1] < 1 )
       goto LABEL_55;
     Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
@@ -461,7 +461,7 @@ LABEL_24:
     UserItemMax = v24->static_fields->UserItemMax;
     if ( Sum >= UserItemMax )
       goto LABEL_54;
-    v26 = HIDWORD(buyServantNum);
+    v26 = buyServantNum[1];
     if ( !*(&v24->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(v24, v22);

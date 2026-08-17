@@ -506,9 +506,9 @@ LABEL_35:
   {
     if ( v15 )
     {
+      result = 1;
       v26->fields.x = (float)v14->fields.targetId;
       v26->fields.y = (float)v15->fields.targetId;
-      return 1;
     }
   }
   return result;

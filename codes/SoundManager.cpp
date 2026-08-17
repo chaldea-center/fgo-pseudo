@@ -1020,8 +1020,12 @@ LABEL_15:
 void SoundManager__PlaySubBgm(System_String_o *name, float fadeTime, const MethodInfo *method)
 {
   BgmManager_c *v5; // x0
-  float DEFAULT_VOLUME; // s0
-  SubBgmPlayArgs_o *v7; // x20
+  float *p_DEFAULT_VOLUME; // x8
+  System_Nullable_float__o p_volume; // x0
+  float v8; // s0
+  SubBgmPlayArgs_o *v9; // x0
+  System_Nullable_float__o v10; // x2
+  SubBgmPlayArgs_o *v11; // x20
   System_Nullable_float__o volume; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_59701D1 & 1) == 0 )
@@ -1037,15 +1041,16 @@ void SoundManager__PlaySubBgm(System_String_o *name, float fadeTime, const Metho
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, method);
     v5 = BgmManager_TypeInfo;
   }
-  DEFAULT_VOLUME = v5->static_fields->DEFAULT_VOLUME;
+  p_DEFAULT_VOLUME = &v5->static_fields->DEFAULT_VOLUME;
+  p_volume = (System_Nullable_float__o)&volume;
+  v8 = *p_DEFAULT_VOLUME;
   volume = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&volume,
-    DEFAULT_VOLUME,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-  v7 = (SubBgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
-  SubBgmPlayArgs___ctor(v7, name, volume, fadeTime, 0, 0);
-  BgmManager__PlaySubBgm(v7, 0);
+  System_Nullable_float____ctor(p_volume, v8, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  v9 = (SubBgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+  v10 = volume;
+  v11 = v9;
+  SubBgmPlayArgs___ctor(v9, name, v10, fadeTime, 0, 0);
+  BgmManager__PlaySubBgm(v11, 0);
 }
 
 
@@ -1055,8 +1060,11 @@ void SoundManager__PlaySubBgm_48506544(
         float fadeTime,
         const MethodInfo *method)
 {
-  SubBgmPlayArgs_o *v7; // x20
-  __int64 v8; // x1
+  System_Nullable_float__o p_volumea; // x0
+  SubBgmPlayArgs_o *v8; // x0
+  System_Nullable_float__o v9; // x2
+  SubBgmPlayArgs_o *v10; // x20
+  __int64 v11; // x1
   System_Nullable_float__o volumea; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_59701D2 & 1) == 0 )
@@ -1066,16 +1074,16 @@ void SoundManager__PlaySubBgm_48506544(
     sub_2213A60(&SubBgmPlayArgs_TypeInfo);
     byte_59701D2 = 1;
   }
+  p_volumea = (System_Nullable_float__o)&volumea;
   volumea = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&volumea,
-    volume,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-  v7 = (SubBgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
-  SubBgmPlayArgs___ctor(v7, bgmName, volumea, fadeTime, 0, 0);
+  System_Nullable_float____ctor(p_volumea, volume, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  v8 = (SubBgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+  v9 = volumea;
+  v10 = v8;
+  SubBgmPlayArgs___ctor(v8, bgmName, v9, fadeTime, 0, 0);
   if ( !*(&BgmManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, v8);
-  BgmManager__PlaySubBgm(v7, 0);
+    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo, v11);
+  BgmManager__PlaySubBgm(v10, 0);
 }
 
 
@@ -4710,6 +4718,7 @@ System_String_o *SoundManager_CpkLoader_EfCpkNameHelper__RemoveEfSuffix(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_ValueTuple_string__string__o SoundManager_CpkLoader_EfCpkNameHelper__ResolveCueSheetFileNames(
         CriFsBinder_o *binder,
         System_String_o *targetCpkName,
@@ -4719,6 +4728,7 @@ System_ValueTuple_string__string__o SoundManager_CpkLoader_EfCpkNameHelper__Reso
   const MethodInfo *v7; // x1
   const MethodInfo_3CF8CCC *v8; // x4
   Il2CppObject *v9; // x3
+  System_ValueTuple_object__object__o v10; // x0
   Il2CppObject *Item2; // x2
   System_String_array *AcbAwbFileNameCandidates; // x23
   const MethodInfo *v13; // x3
@@ -4727,9 +4737,10 @@ System_ValueTuple_string__string__o SoundManager_CpkLoader_EfCpkNameHelper__Reso
   Il2CppObject *v16; // x22
   Il2CppObject *v17; // x21
   System_String_o *v18; // x0
+  struct System_String_o *v19; // x0
+  struct System_String_o *v20; // x1
   struct System_String_o *v21; // [xsp+0h] [xbp-60h] BYREF
   struct System_String_o *v22; // [xsp+8h] [xbp-58h]
-  System_ValueTuple_object__object__o v23; // 0:x0.16
   System_ValueTuple_string__string__o result; // 0:x0.16
 
   if ( (byte_597023B & 1) == 0 )
@@ -4742,12 +4753,12 @@ System_ValueTuple_string__string__o SoundManager_CpkLoader_EfCpkNameHelper__Reso
   }
   if ( System_String__IsNullOrEmpty(targetCpkName, 0) )
   {
-    v23.fields.Item1 = (Il2CppObject *)&v21;
+    v10.fields.Item1 = (Il2CppObject *)&v21;
     v9 = (Il2CppObject *)Method_System_ValueTuple_string__string___ctor__;
-    v23.fields.Item2 = **(Il2CppObject ***)(qword_5984390 + 184);
+    v10.fields.Item2 = **(Il2CppObject ***)(qword_5984390 + 184);
     v21 = 0;
     v22 = 0;
-    Item2 = v23.fields.Item2;
+    Item2 = v10.fields.Item2;
   }
   else
   {
@@ -4775,15 +4786,17 @@ System_ValueTuple_string__string__o SoundManager_CpkLoader_EfCpkNameHelper__Reso
         v17 = (Il2CppObject *)v18;
     }
     v9 = (Il2CppObject *)Method_System_ValueTuple_string__string___ctor__;
-    v23.fields.Item1 = (Il2CppObject *)&v21;
-    v23.fields.Item2 = v16;
+    v10.fields.Item1 = (Il2CppObject *)&v21;
+    v10.fields.Item2 = v16;
     Item2 = v17;
     v21 = 0;
     v22 = 0;
   }
-  System_ValueTuple_object__object____ctor(v23, Item2, v9, v8);
-  result.fields.Item1 = v21;
-  result.fields.Item2 = v22;
+  System_ValueTuple_object__object____ctor(v10, Item2, v9, v8);
+  v19 = v21;
+  v20 = v22;
+  result.fields.Item2 = v20;
+  result.fields.Item1 = v19;
   return result;
 }
 
@@ -5017,6 +5030,7 @@ bool SoundManager_CpkLoader__SetupCpk_d__14__MoveNext(
   int32_t v25; // w5
   bool v26; // w6
   bool v27; // w7
+  bool result; // w0
   struct SoundManager_o *manager; // x8
   struct CriFsBindRequest_o *bind_request_5__5; // x8
   struct SoundManager_o *v31; // x8
@@ -5154,8 +5168,9 @@ bool SoundManager_CpkLoader__SetupCpk_d__14__MoveNext(
         v3->fields.__2__current = (Il2CppObject *)v20;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)v20, v22, v23, v24, v25, v26, v27);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
 LABEL_32:
       sub_2213CDC(this, method);

@@ -8,11 +8,17 @@ UnityEngine_Vector3_o EventInfoUISlideAnimation__GetSlideOutPosition(
         EventInfoUISlideAnimation_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.slideOutPosition.fields.x;
-  result.fields.y = this->fields.slideOutPosition.fields.y;
-  result.fields.z = this->fields.slideOutPosition.fields.z;
+  x = this->fields.slideOutPosition.fields.x;
+  y = this->fields.slideOutPosition.fields.y;
+  z = this->fields.slideOutPosition.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

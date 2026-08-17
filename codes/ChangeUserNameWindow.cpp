@@ -140,6 +140,7 @@ void ChangeUserNameWindow__Init(ChangeUserNameWindow_o *this, const MethodInfo *
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this, const MethodInfo *method)
 {
   UILineInput_o *nameInput; // x0
@@ -149,8 +150,11 @@ void ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this, const Met
   uint16_t Chars; // w0
   __int64 v8; // x2
   bool IsNullOrEmpty; // w20
-  System_String_o *v11; // x0
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v10; // s0 OVERLAPPED
+  float v11; // s3
+  float v12; // s1
+  float v13; // s2
+  System_String_o *v14; // x0
 
   if ( (byte_596B627 & 1) == 0 )
   {
@@ -189,8 +193,8 @@ void ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this, const Met
     nameInput = (UILineInput_o *)LocalizationManager__ReplaceNameTag(Text, 0, 0);
     if ( nameInput )
     {
-      v11 = System_String__Trim((System_String_o *)nameInput, 0);
-      IsNullOrEmpty = System_String__IsNullOrEmpty(v11, 0);
+      v14 = System_String__Trim((System_String_o *)nameInput, 0);
+      IsNullOrEmpty = System_String__IsNullOrEmpty(v14, 0);
       goto LABEL_13;
     }
 LABEL_23:
@@ -213,13 +217,13 @@ LABEL_13:
   nameInput = (UILineInput_o *)this->fields.submitBtn;
   if ( !nameInput )
     goto LABEL_23;
-  v12.fields.r = 1.0;
-  v12.fields.a = 1.0;
+  v10 = 1.0;
+  v11 = 1.0;
   if ( IsNullOrEmpty )
-    v12.fields.r = 0.5;
-  v12.fields.g = v12.fields.r;
-  v12.fields.b = v12.fields.r;
-  UIButtonColor__set_defaultColor((UIButtonColor_o *)nameInput, v12, 0);
+    v10 = 0.5;
+  v12 = v10;
+  v13 = v10;
+  UIButtonColor__set_defaultColor((UIButtonColor_o *)nameInput, *(UnityEngine_Color_o *)&v10, 0);
 }
 
 
@@ -590,7 +594,7 @@ System_IAsyncResult_o *ChangeUserNameWindow_CallbackFunc__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(qword_5984328, v12);
   v11[1] = changeName;
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

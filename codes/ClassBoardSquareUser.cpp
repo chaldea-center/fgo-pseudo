@@ -104,6 +104,8 @@ void ClassBoardSquareUser__RequestRelease(
   struct ClassBoardSquareEntity_o *squareEntity; // x8
   int32_t classBoardBaseId; // w1
   int32_t id; // w2
+  ClassBoardReleaseRequestData_o p_data; // x0
+  ClassBoardReleaseRequestData_o v20; // x1
   ClassBoardReleaseRequestData_o data; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_597479D & 1) == 0 )
@@ -137,13 +139,15 @@ void ClassBoardSquareUser__RequestRelease(
     || (CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0), (squareEntity = this->fields.squareEntity) == 0)
     || (classBoardBaseId = squareEntity->fields.classBoardBaseId,
         id = squareEntity->fields.id,
+        p_data = (ClassBoardReleaseRequestData_o)&data,
         data = 0,
-        ClassBoardReleaseRequestData___ctor((ClassBoardReleaseRequestData_o)&data, classBoardBaseId, id, 0),
+        ClassBoardReleaseRequestData___ctor(p_data, classBoardBaseId, id, 0),
         !Request_object) )
   {
     sub_2213CDC(Instance, v15);
   }
-  ClassBoardReleaseSquareRequest__beginRequest((ClassBoardReleaseSquareRequest_o *)Request_object, data, 0);
+  v20 = data;
+  ClassBoardReleaseSquareRequest__beginRequest((ClassBoardReleaseSquareRequest_o *)Request_object, v20, 0);
 }
 
 

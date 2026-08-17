@@ -907,6 +907,7 @@ void PartyListMenu__EndHelp(PartyListMenu_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void PartyListMenu__EndOpen(PartyListMenu_o *this, const MethodInfo *method)
 {
   PartyListViewManager_CallbackFunc_c *v3; // x0
@@ -926,30 +927,34 @@ void PartyListMenu__EndOpen(PartyListMenu_o *this, const MethodInfo *method)
   UnityEngine_Vector2_o v17; // kr00_8
   Il2CppObject *Instance; // x20
   System_Action_o *v19; // x21
-  float v20; // w8
-  float v22; // w9
-  PartyListViewManager_CallbackFunc_c *v24; // x0
-  PartyListViewManager_o *v25; // x20
-  PartyListViewManager_CallbackFunc_o *v26; // x21
+  int v20; // w8
+  float v21; // s4
+  int v22; // w9
+  float v23; // s3 OVERLAPPED
+  float v24; // s1
+  float v25; // s0 OVERLAPPED
+  PartyListViewManager_CallbackFunc_c *v26; // x0
+  PartyListViewManager_o *v27; // x20
+  PartyListViewManager_CallbackFunc_o *v28; // x21
   PartyOrganizationChangeObject_o *tutorialPartyOrganizationChangeEmptyObject; // x20
-  __int64 v28; // x1
-  __int64 v29; // x2
-  Il2CppObject *v30; // x20
-  UnityEngine_Vector2_o v31; // kr08_8
-  __int64 v32; // x1
-  __int64 v33; // x2
-  Il2CppObject *v34; // x20
-  System_String_o *v35; // x21
-  System_Action_o *v36; // x22
-  __int64 v37; // x1
-  __int64 v38; // x2
+  __int64 v30; // x1
+  __int64 v31; // x2
+  Il2CppObject *v32; // x20
+  UnityEngine_Vector2_o v33; // kr08_8
+  __int64 v34; // x1
+  __int64 v35; // x2
+  Il2CppObject *v36; // x20
+  System_String_o *v37; // x21
+  System_Action_o *v38; // x22
+  __int64 v39; // x1
+  __int64 v40; // x2
   Il2CppObject *Component_object; // x20
   UnityEngine_Vector2_o AddOffset; // kr10_8
+  int v43; // s5
+  int v44; // s6
   struct System_Action_o *openCallbackFunc; // x20
-  UnityEngine_Vector2_o v42; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v43; // 0:s0.4,4:s1.4
-  UnityEngine_Rect_o v44; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
-  UnityEngine_Rect_o v45; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  UnityEngine_Vector2_o v46; // 0:s0.4,4:s1.4
+  UnityEngine_Rect_o v47; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_596BE91 & 1) == 0 )
   {
@@ -1004,19 +1009,19 @@ void PartyListMenu__EndOpen(PartyListMenu_o *this, const MethodInfo *method)
                                          (UnityEngine_Component_o *)tutorialMaskBase,
                                          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
                     if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
-                      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v37, v38);
+                      j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v39, v40);
                     AddOffset = FSUtility__GetAddOffset((FSOffset_o *)Component_object, 2, 0);
                     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                     v19 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                     System_Action___ctor(v19, (Il2CppObject *)this, Method_PartyListMenu_EndOpenTutorialArrow__, 0);
                     if ( Instance )
                     {
-                      v20 = 190.0;
-                      v45.fields.m_YMin = AddOffset.fields.y + -291.0;
-                      v22 = 90.0;
-                      v45.fields.m_XMin = AddOffset.fields.x + 329.0;
-                      v42.fields.x = AddOffset.fields.x + 422.0;
-                      v42.fields.y = AddOffset.fields.y + -231.0;
+                      v20 = 1128136704;
+                      v21 = AddOffset.fields.y + -291.0;
+                      v22 = 1119092736;
+                      v23 = AddOffset.fields.x + 329.0;
+                      v25 = AddOffset.fields.x + 422.0;
+                      v24 = AddOffset.fields.y + -231.0;
                       goto LABEL_44;
                     }
                   }
@@ -1071,39 +1076,39 @@ void PartyListMenu__EndOpen(PartyListMenu_o *this, const MethodInfo *method)
                                                                            0);
                           if ( tutorialMaskBase )
                           {
-                            v30 = UnityEngine_Component__GetComponent_object_(
+                            v32 = UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)tutorialMaskBase,
                                     (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
                             if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v28, v29);
-                            v31 = FSUtility__GetAddOffset((FSOffset_o *)v30, 1, 0);
-                            v34 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                              j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, v30, v31);
+                            v33 = FSUtility__GetAddOffset((FSOffset_o *)v32, 1, 0);
+                            v36 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32, v33);
-                            v35 = LocalizationManager__Get((System_String_o *)StringLiteral_14151/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION1_2"*/, 0);
-                            v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+                              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v34, v35);
+                            v37 = LocalizationManager__Get((System_String_o *)StringLiteral_14151/*"TUTORIAL_MESSAGE_PARTY_ORGANIZATION1_2"*/, 0);
+                            v38 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                             System_Action___ctor(
-                              v36,
+                              v38,
                               (Il2CppObject *)this,
                               Method_PartyListMenu_EndOpenTutorialArrow__,
                               0);
-                            if ( v34 )
+                            if ( v36 )
                             {
-                              v44.fields.m_Width = 150.0;
-                              v43.fields.x = v31.fields.x + -245.0;
-                              v43.fields.y = v31.fields.y + 70.0;
-                              v44.fields.m_Height = 380.0;
-                              v44.fields.m_XMin = v31.fields.x + -320.0;
-                              v44.fields.m_YMin = v31.fields.y + -205.0;
+                              v47.fields.m_Width = 150.0;
+                              v46.fields.x = v33.fields.x + -245.0;
+                              v46.fields.y = v33.fields.y + 70.0;
+                              v47.fields.m_Height = 380.0;
+                              v47.fields.m_XMin = v33.fields.x + -320.0;
+                              v47.fields.m_YMin = v33.fields.y + -205.0;
                               CommonUI__OpenTutorialNotificationDialogArrow(
-                                (CommonUI_o *)v34,
-                                v35,
-                                v43,
-                                v44,
+                                (CommonUI_o *)v36,
+                                v37,
+                                v46,
+                                v47,
                                 0.0,
                                 (UnityEngine_Vector2_o)0xC220000042C80000LL,
                                 -1,
-                                v36,
+                                v38,
                                 0);
                               goto LABEL_47;
                             }
@@ -1151,16 +1156,22 @@ void PartyListMenu__EndOpen(PartyListMenu_o *this, const MethodInfo *method)
                     System_Action___ctor(v19, (Il2CppObject *)this, Method_PartyListMenu_EndOpenTutorialArrow__, 0);
                     if ( Instance )
                     {
-                      v20 = 160.0;
-                      v45.fields.m_YMin = v17.fields.y + -295.0;
-                      v22 = 80.0;
-                      v45.fields.m_XMin = v17.fields.x + -200.0;
-                      v42.fields.y = v17.fields.y + -255.0;
-                      v42.fields.x = v17.fields.x + -120.0;
+                      v20 = 1126170624;
+                      v21 = v17.fields.y + -295.0;
+                      v22 = 1117782016;
+                      v23 = v17.fields.x + -200.0;
+                      v24 = v17.fields.y + -255.0;
+                      v25 = v17.fields.x + -120.0;
 LABEL_44:
-                      v45.fields.m_Width = v20;
-                      v45.fields.m_Height = v22;
-                      CommonUI__OpenTutorialArrowMark((CommonUI_o *)Instance, v42, 0.0, v45, v19, 0);
+                      v43 = v20;
+                      v44 = v22;
+                      CommonUI__OpenTutorialArrowMark(
+                        (CommonUI_o *)Instance,
+                        *(UnityEngine_Vector2_o *)&v25,
+                        0.0,
+                        *(UnityEngine_Rect_o *)&v23,
+                        v19,
+                        0);
                       goto LABEL_47;
                     }
                   }
@@ -1178,18 +1189,18 @@ LABEL_50:
   }
   if ( this->fields.callbackFunc )
   {
-    v24 = PartyListViewManager_CallbackFunc_TypeInfo;
-    v25 = this->fields.partyListViewManager;
+    v26 = PartyListViewManager_CallbackFunc_TypeInfo;
+    v27 = this->fields.partyListViewManager;
     this->fields.state = 2;
-    v26 = (PartyListViewManager_CallbackFunc_o *)sub_2213CCC(v24);
+    v28 = (PartyListViewManager_CallbackFunc_o *)sub_2213CCC(v26);
     PartyListViewManager_CallbackFunc___ctor(
-      v26,
+      v28,
       (Il2CppObject *)this,
       (intptr_t)Method_PartyListMenu_OnSelectItem__,
       0);
-    if ( v25 )
+    if ( v27 )
     {
-      PartyListViewManager__SetMode(v25, 2, v26, 0);
+      PartyListViewManager__SetMode(v27, 2, v28, 0);
       goto LABEL_47;
     }
     goto LABEL_50;
@@ -3386,84 +3397,84 @@ void PartyListMenu__Open(
   PartyListMenu_o *transform; // x0
   const MethodInfo *v134; // x1
   UnityEngine_Transform_o *v135; // x23
-  UnityEngine_GameObject_o *v136; // x23
-  const MethodInfo *v137; // x1
-  __int64 v138; // x2
+  UnityEngine_Vector2_o v136; // kr08_8 OVERLAPPED
+  UnityEngine_GameObject_o *v137; // x23
+  const MethodInfo *v138; // x1
+  __int64 v139; // x2
+  int v140; // s2
   int32_t questId; // w23
   bool IsDisplayQuestInformation; // w23
-  const MethodInfo *v141; // x1
+  const MethodInfo *v143; // x1
   bool IsDisplayAssistConfirm; // w8
-  UISprite_o *v143; // x23
-  Il2CppObject *v144; // x0
-  __int64 v145; // x1
-  __int64 v146; // x2
-  System_String_o *v147; // x24
-  const MethodInfo *v148; // x1
+  UISprite_o *v145; // x23
+  Il2CppObject *v146; // x0
+  __int64 v147; // x1
+  __int64 v148; // x2
+  System_String_o *v149; // x24
+  const MethodInfo *v150; // x1
   bool IsActiveAssistConfirm; // w8
-  System_String_o *v150; // x1
-  const MethodInfo *v151; // x1
-  __int64 v152; // x1
-  __int64 v153; // x2
+  System_String_o *v152; // x1
+  const MethodInfo *v153; // x1
+  __int64 v154; // x1
+  __int64 v155; // x2
   struct UILabel_o *assistCanNotLabel; // x23
   bool IsDisplayCommandAssistConfirm; // w8
-  int32_t v156; // w23
-  System_Action_o *v157; // x24
-  __int64 v158; // x1
-  __int64 v159; // x2
-  const MethodInfo *v160; // x1
+  int32_t v158; // w23
+  System_Action_o *v159; // x24
+  __int64 v160; // x1
+  __int64 v161; // x2
+  const MethodInfo *v162; // x1
   bool IsActiveCommandAssistConfirm; // w8
-  System_String_o *v162; // x1
-  const MethodInfo *v163; // x1
-  __int64 v164; // x1
-  __int64 v165; // x2
+  System_String_o *v164; // x1
+  const MethodInfo *v165; // x1
+  __int64 v166; // x1
+  __int64 v167; // x2
   struct UILabel_o *commandAssistCanNotLabel; // x23
   bool IsDisplayLiveConfirm; // w8
-  bool v168; // w1
-  __int64 v169; // x2
-  struct QuestRestrictionInfo_o *v170; // x8
-  int32_t v171; // w22
+  bool v170; // w1
+  __int64 v171; // x2
+  struct QuestRestrictionInfo_o *v172; // x8
+  int32_t v173; // w22
   int32_t questPhase; // w23
-  System_String_o *v173; // x2
-  struct QuestRestrictionInfo_o *v174; // x8
-  int32_t v175; // w22
-  int32_t v176; // w23
-  __int64 v177; // x2
-  struct QuestRestrictionInfo_o *v178; // x8
-  int32_t v179; // w20
-  int32_t v180; // w22
-  System_String_o *v181; // x3
-  int32_t v182; // w4
-  int32_t v183; // w5
-  bool v184; // w6
-  bool v185; // w7
-  PartyListMenu_c *v186; // x0
-  int v187; // w8
+  System_String_o *v175; // x2
+  struct QuestRestrictionInfo_o *v176; // x8
+  int32_t v177; // w22
+  int32_t v178; // w23
+  __int64 v179; // x2
+  struct QuestRestrictionInfo_o *v180; // x8
+  int32_t v181; // w20
+  int32_t v182; // w22
+  System_String_o *v183; // x3
+  int32_t v184; // w4
+  int32_t v185; // w5
+  bool v186; // w6
+  bool v187; // w7
+  PartyListMenu_c *v188; // x0
+  int v189; // w8
   int32_t *p_LAYOUT_POS_X_HINT_IN_EVENT; // x8
-  int32_t v189; // w20
-  PartyListMenu_o *v190; // x0
-  __int64 v191; // x1
-  __int64 v192; // x2
-  const MethodInfo *v193; // x4
-  PartyListMenu_c *v194; // x8
-  UnityEngine_GameObject_o *v195; // x21
-  __int64 v196; // x1
-  __int64 v197; // x2
-  BalanceConfig_c *v198; // x0
+  int32_t v191; // w20
+  PartyListMenu_o *v192; // x0
+  __int64 v193; // x1
+  __int64 v194; // x2
+  const MethodInfo *v195; // x4
+  PartyListMenu_c *v196; // x8
+  UnityEngine_GameObject_o *v197; // x21
+  __int64 v198; // x1
+  __int64 v199; // x2
+  BalanceConfig_c *v200; // x0
   int32_t ClassBoardReleaseQuestId; // w20
-  __int64 v200; // x2
+  __int64 v202; // x2
   UISprite_o *classInfoSpriteOrganization; // x20
-  System_Action_o *v202; // x20
-  int32_t v203; // w22
-  int32_t v204; // w23
-  System_String_o *v205; // x2
-  System_String_o *v206; // x3
-  int32_t v207; // w4
-  int32_t v208; // w5
-  bool v209; // w6
-  bool v210; // w7
+  System_Action_o *v204; // x20
+  int32_t v205; // w22
+  int32_t v206; // w23
+  System_String_o *v207; // x2
+  System_String_o *v208; // x3
+  int32_t v209; // w4
+  int32_t v210; // w5
+  bool v211; // w6
+  bool v212; // w7
   int32_t eventId; // [xsp+Ch] [xbp-64h] BYREF
-  UnityEngine_Vector3_o v213; // 0:kr00_12.12
-  UnityEngine_Vector2_o v214; // 0:s0.4,4:s1.4
   UnityEngine_Color_o v215; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v216; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v217; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -3768,14 +3779,13 @@ void PartyListMenu__Open(
                                                          (UnityEngine_Component_o *)gameObject,
                                                          0);
                         v135 = (UnityEngine_Transform_o *)transform;
-                        v214 = (v54 & 1) != 0
+                        v136 = (v54 & 1) != 0
                              ? PartyListMenu__get_HELP_PANEL_OFFSET_1_FS(transform, v134)
                              : PartyListMenu__get_HELP_PANEL_OFFSET_2_FS(transform, v134);
                         if ( !v135 )
                           goto LABEL_188;
-                        *(UnityEngine_Vector2_o *)&v213.fields.x = v214;
-                        v213.fields.z = 0.0;
-                        UnityEngine_Transform__set_localPosition(v135, v213, 0);
+                        v140 = 0;
+                        UnityEngine_Transform__set_localPosition(v135, *(UnityEngine_Vector3_o *)&v136.fields.x, 0);
                       }
                       else
                       {
@@ -3789,11 +3799,11 @@ void PartyListMenu__Open(
                         gameObject = (UnityEngine_GameObject_o *)this->fields.partyHelpIconButton;
                         if ( !gameObject )
                           goto LABEL_188;
-                        v136 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-                        gameObject = (UnityEngine_GameObject_o *)PartyListMenu__IsNeedHelp(this, v137);
-                        if ( !v136 )
+                        v137 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+                        gameObject = (UnityEngine_GameObject_o *)PartyListMenu__IsNeedHelp(this, v138);
+                        if ( !v137 )
                           goto LABEL_188;
-                        UnityEngine_GameObject__SetActive(v136, (unsigned __int8)gameObject & 1, 0);
+                        UnityEngine_GameObject__SetActive(v137, (unsigned __int8)gameObject & 1, 0);
                       }
                       if ( this->fields.menuKind == 8 || !*p_questRestrictionInfo )
                       {
@@ -3803,7 +3813,7 @@ void PartyListMenu__Open(
                       {
                         questId = (*p_questRestrictionInfo)->fields.questId;
                         if ( !*(&QuestInformationComponent_TypeInfo->_2.cctor_finished + 1) )
-                          j_il2cpp_runtime_class_init_0(QuestInformationComponent_TypeInfo, v49, v138);
+                          j_il2cpp_runtime_class_init_0(QuestInformationComponent_TypeInfo, v49, v139);
                         IsDisplayQuestInformation = QuestInformationComponent__IsDisplayQuestInformation(questId, 0);
                       }
                       gameObject = (UnityEngine_GameObject_o *)this->fields.partyQuestInfoIconButton;
@@ -3813,7 +3823,7 @@ void PartyListMenu__Open(
                         if ( gameObject )
                         {
                           UnityEngine_GameObject__SetActive(gameObject, IsDisplayQuestInformation, 0);
-                          IsDisplayAssistConfirm = PartyListMenu__IsDisplayAssistConfirm(this, v141);
+                          IsDisplayAssistConfirm = PartyListMenu__IsDisplayAssistConfirm(this, v143);
                           gameObject = (UnityEngine_GameObject_o *)this->fields.assistConfirmButton;
                           if ( IsDisplayAssistConfirm )
                           {
@@ -3831,14 +3841,14 @@ void PartyListMenu__Open(
                                                                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UISprite___);
                             if ( !*p_questRestrictionInfo )
                               goto LABEL_188;
-                            v143 = (UISprite_o *)gameObject;
+                            v145 = (UISprite_o *)gameObject;
                             eventId = (*p_questRestrictionInfo)->fields.eventId;
-                            v144 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &eventId);
-                            v147 = System_String__Format((System_String_o *)StringLiteral_20165/*"event_skill_btn_{0}"*/, v144, 0);
+                            v146 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &eventId);
+                            v149 = System_String__Format((System_String_o *)StringLiteral_20165/*"event_skill_btn_{0}"*/, v146, 0);
                             if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v145, v146);
-                            AtlasManager__SetEventUI(v143, v147, 0);
-                            IsActiveAssistConfirm = PartyListMenu__IsActiveAssistConfirm(this, v148);
+                              j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v147, v148);
+                            AtlasManager__SetEventUI(v145, v149, 0);
+                            IsActiveAssistConfirm = PartyListMenu__IsActiveAssistConfirm(this, v150);
                             gameObject = (UnityEngine_GameObject_o *)this->fields.assistConfirmButton;
                             if ( IsActiveAssistConfirm )
                             {
@@ -3870,7 +3880,7 @@ void PartyListMenu__Open(
                               gameObject = (UnityEngine_GameObject_o *)this->fields.assistCanNotLabel;
                               if ( !gameObject )
                                 goto LABEL_188;
-                              v150 = (System_String_o *)StringLiteral_1/*""*/;
+                              v152 = (System_String_o *)StringLiteral_1/*""*/;
                             }
                             else
                             {
@@ -3901,16 +3911,16 @@ void PartyListMenu__Open(
                               UnityEngine_GameObject__SetActive(gameObject, 1, 0);
                               assistCanNotLabel = this->fields.assistCanNotLabel;
                               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v152, v153);
+                                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v154, v155);
                               gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
                                                                          (System_String_o *)StringLiteral_5725/*"EVENT_ASSIST_SKILL_DO_NOT"*/,
                                                                          0);
                               if ( !assistCanNotLabel )
                                 goto LABEL_188;
-                              v150 = (System_String_o *)gameObject;
+                              v152 = (System_String_o *)gameObject;
                               gameObject = (UnityEngine_GameObject_o *)assistCanNotLabel;
                             }
-                            UILabel__set_text((UILabel_o *)gameObject, v150, 0);
+                            UILabel__set_text((UILabel_o *)gameObject, v152, 0);
                           }
                           else
                           {
@@ -3925,7 +3935,7 @@ void PartyListMenu__Open(
                               goto LABEL_188;
                             UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 0, 0);
                           }
-                          IsDisplayCommandAssistConfirm = PartyListMenu__IsDisplayCommandAssistConfirm(this, v151);
+                          IsDisplayCommandAssistConfirm = PartyListMenu__IsDisplayCommandAssistConfirm(this, v153);
                           gameObject = (UnityEngine_GameObject_o *)this->fields.commandAssistConfirmButton;
                           if ( IsDisplayCommandAssistConfirm )
                           {
@@ -3937,13 +3947,13 @@ void PartyListMenu__Open(
                             UnityEngine_GameObject__SetActive(gameObject, 1, 0);
                             if ( !*p_questRestrictionInfo )
                               goto LABEL_188;
-                            v156 = (*p_questRestrictionInfo)->fields.eventId;
-                            v157 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-                            System_Action___ctor(v157, (Il2CppObject *)this, Method_PartyListMenu__Open_b__104_0__, 0);
+                            v158 = (*p_questRestrictionInfo)->fields.eventId;
+                            v159 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+                            System_Action___ctor(v159, (Il2CppObject *)this, Method_PartyListMenu__Open_b__104_0__, 0);
                             if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v158, v159);
-                            AtlasManager__LoadEventUI_47569188(v156, v157, 1, 0);
-                            IsActiveCommandAssistConfirm = PartyListMenu__IsActiveCommandAssistConfirm(this, v160);
+                              j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v160, v161);
+                            AtlasManager__LoadEventUI_47569188(v158, v159, 1, 0);
+                            IsActiveCommandAssistConfirm = PartyListMenu__IsActiveCommandAssistConfirm(this, v162);
                             gameObject = (UnityEngine_GameObject_o *)this->fields.commandAssistConfirmButton;
                             if ( IsActiveCommandAssistConfirm )
                             {
@@ -3975,7 +3985,7 @@ void PartyListMenu__Open(
                               gameObject = (UnityEngine_GameObject_o *)this->fields.commandAssistCanNotLabel;
                               if ( !gameObject )
                                 goto LABEL_188;
-                              v162 = (System_String_o *)StringLiteral_1/*""*/;
+                              v164 = (System_String_o *)StringLiteral_1/*""*/;
                             }
                             else
                             {
@@ -4006,16 +4016,16 @@ void PartyListMenu__Open(
                               UnityEngine_GameObject__SetActive(gameObject, 1, 0);
                               commandAssistCanNotLabel = this->fields.commandAssistCanNotLabel;
                               if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v164, v165);
+                                j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v166, v167);
                               gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
                                                                          (System_String_o *)StringLiteral_5756/*"EVENT_COMMAND_ASSIST_DO_NOT"*/,
                                                                          0);
                               if ( !commandAssistCanNotLabel )
                                 goto LABEL_188;
-                              v162 = (System_String_o *)gameObject;
+                              v164 = (System_String_o *)gameObject;
                               gameObject = (UnityEngine_GameObject_o *)commandAssistCanNotLabel;
                             }
-                            UILabel__set_text((UILabel_o *)gameObject, v162, 0);
+                            UILabel__set_text((UILabel_o *)gameObject, v164, 0);
                           }
                           else
                           {
@@ -4030,7 +4040,7 @@ void PartyListMenu__Open(
                               goto LABEL_188;
                             UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 0, 0);
                           }
-                          IsDisplayLiveConfirm = PartyListMenu__IsDisplayLiveConfirm(this, v163);
+                          IsDisplayLiveConfirm = PartyListMenu__IsDisplayLiveConfirm(this, v165);
                           gameObject = (UnityEngine_GameObject_o *)this->fields.centerEffectLabelSp;
                           if ( IsDisplayLiveConfirm )
                           {
@@ -4039,7 +4049,7 @@ void PartyListMenu__Open(
                             gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
                             if ( !gameObject )
                               goto LABEL_188;
-                            v168 = 1;
+                            v170 = 1;
                           }
                           else
                           {
@@ -4048,9 +4058,9 @@ void PartyListMenu__Open(
                             gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
                             if ( !gameObject )
                               goto LABEL_188;
-                            v168 = 0;
+                            v170 = 0;
                           }
-                          UnityEngine_GameObject__SetActive(gameObject, v168, 0);
+                          UnityEngine_GameObject__SetActive(gameObject, v170, 0);
                           gameObject = (UnityEngine_GameObject_o *)this->fields.hintDialogButton;
                           if ( IsHintDialog )
                           {
@@ -4060,51 +4070,51 @@ void PartyListMenu__Open(
                             if ( !gameObject )
                               goto LABEL_188;
                             UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-                            v170 = *p_questRestrictionInfo;
+                            v172 = *p_questRestrictionInfo;
                             if ( !*p_questRestrictionInfo )
                               goto LABEL_188;
-                            v171 = v170->fields.questId;
-                            questPhase = v170->fields.questPhase;
+                            v173 = v172->fields.questId;
+                            questPhase = v172->fields.questPhase;
                             if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v169);
+                              j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v171);
                             gameObject = (UnityEngine_GameObject_o *)QuestHintDialogOpenManager__IsSettingTemporarilyInfo(
-                                                                       v171,
+                                                                       v173,
                                                                        questPhase,
                                                                        0);
                             if ( ((unsigned __int8)gameObject & 1) == 0 )
                             {
-                              v174 = *p_questRestrictionInfo;
+                              v176 = *p_questRestrictionInfo;
                               if ( !*p_questRestrictionInfo )
                                 goto LABEL_188;
-                              v175 = v174->fields.questId;
-                              v176 = v174->fields.questPhase;
+                              v177 = v176->fields.questId;
+                              v178 = v176->fields.questPhase;
                               if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-                                j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v173);
-                              if ( !QuestHintDialogOpenManager__IsQuestHintOpen(v175, v176, 0) )
+                                j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v175);
+                              if ( !QuestHintDialogOpenManager__IsQuestHintOpen(v177, v178, 0) )
                               {
                                 gameObject = (UnityEngine_GameObject_o *)PartyListMenu__IsHintDialogEveryTime(
                                                                            this,
                                                                            (const MethodInfo *)v49);
-                                v178 = this->fields.questRestrictionInfo;
+                                v180 = this->fields.questRestrictionInfo;
                                 if ( ((unsigned __int8)gameObject & 1) != 0 )
                                 {
-                                  if ( !v178 )
+                                  if ( !v180 )
                                     goto LABEL_188;
-                                  v179 = v178->fields.questId;
-                                  v180 = v178->fields.questPhase;
+                                  v181 = v180->fields.questId;
+                                  v182 = v180->fields.questPhase;
                                   if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-                                    j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v177);
-                                  QuestHintDialogOpenManager__SetTemporarilyInfo(v179, v180, 0);
+                                    j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v179);
+                                  QuestHintDialogOpenManager__SetTemporarilyInfo(v181, v182, 0);
                                 }
                                 else
                                 {
-                                  if ( !v178 )
+                                  if ( !v180 )
                                     goto LABEL_188;
-                                  v203 = v178->fields.questId;
-                                  v204 = v178->fields.questPhase;
+                                  v205 = v180->fields.questId;
+                                  v206 = v180->fields.questPhase;
                                   if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-                                    j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v177);
-                                  QuestHintDialogOpenManager__SetTemporarilyInfo(v203, v204, 0);
+                                    j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v49, v179);
+                                  QuestHintDialogOpenManager__SetTemporarilyInfo(v205, v206, 0);
                                   if ( !*p_questRestrictionInfo )
                                     goto LABEL_188;
                                   QuestHintDialogOpenManager__SetQuestInfo(
@@ -4125,22 +4135,22 @@ void PartyListMenu__Open(
                                       sub_2213A04(
                                         (MissionNaviTransitionBoardItem_o *)&this->fields.hintDialogCloseCallbackFunc,
                                         (int32_t)v49,
-                                        v173,
-                                        v181,
-                                        v182,
+                                        v175,
                                         v183,
                                         v184,
-                                        v185);
+                                        v185,
+                                        v186,
+                                        v187);
                                       this->fields.openCallbackFunc = 0;
                                       sub_2213A04(
                                         (MissionNaviTransitionBoardItem_o *)&this->fields.openCallbackFunc,
                                         0,
-                                        v205,
-                                        v206,
                                         v207,
                                         v208,
                                         v209,
-                                        v210);
+                                        v210,
+                                        v211,
+                                        v212);
                                     }
                                   }
                                 }
@@ -4156,61 +4166,61 @@ void PartyListMenu__Open(
                               goto LABEL_188;
                             UnityEngine_GameObject__SetActive(gameObject, 0, 0);
                           }
-                          v186 = PartyListMenu_TypeInfo;
-                          v187 = *(&PartyListMenu_TypeInfo->_2.cctor_finished + 1);
+                          v188 = PartyListMenu_TypeInfo;
+                          v189 = *(&PartyListMenu_TypeInfo->_2.cctor_finished + 1);
                           if ( (v54 & 1) != 0 )
                           {
-                            if ( !v187 )
+                            if ( !v189 )
                             {
-                              j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, v49, v173);
-                              v186 = PartyListMenu_TypeInfo;
+                              j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, v49, v175);
+                              v188 = PartyListMenu_TypeInfo;
                             }
-                            p_LAYOUT_POS_X_HINT_IN_EVENT = &v186->static_fields->LAYOUT_POS_X_HINT_IN_EVENT;
+                            p_LAYOUT_POS_X_HINT_IN_EVENT = &v188->static_fields->LAYOUT_POS_X_HINT_IN_EVENT;
                           }
                           else
                           {
-                            if ( !v187 )
+                            if ( !v189 )
                             {
-                              j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, v49, v173);
-                              v186 = PartyListMenu_TypeInfo;
+                              j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, v49, v175);
+                              v188 = PartyListMenu_TypeInfo;
                             }
-                            p_LAYOUT_POS_X_HINT_IN_EVENT = &v186->static_fields->LAYOUT_POS_X_HINT_NOT_EVENT;
+                            p_LAYOUT_POS_X_HINT_IN_EVENT = &v188->static_fields->LAYOUT_POS_X_HINT_NOT_EVENT;
                           }
                           gameObject = (UnityEngine_GameObject_o *)this->fields.hintDialogButton;
                           if ( gameObject )
                           {
-                            v189 = *p_LAYOUT_POS_X_HINT_IN_EVENT;
-                            v190 = (PartyListMenu_o *)UnityEngine_Component__get_gameObject(
+                            v191 = *p_LAYOUT_POS_X_HINT_IN_EVENT;
+                            v192 = (PartyListMenu_o *)UnityEngine_Component__get_gameObject(
                                                         (UnityEngine_Component_o *)gameObject,
                                                         0);
-                            v194 = PartyListMenu_TypeInfo;
-                            v195 = (UnityEngine_GameObject_o *)v190;
+                            v196 = PartyListMenu_TypeInfo;
+                            v197 = (UnityEngine_GameObject_o *)v192;
                             if ( !*(&PartyListMenu_TypeInfo->_2.cctor_finished + 1) )
                             {
-                              j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, v191, v192);
-                              v194 = PartyListMenu_TypeInfo;
+                              j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, v193, v194);
+                              v196 = PartyListMenu_TypeInfo;
                             }
                             PartyListMenu__SetButtonPosAndSize(
-                              v190,
-                              v195,
-                              v194->static_fields->LAYOUT_FS_OFFSET,
-                              v189,
+                              v192,
+                              v197,
+                              v196->static_fields->LAYOUT_FS_OFFSET,
+                              v191,
                               0,
-                              v193);
-                            v198 = BalanceConfig_TypeInfo;
+                              v195);
+                            v200 = BalanceConfig_TypeInfo;
                             if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
                             {
-                              j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v196, v197);
-                              v198 = BalanceConfig_TypeInfo;
+                              j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v198, v199);
+                              v200 = BalanceConfig_TypeInfo;
                             }
-                            ClassBoardReleaseQuestId = v198->static_fields->ClassBoardReleaseQuestId;
+                            ClassBoardReleaseQuestId = v200->static_fields->ClassBoardReleaseQuestId;
                             if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v196, v197);
+                              j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v198, v199);
                             if ( CondType__IsQuestClear_47284152(ClassBoardReleaseQuestId, -1, 0, 0) )
                             {
                               classInfoSpriteOrganization = this->fields.classInfoSpriteOrganization;
                               if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v49, v200);
+                                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v49, v202);
                               AtlasManager__SetPartyOrganizationImage(
                                 classInfoSpriteOrganization,
                                 (System_String_o *)StringLiteral_18443/*"buttontxt_formation_20"*/,
@@ -4225,9 +4235,9 @@ void PartyListMenu__Open(
                             {
                               PartyListViewManager__SetMode_40867276((PartyListViewManager_o *)gameObject, 1, 0);
                               this->fields.state = 1;
-                              v202 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-                              System_Action___ctor(v202, (Il2CppObject *)this, Method_PartyListMenu_EndOpen__, 0);
-                              BaseMenu__Open((BaseMenu_o *)this, v202, 0);
+                              v204 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+                              System_Action___ctor(v204, (Il2CppObject *)this, Method_PartyListMenu_EndOpen__, 0);
+                              BaseMenu__Open((BaseMenu_o *)this, v204, 0);
                               return;
                             }
                           }
@@ -4650,12 +4660,16 @@ void PartyListMenu__SetButtonPosAndSize(
   const MethodInfo *v13; // x1
   float v14; // s8
   float y; // s9
-  __int64 v16; // x1
-  __int64 v17; // x2
-  __int64 v18; // x2
-  float v19; // s8
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  float v16; // s1
+  float v17; // s0
+  __int64 v18; // x1
+  __int64 v19; // x2
+  __int64 v20; // x2
+  float v21; // s8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BE8E & 1) == 0 )
   {
@@ -4677,20 +4691,21 @@ void PartyListMenu__SetButtonPosAndSize(
   this = (PartyListMenu_o *)UnityEngine_GameObject__get_transform(buttonObj, 0);
   if ( !this )
     goto LABEL_19;
-  y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  y = localPosition.fields.y;
   this = (PartyListMenu_o *)UnityEngine_GameObject__get_transform(buttonObj, 0);
   if ( !this )
     goto LABEL_19;
-  v20.fields.z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+  v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   if ( !transform )
     goto LABEL_19;
-  v20.fields.y = y;
-  v20.fields.x = (float)posX - v14;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v20, 0);
+  v16 = y;
+  v17 = (float)posX - v14;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v23, 0);
   if ( sizeX )
   {
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16, v17);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18, v19);
     this = (PartyListMenu_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
@@ -4699,17 +4714,18 @@ void PartyListMenu__SetButtonPosAndSize(
       UIWidget__set_width((UIWidget_o *)Component_object, sizeX, 0);
     }
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, buttonObj, v18);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, buttonObj, v20);
     this = (PartyListMenu_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v11, 0, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       if ( v11 )
       {
-        v19 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v11, 0).fields.y;
-        v21.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v11, 0).fields.z;
-        v21.fields.x = (float)sizeX;
-        v21.fields.y = v19;
-        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)v11, v21, 0);
+        size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v11, 0);
+        v21 = size.fields.y;
+        v25 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v11, 0);
+        v25.fields.x = (float)sizeX;
+        v25.fields.y = v21;
+        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)v11, v25, 0);
         return;
       }
 LABEL_19:
@@ -5581,9 +5597,11 @@ UnityEngine_Vector2_o PartyListMenu__get_HELP_PANEL_OFFSET_1_FS(PartyListMenu_o 
 {
   __int64 v2; // x2
   PartyListMenu_o *v3; // x0
-  float *partyPointEventButton; // x8
+  struct UICommonButton_o *partyPointEventButton; // x8
   float v5; // s8
   float v6; // s9
+  float v7; // s0
+  float v8; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_596BE87 & 1) == 0 )
@@ -5597,11 +5615,13 @@ UnityEngine_Vector2_o PartyListMenu__get_HELP_PANEL_OFFSET_1_FS(PartyListMenu_o 
     j_il2cpp_runtime_class_init_0(PartyListMenu_TypeInfo, method, v2);
     v3 = (PartyListMenu_o *)PartyListMenu_TypeInfo;
   }
-  partyPointEventButton = (float *)v3->fields.partyPointEventButton;
-  v6 = *partyPointEventButton;
-  v5 = partyPointEventButton[1];
-  result.fields.x = v6 - PartyListMenu__FSOffsetX(v3, method);
-  result.fields.y = v5;
+  partyPointEventButton = v3->fields.partyPointEventButton;
+  v6 = *(float *)&partyPointEventButton->klass;
+  v5 = *((float *)&partyPointEventButton->klass + 1);
+  v7 = v6 - PartyListMenu__FSOffsetX(v3, method);
+  v8 = v5;
+  result.fields.y = v8;
+  result.fields.x = v7;
   return result;
 }
 
@@ -5613,6 +5633,8 @@ UnityEngine_Vector2_o PartyListMenu__get_HELP_PANEL_OFFSET_2_FS(PartyListMenu_o 
   struct UICommonButton_o *partyPointEventButton; // x8
   float v5; // s8
   float v6; // s9
+  float v7; // s0
+  float v8; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_596BE88 & 1) == 0 )
@@ -5629,8 +5651,10 @@ UnityEngine_Vector2_o PartyListMenu__get_HELP_PANEL_OFFSET_2_FS(PartyListMenu_o 
   partyPointEventButton = v3->fields.partyPointEventButton;
   v6 = *((float *)&partyPointEventButton->monitor + 1);
   v5 = *(float *)&partyPointEventButton->fields.m_CachedPtr;
-  result.fields.x = v6 - PartyListMenu__FSOffsetX(v3, method);
-  result.fields.y = v5;
+  v7 = v6 - PartyListMenu__FSOffsetX(v3, method);
+  v8 = v5;
+  result.fields.y = v8;
+  result.fields.x = v7;
   return result;
 }
 
@@ -5754,7 +5778,7 @@ System_IAsyncResult_o *PartyListMenu_CallbackFunc__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(PartyListMenu_ResultKind_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

@@ -28,6 +28,8 @@ UnityEngine_Vector2_o ServantScriptAddEntity__getOffset(
   int32_t *p_offsetYGrandBoard; // x11
   int32_t *p_offsetXEventShop; // x8
   int32_t *p_offsetYEventShop; // x9
+  float v9; // s0
+  float v10; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   p_offsetXEventReward = &this->fields.offsetXEventReward;
@@ -51,7 +53,9 @@ UnityEngine_Vector2_o ServantScriptAddEntity__getOffset(
     p_offsetYEventShop = p_offsetYGrandBoard;
     p_offsetXEventShop = p_offsetXGrandBoard;
   }
-  result.fields.x = (float)*p_offsetXEventShop;
-  result.fields.y = (float)*p_offsetYEventShop;
+  v9 = (float)*p_offsetXEventShop;
+  v10 = (float)*p_offsetYEventShop;
+  result.fields.y = v10;
+  result.fields.x = v9;
   return result;
 }

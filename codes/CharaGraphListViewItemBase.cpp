@@ -229,7 +229,7 @@ bool CharaGraphListViewItemBase__IsMatchFilter(
   {
     sub_2213CDC(filterLogic, sort);
   }
-  return ((bool (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
+  return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
            filterLogic,
            filterLogic->klass->vtable._4_unknown.method);
 }

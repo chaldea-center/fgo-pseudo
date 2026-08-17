@@ -30,9 +30,12 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
   AdjustPopupPosInScreenArgument_o *IsOffScreen; // x0
   BattleAdjustPopupPosInScreenComponent_o *v11; // x20
   struct AdjustPopupPosInScreenArgument_o *v12; // x8
-  UnityEngine_Vector3_o AdjustedWorldPos; // 0:kr14_12.12
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  float v13; // s1
+  float v14; // s2
+  float v15; // s0
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o ViewPos; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o AdjustedWorldPos; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   z = currentTargetPos.fields.z;
@@ -51,10 +54,10 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
     adjustPosInScreenArg = this->fields.adjustPosInScreenArg;
     if ( adjustPosInScreenArg )
     {
-      v17.fields.x = x;
-      v17.fields.y = y;
-      v17.fields.z = z;
-      AdjustPopupPosInScreenArgument__UpdateTargetWorldPos(adjustPosInScreenArg, v17, 0);
+      v16.fields.x = x;
+      v16.fields.y = y;
+      v16.fields.z = z;
+      AdjustPopupPosInScreenArgument__UpdateTargetWorldPos(adjustPosInScreenArg, v16, 0);
       IsOffScreen = this->fields.adjustPosInScreenArg;
       if ( IsOffScreen )
       {
@@ -98,9 +101,12 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
     }
   }
 LABEL_14:
-  result.fields.y = y;
-  result.fields.z = z;
-  result.fields.x = x;
+  v13 = y;
+  v14 = z;
+  v15 = x;
+  result.fields.z = v14;
+  result.fields.y = v13;
+  result.fields.x = v15;
   return result;
 }
 
@@ -219,8 +225,7 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
   int32_t v22; // w5
   bool v23; // w6
   bool v24; // w7
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597430A & 1) == 0 )
   {
@@ -257,10 +262,10 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
           sub_2213CDC(transform, v15);
         }
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
-        v26.fields.x = position.fields.x + this->fields.addpos.fields.x;
-        v26.fields.y = position.fields.y + this->fields.addpos.fields.y;
-        v26.fields.z = position.fields.z + this->fields.addpos.fields.z;
-        v18 = AdjustPopupPosInScreenArgument__Init(adjustArg, v17, v26, 0);
+        position.fields.x = position.fields.x + this->fields.addpos.fields.x;
+        position.fields.y = position.fields.y + this->fields.addpos.fields.y;
+        position.fields.z = position.fields.z + this->fields.addpos.fields.z;
+        v18 = AdjustPopupPosInScreenArgument__Init(adjustArg, v17, position, 0);
         this->fields.adjustPosInScreenArg = v18;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.adjustPosInScreenArg,
@@ -305,21 +310,28 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
   UnityEngine_Camera_o *before; // x20
   const MethodInfo *v7; // x1
   float x; // s8
+  float y; // s10
   float z; // s9
   float aspect; // s0
-  float v11; // s11
-  float v12; // s0
+  float v12; // s11
+  float v13; // s0
   int32_t condition; // w8
-  float v14; // s10
+  float v15; // s10
   float conditionValue; // s14
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v17; // 0:kr20_12.12
-  UnityEngine_Vector3_o v18; // 0:kr34_12.12
-  UnityEngine_Vector3_o v19; // 0:kr40_12.12
-  UnityEngine_Vector3_o v20; // 0:kr54_12.12
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  float v17; // s11
+  float v18; // s12
+  float v19; // s13
+  float v20; // s8
+  float v21; // s9
+  float v22; // s10
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o AdjustedPosInScreen; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597430B & 1) == 0 )
   {
@@ -339,26 +351,27 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
       if ( transform )
       {
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
-        v21.fields.x = position.fields.x + this->fields.addpos.fields.x;
-        v21.fields.y = position.fields.y + this->fields.addpos.fields.y;
-        v21.fields.z = position.fields.z + this->fields.addpos.fields.z;
-        AdjustedPosInScreen = TrackingMoveCtCComponent__GetAdjustedPosInScreen(this, v21, v7);
+        position.fields.x = position.fields.x + this->fields.addpos.fields.x;
+        position.fields.y = position.fields.y + this->fields.addpos.fields.y;
+        position.fields.z = position.fields.z + this->fields.addpos.fields.z;
+        AdjustedPosInScreen = TrackingMoveCtCComponent__GetAdjustedPosInScreen(this, position, v7);
         if ( before )
         {
-          v17 = UnityEngine_Camera__WorldToViewportPoint_83198212(before, AdjustedPosInScreen, 0);
+          v25 = UnityEngine_Camera__WorldToViewportPoint_83198212(before, AdjustedPosInScreen, 0);
           transform = (UnityEngine_GameObject_o *)this->fields.before;
           if ( transform )
           {
-            x = v17.fields.x;
-            z = v17.fields.z;
+            x = v25.fields.x;
+            y = v25.fields.y;
+            z = v25.fields.z;
             aspect = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0);
             transform = (UnityEngine_GameObject_o *)this->fields.after;
             if ( transform )
             {
-              v11 = aspect;
-              v12 = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0);
+              v12 = aspect;
+              v13 = UnityEngine_Camera__get_aspect((UnityEngine_Camera_o *)transform, 0);
               condition = this->fields.offset2D.fields.condition;
-              v14 = (float)((float)((float)(v17.fields.y + -0.5) / v11) * v12) + 0.5;
+              v15 = (float)((float)((float)(y + -0.5) / v12) * v13) + 0.5;
               if ( condition == 1 )
                 goto LABEL_18;
               if ( condition == 2 )
@@ -372,44 +385,49 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
                                                           0);
                 if ( !transform )
                   goto LABEL_23;
-                v18 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
+                v26 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
                 transform = this->fields.targetObject;
                 if ( !transform )
                   goto LABEL_23;
+                v17 = v26.fields.x;
+                v18 = v26.fields.y;
+                v19 = v26.fields.z;
                 transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
                 if ( !transform )
                   goto LABEL_23;
-                v19 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
-                if ( (float)(conditionValue * conditionValue) < (float)((float)((float)(v18.fields.z - v19.fields.z)
-                                                                              * (float)(v18.fields.z - v19.fields.z))
-                                                                      + (float)((float)((float)(v18.fields.x
-                                                                                              - v19.fields.x)
-                                                                                      * (float)(v18.fields.x
-                                                                                              - v19.fields.x))
-                                                                              + (float)((float)(v18.fields.y
-                                                                                              - v19.fields.y)
-                                                                                      * (float)(v18.fields.y
-                                                                                              - v19.fields.y)))) )
+                v27 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
+                if ( (float)(conditionValue * conditionValue) < (float)((float)((float)(v19 - v27.fields.z)
+                                                                              * (float)(v19 - v27.fields.z))
+                                                                      + (float)((float)((float)(v17 - v27.fields.x)
+                                                                                      * (float)(v17 - v27.fields.x))
+                                                                              + (float)((float)(v18 - v27.fields.y)
+                                                                                      * (float)(v18 - v27.fields.y)))) )
                 {
 LABEL_18:
-                  z = v17.fields.z + this->fields.offset2D.fields.offset.fields.z;
-                  x = v17.fields.x + this->fields.offset2D.fields.offset.fields.x;
-                  v14 = v14 + this->fields.offset2D.fields.offset.fields.y;
+                  z = z + this->fields.offset2D.fields.offset.fields.z;
+                  x = x + this->fields.offset2D.fields.offset.fields.x;
+                  v15 = v15 + this->fields.offset2D.fields.offset.fields.y;
                 }
               }
               transform = (UnityEngine_GameObject_o *)this->fields.after;
               if ( transform )
               {
-                v22.fields.x = x;
-                v22.fields.y = v14;
-                v22.fields.z = z;
-                v20 = UnityEngine_Camera__ViewportToWorldPoint_83198220((UnityEngine_Camera_o *)transform, v22, 0);
+                v28.fields.x = x;
+                v28.fields.y = v15;
+                v28.fields.z = z;
+                v29 = UnityEngine_Camera__ViewportToWorldPoint_83198220((UnityEngine_Camera_o *)transform, v28, 0);
+                v20 = v29.fields.x;
+                v21 = v29.fields.y;
+                v22 = v29.fields.z;
                 transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                           (UnityEngine_Component_o *)this,
                                                           0);
                 if ( transform )
                 {
-                  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, v20, 0);
+                  v30.fields.x = v20;
+                  v30.fields.y = v21;
+                  v30.fields.z = v22;
+                  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)transform, v30, 0);
                   return;
                 }
               }

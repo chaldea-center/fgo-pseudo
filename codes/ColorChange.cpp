@@ -13,12 +13,20 @@ void ColorChange__Awake(ColorChange_o *this, const MethodInfo *method)
 
 UnityEngine_Color_o ColorChange__GetColor(ColorChange_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.mNowColor.fields.r;
-  result.fields.g = this->fields.mNowColor.fields.g;
-  result.fields.b = this->fields.mNowColor.fields.b;
-  result.fields.a = this->fields.mNowColor.fields.a;
+  r = this->fields.mNowColor.fields.r;
+  g = this->fields.mNowColor.fields.g;
+  b = this->fields.mNowColor.fields.b;
+  a = this->fields.mNowColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -179,6 +187,7 @@ void ColorChange__Stop(ColorChange_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
 {
   float mStartTime; // s8
@@ -186,25 +195,26 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
   const MethodInfo *v5; // x2
   float v6; // s0
   int32_t mEasingType; // w1
-  float v11; // s0
-  float v12; // s3
-  float v13; // s0
+  float r; // s4 OVERLAPPED
+  float g; // s5
+  float b; // s6
+  float a; // s7
+  float v12; // s0
+  float v13; // s3
+  float v14; // s0
+  float v15; // s2 OVERLAPPED
+  float v16; // s3
   float time; // s8
+  float v18; // s0
+  float v19; // s1
   struct System_Action_o *mProcessAct; // x8
   int32_t mCount; // w8
-  int32_t v20; // w9
+  int32_t v22; // w9
   struct System_Action_o *mEndAct; // x8
-  float v22; // s0
+  float v24; // s0
   int32_t mStyle; // w8
   struct UnityEngine_Color_o mFromColor; // q0
-  float r; // s0
-  float g; // s1
-  float b; // s2
-  float a; // s3
-  UnityEngine_Color_o v29; // 0:kr00_16.16
-  UnityEngine_Color_o v30; // 0:kr10_16.16
-  UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o mToColor; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( this->fields.mIsChangeColor && !this->fields.mPause )
   {
@@ -215,36 +225,32 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
     {
       v6 = UnityEngine_Time__get_time(0);
       mEasingType = this->fields.mEasingType;
-      mToColor = this->fields.mToColor;
-      v11 = (float)(v6 - (float)(this->fields.mStartTime + this->fields.mDelay)) / this->fields.mTime;
-      v12 = v11 <= 1.0 ? v11 : 1.0;
-      v13 = v11 >= 0.0 ? v12 : 0.0;
-      v31.fields.b = this->fields.mFromColor.fields.b;
-      v31.fields.a = this->fields.mFromColor.fields.a;
-      time = this->fields.mIsSkip ? 1.0 : v13;
-      v31.fields.r = this->fields.mFromColor.fields.r;
-      v31.fields.g = this->fields.mFromColor.fields.g;
-      if ( this->fields.mStyle == 1 )
-      {
-        v29 = ColorChange__PingPong(this, v31, mToColor, time, mEasingType, v5);
-        r = v29.fields.r;
-        g = v29.fields.g;
-        b = v29.fields.b;
-        a = v29.fields.a;
-      }
-      else
-      {
-        v30 = Easing__Func_56119096(v31, mToColor, time, mEasingType, 0);
-        r = v30.fields.r;
-        g = v30.fields.g;
-        b = v30.fields.b;
-        a = v30.fields.a;
-      }
-      this->fields.mNowColor.fields.r = r;
+      r = this->fields.mToColor.fields.r;
+      g = this->fields.mToColor.fields.g;
+      b = this->fields.mToColor.fields.b;
+      a = this->fields.mToColor.fields.a;
+      v12 = (float)(v6 - (float)(this->fields.mStartTime + this->fields.mDelay)) / this->fields.mTime;
+      v13 = v12 <= 1.0 ? v12 : 1.0;
+      v14 = v12 >= 0.0 ? v13 : 0.0;
+      v15 = this->fields.mFromColor.fields.b;
+      v16 = this->fields.mFromColor.fields.a;
+      time = this->fields.mIsSkip ? 1.0 : v14;
+      v18 = this->fields.mFromColor.fields.r;
+      v19 = this->fields.mFromColor.fields.g;
+      v27 = this->fields.mStyle == 1
+          ? ColorChange__PingPong(
+              this,
+              *(UnityEngine_Color_o *)(&v15 - 2),
+              *(UnityEngine_Color_o *)&r,
+              time,
+              mEasingType,
+              v5)
+          : Easing__Func_56119096(*(UnityEngine_Color_o *)(&v15 - 2), *(UnityEngine_Color_o *)&r, time, mEasingType, 0);
+      this->fields.mNowColor.fields.r = v27.fields.r;
       mProcessAct = this->fields.mProcessAct;
-      this->fields.mNowColor.fields.g = g;
-      this->fields.mNowColor.fields.b = b;
-      this->fields.mNowColor.fields.a = a;
+      this->fields.mNowColor.fields.g = v27.fields.g;
+      this->fields.mNowColor.fields.b = v27.fields.b;
+      this->fields.mNowColor.fields.a = v27.fields.a;
       if ( mProcessAct )
         ((void (__fastcall *)(intptr_t, intptr_t))mProcessAct->fields.invoke_impl)(
           mProcessAct->fields.method_code,
@@ -252,13 +258,13 @@ void ColorChange__Update(ColorChange_o *this, const MethodInfo *method)
       if ( time >= 1.0 )
       {
         mCount = this->fields.mCount;
-        v20 = this->fields.mNowCount + 1;
-        this->fields.mNowCount = v20;
-        if ( mCount > v20 || !mCount )
+        v22 = this->fields.mNowCount + 1;
+        this->fields.mNowCount = v22;
+        if ( mCount > v22 || !mCount )
         {
-          v22 = UnityEngine_Time__get_time(0);
+          v24 = UnityEngine_Time__get_time(0);
           mStyle = this->fields.mStyle;
-          this->fields.mStartTime = v22;
+          this->fields.mStartTime = v24;
           if ( mStyle == 1 )
           {
             mFromColor = this->fields.mFromColor;

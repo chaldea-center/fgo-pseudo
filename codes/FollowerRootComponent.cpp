@@ -692,6 +692,7 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification1(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FollowerRootComponent__EndTutorialFollowerGuideNotification2(
         FollowerRootComponent_o *this,
         const MethodInfo *method)
@@ -702,8 +703,12 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification2(
   bool IsUnderVista; // w22
   Il2CppObject *Instance; // x20
   System_Action_o *v8; // x21
-  UnityEngine_Vector2_o v10; // 0:s0.4,4:s1.4
-  UnityEngine_Rect_o v11; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  float v9; // s0 OVERLAPPED
+  float v10; // s3 OVERLAPPED
+  int v11; // s1
+  int v12; // s5
+  float v13; // s4
+  int v14; // s6
 
   if ( (byte_596AF74 & 1) == 0 )
   {
@@ -726,17 +731,23 @@ void FollowerRootComponent__EndTutorialFollowerGuideNotification2(
   if ( !Instance )
 LABEL_12:
     sub_2213CDC(tutorialMaskBase2, method);
-  v10.fields.x = -12.0;
-  v11.fields.m_XMin = -500.0;
+  v9 = -12.0;
+  v10 = -500.0;
   if ( IsUnderVista )
-    v10.fields.x = -20.0;
-  v10.fields.y = 100.0;
+    v9 = -20.0;
+  v11 = 1120403456;
   if ( !IsUnderVista )
-    v11.fields.m_XMin = -492.0;
-  v11.fields.m_Width = 1000.0;
-  v11.fields.m_YMin = -14.0;
-  v11.fields.m_Height = 150.0;
-  CommonUI__OpenTutorialArrowMark((CommonUI_o *)Instance, v10, 0.0, v11, v8, 0);
+    v10 = -492.0;
+  v12 = 1148846080;
+  v13 = -14.0;
+  v14 = 1125515264;
+  CommonUI__OpenTutorialArrowMark(
+    (CommonUI_o *)Instance,
+    *(UnityEngine_Vector2_o *)&v9,
+    0.0,
+    *(UnityEngine_Rect_o *)&v10,
+    v8,
+    0);
 }
 
 
@@ -3591,47 +3602,48 @@ void FollowerRootComponent__UpdateDeckInfomation(FollowerRootComponent_o *this, 
   __int64 v53; // x2
   __int64 v54; // x8
   int64_t currentCryptoKey; // x8
-  int32_t v56; // w1
-  struct BattleSetupInfo_o *v57; // x9
-  struct QuestRestrictionInfo_o *v58; // x9
+  System_Nullable_int__o v56; // x0
+  int32_t v57; // w1
+  struct BattleSetupInfo_o *v58; // x9
+  struct QuestRestrictionInfo_o *v59; // x9
   int32_t j; // w21
-  PartyOrganizationListViewItem_o *v60; // x0
-  PartyOrganizationListViewItem_o *v61; // x22
-  __int64 v62; // x2
+  PartyOrganizationListViewItem_o *v61; // x0
+  PartyOrganizationListViewItem_o *v62; // x22
+  __int64 v63; // x2
   struct UserServantEntity_o *userServantEntity; // x8
-  System_Int64_array *v64; // x23
+  System_Int64_array *v65; // x23
   int32_t InitPos_k__BackingField; // w24
-  __int128 v66; // q0
-  __int128 v67; // q1
-  int v68; // w8
-  int64_t v69; // x0
-  const MethodInfo *v70; // x3
-  System_Int64_array *v71; // x1
-  FollowerRootComponent_o *v72; // x0
-  const MethodInfo *v73; // x4
-  __int64 v74; // x2
+  __int128 v67; // q0
+  __int128 v68; // q1
+  int v69; // w8
+  int64_t v70; // x0
+  const MethodInfo *v71; // x3
+  System_Int64_array *v72; // x1
+  FollowerRootComponent_o *v73; // x0
+  const MethodInfo *v74; // x4
+  __int64 v75; // x2
   UserServantEntity_array *UserServantList; // x21
-  unsigned __int64 v76; // x22
+  unsigned __int64 v77; // x22
   UserServantEntity_o **m_Items; // x25
   struct DeckServant_o *deckInfo; // x8
   struct DeckServantData_array *svts; // x8
-  DeckServantData_o *v80; // x26
-  const MethodInfo *v81; // x3
-  System_Int64_array *v82; // x23
-  FollowerRootComponent_o *v83; // x0
-  const MethodInfo *v84; // x4
+  DeckServantData_o *v81; // x26
+  const MethodInfo *v82; // x3
+  System_Int64_array *v83; // x23
+  FollowerRootComponent_o *v84; // x0
+  const MethodInfo *v85; // x4
   int32_t k; // w20
-  BalanceConfig_c *v86; // x0
+  BalanceConfig_c *v87; // x0
   UserServantEntity_o *UserServant; // x0
-  UserServantEntity_o *v88; // x21
+  UserServantEntity_o *v89; // x21
   System_Int64_array *EquipList; // x0
-  FollowerRootComponent_o *v90; // x0
-  const MethodInfo *v91; // x4
-  struct BattleSetupInfo_o *v92; // x8
+  FollowerRootComponent_o *v91; // x0
+  const MethodInfo *v92; // x4
   struct BattleSetupInfo_o *v93; // x8
-  int32_t v94; // w8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v95; // [xsp+0h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v96; // [xsp+20h] [xbp-80h] BYREF
+  struct BattleSetupInfo_o *v94; // x8
+  int32_t v95; // w8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v96; // [xsp+0h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v97; // [xsp+20h] [xbp-80h] BYREF
   int32_t fpUpDuplicateSum[2]; // [xsp+40h] [xbp-60h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-58h] BYREF
 
@@ -3910,21 +3922,19 @@ LABEL_138:
       currentCryptoKey = *(_QWORD *)(v54 + 176);
       if ( currentCryptoKey )
       {
-        v56 = *(_DWORD *)(currentCryptoKey + 396);
-        v96.fields.currentCryptoKey = 0;
-        System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v96,
-          v56,
-          (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-        currentCryptoKey = v96.fields.currentCryptoKey;
+        v56 = (System_Nullable_int__o)&v97;
+        v57 = *(_DWORD *)(currentCryptoKey + 396);
+        v97.fields.currentCryptoKey = 0;
+        System_Nullable_int____ctor(v56, v57, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+        currentCryptoKey = v97.fields.currentCryptoKey;
       }
-      v57 = this->fields.battleSetupInfo;
-      if ( !v57 )
-        goto LABEL_137;
-      v58 = v57->fields.questRestrictionInfo;
+      v58 = this->fields.battleSetupInfo;
       if ( !v58 )
         goto LABEL_137;
-      if ( (_BYTE)currentCryptoKey && v58->fields.eventDeckNum == HIDWORD(currentCryptoKey) )
+      v59 = v58->fields.questRestrictionInfo;
+      if ( !v59 )
+        goto LABEL_137;
+      if ( (_BYTE)currentCryptoKey && v59->fields.eventDeckNum == HIDWORD(currentCryptoKey) )
       {
         for ( j = 0; ; ++j )
         {
@@ -3942,48 +3952,48 @@ LABEL_138:
           Instance = *(UserServantEntity_o **)&Instance->fields.limitCount.fields.fakeValue;
           if ( !Instance )
             goto LABEL_137;
-          v60 = PartyListViewItem__GetMember((PartyListViewItem_o *)Instance, j, 0);
-          if ( v60 )
+          v61 = PartyListViewItem__GetMember((PartyListViewItem_o *)Instance, j, 0);
+          if ( v61 )
           {
-            v61 = v60;
-            if ( v60->fields.userServantEntity )
+            v62 = v61;
+            if ( v61->fields.userServantEntity )
             {
-              Instance = (UserServantEntity_o *)PartyOrganizationListViewItem__GetEquipList(v60, 0);
-              userServantEntity = v61->fields.userServantEntity;
+              Instance = (UserServantEntity_o *)PartyOrganizationListViewItem__GetEquipList(v61, 0);
+              userServantEntity = v62->fields.userServantEntity;
               if ( !userServantEntity )
                 goto LABEL_137;
-              v64 = (System_Int64_array *)Instance;
-              InitPos_k__BackingField = v61->fields._InitPos_k__BackingField;
-              v66 = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
-              v67 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
-              v68 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
-              *(_OWORD *)&v96.fields.currentCryptoKey = v66;
-              *(_OWORD *)&v96.fields.fakeValue = v67;
-              if ( !v68 )
-                j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v4, v62);
-              v95 = v96;
-              v69 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v95, 0);
+              v65 = (System_Int64_array *)Instance;
+              InitPos_k__BackingField = v62->fields._InitPos_k__BackingField;
+              v67 = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
+              v68 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
+              v69 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
+              *(_OWORD *)&v97.fields.currentCryptoKey = v67;
+              *(_OWORD *)&v97.fields.fakeValue = v68;
+              if ( !v69 )
+                j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v4, v63);
+              v96 = v97;
+              v70 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v96, 0);
               Instance = (UserServantEntity_o *)FollowerRootComponent__GetEquipIdsForGrandSvt(
                                                   this,
                                                   InitPos_k__BackingField,
-                                                  v69,
-                                                  v70);
-              if ( !v61->fields.userServantEntity )
+                                                  v70,
+                                                  v71);
+              if ( !v62->fields.userServantEntity )
                 goto LABEL_137;
               if ( Instance )
-                v71 = (System_Int64_array *)Instance;
+                v72 = (System_Int64_array *)Instance;
               else
-                v71 = v64;
-              v72 = (FollowerRootComponent_o *)UserServantEntity__GetFriendPointUpTypeVals(
-                                                 v61->fields.userServantEntity,
-                                                 v71,
+                v72 = v65;
+              v73 = (FollowerRootComponent_o *)UserServantEntity__GetFriendPointUpTypeVals(
+                                                 v62->fields.userServantEntity,
+                                                 v72,
                                                  0);
               FollowerRootComponent__GetFriendPointUpValSummary(
-                v72,
+                v73,
                 &fpUpDuplicateSum[1],
                 fpUpDuplicateSum,
-                (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v72,
-                v73);
+                (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v73,
+                v74);
             }
           }
         }
@@ -3996,17 +4006,17 @@ LABEL_97:
         if ( fakeValue )
         {
           UserServantList = UserEventDeckEntity__GetUserServantList(fakeValue, 0, 0, 0);
-          v76 = 0;
+          v77 = 0;
           m_Items = UserServantList->m_Items;
           Instance = (UserServantEntity_o *)BalanceConfig_TypeInfo;
           while ( 1 )
           {
             if ( !Instance->fields.randomLimitCountSupport.fields.hiddenValue )
             {
-              j_il2cpp_runtime_class_init_0(Instance, v4, v74);
+              j_il2cpp_runtime_class_init_0(Instance, v4, v75);
               Instance = (UserServantEntity_o *)BalanceConfig_TypeInfo;
             }
-            if ( (__int64)v76 >= *(int *)(*(_QWORD *)&Instance->fields.portraitLimitCount.fields.fakeValue + 172LL) )
+            if ( (__int64)v77 >= *(int *)(*(_QWORD *)&Instance->fields.portraitLimitCount.fields.fakeValue + 172LL) )
               break;
             deckInfo = fakeValue->fields.deckInfo;
             if ( !deckInfo )
@@ -4014,49 +4024,49 @@ LABEL_97:
             svts = deckInfo->fields.svts;
             if ( !svts )
               goto LABEL_137;
-            if ( v76 >= LODWORD(svts->max_length) )
+            if ( v77 >= LODWORD(svts->max_length) )
               goto LABEL_138;
             if ( !UserServantList )
               goto LABEL_137;
-            if ( v76 >= LODWORD(UserServantList->max_length) )
+            if ( v77 >= LODWORD(UserServantList->max_length) )
               goto LABEL_138;
-            if ( m_Items[v76] )
+            if ( m_Items[v77] )
             {
-              v80 = svts->m_Items[v76];
-              Instance = (UserServantEntity_o *)UserEventDeckEntity__GetEquipList(fakeValue, v76, 0);
-              if ( !v80 )
+              v81 = svts->m_Items[v77];
+              Instance = (UserServantEntity_o *)UserEventDeckEntity__GetEquipList(fakeValue, v77, 0);
+              if ( !v81 )
                 goto LABEL_137;
-              v82 = (System_Int64_array *)Instance;
+              v83 = (System_Int64_array *)Instance;
               Instance = (UserServantEntity_o *)FollowerRootComponent__GetEquipIdsForGrandSvt(
                                                   this,
-                                                  v80->fields.initPos,
-                                                  v80->fields.userSvtId,
-                                                  v81);
+                                                  v81->fields.initPos,
+                                                  v81->fields.userSvtId,
+                                                  v82);
               if ( Instance )
                 v4 = (System_Int64_array *)Instance;
               else
-                v4 = v82;
-              if ( v76 >= LODWORD(UserServantList->max_length) )
+                v4 = v83;
+              if ( v77 >= LODWORD(UserServantList->max_length) )
                 goto LABEL_138;
-              Instance = m_Items[v76];
+              Instance = m_Items[v77];
               if ( !Instance )
                 goto LABEL_137;
-              v83 = (FollowerRootComponent_o *)UserServantEntity__GetFriendPointUpTypeVals(Instance, v4, 0);
+              v84 = (FollowerRootComponent_o *)UserServantEntity__GetFriendPointUpTypeVals(Instance, v4, 0);
               FollowerRootComponent__GetFriendPointUpValSummary(
-                v83,
+                v84,
                 &fpUpDuplicateSum[1],
                 fpUpDuplicateSum,
-                (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v83,
-                v84);
+                (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v84,
+                v85);
               Instance = (UserServantEntity_o *)BalanceConfig_TypeInfo;
             }
-            ++v76;
+            ++v77;
           }
 LABEL_127:
-          v92 = this->fields.battleSetupInfo;
-          if ( v92 )
+          v93 = this->fields.battleSetupInfo;
+          if ( v93 )
           {
-            Instance = (UserServantEntity_o *)v92->fields.questRestrictionInfo;
+            Instance = (UserServantEntity_o *)v93->fields.questRestrictionInfo;
             if ( Instance )
             {
               QuestRestrictionInfo__SetDeckInfo_50429080((QuestRestrictionInfo_o *)Instance, fakeValue, 0);
@@ -4067,10 +4077,10 @@ LABEL_137:
           sub_2213CDC(Instance, v4);
         }
       }
-      v93 = this->fields.battleSetupInfo;
-      if ( v93 )
+      v94 = this->fields.battleSetupInfo;
+      if ( v94 )
       {
-        Instance = (UserServantEntity_o *)v93->fields.questRestrictionInfo;
+        Instance = (UserServantEntity_o *)v94->fields.questRestrictionInfo;
         if ( Instance )
         {
           QuestRestrictionInfo__ResetDeckInfo((QuestRestrictionInfo_o *)Instance, 0);
@@ -4088,13 +4098,13 @@ LABEL_137:
   }
   for ( k = 0; ; ++k )
   {
-    v86 = BalanceConfig_TypeInfo;
+    v87 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v4, v29);
-      v86 = BalanceConfig_TypeInfo;
+      v87 = BalanceConfig_TypeInfo;
     }
-    if ( k >= v86->static_fields->DeckMemberMax )
+    if ( k >= v87->static_fields->DeckMemberMax )
       break;
     Instance = (UserServantEntity_o *)entity;
     if ( !entity )
@@ -4102,24 +4112,24 @@ LABEL_137:
     UserServant = UserDeckEntity__GetUserServant((UserDeckEntity_o *)entity, k, 0);
     if ( UserServant )
     {
-      v88 = UserServant;
+      v89 = UserServant;
       Instance = (UserServantEntity_o *)entity;
       if ( !entity )
         goto LABEL_137;
       EquipList = UserDeckEntity__GetEquipList((UserDeckEntity_o *)entity, k, 0);
-      v90 = (FollowerRootComponent_o *)UserServantEntity__GetFriendPointUpTypeVals(v88, EquipList, 0);
+      v91 = (FollowerRootComponent_o *)UserServantEntity__GetFriendPointUpTypeVals(v89, EquipList, 0);
       FollowerRootComponent__GetFriendPointUpValSummary(
-        v90,
+        v91,
         &fpUpDuplicateSum[1],
         fpUpDuplicateSum,
-        (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v90,
-        v91);
+        (System_Collections_Generic_List_ValueTuple_FuncList_TYPE__int___o *)v91,
+        v92);
     }
   }
 LABEL_133:
-  v94 = fpUpDuplicateSum[1];
+  v95 = fpUpDuplicateSum[1];
   this->fields.friendPointUpVal = fpUpDuplicateSum[0] + fpUpDuplicateSum[1];
-  this->fields.friendPointUpMaxVal = v94;
+  this->fields.friendPointUpMaxVal = v95;
 }
 
 

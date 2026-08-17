@@ -228,6 +228,7 @@ LABEL_8:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandServantListRootComponent__InstantiateAssetObject___Il2CppFullySharedGenericType_(
         GrandServantListRootComponent_o *this,
         System_String_o *objectName,
@@ -246,6 +247,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandServantListRootCompo
   __int64 *v16; // x1
   __int64 v17; // x0
   void (__fastcall *v18)(__int64, __int64 *, AssetData_o *, _QWORD *, _QWORD); // x8
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v19; // x0
+  void *v20; // x1
   _QWORD v21[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -295,10 +298,12 @@ LABEL_12:
   v18 = (void (__fastcall *)(__int64, __int64 *, AssetData_o *, _QWORD *, _QWORD))v16[2];
   v21[0] = (char *)v21 - ((v9 + 15) & 0x1FFFFFFF0LL);
   v18(v17, v16, v15, v21, v21[0]);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                             (void *)method,
-                                                                             (char *)v21 - ((v9 + 15) & 0x1FFFFFFF0LL),
-                                                                             v9);
+  v19 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    (void *)method,
+                                                                    (char *)v21 - ((v9 + 15) & 0x1FFFFFFF0LL),
+                                                                    v9);
+  result.monitor = v20;
+  result.klass = v19;
   return result;
 }
 
@@ -2424,6 +2429,7 @@ void GrandServantListRootComponent__OpenCannotSelectGrandDialog(
   Il2CppObject *v14; // x0
   System_String_o *v15; // x21
   Il2CppObject *Instance; // x22
+  System_Nullable_float__o p_messagePosY; // x0
   System_Nullable_float__o messagePosY; // [xsp+38h] [xbp-58h] BYREF
   int monitor; // [xsp+48h] [xbp-48h] BYREF
   int klass_high; // [xsp+4Ch] [xbp-44h] BYREF
@@ -2464,11 +2470,9 @@ void GrandServantListRootComponent__OpenCannotSelectGrandDialog(
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &monitor);
   v15 = System_String__Format_75697880(v12, v13, v14, 0);
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  p_messagePosY = (System_Nullable_float__o)&messagePosY;
   messagePosY = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&messagePosY,
-    26.0,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(p_messagePosY, 26.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   if ( !Instance )
 LABEL_11:
     sub_2213CDC(Master_object, v7);
@@ -4196,7 +4200,7 @@ int32_t GrandServantListRootComponent___c___OnSelectEditServant_b__29_4(
 LABEL_8:
     v7 = sub_224BC3C(g, System_Linq_IGrouping_int__SelectGrandServantInfo__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__SelectGrandServantInfo__o *, _QWORD))v7)(
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__SelectGrandServantInfo__o *, _QWORD))v7)(
            g,
            *(_QWORD *)(v7 + 8));
 }
@@ -4653,8 +4657,8 @@ void GrandServantListRootComponent___c__DisplayClass31_0___StartSelectGrandServa
   this = (GrandServantListRootComponent___c__DisplayClass31_0_o *)v3->fields.__4__this;
   if ( !this )
     goto LABEL_17;
-  *((_QWORD *)this + 22) = 0;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 176), 0, v10, v11, v12, v13, v14, v15);
+  this[3].fields.selectGrandServant = 0;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[3].fields.selectGrandServant, 0, v10, v11, v12, v13, v14, v15);
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v19 = AvalonSceneManager_TypeInfo;
   v20 = (CommonUI_o *)Instance;
@@ -4888,8 +4892,8 @@ void GrandServantListRootComponent___c__DisplayClass31_1___StartSelectGrandServa
   this = (GrandServantListRootComponent___c__DisplayClass31_1_o *)v18->fields.__4__this;
   if ( !this )
     goto LABEL_27;
-  *((_QWORD *)this + 22) = 0;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 176), 0, v12, v13, v14, v15, v16, v17);
+  this[4].fields.servantEntity = 0;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[4].fields, 0, v12, v13, v14, v15, v16, v17);
   v19 = v3->fields.CS___8__locals1;
   if ( !v19 )
     goto LABEL_27;

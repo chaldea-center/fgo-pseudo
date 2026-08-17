@@ -7830,6 +7830,7 @@ bool QuestRestrictionInfo__IsRestriction_50436644(
   int32_t type; // w8
   RestrictionEntity_o *v20; // x0
   int32_t v21; // w1
+  bool result; // w0
 
   *isWhole = 0;
   if ( !this->fields.restrictionBaseEntity )
@@ -7909,8 +7910,9 @@ LABEL_24:
     if ( (int)++v11 >= v9 )
       return 0;
   }
+  result = 1;
   *isWhole = 1;
-  return 1;
+  return result;
 }
 
 
@@ -9136,7 +9138,8 @@ bool QuestRestrictionInfo__IsUniqueServant_50439864(
   struct QuestRestrictionInfo_DeckSvtInfo_array *deckSvtInfoList; // x8
   QuestRestrictionInfo_DeckSvtInfo_o *v10; // x8
   int32_t baseSvtId; // w1
-  QuestRestrictionInfo_DeckSvtInfo_o *v13; // [xsp+8h] [xbp-38h] BYREF
+  System_Nullable_int__o v12; // x0
+  QuestRestrictionInfo_DeckSvtInfo_o *v14; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_5971C2A & 1) == 0 )
   {
@@ -9173,12 +9176,10 @@ bool QuestRestrictionInfo__IsUniqueServant_50439864(
       if ( v10 )
       {
         baseSvtId = v10->fields.baseSvtId;
-        v13 = 0;
-        System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v13,
-          baseSvtId,
-          (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-        v10 = v13;
+        v12 = (System_Nullable_int__o)&v14;
+        v14 = 0;
+        System_Nullable_int____ctor(v12, baseSvtId, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+        v10 = v14;
         v7 = BalanceConfig_TypeInfo;
       }
       ++v6;
@@ -14565,9 +14566,9 @@ System_Collections_Generic_IEnumerable_int__o *QuestRestrictionInfo___c___get_Gr
   if ( !this )
 LABEL_9:
     sub_2213CDC(this, entity);
-  if ( !*((_DWORD *)this + 6) )
+  if ( !LODWORD(this[1].monitor) )
     sub_2213CE4(this);
-  *((_DWORD *)this + 8) = 1;
+  LODWORD(this[2].klass) = 1;
   return (System_Collections_Generic_IEnumerable_int__o *)this;
 }
 

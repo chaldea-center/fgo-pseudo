@@ -272,26 +272,26 @@ void UserPresentBoxEventPointRewardDialog__Open(
   float v48; // s11
   float v49; // s10
   struct UILabel_o *v50; // x8
-  struct UILabel_o *v51; // x8
-  int v52; // w8
+  float mHeight; // s1
+  struct UILabel_o *v52; // x8
+  int v53; // w8
   UnityEngine_Object_o *messageLabel; // x21
-  __int64 v54; // x1
-  __int64 v55; // x2
-  UILabel_o *v56; // x21
-  System_String_o *v57; // x0
+  __int64 v55; // x1
+  __int64 v56; // x2
+  UILabel_o *v57; // x21
+  System_String_o *v58; // x0
   UnityEngine_Object_o *okBtnLabel; // x20
-  __int64 v59; // x1
-  __int64 v60; // x2
-  UILabel_o *v61; // x20
-  System_Action_c *v62; // x0
-  System_Action_o *v63; // x20
-  UnityEngine_Vector3_o size; // 0:kr00_12.12
+  __int64 v60; // x1
+  __int64 v61; // x2
+  UILabel_o *v62; // x20
+  System_Action_c *v63; // x0
+  System_Action_o *v64; // x20
+  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F47C & 1) == 0 )
   {
@@ -448,22 +448,32 @@ LABEL_87:
         if ( !Instance )
           goto LABEL_25;
         v48 = v43 * (float)MESSAGE_GAP;
-        v66.fields.y = 0.0;
+        v65.fields.y = 0.0;
         v49 = (float)(v43 * (float)(mWidth - v40)) * 0.5;
-        v66.fields.z = 0.0;
-        v66.fields.x = v49 - v48;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v66, 0);
+        v65.fields.z = 0.0;
+        v65.fields.x = v49 - v48;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v65, 0);
         Instance = this->fields.numLabel;
         if ( !Instance )
           goto LABEL_25;
         Instance = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
         if ( !Instance )
           goto LABEL_25;
-        v67.fields.x = v48 + v49;
-        v67.fields.y = 0.0;
-        v67.fields.z = 0.0;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v67, 0);
+        v66.fields.x = v48 + v49;
+        v66.fields.y = 0.0;
+        v66.fields.z = 0.0;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v66, 0);
         Instance = this->fields.itemLabel;
+        if ( !Instance )
+          goto LABEL_25;
+        Instance = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
+        if ( !Instance )
+          goto LABEL_25;
+        v67.fields.x = v43;
+        v67.fields.y = v43;
+        v67.fields.z = 1.0;
+        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v67, 0);
+        Instance = this->fields.numLabel;
         if ( !Instance )
           goto LABEL_25;
         Instance = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
@@ -473,16 +483,6 @@ LABEL_87:
         v68.fields.y = v43;
         v68.fields.z = 1.0;
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v68, 0);
-        Instance = this->fields.numLabel;
-        if ( !Instance )
-          goto LABEL_25;
-        Instance = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
-        if ( !Instance )
-          goto LABEL_25;
-        v69.fields.x = v43;
-        v69.fields.y = v43;
-        v69.fields.z = 1.0;
-        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v69, 0);
         Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         if ( !Instance )
           goto LABEL_25;
@@ -492,7 +492,7 @@ LABEL_87:
           Instance = this->fields.scrView;
           if ( !Instance )
             goto LABEL_25;
-          v52 = 4;
+          v53 = 4;
         }
         else
         {
@@ -500,32 +500,30 @@ LABEL_87:
           if ( !Instance )
             goto LABEL_25;
           size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)Instance, 0);
-          v71.fields.x = size.fields.x;
-          v71.fields.z = size.fields.z;
           v50 = this->fields.itemLabel;
           if ( !v50 )
             goto LABEL_25;
           Instance = this->fields.scrField;
           if ( !Instance )
             goto LABEL_25;
-          v71.fields.y = (float)v50->fields.mHeight;
-          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Instance, v71, 0);
-          v51 = this->fields.itemLabel;
-          if ( !v51 )
+          mHeight = (float)v50->fields.mHeight;
+          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Instance, size, 0);
+          v52 = this->fields.itemLabel;
+          if ( !v52 )
             goto LABEL_25;
           Instance = this->fields.scrField;
           if ( !Instance )
             goto LABEL_25;
           v70.fields.x = 0.0;
           v70.fields.z = 0.0;
-          v70.fields.y = vcvts_n_f32_s32(-v51->fields.mHeight, 1u);
+          v70.fields.y = vcvts_n_f32_s32(-v52->fields.mHeight, 1u);
           UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Instance, v70, 0);
           Instance = this->fields.scrView;
           if ( !Instance )
             goto LABEL_25;
-          v52 = 1;
+          v53 = 1;
         }
-        *((_DWORD *)Instance + 21) = v52;
+        *((_DWORD *)Instance + 21) = v53;
         UIScrollView__ResetPosition((UIScrollView_o *)Instance, 0);
         Instance = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         if ( !Instance )
@@ -539,37 +537,37 @@ LABEL_87:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18, v38);
   if ( UnityEngine_Object__op_Inequality(messageLabel, 0, 0) )
   {
-    v56 = this->fields.messageLabel;
+    v57 = this->fields.messageLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v54, v55);
-    v57 = LocalizationManager__Get((System_String_o *)StringLiteral_10841/*"PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE"*/, 0);
-    Instance = System_String__Format(v57, v23, 0);
-    if ( !v56 )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v55, v56);
+    v58 = LocalizationManager__Get((System_String_o *)StringLiteral_10841/*"PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE"*/, 0);
+    Instance = System_String__Format(v58, v23, 0);
+    if ( !v57 )
       goto LABEL_25;
-    UILabel__set_text(v56, (System_String_o *)Instance, 0);
+    UILabel__set_text(v57, (System_String_o *)Instance, 0);
   }
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v54, v55);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v55, v56);
   if ( UnityEngine_Object__op_Inequality(okBtnLabel, 0, 0) )
   {
-    v61 = this->fields.okBtnLabel;
+    v62 = this->fields.okBtnLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v59, v60);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v60, v61);
     Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COMMON_CONFIRM_CLOSE"*/, 0);
-    if ( v61 )
+    if ( v62 )
     {
-      UILabel__set_text(v61, (System_String_o *)Instance, 0);
+      UILabel__set_text(v62, (System_String_o *)Instance, 0);
       goto LABEL_86;
     }
     goto LABEL_25;
   }
 LABEL_86:
-  v62 = System_Action_TypeInfo;
+  v63 = System_Action_TypeInfo;
   this->fields.isButtonEnable = 0;
-  v63 = (System_Action_o *)sub_2213CCC(v62);
-  System_Action___ctor(v63, (Il2CppObject *)this, Method_UserPresentBoxEventPointRewardDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v63, 0, 0, 0);
+  v64 = (System_Action_o *)sub_2213CCC(v63);
+  System_Action___ctor(v64, (Il2CppObject *)this, Method_UserPresentBoxEventPointRewardDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v64, 0, 0, 0);
 }
 
 
@@ -639,7 +637,7 @@ System_IAsyncResult_o *UserPresentBoxEventPointRewardDialog_ClickDelegate__Begin
   v10[0] = isOk;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

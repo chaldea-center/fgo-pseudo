@@ -1216,7 +1216,7 @@ System_String_o *ServantLimitAddEntity___c___GetScriptStringArrayParam_b__21_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
-           x,
-           x->klass->vtable[3].method);
+  return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
+                              x,
+                              x->klass->vtable[3].method);
 }

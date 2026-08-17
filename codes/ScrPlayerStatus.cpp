@@ -122,7 +122,7 @@ void ScrPlayerStatus__Awake(ScrPlayerStatus_o *this, const MethodInfo *method)
   const MethodInfo *v9; // x2
   const MethodInfo *v10; // x2
   const MethodInfo *v11; // x1
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
   nextExpDialog = this->fields.nextExpDialog;
@@ -1025,29 +1025,33 @@ void ScrPlayerStatus__FrameInOut(ScrPlayerStatus_o *this, bool is_framein, bool 
   ScrPlayerStatus_c *v23; // x0
   float MV_SPD_TIME; // s8
   float IntpTime_AutoResume; // s12
-  UnityEngine_GameObject_o *v26; // x21
-  float v27; // s0
-  float y; // s1
-  float z; // s2
-  float v30; // s3
-  float v31; // s4
-  float v32; // s0
-  UnityEngine_GameObject_o *v33; // x0
-  System_String_o *v34; // x2
-  System_String_o *v35; // x3
-  int32_t v36; // w4
-  int32_t v37; // w5
-  bool v38; // w6
-  bool v39; // w7
-  int32_t v40; // w1
-  System_String_o *v41; // x2
-  System_String_o *v42; // x3
-  int32_t v43; // w4
-  int32_t v44; // w5
-  bool v45; // w6
-  bool v46; // w7
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v48; // 0:kr14_12.12
+  float y; // s9
+  float z; // s8
+  float v28; // s10
+  float v29; // s11
+  UnityEngine_GameObject_o *v30; // x21
+  float v31; // s0
+  float v32; // s1
+  float v33; // s2
+  float v34; // s3
+  float v35; // s4
+  float v36; // s0
+  UnityEngine_GameObject_o *v37; // x0
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  int32_t v44; // w1
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
+  int32_t v48; // w5
+  bool v49; // w6
+  bool v50; // w7
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D6A6 & 1) == 0 )
   {
@@ -1087,51 +1091,55 @@ void ScrPlayerStatus__FrameInOut(ScrPlayerStatus_o *this, bool is_framein, bool 
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v8, v16);
     IntpTime_AutoResume = TerminalPramsManager__GetIntpTime_AutoResume(MV_SPD_TIME, 0);
     LocalPosition = GameObjectExtensions__GetLocalPosition(v12, 0);
-    v48 = GameObjectExtensions__GetLocalPosition(v12, 0);
+    y = LocalPosition.fields.y;
+    z = LocalPosition.fields.z;
+    v52 = GameObjectExtensions__GetLocalPosition(v12, 0);
+    v28 = v52.fields.y;
+    v29 = v52.fields.z;
     gameObject = (UnityEngine_GameObject_o *)UITweener__Begin_object_(
                                                v12,
                                                IntpTime_AutoResume,
                                                (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
     if ( gameObject )
     {
-      v26 = gameObject;
+      v30 = gameObject;
       if ( is_framein )
-        v27 = FRAME_OUT_POS_X;
+        v31 = FRAME_OUT_POS_X;
       else
-        v27 = mFrameInPosX;
+        v31 = mFrameInPosX;
       if ( is_framein )
-        y = v48.fields.y;
+        v32 = v28;
       else
-        y = LocalPosition.fields.y;
+        v32 = y;
       if ( is_framein )
-        z = v48.fields.z;
+        v33 = v29;
       else
-        z = LocalPosition.fields.z;
+        v33 = z;
       if ( is_framein )
-        v30 = mFrameInPosX;
+        v34 = mFrameInPosX;
       else
-        v30 = FRAME_OUT_POS_X;
+        v34 = FRAME_OUT_POS_X;
       if ( is_framein )
-        v31 = LocalPosition.fields.y;
+        v35 = y;
       else
-        v31 = v48.fields.y;
+        v35 = v28;
       LODWORD(gameObject[1].monitor) = 2;
-      *(float *)&gameObject[5].monitor = v27;
-      *((float *)&gameObject[5].monitor + 1) = y;
+      *(float *)&gameObject[5].monitor = v31;
+      *((float *)&gameObject[5].monitor + 1) = v32;
       if ( is_framein )
-        v32 = LocalPosition.fields.z;
+        v36 = z;
       else
-        v32 = v48.fields.z;
-      *(float *)&gameObject[5].fields.m_CachedPtr = z;
-      *((float *)&gameObject[5].fields.m_CachedPtr + 1) = v30;
-      *(float *)&gameObject[6].klass = v31;
-      *((float *)&gameObject[6].klass + 1) = v32;
-      v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      v26[3].monitor = v33;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[3].monitor, (int32_t)v33, v34, v35, v36, v37, v38, v39);
-      v40 = StringLiteral_7147/*"FrameInOutEnd"*/;
-      v26[3].fields.m_CachedPtr = StringLiteral_7147/*"FrameInOutEnd"*/;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v26[3].fields, v40, v41, v42, v43, v44, v45, v46);
+        v36 = v29;
+      *(float *)&gameObject[5].fields.m_CachedPtr = v33;
+      *((float *)&gameObject[5].fields.m_CachedPtr + 1) = v34;
+      *(float *)&gameObject[6].klass = v35;
+      *((float *)&gameObject[6].klass + 1) = v36;
+      v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v30[3].monitor = v37;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30[3].monitor, (int32_t)v37, v38, v39, v40, v41, v42, v43);
+      v44 = StringLiteral_7147/*"FrameInOutEnd"*/;
+      v30[3].fields.m_CachedPtr = StringLiteral_7147/*"FrameInOutEnd"*/;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30[3].fields, v44, v45, v46, v47, v48, v49, v50);
       return;
     }
 LABEL_42:
@@ -3720,25 +3728,26 @@ void ScrPlayerStatus__SetAllParam(ScrPlayerStatus_o *this, UserGameEntity_o *ent
   __int64 v7; // x2
   Il2CppType *v8; // x22
   int64_t v9; // x21
+  System_RuntimeTypeHandle_o v10; // x0
   System_Type_o *TypeFromHandle; // x0
-  __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v12; // x1
+  __int64 v13; // x2
   int32_t genderType; // w22
-  System_Type_o *v14; // x23
-  __int64 v15; // x2
-  __int64 v16; // x3
-  int32_t v17; // w8
+  System_Type_o *v15; // x23
+  __int64 v16; // x2
+  __int64 v17; // x3
+  int32_t v18; // w8
   int32_t Act; // w0
   int32_t actMax; // w8
-  float v20; // s0
+  float v21; // s0
   int32_t CommandSpell; // w20
   int32_t Value; // w0
-  const MethodInfo *v23; // x3
-  const MethodInfo *v24; // x1
-  ScrPlayerStatus_o *v25; // x0
-  int64_t v26; // x1
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
+  const MethodInfo *v24; // x3
+  const MethodInfo *v25; // x1
+  ScrPlayerStatus_o *v26; // x0
+  int64_t v27; // x1
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
   int64_t exp; // [xsp+8h] [xbp-38h] BYREF
 
   v4 = this;
@@ -3758,23 +3767,24 @@ void ScrPlayerStatus__SetAllParam(ScrPlayerStatus_o *this, UserGameEntity_o *ent
   v9 = ActiveUserEquipId;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v6, v7);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v8, 0);
+  v10.fields.value = (intptr_t)v8;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v10, 0);
   genderType = entity->fields.genderType;
-  v14 = TypeFromHandle;
+  v15 = TypeFromHandle;
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v11, v12);
-  this = (ScrPlayerStatus_o *)System_Enum__ToObject_77364592(v14, genderType, 0);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v12, v13);
+  this = (ScrPlayerStatus_o *)System_Enum__ToObject_77364592(v15, genderType, 0);
   if ( !this )
 LABEL_17:
     sub_2213CDC(this, entity);
   if ( this->klass->_1.element_class == Gender_Type_TypeInfo->_1.element_class )
   {
-    v17 = *(_DWORD *)j_il2cpp_object_unbox_0(this, Gender_Type_TypeInfo, v15, v16);
-    if ( v4->fields.miMasterUserEquipID != v9 || v4->fields.meMasterGender != v17 )
+    v18 = *(_DWORD *)j_il2cpp_object_unbox_0(this, Gender_Type_TypeInfo, v16, v17);
+    if ( v4->fields.miMasterUserEquipID != v9 || v4->fields.meMasterGender != v18 )
     {
       v4->fields.miMasterUserEquipID = v9;
       v4->fields.isUpdateFaceTexture = 1;
-      v4->fields.meMasterGender = v17;
+      v4->fields.meMasterGender = v18;
     }
     UserGameEntity__getExpInfo(entity, &exp, &v4->fields.nextExpVal, &v4->fields.mfExpPar, 0);
     Act = UserGameEntity__getAct(entity, 0);
@@ -3782,19 +3792,19 @@ LABEL_17:
     v4->fields.miApNow = Act;
     v4->fields.miApMax = actMax;
     if ( Act < 1 )
-      v20 = 0.0;
+      v21 = 0.0;
     else
-      v20 = (float)Act / (float)actMax;
-    v4->fields.mfApPar = v20;
+      v21 = (float)Act / (float)actMax;
+    v4->fields.mfApPar = v21;
     CommandSpell = UserGameEntity__getCommandSpell(entity, 0);
     Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8971/*"MAX_COMMAND_SPELL"*/, 0);
-    ScrPlayerStatus__mfSetSpell(v4, CommandSpell, Value, v23);
-    ScrPlayerStatus__mfSetStoneAndFragment(v4, v24);
+    ScrPlayerStatus__mfSetSpell(v4, CommandSpell, Value, v24);
+    ScrPlayerStatus__mfSetStoneAndFragment(v4, v25);
   }
   else
   {
-    sub_221405C(this, Gender_Type_TypeInfo, v15, v16);
-    ScrPlayerStatus__mfSetFaceID(v25, v26, v27, v28);
+    sub_221405C(this, Gender_Type_TypeInfo, v16, v17);
+    ScrPlayerStatus__mfSetFaceID(v26, v27, v28, v29);
   }
 }
 
@@ -3803,19 +3813,22 @@ LABEL_17:
 void ScrPlayerStatus__SetApRecoverBtnEnable(ScrPlayerStatus_o *this, bool is_enable, const MethodInfo *method)
 {
   UIWidget_o *mApRecoverBtnSp; // x0
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s0 OVERLAPPED
+  float v6; // s3
+  float v7; // s1
+  float v8; // s2
 
   mApRecoverBtnSp = (UIWidget_o *)this->fields.mApRecoverBtnSp;
   this->fields.mIsEnableApRecoverBtn = is_enable;
   if ( !mApRecoverBtnSp )
     sub_2213CDC(0, is_enable);
-  v6.fields.r = 0.5;
-  v6.fields.a = 1.0;
+  v5 = 0.5;
+  v6 = 1.0;
   if ( is_enable )
-    v6.fields.r = 1.0;
-  v6.fields.g = v6.fields.r;
-  v6.fields.b = v6.fields.r;
-  UIWidget__set_color(mApRecoverBtnSp, v6, 0);
+    v5 = 1.0;
+  v7 = v5;
+  v8 = v5;
+  UIWidget__set_color(mApRecoverBtnSp, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 
@@ -4171,19 +4184,22 @@ void ScrPlayerStatus__SetRecoverAct(ScrPlayerStatus_o *this, System_Action_o *ac
 void ScrPlayerStatus__SetRpRecoverBtnEnable(ScrPlayerStatus_o *this, bool is_enable, const MethodInfo *method)
 {
   UIWidget_o *mRpRecoverBtnSp; // x0
-  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s0 OVERLAPPED
+  float v6; // s3
+  float v7; // s1
+  float v8; // s2
 
   mRpRecoverBtnSp = (UIWidget_o *)this->fields.mRpRecoverBtnSp;
   this->fields.mIsEnableRpRecoverBtn = is_enable;
   if ( !mRpRecoverBtnSp )
     sub_2213CDC(0, is_enable);
-  v6.fields.r = 0.5;
-  v6.fields.a = 1.0;
+  v5 = 0.5;
+  v6 = 1.0;
   if ( is_enable )
-    v6.fields.r = 1.0;
-  v6.fields.g = v6.fields.r;
-  v6.fields.b = v6.fields.r;
-  UIWidget__set_color(mRpRecoverBtnSp, v6, 0);
+    v5 = 1.0;
+  v7 = v5;
+  v8 = v5;
+  UIWidget__set_color(mRpRecoverBtnSp, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 

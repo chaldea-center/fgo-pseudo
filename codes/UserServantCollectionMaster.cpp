@@ -153,10 +153,10 @@ LABEL_16:
             System_Collections_Generic_IReadOnlyDictionary_string__UserServantCollectionEntity__TypeInfo,
             2);
   }
-  return (*(UserServantCollectionEntity_o *(__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
-           v16,
-           PK,
-           *(_QWORD *)(v19 + 8));
+  return (UserServantCollectionEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
+                                            v16,
+                                            PK,
+                                            *(_QWORD *)(v19 + 8));
 }
 
 

@@ -120,7 +120,7 @@ void DeckListViewItemDraw__SetItem_40736472(
         goto LABEL_20;
       v10 = v6->fields.memberObjectList;
       item = (PartyListViewItem_o *)this;
-      if ( *((_BYTE *)this + 136) )
+      if ( LOBYTE(this[1].fields.deckNumLabel) )
       {
         if ( !v10 )
           goto LABEL_20;

@@ -311,7 +311,7 @@ bool ShopBuyItemConfirmMenu__GetIsBuyable(
   __int64 v19; // x22
   int basePanel; // w24
   __int64 v21; // x2
-  int32_t v22; // w19
+  int v22; // w19
   int32_t m_CancellationTokenSource; // w20
   BalanceConfig_c *v24; // x8
   int32_t PresentBoxMax; // w9
@@ -326,7 +326,7 @@ bool ShopBuyItemConfirmMenu__GetIsBuyable(
   System_Int64_array *v34; // x23
   int32_t questId; // [xsp+Ch] [xbp-54h] BYREF
   int32_t recordNum[2]; // [xsp+10h] [xbp-50h] BYREF
-  __int64 buyCmdCodeNum; // [xsp+18h] [xbp-48h] BYREF
+  int32_t buyCmdCodeNum[2]; // [xsp+18h] [xbp-48h] BYREF
   int32_t buyServantNum[2]; // [xsp+28h] [xbp-38h] BYREF
 
   v8 = this;
@@ -341,7 +341,7 @@ bool ShopBuyItemConfirmMenu__GetIsBuyable(
   }
   *(_QWORD *)buyServantNum = 0;
   *(_QWORD *)recordNum = 0;
-  buyCmdCodeNum = 0;
+  *(_QWORD *)buyCmdCodeNum = 0;
   questId = 0;
   if ( !shopEntity )
     goto LABEL_85;
@@ -439,17 +439,17 @@ LABEL_23:
 LABEL_45:
             *(_QWORD *)buyServantNum = 0;
             *(_QWORD *)recordNum = 0;
-            buyCmdCodeNum = 0;
+            *(_QWORD *)buyCmdCodeNum = 0;
             ShopEntity__GetSum(
               shopEntity,
               &buyServantNum[1],
               buyServantNum,
-              (int32_t *)&buyCmdCodeNum + 1,
-              (int32_t *)&buyCmdCodeNum,
+              &buyCmdCodeNum[1],
+              buyCmdCodeNum,
               &recordNum[1],
               recordNum,
               0);
-            if ( HIDWORD(buyCmdCodeNum) + buyServantNum[0] + (int)buyCmdCodeNum >= 1 )
+            if ( buyCmdCodeNum[1] + buyServantNum[0] + buyCmdCodeNum[0] >= 1 )
             {
               this = (ShopBuyItemConfirmMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !this )
@@ -470,7 +470,7 @@ LABEL_45:
               if ( shopEntity->fields.purchaseType == 5 )
                 v22 = recordNum[0];
               else
-                v22 = HIDWORD(buyCmdCodeNum) + buyServantNum[0] + buyCmdCodeNum;
+                v22 = buyCmdCodeNum[1] + buyServantNum[0] + buyCmdCodeNum[0];
               m_CancellationTokenSource = (int32_t)this->fields.m_CancellationTokenSource;
               v24 = BalanceConfig_TypeInfo;
               if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -4763,7 +4763,7 @@ void ShopBuyItemConfirmMenu__SetWarningLabel(
   Il2CppObject *entity; // [xsp+10h] [xbp-90h] BYREF
   int32_t recordNum; // [xsp+1Ch] [xbp-84h] BYREF
   int32_t buyQuestNum[2]; // [xsp+20h] [xbp-80h] BYREF
-  __int64 buyServantEquipNum; // [xsp+28h] [xbp-78h] BYREF
+  int32_t buyServantEquipNum[2]; // [xsp+28h] [xbp-78h] BYREF
   ShopResetEntity_o *v156; // [xsp+30h] [xbp-70h] BYREF
   System_Int32_array *possessionAnotherItemId; // [xsp+38h] [xbp-68h] BYREF
   int32_t questId[2]; // [xsp+48h] [xbp-58h] BYREF
@@ -4820,7 +4820,7 @@ void ShopBuyItemConfirmMenu__SetWarningLabel(
   possessionAnotherItemId = 0;
   v11 = *(&BalanceConfig_TypeInfo->_2.cctor_finished + 1);
   *(_QWORD *)buyQuestNum = 0;
-  buyServantEquipNum = 0;
+  *(_QWORD *)buyServantEquipNum = 0;
   recordNum = 0;
   entity = 0;
   if ( !v11 )
@@ -5377,18 +5377,18 @@ LABEL_140:
 LABEL_214:
   questId[0] = 0;
   *(_QWORD *)buyQuestNum = 0;
-  buyServantEquipNum = 0;
+  *(_QWORD *)buyServantEquipNum = 0;
   recordNum = 0;
   ShopEntity__GetSum(
     shopEntity,
     questId,
-    (int32_t *)&buyServantEquipNum + 1,
-    (int32_t *)&buyServantEquipNum,
+    &buyServantEquipNum[1],
+    buyServantEquipNum,
     &buyQuestNum[1],
     buyQuestNum,
     &recordNum,
     0);
-  if ( (int)buyServantEquipNum + HIDWORD(buyServantEquipNum) + buyQuestNum[1] >= 1 )
+  if ( buyServantEquipNum[0] + buyServantEquipNum[1] + buyQuestNum[1] >= 1 )
   {
     gameObject = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !gameObject )
@@ -5409,7 +5409,7 @@ LABEL_214:
     if ( shopEntity->fields.purchaseType == 5 )
       v135 = recordNum;
     else
-      v135 = buyServantEquipNum + HIDWORD(buyServantEquipNum) + buyQuestNum[1];
+      v135 = buyServantEquipNum[0] + buyServantEquipNum[1] + buyQuestNum[1];
     v136 = BalanceConfig_TypeInfo;
     v137 = *(_DWORD *)(gameObject + 24);
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )

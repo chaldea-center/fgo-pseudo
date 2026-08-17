@@ -61,12 +61,20 @@ UnityEngine_Color_o QuestBoardRewardIcon_RewardIconArgs__get_Color(
         QuestBoardRewardIcon_RewardIconArgs_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._Color_k__BackingField.fields.r;
-  result.fields.g = this->fields._Color_k__BackingField.fields.g;
-  result.fields.b = this->fields._Color_k__BackingField.fields.b;
-  result.fields.a = this->fields._Color_k__BackingField.fields.a;
+  r = this->fields._Color_k__BackingField.fields.r;
+  g = this->fields._Color_k__BackingField.fields.g;
+  b = this->fields._Color_k__BackingField.fields.b;
+  a = this->fields._Color_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -327,15 +335,23 @@ UnityEngine_Color_o QuestBoardRewardIcon_RewardIconInfo__get_Color(
         const MethodInfo *method)
 {
   struct QuestBoardRewardIcon_RewardIconArgs_o *args; // x8
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   args = this->fields.args;
   if ( !args )
     sub_2213CDC(this, method);
-  result.fields.r = args->fields._Color_k__BackingField.fields.r;
-  result.fields.g = args->fields._Color_k__BackingField.fields.g;
-  result.fields.b = args->fields._Color_k__BackingField.fields.b;
-  result.fields.a = args->fields._Color_k__BackingField.fields.a;
+  r = args->fields._Color_k__BackingField.fields.r;
+  g = args->fields._Color_k__BackingField.fields.g;
+  b = args->fields._Color_k__BackingField.fields.b;
+  a = args->fields._Color_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

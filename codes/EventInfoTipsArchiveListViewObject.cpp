@@ -55,7 +55,7 @@ int32_t EventInfoTipsArchiveListViewObject__GetKind(
   v5 = this->fields.itemDraw;
   if ( !v5 )
     sub_2213CDC(0, v4);
-  return ((int32_t (__fastcall *)(struct EventInfoTipsArchiveListViewItemDraw_o *, const MethodInfo *))v5->klass->vtable._4_GetKind.methodPtr)(
+  return ((__int64 (__fastcall *)(struct EventInfoTipsArchiveListViewItemDraw_o *, const MethodInfo *))v5->klass->vtable._4_GetKind.methodPtr)(
            v5,
            v5->klass->vtable._4_GetKind.method);
 }
@@ -578,15 +578,21 @@ UnityEngine_Vector3_o EventInfoTipsArchiveListViewObject__get_BottomPosition(
   float y; // s10
   float z; // s9
   int32_t Size; // w0
+  float v6; // s2
+  float v7; // s1
+  float v8; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   x = this->fields.basePosition.fields.x;
   y = this->fields.basePosition.fields.y;
   z = this->fields.basePosition.fields.z;
   Size = EventInfoTipsArchiveListViewObject__GetSize(this, method);
-  result.fields.z = z;
-  result.fields.y = y + (float)((float)Size * -0.5);
-  result.fields.x = x;
+  v6 = z;
+  v7 = y + (float)((float)Size * -0.5);
+  v8 = x;
+  result.fields.z = v6;
+  result.fields.y = v7;
+  result.fields.x = v8;
   return result;
 }
 

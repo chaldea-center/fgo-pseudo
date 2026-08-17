@@ -447,6 +447,7 @@ bool EventHappinessCounterUpdateAction__CountUpAnim_d__20__MoveNext(
   int nowPoint_5__2; // w8
   UILabel_o *happinessPointLabel; // x19
   Il2CppObject *v11; // x0
+  bool result; // w0
   float v13; // s0
   float v14; // s8
   double v15; // d0
@@ -570,8 +571,9 @@ LABEL_27:
   v2->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, 0, v26, v27, v28, v29, v30, v31);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

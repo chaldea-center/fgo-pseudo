@@ -946,52 +946,55 @@ void WaveBattlePartyOrganizationMenu__Open(
   int32_t v22; // w5
   bool v23; // w6
   bool v24; // w7
-  bool v25; // w25
-  bool v26; // w1
-  System_String_o *v27; // x2
-  System_String_o *v28; // x3
-  int32_t v29; // w4
-  int32_t v30; // w5
-  bool v31; // w6
-  bool v32; // w7
+  float y; // s8
+  float z; // s9
+  float v27; // s10
+  float v28; // s11
+  bool v29; // w25
+  bool v30; // w1
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
   WaveBattleWaveInfoListManager_o *waveInfoListManager; // x24
-  WaveBattleWaveInfoListManager_CallbackFunc_o *v34; // x26
-  const MethodInfo *v35; // x3
-  const MethodInfo *v36; // x2
+  WaveBattleWaveInfoListManager_CallbackFunc_o *v38; // x26
+  const MethodInfo *v39; // x3
+  const MethodInfo *v40; // x2
   struct DeckServant_o *deckInfo; // x8
-  __int64 v38; // x1
-  __int64 v39; // x2
-  UISprite_o *classInfoSpriteOrganization; // x20
-  const MethodInfo *v41; // x2
-  bool IsHintDialog; // w8
+  __int64 v42; // x1
   __int64 v43; // x2
-  struct QuestRestrictionInfo_o *v44; // x8
-  int32_t questId; // w20
-  int32_t questPhase; // w21
+  UISprite_o *classInfoSpriteOrganization; // x20
+  const MethodInfo *v45; // x2
+  bool IsHintDialog; // w8
   __int64 v47; // x2
   struct QuestRestrictionInfo_o *v48; // x8
-  int32_t v49; // w20
-  int32_t v50; // w21
+  int32_t questId; // w20
+  int32_t questPhase; // w21
   __int64 v51; // x2
   struct QuestRestrictionInfo_o *v52; // x8
   int32_t v53; // w20
   int32_t v54; // w21
-  __int64 v55; // x1
-  __int64 v56; // x2
+  __int64 v55; // x2
+  struct QuestRestrictionInfo_o *v56; // x8
+  int32_t v57; // w20
+  int32_t v58; // w21
+  __int64 v59; // x1
+  __int64 v60; // x2
   UISprite_o *applyInterruptionDeckSprite; // x20
-  const MethodInfo *v58; // x1
-  System_Action_o *v59; // x20
-  int32_t v60; // w20
-  int32_t v61; // w21
-  struct QuestRestrictionInfo_o *v62; // x8
-  const MethodInfo *v63; // [xsp+0h] [xbp-80h]
+  const MethodInfo *v62; // x1
+  System_Action_o *v63; // x20
+  int32_t v64; // w20
+  int32_t v65; // w21
+  struct QuestRestrictionInfo_o *v66; // x8
+  const MethodInfo *v67; // [xsp+0h] [xbp-80h]
   bool isEvery; // [xsp+Ch] [xbp-74h] BYREF
   QuestPhaseEntity_o *entity; // [xsp+38h] [xbp-48h] BYREF
-  UnityEngine_Vector3_o center; // 0:kr00_12.12
-  UnityEngine_Vector3_o size; // 0:kr14_12.12
-  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o center; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596C39A & 1) == 0 )
   {
@@ -1060,17 +1063,21 @@ void WaveBattlePartyOrganizationMenu__Open(
         if ( !Component_object )
           goto LABEL_76;
         center = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
+        y = center.fields.y;
+        z = center.fields.z;
         size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)Component_object, 0);
-        v68.fields.y = center.fields.y;
-        v68.fields.z = center.fields.z;
-        v68.fields.x = 200.0;
-        UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, v68, 0);
-        v69.fields.y = size.fields.y;
-        v69.fields.z = size.fields.z;
-        v69.fields.x = 540.0;
-        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v69, 0);
+        v27 = size.fields.y;
+        v28 = size.fields.z;
+        size.fields.y = y;
+        size.fields.z = z;
+        size.fields.x = 200.0;
+        UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, size, 0);
+        v72.fields.y = v27;
+        v72.fields.z = v28;
+        v72.fields.x = 540.0;
+        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v72, 0);
       }
-      v25 = 1;
+      v29 = 1;
       goto LABEL_31;
     }
     if ( entity && QuestPhaseEntity__IsWaveSetupSwitchParty(entity, 0) )
@@ -1087,7 +1094,7 @@ void WaveBattlePartyOrganizationMenu__Open(
       Master_object = (QuestPhaseMaster_o *)this->fields.separateView;
       if ( !Master_object )
         goto LABEL_76;
-      v26 = 1;
+      v30 = 1;
     }
     else
     {
@@ -1103,10 +1110,10 @@ LABEL_26:
       Master_object = (QuestPhaseMaster_o *)this->fields.separateView;
       if ( !Master_object )
         goto LABEL_76;
-      v26 = 0;
+      v30 = 0;
     }
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v26, 0);
-    v25 = 0;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v30, 0);
+    v29 = 0;
 LABEL_31:
     this->fields.questRestrictionInfo = questRestrictionInfo;
     sub_2213A04(
@@ -1122,19 +1129,19 @@ LABEL_31:
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
-      v27,
-      v28,
-      v29,
-      v30,
       v31,
-      v32);
-    waveInfoListManager = this->fields.waveInfoListManager;
-    v34 = (WaveBattleWaveInfoListManager_CallbackFunc_o *)sub_2213CCC(WaveBattleWaveInfoListManager_CallbackFunc_TypeInfo);
-    WaveBattleWaveInfoListManager_CallbackFunc___ctor(
+      v32,
+      v33,
       v34,
+      v35,
+      v36);
+    waveInfoListManager = this->fields.waveInfoListManager;
+    v38 = (WaveBattleWaveInfoListManager_CallbackFunc_o *)sub_2213CCC(WaveBattleWaveInfoListManager_CallbackFunc_TypeInfo);
+    WaveBattleWaveInfoListManager_CallbackFunc___ctor(
+      v38,
       (Il2CppObject *)this,
       Method_WaveBattlePartyOrganizationMenu_OnSelectWavePartyList__,
-      v35);
+      v39);
     if ( !waveInfoListManager )
       goto LABEL_76;
     WaveBattleWaveInfoListManager__CreateList(
@@ -1142,11 +1149,11 @@ LABEL_31:
       deckEntity,
       questRestrictionInfo,
       waveCount,
-      v34,
+      v38,
       restartWave,
-      v25,
+      v29,
       this->fields.isSwitchPartyBattle,
-      v63);
+      v67);
     this->fields.restartWave = restartWave;
     this->fields.isInterruption = restartWave > 0;
     if ( !deckEntity )
@@ -1154,12 +1161,12 @@ LABEL_31:
     deckInfo = deckEntity->fields.deckInfo;
     if ( !deckInfo )
       goto LABEL_76;
-    WaveBattlePartyOrganizationMenu__SetMasterEquipButton(this, deckInfo->fields.userEquipId, v36);
+    WaveBattlePartyOrganizationMenu__SetMasterEquipButton(this, deckInfo->fields.userEquipId, v40);
     classInfoSpriteOrganization = this->fields.classInfoSpriteOrganization;
     if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v38, v39);
+      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v42, v43);
     AtlasManager__SetPartyOrganizationImage(classInfoSpriteOrganization, (System_String_o *)StringLiteral_18443/*"buttontxt_formation_20"*/, 0);
-    IsHintDialog = WaveBattlePartyOrganizationMenu__IsHintDialog(this, &isEvery, v41);
+    IsHintDialog = WaveBattlePartyOrganizationMenu__IsHintDialog(this, &isEvery, v45);
     Master_object = (QuestPhaseMaster_o *)this->fields.hintDialogButton;
     if ( IsHintDialog )
     {
@@ -1171,50 +1178,50 @@ LABEL_31:
       if ( !Master_object )
         goto LABEL_76;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
-      v44 = this->fields.questRestrictionInfo;
-      if ( !v44 )
+      v48 = this->fields.questRestrictionInfo;
+      if ( !v48 )
         goto LABEL_76;
-      questId = v44->fields.questId;
-      questPhase = v44->fields.questPhase;
+      questId = v48->fields.questId;
+      questPhase = v48->fields.questPhase;
       if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v43);
+        j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v47);
       Master_object = (QuestPhaseMaster_o *)QuestHintDialogOpenManager__IsSettingTemporarilyInfo(questId, questPhase, 0);
       if ( ((unsigned __int8)Master_object & 1) == 0 )
       {
-        v48 = this->fields.questRestrictionInfo;
-        if ( !v48 )
+        v52 = this->fields.questRestrictionInfo;
+        if ( !v52 )
           goto LABEL_76;
-        v49 = v48->fields.questId;
-        v50 = v48->fields.questPhase;
+        v53 = v52->fields.questId;
+        v54 = v52->fields.questPhase;
         if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v47);
-        Master_object = (QuestPhaseMaster_o *)QuestHintDialogOpenManager__IsQuestHintOpen(v49, v50, 0);
+          j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v51);
+        Master_object = (QuestPhaseMaster_o *)QuestHintDialogOpenManager__IsQuestHintOpen(v53, v54, 0);
         if ( ((unsigned __int8)Master_object & 1) == 0 )
         {
-          v52 = this->fields.questRestrictionInfo;
+          v56 = this->fields.questRestrictionInfo;
           if ( isEvery )
           {
-            if ( !v52 )
+            if ( !v56 )
               goto LABEL_76;
-            v53 = v52->fields.questId;
-            v54 = v52->fields.questPhase;
+            v57 = v56->fields.questId;
+            v58 = v56->fields.questPhase;
             if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v51);
-            QuestHintDialogOpenManager__SetTemporarilyInfo(v53, v54, 0);
+              j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v55);
+            QuestHintDialogOpenManager__SetTemporarilyInfo(v57, v58, 0);
           }
           else
           {
-            if ( !v52 )
+            if ( !v56 )
               goto LABEL_76;
-            v60 = v52->fields.questId;
-            v61 = v52->fields.questPhase;
+            v64 = v56->fields.questId;
+            v65 = v56->fields.questPhase;
             if ( !*(&QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v51);
-            QuestHintDialogOpenManager__SetTemporarilyInfo(v60, v61, 0);
-            v62 = this->fields.questRestrictionInfo;
-            if ( !v62 )
+              j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo, v15, v55);
+            QuestHintDialogOpenManager__SetTemporarilyInfo(v64, v65, 0);
+            v66 = this->fields.questRestrictionInfo;
+            if ( !v66 )
               goto LABEL_76;
-            QuestHintDialogOpenManager__SetQuestInfo(v62->fields.questId, v62->fields.questPhase, 0);
+            QuestHintDialogOpenManager__SetQuestInfo(v66->fields.questId, v66->fields.questPhase, 0);
             QuestHintDialogOpenManager__WriteData(0);
           }
           this->fields.isHintDialogOpenFlag = 1;
@@ -1245,7 +1252,7 @@ LABEL_31:
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
           applyInterruptionDeckSprite = this->fields.applyInterruptionDeckSprite;
           if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v55, v56);
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v59, v60);
           AtlasManager__SetPartyOrganizationImage(
             applyInterruptionDeckSprite,
             (System_String_o *)StringLiteral_18444/*"buttontxt_formation_21"*/,
@@ -1268,22 +1275,22 @@ LABEL_31:
                                                       0);
               if ( Master_object )
               {
-                v70.fields.x = 0.0;
-                v70.fields.z = 0.0;
-                v70.fields.y = -2.0;
-                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Master_object, v70, 0);
+                v73.fields.x = 0.0;
+                v73.fields.z = 0.0;
+                v73.fields.y = -2.0;
+                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Master_object, v73, 0);
                 Master_object = (QuestPhaseMaster_o *)this->fields.battleStartSprite;
                 if ( Master_object )
                 {
                   (*(void (__fastcall **)(QuestPhaseMaster_o *, _QWORD))&Master_object->klass[1]._2.element_size)(
                     Master_object,
                     *(_QWORD *)&Master_object->klass[1]._2.static_fields_size);
-                  WaveBattlePartyOrganizationMenu__DisabledEditButton(this, v58);
+                  WaveBattlePartyOrganizationMenu__DisabledEditButton(this, v62);
 LABEL_68:
                   this->fields.state = 1;
-                  v59 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-                  System_Action___ctor(v59, (Il2CppObject *)this, Method_WaveBattlePartyOrganizationMenu_EndOpen__, 0);
-                  BaseMenu__Open((BaseMenu_o *)this, v59, 0);
+                  v63 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+                  System_Action___ctor(v63, (Il2CppObject *)this, Method_WaveBattlePartyOrganizationMenu_EndOpen__, 0);
+                  BaseMenu__Open((BaseMenu_o *)this, v63, 0);
                   return;
                 }
               }
@@ -1878,7 +1885,7 @@ System_IAsyncResult_o *WaveBattlePartyOrganizationMenu_CallbackFunc__BeginInvoke
   v11[0] = j_il2cpp_value_box_0(WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

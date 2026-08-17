@@ -1272,7 +1272,7 @@ int32_t ImagePartsGroupMaster___c___ConcatMaterialImageValues_b__2_1(
 LABEL_8:
     v7 = sub_224BC3C(typeValueGroup, System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__ImagePartsGroupEntity__o *, _QWORD))v7)(
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__ImagePartsGroupEntity__o *, _QWORD))v7)(
            typeValueGroup,
            *(_QWORD *)(v7 + 8));
 }
@@ -1325,7 +1325,7 @@ int32_t ImagePartsGroupMaster___c___GetDefaultImageValues_b__4_1(
 LABEL_8:
     v7 = sub_224BC3C(typeValueGroup, System_Linq_IGrouping_int__ImagePartsGroupEntity__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__ImagePartsGroupEntity__o *, _QWORD))v7)(
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__ImagePartsGroupEntity__o *, _QWORD))v7)(
            typeValueGroup,
            *(_QWORD *)(v7 + 8));
 }

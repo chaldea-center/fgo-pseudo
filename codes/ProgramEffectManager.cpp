@@ -35,10 +35,17 @@ UnityEngine_GameObject_o *ProgramEffectManager__Create(
   UnityEngine_GameObject_o *v25; // x22
   Il2CppObject *Component_object; // x23
   UnityEngine_Transform_o *transform; // x24
-  const MethodInfo *v28; // x4
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v32; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
+  float v28; // s8
+  float v29; // s9
+  float v30; // s10
+  const MethodInfo *v31; // x4
+  float v33; // [xsp+4h] [xbp-8Ch]
+  float v34; // [xsp+8h] [xbp-88h]
+  float colora; // [xsp+Ch] [xbp-84h]
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v39; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   a = color.fields.a;
   b = color.fields.b;
@@ -61,7 +68,10 @@ UnityEngine_GameObject_o *ProgramEffectManager__Create(
                                       (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v23 )
     goto LABEL_13;
+  v33 = time;
+  v34 = r;
   v25 = v23;
+  colora = g;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v23,
                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ProgramEffectComponent___);
@@ -72,14 +82,17 @@ UnityEngine_GameObject_o *ProgramEffectManager__Create(
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v23, 0);
   if ( !parent )
     goto LABEL_13;
+  v28 = localScale.fields.x;
+  v29 = localScale.fields.y;
+  v30 = localScale.fields.z;
   v23 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parent, 0);
   if ( !transform )
     goto LABEL_13;
   UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v23, 0);
-  v31.fields.x = x;
-  v31.fields.y = y;
-  v31.fields.z = z;
-  UnityEngine_Transform__set_localPosition(transform, v31, 0);
+  v37.fields.x = x;
+  v37.fields.y = y;
+  v37.fields.z = z;
+  UnityEngine_Transform__set_localPosition(transform, v37, 0);
   if ( !byte_5969AE6 )
   {
     sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -89,23 +102,26 @@ UnityEngine_GameObject_o *ProgramEffectManager__Create(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v38.fields.x = v28;
+  v38.fields.y = v29;
+  v38.fields.z = v30;
+  UnityEngine_Transform__set_localScale(transform, v38, 0);
   if ( !Component_object )
 LABEL_13:
     sub_2213CDC(v23, v24);
-  v32.fields.b = b;
-  v32.fields.a = a;
-  v32.fields.r = r;
-  v32.fields.g = g;
+  v39.fields.b = b;
+  v39.fields.a = a;
+  v39.fields.r = v34;
+  v39.fields.g = colora;
   ProgramEffectComponent__Init(
     (ProgramEffectComponent_o *)Component_object,
-    time,
-    v32,
+    v33,
+    v39,
     range,
     isSkip,
     isPause,
     isContinueSilhouette,
-    v28);
+    v31);
   return v25;
 }
 

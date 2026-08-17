@@ -13,12 +13,12 @@ void MasterEquipSettingListViewItemDraw__SetButton(
   __int64 v5; // x2
   UIRangeLabel_o *equipShortNameLabel; // x21
   int v7; // w8
-  float *v8; // x11
-  float *v9; // x8
-  float *v10; // x9
-  float *v11; // x10
+  struct UISprite_o *v8; // x11
+  float *p_mTrans; // x8
+  float *p_mUpdateFrame; // x9
+  float *p_mChildren; // x10
   float *v12; // x11
-  float *v13; // x11
+  struct UISprite_o *equipSetButtonSprite; // x11
   __int64 *v14; // x8
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -53,11 +53,11 @@ void MasterEquipSettingListViewItemDraw__SetButton(
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v5);
       this = (MasterEquipSettingListViewItemDraw_o *)LocalizationManager_TypeInfo;
     }
-    v13 = (float *)*((_QWORD *)this + 23);
-    v9 = v13 + 20;
-    v10 = v13 + 21;
-    v11 = v13 + 22;
-    v12 = v13 + 23;
+    equipSetButtonSprite = this[2].fields.equipSetButtonSprite;
+    p_mTrans = (float *)&equipSetButtonSprite->fields.mTrans;
+    p_mUpdateFrame = (float *)&equipSetButtonSprite->fields.mTrans + 1;
+    p_mChildren = (float *)&equipSetButtonSprite->fields.mChildren;
+    v12 = (float *)&equipSetButtonSprite->fields.mChildren + 1;
     if ( equipShortNameLabel )
       goto LABEL_21;
 LABEL_25:
@@ -76,18 +76,18 @@ LABEL_25:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, item, v5);
     this = (MasterEquipSettingListViewItemDraw_o *)LocalizationManager_TypeInfo;
   }
-  v8 = (float *)*((_QWORD *)this + 23);
-  v9 = v8 + 24;
-  v10 = v8 + 25;
-  v11 = v8 + 26;
-  v12 = v8 + 27;
+  v8 = this[2].fields.equipSetButtonSprite;
+  p_mTrans = (float *)&v8->fields.mChanged;
+  p_mUpdateFrame = (float *)&v8->fields.mUpdateFrame;
+  p_mChildren = (float *)&v8->fields.mAnchorsCached;
+  v12 = (float *)(&v8->fields.mAnchorsCached + 4);
   if ( !equipShortNameLabel )
     goto LABEL_25;
 LABEL_21:
   v15.fields.a = *v12;
-  v15.fields.b = *v11;
-  v15.fields.g = *v10;
-  v15.fields.r = *v9;
+  v15.fields.b = *p_mChildren;
+  v15.fields.g = *p_mUpdateFrame;
+  v15.fields.r = *p_mTrans;
   UIRangeLabel__set_effectColor(equipShortNameLabel, v15, 0);
   this = (MasterEquipSettingListViewItemDraw_o *)v4->fields.equipSetButtonSprite;
   if ( !this )

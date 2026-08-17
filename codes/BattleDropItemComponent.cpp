@@ -541,6 +541,7 @@ void BattleDropItemComponent__SetMaterialTd(BattleDropItemComponent_o *this, boo
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleDropItemComponent__SetPossession(BattleDropItemComponent_o *this, int32_t num, const MethodInfo *method)
 {
   UILabel_o *possessionLabel; // x20
@@ -553,8 +554,11 @@ void BattleDropItemComponent__SetPossession(BattleDropItemComponent_o *this, int
   float *p_PossessionLabelWidth; // x8
   UnityEngine_Transform_o *v12; // x20
   struct UILabel_o *v13; // x8
+  float z; // s2
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   int32_t possessionNum; // [xsp+Ch] [xbp-24h] BYREF
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973400 & 1) == 0 )
   {
@@ -594,7 +598,10 @@ void BattleDropItemComponent__SetPossession(BattleDropItemComponent_o *this, int
       }
       if ( v12 )
       {
-        oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+        static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+        y = static_fields->oneVector.fields.y;
+        z = static_fields->oneVector.fields.z;
+        x = static_fields->oneVector.fields.x;
         goto LABEL_19;
       }
     }
@@ -610,11 +617,11 @@ LABEL_20:
   v13 = this->fields.possessionLabel;
   if ( !v13 || !v12 )
     goto LABEL_20;
-  oneVector.fields.z = 1.0;
-  oneVector.fields.x = BattleDropItemComponent_TypeInfo->static_fields->PossessionLabelWidth / (float)v13->fields.mWidth;
-  oneVector.fields.y = 1.0;
+  z = 1.0;
+  x = BattleDropItemComponent_TypeInfo->static_fields->PossessionLabelWidth / (float)v13->fields.mWidth;
+  y = 1.0;
 LABEL_19:
-  UnityEngine_Transform__set_localScale(v12, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v12, *(UnityEngine_Vector3_o *)&x, 0);
 }
 
 
@@ -1137,7 +1144,7 @@ System_IAsyncResult_o *BattleDropItemComponent_ClickDelegate__BeginInvoke(
   BattleDropItem_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = item;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

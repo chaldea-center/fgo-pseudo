@@ -13,8 +13,9 @@ float ChangeModelData__GetHeadUpOffsetY(
   Il2CppObject *Master_object; // x0
   __int64 v6; // x1
   float HeadUpY; // s0
+  System_Nullable_float__o v8; // x0
   System_Nullable_float__o p_headUpOffsetY; // x0
-  struct System_Nullable_float__o v10; // [xsp+0h] [xbp-30h] BYREF
+  struct System_Nullable_float__o v11; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v3 = originalSvtEnt;
@@ -48,12 +49,10 @@ float ChangeModelData__GetHeadUpOffsetY(
         {
 LABEL_9:
           HeadUpY = ServantEntity__getHeadUpY(v3, 0);
-          v10 = 0;
-          System_Nullable_float____ctor(
-            (System_Nullable_float__o)&v10,
-            HeadUpY,
-            (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-          this->fields.headUpOffsetY = v10;
+          v8 = (System_Nullable_float__o)&v11;
+          v11 = 0;
+          System_Nullable_float____ctor(v8, HeadUpY, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+          this->fields.headUpOffsetY = v11;
           goto LABEL_10;
         }
       }

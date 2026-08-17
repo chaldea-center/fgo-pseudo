@@ -599,8 +599,9 @@ LABEL_28:
       return 1;
     }
 LABEL_40:
+    result = 0;
     *iconKind = -1;
-    return 0;
+    return result;
   }
   if ( sortKind > 3 )
   {
@@ -2131,15 +2132,14 @@ void ServantOperationListViewItem__SetIconInfoLabel(
   int32_t sortKind; // w8
   ServantEntity_o *servantEntity; // x0
   int32_t v17; // [xsp+14h] [xbp-3Ch] BYREF
-  int32_t v18[2]; // [xsp+18h] [xbp-38h] BYREF
+  int32_t iconKind[2]; // [xsp+18h] [xbp-38h] BYREF
   int64_t time; // [xsp+20h] [xbp-30h] BYREF
   int32_t adjustDataValue; // [xsp+2Ch] [xbp-24h] BYREF
-  int32_t dataValue; // [xsp+38h] [xbp-18h] BYREF
-  int32_t iconKind; // [xsp+3Ch] [xbp-14h] BYREF
+  int32_t dataValue[2]; // [xsp+38h] [xbp-18h] BYREF
 
   iconLabelInfo1 = (int64_t)this->fields.iconLabelInfo1;
   adjustDataValue = 0;
-  *(_QWORD *)v18 = 0;
+  *(_QWORD *)iconKind = 0;
   time = 0;
   v17 = 0;
   if ( !iconLabelInfo1 )
@@ -2153,8 +2153,8 @@ void ServantOperationListViewItem__SetIconInfoLabel(
   iconLabelInfo1 = ServantOperationListViewItem__GetIconLabelInfoData1(
                      this,
                      sort,
-                     &iconKind,
-                     &dataValue,
+                     &dataValue[1],
+                     dataValue,
                      &adjustDataValue,
                      &time,
                      v6);
@@ -2167,7 +2167,7 @@ void ServantOperationListViewItem__SetIconInfoLabel(
     {
       if ( !iconLabelInfo1 )
         goto LABEL_38;
-      IconLabelInfo__SetTime((IconLabelInfo_o *)iconLabelInfo1, iconKind, time, 0, 0, 0, 0);
+      IconLabelInfo__SetTime((IconLabelInfo_o *)iconLabelInfo1, dataValue[1], time, 0, 0, 0, 0);
       UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
       if ( UserServantEntity_k__BackingField && UserServantEntity__IsMaterialTd(UserServantEntity_k__BackingField, 0) )
         this->fields.isNeedAdjustIconLabelScale = 1;
@@ -2178,8 +2178,8 @@ void ServantOperationListViewItem__SetIconInfoLabel(
         goto LABEL_38;
       IconLabelInfo__Set_47880948(
         (IconLabelInfo_o *)iconLabelInfo1,
-        iconKind,
-        dataValue,
+        dataValue[1],
+        dataValue[0],
         adjustDataValue,
         0,
         0,
@@ -2189,18 +2189,18 @@ void ServantOperationListViewItem__SetIconInfoLabel(
         0);
     }
   }
-  if ( ServantOperationListViewItem__GetIconLabelInfoData2(this, sort, &v18[1], v18, &v17, v7) )
+  if ( ServantOperationListViewItem__GetIconLabelInfoData2(this, sort, &iconKind[1], iconKind, &v17, v7) )
   {
     iconLabelInfo1 = (int64_t)this->fields.iconLabelInfo2;
     if ( !iconLabelInfo1 )
       goto LABEL_38;
-    IconLabelInfo__Set_47880948((IconLabelInfo_o *)iconLabelInfo1, v18[1], v18[0], v17, 0, 0, 0, 0, 0, 0);
+    IconLabelInfo__Set_47880948((IconLabelInfo_o *)iconLabelInfo1, iconKind[1], iconKind[0], v17, 0, 0, 0, 0, 0, 0);
   }
   v10 = this->fields._IsSwapChoice_k__BackingField
       ? !this->fields._IsChoice_k__BackingField
       : this->fields._IsChoice_k__BackingField;
   SortValue0 = ServantOperationListViewItem__GetSortValue0(this, sort, v10, &this->fields.sortValue0B, v9);
-  v12 = dataValue;
+  v12 = dataValue[0];
   this->fields.sortValue0 = SortValue0;
   iconLabelInfo1 = ServantOperationListViewItem__GetSortValue1(this, sort, v12, v13);
   this->fields.sortValue1 = iconLabelInfo1;

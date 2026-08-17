@@ -115,5 +115,5 @@ bool ReactTaskTargetPlayer___c___TargetServants_b__0_0(
 {
   if ( !svt || (this = (ReactTaskTargetPlayer___c_o *)BattleServantData__get_AiStateManager(svt, 0)) == 0 )
     sub_2213CDC(this, svt);
-  return *((_BYTE *)this + 56);
+  return (bool)this[3].monitor;
 }

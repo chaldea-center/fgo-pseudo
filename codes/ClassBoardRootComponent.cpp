@@ -740,6 +740,7 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
   int32_t v39; // w5
   bool v40; // w6
   bool v41; // w7
+  bool result; // w0
   struct ClassBoardRootComponent___c__DisplayClass37_0_o *_8__1; // x21
   System_String_o *movieName; // x22
   System_String_o *MoviePath; // x0
@@ -798,8 +799,8 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
   Il2CppObject *v98; // x19
   AvalonSceneManager_c *v99; // x8
   float v100; // s8
-  struct ClassBoardRootComponent___c_StaticFields *static_fields; // x8
-  System_Action_o *_9__37_2; // x20
+  void *static_fields; // x8
+  System_Action_o *v102; // x20
   Il2CppObject *v103; // x21
   struct ClassBoardRootComponent___c_StaticFields *v104; // x0
   System_String_o *v105; // x2
@@ -891,8 +892,9 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
             v8->fields.__2__current = (Il2CppObject *)v34;
             p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
             sub_2213A04(p__2__current, (int32_t)v34, v36, v37, v38, v39, v40, v41);
+            result = 1;
             p__2__current[-1].fields._BoardType_k__BackingField = 1;
-            return 1;
+            return result;
           }
         }
 LABEL_56:
@@ -1080,23 +1082,23 @@ LABEL_56:
       j_il2cpp_runtime_class_init_0(ClassBoardRootComponent___c_TypeInfo, method);
       this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)ClassBoardRootComponent___c_TypeInfo;
     }
-    static_fields = (struct ClassBoardRootComponent___c_StaticFields *)*((_QWORD *)this + 23);
-    _9__37_2 = static_fields->__9__37_2;
-    if ( !_9__37_2 )
+    static_fields = this[2].fields.callBackAfter;
+    v102 = (System_Action_o *)*((_QWORD *)static_fields + 1);
+    if ( !v102 )
     {
-      if ( !*((_DWORD *)this + 57) )
+      if ( !HIDWORD(this[3].monitor) )
       {
         j_il2cpp_runtime_class_init_0(this, method);
         static_fields = ClassBoardRootComponent___c_TypeInfo->static_fields;
       }
-      v103 = (Il2CppObject *)static_fields->__9;
-      _9__37_2 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-      System_Action___ctor(_9__37_2, v103, Method_ClassBoardRootComponent___c__PlayMovieCoroutine_b__37_2__, 0);
+      v103 = *(Il2CppObject **)static_fields;
+      v102 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+      System_Action___ctor(v102, v103, Method_ClassBoardRootComponent___c__PlayMovieCoroutine_b__37_2__, 0);
       v104 = ClassBoardRootComponent___c_TypeInfo->static_fields;
-      v104->__9__37_2 = _9__37_2;
+      v104->__9__37_2 = v102;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v104->__9__37_2,
-        (int32_t)_9__37_2,
+        (int32_t)v102,
         v105,
         v106,
         v107,
@@ -1106,14 +1108,15 @@ LABEL_56:
     }
     if ( !v98 )
       goto LABEL_56;
-    CommonUI__maskFadein((CommonUI_o *)v98, v100, _9__37_2, 0);
+    CommonUI__maskFadein((CommonUI_o *)v98, v100, v102, 0);
     return 0;
   }
   v8->fields.__2__current = 0;
   v111 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v111, 0, v2, (System_String_o *)v3, v4, v5, v6, v7);
+  result = 1;
   v111[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 

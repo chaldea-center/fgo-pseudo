@@ -179,7 +179,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, itemDraw, v10);
           this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)BalanceConfig_TypeInfo;
         }
-        if ( mWidth > *(_DWORD *)(*((_QWORD *)this + 23) + 1308LL) )
+        if ( mWidth > *((_DWORD *)this[11].monitor + 327) )
         {
           v24 = v5->fields.warningLabel3;
           if ( v24 )

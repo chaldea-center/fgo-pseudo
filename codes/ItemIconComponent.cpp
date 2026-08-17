@@ -48,11 +48,11 @@ void ItemIconComponent__Awake(ItemIconComponent_o *this, const MethodInfo *metho
   UnityEngine_Object_o *typeSprite; // x20
   __int64 v4; // x1
   UnityEngine_Component_o *transform; // x0
-  float v6; // s8
-  UnityEngine_Object_o *possessionTitleLabel; // x20
-  __int64 v8; // x1
-  UILabel_o *v9; // x19
   unsigned int localPosition; // s0
+  float v7; // s8
+  UnityEngine_Object_o *possessionTitleLabel; // x20
+  __int64 v9; // x1
+  UILabel_o *v10; // x19
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FBC9 & 1) == 0 )
@@ -77,12 +77,12 @@ void ItemIconComponent__Awake(ItemIconComponent_o *this, const MethodInfo *metho
     transform = (UnityEngine_Component_o *)this->fields.typeSprite;
     if ( !transform )
       goto LABEL_19;
-    v6 = *(float *)&localPosition;
+    v7 = *(float *)&localPosition;
     transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
     if ( !transform )
       goto LABEL_19;
     v11.fields.z = 0.0;
-    v11.fields.x = v6;
+    v11.fields.x = v7;
     v11.fields.y = -64.0;
     UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v11, 0);
   }
@@ -91,13 +91,13 @@ void ItemIconComponent__Awake(ItemIconComponent_o *this, const MethodInfo *metho
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   if ( UnityEngine_Object__op_Inequality(possessionTitleLabel, 0, 0) )
   {
-    v9 = this->fields.possessionTitleLabel;
+    v10 = this->fields.possessionTitleLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v9);
     transform = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7847/*"ITEM_POSSESSION_TITLE"*/, 0);
-    if ( v9 )
+    if ( v10 )
     {
-      UILabel__set_text(v9, (System_String_o *)transform, 0);
+      UILabel__set_text(v10, (System_String_o *)transform, 0);
       return;
     }
 LABEL_19:
@@ -2918,6 +2918,7 @@ void ItemIconComponent__SetPointEvent(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ItemIconComponent__SetPossession(ItemIconComponent_o *this, int32_t possessionNum, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *possessionRoot; // x0
@@ -2928,8 +2929,11 @@ void ItemIconComponent__SetPossession(ItemIconComponent_o *this, int32_t possess
   float PossessionLabelWidth; // s9
   float mWidth; // s8
   UnityEngine_Transform_o *v12; // x21
-  int64_t v15; // [xsp+8h] [xbp-38h] BYREF
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
+  float z; // s2
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  int64_t v17; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596FBE3 & 1) == 0 )
   {
@@ -2948,8 +2952,8 @@ void ItemIconComponent__SetPossession(ItemIconComponent_o *this, int32_t possess
   Component_object = (UILabel_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)Child,
                                     (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UILabel___);
-  v15 = this->fields.possessionNum;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v15);
+  v17 = this->fields.possessionNum;
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v17);
   Child = (UnityEngine_Transform_o *)System_String__Format((System_String_o *)StringLiteral_26432/*"{0:#,0}"*/, v9, 0);
   if ( !Component_object )
     goto LABEL_14;
@@ -2967,7 +2971,10 @@ void ItemIconComponent__SetPossession(ItemIconComponent_o *this, int32_t possess
     }
     if ( v12 )
     {
-      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+      static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+      y = static_fields->oneVector.fields.y;
+      z = static_fields->oneVector.fields.z;
+      x = static_fields->oneVector.fields.x;
       goto LABEL_13;
     }
 LABEL_14:
@@ -2975,11 +2982,11 @@ LABEL_14:
   }
   if ( !Child )
     goto LABEL_14;
-  oneVector.fields.z = 1.0;
-  oneVector.fields.x = this->fields.PossessionLabelWidth / (float)Component_object->fields.mWidth;
-  oneVector.fields.y = 1.0;
+  z = 1.0;
+  x = this->fields.PossessionLabelWidth / (float)Component_object->fields.mWidth;
+  y = 1.0;
 LABEL_13:
-  UnityEngine_Transform__set_localScale(v12, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v12, *(UnityEngine_Vector3_o *)&x, 0);
 }
 
 
@@ -3454,7 +3461,10 @@ void ItemIconComponent__ShowPossession(ItemIconComponent_o *this, bool showPosse
   UnityEngine_Object_o *possessionRoot; // x21
   const MethodInfo *v6; // x1
   UnityEngine_GameObject_o *v7; // x0
-  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v8; // s0 OVERLAPPED
+  float v9; // s3
+  float v10; // s1
+  float v11; // s2
 
   if ( (byte_596FBE2 & 1) == 0 )
   {
@@ -3473,13 +3483,13 @@ void ItemIconComponent__ShowPossession(ItemIconComponent_o *this, bool showPosse
         sub_2213CDC(0, v6);
       UnityEngine_GameObject__SetActive(v7, showPossession, 0);
     }
-    v9.fields.r = 1.0;
-    v9.fields.a = 1.0;
+    v8 = 1.0;
+    v9 = 1.0;
     if ( showPossession )
-      v9.fields.r = 0.31373;
-    v9.fields.g = v9.fields.r;
-    v9.fields.b = v9.fields.r;
-    ItemIconComponent__SetColor(this, v9, v6);
+      v8 = 0.31373;
+    v10 = v8;
+    v11 = v8;
+    ItemIconComponent__SetColor(this, *(UnityEngine_Color_o *)&v8, v6);
   }
 }
 
@@ -3706,10 +3716,10 @@ void ItemIconComponent__setLocalScaleIconSprite(ItemIconComponent_o *this, float
 void ItemIconComponent__setTypeSpritePositionY(ItemIconComponent_o *this, float y, const MethodInfo *method)
 {
   UnityEngine_Component_o *typeSprite; // x0
-  float v6; // s9
-  float v7; // s10
   unsigned int localPosition; // s0
-  float z; // s2
+  float v7; // s9
+  float z; // s10
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   typeSprite = (UnityEngine_Component_o *)this->fields.typeSprite;
@@ -3721,17 +3731,18 @@ void ItemIconComponent__setTypeSpritePositionY(ItemIconComponent_o *this, float 
   localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)typeSprite, 0);
   typeSprite = (UnityEngine_Component_o *)this->fields.typeSprite;
   if ( !typeSprite
-    || (v6 = *(float *)&localPosition,
+    || (v7 = *(float *)&localPosition,
         (typeSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(typeSprite, 0)) == 0)
-    || (z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)typeSprite, 0).fields.z,
+    || (v9 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)typeSprite, 0),
         (typeSprite = (UnityEngine_Component_o *)this->fields.typeSprite) == 0)
-    || (v7 = z, (typeSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(typeSprite, 0)) == 0) )
+    || (z = v9.fields.z,
+        (typeSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(typeSprite, 0)) == 0) )
   {
 LABEL_8:
     sub_2213CDC(typeSprite, method);
   }
-  v10.fields.x = v6;
+  v10.fields.x = v7;
   v10.fields.y = y;
-  v10.fields.z = v7;
+  v10.fields.z = z;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)typeSprite, v10, 0);
 }

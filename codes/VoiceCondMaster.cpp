@@ -91,7 +91,7 @@ bool VoiceCondMaster__IsEnable(
   MissionNaviTransitionBoardItem_o *v81; // [xsp+10h] [xbp-F0h]
   System_Collections_Generic_List_Enumerator_object__o v84; // [xsp+38h] [xbp-C8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v85; // [xsp+50h] [xbp-B0h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v86; // [xsp+70h] [xbp-90h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v86; // [xsp+70h] [xbp-90h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v87; // [xsp+90h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v88; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v89; // 0:x2.16
@@ -269,17 +269,17 @@ bool VoiceCondMaster__IsEnable(
           v42,
           (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
         v43 = 0;
-        v86 = (System_Collections_Generic_List_Enumerator_int__o)v84;
+        v86 = v84;
         while ( 1 )
         {
           v40 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-                  &v86,
+                  (System_Collections_Generic_List_Enumerator_int__o *)&v86,
                   (const MethodInfo_40F5CBC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
           if ( (v40 & 1) == 0 )
             break;
           Item = System_Collections_Generic_Dictionary_int__object___get_Item(
                    v22,
-                   v86.fields._current,
+                   (int32_t)v86.fields._current,
                    (const MethodInfo_3F9C410 *)Method_System_Collections_Generic_Dictionary_int__List_VoiceCondEntity___get_Item__);
           v46 = VoiceCondMaster___c_TypeInfo;
           if ( !*(&VoiceCondMaster___c_TypeInfo->_2.cctor_finished + 1) )
@@ -384,7 +384,7 @@ LABEL_41:
         v78 = 18;
 LABEL_56:
         System_Collections_Generic_List_Enumerator_int___Dispose(
-          &v86,
+          (System_Collections_Generic_List_Enumerator_int__o *)&v86,
           (const MethodInfo_40F5CB8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
         if ( v78 == 18 )
           v40 = (v43 ^ 1) & isMainResult;

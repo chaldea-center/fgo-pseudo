@@ -96,6 +96,7 @@ int32_t SoundPlayerShopItemComponent__getItemImgId(SoundPlayerShopItemComponent_
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SoundPlayerShopItemComponent__setItemInfo(
         SoundPlayerShopItemComponent_o *this,
         int64_t usrId,
@@ -113,24 +114,29 @@ void SoundPlayerShopItemComponent__setItemInfo(
   Il2CppObject *v17; // x0
   UILabel_o *needNumLb; // x22
   Il2CppObject *v19; // x0
-  const MethodInfo_47A29F8 *v22; // x0
-  Il2CppObject *v23; // x0
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
+  float v20; // s1
+  float v21; // s0 OVERLAPPED
+  float v22; // s2
+  float v23; // s3
+  const MethodInfo_47A29F8 *v24; // x0
+  Il2CppObject *v25; // x0
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
   struct ItemEntity_o *itemEnt; // x8
+  float y; // s8
+  float z; // s9
   int32_t needItemNum; // [xsp+0h] [xbp-70h] BYREF
   int32_t haveItemNum; // [xsp+4h] [xbp-6Ch] BYREF
-  Il2CppObject *v33; // [xsp+8h] [xbp-68h] BYREF
+  Il2CppObject *v37; // [xsp+8h] [xbp-68h] BYREF
   UserItemEntity_o *entity; // [xsp+28h] [xbp-48h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596BD3A & 1) == 0 )
   {
@@ -146,7 +152,7 @@ void SoundPlayerShopItemComponent__setItemInfo(
   }
   v11 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   entity = 0;
-  v33 = 0;
+  v37 = 0;
   this->fields.haveItemNum = 0;
   this->fields.needItemNum = needNum;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance(v11);
@@ -177,14 +183,14 @@ LABEL_8:
     goto LABEL_40;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-         &v33,
+         &v37,
          itemId,
          (const MethodInfo_3F10B80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
   {
     Instance = (DataManager_o *)UserGameMaster__getSelfUserGame(0);
-    if ( !v33 )
+    if ( !v37 )
       goto LABEL_40;
-    klass = (int)v33[3].klass;
+    klass = (int)v37[3].klass;
     if ( klass == 5 )
     {
       if ( !Instance )
@@ -234,17 +240,17 @@ LABEL_17:
     this->fields.isItemNum = 1;
     if ( Instance )
     {
-      v39.fields.r = 1.0;
-      v39.fields.g = 1.0;
-      v39.fields.b = 1.0;
-      v39.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)Instance, v39, 0);
+      v42.fields.r = 1.0;
+      v42.fields.g = 1.0;
+      v42.fields.b = 1.0;
+      v42.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)Instance, v42, 0);
       Instance = (DataManager_o *)this->fields.needNumLb;
       if ( Instance )
       {
-        v38.fields.r = 1.0;
-        v38.fields.g = 1.0;
-        v38.fields.b = 1.0;
+        v21 = 1.0;
+        v20 = 1.0;
+        v22 = 1.0;
         goto LABEL_29;
       }
     }
@@ -255,27 +261,27 @@ LABEL_40:
   this->fields.isItemNum = 0;
   if ( !Instance )
     goto LABEL_40;
-  v37.fields.g = 0.0;
-  v37.fields.a = 1.0;
-  v37.fields.r = 0.855;
-  v37.fields.b = 0.32;
-  UIWidget__set_color((UIWidget_o *)Instance, v37, 0);
+  v41.fields.g = 0.0;
+  v41.fields.a = 1.0;
+  v41.fields.r = 0.855;
+  v41.fields.b = 0.32;
+  UIWidget__set_color((UIWidget_o *)Instance, v41, 0);
   Instance = (DataManager_o *)this->fields.needNumLb;
   if ( !Instance )
     goto LABEL_40;
-  v38.fields.g = 0.0;
-  v38.fields.r = 0.855;
-  v38.fields.b = 0.32;
+  v20 = 0.0;
+  v21 = 0.855;
+  v22 = 0.32;
 LABEL_29:
-  v38.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)Instance, v38, 0);
+  v23 = 1.0;
+  UIWidget__set_color((UIWidget_o *)Instance, *(UnityEngine_Color_o *)&v21, 0);
   Instance = (DataManager_o *)this->fields.itemInfo;
   if ( !Instance )
     goto LABEL_40;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-  v22 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  v24 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__;
   this->fields.currentItemId = itemId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance(v22);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance(v24);
   if ( !Instance )
     goto LABEL_40;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
@@ -283,12 +289,12 @@ LABEL_29:
                                 (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_40;
-  v23 = DataMasterBase_object__object__int___GetEntity(
+  v25 = DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           this->fields.currentItemId,
           (const MethodInfo_3F10B30 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-  this->fields.itemEnt = (struct ItemEntity_o *)v23;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.itemEnt, (int32_t)v23, v24, v25, v26, v27, v28, v29);
+  this->fields.itemEnt = (struct ItemEntity_o *)v25;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.itemEnt, (int32_t)v25, v26, v27, v28, v29, v30, v31);
   itemEnt = this->fields.itemEnt;
   if ( !itemEnt )
     goto LABEL_40;
@@ -303,11 +309,13 @@ LABEL_29:
   Instance = (DataManager_o *)this->fields.itemDetailInfo;
   if ( !Instance )
     goto LABEL_40;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   Instance = (DataManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
   if ( !Instance )
     goto LABEL_40;
-  v36.fields.z = localPosition.fields.z;
-  v36.fields.y = localPosition.fields.y;
-  v36.fields.x = -(float)((float)((float)idx * 135.0) + -135.0);
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v36, 0);
+  v40.fields.z = z;
+  v40.fields.y = y;
+  v40.fields.x = -(float)((float)((float)idx * 135.0) + -135.0);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v40, 0);
 }

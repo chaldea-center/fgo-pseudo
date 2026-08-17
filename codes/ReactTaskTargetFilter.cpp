@@ -48,11 +48,13 @@ bool ReactTaskTargetFilter__IsFilterFuncMatched(
   struct System_Func_BattleServantData__bool__o *FilterFunc_k__BackingField; // x8
 
   FilterFunc_k__BackingField = this->fields._FilterFunc_k__BackingField;
-  return !FilterFunc_k__BackingField
-      || ((bool (__fastcall *)(intptr_t, BattleServantData_o *, intptr_t))FilterFunc_k__BackingField->fields.invoke_impl)(
-           FilterFunc_k__BackingField->fields.method_code,
-           target,
-           FilterFunc_k__BackingField->fields.method);
+  if ( FilterFunc_k__BackingField )
+    return ((__int64 (__fastcall *)(intptr_t, BattleServantData_o *, intptr_t))FilterFunc_k__BackingField->fields.invoke_impl)(
+             FilterFunc_k__BackingField->fields.method_code,
+             target,
+             FilterFunc_k__BackingField->fields.method);
+  else
+    return 1;
 }
 
 
@@ -141,6 +143,7 @@ bool ReactTaskTargetFilter__Apply_d__4__MoveNext(ReactTaskTargetFilter__Apply_d_
   bool v39; // w7
   struct System_Func_BattleServantData__bool__o *FilterFunc_k__BackingField; // x8
   struct BattleServantData_o *v41; // x19
+  bool result; // w0
   System_String_o *v43; // x2
   System_String_o *v44; // x3
   int32_t v45; // w4
@@ -278,8 +281,9 @@ LABEL_27:
       v37,
       v38,
       v39);
+    result = 1;
     v49->fields.__1__state = 1;
-    return 1;
+    return result;
   }
   ReactTaskTargetFilter__Apply_d__4____m__Finally1(v49, v26);
   v49->fields.__7__wrap1 = 0;

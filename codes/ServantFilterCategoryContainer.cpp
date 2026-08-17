@@ -233,6 +233,7 @@ void ServantFilterCategoryContainer__GridLayout(
   int v49; // w23
   int32_t v50; // w1
   UnityEngine_GameObject_o *v51; // x0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B1FD & 1) == 0 )
   {
@@ -335,9 +336,8 @@ void ServantFilterCategoryContainer__GridLayout(
 LABEL_83:
           sub_2213CDC(ChildList, v13);
         v33 = ceilf((float)size / (float)v32);
-        v35 = fabsf(COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition(
-                                           (UnityEngine_Transform_o *)ChildList,
-                                           0).fields.y)));
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)ChildList, 0);
+        v35 = fabsf(localPosition.fields.y);
         if ( v33 == INFINITY )
           v36 = -2147500000.0;
         else
@@ -696,20 +696,19 @@ UnityEngine_Vector3_o ServantFilterCategoryContainer__get_BottomPosition(
 {
   UnityEngine_Component_o *widget; // x0
   struct UIWidget_o *v4; // x8
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  float v5; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   widget = (UnityEngine_Component_o *)this->fields.widget;
   if ( !widget
     || (widget = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(widget, 0)) == 0
-    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)widget, 0),
-        result.fields.x = localPosition.fields.x,
-        result.fields.z = localPosition.fields.z,
+    || (result = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)widget, 0),
         (v4 = this->fields.widget) == 0) )
   {
     sub_2213CDC(widget, method);
   }
-  result.fields.y = localPosition.fields.y - (float)v4->fields.mHeight;
+  v5 = result.fields.y - (float)v4->fields.mHeight;
+  result.fields.y = v5;
   return result;
 }
 

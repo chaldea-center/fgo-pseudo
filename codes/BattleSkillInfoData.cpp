@@ -464,7 +464,7 @@ SkillLvEntity_o *BattleSkillInfoData__GetSelfSkillLvEntity(BattleSkillInfoData_o
 
 bool BattleSkillInfoData__HasCond(BattleSkillInfoData_o *this, const MethodInfo *method)
 {
-  struct System_Nullable_bool__o *p_hasCond; // x20
+  System_Nullable_bool__o v3; // w0
   struct System_Nullable_bool__o *v5; // x0
   int32_t commonReleaseCondId; // w8
   CommonReleaseEntity_array *Instance; // x0
@@ -492,7 +492,6 @@ bool BattleSkillInfoData__HasCond(BattleSkillInfoData_o *this, const MethodInfo 
     sub_2213A60(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     byte_597378F = 1;
   }
-  p_hasCond = &this->fields.hasCond;
   if ( !this->fields.hasCond.fields.hasValue )
   {
     v5 = &v21;
@@ -518,9 +517,7 @@ bool BattleSkillInfoData__HasCond(BattleSkillInfoData_o *this, const MethodInfo 
         goto LABEL_14;
       v9 = Instance;
       if ( LODWORD(Instance->max_length) != 1 )
-        return System_Nullable_bool___get_Value(
-                 (System_Nullable_bool__o)p_hasCond,
-                 (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
+        goto LABEL_4;
       v10 = Instance->m_Items[0];
       if ( !v10 )
 LABEL_14:
@@ -533,7 +530,7 @@ LABEL_14:
           (System_Nullable_bool__o)v11,
           1,
           (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
-        *p_hasCond = v20;
+        this->fields.hasCond = v20;
         if ( !LODWORD(v9->max_length) )
           sub_2213CE4(v12);
         v19 = v9->m_Items[0];
@@ -550,9 +547,9 @@ LABEL_14:
       }
     }
   }
-  return System_Nullable_bool___get_Value(
-           (System_Nullable_bool__o)p_hasCond,
-           (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
+LABEL_4:
+  v3 = (System_Nullable_bool__o)((_WORD)this + 184);
+  return System_Nullable_bool___get_Value(v3, (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
 }
 
 
@@ -1523,10 +1520,12 @@ bool BattleSkillInfoData__TurnProgress(
 {
   __int64 v11; // x1
   System_Int32_array *v12; // x23
+  bool result; // w0
   int v14; // w0
   int32_t sealedTurn; // w8
   int32_t v16; // w8
-  int v17; // w0
+  int v17; // w8
+  int v18; // w0
 
   if ( (byte_5973784 & 1) == 0 )
   {
@@ -1556,12 +1555,12 @@ bool BattleSkillInfoData__TurnProgress(
     return 0;
   if ( sealedTurn < 1 )
   {
-    v17 = ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))this->klass->vtable._6_get_chargeTurn.methodPtr)(
+    v18 = ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))this->klass->vtable._6_get_chargeTurn.methodPtr)(
             this,
             this->klass->vtable._6_get_chargeTurn.method);
     ((void (__fastcall *)(BattleSkillInfoData_o *, _QWORD, const MethodInfo *))this->klass->vtable._7_set_chargeTurn.methodPtr)(
       this,
-      (unsigned int)(v17 - turnCount),
+      (unsigned int)(v18 - turnCount),
       this->klass->vtable._7_set_chargeTurn.method);
     if ( (this->fields.sealedTurn & 0x80000000) == 0 )
       goto LABEL_14;
@@ -1580,11 +1579,13 @@ LABEL_14:
       this,
       (unsigned int)max,
       this->klass->vtable._7_set_chargeTurn.method);
-  this->fields.isCharge = (int)(this->fields.sealedTurn
-                              + ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))this->klass->vtable._6_get_chargeTurn.methodPtr)(
-                                  this,
-                                  this->klass->vtable._6_get_chargeTurn.method)) < 1;
-  return 1;
+  v17 = this->fields.sealedTurn
+      + ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))this->klass->vtable._6_get_chargeTurn.methodPtr)(
+          this,
+          this->klass->vtable._6_get_chargeTurn.method);
+  result = 1;
+  this->fields.isCharge = v17 < 1;
+  return result;
 }
 
 
@@ -2158,7 +2159,8 @@ bool BattleSkillInfoData__get_IsContainedBattlePointFunc(BattleSkillInfoData_o *
   bool v17; // w7
   bool v18; // w8
   struct System_Nullable_bool__o *v19; // x0
-  struct System_Nullable_bool__o v21; // [xsp+Ch] [xbp-34h] BYREF
+  System_Nullable_bool__o v20; // w0
+  struct System_Nullable_bool__o v22; // [xsp+Ch] [xbp-34h] BYREF
 
   if ( (byte_597379C & 1) == 0 )
   {
@@ -2220,17 +2222,16 @@ bool BattleSkillInfoData__get_IsContainedBattlePointFunc(BattleSkillInfoData_o *
               DataValArray,
               (System_Func_T__bool__o *)_9__124_0,
               (const MethodInfo_380FE8C *)Method_BasicHelper_Any_DataVals___);
-      v19 = &v21;
-      v21 = 0;
+      v19 = &v22;
+      v22 = 0;
       System_Nullable_bool____ctor(
         (System_Nullable_bool__o)v19,
         v18,
         (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
-      *p_hasAddBattlePointFunc = v21;
+      *p_hasAddBattlePointFunc = v22;
     }
-    return System_Nullable_bool___get_Value(
-             (System_Nullable_bool__o)p_hasAddBattlePointFunc,
-             (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
+    v20 = (System_Nullable_bool__o)p_hasAddBattlePointFunc;
+    return System_Nullable_bool___get_Value(v20, (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
   }
 }
 

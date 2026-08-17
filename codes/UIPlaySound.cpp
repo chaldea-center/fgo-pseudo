@@ -234,7 +234,7 @@ bool UIPlaySound__get_canPlay(UIPlaySound_o *this, const MethodInfo *method)
     return 1;
   if ( !Component_object )
     sub_2213CDC(v5, v6);
-  return ((bool (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[4].methodPtr)(
+  return ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[4].methodPtr)(
            Component_object,
            Component_object->klass->vtable[4].method);
 }

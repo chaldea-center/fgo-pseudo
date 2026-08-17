@@ -56,57 +56,61 @@ void UIOrthoCamera__Update(UIOrthoCamera_o *this, const MethodInfo *method)
   UnityEngine_Camera_o *mCam; // x0
   float m_YMin; // s8
   int v5; // w20
-  int v6; // w21
-  float v7; // s8
+  float v6; // s9
+  float m_Height; // s10
+  int v8; // w21
+  float v9; // s8
   float orthographicSize; // s9
-  float v9; // s0
-  float v10; // s1
+  float v11; // s0
+  float v12; // s1
   struct UnityEngine_Mathf_StaticFields *static_fields; // x8
-  float v12; // s0
-  float y; // s1
-  UnityEngine_Rect_o rect; // 0:kr10_16.16
+  float v14; // s0
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o rect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   mCam = this->fields.mCam;
   if ( !mCam )
     goto LABEL_15;
-  m_YMin = UnityEngine_Camera__get_rect(mCam, 0).fields.m_YMin;
+  rect = UnityEngine_Camera__get_rect(mCam, 0);
+  m_YMin = rect.fields.m_YMin;
   mCam = (UnityEngine_Camera_o *)UnityEngine_Screen__get_height(0);
   if ( !this->fields.mCam )
     goto LABEL_15;
   v5 = (int)mCam;
-  rect = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
+  v17 = UnityEngine_Camera__get_rect(this->fields.mCam, 0);
+  v6 = v17.fields.m_YMin;
+  m_Height = v17.fields.m_Height;
   mCam = (UnityEngine_Camera_o *)UnityEngine_Screen__get_height(0);
   if ( !this->fields.mTrans )
     goto LABEL_15;
-  v6 = (int)mCam;
-  y = UnityEngine_Transform__get_lossyScale(this->fields.mTrans, 0).fields.y;
+  v8 = (int)mCam;
+  lossyScale = UnityEngine_Transform__get_lossyScale(this->fields.mTrans, 0);
   mCam = this->fields.mCam;
   if ( !mCam )
     goto LABEL_15;
-  v7 = (float)((float)((float)((float)(rect.fields.m_Height + rect.fields.m_YMin) * (float)v6)
-                     - (float)(m_YMin * (float)v5))
-             * 0.5)
-     * y;
+  v9 = (float)((float)((float)((float)(m_Height + v6) * (float)v8) - (float)(m_YMin * (float)v5)) * 0.5)
+     * lossyScale.fields.y;
   orthographicSize = UnityEngine_Camera__get_orthographicSize(mCam, 0);
   if ( !byte_5969AE4 )
   {
     sub_2213A60(&UnityEngine_Mathf_TypeInfo);
     byte_5969AE4 = 1;
   }
-  v9 = fabsf(orthographicSize);
-  v10 = fabsf(v7);
+  v11 = fabsf(orthographicSize);
+  v12 = fabsf(v9);
   static_fields = UnityEngine_Mathf_TypeInfo->static_fields;
-  if ( v9 <= v10 )
-    v9 = v10;
-  v12 = v9 * 0.000001;
-  if ( v12 <= (float)(static_fields->Epsilon * 8.0) )
-    v12 = static_fields->Epsilon * 8.0;
-  if ( vabds_f32(v7, orthographicSize) >= v12 )
+  if ( v11 <= v12 )
+    v11 = v12;
+  v14 = v11 * 0.000001;
+  if ( v14 <= (float)(static_fields->Epsilon * 8.0) )
+    v14 = static_fields->Epsilon * 8.0;
+  if ( vabds_f32(v9, orthographicSize) >= v14 )
   {
     mCam = this->fields.mCam;
     if ( mCam )
     {
-      UnityEngine_Camera__set_orthographicSize(mCam, v7, 0);
+      UnityEngine_Camera__set_orthographicSize(mCam, v9, 0);
       return;
     }
 LABEL_15:

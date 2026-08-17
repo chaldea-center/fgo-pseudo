@@ -142,15 +142,15 @@ void MaterialEventLogListViewObject__InitItem(MaterialEventLogListViewObject_o *
 
 void MaterialEventLogListViewObject__InitPosition(MaterialEventLogListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v3; // x1
   UnityEngine_Transform_o *v4; // x19
 
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  v4 = (UnityEngine_Transform_o *)transform;
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  v4 = transform;
   if ( !byte_5969AE0 )
   {
-    transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v4 )
@@ -159,6 +159,7 @@ void MaterialEventLogListViewObject__InitPosition(MaterialEventLogListViewObject
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MaterialEventLogListViewObject__Init_40039472(
         MaterialEventLogListViewObject_o *this,
         int32_t initMode,
@@ -167,20 +168,21 @@ void MaterialEventLogListViewObject__Init_40039472(
         const MethodInfo *method)
 {
   float v5; // s0
-  float v6; // s1
-  float v7; // s2
-  float v8; // s3
-  UnityEngine_Vector3_o v13; // 0:kr00_12.12
+  int v6; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v13.fields.x = v6;
-  v13.fields.y = v7;
-  v13.fields.z = v8;
-  MaterialEventLogListViewObject__Init_40039564(this, initMode, callbackFunc, v5, v13, limitCount, method);
+  MaterialEventLogListViewObject__Init_40039564(
+    this,
+    initMode,
+    callbackFunc,
+    v5,
+    *(UnityEngine_Vector3_o *)&v6,
+    limitCount,
+    method);
 }
 
 

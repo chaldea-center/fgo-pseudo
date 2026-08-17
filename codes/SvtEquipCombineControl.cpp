@@ -31,6 +31,7 @@ bool SvtEquipCombineControl__CheckIncrementLv(SvtEquipCombineControl_o *this, in
   __int64 v7; // x1
   int32_t v8; // w8
   int32_t totalExp; // w9
+  bool result; // w0
 
   if ( (byte_596A42A & 1) == 0 )
   {
@@ -56,8 +57,9 @@ bool SvtEquipCombineControl__CheckIncrementLv(SvtEquipCombineControl_o *this, in
     {
       if ( v8 != totalExp )
       {
+        result = 0;
         ++this->fields.checkLv;
-        return 0;
+        return result;
       }
       afterMaxLv = *((_DWORD *)Instance + 5) + 1;
     }
@@ -66,8 +68,9 @@ bool SvtEquipCombineControl__CheckIncrementLv(SvtEquipCombineControl_o *this, in
       afterMaxLv = *((_DWORD *)Instance + 5);
     }
   }
+  result = 1;
   this->fields.increLv = afterMaxLv;
-  return 1;
+  return result;
 }
 
 
@@ -370,149 +373,149 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
   __int128 v75; // q1
   int v76; // w8
   const MethodInfo *v77; // x3
-  __int64 v78; // x26
-  int32_t v79; // w26
-  int32_t v80; // w2
-  __int64 v81; // x26
-  int32_t v82; // w26
-  __int64 v83; // x1
-  __int64 v84; // x2
-  SvtEquipCombineControl___c_c *v85; // x0
-  struct SvtEquipCombineControl___c_StaticFields *v86; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v78; // x0
+  __int64 v79; // x26
+  int32_t v80; // w26
+  int32_t v81; // w2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v82; // x0
+  __int64 v83; // x26
+  int32_t v84; // w26
+  __int64 v85; // x1
+  __int64 v86; // x2
+  SvtEquipCombineControl___c_c *v87; // x0
+  struct SvtEquipCombineControl___c_StaticFields *v88; // x8
   System_Func_T__TResult__o *_9__83_3; // x21
-  Il2CppObject *v88; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v89; // x0
-  System_String_o *v90; // x2
-  System_String_o *v91; // x3
-  int32_t v92; // w4
-  int32_t v93; // w5
-  bool v94; // w6
-  bool v95; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v96; // x0
-  __int64 v97; // x1
-  __int64 v98; // x2
-  SvtEquipCombineControl___c_c *v99; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v100; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v101; // x9
+  Il2CppObject *v90; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v91; // x0
+  System_String_o *v92; // x2
+  System_String_o *v93; // x3
+  int32_t v94; // w4
+  int32_t v95; // w5
+  bool v96; // w6
+  bool v97; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v98; // x0
+  __int64 v99; // x1
+  __int64 v100; // x2
+  SvtEquipCombineControl___c_c *v101; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v102; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v103; // x9
   System_Func_T__TResult__o *_9__83_4; // x21
-  Il2CppObject *v103; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v104; // x0
-  System_String_o *v105; // x2
-  System_String_o *v106; // x3
-  int32_t v107; // w4
-  int32_t v108; // w5
-  bool v109; // w6
-  bool v110; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v111; // x0
-  __int64 v112; // x1
-  __int64 v113; // x2
-  SvtEquipCombineControl___c_c *v114; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v115; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v116; // x9
+  Il2CppObject *v105; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v106; // x0
+  System_String_o *v107; // x2
+  System_String_o *v108; // x3
+  int32_t v109; // w4
+  int32_t v110; // w5
+  bool v111; // w6
+  bool v112; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v113; // x0
+  __int64 v114; // x1
+  __int64 v115; // x2
+  SvtEquipCombineControl___c_c *v116; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v117; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v118; // x9
   System_Func_T__TResult__o *_9__83_5; // x21
-  Il2CppObject *v118; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v119; // x0
-  System_String_o *v120; // x2
-  System_String_o *v121; // x3
-  int32_t v122; // w4
-  int32_t v123; // w5
-  bool v124; // w6
-  bool v125; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v126; // x0
-  __int64 v127; // x1
-  __int64 v128; // x2
-  SvtEquipCombineControl___c_c *v129; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v130; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v131; // x9
+  Il2CppObject *v120; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v121; // x0
+  System_String_o *v122; // x2
+  System_String_o *v123; // x3
+  int32_t v124; // w4
+  int32_t v125; // w5
+  bool v126; // w6
+  bool v127; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v128; // x0
+  __int64 v129; // x1
+  __int64 v130; // x2
+  SvtEquipCombineControl___c_c *v131; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v132; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v133; // x9
   System_Func_T__TResult__o *_9__83_6; // x21
-  Il2CppObject *v133; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v134; // x0
-  System_String_o *v135; // x2
-  System_String_o *v136; // x3
-  int32_t v137; // w4
-  int32_t v138; // w5
-  bool v139; // w6
-  bool v140; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v141; // x0
-  __int64 v142; // x1
-  __int64 v143; // x2
-  SvtEquipCombineControl___c_c *v144; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v145; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v146; // x9
+  Il2CppObject *v135; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v136; // x0
+  System_String_o *v137; // x2
+  System_String_o *v138; // x3
+  int32_t v139; // w4
+  int32_t v140; // w5
+  bool v141; // w6
+  bool v142; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v143; // x0
+  __int64 v144; // x1
+  __int64 v145; // x2
+  SvtEquipCombineControl___c_c *v146; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v147; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v148; // x9
   System_Func_T__TResult__o *_9__83_7; // x21
-  Il2CppObject *v148; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v149; // x0
-  System_String_o *v150; // x2
-  System_String_o *v151; // x3
-  int32_t v152; // w4
-  int32_t v153; // w5
-  bool v154; // w6
-  bool v155; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v156; // x0
-  __int64 v157; // x1
-  __int64 v158; // x2
-  SvtEquipCombineControl___c_c *v159; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v160; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v161; // x9
+  Il2CppObject *v150; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v151; // x0
+  System_String_o *v152; // x2
+  System_String_o *v153; // x3
+  int32_t v154; // w4
+  int32_t v155; // w5
+  bool v156; // w6
+  bool v157; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v158; // x0
+  __int64 v159; // x1
+  __int64 v160; // x2
+  SvtEquipCombineControl___c_c *v161; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v162; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v163; // x9
   System_Func_T__TResult__o *_9__83_8; // x21
-  Il2CppObject *v163; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v164; // x0
-  System_String_o *v165; // x2
-  System_String_o *v166; // x3
-  int32_t v167; // w4
-  int32_t v168; // w5
-  bool v169; // w6
-  bool v170; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v171; // x0
-  __int64 v172; // x1
-  __int64 v173; // x2
-  SvtEquipCombineControl___c_c *v174; // x8
-  System_Linq_IOrderedEnumerable_TSource__o *v175; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v176; // x9
+  Il2CppObject *v165; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v166; // x0
+  System_String_o *v167; // x2
+  System_String_o *v168; // x3
+  int32_t v169; // w4
+  int32_t v170; // w5
+  bool v171; // w6
+  bool v172; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v173; // x0
+  __int64 v174; // x1
+  __int64 v175; // x2
+  SvtEquipCombineControl___c_c *v176; // x8
+  System_Linq_IOrderedEnumerable_TSource__o *v177; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v178; // x9
   System_Func_T__TResult__o *_9__83_9; // x21
-  Il2CppObject *v178; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v179; // x0
-  System_String_o *v180; // x2
-  System_String_o *v181; // x3
-  int32_t v182; // w4
-  int32_t v183; // w5
-  bool v184; // w6
-  bool v185; // w7
-  System_Linq_IOrderedEnumerable_TSource__o *v186; // x0
-  __int64 v187; // x1
-  __int64 v188; // x2
-  SvtEquipCombineControl___c_c *v189; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v190; // x20
-  struct SvtEquipCombineControl___c_StaticFields *v191; // x9
+  Il2CppObject *v180; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v181; // x0
+  System_String_o *v182; // x2
+  System_String_o *v183; // x3
+  int32_t v184; // w4
+  int32_t v185; // w5
+  bool v186; // w6
+  bool v187; // w7
+  System_Linq_IOrderedEnumerable_TSource__o *v188; // x0
+  __int64 v189; // x1
+  __int64 v190; // x2
+  SvtEquipCombineControl___c_c *v191; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v192; // x20
+  struct SvtEquipCombineControl___c_StaticFields *v193; // x9
   System_Func_T__TResult__o *_9__83_10; // x21
-  Il2CppObject *v193; // x22
-  struct SvtEquipCombineControl___c_StaticFields *v194; // x0
-  System_String_o *v195; // x2
-  System_String_o *v196; // x3
-  int32_t v197; // w4
-  int32_t v198; // w5
-  bool v199; // w6
-  bool v200; // w7
-  System_Collections_Generic_IEnumerable_TSource__o *v201; // x0
-  System_Collections_Generic_List_UserServantEntity__o *v202; // x0
-  const MethodInfo *v203; // x2
+  Il2CppObject *v195; // x22
+  struct SvtEquipCombineControl___c_StaticFields *v196; // x0
+  System_String_o *v197; // x2
+  System_String_o *v198; // x3
+  int32_t v199; // w4
+  int32_t v200; // w5
+  bool v201; // w6
+  bool v202; // w7
+  System_Collections_Generic_IEnumerable_TSource__o *v203; // x0
+  System_Collections_Generic_List_UserServantEntity__o *v204; // x0
+  const MethodInfo *v205; // x2
   __int64 value; // [xsp+10h] [xbp-140h]
   __int64 valuea; // [xsp+10h] [xbp-140h]
-  __int64 v207; // [xsp+18h] [xbp-138h]
-  __int64 v208; // [xsp+20h] [xbp-130h]
-  System_Collections_Generic_List_int__o *v209; // [xsp+28h] [xbp-128h]
+  __int64 v209; // [xsp+18h] [xbp-138h]
+  __int64 v210; // [xsp+20h] [xbp-130h]
+  System_Collections_Generic_List_int__o *v211; // [xsp+28h] [xbp-128h]
   System_Collections_ICollection_o *self; // [xsp+30h] [xbp-120h]
   System_Collections_Generic_List_int__o *selectTypeList; // [xsp+38h] [xbp-118h]
-  UserServantGrandMaster_o *v212; // [xsp+40h] [xbp-110h]
-  UserRecommendSupportMaster_o *v213; // [xsp+48h] [xbp-108h]
-  System_Collections_Generic_List_T__o *v214; // [xsp+58h] [xbp-F8h]
-  UserDeckMaster_o *v215; // [xsp+60h] [xbp-F0h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v217; // [xsp+70h] [xbp-E0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v218; // [xsp+90h] [xbp-C0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v219; // [xsp+B0h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v220; // [xsp+D0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v221; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v222; // 0:x0.16
+  UserServantGrandMaster_o *v214; // [xsp+40h] [xbp-110h]
+  UserRecommendSupportMaster_o *v215; // [xsp+48h] [xbp-108h]
+  System_Collections_Generic_List_T__o *v216; // [xsp+58h] [xbp-F8h]
+  UserDeckMaster_o *v217; // [xsp+60h] [xbp-F0h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v219; // [xsp+70h] [xbp-E0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v220; // [xsp+90h] [xbp-C0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v221; // [xsp+B0h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v222; // [xsp+D0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v223; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v224; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v225; // 0:x0.16
@@ -587,8 +590,8 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
   baseData = this->fields.baseData;
   if ( !baseData )
     goto LABEL_150;
-  v207 = *(_QWORD *)&baseData->fields.svtId.fields.fakeValue;
-  v208 = *(_QWORD *)&baseData->fields.svtId.fields.currentCryptoKey;
+  v209 = *(_QWORD *)&baseData->fields.svtId.fields.fakeValue;
+  v210 = *(_QWORD *)&baseData->fields.svtId.fields.currentCryptoKey;
   if ( !*(&RecommendedSvtEquipConfigSaveData_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(RecommendedSvtEquipConfigSaveData_TypeInfo, Rarity, v9);
   ConfigSaveData = (int64_t)RecommendedSvtEquipConfigSaveData__LoadConfigSaveData(0);
@@ -633,10 +636,10 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
     (System_Collections_Generic_List_T__o *)self,
     v26,
     (const MethodInfo_4469334 *)Method_System_Collections_Generic_List_Rarity_TYPE___ctor___91681120);
-  v209 = *(System_Collections_Generic_List_int__o **)(v12 + 32);
+  v211 = *(System_Collections_Generic_List_int__o **)(v12 + 32);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v27, v28);
-  v215 = (UserDeckMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserDeckMaster___);
+  v217 = (UserDeckMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserDeckMaster___);
   ConfigSaveData = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantLeaderMaster___);
   if ( !ConfigSaveData )
     goto LABEL_150;
@@ -705,14 +708,14 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
                                                                v47,
                                                                (System_Func_TSource__TResult__o *)_9__83_2,
                                                                (const MethodInfo_389155C *)Method_System_Linq_Enumerable_Select_EquipTargetInfo__ObscuredLong___);
-  v214 = (System_Collections_Generic_List_T__o *)System_Linq_Enumerable__ToList_ObscuredLong_(
+  v216 = (System_Collections_Generic_List_T__o *)System_Linq_Enumerable__ToList_ObscuredLong_(
                                                    v58,
                                                    (const MethodInfo_38A0E70 *)Method_System_Linq_Enumerable_ToList_ObscuredLong___);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v59, v60);
-  v213 = (UserRecommendSupportMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserRecommendSupportMaster___);
+  v215 = (UserRecommendSupportMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserRecommendSupportMaster___);
   ConfigSaveData = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantGrandMaster___);
-  v212 = (UserServantGrandMaster_o *)ConfigSaveData;
+  v214 = (UserServantGrandMaster_o *)ConfigSaveData;
   if ( !ServantEquipList )
     goto LABEL_150;
   max_length = ServantEquipList->max_length;
@@ -730,9 +733,9 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
       v66 = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, Rarity, v61);
-      *(_QWORD *)&v221.fields.currentCryptoKey = v65;
-      *(_QWORD *)&v221.fields.fakeValue = v66;
-      ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v221, 0);
+      *(_QWORD *)&v223.fields.currentCryptoKey = v65;
+      *(_QWORD *)&v223.fields.fakeValue = v66;
+      ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v223, 0);
       if ( !v6 )
         goto LABEL_150;
       Entity = DataMasterBase_object__object__int___GetEntity(
@@ -741,12 +744,12 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
                  (const MethodInfo_3F10B30 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       v70 = *(_OWORD *)&v64->fields.id.fields.fakeValue;
       v71 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
-      *(_OWORD *)&v220.fields.currentCryptoKey = *(_OWORD *)&v64->fields.id.fields.currentCryptoKey;
-      *(_OWORD *)&v220.fields.fakeValue = v70;
+      *(_OWORD *)&v222.fields.currentCryptoKey = *(_OWORD *)&v64->fields.id.fields.currentCryptoKey;
+      *(_OWORD *)&v222.fields.fakeValue = v70;
       if ( !v71 )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v67, v68);
-      v219 = v220;
-      v72 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v219, 0);
+      v221 = v222;
+      v72 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v221, 0);
       ConfigSaveData = UserServantEntity__IsChoice(v64, 0);
       if ( (ConfigSaveData & 1) == 0 )
       {
@@ -759,43 +762,43 @@ SetCombineData_o *SvtEquipCombineControl__GetRecommendedCombineData(
           v74 = *(_OWORD *)&v73->fields.id.fields.currentCryptoKey;
           v75 = *(_OWORD *)&v73->fields.id.fields.fakeValue;
           v76 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);
-          *(_OWORD *)&v220.fields.currentCryptoKey = v74;
-          *(_OWORD *)&v220.fields.fakeValue = v75;
+          *(_OWORD *)&v222.fields.currentCryptoKey = v74;
+          *(_OWORD *)&v222.fields.fakeValue = v75;
           if ( !v76 )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, Rarity, v61);
-          v218 = v220;
-          ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v218, 0);
+          v220 = v222;
+          ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v220, 0);
           if ( ConfigSaveData != v72 )
           {
-            ConfigSaveData = (int64_t)v215;
-            if ( !v215 )
+            ConfigSaveData = (int64_t)v217;
+            if ( !v217 )
               goto LABEL_150;
-            ConfigSaveData = UserDeckMaster__IsEquip(v215, v72, 0);
+            ConfigSaveData = UserDeckMaster__IsEquip(v217, v72, 0);
             if ( (ConfigSaveData & 1) == 0 )
             {
               if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, Rarity, v61);
-              CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v217, v72, 0);
-              ConfigSaveData = (int64_t)v214;
-              if ( !v214 )
+              CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v219, v72, 0);
+              ConfigSaveData = (int64_t)v216;
+              if ( !v216 )
                 goto LABEL_150;
-              v220 = v217;
+              v222 = v219;
               ConfigSaveData = System_Collections_Generic_List_ObscuredLong___Contains(
-                                 v214,
-                                 &v220,
+                                 v216,
+                                 &v222,
                                  (const MethodInfo_4486944 *)Method_System_Collections_Generic_List_ObscuredLong__Contains__);
               if ( (ConfigSaveData & 1) == 0 )
               {
-                ConfigSaveData = (int64_t)v213;
-                if ( !v213 )
+                ConfigSaveData = (int64_t)v215;
+                if ( !v215 )
                   goto LABEL_150;
-                ConfigSaveData = UserRecommendSupportMaster__IsSettingServant(v213, v72, 1, 0);
+                ConfigSaveData = UserRecommendSupportMaster__IsSettingServant(v215, v72, 1, 0);
                 if ( (ConfigSaveData & 1) == 0 )
                 {
-                  ConfigSaveData = (int64_t)v212;
-                  if ( !v212 )
+                  ConfigSaveData = (int64_t)v214;
+                  if ( !v214 )
                     goto LABEL_150;
-                  ConfigSaveData = UserServantGrandMaster__IsSettingEquip(v212, v72, 0);
+                  ConfigSaveData = UserServantGrandMaster__IsSettingEquip(v214, v72, 0);
                   if ( (ConfigSaveData & 1) == 0 )
                   {
                     ConfigSaveData = SvtEquipCombineControl__IsMatchServantEquipType(
@@ -826,42 +829,42 @@ LABEL_63:
                           && UserServantEntity__getLimitCntMax(v64, 0)
                           && !ServantEntity__get_IsChocolateSvtEquip((ServantEntity_o *)Entity, 0) )
                         {
-                          ConfigSaveData = (int64_t)v209;
-                          if ( !v209 )
+                          ConfigSaveData = (int64_t)v211;
+                          if ( !v211 )
                             goto LABEL_150;
                           if ( System_Collections_Generic_List_int___Contains(
-                                 v209,
+                                 v211,
                                  1,
                                  (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__) )
                           {
                             ConfigSaveData = System_Collections_Generic_List_int___Contains(
-                                               v209,
+                                               v211,
                                                0,
                                                (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__);
                             if ( (ConfigSaveData & 1) == 0 )
                               continue;
                           }
-                          v78 = *(_QWORD *)&v64->fields.svtId.fields.currentCryptoKey;
-                          *(_QWORD *)&v222.fields.fakeValue = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
+                          v79 = *(_QWORD *)&v64->fields.svtId.fields.currentCryptoKey;
+                          *(_QWORD *)&v78.fields.fakeValue = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
                           if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
                           {
                             value = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
                             j_il2cpp_runtime_class_init_0(
                               CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
-                              *(_QWORD *)&v222.fields.fakeValue,
+                              *(_QWORD *)&v78.fields.fakeValue,
                               v61);
-                            *(_QWORD *)&v222.fields.fakeValue = value;
+                            *(_QWORD *)&v78.fields.fakeValue = value;
                           }
-                          *(_QWORD *)&v222.fields.currentCryptoKey = v78;
-                          v79 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v222, 0);
-                          *(_QWORD *)&v223.fields.fakeValue = v207;
-                          *(_QWORD *)&v223.fields.currentCryptoKey = v208;
-                          ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v223, 0);
-                          if ( v79 == (_DWORD)ConfigSaveData )
+                          *(_QWORD *)&v78.fields.currentCryptoKey = v79;
+                          v80 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v78, 0);
+                          *(_QWORD *)&v224.fields.fakeValue = v209;
+                          *(_QWORD *)&v224.fields.currentCryptoKey = v210;
+                          ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v224, 0);
+                          if ( v80 == (_DWORD)ConfigSaveData )
                           {
                             if ( !v8 )
                               goto LABEL_150;
-                            v80 = 0;
+                            v81 = 0;
                           }
                           else
                           {
@@ -870,54 +873,54 @@ LABEL_63:
                             {
                               if ( !v8 )
                                 goto LABEL_150;
-                              v80 = 20;
+                              v81 = 20;
                             }
                             else
                             {
                               if ( !v8 )
                                 goto LABEL_150;
-                              v80 = 40;
+                              v81 = 40;
                             }
                           }
                         }
                         else
                         {
-                          ConfigSaveData = (int64_t)v209;
-                          if ( !v209 )
+                          ConfigSaveData = (int64_t)v211;
+                          if ( !v211 )
                             goto LABEL_150;
                           if ( !System_Collections_Generic_List_int___Contains(
-                                  v209,
+                                  v211,
                                   1,
                                   (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__) )
                           {
                             ConfigSaveData = System_Collections_Generic_List_int___Contains(
-                                               v209,
+                                               v211,
                                                0,
                                                (const MethodInfo_44675F0 *)Method_System_Collections_Generic_List_int__Contains__);
                             if ( (ConfigSaveData & 1) != 0 )
                               continue;
                           }
-                          v81 = *(_QWORD *)&v64->fields.svtId.fields.currentCryptoKey;
-                          *(_QWORD *)&v224.fields.fakeValue = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
+                          v83 = *(_QWORD *)&v64->fields.svtId.fields.currentCryptoKey;
+                          *(_QWORD *)&v82.fields.fakeValue = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
                           if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
                           {
                             valuea = *(_QWORD *)&v64->fields.svtId.fields.fakeValue;
                             j_il2cpp_runtime_class_init_0(
                               CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
-                              *(_QWORD *)&v224.fields.fakeValue,
+                              *(_QWORD *)&v82.fields.fakeValue,
                               v61);
-                            *(_QWORD *)&v224.fields.fakeValue = valuea;
+                            *(_QWORD *)&v82.fields.fakeValue = valuea;
                           }
-                          *(_QWORD *)&v224.fields.currentCryptoKey = v81;
-                          v82 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v224, 0);
-                          *(_QWORD *)&v225.fields.fakeValue = v207;
-                          *(_QWORD *)&v225.fields.currentCryptoKey = v208;
+                          *(_QWORD *)&v82.fields.currentCryptoKey = v83;
+                          v84 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v82, 0);
+                          *(_QWORD *)&v225.fields.fakeValue = v209;
+                          *(_QWORD *)&v225.fields.currentCryptoKey = v210;
                           ConfigSaveData = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v225, 0);
-                          if ( v82 == (_DWORD)ConfigSaveData )
+                          if ( v84 == (_DWORD)ConfigSaveData )
                           {
                             if ( !v8 )
                               goto LABEL_150;
-                            v80 = 10;
+                            v81 = 10;
                           }
                           else
                           {
@@ -926,20 +929,20 @@ LABEL_63:
                             {
                               if ( !v8 )
                                 goto LABEL_150;
-                              v80 = 30;
+                              v81 = 30;
                             }
                             else
                             {
                               if ( !v8 )
                                 goto LABEL_150;
-                              v80 = 50;
+                              v81 = 50;
                             }
                           }
                         }
                         System_Collections_Generic_Dictionary_object__int___Add(
                           v8,
                           (Il2CppObject *)v64,
-                          v80,
+                          v81,
                           (const MethodInfo_3FF409C *)Method_System_Collections_Generic_Dictionary_UserServantEntity__int__Add__);
                       }
                     }
@@ -960,313 +963,313 @@ LABEL_150:
           v8,
           (const MethodInfo_3FF3D54 *)Method_System_Collections_Generic_Dictionary_UserServantEntity__int__get_Count__) )
     return 0;
-  v85 = SvtEquipCombineControl___c_TypeInfo;
+  v87 = SvtEquipCombineControl___c_TypeInfo;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v83, v84);
-    v85 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v85, v86);
+    v87 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v86 = v85->static_fields;
-  _9__83_3 = (System_Func_T__TResult__o *)v86->__9__83_3;
+  v88 = v87->static_fields;
+  _9__83_3 = (System_Func_T__TResult__o *)v88->__9__83_3;
   if ( !_9__83_3 )
   {
-    if ( !*(&v85->_2.cctor_finished + 1) )
+    if ( !*(&v87->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v85, v83, v84);
-      v86 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v87, v85, v86);
+      v88 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v88 = (Il2CppObject *)v86->__9;
+    v90 = (Il2CppObject *)v88->__9;
     _9__83_3 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___int__TypeInfo);
     System_Func_KeyValuePair_object__int___int____ctor(
       _9__83_3,
-      v88,
+      v90,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_3__,
       0);
-    v89 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v89->__9__83_3 = (struct System_Func_KeyValuePair_UserServantEntity__int___int__o *)_9__83_3;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v89->__9__83_3, (int32_t)_9__83_3, v90, v91, v92, v93, v94, v95);
+    v91 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v91->__9__83_3 = (struct System_Func_KeyValuePair_UserServantEntity__int___int__o *)_9__83_3;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v91->__9__83_3, (int32_t)_9__83_3, v92, v93, v94, v95, v96, v97);
   }
-  v96 = System_Linq_Enumerable__OrderBy_KeyValuePair_object__int___int_(
+  v98 = System_Linq_Enumerable__OrderBy_KeyValuePair_object__int___int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v8,
           (System_Func_TSource__TKey__o *)_9__83_3,
           (const MethodInfo_38887B0 *)Method_System_Linq_Enumerable_OrderBy_KeyValuePair_UserServantEntity__int___int___);
-  v99 = SvtEquipCombineControl___c_TypeInfo;
-  v100 = v96;
+  v101 = SvtEquipCombineControl___c_TypeInfo;
+  v102 = v98;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v97, v98);
-    v99 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v99, v100);
+    v101 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v101 = v99->static_fields;
-  _9__83_4 = (System_Func_T__TResult__o *)v101->__9__83_4;
+  v103 = v101->static_fields;
+  _9__83_4 = (System_Func_T__TResult__o *)v103->__9__83_4;
   if ( !_9__83_4 )
   {
-    if ( !*(&v99->_2.cctor_finished + 1) )
+    if ( !*(&v101->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v99, v97, v98);
-      v101 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v101, v99, v100);
+      v103 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v103 = (Il2CppObject *)v101->__9;
+    v105 = (Il2CppObject *)v103->__9;
     _9__83_4 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___int__TypeInfo);
     System_Func_KeyValuePair_object__int___int____ctor(
       _9__83_4,
-      v103,
+      v105,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_4__,
       0);
-    v104 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v104->__9__83_4 = (struct System_Func_KeyValuePair_UserServantEntity__int___int__o *)_9__83_4;
+    v106 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v106->__9__83_4 = (struct System_Func_KeyValuePair_UserServantEntity__int___int__o *)_9__83_4;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v104->__9__83_4,
+      (MissionNaviTransitionBoardItem_o *)&v106->__9__83_4,
       (int32_t)_9__83_4,
-      v105,
-      v106,
       v107,
       v108,
       v109,
-      v110);
+      v110,
+      v111,
+      v112);
   }
-  v111 = System_Linq_Enumerable__ThenBy_KeyValuePair_object__int___int_(
-           v100,
+  v113 = System_Linq_Enumerable__ThenBy_KeyValuePair_object__int___int_(
+           v102,
            (System_Func_TSource__TKey__o *)_9__83_4,
            (const MethodInfo_389A564 *)Method_System_Linq_Enumerable_ThenBy_KeyValuePair_UserServantEntity__int___int___);
-  v114 = SvtEquipCombineControl___c_TypeInfo;
-  v115 = v111;
+  v116 = SvtEquipCombineControl___c_TypeInfo;
+  v117 = v113;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v112, v113);
-    v114 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v114, v115);
+    v116 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v116 = v114->static_fields;
-  _9__83_5 = (System_Func_T__TResult__o *)v116->__9__83_5;
+  v118 = v116->static_fields;
+  _9__83_5 = (System_Func_T__TResult__o *)v118->__9__83_5;
   if ( !_9__83_5 )
   {
-    if ( !*(&v114->_2.cctor_finished + 1) )
+    if ( !*(&v116->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v114, v112, v113);
-      v116 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v116, v114, v115);
+      v118 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v118 = (Il2CppObject *)v116->__9;
+    v120 = (Il2CppObject *)v118->__9;
     _9__83_5 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___int__TypeInfo);
     System_Func_KeyValuePair_object__int___int____ctor(
       _9__83_5,
-      v118,
+      v120,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_5__,
       0);
-    v119 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v119->__9__83_5 = (struct System_Func_KeyValuePair_UserServantEntity__int___int__o *)_9__83_5;
+    v121 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v121->__9__83_5 = (struct System_Func_KeyValuePair_UserServantEntity__int___int__o *)_9__83_5;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v119->__9__83_5,
+      (MissionNaviTransitionBoardItem_o *)&v121->__9__83_5,
       (int32_t)_9__83_5,
-      v120,
-      v121,
       v122,
       v123,
       v124,
-      v125);
+      v125,
+      v126,
+      v127);
   }
-  v126 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___int_(
-           v115,
+  v128 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___int_(
+           v117,
            (System_Func_TSource__TKey__o *)_9__83_5,
            (const MethodInfo_389AEF4 *)Method_System_Linq_Enumerable_ThenByDescending_KeyValuePair_UserServantEntity__int___int___);
-  v129 = SvtEquipCombineControl___c_TypeInfo;
-  v130 = v126;
+  v131 = SvtEquipCombineControl___c_TypeInfo;
+  v132 = v128;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v127, v128);
-    v129 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v129, v130);
+    v131 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v131 = v129->static_fields;
-  _9__83_6 = (System_Func_T__TResult__o *)v131->__9__83_6;
+  v133 = v131->static_fields;
+  _9__83_6 = (System_Func_T__TResult__o *)v133->__9__83_6;
   if ( !_9__83_6 )
   {
-    if ( !*(&v129->_2.cctor_finished + 1) )
+    if ( !*(&v131->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v129, v127, v128);
-      v131 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v131, v129, v130);
+      v133 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v133 = (Il2CppObject *)v131->__9;
+    v135 = (Il2CppObject *)v133->__9;
     _9__83_6 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___long__TypeInfo);
     System_Func_KeyValuePair_object__int___long____ctor(
       _9__83_6,
-      v133,
+      v135,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_6__,
       0);
-    v134 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v134->__9__83_6 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_6;
+    v136 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v136->__9__83_6 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_6;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v134->__9__83_6,
+      (MissionNaviTransitionBoardItem_o *)&v136->__9__83_6,
       (int32_t)_9__83_6,
-      v135,
-      v136,
       v137,
       v138,
       v139,
-      v140);
+      v140,
+      v141,
+      v142);
   }
-  v141 = System_Linq_Enumerable__ThenBy_KeyValuePair_object__int___long_(
-           v130,
+  v143 = System_Linq_Enumerable__ThenBy_KeyValuePair_object__int___long_(
+           v132,
            (System_Func_TSource__TKey__o *)_9__83_6,
            (const MethodInfo_389A630 *)Method_System_Linq_Enumerable_ThenBy_KeyValuePair_UserServantEntity__int___long___);
-  v144 = SvtEquipCombineControl___c_TypeInfo;
-  v145 = v141;
+  v146 = SvtEquipCombineControl___c_TypeInfo;
+  v147 = v143;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v142, v143);
-    v144 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v144, v145);
+    v146 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v146 = v144->static_fields;
-  _9__83_7 = (System_Func_T__TResult__o *)v146->__9__83_7;
+  v148 = v146->static_fields;
+  _9__83_7 = (System_Func_T__TResult__o *)v148->__9__83_7;
   if ( !_9__83_7 )
   {
-    if ( !*(&v144->_2.cctor_finished + 1) )
+    if ( !*(&v146->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v144, v142, v143);
-      v146 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v146, v144, v145);
+      v148 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v148 = (Il2CppObject *)v146->__9;
+    v150 = (Il2CppObject *)v148->__9;
     _9__83_7 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___long__TypeInfo);
     System_Func_KeyValuePair_object__int___long____ctor(
       _9__83_7,
-      v148,
+      v150,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_7__,
       0);
-    v149 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v149->__9__83_7 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_7;
+    v151 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v151->__9__83_7 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_7;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v149->__9__83_7,
+      (MissionNaviTransitionBoardItem_o *)&v151->__9__83_7,
       (int32_t)_9__83_7,
-      v150,
-      v151,
       v152,
       v153,
       v154,
-      v155);
+      v155,
+      v156,
+      v157);
   }
-  v156 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___long_(
-           v145,
+  v158 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___long_(
+           v147,
            (System_Func_TSource__TKey__o *)_9__83_7,
            (const MethodInfo_389AFC0 *)Method_System_Linq_Enumerable_ThenByDescending_KeyValuePair_UserServantEntity__int___long___);
-  v159 = SvtEquipCombineControl___c_TypeInfo;
-  v160 = v156;
+  v161 = SvtEquipCombineControl___c_TypeInfo;
+  v162 = v158;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v157, v158);
-    v159 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v159, v160);
+    v161 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v161 = v159->static_fields;
-  _9__83_8 = (System_Func_T__TResult__o *)v161->__9__83_8;
+  v163 = v161->static_fields;
+  _9__83_8 = (System_Func_T__TResult__o *)v163->__9__83_8;
   if ( !_9__83_8 )
   {
-    if ( !*(&v159->_2.cctor_finished + 1) )
+    if ( !*(&v161->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v159, v157, v158);
-      v161 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v161, v159, v160);
+      v163 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v163 = (Il2CppObject *)v161->__9;
+    v165 = (Il2CppObject *)v163->__9;
     _9__83_8 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___long__TypeInfo);
     System_Func_KeyValuePair_object__int___long____ctor(
       _9__83_8,
-      v163,
+      v165,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_8__,
       0);
-    v164 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v164->__9__83_8 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_8;
+    v166 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v166->__9__83_8 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_8;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v164->__9__83_8,
+      (MissionNaviTransitionBoardItem_o *)&v166->__9__83_8,
       (int32_t)_9__83_8,
-      v165,
-      v166,
       v167,
       v168,
       v169,
-      v170);
+      v170,
+      v171,
+      v172);
   }
-  v171 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___long_(
-           v160,
+  v173 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___long_(
+           v162,
            (System_Func_TSource__TKey__o *)_9__83_8,
            (const MethodInfo_389AFC0 *)Method_System_Linq_Enumerable_ThenByDescending_KeyValuePair_UserServantEntity__int___long___);
-  v174 = SvtEquipCombineControl___c_TypeInfo;
-  v175 = v171;
+  v176 = SvtEquipCombineControl___c_TypeInfo;
+  v177 = v173;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v172, v173);
-    v174 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v174, v175);
+    v176 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v176 = v174->static_fields;
-  _9__83_9 = (System_Func_T__TResult__o *)v176->__9__83_9;
+  v178 = v176->static_fields;
+  _9__83_9 = (System_Func_T__TResult__o *)v178->__9__83_9;
   if ( !_9__83_9 )
   {
-    if ( !*(&v174->_2.cctor_finished + 1) )
+    if ( !*(&v176->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v174, v172, v173);
-      v176 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v176, v174, v175);
+      v178 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v178 = (Il2CppObject *)v176->__9;
+    v180 = (Il2CppObject *)v178->__9;
     _9__83_9 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___long__TypeInfo);
     System_Func_KeyValuePair_object__int___long____ctor(
       _9__83_9,
-      v178,
+      v180,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_9__,
       0);
-    v179 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v179->__9__83_9 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_9;
+    v181 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v181->__9__83_9 = (struct System_Func_KeyValuePair_UserServantEntity__int___long__o *)_9__83_9;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v179->__9__83_9,
+      (MissionNaviTransitionBoardItem_o *)&v181->__9__83_9,
       (int32_t)_9__83_9,
-      v180,
-      v181,
       v182,
       v183,
       v184,
-      v185);
+      v185,
+      v186,
+      v187);
   }
-  v186 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___long_(
-           v175,
+  v188 = System_Linq_Enumerable__ThenByDescending_KeyValuePair_object__int___long_(
+           v177,
            (System_Func_TSource__TKey__o *)_9__83_9,
            (const MethodInfo_389AFC0 *)Method_System_Linq_Enumerable_ThenByDescending_KeyValuePair_UserServantEntity__int___long___);
-  v189 = SvtEquipCombineControl___c_TypeInfo;
-  v190 = (System_Collections_Generic_IEnumerable_TSource__o *)v186;
+  v191 = SvtEquipCombineControl___c_TypeInfo;
+  v192 = (System_Collections_Generic_IEnumerable_TSource__o *)v188;
   if ( !*(&SvtEquipCombineControl___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v187, v188);
-    v189 = SvtEquipCombineControl___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(SvtEquipCombineControl___c_TypeInfo, v189, v190);
+    v191 = SvtEquipCombineControl___c_TypeInfo;
   }
-  v191 = v189->static_fields;
-  _9__83_10 = (System_Func_T__TResult__o *)v191->__9__83_10;
+  v193 = v191->static_fields;
+  _9__83_10 = (System_Func_T__TResult__o *)v193->__9__83_10;
   if ( !_9__83_10 )
   {
-    if ( !*(&v189->_2.cctor_finished + 1) )
+    if ( !*(&v191->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v189, v187, v188);
-      v191 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(v191, v189, v190);
+      v193 = SvtEquipCombineControl___c_TypeInfo->static_fields;
     }
-    v193 = (Il2CppObject *)v191->__9;
+    v195 = (Il2CppObject *)v193->__9;
     _9__83_10 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_KeyValuePair_UserServantEntity__int___UserServantEntity__TypeInfo);
     System_Func_KeyValuePair_object__int___object____ctor(
       _9__83_10,
-      v193,
+      v195,
       Method_SvtEquipCombineControl___c__GetRecommendedCombineData_b__83_10__,
       0);
-    v194 = SvtEquipCombineControl___c_TypeInfo->static_fields;
-    v194->__9__83_10 = (struct System_Func_KeyValuePair_UserServantEntity__int___UserServantEntity__o *)_9__83_10;
+    v196 = SvtEquipCombineControl___c_TypeInfo->static_fields;
+    v196->__9__83_10 = (struct System_Func_KeyValuePair_UserServantEntity__int___UserServantEntity__o *)_9__83_10;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v194->__9__83_10,
+      (MissionNaviTransitionBoardItem_o *)&v196->__9__83_10,
       (int32_t)_9__83_10,
-      v195,
-      v196,
       v197,
       v198,
       v199,
-      v200);
+      v200,
+      v201,
+      v202);
   }
-  v201 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_KeyValuePair_object__int___object_(
-                                                                v190,
+  v203 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_KeyValuePair_object__int___object_(
+                                                                v192,
                                                                 (System_Func_TSource__TResult__o *)_9__83_10,
                                                                 (const MethodInfo_388BBAC *)Method_System_Linq_Enumerable_Select_KeyValuePair_UserServantEntity__int___UserServantEntity___);
-  v202 = (System_Collections_Generic_List_UserServantEntity__o *)System_Linq_Enumerable__ToList_object_(
-                                                                   v201,
+  v204 = (System_Collections_Generic_List_UserServantEntity__o *)System_Linq_Enumerable__ToList_object_(
+                                                                   v203,
                                                                    (const MethodInfo_38A0DF0 *)Method_System_Linq_Enumerable_ToList_UserServantEntity___);
-  return SvtEquipCombineControl__GetRecommendedSvtEquipCombineData(this, v202, v203);
+  return SvtEquipCombineControl__GetRecommendedSvtEquipCombineData(this, v204, v205);
 }
 
 
@@ -1623,7 +1626,8 @@ LABEL_58:
     (System_Collections_Generic_List_Enumerator_T__o *)&v103,
     v62,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-  v106 = *(System_Collections_Generic_List_Enumerator_object__o *)&v103.fields.currentCryptoKey;
+  v106.fields._current = (Il2CppObject *)v103.fields.fakeValue;
+  *(_OWORD *)&v106.fields._list = *(_OWORD *)&v103.fields.currentCryptoKey;
   v104 = 0;
   v105 = &v106;
   while ( 1 )
@@ -3058,6 +3062,7 @@ LABEL_17:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SvtEquipCombineControl__SetSvtEqCombineData(
         SvtEquipCombineControl_o *this,
         SetCombineData_o *data,
@@ -3182,31 +3187,34 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
   bool v120; // w7
   struct UserServantEntity_o *v121; // x1
   struct UserServantEntity_o *v122; // x8
-  int v123; // w9
-  int v124; // w10
+  int32_t v123; // w9
+  int32_t v124; // w10
   int32_t v125; // w8
-  bool v127; // w20
-  const MethodInfo *v128; // x1
-  __int64 v129; // [xsp+10h] [xbp-A0h]
-  int32_t v130; // [xsp+18h] [xbp-98h]
-  int32_t v131; // [xsp+1Ch] [xbp-94h]
-  __int64 v132; // [xsp+20h] [xbp-90h]
+  float v126; // s1
+  float v127; // s0 OVERLAPPED
+  bool v128; // w20
+  float v129; // s2
+  float v130; // s3
+  const MethodInfo *v131; // x1
+  __int64 v132; // [xsp+10h] [xbp-A0h]
+  int32_t v133; // [xsp+18h] [xbp-98h]
+  int32_t v134; // [xsp+1Ch] [xbp-94h]
+  __int64 v135; // [xsp+20h] [xbp-90h]
   struct System_Int64_array **p_selectMtSvtEqList; // [xsp+28h] [xbp-88h]
   UserServantEntity_o **p_baseData; // [xsp+30h] [xbp-80h]
   int32_t ServantCombineMax; // [xsp+38h] [xbp-78h] BYREF
   int32_t increAmount; // [xsp+3Ch] [xbp-74h] BYREF
   int32_t lateExp[2]; // [xsp+40h] [xbp-70h] BYREF
-  __int64 afterAtk; // [xsp+48h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v139; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v140; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v141; // 0:x0.16
+  int32_t afterAtk[2]; // [xsp+48h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v142; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v143; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v144; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v145; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v146; // 0:x0.16
-  UnityEngine_Vector3_o v147; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v148; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v147; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v148; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v149; // 0:x0.16
+  UnityEngine_Vector3_o v150; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = data;
   if ( (byte_596A429 & 1) == 0 )
@@ -3232,7 +3240,7 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
     byte_596A429 = 1;
   }
   *(_QWORD *)lateExp = 0;
-  afterAtk = 0;
+  *(_QWORD *)afterAtk = 0;
   SvtEquipCombineControl__DestroyGrid(this, (const MethodInfo *)data);
   *(_WORD *)&this->fields.isContainedRare = 0;
   this->fields.isLimitUpMaterial = 0;
@@ -3303,9 +3311,9 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
   v42 = *(_QWORD *)&baseData->fields.limitCount.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6, v39);
-  *(_QWORD *)&v139.fields.currentCryptoKey = v41;
-  *(_QWORD *)&v139.fields.fakeValue = v42;
-  v131 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v139, 0);
+  *(_QWORD *)&v142.fields.currentCryptoKey = v41;
+  *(_QWORD *)&v142.fields.fakeValue = v42;
+  v134 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v142, 0);
   Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_101;
@@ -3329,9 +3337,9 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
   v49 = *(_QWORD *)&v46->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6, v45);
-  *(_QWORD *)&v140.fields.currentCryptoKey = v48;
-  *(_QWORD *)&v140.fields.fakeValue = v49;
-  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v140, 0);
+  *(_QWORD *)&v143.fields.currentCryptoKey = v48;
+  *(_QWORD *)&v143.fields.fakeValue = v49;
+  Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v143, 0);
   if ( !v47 )
     goto LABEL_101;
   Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
@@ -3341,9 +3349,9 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
   if ( !Instance )
     goto LABEL_101;
   v50 = 0;
-  v129 = Instance;
-  v130 = *(_DWORD *)(Instance + 88);
-  v132 = (unsigned int)max_length;
+  v132 = Instance;
+  v133 = *(_DWORD *)(Instance + 88);
+  v135 = (unsigned int)max_length;
   do
   {
     v51 = *p_selectMtSvtEqList;
@@ -3382,10 +3390,10 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
     Instance = (__int64)UnityEngine_GameObject__get_transform(v57, 0);
     if ( !Instance )
       goto LABEL_101;
-    v147.fields.x = 0.5;
-    v147.fields.y = 0.5;
-    v147.fields.z = 0.5;
-    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v147, 0);
+    v150.fields.x = 0.5;
+    v150.fields.y = 0.5;
+    v150.fields.z = 0.5;
+    UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v150, 0);
     Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_101;
@@ -3405,9 +3413,9 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
     v62 = *(_QWORD *)(Instance + 88);
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6, v59);
-    *(_QWORD *)&v141.fields.currentCryptoKey = v61;
-    *(_QWORD *)&v141.fields.fakeValue = v62;
-    v63 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v141, 0);
+    *(_QWORD *)&v144.fields.currentCryptoKey = v61;
+    *(_QWORD *)&v144.fields.fakeValue = v62;
+    v63 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v144, 0);
     Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v60 + 96),
                  0);
@@ -3422,9 +3430,9 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
     v66 = *(_QWORD *)(v60 + 104);
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6, v64);
-    *(_QWORD *)&v142.fields.currentCryptoKey = v65;
-    *(_QWORD *)&v142.fields.fakeValue = v66;
-    Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v142, 0);
+    *(_QWORD *)&v145.fields.currentCryptoKey = v65;
+    *(_QWORD *)&v145.fields.fakeValue = v66;
+    Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v145, 0);
     if ( (int)Instance >= 1 )
       this->fields.isLimitOverMaterial = 1;
     v68 = *p_baseData;
@@ -3434,9 +3442,9 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
     v70 = *(_QWORD *)&v68->fields.svtId.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6, v67);
-    *(_QWORD *)&v143.fields.currentCryptoKey = v69;
-    *(_QWORD *)&v143.fields.fakeValue = v70;
-    v71 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v143, 0);
+    *(_QWORD *)&v146.fields.currentCryptoKey = v69;
+    *(_QWORD *)&v146.fields.fakeValue = v70;
+    v71 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v146, 0);
     if ( v71 != CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                   *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v60 + 80),
                   0) )
@@ -3450,11 +3458,11 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
       v76 = *(_QWORD *)(v60 + 104);
       if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v72, v73);
-      *(_QWORD *)&v144.fields.currentCryptoKey = v75;
-      *(_QWORD *)&v144.fields.fakeValue = v76;
-      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v144, 0) < 1 )
+      *(_QWORD *)&v147.fields.currentCryptoKey = v75;
+      *(_QWORD *)&v147.fields.fakeValue = v76;
+      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v147, 0) < 1 )
       {
-        v82 = v131;
+        v82 = v134;
       }
       else
       {
@@ -3462,14 +3470,14 @@ void SvtEquipCombineControl__SetSvtEqCombineData(
         v79 = *(_QWORD *)(v60 + 104);
         if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v77, v78);
-        *(_QWORD *)&v145.fields.currentCryptoKey = v80;
-        *(_QWORD *)&v145.fields.fakeValue = v79;
-        v81 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v145, 0);
+        *(_QWORD *)&v148.fields.currentCryptoKey = v80;
+        *(_QWORD *)&v148.fields.fakeValue = v79;
+        v81 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v148, 0);
         this->fields.isLimitUpMaterial = 1;
-        v82 = v131 + v81;
+        v82 = v134 + v81;
       }
-      v131 = v82 + 1;
-      v74 = v82 + 1 > v130;
+      v134 = v82 + 1;
+      v74 = v82 + 1 > v133;
     }
     else
     {
@@ -3492,22 +3500,22 @@ LABEL_50:
     MaterialSvtInfo__setMaterialSvtInfo_37859096(v85, v50++, v84, v53, 1, v74, v54 & 1, v86, 0);
     v3 = (SetCombineData_o *)v52;
   }
-  while ( v132 != v50 );
+  while ( v135 != v50 );
   Instance = (__int64)this->fields.selectGrid;
   if ( !Instance )
     goto LABEL_101;
   UIGrid__set_repositionNow((UIGrid_o *)Instance, 1, 0);
   v88 = *p_baseData;
-  v89 = v131 >= v130 ? v130 : v131;
+  v89 = v134 >= v133 ? v133 : v134;
   if ( !v88 )
     goto LABEL_101;
   v90 = *(_QWORD *)&v88->fields.svtId.fields.currentCryptoKey;
   v91 = *(_QWORD *)&v88->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v6, v87);
-  *(_QWORD *)&v146.fields.currentCryptoKey = v90;
-  *(_QWORD *)&v146.fields.fakeValue = v91;
-  v92 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v146, 0);
+  *(_QWORD *)&v149.fields.currentCryptoKey = v90;
+  *(_QWORD *)&v149.fields.fakeValue = v91;
+  v92 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v149, 0);
   Instance = (__int64)ServantLimitMaster__GetEntity(v44, v92, v89, 0);
   if ( !Instance )
     goto LABEL_101;
@@ -3530,7 +3538,7 @@ LABEL_50:
     goto LABEL_101;
   UILabel__set_text(addTotalExpLb, (System_String_o *)Instance, 0);
   v100 = this->fields.baseData;
-  this->fields.expType = *(_DWORD *)(v129 + 132);
+  this->fields.expType = *(_DWORD *)(v132 + 132);
   if ( !v100 )
     goto LABEL_101;
   afterMaxLv = this->fields.afterMaxLv;
@@ -3609,14 +3617,14 @@ LABEL_50:
     goto LABEL_101;
   CheckCombineResStatus__getCombineResStatus(
     (CheckCombineResStatus_o *)Instance,
-    (int32_t *)&afterAtk + 1,
-    (int32_t *)&afterAtk,
+    &afterAtk[1],
+    afterAtk,
     *p_baseData,
     *p_increLv,
     0);
-  v113 = v52[12] + HIDWORD(afterAtk);
-  LODWORD(afterAtk) = v52[13] + afterAtk;
-  HIDWORD(afterAtk) = v113;
+  v113 = v52[12] + afterAtk[1];
+  afterAtk[0] += v52[13];
+  afterAtk[1] = v113;
   v114 = sub_2213CCC(CombineSvtData_TypeInfo);
   CombineSvtData___ctor((CombineSvtData_o *)v114, 0);
   if ( !v114 )
@@ -3642,8 +3650,8 @@ LABEL_50:
     afterMaxLv,
     this->fields.expType,
     0);
-  v123 = afterAtk;
-  v124 = HIDWORD(afterAtk);
+  v123 = afterAtk[0];
+  v124 = afterAtk[1];
   v125 = lateExp[0];
   *(_DWORD *)(v114 + 36) = lateExp[1];
   *(_DWORD *)(v114 + 40) = v125;
@@ -3664,9 +3672,9 @@ LABEL_50:
   {
     if ( Instance )
     {
-      v148.fields.r = 1.0;
-      v148.fields.g = 1.0;
-      v127 = 1;
+      v127 = 1.0;
+      v126 = 1.0;
+      v128 = 1;
       goto LABEL_99;
     }
 LABEL_101:
@@ -3674,15 +3682,15 @@ LABEL_101:
   }
   if ( !Instance )
     goto LABEL_101;
-  v148.fields.g = 0.0;
-  v148.fields.r = 1.0;
-  v127 = 0;
+  v126 = 0.0;
+  v127 = 1.0;
+  v128 = 0;
 LABEL_99:
-  v148.fields.b = v148.fields.g;
-  v148.fields.a = v148.fields.r;
-  UIWidget__set_color((UIWidget_o *)Instance, v148, 0);
-  this->fields.isExeCombine = v127;
-  SvtEquipCombineControl__SetExeBtnState(this, v128);
+  v129 = v126;
+  v130 = v127;
+  UIWidget__set_color((UIWidget_o *)Instance, *(UnityEngine_Color_o *)&v127, 0);
+  this->fields.isExeCombine = v128;
+  SvtEquipCombineControl__SetExeBtnState(this, v131);
 }
 
 

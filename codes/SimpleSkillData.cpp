@@ -45,7 +45,7 @@ int32_t SimpleSkillData__GetHashCode(SimpleSkillData_o this, const MethodInfo *m
                (const MethodInfo_39B4360 *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
     sub_2213CDC(0, v4);
-  return ((int32_t (__fastcall *)(System_Tuple_T1__T2__o *, const MethodInfo *))int__int->klass->vtable._2_GetHashCode.methodPtr)(
+  return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, const MethodInfo *))int__int->klass->vtable._2_GetHashCode.methodPtr)(
            int__int,
            int__int->klass->vtable._2_GetHashCode.method);
 }

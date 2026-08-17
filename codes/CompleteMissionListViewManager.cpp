@@ -1622,6 +1622,7 @@ System_Collections_IEnumerator_o *CompleteMissionListViewManager__OpenPanelMissi
   int32_t v26; // w5
   bool v27; // w6
   bool v28; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596F1BB & 1) == 0 )
   {
@@ -1638,8 +1639,9 @@ System_Collections_IEnumerator_o *CompleteMissionListViewManager__OpenPanelMissi
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 48), (int32_t)rewards, v17, v18, v19, v20, v21, v22);
   *(_QWORD *)(v10 + 56) = rewardDetail;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 56), (int32_t)rewardDetail, v23, v24, v25, v26, v27, v28);
+  result = (System_Collections_IEnumerator_o *)v10;
   *(_BYTE *)(v10 + 40) = v9;
-  return (System_Collections_IEnumerator_o *)v10;
+  return result;
 }
 
 
@@ -1987,7 +1989,7 @@ void CompleteMissionListViewManager__animAfterCallback(
   struct EventMissionEntity_o *missionToRecieve; // x8
   int32_t dispNo; // w21
   __int64 v5; // x2
-  __int64 v6; // x8
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
   UnityEngine_Object_o *v7; // x20
   const MethodInfo *v8; // x4
   UnityEngine_GameObject_o *childGameObject; // [xsp+8h] [xbp-28h] BYREF
@@ -2007,10 +2009,10 @@ void CompleteMissionListViewManager__animAfterCallback(
   this = (CompleteMissionListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_15;
-  v6 = *((_QWORD *)this + 173);
-  if ( !v6 )
+  m_CancellationTokenSource = this[2].fields.m_CancellationTokenSource;
+  if ( !m_CancellationTokenSource )
     goto LABEL_15;
-  v7 = *(UnityEngine_Object_o **)(v6 + 40);
+  v7 = *(UnityEngine_Object_o **)&m_CancellationTokenSource->fields._disposed;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v5);
   this = (CompleteMissionListViewManager_o *)UnityEngine_Object__op_Inequality(v7, 0, 0);
@@ -3619,6 +3621,7 @@ bool CompleteMissionListViewManager__OpenPanelMissionRewardGetDialog_d__50__Move
   bool v34; // w6
   bool v35; // w7
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   System_String_o *v38; // x2
   System_String_o *v39; // x3
   int32_t v40; // w4
@@ -3710,8 +3713,9 @@ LABEL_16:
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v30, v31, v32, v33, v34, v35);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     if ( !_4__this )
       goto LABEL_25;
@@ -3817,6 +3821,7 @@ bool CompleteMissionListViewManager__StartPanelAnimCoroutine_d__64__MoveNext(
   bool v18; // w6
   bool v19; // w7
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
 
   if ( (byte_596F1DA & 1) == 0 )
   {
@@ -3870,8 +3875,9 @@ LABEL_11:
         this->fields.__2__current = 0;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v14, v15, v16, v17, v18, v19);
+        result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
-        return 1;
+        return result;
       }
       if ( _4__this )
       {

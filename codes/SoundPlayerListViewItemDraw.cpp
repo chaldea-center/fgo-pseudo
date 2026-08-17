@@ -497,7 +497,7 @@ LABEL_37:
             goto LABEL_36;
           SoundPlayerShopItemComponent__setItemInfo(
             (SoundPlayerShopItemComponent_o *)v14,
-            *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+            *(_QWORD *)&this[1].fields.titleLabel->fields.updateAnchors,
             itemIds->m_Items[v10],
             prices->m_Items[v10],
             v10,

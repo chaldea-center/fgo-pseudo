@@ -69,13 +69,15 @@ void SupportServantListViewManager___cctor(const MethodInfo *method)
 void SupportServantListViewManager___ctor(SupportServantListViewManager_o *this, const MethodInfo *method)
 {
   Il2CppClass *v3; // x0
-  System_Array_o *v4; // x20
-  System_String_o *v5; // x2
-  System_String_o *v6; // x3
-  int32_t v7; // w4
-  int32_t v8; // w5
-  bool v9; // w6
-  bool v10; // w7
+  System_Array_o *v4; // x0
+  System_RuntimeFieldHandle_o v5; // x1
+  struct ListViewSort_FilterKind_array *v6; // x20
+  System_String_o *v7; // x2
+  System_String_o *v8; // x3
+  int32_t v9; // w4
+  int32_t v10; // w5
+  bool v11; // w6
+  bool v12; // w7
 
   if ( (byte_596CD88 & 1) == 0 )
   {
@@ -86,12 +88,11 @@ void SupportServantListViewManager___ctor(SupportServantListViewManager_o *this,
   v3 = ListViewSort_FilterKind___TypeInfo;
   this->fields.classPos = -1;
   v4 = (System_Array_o *)sub_2213B20(v3, 9);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v4,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__454919E1CAE66B6FF0688FC569A331883561C8E16251189F0BEA6F17359E4374,
-    0);
-  this->fields.classFilter = (struct ListViewSort_FilterKind_array *)v4;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.classFilter, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v5.fields.value = Field__PrivateImplementationDetails__454919E1CAE66B6FF0688FC569A331883561C8E16251189F0BEA6F17359E4374;
+  v6 = (struct ListViewSort_FilterKind_array *)v4;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v4, v5, 0);
+  this->fields.classFilter = v6;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.classFilter, (int32_t)v6, v7, v8, v9, v10, v11, v12);
   ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 
@@ -3164,7 +3165,8 @@ void SupportServantListViewManager__UpdateItemState(
     (System_Collections_Generic_List_Enumerator_T__o *)&v27,
     SelfUserGame,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v30 = *(System_Collections_Generic_List_Enumerator_object__o *)&v27.fields.currentCryptoKey;
+  v30.fields._current = (Il2CppObject *)v27.fields.fakeValue;
+  *(_OWORD *)&v30.fields._list = *(_OWORD *)&v27.fields.currentCryptoKey;
   v28 = 0;
   v29 = &v30;
   while ( 1 )
@@ -3707,7 +3709,7 @@ System_IAsyncResult_o *SupportServantListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(SupportServantListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

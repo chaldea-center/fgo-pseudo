@@ -237,12 +237,20 @@ UnityEngine_Color_o QuestInformationListViewItem__get_AddColor(
         QuestInformationListViewItem_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.addColor.fields.r;
-  result.fields.g = this->fields.addColor.fields.g;
-  result.fields.b = this->fields.addColor.fields.b;
-  result.fields.a = this->fields.addColor.fields.a;
+  r = this->fields.addColor.fields.r;
+  g = this->fields.addColor.fields.g;
+  b = this->fields.addColor.fields.b;
+  a = this->fields.addColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -321,12 +329,20 @@ UnityEngine_Color_o QuestInformationListViewItem__get_MainColor(
         QuestInformationListViewItem_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.mainColor.fields.r;
-  result.fields.g = this->fields.mainColor.fields.g;
-  result.fields.b = this->fields.mainColor.fields.b;
-  result.fields.a = this->fields.mainColor.fields.a;
+  r = this->fields.mainColor.fields.r;
+  g = this->fields.mainColor.fields.g;
+  b = this->fields.mainColor.fields.b;
+  a = this->fields.mainColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

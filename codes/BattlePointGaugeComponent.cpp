@@ -1239,6 +1239,7 @@ System_Collections_IEnumerator_o *BattlePointGaugeComponent__PlayPointEffectSequ
   int32_t v17; // w5
   bool v18; // w6
   bool v19; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597414F & 1) == 0 )
   {
@@ -1252,8 +1253,9 @@ System_Collections_IEnumerator_o *BattlePointGaugeComponent__PlayPointEffectSequ
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = effectPrefabs;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 40), (int32_t)effectPrefabs, v14, v15, v16, v17, v18, v19);
+  result = (System_Collections_IEnumerator_o *)v7;
   *(float *)(v7 + 48) = interval;
-  return (System_Collections_IEnumerator_o *)v7;
+  return result;
 }
 
 
@@ -1279,6 +1281,7 @@ System_Collections_IEnumerator_o *BattlePointGaugeComponent__PlaySeInEffectTimin
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5974147 & 1) == 0 )
   {
@@ -1291,8 +1294,9 @@ System_Collections_IEnumerator_o *BattlePointGaugeComponent__PlaySeInEffectTimin
   *(_QWORD *)(v7 + 32) = seName;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)seName, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v7 + 40) = effectNum;
+  result = (System_Collections_IEnumerator_o *)v7;
   *(float *)(v7 + 44) = waitSecond;
-  return (System_Collections_IEnumerator_o *)v7;
+  return result;
 }
 
 
@@ -1367,37 +1371,42 @@ void BattlePointGaugeComponent__ShowAddedPointEffect(
   struct BattlePointGaugeSetting_EffectSection_o *v51; // x8
   int32_t pointEffectSpeedUpBorderEffectNum; // w23
   float pointEffectSpeedUpCoefficient; // s8
-  float v54; // s8
+  float v54; // s0
+  UnityEngine_ParticleSystem_MainModule_o v55; // x0
+  float v56; // s8
+  UnityEngine_ParticleSystem_EmissionModule_o v57; // x0
+  UnityEngine_ParticleSystem_EmissionModule_o v58; // x0
   float repeatInterval; // s9
-  struct BattlePointPhaseEntity_o *v56; // x8
-  int32_t v57; // w8
+  UnityEngine_ParticleSystem_EmissionModule_o v60; // x0
+  struct BattlePointPhaseEntity_o *v61; // x8
+  int32_t v62; // w8
   UnityEngine_GameObject_o *gameObject; // x22
-  System_Object_array *v59; // x23
-  __int64 v60; // x24
-  __int64 v61; // x24
-  __int64 v62; // x20
-  __int64 v63; // x20
-  __int64 v64; // x1
-  System_Collections_Hashtable_o *v65; // x0
-  const MethodInfo *v66; // x2
-  struct BattlePointGaugeSetting_o *v67; // x8
-  struct BattlePointGaugeSetting_EffectSection_o *v68; // x8
+  System_Object_array *v64; // x23
+  __int64 v65; // x24
+  __int64 v66; // x24
+  __int64 v67; // x20
+  __int64 v68; // x20
+  __int64 v69; // x1
+  System_Collections_Hashtable_o *v70; // x0
+  const MethodInfo *v71; // x2
+  struct BattlePointGaugeSetting_o *v72; // x8
+  struct BattlePointGaugeSetting_EffectSection_o *v73; // x8
   System_String_o *effectSeName; // x20
-  System_Collections_IEnumerator_o *v70; // x0
+  System_Collections_IEnumerator_o *v75; // x0
   struct UnityEngine_Coroutine_o *started; // x0
-  System_String_o *v72; // x2
-  System_String_o *v73; // x3
-  int32_t v74; // w4
-  int32_t v75; // w5
-  bool v76; // w6
-  bool v77; // w7
-  float v78; // [xsp+4h] [xbp-12Ch] BYREF
-  int32_t v79; // [xsp+8h] [xbp-128h] BYREF
-  int32_t v80; // [xsp+Ch] [xbp-124h] BYREF
-  UnityEngine_ParticleSystem_Burst_o v81; // [xsp+10h] [xbp-120h] BYREF
-  UnityEngine_ParticleSystem_Burst_o v82; // [xsp+48h] [xbp-E8h] BYREF
-  UnityEngine_ParticleSystem_Burst_o v83; // [xsp+80h] [xbp-B0h] BYREF
-  __int64 v84; // [xsp+B8h] [xbp-78h] BYREF
+  System_String_o *v77; // x2
+  System_String_o *v78; // x3
+  int32_t v79; // w4
+  int32_t v80; // w5
+  bool v81; // w6
+  bool v82; // w7
+  float v83; // [xsp+4h] [xbp-12Ch] BYREF
+  int32_t v84; // [xsp+8h] [xbp-128h] BYREF
+  int32_t v85; // [xsp+Ch] [xbp-124h] BYREF
+  UnityEngine_ParticleSystem_Burst_o v86; // [xsp+10h] [xbp-120h] BYREF
+  UnityEngine_ParticleSystem_Burst_o v87; // [xsp+48h] [xbp-E8h] BYREF
+  UnityEngine_ParticleSystem_Burst_o v88; // [xsp+80h] [xbp-B0h] BYREF
+  __int64 v89; // [xsp+B8h] [xbp-78h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+C0h] [xbp-70h] BYREF
   BattlePointPhaseEntity_o *entity; // [xsp+C8h] [xbp-68h] BYREF
 
@@ -1424,8 +1433,8 @@ void BattlePointGaugeComponent__ShowAddedPointEffect(
   beforePointValue = this->fields.beforePointValue;
   m_ParticleSystem = 0;
   entity = 0;
-  v84 = 0;
-  memset(&v83, 0, sizeof(v83));
+  v89 = 0;
+  memset(&v88, 0, sizeof(v88));
   if ( beforePointValue < currentPointValue && !this->fields.isPointEffectSequencePlaying )
   {
     currentMaxValueCache = this->fields.currentMaxValueCache;
@@ -1662,7 +1671,7 @@ LABEL_57:
                                    (UnityEngine_ParticleSystem_o *)ComponentInChildren_object__59470360,
                                    0).fields.m_ParticleSystem;
               v50 = this->fields.setting;
-              v84 = setting;
+              v89 = setting;
               if ( !v50 )
                 goto LABEL_83;
               v51 = v50->fields.effect;
@@ -1677,102 +1686,94 @@ LABEL_57:
                       1.0,
                       (float)(pointEffectSpeedUpCoefficient * (float)(EffectNum - pointEffectSpeedUpBorderEffectNum))
                     + 1.0);
-              UnityEngine_ParticleSystem_MainModule__set_simulationSpeed(
-                (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                v54,
-                0);
-              if ( UnityEngine_ParticleSystem_EmissionModule__get_burstCount(
-                     (UnityEngine_ParticleSystem_EmissionModule_o)&v84,
-                     0) < 1 )
+              v55.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+              v56 = v54;
+              UnityEngine_ParticleSystem_MainModule__set_simulationSpeed(v55, v54, 0);
+              v57.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v89;
+              if ( UnityEngine_ParticleSystem_EmissionModule__get_burstCount(v57, 0) < 1 )
               {
                 repeatInterval = 0.0;
               }
               else
               {
-                UnityEngine_ParticleSystem_EmissionModule__GetBurst(
-                  &v82,
-                  (UnityEngine_ParticleSystem_EmissionModule_o)&v84,
-                  0,
-                  0);
-                v83 = v82;
-                repeatInterval = UnityEngine_ParticleSystem_Burst__get_repeatInterval(&v83, 0);
-                UnityEngine_ParticleSystem_Burst__set_cycleCount(&v83, EffectNum, 0);
-                v81 = v83;
-                UnityEngine_ParticleSystem_EmissionModule__SetBurst(
-                  (UnityEngine_ParticleSystem_EmissionModule_o)&v84,
-                  0,
-                  &v81,
-                  0);
+                v58.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v89;
+                UnityEngine_ParticleSystem_EmissionModule__GetBurst(&v87, v58, 0, 0);
+                v88 = v87;
+                repeatInterval = UnityEngine_ParticleSystem_Burst__get_repeatInterval(&v88, 0);
+                UnityEngine_ParticleSystem_Burst__set_cycleCount(&v88, EffectNum, 0);
+                v60.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v89;
+                v86 = v88;
+                UnityEngine_ParticleSystem_EmissionModule__SetBurst(v60, 0, &v86, 0);
               }
               CommonEffectComponent__Resume((CommonEffectComponent_o *)Component_object, 0, 0);
-              v56 = this->fields.beforeEntity;
-              if ( !v56 )
+              v61 = this->fields.beforeEntity;
+              if ( !v61 )
                 goto LABEL_83;
-              v57 = v56->fields.phase;
+              v62 = v61->fields.phase;
               this->fields.lastStepUpEffectIdInTween = -1;
-              this->fields.firstPhaseInTween = v57;
+              this->fields.firstPhaseInTween = v62;
               gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
               setting = sub_2213B20(object___TypeInfo, 12);
               if ( !setting )
                 goto LABEL_83;
-              v59 = (System_Object_array *)setting;
+              v64 = (System_Object_array *)setting;
               sub_1FFE8F8(setting, StringLiteral_20622/*"from"*/);
-              sub_1FFE2C4(v59, 0, StringLiteral_20622/*"from"*/);
-              LODWORD(v82.fields.m_Time) = this->fields.beforePointValue;
-              v60 = j_il2cpp_value_box_0(qword_5984348, &v82);
-              sub_1FFE8F8(v59, v60);
-              sub_1FFE2C4(v59, 1, v60);
-              sub_1FFE8F8(v59, StringLiteral_25406/*"to"*/);
-              sub_1FFE2C4(v59, 2, StringLiteral_25406/*"to"*/);
-              v80 = currentPointValue;
-              v61 = j_il2cpp_value_box_0(qword_5984348, &v80);
-              sub_1FFE8F8(v59, v61);
-              sub_1FFE2C4(v59, 3, v61);
-              sub_1FFE8F8(v59, StringLiteral_23573/*"onupdate"*/);
-              sub_1FFE2C4(v59, 4, StringLiteral_23573/*"onupdate"*/);
-              sub_1FFE8F8(v59, StringLiteral_15796/*"UpdateGaugeValue"*/);
-              sub_1FFE2C4(v59, 5, StringLiteral_15796/*"UpdateGaugeValue"*/);
-              sub_1FFE8F8(v59, StringLiteral_23565/*"oncomplete"*/);
-              sub_1FFE2C4(v59, 6, StringLiteral_23565/*"oncomplete"*/);
-              sub_1FFE8F8(v59, StringLiteral_10282/*"OnCompleteGaugeValue"*/);
-              sub_1FFE2C4(v59, 7, StringLiteral_10282/*"OnCompleteGaugeValue"*/);
-              sub_1FFE8F8(v59, StringLiteral_23566/*"oncompleteparams"*/);
-              sub_1FFE2C4(v59, 8, StringLiteral_23566/*"oncompleteparams"*/);
-              v79 = currentPointValue;
-              v62 = j_il2cpp_value_box_0(qword_5984348, &v79);
-              sub_1FFE8F8(v59, v62);
-              sub_1FFE2C4(v59, 9, v62);
-              sub_1FFE8F8(v59, StringLiteral_25366/*"time"*/);
-              sub_1FFE2C4(v59, 10, StringLiteral_25366/*"time"*/);
-              v78 = (float)(repeatInterval * (float)EffectNum) / v54;
-              v63 = j_il2cpp_value_box_0(qword_5984378, &v78);
-              sub_1FFE8F8(v59, v63);
-              sub_1FFE2C4(v59, 11, v63);
+              sub_1FFE2C4(v64, 0, StringLiteral_20622/*"from"*/);
+              LODWORD(v87.fields.m_Time) = this->fields.beforePointValue;
+              v65 = j_il2cpp_value_box_0(qword_5984348, &v87);
+              sub_1FFE8F8(v64, v65);
+              sub_1FFE2C4(v64, 1, v65);
+              sub_1FFE8F8(v64, StringLiteral_25406/*"to"*/);
+              sub_1FFE2C4(v64, 2, StringLiteral_25406/*"to"*/);
+              v85 = currentPointValue;
+              v66 = j_il2cpp_value_box_0(qword_5984348, &v85);
+              sub_1FFE8F8(v64, v66);
+              sub_1FFE2C4(v64, 3, v66);
+              sub_1FFE8F8(v64, StringLiteral_23573/*"onupdate"*/);
+              sub_1FFE2C4(v64, 4, StringLiteral_23573/*"onupdate"*/);
+              sub_1FFE8F8(v64, StringLiteral_15796/*"UpdateGaugeValue"*/);
+              sub_1FFE2C4(v64, 5, StringLiteral_15796/*"UpdateGaugeValue"*/);
+              sub_1FFE8F8(v64, StringLiteral_23565/*"oncomplete"*/);
+              sub_1FFE2C4(v64, 6, StringLiteral_23565/*"oncomplete"*/);
+              sub_1FFE8F8(v64, StringLiteral_10282/*"OnCompleteGaugeValue"*/);
+              sub_1FFE2C4(v64, 7, StringLiteral_10282/*"OnCompleteGaugeValue"*/);
+              sub_1FFE8F8(v64, StringLiteral_23566/*"oncompleteparams"*/);
+              sub_1FFE2C4(v64, 8, StringLiteral_23566/*"oncompleteparams"*/);
+              v84 = currentPointValue;
+              v67 = j_il2cpp_value_box_0(qword_5984348, &v84);
+              sub_1FFE8F8(v64, v67);
+              sub_1FFE2C4(v64, 9, v67);
+              sub_1FFE8F8(v64, StringLiteral_25366/*"time"*/);
+              sub_1FFE2C4(v64, 10, StringLiteral_25366/*"time"*/);
+              v83 = (float)(repeatInterval * (float)EffectNum) / v56;
+              v68 = j_il2cpp_value_box_0(qword_5984378, &v83);
+              sub_1FFE8F8(v64, v68);
+              sub_1FFE2C4(v64, 11, v68);
               if ( !*(&iTween_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v64);
-              v65 = iTween__Hash(v59, 0);
-              iTween__ValueTo(gameObject, v65, 0);
-              v67 = this->fields.setting;
-              if ( !v67 )
+                j_il2cpp_runtime_class_init_0(iTween_TypeInfo, v69);
+              v70 = iTween__Hash(v64, 0);
+              iTween__ValueTo(gameObject, v70, 0);
+              v72 = this->fields.setting;
+              if ( !v72 )
                 goto LABEL_83;
-              v68 = v67->fields.effect;
-              if ( !v68 )
+              v73 = v72->fields.effect;
+              if ( !v73 )
                 goto LABEL_83;
-              effectSeName = v68->fields.effectSeName;
+              effectSeName = v73->fields.effectSeName;
               if ( !*(&BattlePointGaugeComponent_TypeInfo->_2.cctor_finished + 1) )
                 j_il2cpp_runtime_class_init_0(BattlePointGaugeComponent_TypeInfo, v11);
-              v70 = BattlePointGaugeComponent__PlaySeInEffectTiming(effectSeName, EffectNum, repeatInterval / v54, v66);
-              started = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v70, 0);
+              v75 = BattlePointGaugeComponent__PlaySeInEffectTiming(effectSeName, EffectNum, repeatInterval / v56, v71);
+              started = UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v75, 0);
               this->fields.pointEffectSeCoroutine = started;
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)&this->fields.pointEffectSeCoroutine,
                 (int32_t)started,
-                v72,
-                v73,
-                v74,
-                v75,
-                v76,
-                v77);
+                v77,
+                v78,
+                v79,
+                v80,
+                v81,
+                v82);
             }
           }
         }
@@ -3071,6 +3072,7 @@ bool BattlePointGaugeComponent__PlayPointEffectSequence_d__79__MoveNext(
   struct System_Collections_Generic_List_GameObject__o *v9; // x8
   int32_t size; // w9
   float interval; // s8
+  bool result; // w0
   UnityEngine_WaitForSeconds_o *v13; // x20
   Il2CppObject **p__2__current; // x19
   System_String_o *v15; // x2
@@ -3135,8 +3137,9 @@ LABEL_11:
   this->fields.__2__current = (Il2CppObject *)v13;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v13, v15, v16, v17, v18, v19, v20);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 
@@ -3210,6 +3213,7 @@ bool BattlePointGaugeComponent__PlaySeInEffectTiming_d__56__MoveNext(
   _QWORD *v16; // x0
   System_Reflection_MethodBase_o *v17; // x0
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   _QWORD *v20; // x0
   System_Reflection_MethodBase_o *v21; // x0
 
@@ -3232,8 +3236,9 @@ LABEL_16:
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v7, v8, v9, v10, v11, v12);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     count_5__2 = this->fields._count_5__2;
     do

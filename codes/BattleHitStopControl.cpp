@@ -133,6 +133,7 @@ System_Collections_IEnumerator_o *BattleHitStopControl__stopwaitCor(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597353E & 1) == 0 )
   {
@@ -144,8 +145,9 @@ System_Collections_IEnumerator_o *BattleHitStopControl__stopwaitCor(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(float *)(v5 + 40) = time;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -176,6 +178,7 @@ bool BattleHitStopControl__stopwaitCor_d__5__MoveNext(
   struct DefCoroutine_StaticFields *static_fields; // x8
   Il2CppObject *milliSecPointOne; // x1
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   __int64 v16; // x1
   __int64 v17; // x1
   float time; // s8
@@ -253,8 +256,9 @@ LABEL_26:
       v8->fields.__2__current = (Il2CppObject *)static_fields->milliSecPointOne;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       sub_2213A04(p__2__current, (int32_t)milliSecPointOne, v2, v3, v4, v5, v6, v7);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
@@ -288,8 +292,9 @@ LABEL_26:
   v8->fields.__2__current = (Il2CppObject *)v19;
   v20 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v20, (int32_t)v19, v21, v22, v23, v24, v25, v26);
+  result = 1;
   v20[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 

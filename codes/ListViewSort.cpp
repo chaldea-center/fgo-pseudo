@@ -7512,37 +7512,35 @@ void ListViewSort__Load(ListViewSort_o *this, const MethodInfo *method)
   __int64 v83; // x9
   __int64 v84; // x8
   bool *v85; // x10
-  Il2CppObject *value; // x22
-  Il2CppObject *key; // x23
-  struct System_Collections_Generic_Dictionary_int__int____o *v88; // x24
-  __int64 v89; // x0
-  bool v90; // w0
-  struct System_Collections_Generic_Dictionary_int__int____o *v91; // x24
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  struct System_Collections_Generic_Dictionary_int__int____o *v87; // x24
+  __int64 v88; // x0
+  bool v89; // w0
+  struct System_Collections_Generic_Dictionary_int__int____o *v90; // x24
+  __int64 v91; // x0
   __int64 v92; // x0
-  __int64 v93; // x0
   struct System_Boolean_array *isAutoOrganizationFilterList; // x10
-  __int64 v95; // x9
-  __int64 v96; // x8
-  bool *v97; // x10
+  __int64 v94; // x9
+  __int64 v95; // x8
+  bool *v96; // x10
   struct System_Boolean_array *isWaveBattleAutoOrganizationFilterList; // x10
-  __int64 v99; // x9
-  __int64 v100; // x8
-  bool *v101; // x10
+  __int64 v98; // x9
+  __int64 v99; // x8
+  bool *v100; // x10
+  System_String_o *v101; // x0
   System_String_o *v102; // x0
-  System_String_o *v103; // x0
-  const MethodInfo *v104; // x1
-  System_String_o *v105; // x0
-  ListViewSort_o *v106; // x0
-  const MethodInfo *v107; // x2
-  int32_t v108; // w20
-  Il2CppObject *v109; // x21
+  const MethodInfo *v103; // x1
+  System_String_o *v104; // x0
+  ListViewSort_o *v105; // x0
+  const MethodInfo *v106; // x2
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o v107; // kr10_16
   System_Collections_Generic_Dictionary_int__int__o *isSvtEquipEffectFilterDic; // x22
+  __int64 v109; // x0
+  System_Collections_Generic_Dictionary_int__int__o *v110; // x22
   __int64 v111; // x0
-  System_Collections_Generic_Dictionary_int__int__o *v112; // x22
-  __int64 v113; // x0
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v114; // [xsp+8h] [xbp-E8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v115; // [xsp+30h] [xbp-C0h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v116; // [xsp+60h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v112; // [xsp+8h] [xbp-E8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v113; // [xsp+30h] [xbp-C0h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v114; // [xsp+60h] [xbp-90h] BYREF
 
   if ( (byte_5972028 & 1) == 0 )
   {
@@ -7590,8 +7588,8 @@ void ListViewSort__Load(ListViewSort_o *this, const MethodInfo *method)
     byte_5972028 = 1;
   }
   isRequestLoad = this->fields.isRequestLoad;
-  memset(&v116, 0, sizeof(v116));
-  memset(&v115, 0, sizeof(v115));
+  memset(&v114, 0, sizeof(v114));
+  memset(&v113, 0, sizeof(v113));
   if ( isRequestLoad )
   {
     saveKey = this->fields.saveKey;
@@ -7721,132 +7719,130 @@ LABEL_46:
     if ( !v74 )
       goto LABEL_52;
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v114,
+      &v112,
       (System_Collections_Generic_Dictionary_object__object__o *)v74,
       (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__int____GetEnumerator__);
-    v116 = v114;
-    v114.fields._dictionary = 0;
-    *(_QWORD *)&v114.fields._version = &v116;
+    v114 = v112;
+    v112.fields._dictionary = 0;
+    *(_QWORD *)&v112.fields._version = &v114;
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v116,
+              &v114,
               (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__int____MoveNext__) )
     {
-      key = v116.fields._current.fields.key;
-      value = v116.fields._current.fields.value;
-      v88 = this->fields.svtEventBonusFilterDic;
-      v89 = System_Int32__Parse((System_String_o *)v116.fields._current.fields.key, 0);
-      if ( !v88 )
-        sub_2213CDC(v89, (unsigned int)v89);
-      v90 = System_Collections_Generic_Dictionary_int__object___ContainsKey(
-              (System_Collections_Generic_Dictionary_int__object__o *)v88,
-              v89,
+      current = v114.fields._current;
+      v87 = this->fields.svtEventBonusFilterDic;
+      v88 = System_Int32__Parse((System_String_o *)v114.fields._current.fields.key, 0);
+      if ( !v87 )
+        sub_2213CDC(v88, (unsigned int)v88);
+      v89 = System_Collections_Generic_Dictionary_int__object___ContainsKey(
+              (System_Collections_Generic_Dictionary_int__object__o *)v87,
+              v88,
               (const MethodInfo_3F9C6A4 *)Method_System_Collections_Generic_Dictionary_int__int____ContainsKey__);
-      v91 = this->fields.svtEventBonusFilterDic;
-      if ( v90 )
+      v90 = this->fields.svtEventBonusFilterDic;
+      if ( v89 )
       {
-        v92 = System_Int32__Parse((System_String_o *)key, 0);
-        if ( !v91 )
-          sub_2213CDC(v92, (unsigned int)v92);
+        v91 = System_Int32__Parse((System_String_o *)current.fields.key, 0);
+        if ( !v90 )
+          sub_2213CDC(v91, (unsigned int)v91);
         System_Collections_Generic_Dictionary_int__object___set_Item(
-          (System_Collections_Generic_Dictionary_int__object__o *)v91,
-          v92,
-          value,
+          (System_Collections_Generic_Dictionary_int__object__o *)v90,
+          v91,
+          current.fields.value,
           (const MethodInfo_3F9C49C *)Method_System_Collections_Generic_Dictionary_int__int____set_Item__);
       }
       else
       {
-        v93 = System_Int32__Parse((System_String_o *)key, 0);
-        if ( !v91 )
-          sub_2213CDC(v93, (unsigned int)v93);
+        v92 = System_Int32__Parse((System_String_o *)current.fields.key, 0);
+        if ( !v90 )
+          sub_2213CDC(v92, (unsigned int)v92);
         System_Collections_Generic_Dictionary_int__object___Add(
-          (System_Collections_Generic_Dictionary_int__object__o *)v91,
-          v93,
-          value,
+          (System_Collections_Generic_Dictionary_int__object__o *)v90,
+          v92,
+          current.fields.value,
           (const MethodInfo_3F9C4B0 *)Method_System_Collections_Generic_Dictionary_int__int____Add__);
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v116,
+      &v114,
       (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__int____Dispose__);
     isAutoOrganizationFilterList = this->fields.isAutoOrganizationFilterList;
     if ( !isAutoOrganizationFilterList )
       goto LABEL_52;
-    v95 = LODWORD(isAutoOrganizationFilterList->max_length);
-    v96 = 0;
-    v97 = isAutoOrganizationFilterList->m_Items;
+    v94 = LODWORD(isAutoOrganizationFilterList->max_length);
+    v95 = 0;
+    v96 = isAutoOrganizationFilterList->m_Items;
     do
     {
-      if ( v95 == v96 )
+      if ( v94 == v95 )
         goto LABEL_46;
-      v97[v96++] = v64 & 1;
+      v96[v95++] = v64 & 1;
       v64 >>= 1;
     }
-    while ( v96 != 13 );
+    while ( v95 != 13 );
     isWaveBattleAutoOrganizationFilterList = this->fields.isWaveBattleAutoOrganizationFilterList;
     if ( !isWaveBattleAutoOrganizationFilterList )
 LABEL_52:
       sub_2213CDC(v74, v75);
-    v99 = LODWORD(isWaveBattleAutoOrganizationFilterList->max_length);
-    v100 = 0;
-    v101 = isWaveBattleAutoOrganizationFilterList->m_Items;
+    v98 = LODWORD(isWaveBattleAutoOrganizationFilterList->max_length);
+    v99 = 0;
+    v100 = isWaveBattleAutoOrganizationFilterList->m_Items;
     do
     {
-      if ( v99 == v100 )
+      if ( v98 == v99 )
         goto LABEL_46;
-      v101[v100++] = v66 & 1;
+      v100[v99++] = v66 & 1;
       v66 >>= 1;
     }
-    while ( v100 != 7 );
-    v102 = System_String__Concat_75651716((System_String_o *)StringLiteral_8328/*"IsClearFilterServantClass20231117-"*/, this->fields.saveKey, 0);
-    if ( UnityEngine_PlayerPrefs__GetInt(v102, 0, 0) != 1 )
+    while ( v99 != 7 );
+    v101 = System_String__Concat_75651716((System_String_o *)StringLiteral_8328/*"IsClearFilterServantClass20231117-"*/, this->fields.saveKey, 0);
+    if ( UnityEngine_PlayerPrefs__GetInt(v101, 0, 0) != 1 )
     {
       ListViewSort__ClassFilterOffInSameClass(this, method);
-      v103 = System_String__Concat_75651716((System_String_o *)StringLiteral_8328/*"IsClearFilterServantClass20231117-"*/, this->fields.saveKey, 0);
-      UnityEngine_PlayerPrefs__SetInt(v103, 1, 0);
+      v102 = System_String__Concat_75651716((System_String_o *)StringLiteral_8328/*"IsClearFilterServantClass20231117-"*/, this->fields.saveKey, 0);
+      UnityEngine_PlayerPrefs__SetInt(v102, 1, 0);
     }
   }
   ListViewSort__AdjustmentEventBonusFilter(this, method);
-  ListViewSort__InitSvtEquipEffectFilterList(this, v104);
-  v105 = System_String__Concat_75651716((System_String_o *)StringLiteral_13748/*"SvtEquipEffectFilterNew-"*/, this->fields.saveKey, 0);
-  v106 = (ListViewSort_o *)UnityEngine_PlayerPrefs__GetString(v105, **(System_String_o ***)(qword_5984390 + 184), 0);
-  v74 = (ListViewSort_o *)ListViewSort__ConvertJsonToSvtEquipEffectFilterData(v106, (System_String_o *)v106, v107);
+  ListViewSort__InitSvtEquipEffectFilterList(this, v103);
+  v104 = System_String__Concat_75651716((System_String_o *)StringLiteral_13748/*"SvtEquipEffectFilterNew-"*/, this->fields.saveKey, 0);
+  v105 = (ListViewSort_o *)UnityEngine_PlayerPrefs__GetString(v104, **(System_String_o ***)(qword_5984390 + 184), 0);
+  v74 = (ListViewSort_o *)ListViewSort__ConvertJsonToSvtEquipEffectFilterData(v105, (System_String_o *)v105, v106);
   if ( !v74 )
     goto LABEL_52;
   System_Collections_Generic_Dictionary_object__int___GetEnumerator(
-    &v114,
+    &v112,
     (System_Collections_Generic_Dictionary_object__int__o *)v74,
     (const MethodInfo_3FF4498 *)Method_System_Collections_Generic_Dictionary_string__int__GetEnumerator__);
-  v115 = v114;
-  v114.fields._dictionary = 0;
-  *(_QWORD *)&v114.fields._version = &v115;
+  v113 = v112;
+  v112.fields._dictionary = 0;
+  *(_QWORD *)&v112.fields._version = &v113;
   while ( System_Collections_Generic_Dictionary_Enumerator_object__int___MoveNext(
-            &v115,
+            &v113,
             (const MethodInfo_4167460 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__int__MoveNext__) )
   {
-    v109 = v115.fields._current.fields.key;
-    v108 = (int32_t)v115.fields._current.fields.value;
+    v107 = v113.fields._current;
     isSvtEquipEffectFilterDic = this->fields.isSvtEquipEffectFilterDic;
-    v111 = System_Int32__Parse((System_String_o *)v115.fields._current.fields.key, 0);
+    v109 = System_Int32__Parse((System_String_o *)v113.fields._current.fields.key, 0);
     if ( !isSvtEquipEffectFilterDic )
-      sub_2213CDC(v111, (unsigned int)v111);
+      sub_2213CDC(v109, (unsigned int)v109);
     if ( System_Collections_Generic_Dictionary_int__int___ContainsKey(
            isSvtEquipEffectFilterDic,
-           v111,
+           v109,
            (const MethodInfo_3F92E0C *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__) )
     {
-      v112 = this->fields.isSvtEquipEffectFilterDic;
-      v113 = System_Int32__Parse((System_String_o *)v109, 0);
-      if ( !v112 )
-        sub_2213CDC(v113, (unsigned int)v113);
+      v110 = this->fields.isSvtEquipEffectFilterDic;
+      v111 = System_Int32__Parse((System_String_o *)v107.fields.key, 0);
+      if ( !v110 )
+        sub_2213CDC(v111, (unsigned int)v111);
       System_Collections_Generic_Dictionary_int__int___set_Item(
-        v112,
-        v113,
-        v108,
+        v110,
+        v111,
+        (int32_t)v107.fields.value,
         (const MethodInfo_3F92C0C *)Method_System_Collections_Generic_Dictionary_int__int__set_Item__);
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_object__int___Dispose(
-    &v115,
+    &v113,
     (const MethodInfo_4167584 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__int__Dispose__);
 }
 
@@ -9029,7 +9025,7 @@ void ListViewSort__SetSvtEventBonusFilter(ListViewSort_o *this, const MethodInfo
   System_Collections_Generic_Dictionary_object__object__o *v3; // x20
   __int64 v4; // x1
   struct System_Collections_Generic_Dictionary_int__int____o *svtEventBonusFilterDic; // x0
-  Il2CppObject *value; // x21
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   Il2CppObject *v7; // x0
   __int64 v8; // x1
   System_String_o *v9; // x20
@@ -9069,7 +9065,7 @@ void ListViewSort__SetSvtEventBonusFilter(ListViewSort_o *this, const MethodInfo
             &v12,
             (const MethodInfo_4158548 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__int____MoveNext__) )
   {
-    value = v12.fields._current.fields.value;
+    current = v12.fields._current;
     key = (int)v12.fields._current.fields.key;
     v7 = (Il2CppObject *)System_Int32__ToString((int32_t)&key, 0);
     if ( !v3 )
@@ -9077,7 +9073,7 @@ void ListViewSort__SetSvtEventBonusFilter(ListViewSort_o *this, const MethodInfo
     System_Collections_Generic_Dictionary_object__object___Add(
       v3,
       v7,
-      value,
+      current.fields.value,
       (const MethodInfo_3FFDC10 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(

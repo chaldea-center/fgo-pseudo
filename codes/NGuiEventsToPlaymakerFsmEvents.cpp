@@ -601,121 +601,122 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   __int64 v2; // x2
   struct System_Int32_array *usage; // x8
   Il2CppType *v5; // x21
-  __int64 v6; // x1
-  __int64 v7; // x2
+  System_RuntimeTypeHandle_o v6; // x0
+  __int64 v7; // x1
+  __int64 v8; // x2
   System_Type_o *TypeFromHandle; // x21
   System_Collections_Generic_List_object__o *Names; // x0
-  __int64 v10; // x1
-  struct System_Int32_array *v11; // x0
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
+  __int64 v11; // x1
+  struct System_Int32_array *v12; // x0
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
   UnityEngine_Object_o *targetFSM; // x21
-  __int64 v19; // x1
-  __int64 v20; // x2
+  __int64 v20; // x1
+  __int64 v21; // x2
   Il2CppObject *Component_object; // x0
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
-  UnityEngine_Object_o *v28; // x20
-  const MethodInfo *v29; // x3
+  System_String_o *v23; // x2
+  System_String_o *v24; // x3
+  int32_t v25; // w4
+  int32_t v26; // w5
+  bool v27; // w6
+  bool v28; // w7
+  UnityEngine_Object_o *v29; // x20
   const MethodInfo *v30; // x3
-  Il2CppObject *v31; // x0
-  System_String_o *v32; // x2
-  System_String_o *v33; // x3
-  int32_t v34; // w4
-  int32_t v35; // w5
-  bool v36; // w6
-  bool v37; // w7
-  __int64 v38; // x1
-  __int64 v39; // x2
+  const MethodInfo *v31; // x3
+  Il2CppObject *v32; // x0
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  __int64 v39; // x1
+  __int64 v40; // x2
   UnityEngine_Object_o *input; // x20
-  EventDelegate_o *v41; // x20
-  System_String_o *v42; // x2
-  System_String_o *v43; // x3
-  int32_t v44; // w4
-  int32_t v45; // w5
-  bool v46; // w6
-  bool v47; // w7
-  struct UIInput_o *v48; // x8
+  EventDelegate_o *v42; // x20
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  int32_t v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  struct UIInput_o *v49; // x8
   struct System_Object_array *items; // x8
-  _QWORD *v50; // x9
+  _QWORD *v51; // x9
   __int64 size; // x10
-  Il2CppClass **v52; // x8
-  const MethodInfo *v53; // x3
-  Il2CppObject *v54; // x0
-  System_String_o *v55; // x2
-  System_String_o *v56; // x3
-  int32_t v57; // w4
-  int32_t v58; // w5
-  bool v59; // w6
-  bool v60; // w7
-  __int64 v61; // x1
-  __int64 v62; // x2
+  Il2CppClass **v53; // x8
+  const MethodInfo *v54; // x3
+  Il2CppObject *v55; // x0
+  System_String_o *v56; // x2
+  System_String_o *v57; // x3
+  int32_t v58; // w4
+  int32_t v59; // w5
+  bool v60; // w6
+  bool v61; // w7
+  __int64 v62; // x1
+  __int64 v63; // x2
   UnityEngine_Object_o *pBar; // x20
-  EventDelegate_o *v64; // x20
-  System_String_o *v65; // x2
-  System_String_o *v66; // x3
-  int32_t v67; // w4
-  int32_t v68; // w5
-  bool v69; // w6
-  bool v70; // w7
-  struct UIProgressBar_o *v71; // x8
-  struct System_Object_array *v72; // x8
-  _QWORD *v73; // x9
-  __int64 v74; // x10
-  Il2CppClass **v75; // x8
-  Il2CppObject *v76; // x0
-  System_String_o *v77; // x2
-  System_String_o *v78; // x3
-  int32_t v79; // w4
-  int32_t v80; // w5
-  bool v81; // w6
-  bool v82; // w7
-  __int64 v83; // x1
-  __int64 v84; // x2
-  UnityEngine_Object_o *v85; // x20
-  EventDelegate_o *v86; // x20
-  System_String_o *v87; // x2
-  System_String_o *v88; // x3
-  int32_t v89; // w4
-  int32_t v90; // w5
-  bool v91; // w6
-  bool v92; // w7
-  struct UIInput_o *v93; // x8
-  struct System_Object_array *v94; // x8
-  _QWORD *v95; // x9
-  __int64 v96; // x10
-  Il2CppClass **v97; // x8
-  Il2CppObject *v98; // x0
-  System_String_o *v99; // x2
-  System_String_o *v100; // x3
-  int32_t v101; // w4
-  int32_t v102; // w5
-  bool v103; // w6
-  bool v104; // w7
-  __int64 v105; // x1
-  __int64 v106; // x2
+  EventDelegate_o *v65; // x20
+  System_String_o *v66; // x2
+  System_String_o *v67; // x3
+  int32_t v68; // w4
+  int32_t v69; // w5
+  bool v70; // w6
+  bool v71; // w7
+  struct UIProgressBar_o *v72; // x8
+  struct System_Object_array *v73; // x8
+  _QWORD *v74; // x9
+  __int64 v75; // x10
+  Il2CppClass **v76; // x8
+  Il2CppObject *v77; // x0
+  System_String_o *v78; // x2
+  System_String_o *v79; // x3
+  int32_t v80; // w4
+  int32_t v81; // w5
+  bool v82; // w6
+  bool v83; // w7
+  __int64 v84; // x1
+  __int64 v85; // x2
+  UnityEngine_Object_o *v86; // x20
+  EventDelegate_o *v87; // x20
+  System_String_o *v88; // x2
+  System_String_o *v89; // x3
+  int32_t v90; // w4
+  int32_t v91; // w5
+  bool v92; // w6
+  bool v93; // w7
+  struct UIInput_o *v94; // x8
+  struct System_Object_array *v95; // x8
+  _QWORD *v96; // x9
+  __int64 v97; // x10
+  Il2CppClass **v98; // x8
+  Il2CppObject *v99; // x0
+  System_String_o *v100; // x2
+  System_String_o *v101; // x3
+  int32_t v102; // w4
+  int32_t v103; // w5
+  bool v104; // w6
+  bool v105; // w7
+  __int64 v106; // x1
+  __int64 v107; // x2
   UnityEngine_Object_o *toggle; // x20
-  EventDelegate_o *v108; // x20
-  System_String_o *v109; // x2
-  System_String_o *v110; // x3
-  int32_t v111; // w4
-  int32_t v112; // w5
-  bool v113; // w6
-  bool v114; // w7
-  struct UIToggle_o *v115; // x8
+  EventDelegate_o *v109; // x20
+  System_String_o *v110; // x2
+  System_String_o *v111; // x3
+  int32_t v112; // w4
+  int32_t v113; // w5
+  bool v114; // w6
+  bool v115; // w7
+  struct UIToggle_o *v116; // x8
   System_Collections_Generic_List_object__o *onChange; // x8
-  struct System_Object_array *v117; // x9
-  _QWORD *v118; // x10
-  __int64 v119; // x11
-  Il2CppClass **v120; // x0
+  struct System_Object_array *v118; // x9
+  _QWORD *v119; // x10
+  __int64 v120; // x11
+  Il2CppClass **v121; // x0
 
   if ( (byte_596E546 & 1) == 0 )
   {
@@ -739,15 +740,16 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
     v5 = NGuiPlayMakerDelegates_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, method, v2);
-    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v5, 0);
+    v6.fields.value = (intptr_t)v5;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
     if ( !*(_DWORD *)(qword_5984398 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_5984398, v6, v7);
+      j_il2cpp_runtime_class_init_0(qword_5984398, v7, v8);
     Names = (System_Collections_Generic_List_object__o *)System_Enum__GetNames(TypeFromHandle, 0);
     if ( !Names )
       goto LABEL_63;
-    v11 = (struct System_Int32_array *)sub_2213B20(int___TypeInfo, (unsigned int)Names->fields._size);
-    this->fields._usage = v11;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._usage, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+    v12 = (struct System_Int32_array *)sub_2213B20(int___TypeInfo, (unsigned int)Names->fields._size);
+    this->fields._usage = v12;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._usage, (int32_t)v12, v13, v14, v15, v16, v17, v18);
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -761,44 +763,44 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.targetFSM,
       (int32_t)Component_object,
-      v22,
       v23,
       v24,
       v25,
       v26,
-      v27);
+      v27,
+      v28);
   }
-  v28 = (UnityEngine_Object_o *)this->fields.targetFSM;
+  v29 = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
-  if ( UnityEngine_Object__op_Equality(v28, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
+  if ( UnityEngine_Object__op_Equality(v29, 0, 0) )
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
-  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 10, v29) )
+  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 10, v30) )
   {
-    v31 = UnityEngine_Component__GetComponent_object_(
+    v32 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
             (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-    this->fields._input = (struct UIInput_o *)v31;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v31, v32, v33, v34, v35, v36, v37);
+    this->fields._input = (struct UIInput_o *)v32;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v32, v33, v34, v35, v36, v37, v38);
     input = (UnityEngine_Object_o *)this->fields._input;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v38, v39);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v39, v40);
     if ( UnityEngine_Object__op_Inequality(input, 0, 0) )
     {
-      v41 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
-      EventDelegate___ctor(v41, 0);
-      if ( !v41 )
+      v42 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+      EventDelegate___ctor(v42, 0);
+      if ( !v42 )
         goto LABEL_63;
-      EventDelegate__set_target(v41, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v41, (System_String_o *)StringLiteral_10371/*"OnSubmitChange"*/, 0);
-      v48 = this->fields._input;
-      if ( !v48 )
+      EventDelegate__set_target(v42, (UnityEngine_MonoBehaviour_o *)this, 0);
+      EventDelegate__set_methodName(v42, (System_String_o *)StringLiteral_10371/*"OnSubmitChange"*/, 0);
+      v49 = this->fields._input;
+      if ( !v49 )
         goto LABEL_63;
-      Names = (System_Collections_Generic_List_object__o *)v48->fields.onSubmit;
+      Names = (System_Collections_Generic_List_object__o *)v49->fields.onSubmit;
       if ( !Names )
         goto LABEL_63;
       items = Names->fields._items;
-      v50 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+      v51 = Method_System_Collections_Generic_List_EventDelegate__Add__;
       ++Names->fields._version;
       if ( !items )
         goto LABEL_63;
@@ -807,166 +809,166 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
       {
         System_Collections_Generic_List_object___AddWithResize(
           Names,
-          (Il2CppObject *)v41,
-          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
+          (Il2CppObject *)v42,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
       }
       else
       {
-        v52 = &items->obj.klass + size;
+        v53 = &items->obj.klass + size;
         Names->fields._size = size + 1;
-        v52[4] = (Il2CppClass *)v41;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v52 + 4), (int32_t)v41, v42, v43, v44, v45, v46, v47);
+        v53[4] = (Il2CppClass *)v42;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v53 + 4), (int32_t)v42, v43, v44, v45, v46, v47, v48);
       }
     }
   }
-  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 11, v30) )
+  if ( NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 11, v31) )
   {
-    v54 = UnityEngine_Component__GetComponent_object_(
+    v55 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
             (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
-    this->fields._pBar = (struct UIProgressBar_o *)v54;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._pBar, (int32_t)v54, v55, v56, v57, v58, v59, v60);
+    this->fields._pBar = (struct UIProgressBar_o *)v55;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._pBar, (int32_t)v55, v56, v57, v58, v59, v60, v61);
     pBar = (UnityEngine_Object_o *)this->fields._pBar;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v61, v62);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v62, v63);
     if ( UnityEngine_Object__op_Inequality(pBar, 0, 0) )
     {
-      v64 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
-      EventDelegate___ctor(v64, 0);
-      if ( !v64 )
+      v65 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+      EventDelegate___ctor(v65, 0);
+      if ( !v65 )
         goto LABEL_63;
-      EventDelegate__set_target(v64, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v64, (System_String_o *)StringLiteral_10366/*"OnSliderChange"*/, 0);
-      v71 = this->fields._pBar;
-      if ( !v71 )
-        goto LABEL_63;
-      Names = (System_Collections_Generic_List_object__o *)v71->fields.onChange;
-      if ( !Names )
-        goto LABEL_63;
-      v72 = Names->fields._items;
-      v73 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-      ++Names->fields._version;
+      EventDelegate__set_target(v65, (UnityEngine_MonoBehaviour_o *)this, 0);
+      EventDelegate__set_methodName(v65, (System_String_o *)StringLiteral_10366/*"OnSliderChange"*/, 0);
+      v72 = this->fields._pBar;
       if ( !v72 )
         goto LABEL_63;
-      v74 = Names->fields._size;
-      if ( (unsigned int)v74 >= LODWORD(v72->max_length) )
+      Names = (System_Collections_Generic_List_object__o *)v72->fields.onChange;
+      if ( !Names )
+        goto LABEL_63;
+      v73 = Names->fields._items;
+      v74 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+      ++Names->fields._version;
+      if ( !v73 )
+        goto LABEL_63;
+      v75 = Names->fields._size;
+      if ( (unsigned int)v75 >= LODWORD(v73->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           Names,
-          (Il2CppObject *)v64,
-          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+          (Il2CppObject *)v65,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v74[4] + 192LL) + 112LL));
       }
       else
       {
-        v75 = &v72->obj.klass + v74;
-        Names->fields._size = v74 + 1;
-        v75[4] = (Il2CppClass *)v64;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v75 + 4), (int32_t)v64, v65, v66, v67, v68, v69, v70);
+        v76 = &v73->obj.klass + v75;
+        Names->fields._size = v75 + 1;
+        v76[4] = (Il2CppClass *)v65;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v76 + 4), (int32_t)v65, v66, v67, v68, v69, v70, v71);
       }
     }
   }
-  if ( !NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 14, v53) )
+  if ( !NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(this, this->fields.targetFSM, 14, v54) )
     return;
-  v76 = UnityEngine_Component__GetComponent_object_(
+  v77 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-  this->fields._input = (struct UIInput_o *)v76;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v76, v77, v78, v79, v80, v81, v82);
-  v85 = (UnityEngine_Object_o *)this->fields._input;
+  this->fields._input = (struct UIInput_o *)v77;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields._input, (int32_t)v77, v78, v79, v80, v81, v82, v83);
+  v86 = (UnityEngine_Object_o *)this->fields._input;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v83, v84);
-  if ( UnityEngine_Object__op_Inequality(v85, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v84, v85);
+  if ( UnityEngine_Object__op_Inequality(v86, 0, 0) )
   {
-    v86 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
-    EventDelegate___ctor(v86, 0);
-    if ( !v86 )
+    v87 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+    EventDelegate___ctor(v87, 0);
+    if ( !v87 )
       goto LABEL_63;
-    EventDelegate__set_target(v86, (UnityEngine_MonoBehaviour_o *)this, 0);
-    EventDelegate__set_methodName(v86, (System_String_o *)StringLiteral_10234/*"OnChange"*/, 0);
-    v93 = this->fields._input;
-    if ( !v93 )
-      goto LABEL_63;
-    Names = (System_Collections_Generic_List_object__o *)v93->fields.onChange;
-    if ( !Names )
-      goto LABEL_63;
-    v94 = Names->fields._items;
-    v95 = Method_System_Collections_Generic_List_EventDelegate__Add__;
-    ++Names->fields._version;
+    EventDelegate__set_target(v87, (UnityEngine_MonoBehaviour_o *)this, 0);
+    EventDelegate__set_methodName(v87, (System_String_o *)StringLiteral_10234/*"OnChange"*/, 0);
+    v94 = this->fields._input;
     if ( !v94 )
       goto LABEL_63;
-    v96 = Names->fields._size;
-    if ( (unsigned int)v96 >= LODWORD(v94->max_length) )
+    Names = (System_Collections_Generic_List_object__o *)v94->fields.onChange;
+    if ( !Names )
+      goto LABEL_63;
+    v95 = Names->fields._items;
+    v96 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+    ++Names->fields._version;
+    if ( !v95 )
+      goto LABEL_63;
+    v97 = Names->fields._size;
+    if ( (unsigned int)v97 >= LODWORD(v95->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         Names,
-        (Il2CppObject *)v86,
-        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v95[4] + 192LL) + 112LL));
+        (Il2CppObject *)v87,
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v96[4] + 192LL) + 112LL));
     }
     else
     {
-      v97 = &v94->obj.klass + v96;
-      Names->fields._size = v96 + 1;
-      v97[4] = (Il2CppClass *)v86;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v97 + 4), (int32_t)v86, v87, v88, v89, v90, v91, v92);
+      v98 = &v95->obj.klass + v97;
+      Names->fields._size = v97 + 1;
+      v98[4] = (Il2CppClass *)v87;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v98 + 4), (int32_t)v87, v88, v89, v90, v91, v92, v93);
     }
   }
-  v98 = UnityEngine_Component__GetComponent_object_(
+  v99 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
-  this->fields._toggle = (struct UIToggle_o *)v98;
+  this->fields._toggle = (struct UIToggle_o *)v99;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._toggle,
-    (int32_t)v98,
-    v99,
+    (int32_t)v99,
     v100,
     v101,
     v102,
     v103,
-    v104);
+    v104,
+    v105);
   toggle = (UnityEngine_Object_o *)this->fields._toggle;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v105, v106);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v106, v107);
   if ( UnityEngine_Object__op_Inequality(toggle, 0, 0) )
   {
-    v108 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
-    EventDelegate___ctor(v108, 0);
-    if ( v108 )
+    v109 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+    EventDelegate___ctor(v109, 0);
+    if ( v109 )
     {
-      EventDelegate__set_target(v108, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v108, (System_String_o *)StringLiteral_10234/*"OnChange"*/, 0);
-      v115 = this->fields._toggle;
-      if ( v115 )
+      EventDelegate__set_target(v109, (UnityEngine_MonoBehaviour_o *)this, 0);
+      EventDelegate__set_methodName(v109, (System_String_o *)StringLiteral_10234/*"OnChange"*/, 0);
+      v116 = this->fields._toggle;
+      if ( v116 )
       {
-        onChange = (System_Collections_Generic_List_object__o *)v115->fields.onChange;
+        onChange = (System_Collections_Generic_List_object__o *)v116->fields.onChange;
         if ( onChange )
         {
-          v117 = onChange->fields._items;
-          v118 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+          v118 = onChange->fields._items;
+          v119 = Method_System_Collections_Generic_List_EventDelegate__Add__;
           ++onChange->fields._version;
-          if ( v117 )
+          if ( v118 )
           {
-            v119 = onChange->fields._size;
-            if ( (unsigned int)v119 >= LODWORD(v117->max_length) )
+            v120 = onChange->fields._size;
+            if ( (unsigned int)v120 >= LODWORD(v118->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 onChange,
-                (Il2CppObject *)v108,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
+                (Il2CppObject *)v109,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v119[4] + 192LL) + 112LL));
             }
             else
             {
-              v120 = &v117->obj.klass + v119;
-              onChange->fields._size = v119 + 1;
-              v120[4] = (Il2CppClass *)v108;
+              v121 = &v118->obj.klass + v120;
+              onChange->fields._size = v120 + 1;
+              v121[4] = (Il2CppClass *)v109;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)(v120 + 4),
-                (int32_t)v108,
-                v109,
+                (MissionNaviTransitionBoardItem_o *)(v121 + 4),
+                (int32_t)v109,
                 v110,
                 v111,
                 v112,
                 v113,
-                v114);
+                v114,
+                v115);
             }
             return;
           }
@@ -974,7 +976,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
       }
     }
 LABEL_63:
-    sub_2213CDC(Names, v10);
+    sub_2213CDC(Names, v11);
   }
 }
 

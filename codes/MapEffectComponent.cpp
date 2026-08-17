@@ -60,10 +60,11 @@ void MapEffectComponent__UpdateCameraFollow(MapEffectComponent_o *this, const Me
   float orthographicSize; // s8
   UnityEngine_GameObject_o *gameObject; // x0
   struct MapCamera_o *v11; // x8
-  float v12; // s8
-  UnityEngine_GameObject_o *v13; // x0
-  unsigned __int64 ScrlPosVec3; // kr00_8
+  float x; // s9
+  float v13; // s8
+  UnityEngine_GameObject_o *v14; // x0
   UnityEngine_Vector2_o v15; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D0E5 & 1) == 0 )
   {
@@ -90,12 +91,13 @@ void MapEffectComponent__UpdateCameraFollow(MapEffectComponent_o *this, const Me
       {
         sub_2213CDC(mCamera, v6);
       }
-      ScrlPosVec3 = (unsigned __int64)MapScroll__GetScrlPosVec3((MapScroll_o *)mCamera, v6);
-      v12 = *((float *)&ScrlPosVec3 + 1) + this->fields._OffestPositionY_k__BackingField;
-      v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      LODWORD(v15.fields.x) = ScrlPosVec3;
-      v15.fields.y = v12;
-      GameObjectExtensions__SetLocalPosition_42891412(v13, v15, 0);
+      ScrlPosVec3 = MapScroll__GetScrlPosVec3((MapScroll_o *)mCamera, v6);
+      x = ScrlPosVec3.fields.x;
+      v13 = ScrlPosVec3.fields.y + this->fields._OffestPositionY_k__BackingField;
+      v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v15.fields.x = x;
+      v15.fields.y = v13;
+      GameObjectExtensions__SetLocalPosition_42891412(v14, v15, 0);
     }
   }
 }

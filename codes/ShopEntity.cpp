@@ -923,9 +923,10 @@ int32_t ShopEntity__GetItemCount(ShopEntity_o *this, const MethodInfo *method)
   ShopEntity_o *v2; // x19
   ShopEntity_o *v3; // x20
   __int64 v4; // x8
-  int32_t v5; // w1
+  System_Nullable_int__o v5; // x0
+  int32_t v6; // w1
   struct System_Int32_array *itemIds; // x8
-  unsigned __int64 v9; // [xsp+8h] [xbp-18h] BYREF
+  unsigned __int64 v10; // [xsp+8h] [xbp-18h] BYREF
 
   v2 = this;
   if ( (byte_59713C4 & 1) == 0 )
@@ -935,24 +936,26 @@ int32_t ShopEntity__GetItemCount(ShopEntity_o *this, const MethodInfo *method)
     this = (ShopEntity_o *)sub_2213A60(&Method_System_Nullable_int__get_HasValue__);
     byte_59713C4 = 1;
   }
-  if ( v2->fields.shopType == 20
-    && (this = (ShopEntity_o *)ShopEntity__get_ShopDailyEntity(v2, method)) != 0
-    && (v3 = this,
-        this = (ShopEntity_o *)BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)&this->fields.slot, 0),
-        ((unsigned __int8)this & 1) == 0)
+  if ( v2->fields.shopType != 20 )
+    goto LABEL_9;
+  this = (ShopEntity_o *)ShopEntity__get_ShopDailyEntity(v2, method);
+  if ( !this )
+    goto LABEL_9;
+  v3 = this;
+  this = (ShopEntity_o *)BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)&this->fields.slot, 0);
+  if ( ((unsigned __int8)this & 1) == 0
     && (v4 = *(_QWORD *)&v3->fields.slot) != 0
-    && (v5 = *(_DWORD *)(v4 + 24),
-        v9 = 0,
-        System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v9,
-          v5,
-          (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__),
-        (_BYTE)v9) )
+    && (v5 = (System_Nullable_int__o)&v10,
+        v6 = *(_DWORD *)(v4 + 24),
+        v10 = 0,
+        System_Nullable_int____ctor(v5, v6, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__),
+        (_BYTE)v10) )
   {
-    return HIDWORD(v9);
+    return HIDWORD(v10);
   }
   else
   {
+LABEL_9:
     itemIds = v2->fields.itemIds;
     if ( !itemIds )
       sub_2213CDC(this, method);
@@ -966,10 +969,11 @@ int32_t ShopEntity__GetItemID(ShopEntity_o *this, const MethodInfo *method)
   ShopEntity_o *v2; // x19
   ShopEntity_o *v3; // x20
   __int64 v4; // x8
-  int32_t v5; // w1
-  __int64 v6; // x0
+  System_Nullable_int__o v5; // x0
+  int32_t v6; // w1
+  __int64 v7; // x0
   struct System_Int32_array *itemIds; // x8
-  unsigned __int64 v9; // [xsp+8h] [xbp-18h] BYREF
+  unsigned __int64 v10; // [xsp+8h] [xbp-18h] BYREF
 
   v2 = this;
   if ( (byte_59713C5 & 1) == 0 )
@@ -993,13 +997,11 @@ int32_t ShopEntity__GetItemID(ShopEntity_o *this, const MethodInfo *method)
     goto LABEL_10;
   if ( !*(_DWORD *)(v4 + 24) )
     goto LABEL_13;
-  v5 = *(_DWORD *)(v4 + 32);
-  v9 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v9,
-    v5,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v9 )
+  v5 = (System_Nullable_int__o)&v10;
+  v6 = *(_DWORD *)(v4 + 32);
+  v10 = 0;
+  System_Nullable_int____ctor(v5, v6, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v10 )
   {
 LABEL_10:
     itemIds = v2->fields.itemIds;
@@ -1007,13 +1009,13 @@ LABEL_10:
       sub_2213CDC(this, method);
     if ( LODWORD(itemIds->max_length) )
     {
-      LODWORD(v6) = itemIds->m_Items[0];
-      return v6;
+      LODWORD(v7) = itemIds->m_Items[0];
+      return v7;
     }
 LABEL_13:
     sub_2213CE4(this);
   }
-  return HIDWORD(v9);
+  return HIDWORD(v10);
 }
 
 
@@ -1023,10 +1025,11 @@ int32_t ShopEntity__GetItemIDs(ShopEntity_o *this, int32_t num, const MethodInfo
   ShopEntity_o *v4; // x20
   ShopEntity_o *v5; // x21
   __int64 v6; // x8
-  int32_t v7; // w1
-  __int64 v8; // x0
+  System_Nullable_int__o v7; // x0
+  int32_t v8; // w1
+  __int64 v9; // x0
   struct System_Int32_array *itemIds; // x8
-  unsigned __int64 v11; // [xsp+8h] [xbp-28h] BYREF
+  unsigned __int64 v12; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
   if ( (byte_59713C6 & 1) == 0 )
@@ -1050,13 +1053,11 @@ int32_t ShopEntity__GetItemIDs(ShopEntity_o *this, int32_t num, const MethodInfo
     goto LABEL_10;
   if ( *(_DWORD *)(v6 + 24) <= (unsigned int)num )
     goto LABEL_14;
-  v7 = *(_DWORD *)(v6 + 4LL * num + 32);
-  v11 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v11,
-    v7,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v11 )
+  v7 = (System_Nullable_int__o)&v12;
+  v8 = *(_DWORD *)(v6 + 4LL * num + 32);
+  v12 = 0;
+  System_Nullable_int____ctor(v7, v8, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v12 )
   {
 LABEL_10:
     itemIds = v4->fields.itemIds;
@@ -1064,13 +1065,13 @@ LABEL_10:
       sub_2213CDC(this, *(_QWORD *)&num);
     if ( LODWORD(itemIds->max_length) > num )
     {
-      LODWORD(v8) = itemIds->m_Items[num];
-      return v8;
+      LODWORD(v9) = itemIds->m_Items[num];
+      return v9;
     }
 LABEL_14:
     sub_2213CE4(this);
   }
-  return HIDWORD(v11);
+  return HIDWORD(v12);
 }
 
 
@@ -1211,10 +1212,11 @@ int32_t ShopEntity__GetPrice(ShopEntity_o *this, const MethodInfo *method)
   ShopEntity_o *v2; // x19
   ShopEntity_o *v3; // x20
   __int64 v4; // x8
-  int32_t v5; // w1
-  __int64 v6; // x0
+  System_Nullable_int__o v5; // x0
+  int32_t v6; // w1
+  __int64 v7; // x0
   struct System_Int32_array *prices; // x8
-  unsigned __int64 v9; // [xsp+8h] [xbp-18h] BYREF
+  unsigned __int64 v10; // [xsp+8h] [xbp-18h] BYREF
 
   v2 = this;
   if ( (byte_59713E6 & 1) == 0 )
@@ -1238,13 +1240,11 @@ int32_t ShopEntity__GetPrice(ShopEntity_o *this, const MethodInfo *method)
     goto LABEL_10;
   if ( !*(_DWORD *)(v4 + 24) )
     goto LABEL_13;
-  v5 = *(_DWORD *)(v4 + 32);
-  v9 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v9,
-    v5,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v9 )
+  v5 = (System_Nullable_int__o)&v10;
+  v6 = *(_DWORD *)(v4 + 32);
+  v10 = 0;
+  System_Nullable_int____ctor(v5, v6, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v10 )
   {
 LABEL_10:
     prices = v2->fields.prices;
@@ -1252,13 +1252,13 @@ LABEL_10:
       sub_2213CDC(this, method);
     if ( LODWORD(prices->max_length) )
     {
-      LODWORD(v6) = prices->m_Items[0];
-      return v6;
+      LODWORD(v7) = prices->m_Items[0];
+      return v7;
     }
 LABEL_13:
     sub_2213CE4(this);
   }
-  return HIDWORD(v9);
+  return HIDWORD(v10);
 }
 
 
@@ -1280,10 +1280,11 @@ int32_t ShopEntity__GetPrices(ShopEntity_o *this, int32_t num, const MethodInfo 
   ShopEntity_o *v4; // x20
   ShopEntity_o *v5; // x21
   __int64 v6; // x8
-  int32_t v7; // w1
-  __int64 v8; // x0
+  System_Nullable_int__o v7; // x0
+  int32_t v8; // w1
+  __int64 v9; // x0
   struct System_Int32_array *prices; // x8
-  unsigned __int64 v11; // [xsp+8h] [xbp-28h] BYREF
+  unsigned __int64 v12; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
   if ( (byte_59713E7 & 1) == 0 )
@@ -1307,13 +1308,11 @@ int32_t ShopEntity__GetPrices(ShopEntity_o *this, int32_t num, const MethodInfo 
     goto LABEL_10;
   if ( *(_DWORD *)(v6 + 24) <= (unsigned int)num )
     goto LABEL_14;
-  v7 = *(_DWORD *)(v6 + 4LL * num + 32);
-  v11 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v11,
-    v7,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v11 )
+  v7 = (System_Nullable_int__o)&v12;
+  v8 = *(_DWORD *)(v6 + 4LL * num + 32);
+  v12 = 0;
+  System_Nullable_int____ctor(v7, v8, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v12 )
   {
 LABEL_10:
     prices = v4->fields.prices;
@@ -1321,13 +1320,13 @@ LABEL_10:
       sub_2213CDC(this, *(_QWORD *)&num);
     if ( LODWORD(prices->max_length) > num )
     {
-      LODWORD(v8) = prices->m_Items[num];
-      return v8;
+      LODWORD(v9) = prices->m_Items[num];
+      return v9;
     }
 LABEL_14:
     sub_2213CE4(this);
   }
-  return HIDWORD(v11);
+  return HIDWORD(v12);
 }
 
 

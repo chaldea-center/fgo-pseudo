@@ -180,11 +180,11 @@ BattleServantData_o *TargetAggregator___BattleServantEnumerable_b__18_0(
 bool TargetAggregator__get_IsOpponentTargetOnly(TargetAggregator_o *this, const MethodInfo *method)
 {
   TargetAggregator_o *v2; // x20
-  struct System_Nullable_bool__o *p_isOpponentTargetOnly; // x19
   bool IsActorPlayerSide; // w8
   struct TargetAggregator_Args_o *args; // x8
-  struct System_Nullable_bool__o *v6; // x0
-  const MethodInfo_45E0958 *v7; // x1
+  struct System_Nullable_bool__o *v5; // x0
+  const MethodInfo_45E0958 *v6; // x1
+  System_Nullable_bool__o v7; // w0
   struct System_Nullable_bool__o v9; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
@@ -196,7 +196,6 @@ bool TargetAggregator__get_IsOpponentTargetOnly(TargetAggregator_o *this, const 
     this = (TargetAggregator_o *)sub_2213A60(&Method_System_Nullable_bool__get_Value__);
     byte_5973E41 = 1;
   }
-  p_isOpponentTargetOnly = &v2->fields.isOpponentTargetOnly;
   if ( (unsigned __int8)*(_WORD *)&v2->fields.isOpponentTargetOnly )
   {
     IsActorPlayerSide = *(_WORD *)&v2->fields.isOpponentTargetOnly > 0xFFu;
@@ -212,15 +211,16 @@ bool TargetAggregator__get_IsOpponentTargetOnly(TargetAggregator_o *this, const 
                           args->fields._taskActorType_k__BackingField,
                           0);
   }
-  v6 = &v9;
+  v5 = &v9;
   v9 = 0;
   System_Nullable_bool____ctor(
-    (System_Nullable_bool__o)v6,
+    (System_Nullable_bool__o)v5,
     IsActorPlayerSide,
     (const MethodInfo_45E0940 *)Method_System_Nullable_bool___ctor__);
-  v7 = (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__;
-  *p_isOpponentTargetOnly = v9;
-  return System_Nullable_bool___get_Value((System_Nullable_bool__o)p_isOpponentTargetOnly, v7);
+  v6 = (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__;
+  v7 = (System_Nullable_bool__o)((_WORD)v2 + 24);
+  v2->fields.isOpponentTargetOnly = v9;
+  return System_Nullable_bool___get_Value(v7, v6);
 }
 
 

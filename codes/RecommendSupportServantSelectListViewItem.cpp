@@ -1443,7 +1443,7 @@ bool RecommendSupportServantSelectListViewItem__SetSortValue(
   __int64 v10; // x8
   __int64 v11; // x2
   int32_t sortKind; // w8
-  int64_t v13; // x20
+  int64_t sortValue1B_low; // x20
   IconLabelInfo_o *v14; // x21
   const MethodInfo *v15; // x2
   __int64 v16; // x20
@@ -1497,7 +1497,7 @@ bool RecommendSupportServantSelectListViewItem__SetSortValue(
   const MethodInfo *v64; // x2
   __int64 rarity; // x20
   __int64 Servant_k__BackingField_low; // x9
-  int32_t v67; // w20
+  int32_t sortValue1B; // w20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v69; // [xsp+10h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v70; // [xsp+30h] [xbp-60h]
   int32_t tdMaxLv[2]; // [xsp+58h] [xbp-38h] BYREF
@@ -1837,15 +1837,15 @@ LABEL_144:
           this = (RecommendSupportServantSelectListViewItem_o *)v4->fields._UserServant_k__BackingField;
           if ( this )
           {
-            v13 = *((int *)this + 100);
+            sortValue1B_low = SLODWORD(this[1].fields.sortValue1B);
             v14 = v4->fields._IconInfo1_k__BackingField;
-            v4->fields.sortValue1 = v13;
+            v4->fields.sortValue1 = sortValue1B_low;
             this = (RecommendSupportServantSelectListViewItem_o *)UserServantEntity__getLevelMax(
                                                                     (UserServantEntity_o *)this,
                                                                     0);
             if ( v14 )
             {
-              IconLabelInfo__Set_47880948(v14, 2, v13, (int32_t)this, 0, 0, 0, 0, 0, 0);
+              IconLabelInfo__Set_47880948(v14, 2, sortValue1B_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
 LABEL_148:
               LOBYTE(this) = 1;
               return (char)this;
@@ -1883,11 +1883,11 @@ LABEL_150:
       goto LABEL_150;
     IconInfo1_k__BackingField = v4->fields._IconInfo2_k__BackingField;
 LABEL_146:
-    v67 = *((_DWORD *)this + 100);
+    sortValue1B = this[1].fields.sortValue1B;
     this = (RecommendSupportServantSelectListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
     if ( IconInfo1_k__BackingField )
     {
-      IconLabelInfo__Set_47880948(IconInfo1_k__BackingField, 2, v67, (int32_t)this, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_47880948(IconInfo1_k__BackingField, 2, sortValue1B, (int32_t)this, 0, 0, 0, 0, 0, 0);
       goto LABEL_148;
     }
     goto LABEL_150;

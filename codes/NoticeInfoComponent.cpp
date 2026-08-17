@@ -806,7 +806,7 @@ LABEL_19:
     sub_2213CDC(this, result);
   v8 = UserDeleteReservationMaster__GetEntity(
          (UserDeleteReservationMaster_o *)MasterData_object,
-         *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+         *(_QWORD *)(this[3].fields.m_CachedPtr + 64),
          0);
   if ( v8 )
   {
@@ -845,6 +845,7 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
   bool v9; // w6
   bool v10; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   struct NoticeInfoComponent_o *_4__this; // x8
   UnityEngine_WaitForSeconds_o *v14; // x20
   MissionNaviTransitionBoardItem_o *v15; // x19
@@ -886,6 +887,7 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
       v3->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
       sub_2213A04(p__2__current, 0, v5, v6, v7, v8, v9, v10);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
     }
     else
@@ -895,10 +897,11 @@ bool NoticeInfoComponent__WaitForSE_d__11__MoveNext(
       v3->fields.__2__current = (Il2CppObject *)v14;
       v15 = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
       sub_2213A04(v15, (int32_t)v14, v16, v17, v18, v19, v20, v21);
+      result = 1;
       v15[-1].fields._BoardType_k__BackingField = 2;
     }
-    return 1;
   }
+  return result;
 }
 
 

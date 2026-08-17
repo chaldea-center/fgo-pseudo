@@ -18,7 +18,7 @@ System_Collections_Generic_List_int__o *WarQuestSelectionMaster__GetAllRegistere
 {
   System_Collections_Generic_List_int__o *result; // x0
   __int64 v4; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *v5; // x19
+  System_Collections_Generic_List_int__o *v5; // x19
   WarQuestSelectionMaster___c_c *v6; // x0
   struct WarQuestSelectionMaster___c_StaticFields *static_fields; // x8
   System_Func_object__int__o *_9__2_0; // x20
@@ -49,7 +49,7 @@ System_Collections_Generic_List_int__o *WarQuestSelectionMaster__GetAllRegistere
                                                        (const MethodInfo_3F14B68 *)Method_DataMasterBase_WarQuestSelectionMaster__WarQuestSelectionEntity__string__getEntitys__);
   if ( result )
   {
-    v5 = (System_Collections_Generic_IEnumerable_TSource__o *)result;
+    v5 = result;
     v6 = WarQuestSelectionMaster___c_TypeInfo;
     if ( !*(&WarQuestSelectionMaster___c_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -77,7 +77,7 @@ System_Collections_Generic_List_int__o *WarQuestSelectionMaster__GetAllRegistere
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->__9__2_0, (int32_t)_9__2_0, v11, v12, v13, v14, v15, v16);
     }
     v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                                 v5,
+                                                                 (System_Collections_Generic_IEnumerable_TSource__o *)v5,
                                                                  (System_Func_TSource__TResult__o *)_9__2_0,
                                                                  (const MethodInfo_389085C *)Method_System_Linq_Enumerable_Select_WarQuestSelectionEntity__int___);
     v18 = System_Linq_Enumerable__Distinct_int_(

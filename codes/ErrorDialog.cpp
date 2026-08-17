@@ -410,32 +410,32 @@ void ErrorDialog__Open_49140656(
   System_String_o *v19; // x1
   const MethodInfo_45E8924 *v20; // x2
   UILabel_o *messageLabel; // x22
+  UnityEngine_Vector2_o Value; // kr00_8
   UnityEngine_Object_o *decideLabel; // x21
-  __int64 v23; // x1
-  UILabel_o *v24; // x21
+  __int64 v24; // x1
+  UILabel_o *v25; // x21
   System_String_o *decideTextCode; // x22
   UnityEngine_Object_o *cancelLabel; // x21
-  __int64 v27; // x1
-  UILabel_o *v28; // x21
+  __int64 v28; // x1
+  UILabel_o *v29; // x21
   System_String_o *cancelTextCode; // x22
   UnityEngine_Object_o *sendLabel; // x21
-  __int64 v31; // x1
-  UILabel_o *v32; // x21
+  __int64 v32; // x1
+  UILabel_o *v33; // x21
   System_String_o *sendTextCode; // x22
   UnityEngine_Object_o *noSendLabel; // x21
-  UILabel_o *v35; // x21
+  UILabel_o *v36; // x21
   System_String_o *noSendTextCode; // x22
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v38; // x2
-  const MethodInfo *v39; // x1
-  System_Action_c *v40; // x0
-  System_Action_o *v41; // x20
-  System_Nullable_Vector2__o v42; // [xsp+0h] [xbp-60h] BYREF
-  System_Nullable_Vector2__o v43; // 0:x0.12
-  UnityEngine_Vector2_o Value; // 0:s0.4,4:s1.4
+  const MethodInfo *v39; // x2
+  const MethodInfo *v40; // x1
+  System_Action_c *v41; // x0
+  System_Action_o *v42; // x20
+  System_Nullable_Vector2__o v43; // [xsp+0h] [xbp-60h] BYREF
+  System_Nullable_Vector2__o v44; // 0:x0.12
 
   hasValue = effectDistance.fields.hasValue;
-  v42 = effectDistance;
+  v43 = effectDistance;
   if ( (byte_59709F6 & 1) == 0 )
   {
     sub_2213A60(&System_Action_TypeInfo);
@@ -478,9 +478,9 @@ void ErrorDialog__Open_49140656(
     messageLabel = this->fields.messageLabel;
     if ( hasValue )
     {
-      *(_QWORD *)&v43.fields.hasValue = &v42;
-      LODWORD(v43.fields.value.fields.y) = Method_System_Nullable_Vector2__get_Value__;
-      Value = System_Nullable_Vector2___get_Value(v43, v20);
+      *(_QWORD *)&v44.fields.hasValue = &v43;
+      LODWORD(v44.fields.value.fields.y) = Method_System_Nullable_Vector2__get_Value__;
+      Value = System_Nullable_Vector2___get_Value(v44, v20);
       if ( !messageLabel )
         goto LABEL_51;
     }
@@ -503,58 +503,58 @@ void ErrorDialog__Open_49140656(
   if ( UnityEngine_Object__op_Inequality(decideLabel, 0, 0)
     && !System_String__IsNullOrEmpty(this->fields.decideTextCode, 0) )
   {
-    v24 = this->fields.decideLabel;
+    v25 = this->fields.decideLabel;
     decideTextCode = this->fields.decideTextCode;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v23);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v24);
     titleLabel = (UILabel_o *)LocalizationManager__Get(decideTextCode, 0);
-    if ( !v24 )
+    if ( !v25 )
       goto LABEL_51;
-    UILabel__set_text(v24, (System_String_o *)titleLabel, 0);
+    UILabel__set_text(v25, (System_String_o *)titleLabel, 0);
   }
   cancelLabel = (UnityEngine_Object_o *)this->fields.cancelLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
   if ( UnityEngine_Object__op_Inequality(cancelLabel, 0, 0)
     && !System_String__IsNullOrEmpty(this->fields.cancelTextCode, 0) )
   {
-    v28 = this->fields.cancelLabel;
+    v29 = this->fields.cancelLabel;
     cancelTextCode = this->fields.cancelTextCode;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v27);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v28);
     titleLabel = (UILabel_o *)LocalizationManager__Get(cancelTextCode, 0);
-    if ( !v28 )
+    if ( !v29 )
       goto LABEL_51;
-    UILabel__set_text(v28, (System_String_o *)titleLabel, 0);
+    UILabel__set_text(v29, (System_String_o *)titleLabel, 0);
   }
   sendLabel = (UnityEngine_Object_o *)this->fields.sendLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28);
   if ( UnityEngine_Object__op_Inequality(sendLabel, 0, 0) && !System_String__IsNullOrEmpty(this->fields.sendTextCode, 0) )
   {
-    v32 = this->fields.sendLabel;
+    v33 = this->fields.sendLabel;
     sendTextCode = this->fields.sendTextCode;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v31);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v32);
     titleLabel = (UILabel_o *)LocalizationManager__Get(sendTextCode, 0);
-    if ( !v32 )
+    if ( !v33 )
       goto LABEL_51;
-    UILabel__set_text(v32, (System_String_o *)titleLabel, 0);
+    UILabel__set_text(v33, (System_String_o *)titleLabel, 0);
   }
   noSendLabel = (UnityEngine_Object_o *)this->fields.noSendLabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v31);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32);
   if ( UnityEngine_Object__op_Inequality(noSendLabel, 0, 0)
     && !System_String__IsNullOrEmpty(this->fields.noSendTextCode, 0) )
   {
-    v35 = this->fields.noSendLabel;
+    v36 = this->fields.noSendLabel;
     noSendTextCode = this->fields.noSendTextCode;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17);
     titleLabel = (UILabel_o *)LocalizationManager__Get(noSendTextCode, 0);
-    if ( v35 )
+    if ( v36 )
     {
-      UILabel__set_text(v35, (System_String_o *)titleLabel, 0);
+      UILabel__set_text(v36, (System_String_o *)titleLabel, 0);
       goto LABEL_49;
     }
 LABEL_51:
@@ -566,13 +566,13 @@ LABEL_49:
     goto LABEL_51;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0);
   GameObjectExtensions__SetLocalPositionY(gameObject, closeButtonY, 0);
-  ErrorDialog__SetAbleToCloseTapOutDialog(this, ableToCloseTapOutDialog, v38);
-  ErrorDialog__AdjustLayoutWhetherNoTitle(this, v39);
-  v40 = System_Action_TypeInfo;
+  ErrorDialog__SetAbleToCloseTapOutDialog(this, ableToCloseTapOutDialog, v39);
+  ErrorDialog__AdjustLayoutWhetherNoTitle(this, v40);
+  v41 = System_Action_TypeInfo;
   this->fields.isButtonEnable = 0;
-  v41 = (System_Action_o *)sub_2213CCC(v40);
-  System_Action___ctor(v41, (Il2CppObject *)this, Method_ErrorDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v41, 0, 0, 0);
+  v42 = (System_Action_o *)sub_2213CCC(v41);
+  System_Action___ctor(v42, (Il2CppObject *)this, Method_ErrorDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v42, 0, 0, 0);
 }
 
 
@@ -816,7 +816,7 @@ System_IAsyncResult_o *ErrorDialog_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

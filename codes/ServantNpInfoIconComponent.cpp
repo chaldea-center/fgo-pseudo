@@ -324,15 +324,19 @@ void ServantNpInfoIconComponent__setNpIconImg(
   Il2CppObject *commandCardPrefab; // x22
   ServantNpInfoIconComponent_o *v12; // x22
   UnityEngine_Transform_o *transform; // x23
+  float x; // s9
+  float y; // s10
+  float z; // s11
   Il2CppObject *Component_object; // x0
-  System_String_o *v15; // x2
-  System_String_o *v16; // x3
-  int32_t v17; // w4
-  int32_t v18; // w5
-  bool v19; // w6
-  bool v20; // w7
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   v7 = this;
   if ( (byte_596A394 & 1) == 0 )
@@ -366,6 +370,9 @@ void ServantNpInfoIconComponent__setNpIconImg(
       if ( this )
       {
         localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0);
+        x = localScale.fields.x;
+        y = localScale.fields.y;
+        z = localScale.fields.z;
         UnityEngine_Object__set_name((UnityEngine_Object_o *)v12, (System_String_o *)StringLiteral_4757/*"CommandCard"*/, 0);
         this = (ServantNpInfoIconComponent_o *)v7->fields.commandCardBase;
         if ( this )
@@ -376,10 +383,10 @@ void ServantNpInfoIconComponent__setNpIconImg(
           if ( transform )
           {
             UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)this, 0);
-            v22.fields.x = 0.0;
-            v22.fields.z = 0.0;
-            v22.fields.y = npIconPosY;
-            UnityEngine_Transform__set_localPosition(transform, v22, 0);
+            v25.fields.x = 0.0;
+            v25.fields.z = 0.0;
+            v25.fields.y = npIconPosY;
+            UnityEngine_Transform__set_localPosition(transform, v25, 0);
             if ( !byte_5969AE6 )
             {
               sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -389,7 +396,10 @@ void ServantNpInfoIconComponent__setNpIconImg(
               transform,
               UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
               0);
-            UnityEngine_Transform__set_localScale(transform, localScale, 0);
+            v26.fields.x = x;
+            v26.fields.y = y;
+            v26.fields.z = z;
+            UnityEngine_Transform__set_localScale(transform, v26, 0);
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)v12,
                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
@@ -397,12 +407,12 @@ void ServantNpInfoIconComponent__setNpIconImg(
             sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&v7->fields.commandCard,
               (int32_t)Component_object,
-              v15,
-              v16,
-              v17,
               v18,
               v19,
-              v20);
+              v20,
+              v21,
+              v22,
+              v23);
 LABEL_17:
             ServantNpInfoIconComponent__SetCommandCardComponent(v7, npData, v10);
             return;
@@ -524,7 +534,7 @@ System_IAsyncResult_o *ServantNpInfoIconComponent_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

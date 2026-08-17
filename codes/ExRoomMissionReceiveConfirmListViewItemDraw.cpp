@@ -39,7 +39,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
 {
   ExRoomMissionReceiveConfirmListViewItemDraw_o *v8; // x19
   System_String_o *v9; // x22
-  UnityEngine_Vector2_o printedSize; // kr10_8
+  UnityEngine_Vector2_o printedSize; // kr00_8
   int32_t v11; // w22
   __int64 v12; // x1
   __int64 v13; // x2
@@ -72,7 +72,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
   __int64 v40; // x1
   __int64 v41; // x2
   ExRoomMissionReceiveConfirmListViewItemDraw_c *v42; // x0
-  UnityEngine_Vector2_o v43; // kr18_8
+  UnityEngine_Vector2_o v43; // kr08_8
   int y; // w8
   int v45; // w21
   UnityEngine_GameObject_o *v46; // x0
@@ -80,6 +80,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
   __int64 v48; // x2
   UnityEngine_Object_o *boxCollider; // x20
   int32_t LineHeight; // w22
+  float v51; // s1
   bool v52; // [xsp+4h] [xbp-8Ch]
   System_String_o **v53; // [xsp+8h] [xbp-88h]
   struct System_String_array *v54; // [xsp+10h] [xbp-80h]
@@ -87,8 +88,7 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
   struct System_String_array *RewardCountOperatorStrings_k__BackingField; // [xsp+20h] [xbp-70h]
   int v57; // [xsp+28h] [xbp-68h]
   int32_t num; // [xsp+2Ch] [xbp-64h] BYREF
-  UnityEngine_Vector3_o size; // 0:kr00_12.12
-  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
   if ( (byte_596AF34 & 1) == 0 )
@@ -116,11 +116,11 @@ void ExRoomMissionReceiveConfirmListViewItemDraw__SetItem(
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.messageLabel;
     if ( !this )
       goto LABEL_71;
-    UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)this + 106) * v9->fields._stringLength, 0);
+    UIWidget__set_height((UIWidget_o *)this, this[5].fields.dispMode * v9->fields._stringLength, 0);
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.messageLabel;
     if ( !this )
       goto LABEL_71;
-    WrapControlText__textAdjust((UILabel_o *)this, v9, *((_DWORD *)this + 106), *((_DWORD *)this + 106), 0);
+    WrapControlText__textAdjust((UILabel_o *)this, v9, this[5].fields.dispMode, this[5].fields.dispMode, 0);
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.messageLabel;
     if ( !this )
       goto LABEL_71;
@@ -280,7 +280,7 @@ LABEL_59:
     }
     if ( !v8->fields.lineSprite )
       goto LABEL_71;
-    v45 = *(_DWORD *)(*((_QWORD *)this + 23) + 8LL) + v57;
+    v45 = LODWORD(this[2].fields.messageLabel->monitor) + v57;
     v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8->fields.lineSprite, 0);
     GameObjectExtensions__SetLocalPositionY(v46, (float)-v45, 0);
     this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.lineSprite;
@@ -302,13 +302,11 @@ LABEL_59:
       if ( this )
       {
         size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-        v60.fields.x = size.fields.x;
-        v60.fields.z = size.fields.z;
         this = (ExRoomMissionReceiveConfirmListViewItemDraw_o *)v8->fields.boxCollider;
         if ( this )
         {
-          v60.fields.y = (float)(LineHeight + v45);
-          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, v60, 0);
+          v51 = (float)(LineHeight + v45);
+          UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, size, 0);
           return;
         }
       }

@@ -16,9 +16,9 @@ CharaGraphFilterLogicBase_o *CharaGraphListViewPatternBase__CreateFilterLogic(
   {
     sub_2213CDC(this, method);
   }
-  return ((CharaGraphFilterLogicBase_o *(__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._10_GetItemModifyArgs.methodPtr)(
-           this,
-           this->klass->vtable._10_GetItemModifyArgs.method);
+  return (CharaGraphFilterLogicBase_o *)((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._10_GetItemModifyArgs.methodPtr)(
+                                          this,
+                                          this->klass->vtable._10_GetItemModifyArgs.method);
 }
 
 
@@ -34,9 +34,9 @@ CharaGraphSortLogicBase_o *CharaGraphListViewPatternBase__CreateSortLogic(
   {
     sub_2213CDC(this, method);
   }
-  return ((CharaGraphSortLogicBase_o *(__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._9_GetItemDrawPattern.methodPtr)(
-           this,
-           this->klass->vtable._9_GetItemDrawPattern.method);
+  return (CharaGraphSortLogicBase_o *)((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._9_GetItemDrawPattern.methodPtr)(
+                                        this,
+                                        this->klass->vtable._9_GetItemDrawPattern.method);
 }
 
 
@@ -165,7 +165,7 @@ int32_t CharaGraphListViewPatternBase__get_FilterKind(CharaGraphListViewPatternB
   {
     sub_2213CDC(this, method);
   }
-  return ((int32_t (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._7_get_FilterKind.methodPtr)(
+  return ((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._7_get_FilterKind.methodPtr)(
            this,
            this->klass->vtable._7_get_FilterKind.method);
 }
@@ -259,7 +259,7 @@ int32_t CharaGraphListViewPatternBase__get_SortKind(CharaGraphListViewPatternBas
   {
     sub_2213CDC(this, method);
   }
-  return ((int32_t (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._8_get_SortKind.methodPtr)(
+  return ((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._8_get_SortKind.methodPtr)(
            this,
            this->klass->vtable._8_get_SortKind.method);
 }

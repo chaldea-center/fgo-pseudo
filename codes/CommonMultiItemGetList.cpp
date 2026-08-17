@@ -74,7 +74,7 @@ void CommonMultiItemGetList__setListData(
         GiftListViewItemIcon_ClickDelegate_o *callBack,
         const MethodInfo *method)
 {
-  __int64 Object; // x0
+  int **Object; // x0
   float v9; // s8
   __int64 v10; // x1
   __int64 v11; // x2
@@ -102,7 +102,7 @@ void CommonMultiItemGetList__setListData(
   int32_t v33; // w5
   bool v34; // w6
   bool v35; // w7
-  __int64 v36; // x26
+  int **v36; // x26
   int32_t v37; // w1
   System_String_o *v38; // x2
   System_String_o *v39; // x3
@@ -110,10 +110,10 @@ void CommonMultiItemGetList__setListData(
   int32_t v41; // w5
   bool v42; // w6
   bool v43; // w7
-  __int64 v44; // x8
+  int *v44; // x8
   _QWORD *v45; // x9
   __int64 v46; // x10
-  __int64 v47; // x8
+  int *v47; // x8
   System_Collections_Generic_List_Enumerator_object__o v48; // [xsp+8h] [xbp-C8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v49; // [xsp+20h] [xbp-B0h] BYREF
   GiftListViewItemIcon_ClickDelegate_o *v50; // [xsp+48h] [xbp-88h]
@@ -134,16 +134,16 @@ void CommonMultiItemGetList__setListData(
     sub_2213A60(&UnityEngine_Object_TypeInfo);
     byte_596F131 = 1;
   }
-  Object = (__int64)CommonMultiItemGetList_TypeInfo;
+  Object = (int **)CommonMultiItemGetList_TypeInfo;
   memset(&v49, 0, sizeof(v49));
   if ( !*(&CommonMultiItemGetList_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(CommonMultiItemGetList_TypeInfo, itemlist, *(_QWORD *)&columnCount);
-    Object = (__int64)CommonMultiItemGetList_TypeInfo;
+    Object = (int **)CommonMultiItemGetList_TypeInfo;
   }
   if ( !this->fields.itemObjectList )
     goto LABEL_35;
-  v9 = (float)**(int **)(Object + 184) / (float)columnCount;
+  v9 = (float)*Object[23] / (float)columnCount;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v48,
     (System_Collections_Generic_List_object__o *)this->fields.itemObjectList,
@@ -189,27 +189,27 @@ void CommonMultiItemGetList__setListData(
         if ( v19 >= (unsigned int)max_length )
           sub_2213CE4(Object);
         v24 = itemlist->m_Items[v19];
-        Object = (__int64)BaseMonoBehaviour__createObject(
-                            (BaseMonoBehaviour_o *)this,
-                            this->fields.prefabResultItem,
-                            this->fields.listRoot,
-                            0,
-                            0);
+        Object = (int **)BaseMonoBehaviour__createObject(
+                           (BaseMonoBehaviour_o *)this,
+                           this->fields.prefabResultItem,
+                           this->fields.listRoot,
+                           0,
+                           0);
         if ( !Object )
           break;
         v25 = (UnityEngine_GameObject_o *)Object;
-        Object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Object, 0);
+        Object = (int **)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Object, 0);
         if ( !Object )
           break;
         v51.fields.y = v23 - (float)(v21 * (float)((int)v19 / columnCount));
         v51.fields.x = (float)(v20 * (float)((int)v19 % columnCount)) - v22;
         v51.fields.z = -1.0;
         UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Object, v51, 0);
-        Object = (__int64)UnityEngine_GameObject__get_transform(v25, 0);
+        Object = (int **)UnityEngine_GameObject__get_transform(v25, 0);
         v26 = (UnityEngine_Transform_o *)Object;
         if ( !byte_5969AE5 )
         {
-          Object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          Object = (int **)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
         if ( !v26 )
@@ -223,28 +223,28 @@ void CommonMultiItemGetList__setListData(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28, v29);
         if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v25, 0, 0) )
         {
-          Object = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                              v25,
-                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_GiftListViewItemIcon___);
+          Object = (int **)UnityEngine_GameObject__GetComponent_object_(
+                             v25,
+                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_GiftListViewItemIcon___);
           if ( !Object )
             break;
           v36 = Object;
           GiftListViewItemIcon__Set((GiftListViewItemIcon_o *)Object, v24, 0);
           v37 = (int)v50;
-          *(_QWORD *)(v36 + 48) = v50;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v36 + 48), v37, v38, v39, v40, v41, v42, v43);
+          v36[6] = (int *)v50;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v36 + 6), v37, v38, v39, v40, v41, v42, v43);
           GiftListViewItemIcon__Show((GiftListViewItemIcon_o *)v36, 0);
         }
-        Object = (__int64)this->fields.itemObjectList;
+        Object = (int **)this->fields.itemObjectList;
         if ( !Object )
           break;
-        v44 = *(_QWORD *)(Object + 16);
+        v44 = Object[2];
         v45 = Method_System_Collections_Generic_List_GameObject__Add__;
-        ++*(_DWORD *)(Object + 28);
+        ++*((_DWORD *)Object + 7);
         if ( !v44 )
           break;
-        v46 = *(int *)(Object + 24);
-        if ( (unsigned int)v46 >= *(_DWORD *)(v44 + 24) )
+        v46 = *((int *)Object + 6);
+        if ( (unsigned int)v46 >= v44[6] )
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Object,
@@ -253,10 +253,10 @@ void CommonMultiItemGetList__setListData(
         }
         else
         {
-          v47 = v44 + 8 * v46;
-          *(_DWORD *)(Object + 24) = v46 + 1;
-          *(_QWORD *)(v47 + 32) = v25;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v47 + 32), (int32_t)v25, v30, v31, v32, v33, v34, v35);
+          v47 = &v44[2 * v46];
+          *((_DWORD *)Object + 6) = v46 + 1;
+          *((_QWORD *)v47 + 4) = v25;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v47 + 8), (int32_t)v25, v30, v31, v32, v33, v34, v35);
         }
         LODWORD(max_length) = itemlist->max_length;
         if ( (__int64)++v19 >= (int)max_length )

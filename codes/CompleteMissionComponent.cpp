@@ -1247,7 +1247,7 @@ System_IAsyncResult_o *CompleteMissionComponent_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1417,7 +1417,7 @@ void CompleteMissionComponent___c__DisplayClass27_0___createPanel_b__0(
   this = (CompleteMissionComponent___c__DisplayClass27_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_66;
-  this = (CompleteMissionComponent___c__DisplayClass27_0_o *)*((_QWORD *)this + 173);
+  this = (CompleteMissionComponent___c__DisplayClass27_0_o *)this[28].fields.completeMissionEnt;
   if ( !this )
     goto LABEL_66;
   this = (CompleteMissionComponent___c__DisplayClass27_0_o *)UnityEngine_Component__get_gameObject(

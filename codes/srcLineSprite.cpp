@@ -250,19 +250,15 @@ int32_t srcLineSprite__GetState(srcLineSprite_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void srcLineSprite__SetContrast(srcLineSprite_o *this, float val, float alpha, const MethodInfo *method)
 {
   UIWidget_o *mcLineSprite; // x0
-  UnityEngine_Color_o v5; // 0:kr00_16.16
 
   mcLineSprite = (UIWidget_o *)this->fields.mcLineSprite;
   if ( !mcLineSprite )
     sub_2213CDC(0, method);
-  v5.fields.r = val;
-  v5.fields.g = val;
-  v5.fields.b = val;
-  v5.fields.a = alpha;
-  UIWidget__set_color(mcLineSprite, v5, 0);
+  UIWidget__set_color(mcLineSprite, *(UnityEngine_Color_o *)&val, 0);
 }
 
 
@@ -409,7 +405,7 @@ void srcLineSprite__SetQaaFadeAnim(srcLineSprite_o *this, bool isDisp, float tim
   float v43; // s11
   UnityEngine_GameObject_o *v44; // x20
   UnityEngine_GameObject_o *v45; // x0
-  float z; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D94C & 1) == 0 )
   {
@@ -482,8 +478,13 @@ void srcLineSprite__SetQaaFadeAnim(srcLineSprite_o *this, bool isDisp, float tim
     if ( this->fields.mcMyTrans )
     {
       v44 = (UnityEngine_GameObject_o *)v8;
-      z = UnityEngine_Transform__get_localPosition(this->fields.mcMyTrans, 0).fields.z;
-      GameObjectExtensions__SetLocalPosition_42891620(v44, (float)(x + v42) * 0.5, (float)(y + v43) * 0.5, z, 0);
+      localPosition = UnityEngine_Transform__get_localPosition(this->fields.mcMyTrans, 0);
+      GameObjectExtensions__SetLocalPosition_42891620(
+        v44,
+        (float)(x + v42) * 0.5,
+        (float)(y + v43) * 0.5,
+        localPosition.fields.z,
+        0);
       v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       GameObjectExtensions__ResetLocalScale(v45, 0);
       return;
@@ -545,9 +546,9 @@ void srcLineSprite__SetQaaScaleAnim_44087500(srcLineSprite_o *this, bool is_disp
   float y; // s9
   UnityEngine_Transform_o *v42; // x21
   float v43; // s10
-  float v44; // s2
-  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
-  UnityEngine_Vector3_o v46; // 0:kr20_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D94A & 1) == 0 )
   {
@@ -637,22 +638,22 @@ void srcLineSprite__SetQaaScaleAnim_44087500(srcLineSprite_o *this, bool is_disp
       x = this->fields.mcFrom.fields.x;
       y = this->fields.mcFrom.fields.y;
       v42 = mcMyTrans;
-      v44 = UnityEngine_Transform__get_localPosition(this->fields.mcMyTrans, 0).fields.z;
-      v43 = v44;
+      localPosition = UnityEngine_Transform__get_localPosition(this->fields.mcMyTrans, 0);
+      v43 = localPosition.fields.z;
       if ( is_disp )
       {
         if ( v42 )
         {
           *(float *)&v42[5].monitor = x;
           *((float *)&v42[5].monitor + 1) = y;
-          *(float *)&v42[5].fields.m_CachedPtr = v44;
+          *(float *)&v42[5].fields.m_CachedPtr = localPosition.fields.z;
           mcMyTrans = this->fields.mcMyTrans;
           if ( mcMyTrans )
           {
-            localPosition = UnityEngine_Transform__get_localPosition(mcMyTrans, 0);
-            x = localPosition.fields.x;
-            y = localPosition.fields.y;
-            v43 = localPosition.fields.z;
+            v45 = UnityEngine_Transform__get_localPosition(mcMyTrans, 0);
+            x = v45.fields.x;
+            y = v45.fields.y;
+            v43 = v45.fields.z;
 LABEL_26:
             *((float *)&v42[5].fields.m_CachedPtr + 1) = x;
             *(float *)&v42[6].klass = y;
@@ -864,7 +865,7 @@ void srcLineSprite__mfSetPos2(
   float v32; // s0
   unsigned int v33; // w9
   int32_t v34; // w8
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s1.4,4:s2.4,8:s3.4
   UnityEngine_Quaternion_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -910,10 +911,10 @@ void srcLineSprite__mfSetPos2(
   v23 = v12 * 0.5;
   v24 = v22 * 57.296;
   v25 = v23 + v20;
-  v35.fields.z = UnityEngine_Transform__get_localPosition(mcMyTrans, 0).fields.z;
-  v35.fields.x = (float)(v11 * 0.5) + v21;
-  v35.fields.y = v25;
-  UnityEngine_Transform__set_localPosition(mcMyTrans, v35, 0);
+  localPosition = UnityEngine_Transform__get_localPosition(mcMyTrans, 0);
+  localPosition.fields.x = (float)(v11 * 0.5) + v21;
+  localPosition.fields.y = v25;
+  UnityEngine_Transform__set_localPosition(mcMyTrans, localPosition, 0);
   v36.fields.x = 0.0;
   v36.fields.y = 0.0;
   v26 = this->fields.mcMyTrans;

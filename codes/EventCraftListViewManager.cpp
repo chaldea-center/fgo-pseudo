@@ -13,9 +13,11 @@ void EventCraftListViewManager__CheckIsSerializeFieldNotNull(Il2CppObject *targe
   unsigned int v6; // w27
   Il2CppType *v7; // x22
   System_Reflection_MemberInfo_o *v8; // x21
+  System_RuntimeTypeHandle_o v9; // x0
   System_Type_o *TypeFromHandle; // x0
-  int v10; // w22
-  __int64 v11; // x23
+  int v11; // w22
+  __int64 v12; // x23
+  System_RuntimeTypeHandle_o v13; // x0
 
   v2 = targetObj;
   if ( (byte_596A502 & 1) == 0 )
@@ -48,22 +50,24 @@ void EventCraftListViewManager__CheckIsSerializeFieldNotNull(Il2CppObject *targe
       v8 = (System_Reflection_MemberInfo_o *)*((_QWORD *)&v5[2].klass + (int)v6);
       if ( !*(_DWORD *)(qword_59843E0 + 228) )
         j_il2cpp_runtime_class_init_0(qword_59843E0, method, v3);
-      TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v7, 0);
+      v9.fields.value = (intptr_t)v7;
+      TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
       targetObj = (Il2CppObject *)System_Reflection_CustomAttributeExtensions__IsDefined(v8, TypeFromHandle, 0);
       if ( !v8 )
         break;
-      v10 = (int)targetObj;
-      v11 = ((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, const char *))v8->klass[1]._1.name)(
+      v11 = (int)targetObj;
+      v12 = ((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, const char *))v8->klass[1]._1.name)(
               v8,
               v8->klass[1]._1.namespaze);
-      targetObj = (Il2CppObject *)System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)UnityEngine_Object_var, 0);
-      if ( !v11 )
+      v13.fields.value = (intptr_t)UnityEngine_Object_var;
+      targetObj = (Il2CppObject *)System_Type__GetTypeFromHandle(v13, 0);
+      if ( !v12 )
         break;
-      targetObj = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, Il2CppObject *, _QWORD))(*(_QWORD *)v11 + 648LL))(
-                                    v11,
+      targetObj = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, Il2CppObject *, _QWORD))(*(_QWORD *)v12 + 648LL))(
+                                    v12,
                                     targetObj,
-                                    *(_QWORD *)(*(_QWORD *)v11 + 656LL));
-      if ( (v10 & (unsigned int)targetObj & 1) != 0 )
+                                    *(_QWORD *)(*(_QWORD *)v12 + 656LL));
+      if ( (v11 & (unsigned int)targetObj & 1) != 0 )
         targetObj = (Il2CppObject *)((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, Il2CppObject *, void *))v8->klass[1]._1.properties)(
                                       v8,
                                       v2,
@@ -2759,7 +2763,7 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
   __int64 v6; // x1
   __int64 v7; // x2
   UILabel_o *receiveAllButtonLabel; // x20
-  __int64 receiveAllButton; // x0
+  System_String_o *receiveAllButton; // x0
   const MethodInfo *v10; // x1
   __int64 v11; // x1
   __int64 v12; // x2
@@ -2796,20 +2800,20 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
   receiveAllButtonLabel = this->fields.receiveAllButtonLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v7);
-  receiveAllButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3493/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
+  receiveAllButton = LocalizationManager__Get((System_String_o *)StringLiteral_3493/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
   if ( !receiveAllButtonLabel )
     goto LABEL_22;
-  UILabel__set_text(receiveAllButtonLabel, (System_String_o *)receiveAllButton, 0);
+  UILabel__set_text(receiveAllButtonLabel, receiveAllButton, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
-  receiveAllButton = UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
-  if ( (receiveAllButton & 1) != 0 )
+  receiveAllButton = (System_String_o *)UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
+  if ( ((unsigned __int8)receiveAllButton & 1) != 0 )
   {
     assetManager = this->fields.assetManager;
     if ( assetManager )
     {
-      receiveAllButton = (__int64)this->fields.receiveAllButton;
+      receiveAllButton = (System_String_o *)this->fields.receiveAllButton;
       if ( receiveAllButton )
       {
         CraftButtonBlinkEffect_k__BackingField = (Il2CppObject *)assetManager->fields._CraftButtonBlinkEffect_k__BackingField;
@@ -2830,22 +2834,22 @@ void EventCraftListViewManager__SetReceiveAllButton(EventCraftListViewManager_o 
           v23,
           v24,
           v25);
-        receiveAllButton = (__int64)this->fields.tradeButtonBlinkEffect;
+        receiveAllButton = (System_String_o *)this->fields.tradeButtonBlinkEffect;
         if ( receiveAllButton )
         {
-          receiveAllButton = (__int64)UnityEngine_GameObject__get_transform(
-                                        (UnityEngine_GameObject_o *)receiveAllButton,
-                                        0);
+          receiveAllButton = (System_String_o *)UnityEngine_GameObject__get_transform(
+                                                  (UnityEngine_GameObject_o *)receiveAllButton,
+                                                  0);
           v26 = (UnityEngine_Transform_o *)receiveAllButton;
           if ( !byte_5969AE5 )
           {
-            receiveAllButton = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+            receiveAllButton = (System_String_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
             byte_5969AE5 = 1;
           }
           if ( v26 )
           {
             UnityEngine_Transform__set_localScale(v26, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-            receiveAllButton = (__int64)this->fields.tradeButtonBlinkEffect;
+            receiveAllButton = (System_String_o *)this->fields.tradeButtonBlinkEffect;
             if ( receiveAllButton )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)receiveAllButton, 0, 0);
@@ -2990,6 +2994,7 @@ bool EventCraftListViewManager__TryGetAvailableStoreIdx(
   struct EventTradeStoreEntity_array *v22; // x8
   il2cpp_array_size_t max_length; // x9
   EventTradeStoreEntity_o *v24; // x8
+  bool result; // w0
   int32_t *v26; // [xsp+8h] [xbp-78h]
   System_Int32_array *usedStoreIdx; // [xsp+10h] [xbp-70h] BYREF
   UserEventTradeEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
@@ -3066,8 +3071,9 @@ bool EventCraftListViewManager__TryGetAvailableStoreIdx(
       if ( !*v19 )
         goto LABEL_24;
 LABEL_20:
+      result = 1;
       *v3 = v24->fields.idx;
-      return 1;
+      return result;
     }
   }
   else
@@ -3240,6 +3246,7 @@ void EventCraftListViewManager__UpdateNoticeButtonDisplay(EventCraftListViewMana
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventCraftListViewManager__UpdateReceiveAllButtonState(
         EventCraftListViewManager_o *this,
         const MethodInfo *method)
@@ -3259,10 +3266,13 @@ void EventCraftListViewManager__UpdateReceiveAllButtonState(
   bool v15; // w7
   __int64 v16; // x1
   UIWidget_o *receiveAllButton; // x0
-  __int64 v19; // x1
-  __int64 v20; // x2
+  float v18; // s0 OVERLAPPED
+  float v19; // s3
+  float v20; // s1
+  float v21; // s2
+  __int64 v22; // x1
+  __int64 v23; // x2
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x21
-  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A507 & 1) == 0 )
   {
@@ -3326,16 +3336,16 @@ void EventCraftListViewManager__UpdateReceiveAllButtonState(
   receiveAllButton = (UIWidget_o *)this->fields.receiveAllButtonLabel;
   if ( !receiveAllButton )
     goto LABEL_24;
-  v22.fields.r = 0.5;
-  v22.fields.a = 1.0;
+  v18 = 0.5;
+  v19 = 1.0;
   if ( ((unsigned __int8)itemList & 1) != 0 )
-    v22.fields.r = 1.0;
-  v22.fields.g = v22.fields.r;
-  v22.fields.b = v22.fields.r;
-  UIWidget__set_color(receiveAllButton, v22, 0);
+    v18 = 1.0;
+  v20 = v18;
+  v21 = v18;
+  UIWidget__set_color(receiveAllButton, *(UnityEngine_Color_o *)&v18, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
   if ( UnityEngine_Object__op_Inequality(tradeButtonBlinkEffect, 0, 0) )
   {
     receiveAllButton = (UIWidget_o *)this->fields.tradeButtonBlinkEffect;

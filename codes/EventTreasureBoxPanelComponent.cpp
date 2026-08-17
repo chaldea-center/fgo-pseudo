@@ -639,6 +639,7 @@ void EventTreasureBoxPanelComponent__SetEventEnableTime(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
         EventTreasureBoxPanelComponent_o *this,
         const MethodInfo *method)
@@ -653,8 +654,11 @@ void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
   int klass_high; // w20
   int32_t payNum; // w22
   int v12; // w20
-  __int64 v14; // x1
-  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v13; // s0 OVERLAPPED
+  float v14; // s3
+  float v15; // s1
+  float v16; // s2
+  __int64 v17; // x1
 
   if ( (byte_596ADAF & 1) == 0 )
   {
@@ -721,13 +725,13 @@ void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
   ConsumeItemId = (UnityEngine_GameObject_o *)this->fields.drawBtnLb;
   if ( !ConsumeItemId )
     goto LABEL_27;
-  v15.fields.r = 0.5;
-  v15.fields.a = 1.0;
+  v13 = 0.5;
+  v14 = 1.0;
   if ( v12 > 0 )
-    v15.fields.r = 1.0;
-  v15.fields.g = v15.fields.r;
-  v15.fields.b = v15.fields.r;
-  UIWidget__set_color((UIWidget_o *)ConsumeItemId, v15, 0);
+    v13 = 1.0;
+  v15 = v13;
+  v16 = v13;
+  UIWidget__set_color((UIWidget_o *)ConsumeItemId, *(UnityEngine_Color_o *)&v13, 0);
   ConsumeItemId = this->fields.treasureBoxDrawBtn;
   if ( !ConsumeItemId
     || (ConsumeItemId = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
@@ -738,12 +742,12 @@ LABEL_27:
     sub_2213CDC(ConsumeItemId, v4);
   }
   if ( v12 <= 0 )
-    v14 = 3;
+    v17 = 3;
   else
-    v14 = 0;
+    v17 = 0;
   ((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, _QWORD, Il2CppClass **))ConsumeItemId->klass[1]._1.nestedTypes)(
     ConsumeItemId,
-    v14,
+    v17,
     0,
     ConsumeItemId->klass[1]._1.implementedInterfaces);
 }

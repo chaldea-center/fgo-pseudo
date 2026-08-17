@@ -286,21 +286,20 @@ void ServantOverwriteStatus___ctor_40472500(
   const MethodInfo *v11; // x5
   const MethodInfo *v12; // x7
   int32_t atk; // [xsp+Ch] [xbp-34h] BYREF
-  int32_t hp; // [xsp+18h] [xbp-28h] BYREF
-  int32_t lv; // [xsp+1Ch] [xbp-24h] BYREF
+  int32_t hp[2]; // [xsp+18h] [xbp-28h] BYREF
 
   atk = 0;
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !userSvtCollectionEntity )
     sub_2213CDC(v9, v10);
-  UserServantCollectionEntity__getCollectionStatus_50148372(userSvtCollectionEntity, svtId, &lv, &hp, &atk, 0);
-  ServantOverwriteStatus__Set(this, svtId, userSvtCollectionEntity->fields.maxLimitCount, hp, atk, v11);
+  UserServantCollectionEntity__getCollectionStatus_50148372(userSvtCollectionEntity, svtId, &hp[1], hp, &atk, 0);
+  ServantOverwriteStatus__Set(this, svtId, userSvtCollectionEntity->fields.maxLimitCount, hp[0], atk, v11);
   ServantOverwriteStatus__Overwrite_40470648(
     this,
     svtId,
     userSvtCollectionEntity->fields.maxLimitCount,
     stageLimitCount,
-    lv,
+    hp[1],
     0,
     0,
     v12);

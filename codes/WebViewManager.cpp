@@ -232,7 +232,7 @@ void WebViewManager__LargeInLoadedWindow(
         const MethodInfo *method)
 {
   __int64 v7; // x22
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v9; // x1
   System_String_o *v10; // x2
   System_String_o *v11; // x3
@@ -283,19 +283,19 @@ void WebViewManager__LargeInLoadedWindow(
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 24), (int32_t)callBack, v17, v18, v19, v20, v21, v22);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v23);
-  transform = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)window, 0, 0);
-  if ( (transform & 1) == 0 )
+  transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)window, 0, 0);
+  if ( ((unsigned __int8)transform & 1) == 0 )
   {
     this->fields.isLoadedNonDisp = 0;
     *(_WORD *)&this->fields.isButtonEnable = 256;
     if ( window )
     {
       UnityEngine_GameObject__SetActive(window, 1, 0);
-      transform = (__int64)UnityEngine_GameObject__get_transform(window, 0);
-      v25 = (UnityEngine_Transform_o *)transform;
+      transform = UnityEngine_GameObject__get_transform(window, 0);
+      v25 = transform;
       if ( !byte_5969AE0 )
       {
-        transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE0 = 1;
       }
       if ( v25 )
@@ -306,7 +306,7 @@ void WebViewManager__LargeInLoadedWindow(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26);
         if ( UnityEngine_Object__op_Inequality(webView, 0, 0) )
         {
-          transform = (__int64)this->fields.webView;
+          transform = (UnityEngine_Transform_o *)this->fields.webView;
           if ( !transform )
             goto LABEL_36;
           WebViewObject__SetVisibility((WebViewObject_o *)transform, 0, 0);
@@ -327,8 +327,8 @@ void WebViewManager__LargeInLoadedWindow(
         v33 = TweenScale__Begin(gameObject, OPEN_TIME, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v32);
-        transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v33, 0, 0);
-        if ( (transform & 1) != 0 )
+        transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v33, 0, 0);
+        if ( ((unsigned __int8)transform & 1) != 0 )
         {
           if ( v33 )
           {
@@ -345,11 +345,11 @@ void WebViewManager__LargeInLoadedWindow(
         }
         else
         {
-          transform = (__int64)UnityEngine_GameObject__get_transform(window, 0);
-          v35 = (UnityEngine_Transform_o *)transform;
+          transform = UnityEngine_GameObject__get_transform(window, 0);
+          v35 = transform;
           if ( !byte_5969AE5 )
           {
-            transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+            transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
             byte_5969AE5 = 1;
           }
           if ( v35 )
@@ -360,7 +360,7 @@ void WebViewManager__LargeInLoadedWindow(
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v36);
             if ( UnityEngine_Object__op_Inequality(v37, 0, 0) )
             {
-              transform = (__int64)this->fields.webView;
+              transform = (UnityEngine_Transform_o *)this->fields.webView;
               if ( !transform )
                 goto LABEL_36;
               WebViewObject__SetVisibility((WebViewObject_o *)transform, 1, 0);
@@ -1249,7 +1249,7 @@ bool WebViewManager__OpenViewLocal(
   System_String_o *v8; // x27
   __int64 v15; // x1
   NetworkManager_c *v16; // x0
-  __int64 WebUrl; // x0
+  System_String_o *WebUrl; // x0
   __int64 v18; // x1
   System_String_o *v19; // x23
   Il2CppObject *Component_object; // x0
@@ -1344,10 +1344,10 @@ bool WebViewManager__OpenViewLocal(
   this->fields.isVisibilityRequested = 1;
   if ( !*(&v16->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(v16, v15);
-  WebUrl = (__int64)NetworkManager__getWebUrl(path, 1, 1, 0);
+  WebUrl = NetworkManager__getWebUrl(path, 1, 1, 0);
   if ( !this->fields.titleLabel )
     goto LABEL_50;
-  v19 = (System_String_o *)WebUrl;
+  v19 = WebUrl;
   UILabel__set_text(this->fields.titleLabel, title, 0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
@@ -1369,7 +1369,7 @@ bool WebViewManager__OpenViewLocal(
   if ( UnityEngine_Object__op_Equality(webView, 0, 0) )
   {
     v75 = v8;
-    WebUrl = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    WebUrl = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !WebUrl )
       goto LABEL_50;
     v31 = UnityEngine_GameObject__AddComponent_object_(
@@ -1417,12 +1417,12 @@ bool WebViewManager__OpenViewLocal(
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.errorMessage, 0, v44, v45, v46, v47, v48, v49);
   if ( username && v8 )
   {
-    WebUrl = (__int64)*p_webView;
+    WebUrl = (System_String_o *)*p_webView;
     if ( !*p_webView )
       goto LABEL_50;
     WebViewObject__SetBasicAuthInfo((WebViewObject_o *)WebUrl, username, v8, 0);
   }
-  WebUrl = (__int64)*p_webView;
+  WebUrl = (System_String_o *)*p_webView;
   if ( data )
   {
     if ( !WebUrl )
@@ -1437,41 +1437,41 @@ bool WebViewManager__OpenViewLocal(
   }
   if ( !this->fields.isButtonEnable )
   {
-    WebUrl = (__int64)this->fields.webViewBase;
+    WebUrl = (System_String_o *)this->fields.webViewBase;
     if ( WebUrl )
     {
-      WebUrl = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)WebUrl, 0);
+      WebUrl = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)WebUrl, 0);
       if ( WebUrl )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)WebUrl, 1, 0);
         if ( !*(&TouchEffectManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo, v50);
         TouchEffectManager__SetBlock(1, 0);
-        WebUrl = (__int64)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+        WebUrl = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
         if ( WebUrl )
         {
           MissionNotifyManager__StartPause((MissionNotifyManager_o *)WebUrl, 0);
           baseWindow = this->fields.baseWindow;
-          WebUrl = (__int64)ManagerConfig_TypeInfo;
+          WebUrl = (System_String_o *)ManagerConfig_TypeInfo;
           if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v18);
           if ( baseWindow )
           {
             UIWidget__set_height(baseWindow, ManagerConfig_TypeInfo->static_fields->HEIGHT, 0);
-            WebUrl = (__int64)this->fields.baseWindow;
+            WebUrl = (System_String_o *)this->fields.baseWindow;
             if ( WebUrl )
             {
-              WebUrl = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)WebUrl, 0);
+              WebUrl = (System_String_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)WebUrl, 0);
               v52 = (UnityEngine_Transform_o *)WebUrl;
               if ( !byte_5969AE0 )
               {
-                WebUrl = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+                WebUrl = (System_String_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
                 byte_5969AE0 = 1;
               }
               if ( v52 )
               {
                 UnityEngine_Transform__set_localScale(v52, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-                WebUrl = (__int64)this->fields.baseWindow;
+                WebUrl = (System_String_o *)this->fields.baseWindow;
                 if ( WebUrl )
                 {
                   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)WebUrl, 0);
@@ -1494,8 +1494,8 @@ bool WebViewManager__OpenViewLocal(
                           0);
                   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
                     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v57);
-                  WebUrl = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v58, 0, 0);
-                  if ( (WebUrl & 1) != 0 )
+                  WebUrl = (System_String_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v58, 0, 0);
+                  if ( ((unsigned __int8)WebUrl & 1) != 0 )
                   {
                     if ( v58 )
                     {
@@ -1527,14 +1527,16 @@ bool WebViewManager__OpenViewLocal(
                   }
                   else
                   {
-                    WebUrl = (__int64)this->fields.baseWindow;
+                    WebUrl = (System_String_o *)this->fields.baseWindow;
                     if ( WebUrl )
                     {
-                      WebUrl = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)WebUrl, 0);
+                      WebUrl = (System_String_o *)UnityEngine_Component__get_transform(
+                                                    (UnityEngine_Component_o *)WebUrl,
+                                                    0);
                       v73 = (UnityEngine_Transform_o *)WebUrl;
                       if ( !byte_5969AE5 )
                       {
-                        WebUrl = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+                        WebUrl = (System_String_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
                         byte_5969AE5 = 1;
                       }
                       if ( v73 )
@@ -2434,7 +2436,7 @@ bool WebViewManager__SmallOut(
         const MethodInfo *method)
 {
   __int64 v7; // x21
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   const MethodInfo *v9; // x1
   System_String_o *v10; // x2
   System_String_o *v11; // x3
@@ -2471,8 +2473,8 @@ bool WebViewManager__SmallOut(
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)callBack, v10, v11, v12, v13, v14, v15);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
-  transform = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)window, 0, 0);
-  if ( (transform & 1) != 0 )
+  transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)window, 0, 0);
+  if ( ((unsigned __int8)transform & 1) != 0 )
     goto LABEL_21;
   if ( !window )
     goto LABEL_27;
@@ -2483,11 +2485,11 @@ LABEL_21:
   }
   else
   {
-    transform = (__int64)UnityEngine_GameObject__get_transform(window, 0);
-    v17 = (UnityEngine_Transform_o *)transform;
+    transform = UnityEngine_GameObject__get_transform(window, 0);
+    v17 = transform;
     if ( !byte_5969AE5 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v17 )
@@ -2510,8 +2512,8 @@ LABEL_21:
     WebViewManager__OnClickTargetWebViewClose(this, v23);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
-    transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0, 0);
-    if ( (transform & 1) != 0 )
+    transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0, 0);
+    if ( ((unsigned __int8)transform & 1) != 0 )
     {
       if ( v22 )
       {
@@ -2528,11 +2530,11 @@ LABEL_21:
 LABEL_27:
       sub_2213CDC(transform, v9);
     }
-    transform = (__int64)UnityEngine_GameObject__get_transform(window, 0);
-    v27 = (UnityEngine_Transform_o *)transform;
+    transform = UnityEngine_GameObject__get_transform(window, 0);
+    v27 = transform;
     if ( !byte_5969AE0 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( !v27 )
@@ -2768,8 +2770,8 @@ void WebViewManager___c__DisplayClass34_0___OpenViewLocal_b__3(
   {
     sub_2213CDC(this, msg);
   }
-  *((_QWORD *)this + 13) = msg;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 104), (int32_t)msg, v6, v7, v8, v9, v10, v11);
+  this[2].fields.__4__this = (struct WebViewManager_o *)msg;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[2].fields.__4__this, (int32_t)msg, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -2795,8 +2797,8 @@ void WebViewManager___c__DisplayClass34_0___OpenViewLocal_b__4(
   {
     sub_2213CDC(this, msg);
   }
-  *((_QWORD *)this + 13) = msg;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 104), (int32_t)msg, v6, v7, v8, v9, v10, v11);
+  this[2].fields.__4__this = (struct WebViewManager_o *)msg;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[2].fields.__4__this, (int32_t)msg, v6, v7, v8, v9, v10, v11);
 }
 
 

@@ -464,7 +464,7 @@ void MapButtonPrefab__SetEntryAnim(MapButtonPrefab_o *this, System_Action_o *end
   __int64 v14; // x1
   __int64 v15; // x2
   MapButtonPrefab_c *v16; // x0
-  float y; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D099 & 1) == 0 )
   {
@@ -484,16 +484,16 @@ void MapButtonPrefab__SetEntryAnim(MapButtonPrefab_o *this, System_Action_o *end
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_9;
-  y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
   buttonSprite = this->fields.buttonSprite;
   this->fields.inPos.fields.x = 0.0;
-  this->fields.inPos.fields.y = y;
+  this->fields.inPos.fields.y = localPosition.fields.y;
   this->fields.inPos.fields.z = 0.0;
   if ( !buttonSprite
     || (mWidth = buttonSprite->fields.mWidth,
         this->fields.outPos.fields.z = 0.0,
         this->fields.outPos.fields.x = (float)((float)mWidth * 1.6) + 0.0,
-        this->fields.outPos.fields.y = y + 0.0,
+        this->fields.outPos.fields.y = localPosition.fields.y + 0.0,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_9:
@@ -705,8 +705,9 @@ void MapButtonPrefab__SetupButton(
   __int64 v44; // x1
   UIWidget_o *v45; // x0
   float v46; // s8
-  float v47; // s9
-  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s9
+  UnityEngine_Vector3_o center; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
   v14 = isNew;
   if ( (byte_596D094 & 1) == 0 )
@@ -776,11 +777,12 @@ void MapButtonPrefab__SetupButton(
     if ( Component_object )
     {
       LODWORD(v46) = (unsigned int)UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
-      v47 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0).fields.y));
-      v48.fields.z = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0).fields.z;
-      v48.fields.y = -v47;
-      v48.fields.x = v46;
-      UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, v48, 0);
+      center = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
+      y = center.fields.y;
+      v49 = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
+      v49.fields.y = -y;
+      v49.fields.x = v46;
+      UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, v49, 0);
       v45 = (UIWidget_o *)*p_buttonSprite;
       if ( *p_buttonSprite )
       {

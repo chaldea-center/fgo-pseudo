@@ -179,6 +179,7 @@ bool UICounterLabel__ExecAnimation_d__16__MoveNext(
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
+  bool result; // w0
   int32_t v23; // w19
 
   v2 = this;
@@ -224,9 +225,9 @@ LABEL_21:
   {
     v23 = _4__this->fields._AddCount_k__BackingField + MainCount_k__BackingField;
     UICounterLabel__SetCountLabel(_4__this, v23, v10);
+    result = 0;
     _4__this->fields._MainCount_k__BackingField = v23;
     _4__this->fields._AddCount_k__BackingField = 0;
-    return 0;
   }
   else
   {
@@ -239,9 +240,10 @@ LABEL_21:
     v2->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
     sub_2213A04(p__2__current, 0, v16, v17, v18, v19, v20, v21);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
   }
+  return result;
 }
 
 

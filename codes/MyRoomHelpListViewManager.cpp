@@ -101,47 +101,49 @@ void MyRoomHelpListViewManager___cctor(const MethodInfo *method)
   int32_t v99; // w5
   bool v100; // w6
   bool v101; // w7
-  System_Array_o *v102; // x19
+  System_Array_o *v102; // x0
+  System_RuntimeFieldHandle_o v103; // x1
+  System_Array_o *v104; // x19
   struct MyRoomHelpListViewManager_StaticFields *static_fields; // x0
-  System_String_o *v104; // x2
-  System_String_o *v105; // x3
-  int32_t v106; // w4
-  int32_t v107; // w5
-  bool v108; // w6
-  bool v109; // w7
-  int32_t v110; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v111; // x0
-  System_String_o *v112; // x2
-  System_String_o *v113; // x3
-  int32_t v114; // w4
-  int32_t v115; // w5
-  bool v116; // w6
-  bool v117; // w7
-  int32_t v118; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v119; // x0
-  System_String_o *v120; // x2
-  System_String_o *v121; // x3
-  int32_t v122; // w4
-  int32_t v123; // w5
-  bool v124; // w6
-  bool v125; // w7
-  int32_t v126; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v127; // x0
-  System_String_o *v128; // x2
-  System_String_o *v129; // x3
-  int32_t v130; // w4
-  int32_t v131; // w5
-  bool v132; // w6
-  bool v133; // w7
-  int32_t v134; // w1
-  struct MyRoomHelpListViewManager_StaticFields *v135; // x0
-  System_String_o *v136; // x2
-  System_String_o *v137; // x3
-  int32_t v138; // w4
-  int32_t v139; // w5
-  bool v140; // w6
-  bool v141; // w7
-  __int64 v142; // x0
+  System_String_o *v106; // x2
+  System_String_o *v107; // x3
+  int32_t v108; // w4
+  int32_t v109; // w5
+  bool v110; // w6
+  bool v111; // w7
+  int32_t v112; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v113; // x0
+  System_String_o *v114; // x2
+  System_String_o *v115; // x3
+  int32_t v116; // w4
+  int32_t v117; // w5
+  bool v118; // w6
+  bool v119; // w7
+  int32_t v120; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v121; // x0
+  System_String_o *v122; // x2
+  System_String_o *v123; // x3
+  int32_t v124; // w4
+  int32_t v125; // w5
+  bool v126; // w6
+  bool v127; // w7
+  int32_t v128; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v129; // x0
+  System_String_o *v130; // x2
+  System_String_o *v131; // x3
+  int32_t v132; // w4
+  int32_t v133; // w5
+  bool v134; // w6
+  bool v135; // w7
+  int32_t v136; // w1
+  struct MyRoomHelpListViewManager_StaticFields *v137; // x0
+  System_String_o *v138; // x2
+  System_String_o *v139; // x3
+  int32_t v140; // w4
+  int32_t v141; // w5
+  bool v142; // w6
+  bool v143; // w7
+  __int64 v144; // x0
 
   if ( (byte_596BD4F & 1) == 0 )
   {
@@ -418,8 +420,8 @@ void MyRoomHelpListViewManager___cctor(const MethodInfo *method)
     if ( !v3 )
     {
 LABEL_45:
-      v142 = sub_2213D00(v3, v11);
-      sub_2213BA0(v142, 0);
+      v144 = sub_2213D00(v3, v11);
+      sub_2213BA0(v144, 0);
     }
   }
   if ( LODWORD(v1->max_length) <= 0xC )
@@ -438,53 +440,52 @@ LABEL_44:
     v100,
     v101);
   v102 = (System_Array_o *)sub_2213B20(MyRoomHelpListViewManager_ItemKind___TypeInfo, 12);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v102,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__00A19CA5190488C13513BA3EAB91F2A8A585C9EA317AD3D105973C6CB84E4595,
-    0);
+  v103.fields.value = Field__PrivateImplementationDetails__00A19CA5190488C13513BA3EAB91F2A8A585C9EA317AD3D105973C6CB84E4595;
+  v104 = v102;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v102, v103, 0);
   static_fields = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  static_fields->KindList = (struct MyRoomHelpListViewManager_ItemKind_array *)v102;
+  static_fields->KindList = (struct MyRoomHelpListViewManager_ItemKind_array *)v104;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->KindList,
-    (int32_t)v102,
-    v104,
-    v105,
+    (int32_t)v104,
     v106,
     v107,
     v108,
-    v109);
-  v110 = StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
-  v111 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v111->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v111->HELP_BASE_SPRITE_PATH,
+    v109,
     v110,
+    v111);
+  v112 = StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
+  v113 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v113->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v113->HELP_BASE_SPRITE_PATH,
     v112,
-    v113,
     v114,
     v115,
     v116,
-    v117);
-  v118 = StringLiteral_25548/*"tutorial_0006"*/;
-  v119 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v119->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_25548/*"tutorial_0006"*/;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v119->HELP_BASE_SPRITE_NAME,
+    v117,
     v118,
+    v119);
+  v120 = StringLiteral_25548/*"tutorial_0006"*/;
+  v121 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v121->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_25548/*"tutorial_0006"*/;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v121->HELP_BASE_SPRITE_NAME,
     v120,
-    v121,
     v122,
     v123,
     v124,
-    v125);
-  v126 = StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
-  v127 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v127->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v127->HELP_BASE_ALPHA_PATH, v126, v128, v129, v130, v131, v132, v133);
-  v134 = StringLiteral_25549/*"tutorial_alpha"*/;
-  v135 = MyRoomHelpListViewManager_TypeInfo->static_fields;
-  v135->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_25549/*"tutorial_alpha"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v135->HELP_BASE_ALPHA_NAME, v134, v136, v137, v138, v139, v140, v141);
+    v125,
+    v126,
+    v127);
+  v128 = StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
+  v129 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v129->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v129->HELP_BASE_ALPHA_PATH, v128, v130, v131, v132, v133, v134, v135);
+  v136 = StringLiteral_25549/*"tutorial_alpha"*/;
+  v137 = MyRoomHelpListViewManager_TypeInfo->static_fields;
+  v137->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_25549/*"tutorial_alpha"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v137->HELP_BASE_ALPHA_NAME, v136, v138, v139, v140, v141, v142, v143);
 }
 
 
@@ -1606,9 +1607,9 @@ System_IAsyncResult_o *MyRoomHelpListViewManager_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -1688,9 +1689,9 @@ System_IAsyncResult_o *MyRoomHelpListViewManager_CallbackFunc2__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

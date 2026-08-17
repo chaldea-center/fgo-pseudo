@@ -845,9 +845,8 @@ void EventInfoPassportListViewManager__ResetHorizontalOffset(
   UnityEngine_Transform_o *v4; // x20
   __int64 v5; // x1
   Il2CppObject *Component_object; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector2_o v8; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector2_o v7; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971D3C & 1) == 0 )
   {
@@ -863,10 +862,8 @@ void EventInfoPassportListViewManager__ResetHorizontalOffset(
     goto LABEL_11;
   v4 = (UnityEngine_Transform_o *)scrollView;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
-  v9.fields.y = localPosition.fields.y;
-  v9.fields.z = localPosition.fields.z;
-  v9.fields.x = this->fields.initialScrollViewLocalPosition.fields.x;
-  UnityEngine_Transform__set_localPosition(v4, v9, 0);
+  localPosition.fields.x = this->fields.initialScrollViewLocalPosition.fields.x;
+  UnityEngine_Transform__set_localPosition(v4, localPosition, 0);
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_11;
@@ -883,9 +880,9 @@ void EventInfoPassportListViewManager__ResetHorizontalOffset(
   {
     if ( Component_object )
     {
-      v8.fields.y = *(float *)&Component_object[21].klass;
-      v8.fields.x = 0.0;
-      UIPanel__set_clipOffset((UIPanel_o *)Component_object, v8, 0);
+      v7.fields.y = *(float *)&Component_object[21].klass;
+      v7.fields.x = 0.0;
+      UIPanel__set_clipOffset((UIPanel_o *)Component_object, v7, 0);
       return;
     }
 LABEL_11:

@@ -134,7 +134,7 @@ void BattleResultBondsDeckPerWaveComponent__SetLine(
   BattleResultBondsDeckPerWaveComponent_o *v3; // x19
   struct UILabel_o *waveLabel; // x8
   int32_t mWidth; // w9
-  int v6; // w8
+  int m_CancellationTokenSource; // w8
   int v7; // w9
 
   v3 = this;
@@ -143,17 +143,17 @@ void BattleResultBondsDeckPerWaveComponent__SetLine(
     this = (BattleResultBondsDeckPerWaveComponent_o *)this->fields.waveLabelLine;
     if ( !this )
       goto LABEL_9;
-    UIWidget__set_width((UIWidget_o *)this, *((_DWORD *)this + 42) + 22, 0);
+    UIWidget__set_width((UIWidget_o *)this, LODWORD(this[2].fields.m_CancellationTokenSource) + 22, 0);
   }
   waveLabel = v3->fields.waveLabel;
   if ( !waveLabel || (this = (BattleResultBondsDeckPerWaveComponent_o *)v3->fields.waveLabelLine) == 0 )
 LABEL_9:
     sub_2213CDC(this, isPartyNameDialog);
   mWidth = waveLabel->fields.mWidth;
-  v6 = *((_DWORD *)this + 42);
-  v7 = v6 + mWidth;
+  m_CancellationTokenSource = (int)this[2].fields.m_CancellationTokenSource;
+  v7 = m_CancellationTokenSource + mWidth;
   if ( v7 + 9 >= 286 )
-    UIWidget__set_width((UIWidget_o *)this, v6 - v7 + 276, 0);
+    UIWidget__set_width((UIWidget_o *)this, m_CancellationTokenSource - v7 + 276, 0);
 }
 
 

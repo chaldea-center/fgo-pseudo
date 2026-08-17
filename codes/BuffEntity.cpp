@@ -41,8 +41,9 @@ int32_t BuffEntity__CreatePrimaryKey(BuffEntity_o *this, const MethodInfo *metho
 
 System_Nullable_float__o BuffEntity__GetBattleCharaAlpha(BuffEntity_o *this, const MethodInfo *method)
 {
-  int32_t IntValue; // w0
-  System_Nullable_float__o v4; // [xsp+8h] [xbp-28h] BYREF
+  float IntValue; // s0
+  System_Nullable_float__o v4; // x0
+  System_Nullable_float__o v6; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5970533 & 1) == 0 )
   {
@@ -50,15 +51,21 @@ System_Nullable_float__o BuffEntity__GetBattleCharaAlpha(BuffEntity_o *this, con
     sub_2213A60(&StringLiteral_17796/*"battleCharaAlpha"*/);
     byte_5970533 = 1;
   }
-  if ( !EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_17796/*"battleCharaAlpha"*/, 0) )
-    return 0;
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17796/*"battleCharaAlpha"*/, 0, 0);
-  v4 = 0;
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&v4,
-    (float)IntValue / 1000.0,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-  return v4;
+  if ( EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_17796/*"battleCharaAlpha"*/, 0) )
+  {
+    IntValue = (float)EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17796/*"battleCharaAlpha"*/, 0, 0);
+    v4 = (System_Nullable_float__o)&v6;
+    v6 = 0;
+    System_Nullable_float____ctor(
+      v4,
+      IntValue / 1000.0,
+      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    return v6;
+  }
+  else
+  {
+    return (System_Nullable_float__o)0LL;
+  }
 }
 
 
@@ -628,7 +635,7 @@ BuffEntity_BuffConditionIndividualityData_array *BuffEntity__GetMultiConditionIn
   __int64 size; // x10
   Il2CppClass **v34; // x0
   System_Collections_Generic_List_Enumerator_T__o v35; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+20h] [xbp-70h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v36; // [xsp+20h] [xbp-70h] BYREF
   Il2CppObject *value; // [xsp+48h] [xbp-48h] BYREF
 
   if ( (byte_5970555 & 1) == 0 )
@@ -687,11 +694,11 @@ BuffEntity_BuffConditionIndividualityData_array *BuffEntity__GetMultiConditionIn
           &v35,
           (System_Collections_Generic_List_object__o *)v9,
           (const MethodInfo_448473C *)Method_System_Collections_Generic_List_object__GetEnumerator__);
-        v36 = (System_Collections_Generic_List_Enumerator_object__o)v35;
+        v36 = v35;
         v35.fields._list = 0;
         *(_QWORD *)&v35.fields._index = &v36;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                  &v36,
+                  (System_Collections_Generic_List_Enumerator_object__o *)&v36,
                   (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
         {
           current = v36.fields._current;
@@ -733,7 +740,7 @@ BuffEntity_BuffConditionIndividualityData_array *BuffEntity__GetMultiConditionIn
           }
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v36,
+          (System_Collections_Generic_List_Enumerator_object__o *)&v36,
           (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
         if ( v18 )
         {
@@ -759,44 +766,45 @@ LABEL_10:
 int32_t BuffEntity__GetMultiConditionType(BuffEntity_o *this, const MethodInfo *method)
 {
   Il2CppType *v3; // x20
-  __int64 v4; // x1
+  System_RuntimeTypeHandle_o v4; // x0
+  __int64 v5; // x1
   System_Type_o *TypeFromHandle; // x20
   System_Array_o *Values; // x0
-  __int64 v7; // x1
+  __int64 v8; // x1
   System_Collections_IEnumerator_o *Enumerator; // x0
-  __int64 v9; // x1
-  System_Collections_IEnumerator_o *v10; // x20
+  __int64 v10; // x1
+  System_Collections_IEnumerator_o *v11; // x20
   System_Collections_IEnumerator_c *klass; // x8
-  __int64 v12; // x9
+  __int64 v13; // x9
   int *p_offset; // x10
-  __int64 v14; // x0
   __int64 v15; // x0
-  __int64 v16; // x1
-  System_Collections_IEnumerator_o *v17; // x20
-  System_Collections_IEnumerator_c *v18; // x8
-  __int64 v19; // x9
-  System_Collections_IEnumerator_c **v20; // x10
-  __int64 v21; // x0
+  __int64 v16; // x0
+  __int64 v17; // x1
+  System_Collections_IEnumerator_o *v18; // x20
+  System_Collections_IEnumerator_c *v19; // x8
+  __int64 v20; // x9
+  System_Collections_IEnumerator_c **v21; // x10
   __int64 v22; // x0
-  __int64 v23; // x1
-  __int64 v24; // x2
-  __int64 v25; // x3
-  int32_t v26; // w20
+  __int64 v23; // x0
+  __int64 v24; // x1
+  __int64 v25; // x2
+  __int64 v26; // x3
+  int32_t v27; // w20
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x21
-  Il2CppObject *v28; // x0
-  __int64 v29; // x0
-  __int64 v30; // x8
-  __int64 v31; // x21
-  __int64 v32; // x9
-  int *v33; // x10
-  __int64 v34; // x0
-  System_Enum_o v36; // [xsp+0h] [xbp-80h] BYREF
-  int v37; // [xsp+10h] [xbp-70h]
-  __int64 v38; // [xsp+18h] [xbp-68h]
-  System_Collections_IEnumerator_o **v39; // [xsp+20h] [xbp-60h]
-  __int64 *v40; // [xsp+28h] [xbp-58h]
-  __int64 v41; // [xsp+30h] [xbp-50h] BYREF
-  System_Collections_IEnumerator_o *v42; // [xsp+38h] [xbp-48h] BYREF
+  Il2CppObject *v29; // x0
+  __int64 v30; // x0
+  __int64 v31; // x8
+  __int64 v32; // x21
+  __int64 v33; // x9
+  int *v34; // x10
+  __int64 v35; // x0
+  System_Enum_o v37; // [xsp+0h] [xbp-80h] BYREF
+  int v38; // [xsp+10h] [xbp-70h]
+  __int64 v39; // [xsp+18h] [xbp-68h]
+  System_Collections_IEnumerator_o **v40; // [xsp+20h] [xbp-60h]
+  __int64 *v41; // [xsp+28h] [xbp-58h]
+  __int64 v42; // [xsp+30h] [xbp-50h] BYREF
+  System_Collections_IEnumerator_o *v43; // [xsp+38h] [xbp-48h] BYREF
 
   if ( (byte_5970554 & 1) == 0 )
   {
@@ -808,135 +816,136 @@ int32_t BuffEntity__GetMultiConditionType(BuffEntity_o *this, const MethodInfo *
     byte_5970554 = 1;
   }
   v3 = BuffList_MULTI_CONDITION_var;
-  v41 = 0;
   v42 = 0;
+  v43 = 0;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, method);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v3, 0);
+  v4.fields.value = (intptr_t)v3;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v4);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v5);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
   if ( !Values )
-    sub_2213CDC(0, v7);
+    sub_2213CDC(0, v8);
   Enumerator = System_Array__GetEnumerator(Values, 0);
-  v42 = Enumerator;
-  v38 = 0;
-  v39 = &v42;
-  v40 = &v41;
+  v43 = Enumerator;
+  v39 = 0;
+  v40 = &v43;
+  v41 = &v42;
   if ( !Enumerator )
 LABEL_30:
-    sub_2213CDC(Enumerator, v9);
-  v10 = Enumerator;
+    sub_2213CDC(Enumerator, v10);
+  v11 = Enumerator;
   while ( 1 )
   {
-    klass = v10->klass;
-    v12 = *(unsigned __int16 *)&v10->klass->_2.rank;
-    if ( *(_WORD *)&v10->klass->_2.rank )
+    klass = v11->klass;
+    v13 = *(unsigned __int16 *)&v11->klass->_2.rank;
+    if ( *(_WORD *)&v11->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v12;
+        --v13;
         p_offset += 4;
-        if ( !v12 )
+        if ( !v13 )
           goto LABEL_14;
       }
-      v14 = (__int64)&klass->vtable[*p_offset];
+      v15 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_14:
-      v14 = sub_224BC3C(v10, System_Collections_IEnumerator_TypeInfo, 0);
+      v15 = sub_224BC3C(v11, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    v15 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(v10, *(_QWORD *)(v14 + 8));
-    if ( (v15 & 1) == 0 )
+    v16 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v15)(v11, *(_QWORD *)(v15 + 8));
+    if ( (v16 & 1) == 0 )
       break;
-    v17 = v42;
-    if ( !v42 )
+    v18 = v43;
+    if ( !v43 )
       goto LABEL_42;
-    v18 = v42->klass;
-    v19 = *(unsigned __int16 *)&v42->klass->_2.rank;
-    if ( *(_WORD *)&v42->klass->_2.rank )
+    v19 = v43->klass;
+    v20 = *(unsigned __int16 *)&v43->klass->_2.rank;
+    if ( *(_WORD *)&v43->klass->_2.rank )
     {
-      v20 = (System_Collections_IEnumerator_c **)&v18->_1.interfaceOffsets->offset;
-      while ( *(v20 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v21 = (System_Collections_IEnumerator_c **)&v19->_1.interfaceOffsets->offset;
+      while ( *(v21 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v19;
-        v20 += 2;
-        if ( !v19 )
+        --v20;
+        v21 += 2;
+        if ( !v20 )
           goto LABEL_22;
       }
-      v21 = (__int64)&v18->vtable[*(_DWORD *)v20 + 1];
+      v22 = (__int64)&v19->vtable[*(_DWORD *)v21 + 1];
     }
     else
     {
 LABEL_22:
-      v21 = sub_224BC3C(v42, System_Collections_IEnumerator_TypeInfo, 1);
+      v22 = sub_224BC3C(v43, System_Collections_IEnumerator_TypeInfo, 1);
     }
-    v22 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v21)(v17, *(_QWORD *)(v21 + 8));
-    if ( !v22 )
-      sub_2213CDC(0, v23);
-    if ( *(Il2CppClass **)(*(_QWORD *)v22 + 64LL) != BuffList_MULTI_CONDITION_TypeInfo->_1.element_class )
+    v23 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8));
+    if ( !v23 )
+      sub_2213CDC(0, v24);
+    if ( *(Il2CppClass **)(*(_QWORD *)v23 + 64LL) != BuffList_MULTI_CONDITION_TypeInfo->_1.element_class )
     {
-      sub_221405C(v22, BuffList_MULTI_CONDITION_TypeInfo, v24, v25);
+      sub_221405C(v23, BuffList_MULTI_CONDITION_TypeInfo, v25, v26);
 LABEL_42:
-      sub_2213CDC(v15, v16);
+      sub_2213CDC(v16, v17);
     }
     Enumerator = (System_Collections_IEnumerator_o *)j_il2cpp_object_unbox_0(
-                                                       v22,
+                                                       v23,
                                                        BuffList_MULTI_CONDITION_TypeInfo,
-                                                       v24,
-                                                       v25);
-    v26 = (int32_t)Enumerator->klass;
+                                                       v25,
+                                                       v26);
+    v27 = (int32_t)Enumerator->klass;
     if ( LODWORD(Enumerator->klass) )
     {
       script = this->fields.script;
-      v37 = (int)Enumerator->klass;
-      v36.klass = (System_Enum_c *)BuffList_MULTI_CONDITION_TypeInfo;
-      v36.monitor = (void *)-1LL;
-      v28 = (Il2CppObject *)System_Enum__ToString(&v36, 0);
+      v38 = (int)Enumerator->klass;
+      v37.klass = (System_Enum_c *)BuffList_MULTI_CONDITION_TypeInfo;
+      v37.monitor = (void *)-1LL;
+      v29 = (Il2CppObject *)System_Enum__ToString(&v37, 0);
       if ( !script )
-        sub_2213CDC(v28, v28);
+        sub_2213CDC(v29, v29);
       Enumerator = (System_Collections_IEnumerator_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                                          (System_Collections_Generic_Dictionary_object__object__o *)script,
-                                                         v28,
+                                                         v29,
                                                          (const MethodInfo_3FFDE04 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
       if ( ((unsigned __int8)Enumerator & 1) != 0 )
         goto LABEL_32;
     }
-    v10 = v42;
-    if ( !v42 )
+    v11 = v43;
+    if ( !v43 )
       goto LABEL_30;
   }
-  v26 = 0;
+  v27 = 0;
 LABEL_32:
-  v29 = sub_2213BB4(v42, System_IDisposable_TypeInfo);
-  v41 = v29;
-  if ( v29 )
+  v30 = sub_2213BB4(v43, System_IDisposable_TypeInfo);
+  v42 = v30;
+  if ( v30 )
   {
-    v30 = *(_QWORD *)v29;
-    v31 = v29;
-    v32 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
+    v31 = *(_QWORD *)v30;
+    v32 = v30;
+    v33 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
     {
-      v33 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
+      v34 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v34 - 1) != System_IDisposable_TypeInfo )
       {
-        --v32;
-        v33 += 4;
-        if ( !v32 )
+        --v33;
+        v34 += 4;
+        if ( !v33 )
           goto LABEL_37;
       }
-      v34 = v30 + 16LL * *v33 + 312;
+      v35 = v31 + 16LL * *v34 + 312;
     }
     else
     {
 LABEL_37:
-      v34 = sub_224BC3C(v29, System_IDisposable_TypeInfo, 0);
+      v35 = sub_224BC3C(v30, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v34)(v31, *(_QWORD *)(v34 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
   }
-  return v26;
+  return v27;
 }
 
 
@@ -1965,9 +1974,9 @@ System_String_o *BuffEntity__getScript_48836904(
   {
     sub_2213CDC(script, v7);
   }
-  return ((System_String_o *(__fastcall *)(System_Collections_Generic_Dictionary_object__object__o *, const MethodInfo *))script->klass->vtable._3_ToString.methodPtr)(
-           script,
-           script->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_object__object__o *, const MethodInfo *))script->klass->vtable._3_ToString.methodPtr)(
+                              script,
+                              script->klass->vtable._3_ToString.method);
 }
 
 
@@ -2086,8 +2095,9 @@ bool BuffEntity__isCondition_48838044(BuffEntity_o *this, System_String_o *key, 
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
   __int64 v10; // x2
   __int64 v11; // x3
-  BuffEntity_o *v12; // x0
-  const MethodInfo *v13; // x1
+  _QWORD *v12; // x8
+  BuffEntity_o *v13; // x0
+  const MethodInfo *v14; // x1
 
   if ( (byte_5970517 & 1) == 0 )
   {
@@ -2115,13 +2125,14 @@ bool BuffEntity__isCondition_48838044(BuffEntity_o *this, System_String_o *key, 
       }
       if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_5984368 + 64) )
       {
-        *pal = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10, v11);
+        v12 = (_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10, v11);
         LOBYTE(script) = 1;
+        *pal = *v12;
       }
       else
       {
         sub_221405C(Item, qword_5984368, v10, v11);
-        LOBYTE(script) = BuffEntity__isConditions(v12, v13);
+        LOBYTE(script) = BuffEntity__isConditions(v13, v14);
       }
     }
     else
@@ -2644,7 +2655,7 @@ bool BuffEntity_BuffConditionIndividualityData__CompareValue(
       sub_2213CDC(v21, v22);
     checkValue = (unsigned int)v21;
   }
-  return ((bool (__fastcall *)(intptr_t, _QWORD, __int64, intptr_t))compareFunc->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, _QWORD, __int64, intptr_t))compareFunc->fields.invoke_impl)(
            compareFunc->fields.method_code,
            (unsigned int)totalCount,
            checkValue,
@@ -2811,7 +2822,7 @@ LABEL_8:
     condValue = (System_String_o *)System_Int32__TryParse(v17, &this->fields.checkValue, 0);
     compareFunc = this->fields.compareFunc;
     if ( compareFunc )
-      return ((bool (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))compareFunc->fields.invoke_impl)(
+      return ((__int64 (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))compareFunc->fields.invoke_impl)(
                compareFunc->fields.method_code,
                (unsigned int)totalValue,
                (unsigned int)this->fields.checkValue,
@@ -2819,7 +2830,7 @@ LABEL_8:
 LABEL_25:
     sub_2213CDC(condValue, *(_QWORD *)&totalValue);
   }
-  return ((bool (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))compareFunc->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))compareFunc->fields.invoke_impl)(
            compareFunc->fields.method_code,
            (unsigned int)totalValue,
            (unsigned int)this->fields.checkValue,

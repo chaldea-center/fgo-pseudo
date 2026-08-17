@@ -1444,6 +1444,7 @@ void UIDrawCall__OnEnable(UIDrawCall_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UIDrawCall__OnWillRenderObject(UIDrawCall_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
@@ -1457,47 +1458,71 @@ void UIDrawCall__OnWillRenderObject(UIDrawCall_o *this, const MethodInfo *method
   float32x2_t v11; // d8
   UnityEngine_Material_o *v12; // x20
   __int64 v13; // x8
-  UnityEngine_Material_o *v19; // x20
-  float v20; // s8
-  float v21; // s9
+  unsigned __int64 v19; // d2 OVERLAPPED
+  unsigned __int64 v20; // d0
+  int v21; // s3
+  int v22; // s1
+  UnityEngine_Material_o *v23; // x20
+  float v24; // s0
+  float v25; // s8
+  float y; // s9
+  float v27; // s1
+  float v28; // s0
+  int v29; // s3
   UIRect_o **p_panel; // x24
-  float32x2_t *v23; // x8
-  float32x2_t v24; // d8
-  float32x2_t v25; // d9
-  int32_t v27; // w20
+  float32x2_t *v31; // x8
+  float32x2_t v32; // d8
+  float32x2_t v33; // d9
+  UnityEngine_Vector2_o v34; // d0 OVERLAPPED
+  float v35; // s1
+  UnityEngine_Vector2_o v37; // d0 OVERLAPPED
+  float v38; // s1
+  int v39; // s3 OVERLAPPED
+  unsigned __int64 v40; // d0 OVERLAPPED
+  int v41; // s2
+  int v42; // s1
+  int32_t v43; // w20
   struct UIPanel_o **i; // x8
-  struct UIPanel_o *v29; // x21
+  struct UIPanel_o *v45; // x21
   float x; // s8
-  float v31; // s9
+  float v47; // s9
   float z; // s15
   float w; // s11
-  UnityEngine_Object_o *v34; // x22
-  const MethodInfo *v35; // x1
-  const MethodInfo *v36; // x2
-  float v37; // s12
-  UnityEngine_Transform_o *v38; // x22
-  const MethodInfo *v39; // x1
-  float v40; // s14
-  float v41; // s10
-  __int64 v42; // x1
-  UIRect_o *v43; // x22
-  float v44; // s0
-  float y; // s1
-  unsigned __int64 v46; // krC0_8
-  unsigned __int64 v47; // [xsp+10h] [xbp-A0h]
-  UnityEngine_Vector3_o v48; // 0:kr60_12.12
-  UnityEngine_Vector3_o Positive; // 0:kr74_12.12
-  UnityEngine_Vector3_o v50; // 0:kr90_12.12
-  UnityEngine_Vector3_o v51; // 0:krA4_12.12
-  UnityEngine_Vector4_o v52; // 0:krB0_16.16
-  UnityEngine_Vector4_o v53; // 0:krD0_16.16
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Object_o *v50; // x22
+  const MethodInfo *v51; // x1
+  const MethodInfo *v52; // x2
+  float v53; // s12
+  UnityEngine_Transform_o *v54; // x22
+  float v55; // s12
+  float v56; // s13
+  float v57; // s11
+  float v58; // s9
+  float v59; // s14
+  float v60; // s15
+  float v61; // s8
+  const MethodInfo *v62; // x1
+  float v63; // s9
+  float v64; // s11
+  float v65; // s12
+  float v66; // s13
+  float v67; // s14
+  float v68; // s10
+  __int64 v69; // x1
+  UIRect_o *v70; // x22
+  unsigned __int64 v71; // [xsp+10h] [xbp-A0h]
+  float v72; // [xsp+10h] [xbp-A0h]
+  float v73; // [xsp+6Ch] [xbp-44h]
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v75; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v76; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v78; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v79; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o clipTextureRotationInfo; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v81; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v60; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v83; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v84; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_597518A & 1) == 0 )
   {
@@ -1537,11 +1562,11 @@ void UIDrawCall__OnWillRenderObject(UIDrawCall_o *this, const MethodInfo *method
         v10.n64_u64[0] = *(unsigned __int64 *)&panel->fields.drawCallClipRange.fields.z;
         v12 = this->fields.mDynamicMat;
         cachedTransform = (UIPanel_o *)UIDrawCall_TypeInfo;
-        v47 = v10.n64_u64[0];
+        v71 = v10.n64_u64[0];
         if ( !*(&UIDrawCall_TypeInfo->_2.cctor_finished + 1) )
         {
           j_il2cpp_runtime_class_init_0(UIDrawCall_TypeInfo, v8);
-          v10.n64_u64[0] = v47;
+          v10.n64_u64[0] = v71;
           cachedTransform = (UIPanel_o *)UIDrawCall_TypeInfo;
         }
         v13 = *(_QWORD *)&cachedTransform->fields.drawCalls->fields._size;
@@ -1552,30 +1577,36 @@ void UIDrawCall__OnWillRenderObject(UIDrawCall_o *this, const MethodInfo *method
           if ( v12 )
           {
             __asm { FMOV            V0.2S, #1.0 }
-            *(float32x2_t *)&v52.fields.x = vdiv_f32(vneg_f32(v11), v10);
-            *(float32x2_t *)&v52.fields.z = vdiv_f32(_D0, v10);
-            UnityEngine_Material__SetVector_83285548(v12, *(_DWORD *)(v13 + 32), v52, 0);
+            v19 = vdiv_f32(_D0, v10).n64_u64[0];
+            v20 = vdiv_f32(vneg_f32(v11), v10).n64_u64[0];
+            v21 = HIDWORD(v19);
+            v22 = HIDWORD(v20);
+            UnityEngine_Material__SetVector_83285548(
+              v12,
+              *(_DWORD *)(v13 + 32),
+              *(UnityEngine_Vector4_o *)(&v19 - 1),
+              0);
             cachedTransform = this->fields.panel;
             if ( cachedTransform )
             {
-              v19 = this->fields.mDynamicMat;
-              LODWORD(v44) = *(_OWORD *)&UIPanel__get_clipTextureRotationInfo(cachedTransform, 0);
+              v23 = this->fields.mDynamicMat;
+              LODWORD(v24) = *(_OWORD *)&UIPanel__get_clipTextureRotationInfo(cachedTransform, 0);
               cachedTransform = this->fields.panel;
               if ( cachedTransform )
               {
-                v20 = v44;
-                y = UIPanel__get_clipTextureRotationInfo(cachedTransform, 0).fields.y;
+                v25 = v24;
+                clipTextureRotationInfo = UIPanel__get_clipTextureRotationInfo(cachedTransform, 0);
                 cachedTransform = this->fields.panel;
                 if ( cachedTransform )
                 {
-                  v21 = y;
-                  v58.fields.z = UIPanel__get_clipTextureRotationInfo(cachedTransform, 0).fields.z;
-                  if ( v19 )
+                  y = clipTextureRotationInfo.fields.y;
+                  v81 = UIPanel__get_clipTextureRotationInfo(cachedTransform, 0);
+                  if ( v23 )
                   {
-                    v58.fields.y = (float)-v21 / *((float *)&v47 + 1);
-                    v58.fields.x = (float)-v20 / *(float *)&v47;
-                    v58.fields.w = 0.0;
-                    UnityEngine_Material__SetVector(v19, (System_String_o *)StringLiteral_16807/*"_ClipRotateInfo"*/, v58, 0);
+                    v27 = (float)-y / *((float *)&v71 + 1);
+                    v28 = (float)-v25 / *(float *)&v71;
+                    v29 = 0;
+                    UnityEngine_Material__SetVector(v23, (System_String_o *)StringLiteral_16807/*"_ClipRotateInfo"*/, v81, 0);
                     cachedTransform = (UIPanel_o *)this->fields.mDynamicMat;
                     if ( cachedTransform )
                     {
@@ -1593,127 +1624,142 @@ void UIDrawCall__OnWillRenderObject(UIDrawCall_o *this, const MethodInfo *method
           }
         }
       }
-LABEL_54:
+LABEL_55:
       sub_2213CDC(cachedTransform, v8);
     }
     p_panel = (UIRect_o **)&this->fields.panel;
     if ( this->fields.mLegacyShader )
     {
-      v23 = (float32x2_t *)*p_panel;
+      v31 = (float32x2_t *)*p_panel;
       if ( !*p_panel )
-        goto LABEL_54;
+        goto LABEL_55;
       cachedTransform = (UIPanel_o *)this->fields.mDynamicMat;
       if ( !cachedTransform )
-        goto LABEL_54;
-      v24.n64_u64[0] = v23[33].n64_u64[0];
-      v25.n64_u64[0] = v23[39].n64_u64[0];
-      UnityEngine_Material__set_mainTextureOffset(
-        (UnityEngine_Material_o *)cachedTransform,
-        (UnityEngine_Vector2_o)vdiv_f32(vneg_f32(v23[32]), v24).n64_u64[0],
-        0);
+        goto LABEL_55;
+      v32.n64_u64[0] = v31[33].n64_u64[0];
+      v33.n64_u64[0] = v31[39].n64_u64[0];
+      v34 = (UnityEngine_Vector2_o)vdiv_f32(vneg_f32(v31[32]), v32).n64_u64[0];
+      v35 = v34.fields.y;
+      UnityEngine_Material__set_mainTextureOffset((UnityEngine_Material_o *)cachedTransform, v34, 0);
       cachedTransform = (UIPanel_o *)this->fields.mDynamicMat;
       if ( !cachedTransform )
-        goto LABEL_54;
+        goto LABEL_55;
       __asm { FMOV            V0.2S, #1.0 }
-      UnityEngine_Material__set_mainTextureScale(
-        (UnityEngine_Material_o *)cachedTransform,
-        (UnityEngine_Vector2_o)vdiv_f32(_D0, v24).n64_u64[0],
-        0);
+      v37 = (UnityEngine_Vector2_o)vdiv_f32(_D0, v32).n64_u64[0];
+      v38 = v37.fields.y;
+      UnityEngine_Material__set_mainTextureScale((UnityEngine_Material_o *)cachedTransform, v37, 0);
       cachedTransform = (UIPanel_o *)this->fields.mDynamicMat;
       if ( !cachedTransform )
-        goto LABEL_54;
-      *(int8x8_t *)&v53.fields.x = vbsl_s8(vcgtz_f32(v25), vdiv_f32(v24, v25), vdup_n_s32(0x447A0000u));
-      v53.fields.z = 0.0;
-      v53.fields.w = 0.0;
+        goto LABEL_55;
+      v39 = 0;
+      v40 = vbsl_s8(vcgtz_f32(v33), vdiv_f32(v32, v33), vdup_n_s32(0x447A0000u)).n64_u64[0];
+      v41 = 0;
+      v42 = HIDWORD(v40);
       UnityEngine_Material__SetVector(
         (UnityEngine_Material_o *)cachedTransform,
         (System_String_o *)StringLiteral_16808/*"_ClipSharpness"*/,
-        v53,
+        *(UnityEngine_Vector4_o *)(&v39 - 3),
         0);
     }
     else
     {
-      v27 = 0;
-      for ( i = &this->fields.panel; ; i = &v29->fields.mParentPanel )
+      v43 = 0;
+      for ( i = &this->fields.panel; ; i = &v45->fields.mParentPanel )
       {
-        v29 = *i;
+        v45 = *i;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-        cachedTransform = (UIPanel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v29, 0, 0);
+        cachedTransform = (UIPanel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v45, 0, 0);
         if ( ((unsigned __int8)cachedTransform & 1) == 0 )
           break;
-        if ( !v29 )
-          goto LABEL_54;
-        if ( UIPanel__get_hasClipping(v29, 0) )
+        if ( !v45 )
+          goto LABEL_55;
+        if ( UIPanel__get_hasClipping(v45, 0) )
         {
-          x = v29->fields.drawCallClipRange.fields.x;
-          v31 = v29->fields.drawCallClipRange.fields.y;
-          z = v29->fields.drawCallClipRange.fields.z;
-          w = v29->fields.drawCallClipRange.fields.w;
-          v34 = (UnityEngine_Object_o *)*p_panel;
+          x = v45->fields.drawCallClipRange.fields.x;
+          v47 = v45->fields.drawCallClipRange.fields.y;
+          z = v45->fields.drawCallClipRange.fields.z;
+          w = v45->fields.drawCallClipRange.fields.w;
+          v50 = (UnityEngine_Object_o *)*p_panel;
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-          v37 = 0.0;
-          if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v29, v34, 0) )
+          v53 = 0.0;
+          if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v45, v50, 0) )
           {
-            cachedTransform = (UIPanel_o *)UIRect__get_cachedTransform((UIRect_o *)v29, v35);
+            cachedTransform = (UIPanel_o *)UIRect__get_cachedTransform((UIRect_o *)v45, v51);
             if ( !*p_panel )
-              goto LABEL_54;
-            v38 = (UnityEngine_Transform_o *)cachedTransform;
+              goto LABEL_55;
+            v54 = (UnityEngine_Transform_o *)cachedTransform;
             cachedTransform = (UIPanel_o *)UIRect__get_cachedTransform(*p_panel, v8);
             if ( !cachedTransform )
-              goto LABEL_54;
+              goto LABEL_55;
             position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)cachedTransform, 0);
-            if ( !v38 )
-              goto LABEL_54;
-            v46 = (unsigned __int64)UnityEngine_Transform__InverseTransformPoint(v38, position, 0);
+            if ( !v54 )
+              goto LABEL_55;
+            v72 = w;
+            v75 = UnityEngine_Transform__InverseTransformPoint(v54, position, 0);
             cachedTransform = (UIPanel_o *)*p_panel;
             if ( !*p_panel )
-              goto LABEL_54;
+              goto LABEL_55;
+            v55 = v75.fields.x;
+            v56 = v75.fields.y;
+            v73 = z;
+            v57 = v47;
+            v58 = x;
             cachedTransform = (UIPanel_o *)UIRect__get_cachedTransform((UIRect_o *)cachedTransform, v8);
             if ( !cachedTransform )
-              goto LABEL_54;
+              goto LABEL_55;
             rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)cachedTransform, 0);
-            v48 = UnityEngine_Quaternion__Internal_ToEulerRad(rotation, 0);
-            v54.fields.x = v48.fields.x * 57.296;
-            v54.fields.y = v48.fields.y * 57.296;
-            v54.fields.z = v48.fields.z * 57.296;
-            Positive = UnityEngine_Quaternion__Internal_MakePositive(v54, 0);
-            cachedTransform = (UIPanel_o *)UIRect__get_cachedTransform((UIRect_o *)v29, v39);
+            v76 = UnityEngine_Quaternion__Internal_ToEulerRad(rotation, 0);
+            v76.fields.x = v76.fields.x * 57.296;
+            v76.fields.y = v76.fields.y * 57.296;
+            v76.fields.z = v76.fields.z * 57.296;
+            Positive = UnityEngine_Quaternion__Internal_MakePositive(v76, 0);
+            v59 = Positive.fields.x;
+            v60 = Positive.fields.y;
+            v61 = Positive.fields.z;
+            cachedTransform = (UIPanel_o *)UIRect__get_cachedTransform((UIRect_o *)v45, v62);
             if ( !cachedTransform )
-              goto LABEL_54;
-            v60 = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)cachedTransform, 0);
-            v50 = UnityEngine_Quaternion__Internal_ToEulerRad(v60, 0);
-            v55.fields.x = v50.fields.x * 57.296;
-            v55.fields.y = v50.fields.y * 57.296;
-            v55.fields.z = v50.fields.z * 57.296;
-            v51 = UnityEngine_Quaternion__Internal_MakePositive(v55, 0);
-            v40 = NGUIMath__WrapAngle(v51.fields.x - Positive.fields.x, 0);
-            v41 = NGUIMath__WrapAngle(v51.fields.y - Positive.fields.y, 0);
-            v37 = NGUIMath__WrapAngle(v51.fields.z - Positive.fields.z, 0);
-            if ( fabsf(v40) > 0.001 || fabsf(v41) > 0.001 )
+              goto LABEL_55;
+            v63 = v58 - v55;
+            v64 = v57 - v56;
+            v83 = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)cachedTransform, 0);
+            v78 = UnityEngine_Quaternion__Internal_ToEulerRad(v83, 0);
+            v78.fields.x = v78.fields.x * 57.296;
+            v78.fields.y = v78.fields.y * 57.296;
+            v78.fields.z = v78.fields.z * 57.296;
+            v79 = UnityEngine_Quaternion__Internal_MakePositive(v78, 0);
+            v65 = v79.fields.y - v60;
+            v66 = v79.fields.z - v61;
+            v67 = NGUIMath__WrapAngle(v79.fields.x - v59, 0);
+            v68 = NGUIMath__WrapAngle(v65, 0);
+            v53 = NGUIMath__WrapAngle(v66, 0);
+            if ( fabsf(v67) > 0.001 || fabsf(v68) > 0.001 )
             {
-              v43 = *p_panel;
+              v70 = *p_panel;
+              z = v73;
               if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v42);
+                j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v69);
               UnityEngine_Debug__LogWarning_83209572(
                 (Il2CppObject *)StringLiteral_10950/*"Panel can only be clipped properly if X and Y rotation is left at 0"*/,
-                (UnityEngine_Object_o *)v43,
+                (UnityEngine_Object_o *)v70,
                 0);
-              x = x - *(float *)&v46;
-              v31 = v31 - *((float *)&v46 + 1);
+              x = v63;
+              v47 = v64;
             }
             else
             {
-              x = x - *(float *)&v46;
-              v31 = v31 - *((float *)&v46 + 1);
+              z = v73;
+              x = v63;
+              v47 = v64;
             }
+            w = v72;
           }
-          v57.fields.x = x;
-          v57.fields.y = v31;
-          v57.fields.z = z;
-          v57.fields.w = w;
-          UIDrawCall__SetClipping(this, v27++, v57, v29->fields.mClipSoftness, v37, v36);
+          v84.fields.x = x;
+          v84.fields.y = v47;
+          v84.fields.z = z;
+          v84.fields.w = w;
+          UIDrawCall__SetClipping(this, v43++, v84, v45->fields.mClipSoftness, v53, v52);
         }
       }
     }
@@ -3288,7 +3334,7 @@ System_IAsyncResult_o *UIDrawCall_OnRenderCallback__BeginInvoke(
   UnityEngine_Material_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = mat;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

@@ -443,7 +443,8 @@ ExRoomMissionResolvedReward_o *ExRoomMissionListOutput__FindRewardResolvedReward
   __int64 v8; // x9
   __int64 v9; // x9
   int32_t v10; // w1
-  __int64 v12; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v11; // x0
+  __int64 v13; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
   if ( (byte_596AEC1 & 1) == 0 )
@@ -471,15 +472,13 @@ ExRoomMissionResolvedReward_o *ExRoomMissionListOutput__FindRewardResolvedReward
         if ( v9 )
         {
           v10 = *(_DWORD *)(v9 + 24);
-          v12 = 0;
-          System_Nullable_int____ctor(
-            (System_Nullable_int__o)&v12,
-            v10,
-            (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+          v11 = (System_Nullable_int__o)&v13;
+          v13 = 0;
+          System_Nullable_int____ctor(v11, v10, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
           RewardResolvedRewards_k__BackingField = v4->fields._RewardResolvedRewards_k__BackingField;
-          if ( (_BYTE)v12 )
+          if ( (_BYTE)v13 )
           {
-            if ( HIDWORD(v12) == objectId )
+            if ( HIDWORD(v13) == objectId )
             {
               if ( !RewardResolvedRewards_k__BackingField )
 LABEL_12:

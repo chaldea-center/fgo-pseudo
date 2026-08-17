@@ -555,7 +555,7 @@ void SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0___UpdateUi_b__
         (this = (SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_o *)v3->fields.__4__this) == 0)
     || (this = (SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_o *)SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(
                                                                                    (SubmarineSelectScannerListViewItemDraw_o *)this,
-                                                                                   *((UISprite_o **)this + 4),
+                                                                                   (UISprite_o *)this[1].klass,
                                                                                    (System_String_o *)StringLiteral_21410/*"img_list_bg02"*/,
                                                                                    v5),
         (_4__this = v3->fields.__4__this) == 0)

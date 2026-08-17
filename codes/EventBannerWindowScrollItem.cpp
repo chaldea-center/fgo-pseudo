@@ -121,10 +121,10 @@ void EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScrollItem_o *thi
   CommonUI_o *v8; // x19
   System_String_o *klass; // x21
   System_String_o *v10; // x20
-  struct EventBannerWindowScrollItem___c_StaticFields *static_fields; // x8
-  System_Action_o *_9__9_0; // x22
+  void *monitor; // x8
+  System_Action_o *v12; // x22
   Il2CppObject *v13; // x23
-  struct EventBannerWindowScrollItem___c_StaticFields *v14; // x0
+  struct EventBannerWindowScrollItem___c_StaticFields *static_fields; // x0
   System_String_o *v15; // x2
   System_String_o *v16; // x3
   int32_t v17; // w4
@@ -184,23 +184,23 @@ void EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScrollItem_o *thi
               j_il2cpp_runtime_class_init_0(EventBannerWindowScrollItem___c_TypeInfo, method, v7);
               this = (EventBannerWindowScrollItem_o *)EventBannerWindowScrollItem___c_TypeInfo;
             }
-            static_fields = (struct EventBannerWindowScrollItem___c_StaticFields *)*((_QWORD *)this + 23);
-            _9__9_0 = static_fields->__9__9_0;
-            if ( !_9__9_0 )
+            monitor = this[2].monitor;
+            v12 = (System_Action_o *)*((_QWORD *)monitor + 1);
+            if ( !v12 )
             {
-              if ( !*((_DWORD *)this + 57) )
+              if ( !HIDWORD(this[2].fields.condMessageLabel) )
               {
                 j_il2cpp_runtime_class_init_0(this, method, v7);
-                static_fields = EventBannerWindowScrollItem___c_TypeInfo->static_fields;
+                monitor = EventBannerWindowScrollItem___c_TypeInfo->static_fields;
               }
-              v13 = (Il2CppObject *)static_fields->__9;
-              _9__9_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-              System_Action___ctor(_9__9_0, v13, Method_EventBannerWindowScrollItem___c__OnClickItem_b__9_0__, 0);
-              v14 = EventBannerWindowScrollItem___c_TypeInfo->static_fields;
-              v14->__9__9_0 = _9__9_0;
+              v13 = *(Il2CppObject **)monitor;
+              v12 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+              System_Action___ctor(v12, v13, Method_EventBannerWindowScrollItem___c__OnClickItem_b__9_0__, 0);
+              static_fields = EventBannerWindowScrollItem___c_TypeInfo->static_fields;
+              static_fields->__9__9_0 = v12;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)&v14->__9__9_0,
-                (int32_t)_9__9_0,
+                (MissionNaviTransitionBoardItem_o *)&static_fields->__9__9_0,
+                (int32_t)v12,
                 v15,
                 v16,
                 v17,
@@ -210,7 +210,7 @@ void EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScrollItem_o *thi
             }
             if ( v8 )
             {
-              CommonUI__OpenNotificationDialog(v8, v10, klass, _9__9_0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0.0, 0, 0);
+              CommonUI__OpenNotificationDialog(v8, v10, klass, v12, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0.0, 0, 0);
               return;
             }
           }
@@ -228,6 +228,7 @@ LABEL_21:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventBannerWindowScrollItem__Setup(
         EventBannerWindowScrollItem_o *this,
         TitleInfoControl_EventEndTimeInfo_o *ev_end_time_inf,
@@ -248,27 +249,30 @@ void EventBannerWindowScrollItem__Setup(
   bool v17; // w22
   const MethodInfo *v18; // x1
   UILabel_o *IsGrayOut; // x0
-  System_String_o *v21; // x23
-  const MethodInfo *v22; // x1
-  __int64 v23; // x2
-  struct TitleInfoControl_EventEndTimeInfo_o *v24; // x8
-  __int64 v25; // x2
-  UISprite_o *v26; // x22
-  __int64 v27; // x1
+  float v20; // s0 OVERLAPPED
+  float v21; // s3
+  float v22; // s1
+  float v23; // s2
+  System_String_o *v24; // x23
+  const MethodInfo *v25; // x1
+  __int64 v26; // x2
+  struct TitleInfoControl_EventEndTimeInfo_o *v27; // x8
   __int64 v28; // x2
+  UISprite_o *v29; // x22
+  __int64 v30; // x1
+  __int64 v31; // x2
   struct NoticeNumberComponent_o **p_mNoticeNumber; // x21
   UnityEngine_Object_o *mNoticeNumber; // x22
-  __int64 v31; // x2
+  __int64 v34; // x2
   Il2CppObject *noticeNumberPrefab; // x22
-  Il2CppObject *v33; // x0
-  System_String_o *v34; // x2
-  System_String_o *v35; // x3
-  int32_t v36; // w4
-  int32_t v37; // w5
-  bool v38; // w6
-  bool v39; // w7
+  Il2CppObject *v36; // x0
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
+  int32_t v40; // w5
+  bool v41; // w6
+  bool v42; // w7
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596CEED & 1) == 0 )
   {
@@ -304,41 +308,41 @@ void EventBannerWindowScrollItem__Setup(
   IsGrayOut = (UILabel_o *)EventBannerWindowScrollItem__IsGrayOut(this, v18);
   if ( !v16 )
     goto LABEL_43;
-  v41.fields.r = 1.0;
-  v41.fields.a = 1.0;
+  v20 = 1.0;
+  v21 = 1.0;
   if ( ((unsigned __int8)IsGrayOut & 1) != 0 )
-    v41.fields.r = 0.5;
-  v41.fields.g = v41.fields.r;
-  v41.fields.b = v41.fields.r;
-  UIWidget__set_color(v16, v41, 0);
-  v21 = **(System_String_o ***)(qword_5984390 + 184);
-  IsGrayOut = (UILabel_o *)EventBannerWindowScrollItem__IsGrayOut(this, v22);
+    v20 = 0.5;
+  v22 = v20;
+  v23 = v20;
+  UIWidget__set_color(v16, *(UnityEngine_Color_o *)&v20, 0);
+  v24 = **(System_String_o ***)(qword_5984390 + 184);
+  IsGrayOut = (UILabel_o *)EventBannerWindowScrollItem__IsGrayOut(this, v25);
   if ( ((unsigned __int8)IsGrayOut & 1) != 0 )
   {
-    v24 = *p_mEventEndTimeInfo;
+    v27 = *p_mEventEndTimeInfo;
     if ( !*p_mEventEndTimeInfo )
       goto LABEL_43;
-    if ( !v24->fields.is_reward && v24->fields.is_shop_closed )
+    if ( !v27->fields.is_reward && v27->fields.is_shop_closed )
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v23);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v26);
       IsGrayOut = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5940/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0);
-      v24 = *p_mEventEndTimeInfo;
+      v27 = *p_mEventEndTimeInfo;
       if ( !*p_mEventEndTimeInfo )
         goto LABEL_43;
-      v21 = (System_String_o *)IsGrayOut;
+      v24 = (System_String_o *)IsGrayOut;
     }
-    if ( !v24->fields.is_shop_closed )
+    if ( !v27->fields.is_shop_closed )
     {
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v23);
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5943/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0);
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v11, v26);
+      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5943/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0);
     }
   }
   IsGrayOut = this->fields.condMessageLabel;
   if ( !IsGrayOut )
     goto LABEL_43;
-  UILabel__set_text(IsGrayOut, v21, 0);
+  UILabel__set_text(IsGrayOut, v24, 0);
   IsGrayOut = (UILabel_o *)this->fields.mBannerSp;
   if ( !IsGrayOut )
     goto LABEL_43;
@@ -354,12 +358,12 @@ LABEL_24:
       goto LABEL_43;
     UISprite__set_atlas((UISprite_o *)IsGrayOut, this->fields.mCommonAtlas, 0);
     IsGrayOut = (UILabel_o *)EventBannerWindowScrollItem_TypeInfo;
-    v26 = this->fields.mBannerSp;
+    v29 = this->fields.mBannerSp;
     if ( !*(&EventBannerWindowScrollItem_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(EventBannerWindowScrollItem_TypeInfo, v11, v25);
-    if ( !v26 )
+      j_il2cpp_runtime_class_init_0(EventBannerWindowScrollItem_TypeInfo, v11, v28);
+    if ( !v29 )
       goto LABEL_43;
-    UISprite__set_spriteName(v26, EventBannerWindowScrollItem_TypeInfo->static_fields->DEFAULT_SP_NAME, 0);
+    UISprite__set_spriteName(v29, EventBannerWindowScrollItem_TypeInfo->static_fields->DEFAULT_SP_NAME, 0);
     IsGrayOut = (UILabel_o *)this->fields.mBannerSp;
     if ( !IsGrayOut )
       goto LABEL_43;
@@ -379,26 +383,26 @@ LABEL_24:
     p_mNoticeNumber = &this->fields.mNoticeNumber;
     mNoticeNumber = (UnityEngine_Object_o *)this->fields.mNoticeNumber;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v27, v28);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30, v31);
     IsGrayOut = (UILabel_o *)UnityEngine_Object__op_Equality(mNoticeNumber, 0, 0);
     if ( ((unsigned __int8)IsGrayOut & 1) != 0 )
     {
       noticeNumberPrefab = (Il2CppObject *)this->fields.noticeNumberPrefab;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v31);
-      v33 = UnityEngine_Object__Instantiate_object_(
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v34);
+      v36 = UnityEngine_Object__Instantiate_object_(
               noticeNumberPrefab,
               (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_NoticeNumberComponent___);
-      *p_mNoticeNumber = (struct NoticeNumberComponent_o *)v33;
+      *p_mNoticeNumber = (struct NoticeNumberComponent_o *)v36;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.mNoticeNumber,
-        (int32_t)v33,
-        v34,
-        v35,
-        v36,
+        (int32_t)v36,
         v37,
         v38,
-        v39);
+        v39,
+        v40,
+        v41,
+        v42);
       IsGrayOut = (UILabel_o *)*p_mNoticeNumber;
       if ( !*p_mNoticeNumber )
         goto LABEL_43;

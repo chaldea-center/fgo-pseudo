@@ -24,7 +24,11 @@ UICharaGraphTexture_o *CharaGraphManager__CreateCommandTextureLocal(
   UnityEngine_GameObject_o *v9; // x22
   Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *transform; // x21
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F8F1 & 1) == 0 )
   {
@@ -51,6 +55,9 @@ UICharaGraphTexture_o *CharaGraphManager__CreateCommandTextureLocal(
   if ( !layer )
     goto LABEL_15;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)layer, 0);
+  x = localScale.fields.x;
+  y = localScale.fields.y;
+  z = localScale.fields.z;
   UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)StringLiteral_15338/*"UICommandGraphTexture"*/, 0);
   if ( !parent )
     goto LABEL_15;
@@ -73,7 +80,10 @@ UICharaGraphTexture_o *CharaGraphManager__CreateCommandTextureLocal(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v17.fields.x = x;
+  v17.fields.y = y;
+  v17.fields.z = z;
+  UnityEngine_Transform__set_localScale(transform, v17, 0);
   layer = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(parent, 0);
   if ( !Component_object )
 LABEL_15:
@@ -378,7 +388,11 @@ UICharaGraphTexture_o *CharaGraphManager__CreateTextureLocal(
   Il2CppObject *v17; // x20
   Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *transform; // x21
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F8ED & 1) == 0 )
   {
@@ -452,6 +466,9 @@ LABEL_14:
   if ( !Instance )
     goto LABEL_30;
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)Instance, 0);
+  x = localScale.fields.x;
+  y = localScale.fields.y;
+  z = localScale.fields.z;
   UnityEngine_Object__set_name((UnityEngine_Object_o *)v15, (System_String_o *)StringLiteral_15335/*"UICharaGraphTexture"*/, 0);
   if ( !parent )
     goto LABEL_30;
@@ -474,7 +491,10 @@ LABEL_14:
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v25.fields.x = x;
+  v25.fields.y = y;
+  v25.fields.z = z;
+  UnityEngine_Transform__set_localScale(transform, v25, 0);
   Instance = (DataManager_o *)UnityEngine_GameObject__get_layer(parent, 0);
   if ( !Component_object )
     goto LABEL_30;
@@ -683,9 +703,9 @@ UICharaGraphTexture_o *CharaGraphManager__CreateTextureLocal_47625664(
   if ( !this )
     goto LABEL_14;
   v26 = (UnityEngine_Component_o *)this;
-  *((_QWORD *)this + 66) = overwriteStatus;
+  this[9].fields.m_CancellationTokenSource = (struct System_Threading_CancellationTokenSource_o *)overwriteStatus;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)((char *)this + 528),
+    (MissionNaviTransitionBoardItem_o *)&this[9].fields.m_CancellationTokenSource,
     (int32_t)overwriteStatus,
     v20,
     v21,

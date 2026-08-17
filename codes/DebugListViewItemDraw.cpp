@@ -4,6 +4,7 @@ void DebugListViewItemDraw___ctor(DebugListViewItemDraw_o *this, const MethodInf
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void DebugListViewItemDraw__SetItem(
         DebugListViewItemDraw_o *this,
         DebugListViewItem_o *item,
@@ -15,7 +16,10 @@ void DebugListViewItemDraw__SetItem(
   __int64 v9; // x1
   __int64 v10; // x2
   Il2CppObject *Component_object; // x21
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v12; // s0 OVERLAPPED
+  float v13; // s3
+  float v14; // s1
+  float v15; // s2
 
   if ( (byte_596DBB1 & 1) == 0 )
   {
@@ -54,13 +58,13 @@ void DebugListViewItemDraw__SetItem(
         eventTextLabel = (UILabel_o *)this->fields.baseImageTexture;
         if ( eventTextLabel )
         {
-          v13.fields.r = 1.0;
-          v13.fields.a = 1.0;
+          v12 = 1.0;
+          v13 = 1.0;
           if ( mode == 1 )
-            v13.fields.r = 0.5;
-          v13.fields.g = v13.fields.r;
-          v13.fields.b = v13.fields.r;
-          UIWidget__set_color((UIWidget_o *)eventTextLabel, v13, 0);
+            v12 = 0.5;
+          v14 = v12;
+          v15 = v12;
+          UIWidget__set_color((UIWidget_o *)eventTextLabel, *(UnityEngine_Color_o *)&v12, 0);
           return;
         }
       }

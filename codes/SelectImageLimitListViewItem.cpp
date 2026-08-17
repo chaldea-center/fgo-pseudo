@@ -34,10 +34,12 @@ bool SelectImageLimitListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   int32_t index; // w9
+  bool result; // w0
 
   index = this->fields.index;
+  result = 1;
   this->fields.sortValue0 = -index;
-  return 1;
+  return result;
 }
 
 

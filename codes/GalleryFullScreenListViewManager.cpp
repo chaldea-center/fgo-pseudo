@@ -1646,8 +1646,8 @@ void GalleryFullScreenListViewManager__OnClickMaxim(GalleryFullScreenListViewMan
   __int64 naturalAligment; // x10
   UnityEngine_GameObject_o *dragObject; // x20
   const MethodInfo *v14; // x1
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o DispObjScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B54A & 1) == 0 )
   {
@@ -1681,8 +1681,8 @@ void GalleryFullScreenListViewManager__OnClickMaxim(GalleryFullScreenListViewMan
           {
             DispObjScale = GalleryFullScreenListViewObject__GetDispObjScale(v11, v14);
             GameObjectExtensions__SetLocalScale(dragObject, DispObjScale, 0);
-            v15.fields.x = sub_24B9B38(0);
-            GameObjectExtensions__SetLocalPosition(dragObject, v15, 0);
+            v16.fields.x = sub_24B9B38(0);
+            GameObjectExtensions__SetLocalPosition(dragObject, v16, 0);
           }
         }
       }
@@ -2473,15 +2473,19 @@ UnityEngine_Vector2_o GalleryFullScreenListViewManager__get_CenterPosition(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *scrollView; // x0
-  unsigned __int64 localPosition; // kr00_8
+  float v4; // s0
+  float v5; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollView, 0)) == 0 )
     sub_2213CDC(scrollView, method);
-  localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
-  result.fields.x = this->fields.clipOffset.fields.x - *(float *)&localPosition;
-  result.fields.y = this->fields.clipOffset.fields.y - *((float *)&localPosition + 1);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
+  v4 = this->fields.clipOffset.fields.x - localPosition.fields.x;
+  v5 = this->fields.clipOffset.fields.y - localPosition.fields.y;
+  result.fields.y = v5;
+  result.fields.x = v4;
   return result;
 }
 
@@ -2506,6 +2510,7 @@ bool GalleryFullScreenListViewManager__WaitSetDataSelectGallery_d__36__MoveNext(
   Il2CppObject *object; // x0
   __int64 v7; // x1
   System_Action_o *endCallBack; // x0
+  bool result; // w0
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x21
   System_Func_object__bool__o *v11; // x22
   __int64 v12; // x1
@@ -2668,8 +2673,9 @@ LABEL_26:
   this->fields.__2__current = (Il2CppObject *)v38;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v38, v40, v41, v42, v43, v44, v45);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

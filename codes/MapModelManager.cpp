@@ -286,8 +286,10 @@ UnityEngine_Vector3_o MapModelManager__GetLocationPostion(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  float z; // s2
   MapModelComponent_o *v12; // x0
-  UnityEngine_Vector3_o CameraLocationPosition; // 0:kr00_12.12
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D127 & 1) == 0 )
@@ -306,20 +308,20 @@ UnityEngine_Vector3_o MapModelManager__GetLocationPostion(
       byte_5969AE0 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
-    result.fields.z = static_fields->zeroVector.fields.z;
+    x = static_fields->zeroVector.fields.x;
+    y = static_fields->zeroVector.fields.y;
+    z = static_fields->zeroVector.fields.z;
   }
   else
   {
     v12 = this->fields.mapModelComponent;
     if ( !v12 )
       sub_2213CDC(0, v6);
-    CameraLocationPosition = MapModelComponent__GetCameraLocationPosition(v12, layer, v7);
-    result.fields.x = CameraLocationPosition.fields.x;
-    result.fields.y = CameraLocationPosition.fields.y;
-    result.fields.z = CameraLocationPosition.fields.z;
+    *(UnityEngine_Vector3_o *)&x = MapModelComponent__GetCameraLocationPosition(v12, layer, v7);
   }
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -792,6 +794,9 @@ UnityEngine_Vector3_o MapModelManager__get_MapCamera2DResetPosition(MapModelMana
   struct UnityEngine_Vector3_StaticFields *p_mapCamera2DResetPosition; // x8
   float *p_y; // x9
   float *p_z; // x10
+  float v11; // s2
+  float v12; // s1
+  float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D12B & 1) == 0 )
@@ -823,9 +828,12 @@ UnityEngine_Vector3_o MapModelManager__get_MapCamera2DResetPosition(MapModelMana
     p_y = &p_mapCamera2DResetPosition->zeroVector.fields.y;
     p_z = &p_mapCamera2DResetPosition->zeroVector.fields.z;
   }
-  result.fields.z = *p_z;
-  result.fields.y = *p_y;
-  result.fields.x = p_mapCamera2DResetPosition->zeroVector.fields.x;
+  v11 = *p_z;
+  v12 = *p_y;
+  x = p_mapCamera2DResetPosition->zeroVector.fields.x;
+  result.fields.z = v11;
+  result.fields.y = v12;
+  result.fields.x = x;
   return result;
 }
 

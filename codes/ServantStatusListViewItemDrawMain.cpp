@@ -593,21 +593,18 @@ void ServantStatusListViewItemDrawMain__ResizeCollider(
 {
   UnityEngine_BoxCollider_o *baseCollider; // x0
   struct UISprite_o *baseSprite; // x8
-  UnityEngine_Vector3_o size; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  float mHeight; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   baseCollider = this->fields.baseCollider;
   if ( !baseCollider
-    || (size = UnityEngine_BoxCollider__get_size(baseCollider, 0),
-        v7.fields.x = size.fields.x,
-        v7.fields.z = size.fields.z,
-        (baseSprite = this->fields.baseSprite) == 0)
+    || (size = UnityEngine_BoxCollider__get_size(baseCollider, 0), (baseSprite = this->fields.baseSprite) == 0)
     || (baseCollider = this->fields.baseCollider) == 0 )
   {
     sub_2213CDC(baseCollider, method);
   }
-  v7.fields.y = (float)baseSprite->fields.mHeight;
-  UnityEngine_BoxCollider__set_size(baseCollider, v7, 0);
+  mHeight = (float)baseSprite->fields.mHeight;
+  UnityEngine_BoxCollider__set_size(baseCollider, size, 0);
 }
 
 
@@ -832,17 +829,17 @@ void ServantStatusListViewItemDrawMain__SetItem(
   Il2CppClass **v151; // x0
   const MethodInfo *v152; // x1
   int32_t addParamMaxAdjust1[2]; // [xsp+20h] [xbp-D0h] BYREF
-  __int64 v154; // [xsp+28h] [xbp-C8h] BYREF
+  int32_t secondMaxAdjustHp[2]; // [xsp+28h] [xbp-C8h] BYREF
   int32_t maxAjustHp[2]; // [xsp+30h] [xbp-C0h] BYREF
-  __int64 maxFriendshipRank; // [xsp+38h] [xbp-B8h] BYREF
+  int32_t maxFriendshipRank[2]; // [xsp+38h] [xbp-B8h] BYREF
   __int64 fraction; // [xsp+40h] [xbp-B0h] BYREF
-  __int64 max; // [xsp+48h] [xbp-A8h] BYREF
+  int32_t max[2]; // [xsp+48h] [xbp-A8h] BYREF
   SkillInfo_array *skillInfoList; // [xsp+50h] [xbp-A0h] BYREF
   TreasureDvcInfo_o *tdInfo; // [xsp+58h] [xbp-98h] BYREF
   __int64 barExp; // [xsp+60h] [xbp-90h] BYREF
-  __int64 exp; // [xsp+68h] [xbp-88h] BYREF
+  int32_t exp[2]; // [xsp+68h] [xbp-88h] BYREF
   int32_t addParamMaxAdjust2[2]; // [xsp+70h] [xbp-80h] BYREF
-  __int64 secondMaxAdjustAtk; // [xsp+78h] [xbp-78h] BYREF
+  int32_t secondMaxAdjustAtk[2]; // [xsp+78h] [xbp-78h] BYREF
   int32_t maxAjustAtk[2]; // [xsp+88h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v166; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v167; // 0:x0.16
@@ -870,17 +867,17 @@ void ServantStatusListViewItemDrawMain__SetItem(
   }
   *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
-  secondMaxAdjustAtk = 0;
+  *(_QWORD *)secondMaxAdjustAtk = 0;
   barExp = 0;
-  exp = 0;
+  *(_QWORD *)exp = 0;
   skillInfoList = 0;
   tdInfo = 0;
   fraction = 0;
-  max = 0;
+  *(_QWORD *)max = 0;
   *(_QWORD *)maxAjustHp = 0;
-  maxFriendshipRank = 0;
+  *(_QWORD *)maxFriendshipRank = 0;
   *(_QWORD *)addParamMaxAdjust1 = 0;
-  v154 = 0;
+  *(_QWORD *)secondMaxAdjustHp = 0;
   v7 = sub_2213CCC(ServantStatusListViewItemDrawMain___c__DisplayClass65_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
@@ -898,8 +895,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
     if ( !*v16 )
       goto LABEL_327;
     levelLabel = this->fields.levelLabel;
-    HIDWORD(exp) = ServantStatusListViewItem__get_Level(svtEntity, 0);
-    svtEntity = (ServantStatusListViewItem_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+    exp[1] = ServantStatusListViewItem__get_Level(svtEntity, 0);
+    svtEntity = (ServantStatusListViewItem_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !levelLabel )
       goto LABEL_327;
     UIExtrusionLabel__set_text(levelLabel, (System_String_o *)svtEntity, 0);
@@ -907,8 +904,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
     if ( !*v16 )
       goto LABEL_327;
     maxLevelLabel = this->fields.maxLevelLabel;
-    HIDWORD(exp) = ServantStatusListViewItem__get_MaxLevel(svtEntity, 0);
-    svtEntity = (ServantStatusListViewItem_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+    exp[1] = ServantStatusListViewItem__get_MaxLevel(svtEntity, 0);
+    svtEntity = (ServantStatusListViewItem_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !maxLevelLabel )
       goto LABEL_327;
     UILabel__set_text(maxLevelLabel, (System_String_o *)svtEntity, 0);
@@ -916,8 +913,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
     if ( !*v16 )
       goto LABEL_327;
     costLabel = this->fields.costLabel;
-    HIDWORD(exp) = ServantStatusListViewItem__get_Cost(svtEntity, 0);
-    svtEntity = (ServantStatusListViewItem_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+    exp[1] = ServantStatusListViewItem__get_Cost(svtEntity, 0);
+    svtEntity = (ServantStatusListViewItem_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !costLabel )
       goto LABEL_327;
     UILabel__set_text(costLabel, (System_String_o *)svtEntity, 0);
@@ -1021,8 +1018,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
            svtEntity,
            &maxAjustAtk[1],
            maxAjustAtk,
-           (int32_t *)&secondMaxAdjustAtk + 1,
-           (int32_t *)&secondMaxAdjustAtk,
+           &secondMaxAdjustAtk[1],
+           secondMaxAdjustAtk,
            &addParamMaxAdjust2[1],
            addParamMaxAdjust2,
            0) )
@@ -1038,8 +1035,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
         if ( !*v16 )
           goto LABEL_327;
         v39 = ServantStatusListViewItem__get_AdjustAtk(svtEntity, 0);
-        v38 = secondMaxAdjustAtk;
-        if ( v39 >= (int)secondMaxAdjustAtk && addParamMaxAdjust2[0] )
+        v38 = secondMaxAdjustAtk[0];
+        if ( v39 >= secondMaxAdjustAtk[0] && addParamMaxAdjust2[0] )
           v38 = addParamMaxAdjust2[0];
       }
       svtEntity = *v16;
@@ -1079,8 +1076,8 @@ void ServantStatusListViewItemDrawMain__SetItem(
         if ( !*v16 )
           goto LABEL_327;
         v45 = ServantStatusListViewItem__get_AdjustHp(svtEntity, 0);
-        v44 = HIDWORD(secondMaxAdjustAtk);
-        if ( v45 >= SHIDWORD(secondMaxAdjustAtk) && addParamMaxAdjust2[1] )
+        v44 = secondMaxAdjustAtk[1];
+        if ( v45 >= secondMaxAdjustAtk[1] && addParamMaxAdjust2[1] )
           v44 = addParamMaxAdjust2[1];
       }
       svtEntity = *v16;
@@ -1184,12 +1181,7 @@ void ServantStatusListViewItemDrawMain__SetItem(
     svtEntity = *v16;
     if ( !*v16 )
       goto LABEL_327;
-    ExpInfo = ServantStatusListViewItem__GetExpInfo(
-                svtEntity,
-                (int32_t *)&exp,
-                (int32_t *)&barExp + 1,
-                (float *)&barExp,
-                0);
+    ExpInfo = ServantStatusListViewItem__GetExpInfo(svtEntity, exp, (int32_t *)&barExp + 1, (float *)&barExp, 0);
     svtEntity = (ServantStatusListViewItem_o *)this->fields.expBase;
     if ( ExpInfo )
     {
@@ -1367,8 +1359,8 @@ LABEL_135:
         goto LABEL_327;
       ServantStatusListViewItem__GetFriendshipInfo(
         svtEntity,
-        (int32_t *)&max + 1,
-        (int32_t *)&max,
+        &max[1],
+        max,
         (int32_t *)&fraction + 1,
         (float *)&fraction,
         0);
@@ -1377,8 +1369,8 @@ LABEL_135:
         goto LABEL_327;
       ServantStatusFriendshipGauge__Set(
         (ServantStatusFriendshipGauge_o *)svtEntity,
-        SHIDWORD(max),
-        max,
+        max[1],
+        max[0],
         SHIDWORD(fraction),
         *(float *)&fraction,
         0);
@@ -1591,7 +1583,8 @@ LABEL_327:
     }
     svtEntity = (ServantStatusListViewItem_o *)UserServantEntity__IsHeroine(userSvtEntity, 0);
     v90 = *v16;
-    maxFriendshipRank = -1;
+    maxFriendshipRank[0] = -1;
+    maxFriendshipRank[1] = -1;
     if ( !v90 )
       goto LABEL_327;
     v91 = (char)svtEntity;
@@ -1600,13 +1593,11 @@ LABEL_327:
     {
       svtEntity = (ServantStatusListViewItem_o *)UserServantCollectionEntity__getFriendShipRankInfo(
                                                    (UserServantCollectionEntity_o *)svtEntity,
-                                                   (int32_t *)&maxFriendshipRank + 1,
-                                                   (int32_t *)&maxFriendshipRank,
+                                                   &maxFriendshipRank[1],
+                                                   maxFriendshipRank,
                                                    0);
       v92 = 0;
-      if ( maxFriendshipRank < 0
-        || (maxFriendshipRank & 0x80000000) != 0
-        || HIDWORD(maxFriendshipRank) != (_DWORD)maxFriendshipRank )
+      if ( maxFriendshipRank[1] < 0 || maxFriendshipRank[0] < 0 || maxFriendshipRank[1] != maxFriendshipRank[0] )
       {
 LABEL_172:
         if ( (v91 & 1) == 0 )
@@ -1756,8 +1747,8 @@ LABEL_196:
                                                            svtEntity,
                                                            &maxAjustHp[1],
                                                            maxAjustHp,
-                                                           (int32_t *)&v154 + 1,
-                                                           (int32_t *)&v154,
+                                                           &secondMaxAdjustHp[1],
+                                                           secondMaxAdjustHp,
                                                            &addParamMaxAdjust1[1],
                                                            addParamMaxAdjust1,
                                                            0);
@@ -2044,11 +2035,14 @@ void ServantStatusListViewItemDrawMain__SetSavedTransformButton(
   Il2CppObject *v18; // x25
   struct UICommonButton_o *v19; // x8
   bool v20; // zf
-  System_String_o **v21; // x8
+  float v21; // s0 OVERLAPPED
+  System_String_o **v22; // x8
+  float v23; // s1
+  float v24; // s2
+  float v25; // s3
   UIRangeLabel_o *saveTransformButtonLabel; // x20
-  UIRangeLabel_o *v26; // x21
+  UIRangeLabel_o *v27; // x21
   Il2CppObject *component; // [xsp+8h] [xbp-58h] BYREF
-  UnityEngine_Color_o v28; // 0:kr00_16.16
   UnityEngine_Color_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -2125,28 +2119,28 @@ void ServantStatusListViewItemDrawMain__SetSavedTransformButton(
     v30.fields.g = 1.0;
     v30.fields.b = 1.0;
     v30.fields.a = 1.0;
-    v28 = ColorHelper__ParseColorCode_51166816((System_String_o *)StringLiteral_440/*"#808080"*/, v30, 0);
+    v31 = ColorHelper__ParseColorCode_51166816((System_String_o *)StringLiteral_440/*"#808080"*/, v30, 0);
     v19 = this->fields.saveTransformButton;
     if ( v19 )
     {
-      v19->fields.specifyDisabledColor = v28;
+      v19->fields.specifyDisabledColor = v31;
       saveTransformButton = (UICommonButton_o *)this->fields.saveTransformButtonLabel;
       if ( saveTransformButton )
       {
-        UIRangeLabel__set_color((UIRangeLabel_o *)saveTransformButton, v28, 0);
+        UIRangeLabel__set_color((UIRangeLabel_o *)saveTransformButton, v31, 0);
         v20 = !isCanSave;
-        v31.fields.r = 1.0;
-        v21 = (System_String_o **)&StringLiteral_441/*"#8E4040"*/;
-        v31.fields.g = 1.0;
-        v31.fields.b = 1.0;
-        v31.fields.a = 1.0;
+        v21 = 1.0;
+        v22 = (System_String_o **)&StringLiteral_441/*"#8E4040"*/;
+        v23 = 1.0;
+        v24 = 1.0;
+        v25 = 1.0;
         saveTransformButtonLabel = this->fields.saveTransformButtonLabel;
         if ( !v20 )
-          v21 = (System_String_o **)&StringLiteral_429/*"#000000"*/;
-        v33 = ColorHelper__ParseColorCode_51166816(*v21, v31, 0);
+          v22 = (System_String_o **)&StringLiteral_429/*"#000000"*/;
+        v32 = ColorHelper__ParseColorCode_51166816(*v22, *(UnityEngine_Color_o *)&v21, 0);
         if ( saveTransformButtonLabel )
         {
-          UIRangeLabel__set_effectColor(saveTransformButtonLabel, v33, 0);
+          UIRangeLabel__set_effectColor(saveTransformButtonLabel, v32, 0);
           saveTransformButton = this->fields.saveTransformButton;
           if ( saveTransformButton )
           {
@@ -2159,15 +2153,15 @@ void ServantStatusListViewItemDrawMain__SetSavedTransformButton(
 LABEL_29:
     sub_2213CDC(saveTransformButton, v12);
   }
-  v32.fields.r = 1.0;
-  v32.fields.g = 1.0;
-  v26 = this->fields.saveTransformButtonLabel;
-  v32.fields.b = 1.0;
-  v32.fields.a = 1.0;
-  v34 = ColorHelper__ParseColorCode_51166816(v14, v32, 0);
-  if ( !v26 )
+  v33.fields.r = 1.0;
+  v33.fields.g = 1.0;
+  v27 = this->fields.saveTransformButtonLabel;
+  v33.fields.b = 1.0;
+  v33.fields.a = 1.0;
+  v34 = ColorHelper__ParseColorCode_51166816(v14, v33, 0);
+  if ( !v27 )
     goto LABEL_29;
-  UIRangeLabel__set_effectColor(v26, v34, 0);
+  UIRangeLabel__set_effectColor(v27, v34, 0);
   saveTransformButton = this->fields.saveTransformButton;
   if ( !saveTransformButton )
     goto LABEL_29;
@@ -2218,7 +2212,7 @@ void ServantStatusListViewItemDrawMain___c___AdjustLayoutByInsertGrandEnforcemen
         UnityEngine_Transform_o *x,
         const MethodInfo *method)
 {
-  float v4; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !x
     || (this = (ServantStatusListViewItemDrawMain___c_o *)UnityEngine_Component__get_transform(
@@ -2227,8 +2221,8 @@ void ServantStatusListViewItemDrawMain___c___AdjustLayoutByInsertGrandEnforcemen
   {
     sub_2213CDC(this, x);
   }
-  v4 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y));
-  TransformHelper__SetLocalPositionY(x, v4 + -25.0, 0);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  TransformHelper__SetLocalPositionY(x, localPosition.fields.y + -25.0, 0);
 }
 
 
@@ -2246,9 +2240,12 @@ float ServantStatusListViewItemDrawMain___c___Awake_b__62_1(
         UnityEngine_Transform_o *x,
         const MethodInfo *method)
 {
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+
   if ( !x )
     sub_2213CDC(this, 0);
-  return UnityEngine_Transform__get_localPosition(x, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition(x, 0);
+  return localPosition.fields.y;
 }
 
 

@@ -328,27 +328,28 @@ void ExRoomMissionListViewItemDraw__SetRewardItemIcon(
   struct GiftEntity_array *rewardDisplayGiftEntities; // x8
   int32_t max_length; // w22
   int32_t completedImg_high; // w1
-  bool v10; // cc
-  char v11; // w8
-  UnityEngine_Object_c *v12; // x0
-  const MethodInfo *v13; // x2
-  const MethodInfo *v14; // x3
+  System_Nullable_int__o v10; // x0
+  bool v11; // cc
+  char v12; // w8
+  UnityEngine_Object_c *v13; // x0
+  const MethodInfo *v14; // x2
+  const MethodInfo *v15; // x3
   int32_t AlphaAnimCnt; // w23
   struct GiftEntity_o *RewardEntityForDisplay; // x0
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
-  const MethodInfo *v23; // x2
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
+  const MethodInfo *v24; // x2
   int32_t Count_k__BackingField; // w8
   char ShouldUseSetItemImage_k__BackingField; // w9
-  ExRoomMissionListViewItem_RewardIconDrawInfo_o v26; // [xsp+0h] [xbp-70h] BYREF
-  ExRoomMissionListViewItem_RewardIconDrawInfo_o v27; // [xsp+18h] [xbp-58h] BYREF
-  __int16 v28; // [xsp+2Ch] [xbp-44h]
-  bool v29; // [xsp+2Eh] [xbp-42h]
-  __int64 v30; // [xsp+30h] [xbp-40h]
+  ExRoomMissionListViewItem_RewardIconDrawInfo_o v27; // [xsp+0h] [xbp-70h] BYREF
+  ExRoomMissionListViewItem_RewardIconDrawInfo_o v28; // [xsp+18h] [xbp-58h] BYREF
+  __int16 v29; // [xsp+2Ch] [xbp-44h]
+  bool v30; // [xsp+2Eh] [xbp-42h]
+  __int64 v31; // [xsp+30h] [xbp-40h]
   int32_t ObjectId_k__BackingField; // [xsp+38h] [xbp-38h]
 
   v6 = this;
@@ -361,14 +362,14 @@ void ExRoomMissionListViewItemDraw__SetRewardItemIcon(
     byte_596AF10 = 1;
   }
   ObjectId_k__BackingField = 0;
-  v30 = 0;
-  v28 = 0;
+  v31 = 0;
   v29 = 0;
+  v30 = 0;
   if ( !item )
   {
     max_length = 0;
 LABEL_15:
-    v11 = 1;
+    v12 = 1;
     goto LABEL_16;
   }
   rewardDisplayGiftEntities = item->fields.rewardDisplayGiftEntities;
@@ -382,23 +383,21 @@ LABEL_15:
   if ( !this )
     goto LABEL_15;
   completedImg_high = HIDWORD(this->fields.completedImg);
-  *(_QWORD *)&v27.fields._ItemImageId_k__BackingField = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v27,
-    completedImg_high,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( LOBYTE(v27.fields._ItemImageId_k__BackingField) )
-    v10 = v27.fields._GiftType_k__BackingField < 1;
+  v10 = (System_Nullable_int__o)&v28;
+  *(_QWORD *)&v28.fields._ItemImageId_k__BackingField = 0;
+  System_Nullable_int____ctor(v10, completedImg_high, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( LOBYTE(v28.fields._ItemImageId_k__BackingField) )
+    v11 = v28.fields._GiftType_k__BackingField < 1;
   else
-    v10 = 1;
-  v11 = v10;
+    v11 = 1;
+  v12 = v11;
 LABEL_16:
   if ( !v6 )
     goto LABEL_27;
-  v12 = UnityEngine_Object_TypeInfo;
-  v6->fields.isMultipleReward = v11 & (max_length > 1);
-  if ( !*(&v12->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(v12, item, manager);
+  v13 = UnityEngine_Object_TypeInfo;
+  v6->fields.isMultipleReward = v12 & (max_length > 1);
+  if ( !*(&v13->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v13, item, manager);
   this = (ExRoomMissionListViewItemDraw_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)manager, 0, 0);
   AlphaAnimCnt = 0;
   if ( ((unsigned __int8)this & 1) != 0 && max_length >= 1 )
@@ -414,41 +413,41 @@ LABEL_27:
 LABEL_23:
   if ( item )
   {
-    RewardEntityForDisplay = ExRoomMissionListViewItem__GetRewardEntityForDisplay(item, AlphaAnimCnt, v13);
+    RewardEntityForDisplay = ExRoomMissionListViewItem__GetRewardEntityForDisplay(item, AlphaAnimCnt, v14);
     item->fields.currentDisplayRewardGiftEntity = RewardEntityForDisplay;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&item->fields.currentDisplayRewardGiftEntity,
       (int32_t)RewardEntityForDisplay,
-      v17,
       v18,
       v19,
       v20,
       v21,
-      v22);
-    ExRoomMissionListViewItem__GetRewardIconDrawInfo(&v27, item, AlphaAnimCnt, v23);
-    v30 = *(_QWORD *)&v27.fields._ItemImageId_k__BackingField;
-    Count_k__BackingField = v27.fields._Count_k__BackingField;
-    v28 = *(_WORD *)(&v27.fields._ShouldUseSetItemImage_k__BackingField + 1);
-    v29 = *(&v27.fields._ShouldUseSetItemImage_k__BackingField + 3);
-    ObjectId_k__BackingField = v27.fields._ObjectId_k__BackingField;
-    ShouldUseSetItemImage_k__BackingField = v27.fields._ShouldUseSetItemImage_k__BackingField;
+      v22,
+      v23);
+    ExRoomMissionListViewItem__GetRewardIconDrawInfo(&v28, item, AlphaAnimCnt, v24);
+    v31 = *(_QWORD *)&v28.fields._ItemImageId_k__BackingField;
+    Count_k__BackingField = v28.fields._Count_k__BackingField;
+    v29 = *(_WORD *)(&v28.fields._ShouldUseSetItemImage_k__BackingField + 1);
+    v30 = *(&v28.fields._ShouldUseSetItemImage_k__BackingField + 3);
+    ObjectId_k__BackingField = v28.fields._ObjectId_k__BackingField;
+    ShouldUseSetItemImage_k__BackingField = v28.fields._ShouldUseSetItemImage_k__BackingField;
   }
   else
   {
     ShouldUseSetItemImage_k__BackingField = 1;
     Count_k__BackingField = -1;
     ObjectId_k__BackingField = 0;
-    v30 = 0;
-    v28 = 0;
+    v31 = 0;
     v29 = 0;
+    v30 = 0;
   }
-  v26.fields._ShouldUseSetItemImage_k__BackingField = ShouldUseSetItemImage_k__BackingField;
-  *(_QWORD *)&v26.fields._ItemImageId_k__BackingField = v30;
-  v26.fields._ObjectId_k__BackingField = ObjectId_k__BackingField;
-  v26.fields._Count_k__BackingField = Count_k__BackingField;
-  *(_WORD *)(&v26.fields._ShouldUseSetItemImage_k__BackingField + 1) = v28;
-  *(&v26.fields._ShouldUseSetItemImage_k__BackingField + 3) = v29;
-  ExRoomMissionListViewItemDraw__ApplyRewardItemIcon(v6, &v26, 1, v14);
+  v27.fields._ShouldUseSetItemImage_k__BackingField = ShouldUseSetItemImage_k__BackingField;
+  *(_QWORD *)&v27.fields._ItemImageId_k__BackingField = v31;
+  v27.fields._ObjectId_k__BackingField = ObjectId_k__BackingField;
+  v27.fields._Count_k__BackingField = Count_k__BackingField;
+  *(_WORD *)(&v27.fields._ShouldUseSetItemImage_k__BackingField + 1) = v29;
+  *(&v27.fields._ShouldUseSetItemImage_k__BackingField + 3) = v30;
+  ExRoomMissionListViewItemDraw__ApplyRewardItemIcon(v6, &v27, 1, v15);
 }
 
 

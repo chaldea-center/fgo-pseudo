@@ -473,7 +473,7 @@ System_IAsyncResult_o *StandFigureRenderWaitStatus_EndHandler__BeginInvoke(
   UnityEngine_RenderTexture_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = texture;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

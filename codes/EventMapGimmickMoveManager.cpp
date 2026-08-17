@@ -432,38 +432,45 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
   int32_t valueType; // w8
   UnityEngine_GameObject_o *v32; // x0
   EventRaidEntity_o *v33; // x22
-  __int64 v34; // x8
-  float v35; // s0
-  float v36; // s12
-  __int64 v37; // x2
-  __int64 v38; // x8
-  int v39; // s14
-  float v40; // s9
-  float v41; // s12
-  float v42; // s8
+  float x; // s13
+  float y; // s14
+  float z; // s15
+  __int64 v37; // x8
+  float v38; // s11
+  float v39; // s0
+  float v40; // s12
+  __int64 v41; // x2
+  __int64 v42; // x8
   float v43; // s9
   float v44; // s10
+  float v45; // s13
+  int v46; // s14
+  float v47; // s9
+  float v48; // s12
+  float v49; // s8
+  float v50; // s9
+  float v51; // s10
   int64_t Time; // x0
-  const MethodInfo *v46; // x3
-  float v47; // s0
-  float v48; // s0
-  __int64 v49; // x8
-  UITweener_o *v50; // x20
-  int v51; // w8
-  __int64 v52; // x9
-  __int64 v53; // x21
-  EventDelegate_Callback_c *v54; // x0
-  EventDelegate_Callback_o *v55; // x22
-  EventDelegate_o *v56; // x19
-  __int64 v57; // [xsp+0h] [xbp-A0h] BYREF
-  float v58; // [xsp+8h] [xbp-98h]
-  float z; // [xsp+58h] [xbp-48h]
-  float y; // [xsp+5Ch] [xbp-44h]
-  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:kr14_12.12
-  UnityEngine_Vector3_o v62; // 0:kr20_12.12
-  UnityEngine_Vector3_o v63; // 0:kr34_12.12
-  UnityEngine_Vector3_o v64; // 0:kr40_12.12
-  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v53; // x3
+  float v54; // s0
+  float v55; // s0
+  __int64 v56; // x8
+  UITweener_o *v57; // x20
+  int v58; // w8
+  __int64 v59; // x9
+  __int64 v60; // x21
+  EventDelegate_Callback_c *v61; // x0
+  EventDelegate_Callback_o *v62; // x22
+  EventDelegate_o *v63; // x19
+  unsigned __int64 v64; // [xsp+0h] [xbp-A0h] BYREF
+  float v65; // [xsp+8h] [xbp-98h]
+  float v66; // [xsp+58h] [xbp-48h]
+  float v67; // [xsp+5Ch] [xbp-44h]
+  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596A4B9 & 1) == 0 )
   {
@@ -482,8 +489,8 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
     sub_2213A60(&EventMapGimmickMoveManager___c__DisplayClass7_0_TypeInfo);
     byte_596A4B9 = 1;
   }
-  v58 = 0.0;
-  v57 = 0;
+  v65 = 0.0;
+  v64 = 0;
   v4 = sub_2213CCC(EventMapGimmickMoveManager___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
@@ -565,104 +572,104 @@ void EventMapGimmickMoveManager__UpdateMapGimmickPosition(
             Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
             if ( !Master_object )
               goto LABEL_73;
-            v62 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v26, 0);
-            v34 = *(_QWORD *)v13;
-            z = v62.fields.z;
-            y = v62.fields.y;
-            if ( !v34 )
+            x = PointAsWorldFlatten.fields.x;
+            y = PointAsWorldFlatten.fields.y;
+            z = PointAsWorldFlatten.fields.z;
+            v70 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v26, 0);
+            v37 = *(_QWORD *)v13;
+            v66 = v70.fields.z;
+            v67 = v70.fields.y;
+            if ( !v37 )
               goto LABEL_73;
-            v35 = EventMapGimmickMoveManager__LimitMapGimmickPathRate(*(_DWORD *)(v34 + 16), 1.0, v6);
+            v38 = v70.fields.x;
+            v39 = EventMapGimmickMoveManager__LimitMapGimmickPathRate(*(_DWORD *)(v37 + 16), 1.0, v6);
             if ( !*(_QWORD *)v13 )
               goto LABEL_73;
             Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
             if ( !Master_object )
               goto LABEL_73;
-            v36 = v35;
-            v63 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v35, 0);
-            *(float *)(v4 + 24) = v63.fields.x;
-            v38 = *(_QWORD *)(v4 + 16);
-            *(float *)(v4 + 28) = v63.fields.y;
-            *(float *)(v4 + 32) = v63.fields.z;
-            if ( !v38 )
+            v40 = v39;
+            v71 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v39, 0);
+            *(float *)(v4 + 24) = v71.fields.x;
+            v42 = *(_QWORD *)(v4 + 16);
+            *(float *)(v4 + 28) = v71.fields.y;
+            *(float *)(v4 + 32) = v71.fields.z;
+            if ( !v42 )
               goto LABEL_73;
-            v39 = *(_DWORD *)(v38 + 40);
-            *(float *)&v57 = v63.fields.x - PointAsWorldFlatten.fields.x;
-            *((float *)&v57 + 1) = v63.fields.y - PointAsWorldFlatten.fields.y;
-            v58 = v63.fields.z - PointAsWorldFlatten.fields.z;
+            v43 = v71.fields.x - x;
+            v44 = v71.fields.y - y;
+            v45 = v71.fields.z - z;
+            v46 = *(_DWORD *)(v42 + 40);
+            v64 = __PAIR64__(LODWORD(v44), LODWORD(v43));
+            v65 = v71.fields.z - z;
             if ( !byte_5969AE2 )
             {
               sub_2213A60(&System_Math_TypeInfo);
               byte_5969AE2 = 1;
             }
             if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v37);
+              j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v6, v41);
             Master_object = BalanceConfig_TypeInfo;
-            v40 = sqrtf(
-                    (float)((float)((float)(v63.fields.x - PointAsWorldFlatten.fields.x)
-                                  * (float)(v63.fields.x - PointAsWorldFlatten.fields.x))
-                          + (float)((float)(v63.fields.y - PointAsWorldFlatten.fields.y)
-                                  * (float)(v63.fields.y - PointAsWorldFlatten.fields.y)))
-                  + (float)((float)(v63.fields.z - PointAsWorldFlatten.fields.z)
-                          * (float)(v63.fields.z - PointAsWorldFlatten.fields.z)));
+            v47 = sqrtf((float)((float)(v43 * v43) + (float)(v44 * v44)) + (float)(v45 * v45));
             if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
             {
-              j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v6, v37);
+              j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v6, v41);
               Master_object = BalanceConfig_TypeInfo;
             }
-            if ( v40 < 0.001 )
+            if ( v47 < 0.001 )
             {
               if ( *(_QWORD *)v13 )
               {
-                v65 = *(UnityEngine_Vector3_o *)(v4 + 24);
+                v68 = *(UnityEngine_Vector3_o *)(v4 + 24);
                 v32 = *(UnityEngine_GameObject_o **)(*(_QWORD *)v13 + 24LL);
                 goto LABEL_56;
               }
 LABEL_73:
               sub_2213CDC(Master_object, v6);
             }
-            v41 = (float)(v36 - v26) * (float)v39;
-            v42 = (float)*(int *)(*((_QWORD *)Master_object + 23) + 284LL);
-            if ( v41 <= v42 )
+            v48 = (float)(v40 - v26) * (float)v46;
+            v49 = (float)*(int *)(*((_QWORD *)Master_object + 23) + 284LL);
+            if ( v48 <= v49 )
             {
-              v44 = z;
-              v43 = y;
-              v49 = *(_QWORD *)v13;
+              v51 = v66;
+              v50 = v67;
+              v56 = *(_QWORD *)v13;
             }
             else
             {
-              v44 = z;
-              v43 = y;
+              v51 = v66;
+              v50 = v67;
               if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v6, v37);
+                j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v6, v41);
               Time = NetworkManager__getTime(0);
-              v47 = EventMapGimmickMoveManager__CalcEventRaidMoveRateFromTime(Time + (__int64)v42, v33, v24, v46);
+              v54 = EventMapGimmickMoveManager__CalcEventRaidMoveRateFromTime(Time + (__int64)v49, v33, v24, v53);
               if ( !*(_QWORD *)v13 )
                 goto LABEL_73;
               Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
               if ( !Master_object )
                 goto LABEL_73;
-              v64 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v47, 0);
-              *(UnityEngine_Vector3_o *)(v4 + 24) = v64;
-              *(float *)&v57 = v64.fields.x - v62.fields.x;
-              *((float *)&v57 + 1) = v64.fields.y - v43;
-              v58 = v64.fields.z - v44;
-              v48 = sub_244F1C8(&v57, 0);
-              v49 = *(_QWORD *)(v4 + 16);
-              if ( v48 < 0.001 )
+              v72 = Custom2dSplineMesh__GetPointAsWorldFlatten((Custom2dSplineMesh_o *)Master_object, v54, 0);
+              *(UnityEngine_Vector3_o *)(v4 + 24) = v72;
+              *(float *)&v64 = v72.fields.x - v38;
+              *((float *)&v64 + 1) = v72.fields.y - v50;
+              v65 = v72.fields.z - v51;
+              v55 = sub_244F1C8(&v64, 0);
+              v56 = *(_QWORD *)(v4 + 16);
+              if ( v55 < 0.001 )
               {
-                if ( !v49 )
+                if ( !v56 )
                   goto LABEL_73;
                 GameObjectExtensions__SetPosition(
-                  *(UnityEngine_GameObject_o **)(v49 + 24),
+                  *(UnityEngine_GameObject_o **)(v56 + 24),
                   *(UnityEngine_Vector3_o *)(v4 + 24),
                   0);
                 return;
               }
-              v41 = v42;
+              v48 = v49;
             }
-            if ( !v49 )
+            if ( !v56 )
               goto LABEL_73;
-            Master_object = *(void **)(v49 + 24);
+            Master_object = *(void **)(v56 + 24);
             if ( !Master_object )
               goto LABEL_73;
             Master_object = UnityEngine_GameObject__AddComponent_object_(
@@ -670,31 +677,31 @@ LABEL_73:
                               (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
             if ( !Master_object )
               goto LABEL_73;
-            *((_DWORD *)Master_object + 32) = LODWORD(v62.fields.x);
-            *((float *)Master_object + 33) = v43;
+            *((float *)Master_object + 32) = v38;
+            *((float *)Master_object + 33) = v50;
             *((_BYTE *)Master_object + 152) = 1;
-            v50 = (UITweener_o *)Master_object;
-            *((float *)Master_object + 34) = v44;
-            v51 = *(_DWORD *)(v4 + 32);
-            v52 = *(_QWORD *)(v4 + 24);
-            *((float *)Master_object + 14) = v41;
-            v53 = *((_QWORD *)Master_object + 9);
-            *((_DWORD *)Master_object + 37) = v51;
-            *(_QWORD *)((char *)Master_object + 140) = v52;
-            v54 = EventDelegate_Callback_TypeInfo;
-            v50->fields.method = 0;
-            v55 = (EventDelegate_Callback_o *)sub_2213CCC(v54);
+            v57 = (UITweener_o *)Master_object;
+            *((float *)Master_object + 34) = v51;
+            v58 = *(_DWORD *)(v4 + 32);
+            v59 = *(_QWORD *)(v4 + 24);
+            *((float *)Master_object + 14) = v48;
+            v60 = *((_QWORD *)Master_object + 9);
+            *((_DWORD *)Master_object + 37) = v58;
+            *(_QWORD *)((char *)Master_object + 140) = v59;
+            v61 = EventDelegate_Callback_TypeInfo;
+            v57->fields.method = 0;
+            v62 = (EventDelegate_Callback_o *)sub_2213CCC(v61);
             EventDelegate_Callback___ctor(
-              v55,
+              v62,
               (Il2CppObject *)v4,
               Method_EventMapGimmickMoveManager___c__DisplayClass7_0__UpdateMapGimmickPosition_b__0__,
               0);
-            v56 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
-            EventDelegate___ctor_56337280(v56, v55, 0);
-            if ( !v53 )
+            v63 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+            EventDelegate___ctor_56337280(v63, v62, 0);
+            if ( !v60 )
               goto LABEL_73;
-            sub_1FFEDA8(v53, v56, Method_System_Collections_Generic_List_EventDelegate__Add__);
-            UITweener__PlayForward(v50, 0);
+            sub_1FFEDA8(v60, v63, Method_System_Collections_Generic_List_EventDelegate__Add__);
+            UITweener__PlayForward(v57, 0);
           }
         }
         else if ( valueType == 2 )
@@ -716,7 +723,7 @@ LABEL_73:
                     Master_object = *(void **)(*(_QWORD *)v13 + 32LL);
                     if ( Master_object )
                     {
-                      v65 = Custom2dSplineMesh__GetPointAsWorldFlatten(
+                      v68 = Custom2dSplineMesh__GetPointAsWorldFlatten(
                               (Custom2dSplineMesh_o *)Master_object,
                               *((float *)Master_object + 17),
                               0);
@@ -724,7 +731,7 @@ LABEL_73:
                       {
                         v32 = *(UnityEngine_GameObject_o **)(*(_QWORD *)v13 + 24LL);
 LABEL_56:
-                        GameObjectExtensions__SetPosition(v32, v65, 0);
+                        GameObjectExtensions__SetPosition(v32, v68, 0);
                         return;
                       }
                     }

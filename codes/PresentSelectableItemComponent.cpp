@@ -96,10 +96,13 @@ int32_t PresentSelectableItemComponent__setItemInfo(
   Il2CppObject *v40; // x0
   UILabel_o *spendNumLb; // x22
   int32_t v42; // w8
-  int32_t v45; // [xsp+4h] [xbp-4Ch] BYREF
+  float v43; // s1 OVERLAPPED
+  float v44; // s3
+  float v45; // s0
+  float v46; // s2
+  int32_t v48; // [xsp+4h] [xbp-4Ch] BYREF
   int32_t giftNum; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v47; // [xsp+Ch] [xbp-44h] BYREF
-  UnityEngine_Color_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v50; // [xsp+Ch] [xbp-44h] BYREF
 
   if ( (byte_596F462 & 1) == 0 )
   {
@@ -116,7 +119,7 @@ int32_t PresentSelectableItemComponent__setItemInfo(
     sub_2213A60(&StringLiteral_1/*""*/);
     byte_596F462 = 1;
   }
-  v47 = 0;
+  v50 = 0;
   this->fields.itemSelectEnt = data;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.itemSelectEnt,
@@ -275,15 +278,15 @@ int32_t PresentSelectableItemComponent__setItemInfo(
                           v38 = qword_5984348;
                           currentNumLb = this->fields.currentNumLb;
                           this->fields.itemHold = v36;
-                          v47 = requireNum;
-                          v45 = v36;
-                          v40 = (Il2CppObject *)j_il2cpp_value_box_0(v38, &v45);
+                          v50 = requireNum;
+                          v48 = v36;
+                          v40 = (Il2CppObject *)j_il2cpp_value_box_0(v38, &v48);
                           maskImg = System_String__Format((System_String_o *)StringLiteral_26474/*"{0:N0}"*/, v40, 0);
                           if ( currentNumLb )
                           {
                             UILabel__set_text(currentNumLb, (System_String_o *)maskImg, 0);
                             spendNumLb = this->fields.spendNumLb;
-                            maskImg = System_Int32__ToString((int32_t)&v47, 0);
+                            maskImg = System_Int32__ToString((int32_t)&v50, 0);
                             if ( spendNumLb )
                             {
                               UILabel__set_text(spendNumLb, (System_String_o *)maskImg, 0);
@@ -291,18 +294,18 @@ int32_t PresentSelectableItemComponent__setItemInfo(
                               if ( maskImg )
                               {
                                 UILabel__set_text((UILabel_o *)maskImg, data->fields.detail, 0);
-                                v42 = v47;
+                                v42 = v50;
                                 maskImg = this->fields.spendNumLb;
-                                this->fields.isEnableSelect = v47 <= ticketsHave;
+                                this->fields.isEnableSelect = v50 <= ticketsHave;
                                 if ( maskImg )
                                 {
-                                  v48.fields.g = 1.0;
-                                  v48.fields.a = 1.0;
+                                  v43 = 1.0;
+                                  v44 = 1.0;
                                   if ( v42 > ticketsHave )
-                                    v48.fields.g = 0.0;
-                                  v48.fields.r = 1.0;
-                                  v48.fields.b = v48.fields.g;
-                                  UIWidget__set_color((UIWidget_o *)maskImg, v48, 0);
+                                    v43 = 0.0;
+                                  v45 = 1.0;
+                                  v46 = v43;
+                                  UIWidget__set_color((UIWidget_o *)maskImg, *(UnityEngine_Color_o *)(&v43 - 1), 0);
                                   maskImg = this->fields.maskImg;
                                   if ( maskImg )
                                   {

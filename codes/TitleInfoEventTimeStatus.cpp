@@ -721,12 +721,12 @@ void TitleInfoEventTimeStatus__Setup(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, eventDetailEntity, v32);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v46 = *(_QWORD *)(*((_QWORD *)this + 23) + 360LL);
+  v46 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mAlphaFrameID;
   if ( !v46 )
     goto LABEL_83;
   if ( *(_DWORD *)(v46 + 16) == eventDetailEntity->fields.eventId )
     goto LABEL_70;
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[1].fields.dayCountTween) )
     j_il2cpp_runtime_class_init_0(this, eventDetailEntity, v32);
   if ( !byte_596F129 )
   {
@@ -739,7 +739,7 @@ void TitleInfoEventTimeStatus__Setup(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, eventDetailEntity, v32);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v47 = *(_QWORD *)(*((_QWORD *)this + 23) + 360LL);
+  v47 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mAlphaFrameID;
   if ( !v47 )
     goto LABEL_83;
   v48 = (unsigned __int8)byte_596F129;
@@ -750,18 +750,18 @@ void TitleInfoEventTimeStatus__Setup(
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
     byte_596F129 = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[1].fields.dayCountTween) )
   {
     j_il2cpp_runtime_class_init_0(this, eventDetailEntity, v32);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v49 = *(_QWORD *)(*((_QWORD *)this + 23) + 360LL);
+  v49 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mAlphaFrameID;
   if ( !v49 )
 LABEL_83:
     sub_2213CDC(this, eventDetailEntity);
   *(_DWORD *)(v49 + 20) = NowTimeState;
 LABEL_70:
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[1].fields.dayCountTween) )
     j_il2cpp_runtime_class_init_0(this, eventDetailEntity, v32);
   if ( !byte_596F129 )
   {
@@ -774,7 +774,7 @@ LABEL_70:
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, eventDetailEntity, v32);
     this = (TitleInfoEventTimeStatus_o *)TerminalPramsManager_TypeInfo;
   }
-  v50 = *(_QWORD *)(*((_QWORD *)this + 23) + 360LL);
+  v50 = *(_QWORD *)&this[1].fields.dayCountLabel->fields.mAlphaFrameID;
   if ( !v50 )
     goto LABEL_83;
   this = (TitleInfoEventTimeStatus_o *)v4->fields.iconList;

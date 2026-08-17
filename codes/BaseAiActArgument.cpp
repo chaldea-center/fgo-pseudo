@@ -47,6 +47,7 @@ BattleLogicTask_o *BaseAiActArgument__MakeNoMotionTask(
 {
   BaseAiActArgument_o *v5; // x20
   int32_t v6; // w21
+  BattleLogicTask_o *result; // x0
 
   if ( !logicAi
     || (v5 = this,
@@ -66,8 +67,9 @@ BattleLogicTask_o *BaseAiActArgument__MakeNoMotionTask(
     v5->fields._AiActEnt_k__BackingField,
     v5->fields._AiEnt_k__BackingField,
     task->klass->vtable._12_Init.method);
+  result = (BattleLogicTask_o *)task;
   task->fields.isSkipStep = 1;
-  return (BattleLogicTask_o *)task;
+  return result;
 }
 
 

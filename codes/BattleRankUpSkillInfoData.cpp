@@ -113,7 +113,7 @@ int32_t BattleRankUpSkillInfoData__getCutInId(BattleRankUpSkillInfoData_o *this,
   Current = BattleRankUpSkillInfoData__get_Current(this, v3);
   if ( !Current )
     sub_2213CDC(0, v5);
-  return ((int32_t (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))Current->klass->vtable._9_getCutInId.methodPtr)(
+  return ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))Current->klass->vtable._9_getCutInId.methodPtr)(
            Current,
            Current->klass->vtable._9_getCutInId.method);
 }
@@ -249,7 +249,7 @@ int32_t BattleRankUpSkillInfoData__get_skillId(BattleRankUpSkillInfoData_o *this
   Current = BattleRankUpSkillInfoData__get_Current(this, v3);
   if ( !Current )
     sub_2213CDC(0, v5);
-  return ((int32_t (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))Current->klass->vtable._5_get_skillId.methodPtr)(
+  return ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))Current->klass->vtable._5_get_skillId.methodPtr)(
            Current,
            Current->klass->vtable._5_get_skillId.method);
 }

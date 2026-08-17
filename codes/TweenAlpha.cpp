@@ -205,6 +205,7 @@ float TweenAlpha__get_value(TweenAlpha_o *this, const MethodInfo *method)
   UnityEngine_Object_o *mSr; // x20
   UnityEngine_Object_o *mMat; // x20
   bool v9; // w0
+  UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59751E3 & 1) == 0 )
   {
@@ -220,9 +221,12 @@ float TweenAlpha__get_value(TweenAlpha_o *this, const MethodInfo *method)
   {
     v5 = (UnityEngine_SpriteRenderer_o *)this->fields.mRect;
     if ( v5 )
-      return ((float (__fastcall *)(UnityEngine_SpriteRenderer_o *, _QWORD))v5->klass[1]._1.this_arg.data)(
-               v5,
-               *(_QWORD *)&v5->klass[1]._1.this_arg.bits);
+    {
+      ((void (__fastcall *)(UnityEngine_SpriteRenderer_o *, _QWORD))v5->klass[1]._1.this_arg.data)(
+        v5,
+        *(_QWORD *)&v5->klass[1]._1.this_arg.bits);
+      return result;
+    }
 LABEL_22:
     sub_2213CDC(v5, v4);
   }
@@ -234,7 +238,8 @@ LABEL_22:
     v5 = this->fields.mSr;
     if ( !v5 )
       goto LABEL_22;
-    return UnityEngine_SpriteRenderer__get_color(v5, 0).fields.a;
+    color = UnityEngine_SpriteRenderer__get_color(v5, 0);
+    return color.fields.a;
   }
   mMat = (UnityEngine_Object_o *)this->fields.mMat;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -246,7 +251,8 @@ LABEL_22:
     v5 = (UnityEngine_SpriteRenderer_o *)this->fields.mMat;
     if ( !v5 )
       goto LABEL_22;
-    return UnityEngine_Material__get_color((UnityEngine_Material_o *)v5, 0).fields.a;
+    color = UnityEngine_Material__get_color((UnityEngine_Material_o *)v5, 0);
+    return color.fields.a;
   }
   return result;
 }
@@ -265,11 +271,11 @@ void TweenAlpha__set_value(TweenAlpha_o *this, float value, const MethodInfo *me
   __int64 v6; // x1
   UnityEngine_SpriteRenderer_o *v7; // x0
   UnityEngine_Object_o *mSr; // x20
+  float v9; // s3
   UnityEngine_Object_o *mMat; // x20
-  UnityEngine_Color_o color; // 0:kr00_16.16
-  UnityEngine_Color_o v15; // 0:kr10_16.16
-  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v11; // s3
+  UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59751E4 & 1) == 0 )
   {
@@ -304,14 +310,11 @@ LABEL_23:
     if ( !v7 )
       goto LABEL_23;
     color = UnityEngine_SpriteRenderer__get_color(v7, 0);
-    v16.fields.r = color.fields.r;
-    v16.fields.g = color.fields.g;
-    v16.fields.b = color.fields.b;
     v7 = this->fields.mSr;
     if ( !v7 )
       goto LABEL_23;
-    v16.fields.a = value;
-    UnityEngine_SpriteRenderer__set_color(v7, v16, 0);
+    v9 = value;
+    UnityEngine_SpriteRenderer__set_color(v7, color, 0);
   }
   else
   {
@@ -323,15 +326,12 @@ LABEL_23:
       v7 = (UnityEngine_SpriteRenderer_o *)this->fields.mMat;
       if ( !v7 )
         goto LABEL_23;
-      v15 = UnityEngine_Material__get_color((UnityEngine_Material_o *)v7, 0);
-      v17.fields.r = v15.fields.r;
-      v17.fields.g = v15.fields.g;
-      v17.fields.b = v15.fields.b;
+      v13 = UnityEngine_Material__get_color((UnityEngine_Material_o *)v7, 0);
       v7 = (UnityEngine_SpriteRenderer_o *)this->fields.mMat;
       if ( !v7 )
         goto LABEL_23;
-      v17.fields.a = value;
-      UnityEngine_Material__set_color((UnityEngine_Material_o *)v7, v17, 0);
+      v11 = value;
+      UnityEngine_Material__set_color((UnityEngine_Material_o *)v7, v13, 0);
     }
   }
 }

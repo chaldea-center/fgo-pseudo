@@ -15025,15 +15025,16 @@ Il2CppObject *DataManager__GetMasterData_object_(DataManager_o *this, const Meth
   long double v12; // q0
   Il2CppObject *result; // x0
   __int64 v14; // x2
-  System_RuntimeTypeHandle_o v15; // x19
-  Il2CppObject *v16; // x19
-  Il2CppObject *v17; // x21
-  Il2CppObject *v18; // x0
-  __int64 v19; // x1
-  Il2CppObject *v20; // x19
-  System_Enum_o v21; // [xsp+8h] [xbp-48h] BYREF
-  int v22; // [xsp+18h] [xbp-38h]
-  int v23; // [xsp+24h] [xbp-2Ch] BYREF
+  intptr_t _2_TMaster; // x19
+  System_RuntimeTypeHandle_o v16; // x0
+  Il2CppObject *v17; // x19
+  Il2CppObject *v18; // x21
+  Il2CppObject *v19; // x0
+  __int64 v20; // x1
+  Il2CppObject *v21; // x19
+  System_Enum_o v22; // [xsp+8h] [xbp-48h] BYREF
+  int v23; // [xsp+18h] [xbp-38h]
+  int v24; // [xsp+24h] [xbp-2Ch] BYREF
   Il2CppObject *value; // [xsp+28h] [xbp-28h] BYREF
 
   rgctx_data = method->rgctx_data;
@@ -15084,26 +15085,27 @@ Il2CppObject *DataManager__GetMasterData_object_(DataManager_o *this, const Meth
       return result;
     sub_221405C(this, _1_TMaster, v14);
   }
-  v15.fields.value = (intptr_t)_1_TMaster->rgctx_data->_2_TMaster;
+  _2_TMaster = (intptr_t)_1_TMaster->rgctx_data->_2_TMaster;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v11);
-  rgctxDataDummy = System_Type__GetTypeFromHandle(v15, 0);
+  v16.fields.value = _2_TMaster;
+  rgctxDataDummy = System_Type__GetTypeFromHandle(v16, 0);
   if ( !rgctxDataDummy )
 LABEL_23:
     sub_2213CDC(rgctxDataDummy, method);
-  v16 = (Il2CppObject *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))rgctxDataDummy->klass->vtable._3_ToString.methodPtr)(
+  v17 = (Il2CppObject *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))rgctxDataDummy->klass->vtable._3_ToString.methodPtr)(
                           rgctxDataDummy,
                           rgctxDataDummy->klass->vtable._3_ToString.method);
+  v24 = (int)this;
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v24);
   v23 = (int)this;
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v23);
-  v22 = (int)this;
-  v21.klass = (System_Enum_c *)DataNameKind_Kind_TypeInfo;
-  v21.monitor = (void *)-1LL;
-  v18 = (Il2CppObject *)System_Enum__ToString(&v21, 0);
-  v20 = (Il2CppObject *)System_String__Format_75697948((System_String_o *)StringLiteral_22561/*"master[{0}] is null[{1}:{2}]"*/, v16, v17, v18, 0);
+  v22.klass = (System_Enum_c *)DataNameKind_Kind_TypeInfo;
+  v22.monitor = (void *)-1LL;
+  v19 = (Il2CppObject *)System_Enum__ToString(&v22, 0);
+  v21 = (Il2CppObject *)System_String__Format_75697948((System_String_o *)StringLiteral_22561/*"master[{0}] is null[{1}:{2}]"*/, v17, v18, v19, 0);
   if ( !*(&UnityEngine_Debug_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v19);
-  UnityEngine_Debug__LogError(v20, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo, v20);
+  UnityEngine_Debug__LogError(v21, 0);
   return 0;
 }
 
@@ -17799,6 +17801,7 @@ System_Collections_IEnumerator_o *DataManager__updateMasterData(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_59702CD & 1) == 0 )
   {
@@ -17811,8 +17814,9 @@ System_Collections_IEnumerator_o *DataManager__updateMasterData(
     sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_BYTE *)(v5 + 48) = isUseTips;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -18301,7 +18305,7 @@ int32_t DataManager___c__DisplayClass57_0___StartMasterLoadThread_b__0(
   struct DataManager_o *_4__this; // x8
   struct DataManager_o *v8; // x8
   System_Collections_Generic_List_object__o *saveDataMapList; // x8
-  __int64 v10; // x20
+  void *monitor; // x20
 
   v6 = this;
   if ( (byte_59702E3 & 1) == 0 )
@@ -18326,7 +18330,7 @@ int32_t DataManager___c__DisplayClass57_0___StartMasterLoadThread_b__0(
   v8 = v6->fields.__4__this;
   if ( !v8
     || (saveDataMapList = (System_Collections_Generic_List_object__o *)v8->fields.saveDataMapList) == 0
-    || (v10 = *((_QWORD *)this + 5),
+    || (monitor = this[1].monitor,
         (this = (DataManager___c__DisplayClass57_0_o *)System_Collections_Generic_List_object___get_Item(
                                                          saveDataMapList,
                                                          a,
@@ -18338,7 +18342,7 @@ LABEL_12:
   if ( ((__int64)this->fields.loadedIndices & 0xFFFFFFFE) == 0 )
 LABEL_13:
     sub_2213CE4(this);
-  return v10 - *((_DWORD *)this + 10);
+  return (_DWORD)monitor - LODWORD(this[1].monitor);
 }
 
 
@@ -18588,7 +18592,7 @@ LABEL_36:
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
     this = (DataManager__readMasterData_d__48_o *)DataManager_TypeInfo;
   }
-  *(_DWORD *)(*((_QWORD *)this + 23) + 60LL) = 0;
+  HIDWORD(this[4].fields.__2__current[3].monitor) = 0;
   if ( !_4__this )
 LABEL_100:
     sub_2213CDC(this, method);
@@ -18959,7 +18963,7 @@ LABEL_21:
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
     this = (DataManager__readMasterVersion_d__47_o *)DataManager_TypeInfo;
   }
-  *(_DWORD *)(*((_QWORD *)this + 23) + 56LL) = 0;
+  LODWORD(this[4].fields.__2__current[3].monitor) = 0;
   if ( !_4__this )
     goto LABEL_21;
   if ( DataManager__CheckWaitforFrame(_4__this, 0) )
@@ -19525,7 +19529,7 @@ bool DataManager__updateMasterData_d__50__MoveNext(
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method);
         this = (DataManager__updateMasterData_d__50_o *)DataManager_TypeInfo;
       }
-      *(_DWORD *)(*((_QWORD *)this + 23) + 64LL) = 0;
+      LODWORD(this[1].fields._dataMapDict_5__6->fields._values) = 0;
       if ( !_4__this )
         goto LABEL_257;
       datalist = _4__this->fields.datalist;
@@ -19544,12 +19548,12 @@ bool DataManager__updateMasterData_d__50__MoveNext(
         System_IO_Directory__CreateDirectory(CachePath, 0);
       this = (DataManager__updateMasterData_d__50_o *)DataManager_TypeInfo;
       v8->fields._isAdd_5__4 = 0;
-      if ( !*((_DWORD *)this + 57) )
+      if ( !HIDWORD(this[2].klass) )
       {
         j_il2cpp_runtime_class_init_0(this, method);
         this = (DataManager__updateMasterData_d__50_o *)DataManager_TypeInfo;
       }
-      if ( !*(_QWORD *)(*((_QWORD *)this + 23) + 32LL) )
+      if ( !*(_QWORD *)&this[1].fields._dataMapDict_5__6->fields._count )
         goto LABEL_134;
       v8->fields._dataMapDict_5__6 = 0;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8->fields._dataMapDict_5__6, 0, v43, v44, v45, v46, v47, v48);
@@ -19599,8 +19603,9 @@ bool DataManager__updateMasterData_d__50__MoveNext(
       v8->fields.__2__current = (Il2CppObject *)v83;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       sub_2213A04(p__2__current, (int32_t)v83, v85, v86, v87, v88, v89, v90);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     case 1:
       cryptBytes_5__8 = v8->fields._cryptBytes_5__8;
       v8->fields.__1__state = -1;
@@ -20840,8 +20845,9 @@ LABEL_57:
         this->fields.__2__current = (Il2CppObject *)v46;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v46, v48, v49, v50, v51, v52, v53);
+        result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
-        return 1;
+        return result;
       }
     }
     cryptString_5__3 = this->fields._cryptString_5__3;

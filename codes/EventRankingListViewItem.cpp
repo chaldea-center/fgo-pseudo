@@ -112,12 +112,14 @@ bool EventRankingListViewItem__SetSortValue(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
+  bool result; // w0
   int64_t ranking; // x9
 
+  result = 1;
   ranking = this->fields.ranking;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue1 = ranking;
-  return 1;
+  return result;
 }
 
 

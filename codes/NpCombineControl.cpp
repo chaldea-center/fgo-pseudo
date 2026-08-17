@@ -2109,7 +2109,7 @@ LABEL_35:
 
 void NpCombineControl__ResetScrollView(NpCombineControl_o *this, const MethodInfo *method)
 {
-  __int64 scrollView; // x0
+  void *scrollView; // x0
   UnityEngine_Transform_o *v4; // x20
   UnityEngine_Vector2_o v5; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
@@ -2119,49 +2119,49 @@ void NpCombineControl__ResetScrollView(NpCombineControl_o *this, const MethodInf
     sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIPanel___);
     byte_5974B8D = 1;
   }
-  scrollView = (__int64)this->fields.scrollView;
+  scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_15;
   UIScrollView__ResetPosition((UIScrollView_o *)scrollView, 0);
-  scrollView = (__int64)this->fields.wrapContent;
+  scrollView = this->fields.wrapContent;
   if ( !scrollView )
     goto LABEL_15;
   UIWrapContent__SortAlphabetically((UIWrapContent_o *)scrollView, 0);
-  scrollView = (__int64)this->fields.wrapContent;
+  scrollView = this->fields.wrapContent;
   if ( !scrollView )
     goto LABEL_15;
   UIWrapContent__resetScroll((UIWrapContent_o *)scrollView, 0);
-  scrollView = (__int64)this->fields.scrollView;
+  scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_15;
-  scrollView = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0);
+  scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0);
   v4 = (UnityEngine_Transform_o *)scrollView;
   if ( !byte_5969AE0 )
   {
-    scrollView = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    scrollView = (void *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v4 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v4, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  scrollView = (__int64)this->fields.scrollView;
+  scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_15;
-  scrollView = (__int64)UnityEngine_Component__GetComponent_object_(
-                          (UnityEngine_Component_o *)scrollView,
-                          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+  scrollView = UnityEngine_Component__GetComponent_object_(
+                 (UnityEngine_Component_o *)scrollView,
+                 (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !scrollView )
     goto LABEL_15;
   v5.fields.x = 0.0;
-  v5.fields.y = *(float *)(scrollView + 336);
+  v5.fields.y = *((float *)scrollView + 84);
   UIPanel__set_clipOffset((UIPanel_o *)scrollView, v5, 0);
-  scrollView = (__int64)this->fields.scrollView;
+  scrollView = this->fields.scrollView;
   if ( !scrollView
     || (v6.fields.x = 0.0,
         v6.fields.y = 0.0,
         v6.fields.z = 0.0,
         UIScrollView__set_currentMomentum((UIScrollView_o *)scrollView, v6, 0),
-        (scrollView = (__int64)this->fields.scrollView) == 0) )
+        (scrollView = this->fields.scrollView) == 0) )
   {
 LABEL_15:
     sub_2213CDC(scrollView, method);
@@ -3015,7 +3015,10 @@ LABEL_129:
 void NpCombineControl__SetEnableCombineBtn(NpCombineControl_o *this, bool isCombine, const MethodInfo *method)
 {
   UIWidget_o *combineBtn; // x0
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   combineBtn = (UIWidget_o *)this->fields.combineBtn;
   if ( !combineBtn
@@ -3027,13 +3030,13 @@ void NpCombineControl__SetEnableCombineBtn(NpCombineControl_o *this, bool isComb
   {
     sub_2213CDC(combineBtn, isCombine);
   }
-  v7.fields.r = 0.5;
-  v7.fields.a = 1.0;
+  v6 = 0.5;
+  v7 = 1.0;
   if ( isCombine )
-    v7.fields.r = 1.0;
-  v7.fields.g = v7.fields.r;
-  v7.fields.b = v7.fields.r;
-  UIWidget__set_color(combineBtn, v7, 0);
+    v6 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color(combineBtn, *(UnityEngine_Color_o *)&v6, 0);
 }
 
 
@@ -3162,6 +3165,7 @@ void NpCombineControl__SetHaveQpInfo(NpCombineControl_o *this, const MethodInfo 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void NpCombineControl__SetNpCombineData(NpCombineControl_o *this, SetCombineData_o *data, const MethodInfo *method)
 {
   __int64 materialGrid; // x0
@@ -3210,16 +3214,22 @@ void NpCombineControl__SetNpCombineData(NpCombineControl_o *this, SetCombineData
   float v48; // s0
   int v49; // w8
   UILabel_o *qpLb; // x22
-  struct SetLevelUpData_o *v52; // x8
+  float v51; // s1 OVERLAPPED
+  float v52; // s3
+  float v53; // s0
+  float v54; // s2
+  struct SetLevelUpData_o *v55; // x8
   int64_t spendQpVal; // x9
-  bool v55; // w20
-  const MethodInfo *v56; // x1
-  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+20h] [xbp-80h] BYREF
+  float v57; // s1
+  float v58; // s0 OVERLAPPED
+  bool v59; // w20
+  float v60; // s2
+  float v61; // s3
+  const MethodInfo *v62; // x1
+  System_Collections_Generic_List_Enumerator_object__o v63; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v64; // [xsp+20h] [xbp-80h] BYREF
   int32_t tmpTargetLv; // [xsp+3Ch] [xbp-64h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v62; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974B7F & 1) == 0 )
   {
@@ -3241,7 +3251,7 @@ void NpCombineControl__SetNpCombineData(NpCombineControl_o *this, SetCombineData
     byte_5974B7F = 1;
   }
   tmpTargetLv = 0;
-  memset(&v58, 0, sizeof(v58));
+  memset(&v64, 0, sizeof(v64));
   NpCombineControl__DestroyMaterialGrid(this, (const MethodInfo *)data);
   if ( !data )
     goto LABEL_62;
@@ -3413,24 +3423,24 @@ LABEL_39:
   if ( combineEventList && combineEventList->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v63,
       combineEventList,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventInfoData__GetEnumerator__);
-    v58 = v57;
-    v57.fields._list = 0;
-    *(_QWORD *)&v57.fields._index = &v58;
+    v64 = v63;
+    v63.fields._list = 0;
+    *(_QWORD *)&v63.fields._index = &v64;
     while ( 1 )
     {
       v46 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v58,
+              &v64,
               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__MoveNext__);
       if ( !v46 )
         break;
-      if ( !v58.fields._current )
+      if ( !v64.fields._current )
         sub_2213CDC(v46, v47);
-      if ( HIDWORD(v58.fields._current[1].klass) == 10 )
+      if ( HIDWORD(v64.fields._current[1].klass) == 10 )
       {
-        v48 = *(float *)&v58.fields._current[3].monitor * (float)*p_spendQpVal;
+        v48 = *(float *)&v64.fields._current[3].monitor * (float)*p_spendQpVal;
         v49 = (int)v48;
         if ( v48 == INFINITY )
           v49 = 0x80000000;
@@ -3438,7 +3448,7 @@ LABEL_39:
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v58,
+      &v64,
       (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoData__Dispose__);
   }
   qpLb = this->fields.qpLb;
@@ -3449,27 +3459,27 @@ LABEL_39:
   materialGrid = (__int64)this->fields.qpLb;
   if ( !materialGrid )
     goto LABEL_62;
-  v61.fields.g = 1.0;
-  v61.fields.a = 1.0;
+  v51 = 1.0;
+  v52 = 1.0;
   if ( this->fields.haveQpVal < this->fields.spendQpVal )
-    v61.fields.g = 0.0;
-  v61.fields.r = 1.0;
-  v61.fields.b = v61.fields.g;
-  UIWidget__set_color((UIWidget_o *)materialGrid, v61, 0);
-  v52 = this->fields.lvUpData;
-  if ( !v52 )
+    v51 = 0.0;
+  v53 = 1.0;
+  v54 = v51;
+  UIWidget__set_color((UIWidget_o *)materialGrid, *(UnityEngine_Color_o *)(&v51 - 1), 0);
+  v55 = this->fields.lvUpData;
+  if ( !v55 )
     goto LABEL_62;
-  v52->fields.nextLv = v35;
+  v55->fields.nextLv = v35;
   spendQpVal = this->fields.spendQpVal;
-  v52->fields.spendQp = spendQpVal;
+  v55->fields.spendQp = spendQpVal;
   materialGrid = (__int64)this->fields.qpLb;
   if ( this->fields.haveQpVal >= spendQpVal )
   {
     if ( materialGrid )
     {
-      v62.fields.r = 1.0;
-      v62.fields.g = 1.0;
-      v55 = 1;
+      v58 = 1.0;
+      v57 = 1.0;
+      v59 = 1;
       goto LABEL_60;
     }
 LABEL_62:
@@ -3477,15 +3487,15 @@ LABEL_62:
   }
   if ( !materialGrid )
     goto LABEL_62;
-  v62.fields.g = 0.0;
-  v62.fields.r = 1.0;
-  v55 = 0;
+  v57 = 0.0;
+  v58 = 1.0;
+  v59 = 0;
 LABEL_60:
-  v62.fields.b = v62.fields.g;
-  v62.fields.a = v62.fields.r;
-  UIWidget__set_color((UIWidget_o *)materialGrid, v62, 0);
-  this->fields._IsExeCombine_k__BackingField = v55;
-  NpCombineControl__SetExeBtnState(this, v56);
+  v60 = v57;
+  v61 = v58;
+  UIWidget__set_color((UIWidget_o *)materialGrid, *(UnityEngine_Color_o *)&v58, 0);
+  this->fields._IsExeCombine_k__BackingField = v59;
+  NpCombineControl__SetExeBtnState(this, v62);
 }
 
 

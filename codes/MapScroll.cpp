@@ -121,10 +121,14 @@ UnityEngine_Vector3_o MapScroll__GetScrlPosVec3(MapScroll_o *this, const MethodI
 
 UnityEngine_Vector2_o MapScroll__GetScrlTgtPos(MapScroll_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.mTgt.fields.x;
-  result.fields.y = this->fields.mTgt.fields.y;
+  x = this->fields.mTgt.fields.x;
+  y = this->fields.mTgt.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -211,35 +215,56 @@ bool MapScroll__IsStop(MapScroll_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MapScroll__LimitMv(MapScroll_o *this, const MethodInfo *method)
 {
   struct MapCamera_o *mMapCamera; // x8
   MapScroll_o *v3; // x19
   float ZoomRate; // s10
   const MethodInfo *v5; // x1
-  const MethodInfo *v6; // x1
-  const MethodInfo *v7; // x1
-  unsigned __int64 ScrlPosVec3; // kr00_8
-  UnityEngine_Rect_o CameraRect; // 0:kr10_16.16
-  UnityEngine_Vector2_o v10; // 0:s0.4,4:s1.4
+  float x; // s8
+  float y; // s9
+  float m_XMin; // s4
+  float m_YMin; // s5
+  float m_Width; // s6
+  float m_Height; // s7
+  float v12; // s4
+  float v13; // s5
+  const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x1
+  UnityEngine_Vector2_o v16; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o CameraRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
   mMapCamera = this->fields.mMapCamera;
   if ( !mMapCamera
     || (v3 = this, (this = (MapScroll_o *)mMapCamera->fields.mZoom) == 0)
     || (ZoomRate = MapZoom__GetZoomRate((MapZoom_o *)this, method),
-        ScrlPosVec3 = (unsigned __int64)MapScroll__GetScrlPosVec3(v3, v5),
+        ScrlPosVec3 = MapScroll__GetScrlPosVec3(v3, v5),
         (this = (MapScroll_o *)v3->fields.mMapCamera) == 0) )
   {
     sub_2213CDC(this, method);
   }
+  x = ScrlPosVec3.fields.x;
+  y = ScrlPosVec3.fields.y;
   CameraRect = MapCamera__get_CameraRect((MapCamera_o *)this, 0);
-  v10 = MapScroll__LimitMv_42982728(
+  m_XMin = CameraRect.fields.m_XMin;
+  m_YMin = CameraRect.fields.m_YMin;
+  m_Width = CameraRect.fields.m_Width;
+  m_Height = CameraRect.fields.m_Height;
+  CameraRect.fields.m_XMin = x;
+  CameraRect.fields.m_YMin = y;
+  CameraRect.fields.m_Width = m_XMin;
+  CameraRect.fields.m_Height = m_YMin;
+  v12 = m_Width;
+  v13 = m_Height;
+  v16 = MapScroll__LimitMv_42982728(
           v3,
-          (UnityEngine_Vector2_o)ScrlPosVec3,
-          CameraRect,
+          *(UnityEngine_Vector2_o *)&CameraRect.fields.m_XMin,
+          *(UnityEngine_Rect_o *)&CameraRect.fields.m_Width,
           -(float)((float)((float)(1.0 - ZoomRate) * 0.124) + 0.001),
-          v6);
-  MapScroll__SetScrlPos(v3, v10, v7);
+          v14);
+  MapScroll__SetScrlPos(v3, v16, v15);
 }
 
 
@@ -327,132 +352,136 @@ LABEL_12:
 
 void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
 {
+  const MethodInfo *v3; // x1
+  float x; // s8
   float mAutoMvTime; // s8
-  const MethodInfo *v4; // x1
-  float v5; // s0
+  const MethodInfo *v6; // x1
+  float v7; // s0
   float mAutoMvDuration; // s1
-  float v7; // s6
-  const MethodInfo *v8; // x1
+  float v9; // s6
+  const MethodInfo *v10; // x1
   __int64 touchDetector; // x0
-  __int64 v10; // x2
-  int v11; // w20
-  struct MapTouchDetector_o *v12; // x8
-  UnityEngine_Vector2_o TouchCenter; // kr20_8
-  struct MapTouchDetector_o *v14; // x8
-  UnityEngine_Vector2_o v15; // kr28_8
+  float y; // s9
+  __int64 v13; // x2
+  int v14; // w20
+  struct MapTouchDetector_o *v15; // x8
+  UnityEngine_Vector2_o TouchCenter; // kr00_8
+  struct MapTouchDetector_o *v17; // x8
+  UnityEngine_Vector2_o v18; // kr08_8
   struct MapCamera_o *mMapCamera; // x8
   struct MapZoom_o *mZoom; // x8
   float orthographicSize; // s0
-  const MethodInfo *v19; // x1
-  bool v20; // w0
-  __int64 v21; // x2
-  float y; // s2
-  float x; // s3
-  int v24; // w8
+  const MethodInfo *v22; // x1
+  bool v23; // w0
+  __int64 v24; // x2
+  float v25; // s2
+  float v26; // s3
+  int v27; // w8
   float UserTotalScrollAmount; // s10
-  float v26; // s0
+  float v29; // s0
   struct UnityEngine_Vector2_o *p_mSpd; // x21
-  struct UnityEngine_Vector2_o *v28; // x20
-  float v29; // s1
+  struct UnityEngine_Vector2_o *v31; // x20
+  float v32; // s1
   struct UnityEngine_Vector2_o mTchDif; // d10
   struct UnityEngine_Vector2_o mTchDifOld; // d10
-  struct UnityEngine_Vector2_o v32; // d0
-  struct UnityEngine_Vector2_o v33; // d1
+  struct UnityEngine_Vector2_o v35; // d0
+  struct UnityEngine_Vector2_o v36; // d1
   System_Action_o *mPlaySEAction_Flick; // x0
-  int32x2_t v35; // d2
-  int32x2_t v36; // d3
-  int32x2_t v37; // d2
-  UnityEngine_Vector2_c *v38; // x8
+  int32x2_t v38; // d2
+  int32x2_t v39; // d3
+  int32x2_t v40; // d2
+  UnityEngine_Vector2_c *v41; // x8
   struct UnityEngine_Vector2_o mInertiaSpd; // d10
-  __int64 v40; // x2
-  float v41; // s0
-  struct UnityEngine_Vector2_o v42; // d0
-  float v43; // s11
-  struct MapCamera_o *v44; // x8
-  struct MapZoom_o *v45; // x8
+  __int64 v43; // x2
+  float v44; // s0
+  struct UnityEngine_Vector2_o v45; // d0
+  float v46; // s11
+  struct MapCamera_o *v47; // x8
+  struct MapZoom_o *v48; // x8
   float *p_y; // x20
-  const MethodInfo *v47; // x1
-  const MethodInfo *v48; // x1
-  const MethodInfo *v49; // x2
-  float v50; // s8
-  float v51; // s9
-  const MethodInfo *v52; // x1
-  unsigned __int64 ScrlPosVec3; // kr00_8
-  float v54; // [xsp+0h] [xbp-70h]
-  float v55; // [xsp+10h] [xbp-60h]
+  const MethodInfo *v50; // x1
+  const MethodInfo *v51; // x1
+  const MethodInfo *v52; // x2
+  float v53; // s8
+  float v54; // s9
+  float v55; // [xsp+0h] [xbp-70h]
   float v56; // [xsp+10h] [xbp-60h]
+  float v57; // [xsp+10h] [xbp-60h]
   UnityEngine_Vector2_o mAutoMvEdPos; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v58; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o v59; // 0:s0.4,4:s1.4
-  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v61; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v63; // 0:s3.4,4:s4.4,8:s5.4
 
   if ( (byte_596D131 & 1) == 0 )
   {
     sub_2213A60(&System_Math_TypeInfo);
     byte_596D131 = 1;
   }
-  ScrlPosVec3 = (unsigned __int64)MapScroll__GetScrlPosVec3(this, method);
+  ScrlPosVec3 = MapScroll__GetScrlPosVec3(this, method);
+  x = ScrlPosVec3.fields.x;
   if ( this->fields.mAutoMvDuration > 0.0 )
   {
     mAutoMvTime = this->fields.mAutoMvTime;
-    v5 = mAutoMvTime + UnityEngine_Time__get_deltaTime(0);
+    v7 = mAutoMvTime + UnityEngine_Time__get_deltaTime(0);
     mAutoMvDuration = this->fields.mAutoMvDuration;
-    this->fields.mAutoMvTime = v5;
-    if ( v5 >= mAutoMvDuration )
+    this->fields.mAutoMvTime = v7;
+    if ( v7 >= mAutoMvDuration )
     {
       mAutoMvEdPos = this->fields.mAutoMvEdPos;
       this->fields.mAutoMvDuration = 0.0;
-      MapScroll__SetScrlPos(this, mAutoMvEdPos, v4);
+      MapScroll__SetScrlPos(this, mAutoMvEdPos, v6);
       ActionExtensions__Call(this->fields.mAutoMvEndAct, 0);
     }
     else
     {
-      v7 = v5 / mAutoMvDuration;
-      v60.fields.z = 0.0;
+      v9 = v7 / mAutoMvDuration;
       v61.fields.z = 0.0;
-      v60.fields.x = this->fields.mAutoMvStPos.fields.x;
-      v60.fields.y = this->fields.mAutoMvStPos.fields.y;
-      v61.fields.x = this->fields.mAutoMvEdPos.fields.x;
-      v61.fields.y = this->fields.mAutoMvEdPos.fields.y;
-      v59 = (UnityEngine_Vector2_o)Easing__Func(v60, v61, v7, this->fields.mAutoMvEaseType, 0);
-      MapScroll__SetScrlPos(this, v59, v8);
+      v63.fields.z = 0.0;
+      v61.fields.x = this->fields.mAutoMvStPos.fields.x;
+      v61.fields.y = this->fields.mAutoMvStPos.fields.y;
+      v63.fields.x = this->fields.mAutoMvEdPos.fields.x;
+      v63.fields.y = this->fields.mAutoMvEdPos.fields.y;
+      v62 = Easing__Func(v61, v63, v9, this->fields.mAutoMvEaseType, 0);
+      MapScroll__SetScrlPos(this, *(UnityEngine_Vector2_o *)&v62.fields.x, v10);
     }
     return;
   }
   touchDetector = (__int64)this->fields.touchDetector;
   if ( !touchDetector )
     goto LABEL_63;
+  y = ScrlPosVec3.fields.y;
   touchDetector = TouchDetectorBase__get_CurrentTouchCount((TouchDetectorBase_o *)touchDetector, 0);
   if ( (_DWORD)touchDetector )
   {
-    v11 = touchDetector;
+    v14 = touchDetector;
     if ( !byte_59699C0 )
     {
       touchDetector = sub_2213A60(&UnityEngine_Vector2_TypeInfo);
       byte_59699C0 = 1;
     }
-    v12 = this->fields.touchDetector;
+    v15 = this->fields.touchDetector;
     this->fields.mInertiaSpd = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
-    if ( !v12 )
+    if ( !v15 )
       goto LABEL_63;
-    if ( (unsigned int)(v11 - 3) >= 0xFFFFFFFE && v12->fields._PrevTouchInfo_k__BackingField )
+    if ( (unsigned int)(v14 - 3) >= 0xFFFFFFFE && v15->fields._PrevTouchInfo_k__BackingField )
     {
       this->fields.mTchDifOld = this->fields.mTchDif;
-      touchDetector = (__int64)v12->fields._PrevTouchInfo_k__BackingField;
+      touchDetector = (__int64)v15->fields._PrevTouchInfo_k__BackingField;
       if ( touchDetector )
       {
         TouchCenter = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)touchDetector, 0);
-        v14 = this->fields.touchDetector;
-        if ( v14 )
+        v17 = this->fields.touchDetector;
+        if ( v17 )
         {
-          touchDetector = (__int64)v14->fields._CurrentTouchInfo_k__BackingField;
+          touchDetector = (__int64)v17->fields._CurrentTouchInfo_k__BackingField;
           if ( touchDetector )
           {
-            v15 = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)touchDetector, 0);
+            v18 = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)touchDetector, 0);
             mMapCamera = this->fields.mMapCamera;
-            this->fields.mTchDif.fields.x = TouchCenter.fields.x - v15.fields.x;
-            this->fields.mTchDif.fields.y = TouchCenter.fields.y - v15.fields.y;
+            this->fields.mTchDif.fields.x = TouchCenter.fields.x - v18.fields.x;
+            this->fields.mTchDif.fields.y = TouchCenter.fields.y - v18.fields.y;
             if ( mMapCamera )
             {
               mZoom = mMapCamera->fields.mZoom;
@@ -462,44 +491,46 @@ void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
                 if ( touchDetector )
                 {
                   orthographicSize = UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)touchDetector, 0);
-                  this->fields.mTchDif.fields.x = (float)(TouchCenter.fields.x - v15.fields.x) * orthographicSize;
-                  this->fields.mTchDif.fields.y = (float)(TouchCenter.fields.y - v15.fields.y) * orthographicSize;
-                  v20 = MapScroll__BrakeMv(this, 0.0, v19);
-                  y = this->fields.mTchDif.fields.y;
-                  if ( v20 )
+                  this->fields.mTchDif.fields.x = (float)(TouchCenter.fields.x - v18.fields.x) * orthographicSize;
+                  this->fields.mTchDif.fields.y = (float)(TouchCenter.fields.y - v18.fields.y) * orthographicSize;
+                  v23 = MapScroll__BrakeMv(this, 0.0, v22);
+                  v25 = this->fields.mTchDif.fields.y;
+                  if ( v23 )
                   {
-                    y = y * 0.5;
+                    v25 = v25 * 0.5;
                     this->fields.mTchDif.fields.x = this->fields.mTchDif.fields.x * 0.5;
-                    this->fields.mTchDif.fields.y = y;
+                    this->fields.mTchDif.fields.y = v25;
                   }
-                  x = this->fields.mTchDif.fields.x;
-                  v24 = (unsigned __int8)byte_5969AE1;
+                  v26 = this->fields.mTchDif.fields.x;
+                  v27 = (unsigned __int8)byte_5969AE1;
                   UserTotalScrollAmount = this->fields.UserTotalScrollAmount;
                   this->fields.mTgt = (struct UnityEngine_Vector2_o)vadd_f32(
                                                                       (float32x2_t)this->fields.mTgt,
-                                                                      (float32x2_t)__PAIR64__(LODWORD(y), LODWORD(x))).n64_u64[0];
-                  if ( !v24 )
+                                                                      (float32x2_t)__PAIR64__(
+                                                                                     LODWORD(v25),
+                                                                                     LODWORD(v26))).n64_u64[0];
+                  if ( !v27 )
                   {
                     sub_2213A60(&System_Math_TypeInfo);
-                    x = this->fields.mTchDif.fields.x;
-                    y = this->fields.mTchDif.fields.y;
+                    v26 = this->fields.mTchDif.fields.x;
+                    v25 = this->fields.mTchDif.fields.y;
                     byte_5969AE1 = 1;
                   }
                   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
                   {
-                    v54 = x;
-                    v55 = y;
-                    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v52, v21);
-                    x = v54;
-                    y = v55;
+                    v55 = v26;
+                    v56 = v25;
+                    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v3, v24);
+                    v26 = v55;
+                    v25 = v56;
                   }
-                  v26 = this->fields.mTgt.fields.x - *(float *)&ScrlPosVec3;
-                  this->fields.mSpd.fields.x = v26;
+                  v29 = this->fields.mTgt.fields.x - x;
+                  this->fields.mSpd.fields.x = v29;
                   p_mSpd = &this->fields.mSpd;
-                  v28 = &this->fields.mSpd;
-                  v29 = this->fields.mTgt.fields.y - *((float *)&ScrlPosVec3 + 1);
+                  v31 = &this->fields.mSpd;
+                  v32 = this->fields.mTgt.fields.y - y;
                   this->fields.UserTotalScrollAmount = UserTotalScrollAmount
-                                                     + fabsf(sqrtf((float)(x * x) + (float)(y * y)));
+                                                     + fabsf(sqrtf((float)(v26 * v26) + (float)(v25 * v25)));
                   goto LABEL_54;
                 }
               }
@@ -508,7 +539,7 @@ void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
         }
       }
 LABEL_63:
-      sub_2213CDC(touchDetector, v52);
+      sub_2213CDC(touchDetector, v3);
     }
   }
   else
@@ -521,7 +552,7 @@ LABEL_63:
     }
     mTchDif = this->fields.mTchDif;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v52, v10);
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v3, v13);
     if ( sqrtf(vaddv_f32(vmul_f32((float32x2_t)mTchDif, (float32x2_t)mTchDif))) > 0.0 )
       goto LABEL_37;
     if ( !byte_5969AE1 )
@@ -531,23 +562,23 @@ LABEL_63:
     }
     mTchDifOld = this->fields.mTchDifOld;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v52, v10);
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v3, v13);
     if ( sqrtf(vaddv_f32(vmul_f32((float32x2_t)mTchDifOld, (float32x2_t)mTchDifOld))) > 0.0 )
     {
 LABEL_37:
-      v32 = this->fields.mTchDif;
-      v33 = this->fields.mTchDifOld;
+      v35 = this->fields.mTchDif;
+      v36 = this->fields.mTchDifOld;
       mPlaySEAction_Flick = this->fields.mPlaySEAction_Flick;
-      v35.n64_u64[0] = vmul_f32((float32x2_t)v32, (float32x2_t)v32).n64_u64[0];
-      v36.n64_u64[0] = vmul_f32((float32x2_t)v33, (float32x2_t)v33).n64_u64[0];
-      v37.n64_u64[0] = vadd_f32(vzip1_s32(v35, v36), vzip2_s32(v35, v36)).n64_u64[0];
+      v38.n64_u64[0] = vmul_f32((float32x2_t)v35, (float32x2_t)v35).n64_u64[0];
+      v39.n64_u64[0] = vmul_f32((float32x2_t)v36, (float32x2_t)v36).n64_u64[0];
+      v40.n64_u64[0] = vadd_f32(vzip1_s32(v38, v39), vzip2_s32(v38, v39)).n64_u64[0];
       this->fields.mInertiaSpd = (struct UnityEngine_Vector2_o)vadd_f32(
                                                                  vbsl_s8(
                                                                    vdup_lane_s32(
-                                                                     vcgt_f32(vdup_lane_s32(v37, 1), v37),
+                                                                     vcgt_f32(vdup_lane_s32(v40, 1), v40),
                                                                      0),
-                                                                   (int8x8_t)v33,
-                                                                   (int8x8_t)v32),
+                                                                   (int8x8_t)v36,
+                                                                   (int8x8_t)v35),
                                                                  (float32x2_t)this->fields.mInertiaSpd).n64_u64[0];
       ActionExtensions__Call(mPlaySEAction_Flick, 0);
       if ( !byte_59699C0 )
@@ -555,29 +586,29 @@ LABEL_37:
         sub_2213A60(&UnityEngine_Vector2_TypeInfo);
         byte_59699C0 = 1;
       }
-      v38 = UnityEngine_Vector2_TypeInfo;
+      v41 = UnityEngine_Vector2_TypeInfo;
       this->fields.mTchDif = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
-      this->fields.mTchDifOld = v38->static_fields->zeroVector;
+      this->fields.mTchDifOld = v41->static_fields->zeroVector;
     }
     mInertiaSpd = this->fields.mInertiaSpd;
     this->fields.mTgt = (struct UnityEngine_Vector2_o)vadd_f32((float32x2_t)this->fields.mTgt, (float32x2_t)mInertiaSpd).n64_u64[0];
-    v41 = ChangedFPSUtil__CalcAccelForCurrentFPS(0.88, 0);
+    v44 = ChangedFPSUtil__CalcAccelForCurrentFPS(0.88, 0);
     touchDetector = (__int64)System_Math_TypeInfo;
-    v42 = (struct UnityEngine_Vector2_o)vmul_n_f32((float32x2_t)mInertiaSpd, v41).n64_u64[0];
-    this->fields.mInertiaSpd = v42;
+    v45 = (struct UnityEngine_Vector2_o)vmul_n_f32((float32x2_t)mInertiaSpd, v44).n64_u64[0];
+    this->fields.mInertiaSpd = v45;
     if ( !*(_DWORD *)(touchDetector + 228) )
     {
-      v56 = v42.fields.x;
-      j_il2cpp_runtime_class_init_0(touchDetector, v52, v40);
-      v42.fields.x = v56;
+      v57 = v45.fields.x;
+      j_il2cpp_runtime_class_init_0(touchDetector, v3, v43);
+      v45.fields.x = v57;
     }
-    if ( fabsf(v42.fields.x) < 0.01 )
+    if ( fabsf(v45.fields.x) < 0.01 )
     {
       touchDetector = (__int64)System_Math_TypeInfo;
-      v43 = this->fields.mInertiaSpd.fields.y;
+      v46 = this->fields.mInertiaSpd.fields.y;
       if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v52, v40);
-      if ( fabsf(v43) < 0.01 )
+        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v3, v43);
+      if ( fabsf(v46) < 0.01 )
       {
         if ( !byte_59699C0 )
         {
@@ -587,41 +618,41 @@ LABEL_37:
         this->fields.mInertiaSpd = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
       }
     }
-    v44 = this->fields.mMapCamera;
-    if ( !v44 )
+    v47 = this->fields.mMapCamera;
+    if ( !v47 )
       goto LABEL_63;
-    v45 = v44->fields.mZoom;
-    if ( !v45 )
+    v48 = v47->fields.mZoom;
+    if ( !v48 )
       goto LABEL_63;
-    if ( !v45->fields._IsZoomMaxFitPosFix_k__BackingField )
-      MapScroll__BrakeMv(this, 0.45, v52);
+    if ( !v48->fields._IsZoomMaxFitPosFix_k__BackingField )
+      MapScroll__BrakeMv(this, 0.45, v3);
   }
-  v26 = (float)(this->fields.mTgt.fields.x - *(float *)&ScrlPosVec3) * 0.75;
-  this->fields.mSpd.fields.x = v26;
+  v29 = (float)(this->fields.mTgt.fields.x - x) * 0.75;
+  this->fields.mSpd.fields.x = v29;
   p_mSpd = &this->fields.mSpd;
-  v28 = &this->fields.mSpd;
-  v29 = (float)(this->fields.mTgt.fields.y - *((float *)&ScrlPosVec3 + 1)) * 0.75;
+  v31 = &this->fields.mSpd;
+  v32 = (float)(this->fields.mTgt.fields.y - y) * 0.75;
 LABEL_54:
-  v28->fields.y = v29;
-  p_y = &v28->fields.y;
-  v58.fields.x = *(float *)&ScrlPosVec3 + v26;
-  v58.fields.y = *((float *)&ScrlPosVec3 + 1) + v29;
-  MapScroll__SetScrlPos(this, v58, v52);
-  if ( !MapScroll__IsStop(this, v47) )
+  v31->fields.y = v32;
+  p_y = &v31->fields.y;
+  v59.fields.x = x + v29;
+  v59.fields.y = y + v32;
+  MapScroll__SetScrlPos(this, v59, v3);
+  if ( !MapScroll__IsStop(this, v50) )
   {
-    v50 = p_mSpd->fields.x;
+    v53 = p_mSpd->fields.x;
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v48, v49);
-    if ( fabsf(v50) < 0.01 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v51, v52);
+    if ( fabsf(v53) < 0.01 )
     {
-      v51 = *p_y;
+      v54 = *p_y;
       if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v48, v49);
-      if ( fabsf(v51) < 0.01 )
-        MapScroll__Stop(this, 1, v49);
+        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v51, v52);
+      if ( fabsf(v54) < 0.01 )
+        MapScroll__Stop(this, 1, v52);
     }
   }
-  MapScroll__LimitMv(this, v48);
+  MapScroll__LimitMv(this, v51);
 }
 
 
@@ -671,7 +702,7 @@ void MapScroll__StartAutoMove(
   int32_t v18; // w5
   bool v19; // w6
   bool v20; // w7
-  unsigned __int64 ScrlPosVec3; // kr00_8
+  UnityEngine_Vector3_o ScrlPosVec3; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = (unsigned __int8)byte_59699C0;
   this->fields.mTgt.fields.x = screenPos.fields.x;
@@ -688,11 +719,12 @@ void MapScroll__StartAutoMove(
   this->fields.mAutoMvTime = 0.0;
   this->fields.mAutoMvDuration = sec;
   this->fields.mInertiaSpd = zeroVector;
-  ScrlPosVec3 = (unsigned __int64)MapScroll__GetScrlPosVec3(this, *(const MethodInfo **)&easeType);
+  ScrlPosVec3 = MapScroll__GetScrlPosVec3(this, *(const MethodInfo **)&easeType);
   this->fields.mAutoMvEndAct = endAct;
   p_mAutoMvEndAct = &this->fields.mAutoMvEndAct;
   v14 = *(p_mAutoMvEndAct - 12);
-  *(p_mAutoMvEndAct - 4) = (struct System_Action_o *)ScrlPosVec3;
+  *((_DWORD *)p_mAutoMvEndAct - 8) = LODWORD(ScrlPosVec3.fields.x);
+  *((_DWORD *)p_mAutoMvEndAct - 7) = LODWORD(ScrlPosVec3.fields.y);
   *(p_mAutoMvEndAct - 3) = v14;
   *((_DWORD *)p_mAutoMvEndAct - 2) = easeType;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p_mAutoMvEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);

@@ -152,6 +152,7 @@ bool ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
+  bool result; // w0
   Il2CppObject *loopWait_5__2; // x1
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
 
@@ -207,8 +208,9 @@ LABEL_18:
   v3->fields.__2__current = loopWait_5__2;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
   sub_2213A04(p__2__current, (int32_t)loopWait_5__2, v18, v19, v20, v21, v22, v23);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

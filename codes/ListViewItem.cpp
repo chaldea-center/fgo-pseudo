@@ -150,6 +150,7 @@ bool ListViewItem__SetSortValue(ListViewItem_o *this, ListViewSort_o *sort, cons
   int32_t v9; // w1
   struct System_String_o **p_sortStr1; // x19
   struct System_String_o *v11; // x8
+  bool result; // w0
 
   if ( (byte_5971FDA & 1) == 0 )
   {
@@ -165,9 +166,10 @@ bool ListViewItem__SetSortValue(ListViewItem_o *this, ListViewSort_o *sort, cons
   *(p_sortStr1 - 1) = v11;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p_sortStr1, v9, (System_String_o *)method, v3, v4, v5, v6, v7);
   *((_WORD *)p_sortStr1 + 20) = 0;
+  result = 1;
   *(_OWORD *)(p_sortStr1 + 3) = 0u;
   *(_OWORD *)(p_sortStr1 + 1) = 0u;
-  return 1;
+  return result;
 }
 
 
@@ -341,11 +343,17 @@ LABEL_16:
 
 UnityEngine_Vector3_o ListViewItem__get_BasePosition(ListViewItem_o *this, const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields.basePosition.fields.x;
-  result.fields.y = this->fields.basePosition.fields.y;
-  result.fields.z = this->fields.basePosition.fields.z;
+  x = this->fields.basePosition.fields.x;
+  y = this->fields.basePosition.fields.y;
+  z = this->fields.basePosition.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

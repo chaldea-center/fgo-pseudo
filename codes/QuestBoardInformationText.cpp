@@ -787,19 +787,29 @@ int32_t QuestBoardInformationText__GetDailyDropUpRestCount(
   UserEventEntity_o *Entity; // x19
   System_DateTime_o v11; // x1
   System_DateTime_o v12; // x2
+  System_DateTime_o v13; // x0
   int32_t Year; // w20
+  System_DateTime_o v15; // x0
   int32_t Month; // w21
+  System_DateTime_o v17; // x0
   int32_t Day; // w22
-  int32_t Value; // w0
-  int32_t v17; // w0
+  int32_t Value; // w4
+  System_DateTime_o v20; // x0
+  int32_t v21; // w0
   int64_t NextDayTime_48348308; // x0
-  System_DateTime_o v19; // x20
-  System_DateTime_o v20; // x21
-  __int64 v21; // x1
-  __int64 v22; // x2
   System_DateTime_o v23; // x20
-  uint64_t v24; // x21
-  int32_t v25; // w0
+  System_DateTime_o v24; // x21
+  System_DateTime_o v25; // x1
+  System_DateTime_o v26; // x0
+  __int64 v27; // x1
+  __int64 v28; // x2
+  System_DateTime_o v29; // x0
+  System_DateTime_o v30; // x1
+  uint64_t v31; // x20
+  uint64_t v32; // x21
+  System_DateTime_o v33; // x0
+  System_DateTime_o v34; // x1
+  int32_t v35; // w0
   System_DateTime_o t1; // [xsp+0h] [xbp-50h] BYREF
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
 
@@ -849,34 +859,44 @@ LABEL_26:
     dateData = NetworkManager__getServerDateTime(0).fields._dateData;
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v11.fields._dateData, v12.fields._dateData);
-    Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-    Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-    Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
+    v13.fields._dateData = (uint64_t)&dateData;
+    Year = System_DateTime__get_Year(v13, 0);
+    v15.fields._dateData = (uint64_t)&dateData;
+    Month = System_DateTime__get_Month(v15, 0);
+    v17.fields._dateData = (uint64_t)&dateData;
+    Day = System_DateTime__get_Day(v17, 0);
     Value = ConstantMaster__getValue((System_String_o *)StringLiteral_5146/*"DAILY_DROP_UP_RESET_AT"*/, 0);
-    System_DateTime___ctor_77014300((System_DateTime_o)&t1, Year, Month, Day, Value, 0, 0, 0);
-    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_5146/*"DAILY_DROP_UP_RESET_AT"*/, 0);
-    NextDayTime_48348308 = NetworkManager__getNextDayTime_48348308(v17, 0, 0);
-    v19.fields._dateData = NetworkManager__getServerDateTime_48347596(NextDayTime_48348308, 0).fields._dateData;
-    v20.fields._dateData = NetworkManager__getServerDateTime_48347596(Entity->fields.updatedAt, 0).fields._dateData;
-    if ( System_DateTime__op_LessThanOrEqual(t1, v20, 0) )
+    v20.fields._dateData = (uint64_t)&t1;
+    System_DateTime___ctor_77014300(v20, Year, Month, Day, Value, 0, 0, 0);
+    v21 = ConstantMaster__getValue((System_String_o *)StringLiteral_5146/*"DAILY_DROP_UP_RESET_AT"*/, 0);
+    NextDayTime_48348308 = NetworkManager__getNextDayTime_48348308(v21, 0, 0);
+    v23.fields._dateData = NetworkManager__getServerDateTime_48347596(NextDayTime_48348308, 0).fields._dateData;
+    v24.fields._dateData = NetworkManager__getServerDateTime_48347596(Entity->fields.updatedAt, 0).fields._dateData;
+    v25.fields._dateData = v24.fields._dateData;
+    v26.fields._dateData = t1.fields._dateData;
+    if ( System_DateTime__op_LessThanOrEqual(v26, v25, 0) )
     {
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v21, v22);
-      if ( System_DateTime__op_LessThan(v20, v19, 0) )
+        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v27, v28);
+      v29.fields._dateData = v24.fields._dateData;
+      v30.fields._dateData = v23.fields._dateData;
+      if ( System_DateTime__op_LessThan(v29, v30, 0) )
         goto LABEL_23;
     }
-    v24 = t1.fields._dateData;
-    v23.fields._dateData = dateData;
+    v32 = t1.fields._dateData;
+    v31 = dateData;
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v21, v22);
-    if ( System_DateTime__op_LessThan(v23, (System_DateTime_o)v24, 0) )
+      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v27, v28);
+    v33.fields._dateData = v31;
+    v34.fields._dateData = v32;
+    if ( System_DateTime__op_LessThan(v33, v34, 0) )
 LABEL_23:
       LODWORD(Entity) = Entity->fields.value;
     else
       LODWORD(Entity) = 0;
   }
-  v25 = ConstantMaster__getValue((System_String_o *)StringLiteral_5145/*"DAILY_DROP_UP_COUNT"*/, 0);
-  return (v25 - (_DWORD)Entity) & ~((v25 - (int)Entity) >> 31);
+  v35 = ConstantMaster__getValue((System_String_o *)StringLiteral_5145/*"DAILY_DROP_UP_COUNT"*/, 0);
+  return (v35 - (_DWORD)Entity) & ~((v35 - (int)Entity) >> 31);
 }
 
 

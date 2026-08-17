@@ -123,6 +123,9 @@ UnityEngine_Vector3_o ExtraEasing___c__DisplayClass0_0___AsymptoticSeriesVector3
   float v11; // s0
   float v12; // s2
   float v13; // s3
+  float v14; // s0
+  float v15; // s1
+  float v16; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   y = to.fields.y;
@@ -134,9 +137,12 @@ UnityEngine_Vector3_o ExtraEasing___c__DisplayClass0_0___AsymptoticSeriesVector3
   v11 = powf(1.0 - this->fields.asymptoticSpeed, this->fields.powerRate * t);
   v12 = v9 * v11;
   v13 = v10 * v11;
-  result.fields.x = x + (float)(v8 * v11);
-  result.fields.y = y + v12;
-  result.fields.z = z + v13;
+  v14 = x + (float)(v8 * v11);
+  v15 = y + v12;
+  v16 = z + v13;
+  result.fields.z = v16;
+  result.fields.y = v15;
+  result.fields.x = v14;
   return result;
 }
 

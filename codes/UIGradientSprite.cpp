@@ -18,7 +18,7 @@ void UIGradientSprite__OnFill(
   int32_t size; // w22
   int32_t v10; // w24
   float v11; // s8
-  float v12; // s9
+  float y; // s9
   int32_t v13; // w23
   float v14; // s10
   float32x2_t v15; // d14
@@ -31,9 +31,9 @@ void UIGradientSprite__OnFill(
   unsigned int rgba; // w0
   double v23; // d1
   UnityEngine_Color32_o v24; // x2
-  float v25; // s1
-  float v26; // s1
-  float y; // s1
+  UnityEngine_Vector3_o Item; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
   if ( (byte_597212F & 1) == 0 )
@@ -52,39 +52,39 @@ void UIGradientSprite__OnFill(
   if ( v10 > size )
   {
     v11 = -3.4028e38;
-    v12 = 3.4028e38;
+    y = 3.4028e38;
     v13 = size;
     do
     {
-      v25 = COERCE_FLOAT(LODWORD(BetterList_Vector3___get_Item(
-                                   verts,
-                                   v13,
-                                   (const MethodInfo_3E714B0 *)Method_BetterList_Vector3__get_Item__).fields.y));
-      if ( v12 >= v25 )
-        v12 = v25;
-      v26 = COERCE_FLOAT(LODWORD(BetterList_Vector3___get_Item(
-                                   verts,
-                                   v13++,
-                                   (const MethodInfo_3E714B0 *)Method_BetterList_Vector3__get_Item__).fields.y));
-      if ( v11 <= v26 )
-        v11 = v26;
+      Item = BetterList_Vector3___get_Item(
+               verts,
+               v13,
+               (const MethodInfo_3E714B0 *)Method_BetterList_Vector3__get_Item__);
+      if ( y >= Item.fields.y )
+        y = Item.fields.y;
+      v26 = BetterList_Vector3___get_Item(
+              verts,
+              v13++,
+              (const MethodInfo_3E714B0 *)Method_BetterList_Vector3__get_Item__);
+      if ( v11 <= v26.fields.y )
+        v11 = v26.fields.y;
     }
     while ( v10 != v13 );
-    v14 = v11 - v12;
+    v14 = v11 - y;
     v15.n64_u64[0] = vdup_n_s32(0x437F0000u).n64_u64[0];
     while ( 1 )
     {
       v16 = 0.0;
       if ( v14 > UnityEngine_Mathf_TypeInfo->static_fields->Epsilon )
       {
-        y = BetterList_Vector3___get_Item(
-              verts,
-              size,
-              (const MethodInfo_3E714B0 *)Method_BetterList_Vector3__get_Item__).fields.y;
+        v27 = BetterList_Vector3___get_Item(
+                verts,
+                size,
+                (const MethodInfo_3E714B0 *)Method_BetterList_Vector3__get_Item__);
         v16 = 0.0;
-        if ( v12 != v11 )
+        if ( y != v11 )
         {
-          v17 = y - v12;
+          v17 = v27.fields.y - y;
           v18 = 1.0;
           v19 = v17 / v14;
           if ( v19 <= 1.0 )
@@ -139,24 +139,40 @@ LABEL_24:
 
 UnityEngine_Color_o UIGradientSprite__get_BottomColor(UIGradientSprite_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.bottomColor.fields.r;
-  result.fields.g = this->fields.bottomColor.fields.g;
-  result.fields.b = this->fields.bottomColor.fields.b;
-  result.fields.a = this->fields.bottomColor.fields.a;
+  r = this->fields.bottomColor.fields.r;
+  g = this->fields.bottomColor.fields.g;
+  b = this->fields.bottomColor.fields.b;
+  a = this->fields.bottomColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
 
 UnityEngine_Color_o UIGradientSprite__get_TopColor(UIGradientSprite_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields.topColor.fields.r;
-  result.fields.g = this->fields.topColor.fields.g;
-  result.fields.b = this->fields.topColor.fields.b;
-  result.fields.a = this->fields.topColor.fields.a;
+  r = this->fields.topColor.fields.r;
+  g = this->fields.topColor.fields.g;
+  b = this->fields.topColor.fields.b;
+  a = this->fields.topColor.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

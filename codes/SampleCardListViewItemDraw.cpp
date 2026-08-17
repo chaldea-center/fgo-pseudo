@@ -157,6 +157,7 @@ void SampleCardListViewItemDraw__OnDestroy(SampleCardListViewItemDraw_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SampleCardListViewItemDraw__SetItem(
         SampleCardListViewItemDraw_o *this,
         SampleCardListViewItem_o *item,
@@ -181,8 +182,11 @@ void SampleCardListViewItemDraw__SetItem(
   __int64 v21; // x1
   __int64 v22; // x2
   Il2CppObject *Component_object; // x20
-  int32_t v25; // [xsp+Ch] [xbp-24h] BYREF
-  UnityEngine_Color_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v24; // s0 OVERLAPPED
+  float v25; // s3
+  float v26; // s1
+  float v27; // s2
+  int32_t v28; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = this;
   if ( (byte_596DE20 & 1) == 0 )
@@ -211,8 +215,8 @@ void SampleCardListViewItemDraw__SetItem(
     if ( v6->fields.cardId != isFront )
     {
       v6->fields.cardId = isFront;
-      v25 = isFront;
-      v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v25);
+      v28 = isFront;
+      v9 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v28);
       v10 = System_String__Format((System_String_o *)StringLiteral_14304/*"Test/card{0:d3}"*/, v9, 0);
       v6->fields.cardFileName = v10;
       sub_2213A04(
@@ -261,13 +265,13 @@ void SampleCardListViewItemDraw__SetItem(
   if ( !this )
 LABEL_26:
     sub_2213CDC(this, item);
-  v26.fields.r = 1.0;
-  v26.fields.a = 1.0;
+  v24 = 1.0;
+  v25 = 1.0;
   if ( v7 == 1 )
-    v26.fields.r = 0.5;
-  v26.fields.g = v26.fields.r;
-  v26.fields.b = v26.fields.r;
-  UIWidget__set_color((UIWidget_o *)this, v26, 0);
+    v24 = 0.5;
+  v26 = v24;
+  v27 = v24;
+  UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)&v24, 0);
 }
 
 

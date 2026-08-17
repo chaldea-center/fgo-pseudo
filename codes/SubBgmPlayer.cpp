@@ -27,20 +27,24 @@ BgmPlayArgs_o *SubBgmPlayer__ExportPlayArgs(SubBgmPlayer_o *this, const MethodIn
 {
   System_String_o *bgmName; // x19
   bool IsNullOrEmpty; // w0
+  System_Nullable_float__o p_volume; // x0
   float bgmVolume; // s0
-  const MethodInfo *v6; // x1
+  const MethodInfo *v7; // x1
   int32_t PlayTime; // w20
-  BgmPlayArgs_o *v8; // x0
-  int64_t v9; // x3
-  BgmPlayArgs_o *v10; // x20
-  const MethodInfo *v11; // x4
-  float v12; // s0
+  BgmPlayArgs_o *v9; // x0
+  System_Nullable_float__o v10; // x2
+  int64_t v11; // x3
+  BgmPlayArgs_o *v12; // x20
+  const MethodInfo *v13; // x4
+  System_Nullable_float__o v14; // x0
+  float v15; // s0
   int32_t channelId; // w21
-  const MethodInfo *v14; // x1
-  int32_t v15; // w20
-  BgmPlayArgs_o *v16; // x0
-  int64_t v17; // x3
-  const MethodInfo *v18; // x4
+  const MethodInfo *v17; // x1
+  int32_t v18; // w20
+  BgmPlayArgs_o *v19; // x0
+  System_Nullable_float__o v20; // x2
+  int64_t v21; // x3
+  const MethodInfo *v22; // x4
   System_Nullable_float__o volume; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596FE1C & 1) == 0 )
@@ -58,35 +62,36 @@ BgmPlayArgs_o *SubBgmPlayer__ExportPlayArgs(SubBgmPlayer_o *this, const MethodIn
         bgmName = this->fields.bgmName,
         IsNullOrEmpty) )
   {
+    p_volume = (System_Nullable_float__o)&volume;
     bgmVolume = this->fields.bgmVolume;
     volume = 0;
     System_Nullable_float____ctor(
-      (System_Nullable_float__o)&volume,
+      p_volume,
       bgmVolume,
       (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-    PlayTime = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v6);
-    v8 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
-    v9 = PlayTime;
-    v10 = v8;
-    BgmPlayArgs___ctor(v8, bgmName, volume, 0.0, v9, v11);
+    PlayTime = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v7);
+    v9 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgs_TypeInfo);
+    v10 = volume;
+    v11 = PlayTime;
+    v12 = v9;
+    BgmPlayArgs___ctor(v9, bgmName, v10, 0.0, v11, v13);
   }
   else
   {
-    v12 = this->fields.bgmVolume;
+    v14 = (System_Nullable_float__o)&volume;
+    v15 = this->fields.bgmVolume;
     channelId = this->fields.channelId;
     volume = 0;
-    System_Nullable_float____ctor(
-      (System_Nullable_float__o)&volume,
-      v12,
-      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-    v15 = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v14);
-    v16 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgsWithChannel_TypeInfo);
-    v17 = v15;
-    v10 = v16;
-    BgmPlayArgs___ctor(v16, bgmName, volume, 0.0, v17, v18);
-    LODWORD(v10[1].klass) = channelId;
+    System_Nullable_float____ctor(v14, v15, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    v18 = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v17);
+    v19 = (BgmPlayArgs_o *)sub_2213CCC(SubBgmPlayArgsWithChannel_TypeInfo);
+    v20 = volume;
+    v21 = v18;
+    v12 = v19;
+    BgmPlayArgs___ctor(v19, bgmName, v20, 0.0, v21, v22);
+    LODWORD(v12[1].klass) = channelId;
   }
-  return v10;
+  return v12;
 }
 
 

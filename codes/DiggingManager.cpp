@@ -1729,11 +1729,17 @@ UnityEngine_Vector3_o DiggingManager__GetCalculatedBlockLocalPos(
         int32_t y,
         const MethodInfo *method)
 {
+  float v4; // s0
+  float v5; // s2
+  float v6; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = (float)(70 * x) + -4.0;
-  result.fields.z = 0.0;
-  result.fields.y = (float)(69 * y) + -200.0;
+  v4 = (float)(70 * x) + -4.0;
+  v5 = 0.0;
+  v6 = (float)(69 * y) + -200.0;
+  result.fields.z = v5;
+  result.fields.y = v6;
+  result.fields.x = v4;
   return result;
 }
 
@@ -1744,11 +1750,17 @@ UnityEngine_Vector3_o DiggingManager__GetCalculatedRareRewardLocalPos(
         int32_t y,
         const MethodInfo *method)
 {
+  float v4; // s0
+  float v5; // s2
+  float v6; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = (float)(70 * x) + 13.0;
-  result.fields.z = 0.0;
-  result.fields.y = (float)(69 * y) + -221.0;
+  v4 = (float)(70 * x) + 13.0;
+  v5 = 0.0;
+  v6 = (float)(69 * y) + -221.0;
+  result.fields.z = v5;
+  result.fields.y = v6;
+  result.fields.x = v4;
   return result;
 }
 
@@ -1759,11 +1771,17 @@ UnityEngine_Vector3_o DiggingManager__GetCalculatedRewardLocalPos(
         int32_t y,
         const MethodInfo *method)
 {
+  float v4; // s0
+  float v5; // s2
+  float v6; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = (float)(70 * x) + 18.0;
-  result.fields.z = 0.0;
-  result.fields.y = (float)(69 * y) + -213.0;
+  v4 = (float)(70 * x) + 18.0;
+  v5 = 0.0;
+  v6 = (float)(69 * y) + -213.0;
+  result.fields.z = v5;
+  result.fields.y = v6;
+  result.fields.x = v4;
   return result;
 }
 
@@ -5065,6 +5083,7 @@ bool DiggingManager__StartDiggingCompAnimation_d__116__MoveNext(
   bool v9; // w6
   bool v10; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   v2 = this;
   if ( (byte_596AA95 & 1) == 0 )
@@ -5129,8 +5148,9 @@ LABEL_15:
                 v2->fields.__2__current = 0;
                 p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
                 sub_2213A04(p__2__current, 0, v5, v6, v7, v8, v9, v10);
+                result = 1;
                 p__2__current[-1].fields._BoardType_k__BackingField = 1;
-                return 1;
+                return result;
               }
             }
           }
@@ -5776,10 +5796,10 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
   DiggingManager_resData_o *v13; // x8
   Il2CppObject *v14; // x20
   System_Collections_Generic_List_object__o *monitor; // x20
-  struct DiggingManager___c_StaticFields *static_fields; // x8
-  System_Predicate_object__o *_9__90_6; // x21
+  void *_9__9; // x8
+  System_Predicate_object__o *v17; // x21
   Il2CppObject *v18; // x22
-  struct DiggingManager___c_StaticFields *v19; // x0
+  struct DiggingManager___c_StaticFields *static_fields; // x0
   System_String_o *v20; // x2
   System_String_o *v21; // x3
   int32_t v22; // w4
@@ -5802,8 +5822,8 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
   __int64 v39; // x2
   struct DiggingManager_o *v40; // x8
   System_Collections_Generic_List_object__o *rewardList; // x20
-  struct DiggingManager___c_StaticFields *v42; // x8
-  System_Action_object__o *_9__90_8; // x21
+  void *v42; // x8
+  System_Action_object__o *v43; // x21
   Il2CppObject *v44; // x22
   struct DiggingManager___c_StaticFields *v45; // x0
   System_String_o *v46; // x2
@@ -5830,7 +5850,7 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
   int32_t eventId; // w23
   System_Action_bool__o *v68; // x25
   __int64 max_length_low; // x28
-  System_Action_o *_9__9; // x26
+  System_Action_o *v70; // x26
   System_String_o *v71; // x2
   System_String_o *v72; // x3
   int32_t v73; // w4
@@ -5900,23 +5920,23 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
         j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo, method, v11);
         this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
       }
-      static_fields = (struct DiggingManager___c_StaticFields *)*((_QWORD *)this + 23);
-      _9__90_6 = (System_Predicate_object__o *)static_fields->__9__90_6;
-      if ( !_9__90_6 )
+      _9__9 = this[1].fields.__9__9;
+      v17 = (System_Predicate_object__o *)*((_QWORD *)_9__9 + 1);
+      if ( !v17 )
       {
-        if ( !*((_DWORD *)this + 57) )
+        if ( !HIDWORD(this[2].fields.diggingBlockList) )
         {
           j_il2cpp_runtime_class_init_0(this, method, v11);
-          static_fields = DiggingManager___c_TypeInfo->static_fields;
+          _9__9 = DiggingManager___c_TypeInfo->static_fields;
         }
-        v18 = (Il2CppObject *)static_fields->__9;
-        _9__90_6 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_DiggingBlockComponent__TypeInfo);
-        System_Predicate_object____ctor(_9__90_6, v18, Method_DiggingManager___c__Response_b__90_6__, 0);
-        v19 = DiggingManager___c_TypeInfo->static_fields;
-        v19->__9__90_6 = (struct System_Predicate_DiggingBlockComponent__o *)_9__90_6;
+        v18 = *(Il2CppObject **)_9__9;
+        v17 = (System_Predicate_object__o *)sub_2213CCC(System_Predicate_DiggingBlockComponent__TypeInfo);
+        System_Predicate_object____ctor(v17, v18, Method_DiggingManager___c__Response_b__90_6__, 0);
+        static_fields = DiggingManager___c_TypeInfo->static_fields;
+        static_fields->__9__90_6 = (struct System_Predicate_DiggingBlockComponent__o *)v17;
         sub_2213A04(
-          (MissionNaviTransitionBoardItem_o *)&v19->__9__90_6,
-          (int32_t)_9__90_6,
+          (MissionNaviTransitionBoardItem_o *)&static_fields->__9__90_6,
+          (int32_t)v17,
           v20,
           v21,
           v22,
@@ -5928,7 +5948,7 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
       {
         this = (DiggingManager___c__DisplayClass90_0_o *)System_Collections_Generic_List_object___FindAll(
                                                            monitor,
-                                                           (System_Predicate_T__o *)_9__90_6,
+                                                           (System_Predicate_T__o *)v17,
                                                            (const MethodInfo_448436C *)Method_System_Collections_Generic_List_DiggingBlockComponent__FindAll__);
         v27 = DiggingManager___c_TypeInfo;
         v28 = this;
@@ -5977,23 +5997,23 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
               j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo, method, v39);
               this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
             }
-            v42 = (struct DiggingManager___c_StaticFields *)*((_QWORD *)this + 23);
-            _9__90_8 = (System_Action_object__o *)v42->__9__90_8;
-            if ( !_9__90_8 )
+            v42 = this[1].fields.__9__9;
+            v43 = (System_Action_object__o *)*((_QWORD *)v42 + 3);
+            if ( !v43 )
             {
-              if ( !*((_DWORD *)this + 57) )
+              if ( !HIDWORD(this[2].fields.diggingBlockList) )
               {
                 j_il2cpp_runtime_class_init_0(this, method, v39);
                 v42 = DiggingManager___c_TypeInfo->static_fields;
               }
-              v44 = (Il2CppObject *)v42->__9;
-              _9__90_8 = (System_Action_object__o *)sub_2213CCC(System_Action_DiggingRewardComponent__TypeInfo);
-              System_Action_object____ctor(_9__90_8, v44, Method_DiggingManager___c__Response_b__90_8__, 0);
+              v44 = *(Il2CppObject **)v42;
+              v43 = (System_Action_object__o *)sub_2213CCC(System_Action_DiggingRewardComponent__TypeInfo);
+              System_Action_object____ctor(v43, v44, Method_DiggingManager___c__Response_b__90_8__, 0);
               v45 = DiggingManager___c_TypeInfo->static_fields;
-              v45->__9__90_8 = (struct System_Action_DiggingRewardComponent__o *)_9__90_8;
+              v45->__9__90_8 = (struct System_Action_DiggingRewardComponent__o *)v43;
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)&v45->__9__90_8,
-                (int32_t)_9__90_8,
+                (int32_t)v43,
                 v46,
                 v47,
                 v48,
@@ -6005,7 +6025,7 @@ void DiggingManager___c__DisplayClass90_0___Response_b__5(
             {
               System_Collections_Generic_List_object___ForEach(
                 rewardList,
-                (System_Action_T__o *)_9__90_8,
+                (System_Action_T__o *)v43,
                 (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_DiggingRewardComponent__ForEach__);
               goto LABEL_35;
             }
@@ -6063,13 +6083,13 @@ LABEL_54:
   v68 = (System_Action_bool__o *)sub_2213CCC(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v68, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0);
   max_length_low = LODWORD(resultEventRewardInfos->max_length);
-  _9__9 = v2->fields.__9__9;
-  if ( !_9__9 )
+  v70 = v2->fields.__9__9;
+  if ( !v70 )
   {
-    _9__9 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__9, (Il2CppObject *)v2, Method_DiggingManager___c__DisplayClass90_0__Response_b__9__, 0);
-    v2->fields.__9__9 = _9__9;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__9__9, (int32_t)_9__9, v71, v72, v73, v74, v75, v76);
+    v70 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    System_Action___ctor(v70, (Il2CppObject *)v2, Method_DiggingManager___c__DisplayClass90_0__Response_b__9__, 0);
+    v2->fields.__9__9 = v70;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v2->fields.__9__9, (int32_t)v70, v71, v72, v73, v74, v75, v76);
   }
   if ( !diggingRewardDialog )
     goto LABEL_53;
@@ -6081,7 +6101,7 @@ LABEL_54:
     eventId,
     max_length_low != 0,
     v68,
-    _9__9,
+    v70,
     v78);
   v77 = v2->fields.__4__this;
   if ( !v77 )

@@ -686,9 +686,9 @@ System_String_o *TitleInfoEventRaidBossComponent__GetRestCountText(
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984368, &v27);
   v15 = System_String__Format(v13, v14, 0);
   System_Text_StringBuilder__Append_75735064(v10, v15, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v10->klass->vtable._3_ToString.methodPtr)(
-           v10,
-           v10->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v10->klass->vtable._3_ToString.methodPtr)(
+                              v10,
+                              v10->klass->vtable._3_ToString.method);
 }
 
 
@@ -1716,7 +1716,7 @@ void TitleInfoEventRaidBossComponent__SetDamageAnimation(
   _BOOL4 isJumbleRaid; // w8
   UnityEngine_GameObject_o *gameObject; // x0
   TotalEventRaidEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F09C & 1) == 0 )
   {
@@ -1906,9 +1906,9 @@ void TitleInfoEventRaidBossComponent__SetDisp(TitleInfoEventRaidBossComponent_o 
   __int64 v80; // x0
   bool *v81; // [xsp+0h] [xbp-90h]
   TotalEventRaidEntity_o *entity; // [xsp+8h] [xbp-88h] BYREF
-  UnityEngine_Color_o TextEffectColor; // 0:kr00_16.16
-  UnityEngine_Vector3_o v84; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Color_o v85; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v83; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v84; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o TextEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v86; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v88; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -2091,11 +2091,11 @@ LABEL_94:
       Instance = (DataManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
       if ( !Instance )
         goto LABEL_93;
-      v84.fields.z = 0.0;
-      v84.fields.y = 0.0;
+      v83.fields.z = 0.0;
+      v83.fields.y = 0.0;
       v53 = -(double)v50 / (double)maxHp;
-      v84.fields.x = barSizeX * v53;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v84, 0);
+      v83.fields.x = barSizeX * v53;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v83, 0);
       ++v26;
       v27 += 8;
     }
@@ -2104,11 +2104,11 @@ LABEL_94:
   Instance = (DataManager_o *)this->fields.eventBossStatusUiEntity;
   if ( Instance )
   {
-    v85.fields.g = 0.035294;
-    v85.fields.a = 1.0;
-    v85.fields.r = 0.37647;
-    v85.fields.b = 0.035294;
-    TextEffectColor = EventBossStatusUiEntity__GetTextEffectColor((EventBossStatusUiEntity_o *)Instance, v85, 0);
+    v84.fields.g = 0.035294;
+    v84.fields.a = 1.0;
+    v84.fields.r = 0.37647;
+    v84.fields.b = 0.035294;
+    TextEffectColor = EventBossStatusUiEntity__GetTextEffectColor((EventBossStatusUiEntity_o *)Instance, v84, 0);
     r = TextEffectColor.fields.r;
     g = TextEffectColor.fields.g;
     b = TextEffectColor.fields.b;
@@ -2552,7 +2552,7 @@ void TitleInfoEventRaidBossComponent__Setup(
   bool IsJumbleSingleRaid; // w0
   const MethodInfo *v104; // x3
   const MethodInfo *v105; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v13 = isJumbleRaid;
   v14 = isSingleRaid;
@@ -3192,10 +3192,13 @@ void TitleInfoEventRaidBossComponent__setBeforeMovePos(
   UnityEngine_Transform_o *v5; // x19
   __int64 v6; // x1
   __int64 v7; // x2
-  TitleInfoEventRaidBossComponent_c *v8; // x0
+  float x; // s8
+  float y; // s9
+  TitleInfoEventRaidBossComponent_c *v10; // x0
+  float z; // s10
   float *static_fields; // x8
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F09D & 1) == 0 )
   {
@@ -3210,17 +3213,20 @@ void TitleInfoEventRaidBossComponent__setBeforeMovePos(
   }
   v5 = (UnityEngine_Transform_o *)gameObject;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
-  v8 = TitleInfoEventRaidBossComponent_TypeInfo;
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  v10 = TitleInfoEventRaidBossComponent_TypeInfo;
+  z = localPosition.fields.z;
   if ( !*(&TitleInfoEventRaidBossComponent_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidBossComponent_TypeInfo, v6, v7);
-    v8 = TitleInfoEventRaidBossComponent_TypeInfo;
+    v10 = TitleInfoEventRaidBossComponent_TypeInfo;
   }
-  static_fields = (float *)v8->static_fields;
-  v11.fields.z = localPosition.fields.z + static_fields[10];
-  v11.fields.x = localPosition.fields.x + static_fields[8];
-  v11.fields.y = localPosition.fields.y + static_fields[9];
-  UnityEngine_Transform__set_localPosition(v5, v11, 0);
+  static_fields = (float *)v10->static_fields;
+  v14.fields.z = z + static_fields[10];
+  v14.fields.x = x + static_fields[8];
+  v14.fields.y = y + static_fields[9];
+  UnityEngine_Transform__set_localPosition(v5, v14, 0);
 }
 
 

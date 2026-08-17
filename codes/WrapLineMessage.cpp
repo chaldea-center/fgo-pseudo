@@ -105,6 +105,7 @@ bool WrapLineMessage__IsWrapTextSize(
   float v10; // s8
   UILabel_o *v11; // x21
   const MethodInfo *v12; // x1
+  bool result; // w0
 
   wrapWidth = this->fields.wrapWidth;
   if ( wrapWidth <= 0.0 )
@@ -119,7 +120,7 @@ bool WrapLineMessage__IsWrapTextSize(
   if ( !this )
     goto LABEL_10;
   v10 = wrapWidth - (float)(x - v7);
-  if ( v10 >= (float)(*((_DWORD *)this + 106) * Length) )
+  if ( v10 >= (float)(LODWORD(this[1].fields.imageStock) * Length) )
     return 0;
   v11 = WrapLineMessage__GetWrapCheckLabel(v5, (const MethodInfo *)tempTxt);
   this = (WrapLineMessage_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))tempTxt->klass->vtable._3_ToString.methodPtr)(
@@ -134,8 +135,9 @@ LABEL_10:
   }
   if ( v10 < UILabel__get_printedSize((UILabel_o *)this, 0).fields.x )
   {
+    result = 1;
     v5->fields._IsWrapWidth_k__BackingField = 1;
-    return 1;
+    return result;
   }
   return 0;
 }
@@ -207,6 +209,9 @@ UnityEngine_Vector3_o WrapLineMessage__SetOffsetMessage(
   UnityEngine_Object_o *messageOffset; // x20
   __int64 v8; // x1
   UnityEngine_Transform_o *v9; // x0
+  float v10; // s1
+  float v11; // s2
+  float v12; // s0
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
@@ -232,9 +237,12 @@ UnityEngine_Vector3_o WrapLineMessage__SetOffsetMessage(
     UnityEngine_Transform__set_localPosition(v9, v13, 0);
     x = x + ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)this, 0).fields.x;
   }
-  result.fields.y = y;
-  result.fields.z = z;
-  result.fields.x = x;
+  v10 = y;
+  v11 = z;
+  v12 = x;
+  result.fields.z = v11;
+  result.fields.y = v10;
+  result.fields.x = v12;
   return result;
 }
 

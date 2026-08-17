@@ -433,6 +433,7 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
   uint32_t crc; // w22
   uint32_t v45; // w0
   int32_t nowDataLength; // w8
+  bool result; // w0
 
   if ( (byte_596FA3D & 1) == 0 )
   {
@@ -530,8 +531,9 @@ bool DownloadHandlerFileWithCrcCheck__ReceiveData(
   v45 = Crc32__Compute_48218256(data, dataLength, crc, 0);
   nowDataLength = this->fields.nowDataLength;
   this->fields.crc = v45;
+  result = 1;
   this->fields.nowDataLength = nowDataLength + dataLength;
-  return 1;
+  return result;
 }
 
 

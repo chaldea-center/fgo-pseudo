@@ -345,6 +345,7 @@ float ScriptCharaData__GetDepthPos(ScriptCharaData_o *this, const MethodInfo *me
   __int64 v4; // x1
   UnityEngine_Object_o *parent; // x20
   float z; // s8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972826 & 1) == 0 )
   {
@@ -378,7 +379,8 @@ float ScriptCharaData__GetDepthPos(ScriptCharaData_o *this, const MethodInfo *me
                                                      0);
           if ( gameObject )
           {
-            z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0).fields.z;
+            localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+            z = localPosition.fields.z;
             goto LABEL_16;
           }
         }
@@ -406,6 +408,7 @@ float ScriptCharaData__GetParentDepth(ScriptCharaData_o *this, const MethodInfo 
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   UnityEngine_Object_o *parent; // x20
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972827 & 1) == 0 )
   {
@@ -438,7 +441,10 @@ float ScriptCharaData__GetParentDepth(ScriptCharaData_o *this, const MethodInfo 
                                                      (UnityEngine_Component_o *)gameObject,
                                                      0);
           if ( gameObject )
-            return UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0).fields.z;
+          {
+            localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0);
+            return localPosition.fields.z;
+          }
         }
       }
     }
@@ -634,7 +640,7 @@ bool ScriptCharaData__IsMoveAlpha(ScriptCharaData_o *this, const MethodInfo *met
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, method);
-  return ((bool (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._19_IsBusyMoveAlpha.methodPtr)(
+  return ((__int64 (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._19_IsBusyMoveAlpha.methodPtr)(
            chara,
            chara->klass->vtable._19_IsBusyMoveAlpha.method);
 }
@@ -649,7 +655,7 @@ bool ScriptCharaData__IsMoveAlphaWaitTalk(ScriptCharaData_o *this, const MethodI
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, method);
-  return ((bool (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._19_IsBusyMoveAlpha.methodPtr)(
+  return ((__int64 (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._19_IsBusyMoveAlpha.methodPtr)(
            chara,
            chara->klass->vtable._19_IsBusyMoveAlpha.method);
 }
@@ -799,7 +805,10 @@ void ScriptCharaData__MoveAttack(
 {
   __int64 v9; // x1
   UIScriptChara_o *chara; // x0
-  UnityEngine_Vector3_o Position; // 0:kr00_12.12
+  float y; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5972824 & 1) == 0 )
   {
@@ -812,7 +821,12 @@ void ScriptCharaData__MoveAttack(
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, v9);
-  UIScriptChara__MoveAttack(chara, kind, duration, Position, 0);
+  y = Position.fields.y;
+  z = Position.fields.z;
+  v14.fields.x = Position.fields.x;
+  v14.fields.y = y;
+  v14.fields.z = z;
+  UIScriptChara__MoveAttack(chara, kind, duration, v14, 0);
 }
 
 
@@ -842,7 +856,10 @@ void ScriptCharaData__MoveAttack_51808604(
 {
   __int64 v11; // x1
   UIScriptChara_o *chara; // x0
-  UnityEngine_Vector3_o Position_51899636; // 0:kr00_12.12
+  float v13; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position_51899636; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5972825 & 1) == 0 )
   {
@@ -855,7 +872,12 @@ void ScriptCharaData__MoveAttack_51808604(
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, v11);
-  UIScriptChara__MoveAttack(chara, kind, duration, Position_51899636, 0);
+  v13 = Position_51899636.fields.y;
+  z = Position_51899636.fields.z;
+  v16.fields.x = Position_51899636.fields.x;
+  v16.fields.y = v13;
+  v16.fields.z = z;
+  UIScriptChara__MoveAttack(chara, kind, duration, v16, 0);
 }
 
 
@@ -864,7 +886,10 @@ void ScriptCharaData__MovePosition(ScriptCharaData_o *this, float duration, int3
 {
   __int64 v7; // x1
   UIScriptChara_o *chara; // x0
-  UnityEngine_Vector3_o Position; // 0:kr00_12.12
+  float y; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v12; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_597281F & 1) == 0 )
   {
@@ -877,7 +902,12 @@ void ScriptCharaData__MovePosition(ScriptCharaData_o *this, float duration, int3
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, v7);
-  UIScriptChara__MovePosition(chara, duration, Position, 0);
+  y = Position.fields.y;
+  z = Position.fields.z;
+  v12.fields.x = Position.fields.x;
+  v12.fields.y = y;
+  v12.fields.z = z;
+  UIScriptChara__MovePosition(chara, duration, v12, 0);
 }
 
 
@@ -892,7 +922,10 @@ void ScriptCharaData__MovePositionEase(
   UIScriptChara_o *chara; // x20
   __int64 v12; // x0
   __int64 v13; // x1
-  UnityEngine_Vector3_o Position_51899636; // 0:kr00_12.12
+  float v14; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position_51899636; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5972821 & 1) == 0 )
   {
@@ -905,7 +938,12 @@ void ScriptCharaData__MovePositionEase(
   Position_51899636 = ScriptPosition__GetPosition_51899636(x, y, 0);
   if ( !chara )
     sub_2213CDC(v12, v13);
-  UIScriptChara__MovePositionEase(chara, time, Position_51899636, easeType, 0);
+  v14 = Position_51899636.fields.y;
+  z = Position_51899636.fields.z;
+  v17.fields.x = Position_51899636.fields.x;
+  v17.fields.y = v14;
+  v17.fields.z = z;
+  UIScriptChara__MovePositionEase(chara, time, v17, easeType, 0);
 }
 
 
@@ -933,7 +971,10 @@ void ScriptCharaData__MovePosition_51807452(
 {
   __int64 v9; // x1
   UIScriptChara_o *chara; // x0
-  UnityEngine_Vector3_o Position_51899636; // 0:kr00_12.12
+  float v11; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position_51899636; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5972820 & 1) == 0 )
   {
@@ -946,7 +987,12 @@ void ScriptCharaData__MovePosition_51807452(
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, v9);
-  UIScriptChara__MovePosition(chara, duration, Position_51899636, 0);
+  v11 = Position_51899636.fields.y;
+  z = Position_51899636.fields.z;
+  v14.fields.x = Position_51899636.fields.x;
+  v14.fields.y = v11;
+  v14.fields.z = z;
+  UIScriptChara__MovePosition(chara, duration, v14, 0);
 }
 
 
@@ -1040,7 +1086,10 @@ void ScriptCharaData__MoveReturnPosition_51807832(
 {
   __int64 v7; // x1
   UIScriptChara_o *chara; // x0
-  UnityEngine_Vector3_o Position; // 0:kr00_12.12
+  float y; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v12; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5972822 & 1) == 0 )
   {
@@ -1053,7 +1102,12 @@ void ScriptCharaData__MoveReturnPosition_51807832(
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, v7);
-  UIScriptChara__MoveReturnPosition_51932688(chara, duration, Position, 0);
+  y = Position.fields.y;
+  z = Position.fields.z;
+  v12.fields.x = Position.fields.x;
+  v12.fields.y = y;
+  v12.fields.z = z;
+  UIScriptChara__MoveReturnPosition_51932688(chara, duration, v12, 0);
 }
 
 
@@ -1081,7 +1135,10 @@ void ScriptCharaData__MoveReturnPosition_51808016(
 {
   __int64 v9; // x1
   UIScriptChara_o *chara; // x0
-  UnityEngine_Vector3_o Position_51899636; // 0:kr00_12.12
+  float v11; // s4
+  float z; // s5
+  UnityEngine_Vector3_o Position_51899636; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_5972823 & 1) == 0 )
   {
@@ -1094,7 +1151,12 @@ void ScriptCharaData__MoveReturnPosition_51808016(
   chara = this->fields.chara;
   if ( !chara )
     sub_2213CDC(0, v9);
-  UIScriptChara__MoveReturnPosition_51932688(chara, duration, Position_51899636, 0);
+  v11 = Position_51899636.fields.y;
+  z = Position_51899636.fields.z;
+  v14.fields.x = Position_51899636.fields.x;
+  v14.fields.y = v11;
+  v14.fields.z = z;
+  UIScriptChara__MoveReturnPosition_51932688(chara, duration, v14, 0);
 }
 
 

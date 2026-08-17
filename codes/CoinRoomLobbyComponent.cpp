@@ -145,23 +145,24 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   float v13; // s8
   UnityEngine_ParticleSystem_o *v14; // x23
   float v15; // s8
-  __int64 v16; // x1
-  System_String_o *v17; // x24
+  UnityEngine_ParticleSystem_MainModule_o v16; // x0
+  __int64 v17; // x1
+  System_String_o *v18; // x24
   UILabel_o *lobbyInfoLabel; // x23
-  Il2CppObject *v19; // x22
-  Il2CppObject *v20; // x0
-  System_String_o *v21; // x23
-  CoinRoomLobbyComponent_o *v22; // x0
-  int v23; // w21
-  const MethodInfo *v24; // x1
-  Il2CppObject *v25; // x24
+  Il2CppObject *v20; // x22
+  Il2CppObject *v21; // x0
+  System_String_o *v22; // x23
+  CoinRoomLobbyComponent_o *v23; // x0
+  int v24; // w21
+  const MethodInfo *v25; // x1
+  Il2CppObject *v26; // x24
   UILabel_o *lobbyTimeLabel; // x22
-  Il2CppObject *v27; // x0
-  int v28; // [xsp+4h] [xbp-9Ch] BYREF
-  int v29; // [xsp+8h] [xbp-98h] BYREF
-  int v30; // [xsp+Ch] [xbp-94h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v31; // [xsp+10h] [xbp-90h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v32; // [xsp+30h] [xbp-70h] BYREF
+  Il2CppObject *v28; // x0
+  int v29; // [xsp+4h] [xbp-9Ch] BYREF
+  int v30; // [xsp+8h] [xbp-98h] BYREF
+  int v31; // [xsp+Ch] [xbp-94h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v32; // [xsp+10h] [xbp-90h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v33; // [xsp+30h] [xbp-70h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+58h] [xbp-48h] BYREF
 
   if ( (byte_5974838 & 1) == 0 )
@@ -214,12 +215,10 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
     goto LABEL_27;
   v15 = v13 * *(float *)&gaugeBarObject[1].fields.m_CachedPtr;
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v14, 0).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(&v32, v15, 0);
-  v31 = v32;
-  UnityEngine_ParticleSystem_MainModule__set_startSize(
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    &v31,
-    0);
+  UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(&v33, v15, 0);
+  v16.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v32 = v33;
+  UnityEngine_ParticleSystem_MainModule__set_startSize(v16, &v32, 0);
   gaugeBarObject = this->fields.energyPartLoopObject;
   if ( !gaugeBarObject )
     goto LABEL_27;
@@ -229,25 +228,25 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
     goto LABEL_27;
   UnityEngine_GameObject__SetActive(gaugeBarObject, 1, 0);
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v16);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3688/*"COIN_ROOM_LOBBY_INFO"*/, 0);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v17);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3688/*"COIN_ROOM_LOBBY_INFO"*/, 0);
   lobbyInfoLabel = this->fields.lobbyInfoLabel;
-  v30 = v11;
-  v19 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v30);
-  v29 = v12;
-  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v29);
-  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v17, v19, v20, 0);
+  v31 = v11;
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v31);
+  v30 = v12;
+  v21 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v30);
+  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v18, v20, v21, 0);
   if ( !lobbyInfoLabel )
     goto LABEL_27;
   UILabel__set_text(lobbyInfoLabel, (System_String_o *)gaugeBarObject, 0);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_3689/*"COIN_ROOM_LOBBY_TIME_INFO"*/, 0);
-  v22 = (CoinRoomLobbyComponent_o *)CoinRoomUtility__MonthRemainingNum((const MethodInfo *)v21);
-  v23 = (int)v22;
-  v25 = (Il2CppObject *)CoinRoomLobbyComponent__SetTimeLabel(v22, v24);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3689/*"COIN_ROOM_LOBBY_TIME_INFO"*/, 0);
+  v23 = (CoinRoomLobbyComponent_o *)CoinRoomUtility__MonthRemainingNum((const MethodInfo *)v22);
+  v24 = (int)v23;
+  v26 = (Il2CppObject *)CoinRoomLobbyComponent__SetTimeLabel(v23, v25);
   lobbyTimeLabel = this->fields.lobbyTimeLabel;
-  v28 = v23;
-  v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v28);
-  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v21, v27, v25, 0);
+  v29 = v24;
+  v28 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v29);
+  gaugeBarObject = (UnityEngine_GameObject_o *)System_String__Format_75697880(v22, v28, v26, 0);
   if ( !lobbyTimeLabel )
     goto LABEL_27;
   UILabel__set_text(lobbyTimeLabel, (System_String_o *)gaugeBarObject, 0);
@@ -267,7 +266,7 @@ void CoinRoomLobbyComponent__OpenLobby(CoinRoomLobbyComponent_o *this, PlayMaker
   if ( !gaugeBarObject )
     goto LABEL_27;
   TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)gaugeBarObject, 1, 0);
-  if ( !v23 )
+  if ( !v24 )
   {
     gaugeBarObject = (UnityEngine_GameObject_o *)this->fields.selectCoinButton;
     if ( !gaugeBarObject )

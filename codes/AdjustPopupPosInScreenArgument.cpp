@@ -82,6 +82,7 @@ AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
   float z; // s8
   float y; // s9
   float x; // s10
+  AdjustPopupPosInScreenArgument_o *result; // x0
 
   z = worldPos.fields.z;
   y = worldPos.fields.y;
@@ -98,8 +99,9 @@ AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
     v8);
   this->fields._WorldPos_k__BackingField.fields.x = x;
   this->fields._WorldPos_k__BackingField.fields.y = y;
+  result = this;
   this->fields._WorldPos_k__BackingField.fields.z = z;
-  return this;
+  return result;
 }
 
 
@@ -116,11 +118,17 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_AdjustAfterOffset(
         AdjustPopupPosInScreenArgument_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields._AdjustAfterOffset_k__BackingField.fields.x;
-  result.fields.y = this->fields._AdjustAfterOffset_k__BackingField.fields.y;
-  result.fields.z = this->fields._AdjustAfterOffset_k__BackingField.fields.z;
+  x = this->fields._AdjustAfterOffset_k__BackingField.fields.x;
+  y = this->fields._AdjustAfterOffset_k__BackingField.fields.y;
+  z = this->fields._AdjustAfterOffset_k__BackingField.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -140,9 +148,6 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   UnityEngine_Object_o *Camera_k__BackingField; // x20
   __int64 v4; // x1
   UnityEngine_Camera_o *v5; // x0
-  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973EDC & 1) == 0 )
   {
@@ -157,10 +162,7 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
     v5 = this->fields._Camera_k__BackingField;
     if ( !v5 )
       sub_2213CDC(0, v4);
-    v10 = UnityEngine_Camera__WorldToViewportPoint_83198212(v5, this->fields._WorldPos_k__BackingField, 0);
-    result.fields.x = v10.fields.x;
-    result.fields.y = v10.fields.y;
-    result.fields.z = v10.fields.z;
+    return UnityEngine_Camera__WorldToViewportPoint_83198212(v5, this->fields._WorldPos_k__BackingField, 0);
   }
   else
   {
@@ -169,12 +171,8 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
-    static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
-    result.fields.z = static_fields->zeroVector.fields.z;
+    return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
   }
-  return result;
 }
 
 
@@ -182,11 +180,17 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_WorldPos(
         AdjustPopupPosInScreenArgument_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields._WorldPos_k__BackingField.fields.x;
-  result.fields.y = this->fields._WorldPos_k__BackingField.fields.y;
-  result.fields.z = this->fields._WorldPos_k__BackingField.fields.z;
+  x = this->fields._WorldPos_k__BackingField.fields.x;
+  y = this->fields._WorldPos_k__BackingField.fields.y;
+  z = this->fields._WorldPos_k__BackingField.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

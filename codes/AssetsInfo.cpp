@@ -1351,9 +1351,9 @@ LABEL_57:
   if ( !v5 )
 LABEL_65:
     sub_2213CDC(assets, v6);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
-           v5,
-           v5->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
+                              v5,
+                              v5->klass->vtable._3_ToString.method);
 }
 
 

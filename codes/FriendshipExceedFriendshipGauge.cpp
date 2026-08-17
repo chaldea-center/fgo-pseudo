@@ -151,6 +151,7 @@ LABEL_14:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FriendshipExceedFriendshipGauge__SetLabel(
         FriendshipExceedFriendshipGauge_o *this,
         int32_t level,
@@ -162,21 +163,27 @@ void FriendshipExceedFriendshipGauge__SetLabel(
   System_String_o *v8; // x0
   __int64 v9; // x1
   UILabel_o *maxLabel; // x21
-  int32_t v17; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
-  UnityEngine_Color_o DISABLE_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o EXCEEDED_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v11; // s0 OVERLAPPED
+  float v12; // s1
+  float v13; // s2
+  float v14; // s3
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  int32_t v19; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  v17 = max;
-  v18 = level;
+  v19 = max;
+  v20 = level;
   levelLabel = this->fields.levelLabel;
-  v8 = System_Int32__ToString((int32_t)&v18, 0);
+  v8 = System_Int32__ToString((int32_t)&v20, 0);
   if ( !levelLabel )
     goto LABEL_17;
   UIExtrusionLabel__set_text(levelLabel, v8, 0);
   maxLabel = this->fields.maxLabel;
-  v8 = System_Int32__ToString((int32_t)&v17, 0);
+  v8 = System_Int32__ToString((int32_t)&v19, 0);
   if ( !maxLabel )
     goto LABEL_17;
   UILabel__set_text(maxLabel, v8, 0);
@@ -193,7 +200,10 @@ void FriendshipExceedFriendshipGauge__SetLabel(
       v8 = (System_String_o *)this->fields.maxLabel;
       if ( v8 )
       {
-        EXCEEDED_COLOR = this->fields.EXCEEDED_COLOR;
+        b = this->fields.EXCEEDED_COLOR.fields.b;
+        a = this->fields.EXCEEDED_COLOR.fields.a;
+        r = this->fields.EXCEEDED_COLOR.fields.r;
+        g = this->fields.EXCEEDED_COLOR.fields.g;
         goto LABEL_15;
       }
     }
@@ -206,10 +216,10 @@ void FriendshipExceedFriendshipGauge__SetLabel(
     v8 = (System_String_o *)this->fields.levelLabel;
     if ( v8 )
     {
-      DISABLE_COLOR.fields.r = 1.0;
-      DISABLE_COLOR.fields.g = 1.0;
-      DISABLE_COLOR.fields.b = 1.0;
-      DISABLE_COLOR.fields.a = 1.0;
+      v11 = 1.0;
+      v12 = 1.0;
+      v13 = 1.0;
+      v14 = 1.0;
       goto LABEL_10;
     }
 LABEL_17:
@@ -218,16 +228,19 @@ LABEL_17:
   v8 = (System_String_o *)this->fields.levelLabel;
   if ( !v8 )
     goto LABEL_17;
-  DISABLE_COLOR = this->fields.DISABLE_COLOR;
+  v13 = this->fields.DISABLE_COLOR.fields.b;
+  v14 = this->fields.DISABLE_COLOR.fields.a;
+  v11 = this->fields.DISABLE_COLOR.fields.r;
+  v12 = this->fields.DISABLE_COLOR.fields.g;
 LABEL_10:
-  UIWidget__set_color((UIWidget_o *)v8, DISABLE_COLOR, 0);
+  UIWidget__set_color((UIWidget_o *)v8, *(UnityEngine_Color_o *)&v11, 0);
   v8 = (System_String_o *)this->fields.maxLabel;
   if ( !v8 )
     goto LABEL_17;
-  EXCEEDED_COLOR.fields.r = 1.0;
-  EXCEEDED_COLOR.fields.g = 1.0;
-  EXCEEDED_COLOR.fields.b = 1.0;
-  EXCEEDED_COLOR.fields.a = 1.0;
+  r = 1.0;
+  g = 1.0;
+  b = 1.0;
+  a = 1.0;
 LABEL_15:
-  UIWidget__set_color((UIWidget_o *)v8, EXCEEDED_COLOR, 0);
+  UIWidget__set_color((UIWidget_o *)v8, *(UnityEngine_Color_o *)&r, 0);
 }

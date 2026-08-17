@@ -110,44 +110,45 @@ void PartyOrganizationMenu__CheckAndOpenGrandBondEquipTargetConfirmDialog(
   bool v30; // w7
   __int64 v31; // x2
   __int64 v32; // x8
-  int32_t v33; // w1
+  System_Nullable_int__o v33; // x0
+  int32_t v34; // w1
   int64_t currentCryptoKey; // x22
-  __int64 v35; // x8
   __int64 v36; // x8
-  __int64 v37; // x9
-  __int64 v38; // x8
-  int64_t v39; // x24
-  __int64 v40; // x9
-  __int64 v41; // x27
-  __int64 v42; // x28
-  __int64 v43; // x25
-  __int64 v44; // x26
-  int64_t v45; // x22
-  __int64 v46; // x1
-  __int64 v47; // x2
+  __int64 v37; // x8
+  __int64 v38; // x9
+  __int64 v39; // x8
+  int64_t v40; // x24
+  __int64 v41; // x9
+  __int64 v42; // x27
+  __int64 v43; // x28
+  __int64 v44; // x25
+  __int64 v45; // x26
+  int64_t v46; // x22
+  __int64 v47; // x1
+  __int64 v48; // x2
   Il2CppObject *Instance; // x23
-  int32_t v49; // w27
+  int32_t v50; // w27
   ServantEntity_o *ServantEntity; // x23
   int32_t Value; // w21
-  __int64 v52; // x1
-  __int64 v53; // x2
-  Il2CppObject *v54; // x22
-  __int128 v55; // q1
-  int64_t v56; // x24
-  int32_t v57; // w25
-  System_Action_bool__bool__int__o *v58; // x26
-  __int64 v59; // x8
-  PartyOrganizationUtility_o *v60; // x20
-  __int64 v61; // x2
-  __int64 v62; // x27
-  __int64 v63; // x28
-  int32_t v64; // w27
+  __int64 v53; // x1
+  __int64 v54; // x2
+  Il2CppObject *v55; // x22
+  __int128 v56; // q1
+  int64_t v57; // x24
+  int32_t v58; // w25
+  System_Action_bool__bool__int__o *v59; // x26
+  __int64 v60; // x8
+  PartyOrganizationUtility_o *v61; // x20
+  __int64 v62; // x2
+  __int64 v63; // x27
+  __int64 v64; // x28
+  int32_t v65; // w27
   System_String_o *ServantShortName; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v66; // [xsp+10h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v67; // [xsp+30h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v68; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v67; // [xsp+10h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v68; // [xsp+30h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v69; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v70; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v71; // 0:x0.16
 
   if ( (byte_596C0B0 & 1) == 0 )
   {
@@ -196,13 +197,11 @@ LABEL_52:
   v32 = *(_QWORD *)(*(_QWORD *)v24 + 152LL);
   if ( v32 )
   {
-    v33 = *(_DWORD *)(v32 + 24);
-    v67.fields.currentCryptoKey = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v67,
-      v33,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    currentCryptoKey = v67.fields.currentCryptoKey;
+    v33 = (System_Nullable_int__o)&v68;
+    v34 = *(_DWORD *)(v32 + 24);
+    v68.fields.currentCryptoKey = 0;
+    System_Nullable_int____ctor(v33, v34, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    currentCryptoKey = v68.fields.currentCryptoKey;
   }
   else
   {
@@ -218,65 +217,65 @@ LABEL_52:
   {
     if ( !*(_QWORD *)v24 )
       goto LABEL_52;
-    v35 = *(_QWORD *)(*(_QWORD *)v24 + 152LL);
-    if ( !v35 )
+    v36 = *(_QWORD *)(*(_QWORD *)v24 + 152LL);
+    if ( !v36 )
       goto LABEL_52;
-    if ( !*(_DWORD *)(v35 + 24) )
+    if ( !*(_DWORD *)(v36 + 24) )
       goto LABEL_53;
-    if ( !*(_QWORD *)(v35 + 32) )
+    if ( !*(_QWORD *)(v36 + 32) )
       goto LABEL_7;
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9, v31);
     partyItem = (int64_t)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserServantMaster___);
     if ( !*(_QWORD *)v24 )
       goto LABEL_52;
-    v36 = *(_QWORD *)(*(_QWORD *)v24 + 152LL);
-    if ( !v36 )
+    v37 = *(_QWORD *)(*(_QWORD *)v24 + 152LL);
+    if ( !v37 )
       goto LABEL_52;
-    if ( !*(_DWORD *)(v36 + 24) )
+    if ( !*(_DWORD *)(v37 + 24) )
       goto LABEL_53;
     if ( !partyItem )
       goto LABEL_52;
     partyItem = (int64_t)DataMasterBase_object__object__long___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)partyItem,
-                           *(_QWORD *)(v36 + 32),
+                           *(_QWORD *)(v37 + 32),
                            (const MethodInfo_3F13190 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    v37 = *(_QWORD *)v24;
+    v38 = *(_QWORD *)v24;
     if ( !*(_QWORD *)v24 )
       goto LABEL_52;
-    v38 = *(_QWORD *)(v37 + 120);
-    if ( !v38 )
+    v39 = *(_QWORD *)(v38 + 120);
+    if ( !v39 )
       goto LABEL_52;
-    v39 = partyItem;
+    v40 = partyItem;
     if ( !partyItem )
       goto LABEL_52;
-    v40 = *(_QWORD *)(v37 + 152);
-    if ( !v40 )
+    v41 = *(_QWORD *)(v38 + 152);
+    if ( !v41 )
       goto LABEL_52;
-    if ( (*(_DWORD *)(v40 + 24) & 0xFFFFFFFE) == 0 )
+    if ( (*(_DWORD *)(v41 + 24) & 0xFFFFFFFE) == 0 )
 LABEL_53:
       sub_2213CE4(partyItem);
-    v41 = *(_QWORD *)(v38 + 80);
-    v42 = *(_QWORD *)(v38 + 88);
-    v43 = *(_QWORD *)(partyItem + 80);
-    v44 = *(_QWORD *)(partyItem + 88);
-    v45 = *(_QWORD *)(v40 + 40);
+    v42 = *(_QWORD *)(v39 + 80);
+    v43 = *(_QWORD *)(v39 + 88);
+    v44 = *(_QWORD *)(partyItem + 80);
+    v45 = *(_QWORD *)(partyItem + 88);
+    v46 = *(_QWORD *)(v41 + 40);
     Instance = SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v46, v47);
-    *(_QWORD *)&v68.fields.currentCryptoKey = v41;
-    *(_QWORD *)&v68.fields.fakeValue = v42;
-    v49 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v68, 0);
-    *(_QWORD *)&v69.fields.currentCryptoKey = v43;
-    *(_QWORD *)&v69.fields.fakeValue = v44;
-    partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v69, 0);
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v47, v48);
+    *(_QWORD *)&v69.fields.currentCryptoKey = v42;
+    *(_QWORD *)&v69.fields.fakeValue = v43;
+    v50 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v69, 0);
+    *(_QWORD *)&v70.fields.currentCryptoKey = v44;
+    *(_QWORD *)&v70.fields.fakeValue = v45;
+    partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v70, 0);
     if ( !Instance )
       goto LABEL_52;
     partyItem = PartyOrganizationUtility__IsShowBondEquipGuideDialog(
                   (PartyOrganizationUtility_o *)Instance,
-                  v49,
+                  v50,
                   partyItem,
-                  v45,
+                  v46,
                   0);
     if ( (partyItem & 1) != 0 )
     {
@@ -287,62 +286,62 @@ LABEL_53:
         {
           ServantEntity = UserServantEntity__GetServantEntity((UserServantEntity_o *)partyItem, -1, 0);
           Value = ConstantMaster__getValue((System_String_o *)StringLiteral_7296/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/, 0);
-          v54 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v55 = *(_OWORD *)(v39 + 32);
-          *(_OWORD *)&v67.fields.currentCryptoKey = *(_OWORD *)(v39 + 16);
-          *(_OWORD *)&v67.fields.fakeValue = v55;
+          v55 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v56 = *(_OWORD *)(v40 + 32);
+          *(_OWORD *)&v68.fields.currentCryptoKey = *(_OWORD *)(v40 + 16);
+          *(_OWORD *)&v68.fields.fakeValue = v56;
           if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v52, v53);
-          v66 = v67;
-          partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v66, 0);
+            j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v53, v54);
+          v67 = v68;
+          partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_56000612(&v67, 0);
           if ( *(_QWORD *)v24 )
           {
-            v56 = partyItem;
-            v57 = *(_DWORD *)(*(_QWORD *)v24 + 160LL);
-            v58 = (System_Action_bool__bool__int__o *)sub_2213CCC(System_Action_bool__bool__int__TypeInfo);
+            v57 = partyItem;
+            v58 = *(_DWORD *)(*(_QWORD *)v24 + 160LL);
+            v59 = (System_Action_bool__bool__int__o *)sub_2213CCC(System_Action_bool__bool__int__TypeInfo);
             System_Action_bool__bool__int____ctor(
-              v58,
+              v59,
               (Il2CppObject *)v7,
               Method_PartyOrganizationMenu___c__DisplayClass58_0__CheckAndOpenGrandBondEquipTargetConfirmDialog_b__0__,
               0);
             partyItem = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_47A2F30 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-            v59 = *(_QWORD *)(v7 + 16);
-            if ( v59 )
+            v60 = *(_QWORD *)(v7 + 16);
+            if ( v60 )
             {
-              v60 = (PartyOrganizationUtility_o *)partyItem;
-              partyItem = *(_QWORD *)(v59 + 120);
+              v61 = (PartyOrganizationUtility_o *)partyItem;
+              partyItem = *(_QWORD *)(v60 + 120);
               if ( partyItem )
               {
                 partyItem = (int64_t)UserServantEntity__get_BaseServantEntity((UserServantEntity_o *)partyItem, 0);
                 if ( partyItem )
                 {
-                  v62 = *(_QWORD *)(partyItem + 16);
-                  v63 = *(_QWORD *)(partyItem + 24);
+                  v63 = *(_QWORD *)(partyItem + 16);
+                  v64 = *(_QWORD *)(partyItem + 24);
                   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
-                    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9, v61);
-                  *(_QWORD *)&v70.fields.currentCryptoKey = v62;
-                  *(_QWORD *)&v70.fields.fakeValue = v63;
-                  partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v70, 0);
+                    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9, v62);
+                  *(_QWORD *)&v71.fields.currentCryptoKey = v63;
+                  *(_QWORD *)&v71.fields.fakeValue = v64;
+                  partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v71, 0);
                   if ( ServantEntity )
                   {
-                    v64 = partyItem;
+                    v65 = partyItem;
                     partyItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                   ServantEntity->fields.id,
                                   0);
-                    if ( v60 )
+                    if ( v61 )
                     {
-                      ServantShortName = PartyOrganizationUtility__GetServantShortName(v60, v64, partyItem, 1, 0);
+                      ServantShortName = PartyOrganizationUtility__GetServantShortName(v61, v65, partyItem, 1, 0);
                       partyItem = (int64_t)ServantEntity__getClassName(ServantEntity, 0);
                       if ( *(_QWORD *)v24 )
                       {
-                        if ( v54 )
+                        if ( v55 )
                         {
                           CommonUI__OpenGrandBondEquipTargetConfirmDialog(
-                            (CommonUI_o *)v54,
-                            v56,
-                            Value,
+                            (CommonUI_o *)v55,
                             v57,
+                            Value,
                             v58,
+                            v59,
                             ServantShortName,
                             (System_String_o *)partyItem,
                             *(_DWORD *)(*(_QWORD *)v24 + 208LL),
@@ -1997,7 +1996,7 @@ System_IAsyncResult_o *PartyOrganizationMenu_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(PartyOrganizationMenu_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -2142,7 +2141,7 @@ void PartyOrganizationMenu___c__DisplayClass58_0___CheckAndOpenGrandBondEquipTar
   {
     this = (PartyOrganizationMenu___c__DisplayClass58_0_o *)this->fields.item;
     if ( !this
-      || (*((_DWORD *)this + 40) = equipBondSkillChange,
+      || (LODWORD(this[4].klass) = equipBondSkillChange,
           PartyOrganizationListViewItem__MoveBondEquip((PartyOrganizationListViewItem_o *)this, 0),
           (this = (PartyOrganizationMenu___c__DisplayClass58_0_o *)v5->fields.__4__this) == 0) )
     {

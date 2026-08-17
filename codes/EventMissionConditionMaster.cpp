@@ -1590,43 +1590,47 @@ int32_t EventMissionConditionMaster__getTodayFirstMissionId(
   NetworkManager_c **v4; // x27
   int v6; // w8
   System_DateTime_o v7; // x1
+  System_DateTime_o v8; // x0
   int32_t Month; // w22
+  System_DateTime_o v10; // x0
   int32_t Day; // w23
-  System_Collections_Generic_List_object__o *v10; // x21
-  __int64 v11; // x1
+  System_Collections_Generic_List_object__o *v12; // x21
+  __int64 v13; // x1
   void *list; // x0
   int32_t Count; // w0
-  int32_t v14; // w24
-  int32_t v15; // w25
+  int32_t v16; // w24
+  int32_t v17; // w25
   Il2CppObject *Item; // x0
-  Il2CppObject *v17; // x26
-  NetworkManager_c *v18; // x0
-  NetworkManager_c **v19; // x29
+  Il2CppObject *v19; // x26
+  NetworkManager_c *v20; // x0
+  NetworkManager_c **v21; // x29
   int64_t monitor; // x27
-  System_DateTime_o v21; // x1
-  int32_t v22; // w27
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  bool v29; // zf
+  System_DateTime_o v23; // x1
+  System_DateTime_o v24; // x0
+  int32_t v25; // w27
+  System_DateTime_o v26; // x0
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  bool v33; // zf
   struct System_Object_array *items; // x8
-  _QWORD *v31; // x9
+  _QWORD *v35; // x9
   __int64 size; // x10
-  Il2CppClass **v33; // x0
+  Il2CppClass **v37; // x0
   struct EventMissionConditionMaster___c_StaticFields *static_fields; // x8
   System_Comparison_T__o *_9__11_0; // x19
-  Il2CppObject *v36; // x20
-  struct EventMissionConditionMaster___c_StaticFields *v37; // x0
-  System_String_o *v38; // x2
-  System_String_o *v39; // x3
-  int32_t v40; // w4
-  int32_t v41; // w5
-  bool v42; // w6
-  bool v43; // w7
-  uint64_t v45; // [xsp+0h] [xbp-70h] BYREF
+  Il2CppObject *v40; // x20
+  struct EventMissionConditionMaster___c_StaticFields *v41; // x0
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
+  int32_t v45; // w5
+  bool v46; // w6
+  bool v47; // w7
+  uint64_t v49; // [xsp+0h] [xbp-70h] BYREF
   uint64_t dateData; // [xsp+8h] [xbp-68h] BYREF
 
   v4 = &NetworkManager_TypeInfo;
@@ -1648,18 +1652,20 @@ int32_t EventMissionConditionMaster__getTodayFirstMissionId(
     byte_59708A1 = 1;
   }
   v6 = *(&NetworkManager_TypeInfo->_2.cctor_finished + 1);
-  v45 = 0;
+  v49 = 0;
   dateData = 0;
   if ( !v6 )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, *(_QWORD *)&eventId);
   dateData = NetworkManager__getServerDateTime(0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v7.fields._dateData);
-  Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-  Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v8.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v8, 0);
+  v10.fields._dateData = (uint64_t)&dateData;
+  Day = System_DateTime__get_Day(v10, 0);
+  v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
+    v12,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   list = this->fields.list;
   if ( !list )
@@ -1669,8 +1675,8 @@ int32_t EventMissionConditionMaster__getTodayFirstMissionId(
             (const MethodInfo_3E94214 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v14 = Count;
-    v15 = 0;
+    v16 = Count;
+    v17 = 0;
     while ( 1 )
     {
       list = this->fields.list;
@@ -1678,63 +1684,65 @@ int32_t EventMissionConditionMaster__getTodayFirstMissionId(
         break;
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
-               v15,
+               v17,
                (const MethodInfo_3E942A8 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__);
       if ( Item )
       {
-        v17 = Item;
+        v19 = Item;
         if ( LODWORD(Item[2].klass) == eventId && HIDWORD(Item[1].klass) == 3 && LODWORD(Item[2].monitor) == 12 )
         {
-          v18 = *v4;
-          v19 = v4;
-          monitor = (int64_t)v17[3].monitor;
-          if ( !*(&v18->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(v18, v11);
-          v45 = NetworkManager__getServerDateTime_48347596(monitor, 0).fields._dateData;
+          v20 = *v4;
+          v21 = v4;
+          monitor = (int64_t)v19[3].monitor;
+          if ( !*(&v20->_2.cctor_finished + 1) )
+            j_il2cpp_runtime_class_init_0(v20, v13);
+          v49 = NetworkManager__getServerDateTime_48347596(monitor, 0).fields._dateData;
           if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v21.fields._dateData);
-          v22 = System_DateTime__get_Month((System_DateTime_o)&v45, 0);
-          list = (void *)System_DateTime__get_Day((System_DateTime_o)&v45, 0);
-          v29 = Month == v22;
-          v4 = v19;
-          if ( v29 && Day == (_DWORD)list )
+            j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v23.fields._dateData);
+          v24.fields._dateData = (uint64_t)&v49;
+          v25 = System_DateTime__get_Month(v24, 0);
+          v26.fields._dateData = (uint64_t)&v49;
+          list = (void *)System_DateTime__get_Day(v26, 0);
+          v33 = Month == v25;
+          v4 = v21;
+          if ( v33 && Day == (_DWORD)list )
           {
-            if ( !v10 )
+            if ( !v12 )
               break;
-            items = v10->fields._items;
-            v31 = Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__;
-            ++v10->fields._version;
+            items = v12->fields._items;
+            v35 = Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__;
+            ++v12->fields._version;
             if ( !items )
               break;
-            size = v10->fields._size;
+            size = v12->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
-                v10,
-                v17,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+                v12,
+                v19,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
             }
             else
             {
-              v33 = &items->obj.klass + size;
-              v10->fields._size = size + 1;
-              v33[4] = (Il2CppClass *)v17;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v33 + 4), (int32_t)v17, v23, v24, v25, v26, v27, v28);
+              v37 = &items->obj.klass + size;
+              v12->fields._size = size + 1;
+              v37[4] = (Il2CppClass *)v19;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v37 + 4), (int32_t)v19, v27, v28, v29, v30, v31, v32);
             }
           }
         }
       }
-      if ( v14 == ++v15 )
+      if ( v16 == ++v17 )
         goto LABEL_28;
     }
 LABEL_40:
-    sub_2213CDC(list, v11);
+    sub_2213CDC(list, v13);
   }
 LABEL_28:
   list = EventMissionConditionMaster___c_TypeInfo;
   if ( !*(&EventMissionConditionMaster___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventMissionConditionMaster___c_TypeInfo, v11);
+    j_il2cpp_runtime_class_init_0(EventMissionConditionMaster___c_TypeInfo, v13);
     list = EventMissionConditionMaster___c_TypeInfo;
   }
   static_fields = (struct EventMissionConditionMaster___c_StaticFields *)*((_QWORD *)list + 23);
@@ -1743,30 +1751,30 @@ LABEL_28:
   {
     if ( !*((_DWORD *)list + 57) )
     {
-      j_il2cpp_runtime_class_init_0(list, v11);
+      j_il2cpp_runtime_class_init_0(list, v13);
       static_fields = EventMissionConditionMaster___c_TypeInfo->static_fields;
     }
-    v36 = (Il2CppObject *)static_fields->__9;
+    v40 = (Il2CppObject *)static_fields->__9;
     _9__11_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventMissionConditionEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__11_0,
-      v36,
+      v40,
       Method_EventMissionConditionMaster___c__getTodayFirstMissionId_b__11_0__,
       0);
-    v37 = EventMissionConditionMaster___c_TypeInfo->static_fields;
-    v37->__9__11_0 = (struct System_Comparison_EventMissionConditionEntity__o *)_9__11_0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v37->__9__11_0, (int32_t)_9__11_0, v38, v39, v40, v41, v42, v43);
+    v41 = EventMissionConditionMaster___c_TypeInfo->static_fields;
+    v41->__9__11_0 = (struct System_Comparison_EventMissionConditionEntity__o *)_9__11_0;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v41->__9__11_0, (int32_t)_9__11_0, v42, v43, v44, v45, v46, v47);
   }
-  if ( !v10 )
+  if ( !v12 )
     goto LABEL_40;
   System_Collections_Generic_List_object___Sort_71849708(
-    v10,
+    v12,
     _9__11_0,
     (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__);
-  if ( v10->fields._size < 1 )
+  if ( v12->fields._size < 1 )
     return 0;
   list = System_Collections_Generic_List_object___get_Item(
-           v10,
+           v12,
            0,
            (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
   if ( !list )

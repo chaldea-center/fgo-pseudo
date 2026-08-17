@@ -84,19 +84,20 @@ bool MapCameraPerformance__Execute_d__6__MoveNext(MapCameraPerformance__Execute_
   System_Nullable_float__o v16; // x24
   int32_t value_low; // w25
   System_Action_o *v18; // x26
-  System_Func_bool__o *v19; // x21
-  UnityEngine_WaitUntil_o *v20; // x20
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
-  __int64 v27; // [xsp+0h] [xbp-60h] BYREF
-  __int64 v28; // [xsp+8h] [xbp-58h]
-  System_Nullable_Vector3__o v29; // 0:x0.16
-  System_Nullable_Vector3__o v30; // 0:x1.16
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  System_Nullable_float__o v19; // x3
+  System_Func_bool__o *v20; // x21
+  UnityEngine_WaitUntil_o *v21; // x20
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v28; // [xsp+0h] [xbp-60h] BYREF
+  __int64 v29; // [xsp+8h] [xbp-58h]
+  System_Nullable_Vector3__o v30; // 0:x0.16
+  System_Nullable_Vector3__o v31; // 0:x1.16
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597256C & 1) == 0 )
   {
@@ -141,16 +142,16 @@ bool MapCameraPerformance__Execute_d__6__MoveNext(MapCameraPerformance__Execute_
     v13 = *(float *)&_4__this->fields.easeType;
     if ( *(&_4__this->fields._IsPause_k__BackingField + 3) )
     {
-      v31.fields.z = 0.0;
-      *(_QWORD *)&v29.fields.hasValue = &v27;
-      v31.fields.x = *(float *)&_4__this->fields.position.fields.hasValue;
-      v31.fields.y = _4__this->fields.position.fields.value.fields.x;
-      v27 = 0;
+      v32.fields.z = 0.0;
+      *(_QWORD *)&v30.fields.hasValue = &v28;
+      v32.fields.x = *(float *)&_4__this->fields.position.fields.hasValue;
+      v32.fields.y = _4__this->fields.position.fields.value.fields.x;
       v28 = 0;
-      *(_QWORD *)&v29.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-      System_Nullable_Vector3____ctor(v29, v31, v10);
-      v15 = v27;
-      v14 = v28;
+      v29 = 0;
+      *(_QWORD *)&v30.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+      System_Nullable_Vector3____ctor(v30, v32, v10);
+      v15 = v28;
+      v14 = v29;
     }
     else
     {
@@ -164,27 +165,28 @@ bool MapCameraPerformance__Execute_d__6__MoveNext(MapCameraPerformance__Execute_
     if ( !v12 )
 LABEL_19:
       sub_2213CDC(v7, v8);
-    *(_QWORD *)&v30.fields.hasValue = v15;
-    *(_QWORD *)&v30.fields.value.fields.y = v14;
-    MapCamera__StartAutoWork(v12, v13, v30, v16, value_low, v18, 0);
-    v19 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
+    *(_QWORD *)&v31.fields.hasValue = v15;
+    *(_QWORD *)&v31.fields.value.fields.y = v14;
+    v19 = v16;
+    MapCamera__StartAutoWork(v12, v13, v31, v19, value_low, v18, 0);
+    v20 = (System_Func_bool__o *)sub_2213CCC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
-      v19,
+      v20,
       (Il2CppObject *)v6,
       Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__,
       0);
-    v20 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
-    UnityEngine_WaitUntil___ctor(v20, v19, 0);
-    this->fields.__2__current = (Il2CppObject *)v20;
+    v21 = (UnityEngine_WaitUntil_o *)sub_2213CCC(UnityEngine_WaitUntil_TypeInfo);
+    UnityEngine_WaitUntil___ctor(v21, v20, 0);
+    this->fields.__2__current = (Il2CppObject *)v21;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
-      (int32_t)v20,
-      v21,
+      (int32_t)v21,
       v22,
       v23,
       v24,
       v25,
-      v26);
+      v26,
+      v27);
     v11 = 1;
     result = 1;
   }

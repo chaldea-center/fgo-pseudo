@@ -49,9 +49,9 @@ LABEL_11:
 
 BaseMotionSkip_o *BattleSelfSkillInfoData__MakeSkillSkip(BattleSelfSkillInfoData_o *this, const MethodInfo *method)
 {
-  return ((BaseMotionSkip_o *(__fastcall *)(BattleSelfSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
-           this,
-           this->klass->vtable._17_CommonMakeSkillSkip.method);
+  return (BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSelfSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
+                               this,
+                               this->klass->vtable._17_CommonMakeSkillSkip.method);
 }
 
 

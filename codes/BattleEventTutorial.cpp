@@ -1,38 +1,42 @@
 void BattleEventTutorial___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
-  __int64 v8; // x0
-  __int64 v9; // x1
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
-  struct EventTutorialMaster_OpenType_array *v16; // x1
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct EventTutorialMaster_OpenType_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  __int64 v10; // x0
+  __int64 v11; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  struct EventTutorialMaster_OpenType_array *v18; // x1
   struct BattleEventTutorial_StaticFields *static_fields; // x0
-  System_Array_o *v18; // x19
-  struct BattleEventTutorial_StaticFields *v19; // x0
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
-  struct EventTutorialMaster_OpenType_array *v32; // x1
-  struct BattleEventTutorial_StaticFields *v33; // x0
+  System_Array_o *v20; // x0
+  System_RuntimeFieldHandle_o v21; // x1
+  System_Array_o *v22; // x19
+  struct BattleEventTutorial_StaticFields *v23; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  struct EventTutorialMaster_OpenType_array *v36; // x1
+  struct BattleEventTutorial_StaticFields *v37; // x0
 
   if ( (byte_597348D & 1) == 0 )
   {
@@ -43,58 +47,56 @@ void BattleEventTutorial___cctor(const MethodInfo *method)
     byte_597348D = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__6CE1945219F858E505CBCB583091A5CAEBC22DD3B2E09E641296ADEE8D127F45,
-    0);
-  BattleEventTutorial_TypeInfo->static_fields->tacticalTargetTypes = (struct EventTutorialMaster_OpenType_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__6CE1945219F858E505CBCB583091A5CAEBC22DD3B2E09E641296ADEE8D127F45;
+  v3 = (struct EventTutorialMaster_OpenType_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  BattleEventTutorial_TypeInfo->static_fields->tacticalTargetTypes = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleEventTutorial_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
-  v8 = sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 1);
-  if ( !v8 )
+    v7,
+    v8,
+    v9);
+  v10 = sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 1);
+  if ( !v10 )
     goto LABEL_8;
-  v16 = (struct EventTutorialMaster_OpenType_array *)v8;
-  if ( !*(_DWORD *)(v8 + 24) )
+  v18 = (struct EventTutorialMaster_OpenType_array *)v10;
+  if ( !*(_DWORD *)(v10 + 24) )
     goto LABEL_9;
   static_fields = BattleEventTutorial_TypeInfo->static_fields;
-  v16->m_Items[0] = 111;
-  static_fields->firstPlayerTurnAfterSkillTargetTypes = v16;
+  v18->m_Items[0] = 111;
+  static_fields->firstPlayerTurnAfterSkillTargetTypes = v18;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->firstPlayerTurnAfterSkillTargetTypes,
-    (int32_t)v16,
-    v10,
-    v11,
+    (int32_t)v18,
     v12,
     v13,
     v14,
-    v15);
-  v18 = (System_Array_o *)sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v18,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__BCBC01A5036673E493422616677A83718EDFE475D3E938B1A879903FFB2A05A0,
-    0);
-  v19 = BattleEventTutorial_TypeInfo->static_fields;
-  v19->resultTargetTypes = (struct EventTutorialMaster_OpenType_array *)v18;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->resultTargetTypes, (int32_t)v18, v20, v21, v22, v23, v24, v25);
-  v8 = sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 1);
-  if ( !v8 )
+    v15,
+    v16,
+    v17);
+  v20 = (System_Array_o *)sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 3);
+  v21.fields.value = Field__PrivateImplementationDetails__BCBC01A5036673E493422616677A83718EDFE475D3E938B1A879903FFB2A05A0;
+  v22 = v20;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v20, v21, 0);
+  v23 = BattleEventTutorial_TypeInfo->static_fields;
+  v23->resultTargetTypes = (struct EventTutorialMaster_OpenType_array *)v22;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->resultTargetTypes, (int32_t)v22, v24, v25, v26, v27, v28, v29);
+  v10 = sub_2213B20(EventTutorialMaster_OpenType___TypeInfo, 1);
+  if ( !v10 )
 LABEL_8:
-    sub_2213CDC(v8, v9);
-  v32 = (struct EventTutorialMaster_OpenType_array *)v8;
-  if ( !*(_DWORD *)(v8 + 24) )
+    sub_2213CDC(v10, v11);
+  v36 = (struct EventTutorialMaster_OpenType_array *)v10;
+  if ( !*(_DWORD *)(v10 + 24) )
 LABEL_9:
-    sub_2213CE4(v8);
-  v33 = BattleEventTutorial_TypeInfo->static_fields;
-  v32->m_Items[0] = 26;
-  v33->gimmickTargetTypes = v32;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v33->gimmickTargetTypes, (int32_t)v32, v26, v27, v28, v29, v30, v31);
+    sub_2213CE4(v10);
+  v37 = BattleEventTutorial_TypeInfo->static_fields;
+  v36->m_Items[0] = 26;
+  v37->gimmickTargetTypes = v36;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v37->gimmickTargetTypes, (int32_t)v36, v30, v31, v32, v33, v34, v35);
 }
 
 

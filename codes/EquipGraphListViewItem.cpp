@@ -1228,9 +1228,9 @@ bool EquipGraphListViewItem__SetSortValue(
   _BOOL4 v10; // w8
   int v11; // w10
   int32_t sortKind; // w8
-  int64_t v13; // x20
+  int64_t servantEntity_low; // x20
   IconLabelInfo_o *v14; // x21
-  int64_t v15; // x20
+  int64_t userSvtEntity_low; // x20
   IconLabelInfo_o *v16; // x21
   struct ListViewManager_o *manager; // x8
   __int64 naturalAligment; // x11
@@ -1238,7 +1238,7 @@ bool EquipGraphListViewItem__SetSortValue(
   struct UserServantEntity_o *v20; // x8
   __int128 v21; // q1
   struct UserServantEntity_o *v22; // x8
-  int64_t v23; // x20
+  int64_t servantEntity_high; // x20
   IconLabelInfo_o *iconLabelInfo1; // x21
   IconLabelInfo_o *iconLabelInfo2; // x19
   struct ServantEntity_o *v26; // x8
@@ -1531,26 +1531,26 @@ LABEL_130:
         this = (EquipGraphListViewItem_o *)v4->fields.userSvtEntity;
         if ( !this )
           goto LABEL_130;
-        v23 = *((int *)this + 103);
+        servantEntity_high = SHIDWORD(this[1].fields.servantEntity);
         iconLabelInfo1 = v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v23;
+        v4->fields.sortValue1 = servantEntity_high;
         this = (EquipGraphListViewItem_o *)UserServantEntity__get_HpBoostValue((UserServantEntity_o *)this, 0);
         if ( !iconLabelInfo1 )
           goto LABEL_130;
-        IconLabelInfo__Set_47880948(iconLabelInfo1, 3, v23, (int32_t)this, 0, 0, 0, 0, 0, 0);
+        IconLabelInfo__Set_47880948(iconLabelInfo1, 3, servantEntity_high, (int32_t)this, 0, 0, 0, 0, 0, 0);
       }
       else
       {
         this = (EquipGraphListViewItem_o *)v4->fields.userSvtEntity;
         if ( !this )
           goto LABEL_130;
-        v13 = *((int *)this + 102);
+        servantEntity_low = SLODWORD(this[1].fields.servantEntity);
         v14 = v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v13;
+        v4->fields.sortValue1 = servantEntity_low;
         this = (EquipGraphListViewItem_o *)UserServantEntity__get_AtkBoostValue((UserServantEntity_o *)this, 0);
         if ( !v14 )
           goto LABEL_130;
-        IconLabelInfo__Set_47880948(v14, 5, v13, (int32_t)this, 0, 0, 0, 0, 0, 0);
+        IconLabelInfo__Set_47880948(v14, 5, servantEntity_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
       }
 LABEL_47:
       this = (EquipGraphListViewItem_o *)v4->fields.userSvtEntity;
@@ -1558,7 +1558,7 @@ LABEL_47:
         goto LABEL_130;
       iconLabelInfo2 = v4->fields.iconLabelInfo2;
 LABEL_80:
-      v39 = *((_DWORD *)this + 100);
+      v39 = (int32_t)this[1].fields.userSvtEntity;
       this = (EquipGraphListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( iconLabelInfo2 )
       {
@@ -1659,13 +1659,13 @@ LABEL_78:
   this = (EquipGraphListViewItem_o *)v4->fields.userSvtEntity;
   if ( !this )
     goto LABEL_130;
-  v15 = *((int *)this + 100);
+  userSvtEntity_low = SLODWORD(this[1].fields.userSvtEntity);
   v16 = v4->fields.iconLabelInfo1;
-  v4->fields.sortValue1 = v15;
+  v4->fields.sortValue1 = userSvtEntity_low;
   this = (EquipGraphListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
   if ( !v16 )
     goto LABEL_130;
-  IconLabelInfo__Set_47880948(v16, 2, v15, (int32_t)this, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_47880948(v16, 2, userSvtEntity_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
 LABEL_82:
   LOBYTE(this) = 1;
   return (char)this;

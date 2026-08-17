@@ -2931,7 +2931,7 @@ int32_t FollowerSelectItemListViewManager__GetInitialDisplayClass(
   bool v24; // w8
   int32_t v25; // w22
   RecommendSupportQuestEntity_o *v27; // [xsp+0h] [xbp-40h] BYREF
-  __int64 enableCount; // [xsp+8h] [xbp-38h] BYREF
+  int32_t enableCount[2]; // [xsp+8h] [xbp-38h] BYREF
 
   v8 = this;
   if ( (byte_596AFAA & 1) == 0 )
@@ -2946,7 +2946,7 @@ int32_t FollowerSelectItemListViewManager__GetInitialDisplayClass(
     byte_596AFAA = 1;
   }
   v27 = 0;
-  enableCount = 0;
+  *(_QWORD *)enableCount = 0;
   if ( isInitialize )
   {
     PlayerPrefsFollowerClassId = (FollowerSelectItemListViewManager_c *)FollowerSelectItemListViewManager__GetPlayerPrefsFollowerClassId(
@@ -2976,16 +2976,12 @@ int32_t FollowerSelectItemListViewManager__GetInitialDisplayClass(
   if ( !classButtonControl )
     goto LABEL_34;
   v14 = (char)IsSameQuestAndPhase;
-  if ( ClassButtonControlComponent__HasDisableClassTabs(
-         classButtonControl,
-         (int32_t *)&enableCount + 1,
-         (int32_t *)&enableCount,
-         0) )
+  if ( ClassButtonControlComponent__HasDisableClassTabs(classButtonControl, &enableCount[1], enableCount, 0) )
   {
     if ( (v14 & 1) != 0 )
       return followerClassId;
-    if ( (_DWORD)enableCount == 1 )
-      followerClassId = HIDWORD(enableCount);
+    if ( enableCount[0] == 1 )
+      followerClassId = enableCount[1];
     else
       followerClassId = 9;
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
@@ -7113,7 +7109,7 @@ System_IAsyncResult_o *FollowerSelectItemListViewManager_CallbackFunc__BeginInvo
   v11[0] = j_il2cpp_value_box_0(FollowerSelectItemListViewManager_ResultKind_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

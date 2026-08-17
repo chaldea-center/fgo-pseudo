@@ -148,6 +148,7 @@ bool WarBoardMovePerformance__Execute_d__7__MoveNext(
   float v16; // s8
   UnityEngine_Transform_o *transform; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   _1__state = this->fields.__1__state;
@@ -192,8 +193,9 @@ LABEL_17:
     v10->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v10->fields.__2__current;
     sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   return 0;
 }

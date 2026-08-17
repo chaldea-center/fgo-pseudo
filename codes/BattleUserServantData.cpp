@@ -247,9 +247,10 @@ SimpleSkillData_array *BattleUserServantData__MakeSimpleSkillArray(
   unsigned __int64 v9; // x23
   int32_t v10; // w1
   int32_t v11; // w2
-  __int64 v12; // x1
-  unsigned __int64 v13; // x9
-  __int64 v15; // [xsp+8h] [xbp-48h] BYREF
+  SimpleSkillData_o v12; // x0
+  __int64 v13; // x1
+  unsigned __int64 v14; // x9
+  __int64 v16; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_597029B & 1) == 0 )
   {
@@ -273,15 +274,16 @@ SimpleSkillData_array *BattleUserServantData__MakeSimpleSkillArray(
             goto LABEL_13;
           v10 = skillIds->m_Items[v9];
           v11 = skillLvs->m_Items[v9];
-          v15 = 0;
-          SimpleSkillData___ctor((SimpleSkillData_o)&v15, v10, v11, 0);
+          v12 = (SimpleSkillData_o)&v16;
+          v16 = 0;
+          SimpleSkillData___ctor(v12, v10, v11, 0);
           if ( !v6 )
-            sub_2213CDC(v8, v12);
+            sub_2213CDC(v8, v13);
           if ( v9 >= *(unsigned int *)(v6 + 24) )
 LABEL_13:
             sub_2213CE4(v8);
-          v13 = v6 + 8 * v9++;
-          *(_QWORD *)(v13 + 32) = v15;
+          v14 = v6 + 8 * v9++;
+          *(_QWORD *)(v14 + 32) = v16;
         }
         while ( (unsigned int)max_length != v9 );
       }

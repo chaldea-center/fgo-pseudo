@@ -1032,6 +1032,7 @@ bool MasterEquipSettingDialog__SetUpMasterEquip_d__23__MoveNext(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  bool result; // w0
 
   v3 = this;
   if ( (byte_596BB8A & 1) == 0 )
@@ -1068,8 +1069,9 @@ LABEL_11:
     v3->fields.__2__current = (Il2CppObject *)v7;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   return 0;
 }
@@ -1225,7 +1227,7 @@ void MasterEquipSettingDialog___c__DisplayClass20_0___OnClickDecide_b__0(
   struct MasterEquipSettingDialog_o *_4__this; // x8
   System_Action_T1__T2__o *callBack; // x20
   struct MasterEquipSettingDialog_o *v5; // x8
-  System_Collections_IEnumerator_o *v6; // x1
+  struct MasterEquipSettingDialog_o *v6; // x1
   System_String_o *v7; // x2
   System_String_o *v8; // x3
   int32_t v9; // w4
@@ -1266,15 +1268,18 @@ void MasterEquipSettingDialog___c__DisplayClass20_0___OnClickDecide_b__0(
   this = (MasterEquipSettingDialog___c__DisplayClass20_0_o *)v2->fields.__4__this;
   if ( !this )
     goto LABEL_12;
-  v6 = (System_Collections_IEnumerator_o *)*((_QWORD *)this + 27);
+  v6 = this[6].fields.__4__this;
   if ( v6 )
   {
-    UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, v6, 0);
+    UnityEngine_MonoBehaviour__StopCoroutine(
+      (UnityEngine_MonoBehaviour_o *)this,
+      (System_Collections_IEnumerator_o *)v6,
+      0);
     this = (MasterEquipSettingDialog___c__DisplayClass20_0_o *)v2->fields.__4__this;
     if ( this )
     {
-      *((_QWORD *)this + 27) = 0;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 216), 0, v7, v8, v9, v10, v11, v12);
+      this[6].fields.__4__this = 0;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[6].fields.__4__this, 0, v7, v8, v9, v10, v11, v12);
       return;
     }
 LABEL_12:

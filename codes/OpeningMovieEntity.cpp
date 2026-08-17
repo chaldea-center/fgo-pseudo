@@ -48,15 +48,20 @@ int32_t OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, const MethodI
 System_String_o *OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
   int32_t moviePlayTime; // w19
-  bool v4; // cc
-  __int64 v5; // x1
-  int v6; // w8
-  Il2CppObject *v7; // x19
-  Il2CppObject *v8; // x0
-  Il2CppObject *v10; // x0
-  int32_t v11; // [xsp+0h] [xbp-30h] BYREF
+  System_TimeSpan_o v4; // x0
+  System_TimeSpan_o v5; // x0
+  bool v6; // cc
+  __int64 v7; // x1
+  int v8; // w8
+  System_TimeSpan_o v9; // x0
+  Il2CppObject *v10; // x19
+  System_TimeSpan_o v11; // x0
+  Il2CppObject *v12; // x0
+  System_TimeSpan_o v14; // x0
+  Il2CppObject *v15; // x0
+  int32_t v16; // [xsp+0h] [xbp-30h] BYREF
   int32_t Seconds; // [xsp+4h] [xbp-2Ch] BYREF
-  __int64 v13; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v18; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5970E35 & 1) == 0 )
   {
@@ -66,29 +71,34 @@ System_String_o *OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEntity_o *this
     byte_5970E35 = 1;
   }
   moviePlayTime = this->fields.moviePlayTime;
-  v13 = 0;
+  v18 = 0;
   if ( !*(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, method);
-  System_TimeSpan___ctor_77242956((System_TimeSpan_o)&v13, 0, 0, moviePlayTime, 0);
-  v4 = System_TimeSpan__get_Minutes((System_TimeSpan_o)&v13, 0) < 1;
-  v6 = *(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1);
-  if ( v4 )
+  v4.fields._ticks = (int64_t)&v18;
+  System_TimeSpan___ctor_77242956(v4, 0, 0, moviePlayTime, 0);
+  v5.fields._ticks = (int64_t)&v18;
+  v6 = System_TimeSpan__get_Minutes(v5, 0) < 1;
+  v8 = *(&System_TimeSpan_TypeInfo->_2.cctor_finished + 1);
+  if ( v6 )
   {
-    if ( !v6 )
-      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v5);
-    Seconds = System_TimeSpan__get_Seconds((System_TimeSpan_o)&v13, 0);
-    v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
-    return System_String__Format((System_String_o *)StringLiteral_26620/*"{0}秒"*/, v10, 0);
+    if ( !v8 )
+      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v7);
+    v14.fields._ticks = (int64_t)&v18;
+    Seconds = System_TimeSpan__get_Seconds(v14, 0);
+    v15 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
+    return System_String__Format((System_String_o *)StringLiteral_26620/*"{0}秒"*/, v15, 0);
   }
   else
   {
-    if ( !v6 )
-      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v5);
-    Seconds = System_TimeSpan__get_Minutes((System_TimeSpan_o)&v13, 0);
-    v7 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
-    v11 = System_TimeSpan__get_Seconds((System_TimeSpan_o)&v13, 0);
-    v8 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v11);
-    return System_String__Format_75697880((System_String_o *)StringLiteral_26618/*"{0}分{1}秒"*/, v7, v8, 0);
+    if ( !v8 )
+      j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo, v7);
+    v9.fields._ticks = (int64_t)&v18;
+    Seconds = System_TimeSpan__get_Minutes(v9, 0);
+    v10 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &Seconds);
+    v11.fields._ticks = (int64_t)&v18;
+    v16 = System_TimeSpan__get_Seconds(v11, 0);
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v16);
+    return System_String__Format_75697880((System_String_o *)StringLiteral_26618/*"{0}分{1}秒"*/, v10, v12, 0);
   }
 }
 

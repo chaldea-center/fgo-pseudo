@@ -380,7 +380,7 @@ void ServerSettingMenu__OnChangeDataServerAddress(ServerSettingMenu_o *this, con
   System_String_o *mSelectedItem; // x20
   System_String_o *value; // x0
   __int64 v6; // x2
-  System_String_o *v7; // x20
+  System_String_o *methods; // x20
   System_String_o *v8; // x2
   const MethodInfo *v9; // x3
 
@@ -415,9 +415,9 @@ void ServerSettingMenu__OnChangeDataServerAddress(ServerSettingMenu_o *this, con
   if ( !v2->fields.dataServerAddressInput )
 LABEL_13:
     sub_2213CDC(this, method);
-  v7 = *(System_String_o **)(*((_QWORD *)this + 23) + 152LL);
+  methods = (System_String_o *)this[1].klass->_1.methods;
   v8 = UIInput__get_value(v2->fields.dataServerAddressInput, 0);
-  ServerSettingMenu__OnChangeAnyServerAddress(v2, v7, v8, v9);
+  ServerSettingMenu__OnChangeAnyServerAddress(v2, methods, v8, v9);
 }
 
 
@@ -428,7 +428,7 @@ void ServerSettingMenu__OnChangeGameServerAddress(ServerSettingMenu_o *this, con
   System_String_o *mSelectedItem; // x20
   System_String_o *value; // x0
   __int64 v6; // x2
-  System_String_o *v7; // x20
+  System_String_o *properties; // x20
   System_String_o *v8; // x2
   const MethodInfo *v9; // x3
 
@@ -463,9 +463,9 @@ void ServerSettingMenu__OnChangeGameServerAddress(ServerSettingMenu_o *this, con
   if ( !v2->fields.gameServerAddressInput )
 LABEL_13:
     sub_2213CDC(this, method);
-  v7 = *(System_String_o **)(*((_QWORD *)this + 23) + 144LL);
+  properties = (System_String_o *)this[1].klass->_1.properties;
   v8 = UIInput__get_value(v2->fields.gameServerAddressInput, 0);
-  ServerSettingMenu__OnChangeAnyServerAddress(v2, v7, v8, v9);
+  ServerSettingMenu__OnChangeAnyServerAddress(v2, properties, v8, v9);
 }
 
 
@@ -618,7 +618,7 @@ void ServerSettingMenu__OnChangeWebServerAddress(ServerSettingMenu_o *this, cons
   System_String_o *mSelectedItem; // x20
   System_String_o *value; // x0
   __int64 v6; // x2
-  System_String_o *v7; // x20
+  Il2CppClass **nestedTypes; // x20
   System_String_o *v8; // x2
   const MethodInfo *v9; // x3
 
@@ -653,9 +653,9 @@ void ServerSettingMenu__OnChangeWebServerAddress(ServerSettingMenu_o *this, cons
   if ( !v2->fields.webServerAddressInput )
 LABEL_13:
     sub_2213CDC(this, method);
-  v7 = *(System_String_o **)(*((_QWORD *)this + 23) + 160LL);
+  nestedTypes = this[1].klass->_1.nestedTypes;
   v8 = UIInput__get_value(v2->fields.webServerAddressInput, 0);
-  ServerSettingMenu__OnChangeAnyServerAddress(v2, v7, v8, v9);
+  ServerSettingMenu__OnChangeAnyServerAddress(v2, (System_String_o *)nestedTypes, v8, v9);
 }
 
 
@@ -1478,7 +1478,7 @@ System_IAsyncResult_o *ServerSettingMenu_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1543,6 +1543,7 @@ bool ServerSettingMenu__CheckURL_d__37__MoveNext(ServerSettingMenu__CheckURL_d__
   int32_t v28; // w5
   bool v29; // w6
   bool v30; // w7
+  bool result; // w0
   Il2CppObject *Instance; // x0
   __int64 v33; // x1
   __int64 v34; // x1
@@ -1656,8 +1657,9 @@ LABEL_19:
   v24 = v53;
   v53->fields.__2__current = v23;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&v24->fields.__2__current, (int32_t)v23, v25, v26, v27, v28, v29, v30);
+  result = 1;
   v53->fields.__1__state = 1;
-  return 1;
+  return result;
 }
 
 

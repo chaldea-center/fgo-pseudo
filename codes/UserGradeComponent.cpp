@@ -7,17 +7,18 @@ void UserGradeComponent___ctor(UserGradeComponent_o *this, const MethodInfo *met
 UnityEngine_Vector2_o UserGradeComponent__GetGradeLocalSize(UserGradeComponent_o *this, const MethodInfo *method)
 {
   struct UISprite_o *usrGradeImg; // x0
-  UnityEngine_Vector2_o v5; // kr00_8
+  float v3; // s0
+  float v4; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   usrGradeImg = this->fields.usrGradeImg;
   if ( !usrGradeImg )
     sub_2213CDC(0, method);
-  v5 = ((UnityEngine_Vector2_o (__fastcall *)(struct UISprite_o *, const MethodInfo *))usrGradeImg->klass->vtable._22_get_localSize.methodPtr)(
-         usrGradeImg,
-         usrGradeImg->klass->vtable._22_get_localSize.method);
-  result.fields.y = v5.fields.y;
-  result.fields.x = v5.fields.x;
+  ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))usrGradeImg->klass->vtable._22_get_localSize.methodPtr)(
+    usrGradeImg,
+    usrGradeImg->klass->vtable._22_get_localSize.method);
+  result.fields.y = v4;
+  result.fields.x = v3;
   return result;
 }
 

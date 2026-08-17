@@ -325,6 +325,7 @@ LABEL_25:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UITable__RepositionVariableSize(
         UITable_o *this,
         System_Collections_Generic_List_Transform__o *children,
@@ -349,130 +350,131 @@ void UITable__RepositionVariableSize(
   float v20; // s11
   __int64 v21; // x8
   __int64 v22; // x9
-  float32x2_t v23; // d3
-  float v24; // s1
-  __int64 v25; // x9
-  float32x2_t v26; // d4
-  float v27; // s5
-  float32x2_t v28; // d3
-  float v29; // s1
-  float32x2_t v30; // d6
-  float32x2_t v31; // d4
-  float v32; // s7
-  float v33; // s1
-  float32x2_t v34; // d3
-  float v35; // s2
-  float32x2_t v36; // d4
-  float v37; // s5
-  float v38; // s0
-  int8x8_t v39; // d1
-  __int64 v40; // x9
-  float v41; // s2
-  int8x8_t v42; // d3
-  float v43; // s6
-  float v44; // s7
-  float32x2_t v45; // d18
-  float v46; // s16
-  float v47; // s6
-  int8x8_t v48; // d7
-  int8x8_t v49; // d17
-  int8x8_t v50; // d18
-  int8x8_t v51; // d19
-  float32x2_t v52; // d7
-  float32x2_t v53; // d17
+  float y; // v0.s[1]
+  float32x2_t v24; // d3
+  float v25; // s1
+  __int64 v26; // x9
+  float32x2_t v27; // d4
+  float v28; // s5
+  float32x2_t v29; // d3
+  float v30; // s1
+  float32x2_t v31; // d6
+  float32x2_t v32; // d4
+  float v33; // s7
+  float v34; // s1
+  float32x2_t v35; // d3
+  float v36; // s2
+  float32x2_t v37; // d4
+  float v38; // s5
+  float v39; // s0
+  int8x8_t v40; // d1
+  __int64 v41; // x9
+  float v42; // s2
+  int8x8_t v43; // d3
+  float v44; // s6
+  float v45; // s7
+  float32x2_t v46; // d18
+  float v47; // s16
+  float v48; // s6
+  int8x8_t v49; // d7
+  int8x8_t v50; // d17
+  int8x8_t v51; // d18
+  int8x8_t v52; // d19
+  float32x2_t v53; // d7
   float32x2_t v54; // d17
-  float v55; // s6
-  float32x2_t v56; // d7
-  float v57; // s16
-  int8x8_t v58; // d4
-  int8x8_t v59; // d7
-  float v60; // s5
-  float v61; // s6
-  int8x8_t v62; // d16
-  int8x8_t v63; // d17
-  float32x2_t v64; // d4
-  float32x2_t v65; // d7
+  float32x2_t v55; // d17
+  float v56; // s6
+  float32x2_t v57; // d7
+  float v58; // s16
+  int8x8_t v59; // d4
+  int8x8_t v60; // d7
+  float v61; // s5
+  float v62; // s6
+  int8x8_t v63; // d16
+  int8x8_t v64; // d17
+  float32x2_t v65; // d4
   float32x2_t v66; // d7
-  float v67; // s6
-  __int64 v68; // x8
-  float v69; // s4
-  float v70; // s5
-  float32x2_t v71; // d16
-  float v72; // s6
-  float v73; // s4
-  int8x8_t v74; // d5
-  int8x8_t v75; // d7
-  int8x8_t v76; // d16
-  int8x8_t v77; // d17
-  float32x2_t v78; // d4
-  float v79; // s0
-  float32x2_t v80; // d1
-  float v81; // s5
-  float32x2_t v82; // d4
-  float v83; // s6
-  float v84; // s0
-  int8x8_t v85; // d7
-  int8x8_t v86; // d1
-  int8x8_t v87; // d4
-  int8x8_t v88; // d5
-  float32x2_t v89; // d4
-  float32x2_t v90; // d1
+  float32x2_t v67; // d7
+  float v68; // s6
+  __int64 v69; // x8
+  float v70; // s4
+  float v71; // s5
+  float32x2_t v72; // d16
+  float v73; // s6
+  float v74; // s4
+  int8x8_t v75; // d5
+  int8x8_t v76; // d7
+  int8x8_t v77; // d16
+  int8x8_t v78; // d17
+  float32x2_t v79; // d4
+  float v80; // s0
+  float32x2_t v81; // d1
+  float v82; // s5
+  float32x2_t v83; // d4
+  float v84; // s6
+  float v85; // s0
+  int8x8_t v86; // d7
+  int8x8_t v87; // d1
+  int8x8_t v88; // d4
+  int8x8_t v89; // d5
+  float32x2_t v90; // d4
   float32x2_t v91; // d1
-  float v92; // s0
-  int v93; // w8
-  const MethodInfo *v94; // x1
-  UnityEngine_Vector2_o PivotOffset; // kr30_8
-  int32_t v96; // w26
-  unsigned int v97; // w28
-  float v98; // s8
-  float v99; // s13
-  unsigned int v100; // w27
-  int32_t v101; // w24
+  float32x2_t v92; // d1
+  float v93; // s0
+  int v94; // w8
+  const MethodInfo *v95; // x1
+  UnityEngine_Vector2_o PivotOffset; // kr00_8
+  int32_t v97; // w26
+  unsigned int v98; // w28
+  float v99; // s8
+  float v100; // s13
+  unsigned int v101; // w27
+  int32_t v102; // w24
   float x; // s3
-  float v103; // s5
-  float y; // s0
-  __int64 v105; // x8
+  float v104; // s5
+  float v105; // s0
   __int64 v106; // x8
-  UnityEngine_Transform_o *v107; // x25
-  __int64 v108; // x10
-  __int64 v109; // x9
-  float *v110; // x8
-  float v111; // s15
-  float v112; // s12
-  float v113; // s14
-  float v114; // s10
-  float v115; // s9
-  float v116; // s11
-  float v117; // s0
-  float v119; // s3
-  int v120; // w8
+  __int64 v107; // x8
+  UnityEngine_Transform_o *v108; // x25
+  __int64 v109; // x10
+  __int64 v110; // x9
+  float *v111; // x8
+  float v112; // s15
+  float v113; // s12
+  float v114; // s14
+  float v115; // s10
+  float v116; // s9
+  float v117; // s11
+  float v118; // s0
+  float v119; // s1
+  float v120; // s3
+  float v121; // s0
+  int v122; // w8
   int32_t pivot; // w0
-  UnityEngine_Vector2_o v122; // kr38_8
+  UnityEngine_Vector2_o v124; // kr08_8
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v124; // x4
-  float v125; // s8
-  UnityEngine_Transform_o *v126; // x19
-  int32_t v127; // w20
-  float32x2_t v133; // d2
-  float32x2_t v134; // d4
-  unsigned __int64 v135; // d0
-  unsigned __int64 v136; // d0
-  float v137; // s8
-  UnityEngine_Transform_o *v138; // x21
-  __int64 v139; // x1
+  const MethodInfo *v126; // x4
+  float v127; // s8
+  UnityEngine_Transform_o *v128; // x19
+  int32_t v129; // w20
+  float32x2_t v135; // d2
+  float32x2_t v136; // d4
+  unsigned __int64 v137; // d0
+  unsigned __int64 v138; // d0
+  float v139; // s8
+  UnityEngine_Transform_o *v140; // x21
+  __int64 v141; // x1
   Il2CppObject *Component_object; // x22
-  float32x2_t v141; // d0
-  float v142; // [xsp+8h] [xbp-F8h]
-  float v143; // [xsp+Ch] [xbp-F4h]
-  unsigned __int64 v144; // [xsp+10h] [xbp-F0h]
-  __int64 v145; // [xsp+20h] [xbp-E0h]
-  float v146; // [xsp+20h] [xbp-E0h]
-  float v147; // [xsp+30h] [xbp-D0h]
-  float32x2_t v148; // [xsp+30h] [xbp-D0h]
-  UnityEngine_Bounds_o v149; // [xsp+48h] [xbp-B8h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr20_12.12
-  UnityEngine_Vector3_o v152; // 0:s0.4,4:s1.4,8:s2.4
+  float v143; // [xsp+8h] [xbp-F8h]
+  float v144; // [xsp+Ch] [xbp-F4h]
+  unsigned __int64 v145; // [xsp+10h] [xbp-F0h]
+  __int64 v146; // [xsp+20h] [xbp-E0h]
+  float v147; // [xsp+20h] [xbp-E0h]
+  float v148; // [xsp+30h] [xbp-D0h]
+  float32x2_t v149; // [xsp+30h] [xbp-D0h]
+  UnityEngine_Bounds_o v150; // [xsp+48h] [xbp-B8h] BYREF
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v153; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
@@ -500,9 +502,9 @@ void UITable__RepositionVariableSize(
       goto LABEL_79;
     v6 = children->fields._size / columns + 1;
   }
-  *(_QWORD *)&v149.fields.m_Center.fields.x = v6;
-  *(_QWORD *)&v149.fields.m_Center.fields.z = columns;
-  v7 = sub_2213B28(UnityEngine_Bounds____TypeInfo, &v149);
+  *(_QWORD *)&v150.fields.m_Center.fields.x = v6;
+  *(_QWORD *)&v150.fields.m_Center.fields.z = columns;
+  v7 = sub_2213B28(UnityEngine_Bounds____TypeInfo, &v150);
   v8 = sub_2213B20(UnityEngine_Bounds___TypeInfo, (unsigned int)columns);
   v9 = sub_2213B20(UnityEngine_Bounds___TypeInfo, (unsigned int)v6);
   size = children->fields._size;
@@ -512,7 +514,7 @@ void UITable__RepositionVariableSize(
     v12 = 0;
     v13 = 0;
     v14 = 0;
-    v145 = v9 + 32;
+    v146 = v9 + 32;
     while ( 1 )
     {
       Item = System_Collections_Generic_List_object___get_Item(
@@ -520,7 +522,7 @@ void UITable__RepositionVariableSize(
                v14,
                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_Transform__get_Item__);
       this = (UITable_o *)NGUIMath__CalculateRelativeWidgetBounds_56362504(
-                            &v149,
+                            &v150,
                             (UnityEngine_Transform_o *)Item,
                             (UnityEngine_Transform_o *)Item,
                             !v4->fields.hideInactive,
@@ -528,12 +530,11 @@ void UITable__RepositionVariableSize(
                             v16);
       if ( !Item )
         break;
-      z = v149.fields.m_Center.fields.z;
-      v18.n64_u64[0] = *(unsigned __int64 *)&v149.fields.m_Center.fields.x;
-      v19.n64_u64[0] = *(unsigned __int64 *)&v149.fields.m_Extents.fields.x;
-      v20 = v149.fields.m_Extents.fields.z;
+      z = v150.fields.m_Center.fields.z;
+      v18.n64_u64[0] = *(unsigned __int64 *)&v150.fields.m_Center.fields.x;
+      v19.n64_u64[0] = *(unsigned __int64 *)&v150.fields.m_Extents.fields.x;
+      v20 = v150.fields.m_Extents.fields.z;
       localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)Item, 0);
-      v141.n64_u32[0] = LODWORD(localScale.fields.x);
       if ( !v7 )
         break;
       v21 = *(_QWORD *)(v7 + 16);
@@ -542,121 +543,123 @@ void UITable__RepositionVariableSize(
       v22 = *(_QWORD *)(v21 + 16);
       if ( v12 >= (unsigned int)v22 )
         goto LABEL_80;
-      v141.n64_u32[1] = LODWORD(localScale.fields.y);
-      v23.n64_u64[0] = vmul_f32(vsub_f32(v18, v19), v141).n64_u64[0];
-      v24 = (float)(z - v20) * localScale.fields.z;
-      v25 = v7 + 24 * ((int)v12 + v22 * (int)v13);
-      v26.n64_u64[0] = vmul_f32(vsub_f32(vadd_f32(v18, v19), v23), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v27 = (float)((float)(z + v20) - v24) * 0.5;
-      v28.n64_u64[0] = vadd_f32(v23, v26).n64_u64[0];
-      v29 = v24 + v27;
-      v30.n64_u64[0] = vadd_f32(v26, v28).n64_u64[0];
-      v31.n64_u64[0] = vsub_f32(v28, v26).n64_u64[0];
-      v32 = v27 + v29;
-      v33 = v29 - v27;
-      v34.n64_u64[0] = vmul_f32(vsub_f32(vmul_f32(v141, v30), v31), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v35 = (float)((float)(localScale.fields.z * v32) - v33) * 0.5;
-      v36.n64_u64[0] = vadd_f32(v31, v34).n64_u64[0];
-      *(float32x2_t *)(v25 + 44) = v34;
-      v37 = v33 + v35;
-      *(float *)(v25 + 52) = v35;
-      *(float32x2_t *)(v25 + 32) = v36;
-      *(float *)(v25 + 40) = v33 + v35;
+      y = localScale.fields.y;
+      v24.n64_u64[0] = vmul_f32(vsub_f32(v18, v19), *(float32x2_t *)&localScale.fields.x).n64_u64[0];
+      v25 = (float)(z - v20) * localScale.fields.z;
+      v26 = v7 + 24 * ((int)v12 + v22 * (int)v13);
+      v27.n64_u64[0] = vmul_f32(vsub_f32(vadd_f32(v18, v19), v24), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v28 = (float)((float)(z + v20) - v25) * 0.5;
+      v29.n64_u64[0] = vadd_f32(v24, v27).n64_u64[0];
+      v30 = v25 + v28;
+      v31.n64_u64[0] = vadd_f32(v27, v29).n64_u64[0];
+      v32.n64_u64[0] = vsub_f32(v29, v27).n64_u64[0];
+      v33 = v28 + v30;
+      v34 = v30 - v28;
+      v35.n64_u64[0] = vmul_f32(
+                         vsub_f32(vmul_f32(*(float32x2_t *)&localScale.fields.x, v31), v32),
+                         (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v36 = (float)((float)(localScale.fields.z * v33) - v34) * 0.5;
+      v37.n64_u64[0] = vadd_f32(v32, v35).n64_u64[0];
+      *(float32x2_t *)(v26 + 44) = v35;
+      v38 = v34 + v36;
+      *(float *)(v26 + 52) = v36;
+      *(float32x2_t *)(v26 + 32) = v37;
+      *(float *)(v26 + 40) = v34 + v36;
       if ( !v8 )
         break;
       if ( v12 >= *(_DWORD *)(v8 + 24) )
 LABEL_80:
         sub_2213CE4(this);
-      v38 = v37 - v35;
-      v39.n64_u64[0] = vsub_f32(v36, v34).n64_u64[0];
-      v40 = v8 + 32 + 24LL * (int)v12;
-      v41 = v35 + v37;
-      v42.n64_u64[0] = vadd_f32(v34, v36).n64_u64[0];
-      v43 = *(float *)(v40 + 8);
-      v44 = *(float *)(v40 + 20);
-      v45.n64_u64[0] = *(unsigned __int64 *)(v40 + 12);
-      v46 = v43 - v44;
-      v47 = v43 + v44;
-      v48.n64_u64[0] = vsub_f32(*(float32x2_t *)v40, v45).n64_u64[0];
-      v49.n64_u64[0] = vadd_f32(*(float32x2_t *)v40, v45).n64_u64[0];
-      v50.n64_u64[0] = vcgt_f32(v39, v48).n64_u64[0];
-      v51.n64_u64[0] = vcgt_f32(v49, v39).n64_u64[0];
-      if ( v46 >= v38 )
-        v46 = v38;
-      v52.n64_u64[0] = vbsl_s8(v50, v48, v39).n64_u64[0];
-      v53.n64_u64[0] = vbsl_s8(v51, v49, v39).n64_u64[0];
-      if ( v47 <= v38 )
-        v47 = v38;
-      v54.n64_u64[0] = vmul_f32(vsub_f32(v53, v52), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v55 = (float)(v47 - v46) * 0.5;
-      v56.n64_u64[0] = vadd_f32(v52, v54).n64_u64[0];
-      v57 = v46 + v55;
-      v58.n64_u64[0] = vsub_f32(v56, v54).n64_u64[0];
-      v59.n64_u64[0] = vadd_f32(v54, v56).n64_u64[0];
-      v60 = v57 - v55;
-      v61 = v55 + v57;
-      v62.n64_u64[0] = vcgt_f32(v42, v58).n64_u64[0];
-      v63.n64_u64[0] = vcgt_f32(v59, v42).n64_u64[0];
-      if ( v60 >= v41 )
-        v60 = v41;
-      v64.n64_u64[0] = vbsl_s8(v62, v58, v42).n64_u64[0];
-      v65.n64_u64[0] = vbsl_s8(v63, v59, v42).n64_u64[0];
-      if ( v61 <= v41 )
-        v61 = v41;
-      v66.n64_u64[0] = vmul_f32(vsub_f32(v65, v64), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v67 = (float)(v61 - v60) * 0.5;
-      *(float32x2_t *)(v40 + 12) = v66;
-      *(float *)(v40 + 20) = v67;
-      *(float32x2_t *)v40 = vadd_f32(v64, v66);
-      *(float *)(v40 + 8) = v60 + v67;
+      v39 = v38 - v36;
+      v40.n64_u64[0] = vsub_f32(v37, v35).n64_u64[0];
+      v41 = v8 + 32 + 24LL * (int)v12;
+      v42 = v36 + v38;
+      v43.n64_u64[0] = vadd_f32(v35, v37).n64_u64[0];
+      v44 = *(float *)(v41 + 8);
+      v45 = *(float *)(v41 + 20);
+      v46.n64_u64[0] = *(unsigned __int64 *)(v41 + 12);
+      v47 = v44 - v45;
+      v48 = v44 + v45;
+      v49.n64_u64[0] = vsub_f32(*(float32x2_t *)v41, v46).n64_u64[0];
+      v50.n64_u64[0] = vadd_f32(*(float32x2_t *)v41, v46).n64_u64[0];
+      v51.n64_u64[0] = vcgt_f32(v40, v49).n64_u64[0];
+      v52.n64_u64[0] = vcgt_f32(v50, v40).n64_u64[0];
+      if ( v47 >= v39 )
+        v47 = v39;
+      v53.n64_u64[0] = vbsl_s8(v51, v49, v40).n64_u64[0];
+      v54.n64_u64[0] = vbsl_s8(v52, v50, v40).n64_u64[0];
+      if ( v48 <= v39 )
+        v48 = v39;
+      v55.n64_u64[0] = vmul_f32(vsub_f32(v54, v53), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v56 = (float)(v48 - v47) * 0.5;
+      v57.n64_u64[0] = vadd_f32(v53, v55).n64_u64[0];
+      v58 = v47 + v56;
+      v59.n64_u64[0] = vsub_f32(v57, v55).n64_u64[0];
+      v60.n64_u64[0] = vadd_f32(v55, v57).n64_u64[0];
+      v61 = v58 - v56;
+      v62 = v56 + v58;
+      v63.n64_u64[0] = vcgt_f32(v43, v59).n64_u64[0];
+      v64.n64_u64[0] = vcgt_f32(v60, v43).n64_u64[0];
+      if ( v61 >= v42 )
+        v61 = v42;
+      v65.n64_u64[0] = vbsl_s8(v63, v59, v43).n64_u64[0];
+      v66.n64_u64[0] = vbsl_s8(v64, v60, v43).n64_u64[0];
+      if ( v62 <= v42 )
+        v62 = v42;
+      v67.n64_u64[0] = vmul_f32(vsub_f32(v66, v65), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v68 = (float)(v62 - v61) * 0.5;
+      *(float32x2_t *)(v41 + 12) = v67;
+      *(float *)(v41 + 20) = v68;
+      *(float32x2_t *)v41 = vadd_f32(v65, v67);
+      *(float *)(v41 + 8) = v61 + v68;
       if ( !v11 )
         break;
       if ( v13 >= *(_DWORD *)(v11 + 24) )
         goto LABEL_80;
-      v68 = v145 + 24LL * (int)v13;
+      v69 = v146 + 24LL * (int)v13;
       ++v14;
-      v69 = *(float *)(v68 + 8);
-      v70 = *(float *)(v68 + 20);
-      v71.n64_u64[0] = *(unsigned __int64 *)(v68 + 12);
-      v72 = v69 - v70;
-      v73 = v69 + v70;
-      v74.n64_u64[0] = vsub_f32(*(float32x2_t *)v68, v71).n64_u64[0];
-      v75.n64_u64[0] = vadd_f32(*(float32x2_t *)v68, v71).n64_u64[0];
-      v76.n64_u64[0] = vcgt_f32(v39, v74).n64_u64[0];
-      v77.n64_u64[0] = vcgt_f32(v75, v39).n64_u64[0];
-      if ( v72 >= v38 )
-        v72 = v38;
-      if ( v73 > v38 )
-        v38 = v73;
-      v78.n64_u64[0] = vbsl_s8(v76, v74, v39).n64_u64[0];
-      v79 = (float)(v38 - v72) * 0.5;
-      v80.n64_u64[0] = vmul_f32(vsub_f32(vbsl_s8(v77, v75, v39), v78), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v81 = v72 + v79;
-      v82.n64_u64[0] = vadd_f32(v78, v80).n64_u64[0];
-      v83 = (float)(v72 + v79) - v79;
-      v84 = v79 + v81;
-      v85.n64_u64[0] = vsub_f32(v82, v80).n64_u64[0];
-      v86.n64_u64[0] = vadd_f32(v80, v82).n64_u64[0];
-      v87.n64_u64[0] = vcgt_f32(v42, v85).n64_u64[0];
-      v88.n64_u64[0] = vcgt_f32(v86, v42).n64_u64[0];
-      if ( v83 >= v41 )
-        v83 = v41;
-      v89.n64_u64[0] = vbsl_s8(v87, v85, v42).n64_u64[0];
-      v90.n64_u64[0] = vbsl_s8(v88, v86, v42).n64_u64[0];
-      if ( v84 <= v41 )
-        v84 = v41;
-      v91.n64_u64[0] = vmul_f32(vsub_f32(v90, v89), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v92 = (float)(v84 - v83) * 0.5;
-      *(float *)(v68 + 20) = v92;
-      *(float32x2_t *)(v68 + 12) = v91;
-      *(float32x2_t *)v68 = vadd_f32(v89, v91);
-      *(float *)(v68 + 8) = v83 + v92;
-      v93 = (int)(v12 + 1) >= v4->fields.columns && v4->fields.columns > 0;
+      v70 = *(float *)(v69 + 8);
+      v71 = *(float *)(v69 + 20);
+      v72.n64_u64[0] = *(unsigned __int64 *)(v69 + 12);
+      v73 = v70 - v71;
+      v74 = v70 + v71;
+      v75.n64_u64[0] = vsub_f32(*(float32x2_t *)v69, v72).n64_u64[0];
+      v76.n64_u64[0] = vadd_f32(*(float32x2_t *)v69, v72).n64_u64[0];
+      v77.n64_u64[0] = vcgt_f32(v40, v75).n64_u64[0];
+      v78.n64_u64[0] = vcgt_f32(v76, v40).n64_u64[0];
+      if ( v73 >= v39 )
+        v73 = v39;
+      if ( v74 > v39 )
+        v39 = v74;
+      v79.n64_u64[0] = vbsl_s8(v77, v75, v40).n64_u64[0];
+      v80 = (float)(v39 - v73) * 0.5;
+      v81.n64_u64[0] = vmul_f32(vsub_f32(vbsl_s8(v78, v76, v40), v79), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v82 = v73 + v80;
+      v83.n64_u64[0] = vadd_f32(v79, v81).n64_u64[0];
+      v84 = (float)(v73 + v80) - v80;
+      v85 = v80 + v82;
+      v86.n64_u64[0] = vsub_f32(v83, v81).n64_u64[0];
+      v87.n64_u64[0] = vadd_f32(v81, v83).n64_u64[0];
+      v88.n64_u64[0] = vcgt_f32(v43, v86).n64_u64[0];
+      v89.n64_u64[0] = vcgt_f32(v87, v43).n64_u64[0];
+      if ( v84 >= v42 )
+        v84 = v42;
+      v90.n64_u64[0] = vbsl_s8(v88, v86, v43).n64_u64[0];
+      v91.n64_u64[0] = vbsl_s8(v89, v87, v43).n64_u64[0];
+      if ( v85 <= v42 )
+        v85 = v42;
+      v92.n64_u64[0] = vmul_f32(vsub_f32(v91, v90), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v93 = (float)(v85 - v84) * 0.5;
+      *(float *)(v69 + 20) = v93;
+      *(float32x2_t *)(v69 + 12) = v92;
+      *(float32x2_t *)v69 = vadd_f32(v90, v92);
+      *(float *)(v69 + 8) = v84 + v93;
+      v94 = (int)(v12 + 1) >= v4->fields.columns && v4->fields.columns > 0;
       if ( (int)(v12 + 1) >= v4->fields.columns && v4->fields.columns > 0 )
         v12 = 0;
       else
         ++v12;
-      v13 += v93;
+      v13 += v94;
       if ( size == v14 )
         goto LABEL_38;
     }
@@ -665,151 +668,150 @@ LABEL_79:
   }
 LABEL_38:
   PivotOffset = NGUIMath__GetPivotOffset(v4->fields.cellAlignment, (const MethodInfo *)children);
-  v96 = children->fields._size;
-  if ( v96 >= 1 )
+  v97 = children->fields._size;
+  if ( v97 >= 1 )
   {
-    v97 = 0;
-    v98 = 0.0;
+    v98 = 0;
     v99 = 0.0;
-    v100 = 0;
+    v100 = 0.0;
     v101 = 0;
+    v102 = 0;
     if ( PivotOffset.fields.x <= 1.0 )
       x = PivotOffset.fields.x;
     else
       x = 1.0;
     if ( PivotOffset.fields.x >= 0.0 )
-      v103 = x;
+      v104 = x;
     else
-      v103 = 0.0;
+      v104 = 0.0;
     if ( PivotOffset.fields.y <= 1.0 )
-      y = PivotOffset.fields.y;
+      v105 = PivotOffset.fields.y;
     else
-      y = 1.0;
+      v105 = 1.0;
     if ( PivotOffset.fields.y < 0.0 )
-      y = 0.0;
-    v142 = y;
-    v143 = v103;
+      v105 = 0.0;
+    v143 = v105;
+    v144 = v104;
     do
     {
       this = (UITable_o *)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)children,
-                            v101,
+                            v102,
                             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_Transform__get_Item__);
       if ( !v7 )
         goto LABEL_79;
-      v105 = *(_QWORD *)(v7 + 16);
-      if ( v100 >= *(_DWORD *)v105 )
+      v106 = *(_QWORD *)(v7 + 16);
+      if ( v101 >= *(_DWORD *)v106 )
         goto LABEL_80;
-      v106 = *(_QWORD *)(v105 + 16);
-      if ( v97 >= (unsigned int)v106 )
+      v107 = *(_QWORD *)(v106 + 16);
+      if ( v98 >= (unsigned int)v107 )
         goto LABEL_80;
       if ( !v8 )
         goto LABEL_79;
-      if ( v97 >= *(_DWORD *)(v8 + 24) )
+      if ( v98 >= *(_DWORD *)(v8 + 24) )
         goto LABEL_80;
       if ( !v11 )
         goto LABEL_79;
-      if ( v100 >= *(_DWORD *)(v11 + 24) )
+      if ( v101 >= *(_DWORD *)(v11 + 24) )
         goto LABEL_80;
-      v107 = (UnityEngine_Transform_o *)this;
+      v108 = (UnityEngine_Transform_o *)this;
       if ( !this )
         goto LABEL_79;
-      v108 = v8 + 24LL * (int)v97;
-      v109 = v11 + 24LL * (int)v100;
-      v110 = (float *)(v7 + 24 * ((int)v97 + v106 * (int)v100));
-      v111 = *(float *)(v108 + 44);
-      v112 = *(float *)(v109 + 36);
-      v113 = *(float *)(v109 + 48);
-      v146 = *(float *)(v108 + 32);
-      v114 = v110[9];
-      v115 = v110[11];
-      v116 = v110[12];
-      v147 = v110[8];
-      v152.fields.z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
-      v117 = (float)(v112 - v113) + (float)((float)((float)(v114 + v116) - (float)(v114 - v116)) - (float)(v112 + v113));
+      v109 = v8 + 24LL * (int)v98;
+      v110 = v11 + 24LL * (int)v101;
+      v111 = (float *)(v7 + 24 * ((int)v98 + v107 * (int)v101));
+      v112 = *(float *)(v109 + 44);
+      v113 = *(float *)(v110 + 36);
+      v114 = *(float *)(v110 + 48);
+      v147 = *(float *)(v109 + 32);
+      v115 = v111[9];
+      v116 = v111[11];
+      v117 = v111[12];
+      v148 = v111[8];
+      localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+      v118 = (float)(v113 - v114) + (float)((float)((float)(v115 + v117) - (float)(v115 - v117)) - (float)(v113 + v114));
       if ( v4->fields.direction )
-        v152.fields.y = (float)((float)(v99 + v116) - v114)
-                      - (float)((float)((float)(v142 * v117) + 0.0) - v4->fields.padding.fields.y);
+        v119 = (float)((float)(v100 + v117) - v115)
+             - (float)((float)((float)(v143 * v118) + 0.0) - v4->fields.padding.fields.y);
       else
-        v152.fields.y = (float)((float)((float)-v99 - v116) - v114)
-                      + (float)((float)(v117 + (float)(v142 * (float)(0.0 - v117))) - v4->fields.padding.fields.y);
-      v119 = v4->fields.padding.fields.x;
-      v152.fields.x = (float)((float)(v98 + v115) - v147)
-                    - (float)((float)((float)(v143
-                                            * (float)((float)(v146 - v111)
-                                                    + (float)((float)((float)(v147 + v115) - (float)(v147 - v115))
-                                                            - (float)(v146 + v111))))
-                                    + 0.0)
-                            - v119);
-      v98 = v98 + (float)((float)(v111 + v111) + (float)(v119 + v119));
-      UnityEngine_Transform__set_localPosition(v107, v152, 0);
-      v120 = v4->fields.columns;
-      if ( (int)++v97 >= v120 && v120 >= 1 )
+        v119 = (float)((float)((float)-v100 - v117) - v115)
+             + (float)((float)(v118 + (float)(v143 * (float)(0.0 - v118))) - v4->fields.padding.fields.y);
+      v120 = v4->fields.padding.fields.x;
+      v121 = (float)((float)(v99 + v116) - v148)
+           - (float)((float)((float)(v144
+                                   * (float)((float)(v147 - v112)
+                                           + (float)((float)((float)(v148 + v116) - (float)(v148 - v116))
+                                                   - (float)(v147 + v112))))
+                           + 0.0)
+                   - v120);
+      v99 = v99 + (float)((float)(v112 + v112) + (float)(v120 + v120));
+      UnityEngine_Transform__set_localPosition(v108, localPosition, 0);
+      v122 = v4->fields.columns;
+      if ( (int)++v98 >= v122 && v122 >= 1 )
       {
-        v98 = 0.0;
-        v97 = 0;
-        ++v100;
-        v99 = v99 + (float)((float)(v113 + v113) + (float)(v4->fields.padding.fields.y + v4->fields.padding.fields.y));
+        v99 = 0.0;
+        v98 = 0;
+        ++v101;
+        v100 = v100 + (float)((float)(v114 + v114) + (float)(v4->fields.padding.fields.y + v4->fields.padding.fields.y));
       }
     }
-    while ( v96 != ++v101 );
+    while ( v97 != ++v102 );
   }
   pivot = v4->fields.pivot;
   if ( pivot )
   {
-    v122 = NGUIMath__GetPivotOffset(pivot, v94);
+    v124 = NGUIMath__GetPivotOffset(pivot, v95);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
-    NGUIMath__CalculateRelativeWidgetBounds_56362504(&v149, transform, transform, 0, 1, v124);
-    v125 = v149.fields.m_Extents.fields.y;
-    v144 = *(_QWORD *)&v149.fields.m_Extents.fields.x;
+    NGUIMath__CalculateRelativeWidgetBounds_56362504(&v150, transform, transform, 0, 1, v126);
+    v127 = v150.fields.m_Extents.fields.y;
+    v145 = *(_QWORD *)&v150.fields.m_Extents.fields.x;
     this = (UITable_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
     if ( !this )
       goto LABEL_79;
-    v126 = (UnityEngine_Transform_o *)this;
+    v128 = (UnityEngine_Transform_o *)this;
     if ( UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)this, 0) >= 1 )
     {
-      v127 = 0;
+      v129 = 0;
       __asm { FMOV            V1.2S, #1.0 }
-      v133.n64_u64[0] = v144;
-      v134.n64_u32[0] = vadd_f32(v133, v133).n64_u32[0];
-      v133.n64_f32[1] = v125 * -2.0;
-      v135 = vsub_f32(0, v133).n64_u64[0];
-      v133.n64_u32[0] = 0;
-      v134.n64_u32[1] = HIDWORD(v135);
-      v136 = vadd_f32(
+      v135.n64_u64[0] = v145;
+      v136.n64_u32[0] = vadd_f32(v135, v135).n64_u32[0];
+      v135.n64_f32[1] = v127 * -2.0;
+      v137 = vsub_f32(0, v135).n64_u64[0];
+      v135.n64_u32[0] = 0;
+      v136.n64_u32[1] = HIDWORD(v137);
+      v138 = vadd_f32(
                vmul_f32(
-                 vbic_s8(vbsl_s8(vcgt_f32((float32x2_t)v122, _D1), _D1, (int8x8_t)v122), vcltz_f32((float32x2_t)v122)),
-                 v134),
-               v133).n64_u64[0];
-      v137 = *((float *)&v136 + 1);
-      v148.n64_u64[0] = v136;
+                 vbic_s8(vbsl_s8(vcgt_f32((float32x2_t)v124, _D1), _D1, (int8x8_t)v124), vcltz_f32((float32x2_t)v124)),
+                 v136),
+               v135).n64_u64[0];
+      v139 = *((float *)&v138 + 1);
+      v149.n64_u64[0] = v138;
       while ( 1 )
       {
-        this = (UITable_o *)UnityEngine_Transform__GetChild(v126, v127, 0);
+        this = (UITable_o *)UnityEngine_Transform__GetChild(v128, v129, 0);
         if ( !this )
           goto LABEL_79;
-        v138 = (UnityEngine_Transform_o *)this;
+        v140 = (UnityEngine_Transform_o *)this;
         Component_object = UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)this,
                              (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v139);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v141);
         this = (UITable_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !Component_object )
             goto LABEL_79;
-          Component_object[2].klass = (Il2CppClass *)vsub_f32((float32x2_t)Component_object[2].klass, v148).n64_u64[0];
+          Component_object[2].klass = (Il2CppClass *)vsub_f32((float32x2_t)Component_object[2].klass, v149).n64_u64[0];
         }
         else
         {
-          localPosition = UnityEngine_Transform__get_localPosition(v138, 0);
-          v153.fields.z = localPosition.fields.z;
-          v153.fields.y = localPosition.fields.y - v137;
-          v153.fields.x = localPosition.fields.x - v148.n64_f32[0];
-          UnityEngine_Transform__set_localPosition(v138, v153, 0);
+          v153 = UnityEngine_Transform__get_localPosition(v140, 0);
+          v153.fields.y = v153.fields.y - v139;
+          v153.fields.x = v153.fields.x - v149.n64_f32[0];
+          UnityEngine_Transform__set_localPosition(v140, v153, 0);
         }
-        if ( ++v127 >= UnityEngine_Transform__get_childCount(v126, 0) )
+        if ( ++v129 >= UnityEngine_Transform__get_childCount(v128, 0) )
           return;
       }
     }
@@ -922,9 +924,9 @@ System_IAsyncResult_o *UITable_OnReposition__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

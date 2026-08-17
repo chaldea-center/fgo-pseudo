@@ -197,15 +197,19 @@ void ServantClassIconComponent__ReSizeClassIcon(
   __int64 v6; // x1
   struct UISprite_o *v7; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v9; // x0
-  UIWidget_o *v10; // x20
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_GameObject_o *v12; // x0
+  UIWidget_o *v13; // x20
   int mWidth; // w22
-  ServantClassIconComponent_c *v12; // x0
-  float v13; // s0
-  int32_t v14; // w1
-  float v15; // s0
-  int32_t v16; // w1
-  UnityEngine_Vector3_o LocalScale; // 0:kr00_12.12
+  ServantClassIconComponent_c *v15; // x0
+  float v16; // s0
+  int32_t v17; // w1
+  float v18; // s0
+  int32_t v19; // w1
+  UnityEngine_Vector3_o LocalScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FCDD & 1) == 0 )
   {
@@ -228,39 +232,45 @@ void ServantClassIconComponent__ReSizeClassIcon(
     v7 = this->fields.iconSprite;
     if ( !v7 )
       goto LABEL_23;
+    x = LocalScale.fields.x;
+    y = LocalScale.fields.y;
+    z = LocalScale.fields.z;
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v7->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v7,
       v7->klass->vtable._33_MakePixelPerfect.method);
     v7 = this->fields.iconSprite;
     if ( !v7 )
       goto LABEL_23;
-    v9 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v7, 0);
-    GameObjectExtensions__SetLocalScale(v9, LocalScale, 0);
+    v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v7, 0);
+    v21.fields.x = x;
+    v21.fields.y = y;
+    v21.fields.z = z;
+    GameObjectExtensions__SetLocalScale(v12, v21, 0);
     if ( !isEnemy )
       return;
-    v10 = (UIWidget_o *)this->fields.iconSprite;
-    if ( !v10 )
+    v13 = (UIWidget_o *)this->fields.iconSprite;
+    if ( !v13 )
       goto LABEL_23;
-    mWidth = v10->fields.mWidth;
-    v12 = ServantClassIconComponent_TypeInfo;
+    mWidth = v13->fields.mWidth;
+    v15 = ServantClassIconComponent_TypeInfo;
     if ( !*(&ServantClassIconComponent_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(ServantClassIconComponent_TypeInfo, v6);
-      v12 = ServantClassIconComponent_TypeInfo;
+      v15 = ServantClassIconComponent_TypeInfo;
     }
-    v13 = v12->static_fields->ENEMY_ICON_SCALE * (float)mWidth;
-    v14 = v13 == INFINITY ? 0x80000000 : (int)v13;
-    UIWidget__set_width(v10, v14, 0);
+    v16 = v15->static_fields->ENEMY_ICON_SCALE * (float)mWidth;
+    v17 = v16 == INFINITY ? 0x80000000 : (int)v16;
+    UIWidget__set_width(v13, v17, 0);
     v7 = this->fields.iconSprite;
     if ( !v7 )
 LABEL_23:
       sub_2213CDC(v7, v6);
-    v15 = ServantClassIconComponent_TypeInfo->static_fields->ENEMY_ICON_SCALE * (float)v7->fields.mHeight;
-    if ( v15 == INFINITY )
-      v16 = 0x80000000;
+    v18 = ServantClassIconComponent_TypeInfo->static_fields->ENEMY_ICON_SCALE * (float)v7->fields.mHeight;
+    if ( v18 == INFINITY )
+      v19 = 0x80000000;
     else
-      v16 = (int)v15;
-    UIWidget__set_height((UIWidget_o *)v7, v16, 0);
+      v19 = (int)v18;
+    UIWidget__set_height((UIWidget_o *)v7, v19, 0);
   }
 }
 

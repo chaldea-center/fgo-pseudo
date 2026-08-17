@@ -434,17 +434,18 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
   __int64 v56; // x1
   __int64 v57; // x2
   int64_t v58; // x21
-  int32_t TradePickupTime; // w0
-  const MethodInfo_45E4A50 *v60; // x3
+  int32_t TradePickupTime; // w1
+  System_Nullable_int__o v60; // x0
   const MethodInfo_45E4A50 *v61; // x3
-  int64_t v62; // x8
-  int64_t v63; // x21
+  const MethodInfo_45E4A50 *v62; // x3
+  int64_t v63; // x8
+  int64_t v64; // x21
   UILabel_o *supportToolLeftTimeLb; // x22
-  System_String_o *v65; // x0
-  __int64 v66; // [xsp+0h] [xbp-70h] BYREF
-  int64_t v67; // [xsp+8h] [xbp-68h]
-  System_Nullable_long__o v68; // 0:x0.16
+  System_String_o *v66; // x0
+  __int64 v67; // [xsp+0h] [xbp-70h] BYREF
+  int64_t v68; // [xsp+8h] [xbp-68h]
   System_Nullable_long__o v69; // 0:x0.16
+  System_Nullable_long__o v70; // 0:x0.16
 
   v4 = this;
   if ( (byte_596A55E & 1) == 0 )
@@ -588,38 +589,36 @@ void EventCraftUseSupportToolDialogComponent__SetTimeLabel(
     goto LABEL_45;
   v58 = v55;
   TradePickupTime = ItemEntity__GetTradePickupTime(v4->fields.supportTool, 0);
-  v66 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v66,
-    TradePickupTime,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v66 )
-    goto LABEL_45;
-  v68.fields.value = v66 >> 32;
-  *(_QWORD *)&v68.fields.hasValue = &v66;
-  v66 = 0;
+  v60 = (System_Nullable_int__o)&v67;
   v67 = 0;
-  System_Nullable_long____ctor(v68, Method_System_Nullable_long___ctor__, v60);
-  if ( (_BYTE)v66 )
+  System_Nullable_int____ctor(v60, TradePickupTime, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v67 )
+    goto LABEL_45;
+  v69.fields.value = v67 >> 32;
+  *(_QWORD *)&v69.fields.hasValue = &v67;
+  v67 = 0;
+  v68 = 0;
+  System_Nullable_long____ctor(v69, Method_System_Nullable_long___ctor__, v61);
+  if ( (_BYTE)v67 )
   {
-    v62 = v67;
-    *(_QWORD *)&v69.fields.hasValue = &v66;
-    v66 = 0;
+    v63 = v68;
+    *(_QWORD *)&v70.fields.hasValue = &v67;
     v67 = 0;
-    v69.fields.value = v62 + v58;
-    System_Nullable_long____ctor(v69, Method_System_Nullable_long___ctor__, v61);
-    v63 = v67;
+    v68 = 0;
+    v70.fields.value = v63 + v58;
+    System_Nullable_long____ctor(v70, Method_System_Nullable_long___ctor__, v62);
+    v64 = v68;
   }
   else
   {
 LABEL_45:
-    v63 = 0;
+    v64 = 0;
   }
   supportToolLeftTimeLb = v4->fields.supportToolLeftTimeLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v56, v57);
-  v65 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
-  this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v63, 0, v65, 0);
+  v66 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
+  this = (EventCraftUseSupportToolDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v64, 0, v66, 0);
   if ( !supportToolLeftTimeLb
     || (UILabel__set_text(supportToolLeftTimeLb, (System_String_o *)this, 0),
         (this = (EventCraftUseSupportToolDialogComponent_o *)v4->fields.decideButton) == 0) )

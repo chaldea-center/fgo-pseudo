@@ -281,17 +281,16 @@ void USFGOChrChangeShaderComp__RestoreShaders(USFGOChrChangeShaderComp_o *this, 
   struct System_Collections_Generic_Dictionary_Material__Shader__o *originalShaders; // t1
   __int64 v6; // x1
   __int64 v7; // x1
-  Il2CppObject *key; // x20
-  Il2CppObject *value; // x21
-  _BOOL8 v10; // x0
-  __int64 v11; // x1
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v18; // [xsp+10h] [xbp-60h] BYREF
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
+  System_String_o *v11; // x2
+  System_String_o *v12; // x3
+  int32_t v13; // w4
+  int32_t v14; // w5
+  bool v15; // w6
+  bool v16; // w7
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v17; // [xsp+10h] [xbp-60h] BYREF
 
   if ( (byte_5972283 & 1) == 0 )
   {
@@ -308,7 +307,7 @@ void USFGOChrChangeShaderComp__RestoreShaders(USFGOChrChangeShaderComp_o *this, 
   originalShaders = this->fields.originalShaders;
   p_originalShaders = (System_Collections_Generic_Dictionary_object__object__o **)&this->fields.originalShaders;
   v3 = (System_Collections_Generic_Dictionary_object__object__o *)originalShaders;
-  memset(&v18, 0, sizeof(v18));
+  memset(&v17, 0, sizeof(v17));
   if ( originalShaders
     && System_Collections_Generic_Dictionary_object__object___get_Count(
          v3,
@@ -317,30 +316,32 @@ void USFGOChrChangeShaderComp__RestoreShaders(USFGOChrChangeShaderComp_o *this, 
     if ( !*p_originalShaders )
       sub_2213CDC(0, v6);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v18,
+      &v17,
       *p_originalShaders,
       (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_Material__Shader__GetEnumerator__);
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v18,
+              &v17,
               (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__MoveNext__) )
     {
-      key = v18.fields._current.fields.key;
-      value = v18.fields._current.fields.value;
+      current = v17.fields._current;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-      v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)key, 0, 0);
-      if ( v10 )
+      v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current.fields.key, 0, 0);
+      if ( v9 )
       {
-        if ( !key )
-          sub_2213CDC(v10, v11);
-        UnityEngine_Material__set_shader((UnityEngine_Material_o *)key, (UnityEngine_Shader_o *)value, 0);
+        if ( !current.fields.key )
+          sub_2213CDC(v9, v10);
+        UnityEngine_Material__set_shader(
+          (UnityEngine_Material_o *)current.fields.key,
+          (UnityEngine_Shader_o *)current.fields.value,
+          0);
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v18,
+      &v17,
       (const MethodInfo_41691C0 *)Method_System_Collections_Generic_Dictionary_Enumerator_Material__Shader__Dispose__);
     *p_originalShaders = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_originalShaders, 0, v12, v13, v14, v15, v16, v17);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)p_originalShaders, 0, v11, v12, v13, v14, v15, v16);
   }
 }
 

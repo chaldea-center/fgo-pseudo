@@ -29,10 +29,10 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
   __int64 v9; // x1
   UnityEngine_Object_o *widget; // x21
   UnityEngine_BoxCollider_o *collider; // x21
-  int monitor_high; // w22
-  float v13; // s8
-  UnityEngine_Object_o *spriteLineH; // x21
   unsigned int size; // s0
+  int monitor_high; // w22
+  float v14; // s8
+  UnityEngine_Object_o *spriteLineH; // x21
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5970A82 & 1) == 0 )
@@ -132,9 +132,9 @@ void EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this,
       if ( !objHistory )
         goto LABEL_21;
       monitor_high = HIDWORD(v4[10].monitor);
-      v13 = *(float *)&size;
-      v16.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)objHistory, 0).fields.z;
-      v16.fields.x = v13;
+      v14 = *(float *)&size;
+      v16 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)objHistory, 0);
+      v16.fields.x = v14;
       v16.fields.y = (float)(monitor_high + 7);
       UnityEngine_BoxCollider__set_size(collider, v16, 0);
     }

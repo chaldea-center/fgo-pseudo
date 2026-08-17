@@ -132,6 +132,7 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   __int64 v110; // [xsp+10h] [xbp-60h] BYREF
   float v111; // [xsp+18h] [xbp-58h]
   char v112[4]; // [xsp+1Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = afterPosition.fields.z;
   y = afterPosition.fields.y;
@@ -165,7 +166,8 @@ void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   this->fields.slideInPosition.fields.z = z;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (this->fields.slideOutPosition.fields.y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y,
+    || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
+        this->fields.slideOutPosition.fields.y = localPosition.fields.y,
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
         (transform = (UnityEngine_Transform_o *)sub_2213B20(object___TypeInfo, 12)) == 0) )
   {

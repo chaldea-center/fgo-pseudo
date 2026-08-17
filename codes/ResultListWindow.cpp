@@ -1553,6 +1553,7 @@ bool ResultListWindow__StartDisp_d__50__MoveNext(ResultListWindow__StartDisp_d__
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  bool result; // w0
   System_Collections_Generic_List_object__o *listRewardAction_5__2; // x0
   System_Collections_Generic_List_object__o *v14; // x22
   System_Collections_Generic_List_object__o **p_listRewardAction_5__2; // x21
@@ -1647,8 +1648,9 @@ bool ResultListWindow__StartDisp_d__50__MoveNext(ResultListWindow__StartDisp_d__
       UnityEngine_WaitForSeconds___ctor(v5, 0.2, 0);
       this->fields.__2__current = (Il2CppObject *)v5;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+      result = 1;
       this->fields.__1__state = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
@@ -1886,8 +1888,9 @@ LABEL_62:
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v55, v56, v57, v58, v59, v60);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 2;
-  return 1;
+  return result;
 }
 
 
@@ -2085,8 +2088,8 @@ bool ResultListWindow__StartRewardAction_d__51__MoveNext(
         this->fields.__2__current = (Il2CppObject *)v16;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v16, v18, v19, v20, v21, v22, v23);
-        *((_DWORD *)p__2__current - 2) = 1;
         LOBYTE(scrollBar) = 1;
+        *((_DWORD *)p__2__current - 2) = 1;
         return (char)scrollBar;
       }
 LABEL_89:

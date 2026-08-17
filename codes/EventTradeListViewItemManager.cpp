@@ -14,9 +14,11 @@ void EventTradeListViewItemManager__CheckIsSerializeFieldNotNull(Il2CppObject *t
   unsigned int v6; // w27
   Il2CppType *v7; // x22
   System_Reflection_MemberInfo_o *v8; // x21
+  System_RuntimeTypeHandle_o v9; // x0
   System_Type_o *TypeFromHandle; // x0
-  int v10; // w22
-  __int64 v11; // x23
+  int v11; // w22
+  __int64 v12; // x23
+  System_RuntimeTypeHandle_o v13; // x0
 
   v2 = targetObj;
   if ( (byte_596AD4D & 1) == 0 )
@@ -49,22 +51,24 @@ void EventTradeListViewItemManager__CheckIsSerializeFieldNotNull(Il2CppObject *t
       v8 = (System_Reflection_MemberInfo_o *)*((_QWORD *)&v5[2].klass + (int)v6);
       if ( !*(_DWORD *)(qword_59843E0 + 228) )
         j_il2cpp_runtime_class_init_0(qword_59843E0, method, v3);
-      TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v7, 0);
+      v9.fields.value = (intptr_t)v7;
+      TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
       targetObj = (Il2CppObject *)System_Reflection_CustomAttributeExtensions__IsDefined(v8, TypeFromHandle, 0);
       if ( !v8 )
         break;
-      v10 = (int)targetObj;
-      v11 = ((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, const char *))v8->klass[1]._1.name)(
+      v11 = (int)targetObj;
+      v12 = ((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, const char *))v8->klass[1]._1.name)(
               v8,
               v8->klass[1]._1.namespaze);
-      targetObj = (Il2CppObject *)System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)UnityEngine_Object_var, 0);
-      if ( !v11 )
+      v13.fields.value = (intptr_t)UnityEngine_Object_var;
+      targetObj = (Il2CppObject *)System_Type__GetTypeFromHandle(v13, 0);
+      if ( !v12 )
         break;
-      targetObj = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, Il2CppObject *, _QWORD))(*(_QWORD *)v11 + 648LL))(
-                                    v11,
+      targetObj = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, Il2CppObject *, _QWORD))(*(_QWORD *)v12 + 648LL))(
+                                    v12,
                                     targetObj,
-                                    *(_QWORD *)(*(_QWORD *)v11 + 656LL));
-      if ( (v10 & (unsigned int)targetObj & 1) != 0 )
+                                    *(_QWORD *)(*(_QWORD *)v12 + 656LL));
+      if ( (v11 & (unsigned int)targetObj & 1) != 0 )
         targetObj = (Il2CppObject *)((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, Il2CppObject *, void *))v8->klass[1]._1.properties)(
                                       v8,
                                       v2,
@@ -473,22 +477,23 @@ void EventTradeListViewItemManager__DispPickupInfoBoard(
   System_DateTime_o v9; // x1
   System_DateTime_o v10; // x2
   System_DateTime_o v11; // x0
+  System_DateTime_o v12; // x0
   int64_t Time_48346468; // x0
-  const MethodInfo *v13; // x1
-  int64_t v14; // x22
+  const MethodInfo *v14; // x1
+  int64_t v15; // x22
   bool EntityListTargetTime; // w21
-  char v16; // w20
-  const MethodInfo *v17; // x4
-  UnityEngine_GameObject_o *v18; // x0
-  __int64 v19; // x2
+  char v17; // w20
+  const MethodInfo *v18; // x4
+  UnityEngine_GameObject_o *v19; // x0
+  __int64 v20; // x2
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *infoPanel; // x20
-  __int64 v22; // x2
-  UnityEngine_GameObject_o *v23; // x0
+  __int64 v23; // x2
+  UnityEngine_GameObject_o *v24; // x0
   UnityEngine_Object_o *svtIndexPanel; // x20
-  UnityEngine_GameObject_o *v25; // x0
+  UnityEngine_GameObject_o *v26; // x0
   uint64_t dateData; // [xsp+0h] [xbp-40h] BYREF
-  System_Collections_Generic_List_EventTradePickupEntity__o *v27; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_EventTradePickupEntity__o *v28; // [xsp+8h] [xbp-38h] BYREF
   System_Collections_Generic_List_EventTradePickupEntity__o *pickupEntityList; // [xsp+18h] [xbp-28h] BYREF
 
   if ( (byte_596AD53 & 1) == 0 )
@@ -503,7 +508,7 @@ void EventTradeListViewItemManager__DispPickupInfoBoard(
   pickupEntityList = 0;
   v4 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
   dateData = 0;
-  v27 = 0;
+  v28 = 0;
   if ( !v4 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v2);
   Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
@@ -513,11 +518,12 @@ void EventTradeListViewItemManager__DispPickupInfoBoard(
   dateData = NetworkManager__getDateTime(0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v9.fields._dateData, v10.fields._dateData);
-  v11.fields._dateData = System_DateTime__AddDays((System_DateTime_o)&dateData, 1.0, 0).fields._dateData;
-  Time_48346468 = NetworkManager__getTime_48346468(v11, 0);
+  v11.fields._dateData = (uint64_t)&dateData;
+  v12.fields._dateData = System_DateTime__AddDays(v11, 1.0, 0).fields._dateData;
+  Time_48346468 = NetworkManager__getTime_48346468(v12, 0);
   if ( !Master_object )
     goto LABEL_32;
-  v14 = Time_48346468;
+  v15 = Time_48346468;
   EntityListTargetTime = EventTradePickupMaster__TryGetEntityListTargetTime(
                            (EventTradePickupMaster_o *)Master_object,
                            &pickupEntityList,
@@ -526,21 +532,21 @@ void EventTradeListViewItemManager__DispPickupInfoBoard(
                            0);
   Time_48346468 = EventTradePickupMaster__TryGetEntityListTargetTime(
                     (EventTradePickupMaster_o *)Master_object,
-                    &v27,
+                    &v28,
                     this->fields.currentEventId,
-                    v14,
+                    v15,
                     0);
   if ( !this->fields.currentPickupInfoDispControl )
     goto LABEL_32;
-  v16 = Time_48346468;
-  EventTradePickupInfoDispControl__Init(this->fields.currentPickupInfoDispControl, v13);
+  v17 = Time_48346468;
+  EventTradePickupInfoDispControl__Init(this->fields.currentPickupInfoDispControl, v14);
   Time_48346468 = (int64_t)this->fields.nextPickupInfoDispControl;
   if ( !Time_48346468 )
     goto LABEL_32;
-  EventTradePickupInfoDispControl__Init((EventTradePickupInfoDispControl_o *)Time_48346468, v13);
+  EventTradePickupInfoDispControl__Init((EventTradePickupInfoDispControl_o *)Time_48346468, v14);
   if ( !EntityListTargetTime )
   {
-    if ( (v16 & 1) == 0 )
+    if ( (v17 & 1) == 0 )
       return;
 LABEL_18:
     Time_48346468 = (int64_t)this->fields.nextPickupInfoDispControl;
@@ -549,9 +555,9 @@ LABEL_18:
     EventTradePickupInfoDispControl__SetUi(
       (EventTradePickupInfoDispControl_o *)Time_48346468,
       this->fields.currentEventId,
-      v27,
+      v28,
       0,
-      v17);
+      v18);
     Time_48346468 = (int64_t)this->fields.nextPickupInfoDispControl;
     if ( !Time_48346468 )
       goto LABEL_32;
@@ -567,40 +573,40 @@ LABEL_18:
     this->fields.currentEventId,
     pickupEntityList,
     1,
-    v17);
+    v18);
   Time_48346468 = (int64_t)this->fields.currentPickupInfoDispControl;
   if ( !Time_48346468 )
     goto LABEL_32;
-  v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_48346468, 0);
-  GameObjectExtensions__SetLocalPosition_42891412(v18, this->fields.CURRENT_PICKUP_INFO_BOARD_POS, 0);
-  if ( (v16 & 1) != 0 )
+  v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_48346468, 0);
+  GameObjectExtensions__SetLocalPosition_42891412(v19, this->fields.CURRENT_PICKUP_INFO_BOARD_POS, 0);
+  if ( (v17 & 1) != 0 )
     goto LABEL_18;
 LABEL_21:
   infoPanel = (UnityEngine_Object_o *)this->fields.infoPanel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v19);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v20);
   if ( UnityEngine_Object__op_Inequality(infoPanel, 0, 0) )
   {
     Time_48346468 = (int64_t)this->fields.infoPanel;
     if ( !Time_48346468 )
       goto LABEL_32;
-    v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_48346468, 0);
-    GameObjectExtensions__SetLocalPositionY(v23, -33.0, 0);
+    v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_48346468, 0);
+    GameObjectExtensions__SetLocalPositionY(v24, -33.0, 0);
   }
   svtIndexPanel = (UnityEngine_Object_o *)this->fields.svtIndexPanel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v22);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v23);
   if ( UnityEngine_Object__op_Inequality(svtIndexPanel, 0, 0) )
   {
     Time_48346468 = (int64_t)this->fields.svtIndexPanel;
     if ( Time_48346468 )
     {
-      v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_48346468, 0);
-      GameObjectExtensions__SetLocalPositionY(v25, -92.0, 0);
+      v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_48346468, 0);
+      GameObjectExtensions__SetLocalPositionY(v26, -92.0, 0);
       return;
     }
 LABEL_32:
-    sub_2213CDC(Time_48346468, v13);
+    sub_2213CDC(Time_48346468, v14);
   }
 }
 
@@ -612,10 +618,12 @@ bool EventTradeListViewItemManager__ExecuteCloseDialogCallBack(
   struct System_Func_bool__o *closeDialogCallBack; // x8
 
   closeDialogCallBack = this->fields.closeDialogCallBack;
-  return closeDialogCallBack
-      && ((bool (__fastcall *)(intptr_t, intptr_t))closeDialogCallBack->fields.invoke_impl)(
-           closeDialogCallBack->fields.method_code,
-           closeDialogCallBack->fields.method);
+  if ( closeDialogCallBack )
+    return ((__int64 (__fastcall *)(intptr_t, intptr_t))closeDialogCallBack->fields.invoke_impl)(
+             closeDialogCallBack->fields.method_code,
+             closeDialogCallBack->fields.method);
+  else
+    return 0;
 }
 
 
@@ -779,17 +787,20 @@ int64_t EventTradeListViewItemManager__GetUpdateTime(EventTradeListViewItemManag
   __int64 v4; // x1
   __int64 v5; // x2
   int64_t Time; // x19
+  System_DateTime_o v7; // x0
   int32_t Hour; // w20
+  System_DateTime_o v9; // x0
   int32_t Minute; // w21
+  System_DateTime_o v11; // x0
   int32_t Second; // w0
-  __int64 v10; // x1
-  __int64 v11; // x2
-  EventTradeTimeCalculation_c *v12; // x8
-  int32_t v13; // w22
-  int64_t v14; // x19
-  __int64 v15; // x1
-  __int64 v16; // x2
-  EventTradeTimeCalculation_c *v17; // x0
+  __int64 v13; // x1
+  __int64 v14; // x2
+  EventTradeTimeCalculation_c *v15; // x8
+  int32_t v16; // w22
+  int64_t v17; // x19
+  __int64 v18; // x1
+  __int64 v19; // x2
+  EventTradeTimeCalculation_c *v20; // x0
   uint64_t dateData; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596AD4B & 1) == 0 )
@@ -807,28 +818,31 @@ int64_t EventTradeListViewItemManager__GetUpdateTime(EventTradeListViewItemManag
   Time = NetworkManager__getTime(0);
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v4, v5);
-  Hour = System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
-  Minute = System_DateTime__get_Minute((System_DateTime_o)&dateData, 0);
-  Second = System_DateTime__get_Second((System_DateTime_o)&dateData, 0);
-  v12 = EventTradeTimeCalculation_TypeInfo;
-  v13 = Second;
+  v7.fields._dateData = (uint64_t)&dateData;
+  Hour = System_DateTime__get_Hour(v7, 0);
+  v9.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v9, 0);
+  v11.fields._dateData = (uint64_t)&dateData;
+  Second = System_DateTime__get_Second(v11, 0);
+  v15 = EventTradeTimeCalculation_TypeInfo;
+  v16 = Second;
   if ( !*(&EventTradeTimeCalculation_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo, v10, v11);
-    v12 = EventTradeTimeCalculation_TypeInfo;
+    j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo, v13, v14);
+    v15 = EventTradeTimeCalculation_TypeInfo;
   }
-  v14 = v12->static_fields->TRADE_TIME_OFFSET + Time - (v13 + 60 * (Minute + 60 * Hour));
-  if ( NetworkManager__getTime(0) < v14 )
+  v17 = v15->static_fields->TRADE_TIME_OFFSET + Time - (v16 + 60 * (Minute + 60 * Hour));
+  if ( NetworkManager__getTime(0) < v17 )
   {
-    v17 = EventTradeTimeCalculation_TypeInfo;
+    v20 = EventTradeTimeCalculation_TypeInfo;
     if ( !*(&EventTradeTimeCalculation_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo, v15, v16);
-      v17 = EventTradeTimeCalculation_TypeInfo;
+      j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo, v18, v19);
+      v20 = EventTradeTimeCalculation_TypeInfo;
     }
-    v14 -= v17->static_fields->ONE_DAY_SECOND;
+    v17 -= v20->static_fields->ONE_DAY_SECOND;
   }
-  return v14;
+  return v17;
 }
 
 
@@ -3492,7 +3506,7 @@ void EventTradeListViewItemManager__SetReceiveAllButton(
   __int64 v6; // x1
   __int64 v7; // x2
   UILabel_o *receiveAllButtonLabel; // x20
-  __int64 receiveAllButton; // x0
+  System_String_o *receiveAllButton; // x0
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x2
@@ -3529,20 +3543,20 @@ void EventTradeListViewItemManager__SetReceiveAllButton(
   receiveAllButtonLabel = this->fields.receiveAllButtonLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v6, v7);
-  receiveAllButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3493/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
+  receiveAllButton = LocalizationManager__Get((System_String_o *)StringLiteral_3493/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
   if ( !receiveAllButtonLabel )
     goto LABEL_22;
-  UILabel__set_text(receiveAllButtonLabel, (System_String_o *)receiveAllButton, 0);
+  UILabel__set_text(receiveAllButtonLabel, receiveAllButton, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
-  receiveAllButton = UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
-  if ( (receiveAllButton & 1) != 0 )
+  receiveAllButton = (System_String_o *)UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
+  if ( ((unsigned __int8)receiveAllButton & 1) != 0 )
   {
     assetManager = this->fields.assetManager;
     if ( assetManager )
     {
-      receiveAllButton = (__int64)this->fields.receiveAllButton;
+      receiveAllButton = (System_String_o *)this->fields.receiveAllButton;
       if ( receiveAllButton )
       {
         TradeButtonBlinkEffect_k__BackingField = (Il2CppObject *)assetManager->fields._TradeButtonBlinkEffect_k__BackingField;
@@ -3563,22 +3577,22 @@ void EventTradeListViewItemManager__SetReceiveAllButton(
           v23,
           v24,
           v25);
-        receiveAllButton = (__int64)this->fields.tradeButtonBlinkEffect;
+        receiveAllButton = (System_String_o *)this->fields.tradeButtonBlinkEffect;
         if ( receiveAllButton )
         {
-          receiveAllButton = (__int64)UnityEngine_GameObject__get_transform(
-                                        (UnityEngine_GameObject_o *)receiveAllButton,
-                                        0);
+          receiveAllButton = (System_String_o *)UnityEngine_GameObject__get_transform(
+                                                  (UnityEngine_GameObject_o *)receiveAllButton,
+                                                  0);
           v26 = (UnityEngine_Transform_o *)receiveAllButton;
           if ( !byte_5969AE5 )
           {
-            receiveAllButton = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+            receiveAllButton = (System_String_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
             byte_5969AE5 = 1;
           }
           if ( v26 )
           {
             UnityEngine_Transform__set_localScale(v26, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-            receiveAllButton = (__int64)this->fields.tradeButtonBlinkEffect;
+            receiveAllButton = (System_String_o *)this->fields.tradeButtonBlinkEffect;
             if ( receiveAllButton )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)receiveAllButton, 0, 0);
@@ -4269,6 +4283,7 @@ bool EventTradeListViewItemManager__TryGetAvailableStoreIdx(
   struct EventTradeStoreEntity_array *v22; // x8
   il2cpp_array_size_t max_length; // x9
   EventTradeStoreEntity_o *v24; // x8
+  bool result; // w0
   int32_t *v26; // [xsp+8h] [xbp-78h]
   System_Int32_array *usedStoreIdx; // [xsp+10h] [xbp-70h] BYREF
   UserEventTradeEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
@@ -4345,8 +4360,9 @@ bool EventTradeListViewItemManager__TryGetAvailableStoreIdx(
       if ( !*v19 )
         goto LABEL_24;
 LABEL_20:
+      result = 1;
       *v3 = v24->fields.idx;
-      return 1;
+      return result;
     }
   }
   else
@@ -4394,6 +4410,7 @@ void EventTradeListViewItemManager__UpdateNoticeButtonDisp(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
         EventTradeListViewItemManager_o *this,
         const MethodInfo *method)
@@ -4416,10 +4433,13 @@ void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
   struct UICommonButton_o *receiveAllButton; // x8
   char v19; // w20
   __int64 v20; // x1
-  __int64 v22; // x1
-  __int64 v23; // x2
+  float v21; // s0 OVERLAPPED
+  float v22; // s3
+  float v23; // s1
+  float v24; // s2
+  __int64 v25; // x1
+  __int64 v26; // x2
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x21
-  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596AD4E & 1) == 0 )
   {
@@ -4474,16 +4494,16 @@ void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
   receiveAllButtonLabel = (UIWidget_o *)this->fields.receiveAllButtonLabel;
   if ( !receiveAllButtonLabel )
     goto LABEL_22;
-  v25.fields.r = 0.5;
-  v25.fields.a = 1.0;
+  v21 = 0.5;
+  v22 = 1.0;
   if ( (v19 & 1) != 0 )
-    v25.fields.r = 1.0;
-  v25.fields.g = v25.fields.r;
-  v25.fields.b = v25.fields.r;
-  UIWidget__set_color(receiveAllButtonLabel, v25, 0);
+    v21 = 1.0;
+  v23 = v21;
+  v24 = v21;
+  UIWidget__set_color(receiveAllButtonLabel, *(UnityEngine_Color_o *)&v21, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22, v23);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v25, v26);
   if ( UnityEngine_Object__op_Inequality(tradeButtonBlinkEffect, 0, 0) )
   {
     receiveAllButtonLabel = (UIWidget_o *)this->fields.tradeButtonBlinkEffect;

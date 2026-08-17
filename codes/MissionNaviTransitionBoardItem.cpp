@@ -2889,23 +2889,24 @@ void MissionNaviTransitionBoardItem___c__DisplayClass40_0___GetNaviWarOrSpotTran
   MapControl_WarInfo_o *WarInfoByWarID; // x0
   WarEntity_o *Mine; // x0
   int32_t parentBlankEarthSpotId; // w1
-  unsigned __int64 v13; // x8
-  BalanceConfig_c *v14; // x0
+  System_Nullable_int__o v13; // x0
+  unsigned __int64 v14; // x8
+  BalanceConfig_c *v15; // x0
   int32_t OrdealCallWarId; // w19
-  struct SpotEntity_o *v16; // x8
+  struct SpotEntity_o *v17; // x8
   int32_t warId; // w20
   int32_t targetSpotId; // w25
-  TerminalPramsManager_c *v19; // x0
   TerminalPramsManager_c *v20; // x0
+  TerminalPramsManager_c *v21; // x0
   _BOOL4 isMainScenario; // w8
   _BOOL4 isGrandQuestWar; // w9
-  int32_t v23; // w19
-  int v24; // w9
-  int v25; // w8
-  __int64 v26; // x1
-  __int64 v27; // x2
-  TerminalPramsManager_c *v28; // x0
-  unsigned __int64 v29; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v24; // w19
+  int v25; // w9
+  int v26; // w8
+  __int64 v27; // x1
+  __int64 v28; // x2
+  TerminalPramsManager_c *v29; // x0
+  unsigned __int64 v30; // [xsp+8h] [xbp-58h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-48h] BYREF
 
   if ( (byte_596A0D9 & 1) == 0 )
@@ -2967,18 +2968,19 @@ LABEL_20:
         if ( WarInfoByWarID && (Mine = MapControl_WarInfo__GetMine(WarInfoByWarID, 0)) != 0 )
         {
           parentBlankEarthSpotId = Mine->fields.parentBlankEarthSpotId;
-          v29 = 0;
+          v13 = (System_Nullable_int__o)&v30;
+          v30 = 0;
           System_Nullable_int____ctor(
-            (System_Nullable_int__o)&v29,
+            v13,
             parentBlankEarthSpotId,
             (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-          v13 = v29;
+          v14 = v30;
         }
         else
         {
-          v13 = 0;
+          v14 = 0;
         }
-        if ( HIDWORD(v13) == 0 && !IsBlankEarthWarByWarId )
+        if ( HIDWORD(v14) == 0 && !IsBlankEarthWarByWarId )
           goto LABEL_32;
         goto LABEL_24;
       }
@@ -2992,13 +2994,13 @@ LABEL_24:
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
   if ( TerminalPramsManager__ExistBlankEarthTutorial(0) )
   {
-    v14 = BalanceConfig_TypeInfo;
+    v15 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v5, v6);
-      v14 = BalanceConfig_TypeInfo;
+      v15 = BalanceConfig_TypeInfo;
     }
-    OrdealCallWarId = v14->static_fields->OrdealCallWarId;
+    OrdealCallWarId = v15->static_fields->OrdealCallWarId;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
     TerminalPramsManager__SetAutoResumeByWarId(OrdealCallWarId, 0);
@@ -3007,10 +3009,10 @@ LABEL_24:
 LABEL_32:
   if ( this->fields.isSpot )
   {
-    v16 = this->fields.spotEnt;
-    if ( v16 )
+    v17 = this->fields.spotEnt;
+    if ( v17 )
     {
-      warId = v16->fields.warId;
+      warId = v17->fields.warId;
       targetSpotId = this->fields.targetSpotId;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
@@ -3019,61 +3021,61 @@ LABEL_32:
         sub_2213A60(&TerminalPramsManager_TypeInfo);
         byte_596A15A = 1;
       }
-      v19 = TerminalPramsManager_TypeInfo;
-      if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-      {
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
-        v19 = TerminalPramsManager_TypeInfo;
-      }
-      v19->static_fields->_SpotId_k__BackingField = targetSpotId;
-      TerminalPramsManager__SetAutoResumeByWarId(warId, 0);
-      if ( !byte_596A094 )
-      {
-        sub_2213A60(&TerminalPramsManager_TypeInfo);
-        byte_596A094 = 1;
-      }
       v20 = TerminalPramsManager_TypeInfo;
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
       {
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
         v20 = TerminalPramsManager_TypeInfo;
       }
-      v20->static_fields->_IsDirectTransition_k__BackingField = 1;
+      v20->static_fields->_SpotId_k__BackingField = targetSpotId;
+      TerminalPramsManager__SetAutoResumeByWarId(warId, 0);
+      if ( !byte_596A094 )
+      {
+        sub_2213A60(&TerminalPramsManager_TypeInfo);
+        byte_596A094 = 1;
+      }
+      v21 = TerminalPramsManager_TypeInfo;
+      if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
+      {
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
+        v21 = TerminalPramsManager_TypeInfo;
+      }
+      v21->static_fields->_IsDirectTransition_k__BackingField = 1;
     }
   }
   if ( this->fields.isWar )
   {
     isMainScenario = this->fields.isMainScenario;
     isGrandQuestWar = this->fields.isGrandQuestWar;
-    v23 = this->fields.targetWarId;
-    v24 = isGrandQuestWar || isMainScenario;
-    v25 = *(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1);
-    if ( v24 )
+    v24 = this->fields.targetWarId;
+    v25 = isGrandQuestWar || isMainScenario;
+    v26 = *(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1);
+    if ( v25 )
     {
-      if ( !v25 )
+      if ( !v26 )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
-      TerminalPramsManager__SetAutoResumeForFolder(v23, 0);
+      TerminalPramsManager__SetAutoResumeForFolder(v24, 0);
     }
     else
     {
-      if ( !v25 )
+      if ( !v26 )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v5, v6);
-      TerminalPramsManager__SetAutoResumeByWarId(v23, 0);
+      TerminalPramsManager__SetAutoResumeByWarId(v24, 0);
     }
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v26, v27);
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v27, v28);
     if ( !byte_596A094 )
     {
       sub_2213A60(&TerminalPramsManager_TypeInfo);
       byte_596A094 = 1;
     }
-    v28 = TerminalPramsManager_TypeInfo;
+    v29 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v26, v27);
-      v28 = TerminalPramsManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v27, v28);
+      v29 = TerminalPramsManager_TypeInfo;
     }
-    v28->static_fields->_IsDirectTransition_k__BackingField = 1;
+    v29->static_fields->_IsDirectTransition_k__BackingField = 1;
   }
 LABEL_60:
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);

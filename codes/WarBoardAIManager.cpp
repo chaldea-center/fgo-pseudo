@@ -1676,8 +1676,8 @@ LABEL_49:
       this->fields.__2__current = (Il2CppObject *)v158;
       v159 = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)v159, (int32_t)v158, v160, v161, v162, v163, v164, v165);
-      *((_DWORD *)v159 - 2) = 1;
       LOBYTE(Instance) = 1;
+      *((_DWORD *)v159 - 2) = 1;
       return Instance;
     }
 LABEL_52:
@@ -1818,8 +1818,8 @@ LABEL_52:
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v54, (System_String_o *)v55, v56, v57, v58, v59);
   v45 = 5;
 LABEL_28:
-  *((_DWORD *)p__2__current - 2) = v45;
   LOBYTE(Instance) = 1;
+  *((_DWORD *)p__2__current - 2) = v45;
   return Instance;
 }
 

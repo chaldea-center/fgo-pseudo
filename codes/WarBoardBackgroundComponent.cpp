@@ -296,7 +296,7 @@ void WarBoardBackgroundComponent__PlayBgAnimation(
   __int64 v9; // x2
   WarBoardBGEffectComponent_o *WarBoardBGEffectComponent; // x20
   int32_t IsStop; // w21
-  WarBoardData_o *v12; // x21
+  WarBoardData_o *bgAnimationObjDic; // x21
   const MethodInfo *v13; // x2
   WarBoardData_o *v14; // x21
   System_String_o *v15; // x22
@@ -328,11 +328,15 @@ void WarBoardBackgroundComponent__PlayBgAnimation(
       {
         if ( this )
         {
-          v12 = (WarBoardData_o *)*((_QWORD *)this + 55);
+          bgAnimationObjDic = (WarBoardData_o *)this[6].fields.bgAnimationObjDic;
           this = (WarBoardBackgroundComponent_o *)WarBoardEventScriptEntity__GetObjectName(entity, 0);
-          if ( v12 )
+          if ( bgAnimationObjDic )
           {
-            WarBoardData__SetBgAnimationInfo(v12, (System_String_o *)this, (System_String_o *)StringLiteral_1/*""*/, 0);
+            WarBoardData__SetBgAnimationInfo(
+              bgAnimationObjDic,
+              (System_String_o *)this,
+              (System_String_o *)StringLiteral_1/*""*/,
+              0);
             if ( WarBoardBGEffectComponent )
             {
               WarBoardBGEffectComponent__StopAnimation(WarBoardBGEffectComponent, 0, v13);
@@ -343,7 +347,7 @@ void WarBoardBackgroundComponent__PlayBgAnimation(
       }
       else if ( this )
       {
-        v14 = (WarBoardData_o *)*((_QWORD *)this + 55);
+        v14 = (WarBoardData_o *)this[6].fields.bgAnimationObjDic;
         v15 = WarBoardEventScriptEntity__GetObjectName(entity, 0);
         this = (WarBoardBackgroundComponent_o *)WarBoardEventScriptEntity__GetAnimationName(entity, 0);
         if ( v14 )

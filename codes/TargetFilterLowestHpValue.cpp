@@ -274,7 +274,7 @@ int32_t TargetFilterLowestHpValue___c___Apply_b__0_3(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((int32_t (__fastcall *)(BattleServantData_o *, const MethodInfo *))x->klass->vtable._9_get_hp.methodPtr)(
+  return ((__int64 (__fastcall *)(BattleServantData_o *, const MethodInfo *))x->klass->vtable._9_get_hp.methodPtr)(
            x,
            x->klass->vtable._9_get_hp.method);
 }

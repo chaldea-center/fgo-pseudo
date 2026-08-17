@@ -34,7 +34,7 @@ uint32_t CriFsPlugin__CRIWARE05FCC2E5(const MethodInfo *method)
     v1 = (void *)sub_2214114(v3);
     off_59696F0 = v1;
   }
-  return ((uint32_t (*)(void))v1)();
+  return ((__int64 (*)(void))v1)();
 }
 
 
@@ -392,7 +392,7 @@ uint32_t CriFsPlugin__criFsLoader_GetRetryCount(const MethodInfo *method)
     v1 = (void *)sub_2214114(v3);
     off_59696F8 = v1;
   }
-  return ((uint32_t (*)(void))v1)();
+  return ((__int64 (*)(void))v1)();
 }
 
 
@@ -488,7 +488,7 @@ int32_t CriFsPlugin__criFs_GetNumBinds(int32_t *cur, int32_t *max, int32_t *limi
     v6 = (void *)sub_2214114(v9);
     off_5969700 = v6;
   }
-  return ((int32_t (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
+  return ((__int64 (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
 }
 
 
@@ -512,7 +512,7 @@ int32_t CriFsPlugin__criFs_GetNumUsedInstallers(int32_t *cur, int32_t *max, int3
     v6 = (void *)sub_2214114(v9);
     off_5969710 = v6;
   }
-  return ((int32_t (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
+  return ((__int64 (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
 }
 
 
@@ -536,7 +536,7 @@ int32_t CriFsPlugin__criFs_GetNumUsedLoaders(int32_t *cur, int32_t *max, int32_t
     v6 = (void *)sub_2214114(v9);
     off_5969708 = v6;
   }
-  return ((int32_t (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
+  return ((__int64 (__fastcall *)(int32_t *, int32_t *, int32_t *, const MethodInfo *))v6)(cur, max, limit, method);
 }
 
 
@@ -560,7 +560,7 @@ int32_t CriFsPlugin__criFs_SetReadDeviceEnabled(int32_t device_id, bool enabled,
     v5 = (void *)sub_2214114(v7);
     off_5969718 = v5;
   }
-  return ((int32_t (__fastcall *)(_QWORD, bool, const MethodInfo *))v5)((unsigned int)device_id, enabled, method);
+  return ((__int64 (__fastcall *)(_QWORD, bool, const MethodInfo *))v5)((unsigned int)device_id, enabled, method);
 }
 
 

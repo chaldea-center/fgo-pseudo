@@ -5,6 +5,7 @@ BattleMovieParam_o *BattleMovieParamExtension__ToBattleMovieParam(
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  BattleMovieParam_o *result; // x0
 
   if ( (byte_5970340 & 1) == 0 )
   {
@@ -17,9 +18,10 @@ BattleMovieParam_o *BattleMovieParamExtension__ToBattleMovieParam(
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !saveData )
     sub_2213CDC(v4, v5);
+  result = (BattleMovieParam_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&saveData->fields.fadeOutBgmBeforeMovie;
   *(_DWORD *)(v3 + 24) = saveData->fields.movieAfterCrossFadeTime;
-  return (BattleMovieParam_o *)v3;
+  return result;
 }
 
 
@@ -28,6 +30,7 @@ BattleMovieParam_SaveData_o *BattleMovieParamExtension__ToSaveData(BattleMoviePa
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  BattleMovieParam_SaveData_o *result; // x0
 
   if ( (byte_597033F & 1) == 0 )
   {
@@ -38,7 +41,8 @@ BattleMovieParam_SaveData_o *BattleMovieParamExtension__ToSaveData(BattleMoviePa
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !param || !v3 )
     sub_2213CDC(v4, v5);
+  result = (BattleMovieParam_SaveData_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&param->fields.FadeOutBgmBeforeMovie;
   *(_DWORD *)(v3 + 24) = param->fields.movieAfterCrossFadeTime;
-  return (BattleMovieParam_SaveData_o *)v3;
+  return result;
 }

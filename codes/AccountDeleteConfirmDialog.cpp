@@ -358,9 +358,12 @@ LABEL_13:
 // local variable allocation has failed, the output may be wrong!
 void AccountDeleteConfirmDialog__SetSlider(AccountDeleteConfirmDialog_o *this, bool sliderOn, const MethodInfo *method)
 {
-  char *sliderSprite; // x0
+  void *sliderSprite; // x0
   __int64 *v6; // x8
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v7; // s0 OVERLAPPED
+  float v8; // s1
+  float v9; // s2
+  float v10; // s3
 
   if ( (byte_5969DD5 & 1) == 0 )
   {
@@ -368,25 +371,25 @@ void AccountDeleteConfirmDialog__SetSlider(AccountDeleteConfirmDialog_o *this, b
     sub_2213A60(&StringLiteral_21575/*"img_slider_thumb"*/);
     byte_5969DD5 = 1;
   }
-  sliderSprite = (char *)this->fields.sliderSprite;
+  sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_14;
   v6 = &StringLiteral_21575/*"img_slider_thumb"*/;
   if ( !sliderOn )
     v6 = &StringLiteral_21576/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName((UISprite_o *)sliderSprite, (System_String_o *)*v6, 0);
-  sliderSprite = (char *)this->fields.decideButton;
+  sliderSprite = this->fields.decideButton;
   if ( !sliderSprite )
 LABEL_14:
     sub_2213CDC(sliderSprite, sliderOn);
   (*(void (**)(void))(*(_QWORD *)sliderSprite + 536LL))();
-  sliderSprite = (char *)this->fields.decideButton;
+  sliderSprite = this->fields.decideButton;
   if ( sliderOn )
   {
-    v10.fields.r = 1.0;
-    v10.fields.g = 1.0;
-    v10.fields.b = 1.0;
-    v10.fields.a = 1.0;
+    v7 = 1.0;
+    v8 = 1.0;
+    v9 = 1.0;
+    v10 = 1.0;
     if ( !sliderSprite )
       goto LABEL_14;
   }
@@ -394,13 +397,16 @@ LABEL_14:
   {
     if ( !sliderSprite )
       goto LABEL_14;
-    v10 = *(UnityEngine_Color_o *)(sliderSprite + 72);
+    v7 = *((float *)sliderSprite + 18);
+    v8 = *((float *)sliderSprite + 19);
+    v9 = *((float *)sliderSprite + 20);
+    v10 = *((float *)sliderSprite + 21);
   }
-  UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v10, 0);
-  sliderSprite = (char *)this->fields.decideButton;
+  UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, *(UnityEngine_Color_o *)&v7, 0);
+  sliderSprite = this->fields.decideButton;
   if ( !sliderSprite )
     goto LABEL_14;
-  (*(void (__fastcall **)(char *, bool, _QWORD))(*(_QWORD *)sliderSprite + 392LL))(
+  (*(void (__fastcall **)(void *, bool, _QWORD))(*(_QWORD *)sliderSprite + 392LL))(
     sliderSprite,
     sliderOn,
     *(_QWORD *)(*(_QWORD *)sliderSprite + 400LL));
@@ -461,7 +467,7 @@ System_IAsyncResult_o *AccountDeleteConfirmDialog_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

@@ -418,9 +418,9 @@ LABEL_26:
   if ( v8 )
 LABEL_24:
     System_Text_StringBuilder__Append_75737396(v9, v7 | v8, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
-           v9,
-           v9->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
+                              v9,
+                              v9->klass->vtable._3_ToString.method);
 }
 
 
@@ -2438,17 +2438,17 @@ void RecommendSupportQuestBoardListViewItemDraw__SetRecommendLv(
   __int64 v14; // x2
   Il2CppObject *Component_object; // x20
   UnityEngine_GameObject_o *v16; // x21
-  __int64 v17; // x1
-  __int64 v18; // x2
-  float v19; // s0
-  float v20; // s8
-  __int64 v21; // x2
+  float v17; // s0
+  __int64 v18; // x1
+  __int64 v19; // x2
+  float v20; // s0
+  float v21; // s8
+  __int64 v22; // x2
   struct UILabel_o *titleLevelLb; // x8
-  UnityEngine_Object_o *v23; // x20
+  UnityEngine_Object_o *v24; // x20
   int mWidth; // s8
   float monitor_low; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  float v27; // s0
   UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -2532,12 +2532,12 @@ void RecommendSupportQuestBoardListViewItemDraw__SetRecommendLv(
                                                              0);
                 if ( IsNullOrEmpty )
                 {
-                  LODWORD(v27) = (unsigned int)UnityEngine_Transform__get_localPosition(
+                  LODWORD(v17) = (unsigned int)UnityEngine_Transform__get_localPosition(
                                                  (UnityEngine_Transform_o *)IsNullOrEmpty,
                                                  0);
-                  GameObjectExtensions__SetLocalPositionX(v16, v27, 0);
+                  GameObjectExtensions__SetLocalPositionX(v16, v17, 0);
                   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
+                    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18, v19);
                   IsNullOrEmpty = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
                                                                (UnityEngine_Object_o *)Component_object,
                                                                0,
@@ -2546,14 +2546,14 @@ void RecommendSupportQuestBoardListViewItemDraw__SetRecommendLv(
                   {
                     if ( Component_object )
                     {
-                      v19 = CondensedScaleSprite__GetAfterAdjustWidth((CondensedScaleSprite_o *)Component_object, 0);
+                      v20 = CondensedScaleSprite__GetAfterAdjustWidth((CondensedScaleSprite_o *)Component_object, 0);
                       IsNullOrEmpty = (UnityEngine_Component_o *)this->fields.titleLevelSp;
                       if ( IsNullOrEmpty )
                       {
-                        v20 = (float)(SLODWORD(IsNullOrEmpty[7].klass) / 2) + (float)(v19 * -0.5);
+                        v21 = (float)(SLODWORD(IsNullOrEmpty[7].klass) / 2) + (float)(v20 * -0.5);
 LABEL_36:
                         gameObject = UnityEngine_Component__get_gameObject(IsNullOrEmpty, 0);
-                        GameObjectExtensions__AddLocalPositionX(gameObject, v20, 0);
+                        GameObjectExtensions__AddLocalPositionX(gameObject, v21, 0);
                         return;
                       }
                     }
@@ -2569,23 +2569,23 @@ LABEL_36:
                       titleLevelLb = this->fields.titleLevelLb;
                       if ( titleLevelLb )
                       {
-                        v23 = (UnityEngine_Object_o *)IsNullOrEmpty;
+                        v24 = (UnityEngine_Object_o *)IsNullOrEmpty;
                         mWidth = titleLevelLb->fields.mWidth;
                         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12, v21);
+                          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v12, v22);
                         monitor_low = (float)mWidth;
-                        IsNullOrEmpty = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v23, 0, 0);
+                        IsNullOrEmpty = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(v24, 0, 0);
                         if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
                         {
-                          if ( !v23 )
+                          if ( !v24 )
                             goto LABEL_37;
-                          if ( monitor_low > (float)SLODWORD(v23[2].monitor) )
-                            monitor_low = (float)SLODWORD(v23[2].monitor);
+                          if ( monitor_low > (float)SLODWORD(v24[2].monitor) )
+                            monitor_low = (float)SLODWORD(v24[2].monitor);
                         }
                         IsNullOrEmpty = (UnityEngine_Component_o *)this->fields.titleLevelSp;
                         if ( IsNullOrEmpty )
                         {
-                          v20 = monitor_low * -0.5;
+                          v21 = monitor_low * -0.5;
                           goto LABEL_36;
                         }
                       }

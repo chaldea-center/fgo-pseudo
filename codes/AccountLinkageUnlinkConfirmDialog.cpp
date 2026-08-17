@@ -529,14 +529,17 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
   __int64 v8; // x2
   AccountLinkageUnlinkConfirmDialog_c *v9; // x0
   __int64 v10; // x1
-  __int64 v14; // x1
-  __int64 v15; // x2
-  AccountLinkageUnlinkConfirmDialog_c *v16; // x0
-  int v17; // w8
+  float a; // s3
+  float b; // s2
+  float g; // s1
+  float r; // s0 OVERLAPPED
+  __int64 v15; // x1
+  __int64 v16; // x2
+  AccountLinkageUnlinkConfirmDialog_c *v17; // x0
+  int v18; // w8
   System_String_o **p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE; // x8
-  UnityEngine_Color_o v19; // [xsp+0h] [xbp-50h] BYREF
+  UnityEngine_Color_o v20; // [xsp+0h] [xbp-50h] BYREF
   UnityEngine_Color_o color; // [xsp+10h] [xbp-40h] BYREF
-  UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5969E18 & 1) == 0 )
   {
@@ -549,8 +552,8 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
   sliderSprite = this->fields.sliderSprite;
   *(_QWORD *)&color.fields.r = 0;
   *(_QWORD *)&color.fields.b = 0;
-  *(_QWORD *)&v19.fields.r = 0;
-  *(_QWORD *)&v19.fields.b = 0;
+  *(_QWORD *)&v20.fields.r = 0;
+  *(_QWORD *)&v20.fields.b = 0;
   if ( !sliderSprite )
     goto LABEL_28;
   v6 = &StringLiteral_21575/*"img_slider_thumb"*/;
@@ -584,15 +587,20 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
   sliderSprite = (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)sliderSprite,
                                  (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
-  v21.fields.a = 1.0;
-  v21.fields.b = 1.0;
-  v21.fields.g = 1.0;
-  v21.fields.r = 1.0;
+  a = 1.0;
+  b = 1.0;
+  g = 1.0;
+  r = 1.0;
   if ( !sliderOn )
-    v21 = color;
+  {
+    r = color.fields.r;
+    g = color.fields.g;
+    b = color.fields.b;
+    a = color.fields.a;
+  }
   if ( !sliderSprite )
     goto LABEL_28;
-  UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, v21, 0);
+  UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, *(UnityEngine_Color_o *)&r, 0);
   sliderSprite = (UISprite_o *)this->fields.buttonDecide;
   if ( !sliderSprite )
     goto LABEL_28;
@@ -605,32 +613,32 @@ void AccountLinkageUnlinkConfirmDialog__SetSlider(
     sliderSprite,
     sliderOn,
     sliderSprite->klass->vtable._5_get_isAnchoredVertically.method);
-  v16 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
-  v17 = *(&AccountLinkageUnlinkConfirmDialog_TypeInfo->_2.cctor_finished + 1);
+  v17 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
+  v18 = *(&AccountLinkageUnlinkConfirmDialog_TypeInfo->_2.cctor_finished + 1);
   if ( sliderOn )
   {
-    if ( !v17 )
+    if ( !v18 )
     {
-      j_il2cpp_runtime_class_init_0(AccountLinkageUnlinkConfirmDialog_TypeInfo, v14, v15);
-      v16 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AccountLinkageUnlinkConfirmDialog_TypeInfo, v15, v16);
+      v17 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
     }
-    p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE = &v16->static_fields->DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE;
+    p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE = &v17->static_fields->DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE;
   }
   else
   {
-    if ( !v17 )
+    if ( !v18 )
     {
-      j_il2cpp_runtime_class_init_0(AccountLinkageUnlinkConfirmDialog_TypeInfo, v14, v15);
-      v16 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
+      j_il2cpp_runtime_class_init_0(AccountLinkageUnlinkConfirmDialog_TypeInfo, v15, v16);
+      v17 = AccountLinkageUnlinkConfirmDialog_TypeInfo;
     }
-    p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE = &v16->static_fields->DECIDE_BUTTON_LABEL_LOCK_COLOR_CODE;
+    p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE = &v17->static_fields->DECIDE_BUTTON_LABEL_LOCK_COLOR_CODE;
   }
-  UnityEngine_ColorUtility__TryParseHtmlString(*p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE, &v19, 0);
+  UnityEngine_ColorUtility__TryParseHtmlString(*p_DECIDE_BUTTON_LABEL_OPEN_COLOR_CODE, &v20, 0);
   sliderSprite = (UISprite_o *)this->fields.buttonDecideLabel;
   if ( !sliderSprite )
 LABEL_28:
     sub_2213CDC(sliderSprite, sliderOn);
-  UIWidget__set_color((UIWidget_o *)sliderSprite, v19, 0);
+  UIWidget__set_color((UIWidget_o *)sliderSprite, v20, 0);
 }
 
 
@@ -1089,7 +1097,7 @@ System_IAsyncResult_o *AccountLinkageUnlinkConfirmDialog_ClickDelegate__BeginInv
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

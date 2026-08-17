@@ -1981,21 +1981,22 @@ LABEL_14:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScrTerminalMap__ClickSpotOnMapModelScreen(ScrTerminalMap_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
   UnityEngine_Vector2_o mCamera; // x0
   UnityEngine_Vector2_o v5; // x1
+  UnityEngine_Vector2_o TouchPos; // kr00_8 OVERLAPPED
   struct MapCamera_o *mapCamera; // x8
+  int v8; // s2
   struct MapModelManager_o *mapModelManager; // x8
-  __int64 v8; // x1
-  __int64 v9; // x2
-  UnityEngine_Object_o *v10; // x19
-  __int64 v11; // x1
-  __int64 v12; // x2
+  __int64 v10; // x1
+  __int64 v11; // x2
+  UnityEngine_Object_o *v12; // x19
+  __int64 v13; // x1
+  __int64 v14; // x2
   Il2CppObject *Component_object; // x19
-  UnityEngine_Vector3_o v14; // 0:kr14_12.12
-  UnityEngine_Vector2_o TouchPos; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D83D & 1) == 0 )
@@ -2014,28 +2015,30 @@ void ScrTerminalMap__ClickSpotOnMapModelScreen(ScrTerminalMap_o *this, const Met
   mCamera = (UnityEngine_Vector2_o)mapCamera->fields.mCamera;
   if ( !*(_QWORD *)&mCamera )
     goto LABEL_19;
-  *(UnityEngine_Vector2_o *)&v14.fields.x = TouchPos;
-  v14.fields.z = 0.0;
-  v16 = UnityEngine_Camera__ScreenToWorldPoint_83198228((UnityEngine_Camera_o *)*(_QWORD *)&mCamera, v14, 0);
+  v8 = 0;
+  v16 = UnityEngine_Camera__ScreenToWorldPoint_83198228(
+          (UnityEngine_Camera_o *)*(_QWORD *)&mCamera,
+          *(UnityEngine_Vector3_o *)&TouchPos.fields.x,
+          0);
   mapModelManager = this->fields.mapModelManager;
   if ( !mapModelManager )
     goto LABEL_19;
   mCamera = (UnityEngine_Vector2_o)mapModelManager->fields._SpotModelCamera_k__BackingField;
   if ( !*(_QWORD *)&mCamera )
     goto LABEL_19;
-  v10 = (UnityEngine_Object_o *)MapModelCamera__RayCast(*(MapModelCamera_o **)&mCamera, v16, 0);
+  v12 = (UnityEngine_Object_o *)MapModelCamera__RayCast(*(MapModelCamera_o **)&mCamera, v16, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
-  mCamera = (UnityEngine_Vector2_o)UnityEngine_Object__op_Equality(v10, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
+  mCamera = (UnityEngine_Vector2_o)UnityEngine_Object__op_Equality(v12, 0, 0);
   if ( (LOBYTE(mCamera.fields.x) & 1) == 0 )
   {
-    if ( v10 )
+    if ( v12 )
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
-                           (UnityEngine_GameObject_o *)v10,
+                           (UnityEngine_GameObject_o *)v12,
                            (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v13, v14);
       mCamera = (UnityEngine_Vector2_o)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
       if ( (LOBYTE(mCamera.fields.x) & 1) != 0 )
         return;
@@ -2144,7 +2147,7 @@ UnityEngine_Vector3_o ScrTerminalMap__ConvertLocalToScreenPosition(
   __int64 v8; // x1
   const MethodInfo *v9; // x1
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   z = localPostion.fields.z;
   y = localPostion.fields.y;
@@ -2155,8 +2158,8 @@ UnityEngine_Vector3_o ScrTerminalMap__ConvertLocalToScreenPosition(
   v10.fields.x = x;
   v10.fields.y = y;
   v10.fields.z = z;
-  v12 = UnityEngine_Transform__TransformPoint(transform, v10, 0);
-  return ScrTerminalMap__ConvertWorldToScreenPosition(this, v12, v9);
+  v11 = UnityEngine_Transform__TransformPoint(transform, v10, 0);
+  return ScrTerminalMap__ConvertWorldToScreenPosition(this, v11, v9);
 }
 
 
@@ -2174,8 +2177,12 @@ UnityEngine_Vector3_o ScrTerminalMap__ConvertWorldToScreenPosition(
   struct MapModelCamera_o *MapModelCamera_k__BackingField; // x20
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   unsigned __int64 v11; // d0
-  unsigned __int64 v14; // kr00_8
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  float v12; // s2
+  float v13; // s1
+  float v14; // [xsp+0h] [xbp-50h]
+  float v15; // [xsp+10h] [xbp-40h]
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   z = worldPostion.fields.z;
@@ -2205,11 +2212,13 @@ UnityEngine_Vector3_o ScrTerminalMap__ConvertWorldToScreenPosition(
       this = (ScrTerminalMap_o *)MapModelCamera_k__BackingField->fields.cameraInstance;
       if ( this )
       {
-        v15.fields.x = x;
-        v15.fields.y = y;
-        v15.fields.z = z;
-        v14 = (unsigned __int64)UnityEngine_Camera__WorldToScreenPoint_83198204((UnityEngine_Camera_o *)this, v15, 0);
+        v16.fields.x = x;
+        v16.fields.y = y;
+        v16.fields.z = z;
+        v17 = UnityEngine_Camera__WorldToScreenPoint_83198204((UnityEngine_Camera_o *)this, v16, 0);
         this = (ScrTerminalMap_o *)v7->fields.mapModelScreen;
+        v14 = v17.fields.y;
+        v15 = v17.fields.x;
         if ( this )
         {
           this = (ScrTerminalMap_o *)UnityEngine_GameObject__GetComponent_object_(
@@ -2217,9 +2226,9 @@ UnityEngine_Vector3_o ScrTerminalMap__ConvertWorldToScreenPosition(
                                        (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
           if ( this )
           {
-            result.fields.z = 0.0;
+            v12 = 0.0;
             v11 = vadd_f32(
-                    (float32x2_t)v14,
+                    (float32x2_t)__PAIR64__(LODWORD(v14), LODWORD(v15)),
                     vmul_f32(vcvt_f32_s32((int32x2_t)this->fields.rootGimmickP), (float32x2_t)0xBF000000BF000000LL)).n64_u64[0];
             goto LABEL_15;
           }
@@ -2236,10 +2245,12 @@ LABEL_16:
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v11 = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  result.fields.z = static_fields->zeroVector.fields.z;
+  v12 = static_fields->zeroVector.fields.z;
 LABEL_15:
-  result.fields.y = *((float *)&v11 + 1);
+  v13 = *((float *)&v11 + 1);
   result.fields.x = *(float *)&v11;
+  result.fields.z = v12;
+  result.fields.y = v13;
   return result;
 }
 
@@ -2413,8 +2424,8 @@ MapGimmickComponent_o *ScrTerminalMap__CreateMapGimmick(
   NetworkManager_ResultCallbackFunc_o *v52; // x26
   int32_t currentWarId; // [xsp+Ch] [xbp-84h] BYREF
   UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalPositionOnMapModel; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v58; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   v6 = this;
@@ -2540,11 +2551,11 @@ MapGimmickComponent_o *ScrTerminalMap__CreateMapGimmick(
         (UnityEngine_GameObject_o *)v15,
         *(UnityEngine_GameObject_o **)((char *)&v6->klass + v36),
         0);
-      v56.fields.x = (float)v11->fields.x - v6->fields.mapImageOffsetX;
-      v56.fields.z = 0.0;
-      v56.fields.y = (float)((float)v6->fields._currentMapImageH_k__BackingField - (float)v11->fields.y)
+      v57.fields.x = (float)v11->fields.x - v6->fields.mapImageOffsetX;
+      v57.fields.z = 0.0;
+      v57.fields.y = (float)((float)v6->fields._currentMapImageH_k__BackingField - (float)v11->fields.y)
                    - v6->fields.mapImageOffsetY;
-      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v15, v56, 0);
+      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v15, v57, 0);
       if ( v6->fields.isRaidMap )
       {
         if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
@@ -4401,8 +4412,8 @@ void ScrTerminalMap__EventBoardCameraAction(
   Il2CppObject *MasterData_object; // x23
   float RateValue; // s8
   ConstantStrMaster_o *v13; // x24
-  float v14; // s4
-  const MethodInfo *v15; // x2
+  const MethodInfo *v14; // x2
+  float v15; // s4
   UnityEngine_Vector3_o ValueVector3; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D854 & 1) == 0 )
@@ -4441,10 +4452,10 @@ void ScrTerminalMap__EventBoardCameraAction(
 LABEL_12:
     sub_2213CDC(Instance, v10);
   ValueVector3 = ConstantStrMaster__GetValueVector3(v13, (System_String_o *)StringLiteral_5738/*"EVENT_BOARD_GAME_MAP_POSITION"*/, 0);
-  v14 = 0.25;
+  v15 = 0.25;
   if ( isForce )
-    v14 = 0.0;
-  ScrTerminalMap__EventBoardCameraAction_44004640(this, ValueVector3, RateValue, v14, callback, v15);
+    v15 = 0.0;
+  ScrTerminalMap__EventBoardCameraAction_44004640(this, ValueVector3, RateValue, v15, callback, v14);
 }
 
 
@@ -4513,10 +4524,12 @@ void ScrTerminalMap__EventBoardCameraAction_44004640(
   struct MapCamera_o *v17; // x8
   MapCamera_o *v18; // x20
   const MethodInfo_45E9150 *v19; // x2
+  System_Nullable_float__o p_size; // x0
+  System_Nullable_float__o v21; // x3
   System_Nullable_float__o size; // [xsp+8h] [xbp-68h] BYREF
-  System_Nullable_Vector3__o v21; // [xsp+10h] [xbp-60h] BYREF
-  System_Nullable_Vector3__o v22; // 0:x0.16
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  System_Nullable_Vector3__o v23; // [xsp+10h] [xbp-60h] BYREF
+  System_Nullable_Vector3__o v24; // 0:x0.16
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   z = cameraPosition.fields.z;
   y = cameraPosition.fields.y;
@@ -4552,24 +4565,23 @@ void ScrTerminalMap__EventBoardCameraAction_44004640(
     if ( !mZoom )
       goto LABEL_13;
     MapScroll__Stop((MapScroll_o *)mZoom, 1, 0);
-    v23.fields.x = x;
-    v23.fields.y = y;
-    v23.fields.z = z;
+    v25.fields.x = x;
+    v25.fields.y = y;
+    v25.fields.z = z;
     v18 = this->fields.mapCamera;
-    *(_QWORD *)&v22.fields.hasValue = &v21;
-    *(_QWORD *)&v21.fields.hasValue = 0;
-    *(_QWORD *)&v21.fields.value.fields.y = 0;
-    *(_QWORD *)&v22.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-    System_Nullable_Vector3____ctor(v22, v23, v19);
+    *(_QWORD *)&v24.fields.hasValue = &v23;
+    *(_QWORD *)&v23.fields.hasValue = 0;
+    *(_QWORD *)&v23.fields.value.fields.y = 0;
+    *(_QWORD *)&v24.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+    System_Nullable_Vector3____ctor(v24, v25, v19);
+    p_size = (System_Nullable_float__o)&size;
     size = 0;
-    System_Nullable_float____ctor(
-      (System_Nullable_float__o)&size,
-      zoomScale,
-      (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+    System_Nullable_float____ctor(p_size, zoomScale, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
     if ( !v18 )
 LABEL_13:
       sub_2213CDC(mZoom, v15);
-    MapCamera__StartAutoWork(v18, actTime, v21, size, 5, callback, 0);
+    v21 = size;
+    MapCamera__StartAutoWork(v18, actTime, v23, v21, 5, callback, 0);
   }
 }
 
@@ -5519,17 +5531,20 @@ void ScrTerminalMap__ExecuteWhiteIn_ToMap(ScrTerminalMap_o *this, const MethodIn
   float RateValue; // s0
   float v49; // s10
   struct MapCamera_o *mapCamera; // x8
-  struct MapCamera_o *v51; // x8
-  __int64 v52; // x2
+  float x; // s8
+  float y; // s9
+  struct MapCamera_o *v53; // x8
+  __int64 v54; // x2
   Il2CppClass *klass; // x8
-  ScrTerminalListTop_o *v54; // x22
-  const MethodInfo *v55; // x1
-  System_Collections_IEnumerator_o *v56; // x0
-  const MethodInfo *v57; // x2
-  unsigned __int64 ValueVector3; // kr00_8
-  UnityEngine_Color_o v59; // [xsp+0h] [xbp-80h] BYREF
+  ScrTerminalListTop_o *v56; // x22
+  const MethodInfo *v57; // x1
+  System_Collections_IEnumerator_o *v58; // x0
+  const MethodInfo *v59; // x2
+  UnityEngine_Color_o v60; // [xsp+0h] [xbp-80h] BYREF
   int32_t fadeColorKind[2]; // [xsp+18h] [xbp-68h] BYREF
   System_String_o *fadeType; // [xsp+28h] [xbp-58h] BYREF
+  UnityEngine_Vector2_o v63; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o ValueVector3; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D80D & 1) == 0 )
   {
@@ -5551,7 +5566,7 @@ void ScrTerminalMap__ExecuteWhiteIn_ToMap(ScrTerminalMap_o *this, const MethodIn
   mapButtonGrid = this->fields.mapButtonGrid;
   fadeType = 0;
   *(_QWORD *)fadeColorKind = 0;
-  v59 = (UnityEngine_Color_o)0LL;
+  v60 = (UnityEngine_Color_o)0LL;
   if ( !mapButtonGrid )
     goto LABEL_153;
   MapButtonControl__CreateMapButtons(
@@ -5636,7 +5651,7 @@ LABEL_28:
              &fadeType,
              &fadeColorKind[1],
              fadeColorKind,
-             &v59,
+             &v60,
              0) )
       {
         v17 = fadeType;
@@ -5660,7 +5675,7 @@ LABEL_28:
         {
           goto LABEL_153;
         }
-        v36 = (unsigned __int128)v59;
+        v36 = (unsigned __int128)v60;
         terminalScene->fields._FirstFadeMapColorKind_k__BackingField = fadeColorKind[0];
         terminalScene->fields._FirstFadeMapColor_k__BackingField = (struct UnityEngine_Color_o)v36;
       }
@@ -5833,29 +5848,27 @@ LABEL_28:
                     if ( v47 )
                     {
                       v49 = RateValue;
-                      ValueVector3 = (unsigned __int64)ConstantStrMaster__GetValueVector3(
-                                                         v47,
-                                                         (System_String_o *)StringLiteral_5738/*"EVENT_BOARD_GAME_MAP_POSITION"*/,
-                                                         0);
+                      ValueVector3 = ConstantStrMaster__GetValueVector3(v47, (System_String_o *)StringLiteral_5738/*"EVENT_BOARD_GAME_MAP_POSITION"*/, 0);
                       mapCamera = this->fields.mapCamera;
                       if ( mapCamera )
                       {
                         mapButtonGrid = (MapButtonControl_o *)mapCamera->fields.mZoom;
                         if ( mapButtonGrid )
                         {
+                          x = ValueVector3.fields.x;
+                          y = ValueVector3.fields.y;
                           MapZoom__SetZoomSize((MapZoom_o *)mapButtonGrid, v49, 0, 0, 0);
-                          v51 = this->fields.mapCamera;
-                          if ( v51 )
+                          v53 = this->fields.mapCamera;
+                          if ( v53 )
                           {
-                            mapButtonGrid = (MapButtonControl_o *)v51->fields.mScrl;
+                            mapButtonGrid = (MapButtonControl_o *)v53->fields.mScrl;
                             if ( mapButtonGrid )
                             {
-                              MapScroll__SetScrlPos(
-                                (MapScroll_o *)mapButtonGrid,
-                                (UnityEngine_Vector2_o)ValueVector3,
-                                0);
+                              v63.fields.x = x;
+                              v63.fields.y = y;
+                              MapScroll__SetScrlPos((MapScroll_o *)mapButtonGrid, v63, 0);
                               if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
-                                j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v52);
+                                j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v54);
                               if ( !byte_596A090 )
                               {
                                 sub_2213A60(&TerminalSceneComponent_TypeInfo);
@@ -5864,13 +5877,13 @@ LABEL_28:
                               mapButtonGrid = (MapButtonControl_o *)TerminalSceneComponent_TypeInfo;
                               if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
                               {
-                                j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v52);
+                                j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method, v54);
                                 mapButtonGrid = (MapButtonControl_o *)TerminalSceneComponent_TypeInfo;
                               }
                               klass = mapButtonGrid[1].fields.buttons->obj.klass;
                               if ( klass )
                               {
-                                v54 = *(ScrTerminalListTop_o **)&klass->_2.element_size;
+                                v56 = *(ScrTerminalListTop_o **)&klass->_2.element_size;
                                 if ( !byte_596D8B8 )
                                 {
                                   sub_2213A60(&TerminalPramsManager_TypeInfo);
@@ -5879,24 +5892,24 @@ LABEL_28:
                                 mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
                                 if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
                                 {
-                                  j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v52);
+                                  j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v54);
                                   mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
                                 }
                                 if ( List )
                                 {
                                   if ( !LODWORD(List->max_length) )
                                     sub_2213CE4(mapButtonGrid);
-                                  if ( v54 )
+                                  if ( v56 )
                                   {
                                     ScrTerminalListTop__ResumeQuestScriptWithMap(
-                                      v54,
+                                      v56,
                                       HIDWORD(mapButtonGrid[1].fields.buttons->m_Items[96]),
                                       List->m_Items[0],
                                       0);
-                                    v56 = ScrTerminalMap__WaitScriptLoad(this, v55);
+                                    v58 = ScrTerminalMap__WaitScriptLoad(this, v57);
                                     UnityEngine_MonoBehaviour__StartCoroutine_83444756(
                                       (UnityEngine_MonoBehaviour_o *)this,
-                                      v56,
+                                      v58,
                                       0);
                                     return;
                                   }
@@ -5920,7 +5933,7 @@ LABEL_28:
     if ( !mapButtonGrid )
       goto LABEL_153;
     MapButtonControl__FrameIn(mapButtonGrid, 0);
-    ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7273/*"GO_NEXT"*/, v57);
+    ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7273/*"GO_NEXT"*/, v59);
   }
   else
   {
@@ -5970,7 +5983,7 @@ LABEL_28:
                                             &fadeType,
                                             &fadeColorKind[1],
                                             fadeColorKind,
-                                            &v59,
+                                            &v60,
                                             0);
     if ( ((unsigned __int8)mapButtonGrid & 1) == 0 )
       goto LABEL_58;
@@ -5979,7 +5992,7 @@ LABEL_28:
       goto LABEL_153;
     v26 = fadeType;
     mapButtonGrid = (MapButtonControl_o *)ScrTerminalMap_TypeInfo;
-    v25->fields._FirstFadeMapColor_k__BackingField = v59;
+    v25->fields._FirstFadeMapColor_k__BackingField = v60;
     m_CachedPtr_high = HIDWORD(mapButtonGrid[2].fields.m_CachedPtr);
     v25->fields._FirstFadeMapColorKind_k__BackingField = fadeColorKind[0];
     if ( !m_CachedPtr_high )
@@ -6692,9 +6705,6 @@ UnityEngine_Vector3_o ScrTerminalMap__GetEventBoardSquarePos(
   __int64 v5; // x1
   __int64 v6; // x2
   UnityEngine_GameObject_o *EventBoardSquareObject; // x19
-  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Vector3_o Position; // 0:kr00_12.12
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D86A & 1) == 0 )
   {
@@ -6705,25 +6715,13 @@ UnityEngine_Vector3_o ScrTerminalMap__GetEventBoardSquarePos(
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v5, v6);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)EventBoardSquareObject, 0, 0) )
+    return GameObjectExtensions__GetPosition(EventBoardSquareObject, 0);
+  if ( !byte_5969AE0 )
   {
-    Position = GameObjectExtensions__GetPosition(EventBoardSquareObject, 0);
-    result.fields.x = Position.fields.x;
-    result.fields.y = Position.fields.y;
-    result.fields.z = Position.fields.z;
+    sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    byte_5969AE0 = 1;
   }
-  else
-  {
-    if ( !byte_5969AE0 )
-    {
-      sub_2213A60(&UnityEngine_Vector3_TypeInfo);
-      byte_5969AE0 = 1;
-    }
-    static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
-    result.fields.z = static_fields->zeroVector.fields.z;
-  }
-  return result;
+  return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
 }
 
 
@@ -8291,7 +8289,7 @@ void ScrTerminalMap__JumpEventBoardGamePiece(
   bool v49; // w6
   bool v50; // w7
   UserEventEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
-  UnityEngine_Vector3_o EventBoardSquarePos; // 0:kr00_12.12
+  UnityEngine_Vector3_o EventBoardSquarePos; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D864 & 1) == 0 )
   {
@@ -10251,13 +10249,18 @@ UnityEngine_Vector3_o ScrTerminalMap__LocalPosFromCoord(
         float offsetY,
         const MethodInfo *method)
 {
+  float v6; // s0
+  float v7; // s2
+  float v8; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = (float)(x - this->fields.mapImageOffsetX) + offsetX;
-  result.fields.z = 0.0;
-  result.fields.y = (float)((float)((float)this->fields._currentMapImageH_k__BackingField - y)
-                          - this->fields.mapImageOffsetY)
-                  + offsetY;
+  v6 = (float)(x - this->fields.mapImageOffsetX) + offsetX;
+  v7 = 0.0;
+  v8 = (float)((float)((float)this->fields._currentMapImageH_k__BackingField - y) - this->fields.mapImageOffsetY)
+     + offsetY;
+  result.fields.z = v7;
+  result.fields.y = v8;
+  result.fields.x = v6;
   return result;
 }
 
@@ -13347,42 +13350,57 @@ void ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t layer, const
   bool v13; // w7
   struct MapModelManager_o *v14; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v16; // x1
-  __int64 v17; // x2
-  int v18; // w8
-  float v19; // s11
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  const MethodInfo *v19; // x1
+  __int64 v20; // x2
+  float v21; // s11
+  float v22; // s13
+  float v23; // s12
+  int v24; // w8
+  float v25; // s11
   float MapCameraMoveTimeConstant; // s13
-  const MethodInfo *v21; // x1
+  const MethodInfo *v27; // x1
   float MapCameraMoveTimeCoefficient; // s15
-  const MethodInfo *v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x2
+  const MethodInfo *v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x2
   int32_t MapCameraMoveTimeLogarithmBase; // w22
-  __int64 v27; // x1
-  __int64 v28; // x2
-  double v29; // d11
-  System_Action_o *v30; // x22
-  float MapCamera2DResetSize; // s0
-  MapCamera_o *mapCamera; // x23
-  float v33; // s13
-  const MethodInfo *v34; // x1
-  float Camera2DResetDuration; // s14
-  const MethodInfo_45E9150 *v36; // x2
-  const MethodInfo *v37; // x1
+  __int64 v33; // x1
+  __int64 v34; // x2
+  double v35; // d11
+  System_Action_o *v36; // x22
+  float v37; // s15
   float v38; // s11
   float v39; // s12
-  MapModelManager_o *v40; // x23
-  float v41; // s14
-  float v42; // s0
-  float v43; // [xsp+0h] [xbp-A0h]
-  double v44; // [xsp+8h] [xbp-98h]
-  System_Nullable_Vector3__o v45; // [xsp+10h] [xbp-90h] BYREF
+  float MapCamera2DResetSize; // s0
+  MapCamera_o *mapCamera; // x23
+  float v42; // s13
+  const MethodInfo *v43; // x1
+  float Camera2DResetDuration; // s14
+  const MethodInfo_45E9150 *v45; // x2
+  System_Nullable_float__o p_size; // x0
+  const MethodInfo *v47; // x1
+  System_Nullable_float__o v48; // x3
+  float v49; // s11
+  float v50; // s12
+  MapModelManager_o *v51; // x23
+  float v52; // s14
+  float v53; // s0
+  float v54; // s6
+  float v55; // [xsp+0h] [xbp-A0h]
+  float v56; // [xsp+4h] [xbp-9Ch]
+  double v57; // [xsp+8h] [xbp-98h]
+  System_Nullable_Vector3__o v58; // [xsp+10h] [xbp-90h] BYREF
   System_Nullable_float__o size; // [xsp+68h] [xbp-38h] BYREF
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o LocationPostion; // 0:kr14_12.12
-  UnityEngine_Vector3_o MapCamera2DResetPosition; // 0:kr20_12.12
-  System_Nullable_Vector3__o v50; // 0:x0.16
-  UnityEngine_Vector3_o v51; // 0:s3.4,4:s4.4,8:s5.4
+  System_Nullable_Vector3__o v60; // 0:x0.16
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o LocationPostion; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o MapCamera2DResetPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v66; // 0:s3.4,4:s4.4,8:s5.4
 
   if ( (byte_596D821 & 1) == 0 )
   {
@@ -13417,47 +13435,49 @@ void ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t layer, const
     mapModelManager = this->fields.mapModelManager;
     if ( !mapModelManager )
       goto LABEL_32;
+    x = LocalPosition.fields.x;
+    y = LocalPosition.fields.y;
+    z = LocalPosition.fields.z;
     LocationPostion = MapModelManager__GetLocationPostion(mapModelManager, layer, 0);
-    v18 = (unsigned __int8)byte_5969ADE;
+    v21 = LocationPostion.fields.x;
+    v22 = LocationPostion.fields.y;
+    v23 = LocationPostion.fields.z;
+    v24 = (unsigned __int8)byte_5969ADE;
     *(UnityEngine_Vector3_o *)(v5 + 24) = LocationPostion;
-    if ( !v18 )
+    if ( !v24 )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_5969ADE = 1;
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v16, v17);
-    v19 = sqrtf(
-            (float)((float)(LocalPosition.fields.z - LocationPostion.fields.z)
-                  * (float)(LocalPosition.fields.z - LocationPostion.fields.z))
-          + (float)((float)((float)(LocalPosition.fields.x - LocationPostion.fields.x)
-                          * (float)(LocalPosition.fields.x - LocationPostion.fields.x))
-                  + (float)((float)(LocalPosition.fields.y - LocationPostion.fields.y)
-                          * (float)(LocalPosition.fields.y - LocationPostion.fields.y))));
-    if ( v19 > 0.0 )
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v19, v20);
+    v25 = sqrtf(
+            (float)((float)(z - v23) * (float)(z - v23))
+          + (float)((float)((float)(x - v21) * (float)(x - v21)) + (float)((float)(y - v22) * (float)(y - v22))));
+    if ( v25 > 0.0 )
     {
-      MapCameraMoveTimeConstant = ScrTerminalMap__get_MapCameraMoveTimeConstant(this, v16);
-      MapCameraMoveTimeCoefficient = ScrTerminalMap__get_MapCameraMoveTimeCoefficient(this, v21);
-      MapCameraMoveTimeLogarithmBase = ScrTerminalMap__get_MapCameraMoveTimeLogarithmBase(this, v23);
+      MapCameraMoveTimeConstant = ScrTerminalMap__get_MapCameraMoveTimeConstant(this, v19);
+      MapCameraMoveTimeCoefficient = ScrTerminalMap__get_MapCameraMoveTimeCoefficient(this, v27);
+      MapCameraMoveTimeLogarithmBase = ScrTerminalMap__get_MapCameraMoveTimeLogarithmBase(this, v29);
       if ( !byte_596D8BA )
       {
         sub_2213A60(&System_Math_TypeInfo);
         byte_596D8BA = 1;
       }
       if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v24, v25);
-      v29 = System_Math__Log(v19, (float)MapCameraMoveTimeLogarithmBase, 0);
+        j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v30, v31);
+      v35 = System_Math__Log(v25, (float)MapCameraMoveTimeLogarithmBase, 0);
       if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v27, v28);
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v33, v34);
       TerminalPramsManager__PlaySystemSE(0, 0);
       mapModelManager = (MapModelManager_o *)this->fields.mapButtonGrid;
       this->fields.currentMapLayerId = layer;
       if ( mapModelManager )
       {
         MapButtonControl__UpdateButtonSprite((MapButtonControl_o *)mapModelManager, 0);
-        v30 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+        v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         System_Action___ctor(
-          v30,
+          v36,
           (Il2CppObject *)v5,
           Method_ScrTerminalMap___c__DisplayClass360_0__RequestMapMove_b__0__,
           0);
@@ -13468,57 +13488,63 @@ void ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t layer, const
           mapModelManager = this->fields.mapModelManager;
           if ( mapModelManager )
           {
-            v44 = v29;
+            v57 = v35;
             if ( MapModelManager__get_IsMapCamera2DReset(mapModelManager, 0) )
             {
               mapModelManager = this->fields.mapModelManager;
+              v56 = MapCameraMoveTimeCoefficient;
               if ( !mapModelManager )
                 goto LABEL_32;
-              v43 = MapCameraMoveTimeConstant;
+              v55 = MapCameraMoveTimeConstant;
               MapCamera2DResetPosition = MapModelManager__get_MapCamera2DResetPosition(mapModelManager, 0);
               mapModelManager = this->fields.mapModelManager;
               if ( !mapModelManager )
                 goto LABEL_32;
+              v37 = MapCamera2DResetPosition.fields.x;
+              v38 = MapCamera2DResetPosition.fields.y;
+              v39 = MapCamera2DResetPosition.fields.z;
               MapCamera2DResetSize = MapModelManager__get_MapCamera2DResetSize(mapModelManager, 0);
               mapCamera = this->fields.mapCamera;
-              v33 = MapCamera2DResetSize;
-              Camera2DResetDuration = ScrTerminalMap__get_Camera2DResetDuration(this, v34);
-              *(_QWORD *)&v50.fields.hasValue = &v45;
-              *(_QWORD *)&v45.fields.hasValue = 0;
-              *(_QWORD *)&v45.fields.value.fields.y = 0;
-              *(_QWORD *)&v50.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-              System_Nullable_Vector3____ctor(v50, MapCamera2DResetPosition, v36);
+              v42 = MapCamera2DResetSize;
+              Camera2DResetDuration = ScrTerminalMap__get_Camera2DResetDuration(this, v43);
+              v64.fields.x = v37;
+              v64.fields.y = v38;
+              v64.fields.z = v39;
+              *(_QWORD *)&v60.fields.hasValue = &v58;
+              *(_QWORD *)&v58.fields.hasValue = 0;
+              *(_QWORD *)&v58.fields.value.fields.y = 0;
+              *(_QWORD *)&v60.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+              System_Nullable_Vector3____ctor(v60, v64, v45);
+              p_size = (System_Nullable_float__o)&size;
               size = 0;
               System_Nullable_float____ctor(
-                (System_Nullable_float__o)&size,
-                v33,
+                p_size,
+                v42,
                 (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-              mapModelManager = (MapModelManager_o *)ScrTerminalMap__get_MapCameraMoveEasingType(this, v37);
+              mapModelManager = (MapModelManager_o *)ScrTerminalMap__get_MapCameraMoveEasingType(this, v47);
               if ( !mapCamera )
                 goto LABEL_32;
-              MapCamera__StartAutoWork(mapCamera, Camera2DResetDuration, v45, size, (int32_t)mapModelManager, 0, 0);
-              MapCameraMoveTimeConstant = v43;
+              v48 = size;
+              MapCamera__StartAutoWork(mapCamera, Camera2DResetDuration, v58, v48, (int32_t)mapModelManager, 0, 0);
+              MapCameraMoveTimeConstant = v55;
+              MapCameraMoveTimeCoefficient = v56;
             }
-            v38 = *(float *)(v5 + 24);
-            v39 = *(float *)(v5 + 28);
-            v40 = this->fields.mapModelManager;
-            v41 = *(float *)(v5 + 32);
+            v49 = *(float *)(v5 + 24);
+            v50 = *(float *)(v5 + 28);
+            v51 = this->fields.mapModelManager;
+            v52 = *(float *)(v5 + 32);
             mapModelManager = (MapModelManager_o *)ScrTerminalMap__get_MapCameraMoveEasingType(this, v7);
-            if ( v40 )
+            if ( v51 )
             {
-              v51.fields.x = v38;
-              v51.fields.y = v39;
-              v42 = v44;
-              v51.fields.z = v41;
-              MapModelManager__MoveMapModelCamera(
-                v40,
-                layer,
-                LocalPosition,
-                v51,
-                MapCameraMoveTimeConstant + (float)(MapCameraMoveTimeCoefficient * v42),
-                (int32_t)mapModelManager,
-                v30,
-                0);
+              v65.fields.y = y;
+              v65.fields.z = z;
+              v66.fields.x = v49;
+              v66.fields.y = v50;
+              v53 = v57;
+              v66.fields.z = v52;
+              v54 = MapCameraMoveTimeConstant + (float)(MapCameraMoveTimeCoefficient * v53);
+              v65.fields.x = x;
+              MapModelManager__MoveMapModelCamera(v51, layer, v65, v66, v54, (int32_t)mapModelManager, v36, 0);
               return;
             }
           }
@@ -13556,12 +13582,19 @@ void ScrTerminalMap__RequestMapMove_43971820(
   bool v25; // w7
   struct MapModelManager_o *v26; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v28; // x1
-  __int64 v29; // x2
-  int v30; // w8
-  System_Action_o *v31; // x22
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o LocationPostion; // 0:kr14_12.12
+  float x; // s9
+  float y; // s10
+  float z; // s11
+  __int64 v31; // x1
+  __int64 v32; // x2
+  float v33; // s12
+  float v34; // s14
+  float v35; // s13
+  int v36; // w8
+  System_Action_o *v37; // x22
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o LocationPostion; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D822 & 1) == 0 )
   {
@@ -13596,27 +13629,29 @@ void ScrTerminalMap__RequestMapMove_43971820(
     mapModelManager = this->fields.mapModelManager;
     if ( !mapModelManager )
       goto LABEL_19;
+    x = LocalPosition.fields.x;
+    y = LocalPosition.fields.y;
+    z = LocalPosition.fields.z;
     LocationPostion = MapModelManager__GetLocationPostion(mapModelManager, *(_DWORD *)(v11 + 24), 0);
-    v30 = (unsigned __int8)byte_5969ADE;
+    v33 = LocationPostion.fields.x;
+    v34 = LocationPostion.fields.y;
+    v35 = LocationPostion.fields.z;
+    v36 = (unsigned __int8)byte_5969ADE;
     *(UnityEngine_Vector3_o *)(v11 + 28) = LocationPostion;
-    if ( !v30 )
+    if ( !v36 )
     {
       sub_2213A60(&System_Math_TypeInfo);
       byte_5969ADE = 1;
     }
     if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v28, v29);
+      j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v31, v32);
     if ( sqrtf(
-           (float)((float)(LocalPosition.fields.z - LocationPostion.fields.z)
-                 * (float)(LocalPosition.fields.z - LocationPostion.fields.z))
-         + (float)((float)((float)(LocalPosition.fields.x - LocationPostion.fields.x)
-                         * (float)(LocalPosition.fields.x - LocationPostion.fields.x))
-                 + (float)((float)(LocalPosition.fields.y - LocationPostion.fields.y)
-                         * (float)(LocalPosition.fields.y - LocationPostion.fields.y)))) > 0.0 )
+           (float)((float)(z - v35) * (float)(z - v35))
+         + (float)((float)((float)(x - v33) * (float)(x - v33)) + (float)((float)(y - v34) * (float)(y - v34)))) > 0.0 )
     {
-      v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+      v37 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       System_Action___ctor(
-        v31,
+        v37,
         (Il2CppObject *)v11,
         Method_ScrTerminalMap___c__DisplayClass361_0__RequestMapMove_b__0__,
         0);
@@ -13627,14 +13662,17 @@ void ScrTerminalMap__RequestMapMove_43971820(
         mapModelManager = this->fields.mapModelManager;
         if ( mapModelManager )
         {
+          v40.fields.x = x;
+          v40.fields.y = y;
+          v40.fields.z = z;
           MapModelManager__MoveMapModelCamera(
             mapModelManager,
             *(_DWORD *)(v11 + 24),
-            LocalPosition,
+            v40,
             *(UnityEngine_Vector3_o *)(v11 + 28),
             duration,
             easingType,
-            v31,
+            v37,
             0);
           return;
         }
@@ -13675,6 +13713,7 @@ void ScrTerminalMap__SetActiveDiceButton(ScrTerminalMap_o *this, bool isActive, 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScrTerminalMap__SetBoardGameSquareHaveToken(ScrTerminalMap_o *this, int32_t squareId, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
@@ -13758,12 +13797,15 @@ void ScrTerminalMap__SetBoardGameSquareHaveToken(ScrTerminalMap_o *this, int32_t
   __int64 v83; // x2
   UnityEngine_Object_o *GameObjectWithLog; // x23
   Il2CppObject *Component_object; // x23
-  System_Collections_Generic_List_Enumerator_object__o v87; // [xsp+10h] [xbp-D0h] BYREF
-  UserQuestEntity_o *v88; // [xsp+28h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v89; // [xsp+30h] [xbp-B0h] BYREF
+  float v86; // s3 OVERLAPPED
+  float v87; // s0
+  float v88; // s1
+  float v89; // s2
+  System_Collections_Generic_List_Enumerator_object__o v90; // [xsp+10h] [xbp-D0h] BYREF
+  UserQuestEntity_o *v91; // [xsp+28h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v92; // [xsp+30h] [xbp-B0h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v91; // [xsp+50h] [xbp-90h] BYREF
-  UnityEngine_Color_o v92; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_Collections_Generic_List_Enumerator_object__o v94; // [xsp+50h] [xbp-90h] BYREF
 
   if ( (byte_596D868 & 1) == 0 )
   {
@@ -13811,10 +13853,10 @@ void ScrTerminalMap__SetBoardGameSquareHaveToken(ScrTerminalMap_o *this, int32_t
     sub_2213A60(&StringLiteral_25414/*"token_{0:D2}"*/);
     byte_596D868 = 1;
   }
-  memset(&v91, 0, sizeof(v91));
+  memset(&v94, 0, sizeof(v94));
   entity = 0;
-  memset(&v89, 0, sizeof(v89));
-  v88 = 0;
+  memset(&v92, 0, sizeof(v92));
+  v91 = 0;
   Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_81;
@@ -13849,31 +13891,31 @@ void ScrTerminalMap__SetBoardGameSquareHaveToken(ScrTerminalMap_o *this, int32_t
   if ( !Instance )
     goto LABEL_81;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v87,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v90,
     (System_Collections_Generic_List_object__o *)Instance,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
-  v14 = *(_OWORD *)&v87.fields._list;
-  v87.fields._list = 0;
-  v91.fields._current = v87.fields._current;
-  *(_OWORD *)&v91.fields._list = v14;
-  *(_QWORD *)&v87.fields._index = &v91;
+  v14 = *(_OWORD *)&v90.fields._list;
+  v90.fields._list = 0;
+  v94.fields._current = v90.fields._current;
+  *(_OWORD *)&v94.fields._list = v14;
+  *(_QWORD *)&v90.fields._index = &v94;
   while ( 1 )
   {
     v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v91,
+            &v94,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v15 )
       break;
-    if ( !v91.fields._current )
+    if ( !v94.fields._current )
       sub_2213CDC(v15, v16);
-    if ( v91.fields._current[2].klass == (Il2CppClass *)squareId )
+    if ( v94.fields._current[2].klass == (Il2CppClass *)squareId )
     {
       if ( !MasterData_object )
         sub_2213CDC(v15, v16);
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              &entity,
-             (int32_t)v91.fields._current[1].klass,
+             (int32_t)v94.fields._current[1].klass,
              (const MethodInfo_3F10B80 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
       {
         if ( !entity )
@@ -13910,7 +13952,7 @@ void ScrTerminalMap__SetBoardGameSquareHaveToken(ScrTerminalMap_o *this, int32_t
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v91,
+    &v94,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   v32 = ScrTerminalMap___c_TypeInfo;
   if ( !*(&ScrTerminalMap___c_TypeInfo->_2.cctor_finished + 1) )
@@ -13948,18 +13990,18 @@ void ScrTerminalMap__SetBoardGameSquareHaveToken(ScrTerminalMap_o *this, int32_t
   if ( !Instance )
     goto LABEL_81;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v87,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v90,
     (System_Collections_Generic_List_object__o *)Instance,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_QuestEntity__GetEnumerator__);
-  v89 = v87;
-  v87.fields._list = 0;
-  *(_QWORD *)&v87.fields._index = &v89;
+  v92 = v90;
+  v90.fields._list = 0;
+  *(_QWORD *)&v90.fields._index = &v92;
 LABEL_28:
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v89,
+            &v92,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_QuestEntity__MoveNext__) )
   {
-    current = v89.fields._current;
+    current = v92.fields._current;
     v45 = sub_2213CCC(ScrTerminalMap___c__DisplayClass437_0_TypeInfo);
     ScrTerminalMap___c__DisplayClass437_0___ctor((ScrTerminalMap___c__DisplayClass437_0_o *)v45, 0);
     if ( !current )
@@ -13985,14 +14027,14 @@ LABEL_28:
       sub_2213CDC(v50, v47);
     if ( UserQuestMaster__TryGetEntity(
            (UserQuestMaster_o *)v9,
-           &v88,
+           &v91,
            v50->static_fields->userIdNumber,
            *(_DWORD *)(v45 + 16),
            0) )
     {
-      if ( !v88 )
+      if ( !v91 )
         sub_2213CDC(0, v51);
-      v52 = UserQuestEntity__getClearNum(v88, 0) > 0;
+      v52 = UserQuestEntity__getClearNum(v91, 0) > 0;
     }
     else
     {
@@ -14103,7 +14145,7 @@ LABEL_61:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v89,
+    &v92,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_QuestEntity__Dispose__);
   if ( !v13 )
 LABEL_81:
@@ -14115,8 +14157,8 @@ LABEL_81:
     {
       v78 = v77 + 1;
       EventBoardSquareObject = ScrTerminalMap__GetEventBoardSquareObject(this, squareId, v76);
-      LODWORD(v87.fields._list) = v77 + 1;
-      v80 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v87);
+      LODWORD(v90.fields._list) = v77 + 1;
+      v80 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v90);
       v81 = System_String__Format((System_String_o *)StringLiteral_25414/*"token_{0:D2}"*/, v80, 0);
       GameObjectWithLog = (UnityEngine_Object_o *)GameObjectExtensions__FindGameObjectWithLog(
                                                     EventBoardSquareObject,
@@ -14138,11 +14180,11 @@ LABEL_81:
                                     (const MethodInfo_44114A0 *)Method_System_Collections_Generic_List_bool__get_Item__);
       if ( !Component_object )
         goto LABEL_81;
-      v92.fields.a = 1.0;
-      v92.fields.r = ((unsigned __int8)Instance & 1) != 0 ? 0.5 : 1.0;
-      v92.fields.g = v92.fields.r;
-      v92.fields.b = v92.fields.r;
-      UIWidget__set_color((UIWidget_o *)Component_object, v92, 0);
+      v86 = 1.0;
+      v87 = ((unsigned __int8)Instance & 1) != 0 ? 0.5 : 1.0;
+      v88 = v87;
+      v89 = v87;
+      UIWidget__set_color((UIWidget_o *)Component_object, *(UnityEngine_Color_o *)(&v86 - 3), 0);
       ++v77;
     }
     while ( v78 < v13->fields._size );
@@ -14594,10 +14636,13 @@ void ScrTerminalMap__SetEnabledDiceButton(ScrTerminalMap_o *this, bool isEnabled
   UnityEngine_Object_o *diceButton; // x21
   __int64 v6; // x1
   UnityEngine_Behaviour_o *diceButtonArrow; // x0
-  __int64 v9; // x1
-  __int64 v10; // x2
-  TerminalPramsManager_c *v11; // x0
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v8; // s0 OVERLAPPED
+  float v9; // s3
+  float v10; // s1
+  float v11; // s2
+  __int64 v12; // x1
+  __int64 v13; // x2
+  TerminalPramsManager_c *v14; // x0
 
   if ( (byte_596D84E & 1) == 0 )
   {
@@ -14617,32 +14662,32 @@ void ScrTerminalMap__SetEnabledDiceButton(ScrTerminalMap_o *this, bool isEnabled
     diceButtonArrow = (UnityEngine_Behaviour_o *)this->fields.diceButton;
     if ( !diceButtonArrow )
       goto LABEL_19;
-    v12.fields.r = 0.5;
-    v12.fields.a = 1.0;
+    v8 = 0.5;
+    v9 = 1.0;
     if ( isEnabled )
-      v12.fields.r = 1.0;
-    v12.fields.g = v12.fields.r;
-    v12.fields.b = v12.fields.r;
-    UIButtonColor__set_defaultColor((UIButtonColor_o *)diceButtonArrow, v12, 0);
+      v8 = 1.0;
+    v10 = v8;
+    v11 = v8;
+    UIButtonColor__set_defaultColor((UIButtonColor_o *)diceButtonArrow, *(UnityEngine_Color_o *)&v8, 0);
     diceButtonArrow = (UnityEngine_Behaviour_o *)this->fields.diceButtonArrow;
     if ( !diceButtonArrow )
 LABEL_19:
       sub_2213CDC(diceButtonArrow, v6);
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)diceButtonArrow, isEnabled, 0);
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v10);
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v12, v13);
     if ( !byte_596D8CF )
     {
       sub_2213A60(&TerminalPramsManager_TypeInfo);
       byte_596D8CF = 1;
     }
-    v11 = TerminalPramsManager_TypeInfo;
+    v14 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v9, v10);
-      v11 = TerminalPramsManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v12, v13);
+      v14 = TerminalPramsManager_TypeInfo;
     }
-    v11->static_fields->_IsEventBoardGameDiceBtnActive_k__BackingField = isEnabled;
+    v14->static_fields->_IsEventBoardGameDiceBtnActive_k__BackingField = isEnabled;
   }
 }
 
@@ -15009,20 +15054,18 @@ void ScrTerminalMap__SetMapCamera_TutorialFocusSpot(
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v8; // x2
   struct UISprite_o *mcSpotSprite; // x8
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  float v10; // s1
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !spot
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)spot, 0),
         LocalPosition = GameObjectExtensions__GetLocalPosition(gameObject, 0),
-        v12.fields.x = LocalPosition.fields.x,
-        v12.fields.z = LocalPosition.fields.z,
         (mcSpotSprite = spot->fields.mcSpotSprite) == 0) )
   {
     sub_2213CDC(this, spot);
   }
-  v12.fields.y = LocalPosition.fields.y + (float)(mcSpotSprite->fields.mHeight / 2);
-  ScrTerminalMap__SetMapCamera(this, v12, time, 0, v8);
+  v10 = LocalPosition.fields.y + (float)(mcSpotSprite->fields.mHeight / 2);
+  ScrTerminalMap__SetMapCamera(this, LocalPosition, time, 0, v8);
 }
 
 
@@ -16799,6 +16842,8 @@ void ScrTerminalMap__StartEventQuestCheckNewOpen(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
+  System_Nullable_float__o p_messagePosY; // x0
+  System_Nullable_float__o v25; // x5
   System_Nullable_float__o messagePosY; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_596D82E & 1) == 0 )
@@ -16874,14 +16919,16 @@ LABEL_24:
             v22,
             v23);
         }
+        p_messagePosY = (System_Nullable_float__o)&messagePosY;
         messagePosY = 0;
         System_Nullable_float____ctor(
-          (System_Nullable_float__o)&messagePosY,
+          p_messagePosY,
           30.0,
           (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
         if ( v10 )
         {
-          CommonUI__OpenQuestNewPlayableDialog(v10, v11, v15, _9__375_0, 0, messagePosY, 0.0, 0);
+          v25 = messagePosY;
+          CommonUI__OpenQuestNewPlayableDialog(v10, v11, v15, _9__375_0, 0, v25, 0.0, 0);
           return;
         }
       }
@@ -18231,6 +18278,7 @@ System_Collections_IEnumerator_o *ScrTerminalMap__WaitReturnChapterSelectFadeInA
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596D883 & 1) == 0 )
   {
@@ -18246,8 +18294,9 @@ System_Collections_IEnumerator_o *ScrTerminalMap__WaitReturnChapterSelectFadeInA
     sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 32) = version;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -21425,9 +21474,9 @@ void ScrTerminalMap__mcbfSpotMaskStart(ScrTerminalMap_o *this, const MethodInfo 
   MapCamera_o *mapCamera; // x23
   MapModelCamera_o *MapModelCamera_k__BackingField; // x24
   System_Action_o *v23; // x25
-  UnityEngine_Vector3_o v24; // 0:kr14_12.12
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D811 & 1) == 0 )
   {
@@ -21469,10 +21518,10 @@ void ScrTerminalMap__mcbfSpotMaskStart(ScrTerminalMap_o *this, const MethodInfo 
   if ( IsMapModel )
   {
     Position = GameObjectExtensions__GetPosition(this->fields.spotTouchObj, 0);
-    v24 = ScrTerminalMap__ConvertWorldToScreenPosition(this, Position, v7);
-    x = v24.fields.x;
-    y = v24.fields.y;
-    z = v24.fields.z;
+    v25 = ScrTerminalMap__ConvertWorldToScreenPosition(this, Position, v7);
+    x = v25.fields.x;
+    y = v25.fields.y;
+    z = v25.fields.z;
   }
   else
   {
@@ -21543,9 +21592,9 @@ LABEL_31:
   System_Action___ctor(v23, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfSpotMaskStart_b__334_1__, 0);
   if ( !spotLargeComponent )
     goto LABEL_31;
-  v25.fields.x = x;
-  v25.fields.y = y;
-  v25.fields.z = z;
+  v26.fields.x = x;
+  v26.fields.y = y;
+  v26.fields.z = z;
   SpotLargeComponent__LargeIn(
     spotLargeComponent,
     v20,
@@ -21553,7 +21602,7 @@ LABEL_31:
     MapModelCamera_k__BackingField,
     v23,
     IsMapModel,
-    v25,
+    v26,
     0);
 }
 
@@ -22674,6 +22723,7 @@ LABEL_49:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 SrcSpotBasePrefab_o *ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
         ScrTerminalMap_o *this,
         int32_t spotId,
@@ -22716,77 +22766,78 @@ SrcSpotBasePrefab_o *ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
   MapEntity_o *mMapEnt; // x0
   struct UnityEngine_Vector3_StaticFields *v41; // x8
   float v42; // s8
-  unsigned __int64 v43; // d1
+  unsigned __int64 v43; // d1 OVERLAPPED
   float SpotScale; // s0
   struct UnityEngine_Vector3_StaticFields *v45; // x8
-  __int64 v46; // x1
-  __int64 v47; // x2
-  ScrTerminalMap_c *v48; // x0
-  __int64 v49; // x1
-  __int64 v50; // x2
-  int32_t v51; // w29
-  System_String_o *v52; // x2
-  System_String_o *v53; // x3
-  int32_t v54; // w4
-  int32_t v55; // w5
-  bool v56; // w6
-  bool v57; // w7
-  __int64 v58; // x2
-  __int64 v59; // x2
+  int v46; // s2
+  float v47; // s0
+  __int64 v48; // x1
+  __int64 v49; // x2
+  ScrTerminalMap_c *v50; // x0
+  __int64 v51; // x1
+  __int64 v52; // x2
+  int32_t v53; // w29
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
+  __int64 v60; // x2
+  __int64 v61; // x2
   struct MapModelManager_o *mapModelManager; // x8
   UnityEngine_Object_o *MapModelCamera_k__BackingField; // x27
-  struct MapModelManager_o *v62; // x8
-  struct MapModelCamera_o *v63; // x8
+  struct MapModelManager_o *v64; // x8
+  struct MapModelCamera_o *v65; // x8
   UnityEngine_Object_o *cameraInstance; // x27
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Object_o *v66; // x27
-  __int64 v67; // x1
-  __int64 v68; // x2
+  UnityEngine_Object_o *v68; // x27
   __int64 v69; // x1
   __int64 v70; // x2
+  __int64 v71; // x1
+  __int64 v72; // x2
   int32_t nameOfsX; // w8
-  int v72; // w10
-  System_String_o *v73; // x2
-  System_String_o *v74; // x3
-  int32_t v75; // w4
-  int32_t v76; // w5
-  bool v77; // w6
-  bool v78; // w7
+  int v74; // w10
+  System_String_o *v75; // x2
+  System_String_o *v76; // x3
+  int32_t v77; // w4
+  int32_t v78; // w5
+  bool v79; // w6
+  bool v80; // w7
   System_String_o *Name; // x0
-  System_String_o *v80; // x2
-  System_String_o *v81; // x3
-  int32_t v82; // w4
-  int32_t v83; // w5
-  bool v84; // w6
-  bool v85; // w7
-  System_String_o *v86; // x2
-  System_String_o *v87; // x3
-  int32_t v88; // w4
-  int32_t v89; // w5
-  bool v90; // w6
-  bool v91; // w7
-  float v92; // s0
-  struct MapModelManager_o *v93; // x8
-  struct MapModelCamera_o *v94; // x1
+  System_String_o *v82; // x2
+  System_String_o *v83; // x3
+  int32_t v84; // w4
+  int32_t v85; // w5
+  bool v86; // w6
+  bool v87; // w7
+  System_String_o *v88; // x2
+  System_String_o *v89; // x3
+  int32_t v90; // w4
+  int32_t v91; // w5
+  bool v92; // w6
+  bool v93; // w7
+  float v94; // s0
+  struct MapModelManager_o *v95; // x8
+  struct MapModelCamera_o *v96; // x1
   struct UnityEngine_GameObject_o *subRootEffectP; // x1
-  System_String_o *v96; // x2
-  System_String_o *v97; // x3
-  int32_t v98; // w4
-  int32_t v99; // w5
-  bool v100; // w6
-  bool v101; // w7
-  float v102; // s0
+  System_String_o *v98; // x2
+  System_String_o *v99; // x3
+  int32_t v100; // w4
+  int32_t v101; // w5
+  bool v102; // w6
+  bool v103; // w7
+  float v104; // s0
   bool IsTutorialActive; // w0
-  float32x2_t v105; // [xsp+0h] [xbp-C0h]
+  float32x2_t v107; // [xsp+0h] [xbp-C0h]
   int32_t ofsY[2]; // [xsp+18h] [xbp-A8h] BYREF
   UnityEngine_GameObject_o *pathLength; // [xsp+28h] [xbp-98h] BYREF
-  UnityEngine_Vector3_o v108; // 0:kr34_12.12
-  UnityEngine_Vector3_o v109; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v110; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalPositionOnMapModel; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v114; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  UnityEngine_Vector3_o v114; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v115; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_596D801 & 1) == 0 )
   {
@@ -22860,17 +22911,17 @@ SrcSpotBasePrefab_o *ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
     w = v30->identityQuaternion.fields.w;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
-    v109.fields.x = x;
-    v109.fields.y = y;
-    v109.fields.z = z;
-    v114.fields.x = v31;
-    v114.fields.y = v32;
-    v114.fields.z = v33;
-    v114.fields.w = w;
+    v110.fields.x = x;
+    v110.fields.y = y;
+    v110.fields.z = z;
+    v115.fields.x = v31;
+    v115.fields.y = v32;
+    v115.fields.z = v33;
+    v115.fields.w = w;
     v37 = UnityEngine_Object__Instantiate_object__59717424(
             pfbBaseP,
-            v109,
-            v114,
+            v110,
+            v115,
             (const MethodInfo_38F3730 *)Method_UnityEngine_Object_Instantiate_GameObject____91801600);
     id = v12->fields.id;
     if ( !*(&SrcSpotBasePrefab_TypeInfo->_2.cctor_finished + 1) )
@@ -22898,10 +22949,10 @@ LABEL_77:
     v43 = *(_QWORD *)&v41->oneVector.fields.y;
     if ( mMapEnt )
     {
-      v105.n64_u64[0] = *(unsigned __int64 *)&v41->oneVector.fields.y;
+      v107.n64_u64[0] = *(unsigned __int64 *)&v41->oneVector.fields.y;
       SpotScale = MapEntity__GetSpotScale(mMapEnt, 0);
       v42 = v42 * SpotScale;
-      v43 = vmul_n_f32(v105, SpotScale).n64_u64[0];
+      v43 = vmul_n_f32(v107, SpotScale).n64_u64[0];
     }
     if ( !v11[5] )
     {
@@ -22914,31 +22965,34 @@ LABEL_77:
       v42 = v45->zeroVector.fields.x;
       v43 = *(_QWORD *)&v45->zeroVector.fields.y;
     }
-    v108.fields.x = v42;
-    *(_QWORD *)&v108.fields.y = v43;
-    GameObjectExtensions__SetLocalScale((UnityEngine_GameObject_o *)v37, v108, 0);
+    v46 = HIDWORD(v43);
+    v47 = v42;
+    GameObjectExtensions__SetLocalScale(
+      (UnityEngine_GameObject_o *)v37,
+      *(UnityEngine_Vector3_o *)((char *)&v43 - 4),
+      0);
     if ( isMapModel )
     {
-      v48 = ScrTerminalMap_TypeInfo;
+      v50 = ScrTerminalMap_TypeInfo;
       if ( !*(&ScrTerminalMap_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(ScrTerminalMap_TypeInfo, v46, v47);
-        v48 = ScrTerminalMap_TypeInfo;
+        j_il2cpp_runtime_class_init_0(ScrTerminalMap_TypeInfo, v48, v49);
+        v50 = ScrTerminalMap_TypeInfo;
       }
-      v51 = UnityEngine_LayerMask__NameToLayer(v48->static_fields->MAP_DISP_LAYER_SPOT, 0);
+      v53 = UnityEngine_LayerMask__NameToLayer(v50->static_fields->MAP_DISP_LAYER_SPOT, 0);
       if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v49, v50);
-      NGUITools__SetLayer((UnityEngine_GameObject_o *)v37, v51, 0);
+        j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v51, v52);
+      NGUITools__SetLayer((UnityEngine_GameObject_o *)v37, v53, 0);
     }
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v46, v47);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v48, v49);
     Instance = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v18, 0, 0);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
       if ( v17 )
       {
         *(_QWORD *)(v17 + 24) = v37;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)v37, v52, v53, v54, v55, v56, v57);
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v17 + 24), (int32_t)v37, v54, v55, v56, v57, v58, v59);
       }
       if ( !v18 )
         goto LABEL_77;
@@ -22954,19 +23008,19 @@ LABEL_77:
         goto LABEL_77;
       MapModelCamera_k__BackingField = (UnityEngine_Object_o *)mapModelManager->fields._MapModelCamera_k__BackingField;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v59);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v61);
       Instance = (void *)UnityEngine_Object__op_Inequality(MapModelCamera_k__BackingField, 0, 0);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
-        v62 = this->fields.mapModelManager;
-        if ( !v62 )
+        v64 = this->fields.mapModelManager;
+        if ( !v64 )
           goto LABEL_77;
-        v63 = v62->fields._MapModelCamera_k__BackingField;
-        if ( !v63 )
+        v65 = v64->fields._MapModelCamera_k__BackingField;
+        if ( !v65 )
           goto LABEL_77;
-        cameraInstance = (UnityEngine_Object_o *)v63->fields.cameraInstance;
+        cameraInstance = (UnityEngine_Object_o *)v65->fields.cameraInstance;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v58);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v60);
         Instance = (void *)UnityEngine_Object__op_Inequality(cameraInstance, 0, 0);
         if ( ((unsigned __int8)Instance & 1) != 0 )
         {
@@ -22980,30 +23034,30 @@ LABEL_77:
     }
     else
     {
-      v110.fields.x = (float)v12->fields.x - this->fields.mapImageOffsetX;
-      v110.fields.z = 0.0;
-      v110.fields.y = (float)((float)this->fields._currentMapImageH_k__BackingField - (float)v12->fields.y)
+      v114.fields.x = (float)v12->fields.x - this->fields.mapImageOffsetX;
+      v114.fields.z = 0.0;
+      v114.fields.y = (float)((float)this->fields._currentMapImageH_k__BackingField - (float)v12->fields.y)
                     - this->fields.mapImageOffsetY;
-      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v37, v110, 0);
+      GameObjectExtensions__SetLocalPosition((UnityEngine_GameObject_o *)v37, v114, 0);
     }
-    v66 = (UnityEngine_Object_o *)pathLength;
+    v68 = (UnityEngine_Object_o *)pathLength;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v58);
-    if ( UnityEngine_Object__op_Inequality(v66, 0, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v60);
+    if ( UnityEngine_Object__op_Inequality(v68, 0, 0) )
       GameObjectExtensions__SafeSetParent_42897308(pathLength, (UnityEngine_GameObject_o *)v37, 0);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v37,
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v67, v68);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v69, v70);
     if ( UnityEngine_Object__op_Inequality(0, (UnityEngine_Object_o *)Component_object, 0) )
     {
       nameOfsX = v12->fields.nameOfsX;
-      v72 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
+      v74 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
       ofsY[0] = v12->fields.nameOfsY;
       ofsY[1] = nameOfsX;
-      if ( !v72 )
-        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v69, v70);
+      if ( !v74 )
+        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v71, v72);
       Instance = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SpotAddMaster___);
       if ( Instance )
       {
@@ -23015,12 +23069,12 @@ LABEL_77:
           sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&Component_object[5],
             (int32_t)Instance,
-            v73,
-            v74,
             v75,
             v76,
             v77,
-            v78);
+            v78,
+            v79,
+            v80);
           SrcSpotBasePrefab__mfSetSpotID((SrcSpotBasePrefab_o *)Component_object, spotId, 0);
           SrcSpotBasePrefab__mfSetQuestCount((SrcSpotBasePrefab_o *)Component_object, v9, 0);
           SrcSpotBasePrefab__SetFreeQuestCount((SrcSpotBasePrefab_o *)Component_object, v10, 0);
@@ -23038,53 +23092,53 @@ LABEL_77:
           sub_2213A04(
             (MissionNaviTransitionBoardItem_o *)&Component_object[14].monitor,
             (int32_t)v11,
-            v80,
-            v81,
             v82,
             v83,
             v84,
-            v85);
+            v85,
+            v86,
+            v87);
           Instance = this->fields.mMapEnt;
           if ( Instance )
           {
-            v92 = MapEntity__GetSpotScale((MapEntity_o *)Instance, 0);
-            SrcSpotBasePrefab__SetSelfScale((SrcSpotBasePrefab_o *)Component_object, v92, 0);
+            v94 = MapEntity__GetSpotScale((MapEntity_o *)Instance, 0);
+            SrcSpotBasePrefab__SetSelfScale((SrcSpotBasePrefab_o *)Component_object, v94, 0);
           }
           if ( isMapModel )
           {
-            v93 = this->fields.mapModelManager;
+            v95 = this->fields.mapModelManager;
             BYTE4(Component_object[15].klass) = 1;
-            if ( !v93 )
+            if ( !v95 )
               goto LABEL_77;
-            v94 = v93->fields._MapModelCamera_k__BackingField;
-            Component_object[15].monitor = v94;
+            v96 = v95->fields._MapModelCamera_k__BackingField;
+            Component_object[15].monitor = v96;
             sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&Component_object[15].monitor,
-              (int32_t)v94,
-              v86,
-              v87,
+              (int32_t)v96,
               v88,
               v89,
               v90,
-              v91);
+              v91,
+              v92,
+              v93);
             subRootEffectP = this->fields.subRootEffectP;
             Component_object[16].klass = (Il2CppClass *)subRootEffectP;
             sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&Component_object[16],
               (int32_t)subRootEffectP,
-              v96,
-              v97,
               v98,
               v99,
               v100,
-              v101);
+              v101,
+              v102,
+              v103);
             LODWORD(Component_object[15].klass) = this->fields.currentMapLayerId;
           }
           SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)Component_object, 0, 0);
-          v102 = 1.0;
+          v104 = 1.0;
           if ( v11[5] == 2 )
-            v102 = 0.5;
-          SrcSpotBasePrefab__SetContrast((SrcSpotBasePrefab_o *)Component_object, v102, 0);
+            v104 = 0.5;
+          SrcSpotBasePrefab__SetContrast((SrcSpotBasePrefab_o *)Component_object, v104, 0);
           SrcSpotBasePrefab__SetTouchType_44096212((SrcSpotBasePrefab_o *)Component_object, 0);
           Instance = this->fields.terminalScene;
           if ( Instance )
@@ -23677,6 +23731,7 @@ LABEL_9:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, const MethodInfo *method)
 {
   ScrTerminalMap_o *v2; // x19
@@ -23864,122 +23919,132 @@ void ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, const Metho
   Il2CppObject *v184; // x26
   __int64 v185; // x0
   __int64 v186; // x1
-  UnityEngine_GameObject_o *v187; // x0
-  UnityEngine_GameObject_o *v188; // x0
+  float v187; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_GameObject_o *v190; // x0
+  UnityEngine_GameObject_o *v191; // x0
   int32_t MapGimmickId; // w0
-  System_Collections_Generic_List_object__o *v190; // x25
-  System_Predicate_object__o *v191; // x26
-  __int64 v192; // x0
-  __int64 v193; // x1
-  __int64 v194; // x1
-  __int64 v195; // x2
-  Il2CppObject *v196; // x24
-  __int64 v197; // x0
-  __int64 v198; // x1
-  UnityEngine_GameObject_o *v199; // x0
-  UnityEngine_Object_o *v200; // x24
-  __int64 v201; // x2
+  System_Collections_Generic_List_object__o *v193; // x25
+  System_Predicate_object__o *v194; // x26
+  __int64 v195; // x0
+  __int64 v196; // x1
+  __int64 v197; // x1
+  __int64 v198; // x2
+  Il2CppObject *v199; // x24
+  __int64 v200; // x0
+  __int64 v201; // x1
+  float v202; // s8
+  float v203; // s9
+  float v204; // s10
+  UnityEngine_GameObject_o *v205; // x0
+  UnityEngine_Object_o *v206; // x24
+  __int64 v207; // x2
   struct WarEntity_o *mWarEnt; // x8
-  UnityEngine_Object_o *v203; // x23
-  __int64 v204; // x1
-  __int64 v205; // x2
-  UnityEngine_Object_o *v206; // x25
-  __int64 v207; // x1
-  __int64 v208; // x2
-  char v209; // w24
-  UnityEngine_Object_o *v210; // x22
-  UnityEngine_GameObject_o *v211; // x0
-  const MethodInfo *v212; // x2
-  bool v213; // w0
-  const MethodInfo *v214; // x2
-  System_String_o *v215; // x0
-  System_String_o *v216; // x2
-  System_String_o *v217; // x3
-  int32_t v218; // w4
-  int32_t v219; // w5
-  bool v220; // w6
-  bool v221; // w7
+  UnityEngine_Object_o *v209; // x23
+  __int64 v210; // x1
+  __int64 v211; // x2
+  UnityEngine_Object_o *v212; // x25
+  __int64 v213; // x1
+  __int64 v214; // x2
+  char v215; // w24
+  UnityEngine_Object_o *v216; // x22
+  UnityEngine_GameObject_o *v217; // x0
+  const MethodInfo *v218; // x2
+  bool v219; // w0
+  const MethodInfo *v220; // x2
+  System_String_o *v221; // x0
+  System_String_o *v222; // x2
+  System_String_o *v223; // x3
+  int32_t v224; // w4
+  int32_t v225; // w5
+  bool v226; // w6
+  bool v227; // w7
   UnityEngine_Object_o **p_mFocusSpot; // x25
-  __int64 v223; // x1
-  __int64 v224; // x2
-  MapZoom_c *v225; // x0
+  __int64 v229; // x1
+  __int64 v230; // x2
+  MapZoom_c *v231; // x0
   float ZOOM_DEFAULT; // s8
-  TerminalPramsManager_c *v227; // x0
+  TerminalPramsManager_c *v233; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
-  UnityEngine_Object_c *v229; // x0
-  __int64 v230; // x1
-  MissionNaviTransitionBoardItem_o *v231; // x0
-  int32_t v232; // w1
-  __int64 v233; // x1
-  __int64 v234; // x2
-  UnityEngine_Object_o *v235; // x23
-  MethodInfo *v236; // x2
-  TerminalPramsManager_c *v237; // x0
-  TerminalPramsManager_c *v238; // x0
+  UnityEngine_Object_c *v235; // x0
+  __int64 v236; // x1
+  MissionNaviTransitionBoardItem_o *v237; // x0
+  int32_t v238; // w1
   __int64 v239; // x1
   __int64 v240; // x2
   UnityEngine_Object_o *v241; // x23
-  Il2CppObject *v242; // x0
-  System_String_o *v243; // x2
-  System_String_o *v244; // x3
-  int32_t v245; // w4
-  int32_t v246; // w5
-  bool v247; // w6
-  bool v248; // w7
-  char v249; // w25
-  struct MapControl_MapInfo_o *v250; // x8
-  MapModelManager_c *v251; // x0
+  MethodInfo *v242; // x2
+  TerminalPramsManager_c *v243; // x0
+  TerminalPramsManager_c *v244; // x0
+  __int64 v245; // x1
+  __int64 v246; // x2
+  UnityEngine_Object_o *v247; // x23
+  Il2CppObject *v248; // x0
+  System_String_o *v249; // x2
+  System_String_o *v250; // x3
+  int32_t v251; // w4
+  int32_t v252; // w5
+  bool v253; // w6
+  bool v254; // w7
+  char v255; // w25
+  struct MapControl_MapInfo_o *v256; // x8
+  float v257; // s0 OVERLAPPED
+  float v258; // s1
+  float v259; // s2
+  MapModelManager_c *v260; // x0
   UnityEngine_Object_o *mFocusSpot; // x24
-  UnityEngine_Object_o **v253; // x23
-  __int64 v254; // x1
-  System_String_o *v255; // x2
-  System_String_o *v256; // x3
-  int32_t v257; // w4
-  int32_t v258; // w5
-  bool v259; // w6
-  bool v260; // w7
-  UnityEngine_Object_o *v261; // x22
-  System_String_o *v262; // x3
-  int32_t v263; // w4
-  int32_t v264; // w5
-  bool v265; // w6
-  bool v266; // w7
-  const MethodInfo *v267; // x2
-  __int64 v268; // x1
-  __int64 v269; // x2
-  UnityEngine_Object_o *SpotPrefab; // x21
-  System_String_o *v271; // x2
-  System_String_o *v272; // x3
-  int32_t v273; // w4
-  int32_t v274; // w5
-  bool v275; // w6
-  bool v276; // w7
+  UnityEngine_Object_o **v262; // x23
+  __int64 v263; // x1
+  System_String_o *v264; // x2
+  System_String_o *v265; // x3
+  int32_t v266; // w4
+  int32_t v267; // w5
+  bool v268; // w6
+  bool v269; // w7
+  UnityEngine_Object_o *v270; // x22
+  System_String_o *v271; // x3
+  int32_t v272; // w4
+  int32_t v273; // w5
+  bool v274; // w6
+  bool v275; // w7
+  const MethodInfo *v276; // x2
   __int64 v277; // x1
-  Il2CppObject *v278; // x0
-  UnityEngine_Object_o *v279; // x21
-  const MethodInfo *v280; // x4
+  __int64 v278; // x2
+  UnityEngine_Object_o *SpotPrefab; // x21
+  System_String_o *v280; // x2
+  System_String_o *v281; // x3
+  int32_t v282; // w4
+  int32_t v283; // w5
+  bool v284; // w6
+  bool v285; // w7
+  __int64 v286; // x1
+  Il2CppObject *v287; // x0
+  UnityEngine_Object_o *v288; // x21
+  const MethodInfo *v289; // x4
   struct EventMapManagerInterface_o *eventMapManagerInterface_k__BackingField; // x20
-  System_Action_o *v282; // x21
+  System_Action_o *v291; // x21
   EventMapManagerInterface_c *klass; // x8
-  __int64 v284; // x9
+  __int64 v293; // x9
   EventMapManagerInterface_c **p_offset; // x10
-  __int64 v286; // x0
+  __int64 v295; // x0
   struct EventRaceBoostInfo_o *eventRaceBoost_k__BackingField; // [xsp+8h] [xbp-168h]
   MissionNaviTransitionBoardItem_o *p_eventBoardGameSpotPrefab; // [xsp+10h] [xbp-160h]
   int32_t EventBoardGameSpotId; // [xsp+18h] [xbp-158h]
-  Il2CppObject *v290; // [xsp+18h] [xbp-158h]
+  Il2CppObject *v299; // [xsp+18h] [xbp-158h]
   UnityEngine_Object_o *x; // [xsp+20h] [xbp-150h]
-  System_Collections_Generic_List_Enumerator_object__o v292; // [xsp+28h] [xbp-148h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v293; // [xsp+40h] [xbp-130h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v301; // [xsp+28h] [xbp-148h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v302; // [xsp+40h] [xbp-130h] BYREF
   UnityEngine_Vector3_o pos; // [xsp+60h] [xbp-110h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v295; // [xsp+70h] [xbp-100h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v296; // [xsp+90h] [xbp-E0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v297; // [xsp+B0h] [xbp-C0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v298; // [xsp+D0h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v304; // [xsp+70h] [xbp-100h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v305; // [xsp+90h] [xbp-E0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v306; // [xsp+B0h] [xbp-C0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v307; // [xsp+D0h] [xbp-A0h] BYREF
   UnityEngine_Object_o *Component_object; // [xsp+F8h] [xbp-78h]
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o Position; // 0:kr14_12.12
-  UnityEngine_Vector3_o v302; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v310; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v312; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
   if ( (byte_596D7F6 & 1) == 0 )
@@ -24036,13 +24101,13 @@ void ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, const Metho
     byte_596D7F6 = 1;
   }
   mWarInfo = v2->fields.mWarInfo;
-  memset(&v298, 0, sizeof(v298));
-  memset(&v297, 0, sizeof(v297));
-  memset(&v296, 0, sizeof(v296));
-  memset(&v295, 0, sizeof(v295));
+  memset(&v307, 0, sizeof(v307));
+  memset(&v306, 0, sizeof(v306));
+  memset(&v305, 0, sizeof(v305));
+  memset(&v304, 0, sizeof(v304));
   pos.fields.z = 0.0;
   *(_QWORD *)&pos.fields.x = 0;
-  memset(&v293, 0, sizeof(v293));
+  memset(&v302, 0, sizeof(v302));
   if ( !mWarInfo )
     goto LABEL_316;
   warId = mWarInfo->fields.warId;
@@ -24173,32 +24238,32 @@ void ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, const Metho
   if ( !this )
     goto LABEL_316;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v301,
     (System_Collections_Generic_List_object__o *)this,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
-  v43 = *(_OWORD *)&v292.fields._list;
+  v43 = *(_OWORD *)&v301.fields._list;
   v44 = 0;
   v45 = 0;
   Component_object = 0;
-  v298.fields._current = v292.fields._current;
-  *(_QWORD *)&v292.fields._index = &v298;
-  *(_OWORD *)&v298.fields._list = v43;
+  v307.fields._current = v301.fields._current;
+  *(_QWORD *)&v301.fields._index = &v307;
+  *(_OWORD *)&v307.fields._list = v43;
   x = 0;
-  v292.fields._list = 0;
+  v301.fields._list = 0;
   p_eventBoardGameSpotPrefab = (MissionNaviTransitionBoardItem_o *)&v2->fields.eventBoardGameSpotPrefab;
   while ( 1 )
   {
     v46 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v298,
+            &v307,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
     if ( !v46 )
       break;
-    current = (MapControl_SpotInfo_o *)v298.fields._current;
-    if ( !v298.fields._current )
+    current = (MapControl_SpotInfo_o *)v307.fields._current;
+    if ( !v307.fields._current )
       sub_2213CDC(v46, v47);
     SpotBySpotInfo = (UnityEngine_Object_o *)ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
                                                v2,
-                                               (int32_t)v298.fields._current[1].klass,
+                                               (int32_t)v307.fields._current[1].klass,
                                                IsMapModel,
                                                v48);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -24360,9 +24425,9 @@ LABEL_85:
       }
     }
   }
-  list = v292.fields._list;
+  list = v301.fields._list;
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    *(System_Collections_Generic_List_Enumerator_object__o **)&v292.fields._index,
+    *(System_Collections_Generic_List_Enumerator_object__o **)&v301.fields._index,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
   if ( list )
     sub_2213CD4(list);
@@ -24420,16 +24485,16 @@ LABEL_138:
       if ( !this )
         goto LABEL_316;
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v301,
         (System_Collections_Generic_List_object__o *)this,
         (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
-      v297 = v292;
-      v292.fields._list = 0;
-      *(_QWORD *)&v292.fields._index = &v297;
+      v306 = v301;
+      v301.fields._list = 0;
+      *(_QWORD *)&v301.fields._index = &v306;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v297,
+                &v306,
                 (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__) )
-        ScrTerminalMap__mfMap2d_Create_LineBySpotID(v2, (MapControl_SpotRoadInfo_o *)v297.fields._current, v121);
+        ScrTerminalMap__mfMap2d_Create_LineBySpotID(v2, (MapControl_SpotRoadInfo_o *)v306.fields._current, v121);
       goto LABEL_143;
     }
   }
@@ -24440,14 +24505,14 @@ LABEL_138:
   if ( !this )
     goto LABEL_316;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v301,
     (System_Collections_Generic_List_object__o *)this,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
-  v297 = v292;
-  v292.fields._list = 0;
-  *(_QWORD *)&v292.fields._index = &v297;
+  v306 = v301;
+  v301.fields._list = 0;
+  *(_QWORD *)&v301.fields._index = &v306;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v297,
+            &v306,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__) )
   {
     mapModelManager = v2->fields.mapModelManager;
@@ -24455,13 +24520,13 @@ LABEL_138:
       sub_2213CDC(0, v119);
     MapModelManager__CreateModelLineBySpotId(
       mapModelManager,
-      (MapControl_SpotRoadInfo_o *)v297.fields._current,
+      (MapControl_SpotRoadInfo_o *)v306.fields._current,
       v2->fields.pfbModelLineP,
       0);
   }
 LABEL_143:
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v297,
+    &v306,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
   this = (ScrTerminalMap_o *)v2->fields.mapModelManager;
   if ( !this )
@@ -24495,23 +24560,23 @@ LABEL_143:
     if ( !this )
       goto LABEL_316;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v301,
       (System_Collections_Generic_List_object__o *)this,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
-    v296 = v292;
-    v292.fields._list = 0;
-    *(_QWORD *)&v292.fields._index = &v296;
+    v305 = v301;
+    v301.fields._list = 0;
+    *(_QWORD *)&v301.fields._index = &v305;
     while ( 1 )
     {
       v132 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-               &v296,
+               &v305,
                (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
       if ( !v132 )
         break;
-      v134 = v296.fields._current;
+      v134 = v305.fields._current;
       if ( !ScrTerminalMap__IsSkipCreateBoardGameGimmick(
               (ScrTerminalMap_o *)v132,
-              (MapControl_MapGimmickInfo_o *)v296.fields._current,
+              (MapControl_MapGimmickInfo_o *)v305.fields._current,
               v133) )
       {
         v136 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
@@ -24556,20 +24621,20 @@ LABEL_143:
     if ( !this )
       goto LABEL_316;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v301,
       (System_Collections_Generic_List_object__o *)this,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
-    v296 = v292;
-    v292.fields._list = 0;
-    *(_QWORD *)&v292.fields._index = &v296;
+    v305 = v301;
+    v301.fields._list = 0;
+    *(_QWORD *)&v301.fields._index = &v305;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v296,
+              &v305,
               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__) )
     {
       v150 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
       v151 = (Il2CppObject *)ScrTerminalMap__CreateMapGimmick(
                                v2,
-                               (MapControl_MapGimmickInfo_o *)v296.fields._current,
+                               (MapControl_MapGimmickInfo_o *)v305.fields._current,
                                IsMapModel,
                                v149);
       v158 = v151;
@@ -24599,7 +24664,7 @@ LABEL_143:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v296,
+    &v305,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
   v164 = x;
   if ( v2->fields.isRaidMap )
@@ -24616,22 +24681,22 @@ LABEL_143:
         if ( !v166 )
           goto LABEL_316;
         this = (ScrTerminalMap_o *)v166->fields.eventSpotMoveDataList;
-        v290 = v118;
+        v299 = v118;
         if ( !this )
           goto LABEL_316;
         System_Collections_Generic_List_object___GetEnumerator(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+          (System_Collections_Generic_List_Enumerator_T__o *)&v301,
           (System_Collections_Generic_List_object__o *)this,
           (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
         v167 = &System_Predicate_MapGimmickComponent__TypeInfo;
-        v295 = v292;
-        v292.fields._list = 0;
-        *(_QWORD *)&v292.fields._index = &v295;
+        v304 = v301;
+        v301.fields._list = 0;
+        *(_QWORD *)&v301.fields._index = &v304;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                  &v295,
+                  &v304,
                   (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
         {
-          v168 = v295.fields._current;
+          v168 = v304.fields._current;
           v169 = (ScrTerminalMap___c__DisplayClass302_0_o *)sub_2213CCC(ScrTerminalMap___c__DisplayClass302_0_TypeInfo);
           ScrTerminalMap___c__DisplayClass302_0___ctor(v169, 0);
           if ( !v168 )
@@ -24671,54 +24736,66 @@ LABEL_143:
                 LocalPosition = GameObjectExtensions__GetLocalPosition((UnityEngine_GameObject_o *)v168[1].monitor, 0);
                 if ( !v184 )
                   sub_2213CDC(v185, v186);
-                v187 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v184, 0);
-                GameObjectExtensions__SetLocalPosition(v187, LocalPosition, 0);
-                v188 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v184, 0);
-                GameObjectExtensions__SafeSetParent_42897308(v188, (UnityEngine_GameObject_o *)v168[1].monitor, 0);
+                v187 = LocalPosition.fields.x;
+                y = LocalPosition.fields.y;
+                z = LocalPosition.fields.z;
+                v190 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v184, 0);
+                v310.fields.x = v187;
+                v310.fields.y = y;
+                v310.fields.z = z;
+                GameObjectExtensions__SetLocalPosition(v190, v310, 0);
+                v191 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v184, 0);
+                GameObjectExtensions__SafeSetParent_42897308(v191, (UnityEngine_GameObject_o *)v168[1].monitor, 0);
               }
             }
             MapGimmickId = SpotPathEntity__GetMapGimmickId(v174, 0);
             v169->fields.gimmickId = MapGimmickId;
             if ( MapGimmickId >= 1 )
             {
-              v190 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
-              v191 = (System_Predicate_object__o *)sub_2213CCC(*v167);
+              v193 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
+              v194 = (System_Predicate_object__o *)sub_2213CCC(*v167);
               System_Predicate_object____ctor(
-                v191,
+                v194,
                 (Il2CppObject *)v169,
                 Method_ScrTerminalMap___c__DisplayClass302_0__smfMap2d_SpotMarkCreate_b__1__,
                 0);
-              if ( !v190 )
-                sub_2213CDC(v192, v193);
-              v196 = System_Collections_Generic_List_object___Find(
-                       v190,
-                       (System_Predicate_T__o *)v191,
+              if ( !v193 )
+                sub_2213CDC(v195, v196);
+              v199 = System_Collections_Generic_List_object___Find(
+                       v193,
+                       (System_Predicate_T__o *)v194,
                        (const MethodInfo_44842C0 *)Method_System_Collections_Generic_List_MapGimmickComponent__Find__);
               if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v194, v195);
-              if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v196, 0, 0) )
+                j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v197, v198);
+              if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v199, 0, 0) )
               {
                 Position = GameObjectExtensions__GetPosition((UnityEngine_GameObject_o *)v168[1].monitor, 0);
-                if ( !v196 )
-                  sub_2213CDC(v197, v198);
-                v199 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v196, 0);
-                GameObjectExtensions__SetPosition(v199, Position, 0);
+                if ( !v199 )
+                  sub_2213CDC(v200, v201);
+                v202 = Position.fields.x;
+                v203 = Position.fields.y;
+                v204 = Position.fields.z;
+                v205 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v199, 0);
+                v312.fields.x = v202;
+                v312.fields.y = v203;
+                v312.fields.z = v204;
+                GameObjectExtensions__SetPosition(v205, v312, 0);
               }
             }
           }
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v295,
+          &v304,
           (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
-        v118 = v290;
+        v118 = v299;
         v164 = x;
       }
     }
   }
-  v200 = (UnityEngine_Object_o *)v2->fields.eventQuestCooltimeComponent;
+  v206 = (UnityEngine_Object_o *)v2->fields.eventQuestCooltimeComponent;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v163);
-  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(v200, 0, 0);
+  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(v206, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     mWarEnt = v2->fields.mWarEnt;
@@ -24734,36 +24811,36 @@ LABEL_143:
       0);
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v201);
-  v203 = Component_object;
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v207);
+  v209 = Component_object;
   if ( UnityEngine_Object__op_Equality(Component_object, 0, 0) )
-    v206 = v164;
+    v212 = v164;
   else
-    v206 = v203;
+    v212 = v209;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v204, v205);
-  v209 = UnityEngine_Object__op_Equality(v206, 0, 0);
-  if ( (v209 & 1) != 0 )
-    v210 = v45;
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v210, v211);
+  v215 = UnityEngine_Object__op_Equality(v212, 0, 0);
+  if ( (v215 & 1) != 0 )
+    v216 = v45;
   else
-    v210 = v206;
+    v216 = v212;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v207, v208);
-  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(v210, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v213, v214);
+  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(v216, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( !v210 )
+    if ( !v216 )
       goto LABEL_316;
-    v211 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v210, 0);
-    ScrTerminalMap__SetPlayerIcon(v2, v211, v212);
-    if ( (v209 & 1) == 0 )
+    v217 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v216, 0);
+    ScrTerminalMap__SetPlayerIcon(v2, v217, v218);
+    if ( (v215 & 1) == 0 )
     {
       this = (ScrTerminalMap_o *)v2->fields.mWarInfo;
       if ( !this )
         goto LABEL_316;
-      v213 = MapControl_WarInfo__IsMultiMap((MapControl_WarInfo_o *)this, 0);
-      v215 = ScrTerminalMap__GetSaveKey_PlayerIcon(v2, v213, v214);
-      UnityEngine_PlayerPrefs__SetInt(v215, (int32_t)v206[6].klass, 0);
+      v219 = MapControl_WarInfo__IsMultiMap((MapControl_WarInfo_o *)this, 0);
+      v221 = ScrTerminalMap__GetSaveKey_PlayerIcon(v2, v219, v220);
+      UnityEngine_PlayerPrefs__SetInt(v221, (int32_t)v212[6].klass, 0);
     }
     if ( eventRaceBoost_k__BackingField )
     {
@@ -24779,204 +24856,211 @@ LABEL_143:
   p_mFocusSpot = (UnityEngine_Object_o **)&v2->fields.mFocusSpot;
   if ( QuestAfterAction__IsActiveCommand((QuestAfterAction_o *)this, 0) )
   {
-    *p_mFocusSpot = v210;
+    *p_mFocusSpot = v216;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot,
-      (int32_t)v210,
-      v216,
-      v217,
-      v218,
-      v219,
-      v220,
-      v221);
-    v225 = MapZoom_TypeInfo;
+      (int32_t)v216,
+      v222,
+      v223,
+      v224,
+      v225,
+      v226,
+      v227);
+    v231 = MapZoom_TypeInfo;
     if ( !*(&MapZoom_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(MapZoom_TypeInfo, v223, v224);
-      v225 = MapZoom_TypeInfo;
+      j_il2cpp_runtime_class_init_0(MapZoom_TypeInfo, v229, v230);
+      v231 = MapZoom_TypeInfo;
     }
-    ZOOM_DEFAULT = v225->static_fields->ZOOM_DEFAULT;
+    ZOOM_DEFAULT = v231->static_fields->ZOOM_DEFAULT;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v223, v224);
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v229, v230);
     if ( !byte_596D0BC )
     {
       sub_2213A60(&TerminalPramsManager_TypeInfo);
       byte_596D0BC = 1;
     }
-    v227 = TerminalPramsManager_TypeInfo;
+    v233 = TerminalPramsManager_TypeInfo;
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v223, v224);
-      v227 = TerminalPramsManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v229, v230);
+      v233 = TerminalPramsManager_TypeInfo;
     }
-    static_fields = v227->static_fields;
-    v229 = UnityEngine_Object_TypeInfo;
+    static_fields = v233->static_fields;
+    v235 = UnityEngine_Object_TypeInfo;
     static_fields->mZoomSize = ZOOM_DEFAULT;
-    if ( !*(&v229->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(v229, v223, v224);
+    if ( !*(&v235->_2.cctor_finished + 1) )
+      j_il2cpp_runtime_class_init_0(v235, v229, v230);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v118, 0, 0) )
     {
       *p_mFocusSpot = (UnityEngine_Object_o *)v118;
-      v231 = (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot;
-      v232 = (int)v118;
+      v237 = (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot;
+      v238 = (int)v118;
       goto LABEL_237;
     }
   }
   else if ( eventRaceBoost_k__BackingField )
   {
-    *p_mFocusSpot = v210;
+    *p_mFocusSpot = v216;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot,
-      (int32_t)v210,
-      v216,
-      v217,
-      v218,
-      v219,
-      v220,
-      v221);
+      (int32_t)v216,
+      v222,
+      v223,
+      v224,
+      v225,
+      v226,
+      v227);
   }
   else
   {
-    v232 = (int)x;
-    v231 = (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot;
+    v238 = (int)x;
+    v237 = (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot;
     *p_mFocusSpot = x;
 LABEL_237:
-    sub_2213A04(v231, v232, v216, v217, v218, v219, v220, v221);
-    v235 = *p_mFocusSpot;
+    sub_2213A04(v237, v238, v222, v223, v224, v225, v226, v227);
+    v241 = *p_mFocusSpot;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v233, v234);
-    v209 &= !UnityEngine_Object__op_Inequality(v235, 0, 0);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v239, v240);
+    v215 &= !UnityEngine_Object__op_Inequality(v241, 0, 0);
   }
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v230, v216);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v236, v222);
   if ( !TerminalPramsManager__IsAuto(0) )
     goto LABEL_261;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v236);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v242);
   if ( !byte_596D0BD )
   {
     sub_2213A60(&TerminalPramsManager_TypeInfo);
     byte_596D0BD = 1;
   }
-  v237 = TerminalPramsManager_TypeInfo;
+  v243 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v236);
-    v237 = TerminalPramsManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v242);
+    v243 = TerminalPramsManager_TypeInfo;
   }
-  if ( v237->static_fields->_SpotId_k__BackingField < 0 )
+  if ( v243->static_fields->_SpotId_k__BackingField < 0 )
     goto LABEL_261;
-  if ( !*(&v237->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(v237, method, v236);
+  if ( !*(&v243->_2.cctor_finished + 1) )
+    j_il2cpp_runtime_class_init_0(v243, method, v242);
   if ( !byte_596D0BD )
   {
     sub_2213A60(&TerminalPramsManager_TypeInfo);
     byte_596D0BD = 1;
   }
-  v238 = TerminalPramsManager_TypeInfo;
+  v244 = TerminalPramsManager_TypeInfo;
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v236);
-    v238 = TerminalPramsManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method, v242);
+    v244 = TerminalPramsManager_TypeInfo;
   }
-  v241 = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotGameObject(
+  v247 = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotGameObject(
                                    v2,
-                                   v238->static_fields->_SpotId_k__BackingField,
-                                   v236);
+                                   v244->static_fields->_SpotId_k__BackingField,
+                                   v242);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v239, v240);
-  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(v241, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v245, v246);
+  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(v247, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( !v241 )
+    if ( !v247 )
       goto LABEL_316;
-    v242 = UnityEngine_GameObject__GetComponent_object_(
-             (UnityEngine_GameObject_o *)v241,
+    v248 = UnityEngine_GameObject__GetComponent_object_(
+             (UnityEngine_GameObject_o *)v247,
              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
-    v2->fields.mFocusSpot = (struct SrcSpotBasePrefab_o *)v242;
+    v2->fields.mFocusSpot = (struct SrcSpotBasePrefab_o *)v248;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot,
-      (int32_t)v242,
-      v243,
-      v244,
-      v245,
-      v246,
-      v247,
-      v248);
-    v249 = 0;
+      (int32_t)v248,
+      v249,
+      v250,
+      v251,
+      v252,
+      v253,
+      v254);
+    v255 = 0;
   }
   else
   {
 LABEL_261:
-    if ( (v209 & 1) != 0 )
+    if ( (v215 & 1) != 0 )
     {
       pos.fields.z = 0.0;
       *(_QWORD *)&pos.fields.x = 0;
       if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v236);
+        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, method, v242);
       this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_MapCondMaster___);
-      v250 = v2->fields.mMapInfo;
-      if ( !v250 || !this )
+      v256 = v2->fields.mMapInfo;
+      if ( !v256 || !this )
         goto LABEL_316;
-      v249 = 0;
-      if ( MapCondMaster__TryGetOnMapCameraOffset((MapCondMaster_o *)this, v250->fields.mapId, &pos, 0, 0, 0) )
+      v255 = 0;
+      if ( MapCondMaster__TryGetOnMapCameraOffset((MapCondMaster_o *)this, v256->fields.mapId, &pos, 0, 0, 0) )
       {
-        v302 = pos;
+        v257 = pos.fields.x;
+        v258 = pos.fields.y;
+        v259 = pos.fields.z;
         if ( IsMapModel )
         {
-          v302 = ScrTerminalMap__ConvertLocalToScreenPosition(v2, pos, method);
-          pos = v302;
+          *(UnityEngine_Vector3_o *)&v257 = ScrTerminalMap__ConvertLocalToScreenPosition(
+                                              v2,
+                                              *(UnityEngine_Vector3_o *)&v257,
+                                              method);
+          pos.fields.x = v257;
+          pos.fields.y = v258;
+          pos.fields.z = v259;
         }
-        ScrTerminalMap__SetMapCamera(v2, v302, 0.001, 0, v236);
-        v249 = 1;
+        ScrTerminalMap__SetMapCamera(v2, *(UnityEngine_Vector3_o *)&v257, 0.001, 0, v242);
+        v255 = 1;
       }
     }
     else
     {
-      v249 = 0;
+      v255 = 0;
     }
   }
-  v251 = MapModelManager_TypeInfo;
+  v260 = MapModelManager_TypeInfo;
   if ( !*(&MapModelManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MapModelManager_TypeInfo, method, v236);
-    v251 = MapModelManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MapModelManager_TypeInfo, method, v242);
+    v260 = MapModelManager_TypeInfo;
   }
-  v2->fields.currentMapLayerId = v251->static_fields->LAYER_LOWER_ID;
-  if ( (v249 & 1) == 0 )
+  v2->fields.currentMapLayerId = v260->static_fields->LAYER_LOWER_ID;
+  if ( (v255 & 1) == 0 )
   {
     mFocusSpot = (UnityEngine_Object_o *)v2->fields.mFocusSpot;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v236);
-    v253 = (UnityEngine_Object_o **)&v2->fields.mFocusSpot;
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v242);
+    v262 = (UnityEngine_Object_o **)&v2->fields.mFocusSpot;
     if ( UnityEngine_Object__op_Equality(mFocusSpot, 0, 0) )
     {
-      *v253 = v210;
+      *v262 = v216;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot,
-        (int32_t)v210,
-        v255,
-        v256,
-        v257,
-        v258,
-        v259,
-        v260);
+        (int32_t)v216,
+        v264,
+        v265,
+        v266,
+        v267,
+        v268,
+        v269);
     }
-    v261 = *v253;
+    v270 = *v262;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v254, v255);
-    if ( UnityEngine_Object__op_Equality(v261, 0, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v263, v264);
+    if ( UnityEngine_Object__op_Equality(v270, 0, 0) )
     {
-      *v253 = x;
+      *v262 = x;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot,
         (int32_t)x,
-        (System_String_o *)v236,
-        v262,
-        v263,
-        v264,
-        v265,
-        v266);
+        (System_String_o *)v242,
+        v271,
+        v272,
+        v273,
+        v274,
+        v275);
     }
   }
   if ( IsMapModel )
@@ -24996,21 +25080,21 @@ LABEL_261:
       this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
       if ( !this )
         goto LABEL_316;
-      SpotPrefab = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotPrefab(v2, (int32_t)this->fields.rootEventObjP, v267);
+      SpotPrefab = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotPrefab(v2, (int32_t)this->fields.rootEventObjP, v276);
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v268, v269);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v277, v278);
       if ( UnityEngine_Object__op_Inequality(SpotPrefab, 0, 0) )
       {
         v2->fields.mFocusSpot = (struct SrcSpotBasePrefab_o *)SpotPrefab;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&v2->fields.mFocusSpot,
           (int32_t)SpotPrefab,
-          v271,
-          v272,
-          v273,
-          v274,
-          v275,
-          v276);
+          v280,
+          v281,
+          v282,
+          v283,
+          v284,
+          v285);
         this = (ScrTerminalMap_o *)v2->fields.mapModelManager;
         if ( !this )
           goto LABEL_316;
@@ -25037,66 +25121,66 @@ LABEL_294:
     if ( !this )
       goto LABEL_316;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v292,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v301,
       (System_Collections_Generic_List_object__o *)this,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
-    v293 = v292;
-    v292.fields._list = 0;
-    *(_QWORD *)&v292.fields._index = &v293;
+    v302 = v301;
+    v301.fields._list = 0;
+    *(_QWORD *)&v301.fields._index = &v302;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v293,
+              &v302,
               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__) )
     {
-      v278 = v293.fields._current;
-      if ( !v293.fields._current )
-        sub_2213CDC(0, v277);
-      LODWORD(v293.fields._current[15].klass) = v2->fields.currentMapLayerId;
-      SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)v278, 1, 0);
+      v287 = v302.fields._current;
+      if ( !v302.fields._current )
+        sub_2213CDC(0, v286);
+      LODWORD(v302.fields._current[15].klass) = v2->fields.currentMapLayerId;
+      SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)v287, 1, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v293,
+      &v302,
       (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
     this = (ScrTerminalMap_o *)v2->fields.mapModelManager;
     if ( !this )
       goto LABEL_316;
     MapModelManager__UpdateLineDispAll((MapModelManager_o *)this, 0);
   }
-  if ( (v249 & 1) == 0 )
+  if ( (v255 & 1) == 0 )
   {
-    v279 = (UnityEngine_Object_o *)v2->fields.mFocusSpot;
+    v288 = (UnityEngine_Object_o *)v2->fields.mFocusSpot;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v236);
-    if ( UnityEngine_Object__op_Inequality(v279, 0, 0) )
-      ScrTerminalMap__SetMapCamera_FocusSpot(v2, v2->fields.mFocusSpot, 0.001, IsMapModel, 0, v280);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v242);
+    if ( UnityEngine_Object__op_Inequality(v288, 0, 0) )
+      ScrTerminalMap__SetMapCamera_FocusSpot(v2, v2->fields.mFocusSpot, 0.001, IsMapModel, 0, v289);
   }
   eventMapManagerInterface_k__BackingField = v2->fields._eventMapManagerInterface_k__BackingField;
-  v282 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-  System_Action___ctor(v282, (Il2CppObject *)v2, Method_ScrTerminalMap__smfMap2d_SpotMarkCreate_b__302_0__, 0);
+  v291 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v291, (Il2CppObject *)v2, Method_ScrTerminalMap__smfMap2d_SpotMarkCreate_b__302_0__, 0);
   if ( !eventMapManagerInterface_k__BackingField )
     goto LABEL_316;
   klass = eventMapManagerInterface_k__BackingField->klass;
-  v284 = *(unsigned __int16 *)&eventMapManagerInterface_k__BackingField->klass->_2.rank;
+  v293 = *(unsigned __int16 *)&eventMapManagerInterface_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&eventMapManagerInterface_k__BackingField->klass->_2.rank )
   {
     p_offset = (EventMapManagerInterface_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != EventMapManagerInterface_TypeInfo )
     {
-      --v284;
+      --v293;
       p_offset += 2;
-      if ( !v284 )
+      if ( !v293 )
         goto LABEL_312;
     }
-    v286 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 4];
+    v295 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 4];
   }
   else
   {
 LABEL_312:
-    v286 = sub_224BC3C(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 4);
+    v295 = sub_224BC3C(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 4);
   }
-  (*(void (__fastcall **)(struct EventMapManagerInterface_o *, System_Action_o *, _QWORD))v286)(
+  (*(void (__fastcall **)(struct EventMapManagerInterface_o *, System_Action_o *, _QWORD))v295)(
     eventMapManagerInterface_k__BackingField,
-    v282,
-    *(_QWORD *)(v286 + 8));
+    v291,
+    *(_QWORD *)(v295 + 8));
 }
 
 
@@ -25796,6 +25880,7 @@ bool ScrTerminalMap__WaitConnecting_d__263__MoveNext(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  bool result; // w0
   Il2CppObject *Instance; // x0
   __int64 v17; // x1
   __int64 v18; // x1
@@ -25862,8 +25947,9 @@ LABEL_23:
       this->fields.__2__current = (Il2CppObject *)v7;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
@@ -25903,8 +25989,9 @@ LABEL_23:
   this->fields.__2__current = (Il2CppObject *)v31;
   v32 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v32, (int32_t)v31, v33, v34, v35, v36, v37, v38);
+  result = 1;
   *((_DWORD *)v32 - 2) = 2;
-  return 1;
+  return result;
 }
 
 
@@ -26163,6 +26250,7 @@ bool ScrTerminalMap__WaitScriptLoad_d__331__MoveNext(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
+  bool result; // w0
   MapButtonControl_o *mapButtonGrid; // x0
   __int64 v26; // x1
   __int64 v27; // x2
@@ -26276,8 +26364,9 @@ LABEL_39:
       this->fields.__2__current = (Il2CppObject *)v16;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
@@ -26318,8 +26407,9 @@ LABEL_39:
   this->fields.__2__current = (Il2CppObject *)v39;
   v40 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v40, (int32_t)v39, v41, v42, v43, v44, v45, v46);
+  result = 1;
   *((_DWORD *)v40 - 2) = 2;
-  return 1;
+  return result;
 }
 
 
@@ -26899,16 +26989,16 @@ void ScrTerminalMap___c__DisplayClass276_0___LoadMap_b__2(
   this = (ScrTerminalMap___c__DisplayClass276_0_o *)v9->fields.__4__this;
   if ( !this )
     goto LABEL_12;
-  ScrTerminalMap__LoadMapEffectPrefab((ScrTerminalMap_o *)this, *((AssetData_o **)this + 31), 0);
+  ScrTerminalMap__LoadMapEffectPrefab((ScrTerminalMap_o *)this, (AssetData_o *)this[4].fields.assetMapName, 0);
   this = (ScrTerminalMap___c__DisplayClass276_0_o *)v9->fields.__4__this;
   if ( !this
-    || (ScrTerminalMap__LoadEventMapObject((ScrTerminalMap_o *)this, *((AssetData_o **)this + 31), 0),
+    || (ScrTerminalMap__LoadEventMapObject((ScrTerminalMap_o *)this, (AssetData_o *)this[4].fields.assetMapName, 0),
         (this = (ScrTerminalMap___c__DisplayClass276_0_o *)v9->fields.__4__this) == 0)
     || (ScrTerminalMap__SetupMapGimmickBasePrefab(
           (ScrTerminalMap_o *)this,
-          *((MapEntity_o **)this + 46),
-          *((AssetData_o **)this + 31),
-          *((AssetData_o **)this + 32),
+          (MapEntity_o *)this[6].fields.__9__2,
+          (AssetData_o *)this[4].fields.assetMapName,
+          (AssetData_o *)this[4].fields.__9__2,
           0),
         v19 = (Il2CppObject *)v9->fields.__4__this,
         v20 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
@@ -27164,16 +27254,16 @@ void ScrTerminalMap___c__DisplayClass276_0___LoadMap_b__4(
   this = (ScrTerminalMap___c__DisplayClass276_0_o *)v9->fields.__4__this;
   if ( !this )
     goto LABEL_13;
-  ScrTerminalMap__LoadMapEffectPrefab((ScrTerminalMap_o *)this, *((AssetData_o **)this + 31), 0);
+  ScrTerminalMap__LoadMapEffectPrefab((ScrTerminalMap_o *)this, (AssetData_o *)this[4].fields.assetMapName, 0);
   this = (ScrTerminalMap___c__DisplayClass276_0_o *)v9->fields.__4__this;
   if ( !this
-    || (ScrTerminalMap__LoadEventMapObject((ScrTerminalMap_o *)this, *((AssetData_o **)this + 31), 0),
+    || (ScrTerminalMap__LoadEventMapObject((ScrTerminalMap_o *)this, (AssetData_o *)this[4].fields.assetMapName, 0),
         (this = (ScrTerminalMap___c__DisplayClass276_0_o *)v9->fields.__4__this) == 0)
     || (ScrTerminalMap__SetupMapGimmickBasePrefab(
           (ScrTerminalMap_o *)this,
-          *((MapEntity_o **)this + 46),
-          *((AssetData_o **)this + 31),
-          *((AssetData_o **)this + 32),
+          (MapEntity_o *)this[6].fields.__9__2,
+          (AssetData_o *)this[4].fields.assetMapName,
+          (AssetData_o *)this[4].fields.__9__2,
           0),
         v19 = (Il2CppObject *)v9->fields.__4__this,
         v20 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
@@ -27223,7 +27313,7 @@ void ScrTerminalMap___c__DisplayClass276_1___LoadMap_b__1(
   __int64 v23; // x2
   struct ScrTerminalMap___c__DisplayClass276_0_o *v24; // x8
   struct ScrTerminalMap_o *v25; // x8
-  System_String_o *v26; // x20
+  struct ScrTerminalMap_o *v26; // x20
   Il2CppObject *v27; // x0
   struct ScrTerminalMap___c__DisplayClass276_0_o *v28; // x8
   struct ScrTerminalMap_o *v29; // x20
@@ -27316,14 +27406,20 @@ void ScrTerminalMap___c__DisplayClass276_1___LoadMap_b__1(
           this = (ScrTerminalMap___c__DisplayClass276_1_o *)v21->fields.__4__this;
           if ( this )
           {
-            ScrTerminalMap__LoadMapEffectPrefab((ScrTerminalMap_o *)this, *((AssetData_o **)this + 31), 0);
+            ScrTerminalMap__LoadMapEffectPrefab(
+              (ScrTerminalMap_o *)this,
+              (AssetData_o *)this[7].fields.CS___8__locals1,
+              0);
             v22 = v2->fields.CS___8__locals1;
             if ( v22 )
             {
               this = (ScrTerminalMap___c__DisplayClass276_1_o *)v22->fields.__4__this;
               if ( this )
               {
-                ScrTerminalMap__LoadEventMapObject((ScrTerminalMap_o *)this, *((AssetData_o **)this + 31), 0);
+                ScrTerminalMap__LoadEventMapObject(
+                  (ScrTerminalMap_o *)this,
+                  (AssetData_o *)this[7].fields.CS___8__locals1,
+                  0);
                 this = (ScrTerminalMap___c__DisplayClass276_1_o *)ScrTerminalMap_TypeInfo;
                 if ( !*(&ScrTerminalMap_TypeInfo->_2.cctor_finished + 1) )
                 {
@@ -27336,10 +27432,13 @@ void ScrTerminalMap___c__DisplayClass276_1___LoadMap_b__1(
                   v25 = v24->fields.__4__this;
                   if ( v25 )
                   {
-                    v26 = *(System_String_o **)(*((_QWORD *)this + 23) + 72LL);
+                    v26 = this[5].fields.CS___8__locals1[1].fields.__4__this;
                     v40 = v25->fields.currentAssetId;
                     v27 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v40);
-                    this = (ScrTerminalMap___c__DisplayClass276_1_o *)System_String__Format(v26, v27, 0);
+                    this = (ScrTerminalMap___c__DisplayClass276_1_o *)System_String__Format(
+                                                                        (System_String_o *)v26,
+                                                                        v27,
+                                                                        0);
                     v28 = v2->fields.CS___8__locals1;
                     if ( v28 )
                     {
@@ -29224,30 +29323,33 @@ void ScrTerminalMap___c__DisplayClass425_0___PlayBoardGamePieceEffectSub_b__0(
         ScrTerminalMap___c__DisplayClass425_0_o *this,
         const MethodInfo *method)
 {
-  void *_4__this; // x0
+  ScrTerminalMap_o *_4__this; // x0
   struct ScrTerminalMap_o *v4; // x8
-  void *v5; // x19
-  __int64 v6; // x8
-  float z; // w9
-  struct ScrTerminalMap_o *v8; // x22
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  void *v8; // x19
+  struct UnityEngine_GameObject_o *v9; // x8
+  float v10; // w9
+  struct ScrTerminalMap_o *v11; // x22
   int32_t currentSquareIndex; // w20
   int32_t endSquareIndex; // w23
-  System_Collections_Generic_List_object__o *v11; // x21
-  EventDelegate_o *v12; // x0
-  bool v13; // zf
-  Il2CppObject *v14; // x20
-  System_String_o **v15; // x8
-  System_String_o *v16; // x2
-  System_String_o *v17; // x3
-  int32_t v18; // w4
-  int32_t v19; // w5
-  bool v20; // w6
-  bool v21; // w7
+  System_Collections_Generic_List_object__o *v14; // x21
+  EventDelegate_o *v15; // x0
+  bool v16; // zf
+  Il2CppObject *v17; // x20
+  System_String_o **v18; // x8
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v26; // x9
   __int64 size; // x10
-  Il2CppClass **v25; // x0
-  UnityEngine_Vector3_o EventBoardSquarePos; // 0:kr00_12.12
+  Il2CppClass **v28; // x0
+  UnityEngine_Vector3_o EventBoardSquarePos; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D910 & 1) == 0 )
   {
@@ -29261,74 +29363,76 @@ void ScrTerminalMap___c__DisplayClass425_0___PlayBoardGamePieceEffectSub_b__0(
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_18;
-  EventBoardSquarePos = ScrTerminalMap__GetEventBoardSquarePos(
-                          (ScrTerminalMap_o *)_4__this,
-                          *((_DWORD *)_4__this + 154),
-                          0);
+  EventBoardSquarePos = ScrTerminalMap__GetEventBoardSquarePos(_4__this, _4__this->fields.currentSquareIndex, 0);
   v4 = this->fields.__4__this;
   if ( !v4 )
     goto LABEL_18;
-  _4__this = v4->fields._EventBoardPieceObj_k__BackingField;
+  _4__this = (ScrTerminalMap_o *)v4->fields._EventBoardPieceObj_k__BackingField;
   if ( !_4__this )
     goto LABEL_18;
-  _4__this = UnityEngine_GameObject__AddComponent_object_(
-               (UnityEngine_GameObject_o *)_4__this,
-               (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+  x = EventBoardSquarePos.fields.x;
+  y = EventBoardSquarePos.fields.y;
+  z = EventBoardSquarePos.fields.z;
+  _4__this = (ScrTerminalMap_o *)UnityEngine_GameObject__AddComponent_object_(
+                                   (UnityEngine_GameObject_o *)_4__this,
+                                   (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   if ( !_4__this )
     goto LABEL_18;
-  v5 = _4__this;
-  *((_BYTE *)_4__this + 152) = 1;
-  v6 = *(_QWORD *)&this->fields.oldPos.fields.x;
-  z = this->fields.oldPos.fields.z;
-  *(UnityEngine_Vector3_o *)((char *)_4__this + 140) = EventBoardSquarePos;
-  *((float *)_4__this + 34) = z;
-  *((_QWORD *)_4__this + 16) = v6;
+  v8 = _4__this;
+  LOBYTE(_4__this->fields.subRootEffectP) = 1;
+  v9 = *(struct UnityEngine_GameObject_o **)&this->fields.oldPos.fields.x;
+  v10 = this->fields.oldPos.fields.z;
+  *((float *)&_4__this->fields.rootSpotP + 1) = x;
+  *(float *)&_4__this->fields.subRootSpotP = y;
+  *((float *)&_4__this->fields.subRootSpotP + 1) = z;
+  *(float *)&_4__this->fields.rootSpotP = v10;
+  _4__this->fields.subRootRoadP = v9;
   _4__this = this->fields.__4__this;
-  *((_DWORD *)v5 + 14) = 1051595899;
+  *((_DWORD *)v8 + 14) = 1051595899;
   if ( !_4__this )
     goto LABEL_18;
-  _4__this = (void *)ScrTerminalMap__GetBoardGamePieceAnimationEasingType(
-                       (ScrTerminalMap_o *)_4__this,
-                       *((_DWORD *)_4__this + 154),
-                       0,
-                       0);
-  v8 = this->fields.__4__this;
-  *((_DWORD *)v5 + 8) = (_DWORD)_4__this;
-  if ( !v8 )
+  _4__this = (ScrTerminalMap_o *)ScrTerminalMap__GetBoardGamePieceAnimationEasingType(
+                                   _4__this,
+                                   _4__this->fields.currentSquareIndex,
+                                   0,
+                                   0);
+  v11 = this->fields.__4__this;
+  *((_DWORD *)v8 + 8) = (_DWORD)_4__this;
+  if ( !v11 )
     goto LABEL_18;
-  currentSquareIndex = v8->fields.currentSquareIndex;
-  endSquareIndex = v8->fields.endSquareIndex;
-  v11 = (System_Collections_Generic_List_object__o *)*((_QWORD *)v5 + 9);
-  v12 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
-  v13 = currentSquareIndex == endSquareIndex;
-  v14 = (Il2CppObject *)v12;
-  v15 = (System_String_o **)(v13 ? &StringLiteral_6238/*"EndBoardGamePieceEffect"*/ : &StringLiteral_13597/*"StartBoardGamePieceEffectSub"*/);
-  EventDelegate___ctor_56337752(v12, (UnityEngine_MonoBehaviour_o *)v8, *v15, 0);
-  if ( !v11
-    || (items = v11->fields._items,
-        v23 = Method_System_Collections_Generic_List_EventDelegate__Add__,
-        ++v11->fields._version,
+  currentSquareIndex = v11->fields.currentSquareIndex;
+  endSquareIndex = v11->fields.endSquareIndex;
+  v14 = (System_Collections_Generic_List_object__o *)*((_QWORD *)v8 + 9);
+  v15 = (EventDelegate_o *)sub_2213CCC(EventDelegate_TypeInfo);
+  v16 = currentSquareIndex == endSquareIndex;
+  v17 = (Il2CppObject *)v15;
+  v18 = (System_String_o **)(v16 ? &StringLiteral_6238/*"EndBoardGamePieceEffect"*/ : &StringLiteral_13597/*"StartBoardGamePieceEffectSub"*/);
+  EventDelegate___ctor_56337752(v15, (UnityEngine_MonoBehaviour_o *)v11, *v18, 0);
+  if ( !v14
+    || (items = v14->fields._items,
+        v26 = Method_System_Collections_Generic_List_EventDelegate__Add__,
+        ++v14->fields._version,
         !items) )
   {
 LABEL_18:
     sub_2213CDC(_4__this, method);
   }
-  size = v11->fields._size;
+  size = v14->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v11,
       v14,
-      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      v17,
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
   }
   else
   {
-    v25 = &items->obj.klass + size;
-    v11->fields._size = size + 1;
-    v25[4] = (Il2CppClass *)v14;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 4), (int32_t)v14, v16, v17, v18, v19, v20, v21);
+    v28 = &items->obj.klass + size;
+    v14->fields._size = size + 1;
+    v28[4] = (Il2CppClass *)v17;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 4), (int32_t)v17, v19, v20, v21, v22, v23, v24);
   }
-  UITweener__PlayForward((UITweener_o *)v5, 0);
+  UITweener__PlayForward((UITweener_o *)v8, 0);
 }
 
 
@@ -29528,7 +29632,7 @@ void ScrTerminalMap___c__DisplayClass432_0___JumpEventBoardGamePiece_b__0(
   struct ScrTerminalMap_o *_4__this; // x8
   ScrTerminalMap___c__DisplayClass432_0_o *v4; // x19
   __int64 v5; // x9
-  __int64 v6; // x9
+  struct System_Action_o *v6; // x9
   int32_t BoardGamePieceAnimationEasingType; // w0
   System_Collections_Generic_List_object__o *_9__1; // x21
   EventDelegate_Callback_o *v9; // x22
@@ -29572,13 +29676,13 @@ void ScrTerminalMap___c__DisplayClass432_0___JumpEventBoardGamePiece_b__0(
   if ( !this )
     goto LABEL_15;
   v4 = this;
-  *((_BYTE *)this + 152) = 1;
+  LOBYTE(this[1].fields.__9__1) = 1;
   v5 = *(_QWORD *)&v2->fields.oldPos.fields.x;
-  *((_DWORD *)this + 34) = LODWORD(v2->fields.oldPos.fields.z);
-  *((_QWORD *)this + 16) = v5;
-  v6 = *(_QWORD *)&v2->fields.newPos.fields.x;
-  *((_DWORD *)this + 37) = LODWORD(v2->fields.newPos.fields.z);
-  *(_QWORD *)((char *)this + 140) = v6;
+  *(float *)&this[1].fields.callback = v2->fields.oldPos.fields.z;
+  *(_QWORD *)&this[1].fields.oldIndex = v5;
+  v6 = *(struct System_Action_o **)&v2->fields.newPos.fields.x;
+  HIDWORD(this[1].fields.__9__2) = LODWORD(v2->fields.newPos.fields.z);
+  *(struct System_Action_o **)((char *)&this[1].fields.callback + 4) = v6;
   this = (ScrTerminalMap___c__DisplayClass432_0_o *)v2->fields.__4__this;
   LODWORD(v4->fields.callback) = 1060823368;
   if ( !this )

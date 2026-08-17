@@ -1439,8 +1439,8 @@ bool Individuality__IsPreIndividualitiesCount(
           result = 0;
           if ( !selfs->max_length && !isSkipPreCheckSelfEmpty )
           {
+            result = 1;
             *ret = 0;
-            return 1;
           }
         }
       }

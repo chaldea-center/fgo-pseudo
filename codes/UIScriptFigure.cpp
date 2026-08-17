@@ -262,8 +262,8 @@ void UIScriptFigure__EndSet(UIScriptFigure_o *this, const MethodInfo *method)
   UIScriptFigure_o *v4; // x19
   Il2CppClass **v5; // x8
   UIStandFigureRender_o *v6; // x20
-  UnityEngine_Vector2_o CenterOffset; // kr40_8
-  float v8; // s10
+  UnityEngine_Vector2_o CenterOffset; // kr00_8
+  float z; // s10
   float v9; // s10
   float v10; // s10
   float v11; // s10
@@ -276,10 +276,10 @@ void UIScriptFigure__EndSet(UIScriptFigure_o *this, const MethodInfo *method)
   MissionNaviTransitionBoardItem_o *p_setCallback; // x19
   struct System_Action_o *v19; // x20
   struct System_Action_o *setCallback; // t1
-  float z; // s2
-  float v22; // s2
-  float v23; // s2
-  float v24; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
@@ -304,60 +304,60 @@ void UIScriptFigure__EndSet(UIScriptFigure_o *this, const MethodInfo *method)
   this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
-  z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   this = (UIScriptFigure_o *)v4->fields.baseSpecialEffect;
   if ( !this )
     goto LABEL_23;
-  v8 = z;
+  z = localPosition.fields.z;
   this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
-  v25.fields.x = CenterOffset.fields.x;
-  v25.fields.y = CenterOffset.fields.y;
-  v25.fields.z = v8;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v25, 0);
+  v22.fields.x = CenterOffset.fields.x;
+  v22.fields.y = CenterOffset.fields.y;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v22, 0);
   this = (UIScriptFigure_o *)v4->fields.baseEffect;
   if ( !this )
     goto LABEL_23;
   this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
-  v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+  v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   this = (UIScriptFigure_o *)v4->fields.baseEffect;
   if ( !this )
     goto LABEL_23;
-  v9 = v22;
+  v9 = v23.fields.z;
+  this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+  if ( !this )
+    goto LABEL_23;
+  v24.fields.x = CenterOffset.fields.x;
+  v24.fields.y = CenterOffset.fields.y;
+  v24.fields.z = v9;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v24, 0);
+  this = (UIScriptFigure_o *)v4->fields.baseEffectBack;
+  if ( !this )
+    goto LABEL_23;
+  this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+  if ( !this )
+    goto LABEL_23;
+  v25 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  this = (UIScriptFigure_o *)v4->fields.baseEffectBack;
+  if ( !this )
+    goto LABEL_23;
+  v10 = v25.fields.z;
   this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !this )
     goto LABEL_23;
   v26.fields.x = CenterOffset.fields.x;
   v26.fields.y = CenterOffset.fields.y;
-  v26.fields.z = v9;
+  v26.fields.z = v10;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v26, 0);
-  this = (UIScriptFigure_o *)v4->fields.baseEffectBack;
-  if ( !this )
-    goto LABEL_23;
-  this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-  if ( !this )
-    goto LABEL_23;
-  v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
-  this = (UIScriptFigure_o *)v4->fields.baseEffectBack;
-  if ( !this )
-    goto LABEL_23;
-  v10 = v23;
-  this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-  if ( !this )
-    goto LABEL_23;
-  v27.fields.x = CenterOffset.fields.x;
-  v27.fields.y = CenterOffset.fields.y;
-  v27.fields.z = v10;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v27, 0);
   this = (UIScriptFigure_o *)v4->fields.baseShadowEffect;
   if ( !this
     || (this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0
-    || (v24 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z,
+    || (v27 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
         (this = (UIScriptFigure_o *)v4->fields.baseShadowEffect) == 0)
-    || (v11 = v24,
+    || (v11 = v27.fields.z,
         (this = (UIScriptFigure_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0)) == 0) )
   {
 LABEL_23:
@@ -422,10 +422,12 @@ UnityEngine_Vector3_o UIScriptFigure__GetOffsetEdgeBlur(UIScriptFigure_o *this, 
   UnityEngine_Transform_o *v3; // x0
   __int64 v4; // x1
   UnityEngine_Transform_o *v5; // x20
-  float v6; // s8
+  unsigned int localPosition; // s8
   float OFFSET_FIGURE_Y; // s10
-  float v8; // s9
-  float y; // s1
+  float y; // s9
+  float v9; // s1
+  float v10; // s0
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = (UnityEngine_Transform_o *)((__int64 (__fastcall *)(UIScriptFigure_o *, const MethodInfo *))this->klass->vtable._8_GetBody.methodPtr)(
@@ -434,25 +436,35 @@ UnityEngine_Vector3_o UIScriptFigure__GetOffsetEdgeBlur(UIScriptFigure_o *this, 
   if ( !v3 )
     sub_2213CDC(0, v4);
   v5 = v3;
-  LODWORD(v6) = (unsigned int)UnityEngine_Transform__get_localPosition(v3, 0);
-  y = UnityEngine_Transform__get_localPosition(v5, 0).fields.y;
+  localPosition = (unsigned int)UnityEngine_Transform__get_localPosition(v3, 0);
+  v11 = UnityEngine_Transform__get_localPosition(v5, 0);
   OFFSET_FIGURE_Y = this->fields.OFFSET_FIGURE_Y;
-  v8 = y;
-  result.fields.z = UnityEngine_Transform__get_localPosition(v5, 0).fields.z;
-  result.fields.y = v8 + OFFSET_FIGURE_Y;
-  result.fields.x = v6;
+  y = v11.fields.y;
+  result = UnityEngine_Transform__get_localPosition(v5, 0);
+  v9 = y + OFFSET_FIGURE_Y;
+  v10 = *(float *)&localPosition;
+  result.fields.y = v9;
+  result.fields.x = v10;
   return result;
 }
 
 
 UnityEngine_Rect_o UIScriptFigure__GetRectEdgeBlur(UIScriptFigure_o *this, const MethodInfo *method)
 {
+  float v2; // s0
+  float v3; // s2
+  float v4; // s3
+  float v5; // s1
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = 0.0;
-  result.fields.m_Width = 1.0;
-  result.fields.m_Height = 1.0;
-  result.fields.m_YMin = 0.25195;
+  v2 = 0.0;
+  v3 = 1.0;
+  v4 = 1.0;
+  v5 = 0.25195;
+  result.fields.m_Height = v4;
+  result.fields.m_Width = v3;
+  result.fields.m_YMin = v5;
+  result.fields.m_XMin = v2;
   return result;
 }
 
@@ -637,8 +649,8 @@ void UIScriptFigure__SetDepth(UIScriptFigure_o *this, int32_t d, const MethodInf
   __int64 mainIndex; // x9
   UIScriptFigure_o *v5; // x21
   UIStandFigureRender_o *v7; // x19
-  UnityEngine_Vector3_o v9; // 0:kr14_12.12
-  unsigned __int64 localPosition; // 0:s0.4,4:s1.4
+  float v8; // s2
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   standFigureList = this->fields.standFigureList;
   if ( !standFigureList )
@@ -650,11 +662,10 @@ void UIScriptFigure__SetDepth(UIScriptFigure_o *this, int32_t d, const MethodInf
   this = (UIScriptFigure_o *)this->fields.baseDepth;
   if ( !this
     || (v7 = (UIStandFigureRender_o *)standFigureList->m_Items[mainIndex],
-        localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
+        localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
         (this = (UIScriptFigure_o *)v5->fields.baseDepth) == 0)
-    || (*(_QWORD *)&v9.fields.x = localPosition,
-        v9.fields.z = (float)-d * 10.0,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v9, 0),
+    || (v8 = (float)-d * 10.0,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, localPosition, 0),
         !v7) )
   {
 LABEL_7:

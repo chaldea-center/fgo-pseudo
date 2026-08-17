@@ -2315,13 +2315,17 @@ UnityEngine_Vector2_o RubyLabelHelper__get_Size(RubyLabelHelper_o *this, const M
 {
   UILabel_o *messageLabel; // x0
   UnityEngine_Vector2_o printedSize; // kr00_8
+  float v5; // s0
+  float v6; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
     sub_2213CDC(0, method);
   printedSize = UILabel__get_printedSize(messageLabel, 0);
-  result.fields.x = printedSize.fields.x + this->fields.addSize.fields.x;
-  result.fields.y = printedSize.fields.y + this->fields.addSize.fields.y;
+  v5 = printedSize.fields.x + this->fields.addSize.fields.x;
+  v6 = printedSize.fields.y + this->fields.addSize.fields.y;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }

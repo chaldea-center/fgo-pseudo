@@ -387,7 +387,7 @@ void ExRoomQuestComponent__CheckQuestPlayable(
   System_Collections_Generic_List_Enumerator_object__o v321; // [xsp+D0h] [xbp-90h] BYREF
   UserItemEntity_o *entity; // [xsp+E8h] [xbp-78h] BYREF
   UserItemEntity_o *v323; // [xsp+F0h] [xbp-70h] BYREF
-  __int64 servantEquipSum; // [xsp+F8h] [xbp-68h] BYREF
+  int32_t servantEquipSum[2]; // [xsp+F8h] [xbp-68h] BYREF
 
   if ( (byte_596AE2F & 1) == 0 )
   {
@@ -464,7 +464,7 @@ void ExRoomQuestComponent__CheckQuestPlayable(
     byte_596AE2F = 1;
   }
   v323 = 0;
-  servantEquipSum = 0;
+  *(_QWORD *)servantEquipSum = 0;
   entity = 0;
   memset(&v321, 0, sizeof(v321));
   v7 = sub_2213CCC(ExRoomQuestComponent___c__DisplayClass20_0_TypeInfo);
@@ -737,12 +737,7 @@ LABEL_261:
                                                  (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !ActConsumeCost )
       goto LABEL_258;
-    UserServantMaster__getCount(
-      (UserServantMaster_o *)ActConsumeCost,
-      (int32_t *)&servantEquipSum + 1,
-      (int32_t *)&servantEquipSum,
-      1,
-      0);
+    UserServantMaster__getCount((UserServantMaster_o *)ActConsumeCost, &servantEquipSum[1], servantEquipSum, 1, 0);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
                           (const MethodInfo_385636C *)Method_DataManager_GetMasterData_UserCommandCodeMaster___);
@@ -760,7 +755,7 @@ LABEL_261:
     {
       if ( !v108 )
         goto LABEL_258;
-      v130 = HIDWORD(servantEquipSum);
+      v130 = servantEquipSum[1];
       svtKeep = v108->fields.svtKeep;
       v132 = *v319;
       v133 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_2213CCC(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
@@ -784,7 +779,7 @@ LABEL_89:
     {
       if ( !v108 )
         goto LABEL_258;
-      v138 = servantEquipSum;
+      v138 = servantEquipSum[0];
       svtEquipKeep = v108->fields.svtEquipKeep;
       v140 = *v319;
       v133 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_2213CCC(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);

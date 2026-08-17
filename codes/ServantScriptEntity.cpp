@@ -795,7 +795,7 @@ LABEL_37:
 UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o *this, const MethodInfo *method)
 {
   struct System_Collections_Generic_Dictionary_string__object__o *extendData; // x21
-  UnityEngine_Vector2Int_o s_Zero; // x19
+  unsigned __int64 s_Zero; // x19
   ServantScriptEntity_c *v5; // x0
   __int64 v6; // x1
   ServantScriptEntity_c *v7; // x0
@@ -807,10 +807,10 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
   Il2CppObject *v13; // x0
   unsigned __int64 v14; // x0
   int size; // w8
-  __int64 v16; // x1
-  Il2CppObject *v17; // x19
-  __int64 v18; // x1
-  Il2CppObject *v19; // x0
+  __int64 v17; // x1
+  Il2CppObject *v18; // x19
+  __int64 v19; // x1
+  Il2CppObject *v20; // x0
 
   if ( (byte_59712CD & 1) == 0 )
   {
@@ -829,7 +829,7 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
     byte_597137B = 1;
   }
   extendData = this->fields.extendData;
-  s_Zero = UnityEngine_Vector2Int_TypeInfo->static_fields->s_Zero;
+  s_Zero = (unsigned __int64)UnityEngine_Vector2Int_TypeInfo->static_fields->s_Zero;
   if ( extendData )
   {
     v5 = ServantScriptEntity_TypeInfo;
@@ -864,32 +864,32 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
         {
           if ( size >= 2 )
           {
-            s_Zero = (UnityEngine_Vector2Int_o)System_Collections_Generic_List_object___get_Item(
-                                                 Item,
-                                                 0,
-                                                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_object__get_Item__);
+            s_Zero = (unsigned __int64)System_Collections_Generic_List_object___get_Item(
+                                         Item,
+                                         0,
+                                         (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_object__get_Item__);
             if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v18);
-            s_Zero.fields.m_X = System_Convert__ToInt32(*(Il2CppObject **)&s_Zero, 0);
-            v19 = System_Collections_Generic_List_object___get_Item(
+              j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v19);
+            LODWORD(s_Zero) = System_Convert__ToInt32((Il2CppObject *)s_Zero, 0);
+            v20 = System_Collections_Generic_List_object___get_Item(
                     v11,
                     1,
                     (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_object__get_Item__);
-            v14 = System_Convert__ToInt32(v19, 0);
+            v14 = System_Convert__ToInt32(v20, 0);
           }
           else
           {
-            v14 = HIDWORD(*(unsigned __int64 *)&s_Zero);
+            v14 = HIDWORD(s_Zero);
           }
-          return (UnityEngine_Vector2Int_o)((unsigned int)s_Zero.fields.m_X | (v14 << 32));
+          return (UnityEngine_Vector2Int_o)((unsigned int)s_Zero | (v14 << 32));
         }
-        v17 = System_Collections_Generic_List_object___get_Item(
+        v18 = System_Collections_Generic_List_object___get_Item(
                 Item,
                 0,
                 (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_object__get_Item__);
         if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v16);
-        v13 = v17;
+          j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, v17);
+        v13 = v18;
       }
       else
       {
@@ -898,11 +898,11 @@ UnityEngine_Vector2Int_o ServantScriptEntity__getFaceSize(ServantScriptEntity_o 
         v13 = (Il2CppObject *)v11;
       }
       v14 = System_Convert__ToInt32(v13, 0);
-      s_Zero.fields.m_X = v14;
-      return (UnityEngine_Vector2Int_o)((unsigned int)s_Zero.fields.m_X | (v14 << 32));
+      LODWORD(s_Zero) = v14;
+      return (UnityEngine_Vector2Int_o)((unsigned int)s_Zero | (v14 << 32));
     }
   }
-  return s_Zero;
+  return (UnityEngine_Vector2Int_o)s_Zero;
 }
 
 
@@ -971,6 +971,8 @@ UnityEngine_Vector2_o ServantScriptEntity__getOffset(
   __int64 v10; // x8
   struct System_Int32_array *grandSelectOffset; // x8
   int32_t v12; // w12
+  float v13; // s0
+  float v14; // s1
   Il2CppObject *v15; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+10h] [xbp-30h] BYREF
   Il2CppObject *v17; // [xsp+18h] [xbp-28h] BYREF
@@ -1115,8 +1117,10 @@ LABEL_28:
   klass = *(_DWORD *)((char *)&v17->klass + v10);
   offsetYMyroom = *(_DWORD *)((char *)&v17->klass + v9);
 LABEL_43:
-  result.fields.x = (float)klass;
-  result.fields.y = (float)offsetYMyroom;
+  v13 = (float)klass;
+  v14 = (float)offsetYMyroom;
+  result.fields.y = v14;
+  result.fields.x = v13;
   return result;
 }
 

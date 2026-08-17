@@ -232,6 +232,9 @@ UnityEngine_Vector3_o TitleInfoEventUIComponent__GetPosition(
   int32_t x; // w20
   EventUiEntity_c *v5; // x0
   float EVNET_UI_POSITION_MAGNIFICATION; // s3
+  float v7; // s0
+  float v8; // s1
+  float v9; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F319 & 1) == 0 )
@@ -249,9 +252,12 @@ UnityEngine_Vector3_o TitleInfoEventUIComponent__GetPosition(
     v5 = EventUiEntity_TypeInfo;
   }
   EVNET_UI_POSITION_MAGNIFICATION = v5->static_fields->EVNET_UI_POSITION_MAGNIFICATION;
-  result.fields.x = EVNET_UI_POSITION_MAGNIFICATION * (float)x;
-  result.fields.y = -(float)(EVNET_UI_POSITION_MAGNIFICATION * (float)entity->fields.y);
-  result.fields.z = 0.0;
+  v7 = EVNET_UI_POSITION_MAGNIFICATION * (float)x;
+  v8 = -(float)(EVNET_UI_POSITION_MAGNIFICATION * (float)entity->fields.y);
+  v9 = 0.0;
+  result.fields.z = v9;
+  result.fields.y = v8;
+  result.fields.x = v7;
   return result;
 }
 
@@ -1445,6 +1451,7 @@ bool TitleInfoEventUIComponent__LoadAssetBundle_d__16__MoveNext(
   __int64 v30; // x2
   struct TitleInfoEventUIComponent___c__DisplayClass16_0_o *_8__1; // x8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   v8 = this;
   if ( (byte_596F324 & 1) == 0 )
@@ -1508,8 +1515,9 @@ LABEL_12:
         v8->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
         sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
       goto LABEL_15;
     }

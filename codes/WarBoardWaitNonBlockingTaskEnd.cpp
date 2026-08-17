@@ -3,6 +3,7 @@ System_Collections_IEnumerator_o *WarBoardWaitNonBlockingTaskEnd__Execute(
         const MethodInfo *method)
 {
   __int64 v2; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596E3CA & 1) == 0 )
   {
@@ -11,8 +12,9 @@ System_Collections_IEnumerator_o *WarBoardWaitNonBlockingTaskEnd__Execute(
   }
   v2 = sub_2213CCC(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
+  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  return result;
 }
 
 

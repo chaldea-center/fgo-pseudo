@@ -225,6 +225,7 @@ void GeoLocation__GetLocation(
 System_Collections_IEnumerator_o *GeoLocation__GetLocationCoroutine(const MethodInfo *method)
 {
   __int64 v1; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596FEC0 & 1) == 0 )
   {
@@ -233,8 +234,9 @@ System_Collections_IEnumerator_o *GeoLocation__GetLocationCoroutine(const Method
   }
   v1 = sub_2213CCC(GeoLocation__GetLocationCoroutine_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0);
+  result = (System_Collections_IEnumerator_o *)v1;
   *(_DWORD *)(v1 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v1;
+  return result;
 }
 
 
@@ -318,7 +320,7 @@ System_IAsyncResult_o *GeoLocation_LocationDelegate__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(GeoLocation_ResultState_TypeInfo, &v12);
   v11[1] = j_il2cpp_value_box_0(UnityEngine_LocationInfo_TypeInfo, locInfo);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

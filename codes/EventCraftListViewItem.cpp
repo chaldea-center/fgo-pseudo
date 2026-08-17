@@ -391,6 +391,7 @@ bool EventCraftListViewItem__SetSortValue(
   const MethodInfo *v9; // x1
   int64_t v10; // x8
   struct EventTradeInfo_o *v11; // x8
+  bool result; // w0
 
   TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField;
   *(_WORD *)&this->fields.isTermination = 0;
@@ -434,8 +435,9 @@ LABEL_9:
   else
     v10 = 4;
 LABEL_18:
+  result = 1;
   this->fields.sortValue0 = v10;
-  return 1;
+  return result;
 }
 
 

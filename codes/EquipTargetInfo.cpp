@@ -393,14 +393,10 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o EquipTargetInfo__GetFriendPoin
   const MethodInfo *v7; // x1
   System_Int32_array *SkillIdList; // x20
   const MethodInfo *v9; // x1
-  __int64 v10; // x1
+  __int128 v10; // x0
   System_Int32_array *SkillLevelList; // x21
   unsigned __int64 i; // x23
-  BalanceConfig_c *v13; // x0
-  SkillLvEntity_o *Entity; // x0
-  System_Nullable_ValueTuple_FuncList_TYPE__int___o result; // 0:x0.12
-  System_Nullable_ValueTuple_FuncList_TYPE__int___o FriendPointUpTypeVal; // 0:kr00_12.12
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
   if ( (byte_597035A & 1) == 0 )
   {
@@ -415,9 +411,9 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o EquipTargetInfo__GetFriendPoin
   v4 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-  *(_QWORD *)&v18.fields.currentCryptoKey = v3;
-  *(_QWORD *)&v18.fields.fakeValue = v4;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v18, 0) >= 1 )
+  *(_QWORD *)&v14.fields.currentCryptoKey = v3;
+  *(_QWORD *)&v14.fields.fakeValue = v4;
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v14, 0) >= 1 )
   {
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v5);
@@ -426,47 +422,48 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o EquipTargetInfo__GetFriendPoin
     SkillLevelList = EquipTargetInfo__getSkillLevelList(this, v9);
     for ( i = 0; ; ++i )
     {
-      v13 = BalanceConfig_TypeInfo;
+      *(_QWORD *)&v10 = BalanceConfig_TypeInfo;
       if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v10);
-        v13 = BalanceConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, *((_QWORD *)&v10 + 1));
+        *(_QWORD *)&v10 = BalanceConfig_TypeInfo;
       }
-      if ( (__int64)i >= v13->static_fields->SvtEquipSkillListMax )
+      if ( (__int64)i >= *(int *)(*(_QWORD *)(v10 + 184) + 56LL) )
         break;
       if ( !SkillIdList )
         goto LABEL_23;
       if ( i >= LODWORD(SkillIdList->max_length) )
         goto LABEL_24;
-      v10 = (unsigned int)SkillIdList->m_Items[i];
-      if ( (int)v10 >= 1 )
+      *((_QWORD *)&v10 + 1) = (unsigned int)SkillIdList->m_Items[i];
+      if ( SDWORD2(v10) >= 1 )
       {
         if ( !SkillLevelList )
           goto LABEL_23;
         if ( i >= LODWORD(SkillLevelList->max_length) )
 LABEL_24:
-          sub_2213CE4(v13);
+          sub_2213CE4(v10);
         if ( !Master_object )
 LABEL_23:
-          sub_2213CDC(v13, v10);
-        Entity = SkillLvMaster__GetEntity((SkillLvMaster_o *)Master_object, v10, SkillLevelList->m_Items[i], 0);
-        if ( Entity )
+          sub_2213CDC(v10, *((_QWORD *)&v10 + 1));
+        *(_QWORD *)&v10 = SkillLvMaster__GetEntity(
+                            (SkillLvMaster_o *)Master_object,
+                            SDWORD2(v10),
+                            SkillLevelList->m_Items[i],
+                            0);
+        if ( (_QWORD)v10 )
         {
-          FriendPointUpTypeVal = SkillLvEntity__GetFriendPointUpTypeVal(Entity, 0);
-          result.fields.hasValue = FriendPointUpTypeVal.fields.hasValue;
-          result.fields.value.fields.Item1 = FriendPointUpTypeVal.fields.value.fields.Item1;
-          LODWORD(v10) = FriendPointUpTypeVal.fields.value.fields.Item2;
-          if ( FriendPointUpTypeVal.fields.hasValue )
-            goto LABEL_25;
+          *(System_Nullable_ValueTuple_FuncList_TYPE__int___o *)&v10 = SkillLvEntity__GetFriendPointUpTypeVal(
+                                                                         (SkillLvEntity_o *)v10,
+                                                                         0);
+          if ( (_BYTE)v10 )
+            return (System_Nullable_ValueTuple_FuncList_TYPE__int___o)v10;
         }
       }
     }
   }
-  *(_QWORD *)&result.fields.hasValue = 0;
-  LODWORD(v10) = 0;
-LABEL_25:
-  result.fields.value.fields.Item2 = v10;
-  return result;
+  *(_QWORD *)&v10 = 0;
+  DWORD2(v10) = 0;
+  return (System_Nullable_ValueTuple_FuncList_TYPE__int___o)v10;
 }
 
 

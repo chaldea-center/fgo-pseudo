@@ -371,9 +371,11 @@ void ServantStatusCharaGraphListViewIndicator__SetPageMax(
   const MethodInfo *v7; // x3
   struct UISprite_array *pageSpriteList; // x8
   int max_length; // w8
-  float v10; // s10
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s8
+  float z; // s9
+  float v12; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = max;
   ServantStatusCharaGraphListViewIndicator__SetupPageSprites(this, max, method);
@@ -385,22 +387,28 @@ void ServantStatusCharaGraphListViewIndicator__SetPageMax(
   max_length = pageSpriteList->max_length;
   if ( v3 >= max_length )
     v3 = max_length;
-  if ( (ServantStatusCharaGraphListViewIndicator__UpdatePageSpriteState(this, v3, -1, v7),
-        (pageBaseObject = this->fields.pageBaseObject) == 0)
-    || (pageBaseObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(pageBaseObject, 0)) == 0
-    || ((localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)pageBaseObject, 0), v3 < 1)
-      ? (v10 = 0.0)
-      : (v10 = (float)(this->fields.defaultPageSpriteStepX * -0.5) * (float)(v3 - 1)),
-        (pageBaseObject = this->fields.pageBaseObject) == 0
-     || (pageBaseObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(pageBaseObject, 0)) == 0) )
+  ServantStatusCharaGraphListViewIndicator__UpdatePageSpriteState(this, v3, -1, v7);
+  pageBaseObject = this->fields.pageBaseObject;
+  if ( !pageBaseObject )
+    goto LABEL_12;
+  pageBaseObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(pageBaseObject, 0);
+  if ( !pageBaseObject )
+    goto LABEL_12;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)pageBaseObject, 0);
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
+  v12 = v3 < 1 ? 0.0 : (float)(this->fields.defaultPageSpriteStepX * -0.5) * (float)(v3 - 1);
+  pageBaseObject = this->fields.pageBaseObject;
+  if ( !pageBaseObject
+    || (pageBaseObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(pageBaseObject, 0)) == 0 )
   {
 LABEL_12:
     sub_2213CDC(pageBaseObject, v6);
   }
-  v12.fields.y = localPosition.fields.y;
-  v12.fields.z = localPosition.fields.z;
-  v12.fields.x = v10;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)pageBaseObject, v12, 0);
+  v14.fields.y = y;
+  v14.fields.z = z;
+  v14.fields.x = v12;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)pageBaseObject, v14, 0);
 }
 
 
@@ -429,39 +437,42 @@ void ServantStatusCharaGraphListViewIndicator__SetupPageSprites(
   unsigned __int64 v20; // x28
   __int64 v21; // x24
   __int64 v22; // x1
+  float x; // s8
+  float y; // s9
+  float z; // s10
   float defaultPageSpriteStepX; // s14
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float x; // s11
-  float y; // s12
-  float z; // s13
-  System_String_o *v28; // x2
-  System_String_o *v29; // x3
-  int32_t v30; // w4
-  int32_t v31; // w5
-  bool v32; // w6
-  bool v33; // w7
-  float v34; // s11
-  float v35; // s12
-  float v36; // s13
-  ServantStatusCharaGraphListViewIndicator_o *v37; // x24
+  float v28; // s11
+  float v29; // s12
+  float v30; // s13
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
+  float v37; // s11
+  float v38; // s12
+  float v39; // s13
+  ServantStatusCharaGraphListViewIndicator_o *v40; // x24
   Il2CppObject *pageSprite; // x25
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
-  __int64 v45; // x26
-  UnityEngine_Component_o *v46; // x25
-  ServantStatusCharaGraphListViewIndicator_o *v47; // x25
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
+  int32_t v45; // w5
+  bool v46; // w6
+  bool v47; // w7
+  __int64 v48; // x26
+  UnityEngine_Component_o *v49; // x25
+  ServantStatusCharaGraphListViewIndicator_o *v50; // x25
   UnityEngine_Object_o *gameObject; // x25
   System_String_o *name; // x26
-  System_String_o *v50; // x0
-  __int64 v51; // x0
+  System_String_o *v53; // x0
+  __int64 v54; // x0
   int32_t max_length; // [xsp+Ch] [xbp-94h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
@@ -509,8 +520,8 @@ void ServantStatusCharaGraphListViewIndicator__SetupPageSprites(
           if ( !this )
           {
 LABEL_39:
-            v51 = sub_2213D00(this, v22);
-            sub_2213BA0(v51, 0);
+            v54 = sub_2213D00(this, v22);
+            sub_2213BA0(v54, 0);
           }
         }
         if ( v20 >= v15[6] )
@@ -535,6 +546,9 @@ LABEL_38:
     if ( !this )
       goto LABEL_15;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+    x = localPosition.fields.x;
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
     if ( !byte_5969AE7 )
     {
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
@@ -544,9 +558,9 @@ LABEL_38:
     if ( !this
       || (defaultPageSpriteStepX = v4->fields.defaultPageSpriteStepX,
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields,
-          x = static_fields->rightVector.fields.x,
-          y = static_fields->rightVector.fields.y,
-          z = static_fields->rightVector.fields.z,
+          v28 = static_fields->rightVector.fields.x,
+          v29 = static_fields->rightVector.fields.y,
+          v30 = static_fields->rightVector.fields.z,
           this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_Component__get_transform(
                                                                  (UnityEngine_Component_o *)this,
                                                                  0),
@@ -558,61 +572,61 @@ LABEL_15:
     max_length = (*p_pageSpriteList)->max_length;
     if ( max_length < count )
     {
-      v34 = x * defaultPageSpriteStepX;
-      v35 = y * defaultPageSpriteStepX;
-      v36 = z * defaultPageSpriteStepX;
-      v37 = this;
+      v37 = v28 * defaultPageSpriteStepX;
+      v38 = v29 * defaultPageSpriteStepX;
+      v39 = v30 * defaultPageSpriteStepX;
+      v40 = this;
       do
       {
         pageSprite = (Il2CppObject *)v4->fields.pageSprite;
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&count, v28);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, *(_QWORD *)&count, v31);
         this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_Object__Instantiate_object_(
                                                                pageSprite,
                                                                (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_UISprite___);
         if ( !v15 )
           goto LABEL_15;
-        v45 = max_length;
-        v46 = (UnityEngine_Component_o *)this;
+        v48 = max_length;
+        v49 = (UnityEngine_Component_o *)this;
         if ( this )
         {
           this = (ServantStatusCharaGraphListViewIndicator_o *)sub_2213BB4(this, *(_QWORD *)(*(_QWORD *)v15 + 64LL));
           if ( !this )
             goto LABEL_39;
         }
-        if ( (unsigned int)v45 >= v15[6] )
+        if ( (unsigned int)v48 >= v15[6] )
           goto LABEL_38;
-        *(_QWORD *)&v15[2 * v45 + 8] = v46;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)&p_leftObject[v45], (int32_t)v46, v39, v40, v41, v42, v43, v44);
-        if ( !v46 )
+        *(_QWORD *)&v15[2 * v48 + 8] = v49;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&p_leftObject[v48], (int32_t)v49, v42, v43, v44, v45, v46, v47);
+        if ( !v49 )
           goto LABEL_15;
-        this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_Component__get_transform(v46, 0);
+        this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_Component__get_transform(v49, 0);
         if ( !this )
           goto LABEL_15;
-        v47 = this;
+        v50 = this;
         UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)this, transform, 0);
-        if ( !v37 )
+        if ( !v40 )
           goto LABEL_15;
-        localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v37, 0);
-        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v47, localScale, 0);
-        localRotation = UnityEngine_Transform__get_localRotation((UnityEngine_Transform_o *)v37, 0);
-        UnityEngine_Transform__set_localRotation((UnityEngine_Transform_o *)v47, localRotation, 0);
-        v54.fields.x = localPosition.fields.x + (float)(v34 * (float)max_length);
-        v54.fields.y = localPosition.fields.y + (float)(v35 * (float)max_length);
-        v54.fields.z = localPosition.fields.z + (float)(v36 * (float)max_length);
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v47, v54, 0);
-        gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v47, 0);
+        localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v40, 0);
+        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v50, localScale, 0);
+        localRotation = UnityEngine_Transform__get_localRotation((UnityEngine_Transform_o *)v40, 0);
+        UnityEngine_Transform__set_localRotation((UnityEngine_Transform_o *)v50, localRotation, 0);
+        v58.fields.x = x + (float)(v37 * (float)max_length);
+        v58.fields.y = y + (float)(v38 * (float)max_length);
+        v58.fields.z = z + (float)(v39 * (float)max_length);
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v50, v58, 0);
+        gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v50, 0);
         this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_Component__get_gameObject(
-                                                               (UnityEngine_Component_o *)v37,
+                                                               (UnityEngine_Component_o *)v40,
                                                                0);
         if ( !this )
           goto LABEL_15;
         name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-        v50 = System_Int32__ToString((int32_t)&max_length, 0);
+        v53 = System_Int32__ToString((int32_t)&max_length, 0);
         this = (ServantStatusCharaGraphListViewIndicator_o *)System_String__Concat_75694928(
                                                                name,
                                                                (System_String_o *)StringLiteral_16746/*"_"*/,
-                                                               v50,
+                                                               v53,
                                                                0);
         if ( !gameObject )
           goto LABEL_15;
@@ -624,12 +638,12 @@ LABEL_15:
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v4->fields.pageSpriteList,
       (int32_t)v15,
-      v28,
-      v29,
-      v30,
       v31,
       v32,
-      v33);
+      v33,
+      v34,
+      v35,
+      v36);
   }
 }
 

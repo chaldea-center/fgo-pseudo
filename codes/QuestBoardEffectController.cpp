@@ -2449,8 +2449,8 @@ bool QuestBoardEffectController__ScrollBarDisabled_d__33__MoveNext(
           this = (QuestBoardEffectController__ScrollBarDisabled_d__33_o *)questBoardListViewManager->fields.scrollView;
           if ( this )
           {
-            *((_QWORD *)this + 8) = 0;
-            sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 64), 0, v2, v3, v4, v5, v6, v7);
+            this[1].monitor = 0;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[1].monitor, 0, v2, v3, v4, v5, v6, v7);
             return _1__state == 0;
           }
         }
@@ -2898,7 +2898,7 @@ void QuestBoardEffectController___c__DisplayClass37_0___SetBgmParameter_b__1(
   if ( !questBoardListEffectComponent )
     goto LABEL_12;
   bgmFadeInTime = questBoardListEffectComponent->fields.bgmFadeInTime;
-  v9 = **((float **)this + 23);
+  v9 = *(float *)&this[5].fields.questBoardListEffectComponent->klass;
   if ( !*(&SoundManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo, method, v2);
   SoundManager__playBgm_48506880(mPlayBgmName, v9, bgmFadeInTime, 0);

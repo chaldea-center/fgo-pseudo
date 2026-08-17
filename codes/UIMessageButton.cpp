@@ -377,7 +377,7 @@ void UIMessageButton__UpdateColor(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v19; // x1
   UnityEngine_Object_o *v20; // x24
-  UnityEngine_Color_o defaultColor; // 0:kr00_16.16
+  UnityEngine_Color_o defaultColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v23; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 

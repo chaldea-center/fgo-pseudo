@@ -836,7 +836,7 @@ System_IAsyncResult_o *WaveBattleSelectWaveConfirmDialog_CloseDelegate__BeginInv
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -959,11 +959,11 @@ void WaveBattleSelectWaveConfirmDialog___c__DisplayClass33_1___OnClickResumeSele
       {
         WaveBattleSelectWaveConfirmDialog__Open(
           (WaveBattleSelectWaveConfirmDialog_o *)this,
-          *((_DWORD *)this + 44),
-          *((_DWORD *)this + 46),
-          *((_DWORD *)this + 47),
-          *((_DWORD *)this + 48),
-          *((WaveBattleSelectWaveConfirmDialog_CloseDelegate_o **)this + 29),
+          *(_DWORD *)&this[5].fields.isDecide,
+          (int32_t)this[5].fields.CS___8__locals1,
+          HIDWORD(this[5].fields.CS___8__locals1),
+          (int32_t)this[6].klass,
+          (WaveBattleSelectWaveConfirmDialog_CloseDelegate_o *)this[7].monitor,
           v6);
         return;
       }

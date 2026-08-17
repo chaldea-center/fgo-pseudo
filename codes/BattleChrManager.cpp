@@ -229,7 +229,7 @@ LABEL_67:
                       if ( v29 + 2 >= v34 )
                         goto LABEL_68;
                       v36 = (System_String_o *)*((_QWORD *)&v18->fields.mayaPrefab + v29);
-                      v37 = **((float **)this + 23);
+                      v37 = *(float *)&this[3].fields.mayaPrefab->klass;
                       v38 = (System_String_o *)*((_QWORD *)&v18[1].klass + v29);
                       v39 = (UnityEngine_AnimationEvent_o *)sub_2213CCC(UnityEngine_AnimationEvent_TypeInfo);
                       UnityEngine_AnimationEvent___ctor(v39, 0);
@@ -291,7 +291,7 @@ LABEL_67:
                         if ( v45 + 2 >= v50 )
                           break;
                         v52 = (System_String_o *)*((_QWORD *)&v18->fields.mayaPrefab + v45);
-                        v53 = **((float **)this + 23);
+                        v53 = *(float *)&this[3].fields.mayaPrefab->klass;
                         v54 = (System_String_o *)*((_QWORD *)&v18[1].klass + v45);
                         v55 = (UnityEngine_AnimationEvent_o *)sub_2213CCC(UnityEngine_AnimationEvent_TypeInfo);
                         UnityEngine_AnimationEvent___ctor(v55, 0);
@@ -619,18 +619,19 @@ void BattleChrManager__Start(BattleChrManager_o *this, const MethodInfo *method)
   __int64 v21; // x1
   __int64 v22; // x2
   Il2CppType *v23; // x20
+  System_RuntimeTypeHandle_o v24; // x0
   System_Type_o *TypeFromHandle; // x0
   UnityEngine_Object_o *_83400868; // x0
-  System_String_o *v26; // x3
-  const MethodInfo *v27; // x5
+  System_String_o *v27; // x3
+  const MethodInfo *v28; // x5
   __int64 naturalAligment; // x10
-  UnityEngine_TextAsset_o *v29; // x2
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_TextAsset_o *v30; // x2
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Quaternion_o v35; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v36; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_596FB2C & 1) == 0 )
   {
@@ -664,17 +665,17 @@ void BattleChrManager__Start(BattleChrManager_o *this, const MethodInfo *method)
   w = v9->identityQuaternion.fields.w;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
-  v30.fields.x = x;
-  v30.fields.y = y;
-  v30.fields.z = z;
-  v35.fields.x = v10;
-  v35.fields.y = v11;
-  v35.fields.z = v12;
-  v35.fields.w = w;
+  v31.fields.x = x;
+  v31.fields.y = y;
+  v31.fields.z = z;
+  v36.fields.x = v10;
+  v36.fields.y = v11;
+  v36.fields.z = v12;
+  v36.fields.w = w;
   transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59717424(
                                             mayaPrefab,
-                                            v30,
-                                            v35,
+                                            v31,
+                                            v36,
                                             (const MethodInfo_38F3730 *)Method_UnityEngine_Object_Instantiate_GameObject____91801600);
   if ( !transform )
     goto LABEL_23;
@@ -687,47 +688,48 @@ void BattleChrManager__Start(BattleChrManager_o *this, const MethodInfo *method)
   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v16, 0);
   if ( !transform )
     goto LABEL_23;
-  v31.fields.x = -30.677;
-  v31.fields.y = 0.35516;
-  v31.fields.z = -1703.9;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v31, 0);
+  v32.fields.x = -30.677;
+  v32.fields.y = 0.35516;
+  v32.fields.z = -1703.9;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v32, 0);
   v17 = UnityEngine_GameObject__get_transform(v16, 0);
-  v32.fields.x = 0.0;
-  v32.fields.z = 0.0;
-  v32.fields.y = 4.7124;
+  v33.fields.x = 0.0;
+  v33.fields.z = 0.0;
+  v33.fields.y = 4.7124;
   v18 = v17;
-  v34 = UnityEngine_Quaternion__Internal_FromEulerRad(v32, 0);
+  v35 = UnityEngine_Quaternion__Internal_FromEulerRad(v33, 0);
   if ( !v18
-    || (UnityEngine_Transform__set_localRotation(v18, v34, 0),
+    || (UnityEngine_Transform__set_localRotation(v18, v35, 0),
         (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v16, 0)) == 0) )
   {
 LABEL_23:
     sub_2213CDC(transform, v15);
   }
-  v33.fields.x = 20.0;
-  v33.fields.y = 20.0;
-  v33.fields.z = 20.0;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v33, 0);
+  v34.fields.x = 20.0;
+  v34.fields.y = 20.0;
+  v34.fields.z = 20.0;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v34, 0);
   BattleChrManager__SetEvolutionLevel(v19, v16, 2, v20);
   v23 = UnityEngine_TextAsset_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v21, v22);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v23, 0);
+  v24.fields.value = (intptr_t)v23;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v24, 0);
   _83400868 = UnityEngine_Resources__Load_83400868((System_String_o *)StringLiteral_9349/*"Maya/fbxevent_arthur"*/, TypeFromHandle, 0);
   if ( _83400868
     && (naturalAligment = UnityEngine_TextAsset_TypeInfo->_2.naturalAligment,
         _83400868->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
   {
     if ( (UnityEngine_TextAsset_c *)_83400868->klass->_2.typeHierarchy[naturalAligment - 1] == UnityEngine_TextAsset_TypeInfo )
-      v29 = (UnityEngine_TextAsset_o *)_83400868;
+      v30 = (UnityEngine_TextAsset_o *)_83400868;
     else
-      v29 = 0;
+      v30 = 0;
   }
   else
   {
-    v29 = 0;
+    v30 = 0;
   }
-  BattleChrManager__AttachAnimationEvents((BattleChrManager_o *)_83400868, v16, v29, v26, 1, v27);
+  BattleChrManager__AttachAnimationEvents((BattleChrManager_o *)_83400868, v16, v30, v27, 1, v28);
 }
 
 

@@ -1332,8 +1332,11 @@ void ClassBoardLine__Setup(ClassBoardLine_o *this, IClassBoardLineModel_o *setLi
   float lineLength; // s8
   UnityEngine_Transform_o *v117; // x20
   float y; // s9
-  int v119; // [xsp+1Ch] [xbp-44h] BYREF
-  UnityEngine_Vector3_o v120; // 0:s0.4,4:s1.4,8:s2.4
+  float v119; // s0
+  float v120; // s1
+  int v121; // [xsp+1Ch] [xbp-44h] BYREF
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v123; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59746BF & 1) == 0 )
   {
@@ -1346,7 +1349,7 @@ void ClassBoardLine__Setup(ClassBoardLine_o *this, IClassBoardLineModel_o *setLi
     sub_2213A60(&StringLiteral_16746/*"_"*/);
     byte_59746BF = 1;
   }
-  v119 = 0;
+  v121 = 0;
   this->fields._LineModel_k__BackingField = setLineModel;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields._LineModel_k__BackingField,
@@ -1420,8 +1423,8 @@ LABEL_12:
 LABEL_19:
     v35 = sub_224BC3C(name, IClassBoardSquareModel_TypeInfo, 0);
   }
-  v119 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
-  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v119, 0);
+  v121 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v35)(v32, *(_QWORD *)(v35 + 8));
+  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v121, 0);
   if ( LODWORD(v13[1].klass) <= 2
     || (v13[2].klass = (UnityEngine_Object_c *)name,
         sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13[2], (int32_t)name, v36, v37, v38, v39, v40, v41),
@@ -1478,8 +1481,8 @@ LABEL_64:
 LABEL_34:
     v57 = sub_224BC3C(name, IClassBoardSquareModel_TypeInfo, 0);
   }
-  v119 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v57)(v54, *(_QWORD *)(v57 + 8));
-  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v119, 0);
+  v121 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v57)(v54, *(_QWORD *)(v57 + 8));
+  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v121, 0);
   if ( LODWORD(v13[1].klass) <= 4 )
     goto LABEL_65;
   v13[2].fields.m_CachedPtr = (intptr_t)name;
@@ -1533,8 +1536,8 @@ LABEL_42:
 LABEL_49:
     v79 = sub_224BC3C(name, IClassBoardSquareModel_TypeInfo, 1);
   }
-  v119 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v79)(v76, *(_QWORD *)(v79 + 8));
-  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v119, 0);
+  v121 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v79)(v76, *(_QWORD *)(v79 + 8));
+  name = (UnityEngine_Object_o *)System_Int32__ToString((int32_t)&v121, 0);
   if ( LODWORD(v13[1].klass) <= 6 )
     goto LABEL_65;
   v13[3].monitor = name;
@@ -1576,7 +1579,7 @@ LABEL_49:
     v108,
     v109);
   effectObjects = this->fields.effectObjects;
-  v119 = 0;
+  v121 = 0;
   if ( !effectObjects )
     goto LABEL_64;
   max_length = effectObjects->max_length;
@@ -1595,19 +1598,20 @@ LABEL_49:
       name = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v114, 0);
       if ( !name )
         goto LABEL_64;
-      y = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0).fields.y;
+      localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0);
+      y = localScale.fields.y;
       name = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(v114, 0);
       if ( !name )
         goto LABEL_64;
-      v120.fields.z = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0).fields.z;
+      v123 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)name, 0);
       if ( !v117 )
         goto LABEL_64;
-      v120.fields.x = lineLength;
-      v120.fields.y = y;
-      UnityEngine_Transform__set_localScale(v117, v120, 0);
+      v119 = lineLength;
+      v120 = y;
+      UnityEngine_Transform__set_localScale(v117, v123, 0);
       max_length = effectObjects->max_length;
-      v112 = ++v119;
-      if ( v119 >= max_length )
+      v112 = ++v121;
+      if ( v121 >= max_length )
         return;
     }
     goto LABEL_65;
@@ -1627,6 +1631,7 @@ void ClassBoardLine__UpdateDrawFromAnimationEvent(ClassBoardLine_o *this, const 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodInfo *method)
 {
   ClassBoardLine_o *v2; // x19
@@ -1705,18 +1710,20 @@ void ClassBoardLine__UpdateLine(ClassBoardLine_o *this, const MethodInfo *method
   float32x2_t v75; // d0
   float v76; // s1
   struct UnityEngine_Vector3_StaticFields *v77; // x8
-  unsigned __int32 v78; // [xsp+0h] [xbp-C0h]
-  unsigned __int32 v79; // [xsp+0h] [xbp-C0h]
-  unsigned int v80; // [xsp+10h] [xbp-B0h]
+  unsigned __int64 v78; // d0 OVERLAPPED
+  float v79; // s2
+  int v80; // s1
+  unsigned __int32 v81; // [xsp+0h] [xbp-C0h]
+  unsigned __int32 v82; // [xsp+0h] [xbp-C0h]
+  unsigned int v83; // [xsp+10h] [xbp-B0h]
   unsigned __int32 xb; // [xsp+20h] [xbp-A0h]
   unsigned __int32 xc; // [xsp+20h] [xbp-A0h]
   float32x2_t x; // [xsp+20h] [xbp-A0h]
   float32x2_t xa; // [xsp+20h] [xbp-A0h]
-  unsigned int v85; // [xsp+30h] [xbp-90h]
-  float32x2_t v86; // [xsp+30h] [xbp-90h]
-  int32x2_t v87; // [xsp+30h] [xbp-90h]
-  UnityEngine_Vector3_o v88; // 0:kr00_12.12
-  UnityEngine_Vector3_o v89; // 0:s0.4,4:s1.4,8:s2.4
+  unsigned int v88; // [xsp+30h] [xbp-90h]
+  float32x2_t v89; // [xsp+30h] [xbp-90h]
+  int32x2_t v90; // [xsp+30h] [xbp-90h]
+  UnityEngine_Vector3_o v91; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
   if ( (byte_59746C2 & 1) == 0 )
@@ -1778,9 +1785,9 @@ LABEL_15:
     goto LABEL_94;
   v17 = v15;
   v18 = v16->klass;
-  v85 = v13;
+  v88 = v13;
   v19 = *(unsigned __int16 *)&v16->klass->_2.rank;
-  v80 = v14;
+  v83 = v14;
   if ( *(_WORD *)&v16->klass->_2.rank )
   {
     v20 = (IClassBoardLineModel_c **)&v18->_1.interfaceOffsets->offset;
@@ -1828,29 +1835,29 @@ LABEL_29:
   if ( !byte_5969ADE )
   {
     xb = v27.n64_u32[0];
-    v78 = v28;
+    v81 = v28;
     sub_2213A60(&System_Math_TypeInfo);
-    v28 = v78;
+    v28 = v81;
     v27.n64_u32[0] = xb;
     byte_5969ADE = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
   {
     xc = v27.n64_u32[0];
-    v79 = v28;
+    v82 = v28;
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method);
-    v28 = v79;
+    v28 = v82;
     v27.n64_u32[0] = xc;
   }
   v27.n64_u32[1] = v28;
-  v31.n64_u64[0] = __PAIR64__(v80, v85);
+  v31.n64_u64[0] = __PAIR64__(v83, v88);
   x.n64_u64[0] = v27.n64_u64[0];
-  v86.n64_u64[0] = __PAIR64__(v80, v85);
+  v89.n64_u64[0] = __PAIR64__(v83, v88);
   if ( !byte_5969AE3 )
   {
     sub_2213A60(&System_Math_TypeInfo);
     v27.n64_u64[0] = x.n64_u64[0];
-    v31.n64_u64[0] = v86.n64_u64[0];
+    v31.n64_u64[0] = v89.n64_u64[0];
     byte_5969AE3 = 1;
   }
   this = (ClassBoardLine_o *)System_Math_TypeInfo;
@@ -1928,7 +1935,7 @@ LABEL_56:
     v53 = sub_224BC3C(v2->fields._LineModel_k__BackingField, IClassBoardLineModel_TypeInfo, 1);
   }
   v54 = v17 - v51;
-  v55.n64_u64[0] = vsub_f32(v86, v50).n64_u64[0];
+  v55.n64_u64[0] = vsub_f32(v89, v50).n64_u64[0];
   v56 = (IClassBoardSquareModel_o *)(*(__int64 (__fastcall **)(struct IClassBoardLineModel_o *, _QWORD))v53)(
                                       v46,
                                       *(_QWORD *)(v53 + 8));
@@ -1951,7 +1958,7 @@ LABEL_56:
   v64 = v62.n64_f32[1];
   v65 = vmul_f32(v62, v62).n64_u64[0];
   *(float *)&v65 = sqrtf((float)(v63 * v63) + (float)(*(float *)&v65 + vmuls_lane_f32(v62.n64_f32[1], v62, 1)));
-  v87.n64_u64[0] = v65;
+  v90.n64_u64[0] = v65;
   LODWORD(v2->fields.lineLength) = v65;
   this = (ClassBoardLine_o *)ClassBoardLine__GetConnectType(v2, v58);
   if ( !v2->fields.notConnectedSprite )
@@ -2001,17 +2008,17 @@ LABEL_73:
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v69);
-  v70 = vcvtps_s32_f32(v87.n64_f32[0]);
-  v71 = ceilf(v87.n64_f32[0]) == INFINITY ? 0x80000000 : v70;
+  v70 = vcvtps_s32_f32(v90.n64_f32[0]);
+  v71 = ceilf(v90.n64_f32[0]) == INFINITY ? 0x80000000 : v70;
   UIWidget__set_width((UIWidget_o *)v68, v71, 0);
   this = (ClassBoardLine_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
   if ( !this )
     goto LABEL_94;
   v72 = this;
-  v89.fields.z = atan2f(v64, xa.n64_f32[0]) * 57.296;
-  v89.fields.x = 0.0;
-  v89.fields.y = 0.0;
-  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)v72, v89, 0);
+  v91.fields.z = atan2f(v64, xa.n64_f32[0]) * 57.296;
+  v91.fields.x = 0.0;
+  v91.fields.y = 0.0;
+  UnityEngine_Transform__set_localEulerAngles((UnityEngine_Transform_o *)v72, v91, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
   if ( !byte_5969AE3 )
   {
@@ -2021,13 +2028,13 @@ LABEL_73:
   this = (ClassBoardLine_o *)System_Math_TypeInfo;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method);
-  v74 = v87.n64_f32[0];
-  if ( v87.n64_f32[0] <= 0.00001 )
+  v74 = v90.n64_f32[0];
+  if ( v90.n64_f32[0] <= 0.00001 )
   {
     if ( !byte_5969AE0 )
     {
       this = (ClassBoardLine_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
-      v74 = v87.n64_f32[0];
+      v74 = v90.n64_f32[0];
       byte_5969AE0 = 1;
     }
     v77 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -2036,14 +2043,15 @@ LABEL_73:
   }
   else
   {
-    v75.n64_u64[0] = vdiv_f32(xa, vdup_lane_s32(v87, 0)).n64_u64[0];
-    v76 = v63 / v87.n64_f32[0];
+    v75.n64_u64[0] = vdiv_f32(xa, vdup_lane_s32(v90, 0)).n64_u64[0];
+    v76 = v63 / v90.n64_f32[0];
   }
   if ( !transform )
     goto LABEL_94;
-  *(float32x2_t *)&v88.fields.x = vadd_f32(v55, vmul_n_f32(v75, v74 * 0.5));
-  v88.fields.z = v54 + (float)((float)(v74 * 0.5) * v76);
-  UnityEngine_Transform__set_localPosition(transform, v88, 0);
+  v78 = vadd_f32(v55, vmul_n_f32(v75, v74 * 0.5)).n64_u64[0];
+  v79 = v54 + (float)((float)(v74 * 0.5) * v76);
+  v80 = HIDWORD(v78);
+  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v78, 0);
 }
 
 
@@ -2269,6 +2277,7 @@ bool ClassBoardLine__WaitAnimationFinished_d__40__MoveNext(
   bool v26; // w6
   bool v27; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   v2 = this;
   if ( (byte_59746C9 & 1) == 0 )
@@ -2350,8 +2359,9 @@ LABEL_22:
         v2->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
         sub_2213A04(p__2__current, 0, v22, v23, v24, v25, v26, v27);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
       goto LABEL_26;
     }

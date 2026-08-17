@@ -11,8 +11,8 @@ void ServantStatusListViewItemDrawFace__Awake(ServantStatusListViewItemDrawFace_
   UnityEngine_Component_o *baseSprite; // x0
   float v4; // s0
   float v5; // s1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:kr14_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
   baseSprite = (UnityEngine_Component_o *)this->fields.baseSprite;
   if ( !baseSprite )
@@ -128,74 +128,75 @@ void ServantStatusListViewItemDrawFace__SetItem(
   __int64 v35; // x2
   UnityEngine_Object_o *baseCollider; // x22
   UnityEngine_BoxCollider_o *v37; // x22
-  int v39; // w22
+  int v38; // s0 OVERLAPPED
+  int v40; // s2
+  int v41; // w22
   float x; // s8
-  float v41; // s11
+  float v43; // s11
   float z; // s9
-  float v43; // s10
-  float v44; // s8
-  float v45; // s11
-  float v46; // s9
-  float v47; // s8
-  float v48; // s10
-  float v49; // s9
+  float v45; // s10
+  float v46; // s8
+  float v47; // s11
+  float v48; // s9
+  float v49; // s8
+  float v50; // s10
+  float v51; // s9
   int32_t SvtId; // w22
   Il2CppObject *MasterData_object; // x0
-  const MethodInfo *v52; // x3
-  ServantCostumeMaster_o *v53; // x23
-  __int64 v54; // x24
-  __int64 v55; // x29
+  const MethodInfo *v54; // x3
+  ServantCostumeMaster_o *v55; // x23
+  __int64 v56; // x24
+  __int64 v57; // x29
   struct ServantStatusListViewItemFace_array *faceItems; // x8
-  ServantStatusListViewItemFace_o *v57; // x8
+  ServantStatusListViewItemFace_o *v59; // x8
   struct ServantStatusListViewItemButton_o *levelButtonItem; // x8
-  struct ServantStatusListViewItemFace_array *v59; // x8
-  ServantStatusListViewItemFace_o *v60; // x8
-  UISprite_o *v61; // x25
-  __int64 v62; // x1
-  __int64 v63; // x2
-  int32_t v64; // w26
-  struct ServantStatusListViewItemFace_array *v65; // x8
-  ServantStatusListViewItemFace_o *v66; // x8
+  struct ServantStatusListViewItemFace_array *v61; // x8
+  ServantStatusListViewItemFace_o *v62; // x8
+  UISprite_o *v63; // x25
+  __int64 v64; // x1
+  __int64 v65; // x2
+  int32_t v66; // w26
   struct ServantStatusListViewItemFace_array *v67; // x8
   ServantStatusListViewItemFace_o *v68; // x8
-  UISprite_o *v69; // x25
-  __int64 v70; // x1
-  __int64 v71; // x2
-  int32_t v72; // w26
+  struct ServantStatusListViewItemFace_array *v69; // x8
+  ServantStatusListViewItemFace_o *v70; // x8
+  UISprite_o *v71; // x25
+  __int64 v72; // x1
+  __int64 v73; // x2
+  int32_t v74; // w26
   ServantCostumeEntity_o *Entity; // x0
-  const MethodInfo *v74; // x3
-  struct ServantStatusListViewItemFace_array *v75; // x8
-  ServantStatusListViewItemFace_o *v76; // x8
-  bool v77; // w1
-  __int64 v78; // x2
-  struct ServantStatusListViewItemFace_array *v79; // x8
-  ServantStatusListViewItemFace_o *v80; // x8
+  const MethodInfo *v76; // x3
+  struct ServantStatusListViewItemFace_array *v77; // x8
+  ServantStatusListViewItemFace_o *v78; // x8
+  bool v79; // w1
+  __int64 v80; // x2
+  struct ServantStatusListViewItemFace_array *v81; // x8
+  ServantStatusListViewItemFace_o *v82; // x8
   UISprite_o *faceSprite; // x25
-  struct ServantStatusListViewItemFace_array *v82; // x8
-  ServantStatusListViewItemFace_o *v83; // x8
-  ServantStatusListViewItemFace_o *v84; // x8
-  UISprite_o *v85; // x25
+  struct ServantStatusListViewItemFace_array *v84; // x8
+  ServantStatusListViewItemFace_o *v85; // x8
+  ServantStatusListViewItemFace_o *v86; // x8
+  UISprite_o *v87; // x25
   UIWidget_o *transformNameLabel; // x21
   UIWidget_o *transformNameSprite; // x21
-  UILabel_o *v88; // x21
-  __int64 v89; // x1
-  __int64 v90; // x2
-  UnityEngine_Object_o *v91; // x21
+  UILabel_o *v90; // x21
+  __int64 v91; // x1
+  __int64 v92; // x2
+  UnityEngine_Object_o *v93; // x21
+  float v94; // s1
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t transformNameAddHeight; // w8
-  int v94; // w8
-  UnityEngine_GameObject_o *v95; // x0
-  int32_t v96; // w8
   int v97; // w8
-  const MethodInfo *v98; // x3
-  const MethodInfo *v99; // x2
-  UnityEngine_Vector3_o size; // 0:kr20_12.12
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v102; // 0:x0.16
-  UnityEngine_Vector3_o v103; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v98; // x0
+  int32_t v99; // w8
+  int v100; // w8
+  const MethodInfo *v101; // x3
+  const MethodInfo *v102; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v103; // 0:x0.16
   UnityEngine_Vector3_o v104; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v105; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v106; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v107; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -264,9 +265,9 @@ void ServantStatusListViewItemDrawFace__SetItem(
     v18 = *(_QWORD *)&svtEntity->fields.id.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14, v15);
-    *(_QWORD *)&v102.fields.currentCryptoKey = v17;
-    *(_QWORD *)&v102.fields.fakeValue = v18;
-    ServantStatusExplanationText = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v102, 0);
+    *(_QWORD *)&v103.fields.currentCryptoKey = v17;
+    *(_QWORD *)&v103.fields.fakeValue = v18;
+    ServantStatusExplanationText = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v103, 0);
     if ( (_DWORD)ServantStatusExplanationText )
     {
       if ( !Master_object )
@@ -337,18 +338,18 @@ LABEL_34:
                                                  *(_QWORD *)(*(_QWORD *)ServantStatusExplanationText + 672LL));
                 if ( !v37 )
                   goto LABEL_142;
-                v103.fields.z = 0.0;
-                UnityEngine_BoxCollider__set_size(v37, v103, 0);
+                v40 = 0;
+                UnityEngine_BoxCollider__set_size(v37, *(UnityEngine_Vector3_o *)&v38, 0);
               }
               ServantStatusExplanationText = (__int64)this->fields.titleSprite;
               if ( v31 >= 0 )
-                v39 = v31;
+                v41 = v31;
               else
-                v39 = v31 + 1;
+                v41 = v31 + 1;
               if ( ServantStatusExplanationText )
               {
                 x = this->fields.titleBasePosition.fields.x;
-                v41 = this->fields.titleBasePosition.fields.y;
+                v43 = this->fields.titleBasePosition.fields.y;
                 z = this->fields.titleBasePosition.fields.z;
                 ServantStatusExplanationText = (__int64)UnityEngine_Component__get_transform(
                                                           (UnityEngine_Component_o *)ServantStatusExplanationText,
@@ -357,8 +358,8 @@ LABEL_34:
                 {
                   v104.fields.x = x;
                   v104.fields.z = z;
-                  v43 = (float)(v39 >> 1);
-                  v104.fields.y = v41 + v43;
+                  v45 = (float)(v41 >> 1);
+                  v104.fields.y = v43 + v45;
                   UnityEngine_Transform__set_localPosition(
                     (UnityEngine_Transform_o *)ServantStatusExplanationText,
                     v104,
@@ -366,37 +367,37 @@ LABEL_34:
                   ServantStatusExplanationText = (__int64)this->fields.faceBase;
                   if ( ServantStatusExplanationText )
                   {
-                    v44 = this->fields.faceBasePosition.fields.x;
-                    v45 = this->fields.faceBasePosition.fields.y;
-                    v46 = this->fields.faceBasePosition.fields.z;
+                    v46 = this->fields.faceBasePosition.fields.x;
+                    v47 = this->fields.faceBasePosition.fields.y;
+                    v48 = this->fields.faceBasePosition.fields.z;
                     ServantStatusExplanationText = (__int64)UnityEngine_GameObject__get_transform(
                                                               (UnityEngine_GameObject_o *)ServantStatusExplanationText,
                                                               0);
                     if ( ServantStatusExplanationText )
                     {
-                      v105.fields.y = v45 + v43;
-                      v105.fields.x = v44;
-                      v105.fields.z = v46;
+                      v105.fields.y = v47 + v45;
+                      v105.fields.x = v46;
+                      v105.fields.z = v48;
                       UnityEngine_Transform__set_localPosition(
                         (UnityEngine_Transform_o *)ServantStatusExplanationText,
                         v105,
                         0);
                       ServantStatusExplanationText = (__int64)this->fields.explanationLabel;
-                      v47 = v26
-                          ? (float)(this->fields.explanationBasePosition.fields.y - v43) + 16.0
-                          : this->fields.explanationBasePosition.fields.y - v43;
+                      v49 = v26
+                          ? (float)(this->fields.explanationBasePosition.fields.y - v45) + 16.0
+                          : this->fields.explanationBasePosition.fields.y - v45;
                       if ( ServantStatusExplanationText )
                       {
-                        v48 = this->fields.explanationBasePosition.fields.x;
-                        v49 = this->fields.explanationBasePosition.fields.z;
+                        v50 = this->fields.explanationBasePosition.fields.x;
+                        v51 = this->fields.explanationBasePosition.fields.z;
                         ServantStatusExplanationText = (__int64)UnityEngine_Component__get_transform(
                                                                   (UnityEngine_Component_o *)ServantStatusExplanationText,
                                                                   0);
                         if ( ServantStatusExplanationText )
                         {
-                          v106.fields.x = v48;
-                          v106.fields.y = v47;
-                          v106.fields.z = v49;
+                          v106.fields.x = v50;
+                          v106.fields.y = v49;
+                          v106.fields.z = v51;
                           UnityEngine_Transform__set_localPosition(
                             (UnityEngine_Transform_o *)ServantStatusExplanationText,
                             v106,
@@ -410,21 +411,21 @@ LABEL_34:
                                                   (const MethodInfo_385636C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
                             if ( *(int *)(v28 + 24) >= 1 )
                             {
-                              v53 = (ServantCostumeMaster_o *)MasterData_object;
-                              v54 = 0;
-                              v55 = v28 + 32;
+                              v55 = (ServantCostumeMaster_o *)MasterData_object;
+                              v56 = 0;
+                              v57 = v28 + 32;
                               while ( 1 )
                               {
-                                ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v54, 0, v52);
+                                ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v56, 0, v54);
                                 faceItems = this->fields.faceItems;
                                 if ( !faceItems )
                                   goto LABEL_142;
-                                if ( (unsigned int)v54 >= LODWORD(faceItems->max_length) )
+                                if ( (unsigned int)v56 >= LODWORD(faceItems->max_length) )
                                   goto LABEL_143;
-                                v57 = faceItems->m_Items[v54];
-                                if ( !v57 )
+                                v59 = faceItems->m_Items[v56];
+                                if ( !v59 )
                                   goto LABEL_142;
-                                ServantStatusExplanationText = (__int64)v57->fields.frameSprite;
+                                ServantStatusExplanationText = (__int64)v59->fields.frameSprite;
                                 if ( !ServantStatusExplanationText )
                                   goto LABEL_142;
                                 UnityEngine_Behaviour__set_enabled(
@@ -434,139 +435,139 @@ LABEL_34:
                                 levelButtonItem = this->fields.levelButtonItem;
                                 if ( !levelButtonItem )
                                   goto LABEL_142;
-                                if ( (int)v54 >= levelButtonItem->fields.columnCount )
+                                if ( (int)v56 >= levelButtonItem->fields.columnCount )
                                   break;
-                                if ( (unsigned int)v54 >= *(_DWORD *)(v28 + 24) )
+                                if ( (unsigned int)v56 >= *(_DWORD *)(v28 + 24) )
                                   goto LABEL_143;
-                                if ( (*(_DWORD *)(v55 + 4 * v54) & 0x80000000) != 0 )
+                                if ( (*(_DWORD *)(v57 + 4 * v56) & 0x80000000) != 0 )
                                 {
                                   ServantStatusExplanationText = ServantStatusListViewItem__get_IsMine(item, 0);
-                                  v79 = this->fields.faceItems;
+                                  v81 = this->fields.faceItems;
                                   if ( (ServantStatusExplanationText & 1) != 0 )
                                   {
-                                    if ( !v79 )
+                                    if ( !v81 )
                                       goto LABEL_142;
-                                    if ( (unsigned int)v54 >= LODWORD(v79->max_length) )
+                                    if ( (unsigned int)v56 >= LODWORD(v81->max_length) )
                                       goto LABEL_143;
-                                    v80 = v79->m_Items[v54];
-                                    if ( !v80 )
-                                      goto LABEL_142;
-                                    faceSprite = v80->fields.faceSprite;
-                                    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                                      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v14, v78);
-                                    ServantStatusExplanationText = AtlasManager__SetNoMountFace(faceSprite, 0);
-                                    v82 = this->fields.faceItems;
+                                    v82 = v81->m_Items[v56];
                                     if ( !v82 )
                                       goto LABEL_142;
-                                    if ( (unsigned int)v54 >= LODWORD(v82->max_length) )
-                                      goto LABEL_143;
-                                    v83 = v82->m_Items[v54];
-                                    if ( !v83 )
+                                    faceSprite = v82->fields.faceSprite;
+                                    if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
+                                      j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v14, v80);
+                                    ServantStatusExplanationText = AtlasManager__SetNoMountFace(faceSprite, 0);
+                                    v84 = this->fields.faceItems;
+                                    if ( !v84 )
                                       goto LABEL_142;
-                                    ServantStatusExplanationText = (__int64)v83->fields.frameSprite;
+                                    if ( (unsigned int)v56 >= LODWORD(v84->max_length) )
+                                      goto LABEL_143;
+                                    v85 = v84->m_Items[v56];
+                                    if ( !v85 )
+                                      goto LABEL_142;
+                                    ServantStatusExplanationText = (__int64)v85->fields.frameSprite;
                                     if ( !ServantStatusExplanationText )
                                       goto LABEL_142;
-                                    v77 = 0;
+                                    v79 = 0;
                                     goto LABEL_96;
                                   }
-                                  if ( !v79 )
+                                  if ( !v81 )
                                     goto LABEL_142;
-                                  if ( (unsigned int)v54 >= LODWORD(v79->max_length) )
+                                  if ( (unsigned int)v56 >= LODWORD(v81->max_length) )
 LABEL_143:
                                     sub_2213CE4(ServantStatusExplanationText);
-                                  v84 = v79->m_Items[v54];
-                                  if ( !v84 )
+                                  v86 = v81->m_Items[v56];
+                                  if ( !v86 )
                                     goto LABEL_142;
-                                  v85 = v84->fields.faceSprite;
+                                  v87 = v86->fields.faceSprite;
                                   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                                    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v14, v78);
-                                  AtlasManager__SetNotOpenFace(v85, 0);
+                                    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v14, v80);
+                                  AtlasManager__SetNotOpenFace(v87, 0);
                                 }
                                 else
                                 {
                                   ServantStatusExplanationText = ServantStatusListViewItem__get_LimitCount(item, 0);
-                                  if ( (unsigned int)v54 >= *(_DWORD *)(v28 + 24) )
+                                  if ( (unsigned int)v56 >= *(_DWORD *)(v28 + 24) )
                                     goto LABEL_143;
                                   ServantStatusExplanationText = LimitCountUtility__GetSealAfter(
                                                                    SvtId,
                                                                    ServantStatusExplanationText,
-                                                                   *(_DWORD *)(v55 + 4 * v54),
+                                                                   *(_DWORD *)(v57 + 4 * v56),
                                                                    1,
                                                                    0);
-                                  v59 = this->fields.faceItems;
-                                  if ( !v59 )
+                                  v61 = this->fields.faceItems;
+                                  if ( !v61 )
                                     goto LABEL_142;
-                                  if ( (unsigned int)v54 >= LODWORD(v59->max_length) )
+                                  if ( (unsigned int)v56 >= LODWORD(v61->max_length) )
                                     goto LABEL_143;
-                                  v60 = v59->m_Items[v54];
-                                  if ( !v60 )
+                                  v62 = v61->m_Items[v56];
+                                  if ( !v62 )
                                     goto LABEL_142;
-                                  v61 = v60->fields.faceSprite;
-                                  v64 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(
+                                  v63 = v62->fields.faceSprite;
+                                  v66 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(
                                           ServantStatusExplanationText,
                                           0);
                                   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                                    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v62, v63);
-                                  AtlasManager__SetFaceImage(v61, SvtId, v64, 1, 0, 0, 0);
+                                    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v64, v65);
+                                  AtlasManager__SetFaceImage(v63, SvtId, v66, 1, 0, 0, 0);
                                 }
 LABEL_97:
-                                if ( (int)++v54 >= *(_DWORD *)(v28 + 24) )
+                                if ( (int)++v56 >= *(_DWORD *)(v28 + 24) )
                                   goto LABEL_116;
                               }
-                              v65 = this->fields.faceItems;
-                              if ( !v65 )
+                              v67 = this->fields.faceItems;
+                              if ( !v67 )
                                 goto LABEL_142;
-                              if ( (unsigned int)v54 >= LODWORD(v65->max_length) )
+                              if ( (unsigned int)v56 >= LODWORD(v67->max_length) )
                                 goto LABEL_143;
-                              v66 = v65->m_Items[v54];
-                              if ( !v66 )
+                              v68 = v67->m_Items[v56];
+                              if ( !v68 )
                                 goto LABEL_142;
-                              ServantStatusExplanationText = (__int64)v66->fields.faceSprite;
+                              ServantStatusExplanationText = (__int64)v68->fields.faceSprite;
                               if ( !ServantStatusExplanationText )
                                 goto LABEL_142;
                               UnityEngine_Behaviour__set_enabled(
                                 (UnityEngine_Behaviour_o *)ServantStatusExplanationText,
                                 1,
                                 0);
-                              v67 = this->fields.faceItems;
-                              if ( !v67 )
+                              v69 = this->fields.faceItems;
+                              if ( !v69 )
                                 goto LABEL_142;
-                              if ( (unsigned int)v54 >= LODWORD(v67->max_length) )
+                              if ( (unsigned int)v56 >= LODWORD(v69->max_length) )
                                 goto LABEL_143;
-                              v68 = v67->m_Items[v54];
-                              if ( !v68 )
+                              v70 = v69->m_Items[v56];
+                              if ( !v70 )
                                 goto LABEL_142;
-                              if ( (unsigned int)v54 >= *(_DWORD *)(v28 + 24) )
+                              if ( (unsigned int)v56 >= *(_DWORD *)(v28 + 24) )
                                 goto LABEL_143;
-                              v69 = v68->fields.faceSprite;
-                              v72 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(
-                                      *(_DWORD *)(v55 + 4 * v54),
+                              v71 = v70->fields.faceSprite;
+                              v74 = LimitCountUtility__ConvertLimitCountStageIndexOneToZero(
+                                      *(_DWORD *)(v57 + 4 * v56),
                                       0);
                               if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v70, v71);
-                              ServantStatusExplanationText = AtlasManager__SetFaceImage(v69, SvtId, v72, 1, 0, 0, 0);
-                              if ( (unsigned int)v54 >= *(_DWORD *)(v28 + 24) )
+                                j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v72, v73);
+                              ServantStatusExplanationText = AtlasManager__SetFaceImage(v71, SvtId, v74, 1, 0, 0, 0);
+                              if ( (unsigned int)v56 >= *(_DWORD *)(v28 + 24) )
                                 goto LABEL_143;
-                              if ( !v53 )
+                              if ( !v55 )
                                 goto LABEL_142;
-                              Entity = ServantCostumeMaster__GetEntity(v53, SvtId, *(_DWORD *)(v55 + 4 * v54), 0);
-                              ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v54, Entity, v74);
-                              v75 = this->fields.faceItems;
-                              if ( !v75 )
+                              Entity = ServantCostumeMaster__GetEntity(v55, SvtId, *(_DWORD *)(v57 + 4 * v56), 0);
+                              ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v56, Entity, v76);
+                              v77 = this->fields.faceItems;
+                              if ( !v77 )
                                 goto LABEL_142;
-                              if ( (unsigned int)v54 >= LODWORD(v75->max_length) )
+                              if ( (unsigned int)v56 >= LODWORD(v77->max_length) )
                                 goto LABEL_143;
-                              v76 = v75->m_Items[v54];
-                              if ( !v76 )
+                              v78 = v77->m_Items[v56];
+                              if ( !v78 )
                                 goto LABEL_142;
-                              ServantStatusExplanationText = (__int64)v76->fields.frameSprite;
+                              ServantStatusExplanationText = (__int64)v78->fields.frameSprite;
                               if ( !ServantStatusExplanationText )
                                 goto LABEL_142;
-                              v77 = 1;
+                              v79 = 1;
 LABEL_96:
                               UnityEngine_Behaviour__set_enabled(
                                 (UnityEngine_Behaviour_o *)ServantStatusExplanationText,
-                                v77,
+                                v79,
                                 0);
                               goto LABEL_97;
                             }
@@ -597,17 +598,17 @@ LABEL_116:
                                         (UnityEngine_GameObject_o *)ServantStatusExplanationText,
                                         1,
                                         0);
-                                      v88 = this->fields.transformNameLabel;
+                                      v90 = this->fields.transformNameLabel;
                                       ServantStatusExplanationText = (__int64)ServantStatusListViewItem__GetTransformName(
                                                                                 item,
                                                                                 0);
-                                      if ( v88 )
+                                      if ( v90 )
                                       {
-                                        UILabel__set_text(v88, (System_String_o *)ServantStatusExplanationText, 0);
-                                        v91 = (UnityEngine_Object_o *)this->fields.baseCollider;
+                                        UILabel__set_text(v90, (System_String_o *)ServantStatusExplanationText, 0);
+                                        v93 = (UnityEngine_Object_o *)this->fields.baseCollider;
                                         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                                          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v89, v90);
-                                        if ( UnityEngine_Object__op_Inequality(v91, 0, 0) )
+                                          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v91, v92);
+                                        if ( UnityEngine_Object__op_Inequality(v93, 0, 0) )
                                         {
                                           ServantStatusExplanationText = (__int64)this->fields.baseCollider;
                                           if ( !ServantStatusExplanationText )
@@ -615,15 +616,13 @@ LABEL_116:
                                           size = UnityEngine_BoxCollider__get_size(
                                                    (UnityEngine_BoxCollider_o *)ServantStatusExplanationText,
                                                    0);
-                                          v107.fields.x = size.fields.x;
-                                          v107.fields.z = size.fields.z;
                                           ServantStatusExplanationText = (__int64)this->fields.baseCollider;
                                           if ( !ServantStatusExplanationText )
                                             goto LABEL_142;
-                                          v107.fields.y = size.fields.y + (float)this->fields.transformNameAddHeight;
+                                          v94 = size.fields.y + (float)this->fields.transformNameAddHeight;
                                           UnityEngine_BoxCollider__set_size(
                                             (UnityEngine_BoxCollider_o *)ServantStatusExplanationText,
-                                            v107,
+                                            size,
                                             0);
                                         }
                                         ServantStatusExplanationText = (__int64)this->fields.baseSprite;
@@ -645,25 +644,25 @@ LABEL_116:
                                               (float)(this->fields.transformNameAddHeight / 2),
                                               0);
                                             transformNameAddHeight = this->fields.transformNameAddHeight;
-                                            v94 = transformNameAddHeight <= 0
+                                            v97 = transformNameAddHeight <= 0
                                                 ? -transformNameAddHeight
                                                 : 1 - transformNameAddHeight;
                                             GameObjectExtensions__AddLocalPositionY(
                                               this->fields.faceBase,
-                                              (float)(v94 >> 1),
+                                              (float)(v97 >> 1),
                                               0);
                                             ServantStatusExplanationText = (__int64)this->fields.explanationLabel;
                                             if ( ServantStatusExplanationText )
                                             {
-                                              v95 = UnityEngine_Component__get_gameObject(
+                                              v98 = UnityEngine_Component__get_gameObject(
                                                       (UnityEngine_Component_o *)ServantStatusExplanationText,
                                                       0);
-                                              v96 = this->fields.transformNameAddHeight;
-                                              if ( v96 <= 0 )
-                                                v97 = -v96;
+                                              v99 = this->fields.transformNameAddHeight;
+                                              if ( v99 <= 0 )
+                                                v100 = -v99;
                                               else
-                                                v97 = 1 - v96;
-                                              GameObjectExtensions__AddLocalPositionY(v95, (float)(v97 >> 1), 0);
+                                                v100 = 1 - v99;
+                                              GameObjectExtensions__AddLocalPositionY(v98, (float)(v100 >> 1), 0);
                                               goto LABEL_141;
                                             }
                                           }
@@ -689,8 +688,8 @@ LABEL_116:
                                     0,
                                     0);
 LABEL_141:
-                                  ServantStatusListViewItemDrawFace__SetupButton(this, item, 1, v98);
-                                  ServantStatusListViewItemDrawFace__SetupMask(this, item, v99);
+                                  ServantStatusListViewItemDrawFace__SetupButton(this, item, 1, v101);
+                                  ServantStatusListViewItemDrawFace__SetupMask(this, item, v102);
                                   return;
                                 }
                               }
@@ -1024,7 +1023,7 @@ void ServantStatusListViewItemDrawFace__SetupMask(
   ServantStatusListViewItemDrawFace_o *v7; // x21
   System_String_o *v8; // x21
   __int64 v9; // x2
-  float y; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596D34A & 1) == 0 )
@@ -1069,8 +1068,8 @@ void ServantStatusListViewItemDrawFace__SetupMask(
                                                                   0);
                   if ( this )
                   {
-                    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
-                    GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v7, y, 0);
+                    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+                    GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v7, localPosition.fields.y, 0);
                     v8 = **(System_String_o ***)(qword_5984390 + 184);
                     if ( ServantStatusListViewItem__get_IsEnableOwnRandomSetting(item, 0) )
                     {

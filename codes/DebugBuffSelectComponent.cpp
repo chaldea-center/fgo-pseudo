@@ -230,6 +230,7 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
   int32_t _1__state; // w8
   struct DebugBuffSelectComponent_o *_4__this; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   System_Object_array *Entitys; // x0
   System_String_o *v14; // x2
   System_String_o *v15; // x3
@@ -294,8 +295,9 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       p__2__current[-1].fields._BoardType_k__BackingField = -1;
       sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     return 0;
   }
@@ -464,8 +466,9 @@ LABEL_32:
   v8->fields.__2__current = 0;
   v41 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v41, 0, v42, v43, v44, v45, v46, v47);
+  result = 1;
   v41[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 

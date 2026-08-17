@@ -1433,7 +1433,7 @@ bool SupportServantListViewItem__SetSortValue(
   int v9; // w10
   __int64 v10; // x2
   int32_t sortKind; // w8
-  int64_t v12; // x20
+  int64_t sortStr1_low; // x20
   IconLabelInfo_o *v13; // x21
   const MethodInfo *v14; // x2
   __int64 v15; // x20
@@ -1486,7 +1486,7 @@ bool SupportServantListViewItem__SetSortValue(
   const MethodInfo *v62; // x2
   __int64 rarity; // x20
   __int64 v64; // x9
-  int32_t v65; // w20
+  int32_t sortStr1; // w20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v67; // [xsp+10h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v68; // [xsp+30h] [xbp-60h]
   int32_t tdMaxLv[2]; // [xsp+58h] [xbp-38h] BYREF
@@ -1798,13 +1798,13 @@ LABEL_137:
           this = (SupportServantListViewItem_o *)v4->fields.userServantEntity;
           if ( this )
           {
-            v12 = *((int *)this + 100);
+            sortStr1_low = SLODWORD(this[1].fields.sortStr1);
             v13 = v4->fields.iconLabelInfo1;
-            v4->fields.sortValue1 = v12;
+            v4->fields.sortValue1 = sortStr1_low;
             this = (SupportServantListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
             if ( v13 )
             {
-              IconLabelInfo__Set_47880948(v13, 2, v12, (int32_t)this, 0, 0, 0, 0, 0, 0);
+              IconLabelInfo__Set_47880948(v13, 2, sortStr1_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
 LABEL_141:
               LOBYTE(this) = 1;
               return (char)this;
@@ -1841,11 +1841,11 @@ LABEL_141:
       goto LABEL_143;
     iconLabelInfo1 = v4->fields.iconLabelInfo2;
 LABEL_139:
-    v65 = *((_DWORD *)this + 100);
+    sortStr1 = (int32_t)this[1].fields.sortStr1;
     this = (SupportServantListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
     if ( iconLabelInfo1 )
     {
-      IconLabelInfo__Set_47880948(iconLabelInfo1, 2, v65, (int32_t)this, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_47880948(iconLabelInfo1, 2, sortStr1, (int32_t)this, 0, 0, 0, 0, 0, 0);
       goto LABEL_141;
     }
     goto LABEL_143;

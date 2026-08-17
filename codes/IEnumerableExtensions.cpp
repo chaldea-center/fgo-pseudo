@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o IEnumerableExtensions__DrawLottery___Il2CppFullySharedGenericType_(
         System_Collections_Generic_IEnumerable_T__o *self,
         System_Func_T__int__o *getWeightFunc,
@@ -32,6 +33,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o IEnumerableExtensions__Dr
   int32_t *p_offset; // x10
   __int64 v31; // x0
   char *v32; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v33; // x0
+  void *v34; // x1
   __int64 v35; // x0
   __int64 v36; // x1
   signed int v37; // w19
@@ -107,8 +110,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o IEnumerableExtensions__Dr
 LABEL_17:
     memset(v32, 0, v8);
     memset(v9, 0, v8);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset(v69, 0, v8);
-    return result;
+    v33 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset(v69, 0, v8);
+    goto LABEL_58;
   }
   v11 = *(__int64 (__fastcall ***)(System_Collections_Generic_IEnumerable_T__o *))(v7 + 16);
   v68 = (char *)&v67 - ((v8 + 15) & 0x1FFFFFFF0LL);
@@ -290,13 +293,16 @@ LABEL_48:
   if ( v61 == 8 )
   {
     memset(v9, 0, v8);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset(v69, 0, v8);
+    v33 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset(v69, 0, v8);
   }
   else
   {
     memcpy(v9, v60, v8);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(v69, v60, v8);
+    v33 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(v69, v60, v8);
   }
+LABEL_58:
+  result.monitor = v34;
+  result.klass = v33;
   return result;
 }
 
@@ -509,6 +515,7 @@ LABEL_42:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o IEnumerableExtensions__GetMaxValueOwner___Il2CppFullySharedGenericType_(
         System_Collections_Generic_IEnumerable_T__o *self,
         System_Func_T__int__o *getValueFunc,
@@ -526,6 +533,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o IEnumerableExtensions__Ge
   __int64 v14; // x9
   int32_t *p_offset; // x10
   __int64 v16; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v17; // x0
+  void *v18; // x1
   __int64 *v19; // x0
   __int64 v20; // x1
   signed int v21; // w28
@@ -727,13 +736,15 @@ LABEL_42:
       (*(void (__fastcall **)(void *, _QWORD))v49)(v45, *(_QWORD *)(v49 + 8));
     }
     memcpy(v10, v10, v9);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(v51, v10, v9);
+    v17 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(v51, v10, v9);
   }
   else
   {
     memset(v10, 0, v9);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset(v51, 0, v9);
+    v17 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset(v51, 0, v9);
   }
+  result.monitor = v18;
+  result.klass = v17;
   return result;
 }
 

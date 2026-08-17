@@ -22,14 +22,14 @@ void ServantStatusListViewItemDrawRandomLimitCountSetting__Awake(
   UnityEngine_GameObject_o *buttonBase; // x0
   float v8; // s0
   UnityEngine_GameObject_o *gameObject; // x0
-  float y; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   baseCollider = this->fields.baseCollider;
   if ( !baseCollider )
     goto LABEL_5;
-  y = UnityEngine_BoxCollider__get_size(baseCollider, 0).fields.y;
+  size = UnityEngine_BoxCollider__get_size(baseCollider, 0);
   baseSprite = this->fields.baseSprite;
-  this->fields.baseColliderHeightBase = y;
+  this->fields.baseColliderHeightBase = size.fields.y;
   if ( !baseSprite )
     goto LABEL_5;
   titleBase = this->fields.titleBase;
@@ -56,6 +56,7 @@ int32_t ServantStatusListViewItemDrawRandomLimitCountSetting__GetKind(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
         ServantStatusListViewItemDrawRandomLimitCountSetting_o *this,
         UICommonButton_o *targetButton,
@@ -80,7 +81,10 @@ void ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
   float v22; // s13
   float v23; // s14
   float v24; // s15
-  UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v25; // s0 OVERLAPPED
+  float v26; // s1
+  float v27; // s2
+  float v28; // s3
 
   if ( (byte_596D363 & 1) == 0 )
   {
@@ -153,22 +157,22 @@ void ServantStatusListViewItemDrawRandomLimitCountSetting__SetButtonText(
         v24 = v20[27];
         UILabel__set_text((UILabel_o *)ComponentInChildren_object__58855044, text, 0);
         if ( isSelectedButton )
-          v28.fields.r = v21;
+          v25 = v21;
         else
-          v28.fields.r = v16;
+          v25 = v16;
         if ( isSelectedButton )
-          v28.fields.g = v22;
+          v26 = v22;
         else
-          v28.fields.g = v17;
+          v26 = v17;
         if ( isSelectedButton )
-          v28.fields.b = v23;
+          v27 = v23;
         else
-          v28.fields.b = v18;
+          v27 = v18;
         if ( isSelectedButton )
-          v28.fields.a = v24;
+          v28 = v24;
         else
-          v28.fields.a = v19;
-        UILabel__set_effectColor((UILabel_o *)ComponentInChildren_object__58855044, v28, 0);
+          v28 = v19;
+        UILabel__set_effectColor((UILabel_o *)ComponentInChildren_object__58855044, *(UnityEngine_Color_o *)&v25, 0);
         return;
       }
 LABEL_38:
@@ -216,23 +220,23 @@ void ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
   __int64 v19; // x1
   __int64 v20; // x2
   UIWidget_o *transformNameLabel; // x21
+  UnityEngine_Component_o *gameObject; // x0
+  __int64 v23; // x1
   UIWidget_o *transformNameSprite; // x21
-  UILabel_o *v23; // x21
-  __int64 v24; // x1
-  __int64 v25; // x2
+  UILabel_o *v25; // x21
+  __int64 v26; // x1
+  __int64 v27; // x2
   float baseColliderHeightBase; // s8
   int32_t transformNameAddHeight; // s9
   UnityEngine_Object_o *baseCollider; // x21
-  UnityEngine_GameObject_o *v29; // x0
-  const MethodInfo *v30; // x2
-  UnityEngine_Object_o *v31; // x21
+  float v31; // s1
   UnityEngine_GameObject_o *v32; // x0
-  UnityEngine_Component_o *gameObject; // x0
-  __int64 v34; // x1
-  UnityEngine_Vector3_o size; // 0:kr20_12.12
-  UnityEngine_Vector3_o v38; // 0:kr34_12.12
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v33; // x2
+  UnityEngine_Object_o *v34; // x21
+  float v35; // s1
+  UnityEngine_GameObject_o *v36; // x0
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -293,29 +297,27 @@ void ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
             if ( gameObject )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
-              v23 = this->fields.transformNameLabel;
+              v25 = this->fields.transformNameLabel;
               gameObject = (UnityEngine_Component_o *)ServantStatusListViewItem__GetTransformName(item, 0);
-              if ( v23 )
+              if ( v25 )
               {
-                UILabel__set_text(v23, (System_String_o *)gameObject, 0);
+                UILabel__set_text(v25, (System_String_o *)gameObject, 0);
                 transformNameAddHeight = this->fields.transformNameAddHeight;
                 baseColliderHeightBase = this->fields.baseColliderHeightBase;
                 baseCollider = (UnityEngine_Object_o *)this->fields.baseCollider;
                 if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                  j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24, v25);
+                  j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
                 if ( UnityEngine_Object__op_Inequality(baseCollider, 0, 0) )
                 {
                   gameObject = (UnityEngine_Component_o *)this->fields.baseCollider;
                   if ( !gameObject )
                     goto LABEL_34;
                   size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)gameObject, 0);
-                  v39.fields.x = size.fields.x;
-                  v39.fields.z = size.fields.z;
                   gameObject = (UnityEngine_Component_o *)this->fields.baseCollider;
                   if ( !gameObject )
                     goto LABEL_34;
-                  v39.fields.y = baseColliderHeightBase + (float)transformNameAddHeight;
-                  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, v39, 0);
+                  v31 = baseColliderHeightBase + (float)transformNameAddHeight;
+                  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, size, 0);
                 }
                 gameObject = (UnityEngine_Component_o *)this->fields.baseSprite;
                 if ( gameObject )
@@ -335,13 +337,13 @@ void ServantStatusListViewItemDrawRandomLimitCountSetting__Setup(
                   gameObject = (UnityEngine_Component_o *)this->fields.lineSprite;
                   if ( gameObject )
                   {
-                    v29 = UnityEngine_Component__get_gameObject(gameObject, 0);
+                    v32 = UnityEngine_Component__get_gameObject(gameObject, 0);
                     GameObjectExtensions__SetLocalPositionY(
-                      v29,
+                      v32,
                       this->fields.lineSpritePosYBase - (float)(this->fields.transformNameAddHeight / 2),
                       0);
 LABEL_33:
-                    ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask(this, item, v30);
+                    ServantStatusListViewItemDrawRandomLimitCountSetting__SetupMask(this, item, v33);
                     return;
                   }
                 }
@@ -353,22 +355,20 @@ LABEL_33:
     }
     else
     {
-      v31 = (UnityEngine_Object_o *)this->fields.baseCollider;
+      v34 = (UnityEngine_Object_o *)this->fields.baseCollider;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19, v20);
-      if ( UnityEngine_Object__op_Inequality(v31, 0, 0) )
+      if ( UnityEngine_Object__op_Inequality(v34, 0, 0) )
       {
         gameObject = (UnityEngine_Component_o *)this->fields.baseCollider;
         if ( !gameObject )
           goto LABEL_34;
         v38 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)gameObject, 0);
-        v40.fields.x = v38.fields.x;
-        v40.fields.z = v38.fields.z;
         gameObject = (UnityEngine_Component_o *)this->fields.baseCollider;
         if ( !gameObject )
           goto LABEL_34;
-        v40.fields.y = this->fields.baseColliderHeightBase;
-        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, v40, 0);
+        v35 = this->fields.baseColliderHeightBase;
+        UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)gameObject, v38, 0);
       }
       gameObject = (UnityEngine_Component_o *)this->fields.baseSprite;
       if ( gameObject )
@@ -379,8 +379,8 @@ LABEL_33:
         gameObject = (UnityEngine_Component_o *)this->fields.lineSprite;
         if ( gameObject )
         {
-          v32 = UnityEngine_Component__get_gameObject(gameObject, 0);
-          GameObjectExtensions__SetLocalPositionY(v32, this->fields.lineSpritePosYBase, 0);
+          v36 = UnityEngine_Component__get_gameObject(gameObject, 0);
+          GameObjectExtensions__SetLocalPositionY(v36, this->fields.lineSpritePosYBase, 0);
           gameObject = (UnityEngine_Component_o *)this->fields.transformNameSprite;
           if ( gameObject )
           {
@@ -395,7 +395,7 @@ LABEL_33:
       }
     }
 LABEL_34:
-    sub_2213CDC(gameObject, v34);
+    sub_2213CDC(gameObject, v23);
   }
 }
 

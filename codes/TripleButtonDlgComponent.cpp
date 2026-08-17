@@ -509,20 +509,31 @@ void TripleButtonDlgComponent__SetButtonSpriteSize(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *v4; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F3DE & 1) == 0 )
   {
     this = (TripleButtonDlgComponent_o *)sub_2213A60(&Method_UnityEngine_Component_GetComponent_UIRect___);
     byte_596F3DE = 1;
   }
-  if ( !sprite
-    || (this = (TripleButtonDlgComponent_o *)UnityEngine_Component__GetComponent_object_(
-                                               (UnityEngine_Component_o *)sprite,
-                                               (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIRect___)) == 0
-    || (v4 = (UnityEngine_Component_o *)this,
-        (this = (TripleButtonDlgComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
+  if ( !sprite )
+    goto LABEL_8;
+  this = (TripleButtonDlgComponent_o *)UnityEngine_Component__GetComponent_object_(
+                                         (UnityEngine_Component_o *)sprite,
+                                         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+  if ( !this )
+    goto LABEL_8;
+  v4 = (UnityEngine_Component_o *)this;
+  this = (TripleButtonDlgComponent_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  if ( !this
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0),
+        x = localPosition.fields.x,
+        y = localPosition.fields.y,
+        z = localPosition.fields.z,
         (*(void (__fastcall **)(UnityEngine_Component_o *, size_t, double, double, float, float))&v4->klass[1]._2.cctor_finished)(
           v4,
           v4->klass[1]._2.cctor_thread,
@@ -532,9 +543,13 @@ void TripleButtonDlgComponent__SetButtonSpriteSize(
           56.0),
         (this = (TripleButtonDlgComponent_o *)UnityEngine_Component__get_transform(v4, 0)) == 0) )
   {
+LABEL_8:
     sub_2213CDC(this, sprite);
   }
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, localPosition, 0);
+  v9.fields.x = x;
+  v9.fields.y = y;
+  v9.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v9, 0);
 }
 
 
@@ -892,7 +907,7 @@ System_IAsyncResult_o *TripleButtonDlgComponent_CallbackFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(TripleButtonDlgComponent_ResultClicked_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

@@ -583,26 +583,29 @@ void BattleNpGaugeSystemComponent__setNowParam(
 void BattleNpGaugeSystemComponent__setUseNp(BattleNpGaugeSystemComponent_o *this, bool flg, const MethodInfo *method)
 {
   UIWidget_o *frameSprite; // x0
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v5; // s0 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
   UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   frameSprite = (UIWidget_o *)this->fields.frameSprite;
   if ( !flg )
   {
     if ( frameSprite )
     {
-      v9.fields.r = 0.5;
-      v9.fields.g = 0.5;
-      v9.fields.b = 0.5;
-      v9.fields.a = 1.0;
-      UIWidget__set_color(frameSprite, v9, 0);
+      v10.fields.r = 0.5;
+      v10.fields.g = 0.5;
+      v10.fields.b = 0.5;
+      v10.fields.a = 1.0;
+      UIWidget__set_color(frameSprite, v10, 0);
       frameSprite = (UIWidget_o *)this->fields.label;
       if ( frameSprite )
       {
-        v8.fields.r = 0.5;
-        v8.fields.g = 0.5;
-        v8.fields.b = 0.5;
+        v5 = 0.5;
+        v6 = 0.5;
+        v7 = 0.5;
         goto LABEL_8;
       }
     }
@@ -611,20 +614,20 @@ LABEL_9:
   }
   if ( !frameSprite )
     goto LABEL_9;
-  v7.fields.r = 1.0;
-  v7.fields.g = 1.0;
-  v7.fields.b = 1.0;
-  v7.fields.a = 1.0;
-  UIWidget__set_color(frameSprite, v7, 0);
+  v9.fields.r = 1.0;
+  v9.fields.g = 1.0;
+  v9.fields.b = 1.0;
+  v9.fields.a = 1.0;
+  UIWidget__set_color(frameSprite, v9, 0);
   frameSprite = (UIWidget_o *)this->fields.label;
   if ( !frameSprite )
     goto LABEL_9;
-  v8.fields.r = 1.0;
-  v8.fields.g = 1.0;
-  v8.fields.b = 1.0;
+  v5 = 1.0;
+  v6 = 1.0;
+  v7 = 1.0;
 LABEL_8:
-  v8.fields.a = 1.0;
-  UIWidget__set_color(frameSprite, v8, 0);
+  v8 = 1.0;
+  UIWidget__set_color(frameSprite, *(UnityEngine_Color_o *)&v5, 0);
 }
 
 

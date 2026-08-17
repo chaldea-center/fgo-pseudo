@@ -145,40 +145,44 @@ void ServantStatusNpComponent__ModifyCommandCard(
   Il2CppObject *commandCardPrefab; // x20
   ServantStatusNpComponent_o *v11; // x20
   UnityEngine_Transform_o *transform; // x23
-  ServantStatusNpComponent_o *v13; // x23
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  ServantStatusNpComponent_o *v16; // x23
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v15; // x2
-  System_String_o *v16; // x3
-  int32_t v17; // w4
-  int32_t v18; // w5
-  bool v19; // w6
-  bool v20; // w7
+  System_String_o *v18; // x2
+  System_String_o *v19; // x3
+  int32_t v20; // w4
+  int32_t v21; // w5
+  bool v22; // w6
+  bool v23; // w7
   int32_t SvtId; // w24
-  const MethodInfo *v22; // x2
+  const MethodInfo *v25; // x2
   int32_t CommandLimitCount; // w26
   int32_t cardType; // w25
-  BattleCommandData_o *v25; // x27
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
-  struct BattleCommandData_o *v32; // x22
+  BattleCommandData_o *v28; // x27
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  struct BattleCommandData_o *v35; // x22
   struct TreasureDvcEntity_o *tdEntity; // x8
-  bool v34; // w21
+  bool v37; // w21
   bool IsDispUnavailable; // w0
   MissionNaviTransitionBoardItem_o *p_commandCardComponent; // x19
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  __int64 v43; // x1
-  __int64 v44; // x2
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
+  __int64 v46; // x1
+  __int64 v47; // x2
   int32_t layer; // w19
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = item;
   v4 = this;
@@ -247,6 +251,9 @@ LABEL_32:
     if ( !this )
       goto LABEL_32;
     localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0);
+    x = localScale.fields.x;
+    y = localScale.fields.y;
+    z = localScale.fields.z;
     UnityEngine_Object__set_name((UnityEngine_Object_o *)v11, (System_String_o *)StringLiteral_4757/*"CommandCard"*/, 0);
     this = (ServantStatusNpComponent_o *)v4->fields.commandCardBase;
     if ( !this )
@@ -270,7 +277,10 @@ LABEL_32:
       transform,
       UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
       0);
-    UnityEngine_Transform__set_localScale(transform, localScale, 0);
+    v50.fields.x = x;
+    v50.fields.y = y;
+    v50.fields.z = z;
+    UnityEngine_Transform__set_localScale(transform, v50, 0);
     UnityEngine_GameObject__AddComponent_object_(
       (UnityEngine_GameObject_o *)v11,
       (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_UIDragScrollView___);
@@ -279,68 +289,68 @@ LABEL_32:
                                            (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_BattleCommandComponent___);
     if ( !this )
       goto LABEL_32;
-    v13 = this;
+    v16 = this;
     BattleCommandComponent__setDepth((BattleCommandComponent_o *)this, 110, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0);
-    v13[1].fields.tdEntity = (struct TreasureDvcEntity_o *)gameObject;
+    v16[1].fields.tdEntity = (struct TreasureDvcEntity_o *)gameObject;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v13[1].fields.tdEntity,
+      (MissionNaviTransitionBoardItem_o *)&v16[1].fields.tdEntity,
       (int32_t)gameObject,
-      v15,
-      v16,
-      v17,
       v18,
       v19,
-      v20);
+      v20,
+      v21,
+      v22,
+      v23);
     if ( !v3 )
       goto LABEL_32;
     SvtId = ServantStatusListViewItem__GetSvtId(v3, 1, 0);
-    CommandLimitCount = ServantStatusNpComponent__GetCommandLimitCount(v4, v3, v22);
+    CommandLimitCount = ServantStatusNpComponent__GetCommandLimitCount(v4, v3, v25);
     cardType = v4->fields.cardType;
-    v25 = (BattleCommandData_o *)sub_2213CCC(BattleCommandData_TypeInfo);
-    BattleCommandData___ctor_53637188(v25, cardType, SvtId, CommandLimitCount, 0, -1, 0);
-    v4->fields.commandCardData = v25;
+    v28 = (BattleCommandData_o *)sub_2213CCC(BattleCommandData_TypeInfo);
+    BattleCommandData___ctor_53637188(v28, cardType, SvtId, CommandLimitCount, 0, -1, 0);
+    v4->fields.commandCardData = v28;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&v4->fields.commandCardData,
-      (int32_t)v25,
-      v26,
-      v27,
-      v28,
+      (int32_t)v28,
       v29,
       v30,
-      v31);
-    v32 = v4->fields.commandCardData;
+      v31,
+      v32,
+      v33,
+      v34);
+    v35 = v4->fields.commandCardData;
     this = (ServantStatusNpComponent_o *)ServantStatusListViewItem__GetDispLimitCountStageSealAfterAtStageLimitCount(
                                            v3,
                                            1,
                                            0);
-    if ( !v32 )
+    if ( !v35 )
       goto LABEL_32;
     tdEntity = v4->fields.tdEntity;
-    v32->fields._loadsvtLimit = (int)this;
+    v35->fields._loadsvtLimit = (int)this;
     if ( !tdEntity )
       goto LABEL_32;
     item = (ServantStatusListViewItem_o *)v4->fields.commandCardData;
     if ( !item )
       goto LABEL_32;
     LODWORD(item->fields.warBoardPartyItem) = tdEntity->fields.id;
-    BattleCommandComponent__setData((BattleCommandComponent_o *)v13, (BattleCommandData_o *)item, 0, 0, 1, 0, 1, 0);
-    BattleCommandComponent__setShader((BattleCommandComponent_o *)v13, (System_String_o *)StringLiteral_15732/*"Unlit/Transparent Colored"*/, 0);
+    BattleCommandComponent__setData((BattleCommandComponent_o *)v16, (BattleCommandData_o *)item, 0, 0, 1, 0, 1, 0);
+    BattleCommandComponent__setShader((BattleCommandComponent_o *)v16, (System_String_o *)StringLiteral_15732/*"Unlit/Transparent Colored"*/, 0);
     this = (ServantStatusNpComponent_o *)v4->fields.tdEntity;
     if ( !this )
       goto LABEL_32;
-    v34 = v4->fields.isCharaHide;
+    v37 = v4->fields.isCharaHide;
     IsDispUnavailable = TreasureDvcEntity__IsDispUnavailable((TreasureDvcEntity_o *)this, 0);
-    BattleCommandComponent__updateView((BattleCommandComponent_o *)v13, 1, 0, 1, 0, v34, IsDispUnavailable, 0);
-    v4->fields.commandCardComponent = (struct BattleCommandComponent_o *)v13;
+    BattleCommandComponent__updateView((BattleCommandComponent_o *)v16, 1, 0, 1, 0, v37, IsDispUnavailable, 0);
+    v4->fields.commandCardComponent = (struct BattleCommandComponent_o *)v16;
     p_commandCardComponent = (MissionNaviTransitionBoardItem_o *)&v4->fields.commandCardComponent;
-    sub_2213A04(p_commandCardComponent, (int32_t)v13, v37, v38, v39, v40, v41, v42);
+    sub_2213A04(p_commandCardComponent, (int32_t)v16, v40, v41, v42, v43, v44, v45);
     this = (ServantStatusNpComponent_o *)p_commandCardComponent[-1].fields.sortValue2B;
     if ( !this )
       goto LABEL_32;
     layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0);
     if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v43, v44);
+      j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v46, v47);
     NGUITools__SetLayer((UnityEngine_GameObject_o *)v11, layer, 0);
   }
 }

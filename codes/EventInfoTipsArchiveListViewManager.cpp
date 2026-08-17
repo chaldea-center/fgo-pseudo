@@ -528,7 +528,7 @@ void EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
   int v9; // w24
   float v10; // s9
   EventInfoTipsArchiveListViewObject_o *v11; // x21
-  float v12; // s8
+  float y; // s8
   const MethodInfo *v13; // x1
   float ReadEndValue_k__BackingField; // s8
   const MethodInfo *v15; // x2
@@ -536,7 +536,7 @@ void EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
   int klass; // w8
   struct EventInfoTipsArchiveListViewItem_o *mainInfo; // x9
   struct TipsArchiveStateManager_o *tipsArchiveStateManager; // x8
-  float y; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972FF6 & 1) == 0 )
   {
@@ -556,7 +556,7 @@ void EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
     scrollView = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(scrollView, 0);
     if ( !scrollView )
       goto LABEL_31;
-    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0).fields.y;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0);
     objectList = this->fields.objectList;
     if ( !objectList )
       goto LABEL_31;
@@ -565,7 +565,7 @@ void EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
     {
       v8 = 0;
       v9 = -size;
-      v10 = y - this->fields.initialScrollPosition.fields.y;
+      v10 = localPosition.fields.y - this->fields.initialScrollPosition.fields.y;
       while ( 1 )
       {
         scrollView = (UnityEngine_Component_o *)this->fields.objectList;
@@ -585,13 +585,13 @@ void EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
                                                     v4);
           if ( !this->fields.scrollViewPanel )
             break;
-          if ( COERCE_FLOAT(LODWORD(UIPanel__GetViewSize(this->fields.scrollViewPanel, 0).fields.y)) > (float)(int)scrollView )
+          if ( COERCE_FLOAT(LODWORD(UIPanel__GetViewSize((UIPanel_o *)this[32], 0).fields.y)) > (float)(int)scrollView )
           {
             scrollView = (UnityEngine_Component_o *)this->fields.scrollViewPanel;
             if ( !scrollView )
               break;
-            v12 = UIPanel__GetViewSize((UIPanel_o *)scrollView, 0).fields.y;
-            v10 = v10 + (float)(v12 - (float)EventInfoTipsArchiveListViewObject__GetSize(v11, v13));
+            y = UIPanel__GetViewSize((UIPanel_o *)scrollView, 0).fields.y;
+            v10 = v10 + (float)(y - (float)EventInfoTipsArchiveListViewObject__GetSize(v11, v13));
           }
         }
         else if ( !scrollView )
@@ -1191,7 +1191,7 @@ System_IAsyncResult_o *EventInfoTipsArchiveListViewManager_CallbackFunc__BeginIn
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(EventInfoTipsArchiveListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

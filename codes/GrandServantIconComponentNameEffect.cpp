@@ -58,6 +58,7 @@ void GrandServantIconComponentNameEffect__OnEnable(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEffect_o *this, const MethodInfo *method)
 {
   float t; // s8
@@ -77,6 +78,9 @@ void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEf
   float v17; // s1
   struct UnityEngine_Color_o fromColor; // q2
   float32x4_t v19; // q3
+  UnityEngine_Color_o v20; // q0 OVERLAPPED
+  float g; // s1
+  __int64 v22; // kr00_8
 
   t = this->fields.t;
   deltaTime = UnityEngine_Time__get_deltaTime(0);
@@ -124,5 +128,8 @@ void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEf
   v19 = vsubq_f32((float32x4_t)this->fields.toColor, (float32x4_t)fromColor);
   if ( v12 > 1.0 )
     v12 = 1.0;
-  UIWidget__set_color(texture, (UnityEngine_Color_o)vaddq_f32((float32x4_t)fromColor, vmulq_n_f32(v19, v12)), 0);
+  v20 = (UnityEngine_Color_o)vaddq_f32((float32x4_t)fromColor, vmulq_n_f32(v19, v12));
+  g = v20.fields.g;
+  v22 = *(_QWORD *)&v20.fields.b;
+  UIWidget__set_color(texture, v20, 0);
 }

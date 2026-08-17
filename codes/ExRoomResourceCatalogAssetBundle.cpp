@@ -558,9 +558,9 @@ void ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1___LoadAsset_b__3(
   if ( !CS___8__locals1
     || (v9 = this,
         (this = (ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_o *)CS___8__locals1->fields.__4__this) == 0)
-    || (*((_QWORD *)this + 4) = asset,
+    || (this[1].klass = (ExRoomResourceCatalogAssetBundle___c__DisplayClass7_1_c *)asset,
         sub_2213A04(
-          (MissionNaviTransitionBoardItem_o *)(this + 1),
+          (MissionNaviTransitionBoardItem_o *)&this[1],
           (int32_t)asset,
           (System_String_o *)method,
           v3,

@@ -5222,7 +5222,8 @@ System_Collections_Generic_List_long__o *UserServantMaster__getSvtAllUserIdList(
     (System_Collections_Generic_List_Enumerator_T__o *)&v24,
     v6,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-  v27 = *(System_Collections_Generic_List_Enumerator_object__o *)&v24.fields.currentCryptoKey;
+  v27.fields._current = (Il2CppObject *)v24.fields.fakeValue;
+  *(_OWORD *)&v27.fields._list = *(_OWORD *)&v24.fields.currentCryptoKey;
   v25 = 0;
   v26 = &v27;
   while ( 1 )

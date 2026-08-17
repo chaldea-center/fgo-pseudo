@@ -91,6 +91,7 @@ void BattleServantNPSpeedChangeComponent__OnClickButton(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleServantNPSpeedChangeComponent__SetButton(
         BattleServantNPSpeedChangeComponent_o *this,
         const MethodInfo *method)
@@ -119,7 +120,10 @@ void BattleServantNPSpeedChangeComponent__SetButton(
   struct UISprite_array *npSpeedButtonSpriteArray; // x8
   System_String_o **v25; // x8
   struct UIRangeLabel_array *npSpeedLabelArray; // x8
-  UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v27; // s0 OVERLAPPED
+  float v28; // s1
+  float v29; // s2
+  float v30; // s3
 
   if ( (byte_59741F1 & 1) == 0 )
   {
@@ -206,11 +210,11 @@ LABEL_48:
             supportServantLabel = (void *)*((_QWORD *)&npSpeedLabelArray->obj.klass + v15);
             if ( supportServantLabel )
             {
-              v30.fields.r = v23 == 4 ? v16 : v6;
-              v30.fields.g = v23 == 4 ? v17 : v7;
-              v30.fields.b = v23 == 4 ? v18 : v8;
-              v30.fields.a = v23 == 4 ? v19 : v9;
-              UIRangeLabel__set_effectColor((UIRangeLabel_o *)supportServantLabel, v30, 0);
+              v27 = v23 == 4 ? v16 : v6;
+              v28 = v23 == 4 ? v17 : v7;
+              v29 = v23 == 4 ? v18 : v8;
+              v30 = v23 == 4 ? v19 : v9;
+              UIRangeLabel__set_effectColor((UIRangeLabel_o *)supportServantLabel, *(UnityEngine_Color_o *)&v27, 0);
               npSpeedButtonArray = this->fields.npSpeedButtonArray;
               ++v15;
               if ( npSpeedButtonArray )
@@ -358,6 +362,7 @@ LABEL_28:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleServantNPSpeedChangeComponent__SetSupportServantButton(
         BattleServantNPSpeedChangeComponent_o *this,
         const MethodInfo *method)
@@ -378,9 +383,12 @@ void BattleServantNPSpeedChangeComponent__SetSupportServantButton(
   struct UISprite_array *v16; // x8
   struct UIRangeLabel_array *npSpeedLabelArray; // x8
   struct UIRangeLabel_array *v18; // x8
-  __int64 v22; // x1
-  UILabel_o *v23; // x19
-  UnityEngine_Color_o maskLabelEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float a; // s3
+  float b; // s2
+  float g; // s1
+  float r; // s0 OVERLAPPED
+  __int64 v23; // x1
+  UILabel_o *v24; // x19
 
   if ( (byte_59741F3 & 1) == 0 )
   {
@@ -468,17 +476,25 @@ void BattleServantNPSpeedChangeComponent__SetSupportServantButton(
                         if ( v7 >= LODWORD(v18->max_length) )
 LABEL_42:
                           sub_2213CE4(supportServantLabel);
-                        maskLabelEffectColor.fields.a = v11;
-                        maskLabelEffectColor.fields.b = v10;
-                        maskLabelEffectColor.fields.g = v9;
-                        maskLabelEffectColor.fields.r = v8;
+                        a = v11;
+                        b = v10;
+                        g = v9;
+                        r = v8;
                         if ( !v7 )
-                          maskLabelEffectColor = this->fields.maskLabelEffectColor;
+                        {
+                          r = this->fields.maskLabelEffectColor.fields.r;
+                          g = this->fields.maskLabelEffectColor.fields.g;
+                          b = this->fields.maskLabelEffectColor.fields.b;
+                          a = this->fields.maskLabelEffectColor.fields.a;
+                        }
                         supportServantLabel = (UICommonButton_o *)v18->m_Items[v7];
                         if ( supportServantLabel )
                         {
                           ++v7;
-                          UIRangeLabel__set_effectColor((UIRangeLabel_o *)supportServantLabel, maskLabelEffectColor, 0);
+                          UIRangeLabel__set_effectColor(
+                            (UIRangeLabel_o *)supportServantLabel,
+                            *(UnityEngine_Color_o *)&r,
+                            0);
                           npSpeedButtonArray = this->fields.npSpeedButtonArray;
                           if ( npSpeedButtonArray )
                             continue;
@@ -504,14 +520,14 @@ LABEL_42:
   if ( !supportServantLabel )
     goto LABEL_35;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)supportServantLabel, 1, 0);
-  v23 = this->fields.supportServantLabel;
+  v24 = this->fields.supportServantLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v22);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v23);
   supportServantLabel = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3004/*"BATTLE_SUPPORT_SERVANT_NP_SPEED"*/, 0);
-  if ( !v23 )
+  if ( !v24 )
 LABEL_35:
     sub_2213CDC(supportServantLabel, method);
-  UILabel__set_text(v23, (System_String_o *)supportServantLabel, 0);
+  UILabel__set_text(v24, (System_String_o *)supportServantLabel, 0);
 }
 
 

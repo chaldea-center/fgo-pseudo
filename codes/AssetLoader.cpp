@@ -1192,7 +1192,7 @@ System_IAsyncResult_o *AssetLoader_LoadEndDataHandler__BeginInvoke(
   AssetData_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = data;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -1314,7 +1314,7 @@ System_IAsyncResult_o *AssetLoader_LoadEndHandler__BeginInvoke(
   AssetLoader_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = loader;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -1752,6 +1752,7 @@ bool AssetLoader__LoadDataCR_d__29__MoveNext(AssetLoader__LoadDataCR_d__29_o *th
   __int64 *v400; // x8
   System_String_o *v401; // x21
   ErrorDialog_ClickDelegate_o *v402; // x22
+  bool v403; // w0
   __int64 *v404; // x8
   System_String_o *v405; // x22
   ErrorDialog_ClickDelegate_o *v406; // x23
@@ -2444,8 +2445,9 @@ LABEL_386:
       v9->fields.__2__current = wait_5__10;
       v529 = (MissionNaviTransitionBoardItem_o *)&v9->fields.__2__current;
       sub_2213A04(v529, (int32_t)wait_5__10, v152, v153, v154, v155, v156, v157);
+      v403 = 1;
       v529[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return v403;
     }
     if ( v158 < v9->fields._requestTime_5__8 )
       goto LABEL_386;
@@ -2929,7 +2931,7 @@ LABEL_167:
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
     this = (AssetLoader__LoadDataCR_d__29_o *)NetworkManager_TypeInfo;
   }
-  if ( *(_BYTE *)(*((_QWORD *)this + 23) + 144LL) )
+  if ( *(_BYTE *)(*(_QWORD *)&this[1].fields._isEncrypted_5__2 + 144LL) )
   {
     if ( !_4__this )
       goto LABEL_392;

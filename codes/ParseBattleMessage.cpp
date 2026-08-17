@@ -245,15 +245,15 @@ System_String_o *ParseBattleMessage__ReplaceText(
   ParseBattleMessage_o *v9; // x0
   const MethodInfo *v10; // x5
   int32_t v11; // w22
-  int v12; // w24
-  int v13; // w25
+  int32_t v12; // w24
+  int32_t v13; // w25
   System_String_o *v14; // x23
   const MethodInfo *v15; // x3
   ParseBattleMessage_o *appended; // x0
   const MethodInfo *v17; // x5
   int32_t v18; // w8
   System_String_o *v20; // [xsp+0h] [xbp-50h] BYREF
-  __int64 endIndex; // [xsp+8h] [xbp-48h] BYREF
+  int32_t endIndex[2]; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_5973E84 & 1) == 0 )
   {
@@ -261,7 +261,7 @@ System_String_o *ParseBattleMessage__ReplaceText(
     byte_5973E84 = 1;
   }
   v20 = 0;
-  endIndex = 0;
+  *(_QWORD *)endIndex = 0;
   IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(text, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
@@ -270,22 +270,16 @@ System_String_o *ParseBattleMessage__ReplaceText(
       stringLength = text->fields._stringLength;
       v8 = (System_Text_StringBuilder_o *)sub_2213CCC(System_Text_StringBuilder_TypeInfo);
       System_Text_StringBuilder___ctor_75728496(v8, stringLength + 32, 0);
-      IsNullOrEmpty = (System_String_o *)ParseBattleMessage__NextTagSearch(
-                                           v9,
-                                           text,
-                                           0,
-                                           (int32_t *)&endIndex + 1,
-                                           (int32_t *)&endIndex,
-                                           v10);
+      IsNullOrEmpty = (System_String_o *)ParseBattleMessage__NextTagSearch(v9, text, 0, &endIndex[1], endIndex, v10);
       v11 = 0;
       if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
       {
         v11 = 0;
         do
         {
-          v12 = endIndex;
-          v13 = HIDWORD(endIndex);
-          v14 = System_String__Substring_75702848(text, HIDWORD(endIndex) + 1, (int)endIndex + ~HIDWORD(endIndex), 0);
+          v12 = endIndex[0];
+          v13 = endIndex[1];
+          v14 = System_String__Substring_75702848(text, endIndex[1] + 1, endIndex[0] + ~endIndex[1], 0);
           IsNullOrEmpty = (System_String_o *)ParseBattleMessage__ExistReplaceTag(
                                                this,
                                                v14,
@@ -327,8 +321,8 @@ System_String_o *ParseBattleMessage__ReplaceText(
                                                appended,
                                                text,
                                                v12 + 1,
-                                               (int32_t *)&endIndex + 1,
-                                               (int32_t *)&endIndex,
+                                               &endIndex[1],
+                                               endIndex,
                                                v17);
         }
         while ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 );

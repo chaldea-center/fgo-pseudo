@@ -1968,22 +1968,32 @@ bool VoiceMaster__isEnableBirthdayVoice(
         const MethodInfo *method)
 {
   System_DateTime_o v6; // x1
+  System_DateTime_o v7; // x0
   int32_t Year; // w20
+  System_DateTime_o v9; // x0
   int32_t Month; // w21
+  System_DateTime_o v11; // x0
   int32_t Day; // w3
-  __int64 v10; // x1
-  int32_t v11; // w20
-  int32_t v12; // w21
-  int32_t v13; // w3
+  System_DateTime_o v13; // x0
   __int64 v14; // x1
+  System_DateTime_o v15; // x0
+  int32_t v16; // w20
+  System_DateTime_o v17; // x0
+  int32_t v18; // w21
+  System_DateTime_o v19; // x0
+  int32_t v20; // w3
+  System_DateTime_o v21; // x0
+  __int64 v22; // x1
   int64_t ServerTime; // x20
+  System_DateTime_o v24; // x0
   int64_t Time_48346468; // x21
-  int64_t v17; // x0
-  _QWORD v21[2]; // [xsp+8h] [xbp-68h] BYREF
-  int v22; // [xsp+18h] [xbp-58h]
-  System_DateTime_o v23; // [xsp+20h] [xbp-50h]
+  System_DateTime_o v26; // x0
+  int64_t v27; // x0
+  _QWORD v31[2]; // [xsp+8h] [xbp-68h] BYREF
+  int v32; // [xsp+18h] [xbp-58h]
+  System_DateTime_o v33; // [xsp+20h] [xbp-50h]
   System_DateTime_o dateTime; // [xsp+28h] [xbp-48h]
-  uint64_t v25; // [xsp+30h] [xbp-40h] BYREF
+  uint64_t v35; // [xsp+30h] [xbp-40h] BYREF
   uint64_t dateData; // [xsp+38h] [xbp-38h] BYREF
 
   if ( (byte_59719BD & 1) == 0 )
@@ -1992,39 +2002,49 @@ bool VoiceMaster__isEnableBirthdayVoice(
     sub_2213A60(&NetworkManager_TypeInfo);
     byte_59719BD = 1;
   }
-  v25 = 0;
+  v35 = 0;
   dateData = 0;
-  v23.fields._dateData = 0;
+  v33.fields._dateData = 0;
   dateTime.fields._dateData = 0;
-  v22 = 0;
+  v32 = 0;
   if ( userBirthDay < 1 )
     return 0;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, userBirthDay);
   dateData = NetworkManager__getServerDateTime_48347596(createDay, 0).fields._dateData;
-  v25 = NetworkManager__getDateTime_48347260(userBirthDay, 0).fields._dateData;
+  v35 = NetworkManager__getDateTime_48347260(userBirthDay, 0).fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v6.fields._dateData);
-  Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-  Month = System_DateTime__get_Month((System_DateTime_o)&v25, 0);
-  Day = System_DateTime__get_Day((System_DateTime_o)&v25, 0);
-  v21[0] = 0;
-  System_DateTime___ctor_77013752((System_DateTime_o)v21, Year, Month, Day, 0);
-  dateTime.fields._dateData = v21[0];
+  v7.fields._dateData = (uint64_t)&dateData;
+  Year = System_DateTime__get_Year(v7, 0);
+  v9.fields._dateData = (uint64_t)&v35;
+  Month = System_DateTime__get_Month(v9, 0);
+  v11.fields._dateData = (uint64_t)&v35;
+  Day = System_DateTime__get_Day(v11, 0);
+  v31[0] = 0;
+  v13.fields._dateData = (uint64_t)v31;
+  System_DateTime___ctor_77013752(v13, Year, Month, Day, 0);
+  dateTime.fields._dateData = v31[0];
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v10);
-  v11 = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-  v12 = System_DateTime__get_Month((System_DateTime_o)&v25, 0);
-  v13 = System_DateTime__get_Day((System_DateTime_o)&v25, 0);
-  v21[0] = 0;
-  System_DateTime___ctor_77013752((System_DateTime_o)v21, v11 + 1, v12, v13, 0);
-  v23.fields._dateData = v21[0];
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v14);
+  v15.fields._dateData = (uint64_t)&dateData;
+  v16 = System_DateTime__get_Year(v15, 0);
+  v17.fields._dateData = (uint64_t)&v35;
+  v18 = System_DateTime__get_Month(v17, 0);
+  v19.fields._dateData = (uint64_t)&v35;
+  v20 = System_DateTime__get_Day(v19, 0);
+  v31[0] = 0;
+  v21.fields._dateData = (uint64_t)v31;
+  System_DateTime___ctor_77013752(v21, v16 + 1, v18, v20, 0);
+  v33.fields._dateData = v31[0];
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v14);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v22);
   ServerTime = NetworkManager__getServerTime(0);
-  Time_48346468 = NetworkManager__getTime_48346468(dateTime, 0);
-  v17 = NetworkManager__getTime_48346468(v23, 0);
-  return Time_48346468 + 86400 >= createDay && Time_48346468 <= ServerTime || v17 <= ServerTime;
+  v24.fields._dateData = dateTime.fields._dateData;
+  Time_48346468 = NetworkManager__getTime_48346468(v24, 0);
+  v26.fields._dateData = v33.fields._dateData;
+  v27 = NetworkManager__getTime_48346468(v26, 0);
+  return Time_48346468 + 86400 >= createDay && Time_48346468 <= ServerTime || v27 <= ServerTime;
 }
 
 

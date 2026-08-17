@@ -77,11 +77,8 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
   Il2CppObject *RestTime2; // x0
   System_String_o *v15; // x1
   bool v16; // w8
-  float b; // s2
-  float a; // s3
-  UnityEngine_Color_o v19; // [xsp+0h] [xbp-40h] BYREF
-  UnityEngine_Color_o v20; // 0:kr00_16.16
-  __int64 v21; // 0:s0.4,4:s1.4
+  __int128 v17; // kr00_16 OVERLAPPED
+  UnityEngine_Color_o v18; // [xsp+0h] [xbp-40h] BYREF
 
   if ( (byte_596CE3B & 1) == 0 )
   {
@@ -89,8 +86,8 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
     sub_2213A60(&NetworkManager_TypeInfo);
     byte_596CE3B = 1;
   }
-  *(_QWORD *)&v19.fields.r = 0;
-  *(_QWORD *)&v19.fields.b = 0;
+  *(_QWORD *)&v18.fields.r = 0;
+  *(_QWORD *)&v18.fields.b = 0;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, ent, isInit);
   Time = NetworkManager__getTime(0);
@@ -134,16 +131,14 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
     v15 = *(System_String_o **)(Time + 16);
   }
   UILabel__set_text(behindLabel, v15, 0);
-  v16 = UnityEngine_ColorUtility__TryParseHtmlString(*(System_String_o **)(v11 + 24), &v19, 0);
+  v16 = UnityEngine_ColorUtility__TryParseHtmlString(*(System_String_o **)(v11 + 24), &v18, 0);
   Time = (int64_t)this->fields.behindLabel;
   if ( !v16 )
   {
     if ( Time )
     {
-      LODWORD(v21) = 1.0;
-      HIDWORD(v21) = 1.0;
-      b = 1.0;
-      a = 1.0;
+      *(_QWORD *)&v17 = __PAIR64__(1.0, 1.0);
+      *((_QWORD *)&v17 + 1) = __PAIR64__(1.0, 1.0);
       goto LABEL_23;
     }
 LABEL_25:
@@ -151,12 +146,8 @@ LABEL_25:
   }
   if ( !Time )
     goto LABEL_25;
-  b = v19.fields.b;
-  a = v19.fields.a;
-  v21 = *(_QWORD *)&v19.fields.r;
+  *(_QWORD *)&v17 = *(_QWORD *)&v18.fields.b;
+  *((_QWORD *)&v17 + 1) = *(_QWORD *)&v18.fields.r;
 LABEL_23:
-  *(_QWORD *)&v20.fields.r = v21;
-  v20.fields.b = b;
-  v20.fields.a = a;
-  UIWidget__set_color((UIWidget_o *)Time, v20, 0);
+  UIWidget__set_color((UIWidget_o *)Time, *(UnityEngine_Color_o *)((char *)&v17 + 8), 0);
 }

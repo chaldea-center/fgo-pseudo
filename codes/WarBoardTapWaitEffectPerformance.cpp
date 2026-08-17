@@ -652,6 +652,7 @@ bool WarBoardTapWaitEffectPerformance__Execute_d__10__MoveNext(
   __int64 v18; // x1
   __int64 v19; // x2
   UnityEngine_Object_o *commonEffect; // x21
+  bool result; // w0
   int v22; // w20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
 
@@ -734,8 +735,9 @@ LABEL_23:
   v8->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(p__2__current, 0, (System_String_o *)v2, v3, v4, v5, v6, v7);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = v22;
-  return 1;
+  return result;
 }
 
 

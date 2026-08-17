@@ -172,7 +172,7 @@ void BonusSelectSummonPartyServantListViewItemDraw__SetItem(
   __int64 v19; // x2
   Il2CppObject *Master_object; // x21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v21; // x8
-  int64_t v22; // x22
+  UIIconLabel_c *klass; // x22
   __int64 v23; // x2
   __int64 *v24; // x8
   UISprite_o *summonInfoSprite; // x21
@@ -282,7 +282,7 @@ void BonusSelectSummonPartyServantListViewItemDraw__SetItem(
     v21 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v5->fields.servantEntity;
     if ( !v21 )
       goto LABEL_40;
-    v22 = *(_QWORD *)(*((_QWORD *)this + 23) + 64LL);
+    klass = this[1].fields.treasureDeviceIconLabel[1].klass;
     this = (BonusSelectSummonPartyServantListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
                                                                 v21[1],
                                                                 0);
@@ -291,7 +291,7 @@ void BonusSelectSummonPartyServantListViewItemDraw__SetItem(
     this = (BonusSelectSummonPartyServantListViewItemDraw_o *)UserServantCollectionMaster__TryGetEntity(
                                                                 (UserServantCollectionMaster_o *)Master_object,
                                                                 &entity,
-                                                                v22,
+                                                                (int64_t)klass,
                                                                 (int32_t)this,
                                                                 0);
     v24 = &StringLiteral_21399/*"img_icon_not_summoned"*/;

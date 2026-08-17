@@ -134,7 +134,7 @@ void PurchaseShopCheckWarningDialog__CreateItemList(
   Il2CppObject *v13; // x0
   __int64 v14; // x1
   UnityEngine_GameObject_o *v15; // x22
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v17; // x1
   UnityEngine_Transform_o *v18; // x24
   UnityEngine_Transform_o *v19; // x0
@@ -223,11 +223,11 @@ void PurchaseShopCheckWarningDialog__CreateItemList(
         v15 = (UnityEngine_GameObject_o *)v13;
         if ( !v13 )
           sub_2213CDC(0, v14);
-        transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v13, 0);
-        v18 = (UnityEngine_Transform_o *)transform;
+        transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v13, 0);
+        v18 = transform;
         if ( !byte_5969AE0 )
         {
-          transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
         if ( !v18 )
@@ -606,7 +606,10 @@ void PurchaseShopCheckWarningDialog__SetSlider(
 {
   UISprite_o *sliderSprite; // x0
   __int64 *v6; // x8
-  UnityEngine_Color_o DisableColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float a; // s3
+  float b; // s2
+  float g; // s1
+  float r; // s0 OVERLAPPED
 
   if ( (byte_596C675 & 1) == 0 )
   {
@@ -621,15 +624,20 @@ void PurchaseShopCheckWarningDialog__SetSlider(
   if ( !sliderOn )
     v6 = &StringLiteral_21576/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, (System_String_o *)*v6, 0);
-  DisableColor.fields.a = 1.0;
-  DisableColor.fields.b = 1.0;
+  a = 1.0;
+  b = 1.0;
   sliderSprite = (UISprite_o *)this->fields.decideButton;
-  DisableColor.fields.g = 1.0;
-  DisableColor.fields.r = 1.0;
+  g = 1.0;
+  r = 1.0;
   if ( !sliderOn )
-    DisableColor = this->fields.DisableColor;
+  {
+    r = this->fields.DisableColor.fields.r;
+    g = this->fields.DisableColor.fields.g;
+    b = this->fields.DisableColor.fields.b;
+    a = this->fields.DisableColor.fields.a;
+  }
   if ( !sliderSprite
-    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, DisableColor, 0),
+    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, *(UnityEngine_Color_o *)&r, 0),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0)
     || (sliderSprite->klass->vtable._14_OnEnable.methodPtr(),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
@@ -748,7 +756,7 @@ System_IAsyncResult_o *PurchaseShopCheckWarningDialog_ClickDelegate__BeginInvoke
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

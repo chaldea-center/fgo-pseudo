@@ -434,6 +434,7 @@ bool FileMergeAndSplit_CRCChecker__Run_d__7__MoveNext(
   bool v68; // w6
   bool v69; // w7
   FileMergeAndSplit_CRCChecker__Run_d__7_o *v70; // x0
+  bool result; // w0
   __int64 v72; // x1
   FileMergeAndSplit_CRCChecker__Run_d__7_o *v73; // x8
   System_Diagnostics_Stopwatch_o *v74; // x0
@@ -569,8 +570,9 @@ LABEL_41:
         v70 = v103;
         v103->fields.__2__current = 0;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)&v70->fields.__2__current, 0, v64, v65, v66, v67, v68, v69);
+        result = 1;
         v103->fields.__1__state = 1;
-        return 1;
+        return result;
       }
     }
     FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(v103, v49);
@@ -594,8 +596,8 @@ LABEL_41:
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v90->fields._mergeFileStream_5__3, 0, v91, v92, v93, v94, v95, v96);
     if ( !_4__this )
       sub_2213CDC(v97, v98);
+    result = 0;
     *(_WORD *)&_4__this->fields.isCRCMatch = 257;
-    return 0;
   }
   else
   {
@@ -678,6 +680,7 @@ LABEL_41:
     }
     return 0;
   }
+  return result;
 }
 
 

@@ -2626,7 +2626,7 @@ void WarehouseListMenu__SetTabKind(
   struct UISprite_o *servantListViewManager; // x0
   __int64 v13; // x2
   __n128 inited; // q0
-  float *onChange; // x8
+  struct UIWidget_OnDimensionsChanged_o *onChange; // x8
   float v16; // s12
   float v17; // s13
   float v18; // s14
@@ -2640,71 +2640,74 @@ void WarehouseListMenu__SetTabKind(
   unsigned int v26; // w27
   __int64 *v27; // x8
   struct UILabel_o *v28; // x8
-  __int64 *v32; // x8
-  bool v33; // w26
-  UICommonButton_o *v34; // x24
+  float v29; // s3
+  float v30; // s2
+  float v31; // s1
+  float v32; // s0 OVERLAPPED
+  __int64 *v33; // x8
+  bool v34; // w26
+  UICommonButton_o *v35; // x24
   bool enabled; // w0
-  __int64 *v36; // x8
   __int64 *v37; // x8
+  __int64 *v38; // x8
   UICommonButton_o *servantEquipTabButton; // x24
-  bool v39; // w0
-  unsigned int v40; // w27
-  System_String_o **v41; // x8
+  bool v40; // w0
+  unsigned int v41; // w27
   System_String_o **v42; // x8
+  System_String_o **v43; // x8
   UICommonButton_o *putInTabButton; // x24
-  bool v44; // w0
-  System_String_o **v45; // x8
+  bool v45; // w0
   System_String_o **v46; // x8
+  System_String_o **v47; // x8
   UICommonButton_o *putOutTabButton; // x24
-  bool v48; // w0
-  System_String_o **v49; // x8
-  const MethodInfo *v50; // x2
-  const MethodInfo *v51; // x3
+  bool v49; // w0
+  System_String_o **v50; // x8
+  const MethodInfo *v51; // x2
+  const MethodInfo *v52; // x3
   EventUpValSetupInfo_o *setupInfo; // x2
-  int32_t v53; // w1
-  struct WarehouseListManager_o *v54; // x8
-  const MethodInfo *v55; // x3
-  struct WarehouseListManager_o *v56; // x8
+  int32_t v54; // w1
+  struct WarehouseListManager_o *v55; // x8
+  const MethodInfo *v56; // x3
+  struct WarehouseListManager_o *v57; // x8
   UISprite_c *klass; // x8
-  struct WarehouseListManager_o *v58; // x8
-  __int64 *v59; // x8
+  struct WarehouseListManager_o *v59; // x8
+  __int64 *v60; // x8
   UICommonButton_o *statusTabButton; // x24
-  bool v61; // w0
-  __int64 *v62; // x8
+  bool v62; // w0
+  __int64 *v63; // x8
   UICommonButton_o *lockTabButton; // x24
-  bool v64; // w0
-  __int64 *v65; // x8
+  bool v65; // w0
+  __int64 *v66; // x8
   UICommonButton_o *choiceTabButton; // x24
-  bool v67; // w0
-  bool v68; // zf
-  bool v69; // w1
-  __int64 *v70; // x8
+  bool v68; // w0
+  bool v69; // zf
+  bool v70; // w1
+  __int64 *v71; // x8
   UICommonButton_o *pushTabButton; // x24
-  bool v72; // w0
-  UISprite_c *v73; // x8
+  bool v73; // w0
+  UISprite_c *v74; // x8
   UILabel_o *explanationLabel; // x23
-  struct WarehouseListManager_o *v75; // x8
-  int v76; // w9
-  UILabel_o *v77; // x23
+  struct WarehouseListManager_o *v76; // x8
+  int v77; // w9
   UILabel_o *v78; // x23
-  __int64 *v79; // x8
-  UILabel_o *v80; // x23
-  struct WarehouseListManager_o *v81; // x8
+  UILabel_o *v79; // x23
+  __int64 *v80; // x8
+  UILabel_o *v81; // x23
+  struct WarehouseListManager_o *v82; // x8
   int32_t state; // w9
-  struct WarehouseListManager_o *v83; // x21
-  WarehouseListManager_CallbackFunc_o *v84; // x22
-  const MethodInfo *v85; // x3
-  System_String_o *v86; // x2
-  System_String_o *v87; // x3
-  int32_t v88; // w4
-  int32_t v89; // w5
-  bool v90; // w6
-  bool v91; // w7
-  int32_t v92; // w1
-  struct WarehouseListManager_o *v93; // x8
+  struct WarehouseListManager_o *v84; // x21
+  WarehouseListManager_CallbackFunc_o *v85; // x22
+  const MethodInfo *v86; // x3
+  System_String_o *v87; // x2
+  System_String_o *v88; // x3
+  int32_t v89; // w4
+  int32_t v90; // w5
+  bool v91; // w6
+  bool v92; // w7
+  int32_t v93; // w1
   struct WarehouseListManager_o *v94; // x8
+  struct WarehouseListManager_o *v95; // x8
   UISprite_o *scaleChageTabSprite; // x19
-  UnityEngine_Color_o v96; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v97; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596E4B0 & 1) == 0 )
@@ -2778,11 +2781,11 @@ void WarehouseListMenu__SetTabKind(
     inited = j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v13);
     servantListViewManager = (struct UISprite_o *)LocalizationManager_TypeInfo;
   }
-  onChange = (float *)servantListViewManager->fields.onChange;
-  v16 = onChange[20];
-  v17 = onChange[21];
-  v18 = onChange[22];
-  v19 = onChange[23];
+  onChange = servantListViewManager->fields.onChange;
+  v16 = *(float *)&onChange->fields.interp_invoke_impl;
+  v17 = *((float *)&onChange->fields.interp_invoke_impl + 1);
+  v18 = *(float *)&onChange->fields.method_info;
+  v19 = *((float *)&onChange->fields.method_info + 1);
   if ( !byte_596ABD6 )
   {
     sub_2213A60(&LocalizationManager_TypeInfo);
@@ -2835,27 +2838,27 @@ void WarehouseListMenu__SetTabKind(
   if ( (tabKind | 2) == 2 )
   {
     servantListViewManager = (struct UISprite_o *)v28;
-    v96.fields.a = v24;
-    v96.fields.b = v25;
-    v96.fields.g = v22;
-    v96.fields.r = v23;
+    v29 = v24;
+    v30 = v25;
+    v31 = v22;
+    v32 = v23;
   }
   else
   {
-    v96.fields.a = v19;
-    v96.fields.b = v18;
-    v96.fields.g = v17;
-    v96.fields.r = v16;
+    v29 = v19;
+    v30 = v18;
+    v31 = v17;
+    v32 = v16;
     if ( !v26 )
       goto LABEL_234;
   }
   if ( !servantListViewManager )
     goto LABEL_234;
-  UILabel__set_effectColor((UILabel_o *)servantListViewManager, v96, 0);
+  UILabel__set_effectColor((UILabel_o *)servantListViewManager, *(UnityEngine_Color_o *)&v32, 0);
   servantListViewManager = v26 ? 0LL : this->fields.servantTabSprite;
   if ( (tabKind | 2) == 2 )
   {
-    v32 = &StringLiteral_18208/*"btn_bg_19"*/;
+    v33 = &StringLiteral_18208/*"btn_bg_19"*/;
     if ( !servantListViewManager )
       goto LABEL_234;
   }
@@ -2864,25 +2867,25 @@ void WarehouseListMenu__SetTabKind(
     if ( !v26 )
       goto LABEL_234;
     servantListViewManager = this->fields.servantTabSprite;
-    v32 = &StringLiteral_18206/*"btn_bg_12"*/;
+    v33 = &StringLiteral_18206/*"btn_bg_12"*/;
     if ( !servantListViewManager )
       goto LABEL_234;
   }
-  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v32, 0);
+  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v33, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.servantTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v33 = !v11;
+  v34 = !v11;
   servantListViewManager = (struct UISprite_o *)((__int64 (__fastcall *)(struct UISprite_o *, _QWORD, bool, const MethodInfo *))servantListViewManager->klass->vtable._14_OnEnable.methodPtr)(
                                                   servantListViewManager,
                                                   0,
                                                   !v11,
                                                   servantListViewManager->klass->vtable._14_OnEnable.method);
-  v34 = this->fields.servantTabButton;
-  if ( !v34 )
+  v35 = this->fields.servantTabButton;
+  if ( !v35 )
     goto LABEL_234;
   enabled = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.servantTabButton, 0);
-  UICommonButton__SetColliderEnable(v34, enabled, v33, 0);
+  UICommonButton__SetColliderEnable(v35, enabled, v34, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.servantEquipTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -2898,32 +2901,32 @@ void WarehouseListMenu__SetTabKind(
   if ( (tabKind | 2) == 2 )
   {
     servantListViewManager = this->fields.servantEquipTabTitleSprite;
-    v36 = &StringLiteral_18330/*"btn_txt_craftessence_off"*/;
+    v37 = &StringLiteral_18330/*"btn_txt_craftessence_off"*/;
     if ( !servantListViewManager )
       goto LABEL_234;
   }
   else
   {
-    v36 = &StringLiteral_18331/*"btn_txt_craftessence_on"*/;
-    if ( !servantListViewManager )
-      goto LABEL_234;
-  }
-  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v36, 0);
-  servantListViewManager = v26 ? this->fields.servantEquipTabSprite : 0LL;
-  if ( (tabKind | 2) == 2 )
-  {
-    servantListViewManager = this->fields.servantEquipTabSprite;
-    v37 = &StringLiteral_18206/*"btn_bg_12"*/;
-    if ( !servantListViewManager )
-      goto LABEL_234;
-  }
-  else
-  {
-    v37 = &StringLiteral_18208/*"btn_bg_19"*/;
+    v37 = &StringLiteral_18331/*"btn_txt_craftessence_on"*/;
     if ( !servantListViewManager )
       goto LABEL_234;
   }
   UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v37, 0);
+  servantListViewManager = v26 ? this->fields.servantEquipTabSprite : 0LL;
+  if ( (tabKind | 2) == 2 )
+  {
+    servantListViewManager = this->fields.servantEquipTabSprite;
+    v38 = &StringLiteral_18206/*"btn_bg_12"*/;
+    if ( !servantListViewManager )
+      goto LABEL_234;
+  }
+  else
+  {
+    v38 = &StringLiteral_18208/*"btn_bg_19"*/;
+    if ( !servantListViewManager )
+      goto LABEL_234;
+  }
+  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v38, 0);
   if ( v26 )
     servantListViewManager = (struct UISprite_o *)this->fields.servantEquipTabLabel;
   else
@@ -2954,8 +2957,8 @@ void WarehouseListMenu__SetTabKind(
   servantEquipTabButton = this->fields.servantEquipTabButton;
   if ( !servantEquipTabButton )
     goto LABEL_234;
-  v39 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.servantEquipTabButton, 0);
-  UICommonButton__SetColliderEnable(servantEquipTabButton, v39, v33, 0);
+  v40 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.servantEquipTabButton, 0);
+  UICommonButton__SetColliderEnable(servantEquipTabButton, v40, v34, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.putInTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -2966,20 +2969,20 @@ void WarehouseListMenu__SetTabKind(
   servantListViewManager = (struct UISprite_o *)this->fields.putInTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v40 = tabKind & 0xFFFFFFFE;
+  v41 = tabKind & 0xFFFFFFFE;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)servantListViewManager, (tabKind & 0xFFFFFFFE) == 2, 0);
   servantListViewManager = this->fields.putInTabTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v41 = (System_String_o **)&StringLiteral_18324/*"btn_txt_cardtoarchive_off"*/;
-  if ( v40 != 2 )
-    v41 = (System_String_o **)&StringLiteral_18325/*"btn_txt_cardtoarchive_on"*/;
-  UISprite__set_spriteName(servantListViewManager, *v41, 0);
+  v42 = (System_String_o **)&StringLiteral_18324/*"btn_txt_cardtoarchive_off"*/;
+  if ( v41 != 2 )
+    v42 = (System_String_o **)&StringLiteral_18325/*"btn_txt_cardtoarchive_on"*/;
+  UISprite__set_spriteName(servantListViewManager, *v42, 0);
   servantListViewManager = this->fields.putInTabSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v42 = (System_String_o **)(v40 == 2 ? &StringLiteral_18213/*"btn_bg_24"*/ : &StringLiteral_18214/*"btn_bg_25"*/);
-  UISprite__set_spriteName(servantListViewManager, *v42, 0);
+  v43 = (System_String_o **)(v41 == 2 ? &StringLiteral_18213/*"btn_bg_24"*/ : &StringLiteral_18214/*"btn_bg_25"*/);
+  UISprite__set_spriteName(servantListViewManager, *v43, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.putInTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -2991,8 +2994,8 @@ void WarehouseListMenu__SetTabKind(
   putInTabButton = this->fields.putInTabButton;
   if ( !putInTabButton )
     goto LABEL_234;
-  v44 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.putInTabButton, 0);
-  UICommonButton__SetColliderEnable(putInTabButton, v44, v33, 0);
+  v45 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.putInTabButton, 0);
+  UICommonButton__SetColliderEnable(putInTabButton, v45, v34, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.putOutTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3003,19 +3006,19 @@ void WarehouseListMenu__SetTabKind(
   servantListViewManager = (struct UISprite_o *)this->fields.putOutTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
-  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)servantListViewManager, v40 != 2, 0);
+  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)servantListViewManager, v41 != 2, 0);
   servantListViewManager = this->fields.putOutTabTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v45 = (System_String_o **)&StringLiteral_18313/*"btn_txt_archivetocard_on"*/;
-  if ( v40 != 2 )
-    v45 = (System_String_o **)&StringLiteral_18312/*"btn_txt_archivetocard_off"*/;
-  UISprite__set_spriteName(servantListViewManager, *v45, 0);
+  v46 = (System_String_o **)&StringLiteral_18313/*"btn_txt_archivetocard_on"*/;
+  if ( v41 != 2 )
+    v46 = (System_String_o **)&StringLiteral_18312/*"btn_txt_archivetocard_off"*/;
+  UISprite__set_spriteName(servantListViewManager, *v46, 0);
   servantListViewManager = this->fields.putOutTabSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v46 = (System_String_o **)(v40 == 2 ? &StringLiteral_18214/*"btn_bg_25"*/ : &StringLiteral_18213/*"btn_bg_24"*/);
-  UISprite__set_spriteName(servantListViewManager, *v46, 0);
+  v47 = (System_String_o **)(v41 == 2 ? &StringLiteral_18214/*"btn_bg_25"*/ : &StringLiteral_18213/*"btn_bg_24"*/);
+  UISprite__set_spriteName(servantListViewManager, *v47, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.putOutTabButton;
   if ( !servantListViewManager
     || (servantListViewManager = (struct UISprite_o *)((__int64 (__fastcall *)(struct UISprite_o *, _QWORD, bool, const MethodInfo *))servantListViewManager->klass->vtable._14_OnEnable.methodPtr)(
@@ -3024,17 +3027,17 @@ void WarehouseListMenu__SetTabKind(
                                                         !v11,
                                                         servantListViewManager->klass->vtable._14_OnEnable.method),
         (putOutTabButton = this->fields.putOutTabButton) == 0)
-    || (v48 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.putOutTabButton, 0),
-        UICommonButton__SetColliderEnable(putOutTabButton, v48, v33, 0),
+    || (v49 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.putOutTabButton, 0),
+        UICommonButton__SetColliderEnable(putOutTabButton, v49, v34, 0),
         (servantListViewManager = this->fields.sendTitleSprite) == 0) )
   {
 LABEL_234:
     sub_2213CDC(servantListViewManager, *(_QWORD *)&tabKind);
   }
-  v49 = (System_String_o **)&StringLiteral_21625/*"img_txt_cardspace"*/;
-  if ( v40 != 2 )
-    v49 = (System_String_o **)&StringLiteral_21616/*"img_txt_archivespace"*/;
-  UISprite__set_spriteName(servantListViewManager, *v49, 0);
+  v50 = (System_String_o **)&StringLiteral_21625/*"img_txt_cardspace"*/;
+  if ( v41 != 2 )
+    v50 = (System_String_o **)&StringLiteral_21616/*"img_txt_archivespace"*/;
+  UISprite__set_spriteName(servantListViewManager, *v50, 0);
   if ( tabKind > 1 )
   {
     if ( tabKind != 2 )
@@ -3047,14 +3050,14 @@ LABEL_234:
           if ( !servantListViewManager )
             goto LABEL_234;
           setupInfo = this->fields.setupInfo;
-          v53 = 3;
+          v54 = 3;
           goto LABEL_107;
         }
 LABEL_108:
-        v54 = this->fields.servantListViewManager;
-        if ( !v54 )
+        v55 = this->fields.servantListViewManager;
+        if ( !v55 )
           goto LABEL_234;
-        servantListViewManager = (struct UISprite_o *)v54->fields.filterButton;
+        servantListViewManager = (struct UISprite_o *)v55->fields.filterButton;
         if ( !servantListViewManager )
           goto LABEL_234;
         ((void (__fastcall *)(struct UISprite_o *, _QWORD, __int64, const MethodInfo *))servantListViewManager->klass->vtable._14_OnEnable.methodPtr)(
@@ -3062,7 +3065,7 @@ LABEL_108:
           0,
           1,
           servantListViewManager->klass->vtable._14_OnEnable.method);
-        servantListViewManager = (struct UISprite_o *)WarehouseListMenu__HidePushButton(this, modeKind, 0, v55);
+        servantListViewManager = (struct UISprite_o *)WarehouseListMenu__HidePushButton(this, modeKind, 0, v56);
         modeKind = (int)servantListViewManager;
         if ( v11 )
           goto LABEL_142;
@@ -3078,12 +3081,12 @@ LABEL_141:
       servantListViewManager = (struct UISprite_o *)this->fields.servantListViewManager;
       if ( !servantListViewManager )
         goto LABEL_234;
-      WarehouseListManager__CreateList((WarehouseListManager_o *)servantListViewManager, 2, this->fields.setupInfo, v51);
+      WarehouseListManager__CreateList((WarehouseListManager_o *)servantListViewManager, 2, this->fields.setupInfo, v52);
     }
-    v58 = this->fields.servantListViewManager;
-    if ( !v58 )
+    v59 = this->fields.servantListViewManager;
+    if ( !v59 )
       goto LABEL_234;
-    servantListViewManager = (struct UISprite_o *)v58->fields.filterButton;
+    servantListViewManager = (struct UISprite_o *)v59->fields.filterButton;
     if ( !servantListViewManager )
       goto LABEL_234;
     ((void (__fastcall *)(struct UISprite_o *, _QWORD, __int64, const MethodInfo *))servantListViewManager->klass->vtable._14_OnEnable.methodPtr)(
@@ -3136,9 +3139,9 @@ LABEL_134:
           if ( !servantListViewManager )
             goto LABEL_234;
           setupInfo = this->fields.setupInfo;
-          v53 = 1;
+          v54 = 1;
 LABEL_107:
-          WarehouseListManager__CreateList((WarehouseListManager_o *)servantListViewManager, v53, setupInfo, v51);
+          WarehouseListManager__CreateList((WarehouseListManager_o *)servantListViewManager, v54, setupInfo, v52);
           goto LABEL_108;
         }
         goto LABEL_108;
@@ -3150,12 +3153,12 @@ LABEL_107:
       servantListViewManager = (struct UISprite_o *)this->fields.servantListViewManager;
       if ( !servantListViewManager )
         goto LABEL_234;
-      WarehouseListManager__CreateList((WarehouseListManager_o *)servantListViewManager, 0, this->fields.setupInfo, v51);
+      WarehouseListManager__CreateList((WarehouseListManager_o *)servantListViewManager, 0, this->fields.setupInfo, v52);
     }
-    v56 = this->fields.servantListViewManager;
-    if ( !v56 )
+    v57 = this->fields.servantListViewManager;
+    if ( !v57 )
       goto LABEL_234;
-    servantListViewManager = (struct UISprite_o *)v56->fields.filterButton;
+    servantListViewManager = (struct UISprite_o *)v57->fields.filterButton;
     if ( !servantListViewManager )
       goto LABEL_234;
     ((void (__fastcall *)(struct UISprite_o *, _QWORD, __int64, const MethodInfo *))servantListViewManager->klass->vtable._14_OnEnable.methodPtr)(
@@ -3206,10 +3209,10 @@ LABEL_142:
   servantListViewManager = this->fields.statusTabSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v59 = &StringLiteral_18433/*"button_select_reg"*/;
+  v60 = &StringLiteral_18433/*"button_select_reg"*/;
   if ( modeKind )
-    v59 = &StringLiteral_18434/*"button_select_unreg"*/;
-  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v59, 0);
+    v60 = &StringLiteral_18434/*"button_select_unreg"*/;
+  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v60, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.statusTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3221,8 +3224,8 @@ LABEL_142:
   statusTabButton = this->fields.statusTabButton;
   if ( !statusTabButton )
     goto LABEL_234;
-  v61 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.statusTabButton, 0);
-  UICommonButton__SetColliderEnable(statusTabButton, v61, v33, 0);
+  v62 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.statusTabButton, 0);
+  UICommonButton__SetColliderEnable(statusTabButton, v62, v34, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.lockTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3237,10 +3240,10 @@ LABEL_142:
   servantListViewManager = this->fields.lockTabSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v62 = &StringLiteral_18420/*"button_alllock_unreg"*/;
+  v63 = &StringLiteral_18420/*"button_alllock_unreg"*/;
   if ( modeKind == 1 )
-    v62 = &StringLiteral_18419/*"button_alllock_reg"*/;
-  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v62, 0);
+    v63 = &StringLiteral_18419/*"button_alllock_reg"*/;
+  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v63, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.lockTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3252,8 +3255,8 @@ LABEL_142:
   lockTabButton = this->fields.lockTabButton;
   if ( !lockTabButton )
     goto LABEL_234;
-  v64 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.lockTabButton, 0);
-  UICommonButton__SetColliderEnable(lockTabButton, v64, v33, 0);
+  v65 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.lockTabButton, 0);
+  UICommonButton__SetColliderEnable(lockTabButton, v65, v34, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.choiceTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3268,10 +3271,10 @@ LABEL_142:
   servantListViewManager = this->fields.choiceTabSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v65 = &StringLiteral_18418/*"button_allchoice_unreg"*/;
+  v66 = &StringLiteral_18418/*"button_allchoice_unreg"*/;
   if ( modeKind == 2 )
-    v65 = &StringLiteral_18417/*"button_allchoice_reg"*/;
-  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v65, 0);
+    v66 = &StringLiteral_18417/*"button_allchoice_reg"*/;
+  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v66, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.choiceTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3283,8 +3286,8 @@ LABEL_142:
   choiceTabButton = this->fields.choiceTabButton;
   if ( !choiceTabButton )
     goto LABEL_234;
-  v67 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.choiceTabButton, 0);
-  UICommonButton__SetColliderEnable(choiceTabButton, v67, v33, 0);
+  v68 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.choiceTabButton, 0);
+  UICommonButton__SetColliderEnable(choiceTabButton, v68, v34, 0);
   servantListViewManager = (struct UISprite_o *)this->fields.pushTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
@@ -3295,39 +3298,39 @@ LABEL_142:
   servantListViewManager = (struct UISprite_o *)this->fields.pushTabButton;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v68 = v40 == 2 || modeKind == 3;
-  v69 = !v68;
-  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)servantListViewManager, v69, 0);
+  v69 = v41 == 2 || modeKind == 3;
+  v70 = !v69;
+  UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)servantListViewManager, v70, 0);
   servantListViewManager = this->fields.pushTabSprite;
   if ( !servantListViewManager )
     goto LABEL_234;
-  v70 = &StringLiteral_18431/*"button_push_reg"*/;
+  v71 = &StringLiteral_18431/*"button_push_reg"*/;
   if ( modeKind != 3 )
-    v70 = &StringLiteral_18432/*"button_push_unreg"*/;
-  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v70, 0);
+    v71 = &StringLiteral_18432/*"button_push_unreg"*/;
+  UISprite__set_spriteName(servantListViewManager, (System_String_o *)*v71, 0);
   pushTabButton = this->fields.pushTabButton;
-  if ( v40 == 2 )
+  if ( v41 == 2 )
   {
     if ( !pushTabButton )
       goto LABEL_234;
-    UICommonButton__SetColliderEnable(this->fields.pushTabButton, 1, v33, 0);
+    UICommonButton__SetColliderEnable(this->fields.pushTabButton, 1, v34, 0);
     servantListViewManager = (struct UISprite_o *)this->fields.pushTabButton;
     if ( !servantListViewManager )
       goto LABEL_234;
-    v73 = servantListViewManager->klass;
+    v74 = servantListViewManager->klass;
   }
   else
   {
     if ( !pushTabButton )
       goto LABEL_234;
-    v72 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.pushTabButton, 0);
-    UICommonButton__SetColliderEnable(pushTabButton, v72, v33, 0);
+    v73 = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this->fields.pushTabButton, 0);
+    UICommonButton__SetColliderEnable(pushTabButton, v73, v34, 0);
     servantListViewManager = (struct UISprite_o *)this->fields.pushTabButton;
     if ( !servantListViewManager )
       goto LABEL_234;
-    v73 = servantListViewManager->klass;
+    v74 = servantListViewManager->klass;
   }
-  servantListViewManager = (struct UISprite_o *)((__int64 (*)(void))v73->vtable._14_OnEnable.methodPtr)();
+  servantListViewManager = (struct UISprite_o *)((__int64 (*)(void))v74->vtable._14_OnEnable.methodPtr)();
 LABEL_182:
   if ( modeKind <= 1 )
   {
@@ -3337,21 +3340,21 @@ LABEL_182:
       {
         explanationLabel = this->fields.explanationLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v50);
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v51);
         servantListViewManager = (struct UISprite_o *)LocalizationManager__Get(
                                                         (System_String_o *)StringLiteral_16059/*"WAREHOUSE_EXPLANATION_LOCK"*/,
                                                         0);
         if ( !explanationLabel )
           goto LABEL_234;
         UILabel__set_text(explanationLabel, (System_String_o *)servantListViewManager, 0);
-        v75 = this->fields.servantListViewManager;
-        if ( !v75 )
+        v76 = this->fields.servantListViewManager;
+        if ( !v76 )
           goto LABEL_234;
-        if ( v75->fields.modeKind != 1 )
+        if ( v76->fields.modeKind != 1 )
         {
-          v76 = 1;
+          v77 = 1;
 LABEL_210:
-          v75->fields.modeKind = v76;
+          v76->fields.modeKind = v77;
           goto LABEL_219;
         }
       }
@@ -3359,67 +3362,67 @@ LABEL_210:
     }
     if ( (unsigned int)tabKind < 2 )
     {
-      v78 = this->fields.explanationLabel;
+      v79 = this->fields.explanationLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v50);
-      v79 = &StringLiteral_16061/*"WAREHOUSE_EXPLANATION_PUT_IN"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v51);
+      v80 = &StringLiteral_16061/*"WAREHOUSE_EXPLANATION_PUT_IN"*/;
     }
     else
     {
-      if ( v40 != 2 )
+      if ( v41 != 2 )
       {
 LABEL_216:
-        v81 = this->fields.servantListViewManager;
-        if ( !v81 )
+        v82 = this->fields.servantListViewManager;
+        if ( !v82 )
           goto LABEL_234;
-        if ( v81->fields.modeKind )
-          v81->fields.modeKind = 0;
+        if ( v82->fields.modeKind )
+          v82->fields.modeKind = 0;
         goto LABEL_219;
       }
-      v78 = this->fields.explanationLabel;
+      v79 = this->fields.explanationLabel;
       if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v50);
-      v79 = &StringLiteral_16062/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/;
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v51);
+      v80 = &StringLiteral_16062/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/;
     }
-    servantListViewManager = (struct UISprite_o *)LocalizationManager__Get((System_String_o *)*v79, 0);
-    if ( !v78 )
+    servantListViewManager = (struct UISprite_o *)LocalizationManager__Get((System_String_o *)*v80, 0);
+    if ( !v79 )
       goto LABEL_234;
-    UILabel__set_text(v78, (System_String_o *)servantListViewManager, 0);
+    UILabel__set_text(v79, (System_String_o *)servantListViewManager, 0);
     goto LABEL_216;
   }
   if ( modeKind == 2 )
   {
-    v80 = this->fields.explanationLabel;
+    v81 = this->fields.explanationLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v50);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v51);
     servantListViewManager = (struct UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_16058/*"WAREHOUSE_EXPLANATION_CHOICE"*/, 0);
-    if ( !v80 )
+    if ( !v81 )
       goto LABEL_234;
-    UILabel__set_text(v80, (System_String_o *)servantListViewManager, 0);
-    v75 = this->fields.servantListViewManager;
-    if ( !v75 )
+    UILabel__set_text(v81, (System_String_o *)servantListViewManager, 0);
+    v76 = this->fields.servantListViewManager;
+    if ( !v76 )
       goto LABEL_234;
-    if ( v75->fields.modeKind != 2 )
+    if ( v76->fields.modeKind != 2 )
     {
-      v76 = 2;
+      v77 = 2;
       goto LABEL_210;
     }
   }
   else if ( modeKind == 3 )
   {
-    v77 = this->fields.explanationLabel;
+    v78 = this->fields.explanationLabel;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v50);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&tabKind, v51);
     servantListViewManager = (struct UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_16060/*"WAREHOUSE_EXPLANATION_PUSH"*/, 0);
-    if ( !v77 )
+    if ( !v78 )
       goto LABEL_234;
-    UILabel__set_text(v77, (System_String_o *)servantListViewManager, 0);
-    v75 = this->fields.servantListViewManager;
-    if ( !v75 )
+    UILabel__set_text(v78, (System_String_o *)servantListViewManager, 0);
+    v76 = this->fields.servantListViewManager;
+    if ( !v76 )
       goto LABEL_234;
-    if ( v75->fields.modeKind != 3 )
+    if ( v76->fields.modeKind != 3 )
     {
-      v76 = 3;
+      v77 = 3;
       goto LABEL_210;
     }
   }
@@ -3436,42 +3439,42 @@ LABEL_219:
     servantListViewManager = (struct UISprite_o *)servantListViewManager->fields.leftAnchor;
     if ( !servantListViewManager )
       goto LABEL_234;
-    WarehouseListViewManager__UpdateItemState((WarehouseListViewManager_o *)servantListViewManager, modeKind == 3, v50);
-    v83 = this->fields.servantListViewManager;
-    v84 = (WarehouseListManager_CallbackFunc_o *)sub_2213CCC(WarehouseListManager_CallbackFunc_TypeInfo);
+    WarehouseListViewManager__UpdateItemState((WarehouseListViewManager_o *)servantListViewManager, modeKind == 3, v51);
+    v84 = this->fields.servantListViewManager;
+    v85 = (WarehouseListManager_CallbackFunc_o *)sub_2213CCC(WarehouseListManager_CallbackFunc_TypeInfo);
     WarehouseListManager_CallbackFunc___ctor(
-      v84,
+      v85,
       (Il2CppObject *)this,
       (intptr_t)Method_WarehouseListMenu_OnSelectServant__,
-      v85);
-    if ( !v83 )
+      v86);
+    if ( !v84 )
       goto LABEL_234;
-    v83->fields.callbackFunc = v84;
+    v84->fields.callbackFunc = v85;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v83->fields.callbackFunc,
-      (int32_t)v84,
-      v86,
+      (MissionNaviTransitionBoardItem_o *)&v84->fields.callbackFunc,
+      (int32_t)v85,
       v87,
       v88,
       v89,
       v90,
-      v91);
-    servantListViewManager = (struct UISprite_o *)v83;
-    v92 = 2;
+      v91,
+      v92);
+    servantListViewManager = (struct UISprite_o *)v84;
+    v93 = 2;
   }
   else
   {
     if ( !servantListViewManager )
       goto LABEL_234;
-    v92 = 1;
+    v93 = 1;
   }
-  WarehouseListManager__SetMode_45270940((WarehouseListManager_o *)servantListViewManager, v92, v50);
+  WarehouseListManager__SetMode_45270940((WarehouseListManager_o *)servantListViewManager, v93, v51);
   if ( !v11 && isModify )
   {
-    v93 = this->fields.servantListViewManager;
-    if ( v93 )
+    v94 = this->fields.servantListViewManager;
+    if ( v94 )
     {
-      servantListViewManager = (struct UISprite_o *)v93->fields.baseListViewManager;
+      servantListViewManager = (struct UISprite_o *)v94->fields.baseListViewManager;
       if ( servantListViewManager )
       {
         WarehouseListViewManager__Modify(
@@ -3483,10 +3486,10 @@ LABEL_219:
     goto LABEL_234;
   }
 LABEL_230:
-  v94 = this->fields.servantListViewManager;
-  if ( !v94 )
+  v95 = this->fields.servantListViewManager;
+  if ( !v95 )
     goto LABEL_234;
-  servantListViewManager = (struct UISprite_o *)v94->fields.baseListViewManager;
+  servantListViewManager = (struct UISprite_o *)v95->fields.baseListViewManager;
   if ( !servantListViewManager )
     goto LABEL_234;
   scaleChageTabSprite = this->fields.scaleChageTabSprite;
@@ -3797,7 +3800,7 @@ System_IAsyncResult_o *WarehouseListMenu_CallbackFunc__BeginInvoke(
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(WarehouseListMenu_ResultKind_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -3888,7 +3891,7 @@ System_IAsyncResult_o *WarehouseListMenu_RequestCallbackFunc__BeginInvoke(
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

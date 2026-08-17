@@ -41,11 +41,13 @@ void TopSignupRequest__requestCompleted(
   Il2CppObject *Instance; // x23
   System_String_o *name; // x21
   int32_t genderType; // w22
+  System_DateTime_o v15; // x0
   int32_t Month; // w24
+  System_DateTime_o v17; // x0
   Il2CppObject *Day; // x0
-  __int64 v17; // x1
+  __int64 v19; // x1
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v19; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v21; // x8
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_5972509 & 1) == 0 )
@@ -76,8 +78,10 @@ void TopSignupRequest__requestCompleted(
     genderType = v9->fields.genderType;
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v11);
-    Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-    Day = (Il2CppObject *)System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
+    v15.fields._dateData = (uint64_t)&dateData;
+    Month = System_DateTime__get_Month(v15, 0);
+    v17.fields._dateData = (uint64_t)&dateData;
+    Day = (Il2CppObject *)System_DateTime__get_Day(v17, 0);
     if ( !Instance
       || (NetworkManager__SetSignup_48337384((NetworkManager_o *)Instance, name, genderType, Month, (int32_t)Day, 0),
           (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0)
@@ -86,7 +90,7 @@ void TopSignupRequest__requestCompleted(
       || (NetworkManager__SetFriendCode((NetworkManager_o *)Day, v9->fields.friendCode, 0),
           (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0) )
     {
-      sub_2213CDC(Day, v17);
+      sub_2213CDC(Day, v19);
     }
     NetworkManager__WriteFriendCode((NetworkManager_o *)Day, 0);
     CallBack = this->fields.CallBack;
@@ -98,11 +102,11 @@ void TopSignupRequest__requestCompleted(
   }
   else
   {
-    v19 = this->fields.CallBack;
-    if ( v19 )
-      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v19->fields.invoke_impl)(
-        v19->fields.method_code,
+    v21 = this->fields.CallBack;
+    if ( v21 )
+      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v21->fields.invoke_impl)(
+        v21->fields.method_code,
         StringLiteral_23336/*"ng"*/,
-        v19->fields.method);
+        v21->fields.method);
   }
 }

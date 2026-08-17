@@ -365,9 +365,11 @@ void SupportSelectMenu__Open(
   bool v31; // w8
   struct SupportServantData_array *v32; // x8
   SupportServantData_o *v33; // x8
-  const MethodInfo *v35; // x2
-  const MethodInfo *v36; // x1
-  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  float v34; // s1 OVERLAPPED
+  int v35; // s2
+  int v36; // s0
+  const MethodInfo *v37; // x2
+  const MethodInfo *v38; // x1
 
   if ( (byte_596CC92 & 1) == 0 )
   {
@@ -459,14 +461,17 @@ LABEL_20:
   v33 = v32->m_Items[0];
   if ( !v33 || !gameObject )
     goto LABEL_20;
-  v37.fields.y = 278.0;
-  v37.fields.z = 0.0;
+  v34 = 278.0;
+  v35 = 0;
   if ( v33->fields.isFriendInfo )
-    v37.fields.y = -215.0;
-  v37.fields.x = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v37, 0);
-  SupportSelectMenu__moveCenterItem(this, mainDeckIdx, v35);
-  SupportSelectMenu__Redisp(this, v36);
+    v34 = -215.0;
+  v36 = 0;
+  UnityEngine_Transform__set_localPosition(
+    (UnityEngine_Transform_o *)gameObject,
+    *(UnityEngine_Vector3_o *)(&v34 - 1),
+    0);
+  SupportSelectMenu__moveCenterItem(this, mainDeckIdx, v37);
+  SupportSelectMenu__Redisp(this, v38);
   BaseMenu__Open((BaseMenu_o *)this, 0, 0);
 }
 
@@ -1686,7 +1691,7 @@ System_IAsyncResult_o *SupportSelectMenu_CallbackFunc__BeginInvoke(
   v11[0] = j_il2cpp_value_box_0(SupportSelectMenu_ResultKind_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(qword_5984348, &v13);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -1799,7 +1804,7 @@ System_IAsyncResult_o *SupportSelectMenu_DragSwapCallbackFunc__BeginInvoke(
   v15[2] = leader1;
   v15[3] = j_il2cpp_value_box_0(qword_5984348, &v17);
   *(_QWORD *)&v16 = leader2;
-  return sub_2213A14(this, v15, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v15, callback, object);
 }
 
 

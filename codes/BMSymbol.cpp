@@ -38,7 +38,7 @@ bool BMSymbol__Validate(BMSymbol_o *this, UIAtlas_o *atlas, const MethodInfo *me
   int32_t paddingTop; // w10
   __int64 v30; // d0
   UnityEngine_Rect_o rect; // [xsp+0h] [xbp-40h]
-  UnityEngine_Rect_o v32; // 0:kr00_16.16
+  UnityEngine_Rect_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59750AE & 1) == 0 )
   {
@@ -161,12 +161,20 @@ int32_t BMSymbol__get_offsetY(BMSymbol_o *this, const MethodInfo *method)
 
 UnityEngine_Rect_o BMSymbol__get_uvRect(BMSymbol_o *this, const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.mUV.fields.m_XMin;
-  result.fields.m_YMin = this->fields.mUV.fields.m_YMin;
-  result.fields.m_Width = this->fields.mUV.fields.m_Width;
-  result.fields.m_Height = this->fields.mUV.fields.m_Height;
+  m_XMin = this->fields.mUV.fields.m_XMin;
+  m_YMin = this->fields.mUV.fields.m_YMin;
+  m_Width = this->fields.mUV.fields.m_Width;
+  m_Height = this->fields.mUV.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = m_YMin;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 

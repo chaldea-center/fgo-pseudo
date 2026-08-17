@@ -756,7 +756,7 @@ bool SupportServantEquipListViewItem__SetSortValue(
   int v9; // w10
   __int64 v10; // x2
   int32_t sortKind; // w8
-  int64_t v12; // x20
+  int64_t bonusKindId; // x20
   SupportServantEquipListViewItem_o *v13; // x21
   int32_t v14; // w3
   int32_t v15; // w1
@@ -1013,7 +1013,7 @@ LABEL_98:
         this = (SupportServantEquipListViewItem_o *)v4->fields.userSvtEntity;
         if ( this )
         {
-          v18 = *((int *)this + 100);
+          v18 = *(int *)&this[1].fields.isOldBase;
           v19 = v4->fields.iconLabelInfo1;
           v4->fields.sortValue1 = v18;
           this = (SupportServantEquipListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
@@ -1038,9 +1038,9 @@ LABEL_104:
         this = (SupportServantEquipListViewItem_o *)v4->fields.userSvtEntity;
         if ( !this )
           goto LABEL_104;
-        v12 = *((int *)this + 103);
+        bonusKindId = this[1].fields.bonusKindId;
         v28 = (SupportServantEquipListViewItem_o *)v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v12;
+        v4->fields.sortValue1 = bonusKindId;
         this = (SupportServantEquipListViewItem_o *)UserServantEntity__get_HpBoostValue((UserServantEntity_o *)this, 0);
         if ( !v28 )
           goto LABEL_104;
@@ -1053,9 +1053,9 @@ LABEL_104:
         this = (SupportServantEquipListViewItem_o *)v4->fields.userSvtEntity;
         if ( !this )
           goto LABEL_104;
-        v12 = *((int *)this + 102);
+        bonusKindId = this[1].fields.bonusKind;
         v13 = (SupportServantEquipListViewItem_o *)v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v12;
+        v4->fields.sortValue1 = bonusKindId;
         this = (SupportServantEquipListViewItem_o *)UserServantEntity__get_AtkBoostValue((UserServantEntity_o *)this, 0);
         if ( !v13 )
           goto LABEL_104;
@@ -1063,7 +1063,7 @@ LABEL_104:
         this = v13;
         v15 = 5;
       }
-      LODWORD(cost) = v12;
+      LODWORD(cost) = bonusKindId;
 LABEL_55:
       IconLabelInfo__Set_47880948((IconLabelInfo_o *)this, v15, cost, v14, 0, 0, 0, 0, 0, 0);
 LABEL_56:
@@ -1072,7 +1072,7 @@ LABEL_56:
         goto LABEL_104;
       iconLabelInfo1 = v4->fields.iconLabelInfo2;
 LABEL_100:
-      v51 = *((_DWORD *)this + 100);
+      v51 = *(_DWORD *)&this[1].fields.isOldBase;
       this = (SupportServantEquipListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
       if ( iconLabelInfo1 )
       {

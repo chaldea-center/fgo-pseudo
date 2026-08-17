@@ -94,6 +94,8 @@ System_Int32_array *BuffDataExtension_GeneralParamContinueFunction__MakeGeneralP
   __int64 Param; // x0
   __int64 v5; // x1
   __int64 v6; // x20
+  int v7; // w8
+  System_Int32_array *result; // x0
 
   if ( (byte_596E58A & 1) == 0 )
   {
@@ -105,8 +107,10 @@ System_Int32_array *BuffDataExtension_GeneralParamContinueFunction__MakeGeneralP
     sub_2213CDC(Param, v5);
   if ( !*(_DWORD *)(v6 + 24) )
     sub_2213CE4(Param);
-  *(_DWORD *)(v6 + 32) = Param;
-  return (System_Int32_array *)v6;
+  v7 = Param;
+  result = (System_Int32_array *)v6;
+  *(_DWORD *)(v6 + 32) = v7;
+  return result;
 }
 
 

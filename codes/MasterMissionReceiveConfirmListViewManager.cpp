@@ -106,8 +106,8 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
   float width; // s8
   float height; // s0
   UnityEngine_Vector3_o v54; // [xsp+0h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974381 & 1) == 0 )
   {
@@ -151,10 +151,10 @@ void MasterMissionReceiveConfirmListViewManager__CreateList(
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
       if ( !transform )
         goto LABEL_46;
-      v56.fields.x = -v11;
-      v56.fields.y = -v12;
-      v56.fields.z = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v56, 0);
+      v55.fields.x = -v11;
+      v55.fields.y = -v12;
+      v55.fields.z = 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v55, 0);
       transform = this->fields.scrollView;
       if ( !transform )
         goto LABEL_46;

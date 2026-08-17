@@ -15,6 +15,9 @@ UnityEngine_Vector3_o NormalRaidTypeBossBattleInfoPosData__get_SkillSkipTrLocalP
   __int64 v5; // x8
   __int64 v6; // x9
   __int64 v7; // x10
+  float v8; // s1
+  float v9; // s0
+  float v10; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   Perf_k__BackingField = this->fields._Perf_k__BackingField;
@@ -38,8 +41,11 @@ UnityEngine_Vector3_o NormalRaidTypeBossBattleInfoPosData__get_SkillSkipTrLocalP
     v7 = 44;
   else
     v7 = 32;
-  result.fields.y = *(float *)((char *)&this->klass + v6);
-  result.fields.x = *(float *)((char *)&this->klass + v5);
-  result.fields.z = *(float *)((char *)&this->klass + v7);
+  v8 = *(float *)((char *)&this->klass + v6);
+  v9 = *(float *)((char *)&this->klass + v5);
+  v10 = *(float *)((char *)&this->klass + v7);
+  result.fields.z = v10;
+  result.fields.y = v8;
+  result.fields.x = v9;
   return result;
 }

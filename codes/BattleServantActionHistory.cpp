@@ -39,6 +39,7 @@ BattleServantActionHistory_SaveData_o *BattleServantActionHistory__GetSaveData(
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  BattleServantActionHistory_SaveData_o *result; // x0
 
   if ( (byte_597374B & 1) == 0 )
   {
@@ -49,10 +50,11 @@ BattleServantActionHistory_SaveData_o *BattleServantActionHistory__GetSaveData(
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     sub_2213CDC(v4, v5);
+  result = (BattleServantActionHistory_SaveData_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.actType;
   *(_DWORD *)(v3 + 24) = this->fields.waveCount;
   *(_WORD *)(v3 + 28) = *(_WORD *)&this->fields.isOpponent;
-  return (BattleServantActionHistory_SaveData_o *)v3;
+  return result;
 }
 
 

@@ -1290,9 +1290,9 @@ LABEL_39:
   v8 = MasterDataUnpakcer_TypeInfo->static_fields->sb;
   if ( !v8 )
     goto LABEL_41;
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v8->klass->vtable._3_ToString.methodPtr)(
-           v8,
-           v8->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v8->klass->vtable._3_ToString.methodPtr)(
+                              v8,
+                              v8->klass->vtable._3_ToString.method);
 }
 
 

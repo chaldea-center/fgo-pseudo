@@ -29,11 +29,13 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
   float v8; // s0
   UnityEngine_GameObject_o *transform; // x0
   float v10; // s10
+  float y; // s8
+  float z; // s9
   int32_t mAlignment; // w9
   int32_t extrusionBlankSize; // w8
-  float v13; // s10
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  float v15; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597212D & 1) == 0 )
   {
@@ -55,12 +57,14 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
     if ( !transform )
       goto LABEL_17;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
     mAlignment = this->fields.mAlignment;
     extrusionBlankSize = this->fields.extrusionBlankSize;
     if ( mAlignment == 2 )
-      v13 = (float)(v10 * 0.5) + (float)extrusionBlankSize;
+      v15 = (float)(v10 * 0.5) + (float)extrusionBlankSize;
     else
-      v13 = mAlignment == 1 ? v10 + (float)extrusionBlankSize : (float)extrusionBlankSize;
+      v15 = mAlignment == 1 ? v10 + (float)extrusionBlankSize : (float)extrusionBlankSize;
     transform = this->fields.extrusionObject;
     if ( !transform
       || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
@@ -68,9 +72,9 @@ void UIExtrusionLabel__set_text(UIExtrusionLabel_o *this, System_String_o *value
 LABEL_17:
       sub_2213CDC(transform, v7);
     }
-    v15.fields.y = localPosition.fields.y;
-    v15.fields.z = localPosition.fields.z;
-    v15.fields.x = v13;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v15, 0);
+    v17.fields.y = y;
+    v17.fields.z = z;
+    v17.fields.x = v15;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v17, 0);
   }
 }

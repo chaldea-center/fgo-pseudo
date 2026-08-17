@@ -527,9 +527,9 @@ LABEL_60:
   if ( (int)IsItem_47387928 < 1 )
   {
     if ( v43 )
-      return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
-               v43,
-               v43->klass->vtable._3_ToString.method);
+      return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
+                                  v43,
+                                  v43->klass->vtable._3_ToString.method);
 LABEL_87:
     sub_2213CDC(IsItem_47387928, v7);
   }
@@ -553,9 +553,9 @@ LABEL_87:
                              StringLiteral_9042/*"MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2"*/,
                              *(_QWORD *)(v51 + 40));
   System_Text_StringBuilder__Append_75735064(v43, v52, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
-           v43,
-           v43->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v43->klass->vtable._3_ToString.methodPtr)(
+                              v43,
+                              v43->klass->vtable._3_ToString.method);
 }
 
 

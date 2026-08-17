@@ -2896,8 +2896,8 @@ void GrandQuestViewSwitcher___c__DisplayClass39_0___StartUp_b__13(
     || (rootComponent = _4__this->fields.rootComponent) == 0
     || (v5 = this, ActionExtensions__Call(rootComponent->fields.initEndCallback, 0), (v13 = v5->fields.__4__this) == 0)
     || (this = (GrandQuestViewSwitcher___c__DisplayClass39_0_o *)v13->fields.rootComponent) == 0
-    || (*((_QWORD *)this + 22) = 0,
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 176), 0, v7, v8, v9, v10, v11, v12),
+    || (this[5].fields.__4__this = 0,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[5].fields, 0, v7, v8, v9, v10, v11, v12),
         !f) )
   {
     sub_2213CDC(this, f);
@@ -3046,8 +3046,8 @@ void GrandQuestViewSwitcher___c__DisplayClass39_0___StartUp_b__6(
     || (rootComponent = _4__this->fields.rootComponent) == 0
     || (v5 = this, ActionExtensions__Call(rootComponent->fields.initEndCallback, 0), (v13 = v5->fields.__4__this) == 0)
     || (this = (GrandQuestViewSwitcher___c__DisplayClass39_0_o *)v13->fields.rootComponent) == 0
-    || (*((_QWORD *)this + 22) = 0,
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 176), 0, v7, v8, v9, v10, v11, v12),
+    || (this[5].fields.__4__this = 0,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[5].fields, 0, v7, v8, v9, v10, v11, v12),
         !f) )
   {
     sub_2213CDC(this, f);
@@ -3355,7 +3355,7 @@ void GrandQuestViewSwitcher___c__DisplayClass53_0___GetOpeningMovieTask_b__1(
     this = (GrandQuestViewSwitcher___c__DisplayClass53_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
     if ( !this )
       goto LABEL_23;
-    if ( *((_BYTE *)this + 196) )
+    if ( BYTE4(this[4].fields.__9__2) )
     {
       this = (GrandQuestViewSwitcher___c__DisplayClass53_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( this )
@@ -3364,7 +3364,7 @@ void GrandQuestViewSwitcher___c__DisplayClass53_0___GetOpeningMovieTask_b__1(
         this = (GrandQuestViewSwitcher___c__DisplayClass53_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
         if ( this )
         {
-          *((_BYTE *)this + 196) = 0;
+          BYTE4(this[4].fields.__9__2) = 0;
           return;
         }
       }
@@ -3657,7 +3657,7 @@ void GrandQuestViewSwitcher___c__DisplayClass55_0___PlayOpeningMovie_b__1(
           player,
           moiveFileName,
           Path,
-          *(float *)(*((_QWORD *)this + 23) + 36LL),
+          *((float *)&this[2].fields.terminalInstance->fields.myFSM + 1),
           v18 & 1,
           0,
           v3->fields.endAction,

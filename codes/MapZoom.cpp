@@ -302,34 +302,38 @@ void MapZoom__Limit(MapZoom_o *this, float spd_rate, const MethodInfo *method)
 
 void MapZoom__MouseScrollWheel(MapZoom_o *this, const MethodInfo *method)
 {
+  float y; // s8
   float Axis; // s0
-  float v4; // s1
-  unsigned __int64 mousePosition; // kr00_8
+  float v5; // s1
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596D13C & 1) == 0 )
   {
     sub_2213A60(&StringLiteral_9548/*"Mouse ScrollWheel"*/);
     byte_596D13C = 1;
   }
-  mousePosition = (unsigned __int64)UnityEngine_Input__get_mousePosition(0);
-  if ( *(float *)&mousePosition >= 0.0
-    && *(float *)&mousePosition <= (float)UnityEngine_Screen__get_width(0)
-    && *((float *)&mousePosition + 1) >= 0.0
-    && *((float *)&mousePosition + 1) <= (float)UnityEngine_Screen__get_height(0) )
+  mousePosition = UnityEngine_Input__get_mousePosition(0);
+  if ( mousePosition.fields.x >= 0.0 )
   {
-    Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9548/*"Mouse ScrollWheel"*/, 0);
-    if ( Axis <= 0.0 )
+    y = mousePosition.fields.y;
+    if ( mousePosition.fields.x <= (float)UnityEngine_Screen__get_width(0)
+      && y >= 0.0
+      && y <= (float)UnityEngine_Screen__get_height(0) )
     {
-      v4 = 0.25;
-      if ( Axis >= 0.0 )
-        v4 = Axis;
+      Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9548/*"Mouse ScrollWheel"*/, 0);
+      if ( Axis <= 0.0 )
+      {
+        v5 = 0.25;
+        if ( Axis >= 0.0 )
+          v5 = Axis;
+      }
+      else
+      {
+        v5 = -0.25;
+        this->fields._IsZoomMaxFit_k__BackingField = 0;
+      }
+      this->fields.mTgt = v5 + this->fields.mTgt;
     }
-    else
-    {
-      v4 = -0.25;
-      this->fields._IsZoomMaxFit_k__BackingField = 0;
-    }
-    this->fields.mTgt = v4 + this->fields.mTgt;
   }
 }
 

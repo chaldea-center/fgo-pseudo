@@ -16,8 +16,8 @@ void ServantStatusListViewItemDrawPortrait__Awake(
   UnityEngine_Component_o *baseSprite; // x0
   float v4; // s0
   float v5; // s1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:kr14_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
   baseSprite = (UnityEngine_Component_o *)this->fields.baseSprite;
   if ( !baseSprite )
@@ -340,38 +340,39 @@ void ServantStatusListViewItemDrawPortrait__SetItem(
   __int64 v35; // x2
   UnityEngine_Object_o *baseCollider; // x21
   UnityEngine_BoxCollider_o *v37; // x21
-  int v39; // w21
+  int v38; // s0 OVERLAPPED
+  int v40; // s2
+  int v41; // w21
   float x; // s8
-  float v41; // s11
+  float v43; // s11
   float z; // s9
-  float v43; // s10
-  float v44; // s8
-  float v45; // s11
-  float v46; // s9
-  float v47; // s8
-  float v48; // s10
-  float v49; // s9
+  float v45; // s10
+  float v46; // s8
+  float v47; // s11
+  float v48; // s9
+  float v49; // s8
+  float v50; // s10
+  float v51; // s9
   UIWidget_o *transformNameLabel; // x21
   UIWidget_o *transformNameSprite; // x21
-  UILabel_o *v52; // x21
-  __int64 v53; // x1
-  __int64 v54; // x2
-  UnityEngine_Object_o *v55; // x21
+  UILabel_o *v54; // x21
+  __int64 v55; // x1
+  __int64 v56; // x2
+  UnityEngine_Object_o *v57; // x21
+  float v58; // s1
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t transformNameAddHeight; // w8
-  int v58; // w8
-  UnityEngine_GameObject_o *v59; // x0
-  int32_t v60; // w8
   int v61; // w8
-  const MethodInfo *v62; // x3
-  const MethodInfo *v63; // x2
-  UnityEngine_Vector3_o size; // 0:kr20_12.12
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v66; // 0:x0.16
-  UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v62; // x0
+  int32_t v63; // w8
+  int v64; // w8
+  const MethodInfo *v65; // x3
+  const MethodInfo *v66; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v67; // 0:x0.16
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v71; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -437,9 +438,9 @@ void ServantStatusListViewItemDrawPortrait__SetItem(
     v18 = *(_QWORD *)&svtEntity->fields.id.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14, v15);
-    *(_QWORD *)&v66.fields.currentCryptoKey = v17;
-    *(_QWORD *)&v66.fields.fakeValue = v18;
-    ServantStatusExplanationText = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v66, 0);
+    *(_QWORD *)&v67.fields.currentCryptoKey = v17;
+    *(_QWORD *)&v67.fields.fakeValue = v18;
+    ServantStatusExplanationText = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v67, 0);
     if ( (_DWORD)ServantStatusExplanationText )
     {
       if ( !Master_object )
@@ -513,18 +514,18 @@ LABEL_34:
                                                  *(_QWORD *)(*(_QWORD *)ServantStatusExplanationText + 672LL));
                 if ( !v37 )
                   goto LABEL_87;
-                v67.fields.z = 0.0;
-                UnityEngine_BoxCollider__set_size(v37, v67, 0);
+                v40 = 0;
+                UnityEngine_BoxCollider__set_size(v37, *(UnityEngine_Vector3_o *)&v38, 0);
               }
               ServantStatusExplanationText = (__int64)this->fields.titleSprite;
               if ( v31 >= 0 )
-                v39 = v31;
+                v41 = v31;
               else
-                v39 = v31 + 1;
+                v41 = v31 + 1;
               if ( ServantStatusExplanationText )
               {
                 x = this->fields.titleBasePosition.fields.x;
-                v41 = this->fields.titleBasePosition.fields.y;
+                v43 = this->fields.titleBasePosition.fields.y;
                 z = this->fields.titleBasePosition.fields.z;
                 ServantStatusExplanationText = (__int64)UnityEngine_Component__get_transform(
                                                           (UnityEngine_Component_o *)ServantStatusExplanationText,
@@ -533,8 +534,8 @@ LABEL_34:
                 {
                   v68.fields.x = x;
                   v68.fields.z = z;
-                  v43 = (float)(v39 >> 1);
-                  v68.fields.y = v41 + v43;
+                  v45 = (float)(v41 >> 1);
+                  v68.fields.y = v43 + v45;
                   UnityEngine_Transform__set_localPosition(
                     (UnityEngine_Transform_o *)ServantStatusExplanationText,
                     v68,
@@ -542,37 +543,37 @@ LABEL_34:
                   ServantStatusExplanationText = (__int64)this->fields.portraitBase;
                   if ( ServantStatusExplanationText )
                   {
-                    v44 = this->fields.portraitBasePosition.fields.x;
-                    v45 = this->fields.portraitBasePosition.fields.y;
-                    v46 = this->fields.portraitBasePosition.fields.z;
+                    v46 = this->fields.portraitBasePosition.fields.x;
+                    v47 = this->fields.portraitBasePosition.fields.y;
+                    v48 = this->fields.portraitBasePosition.fields.z;
                     ServantStatusExplanationText = (__int64)UnityEngine_GameObject__get_transform(
                                                               (UnityEngine_GameObject_o *)ServantStatusExplanationText,
                                                               0);
                     if ( ServantStatusExplanationText )
                     {
-                      v69.fields.y = v45 + v43;
-                      v69.fields.x = v44;
-                      v69.fields.z = v46;
+                      v69.fields.y = v47 + v45;
+                      v69.fields.x = v46;
+                      v69.fields.z = v48;
                       UnityEngine_Transform__set_localPosition(
                         (UnityEngine_Transform_o *)ServantStatusExplanationText,
                         v69,
                         0);
                       ServantStatusExplanationText = (__int64)this->fields.explanationLabel;
-                      v47 = v26
-                          ? (float)(this->fields.explanationBasePosition.fields.y - v43) + 11.0
-                          : this->fields.explanationBasePosition.fields.y - v43;
+                      v49 = v26
+                          ? (float)(this->fields.explanationBasePosition.fields.y - v45) + 11.0
+                          : this->fields.explanationBasePosition.fields.y - v45;
                       if ( ServantStatusExplanationText )
                       {
-                        v48 = this->fields.explanationBasePosition.fields.x;
-                        v49 = this->fields.explanationBasePosition.fields.z;
+                        v50 = this->fields.explanationBasePosition.fields.x;
+                        v51 = this->fields.explanationBasePosition.fields.z;
                         ServantStatusExplanationText = (__int64)UnityEngine_Component__get_transform(
                                                                   (UnityEngine_Component_o *)ServantStatusExplanationText,
                                                                   0);
                         if ( ServantStatusExplanationText )
                         {
-                          v70.fields.x = v48;
-                          v70.fields.y = v47;
-                          v70.fields.z = v49;
+                          v70.fields.x = v50;
+                          v70.fields.y = v49;
+                          v70.fields.z = v51;
                           UnityEngine_Transform__set_localPosition(
                             (UnityEngine_Transform_o *)ServantStatusExplanationText,
                             v70,
@@ -603,17 +604,17 @@ LABEL_34:
                                       (UnityEngine_GameObject_o *)ServantStatusExplanationText,
                                       1,
                                       0);
-                                    v52 = this->fields.transformNameLabel;
+                                    v54 = this->fields.transformNameLabel;
                                     ServantStatusExplanationText = (__int64)ServantStatusListViewItem__GetTransformName(
                                                                               item,
                                                                               0);
-                                    if ( v52 )
+                                    if ( v54 )
                                     {
-                                      UILabel__set_text(v52, (System_String_o *)ServantStatusExplanationText, 0);
-                                      v55 = (UnityEngine_Object_o *)this->fields.baseCollider;
+                                      UILabel__set_text(v54, (System_String_o *)ServantStatusExplanationText, 0);
+                                      v57 = (UnityEngine_Object_o *)this->fields.baseCollider;
                                       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                                        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v53, v54);
-                                      if ( UnityEngine_Object__op_Inequality(v55, 0, 0) )
+                                        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v55, v56);
+                                      if ( UnityEngine_Object__op_Inequality(v57, 0, 0) )
                                       {
                                         ServantStatusExplanationText = (__int64)this->fields.baseCollider;
                                         if ( !ServantStatusExplanationText )
@@ -621,15 +622,13 @@ LABEL_34:
                                         size = UnityEngine_BoxCollider__get_size(
                                                  (UnityEngine_BoxCollider_o *)ServantStatusExplanationText,
                                                  0);
-                                        v71.fields.x = size.fields.x;
-                                        v71.fields.z = size.fields.z;
                                         ServantStatusExplanationText = (__int64)this->fields.baseCollider;
                                         if ( !ServantStatusExplanationText )
                                           goto LABEL_87;
-                                        v71.fields.y = size.fields.y + (float)this->fields.transformNameAddHeight;
+                                        v58 = size.fields.y + (float)this->fields.transformNameAddHeight;
                                         UnityEngine_BoxCollider__set_size(
                                           (UnityEngine_BoxCollider_o *)ServantStatusExplanationText,
-                                          v71,
+                                          size,
                                           0);
                                       }
                                       ServantStatusExplanationText = (__int64)this->fields.baseSprite;
@@ -651,25 +650,25 @@ LABEL_34:
                                             (float)(this->fields.transformNameAddHeight / 2),
                                             0);
                                           transformNameAddHeight = this->fields.transformNameAddHeight;
-                                          v58 = transformNameAddHeight <= 0
+                                          v61 = transformNameAddHeight <= 0
                                               ? -transformNameAddHeight
                                               : 1 - transformNameAddHeight;
                                           GameObjectExtensions__AddLocalPositionY(
                                             this->fields.portraitBase,
-                                            (float)(v58 >> 1),
+                                            (float)(v61 >> 1),
                                             0);
                                           ServantStatusExplanationText = (__int64)this->fields.explanationLabel;
                                           if ( ServantStatusExplanationText )
                                           {
-                                            v59 = UnityEngine_Component__get_gameObject(
+                                            v62 = UnityEngine_Component__get_gameObject(
                                                     (UnityEngine_Component_o *)ServantStatusExplanationText,
                                                     0);
-                                            v60 = this->fields.transformNameAddHeight;
-                                            if ( v60 <= 0 )
-                                              v61 = -v60;
+                                            v63 = this->fields.transformNameAddHeight;
+                                            if ( v63 <= 0 )
+                                              v64 = -v63;
                                             else
-                                              v61 = 1 - v60;
-                                            GameObjectExtensions__AddLocalPositionY(v59, (float)(v61 >> 1), 0);
+                                              v64 = 1 - v63;
+                                            GameObjectExtensions__AddLocalPositionY(v62, (float)(v64 >> 1), 0);
                                             goto LABEL_86;
                                           }
                                         }
@@ -695,8 +694,8 @@ LABEL_34:
                                   0,
                                   0);
 LABEL_86:
-                                ServantStatusListViewItemDrawPortrait__SetupButton(this, item, 1, v62);
-                                ServantStatusListViewItemDrawPortrait__SetupMask(this, item, v63);
+                                ServantStatusListViewItemDrawPortrait__SetupButton(this, item, 1, v65);
+                                ServantStatusListViewItemDrawPortrait__SetupMask(this, item, v66);
                                 return;
                               }
                             }
@@ -997,7 +996,7 @@ void ServantStatusListViewItemDrawPortrait__SetupMask(
   ServantStatusListViewItemDrawPortrait_o *v7; // x21
   System_String_o *v8; // x21
   __int64 v9; // x2
-  float y; // s1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596D360 & 1) == 0 )
@@ -1042,8 +1041,8 @@ void ServantStatusListViewItemDrawPortrait__SetupMask(
                                                                       0);
                   if ( this )
                   {
-                    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
-                    GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v7, y, 0);
+                    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+                    GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)v7, localPosition.fields.y, 0);
                     v8 = **(System_String_o ***)(qword_5984390 + 184);
                     if ( ServantStatusListViewItem__get_IsEnableOwnRandomSetting(item, 0) )
                     {

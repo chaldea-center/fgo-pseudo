@@ -391,9 +391,9 @@ System_Byte_array *BattleActionLogManager__getDataRaw(BattleActionLogManager_o *
   data = this->fields.data;
   if ( !data )
     sub_2213CDC(0, method);
-  return ((System_Byte_array *(__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))data->klass->vtable._40_ToArray.methodPtr)(
-           data,
-           data->klass->vtable._40_ToArray.method);
+  return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))data->klass->vtable._40_ToArray.methodPtr)(
+                                data,
+                                data->klass->vtable._40_ToArray.method);
 }
 
 
@@ -404,9 +404,9 @@ System_Byte_array *BattleActionLogManager__getHeaderRaw(BattleActionLogManager_o
   header = this->fields.header;
   if ( !header )
     sub_2213CDC(0, method);
-  return ((System_Byte_array *(__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))header->klass->vtable._40_ToArray.methodPtr)(
-           header,
-           header->klass->vtable._40_ToArray.method);
+  return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))header->klass->vtable._40_ToArray.methodPtr)(
+                                header,
+                                header->klass->vtable._40_ToArray.method);
 }
 
 

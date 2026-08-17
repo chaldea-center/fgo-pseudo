@@ -543,10 +543,10 @@ BattleLogicTask_array *BattleLogicReaction__CreateAiTask(
 {
   if ( !task )
     sub_2213CDC(this, 0);
-  return ((BattleLogicTask_array *(__fastcall *)(BattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))task->klass->vtable._5_MakeActionTask.methodPtr)(
-           task,
-           this->fields.logic,
-           task->klass->vtable._5_MakeActionTask.method);
+  return (BattleLogicTask_array *)((__int64 (__fastcall *)(BattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))task->klass->vtable._5_MakeActionTask.methodPtr)(
+                                    task,
+                                    this->fields.logic,
+                                    task->klass->vtable._5_MakeActionTask.method);
 }
 
 
@@ -2067,8 +2067,8 @@ LABEL_14:
   if ( !this )
     goto LABEL_14;
   v6 = this;
-  if ( *((_DWORD *)this + 127) == 4 )
-    *((_DWORD *)this + 127) = 0;
+  if ( HIDWORD(this[7].klass) == 4 )
+    HIDWORD(this[7].klass) = 0;
   v7 = sub_2213CCC(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)v7, 0);
   if ( !v7 )

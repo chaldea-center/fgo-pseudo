@@ -404,7 +404,7 @@ void UIRoot__Update(UIRoot_o *this, const MethodInfo *method)
   float v9; // s8
   float v10; // s1
   float v11; // s2
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59752B0 & 1) == 0 )

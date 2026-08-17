@@ -308,10 +308,10 @@ BattleAttackManager_o *BattleAttackManager__Make(
   BattleAttackManager___ctor(v6, v7);
   if ( !v6 )
     sub_2213CDC(v8, v9);
-  return ((BattleAttackManager_o *(__fastcall *)(BattleAttackManager_o *, BattleLogic_LOGICTYPE_array *, const MethodInfo *))v6->klass->vtable._5_Init.methodPtr)(
-           v6,
-           allLogicArray,
-           v6->klass->vtable._5_Init.method);
+  return (BattleAttackManager_o *)((__int64 (__fastcall *)(BattleAttackManager_o *, BattleLogic_LOGICTYPE_array *, const MethodInfo *))v6->klass->vtable._5_Init.methodPtr)(
+                                    v6,
+                                    allLogicArray,
+                                    v6->klass->vtable._5_Init.method);
 }
 
 
@@ -415,7 +415,7 @@ bool BattleAttackManager__get_IsEnemyAttack(BattleAttackManager_o *this, const M
     v5 = BattleAttackManager__get_Current(this, v4);
     if ( !v5 )
       sub_2213CDC(0, v6);
-    LOBYTE(Current) = ((bool (__fastcall *)(BattleAttack_o *, void *))v5->klass[1]._1.image)(
+    LOBYTE(Current) = ((__int64 (__fastcall *)(BattleAttack_o *, void *))v5->klass[1]._1.image)(
                         v5,
                         v5->klass[1]._1.gc_desc);
   }

@@ -126,8 +126,8 @@ bool BattleResultBuddyPointInfoComponent__IsRankUpBuddyRank(
     }
     else
     {
-      this->fields.beforeBuddyRank = svtPointRank;
       LOBYTE(EnableEntity) = 1;
+      this->fields.beforeBuddyRank = svtPointRank;
     }
   }
   return (char)EnableEntity;

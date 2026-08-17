@@ -286,21 +286,23 @@ bool PartyEventPointIndicator__SetTotalDropItem(
   Il2CppObject *ServantName; // x0
   System_String_o *pointEventTotalTitle1Label; // x0
   System_String_o *v9; // x21
-  System_Array_o *v10; // x22
-  System_String_o *v11; // x21
+  System_Array_o *v10; // x0
+  System_RuntimeFieldHandle_o v11; // x1
+  System_Char_array *v12; // x22
+  System_String_o *v13; // x21
   System_String_c *klass; // x8
   float titleWidth; // s9
-  float v14; // s0
-  float v15; // s8
+  float v16; // s0
+  float v17; // s8
   float x; // s0
-  float v17; // s1
-  System_String_o *v18; // x1
+  float v19; // s1
+  System_String_o *v20; // x1
   System_String_o *EventUpString; // x21
-  __int64 v20; // x2
+  __int64 v22; // x2
   struct UILabel_o *pointEventTotalDataLabel; // x20
-  System_String_o *v22; // x0
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v24; // x0
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BE7E & 1) == 0 )
   {
@@ -326,16 +328,15 @@ bool PartyEventPointIndicator__SetTotalDropItem(
            (System_String_o *)StringLiteral_1/*""*/,
            0);
     v10 = (System_Array_o *)sub_2213B20(char___TypeInfo, 4);
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-      v10,
-      (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3,
-      0);
+    v11.fields.value = Field__PrivateImplementationDetails__307012A837186614D001E192B1D70E6A03D8FC10730FB392A7536E08456B2EF3;
+    v12 = (System_Char_array *)v10;
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v10, v11, 0);
     if ( !v9 )
       goto LABEL_43;
-    pointEventTotalTitle1Label = (System_String_o *)System_String__Split_75706100(v9, (System_Char_array *)v10, 0, 0);
+    pointEventTotalTitle1Label = (System_String_o *)System_String__Split_75706100(v9, v12, 0, 0);
     if ( !pointEventTotalTitle1Label )
       goto LABEL_43;
-    v11 = pointEventTotalTitle1Label;
+    v13 = pointEventTotalTitle1Label;
     klass = pointEventTotalTitle1Label[1].klass;
     pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle1Label;
     titleWidth = (float)this->fields.titleWidth;
@@ -355,17 +356,17 @@ bool PartyEventPointIndicator__SetTotalDropItem(
       if ( !pointEventTotalTitle1Label )
         goto LABEL_43;
       UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, (System_String_o *)StringLiteral_1/*""*/, 0);
-      if ( LODWORD(v11[1].klass) )
+      if ( LODWORD(v13[1].klass) )
       {
         pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle2Label;
         if ( !pointEventTotalTitle1Label )
           goto LABEL_43;
-        UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, (System_String_o *)v11[1].monitor, 0);
+        UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, (System_String_o *)v13[1].monitor, 0);
         pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle2Label;
         if ( !pointEventTotalTitle1Label )
           goto LABEL_43;
         LODWORD(x) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)pointEventTotalTitle1Label, 0);
-        v17 = (float)this->fields.titleWidth;
+        v19 = (float)this->fields.titleWidth;
         goto LABEL_31;
       }
     }
@@ -373,36 +374,36 @@ bool PartyEventPointIndicator__SetTotalDropItem(
     {
       if ( !pointEventTotalTitle1Label )
         goto LABEL_43;
-      UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, (System_String_o *)v11[1].monitor, 0);
-      if ( ((__int64)v11[1].klass & 0xFFFFFFFE) != 0 )
+      UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, (System_String_o *)v13[1].monitor, 0);
+      if ( ((__int64)v13[1].klass & 0xFFFFFFFE) != 0 )
       {
         pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle2Label;
         if ( !pointEventTotalTitle1Label )
           goto LABEL_43;
-        UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, *(System_String_o **)&v11[1].fields, 0);
+        UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, *(System_String_o **)&v13[1].fields, 0);
         pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle1Label;
         if ( !pointEventTotalTitle1Label )
           goto LABEL_43;
-        LODWORD(v14) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)pointEventTotalTitle1Label, 0);
+        LODWORD(v16) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)pointEventTotalTitle1Label, 0);
         pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle2Label;
         if ( !pointEventTotalTitle1Label )
           goto LABEL_43;
-        v15 = v14;
+        v17 = v16;
         x = UILabel__get_printedSize((UILabel_o *)pointEventTotalTitle1Label, 0).fields.x;
-        v17 = (float)this->fields.titleWidth;
-        if ( v15 > x )
-          x = v15;
+        v19 = (float)this->fields.titleWidth;
+        if ( v17 > x )
+          x = v17;
 LABEL_31:
-        if ( x > v17 )
+        if ( x > v19 )
           titleWidth = x;
 LABEL_33:
         pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitleBase;
         if ( pointEventTotalTitle1Label )
         {
-          v25.fields.y = 1.0;
-          v25.fields.z = 1.0;
-          v25.fields.x = (float)this->fields.titleWidth / titleWidth;
-          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)pointEventTotalTitle1Label, v25, 0);
+          v27.fields.y = 1.0;
+          v27.fields.z = 1.0;
+          v27.fields.x = (float)this->fields.titleWidth / titleWidth;
+          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)pointEventTotalTitle1Label, v27, 0);
           EventUpString = EventMargeItemUpValInfo__GetEventUpString(dropItemInfo, 0, 0);
           pointEventTotalTitle1Label = (System_String_o *)System_String__IsNullOrEmpty(EventUpString, 0);
           pointEventTotalDataLabel = this->fields.pointEventTotalDataLabel;
@@ -410,7 +411,7 @@ LABEL_33:
           {
             if ( pointEventTotalDataLabel )
             {
-              v18 = (System_String_o *)StringLiteral_1/*""*/;
+              v20 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_41:
               pointEventTotalTitle1Label = (System_String_o *)pointEventTotalDataLabel;
               goto LABEL_42;
@@ -419,12 +420,12 @@ LABEL_41:
           else
           {
             if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, dropItemInfo, v20);
-            v22 = LocalizationManager__Get((System_String_o *)StringLiteral_10651/*"PARTY_ORGANIZATION_EVENT_TOTAL_DATA"*/, 0);
-            pointEventTotalTitle1Label = System_String__Format(v22, (Il2CppObject *)EventUpString, 0);
+              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, dropItemInfo, v22);
+            v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10651/*"PARTY_ORGANIZATION_EVENT_TOTAL_DATA"*/, 0);
+            pointEventTotalTitle1Label = System_String__Format(v24, (Il2CppObject *)EventUpString, 0);
             if ( pointEventTotalDataLabel )
             {
-              v18 = pointEventTotalTitle1Label;
+              v20 = pointEventTotalTitle1Label;
               goto LABEL_41;
             }
           }
@@ -438,10 +439,10 @@ LABEL_43:
   pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitleBase;
   if ( !pointEventTotalTitle1Label )
     goto LABEL_43;
-  v24.fields.x = 1.0;
-  v24.fields.y = 1.0;
-  v24.fields.z = 1.0;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)pointEventTotalTitle1Label, v24, 0);
+  v26.fields.x = 1.0;
+  v26.fields.y = 1.0;
+  v26.fields.z = 1.0;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)pointEventTotalTitle1Label, v26, 0);
   pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalTitle1Label;
   if ( !pointEventTotalTitle1Label )
     goto LABEL_43;
@@ -453,9 +454,9 @@ LABEL_43:
   pointEventTotalTitle1Label = (System_String_o *)this->fields.pointEventTotalDataLabel;
   if ( !pointEventTotalTitle1Label )
     goto LABEL_43;
-  v18 = (System_String_o *)StringLiteral_1/*""*/;
+  v20 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_42:
-  UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, v18, 0);
+  UILabel__set_text((UILabel_o *)pointEventTotalTitle1Label, v20, 0);
   return dropItemInfo != 0;
 }
 
@@ -1002,8 +1003,8 @@ bool PartyEventPointIndicator__DispTotalDropItemCR_d__29__MoveNext(
               v59,
               v60,
               v61);
-            *((_DWORD *)p__2__current - 2) = 1;
             LOBYTE(ta_5__4) = 1;
+            *((_DWORD *)p__2__current - 2) = 1;
             return (char)ta_5__4;
           }
           this->fields._wait_5__6 = 0;

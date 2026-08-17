@@ -49,10 +49,12 @@ bool BattleActionWaitCond_LimitTime__IsWait(
         float elapsedTime,
         const MethodInfo *method)
 {
-  return this->fields.limit > elapsedTime
-      && ((bool (__fastcall *)(BattleActionWaitCond_LimitTime_o *, const MethodInfo *))this->klass->vtable._6_IsWaitCond.methodPtr)(
-           this,
-           this->klass->vtable._6_IsWaitCond.method);
+  if ( this->fields.limit <= elapsedTime )
+    return 0;
+  else
+    return ((__int64 (__fastcall *)(BattleActionWaitCond_LimitTime_o *, const MethodInfo *))this->klass->vtable._6_IsWaitCond.methodPtr)(
+             this,
+             this->klass->vtable._6_IsWaitCond.method);
 }
 
 

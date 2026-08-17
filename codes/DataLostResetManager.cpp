@@ -1190,7 +1190,7 @@ System_IAsyncResult_o *DataLostResetManager_ClickDelegate__BeginInvoke(
   v10 = resetIdx;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1408,8 +1408,8 @@ bool DataLostResetManager__PlayGameOverAnimation_d__11__MoveNext(
     this->fields.__2__current = (Il2CppObject *)v72;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v72, v74, v75, v76, v77, v78, v79);
-    *((_DWORD *)p__2__current - 2) = 2;
     LOBYTE(AssetStorage) = 1;
+    *((_DWORD *)p__2__current - 2) = 2;
   }
   else
   {
@@ -1587,8 +1587,8 @@ LABEL_69:
                                     v99,
                                     v100,
                                     v101);
-                                  *((_DWORD *)v95 - 2) = 1;
                                   LOBYTE(AssetStorage) = 1;
+                                  *((_DWORD *)v95 - 2) = 1;
                                   return (char)AssetStorage;
                                 }
                               }

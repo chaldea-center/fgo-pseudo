@@ -1,12 +1,14 @@
 void SelectTdCommandTypeController___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct BattleCommand_TYPE_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
 
   if ( (byte_5974548 & 1) == 0 )
   {
@@ -16,20 +18,19 @@ void SelectTdCommandTypeController___cctor(const MethodInfo *method)
     byte_5974548 = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(BattleCommand_TYPE___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB,
-    0);
-  SelectTdCommandTypeController_TypeInfo->static_fields->CommandTypeOrder = (struct BattleCommand_TYPE_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB;
+  v3 = (struct BattleCommand_TYPE_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  SelectTdCommandTypeController_TypeInfo->static_fields->CommandTypeOrder = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SelectTdCommandTypeController_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8,
+    v9);
 }
 
 
@@ -314,7 +315,7 @@ int32_t SelectTdCommandTypeController__GetNowCommandTypeId(
                                                     0);
         if ( this )
         {
-          v4 = (int32_t *)(this + 2);
+          v4 = (int32_t *)&this[2];
           return *v4;
         }
       }
@@ -395,6 +396,9 @@ UnityEngine_Vector3_o SelectTdCommandTypeController__GetNowTypeFrameOffset(
         const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !byte_5969AE0 )
@@ -403,9 +407,12 @@ UnityEngine_Vector3_o SelectTdCommandTypeController__GetNowTypeFrameOffset(
     byte_5969AE0 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  result.fields.x = static_fields->zeroVector.fields.x;
-  result.fields.y = static_fields->zeroVector.fields.y;
-  result.fields.z = static_fields->zeroVector.fields.z;
+  x = static_fields->zeroVector.fields.x;
+  y = static_fields->zeroVector.fields.y;
+  z = static_fields->zeroVector.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

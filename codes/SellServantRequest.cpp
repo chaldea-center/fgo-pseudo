@@ -256,6 +256,7 @@ SellServantRequest_UseSvtHash_o *SellServantRequest___c___beginRequest_b__2_0(
   __int64 v4; // x20
   __int64 v5; // x0
   __int64 v6; // x1
+  SellServantRequest_UseSvtHash_o *result; // x0
 
   if ( (byte_59724B8 & 1) == 0 )
   {
@@ -267,8 +268,9 @@ SellServantRequest_UseSvtHash_o *SellServantRequest___c___beginRequest_b__2_0(
   if ( !v4 )
     sub_2213CDC(v5, v6);
   *(_QWORD *)(v4 + 16) = i;
+  result = (SellServantRequest_UseSvtHash_o *)v4;
   *(_DWORD *)(v4 + 24) = 1;
-  return (SellServantRequest_UseSvtHash_o *)v4;
+  return result;
 }
 
 
@@ -280,6 +282,7 @@ SellServantRequest_UseSvtHash_o *SellServantRequest___c___beginRequest_b__2_1(
   __int64 v4; // x20
   __int64 v5; // x0
   __int64 v6; // x1
+  SellServantRequest_UseSvtHash_o *result; // x0
 
   if ( (byte_59724B9 & 1) == 0 )
   {
@@ -291,6 +294,7 @@ SellServantRequest_UseSvtHash_o *SellServantRequest___c___beginRequest_b__2_1(
   if ( !v4 )
     sub_2213CDC(v5, v6);
   *(_QWORD *)(v4 + 16) = i;
+  result = (SellServantRequest_UseSvtHash_o *)v4;
   *(_DWORD *)(v4 + 24) = 1;
-  return (SellServantRequest_UseSvtHash_o *)v4;
+  return result;
 }

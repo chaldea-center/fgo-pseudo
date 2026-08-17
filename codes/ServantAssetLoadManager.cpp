@@ -2656,6 +2656,7 @@ void ServantAssetLoadManager___preloadSkillAnyVoiceLocal_b__76_1(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantAssetLoadManager__changeChocoDeadShader(UnityEngine_GameObject_o *obj, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v2; // x23
@@ -2687,30 +2688,32 @@ void ServantAssetLoadManager__changeChocoDeadShader(UnityEngine_GameObject_o *ob
   UnityEngine_GameObject_c **v28; // x8
   UnityEngine_Material_o *v29; // x26
   UnityEngine_Shader_o *v30; // x0
-  float32x4_t v31; // q2
-  float v32; // s8
-  float v33; // s9
-  float32x4_t v34; // q0
+  float x; // s8
+  float y; // s9
+  float v33; // s8
+  float v34; // s9
   float32x4_t v35; // q2
-  float32x4_t v36; // q0
-  float y; // s8
-  float32x4_t v38; // q2
+  float v36; // s8
+  float v37; // s9
+  float32x4_t v38; // q0
   float32x4_t v39; // q2
-  UnityEngine_GameObject_o *v40; // [xsp+10h] [xbp-110h]
+  float32x4_t v40; // q0
+  float v41; // s8
+  UnityEngine_GameObject_o *v42; // [xsp+10h] [xbp-110h]
   float a; // [xsp+18h] [xbp-108h]
   float value; // [xsp+1Ch] [xbp-104h]
-  float32x4_t v43; // [xsp+20h] [xbp-100h]
-  float32x4_t v44; // [xsp+30h] [xbp-F0h]
-  float32x4_t v45; // [xsp+40h] [xbp-E0h]
-  UnityEngine_Bounds_o v46; // [xsp+50h] [xbp-D0h] BYREF
-  UnityEngine_Bounds_o v47; // [xsp+68h] [xbp-B8h] BYREF
-  UnityEngine_Vector3_o v48; // 0:kr14_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr20_12.12
-  UnityEngine_Color_o Color; // 0:kr30_16.16
-  UnityEngine_Color_o v51; // 0:kr40_16.16
+  float32x4_t v45; // [xsp+20h] [xbp-100h]
+  float32x4_t v46; // [xsp+30h] [xbp-F0h]
+  float32x4_t v47; // [xsp+40h] [xbp-E0h]
+  UnityEngine_Bounds_o v48; // [xsp+50h] [xbp-D0h] BYREF
+  UnityEngine_Bounds_o v49; // [xsp+68h] [xbp-B8h] BYREF
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
   UnityEngine_Color_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = obj;
   if ( (byte_596F95D & 1) == 0 )
@@ -2803,11 +2806,11 @@ LABEL_53:
     obj = (UnityEngine_GameObject_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v7, 0);
     if ( obj )
     {
-      v51 = UnityEngine_Material__GetColor((UnityEngine_Material_o *)obj, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, 0);
-      v10 = v51.fields.r;
-      v9 = v51.fields.g;
-      a = v51.fields.a;
-      v8 = v51.fields.b;
+      v56 = UnityEngine_Material__GetColor((UnityEngine_Material_o *)obj, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, 0);
+      v10 = v56.fields.r;
+      v9 = v56.fields.g;
+      a = v56.fields.a;
+      v8 = v56.fields.b;
       goto LABEL_13;
     }
     goto LABEL_53;
@@ -2830,7 +2833,7 @@ LABEL_13:
   {
     v22 = obj;
     v23 = 0;
-    v40 = v5;
+    v42 = v5;
     while ( 1 )
     {
       if ( v23 >= (unsigned int)v21 )
@@ -2852,9 +2855,9 @@ LABEL_13:
           break;
       }
 LABEL_41:
-      v5 = v40;
+      v5 = v42;
       ++v23;
-      LODWORD(v21) = v40[1].klass;
+      LODWORD(v21) = v42[1].klass;
       if ( (__int64)v23 >= (int)v21 )
         return;
     }
@@ -2910,40 +2913,42 @@ LABEL_34:
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)obj, 0);
         if ( !NodeFromName )
           goto LABEL_53;
-        v48 = UnityEngine_Transform__InverseTransformPoint(NodeFromName, position, 0);
-        v38.n128_u32[0] = LODWORD(v48.fields.z);
-        v44 = v38;
+        v51 = UnityEngine_Transform__InverseTransformPoint(NodeFromName, position, 0);
+        x = v51.fields.x;
+        y = v51.fields.y;
+        v46 = *(float32x4_t *)&v51.fields.z;
         localPosition = UnityEngine_Transform__get_localPosition(NodeFromName, 0);
-        v39.n128_u32[0] = LODWORD(localPosition.fields.z);
-        v45 = v39;
-        UnityEngine_Renderer__get_localBounds(&v47, (UnityEngine_Renderer_o *)v24, 0);
-        v31.n128_u64[1] = 0x3F0000003F000000LL;
-        v31.n128_u64[0] = LODWORD(v47.fields.m_Center.fields.z) | 0x3F00000000000000LL;
-        v32 = (float)(v48.fields.x - localPosition.fields.x) + v47.fields.m_Center.fields.x;
-        v33 = (float)(v48.fields.y - localPosition.fields.y) + v47.fields.m_Center.fields.y;
-        v43 = v31;
-        UnityEngine_Renderer__get_localBounds(&v47, (UnityEngine_Renderer_o *)v24, 0);
-        v34.n128_u64[0] = __PAIR64__(LODWORD(v47.fields.m_Extents.fields.x), v44.n128_u32[0]);
-        v46.fields.m_Center.fields.x = v32;
-        v46.fields.m_Center.fields.y = v33;
-        v34.n128_u64[1] = *(_QWORD *)&v47.fields.m_Extents.fields.y;
-        v35.n128_u64[0] = 0x3F0000003F000000LL;
+        v33 = x - localPosition.fields.x;
+        v34 = y - localPosition.fields.y;
+        v47 = *(float32x4_t *)&localPosition.fields.z;
+        UnityEngine_Renderer__get_localBounds(&v49, (UnityEngine_Renderer_o *)v24, 0);
         v35.n128_u64[1] = 0x3F0000003F000000LL;
-        v36 = vmulq_f32(vaddq_f32(v34, v34), v35);
-        v36.n128_u32[0] = vaddq_f32(vsubq_f32(v44, v45), v43).n128_u32[0];
-        *(float32x4_t *)&v46.fields.m_Center.fields.z = v36;
-        UnityEngine_Renderer__set_localBounds((UnityEngine_Renderer_o *)v24, &v46, 0);
+        v35.n128_u64[0] = LODWORD(v49.fields.m_Center.fields.z) | 0x3F00000000000000LL;
+        v36 = v33 + v49.fields.m_Center.fields.x;
+        v37 = v34 + v49.fields.m_Center.fields.y;
+        v45 = v35;
+        UnityEngine_Renderer__get_localBounds(&v49, (UnityEngine_Renderer_o *)v24, 0);
+        v38.n128_u64[0] = __PAIR64__(LODWORD(v49.fields.m_Extents.fields.x), v46.n128_u32[0]);
+        v48.fields.m_Center.fields.x = v36;
+        v48.fields.m_Center.fields.y = v37;
+        v38.n128_u64[1] = *(_QWORD *)&v49.fields.m_Extents.fields.y;
+        v39.n128_u64[0] = 0x3F0000003F000000LL;
+        v39.n128_u64[1] = 0x3F0000003F000000LL;
+        v40 = vmulq_f32(vaddq_f32(v38, v38), v39);
+        v40.n128_u32[0] = vaddq_f32(vsubq_f32(v46, v47), v45).n128_u32[0];
+        *(float32x4_t *)&v48.fields.m_Center.fields.z = v40;
+        UnityEngine_Renderer__set_localBounds((UnityEngine_Renderer_o *)v24, &v48, 0);
         UnityEngine_SkinnedMeshRenderer__set_rootBone((UnityEngine_SkinnedMeshRenderer_o *)v24, NodeFromName, 0);
       }
       else
       {
-        UnityEngine_Renderer__get_localBounds(&v47, (UnityEngine_Renderer_o *)v24, 0);
-        y = v47.fields.m_Center.fields.y;
-        UnityEngine_Renderer__get_localBounds(&v47, (UnityEngine_Renderer_o *)v24, 0);
+        UnityEngine_Renderer__get_localBounds(&v49, (UnityEngine_Renderer_o *)v24, 0);
+        v41 = v49.fields.m_Center.fields.y;
+        UnityEngine_Renderer__get_localBounds(&v49, (UnityEngine_Renderer_o *)v24, 0);
         UnityEngine_Material__SetFloat(
           v29,
           (System_String_o *)StringLiteral_16809/*"_ClipSharpnessY"*/,
-          y - v47.fields.m_Extents.fields.y,
+          v41 - v49.fields.m_Extents.fields.y,
           0);
       }
       obj = (UnityEngine_GameObject_o *)UnityEngine_Material__HasProperty_83277340(
@@ -2995,9 +3000,9 @@ void ServantAssetLoadManager__changeChocoSahder(UnityEngine_GameObject_o *obj, c
   UnityEngine_GameObject_c **v30; // x8
   UnityEngine_Material_o *v31; // x24
   UnityEngine_Shader_o *v32; // x0
-  UnityEngine_Color_o Color; // 0:kr00_16.16
-  UnityEngine_Color_o v34; // 0:kr10_16.16
-  UnityEngine_Color_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = obj;
@@ -3087,11 +3092,11 @@ LABEL_44:
     obj = (UnityEngine_GameObject_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v9, 0);
     if ( !obj )
       goto LABEL_44;
-    v34 = UnityEngine_Material__GetColor((UnityEngine_Material_o *)obj, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, 0);
-    v4 = v34.fields.r;
-    v10 = v34.fields.g;
-    v11 = v34.fields.b;
-    v12 = v34.fields.a;
+    v36 = UnityEngine_Material__GetColor((UnityEngine_Material_o *)obj, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, 0);
+    v4 = v36.fields.r;
+    v10 = v36.fields.g;
+    v11 = v36.fields.b;
+    v12 = v36.fields.a;
   }
   else
   {
@@ -3161,16 +3166,16 @@ LABEL_32:
                                       v16,
                                       ReplaceChocoShaderFunc->fields.method);
       UnityEngine_Material__set_shader(v31, v32, 0);
-      v35.fields.r = r;
-      v35.fields.g = g;
-      v35.fields.b = b;
-      v35.fields.a = a;
-      UnityEngine_Material__SetColor(v31, (System_String_o *)StringLiteral_16813/*"_Color"*/, v35, 0);
-      v36.fields.r = v4;
-      v36.fields.g = v10;
-      v36.fields.b = v11;
-      v36.fields.a = v12;
-      UnityEngine_Material__SetColor(v31, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, v36, 0);
+      v33.fields.r = r;
+      v33.fields.g = g;
+      v33.fields.b = b;
+      v33.fields.a = a;
+      UnityEngine_Material__SetColor(v31, (System_String_o *)StringLiteral_16813/*"_Color"*/, v33, 0);
+      v34.fields.r = v4;
+      v34.fields.g = v10;
+      v34.fields.b = v11;
+      v34.fields.a = v12;
+      UnityEngine_Material__SetColor(v31, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, v34, 0);
       UnityEngine_Material__SetTexture(v31, (System_String_o *)StringLiteral_16795/*"_ChocoTex"*/, (UnityEngine_Texture_o *)object, 0);
       obj = (UnityEngine_GameObject_o *)UnityEngine_Material__HasProperty_83277340(
                                           v31,
@@ -3372,6 +3377,7 @@ LABEL_38:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantAssetLoadManager__changeDeadShader(UnityEngine_GameObject_o *obj, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v2; // x22
@@ -3402,30 +3408,32 @@ void ServantAssetLoadManager__changeDeadShader(UnityEngine_GameObject_o *obj, co
   UnityEngine_GameObject_c **v27; // x8
   UnityEngine_Material_o *v28; // x25
   UnityEngine_Shader_o *v29; // x0
-  float32x4_t v30; // q2
-  float v31; // s8
-  float v32; // s9
-  float32x4_t v33; // q0
+  float x; // s8
+  float y; // s9
+  float v32; // s8
+  float v33; // s9
   float32x4_t v34; // q2
-  float32x4_t v35; // q0
-  float y; // s8
-  float32x4_t v37; // q2
+  float v35; // s8
+  float v36; // s9
+  float32x4_t v37; // q0
   float32x4_t v38; // q2
-  UnityEngine_GameObject_o *v39; // [xsp+10h] [xbp-110h]
+  float32x4_t v39; // q0
+  float v40; // s8
+  UnityEngine_GameObject_o *v41; // [xsp+10h] [xbp-110h]
   float a; // [xsp+18h] [xbp-108h]
   float value; // [xsp+1Ch] [xbp-104h]
-  float32x4_t v42; // [xsp+20h] [xbp-100h]
-  float32x4_t v43; // [xsp+30h] [xbp-F0h]
-  float32x4_t v44; // [xsp+40h] [xbp-E0h]
-  UnityEngine_Bounds_o v45; // [xsp+50h] [xbp-D0h] BYREF
-  UnityEngine_Bounds_o v46; // [xsp+68h] [xbp-B8h] BYREF
-  UnityEngine_Vector3_o v47; // 0:kr14_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr20_12.12
-  UnityEngine_Color_o Color; // 0:kr30_16.16
-  UnityEngine_Color_o v50; // 0:kr40_16.16
+  float32x4_t v44; // [xsp+20h] [xbp-100h]
+  float32x4_t v45; // [xsp+30h] [xbp-F0h]
+  float32x4_t v46; // [xsp+40h] [xbp-E0h]
+  UnityEngine_Bounds_o v47; // [xsp+50h] [xbp-D0h] BYREF
+  UnityEngine_Bounds_o v48; // [xsp+68h] [xbp-B8h] BYREF
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
   UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o Color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = obj;
   if ( (byte_596F95C & 1) == 0 )
@@ -3515,11 +3523,11 @@ LABEL_53:
     obj = (UnityEngine_GameObject_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v7, 0);
     if ( obj )
     {
-      v50 = UnityEngine_Material__GetColor((UnityEngine_Material_o *)obj, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, 0);
-      v10 = v50.fields.r;
-      v9 = v50.fields.g;
-      a = v50.fields.a;
-      v8 = v50.fields.b;
+      v55 = UnityEngine_Material__GetColor((UnityEngine_Material_o *)obj, (System_String_o *)StringLiteral_16758/*"_AddColor"*/, 0);
+      v10 = v55.fields.r;
+      v9 = v55.fields.g;
+      a = v55.fields.a;
+      v8 = v55.fields.b;
       goto LABEL_13;
     }
     goto LABEL_53;
@@ -3539,7 +3547,7 @@ LABEL_13:
   {
     v21 = obj;
     v22 = 0;
-    v39 = v5;
+    v41 = v5;
     while ( 1 )
     {
       if ( v22 >= (unsigned int)v20 )
@@ -3561,9 +3569,9 @@ LABEL_13:
           break;
       }
 LABEL_41:
-      v5 = v39;
+      v5 = v41;
       ++v22;
-      LODWORD(v20) = v39[1].klass;
+      LODWORD(v20) = v41[1].klass;
       if ( (__int64)v22 >= (int)v20 )
         return;
     }
@@ -3618,40 +3626,42 @@ LABEL_34:
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)obj, 0);
         if ( !NodeFromName )
           goto LABEL_53;
-        v47 = UnityEngine_Transform__InverseTransformPoint(NodeFromName, position, 0);
-        v37.n128_u32[0] = LODWORD(v47.fields.z);
-        v43 = v37;
+        v50 = UnityEngine_Transform__InverseTransformPoint(NodeFromName, position, 0);
+        x = v50.fields.x;
+        y = v50.fields.y;
+        v45 = *(float32x4_t *)&v50.fields.z;
         localPosition = UnityEngine_Transform__get_localPosition(NodeFromName, 0);
-        v38.n128_u32[0] = LODWORD(localPosition.fields.z);
-        v44 = v38;
-        UnityEngine_Renderer__get_localBounds(&v46, (UnityEngine_Renderer_o *)v23, 0);
-        v30.n128_u64[1] = 0x3F0000003F000000LL;
-        v30.n128_u64[0] = LODWORD(v46.fields.m_Center.fields.z) | 0x3F00000000000000LL;
-        v31 = (float)(v47.fields.x - localPosition.fields.x) + v46.fields.m_Center.fields.x;
-        v32 = (float)(v47.fields.y - localPosition.fields.y) + v46.fields.m_Center.fields.y;
-        v42 = v30;
-        UnityEngine_Renderer__get_localBounds(&v46, (UnityEngine_Renderer_o *)v23, 0);
-        v33.n128_u64[0] = __PAIR64__(LODWORD(v46.fields.m_Extents.fields.x), v43.n128_u32[0]);
-        v45.fields.m_Center.fields.x = v31;
-        v45.fields.m_Center.fields.y = v32;
-        v33.n128_u64[1] = *(_QWORD *)&v46.fields.m_Extents.fields.y;
-        v34.n128_u64[0] = 0x3F0000003F000000LL;
+        v32 = x - localPosition.fields.x;
+        v33 = y - localPosition.fields.y;
+        v46 = *(float32x4_t *)&localPosition.fields.z;
+        UnityEngine_Renderer__get_localBounds(&v48, (UnityEngine_Renderer_o *)v23, 0);
         v34.n128_u64[1] = 0x3F0000003F000000LL;
-        v35 = vmulq_f32(vaddq_f32(v33, v33), v34);
-        v35.n128_u32[0] = vaddq_f32(vsubq_f32(v43, v44), v42).n128_u32[0];
-        *(float32x4_t *)&v45.fields.m_Center.fields.z = v35;
-        UnityEngine_Renderer__set_localBounds((UnityEngine_Renderer_o *)v23, &v45, 0);
+        v34.n128_u64[0] = LODWORD(v48.fields.m_Center.fields.z) | 0x3F00000000000000LL;
+        v35 = v32 + v48.fields.m_Center.fields.x;
+        v36 = v33 + v48.fields.m_Center.fields.y;
+        v44 = v34;
+        UnityEngine_Renderer__get_localBounds(&v48, (UnityEngine_Renderer_o *)v23, 0);
+        v37.n128_u64[0] = __PAIR64__(LODWORD(v48.fields.m_Extents.fields.x), v45.n128_u32[0]);
+        v47.fields.m_Center.fields.x = v35;
+        v47.fields.m_Center.fields.y = v36;
+        v37.n128_u64[1] = *(_QWORD *)&v48.fields.m_Extents.fields.y;
+        v38.n128_u64[0] = 0x3F0000003F000000LL;
+        v38.n128_u64[1] = 0x3F0000003F000000LL;
+        v39 = vmulq_f32(vaddq_f32(v37, v37), v38);
+        v39.n128_u32[0] = vaddq_f32(vsubq_f32(v45, v46), v44).n128_u32[0];
+        *(float32x4_t *)&v47.fields.m_Center.fields.z = v39;
+        UnityEngine_Renderer__set_localBounds((UnityEngine_Renderer_o *)v23, &v47, 0);
         UnityEngine_SkinnedMeshRenderer__set_rootBone((UnityEngine_SkinnedMeshRenderer_o *)v23, NodeFromName, 0);
       }
       else
       {
-        UnityEngine_Renderer__get_localBounds(&v46, (UnityEngine_Renderer_o *)v23, 0);
-        y = v46.fields.m_Center.fields.y;
-        UnityEngine_Renderer__get_localBounds(&v46, (UnityEngine_Renderer_o *)v23, 0);
+        UnityEngine_Renderer__get_localBounds(&v48, (UnityEngine_Renderer_o *)v23, 0);
+        v40 = v48.fields.m_Center.fields.y;
+        UnityEngine_Renderer__get_localBounds(&v48, (UnityEngine_Renderer_o *)v23, 0);
         UnityEngine_Material__SetFloat(
           v28,
           (System_String_o *)StringLiteral_16809/*"_ClipSharpnessY"*/,
-          y - v46.fields.m_Extents.fields.y,
+          v40 - v48.fields.m_Extents.fields.y,
           0);
       }
       obj = (UnityEngine_GameObject_o *)UnityEngine_Material__HasProperty_83277340(
@@ -4323,7 +4333,7 @@ int32_t ServantAssetLoadManager__getSkillCutInId(
         const MethodInfo *method)
 {
   if ( skillInfo )
-    return ((int32_t (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._9_getCutInId.methodPtr)(
+    return ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._9_getCutInId.methodPtr)(
              skillInfo,
              skillInfo->klass->vtable._9_getCutInId.method);
   else
@@ -5552,9 +5562,12 @@ bool ServantAssetLoadManager__loadNobleNamelocal(
   __int64 v34; // x1
   __int64 v35; // x2
   bool v36; // w21
-  unsigned int v41; // [xsp+Ch] [xbp-54h] BYREF
+  int v37; // s0 OVERLAPPED
+  float v38; // s1
+  float v39; // s2
+  float v40; // s3
+  unsigned int v42; // [xsp+Ch] [xbp-54h] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+18h] [xbp-48h] BYREF
-  UnityEngine_Rect_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596F92F & 1) == 0 )
   {
@@ -5667,8 +5680,8 @@ LABEL_16:
         if ( !*(&ServantAssetLoadManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo, v26, v27);
         v28 = ServantAssetLoadManager__getCommandCardLoadFolderName(svtId, v26, v27);
-        v41 = (unsigned int)imageIndex >> 1;
-        v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v41);
+        v42 = (unsigned int)imageIndex >> 1;
+        v29 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v42);
         v30 = System_String__Format((System_String_o *)StringLiteral_26484/*"{0}"*/, v29, 0);
         v31 = System_String__Concat_75651716(v23, v30, 0);
         v32 = this;
@@ -5702,13 +5715,13 @@ LABEL_16:
           tex,
           AssetObject_object,
           tex->klass->vtable._27_set_mainTexture.method);
-        v43.fields.m_XMin = 0.0;
-        v43.fields.m_YMin = 0.5;
-        v43.fields.m_Width = 1.0;
-        v43.fields.m_Height = 0.5;
+        v37 = 0;
+        v38 = 0.5;
+        v39 = 1.0;
+        v40 = 0.5;
         if ( (imageIndex & 1) != 0 )
-          v43.fields.m_YMin = 0.0;
-        UITexture__set_uvRect(tex, v43, 0);
+          v38 = 0.0;
+        UITexture__set_uvRect(tex, *(UnityEngine_Rect_o *)&v37, 0);
         return !v36;
       }
 LABEL_46:
@@ -8910,6 +8923,7 @@ bool ServantAssetLoadManager__GetAheadBg_d__163__MoveNext(
   struct System_Collections_Generic_List_USFGOChangeBgEvent__o *bgAheadList_5__2; // x8
   _DWORD *monitor; // x9
   struct System_Action_o *callback; // x8
+  bool result; // w0
   UnityEngine_WaitForEndOfFrame_o *v42; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
   System_String_o *v44; // x2
@@ -9075,8 +9089,9 @@ LABEL_18:
   v8->fields.__2__current = (Il2CppObject *)v42;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(p__2__current, (int32_t)v42, v44, v45, v46, v47, v48, v49);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 
@@ -9247,7 +9262,7 @@ void ServantAssetLoadManager___c__DisplayClass161_0___loadNoblePhantasmCoroutine
   int32_t v5; // w5
   bool v6; // w6
   bool v7; // w7
-  __int64 _4__this; // x0
+  char *_4__this; // x0
   __int64 v11; // x1
   __int64 v12; // x2
   Il2CppObject *AssetObject_object; // x20
@@ -9286,10 +9301,10 @@ void ServantAssetLoadManager___c__DisplayClass161_0___loadNoblePhantasmCoroutine
     sub_2213A60(&StringLiteral_4594/*"ChrSequence1"*/);
     byte_596F9BE = 1;
   }
-  _4__this = (__int64)this->fields.__4__this;
+  _4__this = (char *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_28;
-  *(_QWORD *)(_4__this + 112) = assetData;
+  *((_QWORD *)_4__this + 14) = assetData;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)(_4__this + 112),
     (int32_t)assetData,
@@ -9299,7 +9314,7 @@ void ServantAssetLoadManager___c__DisplayClass161_0___loadNoblePhantasmCoroutine
     v5,
     v6,
     v7);
-  _4__this = (__int64)this->fields.__4__this;
+  _4__this = (char *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_28;
   AssetObject_object = ServantAssetLoadManager__getAssetObject_object_(
@@ -9315,66 +9330,66 @@ void ServantAssetLoadManager___c__DisplayClass161_0___loadNoblePhantasmCoroutine
   this->fields.sequence = (struct UnityEngine_GameObject_o *)v14;
   p_sequence = &this->fields.sequence;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.sequence, (int32_t)v14, v16, v17, v18, v19, v20, v21);
-  _4__this = (__int64)this->fields.sequence;
+  _4__this = (char *)this->fields.sequence;
   if ( !_4__this )
     goto LABEL_28;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)_4__this, 0, 0);
-  _4__this = (__int64)*p_sequence;
+  _4__this = (char *)*p_sequence;
   if ( !*p_sequence )
     goto LABEL_28;
-  _4__this = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
+  _4__this = (char *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
   if ( !this->fields.parent )
     goto LABEL_28;
   v22 = (UnityEngine_Transform_o *)_4__this;
-  _4__this = (__int64)UnityEngine_GameObject__get_transform(this->fields.parent, 0);
+  _4__this = (char *)UnityEngine_GameObject__get_transform(this->fields.parent, 0);
   if ( !v22 )
     goto LABEL_28;
   UnityEngine_Transform__set_parent(v22, (UnityEngine_Transform_o *)_4__this, 0);
-  _4__this = (__int64)*p_sequence;
+  _4__this = (char *)*p_sequence;
   if ( !*p_sequence )
     goto LABEL_28;
-  _4__this = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
+  _4__this = (char *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
   v23 = (UnityEngine_Transform_o *)_4__this;
   if ( !byte_5969AE0 )
   {
-    _4__this = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    _4__this = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v23 )
     goto LABEL_28;
   UnityEngine_Transform__set_localPosition(v23, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  _4__this = (__int64)*p_sequence;
+  _4__this = (char *)*p_sequence;
   if ( !*p_sequence )
     goto LABEL_28;
-  _4__this = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
+  _4__this = (char *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
   v24 = (UnityEngine_Transform_o *)_4__this;
   if ( !byte_5969AE8 )
   {
-    _4__this = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    _4__this = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE8 = 1;
   }
   if ( !v24 )
     goto LABEL_28;
   UnityEngine_Transform__set_eulerAngles(v24, UnityEngine_Vector3_TypeInfo->static_fields->upVector, 0);
-  _4__this = (__int64)*p_sequence;
+  _4__this = (char *)*p_sequence;
   if ( !*p_sequence )
     goto LABEL_28;
-  _4__this = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
+  _4__this = (char *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
   v25 = (UnityEngine_Transform_o *)_4__this;
   if ( !byte_5969AE5 )
   {
-    _4__this = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    _4__this = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v25 )
     goto LABEL_28;
   UnityEngine_Transform__set_localScale(v25, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-  _4__this = (__int64)*p_sequence;
+  _4__this = (char *)*p_sequence;
   if ( !*p_sequence )
     goto LABEL_28;
-  _4__this = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__59472212(
-                        (UnityEngine_GameObject_o *)_4__this,
-                        (const MethodInfo_38B7954 *)Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOChangeBgEvent___);
+  _4__this = (char *)UnityEngine_GameObject__GetComponentsInChildren_object__59472212(
+                       (UnityEngine_GameObject_o *)_4__this,
+                       (const MethodInfo_38B7954 *)Method_UnityEngine_GameObject_GetComponentsInChildren_USFGOChangeBgEvent___);
   v27 = (WellFired_USFGOChangeBgEvent_array *)_4__this;
   _9__2 = this->fields.__9__2;
   v29 = this->fields.__4__this;
@@ -9912,8 +9927,8 @@ LABEL_78:
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
     if ( isNext )
     {
-      this->fields.__1__state = 2;
       LOBYTE(Instance) = 1;
+      this->fields.__1__state = 2;
     }
     else
     {
@@ -10037,7 +10052,7 @@ System_IAsyncResult_o *ServantAssetLoadManager_onGameObjectLoadComplete__BeginIn
   UnityEngine_GameObject_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = obj;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

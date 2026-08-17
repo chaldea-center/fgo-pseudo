@@ -809,7 +809,7 @@ int32_t ServantOperationManager__GetSelectedOrderByServantId(
       this = (ServantOperationManager_o *)servantOperationListViewManager->m_Items[v6];
       if ( !this )
         break;
-      if ( *((_DWORD *)this + 123) != 2 )
+      if ( HIDWORD(this[2].fields.filter2Button) != 2 )
       {
         this = (ServantOperationManager_o *)ServantOperationListViewManager__GetSelectedOrderByUserServantId(
                                               (ServantOperationListViewManager_o *)this,
@@ -1895,7 +1895,7 @@ void ServantOperationManager__SellCombineWarning(ServantOperationManager_o *this
   _9__51_0 = (System_Predicate_object__o *)static_fields->__9__51_0;
   if ( !_9__51_0 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[1].fields.servantOperationListViewManager) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v23);
       static_fields = ServantOperationManager___c_TypeInfo->static_fields;
@@ -2334,7 +2334,7 @@ void ServantOperationManager__SellSSRareWarning(ServantOperationManager_o *this,
   _9__52_0 = (System_Predicate_object__o *)static_fields->__9__52_0;
   if ( !_9__52_0 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[1].fields.servantOperationListViewManager) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v23);
       static_fields = ServantOperationManager___c_TypeInfo->static_fields;

@@ -6400,6 +6400,7 @@ System_Collections_IEnumerator_o *TitleRootComponent__WaitPurchase(
   int32_t v51; // w5
   bool v52; // w6
   bool v53; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5972D7E & 1) == 0 )
   {
@@ -6421,11 +6422,12 @@ System_Collections_IEnumerator_o *TitleRootComponent__WaitPurchase(
   *(_QWORD *)(v21 + 64) = func;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v21 + 64), (int32_t)func, v48, v49, v50, v51, v52, v53);
   *(_DWORD *)(v21 + 72) = fontsize;
+  result = (System_Collections_IEnumerator_o *)v21;
   *(float *)(v21 + 76) = windowPosY;
   *(_BYTE *)(v21 + 88) = isCancelTxtTwoLine;
   *(_DWORD *)(v21 + 80) = spacingY;
   *(_DWORD *)(v21 + 84) = messageLabelHeight;
-  return (System_Collections_IEnumerator_o *)v21;
+  return result;
 }
 
 
@@ -8309,30 +8311,32 @@ void TitleRootComponent__callbackInputDecide(
   NetworkManager_o *v22; // x22
   System_String_o *v23; // x23
   int32_t v24; // w24
+  System_DateTime_o v25; // x0
   int32_t Month; // w25
-  __int64 v26; // x1
-  Il2CppObject *v27; // x21
-  Il2CppObject *v28; // x0
-  __int64 v29; // x1
-  Il2CppObject *v30; // x21
-  long double v31; // q0
-  __int64 v32; // x1
-  __int64 v33; // x1
+  System_DateTime_o v27; // x0
+  __int64 v28; // x1
+  Il2CppObject *v29; // x21
+  Il2CppObject *v30; // x0
+  __int64 v31; // x1
+  Il2CppObject *v32; // x21
+  long double v33; // q0
   __int64 v34; // x1
   __int64 v35; // x1
   __int64 v36; // x1
   __int64 v37; // x1
   __int64 v38; // x1
-  __int64 v39; // x8
+  __int64 v39; // x1
   __int64 v40; // x1
   __int64 v41; // x8
-  __int64 v42; // x8
-  System_Action_o *v43; // x19
-  __int64 v44; // x1
-  __int64 v45; // x1
+  __int64 v42; // x1
+  __int64 v43; // x8
+  __int64 v44; // x8
+  System_Action_o *v45; // x19
   __int64 v46; // x1
-  bool v47; // w19
+  __int64 v47; // x1
   __int64 v48; // x1
+  bool v49; // w19
+  __int64 v50; // x1
   Il2CppObject *obj; // [xsp+0h] [xbp-60h] BYREF
   uint64_t dateData; // [xsp+8h] [xbp-58h] BYREF
 
@@ -8472,10 +8476,10 @@ LABEL_71:
   v24 = *(_DWORD *)(v21 + 76);
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v7);
-  Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-  Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)System_DateTime__get_Day(
-                                                                            (System_DateTime_o)&dateData,
-                                                                            0);
+  v25.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v25, 0);
+  v27.fields._dateData = (uint64_t)&dateData;
+  Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)System_DateTime__get_Day(v27, 0);
   if ( !v22 )
     goto LABEL_71;
   NetworkManager__SetSignup_48337384(v22, v23, v24, Month, (int32_t)Dictionary, 0);
@@ -8489,49 +8493,49 @@ LABEL_71:
          &obj,
          (const MethodInfo_3FFF778 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
-    v27 = obj;
+    v29 = obj;
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v26);
-    v28 = (Il2CppObject *)JsonManager__toJson(v27, 0, 0, 0);
-    v30 = JsonManager__Deserialize_object_(
-            v28,
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v28);
+    v30 = (Il2CppObject *)JsonManager__toJson(v29, 0, 0, 0);
+    v32 = JsonManager__Deserialize_object_(
+            v30,
             (const MethodInfo_38D38E4 *)Method_JsonManager_Deserialize_CommonUI_LastChallengeQuestInfo___);
     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-      *(__n128 *)&v31 = j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v29);
-    sub_32100FC(v30, 0, v31);
+      *(__n128 *)&v33 = j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v31);
+    sub_32100FC(v32, 0, v33);
   }
   if ( !*(&UserServantNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserServantNewManager_TypeInfo, v26);
+    j_il2cpp_runtime_class_init_0(UserServantNewManager_TypeInfo, v28);
   UserServantNewManager__CreateContinueDeviceSaveData(0);
   if ( !*(&UserServantCollectionManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserServantCollectionManager_TypeInfo, v32);
+    j_il2cpp_runtime_class_init_0(UserServantCollectionManager_TypeInfo, v34);
   UserServantCollectionManager__CreateContinueDeviceSaveData(0);
   if ( !*(&ServantCommentManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo, v33);
+    j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo, v35);
   ServantCommentManager__CreateContinueDeviceSaveData(0);
   if ( !*(&UserEquipNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserEquipNewManager_TypeInfo, v34);
+    j_il2cpp_runtime_class_init_0(UserEquipNewManager_TypeInfo, v36);
   UserEquipNewManager__CreateContinueDeviceSaveData(0);
   if ( !*(&OtherUserNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(OtherUserNewManager_TypeInfo, v35);
+    j_il2cpp_runtime_class_init_0(OtherUserNewManager_TypeInfo, v37);
   OtherUserNewManager__CreateContinueDeviceSaveData(0);
   if ( !*(&UserCommandCodeNewManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo, v36);
+    j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo, v38);
   UserCommandCodeNewManager__CreateContinueDeviceSaveData(0);
   if ( !*(&UserCommandCodeCollectionManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UserCommandCodeCollectionManager_TypeInfo, v37);
+    j_il2cpp_runtime_class_init_0(UserCommandCodeCollectionManager_TypeInfo, v39);
   UserCommandCodeCollectionManager__CreateContinueDeviceSaveData(0);
   SoundPlayerComponent__CreateContinueDeviceSaveData(0);
   if ( !*(&WarBoardData_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(WarBoardData_TypeInfo, v38);
+    j_il2cpp_runtime_class_init_0(WarBoardData_TypeInfo, v40);
   WarBoardData__CreateContinueDeviceSaveData(0);
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-  v39 = *(_QWORD *)(v5 + 24);
-  if ( !v39 )
+  v41 = *(_QWORD *)(v5 + 24);
+  if ( !v41 )
     goto LABEL_71;
   if ( !Dictionary )
     goto LABEL_71;
-  NetworkManager__SetFriendCode((NetworkManager_o *)Dictionary, *(System_String_o **)(v39 + 112), 0);
+  NetworkManager__SetFriendCode((NetworkManager_o *)Dictionary, *(System_String_o **)(v41 + 112), 0);
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Dictionary )
     goto LABEL_71;
@@ -8541,44 +8545,44 @@ LABEL_71:
     goto LABEL_71;
   FriendCodeComponent__UpdateFriendCode((FriendCodeComponent_o *)Dictionary, 0);
   if ( !*(&TermsOfUseMenu_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(TermsOfUseMenu_TypeInfo, v40);
+    j_il2cpp_runtime_class_init_0(TermsOfUseMenu_TypeInfo, v42);
   TermsOfUseMenu__Save(0);
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-  v41 = *(_QWORD *)(v5 + 24);
-  if ( !v41 )
+  v43 = *(_QWORD *)(v5 + 24);
+  if ( !v43 )
     goto LABEL_71;
   if ( !Dictionary )
     goto LABEL_71;
-  AdManager__SetUserId((AdManager_o *)Dictionary, *(_QWORD *)(v41 + 16), 0);
+  AdManager__SetUserId((AdManager_o *)Dictionary, *(_QWORD *)(v43 + 16), 0);
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-  v42 = *(_QWORD *)(v5 + 24);
-  if ( !v42 )
+  v44 = *(_QWORD *)(v5 + 24);
+  if ( !v44 )
     goto LABEL_71;
   if ( !Dictionary )
     goto LABEL_71;
-  AdManager__SetFriendCode((AdManager_o *)Dictionary, *(System_String_o **)(v42 + 112), 0);
+  AdManager__SetFriendCode((AdManager_o *)Dictionary, *(System_String_o **)(v44 + 112), 0);
   ListViewSort__FirstLoginSave(0);
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
   if ( !Dictionary )
     goto LABEL_71;
   AtlasManager__ReleaseUISkinDialog((AtlasManager_o *)Dictionary, 0);
-  v43 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v45 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v43,
+    v45,
     (Il2CppObject *)v5,
     Method_TitleRootComponent___c__DisplayClass148_0__callbackInputDecide_g__OpenTakeOverNotificationDialog_0__,
     0);
   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v44);
-  AtlasManager__LoadUISkin(v43, 0, 1, 0);
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v46);
+  AtlasManager__LoadUISkin(v45, 0, 1, 0);
   if ( !*(&CondType_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v45);
-  v47 = CondType__IsOpenedSaveDeleteButton(0);
+    j_il2cpp_runtime_class_init_0(CondType_TypeInfo, v47);
+  v49 = CondType__IsOpenedSaveDeleteButton(0);
   if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v46);
-  TerminalPramsManager__SaveUserSaveDataDeleteButtonNonRelease(!v47, 0);
+    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v48);
+  TerminalPramsManager__SaveUserSaveDataDeleteButtonNonRelease(!v49, 0);
   if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v48);
+    j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v50);
   CommonUI__DeleteMovieSaveKey(0);
   CommonUI__DeleteTutorialSaveKey(0);
   CommonUI__DeleteFortuneBonusSaveKey(0);
@@ -9593,12 +9597,16 @@ LABEL_11:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void TitleRootComponent__onChangeTakeoverInput(TitleRootComponent_o *this, const MethodInfo *method)
 {
   UILineInput_o *takeoverKeyInput; // x0
   UILineInput_o *v4; // x20
   _BOOL4 v5; // w20
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   takeoverKeyInput = this->fields.takeoverKeyInput;
   if ( !takeoverKeyInput )
@@ -9633,13 +9641,13 @@ void TitleRootComponent__onChangeTakeoverInput(TitleRootComponent_o *this, const
 LABEL_14:
     sub_2213CDC(takeoverKeyInput, method);
   }
-  v7.fields.r = 0.5;
-  v7.fields.a = 1.0;
+  v6 = 0.5;
+  v7 = 1.0;
   if ( v5 )
-    v7.fields.r = 1.0;
-  v7.fields.g = v7.fields.r;
-  v7.fields.b = v7.fields.r;
-  UIButtonColor__set_defaultColor((UIButtonColor_o *)takeoverKeyInput, v7, 0);
+    v6 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIButtonColor__set_defaultColor((UIButtonColor_o *)takeoverKeyInput, *(UnityEngine_Color_o *)&v6, 0);
 }
 
 
@@ -10935,8 +10943,8 @@ LABEL_98:
           this->fields.__2__current = v107;
           v108 = &this->fields.__2__current;
           sub_2213A04((MissionNaviTransitionBoardItem_o *)v108, (int32_t)v107, v109, v110, v111, v112, v113, v114);
-          *((_DWORD *)v108 - 2) = 1;
           LOBYTE(mainCamera) = 1;
+          *((_DWORD *)v108 - 2) = 1;
           return mainCamera;
         }
       }
@@ -11549,8 +11557,9 @@ LABEL_53:
   v8->fields.__2__current = 0;
   v55 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v55, 0, v48, v49, v50, v51, v52, v53);
+  result = 1;
   v55[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

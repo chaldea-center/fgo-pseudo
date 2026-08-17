@@ -410,7 +410,7 @@ bool MaterialEventLogServantListViewItem__IsItemMatchFilter(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(MaterialEventLogServantListViewItem_o *, ListViewSort_o *, const MethodInfo *))this->klass->vtable._5_IsMatchFilter.methodPtr)(
+  return ((__int64 (__fastcall *)(MaterialEventLogServantListViewItem_o *, ListViewSort_o *, const MethodInfo *))this->klass->vtable._5_IsMatchFilter.methodPtr)(
            this,
            sort,
            this->klass->vtable._5_IsMatchFilter.method);
@@ -604,6 +604,7 @@ bool MaterialEventLogServantListViewItem__SetSortValue(
   int32_t v11; // w1
   struct System_String_o **p_sortStr1; // x19
   struct System_String_o *v13; // x8
+  bool result; // w0
 
   if ( (byte_596B784 & 1) == 0 )
   {
@@ -630,11 +631,12 @@ bool MaterialEventLogServantListViewItem__SetSortValue(
   *(p_sortStr1 - 2) = 0;
   *(p_sortStr1 - 1) = v13;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p_sortStr1, v11, (System_String_o *)method, v3, v4, v5, v6, v7);
+  result = 1;
   *((_WORD *)p_sortStr1 + 20) = 0;
   p_sortStr1[2] = 0;
   p_sortStr1[3] = 0;
   p_sortStr1[1] = 0;
-  return 1;
+  return result;
 }
 
 

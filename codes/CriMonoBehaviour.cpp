@@ -43,12 +43,17 @@ void CriMonoBehaviour__OnEnable(CriMonoBehaviour_o *this, const MethodInfo *meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Guid_o CriMonoBehaviour__get_guid(CriMonoBehaviour_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v3; // x0
   System_Guid_o result; // 0:x0.16
 
-  *(_QWORD *)&result.fields._d = *(_QWORD *)&this->fields._guid_k__BackingField.fields._d;
-  *(_QWORD *)&result.fields._a = *(_QWORD *)&this->fields._guid_k__BackingField.fields._a;
+  v2 = *(_QWORD *)&this->fields._guid_k__BackingField.fields._d;
+  v3 = *(_QWORD *)&this->fields._guid_k__BackingField.fields._a;
+  *(_QWORD *)&result.fields._d = v2;
+  *(_QWORD *)&result.fields._a = v3;
   return result;
 }
 

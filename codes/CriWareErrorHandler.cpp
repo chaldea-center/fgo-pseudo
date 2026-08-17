@@ -182,7 +182,7 @@ intptr_t CriWareErrorHandler__CRIWARE841C0338(const MethodInfo *method)
     v1 = (void *)sub_2214114(v3);
     off_5969880 = v1;
   }
-  return ((intptr_t (*)(void))v1)();
+  return ((__int64 (*)(void))v1)();
 }
 
 
@@ -581,7 +581,7 @@ System_IAsyncResult_o *CriWareErrorHandler_Callback__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = message;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -666,7 +666,7 @@ System_IAsyncResult_o *CriWareErrorHandler_ErrorCallbackFunc__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = errmsg;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 

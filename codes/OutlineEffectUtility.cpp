@@ -299,16 +299,20 @@ UnityEngine_Vector2_o OutlineEffectUtility__GetScaledScreenResolution(const Meth
   int32_t height; // w19
   float v2; // s9
   int32_t width; // w19
+  float v4; // s1
+  float v5; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   height = UnityEngine_Screen__get_height(0);
   v2 = (float)height / (float)UnityEngine_Screen__get_width(0);
   width = UnityEngine_Screen__get_width(0);
   if ( v2 >= 0.5625 )
-    result.fields.y = (float)UnityEngine_Screen__get_width(0) * 0.5625;
+    v4 = (float)UnityEngine_Screen__get_width(0) * 0.5625;
   else
-    result.fields.y = (float)UnityEngine_Screen__get_height(0);
-  result.fields.x = (float)width;
+    v4 = (float)UnityEngine_Screen__get_height(0);
+  v5 = (float)width;
+  result.fields.y = v4;
+  result.fields.x = v5;
   return result;
 }
 
@@ -317,6 +321,8 @@ UnityEngine_Vector2_o OutlineEffectUtility__GetScaledUVOffset(const MethodInfo *
 {
   int32_t height; // w19
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
   float v5; // s8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
@@ -324,8 +330,8 @@ UnityEngine_Vector2_o OutlineEffectUtility__GetScaledUVOffset(const MethodInfo *
   if ( (float)((float)height / (float)UnityEngine_Screen__get_width(0)) >= 0.5625 )
   {
     v5 = (float)UnityEngine_Screen__get_width(0) * 0.5625;
-    result.fields.y = (float)((float)((float)UnityEngine_Screen__get_height(0) - v5) * 0.5) / v5;
-    result.fields.x = 0.0;
+    y = (float)((float)((float)UnityEngine_Screen__get_height(0) - v5) * 0.5) / v5;
+    x = 0.0;
   }
   else
   {
@@ -335,9 +341,11 @@ UnityEngine_Vector2_o OutlineEffectUtility__GetScaledUVOffset(const MethodInfo *
       byte_59699C0 = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-    result.fields.x = static_fields->zeroVector.fields.x;
-    result.fields.y = static_fields->zeroVector.fields.y;
+    x = static_fields->zeroVector.fields.x;
+    y = static_fields->zeroVector.fields.y;
   }
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

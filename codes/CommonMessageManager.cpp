@@ -349,156 +349,158 @@ void CommonMessageManager__AnalysScript(
         System_String_o *scriptData,
         const MethodInfo *method)
 {
-  System_Array_o *v5; // x21
-  System_String_o *v6; // x0
-  Il2CppObject *v7; // x1
-  System_String_array *v8; // x24
-  System_Collections_Generic_List_object__o *v9; // x22
-  System_Collections_Generic_List_object__o *v10; // x21
-  System_Collections_Generic_List_int__o *v11; // x20
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  System_String_o **v15; // x5
-  bool v16; // w6
-  bool v17; // w7
+  System_Array_o *v5; // x0
+  System_RuntimeFieldHandle_o v6; // x1
+  System_Char_array *v7; // x21
+  System_String_o *v8; // x0
+  Il2CppObject *v9; // x1
+  System_String_array *v10; // x24
+  System_Collections_Generic_List_object__o *v11; // x22
+  System_Collections_Generic_List_object__o *v12; // x21
+  System_Collections_Generic_List_int__o *v13; // x20
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  System_String_o **v17; // x5
+  bool v18; // w6
+  bool v19; // w7
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v19; // x23
-  System_String_o *v20; // x28
-  System_String_o *v21; // x26
-  System_String_o *v22; // x27
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
+  unsigned __int64 v21; // x23
+  System_String_o *v22; // x28
+  System_String_o *v23; // x26
+  System_String_o *v24; // x27
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
   struct System_Object_array *items; // x8
-  _QWORD *v30; // x9
+  _QWORD *v32; // x9
   __int64 size; // x10
-  Il2CppClass **v32; // x0
-  System_String_o *v33; // x2
-  System_String_o *v34; // x3
-  int32_t v35; // w4
-  int32_t v36; // w5
-  bool v37; // w6
-  bool v38; // w7
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
-  struct System_Object_array *v45; // x8
-  __int64 v46; // x10
-  Il2CppClass **v47; // x0
-  System_String_o *v48; // x2
-  System_String_o *v49; // x3
-  int32_t v50; // w4
-  int32_t v51; // w5
-  bool v52; // w6
-  bool v53; // w7
-  System_String_o *v54; // x8
-  struct System_Object_array *v55; // x8
-  _QWORD *v56; // x9
-  __int64 v57; // x10
-  Il2CppClass **v58; // x0
-  struct System_Int32_array *v59; // x8
-  _QWORD *v60; // x9
-  __int64 v61; // x10
-  struct System_Object_array *v62; // x8
-  _QWORD *v63; // x9
-  __int64 v64; // x10
-  Il2CppClass **v65; // x0
-  struct System_Int32_array *v66; // x8
-  _QWORD *v67; // x9
-  __int64 v68; // x10
-  struct System_Object_array *v69; // x8
-  _QWORD *v70; // x9
-  __int64 v71; // x10
-  Il2CppClass **v72; // x0
-  System_String_o *v73; // x2
-  System_String_o *v74; // x3
-  int32_t v75; // w4
-  int32_t v76; // w5
-  bool v77; // w6
-  bool v78; // w7
-  struct System_Object_array *v79; // x8
-  _QWORD *v80; // x9
-  __int64 v81; // x10
-  Il2CppObject *v82; // x1
-  Il2CppClass **v83; // x0
-  MissionNaviTransitionBoardItem_o *v84; // x0
-  __int64 v85; // x8
-  System_Collections_Generic_List_object__o *v86; // x0
-  struct System_Object_array *v87; // x8
-  _QWORD *v88; // x9
-  __int64 v89; // x10
-  Il2CppClass **v90; // x0
-  System_String_o *v91; // x2
-  System_String_o *v92; // x3
-  int32_t v93; // w4
-  int32_t v94; // w5
-  bool v95; // w6
-  bool v96; // w7
-  struct System_Object_array *v97; // x8
-  _QWORD *v98; // x9
-  __int64 v99; // x10
-  Il2CppClass **v100; // x0
-  struct System_Int32_array *v101; // x8
-  _QWORD *v102; // x9
-  __int64 v103; // x10
-  struct System_Object_array *v104; // x8
-  _QWORD *v105; // x9
-  __int64 v106; // x10
-  Il2CppClass **v107; // x0
-  _QWORD *v108; // x9
-  struct System_Object_array *v109; // x8
-  __int64 v110; // x10
-  Il2CppClass **v111; // x0
-  struct System_Int32_array *v112; // x8
-  _QWORD *v113; // x9
-  __int64 v114; // x10
-  struct System_Object_array *v115; // x8
-  _QWORD *v116; // x9
-  __int64 v117; // x10
-  Il2CppClass **v118; // x0
-  System_String_o *v119; // x2
-  System_String_o *v120; // x3
-  int32_t v121; // w4
-  int32_t v122; // w5
-  bool v123; // w6
-  bool v124; // w7
-  struct System_Object_array *v125; // x8
-  _QWORD *v126; // x9
-  __int64 v127; // x10
-  Il2CppClass **v128; // x0
-  struct System_Int32_array *v129; // x8
-  _QWORD *v130; // x9
-  __int64 v131; // x10
-  struct System_String_array *v132; // x0
-  System_String_o *v133; // x2
-  System_String_o *v134; // x3
-  int32_t v135; // w4
-  int32_t v136; // w5
-  bool v137; // w6
-  bool v138; // w7
-  struct System_String_array *v139; // x0
-  System_String_o *v140; // x2
-  System_String_o *v141; // x3
-  int32_t v142; // w4
-  int32_t v143; // w5
-  bool v144; // w6
-  bool v145; // w7
-  struct System_Int32_array *v146; // x0
-  System_String_o *v147; // x2
-  System_String_o *v148; // x3
-  int32_t v149; // w4
-  int32_t v150; // w5
-  bool v151; // w6
-  bool v152; // w7
+  Il2CppClass **v34; // x0
+  System_String_o *v35; // x2
+  System_String_o *v36; // x3
+  int32_t v37; // w4
+  int32_t v38; // w5
+  bool v39; // w6
+  bool v40; // w7
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  struct System_Object_array *v47; // x8
+  __int64 v48; // x10
+  Il2CppClass **v49; // x0
+  System_String_o *v50; // x2
+  System_String_o *v51; // x3
+  int32_t v52; // w4
+  int32_t v53; // w5
+  bool v54; // w6
+  bool v55; // w7
+  System_String_o *v56; // x8
+  struct System_Object_array *v57; // x8
+  _QWORD *v58; // x9
+  __int64 v59; // x10
+  Il2CppClass **v60; // x0
+  struct System_Int32_array *v61; // x8
+  _QWORD *v62; // x9
+  __int64 v63; // x10
+  struct System_Object_array *v64; // x8
+  _QWORD *v65; // x9
+  __int64 v66; // x10
+  Il2CppClass **v67; // x0
+  struct System_Int32_array *v68; // x8
+  _QWORD *v69; // x9
+  __int64 v70; // x10
+  struct System_Object_array *v71; // x8
+  _QWORD *v72; // x9
+  __int64 v73; // x10
+  Il2CppClass **v74; // x0
+  System_String_o *v75; // x2
+  System_String_o *v76; // x3
+  int32_t v77; // w4
+  int32_t v78; // w5
+  bool v79; // w6
+  bool v80; // w7
+  struct System_Object_array *v81; // x8
+  _QWORD *v82; // x9
+  __int64 v83; // x10
+  Il2CppObject *v84; // x1
+  Il2CppClass **v85; // x0
+  MissionNaviTransitionBoardItem_o *v86; // x0
+  __int64 v87; // x8
+  System_Collections_Generic_List_object__o *v88; // x0
+  struct System_Object_array *v89; // x8
+  _QWORD *v90; // x9
+  __int64 v91; // x10
+  Il2CppClass **v92; // x0
+  System_String_o *v93; // x2
+  System_String_o *v94; // x3
+  int32_t v95; // w4
+  int32_t v96; // w5
+  bool v97; // w6
+  bool v98; // w7
+  struct System_Object_array *v99; // x8
+  _QWORD *v100; // x9
+  __int64 v101; // x10
+  Il2CppClass **v102; // x0
+  struct System_Int32_array *v103; // x8
+  _QWORD *v104; // x9
+  __int64 v105; // x10
+  struct System_Object_array *v106; // x8
+  _QWORD *v107; // x9
+  __int64 v108; // x10
+  Il2CppClass **v109; // x0
+  _QWORD *v110; // x9
+  struct System_Object_array *v111; // x8
+  __int64 v112; // x10
+  Il2CppClass **v113; // x0
+  struct System_Int32_array *v114; // x8
+  _QWORD *v115; // x9
+  __int64 v116; // x10
+  struct System_Object_array *v117; // x8
+  _QWORD *v118; // x9
+  __int64 v119; // x10
+  Il2CppClass **v120; // x0
+  System_String_o *v121; // x2
+  System_String_o *v122; // x3
+  int32_t v123; // w4
+  int32_t v124; // w5
+  bool v125; // w6
+  bool v126; // w7
+  struct System_Object_array *v127; // x8
+  _QWORD *v128; // x9
+  __int64 v129; // x10
+  Il2CppClass **v130; // x0
+  struct System_Int32_array *v131; // x8
+  _QWORD *v132; // x9
+  __int64 v133; // x10
+  struct System_String_array *v134; // x0
+  System_String_o *v135; // x2
+  System_String_o *v136; // x3
+  int32_t v137; // w4
+  int32_t v138; // w5
+  bool v139; // w6
+  bool v140; // w7
+  struct System_String_array *v141; // x0
+  System_String_o *v142; // x2
+  System_String_o *v143; // x3
+  int32_t v144; // w4
+  int32_t v145; // w5
+  bool v146; // w6
+  bool v147; // w7
+  struct System_Int32_array *v148; // x0
+  System_String_o *v149; // x2
+  System_String_o *v150; // x3
+  int32_t v151; // w4
+  int32_t v152; // w5
+  bool v153; // w6
+  bool v154; // w7
   struct System_String_array *executeDataList; // x8
-  const MethodInfo *v154; // [xsp+0h] [xbp-A0h]
+  const MethodInfo *v156; // [xsp+0h] [xbp-A0h]
   System_String_o *a; // [xsp+10h] [xbp-90h]
   int32_t lastMessageIndex; // [xsp+24h] [xbp-7Ch] BYREF
   System_Collections_Generic_List_int__o *lineDataList; // [xsp+28h] [xbp-78h] BYREF
@@ -538,283 +540,282 @@ void CommonMessageManager__AnalysScript(
   lineDataList = 0;
   lastMessageIndex = 0;
   v5 = (System_Array_o *)sub_2213B20(char___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v5,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54,
-    0);
+  v6.fields.value = Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54;
+  v7 = (System_Char_array *)v5;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v5, v6, 0);
   if ( !scriptData )
     goto LABEL_137;
-  v8 = System_String__Split_75706100(scriptData, (System_Char_array *)v5, 1, 0);
-  v9 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
+  v10 = System_String__Split_75706100(scriptData, v7, 1, 0);
+  v11 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v9,
-    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
-  tagDataList = (System_Collections_Generic_List_string__o *)v9;
-  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
-  scriptDataList = (System_Collections_Generic_List_string__o *)v10;
-  v11 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor(
     v11,
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
+  tagDataList = (System_Collections_Generic_List_string__o *)v11;
+  v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v12,
+    (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_string___ctor__);
+  scriptDataList = (System_Collections_Generic_List_string__o *)v12;
+  v13 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor(
+    v13,
     (const MethodInfo_44669E0 *)Method_System_Collections_Generic_List_int___ctor__);
-  lineDataList = v11;
+  lineDataList = v13;
   lastMessageIndex = -1;
-  if ( !v8 )
+  if ( !v10 )
     goto LABEL_137;
-  max_length = v8->max_length;
+  max_length = v10->max_length;
   if ( (int)max_length >= 1 )
   {
-    v19 = 0;
+    v21 = 0;
     a = (System_String_o *)StringLiteral_1/*""*/;
     while ( 1 )
     {
-      if ( v19 >= (unsigned int)max_length )
-        sub_2213CE4(v6);
-      v20 = v8->m_Items[v19];
-      if ( !v20 )
+      if ( v21 >= (unsigned int)max_length )
+        sub_2213CE4(v8);
+      v22 = v10->m_Items[v21];
+      if ( !v22 )
         goto LABEL_137;
-      if ( v20->fields._stringLength >= 1 )
+      if ( v22->fields._stringLength >= 1 )
       {
-        v21 = (System_String_o *)StringLiteral_1/*""*/;
-        v6 = (System_String_o *)System_String__StartsWith(v8->m_Items[v19], (System_String_o *)StringLiteral_1126/*"//"*/, 0);
-        if ( ((unsigned __int8)v6 & 1) == 0 )
+        v23 = (System_String_o *)StringLiteral_1/*""*/;
+        v8 = (System_String_o *)System_String__StartsWith(v10->m_Items[v21], (System_String_o *)StringLiteral_1126/*"//"*/, 0);
+        if ( ((unsigned __int8)v8 & 1) == 0 )
         {
-          v6 = (System_String_o *)System_String__StartsWith(v20, this->fields.codeCommentString, 0);
-          if ( ((unsigned __int8)v6 & 1) == 0 )
+          v8 = (System_String_o *)System_String__StartsWith(v22, this->fields.codeCommentString, 0);
+          if ( ((unsigned __int8)v8 & 1) == 0 )
             break;
         }
       }
 LABEL_112:
-      LODWORD(max_length) = v8->max_length;
-      if ( (__int64)++v19 >= (int)max_length )
+      LODWORD(max_length) = v10->max_length;
+      if ( (__int64)++v21 >= (int)max_length )
         goto LABEL_115;
     }
-    if ( System_String__StartsWith(v20, this->fields.codeTalkString, 0) )
+    if ( System_String__StartsWith(v22, this->fields.codeTalkString, 0) )
     {
-      v22 = (System_String_o *)StringLiteral_25260/*"talkName"*/;
-      v21 = System_String__Substring(v20, 1, 0);
-      if ( v22 )
+      v24 = (System_String_o *)StringLiteral_25260/*"talkName"*/;
+      v23 = System_String__Substring(v22, 1, 0);
+      if ( v24 )
       {
-        v6 = (System_String_o *)System_String__op_Equality(v22, (System_String_o *)StringLiteral_22160/*"k"*/, 0);
-        if ( ((unsigned __int8)v6 & 1) != 0
-          || (v6 = (System_String_o *)System_String__op_Equality(v22, (System_String_o *)StringLiteral_24034/*"q"*/, 0),
-              ((unsigned __int8)v6 & 1) != 0) )
+        v8 = (System_String_o *)System_String__op_Equality(v24, (System_String_o *)StringLiteral_22160/*"k"*/, 0);
+        if ( ((unsigned __int8)v8 & 1) != 0
+          || (v8 = (System_String_o *)System_String__op_Equality(v24, (System_String_o *)StringLiteral_24034/*"q"*/, 0),
+              ((unsigned __int8)v8 & 1) != 0) )
         {
           if ( (lastMessageIndex & 0x80000000) == 0 )
           {
-            if ( !v9 )
+            if ( !v11 )
               goto LABEL_137;
-            items = v9->fields._items;
-            v30 = Method_System_Collections_Generic_List_string__Add__;
-            ++v9->fields._version;
+            items = v11->fields._items;
+            v32 = Method_System_Collections_Generic_List_string__Add__;
+            ++v11->fields._version;
             if ( !items )
               goto LABEL_137;
-            size = v9->fields._size;
+            size = v11->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
-                v9,
+                v11,
                 0,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
             }
             else
             {
-              v32 = &items->obj.klass + size;
-              v9->fields._size = size + 1;
-              v32[4] = 0;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v32 + 4), 0, v23, v24, v25, v26, v27, v28);
+              v34 = &items->obj.klass + size;
+              v11->fields._size = size + 1;
+              v34[4] = 0;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v34 + 4), 0, v25, v26, v27, v28, v29, v30);
             }
-            if ( !v10 )
+            if ( !v12 )
               goto LABEL_137;
-            v55 = v10->fields._items;
-            v7 = (Il2CppObject *)StringLiteral_16632/*"[r]"*/;
-            v56 = Method_System_Collections_Generic_List_string__Add__;
-            ++v10->fields._version;
-            if ( !v55 )
+            v57 = v12->fields._items;
+            v9 = (Il2CppObject *)StringLiteral_16632/*"[r]"*/;
+            v58 = Method_System_Collections_Generic_List_string__Add__;
+            ++v12->fields._version;
+            if ( !v57 )
               goto LABEL_137;
-            v57 = v10->fields._size;
-            if ( (unsigned int)v57 >= LODWORD(v55->max_length) )
+            v59 = v12->fields._size;
+            if ( (unsigned int)v59 >= LODWORD(v57->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
-                v10,
-                v7,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+                v12,
+                v9,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
             }
             else
             {
-              v58 = &v55->obj.klass + v57;
-              v10->fields._size = v57 + 1;
-              v58[4] = (Il2CppClass *)v7;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v58 + 4), (int32_t)v7, v33, v34, v35, v36, v37, v38);
+              v60 = &v57->obj.klass + v59;
+              v12->fields._size = v59 + 1;
+              v60[4] = (Il2CppClass *)v9;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v60 + 4), (int32_t)v9, v35, v36, v37, v38, v39, v40);
             }
-            if ( !v11 )
+            if ( !v13 )
               goto LABEL_137;
-            v59 = v11->fields._items;
-            v60 = Method_System_Collections_Generic_List_int__Add__;
-            ++v11->fields._version;
-            if ( !v59 )
+            v61 = v13->fields._items;
+            v62 = Method_System_Collections_Generic_List_int__Add__;
+            ++v13->fields._version;
+            if ( !v61 )
               goto LABEL_137;
-            v61 = v11->fields._size;
-            if ( (unsigned int)v61 >= LODWORD(v59->max_length) )
+            v63 = v13->fields._size;
+            if ( (unsigned int)v63 >= LODWORD(v61->max_length) )
             {
               System_Collections_Generic_List_int___AddWithResize(
-                v11,
-                v19 + 1,
-                *(const MethodInfo_4467270 **)(*(_QWORD *)(v60[4] + 192LL) + 112LL));
+                v13,
+                v21 + 1,
+                *(const MethodInfo_4467270 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
             }
             else
             {
-              v11->fields._size = v61 + 1;
-              v59->m_Items[v61] = v19 + 1;
+              v13->fields._size = v63 + 1;
+              v61->m_Items[v63] = v21 + 1;
             }
             lastMessageIndex = -1;
             goto LABEL_96;
           }
         }
-        else if ( System_String__op_Equality(v22, (System_String_o *)StringLiteral_25260/*"talkName"*/, 0) )
+        else if ( System_String__op_Equality(v24, (System_String_o *)StringLiteral_25260/*"talkName"*/, 0) )
         {
-          v6 = (System_String_o *)System_String__op_Equality(v22, (System_String_o *)StringLiteral_25260/*"talkName"*/, 0);
-          v54 = (System_String_o *)StringLiteral_1/*""*/;
-          if ( ((unsigned __int8)v6 & 1) != 0 )
-            v54 = v21;
-          a = v54;
+          v8 = (System_String_o *)System_String__op_Equality(v24, (System_String_o *)StringLiteral_25260/*"talkName"*/, 0);
+          v56 = (System_String_o *)StringLiteral_1/*""*/;
+          if ( ((unsigned __int8)v8 & 1) != 0 )
+            v56 = v23;
+          a = v56;
         }
-        else if ( System_String__op_Equality(v22, (System_String_o *)StringLiteral_21053/*"i"*/, 0)
-               || System_String__op_Equality(v22, (System_String_o *)StringLiteral_21266/*"image"*/, 0)
-               || System_String__op_Equality(v22, (System_String_o *)StringLiteral_22314/*"line"*/, 0)
-               || System_String__StartsWith(v22, (System_String_o *)StringLiteral_506/*"%"*/, 0)
-               || System_String__StartsWith(v22, (System_String_o *)StringLiteral_528/*"&"*/, 0)
-               || (v6 = (System_String_o *)System_String__StartsWith(v22, (System_String_o *)StringLiteral_395/*"#"*/, 0),
-                   ((unsigned __int8)v6 & 1) != 0) )
+        else if ( System_String__op_Equality(v24, (System_String_o *)StringLiteral_21053/*"i"*/, 0)
+               || System_String__op_Equality(v24, (System_String_o *)StringLiteral_21266/*"image"*/, 0)
+               || System_String__op_Equality(v24, (System_String_o *)StringLiteral_22314/*"line"*/, 0)
+               || System_String__StartsWith(v24, (System_String_o *)StringLiteral_506/*"%"*/, 0)
+               || System_String__StartsWith(v24, (System_String_o *)StringLiteral_528/*"&"*/, 0)
+               || (v8 = (System_String_o *)System_String__StartsWith(v24, (System_String_o *)StringLiteral_395/*"#"*/, 0),
+                   ((unsigned __int8)v8 & 1) != 0) )
         {
-          v6 = (System_String_o *)System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0);
-          if ( ((unsigned __int8)v6 & 1) != 0 && lastMessageIndex < 0 )
+          v8 = (System_String_o *)System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0);
+          if ( ((unsigned __int8)v8 & 1) != 0 && lastMessageIndex < 0 )
           {
-            if ( !v9 )
-              goto LABEL_137;
-            v87 = v9->fields._items;
-            v7 = (Il2CppObject *)StringLiteral_25264/*"talkStart"*/;
-            v88 = Method_System_Collections_Generic_List_string__Add__;
-            ++v9->fields._version;
-            if ( !v87 )
-              goto LABEL_137;
-            v89 = v9->fields._size;
-            if ( (unsigned int)v89 >= LODWORD(v87->max_length) )
-            {
-              System_Collections_Generic_List_object___AddWithResize(
-                v9,
-                v7,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
-            }
-            else
-            {
-              v90 = &v87->obj.klass + v89;
-              v9->fields._size = v89 + 1;
-              v90[4] = (Il2CppClass *)v7;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v90 + 4), (int32_t)v7, v23, v24, v25, v26, v27, v28);
-            }
-            if ( !v10 )
-              goto LABEL_137;
-            v97 = v10->fields._items;
-            v7 = (Il2CppObject *)StringLiteral_1/*""*/;
-            v98 = Method_System_Collections_Generic_List_string__Add__;
-            ++v10->fields._version;
-            if ( !v97 )
-              goto LABEL_137;
-            v99 = v10->fields._size;
-            if ( (unsigned int)v99 >= LODWORD(v97->max_length) )
-            {
-              System_Collections_Generic_List_object___AddWithResize(
-                v10,
-                v7,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v98[4] + 192LL) + 112LL));
-            }
-            else
-            {
-              v100 = &v97->obj.klass + v99;
-              v10->fields._size = v99 + 1;
-              v100[4] = (Il2CppClass *)v7;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v100 + 4), (int32_t)v7, v91, v92, v93, v94, v95, v96);
-            }
             if ( !v11 )
               goto LABEL_137;
-            v101 = v11->fields._items;
-            v102 = Method_System_Collections_Generic_List_int__Add__;
+            v89 = v11->fields._items;
+            v9 = (Il2CppObject *)StringLiteral_25264/*"talkStart"*/;
+            v90 = Method_System_Collections_Generic_List_string__Add__;
             ++v11->fields._version;
-            if ( !v101 )
+            if ( !v89 )
               goto LABEL_137;
-            v103 = v11->fields._size;
-            if ( (unsigned int)v103 >= LODWORD(v101->max_length) )
+            v91 = v11->fields._size;
+            if ( (unsigned int)v91 >= LODWORD(v89->max_length) )
             {
-              System_Collections_Generic_List_int___AddWithResize(
+              System_Collections_Generic_List_object___AddWithResize(
                 v11,
-                v19 + 1,
-                *(const MethodInfo_4467270 **)(*(_QWORD *)(v102[4] + 192LL) + 112LL));
+                v9,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v90[4] + 192LL) + 112LL));
             }
             else
             {
-              v11->fields._size = v103 + 1;
-              v101->m_Items[v103] = v19 + 1;
+              v92 = &v89->obj.klass + v91;
+              v11->fields._size = v91 + 1;
+              v92[4] = (Il2CppClass *)v9;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v92 + 4), (int32_t)v9, v25, v26, v27, v28, v29, v30);
+            }
+            if ( !v12 )
+              goto LABEL_137;
+            v99 = v12->fields._items;
+            v9 = (Il2CppObject *)StringLiteral_1/*""*/;
+            v100 = Method_System_Collections_Generic_List_string__Add__;
+            ++v12->fields._version;
+            if ( !v99 )
+              goto LABEL_137;
+            v101 = v12->fields._size;
+            if ( (unsigned int)v101 >= LODWORD(v99->max_length) )
+            {
+              System_Collections_Generic_List_object___AddWithResize(
+                v12,
+                v9,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              v102 = &v99->obj.klass + v101;
+              v12->fields._size = v101 + 1;
+              v102[4] = (Il2CppClass *)v9;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v102 + 4), (int32_t)v9, v93, v94, v95, v96, v97, v98);
+            }
+            if ( !v13 )
+              goto LABEL_137;
+            v103 = v13->fields._items;
+            v104 = Method_System_Collections_Generic_List_int__Add__;
+            ++v13->fields._version;
+            if ( !v103 )
+              goto LABEL_137;
+            v105 = v13->fields._size;
+            if ( (unsigned int)v105 >= LODWORD(v103->max_length) )
+            {
+              System_Collections_Generic_List_int___AddWithResize(
+                v13,
+                v21 + 1,
+                *(const MethodInfo_4467270 **)(*(_QWORD *)(v104[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              v13->fields._size = v105 + 1;
+              v103->m_Items[v105] = v21 + 1;
             }
           }
-          else if ( !v10 )
+          else if ( !v12 )
           {
             goto LABEL_137;
           }
-          lastMessageIndex = v10->fields._size;
+          lastMessageIndex = v12->fields._size;
         }
-        if ( !v9 )
+        if ( !v11 )
           goto LABEL_137;
 LABEL_96:
-        v104 = v9->fields._items;
-        v105 = Method_System_Collections_Generic_List_string__Add__;
-        ++v9->fields._version;
-        if ( !v104 )
+        v106 = v11->fields._items;
+        v107 = Method_System_Collections_Generic_List_string__Add__;
+        ++v11->fields._version;
+        if ( !v106 )
           goto LABEL_137;
-        v106 = v9->fields._size;
-        if ( (unsigned int)v106 >= LODWORD(v104->max_length) )
+        v108 = v11->fields._size;
+        if ( (unsigned int)v108 >= LODWORD(v106->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v9,
-            (Il2CppObject *)v22,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v105[4] + 192LL) + 112LL));
+            v11,
+            (Il2CppObject *)v24,
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v107[4] + 192LL) + 112LL));
         }
         else
         {
-          v107 = &v104->obj.klass + v106;
-          v9->fields._size = v106 + 1;
-          v107[4] = (Il2CppClass *)v22;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v107 + 4), (int32_t)v22, v23, v24, v25, v26, v27, v28);
+          v109 = &v106->obj.klass + v108;
+          v11->fields._size = v108 + 1;
+          v109[4] = (Il2CppClass *)v24;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v109 + 4), (int32_t)v24, v25, v26, v27, v28, v29, v30);
         }
-        if ( !v10 )
+        if ( !v12 )
           goto LABEL_137;
-        v108 = Method_System_Collections_Generic_List_string__Add__;
-        v109 = v10->fields._items;
-        ++v10->fields._version;
-        if ( !v109 )
+        v110 = Method_System_Collections_Generic_List_string__Add__;
+        v111 = v12->fields._items;
+        ++v12->fields._version;
+        if ( !v111 )
           goto LABEL_137;
-        v110 = v10->fields._size;
-        if ( (unsigned int)v110 < LODWORD(v109->max_length) )
+        v112 = v12->fields._size;
+        if ( (unsigned int)v112 < LODWORD(v111->max_length) )
         {
-          v111 = &v109->obj.klass + v110;
-          LODWORD(v82) = (_DWORD)v21;
-          v10->fields._size = v110 + 1;
-          v111[4] = (Il2CppClass *)v21;
-          v84 = (MissionNaviTransitionBoardItem_o *)(v111 + 4);
+          v113 = &v111->obj.klass + v112;
+          LODWORD(v84) = (_DWORD)v23;
+          v12->fields._size = v112 + 1;
+          v113[4] = (Il2CppClass *)v23;
+          v86 = (MissionNaviTransitionBoardItem_o *)(v113 + 4);
           goto LABEL_104;
         }
-        v85 = v108[4];
-        v86 = v10;
-        v82 = (Il2CppObject *)v21;
+        v87 = v110[4];
+        v88 = v12;
+        v84 = (Il2CppObject *)v23;
         goto LABEL_106;
       }
     }
     else
     {
-      v6 = (System_String_o *)System_String__StartsWith(v20, this->fields.codeVoiceString, 0);
-      if ( ((unsigned __int8)v6 & 1) != 0 )
+      v8 = (System_String_o *)System_String__StartsWith(v22, this->fields.codeVoiceString, 0);
+      if ( ((unsigned __int8)v8 & 1) != 0 )
         goto LABEL_112;
       CommonMessageManager__AnalysText(
         this,
@@ -822,238 +823,238 @@ LABEL_96:
         &scriptDataList,
         &lineDataList,
         &lastMessageIndex,
-        v15,
-        v20,
-        v19 + 1,
-        v154);
+        v17,
+        v22,
+        v21 + 1,
+        v156);
     }
-    v6 = (System_String_o *)System_String__op_Inequality(v21, (System_String_o *)StringLiteral_1/*""*/, 0);
-    if ( ((unsigned __int8)v6 & 1) == 0 )
+    v8 = (System_String_o *)System_String__op_Inequality(v23, (System_String_o *)StringLiteral_1/*""*/, 0);
+    if ( ((unsigned __int8)v8 & 1) == 0 )
       goto LABEL_112;
-    v6 = (System_String_o *)System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0);
-    if ( ((unsigned __int8)v6 & 1) != 0 && lastMessageIndex < 0 )
+    v8 = (System_String_o *)System_String__op_Inequality(a, (System_String_o *)StringLiteral_1/*""*/, 0);
+    if ( ((unsigned __int8)v8 & 1) != 0 && lastMessageIndex < 0 )
     {
-      if ( !v9 )
+      if ( !v11 )
         goto LABEL_137;
-      v45 = v9->fields._items;
-      v7 = (Il2CppObject *)StringLiteral_25264/*"talkStart"*/;
-      ++v9->fields._version;
-      if ( !v45 )
+      v47 = v11->fields._items;
+      v9 = (Il2CppObject *)StringLiteral_25264/*"talkStart"*/;
+      ++v11->fields._version;
+      if ( !v47 )
         goto LABEL_137;
-      v46 = v9->fields._size;
-      if ( (unsigned int)v46 >= LODWORD(v45->max_length) )
+      v48 = v11->fields._size;
+      if ( (unsigned int)v48 >= LODWORD(v47->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
+          v11,
           v9,
-          v7,
           *(const MethodInfo_4483C64 **)(*(_QWORD *)(*((_QWORD *)Method_System_Collections_Generic_List_string__Add__ + 4)
                                                    + 192LL)
                                        + 112LL));
       }
       else
       {
-        v47 = &v45->obj.klass + v46;
-        v9->fields._size = v46 + 1;
-        v47[4] = (Il2CppClass *)v7;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v47 + 4), (int32_t)v7, v39, v40, v41, v42, v43, v44);
+        v49 = &v47->obj.klass + v48;
+        v11->fields._size = v48 + 1;
+        v49[4] = (Il2CppClass *)v9;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v49 + 4), (int32_t)v9, v41, v42, v43, v44, v45, v46);
       }
-      if ( !v10 )
+      if ( !v12 )
         goto LABEL_137;
-      v62 = v10->fields._items;
-      v7 = (Il2CppObject *)StringLiteral_1/*""*/;
-      v63 = Method_System_Collections_Generic_List_string__Add__;
-      ++v10->fields._version;
-      if ( !v62 )
+      v64 = v12->fields._items;
+      v9 = (Il2CppObject *)StringLiteral_1/*""*/;
+      v65 = Method_System_Collections_Generic_List_string__Add__;
+      ++v12->fields._version;
+      if ( !v64 )
         goto LABEL_137;
-      v64 = v10->fields._size;
-      if ( (unsigned int)v64 >= LODWORD(v62->max_length) )
+      v66 = v12->fields._size;
+      if ( (unsigned int)v66 >= LODWORD(v64->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v10,
-          v7,
-          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
+          v12,
+          v9,
+          *(const MethodInfo_4483C64 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
       }
       else
       {
-        v65 = &v62->obj.klass + v64;
-        v10->fields._size = v64 + 1;
-        v65[4] = (Il2CppClass *)v7;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v65 + 4), (int32_t)v7, v48, v49, v50, v51, v52, v53);
+        v67 = &v64->obj.klass + v66;
+        v12->fields._size = v66 + 1;
+        v67[4] = (Il2CppClass *)v9;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)(v67 + 4), (int32_t)v9, v50, v51, v52, v53, v54, v55);
       }
-      if ( !v11 )
+      if ( !v13 )
         goto LABEL_137;
-      v66 = v11->fields._items;
-      v67 = Method_System_Collections_Generic_List_int__Add__;
-      ++v11->fields._version;
-      if ( !v66 )
+      v68 = v13->fields._items;
+      v69 = Method_System_Collections_Generic_List_int__Add__;
+      ++v13->fields._version;
+      if ( !v68 )
         goto LABEL_137;
-      v68 = v11->fields._size;
-      if ( (unsigned int)v68 >= LODWORD(v66->max_length) )
+      v70 = v13->fields._size;
+      if ( (unsigned int)v70 >= LODWORD(v68->max_length) )
       {
         System_Collections_Generic_List_int___AddWithResize(
-          v11,
-          v19 + 1,
-          *(const MethodInfo_4467270 **)(*(_QWORD *)(v67[4] + 192LL) + 112LL));
+          v13,
+          v21 + 1,
+          *(const MethodInfo_4467270 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
       }
       else
       {
-        v11->fields._size = v68 + 1;
-        v66->m_Items[v68] = v19 + 1;
+        v13->fields._size = v70 + 1;
+        v68->m_Items[v70] = v21 + 1;
       }
     }
-    else if ( !v9 )
+    else if ( !v11 )
     {
       goto LABEL_137;
     }
-    v69 = v9->fields._items;
-    v70 = Method_System_Collections_Generic_List_string__Add__;
-    ++v9->fields._version;
-    if ( !v69 )
+    v71 = v11->fields._items;
+    v72 = Method_System_Collections_Generic_List_string__Add__;
+    ++v11->fields._version;
+    if ( !v71 )
       goto LABEL_137;
-    v71 = v9->fields._size;
-    if ( (unsigned int)v71 >= LODWORD(v69->max_length) )
+    v73 = v11->fields._size;
+    if ( (unsigned int)v73 >= LODWORD(v71->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v9,
+        v11,
         0,
-        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v70[4] + 192LL) + 112LL));
+        *(const MethodInfo_4483C64 **)(*(_QWORD *)(v72[4] + 192LL) + 112LL));
     }
     else
     {
-      v72 = &v69->obj.klass + v71;
-      v9->fields._size = v71 + 1;
-      v72[4] = 0;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v72 + 4), 0, v39, v40, v41, v42, v43, v44);
+      v74 = &v71->obj.klass + v73;
+      v11->fields._size = v73 + 1;
+      v74[4] = 0;
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)(v74 + 4), 0, v41, v42, v43, v44, v45, v46);
     }
-    if ( !v10 )
+    if ( !v12 )
       goto LABEL_137;
-    lastMessageIndex = v10->fields._size;
-    if ( !v21 )
+    lastMessageIndex = v12->fields._size;
+    if ( !v23 )
       goto LABEL_137;
-    v6 = System_String__Replace_75703400(v21, this->fields.codeReturnString, (System_String_o *)StringLiteral_16632/*"[r]"*/, 0);
-    v79 = v10->fields._items;
-    v80 = Method_System_Collections_Generic_List_string__Add__;
-    ++v10->fields._version;
-    if ( !v79 )
+    v8 = System_String__Replace_75703400(v23, this->fields.codeReturnString, (System_String_o *)StringLiteral_16632/*"[r]"*/, 0);
+    v81 = v12->fields._items;
+    v82 = Method_System_Collections_Generic_List_string__Add__;
+    ++v12->fields._version;
+    if ( !v81 )
       goto LABEL_137;
-    v81 = v10->fields._size;
-    v82 = (Il2CppObject *)v6;
-    if ( (unsigned int)v81 < LODWORD(v79->max_length) )
+    v83 = v12->fields._size;
+    v84 = (Il2CppObject *)v8;
+    if ( (unsigned int)v83 < LODWORD(v81->max_length) )
     {
-      v83 = &v79->obj.klass + v81;
-      v10->fields._size = v81 + 1;
-      v83[4] = (Il2CppClass *)v82;
-      v84 = (MissionNaviTransitionBoardItem_o *)(v83 + 4);
+      v85 = &v81->obj.klass + v83;
+      v12->fields._size = v83 + 1;
+      v85[4] = (Il2CppClass *)v84;
+      v86 = (MissionNaviTransitionBoardItem_o *)(v85 + 4);
 LABEL_104:
-      sub_2213A04(v84, (int32_t)v82, v73, v74, v75, v76, v77, v78);
+      sub_2213A04(v86, (int32_t)v84, v75, v76, v77, v78, v79, v80);
       goto LABEL_107;
     }
-    v85 = v80[4];
-    v86 = v10;
+    v87 = v82[4];
+    v88 = v12;
 LABEL_106:
     System_Collections_Generic_List_object___AddWithResize(
-      v86,
-      v82,
-      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v85 + 192) + 112LL));
+      v88,
+      v84,
+      *(const MethodInfo_4483C64 **)(*(_QWORD *)(v87 + 192) + 112LL));
 LABEL_107:
-    if ( !v11 )
+    if ( !v13 )
       goto LABEL_137;
-    v112 = v11->fields._items;
-    v113 = Method_System_Collections_Generic_List_int__Add__;
-    ++v11->fields._version;
-    if ( !v112 )
+    v114 = v13->fields._items;
+    v115 = Method_System_Collections_Generic_List_int__Add__;
+    ++v13->fields._version;
+    if ( !v114 )
       goto LABEL_137;
-    v114 = v11->fields._size;
-    if ( (unsigned int)v114 >= LODWORD(v112->max_length) )
+    v116 = v13->fields._size;
+    if ( (unsigned int)v116 >= LODWORD(v114->max_length) )
     {
       System_Collections_Generic_List_int___AddWithResize(
-        v11,
-        v19 + 1,
-        *(const MethodInfo_4467270 **)(*(_QWORD *)(v113[4] + 192LL) + 112LL));
+        v13,
+        v21 + 1,
+        *(const MethodInfo_4467270 **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
     }
     else
     {
-      v11->fields._size = v114 + 1;
-      v112->m_Items[v114] = v19 + 1;
+      v13->fields._size = v116 + 1;
+      v114->m_Items[v116] = v21 + 1;
     }
     goto LABEL_112;
   }
-  LODWORD(v19) = 0;
+  LODWORD(v21) = 0;
 LABEL_115:
   if ( (lastMessageIndex & 0x80000000) == 0 )
   {
-    if ( v9 )
+    if ( v11 )
     {
-      v115 = v9->fields._items;
-      v116 = Method_System_Collections_Generic_List_string__Add__;
-      ++v9->fields._version;
-      if ( v115 )
+      v117 = v11->fields._items;
+      v118 = Method_System_Collections_Generic_List_string__Add__;
+      ++v11->fields._version;
+      if ( v117 )
       {
-        v117 = v9->fields._size;
-        if ( (unsigned int)v117 >= LODWORD(v115->max_length) )
+        v119 = v11->fields._size;
+        if ( (unsigned int)v119 >= LODWORD(v117->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v9,
+            v11,
             0,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v116[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
         }
         else
         {
-          v118 = &v115->obj.klass + v117;
-          v9->fields._size = v117 + 1;
-          v118[4] = 0;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v118 + 4), 0, v12, v13, v14, (int32_t)v15, v16, v17);
+          v120 = &v117->obj.klass + v119;
+          v11->fields._size = v119 + 1;
+          v120[4] = 0;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)(v120 + 4), 0, v14, v15, v16, (int32_t)v17, v18, v19);
         }
-        if ( v10 )
+        if ( v12 )
         {
-          v125 = v10->fields._items;
-          v7 = (Il2CppObject *)StringLiteral_16632/*"[r]"*/;
-          v126 = Method_System_Collections_Generic_List_string__Add__;
-          ++v10->fields._version;
-          if ( v125 )
+          v127 = v12->fields._items;
+          v9 = (Il2CppObject *)StringLiteral_16632/*"[r]"*/;
+          v128 = Method_System_Collections_Generic_List_string__Add__;
+          ++v12->fields._version;
+          if ( v127 )
           {
-            v127 = v10->fields._size;
-            if ( (unsigned int)v127 >= LODWORD(v125->max_length) )
+            v129 = v12->fields._size;
+            if ( (unsigned int)v129 >= LODWORD(v127->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
-                v10,
-                v7,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v126[4] + 192LL) + 112LL));
+                v12,
+                v9,
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v128[4] + 192LL) + 112LL));
             }
             else
             {
-              v128 = &v125->obj.klass + v127;
-              v10->fields._size = v127 + 1;
-              v128[4] = (Il2CppClass *)v7;
+              v130 = &v127->obj.klass + v129;
+              v12->fields._size = v129 + 1;
+              v130[4] = (Il2CppClass *)v9;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)(v128 + 4),
-                (int32_t)v7,
-                v119,
-                v120,
+                (MissionNaviTransitionBoardItem_o *)(v130 + 4),
+                (int32_t)v9,
                 v121,
                 v122,
                 v123,
-                v124);
+                v124,
+                v125,
+                v126);
             }
-            if ( v11 )
+            if ( v13 )
             {
-              v129 = v11->fields._items;
-              v130 = Method_System_Collections_Generic_List_int__Add__;
-              ++v11->fields._version;
-              if ( v129 )
+              v131 = v13->fields._items;
+              v132 = Method_System_Collections_Generic_List_int__Add__;
+              ++v13->fields._version;
+              if ( v131 )
               {
-                v131 = v11->fields._size;
-                if ( (unsigned int)v131 >= LODWORD(v129->max_length) )
+                v133 = v13->fields._size;
+                if ( (unsigned int)v133 >= LODWORD(v131->max_length) )
                 {
                   System_Collections_Generic_List_int___AddWithResize(
-                    v11,
-                    v19,
-                    *(const MethodInfo_4467270 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
+                    v13,
+                    v21,
+                    *(const MethodInfo_4467270 **)(*(_QWORD *)(v132[4] + 192LL) + 112LL));
                 }
                 else
                 {
-                  v11->fields._size = v131 + 1;
-                  v129->m_Items[v131] = v19;
+                  v13->fields._size = v133 + 1;
+                  v131->m_Items[v133] = v21;
                 }
                 goto LABEL_133;
               }
@@ -1063,54 +1064,54 @@ LABEL_115:
       }
     }
 LABEL_137:
-    sub_2213CDC(v6, v7);
+    sub_2213CDC(v8, v9);
   }
-  if ( !v9 )
+  if ( !v11 )
     goto LABEL_137;
 LABEL_133:
-  v132 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                         v9,
+  v134 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                         v11,
                                          (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_string__ToArray__);
-  this->fields.executeTagList = v132;
+  this->fields.executeTagList = v134;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.executeTagList,
-    (int32_t)v132,
-    v133,
-    v134,
+    (int32_t)v134,
     v135,
     v136,
     v137,
-    v138);
-  if ( !v10 )
+    v138,
+    v139,
+    v140);
+  if ( !v12 )
     goto LABEL_137;
-  v139 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                         v10,
+  v141 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
+                                         v12,
                                          (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_string__ToArray__);
-  this->fields.executeDataList = v139;
+  this->fields.executeDataList = v141;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.executeDataList,
-    (int32_t)v139,
-    v140,
-    v141,
+    (int32_t)v141,
     v142,
     v143,
     v144,
-    v145);
-  if ( !v11 )
+    v145,
+    v146,
+    v147);
+  if ( !v13 )
     goto LABEL_137;
-  v146 = System_Collections_Generic_List_int___ToArray(
-           v11,
+  v148 = System_Collections_Generic_List_int___ToArray(
+           v13,
            (const MethodInfo_4468CF0 *)Method_System_Collections_Generic_List_int__ToArray__);
-  this->fields.executeLineList = v146;
+  this->fields.executeLineList = v148;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.executeLineList,
-    (int32_t)v146,
-    v147,
-    v148,
+    (int32_t)v148,
     v149,
     v150,
     v151,
-    v152);
+    v152,
+    v153,
+    v154);
   executeDataList = this->fields.executeDataList;
   if ( !executeDataList )
     goto LABEL_137;

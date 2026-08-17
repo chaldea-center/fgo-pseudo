@@ -343,6 +343,7 @@ LABEL_48:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void peRenderTexture__CreatePVMatrix(
         peRenderTexture_o *this,
         UnityEngine_Vector3_o in_center,
@@ -359,46 +360,47 @@ void peRenderTexture__CreatePVMatrix(
   int v12; // w8
   __int64 v13; // x1
   UnityEngine_Camera_o *v14; // x0
-  __int128 v15; // q0
+  UnityEngine_Vector4_o v15; // q0 OVERLAPPED
   __int128 v16; // q1
   __int128 v17; // q2
   __int128 v18; // q3
-  __int128 v19; // q1
-  __int128 v20; // q0
-  __int128 v21; // q0
-  __int128 v22; // q1
-  __int128 v23; // q2
-  __int128 v24; // q3
-  __int128 v25; // q1
-  __int128 v26; // q2
-  peRenderTexture_o *v27; // x0
-  const MethodInfo *v28; // x1
-  __int128 v29; // q1
-  __int128 v30; // q2
-  __int64 v31; // kr20_8
-  __int64 v32; // kr30_8
-  UnityEngine_Matrix4x4_o v33; // [xsp+0h] [xbp-3B0h] BYREF
-  UnityEngine_Matrix4x4_o v34; // [xsp+40h] [xbp-370h] BYREF
-  UnityEngine_Matrix4x4_o v35; // [xsp+80h] [xbp-330h] BYREF
-  UnityEngine_Matrix4x4_o v36; // [xsp+C0h] [xbp-2F0h] BYREF
-  UnityEngine_Matrix4x4_o v37; // [xsp+100h] [xbp-2B0h] BYREF
-  UnityEngine_Matrix4x4_o v38; // [xsp+140h] [xbp-270h] BYREF
-  UnityEngine_Matrix4x4_o v39; // [xsp+180h] [xbp-230h] BYREF
-  UnityEngine_Matrix4x4_o v40; // [xsp+1C0h] [xbp-1F0h] BYREF
-  UnityEngine_Matrix4x4_o v41; // [xsp+200h] [xbp-1B0h] BYREF
-  UnityEngine_Matrix4x4_o v42; // [xsp+240h] [xbp-170h] BYREF
-  UnityEngine_Matrix4x4_o v43; // [xsp+280h] [xbp-130h] BYREF
-  UnityEngine_Matrix4x4_o v44; // [xsp+2C0h] [xbp-F0h] BYREF
-  UnityEngine_Matrix4x4_o v45; // [xsp+300h] [xbp-B0h] BYREF
-  float v46; // [xsp+388h] [xbp-28h]
-  float v47; // [xsp+38Ch] [xbp-24h]
-  UnityEngine_Vector4_o v48; // 0:kr00_16.16
-  UnityEngine_Vector4_o v49; // 0:kr10_16.16
-  UnityEngine_Vector4_o v50; // 0:kr40_16.16
-  UnityEngine_Vector4_o v51; // 0:kr50_16.16
-  UnityEngine_Vector4_o v52; // 0:kr60_16.16
-  UnityEngine_Vector4_o v53; // 0:kr70_16.16
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  float v19; // s10
+  float v20; // s11
+  float v21; // s12
+  float w; // s8
+  float v23; // s15
+  float v24; // s13
+  float v25; // s14
+  float v26; // s9
+  UnityEngine_Vector4_o v27; // q0 OVERLAPPED
+  __int128 v28; // q1
+  __int128 v29; // q2
+  __int128 v30; // q3
+  float v31; // s8
+  float v32; // s10
+  peRenderTexture_o *v33; // x0
+  const MethodInfo *v34; // x1
+  __int128 v35; // q1
+  __int128 v36; // q2
+  UnityEngine_Matrix4x4_o v37; // [xsp+0h] [xbp-3B0h] BYREF
+  UnityEngine_Matrix4x4_o v38; // [xsp+40h] [xbp-370h] BYREF
+  UnityEngine_Matrix4x4_o v39; // [xsp+80h] [xbp-330h] BYREF
+  UnityEngine_Matrix4x4_o v40; // [xsp+C0h] [xbp-2F0h] BYREF
+  UnityEngine_Matrix4x4_o v41; // [xsp+100h] [xbp-2B0h] BYREF
+  UnityEngine_Matrix4x4_o v42; // [xsp+140h] [xbp-270h] BYREF
+  UnityEngine_Matrix4x4_o v43; // [xsp+180h] [xbp-230h] BYREF
+  UnityEngine_Matrix4x4_o v44; // [xsp+1C0h] [xbp-1F0h] BYREF
+  UnityEngine_Matrix4x4_o v45; // [xsp+200h] [xbp-1B0h] BYREF
+  UnityEngine_Matrix4x4_o v46; // [xsp+240h] [xbp-170h] BYREF
+  UnityEngine_Matrix4x4_o v47; // [xsp+280h] [xbp-130h] BYREF
+  UnityEngine_Matrix4x4_o v48; // [xsp+2C0h] [xbp-F0h] BYREF
+  UnityEngine_Matrix4x4_o v49; // [xsp+300h] [xbp-B0h] BYREF
+  float v50; // [xsp+388h] [xbp-28h]
+  float v51; // [xsp+38Ch] [xbp-24h]
+  UnityEngine_Vector4_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector4_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector4_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   z = in_LeftTop.fields.z;
   y = in_LeftTop.fields.y;
@@ -412,100 +414,103 @@ void peRenderTexture__CreatePVMatrix(
   }
   targetCamera = (UnityEngine_Object_o *)this->fields.targetCamera;
   v12 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
-  memset(&v45, 0, sizeof(v45));
+  memset(&v49, 0, sizeof(v49));
   if ( !v12 )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(targetCamera, 0, 0) )
   {
     v14 = this->fields.targetCamera;
     if ( !v14
-      || (v46 = v9,
-          v47 = v8,
-          UnityEngine_Camera__get_projectionMatrix(&v44, v14, 0),
-          v42 = v44,
-          UnityEngine_GL__GetGPUProjectionMatrix(&v43, &v42, 1, 0),
+      || (v50 = v9,
+          v51 = v8,
+          UnityEngine_Camera__get_projectionMatrix(&v48, v14, 0),
+          v46 = v48,
+          UnityEngine_GL__GetGPUProjectionMatrix(&v47, &v46, 1, 0),
           (v14 = this->fields.targetCamera) == 0) )
     {
       sub_2213CDC(v14, v13);
     }
-    UnityEngine_Camera__get_worldToCameraMatrix(&v41, v14, 0);
-    v39 = v43;
-    v38 = v41;
-    UnityEngine_Matrix4x4__op_Multiply(&v40, &v39, &v38, 0);
-    v15 = *(_OWORD *)&v40.fields.m00;
-    v16 = *(_OWORD *)&v40.fields.m01;
-    v17 = *(_OWORD *)&v40.fields.m02;
-    v18 = *(_OWORD *)&v40.fields.m03;
-    *(_OWORD *)&this->fields.MainCamVP.fields.m00 = *(_OWORD *)&v40.fields.m00;
+    UnityEngine_Camera__get_worldToCameraMatrix(&v45, v14, 0);
+    v43 = v47;
+    v42 = v45;
+    UnityEngine_Matrix4x4__op_Multiply(&v44, &v43, &v42, 0);
+    v15 = *(UnityEngine_Vector4_o *)&v44.fields.m00;
+    v16 = *(_OWORD *)&v44.fields.m01;
+    v17 = *(_OWORD *)&v44.fields.m02;
+    v18 = *(_OWORD *)&v44.fields.m03;
+    *(_OWORD *)&this->fields.MainCamVP.fields.m00 = *(_OWORD *)&v44.fields.m00;
     *(_OWORD *)&this->fields.MainCamVP.fields.m01 = v16;
     *(_OWORD *)&this->fields.MainCamVP.fields.m02 = v17;
     *(_OWORD *)&this->fields.MainCamVP.fields.m03 = v18;
-    *(_OWORD *)&v37.fields.m00 = v15;
-    *(_OWORD *)&v37.fields.m01 = v16;
-    *(_OWORD *)&v37.fields.m02 = v17;
-    *(_OWORD *)&v37.fields.m03 = v18;
-    v50.fields.x = x;
-    v50.fields.y = y;
-    v50.fields.z = z;
-    v50.fields.w = 1.0;
-    v48 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v37, v50, 0);
-    v19 = *(_OWORD *)&this->fields.MainCamVP.fields.m01;
-    *(_OWORD *)&v36.fields.m00 = *(_OWORD *)&this->fields.MainCamVP.fields.m00;
-    *(_OWORD *)&v36.fields.m01 = v19;
-    v20 = *(_OWORD *)&this->fields.MainCamVP.fields.m03;
-    *(_OWORD *)&v36.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
-    *(_OWORD *)&v36.fields.m03 = v20;
-    v51.fields.x = in_RightBottom.fields.x;
-    v51.fields.y = in_RightBottom.fields.y;
-    v51.fields.z = in_RightBottom.fields.z;
-    v51.fields.w = 1.0;
-    v49 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v36, v51, 0);
-    v54.fields.z = 0.0;
-    v54.fields.x = v46;
-    v54.fields.y = v47;
-    UnityEngine_Matrix4x4__Translate(&v35, v54, 0);
-    v21 = *(_OWORD *)&v35.fields.m00;
-    v22 = *(_OWORD *)&v35.fields.m01;
-    v23 = *(_OWORD *)&v35.fields.m02;
-    v24 = *(_OWORD *)&v35.fields.m03;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m00 = *(_OWORD *)&v35.fields.m00;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m01 = v22;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m02 = v23;
-    *(_OWORD *)&this->fields.orthoViewMat.fields.m03 = v24;
-    *(_OWORD *)&v34.fields.m00 = v21;
-    *(_OWORD *)&v34.fields.m01 = v22;
-    *(_OWORD *)&v34.fields.m02 = v23;
-    *(_OWORD *)&v34.fields.m03 = v24;
-    v52.fields.x = v48.fields.x / v48.fields.w;
-    v52.fields.y = v48.fields.y / v48.fields.w;
-    v52.fields.z = v48.fields.z / v48.fields.w;
-    v52.fields.w = v48.fields.w / v48.fields.w;
-    v31 = *(_OWORD *)&UnityEngine_Matrix4x4__op_Multiply_83361300(&v34, v52, 0);
-    v25 = *(_OWORD *)&this->fields.orthoViewMat.fields.m01;
-    *(_OWORD *)&v33.fields.m00 = *(_OWORD *)&this->fields.orthoViewMat.fields.m00;
-    *(_OWORD *)&v33.fields.m01 = v25;
-    v26 = *(_OWORD *)&this->fields.orthoViewMat.fields.m03;
-    *(_OWORD *)&v33.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
-    *(_OWORD *)&v33.fields.m03 = v26;
-    v53.fields.x = v49.fields.x / v49.fields.w;
-    v53.fields.y = v49.fields.y / v49.fields.w;
-    v53.fields.z = v49.fields.z / v49.fields.w;
-    v53.fields.w = v49.fields.w / v49.fields.w;
-    v32 = *(_OWORD *)&UnityEngine_Matrix4x4__op_Multiply_83361300(&v33, v53, 0);
-    peRenderTexture__orthogonalMatrix(
-      &v45,
-      v27,
-      *(float *)&v31,
-      *(float *)&v32,
-      *((float *)&v32 + 1),
-      *((float *)&v31 + 1),
-      v28);
-    v29 = *(_OWORD *)&v45.fields.m01;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m00 = *(_OWORD *)&v45.fields.m00;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01 = v29;
-    v30 = *(_OWORD *)&v45.fields.m03;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02 = *(_OWORD *)&v45.fields.m02;
-    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03 = v30;
+    *(UnityEngine_Vector4_o *)&v41.fields.m00 = v15;
+    *(_OWORD *)&v41.fields.m01 = v16;
+    v15.fields.x = x;
+    *(float *)&v16 = y;
+    *(_OWORD *)&v41.fields.m02 = v17;
+    *(_OWORD *)&v41.fields.m03 = v18;
+    *(float *)&v17 = z;
+    LODWORD(v18) = 1.0;
+    v52 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v41, v15, 0);
+    v19 = v52.fields.x;
+    v20 = v52.fields.y;
+    *(UnityEngine_Vector4_o *)&v52.fields.y = *(UnityEngine_Vector4_o *)&this->fields.MainCamVP.fields.m01;
+    v21 = v52.fields.z;
+    w = v52.fields.w;
+    v52.fields.w = 1.0;
+    *(_OWORD *)&v40.fields.m00 = *(_OWORD *)&this->fields.MainCamVP.fields.m00;
+    *(UnityEngine_Vector4_o *)&v40.fields.m01 = *(UnityEngine_Vector4_o *)&v52.fields.y;
+    v52 = *(UnityEngine_Vector4_o *)&this->fields.MainCamVP.fields.m03;
+    v52.fields.y = in_RightBottom.fields.y;
+    *(_OWORD *)&v40.fields.m02 = *(_OWORD *)&this->fields.MainCamVP.fields.m02;
+    *(UnityEngine_Vector4_o *)&v40.fields.m03 = v52;
+    v52.fields.x = in_RightBottom.fields.x;
+    v52.fields.z = in_RightBottom.fields.z;
+    v53 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v40, v52, 0);
+    v23 = v53.fields.z / v53.fields.w;
+    v53.fields.z = 0.0;
+    v24 = v53.fields.x / v53.fields.w;
+    v53.fields.x = v50;
+    v25 = v53.fields.y / v53.fields.w;
+    v53.fields.y = v51;
+    v26 = v53.fields.w / v53.fields.w;
+    UnityEngine_Matrix4x4__Translate(&v39, *(UnityEngine_Vector3_o *)&v53.fields.x, 0);
+    v27 = *(UnityEngine_Vector4_o *)&v39.fields.m00;
+    v28 = *(_OWORD *)&v39.fields.m01;
+    v29 = *(_OWORD *)&v39.fields.m02;
+    v30 = *(_OWORD *)&v39.fields.m03;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m00 = *(_OWORD *)&v39.fields.m00;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m01 = v28;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m02 = v29;
+    *(_OWORD *)&this->fields.orthoViewMat.fields.m03 = v30;
+    *(UnityEngine_Vector4_o *)&v38.fields.m00 = v27;
+    *(_OWORD *)&v38.fields.m01 = v28;
+    v27.fields.x = v19 / w;
+    *(float *)&v28 = v20 / w;
+    *(_OWORD *)&v38.fields.m02 = v29;
+    *(_OWORD *)&v38.fields.m03 = v30;
+    *(float *)&v29 = v21 / w;
+    *(float *)&v30 = w / w;
+    v54 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v38, v27, 0);
+    v31 = v54.fields.x;
+    v32 = v54.fields.y;
+    *(UnityEngine_Vector4_o *)&v54.fields.y = *(UnityEngine_Vector4_o *)&this->fields.orthoViewMat.fields.m01;
+    v54.fields.w = v26;
+    *(_OWORD *)&v37.fields.m00 = *(_OWORD *)&this->fields.orthoViewMat.fields.m00;
+    *(UnityEngine_Vector4_o *)&v37.fields.m01 = *(UnityEngine_Vector4_o *)&v54.fields.y;
+    *(UnityEngine_Vector4_o *)&v54.fields.z = *(UnityEngine_Vector4_o *)&this->fields.orthoViewMat.fields.m03;
+    v54.fields.y = v25;
+    *(_OWORD *)&v37.fields.m02 = *(_OWORD *)&this->fields.orthoViewMat.fields.m02;
+    *(UnityEngine_Vector4_o *)&v37.fields.m03 = *(UnityEngine_Vector4_o *)&v54.fields.z;
+    v54.fields.x = v24;
+    v54.fields.z = v23;
+    v55 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v37, v54, 0);
+    peRenderTexture__orthogonalMatrix(&v49, v33, v31, v55.fields.x, v55.fields.y, v32, v34);
+    v35 = *(_OWORD *)&v49.fields.m01;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m00 = *(_OWORD *)&v49.fields.m00;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m01 = v35;
+    v36 = *(_OWORD *)&v49.fields.m03;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m02 = *(_OWORD *)&v49.fields.m02;
+    *(_OWORD *)&this->fields.orthoProjectionMat.fields.m03 = v36;
   }
 }
 
@@ -530,23 +535,26 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
   float v18; // s0
   float v19; // s10
   float farClipPlane; // s0
+  float x; // s8
+  float y; // s9
+  float z; // s10
   UnityEngine_Material_o *sharedMaterial; // x20
-  UnityEngine_Matrix4x4_o v22; // [xsp+0h] [xbp-3C0h] BYREF
-  UnityEngine_Matrix4x4_o v23; // [xsp+40h] [xbp-380h] BYREF
-  UnityEngine_Matrix4x4_o v24; // [xsp+80h] [xbp-340h] BYREF
-  UnityEngine_Matrix4x4_o v25; // [xsp+C0h] [xbp-300h] BYREF
-  UnityEngine_Matrix4x4_o v26; // [xsp+100h] [xbp-2C0h] BYREF
-  UnityEngine_Matrix4x4_o v27; // [xsp+140h] [xbp-280h] BYREF
-  UnityEngine_Matrix4x4_o v28; // [xsp+180h] [xbp-240h] BYREF
-  UnityEngine_Matrix4x4_o v29; // [xsp+1C0h] [xbp-200h] BYREF
-  UnityEngine_Matrix4x4_o v30; // [xsp+200h] [xbp-1C0h] BYREF
-  UnityEngine_Matrix4x4_o v31; // [xsp+240h] [xbp-180h] BYREF
-  UnityEngine_Matrix4x4_o v32; // [xsp+280h] [xbp-140h] BYREF
-  UnityEngine_Matrix4x4_o v33[3]; // [xsp+2C0h] [xbp-100h] BYREF
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Rect_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Matrix4x4_o v25; // [xsp+0h] [xbp-3C0h] BYREF
+  UnityEngine_Matrix4x4_o v26; // [xsp+40h] [xbp-380h] BYREF
+  UnityEngine_Matrix4x4_o v27; // [xsp+80h] [xbp-340h] BYREF
+  UnityEngine_Matrix4x4_o v28; // [xsp+C0h] [xbp-300h] BYREF
+  UnityEngine_Matrix4x4_o v29; // [xsp+100h] [xbp-2C0h] BYREF
+  UnityEngine_Matrix4x4_o v30; // [xsp+140h] [xbp-280h] BYREF
+  UnityEngine_Matrix4x4_o v31; // [xsp+180h] [xbp-240h] BYREF
+  UnityEngine_Matrix4x4_o v32; // [xsp+1C0h] [xbp-200h] BYREF
+  UnityEngine_Matrix4x4_o v33; // [xsp+200h] [xbp-1C0h] BYREF
+  UnityEngine_Matrix4x4_o v34; // [xsp+240h] [xbp-180h] BYREF
+  UnityEngine_Matrix4x4_o v35; // [xsp+280h] [xbp-140h] BYREF
+  UnityEngine_Matrix4x4_o v36[3]; // [xsp+2C0h] [xbp-100h] BYREF
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Rect_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5973E92 & 1) == 0 )
   {
@@ -556,7 +564,7 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
     byte_5973E92 = 1;
   }
   isInitialized = this->fields.isInitialized;
-  memset(&v33[1], 0, 128);
+  memset(&v36[1], 0, 128);
   if ( isInitialized )
   {
     peRenderTexture__updateLayer(this, method);
@@ -583,15 +591,15 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
         transform = this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
-        v36.fields.m_XMin = 0.0;
-        v36.fields.m_YMin = 0.0;
-        v36.fields.m_Width = 1.0;
-        v36.fields.m_Height = 1.0;
-        UnityEngine_Camera__set_rect(transform, v36, 0);
-        v35.fields.x = 1.0;
-        v35.fields.y = 1.0;
-        v35.fields.z = -1.0;
-        UnityEngine_Matrix4x4__Scale(v33, v35, 0);
+        v39.fields.m_XMin = 0.0;
+        v39.fields.m_YMin = 0.0;
+        v39.fields.m_Width = 1.0;
+        v39.fields.m_Height = 1.0;
+        UnityEngine_Camera__set_rect(transform, v39, 0);
+        v37.fields.x = 1.0;
+        v37.fields.y = 1.0;
+        v37.fields.z = -1.0;
+        UnityEngine_Matrix4x4__Scale(v36, v37, 0);
         transform = this->fields.rasterCamera;
         if ( !transform )
           goto LABEL_30;
@@ -600,12 +608,12 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
                                               0);
         if ( !transform )
           goto LABEL_30;
-        UnityEngine_Transform__get_worldToLocalMatrix(&v32, (UnityEngine_Transform_o *)transform, 0);
-        v30 = v33[0];
-        v29 = v32;
-        UnityEngine_Matrix4x4__op_Multiply(&v31, &v30, &v29, 0);
+        UnityEngine_Transform__get_worldToLocalMatrix(&v35, (UnityEngine_Transform_o *)transform, 0);
+        v33 = v36[0];
+        v32 = v35;
+        UnityEngine_Matrix4x4__op_Multiply(&v34, &v33, &v32, 0);
         transform = this->fields.rasterCamera;
-        v33[2] = v31;
+        v36[2] = v34;
         if ( !transform )
           goto LABEL_30;
         fieldOfView = UnityEngine_Camera__get_fieldOfView(transform, 0);
@@ -624,11 +632,11 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
           goto LABEL_30;
         v19 = v18;
         farClipPlane = UnityEngine_Camera__get_farClipPlane(transform, 0);
-        UnityEngine_Matrix4x4__Perspective(&v28, v15, v17, v19, farClipPlane, 0);
-        v26 = v28;
-        v33[1] = v28;
-        UnityEngine_GL__GetGPUProjectionMatrix(&v27, &v26, 1, 0);
-        v33[1] = v27;
+        UnityEngine_Matrix4x4__Perspective(&v31, v15, v17, v19, farClipPlane, 0);
+        v29 = v31;
+        v36[1] = v31;
+        UnityEngine_GL__GetGPUProjectionMatrix(&v30, &v29, 1, 0);
+        v36[1] = v30;
         if ( !byte_5969DBE )
         {
           sub_2213A60(&UnityEngine_Vector4_TypeInfo);
@@ -646,13 +654,16 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
         transform = (UnityEngine_Camera_o *)this->fields.boardrenderer;
         if ( !transform )
           goto LABEL_30;
+        x = position.fields.x;
+        y = position.fields.y;
+        z = position.fields.z;
         sharedMaterial = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)transform, 0);
-        v24 = v33[1];
-        v23 = v33[2];
-        transform = (UnityEngine_Camera_o *)UnityEngine_Matrix4x4__op_Multiply(&v25, &v24, &v23, 0);
+        v27 = v36[1];
+        v26 = v36[2];
+        transform = (UnityEngine_Camera_o *)UnityEngine_Matrix4x4__op_Multiply(&v28, &v27, &v26, 0);
         if ( !sharedMaterial
-          || (v22 = v25,
-              UnityEngine_Material__SetMatrix(sharedMaterial, (System_String_o *)StringLiteral_16964/*"_ProjectorMatrixVP"*/, &v22, 0),
+          || (v25 = v28,
+              UnityEngine_Material__SetMatrix(sharedMaterial, (System_String_o *)StringLiteral_16964/*"_ProjectorMatrixVP"*/, &v25, 0),
               (transform = (UnityEngine_Camera_o *)this->fields.boardrenderer) == 0)
           || (transform = (UnityEngine_Camera_o *)UnityEngine_Renderer__get_sharedMaterial(
                                                     (UnityEngine_Renderer_o *)transform,
@@ -661,14 +672,14 @@ void peRenderTexture__LateUpdate(peRenderTexture_o *this, const MethodInfo *meth
 LABEL_30:
           sub_2213CDC(transform, v12);
         }
-        v37.fields.x = position.fields.x;
-        v37.fields.y = position.fields.y;
-        v37.fields.z = position.fields.z;
-        v37.fields.w = 1.0;
+        v40.fields.x = x;
+        v40.fields.y = y;
+        v40.fields.z = z;
+        v40.fields.w = 1.0;
         UnityEngine_Material__SetVector(
           (UnityEngine_Material_o *)transform,
           (System_String_o *)StringLiteral_16965/*"_ProjectorPos"*/,
-          v37,
+          v40,
           0);
       }
     }
@@ -905,7 +916,7 @@ void peRenderTexture__initialize(peRenderTexture_o *this, const MethodInfo *meth
   System_Collections_Generic_List_Enumerator_object__o v96; // [xsp+8h] [xbp-A8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v97; // [xsp+20h] [xbp-90h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v98; // [xsp+40h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v100; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973E93 & 1) == 0 )
@@ -1559,9 +1570,9 @@ void peRenderTexture__updateBounds(peRenderTexture_o *this, const MethodInfo *me
   const MethodInfo *v2; // x3
   UnityEngine_GameObject_o *targetObject; // x1
   __int64 v5; // x1
-  __int64 v6; // kr20_8
-  __int64 v7; // kr28_8
-  __int64 v8; // kr30_8
+  __int64 v6; // kr00_8
+  __int64 v7; // kr08_8
+  __int64 v8; // kr10_8
   float v9; // s10
   UnityEngine_MeshFilter_o *Component_object; // x0
   __int64 v11; // x1
@@ -1591,10 +1602,10 @@ void peRenderTexture__updateBounds(peRenderTexture_o *this, const MethodInfo *me
   UnityEngine_Matrix4x4_o bounds; // [xsp+D0h] [xbp-C0h] BYREF
   float v36; // [xsp+158h] [xbp-38h]
   float v37; // [xsp+15Ch] [xbp-34h]
-  UnityEngine_Vector4_o v38; // 0:kr00_16.16
-  UnityEngine_Vector4_o v39; // 0:kr10_16.16
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -1674,7 +1685,7 @@ LABEL_33:
   if ( !Component_object )
     goto LABEL_32;
   v22 = sqrtf(*((float *)&v6 + 1)) * 0.5;
-  v40.fields.x = (float)(sqrtf(
+  v38.fields.x = (float)(sqrtf(
                            (float)((float)((float)(*(float *)&v7 + v37) - (float)(*(float *)&v7 - v37))
                                  * (float)((float)(*(float *)&v7 + v37) - (float)(*(float *)&v7 - v37)))
                          + (float)((float)((float)((float)(*(float *)&v6 - *((float *)&v7 + 1))
@@ -1684,10 +1695,10 @@ LABEL_33:
                                  + (float)((float)(v9 - v9) * (float)(v9 - v9))))
                        + targetBoundsOffsetX)
                / sqrtf((float)((float)(v19 - v28) * (float)(v19 - v28)) + (float)((float)(v30 - v29) * (float)(v30 - v29)));
-  v40.fields.z = 1.0;
-  v40.fields.y = (float)((float)(v22 + v22) + targetBoundsOffsetY)
+  v38.fields.z = 1.0;
+  v38.fields.y = (float)((float)(v22 + v22) + targetBoundsOffsetY)
                / sqrtf((float)((float)(v19 - v19) * (float)(v19 - v19)) + (float)((float)(v36 - v31) * (float)(v36 - v31)));
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Component_object, v40, 0);
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Component_object, v38, 0);
   Component_object = (UnityEngine_MeshFilter_o *)UnityEngine_Component__get_gameObject(
                                                    (UnityEngine_Component_o *)this,
                                                    0);
@@ -1699,10 +1710,10 @@ LABEL_33:
   if ( !Component_object )
     goto LABEL_32;
   v23 = v9 - *((float *)&v6 + 1);
-  LODWORD(v41.fields.x) = v6;
-  LODWORD(v41.fields.z) = v7;
-  v41.fields.y = v23 - *((float *)&v6 + 1);
-  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)Component_object, v41, 0);
+  LODWORD(v39.fields.x) = v6;
+  LODWORD(v39.fields.z) = v7;
+  v39.fields.y = v23 - *((float *)&v6 + 1);
+  UnityEngine_Transform__set_position((UnityEngine_Transform_o *)Component_object, v39, 0);
   LODWORD(this->fields.targetBoundsCenter.fields.x) = v6;
   this->fields.targetBoundsCenter.fields.y = v23;
   LODWORD(this->fields.targetBoundsCenter.fields.z) = v7;
@@ -1724,15 +1735,15 @@ LABEL_33:
   if ( (unsigned int)v24 >= LODWORD(v14[1].klass) )
     goto LABEL_33;
   v25 = (float *)p_monitor + 3 * v24;
-  v42.fields.x = *v25;
-  v42.fields.y = v25[1];
-  v42.fields.z = v25[2];
+  v40.fields.x = *v25;
+  v40.fields.y = v25[1];
+  v40.fields.z = v25[2];
   v34 = bounds;
-  v42.fields.w = 1.0;
-  v38 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v34, v42, 0);
-  this->fields.targetBoundsRB.fields.x = v38.fields.x;
-  this->fields.targetBoundsRB.fields.y = v38.fields.y;
-  this->fields.targetBoundsRB.fields.z = v38.fields.z;
+  v40.fields.w = 1.0;
+  v41 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v34, v40, 0);
+  this->fields.targetBoundsRB.fields.x = v41.fields.x;
+  this->fields.targetBoundsRB.fields.y = v41.fields.y;
+  this->fields.targetBoundsRB.fields.z = v41.fields.z;
   Component_object = (UnityEngine_MeshFilter_o *)UnityEngine_Component__get_gameObject(
                                                    (UnityEngine_Component_o *)this,
                                                    0);
@@ -1752,15 +1763,15 @@ LABEL_32:
   if ( (unsigned int)v26 >= LODWORD(v14[1].klass) )
     goto LABEL_33;
   v27 = (float *)p_monitor + 3 * v26;
-  v43.fields.x = *v27;
-  v43.fields.y = v27[1];
-  v43.fields.z = v27[2];
+  v42.fields.x = *v27;
+  v42.fields.y = v27[1];
+  v42.fields.z = v27[2];
   v32 = v33;
-  v43.fields.w = 1.0;
-  v39 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v32, v43, 0);
-  this->fields.targetBoundsLT.fields.x = v39.fields.x;
-  this->fields.targetBoundsLT.fields.y = v39.fields.y;
-  this->fields.targetBoundsLT.fields.z = v39.fields.z;
+  v42.fields.w = 1.0;
+  v43 = UnityEngine_Matrix4x4__op_Multiply_83361300(&v32, v42, 0);
+  this->fields.targetBoundsLT.fields.x = v43.fields.x;
+  this->fields.targetBoundsLT.fields.y = v43.fields.y;
+  this->fields.targetBoundsLT.fields.z = v43.fields.z;
 }
 
 
@@ -2382,6 +2393,8 @@ bool peRenderTexture_ChangeLayerObject__SyncLayer(peRenderTexture_ChangeLayerObj
   UnityEngine_Object_o *gameObject; // x20
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
+  bool result; // w0
+  int32_t layer; // w8
 
   if ( (byte_5973EA0 & 1) == 0 )
   {
@@ -2402,8 +2415,10 @@ bool peRenderTexture_ChangeLayerObject__SyncLayer(peRenderTexture_ChangeLayerObj
   if ( !v5 )
 LABEL_11:
     sub_2213CDC(v5, v4);
-  this->fields.prevLayer = UnityEngine_GameObject__get_layer(v5, 0);
-  return 1;
+  layer = UnityEngine_GameObject__get_layer(v5, 0);
+  result = 1;
+  this->fields.prevLayer = layer;
+  return result;
 }
 
 

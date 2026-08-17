@@ -745,27 +745,28 @@ void UIAtlas__MarkAsChanged(UIAtlas_o *this, const MethodInfo *method)
   UIAtlas_o *mAtlas; // x22
   const MethodInfo *v12; // x2
   Il2CppType *v13; // x20
+  System_RuntimeTypeHandle_o v14; // x0
   System_Type_o *TypeFromHandle; // x0
   UnityEngine_Object_array *ObjectsOfTypeAll; // x0
-  struct System_Threading_CancellationTokenSource_o *v16; // x25
-  UIAtlas_o *v17; // x20
-  __int64 v18; // x26
-  UIFont_o *v19; // x21
+  struct System_Threading_CancellationTokenSource_o *v17; // x25
+  UIAtlas_o *v18; // x20
+  __int64 v19; // x26
+  UIFont_o *v20; // x21
   UIAtlas_o *atlas; // x0
-  const MethodInfo *v21; // x2
-  UIAtlas_o *v22; // x22
-  const MethodInfo *v23; // x2
+  const MethodInfo *v22; // x2
+  UIAtlas_o *v23; // x22
   const MethodInfo *v24; // x2
-  struct System_Threading_CancellationTokenSource_o *v25; // x24
-  UIAtlas_o *v26; // x20
-  __int64 v27; // x25
-  UILabel_o *v28; // x21
+  const MethodInfo *v25; // x2
+  struct System_Threading_CancellationTokenSource_o *v26; // x24
+  UIAtlas_o *v27; // x20
+  __int64 v28; // x25
+  UILabel_o *v29; // x21
   UnityEngine_Object_o *mFont; // x22
-  UIAtlas_o *v30; // x0
-  const MethodInfo *v31; // x2
+  UIAtlas_o *v31; // x0
   const MethodInfo *v32; // x2
-  UIFont_o *v33; // x22
-  const MethodInfo *v34; // x2
+  const MethodInfo *v33; // x2
+  UIFont_o *v34; // x22
+  const MethodInfo *v35; // x2
 
   if ( (byte_597522C & 1) == 0 )
   {
@@ -819,30 +820,31 @@ LABEL_18:
   v13 = UIFont_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v4);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v13, 0);
+  v14.fields.value = (intptr_t)v13;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v14, 0);
   ObjectsOfTypeAll = UnityEngine_Resources__FindObjectsOfTypeAll(TypeFromHandle, 0);
   Active_object = (UIAtlas_o *)sub_2213BB4(ObjectsOfTypeAll, UIFont___TypeInfo);
   if ( !Active_object )
     goto LABEL_43;
-  v16 = Active_object->fields.m_CancellationTokenSource;
-  v17 = Active_object;
-  if ( (int)v16 >= 1 )
+  v17 = Active_object->fields.m_CancellationTokenSource;
+  v18 = Active_object;
+  if ( (int)v17 >= 1 )
   {
-    v18 = 0;
-    while ( (unsigned int)v18 < LODWORD(v17->fields.m_CancellationTokenSource) )
+    v19 = 0;
+    while ( (unsigned int)v19 < LODWORD(v18->fields.m_CancellationTokenSource) )
     {
-      v19 = (UIFont_o *)*((_QWORD *)&v17->fields.material + v18);
-      if ( !v19 )
+      v20 = (UIFont_o *)*((_QWORD *)&v18->fields.material + v19);
+      if ( !v20 )
         goto LABEL_43;
-      atlas = UIFont__get_atlas(*((UIFont_o **)&v17->fields.material + v18), v4);
-      Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, atlas, v21);
+      atlas = UIFont__get_atlas(*((UIFont_o **)&v18->fields.material + v19), v4);
+      Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, atlas, v22);
       if ( ((unsigned __int8)Active_object & 1) != 0 )
       {
-        v22 = UIFont__get_atlas(v19, v4);
-        UIFont__set_atlas(v19, 0, v23);
-        UIFont__set_atlas(v19, v22, v24);
+        v23 = UIFont__get_atlas(v20, v4);
+        UIFont__set_atlas(v20, 0, v24);
+        UIFont__set_atlas(v20, v23, v25);
       }
-      if ( (_DWORD)v16 == (_DWORD)++v18 )
+      if ( (_DWORD)v17 == (_DWORD)++v19 )
         goto LABEL_28;
     }
     goto LABEL_44;
@@ -854,35 +856,35 @@ LABEL_28:
   if ( !Active_object )
 LABEL_43:
     sub_2213CDC(Active_object, v4);
-  v25 = Active_object->fields.m_CancellationTokenSource;
-  v26 = Active_object;
-  if ( (int)v25 >= 1 )
+  v26 = Active_object->fields.m_CancellationTokenSource;
+  v27 = Active_object;
+  if ( (int)v26 >= 1 )
   {
-    v27 = 0;
-    while ( (unsigned int)v27 < LODWORD(v26->fields.m_CancellationTokenSource) )
+    v28 = 0;
+    while ( (unsigned int)v28 < LODWORD(v27->fields.m_CancellationTokenSource) )
     {
-      v28 = (UILabel_o *)*((_QWORD *)&v26->fields.material + v27);
-      if ( !v28 )
+      v29 = (UILabel_o *)*((_QWORD *)&v27->fields.material + v28);
+      if ( !v29 )
         goto LABEL_43;
-      mFont = (UnityEngine_Object_o *)v28->fields.mFont;
+      mFont = (UnityEngine_Object_o *)v29->fields.mFont;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
       Active_object = (UIAtlas_o *)UnityEngine_Object__op_Inequality(mFont, 0, 0);
       if ( ((unsigned __int8)Active_object & 1) != 0 )
       {
-        Active_object = (UIAtlas_o *)v28->fields.mFont;
+        Active_object = (UIAtlas_o *)v29->fields.mFont;
         if ( !Active_object )
           goto LABEL_43;
-        v30 = UIFont__get_atlas((UIFont_o *)Active_object, v4);
-        Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, v30, v31);
+        v31 = UIFont__get_atlas((UIFont_o *)Active_object, v4);
+        Active_object = (UIAtlas_o *)UIAtlas__CheckIfRelated(this, v31, v32);
         if ( ((unsigned __int8)Active_object & 1) != 0 )
         {
-          v33 = v28->fields.mFont;
-          UILabel__set_bitmapFont(v28, 0, v32);
-          UILabel__set_bitmapFont(v28, v33, v34);
+          v34 = v29->fields.mFont;
+          UILabel__set_bitmapFont(v29, 0, v33);
+          UILabel__set_bitmapFont(v29, v34, v35);
         }
       }
-      if ( (_DWORD)v25 == (_DWORD)++v27 )
+      if ( (_DWORD)v26 == (_DWORD)++v28 )
         return;
     }
     goto LABEL_44;
@@ -1173,7 +1175,7 @@ bool UIAtlas__Upgrade(UIAtlas_o *this, const MethodInfo *method)
   double v136; // d1
   int v137; // w8
   __int64 v138; // x8
-  _QWORD *v139; // x9
+  __int64 v139; // x9
   __int64 v140; // x10
   __int64 v141; // x8
   int v142; // w8
@@ -1271,7 +1273,7 @@ LABEL_7:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Item,
              v11,
-             (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Item__);
+             Method_System_Collections_Generic_List_UIAtlas_Sprite__get_Item__);
     if ( !Item )
       goto LABEL_7;
     v15 = *((float *)Item + 6);
@@ -1781,7 +1783,7 @@ LABEL_226:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Item,
             (Il2CppObject *)v21,
-            *(const MethodInfo_4483C64 **)(*(_QWORD *)(v139[4] + 192LL) + 112LL));
+            *(const MethodInfo_4483C64 **)(*(_QWORD *)(*(_QWORD *)(v139 + 32) + 192LL) + 112LL));
         }
         else
         {

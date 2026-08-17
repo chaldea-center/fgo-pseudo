@@ -55,6 +55,7 @@ bool MapEntity__GetFirstFadeInfo(
   bool v27; // w6
   bool v28; // w7
   __int64 v29; // x1
+  bool result; // w0
   struct System_Collections_Generic_Dictionary_string__object__o *v31; // x23
   struct System_Collections_Generic_Dictionary_string__object__o *v32; // x22
   System_String_o *v33; // x22
@@ -237,9 +238,10 @@ LABEL_50:
     }
   }
   *(_QWORD *)&fadeColor->fields.r = _D0;
+  result = 1;
   fadeColor->fields.b = v41;
   fadeColor->fields.a = 1.0;
-  return 1;
+  return result;
 }
 
 
@@ -667,7 +669,7 @@ bool MapEntity__TryGetFirstFadeTime(MapEntity_o *this, float *fadeTime, const Me
   ScrTerminalMap_c *v9; // x0
   bool result; // w0
   UnityEngine_Color_o fadeColor; // [xsp+8h] [xbp-48h] BYREF
-  __int64 fadeColorKind; // [xsp+18h] [xbp-38h] BYREF
+  int32_t fadeColorKind[2]; // [xsp+18h] [xbp-38h] BYREF
   System_String_o *fadeType; // [xsp+28h] [xbp-28h] BYREF
 
   if ( (byte_5970D46 & 1) == 0 )
@@ -677,16 +679,10 @@ bool MapEntity__TryGetFirstFadeTime(MapEntity_o *this, float *fadeTime, const Me
   }
   fadeType = 0;
   *(_QWORD *)&fadeColor.fields.b = 0;
-  fadeColorKind = 0;
+  *(_QWORD *)fadeColorKind = 0;
   *(_QWORD *)&fadeColor.fields.r = 0;
   v7 = 0.0;
-  if ( !MapEntity__GetFirstFadeInfo(
-          this,
-          &fadeType,
-          (int32_t *)&fadeColorKind + 1,
-          (int32_t *)&fadeColorKind,
-          &fadeColor,
-          v3) )
+  if ( !MapEntity__GetFirstFadeInfo(this, &fadeType, &fadeColorKind[1], fadeColorKind, &fadeColor, v3) )
     goto LABEL_9;
   v8 = fadeType;
   v9 = ScrTerminalMap_TypeInfo;
@@ -697,7 +693,7 @@ bool MapEntity__TryGetFirstFadeTime(MapEntity_o *this, float *fadeTime, const Me
   if ( System_String__Equals_75686512(v8, ScrTerminalMap_TypeInfo->static_fields->FIRST_FADE_TYPE_DURATION, 0) )
   {
     result = 1;
-    v7 = (float)SHIDWORD(fadeColorKind) / 1000.0;
+    v7 = (float)fadeColorKind[1] / 1000.0;
   }
   else
   {

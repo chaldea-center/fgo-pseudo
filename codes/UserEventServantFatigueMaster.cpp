@@ -262,6 +262,7 @@ bool UserEventServantFatigueMaster__GetFatigueInfo(
   int v30; // w8
   __int64 *i; // x9
   __int64 v32; // x10
+  bool result; // w0
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v34; // [xsp+0h] [xbp-D0h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-A8h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v36; // [xsp+30h] [xbp-A0h] BYREF
@@ -404,8 +405,9 @@ LABEL_39:
     if ( !--v30 )
       return 0;
   }
+  result = 1;
   *recoverAt = *(_QWORD *)(v32 + 24);
-  return 1;
+  return result;
 }
 
 

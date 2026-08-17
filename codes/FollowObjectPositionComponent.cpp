@@ -32,6 +32,7 @@ void FollowObjectPositionComponent__SetObj(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *TargetObj; // x19
@@ -40,9 +41,11 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
   __int64 v6; // x1
   struct UnityEngine_GameObject_o *v7; // x8
   UnityEngine_Transform_o *v8; // x19
-  float v9; // s8
   unsigned int localPosition; // s0
-  float y; // s1
+  float v10; // s8
+  float v11; // s1
+  float v12; // s0 OVERLAPPED
+  int v13; // s2
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596FBB2 & 1) == 0 )
@@ -70,18 +73,18 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
           transform = (UnityEngine_Transform_o *)this->fields.TargetObj;
           if ( transform )
           {
-            v9 = *(float *)&localPosition;
+            v10 = *(float *)&localPosition;
             transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
             if ( transform )
             {
-              y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
+              v14 = UnityEngine_Transform__get_localPosition(transform, 0);
               if ( v8 )
               {
-                v14.fields.y = -y;
-                v14.fields.x = -v9;
-                v14.fields.z = 0.0;
+                v11 = -v14.fields.y;
+                v12 = -v10;
+                v13 = 0;
 LABEL_16:
-                UnityEngine_Transform__set_localPosition(v8, v14, 0);
+                UnityEngine_Transform__set_localPosition(v8, *(UnityEngine_Vector3_o *)&v12, 0);
                 return;
               }
             }
@@ -94,7 +97,7 @@ LABEL_16:
       transform = UnityEngine_GameObject__get_transform(this->fields.TargetObj, 0);
       if ( transform )
       {
-        v14 = UnityEngine_Transform__get_localPosition(transform, 0);
+        *(UnityEngine_Vector3_o *)&v12 = UnityEngine_Transform__get_localPosition(transform, 0);
         if ( v8 )
           goto LABEL_16;
       }

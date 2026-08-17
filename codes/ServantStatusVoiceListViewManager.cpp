@@ -434,9 +434,9 @@ void ServantStatusVoiceListViewManager__CreateList(
   ServantVoiceRelationEntity_array *sameRelationList; // [xsp+E8h] [xbp-88h] BYREF
   ServantVoiceRelationEntity_array *beforeRelationList; // [xsp+F0h] [xbp-80h] BYREF
   int32_t firstPriority; // [xsp+FCh] [xbp-74h] BYREF
-  UnityEngine_Vector4_o v247; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o TransformNameLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector4_o v249; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596DFC4 & 1) == 0 )
   {
@@ -536,12 +536,12 @@ void ServantStatusVoiceListViewManager__CreateList(
   AnyTransformServant = scrollView->fields.mPanel;
   if ( !AnyTransformServant )
     goto LABEL_239;
-  v247.fields.y = defaultPanelCenter;
-  v247.fields.w = defaultPanelHeight;
-  v247.fields.x = *((float *)AnyTransformServant + 74);
-  v247.fields.z = *((float *)AnyTransformServant + 76);
+  v249.fields.y = defaultPanelCenter;
+  v249.fields.w = defaultPanelHeight;
+  v249.fields.x = *((float *)AnyTransformServant + 74);
+  v249.fields.z = *((float *)AnyTransformServant + 76);
   key = (System_String_o *)v6;
-  UIPanel__set_baseClipRegion((UIPanel_o *)AnyTransformServant, v247, 0);
+  UIPanel__set_baseClipRegion((UIPanel_o *)AnyTransformServant, v249, 0);
   AnyTransformServant = this->fields.scrollView;
   if ( !AnyTransformServant )
     goto LABEL_239;
@@ -2621,7 +2621,7 @@ System_IAsyncResult_o *ServantStatusVoiceListViewManager_CallbackFunc__BeginInvo
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(ServantStatusVoiceListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

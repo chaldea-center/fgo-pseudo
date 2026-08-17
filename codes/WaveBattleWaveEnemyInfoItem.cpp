@@ -288,15 +288,19 @@ void WaveBattleWaveEnemyInfoItem__SetDispType(
         UISpriteAltMat_o *sp,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x2
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  struct WaveBattleWaveEnemyInfoItem_StaticFields *static_fields; // x8
+  __int64 v11; // x1
+  __int64 v12; // x2
   Il2CppObject *object; // x20
-  WaveBattleWaveEnemyInfoItem_c *v12; // x8
-  UnityEngine_Shader_o *v13; // x22
-  UnityEngine_Material_o *v14; // x21
-  UnityEngine_Material_o *v15; // x20
-  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  WaveBattleWaveEnemyInfoItem_c *v14; // x8
+  UnityEngine_Shader_o *v15; // x22
+  UnityEngine_Material_o *v16; // x21
+  UnityEngine_Material_o *v17; // x20
+  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596C3CC & 1) == 0 )
   {
@@ -312,29 +316,29 @@ void WaveBattleWaveEnemyInfoItem__SetDispType(
     case 3:
       if ( !sp )
         goto LABEL_19;
-      v17.fields.r = 1.0;
-      v17.fields.g = 1.0;
-      v17.fields.b = 1.0;
-      v17.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)sp, v17, 0);
+      v18.fields.r = 1.0;
+      v18.fields.g = 1.0;
+      v18.fields.b = 1.0;
+      v18.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)sp, v18, 0);
       object = UnityEngine_Resources__Load_object_(
                  (System_String_o *)StringLiteral_13377/*"Shaders/ChocoMap"*/,
                  (const MethodInfo_39787F0 *)Method_UnityEngine_Resources_Load_Texture2D___);
-      v12 = WaveBattleWaveEnemyInfoItem_TypeInfo;
+      v14 = WaveBattleWaveEnemyInfoItem_TypeInfo;
       if ( !*(&WaveBattleWaveEnemyInfoItem_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(WaveBattleWaveEnemyInfoItem_TypeInfo, v9, v10);
-        v12 = WaveBattleWaveEnemyInfoItem_TypeInfo;
+        j_il2cpp_runtime_class_init_0(WaveBattleWaveEnemyInfoItem_TypeInfo, v11, v12);
+        v14 = WaveBattleWaveEnemyInfoItem_TypeInfo;
       }
-      v13 = UnityEngine_Shader__Find(v12->static_fields->CHOCO_SHADER_SP, 0);
-      v14 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor(v14, v13, 0);
-      if ( !v14 )
+      v15 = UnityEngine_Shader__Find(v14->static_fields->CHOCO_SHADER_SP, 0);
+      v16 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor(v16, v15, 0);
+      if ( !v16 )
         goto LABEL_19;
-      UnityEngine_Material__SetTexture(v14, (System_String_o *)StringLiteral_16795/*"_ChocoTex"*/, (UnityEngine_Texture_o *)object, 0);
-      v15 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
-      UnityEngine_Material___ctor_83274924(v15, v14, 0);
-      UISpriteAltMat__SetMaterialKeepTexture(sp, v15, 0);
+      UnityEngine_Material__SetTexture(v16, (System_String_o *)StringLiteral_16795/*"_ChocoTex"*/, (UnityEngine_Texture_o *)object, 0);
+      v17 = (UnityEngine_Material_o *)sub_2213CCC(UnityEngine_Material_TypeInfo);
+      UnityEngine_Material___ctor_83274924(v17, v16, 0);
+      UISpriteAltMat__SetMaterialKeepTexture(sp, v17, 0);
       break;
     case 2:
       this = (WaveBattleWaveEnemyInfoItem_o *)WaveBattleWaveEnemyInfoItem_TypeInfo;
@@ -342,7 +346,11 @@ void WaveBattleWaveEnemyInfoItem__SetDispType(
         j_il2cpp_runtime_class_init_0(WaveBattleWaveEnemyInfoItem_TypeInfo, *(_QWORD *)&dispTp, sp);
       if ( sp )
       {
-        SHADOW_COLOR = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields->SHADOW_COLOR;
+        static_fields = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields;
+        b = static_fields->SHADOW_COLOR.fields.b;
+        a = static_fields->SHADOW_COLOR.fields.a;
+        r = static_fields->SHADOW_COLOR.fields.r;
+        g = static_fields->SHADOW_COLOR.fields.g;
         goto LABEL_12;
       }
 LABEL_19:
@@ -350,12 +358,12 @@ LABEL_19:
     case 1:
       if ( sp )
       {
-        SHADOW_COLOR.fields.r = 1.0;
-        SHADOW_COLOR.fields.g = 1.0;
-        SHADOW_COLOR.fields.b = 1.0;
-        SHADOW_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
 LABEL_12:
-        UIWidget__set_color((UIWidget_o *)sp, SHADOW_COLOR, 0);
+        UIWidget__set_color((UIWidget_o *)sp, *(UnityEngine_Color_o *)&r, 0);
         UISpriteAltMat__ResetMaterial(sp, 0);
         return;
       }
@@ -371,7 +379,11 @@ void WaveBattleWaveEnemyInfoItem__SetDispTypeEnemyTex(
         UITexture_o *texture,
         const MethodInfo *method)
 {
-  UnityEngine_Color_o SHADOW_COLOR; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  struct WaveBattleWaveEnemyInfoItem_StaticFields *static_fields; // x8
 
   if ( (byte_596C3CE & 1) == 0 )
   {
@@ -388,7 +400,11 @@ void WaveBattleWaveEnemyInfoItem__SetDispTypeEnemyTex(
         j_il2cpp_runtime_class_init_0(WaveBattleWaveEnemyInfoItem_TypeInfo, *(_QWORD *)&dispTp, texture);
       if ( texture )
       {
-        SHADOW_COLOR = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields->SHADOW_COLOR;
+        static_fields = WaveBattleWaveEnemyInfoItem_TypeInfo->static_fields;
+        b = static_fields->SHADOW_COLOR.fields.b;
+        a = static_fields->SHADOW_COLOR.fields.a;
+        r = static_fields->SHADOW_COLOR.fields.r;
+        g = static_fields->SHADOW_COLOR.fields.g;
         goto LABEL_12;
       }
 LABEL_14:
@@ -397,12 +413,12 @@ LABEL_14:
 LABEL_6:
       if ( texture )
       {
-        SHADOW_COLOR.fields.r = 1.0;
-        SHADOW_COLOR.fields.g = 1.0;
-        SHADOW_COLOR.fields.b = 1.0;
-        SHADOW_COLOR.fields.a = 1.0;
+        r = 1.0;
+        g = 1.0;
+        b = 1.0;
+        a = 1.0;
 LABEL_12:
-        UIWidget__set_color((UIWidget_o *)texture, SHADOW_COLOR, 0);
+        UIWidget__set_color((UIWidget_o *)texture, *(UnityEngine_Color_o *)&r, 0);
         return;
       }
       goto LABEL_14;
@@ -875,7 +891,7 @@ void WaveBattleWaveEnemyInfoItem__SetUnknownDisp(
   UnityEngine_Object_o *mInstance; // x20
   __int64 v22; // x2
   UISprite_o *enemySp; // x20
-  __int64 v24; // x8
+  System_String_c *klass; // x8
   UISprite_o *v25; // x20
   WaveBattleWaveEnemyInfoItem_o *v26; // x0
   const MethodInfo *v27; // x3
@@ -999,10 +1015,10 @@ void WaveBattleWaveEnemyInfoItem__SetUnknownDisp(
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, viewEnemyEnt, v22);
             this = (WaveBattleWaveEnemyInfoItem_o *)TerminalSceneComponent_TypeInfo;
           }
-          v24 = **((_QWORD **)this + 23);
-          if ( !v24 || !enemySp )
+          klass = this[1].fields.enemyIconName->klass;
+          if ( !klass || !enemySp )
             goto LABEL_53;
-          UISprite__set_atlas(enemySp, *(UIAtlas_o **)(v24 + 304), 0);
+          UISprite__set_atlas(enemySp, *(UIAtlas_o **)&klass->_2.naturalAligment, 0);
         }
         v25 = (UISprite_o *)v4->fields.enemySp;
         this = (WaveBattleWaveEnemyInfoItem_o *)WaveBattleWaveEnemyInfoItem_TypeInfo;

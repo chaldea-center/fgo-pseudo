@@ -211,6 +211,7 @@ bool BoxGachaItemListViewItem__SetSortValue(
   bool v4; // cc
   struct BoxGachaBaseEntity_o *gachaBaseData; // x9
   int64_t v6; // x10
+  bool result; // w0
 
   currenNum = this->fields.currenNum;
   *(_WORD *)&this->fields.isTermination = 0;
@@ -220,8 +221,9 @@ bool BoxGachaItemListViewItem__SetSortValue(
   this->fields.sortValue0 = v6;
   if ( !gachaBaseData )
     sub_2213CDC(this, sort);
+  result = 1;
   this->fields.sortValue1 = -gachaBaseData->fields.priority;
-  return 1;
+  return result;
 }
 
 

@@ -140,7 +140,7 @@ void PhotoCampaignStaffCostumeSelectDialog__LoadSelectedStaffCostume(
   __int64 v5; // x2
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
   __int64 v7; // x1
-  Il2CppObject *value; // x20
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   _BOOL8 v9; // x0
   __int64 v10; // x1
   System_String_o *v11; // x0
@@ -184,15 +184,15 @@ void PhotoCampaignStaffCostumeSelectDialog__LoadSelectedStaffCostume(
               &v15,
               (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
-      value = v15.fields._current.fields.value;
+      current = v15.fields._current;
       v9 = System_Int32__TryParse((System_String_o *)v15.fields._current.fields.key, &result[1], 0);
       if ( v9 )
       {
-        if ( !value )
+        if ( !current.fields.value )
           sub_2213CDC(v9, v10);
-        v11 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))value->klass->vtable[3].methodPtr)(
-                                   value,
-                                   value->klass->vtable[3].method);
+        v11 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
+                                   current.fields.value,
+                                   current.fields.value->klass->vtable[3].method);
         if ( System_Int32__TryParse(v11, result, 0) )
         {
           dicSelectedStaffCostume = this->fields.dicSelectedStaffCostume;

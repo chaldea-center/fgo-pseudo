@@ -119,7 +119,7 @@ LABEL_25:
     this = (UserEventMissionMaster_o *)UserEventMissionMaster__TryGetEntity(
                                          v5,
                                          &entity,
-                                         *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+                                         (int64_t)this[2].fields.list[1].monitor,
                                          v9->fields.id,
                                          v3);
     if ( ((unsigned __int8)this & 1) != 0 )

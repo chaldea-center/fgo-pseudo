@@ -473,11 +473,11 @@ Il2CppObject *PropertyReference__Get(PropertyReference_o *this, const MethodInfo
     {
       mProperty = this->fields.mProperty;
       if ( mProperty )
-        return (*(Il2CppObject *(__fastcall **)(void *, struct UnityEngine_Component_o *, _QWORD, _QWORD))(*(_QWORD *)mProperty + 712LL))(
-                 mProperty,
-                 this->fields.mTarget,
-                 0,
-                 *(_QWORD *)(*(_QWORD *)mProperty + 720LL));
+        return (Il2CppObject *)(*(__int64 (__fastcall **)(void *, struct UnityEngine_Component_o *, _QWORD, _QWORD))(*(_QWORD *)mProperty + 712LL))(
+                                 mProperty,
+                                 this->fields.mTarget,
+                                 0,
+                                 *(_QWORD *)(*(_QWORD *)mProperty + 720LL));
 LABEL_14:
       sub_2213CDC(mProperty, v5);
     }
@@ -488,10 +488,10 @@ LABEL_14:
   mProperty = this->fields.mField;
   if ( !mProperty )
     goto LABEL_14;
-  return (*(Il2CppObject *(__fastcall **)(void *, struct UnityEngine_Component_o *, _QWORD))(*(_QWORD *)mProperty + 712LL))(
-           mProperty,
-           this->fields.mTarget,
-           *(_QWORD *)(*(_QWORD *)mProperty + 720LL));
+  return (Il2CppObject *)(*(__int64 (__fastcall **)(void *, struct UnityEngine_Component_o *, _QWORD))(*(_QWORD *)mProperty + 712LL))(
+                           mProperty,
+                           this->fields.mTarget,
+                           *(_QWORD *)(*(_QWORD *)mProperty + 720LL));
 }
 
 
@@ -520,7 +520,7 @@ System_Type_o *PropertyReference__GetPropertyType(PropertyReference_o *this, con
   const MethodInfo *v4; // x1
   __int64 v5; // x1
   void *mProperty; // x0
-  System_Type_o *(*v7)(void); // x2
+  __int64 (*v7)(void); // x2
   __int64 v9; // x19
   System_RuntimeTypeHandle_o v10; // x0
 
@@ -535,8 +535,8 @@ System_Type_o *PropertyReference__GetPropertyType(PropertyReference_o *this, con
     mProperty = this->fields.mProperty;
     if ( mProperty )
     {
-      v7 = *(System_Type_o *(**)(void))(*(_QWORD *)mProperty + 568LL);
-      return v7();
+      v7 = *(__int64 (**)(void))(*(_QWORD *)mProperty + 568LL);
+      return (System_Type_o *)v7();
     }
     goto LABEL_15;
   }
@@ -545,8 +545,8 @@ System_Type_o *PropertyReference__GetPropertyType(PropertyReference_o *this, con
     mProperty = this->fields.mField;
     if ( mProperty )
     {
-      v7 = *(System_Type_o *(**)(void))(*(_QWORD *)mProperty + 584LL);
-      return v7();
+      v7 = *(__int64 (**)(void))(*(_QWORD *)mProperty + 584LL);
+      return (System_Type_o *)v7();
     }
 LABEL_15:
     sub_2213CDC(mProperty, v5);

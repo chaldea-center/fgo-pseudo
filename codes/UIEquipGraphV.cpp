@@ -1768,15 +1768,17 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
   struct EquipGraphViewModeState_o *v10; // x8
   UnityEngine_Transform_o *v11; // x0
   UnityEngine_Transform_o *v12; // x20
-  UnityEngine_Transform_o *v14; // x0
-  UnityEngine_Transform_o *v15; // x20
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  float v13; // s0 OVERLAPPED
+  float v14; // s1
+  UnityEngine_Transform_o *v15; // x0
+  UnityEngine_Transform_o *v16; // x20
+  float v17; // s2
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5972118 & 1) == 0 )
   {
@@ -1813,33 +1815,36 @@ void UIEquipGraphV__SetRotateButton(UIEquipGraphV_o *this, bool isSetting, const
             transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
             if ( transform )
             {
-              v16.fields.z = 0.0;
-              v16.fields.x = -428.0;
-              v16.fields.y = -280.0;
-              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v16, 0);
+              v18.fields.z = 0.0;
+              v18.fields.x = -428.0;
+              v18.fields.y = -280.0;
+              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v18, 0);
               transform = this->fields.rotateBase;
               if ( transform )
               {
                 v11 = UnityEngine_GameObject__get_transform(transform, 0);
-                v17.fields.x = 0.0;
-                v17.fields.y = 0.0;
-                v17.fields.z = 1.5708;
+                v19.fields.x = 0.0;
+                v19.fields.y = 0.0;
+                v19.fields.z = 1.5708;
                 v12 = v11;
-                v21 = UnityEngine_Quaternion__Internal_FromEulerRad(v17, 0);
+                v22 = UnityEngine_Quaternion__Internal_FromEulerRad(v19, 0);
                 if ( v12 )
                 {
-                  UnityEngine_Transform__set_localRotation(v12, v21, 0);
+                  UnityEngine_Transform__set_localRotation(v12, v22, 0);
                   transform = this->fields.rotateBase;
                   if ( transform )
                   {
                     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
                     if ( transform )
                     {
-                      v18.fields.x = 1.5;
-                      v18.fields.y = 1.5;
+                      v13 = 1.5;
+                      v14 = 1.5;
 LABEL_29:
-                      v18.fields.z = 1.0;
-                      UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)transform, v18, 0);
+                      v17 = 1.0;
+                      UnityEngine_Transform__set_localScale(
+                        (UnityEngine_Transform_o *)transform,
+                        *(UnityEngine_Vector3_o *)&v13,
+                        0);
                       return;
                     }
                   }
@@ -1853,30 +1858,30 @@ LABEL_29:
           transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
           if ( transform )
           {
-            v19.fields.x = 0.0;
-            v19.fields.y = 0.0;
-            v19.fields.z = 0.0;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v19, 0);
+            v20.fields.x = 0.0;
+            v20.fields.y = 0.0;
+            v20.fields.z = 0.0;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v20, 0);
             transform = this->fields.rotateBase;
             if ( transform )
             {
-              v14 = UnityEngine_GameObject__get_transform(transform, 0);
-              v20.fields.x = 0.0;
-              v20.fields.y = 0.0;
-              v15 = v14;
-              v20.fields.z = 0.0;
-              v22 = UnityEngine_Quaternion__Internal_FromEulerRad(v20, 0);
-              if ( v15 )
+              v15 = UnityEngine_GameObject__get_transform(transform, 0);
+              v21.fields.x = 0.0;
+              v21.fields.y = 0.0;
+              v16 = v15;
+              v21.fields.z = 0.0;
+              v23 = UnityEngine_Quaternion__Internal_FromEulerRad(v21, 0);
+              if ( v16 )
               {
-                UnityEngine_Transform__set_localRotation(v15, v22, 0);
+                UnityEngine_Transform__set_localRotation(v16, v23, 0);
                 transform = this->fields.rotateBase;
                 if ( transform )
                 {
                   transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
                   if ( transform )
                   {
-                    v18.fields.x = 1.0;
-                    v18.fields.y = 1.0;
+                    v13 = 1.0;
+                    v14 = 1.0;
                     goto LABEL_29;
                   }
                 }

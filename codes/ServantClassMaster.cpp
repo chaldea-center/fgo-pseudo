@@ -42,13 +42,17 @@ System_Int32_array *ServantClassMaster__GetIndividualityWithRelated(
         bool isServant,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  System_ValueTuple_int__bool__o p_key; // x0
+  __int64 v8; // x1
   Il2CppObject *cachedIndividualityWithRelatedDict; // x0
-  const MethodInfo *v9; // x2
-  System_Int32_array *v10; // x19
-  System_ValueTuple_int__bool__o v11; // x21
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v12; // x20
-  System_Int32_array *v14; // [xsp+0h] [xbp-40h] BYREF
+  System_ValueTuple_int__bool__o v10; // x1
+  const MethodInfo *v11; // x2
+  System_Int32_array *v12; // x19
+  System_ValueTuple_int__bool__o v13; // x21
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v14; // x20
+  System_ValueTuple_int__bool__o v15; // x1
+  System_ValueTuple_int__bool__o v16; // x1
+  System_Int32_array *v18; // [xsp+0h] [xbp-40h] BYREF
   System_ValueTuple_int__bool__o key; // [xsp+8h] [xbp-38h] BYREF
 
   if ( (byte_5971121 & 1) == 0 )
@@ -58,42 +62,46 @@ System_Int32_array *ServantClassMaster__GetIndividualityWithRelated(
     sub_2213A60(&Method_System_ValueTuple_int__bool___ctor__);
     byte_5971121 = 1;
   }
-  v14 = 0;
+  p_key = (System_ValueTuple_int__bool__o)&key;
+  v18 = 0;
   key = 0;
   System_ValueTuple_int__bool____ctor(
-    (System_ValueTuple_int__bool__o)&key,
+    p_key,
     classId,
     isServant,
     (const MethodInfo_3CECD7C *)Method_System_ValueTuple_int__bool___ctor__);
   cachedIndividualityWithRelatedDict = (Il2CppObject *)this->fields.cachedIndividualityWithRelatedDict;
   if ( !cachedIndividualityWithRelatedDict )
     goto LABEL_9;
+  v10 = key;
   if ( !System_Collections_Generic_Dictionary_ValueTuple_int__bool___object___TryGetValue(
           (System_Collections_Generic_Dictionary_TKey__TValue__o *)cachedIndividualityWithRelatedDict,
-          key,
-          (Il2CppObject **)&v14,
+          v10,
+          (Il2CppObject **)&v18,
           (const MethodInfo_3F48B2C *)Method_System_Collections_Generic_Dictionary_ValueTuple_int__bool___int____TryGetValue__) )
   {
-    v11 = key;
-    v12 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.cachedIndividualityWithRelatedDict;
+    v13 = key;
+    v14 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.cachedIndividualityWithRelatedDict;
+    v15 = key;
     cachedIndividualityWithRelatedDict = (Il2CppObject *)ServantClassMaster__GetIndividualityWithRelated_49650488(
                                                            this,
-                                                           key,
-                                                           v9);
-    if ( v12 )
+                                                           v15,
+                                                           v11);
+    if ( v14 )
     {
-      v10 = (System_Int32_array *)cachedIndividualityWithRelatedDict;
+      v12 = (System_Int32_array *)cachedIndividualityWithRelatedDict;
+      v16 = v13;
       System_Collections_Generic_Dictionary_ValueTuple_int__bool___object___set_Item(
-        v12,
-        v11,
+        v14,
+        v16,
         cachedIndividualityWithRelatedDict,
         (const MethodInfo_3F47060 *)Method_System_Collections_Generic_Dictionary_ValueTuple_int__bool___int____set_Item__);
-      return v10;
+      return v12;
     }
 LABEL_9:
-    sub_2213CDC(cachedIndividualityWithRelatedDict, v7);
+    sub_2213CDC(cachedIndividualityWithRelatedDict, v8);
   }
-  return v14;
+  return v18;
 }
 
 

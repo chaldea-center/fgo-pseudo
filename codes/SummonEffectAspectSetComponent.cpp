@@ -10,29 +10,27 @@ void SummonEffectAspectSetComponent__SetStartSize(
         float aspect,
         const MethodInfo *method)
 {
+  UnityEngine_ParticleSystem_MainModule_o v5; // x0
   float constant; // s0
-  UnityEngine_ParticleSystem_MinMaxCurve_o v6; // [xsp+0h] [xbp-80h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v7; // [xsp+20h] [xbp-60h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v8; // [xsp+40h] [xbp-40h] BYREF
+  UnityEngine_ParticleSystem_MainModule_o v7; // x0
+  UnityEngine_ParticleSystem_MinMaxCurve_o v8; // [xsp+0h] [xbp-80h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v9; // [xsp+20h] [xbp-60h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v10; // [xsp+40h] [xbp-40h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+68h] [xbp-18h] BYREF
 
   m_ParticleSystem = 0;
-  memset(&v8, 0, sizeof(v8));
+  memset(&v10, 0, sizeof(v10));
   if ( !particle )
     sub_2213CDC(this, 0);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(particle, 0).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MainModule__get_startSize(
-    &v7,
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    0);
-  v8 = v7;
-  constant = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v8, 0);
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constant(&v8, constant * aspect, 0);
-  v6 = v8;
-  UnityEngine_ParticleSystem_MainModule__set_startSize(
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    &v6,
-    0);
+  v5.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startSize(&v9, v5, 0);
+  v10 = v9;
+  constant = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v10, 0);
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constant(&v10, constant * aspect, 0);
+  v7.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v8 = v10;
+  UnityEngine_ParticleSystem_MainModule__set_startSize(v7, &v8, 0);
 }
 
 
@@ -43,37 +41,41 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
   float v5; // s8
   int32_t v6; // w20
   UnityEngine_Transform_o *go_above_cardScaler; // x0
-  float v8; // s9
-  float v9; // s10
+  unsigned int localScale; // s0
+  float v9; // s9
+  float y; // s10
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v11; // x2
-  int32_t v12; // w20
-  Il2CppObject *v13; // x0
-  const MethodInfo *v14; // x2
-  Il2CppObject *v15; // x0
-  const MethodInfo *v16; // x2
-  int32_t v17; // w20
-  Il2CppObject *v18; // x0
-  const MethodInfo *v19; // x2
-  Il2CppObject *v20; // x0
-  const MethodInfo *v21; // x2
-  int32_t v22; // w20
-  Il2CppObject *v23; // x0
-  const MethodInfo *v24; // x2
+  const MethodInfo *v12; // x2
+  int32_t v13; // w20
+  Il2CppObject *v14; // x0
+  const MethodInfo *v15; // x2
+  Il2CppObject *v16; // x0
+  const MethodInfo *v17; // x2
+  int32_t v18; // w20
+  Il2CppObject *v19; // x0
+  const MethodInfo *v20; // x2
+  Il2CppObject *v21; // x0
+  const MethodInfo *v22; // x2
+  int32_t v23; // w20
+  Il2CppObject *v24; // x0
+  const MethodInfo *v25; // x2
+  UnityEngine_ParticleSystem_MainModule_o v26; // x0
   float constantMin; // s0
   float constantMax; // s0
-  float v27; // s0
-  float v28; // s0
-  unsigned int localScale; // s0
-  float y; // s1
-  float z; // s2
-  UnityEngine_ParticleSystem_MinMaxCurve_o v32; // [xsp+0h] [xbp-E0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v33; // [xsp+20h] [xbp-C0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v34; // [xsp+40h] [xbp-A0h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v35; // [xsp+60h] [xbp-80h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v36; // [xsp+80h] [xbp-60h] BYREF
+  UnityEngine_ParticleSystem_MainModule_o v29; // x0
+  UnityEngine_ParticleSystem_MainModule_o v30; // x0
+  float v31; // s0
+  float v32; // s0
+  UnityEngine_ParticleSystem_MainModule_o v33; // x0
+  UnityEngine_ParticleSystem_MinMaxCurve_o v34; // [xsp+0h] [xbp-E0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v35; // [xsp+20h] [xbp-C0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v36; // [xsp+40h] [xbp-A0h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v37; // [xsp+60h] [xbp-80h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v38; // [xsp+80h] [xbp-60h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+A8h] [xbp-38h] BYREF
-  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971FB2 & 1) == 0 )
   {
@@ -81,7 +83,7 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
     byte_5971FB2 = 1;
   }
   m_ParticleSystem = 0;
-  memset(&v36, 0, sizeof(v36));
+  memset(&v38, 0, sizeof(v38));
   width = UnityEngine_Screen__get_width(0);
   v5 = 1.0;
   if ( (float)((float)width / (float)UnityEngine_Screen__get_height(0)) < 1.7778 )
@@ -96,20 +98,20 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
   go_above_cardScaler = this->fields.go_above_cardScaler;
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v8 = *(float *)&localScale;
-  y = UnityEngine_Transform__get_localScale(go_above_cardScaler, 0).fields.y;
+  v9 = *(float *)&localScale;
+  v40 = UnityEngine_Transform__get_localScale(go_above_cardScaler, 0);
   go_above_cardScaler = this->fields.go_above_cardScaler;
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v9 = y;
-  z = UnityEngine_Transform__get_localScale(go_above_cardScaler, 0).fields.z;
+  y = v40.fields.y;
+  v41 = UnityEngine_Transform__get_localScale(go_above_cardScaler, 0);
   go_above_cardScaler = this->fields.go_above_cardScaler;
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v38.fields.z = v5 * z;
-  v38.fields.y = v5 * v9;
-  v38.fields.x = v5 * v8;
-  UnityEngine_Transform__set_localScale(go_above_cardScaler, v38, 0);
+  v42.fields.z = v5 * v41.fields.z;
+  v42.fields.y = v5 * y;
+  v42.fields.x = v5 * v9;
+  UnityEngine_Transform__set_localScale(go_above_cardScaler, v42, 0);
   go_above_cardScaler = this->fields.go_msg_shine00;
   if ( !go_above_cardScaler )
     goto LABEL_50;
@@ -126,11 +128,11 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
     (SummonEffectAspectSetComponent_o *)Component_object,
     (UnityEngine_ParticleSystem_o *)Component_object,
     v5,
-    v11);
+    v12);
   go_above_cardScaler = this->fields.go_msg_shine00;
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v12 = 0;
+  v13 = 0;
   while ( 1 )
   {
     go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
@@ -139,7 +141,7 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
     go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
     if ( !go_above_cardScaler )
       goto LABEL_50;
-    if ( v12 >= UnityEngine_Transform__get_childCount(go_above_cardScaler, 0) )
+    if ( v13 >= UnityEngine_Transform__get_childCount(go_above_cardScaler, 0) )
       break;
     go_above_cardScaler = this->fields.go_msg_shine00;
     if ( go_above_cardScaler )
@@ -150,19 +152,19 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
         go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
         if ( go_above_cardScaler )
         {
-          go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, v12, 0);
+          go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, v13, 0);
           if ( go_above_cardScaler )
           {
-            v13 = UnityEngine_Component__GetComponent_object_(
+            v14 = UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)go_above_cardScaler,
                     (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             SummonEffectAspectSetComponent__SetStartSize(
-              (SummonEffectAspectSetComponent_o *)v13,
-              (UnityEngine_ParticleSystem_o *)v13,
+              (SummonEffectAspectSetComponent_o *)v14,
+              (UnityEngine_ParticleSystem_o *)v14,
               v5,
-              v14);
+              v15);
             go_above_cardScaler = this->fields.go_msg_shine00;
-            ++v12;
+            ++v13;
             if ( go_above_cardScaler )
               continue;
           }
@@ -180,18 +182,18 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
   go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v15 = UnityEngine_Component__GetComponent_object_(
+  v16 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)go_above_cardScaler,
           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   SummonEffectAspectSetComponent__SetStartSize(
-    (SummonEffectAspectSetComponent_o *)v15,
-    (UnityEngine_ParticleSystem_o *)v15,
+    (SummonEffectAspectSetComponent_o *)v16,
+    (UnityEngine_ParticleSystem_o *)v16,
     v5,
-    v16);
+    v17);
   go_above_cardScaler = this->fields.go_msg_shine01;
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v17 = 0;
+  v18 = 0;
   while ( 1 )
   {
     go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
@@ -200,7 +202,7 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
     go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
     if ( !go_above_cardScaler )
       goto LABEL_50;
-    if ( v17 >= UnityEngine_Transform__get_childCount(go_above_cardScaler, 0) )
+    if ( v18 >= UnityEngine_Transform__get_childCount(go_above_cardScaler, 0) )
       break;
     go_above_cardScaler = this->fields.go_msg_shine01;
     if ( go_above_cardScaler )
@@ -211,19 +213,19 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
         go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
         if ( go_above_cardScaler )
         {
-          go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, v17, 0);
+          go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, v18, 0);
           if ( go_above_cardScaler )
           {
-            v18 = UnityEngine_Component__GetComponent_object_(
+            v19 = UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)go_above_cardScaler,
                     (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             SummonEffectAspectSetComponent__SetStartSize(
-              (SummonEffectAspectSetComponent_o *)v18,
-              (UnityEngine_ParticleSystem_o *)v18,
+              (SummonEffectAspectSetComponent_o *)v19,
+              (UnityEngine_ParticleSystem_o *)v19,
               v5,
-              v19);
+              v20);
             go_above_cardScaler = this->fields.go_msg_shine01;
-            ++v17;
+            ++v18;
             if ( go_above_cardScaler )
               continue;
           }
@@ -241,18 +243,18 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
   go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v20 = UnityEngine_Component__GetComponent_object_(
+  v21 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)go_above_cardScaler,
           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   SummonEffectAspectSetComponent__SetStartSize(
-    (SummonEffectAspectSetComponent_o *)v20,
-    (UnityEngine_ParticleSystem_o *)v20,
+    (SummonEffectAspectSetComponent_o *)v21,
+    (UnityEngine_ParticleSystem_o *)v21,
     v5,
-    v21);
+    v22);
   go_above_cardScaler = this->fields.go_msg_shine02;
   if ( !go_above_cardScaler )
     goto LABEL_50;
-  v22 = 0;
+  v23 = 0;
   while ( 1 )
   {
     go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
@@ -261,7 +263,7 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
     go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
     if ( !go_above_cardScaler )
       goto LABEL_50;
-    if ( v22 >= UnityEngine_Transform__get_childCount(go_above_cardScaler, 0) )
+    if ( v23 >= UnityEngine_Transform__get_childCount(go_above_cardScaler, 0) )
       break;
     go_above_cardScaler = this->fields.go_msg_shine02;
     if ( go_above_cardScaler )
@@ -272,19 +274,19 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
         go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, 0, 0);
         if ( go_above_cardScaler )
         {
-          go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, v22, 0);
+          go_above_cardScaler = UnityEngine_Transform__GetChild(go_above_cardScaler, v23, 0);
           if ( go_above_cardScaler )
           {
-            v23 = UnityEngine_Component__GetComponent_object_(
+            v24 = UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)go_above_cardScaler,
                     (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             SummonEffectAspectSetComponent__SetStartSize(
-              (SummonEffectAspectSetComponent_o *)v23,
-              (UnityEngine_ParticleSystem_o *)v23,
+              (SummonEffectAspectSetComponent_o *)v24,
+              (UnityEngine_ParticleSystem_o *)v24,
               v5,
-              v24);
+              v25);
             go_above_cardScaler = this->fields.go_msg_shine02;
-            ++v22;
+            ++v23;
             if ( go_above_cardScaler )
               continue;
           }
@@ -297,37 +299,29 @@ void SummonEffectAspectSetComponent__Start(SummonEffectAspectSetComponent_o *thi
   if ( !go_above_cardScaler )
     goto LABEL_50;
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)go_above_cardScaler, 0).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MainModule__get_startSize(
-    &v35,
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    0);
-  v36 = v35;
-  constantMin = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMin(&v36, 0);
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMin(&v36, v5 * constantMin, 0);
-  constantMax = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v36, 0);
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v36, v5 * constantMax, 0);
-  v34 = v36;
-  UnityEngine_ParticleSystem_MainModule__set_startSize(
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    &v34,
-    0);
+  v26.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startSize(&v37, v26, 0);
+  v38 = v37;
+  constantMin = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMin(&v38, 0);
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMin(&v38, v5 * constantMin, 0);
+  constantMax = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v38, 0);
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v38, v5 * constantMax, 0);
+  v29.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v36 = v38;
+  UnityEngine_ParticleSystem_MainModule__set_startSize(v29, &v36, 0);
   go_above_cardScaler = (UnityEngine_Transform_o *)this->fields.ps_appear_lightburst2;
   if ( !go_above_cardScaler )
 LABEL_50:
     sub_2213CDC(go_above_cardScaler, v4);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)go_above_cardScaler, 0).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MainModule__get_startSize(
-    &v33,
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    0);
-  v36 = v33;
-  v27 = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMin(&v36, 0);
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMin(&v36, v5 * v27, 0);
-  v28 = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v36, 0);
-  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v36, v5 * v28, 0);
-  v32 = v36;
-  UnityEngine_ParticleSystem_MainModule__set_startSize(
-    (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-    &v32,
-    0);
+  v30.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  UnityEngine_ParticleSystem_MainModule__get_startSize(&v35, v30, 0);
+  v38 = v35;
+  v31 = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMin(&v38, 0);
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMin(&v38, v5 * v31, 0);
+  v32 = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v38, 0);
+  UnityEngine_ParticleSystem_MinMaxCurve__set_constantMax(&v38, v5 * v32, 0);
+  v33.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v34 = v38;
+  UnityEngine_ParticleSystem_MainModule__set_startSize(v33, &v34, 0);
 }

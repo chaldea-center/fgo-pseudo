@@ -98,41 +98,45 @@ void BattleSkillConfComponent__SetSkillConf(
   int32_t v62; // w5
   bool v63; // w6
   bool v64; // w7
+  UnityEngine_Vector2Int_o v65; // x6
   UIWidget_o *skillConfLabel; // x26
-  struct UILabel_o *v66; // x26
-  struct BattleSkillInfoData_o *v67; // x8
+  struct UILabel_o *v67; // x26
+  struct BattleSkillInfoData_o *v68; // x8
   System_String_o *Detail_49901180; // x0
-  __int64 v69; // x1
-  BattleSkillConfComponent_c *v70; // x8
-  System_String_o *v71; // x27
-  UILabel_o *v72; // x0
-  System_String_o *v73; // x1
+  __int64 v70; // x1
+  BattleSkillConfComponent_c *v71; // x8
+  System_String_o *v72; // x27
+  UILabel_o *v73; // x0
+  System_String_o *v74; // x1
   int32_t DETAIL_FONT_SIZE; // w2
-  int32_t v75; // w3
+  int32_t v76; // w3
   bool activeSelf; // w26
-  __int64 v77; // x1
+  __int64 v78; // x1
   UnityEngine_Object_o *useCondSkillConfLabel; // x27
-  UIWidget_o *v79; // x27
-  struct BattleSkillInfoData_o *v80; // x8
-  struct UILabel_o *v81; // x22
-  System_String_o *v82; // x0
-  __int64 v83; // x1
-  BattleSkillConfComponent_c *v84; // x8
-  System_String_o *v85; // x23
-  UILabel_o *v86; // x0
-  System_String_o *v87; // x1
-  int32_t v88; // w2
-  int32_t v89; // w3
-  struct UILabel_o *v90; // x22
-  char v91; // w22
-  UnityEngine_Object_o *v92; // x23
-  UIButtonColor_o *v93; // x22
+  UIWidget_o *v80; // x27
+  struct BattleSkillInfoData_o *v81; // x8
+  struct UILabel_o *v82; // x22
+  System_String_o *v83; // x0
+  __int64 v84; // x1
+  BattleSkillConfComponent_c *v85; // x8
+  System_String_o *v86; // x23
+  UILabel_o *v87; // x0
+  System_String_o *v88; // x1
+  int32_t v89; // w2
+  int32_t v90; // w3
+  struct UILabel_o *v91; // x22
+  char v92; // w22
+  UnityEngine_Object_o *v93; // x23
+  UIButtonColor_o *v94; // x22
+  float v95; // s0 OVERLAPPED
+  float v96; // s3
+  float v97; // s1
+  float v98; // s2
   UnityEngine_Object_o *skillChargeLabel; // x20
-  UILabel_o *v96; // x20
+  UILabel_o *v100; // x20
   UnityEngine_Object_o *useCondRoot; // x20
-  const MethodInfo *v98; // x1
+  const MethodInfo *v102; // x1
   int32_t skilllv; // [xsp+1Ch] [xbp-64h] BYREF
-  UnityEngine_Color_o v100; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974285 & 1) == 0 )
   {
@@ -407,6 +411,7 @@ void BattleSkillConfComponent__SetSkillConf(
                         data = (__int64)*p_skillStrengthStatus;
                         if ( *p_skillStrengthStatus )
                         {
+                          v65 = (UnityEngine_Vector2Int_o)0x1E00000022LL;
                           ServantSkillStrengthStatus__Set(
                             (ServantSkillStrengthStatus_o *)data,
                             this->fields.skillNameLabel,
@@ -414,7 +419,7 @@ void BattleSkillConfComponent__SetSkillConf(
                             skillInfo->fields.skillRecord,
                             34,
                             0,
-                            (UnityEngine_Vector2Int_o)0x1E00000022LL,
+                            v65,
                             450,
                             0,
                             0);
@@ -428,35 +433,35 @@ void BattleSkillConfComponent__SetSkillConf(
                               skillConfLabel,
                               BattleSkillConfComponent_TypeInfo->static_fields->DETAIL_LABEL_DEFAULT_HEIGHT,
                               0);
-                            v66 = this->fields.skillConfLabel;
-                            v67 = this->fields.skillInfo;
+                            v67 = this->fields.skillConfLabel;
+                            v68 = this->fields.skillInfo;
                             if ( isSetMinSize )
                             {
-                              if ( !v67 || !v44 )
+                              if ( !v68 || !v44 )
                                 goto LABEL_163;
-                              Detail_49901180 = SkillLvEntity__getDetail_49901180(v44, v67->fields.skilllv, 0, 0);
-                              v70 = BattleSkillConfComponent_TypeInfo;
-                              v71 = Detail_49901180;
+                              Detail_49901180 = SkillLvEntity__getDetail_49901180(v44, v68->fields.skilllv, 0, 0);
+                              v71 = BattleSkillConfComponent_TypeInfo;
+                              v72 = Detail_49901180;
                               if ( !*(&BattleSkillConfComponent_TypeInfo->_2.cctor_finished + 1) )
                               {
-                                j_il2cpp_runtime_class_init_0(BattleSkillConfComponent_TypeInfo, v69);
-                                v70 = BattleSkillConfComponent_TypeInfo;
+                                j_il2cpp_runtime_class_init_0(BattleSkillConfComponent_TypeInfo, v70);
+                                v71 = BattleSkillConfComponent_TypeInfo;
                               }
-                              v72 = v66;
-                              v73 = v71;
-                              DETAIL_FONT_SIZE = v70->static_fields->DETAIL_FONT_SIZE;
-                              v75 = DETAIL_FONT_SIZE;
+                              v73 = v67;
+                              v74 = v72;
+                              DETAIL_FONT_SIZE = v71->static_fields->DETAIL_FONT_SIZE;
+                              v76 = DETAIL_FONT_SIZE;
                             }
                             else
                             {
-                              if ( !v67 || !v44 )
+                              if ( !v68 || !v44 )
                                 goto LABEL_163;
-                              v73 = SkillLvEntity__getDetail_49901180(v44, v67->fields.skilllv, 0, 0);
-                              v72 = v66;
+                              v74 = SkillLvEntity__getDetail_49901180(v44, v68->fields.skilllv, 0, 0);
+                              v73 = v67;
                               DETAIL_FONT_SIZE = 22;
-                              v75 = 0;
+                              v76 = 0;
                             }
-                            WrapControlText__textBBCodeAdjust(v72, v73, DETAIL_FONT_SIZE, v75, 0);
+                            WrapControlText__textBBCodeAdjust(v73, v74, DETAIL_FONT_SIZE, v76, 0);
                             data = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
                             if ( !data )
                               goto LABEL_163;
@@ -488,7 +493,7 @@ void BattleSkillConfComponent__SetSkillConf(
                             UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)data, 0, 0);
                             useCondSkillConfLabel = (UnityEngine_Object_o *)this->fields.useCondSkillConfLabel;
                             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-                              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v77);
+                              j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v78);
                             if ( !UnityEngine_Object__op_Inequality(useCondSkillConfLabel, 0, 0) )
                             {
 LABEL_133:
@@ -509,11 +514,11 @@ LABEL_133:
                                 data = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                                   (UnityEngine_GameObject_o *)data,
                                                   (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIButton___);
-                                v92 = (UnityEngine_Object_o *)this->fields.okButton;
-                                v93 = (UIButtonColor_o *)data;
+                                v93 = (UnityEngine_Object_o *)this->fields.okButton;
+                                v94 = (UIButtonColor_o *)data;
                                 if ( v23 )
                                 {
-                                  if ( !v92 )
+                                  if ( !v93 )
                                     goto LABEL_163;
                                   UnityEngine_GameObject__SetActive(this->fields.okButton, 1, 0);
                                   data = ((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._6_get_chargeTurn.methodPtr)(
@@ -525,10 +530,10 @@ LABEL_133:
                                   {
 LABEL_150:
                                     this->fields.isPlaySkill = 0;
-                                    if ( !v93 )
+                                    if ( !v94 )
                                       goto LABEL_163;
-                                    v100.fields.a = 1.0;
-                                    v100.fields.r = 0.5;
+                                    v96 = 1.0;
+                                    v95 = 0.5;
                                     goto LABEL_152;
                                   }
                                 }
@@ -536,7 +541,7 @@ LABEL_150:
                                 {
                                   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
                                     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
-                                  if ( !UnityEngine_Object__op_Inequality(v92, 0, 0) )
+                                  if ( !UnityEngine_Object__op_Inequality(v93, 0, 0) )
                                   {
 LABEL_153:
                                     skillChargeLabel = (UnityEngine_Object_o *)this->fields.skillChargeLabel;
@@ -544,11 +549,11 @@ LABEL_153:
                                       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
                                     if ( !UnityEngine_Object__op_Inequality(skillChargeLabel, 0, 0) )
                                       goto LABEL_158;
-                                    v96 = this->fields.skillChargeLabel;
+                                    v100 = this->fields.skillChargeLabel;
                                     data = (__int64)System_Int32__ToString((int)v44 + 24, 0);
-                                    if ( v96 )
+                                    if ( v100 )
                                     {
-                                      UILabel__set_text(v96, (System_String_o *)data, 0);
+                                      UILabel__set_text(v100, (System_String_o *)data, 0);
                                       goto LABEL_158;
                                     }
                                     goto LABEL_163;
@@ -565,14 +570,14 @@ LABEL_153:
                                     goto LABEL_150;
                                 }
                                 this->fields.isPlaySkill = 1;
-                                if ( !v93 )
+                                if ( !v94 )
                                   goto LABEL_163;
-                                v100.fields.r = 1.0;
-                                v100.fields.a = 1.0;
+                                v95 = 1.0;
+                                v96 = 1.0;
 LABEL_152:
-                                v100.fields.g = v100.fields.r;
-                                v100.fields.b = v100.fields.r;
-                                UIButtonColor__set_defaultColor(v93, v100, 0);
+                                v97 = v95;
+                                v98 = v95;
+                                UIButtonColor__set_defaultColor(v94, *(UnityEngine_Color_o *)&v95, 0);
                                 goto LABEL_153;
                               }
 LABEL_158:
@@ -580,49 +585,49 @@ LABEL_158:
                               if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
                                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v18);
                               if ( UnityEngine_Object__op_Inequality(useCondRoot, 0, 0) )
-                                BattleSkillConfComponent__SetUseCond(this, v98);
+                                BattleSkillConfComponent__SetUseCond(this, v102);
                               return;
                             }
                             data = (__int64)BattleSkillConfComponent_TypeInfo;
-                            v79 = (UIWidget_o *)this->fields.useCondSkillConfLabel;
+                            v80 = (UIWidget_o *)this->fields.useCondSkillConfLabel;
                             if ( !*(&BattleSkillConfComponent_TypeInfo->_2.cctor_finished + 1) )
                               j_il2cpp_runtime_class_init_0(BattleSkillConfComponent_TypeInfo, v18);
-                            if ( v79 )
+                            if ( v80 )
                             {
                               UIWidget__set_height(
-                                v79,
+                                v80,
                                 BattleSkillConfComponent_TypeInfo->static_fields->DETAIL_LABEL_DEFAULT_HEIGHT,
                                 0);
                               if ( isSetMinSize )
                               {
-                                v80 = this->fields.skillInfo;
-                                if ( !v80 )
+                                v81 = this->fields.skillInfo;
+                                if ( !v81 )
                                   goto LABEL_163;
-                                v81 = this->fields.useCondSkillConfLabel;
-                                v82 = SkillLvEntity__getDetail_49901180(v44, v80->fields.skilllv, 0, 0);
-                                v84 = BattleSkillConfComponent_TypeInfo;
-                                v85 = v82;
+                                v82 = this->fields.useCondSkillConfLabel;
+                                v83 = SkillLvEntity__getDetail_49901180(v44, v81->fields.skilllv, 0, 0);
+                                v85 = BattleSkillConfComponent_TypeInfo;
+                                v86 = v83;
                                 if ( !*(&BattleSkillConfComponent_TypeInfo->_2.cctor_finished + 1) )
                                 {
-                                  j_il2cpp_runtime_class_init_0(BattleSkillConfComponent_TypeInfo, v83);
-                                  v84 = BattleSkillConfComponent_TypeInfo;
+                                  j_il2cpp_runtime_class_init_0(BattleSkillConfComponent_TypeInfo, v84);
+                                  v85 = BattleSkillConfComponent_TypeInfo;
                                 }
-                                v86 = v81;
-                                v87 = v85;
-                                v88 = v84->static_fields->DETAIL_FONT_SIZE;
-                                v89 = v88;
+                                v87 = v82;
+                                v88 = v86;
+                                v89 = v85->static_fields->DETAIL_FONT_SIZE;
+                                v90 = v89;
                               }
                               else
                               {
                                 if ( !*p_skillInfo )
                                   goto LABEL_163;
-                                v90 = this->fields.useCondSkillConfLabel;
-                                v87 = SkillLvEntity__getDetail_49901180(v44, (*p_skillInfo)->fields.skilllv, 0, 0);
-                                v86 = v90;
-                                v88 = 22;
-                                v89 = 0;
+                                v91 = this->fields.useCondSkillConfLabel;
+                                v88 = SkillLvEntity__getDetail_49901180(v44, (*p_skillInfo)->fields.skilllv, 0, 0);
+                                v87 = v91;
+                                v89 = 22;
+                                v90 = 0;
                               }
-                              WrapControlText__textBBCodeAdjust(v86, v87, v88, v89, 0);
+                              WrapControlText__textBBCodeAdjust(v87, v88, v89, v90, 0);
                               data = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
                               if ( data )
                               {
@@ -633,7 +638,7 @@ LABEL_158:
                                   data = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)data, 0);
                                   if ( this->fields.useCondRoot )
                                   {
-                                    v91 = data;
+                                    v92 = data;
                                     UnityEngine_GameObject__SetActive(this->fields.useCondRoot, 1, 0);
                                     data = (__int64)this->fields.useCondScrollView;
                                     if ( data )
@@ -648,7 +653,7 @@ LABEL_158:
                                         {
                                           UnityEngine_GameObject__SetActive(
                                             (UnityEngine_GameObject_o *)data,
-                                            v91 & 1,
+                                            v92 & 1,
                                             0);
                                           data = (__int64)UnityEngine_Component__get_gameObject(
                                                             (UnityEngine_Component_o *)this,

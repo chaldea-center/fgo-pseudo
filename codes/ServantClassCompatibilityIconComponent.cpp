@@ -1,28 +1,34 @@
 void ServantClassCompatibilityIconComponent___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
-  System_Array_o *v8; // x19
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct System_Single_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
+  System_Array_o *v10; // x0
+  System_RuntimeFieldHandle_o v11; // x1
+  System_Array_o *v12; // x19
   struct ServantClassCompatibilityIconComponent_StaticFields *static_fields; // x0
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
-  System_Array_o *v16; // x19
-  struct ServantClassCompatibilityIconComponent_StaticFields *v17; // x0
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
+  System_String_o *v14; // x2
+  System_String_o *v15; // x3
+  int32_t v16; // w4
+  int32_t v17; // w5
+  bool v18; // w6
+  bool v19; // w7
+  System_Array_o *v20; // x0
+  System_RuntimeFieldHandle_o v21; // x1
+  System_Array_o *v22; // x19
+  struct ServantClassCompatibilityIconComponent_StaticFields *v23; // x0
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
 
   if ( (byte_596FCD5 & 1) == 0 )
   {
@@ -34,44 +40,41 @@ void ServantClassCompatibilityIconComponent___cctor(const MethodInfo *method)
     byte_596FCD5 = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(float___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003,
-    0);
-  ServantClassCompatibilityIconComponent_TypeInfo->static_fields->POSITION_X_UP = (struct System_Single_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__657AC32C0816EB8C917333556CB7B41311E802F8A338DA957586A1EFBD925003;
+  v3 = (struct System_Single_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  ServantClassCompatibilityIconComponent_TypeInfo->static_fields->POSITION_X_UP = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)ServantClassCompatibilityIconComponent_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
-  v8 = (System_Array_o *)sub_2213B20(float___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v7,
     v8,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436,
-    0);
+    v9);
+  v10 = (System_Array_o *)sub_2213B20(float___TypeInfo, 5);
+  v11.fields.value = Field__PrivateImplementationDetails__8FD8636127BEF610717EDA6C87275DE8FABC7EAFB50E06E32438371EA366A436;
+  v12 = v10;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v10, v11, 0);
   static_fields = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  static_fields->POSITION_X_DOWN = (struct System_Single_array *)v8;
+  static_fields->POSITION_X_DOWN = (struct System_Single_array *)v12;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->POSITION_X_DOWN,
-    (int32_t)v8,
-    v10,
-    v11,
-    v12,
-    v13,
+    (int32_t)v12,
     v14,
-    v15);
-  v16 = (System_Array_o *)sub_2213B20(float___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
+    v15,
     v16,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528,
-    0);
-  v17 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
-  v17->POSITION_X_CENTER = (struct System_Single_array *)v16;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->POSITION_X_CENTER, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+    v17,
+    v18,
+    v19);
+  v20 = (System_Array_o *)sub_2213B20(float___TypeInfo, 5);
+  v21.fields.value = Field__PrivateImplementationDetails__C08A644CA14B47C51D4206B9CD5FD8F3A046D90EF77DC2C18058397DC1F57528;
+  v22 = v20;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v20, v21, 0);
+  v23 = ServantClassCompatibilityIconComponent_TypeInfo->static_fields;
+  v23->POSITION_X_CENTER = (struct System_Single_array *)v22;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v23->POSITION_X_CENTER, (int32_t)v22, v24, v25, v26, v27, v28, v29);
 }
 
 

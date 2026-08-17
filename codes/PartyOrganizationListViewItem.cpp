@@ -6334,16 +6334,18 @@ void PartyOrganizationListViewItem__MoveBondEquip(PartyOrganizationListViewItem_
   const MethodInfo *v3; // x3
   struct System_Int64_array *equipIdList; // x8
   int32_t max_length; // w1
-  __int64 v7; // x22
-  BalanceConfig_c *v8; // x0
-  struct System_Int64_array *v9; // x8
-  int64_t v10; // x9
+  System_Nullable_int__o v7; // x0
+  __int64 v8; // x22
+  BalanceConfig_c *v9; // x0
+  struct System_Int64_array *v10; // x8
+  int64_t v11; // x9
   struct System_Int32_array *equipSvtIdList; // x8
-  int32_t v12; // w1
-  __int64 v13; // x21
-  struct System_Int32_array *v14; // x8
-  int32_t v15; // w9
-  __int64 v16; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v13; // w1
+  System_Nullable_int__o v14; // x0
+  __int64 v15; // x21
+  struct System_Int32_array *v16; // x8
+  int32_t v17; // w9
+  __int64 v18; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596C028 & 1) == 0 )
   {
@@ -6357,72 +6359,68 @@ void PartyOrganizationListViewItem__MoveBondEquip(PartyOrganizationListViewItem_
   if ( equipIdList )
   {
     max_length = equipIdList->max_length;
-    v16 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v16,
-      max_length,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    v7 = v16;
+    v7 = (System_Nullable_int__o)&v18;
+    v18 = 0;
+    System_Nullable_int____ctor(v7, max_length, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    v8 = v18;
   }
   else
   {
-    v7 = 0;
+    v8 = 0;
   }
-  v8 = BalanceConfig_TypeInfo;
+  v9 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v2);
-    v8 = BalanceConfig_TypeInfo;
+    v9 = BalanceConfig_TypeInfo;
   }
-  if ( (_BYTE)v7 && v8->static_fields->GrandSvtEquipMax == HIDWORD(v7) )
+  if ( (_BYTE)v8 && v9->static_fields->GrandSvtEquipMax == HIDWORD(v8) )
   {
-    v9 = this->fields.equipIdList;
-    if ( !v9 )
+    v10 = this->fields.equipIdList;
+    if ( !v10 )
       goto LABEL_25;
-    if ( LODWORD(v9->max_length) < 2 )
+    if ( LODWORD(v10->max_length) < 2 )
       goto LABEL_24;
-    v10 = v9->m_Items[0];
-    v9->m_Items[0] = 0;
-    v9->m_Items[1] = v10;
+    v11 = v10->m_Items[0];
+    v10->m_Items[0] = 0;
+    v10->m_Items[1] = v11;
   }
   equipSvtIdList = this->fields.equipSvtIdList;
   if ( equipSvtIdList )
   {
-    v12 = equipSvtIdList->max_length;
-    v16 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v16,
-      v12,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    v13 = v16;
-    v8 = BalanceConfig_TypeInfo;
+    v13 = equipSvtIdList->max_length;
+    v14 = (System_Nullable_int__o)&v18;
+    v18 = 0;
+    System_Nullable_int____ctor(v14, v13, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    v15 = v18;
+    v9 = BalanceConfig_TypeInfo;
   }
   else
   {
-    v13 = 0;
+    v15 = 0;
   }
-  if ( !*(&v8->_2.cctor_finished + 1) )
+  if ( !*(&v9->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v8, method, v2);
-    v8 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v9, method, v2);
+    v9 = BalanceConfig_TypeInfo;
   }
-  if ( (_BYTE)v13 && v8->static_fields->GrandSvtEquipMax == HIDWORD(v13) )
+  if ( (_BYTE)v15 && v9->static_fields->GrandSvtEquipMax == HIDWORD(v15) )
   {
-    v14 = this->fields.equipSvtIdList;
-    if ( v14 )
+    v16 = this->fields.equipSvtIdList;
+    if ( v16 )
     {
-      if ( LODWORD(v14->max_length) >= 2 )
+      if ( LODWORD(v16->max_length) >= 2 )
       {
-        v15 = v14->m_Items[0];
-        v14->m_Items[0] = 0;
-        v14->m_Items[1] = v15;
+        v17 = v16->m_Items[0];
+        v16->m_Items[0] = 0;
+        v16->m_Items[1] = v17;
         goto LABEL_23;
       }
 LABEL_24:
-      sub_2213CE4(v8);
+      sub_2213CE4(v9);
     }
 LABEL_25:
-    sub_2213CDC(v8, method);
+    sub_2213CDC(v9, method);
   }
 LABEL_23:
   PartyOrganizationListViewItem__SetEquipStatus(this, this->fields.equipIdList, 0, v3);
@@ -6436,17 +6434,18 @@ bool PartyOrganizationListViewItem__RemoveEquipDuplication(
   __int64 v2; // x2
   const MethodInfo *v3; // x3
   struct System_Int64_array *equipIdList; // x8
+  System_Nullable_int__o v6; // x0
   int32_t max_length; // w1
-  __int64 v7; // x21
-  BalanceConfig_c *v8; // x8
+  __int64 v8; // x21
+  BalanceConfig_c *v9; // x8
   bool result; // w0
-  struct System_Int64_array *v10; // x1
-  int v11; // w10
-  int64_t v12; // x8
-  __int64 v13; // x9
-  int v14; // w10
-  Il2CppClass **v15; // x11
-  __int64 v16; // [xsp+8h] [xbp-28h] BYREF
+  struct System_Int64_array *v11; // x1
+  int v12; // w10
+  int64_t v13; // x8
+  __int64 v14; // x9
+  int v15; // w10
+  Il2CppClass **v16; // x11
+  __int64 v17; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596C029 & 1) == 0 )
   {
@@ -6461,51 +6460,49 @@ bool PartyOrganizationListViewItem__RemoveEquipDuplication(
   equipIdList = this->fields.equipIdList;
   if ( equipIdList )
   {
+    v6 = (System_Nullable_int__o)&v17;
     max_length = equipIdList->max_length;
-    v16 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v16,
-      max_length,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    v7 = v16;
+    v17 = 0;
+    System_Nullable_int____ctor(v6, max_length, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    v8 = v17;
   }
   else
   {
-    v7 = 0;
+    v8 = 0;
   }
-  v8 = BalanceConfig_TypeInfo;
+  v9 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method, v2);
-    v8 = BalanceConfig_TypeInfo;
+    v9 = BalanceConfig_TypeInfo;
   }
   result = 0;
-  if ( (_BYTE)v7 && v8->static_fields->GrandSvtEquipMax == HIDWORD(v7) )
+  if ( (_BYTE)v8 && v9->static_fields->GrandSvtEquipMax == HIDWORD(v8) )
   {
-    v10 = this->fields.equipIdList;
-    if ( !v10 )
-      sub_2213CDC(0, 0);
-    v11 = v10->max_length;
+    v11 = this->fields.equipIdList;
     if ( !v11 )
+      sub_2213CDC(0, 0);
+    v12 = v11->max_length;
+    if ( !v12 )
       sub_2213CE4(0);
-    v12 = v10->m_Items[0];
+    v13 = v11->m_Items[0];
     result = 0;
-    if ( v12 )
+    if ( v13 )
     {
-      if ( v11 >= 2 )
+      if ( v12 >= 2 )
       {
-        v13 = 0;
-        v14 = v11 - 1;
+        v14 = 0;
+        v15 = v12 - 1;
         while ( 1 )
         {
-          v15 = &v10->obj.klass + v13;
-          if ( v15[5] == (Il2CppClass *)v12 )
+          v16 = &v11->obj.klass + v14;
+          if ( v16[5] == (Il2CppClass *)v13 )
             break;
-          if ( v14 == (_DWORD)++v13 )
+          if ( v15 == (_DWORD)++v14 )
             return 0;
         }
-        v15[5] = 0;
-        PartyOrganizationListViewItem__SetEquipStatus(this, v10, 0, v3);
+        v16[5] = 0;
+        PartyOrganizationListViewItem__SetEquipStatus(this, v11, 0, v3);
         return 1;
       }
     }
@@ -7546,7 +7543,7 @@ void PartyOrganizationListViewItem__SetEquipStatus(
   System_Collections_Generic_List_EventMargeItemUpValInfo__o *v404; // [xsp+78h] [xbp-A8h] BYREF
   UserServantCollectionEntity_o *v405; // [xsp+80h] [xbp-A0h] BYREF
   Il2CppObject *entity; // [xsp+88h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v407; // [xsp+90h] [xbp-90h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v407; // [xsp+90h] [xbp-90h] BYREF
   bool v408; // [xsp+B4h] [xbp-6Ch] BYREF
   System_Collections_Generic_List_EventMargeItemUpValInfo__o *v409; // [xsp+B8h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v410; // 0:x0.16
@@ -7708,16 +7705,16 @@ LABEL_22:
           (System_Collections_Generic_List_Enumerator_T__o *)&v397,
           (System_Collections_Generic_List_int__o *)EquipSvtIds,
           (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-        v407 = (System_Collections_Generic_List_Enumerator_int__o)v397;
+        v407 = v397;
         v397.fields._list = 0;
         *(_QWORD *)&v397.fields._index = &v407;
         while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-                  &v407,
+                  (System_Collections_Generic_List_Enumerator_int__o *)&v407,
                   (const MethodInfo_40F5CBC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
         {
-          current = v407.fields._current;
+          current = (int32_t)v407.fields._current;
           equipServantEntityList = (System_Collections_Generic_List_object__o *)this->fields.equipServantEntityList;
-          if ( v407.fields._current )
+          if ( LODWORD(v407.fields._current) )
           {
             Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
@@ -7802,7 +7799,7 @@ LABEL_22:
           }
         }
         System_Collections_Generic_List_Enumerator_int___Dispose(
-          &v407,
+          (System_Collections_Generic_List_Enumerator_int__o *)&v407,
           (const MethodInfo_40F5CB8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
       }
     }
@@ -9782,9 +9779,11 @@ bool PartyOrganizationListViewItem__TryGetNarrowFigureAssetData(
   int32_t ServantId; // w8
   UserServantEntity_o *userServantEntity; // x0
   int32_t CardImageLimitCountStageSealAfter; // w0
+  int32_t v11; // w8
+  bool result; // w0
   ServantLeaderInfo_o *ServantLeader; // x0
-  __int64 v13; // x1
-  ServantLeaderInfo_o *v14; // x22
+  __int64 v14; // x1
+  ServantLeaderInfo_o *v15; // x22
   struct FollowerInfo_o *followerInfo; // x8
   int32_t imageSvtId; // w8
 
@@ -9801,24 +9800,27 @@ bool PartyOrganizationListViewItem__TryGetNarrowFigureAssetData(
                                           this->fields.questRestrictionInfo,
                                           0);
 LABEL_3:
-    *limitCountStage = CardImageLimitCountStageSealAfter;
-    return 1;
+    v11 = CardImageLimitCountStageSealAfter;
+    result = 1;
+    *limitCountStage = v11;
+    return result;
   }
   if ( this->fields.isFollower && this->fields.followerInfo )
   {
     ServantLeader = PartyOrganizationListViewItem__get_ServantLeader(this, v7);
     if ( ServantLeader )
     {
-      v14 = ServantLeader;
+      v15 = ServantLeader;
       if ( ServantLeaderInfo__IsHideSupport(ServantLeader, 0) )
       {
+        result = 1;
         *narrowFigureSvtId = 100001;
-        return 1;
+        return result;
       }
-      ServantLeader = (ServantLeaderInfo_o *)ServantLeaderInfo__IsNpc(v14, 0);
+      ServantLeader = (ServantLeaderInfo_o *)ServantLeaderInfo__IsNpc(v15, 0);
       if ( ((unsigned __int8)ServantLeader & 1) == 0 )
       {
-        CardImageLimitCountStageSealAfter = ServantLeaderInfo__GetCardImageLimitCountStageSealAfter(v14, 0);
+        CardImageLimitCountStageSealAfter = ServantLeaderInfo__GetCardImageLimitCountStageSealAfter(v15, 0);
         goto LABEL_3;
       }
       followerInfo = this->fields.followerInfo;
@@ -9827,11 +9829,11 @@ LABEL_3:
         imageSvtId = followerInfo->fields.imageSvtId;
         if ( imageSvtId >= 1 )
           *narrowFigureSvtId = imageSvtId;
-        CardImageLimitCountStageSealAfter = ServantLeaderInfo__GetCardImageLimitCountStage(v14, -1, 0);
+        CardImageLimitCountStageSealAfter = ServantLeaderInfo__GetCardImageLimitCountStage(v15, -1, 0);
         goto LABEL_3;
       }
     }
-    sub_2213CDC(ServantLeader, v13);
+    sub_2213CDC(ServantLeader, v14);
   }
   return 0;
 }
@@ -10742,6 +10744,7 @@ System_String_o *PartyOrganizationListViewItem__get_EquipName(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o PartyOrganizationListViewItem__get_EquipSvtId(
         PartyOrganizationListViewItem_o *this,
         const MethodInfo *method)
@@ -10753,6 +10756,8 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o PartyOrganizationListViewItem__g
   __int64 v7; // x1
   System_Collections_Generic_List_object__o *equipServantEntityList; // x0
   int32_t DisplayEquipIndex_k__BackingField; // w1
+  struct System_Object_array *v10; // x0
+  __int64 v11; // x1
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o result; // 0:x0.16
 
   if ( (byte_596C03B & 1) == 0 )
@@ -10784,8 +10789,10 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o PartyOrganizationListViewItem__g
     items = equipServantEntityList->fields._items;
     v6 = *(_QWORD *)&equipServantEntityList->fields._size;
   }
-  *(_QWORD *)&result.fields.currentCryptoKey = items;
-  *(_QWORD *)&result.fields.fakeValue = v6;
+  v10 = items;
+  v11 = v6;
+  *(_QWORD *)&result.fields.fakeValue = v11;
+  *(_QWORD *)&result.fields.currentCryptoKey = v10;
   return result;
 }
 
@@ -12456,7 +12463,7 @@ int64_t PartyOrganizationListViewItem___c___CheckDuplicationGrandServantEquipmen
 LABEL_8:
     v7 = sub_224BC3C(group, System_Linq_IGrouping_long__long__TypeInfo, 0);
   }
-  return (*(int64_t (__fastcall **)(System_Linq_IGrouping_long__long__o *, _QWORD))v7)(group, *(_QWORD *)(v7 + 8));
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_long__long__o *, _QWORD))v7)(group, *(_QWORD *)(v7 + 8));
 }
 
 

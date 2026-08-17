@@ -324,7 +324,7 @@ void BattleResultEventItemGroupComponent__SwitchViewMode(
   const MethodInfo *v82; // [xsp+8h] [xbp-78h]
   UnityEngine_Vector3_o v83; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v84; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v85; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v86; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v88; // 0:s0.4,4:s1.4,8:s2.4
@@ -399,17 +399,17 @@ void BattleResultEventItemGroupComponent__SwitchViewMode(
         getLabelRoot = v10->fields.getLabelRoot;
         if ( !getLabelRoot )
           goto LABEL_13;
-        v86.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0).fields.y;
-        v86.fields.z = 0.0;
-        v86.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(getLabelRoot, v86, 0);
+        localPosition = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0);
+        localPosition.fields.z = 0.0;
+        localPosition.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(getLabelRoot, localPosition, 0);
         totalLabelRoot = v10->fields.totalLabelRoot;
         if ( !totalLabelRoot )
           goto LABEL_13;
-        v87.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0).fields.y;
-        v87.fields.z = 0.0;
-        v87.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(totalLabelRoot, v87, 0);
+        v86 = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0);
+        v86.fields.z = 0.0;
+        v86.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(totalLabelRoot, v86, 0);
         this = (BattleResultEventItemGroupComponent_o *)sub_2213B20(long___TypeInfo, 2);
         v31 = viewGroupIds->max_length;
         v32 = this;
@@ -561,17 +561,17 @@ LABEL_150:
         v48 = v10->fields.getLabelRoot;
         if ( !v48 )
           goto LABEL_13;
-        v88.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0).fields.y;
-        v88.fields.z = 0.0;
-        v88.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(v48, v88, 0);
+        v87 = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0);
+        v87.fields.z = 0.0;
+        v87.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(v48, v87, 0);
         v49 = v10->fields.totalLabelRoot;
         if ( !v49 )
           goto LABEL_13;
-        v89.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0).fields.y;
-        v89.fields.z = 0.0;
-        v89.fields.x = -535.0;
-        UnityEngine_Transform__set_localPosition(v49, v89, 0);
+        v88 = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0);
+        v88.fields.z = 0.0;
+        v88.fields.x = -535.0;
+        UnityEngine_Transform__set_localPosition(v49, v88, 0);
         this = (BattleResultEventItemGroupComponent_o *)sub_2213B20(long___TypeInfo, 3);
         v50 = viewGroupIds->max_length;
         v51 = this;
@@ -685,10 +685,10 @@ LABEL_99:
                                                                                 0);
                               if ( this )
                               {
-                                v83.fields.y = y;
-                                v83.fields.z = z;
-                                v83.fields.x = x + (float)(int)(groupIconSpace * (v68 >> 1));
-                                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v83, 0);
+                                v89.fields.y = y;
+                                v89.fields.z = z;
+                                v89.fields.x = x + (float)(int)(groupIconSpace * (v68 >> 1));
+                                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v89, 0);
                                 v73 = v10->fields.groupLabels;
                                 if ( v73 )
                                 {
@@ -805,17 +805,17 @@ LABEL_98:
   v21 = v10->fields.getLabelRoot;
   if ( !v21 )
     goto LABEL_13;
-  v84.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0).fields.y;
-  v84.fields.z = 0.0;
-  v84.fields.x = -355.0;
-  UnityEngine_Transform__set_localPosition(v21, v84, 0);
+  v83 = UnityEngine_Transform__get_localPosition(v10->fields.getLabelRoot, 0);
+  v83.fields.z = 0.0;
+  v83.fields.x = -355.0;
+  UnityEngine_Transform__set_localPosition(v21, v83, 0);
   v22 = v10->fields.totalLabelRoot;
   if ( !v22 )
     goto LABEL_13;
-  v85.fields.y = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0).fields.y;
-  v85.fields.z = 0.0;
-  v85.fields.x = -355.0;
-  UnityEngine_Transform__set_localPosition(v22, v85, 0);
+  v84 = UnityEngine_Transform__get_localPosition(v10->fields.totalLabelRoot, 0);
+  v84.fields.z = 0.0;
+  v84.fields.x = -355.0;
+  UnityEngine_Transform__set_localPosition(v22, v84, 0);
   if ( !oldUsrPoint )
     goto LABEL_13;
   v23 = oldUsrPoint->max_length;

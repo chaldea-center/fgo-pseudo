@@ -207,7 +207,8 @@ System_Int64_array *UserServantGrandEntity__GetEquipUserServantIdList(
     (System_Collections_Generic_List_Enumerator_T__o *)&v50,
     v4,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_EquipTargetInfo__GetEnumerator__);
-  v53 = *(System_Collections_Generic_List_Enumerator_object__o *)&v50.fields.currentCryptoKey;
+  v53.fields._current = (Il2CppObject *)v50.fields.fakeValue;
+  *(_OWORD *)&v53.fields._list = *(_OWORD *)&v50.fields.currentCryptoKey;
   v51 = 0;
   v52 = &v53;
   while ( 1 )

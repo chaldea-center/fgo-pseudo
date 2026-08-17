@@ -23,11 +23,17 @@ UnityEngine_Vector3_o RewardMiniPopup_DisplayArgs__get_OffsetToAdd(
         RewardMiniPopup_DisplayArgs_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields._OffsetToAdd_k__BackingField.fields.x;
-  result.fields.y = this->fields._OffsetToAdd_k__BackingField.fields.y;
-  result.fields.z = this->fields._OffsetToAdd_k__BackingField.fields.z;
+  x = this->fields._OffsetToAdd_k__BackingField.fields.x;
+  y = this->fields._OffsetToAdd_k__BackingField.fields.y;
+  z = this->fields._OffsetToAdd_k__BackingField.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -925,6 +931,7 @@ RewardMiniPopup_DisplayArgs_o *RewardMiniPopup_RewardMiniPopupPlayerSimultaneous
   bool v29; // w6
   bool v30; // w7
   int32_t popupDisplayStartedCount; // s0
+  RewardMiniPopup_DisplayArgs_o *result; // x0
   RewardMiniPopup_RewardMiniPopupPlayerSimultaneous_o *v33; // x0
   const MethodInfo *v34; // x1
 
@@ -969,10 +976,11 @@ RewardMiniPopup_DisplayArgs_o *RewardMiniPopup_RewardMiniPopupPlayerSimultaneous
     popupDisplayStartedCount = this->fields.popupDisplayStartedCount;
     *((_DWORD *)v20 + 4) = 0;
     *((_DWORD *)v20 + 6) = 0;
+    result = (RewardMiniPopup_DisplayArgs_o *)v20;
     *((_BYTE *)v20 + 40) = 0;
     *((float *)v20 + 5) = (float)popupDisplayStartedCount * -50.0;
-    return (RewardMiniPopup_DisplayArgs_o *)v20;
   }
+  return result;
 }
 
 

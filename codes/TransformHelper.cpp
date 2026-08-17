@@ -366,8 +366,7 @@ void TransformHelper__FlipLocalScaleX(UnityEngine_Transform_o *self, const Metho
 {
   _BOOL8 v3; // x0
   __int64 v4; // x1
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59722EB & 1) == 0 )
   {
@@ -382,10 +381,8 @@ void TransformHelper__FlipLocalScaleX(UnityEngine_Transform_o *self, const Metho
     if ( !self )
       sub_2213CDC(v3, v4);
     localScale = UnityEngine_Transform__get_localScale(self, 0);
-    v6.fields.y = localScale.fields.y;
-    v6.fields.z = localScale.fields.z;
-    v6.fields.x = -localScale.fields.x;
-    UnityEngine_Transform__set_localScale(self, v6, 0);
+    localScale.fields.x = -localScale.fields.x;
+    UnityEngine_Transform__set_localScale(self, localScale, 0);
   }
 }
 
@@ -589,10 +586,23 @@ bool TransformHelper__SafeSetParentNonNull(
   __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
-  UnityEngine_GameObject_o *v9; // x20
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr20_12.12
-  UnityEngine_Quaternion_o localRotation; // 0:kr10_16.16
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v12; // s11
+  float v13; // s12
+  float v14; // s13
+  float w; // s14
+  float v16; // s15
+  UnityEngine_GameObject_o *v17; // x20
+  float v18; // [xsp+48h] [xbp-28h]
+  float v19; // [xsp+4Ch] [xbp-24h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59722DC & 1) == 0 )
   {
@@ -611,21 +621,41 @@ bool TransformHelper__SafeSetParentNonNull(
   if ( !self )
     goto LABEL_15;
   localPosition = UnityEngine_Transform__get_localPosition(self, 0);
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   localRotation = UnityEngine_Transform__get_localRotation(self, 0);
+  v12 = localRotation.fields.x;
+  v13 = localRotation.fields.y;
+  v14 = localRotation.fields.z;
+  w = localRotation.fields.w;
   localScale = UnityEngine_Transform__get_localScale(self, 0);
+  v16 = localScale.fields.x;
+  v18 = localScale.fields.z;
+  v19 = localScale.fields.y;
   UnityEngine_Transform__set_parent(self, parent, 0);
-  UnityEngine_Transform__set_localPosition(self, localPosition, 0);
-  UnityEngine_Transform__set_localRotation(self, localRotation, 0);
-  UnityEngine_Transform__set_localScale(self, localScale, 0);
+  v22.fields.x = x;
+  v22.fields.y = y;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localPosition(self, v22, 0);
+  v25.fields.x = v12;
+  v25.fields.y = v13;
+  v25.fields.z = v14;
+  v25.fields.w = w;
+  UnityEngine_Transform__set_localRotation(self, v25, 0);
+  v23.fields.x = v16;
+  v23.fields.z = v18;
+  v23.fields.y = v19;
+  UnityEngine_Transform__set_localScale(self, v23, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)self, 0);
   if ( !parent
-    || (v9 = gameObject, (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)parent, 0)) == 0)
-    || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0), !v9) )
+    || (v17 = gameObject, (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)parent, 0)) == 0)
+    || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0), !v17) )
   {
 LABEL_15:
     sub_2213CDC(gameObject, v7);
   }
-  UnityEngine_GameObject__set_layer(v9, (int32_t)gameObject, 0);
+  UnityEngine_GameObject__set_layer(v17, (int32_t)gameObject, 0);
   return 1;
 }
 
@@ -662,6 +692,12 @@ UnityEngine_Transform_o *TransformHelper__SelectNodeWithRule(
   __int64 v27; // x1
   System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-70h] BYREF
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = tNode;
   if ( (byte_59722E3 & 1) == 0 )
@@ -697,20 +733,24 @@ UnityEngine_Transform_o *TransformHelper__SelectNodeWithRule(
         current = v30.fields._current;
         if ( !v30.fields._current )
           sub_2213CDC(v23, v24);
-        if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(
-                                    (UnityEngine_Transform_o *)v30.fields._current,
-                                    0).fields.z)) > z )
+        lossyScale = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v30.fields._current, 0);
+        if ( lossyScale.fields.z > z )
         {
-          z = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)current, 0).fields.z;
+          v36 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)current, 0);
+          z = v36.fields.z;
           v8 = (UnityEngine_Transform_o *)current;
         }
-        else if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)current, 0).fields.z)) == z )
+        else
         {
-          name = UnityEngine_Object__get_name((UnityEngine_Object_o *)current, 0);
-          if ( !name )
-            sub_2213CDC(0, v27);
-          if ( !System_String__Contains(name, (System_String_o *)StringLiteral_113/*" "*/, 0) )
-            v8 = (UnityEngine_Transform_o *)current;
+          v35 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)current, 0);
+          if ( v35.fields.z == z )
+          {
+            name = UnityEngine_Object__get_name((UnityEngine_Object_o *)current, 0);
+            if ( !name )
+              sub_2213CDC(0, v27);
+            if ( !System_String__Contains(name, (System_String_o *)StringLiteral_113/*" "*/, 0) )
+              v8 = (UnityEngine_Transform_o *)current;
+          }
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
@@ -745,14 +785,17 @@ LABEL_6:
     v7 = v30.fields._current;
     if ( !v30.fields._current )
       sub_2213CDC(v9, v10);
-    if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v30.fields._current, 0).fields.z)) > v5 )
+    v31 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v30.fields._current, 0);
+    if ( v31.fields.z > v5 )
     {
-      v5 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v7, 0).fields.z;
+      v33 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v7, 0);
+      v5 = v33.fields.z;
       v19 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v7, 0);
       v6 = TransformHelper__CalcPriority(v19, v20);
       goto LABEL_6;
     }
-    if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v7, 0).fields.z)) == v5 )
+    v32 = UnityEngine_Transform__get_lossyScale((UnityEngine_Transform_o *)v7, 0);
+    if ( v32.fields.z == v5 )
     {
       v11 = UnityEngine_Object__get_name((UnityEngine_Object_o *)v7, 0);
       if ( !v11 )
@@ -824,8 +867,7 @@ void TransformHelper__SetLocalPositionX(UnityEngine_Transform_o *self, float val
 {
   _BOOL8 v5; // x0
   __int64 v6; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59722E4 & 1) == 0 )
   {
@@ -840,10 +882,8 @@ void TransformHelper__SetLocalPositionX(UnityEngine_Transform_o *self, float val
     if ( !self )
       sub_2213CDC(v5, v6);
     localPosition = UnityEngine_Transform__get_localPosition(self, 0);
-    v8.fields.y = localPosition.fields.y;
-    v8.fields.z = localPosition.fields.z;
-    v8.fields.x = value;
-    UnityEngine_Transform__set_localPosition(self, v8, 0);
+    localPosition.fields.x = value;
+    UnityEngine_Transform__set_localPosition(self, localPosition, 0);
   }
 }
 
@@ -852,8 +892,7 @@ void TransformHelper__SetLocalPositionY(UnityEngine_Transform_o *self, float val
 {
   _BOOL8 v5; // x0
   __int64 v6; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59722E5 & 1) == 0 )
   {
@@ -868,10 +907,8 @@ void TransformHelper__SetLocalPositionY(UnityEngine_Transform_o *self, float val
     if ( !self )
       sub_2213CDC(v5, v6);
     localPosition = UnityEngine_Transform__get_localPosition(self, 0);
-    v8.fields.x = localPosition.fields.x;
-    v8.fields.z = localPosition.fields.z;
-    v8.fields.y = value;
-    UnityEngine_Transform__set_localPosition(self, v8, 0);
+    localPosition.fields.y = value;
+    UnityEngine_Transform__set_localPosition(self, localPosition, 0);
   }
 }
 
@@ -880,7 +917,7 @@ void TransformHelper__SetLocalPositionZ(UnityEngine_Transform_o *self, float val
 {
   _BOOL8 v5; // x0
   __int64 v6; // x1
-  UnityEngine_Vector3_o v7; // 0:kr14_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59722E6 & 1) == 0 )
   {
@@ -894,9 +931,9 @@ void TransformHelper__SetLocalPositionZ(UnityEngine_Transform_o *self, float val
   {
     if ( !self )
       sub_2213CDC(v5, v6);
-    *(_QWORD *)&v7.fields.x = (unsigned __int64)UnityEngine_Transform__get_localPosition(self, 0);
-    v7.fields.z = value;
-    UnityEngine_Transform__set_localPosition(self, v7, 0);
+    localPosition = UnityEngine_Transform__get_localPosition(self, 0);
+    localPosition.fields.z = value;
+    UnityEngine_Transform__set_localPosition(self, localPosition, 0);
   }
 }
 
@@ -936,6 +973,7 @@ void TransformHelper__SetLocalScale(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void TransformHelper__SetLossyScale(
         UnityEngine_Transform_o *self,
         UnityEngine_Vector3_o value,
@@ -948,12 +986,10 @@ void TransformHelper__SetLossyScale(
   __int64 v8; // x1
   __int64 v9; // x1
   UnityEngine_Object_o *parent; // x20
-  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v14; // s0
-  float v15; // s1
-  float v16; // s2
-  UnityEngine_Vector3_o lossyScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  float v11; // s2 OVERLAPPED
+  float v12; // s1
+  float v13; // s0
+  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
 
   z = value.fields.z;
   y = value.fields.y;
@@ -980,33 +1016,27 @@ void TransformHelper__SetLossyScale(
           sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE5 = 1;
         }
-        static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-        v14 = static_fields->oneVector.fields.x;
-        v15 = static_fields->oneVector.fields.y;
-        v16 = static_fields->oneVector.fields.z;
+        oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
         goto LABEL_15;
       }
       v7 = UnityEngine_Transform__get_parent(self, 0);
       if ( v7 )
       {
-        lossyScale = UnityEngine_Transform__get_lossyScale(v7, 0);
-        v14 = lossyScale.fields.x;
-        v15 = lossyScale.fields.y;
-        v16 = lossyScale.fields.z;
+        oneVector = UnityEngine_Transform__get_lossyScale(v7, 0);
 LABEL_15:
-        if ( v16 == 0.0 )
-          v18.fields.z = 0.0;
+        if ( oneVector.fields.z == 0.0 )
+          v11 = 0.0;
         else
-          v18.fields.z = z / v16;
-        if ( v15 == 0.0 )
-          v18.fields.y = 0.0;
+          v11 = z / oneVector.fields.z;
+        if ( oneVector.fields.y == 0.0 )
+          v12 = 0.0;
         else
-          v18.fields.y = y / v15;
-        if ( v14 == 0.0 )
-          v18.fields.x = 0.0;
+          v12 = y / oneVector.fields.y;
+        if ( oneVector.fields.x == 0.0 )
+          v13 = 0.0;
         else
-          v18.fields.x = x / v14;
-        UnityEngine_Transform__set_localScale(self, v18, 0);
+          v13 = x / oneVector.fields.x;
+        UnityEngine_Transform__set_localScale(self, *(UnityEngine_Vector3_o *)(&v11 - 2), 0);
         return;
       }
     }
@@ -1666,24 +1696,40 @@ LABEL_34:
 
 UnityEngine_Color_o TransformHelper__get_DefaultCondTitleLabelColor(const MethodInfo *method)
 {
+  float v1; // s0
+  float v2; // s1
+  float v3; // s2
+  float v4; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = 1.0;
-  result.fields.g = 1.0;
-  result.fields.b = 1.0;
-  result.fields.a = 1.0;
+  v1 = 1.0;
+  v2 = 1.0;
+  v3 = 1.0;
+  v4 = 1.0;
+  result.fields.a = v4;
+  result.fields.b = v3;
+  result.fields.g = v2;
+  result.fields.r = v1;
   return result;
 }
 
 
 UnityEngine_Color_o TransformHelper__get_DefaultCondTitleSpriteColor(const MethodInfo *method)
 {
+  float v1; // s0
+  float v2; // s3
+  float v3; // s1
+  float v4; // s2
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = 0.0;
-  result.fields.a = 1.0;
-  result.fields.g = 0.33333;
-  result.fields.b = 0.8;
+  v1 = 0.0;
+  v2 = 1.0;
+  v3 = 0.33333;
+  v4 = 0.8;
+  result.fields.a = v2;
+  result.fields.b = v4;
+  result.fields.g = v3;
+  result.fields.r = v1;
   return result;
 }
 

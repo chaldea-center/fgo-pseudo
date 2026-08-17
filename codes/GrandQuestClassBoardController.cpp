@@ -191,37 +191,39 @@ void GrandQuestClassBoardController__ExecCircleEffect(
   bool v21; // w7
   int v22; // w23
   bool v23; // w8
-  float v24; // s0
-  struct GrandQuestRootComponent_o *rootComponent; // x8
+  float x; // s8
+  float y; // s9
   float v26; // s0
+  struct GrandQuestRootComponent_o *rootComponent; // x8
+  float v28; // s0
   struct GrandQuestClassSelectController_o *classSelectController; // x8
-  float v28; // w8
+  float v30; // w8
   float classIconDefaultAlpha; // s10
   float classIconActiveAlpha; // s11
-  float v31; // s8
-  float v32; // s9
-  _BOOL8 v33; // x0
-  const MethodInfo *v34; // x2
-  float v35; // s0
+  float v33; // s8
+  float v34; // s9
+  _BOOL8 v35; // x0
+  const MethodInfo *v36; // x2
+  float v37; // s0
   UnityEngine_Transform_o *transform; // x19
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
-  EasingObject_o *v45; // x19
-  System_Action_o *v46; // x20
-  System_Action_o *v47; // x22
-  float z; // s2
-  unsigned __int64 position; // kr20_8
-  unsigned __int64 v50; // kr40_8
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v51; // [xsp+10h] [xbp-90h] BYREF
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  EasingObject_o *v47; // x19
+  System_Action_o *v48; // x20
+  System_Action_o *v49; // x22
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v50; // [xsp+10h] [xbp-90h] BYREF
   Il2CppObject *value; // [xsp+38h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v54; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596B23E & 1) == 0 )
   {
@@ -240,7 +242,7 @@ void GrandQuestClassBoardController__ExecCircleEffect(
     byte_596B23E = 1;
   }
   value = 0;
-  memset(&v51, 0, sizeof(v51));
+  memset(&v50, 0, sizeof(v50));
   v7 = sub_2213CCC(GrandQuestClassBoardController___c__DisplayClass34_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
@@ -296,9 +298,9 @@ LABEL_43:
                                                      0);
   if ( !blankEarthSpotEntity )
     goto LABEL_43;
-  z = UnityEngine_Transform__get_localEulerAngles((UnityEngine_Transform_o *)blankEarthSpotEntity, 0).fields.z;
+  localEulerAngles = UnityEngine_Transform__get_localEulerAngles((UnityEngine_Transform_o *)blankEarthSpotEntity, 0);
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)value;
-  *(float *)(v7 + 24) = z;
+  *(float *)(v7 + 24) = localEulerAngles.fields.z;
   if ( !blankEarthSpotEntity )
     goto LABEL_43;
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)UnityEngine_Component__get_transform(
@@ -306,20 +308,22 @@ LABEL_43:
                                                      0);
   if ( !blankEarthSpotEntity )
     goto LABEL_43;
-  position = (unsigned __int64)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)blankEarthSpotEntity, 0);
+  position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)blankEarthSpotEntity, 0);
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)this->fields.classBoard;
   if ( !blankEarthSpotEntity )
     goto LABEL_43;
+  x = position.fields.x;
+  y = position.fields.y;
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)UnityEngine_Component__get_transform(
                                                      (UnityEngine_Component_o *)blankEarthSpotEntity,
                                                      0);
   if ( !blankEarthSpotEntity )
     goto LABEL_43;
-  v50 = (unsigned __int64)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)blankEarthSpotEntity, 0);
-  v24 = atan2f(*((float *)&position + 1) - *((float *)&v50 + 1), *(float *)&position - *(float *)&v50);
+  v54 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)blankEarthSpotEntity, 0);
+  v26 = atan2f(y - v54.fields.y, x - v54.fields.x);
   rootComponent = this->fields.rootComponent;
-  v26 = (float)(v24 * -57.296) + 90.0;
-  *(float *)(v7 + 28) = v26;
+  v28 = (float)(v26 * -57.296) + 90.0;
+  *(float *)(v7 + 28) = v28;
   if ( !rootComponent )
     goto LABEL_43;
   classSelectController = rootComponent->fields.classSelectController;
@@ -327,53 +331,53 @@ LABEL_43:
     goto LABEL_43;
   if ( classSelectController->fields.isMovePositiveIndex )
   {
-    if ( v26 <= 0.0 )
+    if ( v28 <= 0.0 )
       goto LABEL_26;
-    v28 = -360.0;
+    v30 = -360.0;
   }
   else
   {
-    if ( v26 >= 0.0 )
+    if ( v28 >= 0.0 )
       goto LABEL_26;
-    v28 = 360.0;
+    v30 = 360.0;
   }
-  v26 = v26 + v28;
-  *(float *)(v7 + 28) = v26;
+  v28 = v28 + v30;
+  *(float *)(v7 + 28) = v28;
 LABEL_26:
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)this->fields.dicClassIcon;
   if ( !blankEarthSpotEntity )
     goto LABEL_43;
   classIconDefaultAlpha = this->fields.classIconDefaultAlpha;
   classIconActiveAlpha = this->fields.classIconActiveAlpha;
-  v31 = fabsf(v26 / 180.0);
+  v33 = fabsf(v28 / 180.0);
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
-    &v51,
+    &v50,
     (System_Collections_Generic_Dictionary_int__object__o *)blankEarthSpotEntity,
     (const MethodInfo_3F9C8EC *)Method_System_Collections_Generic_Dictionary_int__UISprite__GetEnumerator__);
   if ( immediately )
-    v32 = 0.0;
+    v34 = 0.0;
   else
-    v32 = v31;
+    v34 = v33;
   while ( 1 )
   {
-    v33 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
-            &v51,
+    v35 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
+            &v50,
             (const MethodInfo_4158548 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__MoveNext__);
-    if ( !v33 )
+    if ( !v35 )
       break;
-    if ( v22 == LODWORD(v51.fields._current.fields.key) )
-      v35 = classIconActiveAlpha;
+    if ( v22 == LODWORD(v50.fields._current.fields.key) )
+      v37 = classIconActiveAlpha;
     else
-      v35 = classIconDefaultAlpha;
+      v37 = classIconDefaultAlpha;
     GrandQuestClassBoardController__ExecChangeIconAlpha(
-      (GrandQuestClassBoardController_o *)v33,
-      (UISprite_o *)v51.fields._current.fields.value,
-      v35 / 255.0,
-      v32,
-      v34);
+      (GrandQuestClassBoardController_o *)v35,
+      (UISprite_o *)v50.fields._current.fields.value,
+      v37 / 255.0,
+      v34,
+      v36);
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
-    &v51,
+    &v50,
     (const MethodInfo_415866C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__Dispose__);
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)this->fields.classBoard;
   if ( immediately )
@@ -381,13 +385,13 @@ LABEL_26:
     if ( blankEarthSpotEntity )
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)blankEarthSpotEntity, 0);
-      v53.fields.z = (float)(*(float *)(v7 + 24) + *(float *)(v7 + 28)) * 0.017453;
-      v53.fields.x = 0.0;
-      v53.fields.y = 0.0;
-      v54 = UnityEngine_Quaternion__Internal_FromEulerRad(v53, 0);
+      v55.fields.z = (float)(*(float *)(v7 + 24) + *(float *)(v7 + 28)) * 0.017453;
+      v55.fields.x = 0.0;
+      v55.fields.y = 0.0;
+      v56 = UnityEngine_Quaternion__Internal_FromEulerRad(v55, 0);
       if ( transform )
       {
-        UnityEngine_Transform__set_localRotation(transform, v54, 0);
+        UnityEngine_Transform__set_localRotation(transform, v56, 0);
         goto LABEL_39;
       }
     }
@@ -400,23 +404,23 @@ LABEL_26:
                        gameObject,
                        (const MethodInfo_38B8770 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v7 + 16) = Component_object;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)Component_object, v39, v40, v41, v42, v43, v44);
-  v45 = *(EasingObject_o **)(v7 + 16);
-  v46 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 16), (int32_t)Component_object, v41, v42, v43, v44, v45, v46);
+  v47 = *(EasingObject_o **)(v7 + 16);
+  v48 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v46,
+    v48,
     (Il2CppObject *)v7,
     Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__0__,
     0);
-  v47 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v49 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v47,
+    v49,
     (Il2CppObject *)v7,
     Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__1__,
     0);
-  if ( !v45 )
+  if ( !v47 )
     goto LABEL_43;
-  EasingObject__Play_56121168(v45, 0.0, 1.0, v31, v46, v47, 0.0, 15, 0);
+  EasingObject__Play_56121168(v47, 0.0, 1.0, v33, v48, v49, 0.0, 15, 0);
 }
 
 
@@ -458,7 +462,7 @@ void GrandQuestClassBoardController__ExecMoveEffectRoot(
   EasingObject_o *v36; // x20
   System_Action_o *v37; // x21
   System_Action_o *v38; // x22
-  UnityEngine_Vector3_o LocalPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
@@ -1349,6 +1353,7 @@ System_Collections_IEnumerator_o *GrandQuestClassBoardController__SetClassServan
   int32_t v14; // w5
   bool v15; // w6
   bool v16; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596B241 & 1) == 0 )
   {
@@ -1362,9 +1367,10 @@ System_Collections_IEnumerator_o *GrandQuestClassBoardController__SetClassServan
   *(_QWORD *)(v10 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v10 + 32), (int32_t)this, v11, v12, v13, v14, v15, v16);
   *(float *)(v10 + 44) = delayTime;
+  result = (System_Collections_IEnumerator_o *)v10;
   *(_BYTE *)(v10 + 40) = v9;
   *(_BYTE *)(v10 + 48) = isClassLocked;
-  return (System_Collections_IEnumerator_o *)v10;
+  return result;
 }
 
 
@@ -1587,6 +1593,7 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
   int32_t v22; // w5
   bool v23; // w6
   bool v24; // w7
+  bool result; // w0
   struct GrandQuestRootComponent_o *rootComponent; // x8
   int v27; // w21
   UnityEngine_GameObject_o *ClassServantNamePrefab; // x0
@@ -1713,8 +1720,9 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
         v3->fields.__2__current = (Il2CppObject *)v17;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)v17, v19, v20, v21, v22, v23, v24);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
     }
   }
@@ -1762,7 +1770,7 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
                                                                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
   if ( !this )
     goto LABEL_67;
-  *((_BYTE *)this + 109) = 1;
+  *(&this[1].fields.isClassLocked + 5) = 1;
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)GameObjectExtensions__Find(
                                                                             *v34,
                                                                             (System_String_o *)StringLiteral_24349/*"root/base"*/,
@@ -2465,6 +2473,7 @@ void GrandQuestClassBoardController___c__DisplayClass38_0___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandQuestClassBoardController___c__DisplayClass38_0___FadeIn_b__0(
         GrandQuestClassBoardController___c__DisplayClass38_0_o *this,
         const MethodInfo *method)
@@ -2476,11 +2485,10 @@ void GrandQuestClassBoardController___c__DisplayClass38_0___FadeIn_b__0(
   float mNow; // s1
   float v7; // s2
   struct GrandQuestClassBoardController_o *v8; // x8
-  unsigned __int64 v9; // d0
+  unsigned __int64 v9; // d0 OVERLAPPED
   float v10; // s2
-  float v11; // s1
+  int v11; // s1
   float v12; // [xsp+0h] [xbp-20h]
-  UnityEngine_Vector3_o v13; // 0:kr00_12.12
 
   easing = this->fields.easing;
   if ( !easing )
@@ -2522,11 +2530,8 @@ LABEL_12:
            v12)).n64_u64[0];
   v10 = v4->fields.fromScale.fields.z
       + (float)(v12 * (float)(v4->fields.toScale.fields.z - v4->fields.fromScale.fields.z));
-  v11 = *((float *)&v9 + 1);
-  LODWORD(v13.fields.x) = v9;
-  v13.fields.y = v11;
-  v13.fields.z = v10;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v13, 0);
+  v11 = HIDWORD(v9);
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, *(UnityEngine_Vector3_o *)&v9, 0);
 }
 
 
@@ -2566,6 +2571,7 @@ void GrandQuestClassBoardController___c__DisplayClass39_0___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GrandQuestClassBoardController___c__DisplayClass39_0___ExecMoveEffectRoot_b__0(
         GrandQuestClassBoardController___c__DisplayClass39_0_o *this,
         const MethodInfo *method)
@@ -2576,10 +2582,9 @@ void GrandQuestClassBoardController___c__DisplayClass39_0___ExecMoveEffectRoot_b
   float mNow; // s1
   float z; // s3
   float v7; // s4
-  unsigned __int64 v8; // d0
+  unsigned __int64 v8; // d0 OVERLAPPED
   float v9; // s2
-  float v10; // s1
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v10; // s1
 
   easing = this->fields.easing;
   if ( !easing || (_4__this = this->fields.__4__this) == 0 )
@@ -2600,11 +2605,8 @@ void GrandQuestClassBoardController___c__DisplayClass39_0___ExecMoveEffectRoot_b
              *(float32x2_t *)&this->fields.currentPosition.fields.x),
            v4)).n64_u64[0];
   v9 = z + v7;
-  v10 = *((float *)&v8 + 1);
-  LODWORD(v11.fields.x) = v8;
-  v11.fields.y = v10;
-  v11.fields.z = v9;
-  TransformHelper__SetLocalPosition(_4__this->fields.effectRoot, v11, 0);
+  v10 = HIDWORD(v8);
+  TransformHelper__SetLocalPosition(_4__this->fields.effectRoot, *(UnityEngine_Vector3_o *)&v8, 0);
 }
 
 

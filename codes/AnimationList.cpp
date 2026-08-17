@@ -3,26 +3,27 @@ void AnimationList___cctor(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x2
   Il2CppType *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x2
+  System_RuntimeTypeHandle_o v4; // x0
+  __int64 v5; // x1
+  __int64 v6; // x2
   System_Type_o *TypeFromHandle; // x19
   System_Array_o *Values; // x0
-  System_Collections_Generic_IEnumerable_TResult__o *v8; // x0
-  __int64 v9; // x1
-  __int64 v10; // x2
-  AnimationList___c_c *v11; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
-  Il2CppObject *v13; // x20
-  System_Func_T__TResult__o *v14; // x21
-  Il2CppObject *v15; // x20
-  System_Func_T__TResult__o *v16; // x22
-  struct System_Collections_Generic_Dictionary_string__int__o *v17; // x0
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
+  System_Collections_Generic_IEnumerable_TResult__o *v9; // x0
+  __int64 v10; // x1
+  __int64 v11; // x2
+  AnimationList___c_c *v12; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v13; // x19
+  Il2CppObject *v14; // x20
+  System_Func_T__TResult__o *v15; // x21
+  Il2CppObject *v16; // x20
+  System_Func_T__TResult__o *v17; // x22
+  struct System_Collections_Generic_Dictionary_string__int__o *v18; // x0
+  System_String_o *v19; // x2
+  System_String_o *v20; // x3
+  int32_t v21; // w4
+  int32_t v22; // w5
+  bool v23; // w6
+  bool v24; // w7
 
   if ( (byte_596F55E & 1) == 0 )
   {
@@ -40,41 +41,42 @@ void AnimationList___cctor(const MethodInfo *method)
   v3 = AnimationList_NAME_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v1, v2);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v3, 0);
+  v4.fields.value = (intptr_t)v3;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v4, v5);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v5, v6);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
-  v8 = System_Linq_Enumerable__Cast_Int32Enum_(
+  v9 = System_Linq_Enumerable__Cast_Int32Enum_(
          (System_Collections_IEnumerable_o *)Values,
          (const MethodInfo_3868A20 *)Method_System_Linq_Enumerable_Cast_AnimationList_NAME___);
-  v11 = AnimationList___c_TypeInfo;
-  v12 = (System_Collections_Generic_IEnumerable_TSource__o *)v8;
+  v12 = AnimationList___c_TypeInfo;
+  v13 = (System_Collections_Generic_IEnumerable_TSource__o *)v9;
   if ( !*(&AnimationList___c_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(AnimationList___c_TypeInfo, v9, v10);
-    v11 = AnimationList___c_TypeInfo;
+    j_il2cpp_runtime_class_init_0(AnimationList___c_TypeInfo, v10, v11);
+    v12 = AnimationList___c_TypeInfo;
   }
-  v13 = (Il2CppObject *)v11->static_fields->__9;
-  v14 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_AnimationList_NAME__string__TypeInfo);
-  System_Func_Int32Enum__object____ctor(v14, v13, Method_AnimationList___c___cctor_b__2_0__, 0);
-  v15 = (Il2CppObject *)AnimationList___c_TypeInfo->static_fields->__9;
-  v16 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_AnimationList_NAME__int__TypeInfo);
-  System_Func_Int32Enum__int____ctor(v16, v15, Method_AnimationList___c___cctor_b__2_1__, 0);
-  v17 = (struct System_Collections_Generic_Dictionary_string__int__o *)System_Linq_Enumerable__ToDictionary_Int32Enum__object__int_(
-                                                                         v12,
-                                                                         (System_Func_TSource__TKey__o *)v14,
-                                                                         (System_Func_TSource__TElement__o *)v16,
+  v14 = (Il2CppObject *)v12->static_fields->__9;
+  v15 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_AnimationList_NAME__string__TypeInfo);
+  System_Func_Int32Enum__object____ctor(v15, v14, Method_AnimationList___c___cctor_b__2_0__, 0);
+  v16 = (Il2CppObject *)AnimationList___c_TypeInfo->static_fields->__9;
+  v17 = (System_Func_T__TResult__o *)sub_2213CCC(System_Func_AnimationList_NAME__int__TypeInfo);
+  System_Func_Int32Enum__int____ctor(v17, v16, Method_AnimationList___c___cctor_b__2_1__, 0);
+  v18 = (struct System_Collections_Generic_Dictionary_string__int__o *)System_Linq_Enumerable__ToDictionary_Int32Enum__object__int_(
+                                                                         v13,
+                                                                         (System_Func_TSource__TKey__o *)v15,
+                                                                         (System_Func_TSource__TElement__o *)v17,
                                                                          (const MethodInfo_389C3D0 *)Method_System_Linq_Enumerable_ToDictionary_AnimationList_NAME__string__int___);
-  AnimationList_TypeInfo->static_fields->_dictionary = v17;
+  AnimationList_TypeInfo->static_fields->_dictionary = v18;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)AnimationList_TypeInfo->static_fields,
-    (int32_t)v17,
-    v18,
+    (int32_t)v18,
     v19,
     v20,
     v21,
     v22,
-    v23);
+    v23,
+    v24);
 }
 
 

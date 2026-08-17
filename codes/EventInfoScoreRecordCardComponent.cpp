@@ -45,8 +45,12 @@ void EventInfoScoreRecordCardComponent__OnTap(EventInfoScoreRecordCardComponent_
   __int64 v23; // x1
   UnityEngine_Object_o *v24; // x22
   ScoreRecordCardDialog_o *v25; // x21
-  System_Action_o *v26; // x22
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  System_Action_o *v29; // x22
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972622 & 1) == 0 )
   {
@@ -131,15 +135,21 @@ void EventInfoScoreRecordCardComponent__OnTap(EventInfoScoreRecordCardComponent_
                 {
                   v25 = this->fields.scoreRecordCardDialogInstance;
                   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)Instance, 0);
-                  v26 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+                  x = position.fields.x;
+                  y = position.fields.y;
+                  z = position.fields.z;
+                  v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                   System_Action___ctor(
-                    v26,
+                    v29,
                     (Il2CppObject *)this,
                     Method_EventInfoScoreRecordCardComponent__OnTap_b__3_0__,
                     0);
                   if ( v25 )
                   {
-                    ScoreRecordCardDialog__Setup(v25, position, v26, 0);
+                    v31.fields.x = x;
+                    v31.fields.y = y;
+                    v31.fields.z = z;
+                    ScoreRecordCardDialog__Setup(v25, v31, v29, 0);
                     Instance = (UnityEngine_Component_o *)*p_scoreRecordCardDialogInstance;
                     if ( *p_scoreRecordCardDialogInstance )
                     {

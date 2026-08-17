@@ -66,7 +66,7 @@ int32_t ExRoomMissionReceiveConfirmListViewObject__GetSize(
   Il2CppObject *Component_object; // x19
   _BOOL8 v6; // x0
   __int64 v7; // x1
-  float v9; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596AF40 & 1) == 0 )
   {
@@ -84,11 +84,11 @@ int32_t ExRoomMissionReceiveConfirmListViewObject__GetSize(
     return 0;
   if ( !Component_object )
     sub_2213CDC(v6, v7);
-  v9 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)Component_object, 0).fields.y));
-  if ( v9 == INFINITY )
+  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)Component_object, 0);
+  if ( size.fields.y == INFINITY )
     return 0x80000000;
   else
-    return (int)v9;
+    return (int)size.fields.y;
 }
 
 

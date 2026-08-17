@@ -533,22 +533,17 @@ void LimitUpResultCheckComponent__SetSkillRelease(
   __int64 size; // x10
   DataMasterBase_TMaster__TEntity__PKType__o *v63; // x1
   Il2CppClass **v64; // x0
-  float v65; // s0
-  float v66; // s1
-  float v67; // s2
-  float v68; // s3
   TransformServantInfo_o *transformInfo; // [xsp+10h] [xbp-A0h] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+18h] [xbp-98h] BYREF
   System_String_o *detail; // [xsp+20h] [xbp-90h] BYREF
   System_String_o *name; // [xsp+28h] [xbp-88h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v74; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v75; // 0:x0.16
-  UnityEngine_Color_o CondLabelColor; // 0:kr00_16.16
-  UnityEngine_Color_o CondSpriteColor; // 0:kr10_16.16
-  UnityEngine_Color_o DefaultCondTitleLabelColor; // 0:kr20_16.16
-  UnityEngine_Color_o DefaultCondTitleSpriteColor; // 0:kr30_16.16
-  UnityEngine_Color_o v80; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v81; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v70; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v71; // 0:x0.16
+  UnityEngine_Color_o CondLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o CondSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o DefaultCondTitleLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v76; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
   if ( (byte_596A170 & 1) == 0 )
   {
@@ -606,10 +601,10 @@ void LimitUpResultCheckComponent__SetSkillRelease(
   v19 = *(_QWORD *)&resUsrSvtData->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10, v15);
-  *(_QWORD *)&v74.fields.currentCryptoKey = v18;
-  *(_QWORD *)&v74.fields.fakeValue = v19;
+  *(_QWORD *)&v70.fields.currentCryptoKey = v18;
+  *(_QWORD *)&v70.fields.fakeValue = v19;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
-                                                                  v74,
+                                                                  v70,
                                                                   0);
   if ( !this->fields.resUsrSvtData )
     goto LABEL_58;
@@ -674,10 +669,10 @@ void LimitUpResultCheckComponent__SetSkillRelease(
   v38 = *(_QWORD *)&v35->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10, v34);
-  *(_QWORD *)&v75.fields.currentCryptoKey = v37;
-  *(_QWORD *)&v75.fields.fakeValue = v38;
+  *(_QWORD *)&v71.fields.currentCryptoKey = v37;
+  *(_QWORD *)&v71.fields.fakeValue = v38;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(
-                                                                  v75,
+                                                                  v71,
                                                                   0);
   if ( !v36 )
     goto LABEL_58;
@@ -753,10 +748,6 @@ LABEL_58:
     b = CondLabelColor.fields.b;
     a = CondLabelColor.fields.a;
     CondSpriteColor = ServantEntity_TransformInfo__GetCondSpriteColor(v47, 0);
-    v65 = CondSpriteColor.fields.r;
-    v66 = CondSpriteColor.fields.g;
-    v67 = CondSpriteColor.fields.b;
-    v68 = CondSpriteColor.fields.a;
   }
   else
   {
@@ -765,21 +756,14 @@ LABEL_58:
     g = DefaultCondTitleLabelColor.fields.g;
     b = DefaultCondTitleLabelColor.fields.b;
     a = DefaultCondTitleLabelColor.fields.a;
-    DefaultCondTitleSpriteColor = TransformHelper__get_DefaultCondTitleSpriteColor(0);
-    v65 = DefaultCondTitleSpriteColor.fields.r;
-    v66 = DefaultCondTitleSpriteColor.fields.g;
-    v67 = DefaultCondTitleSpriteColor.fields.b;
-    v68 = DefaultCondTitleSpriteColor.fields.a;
+    CondSpriteColor = TransformHelper__get_DefaultCondTitleSpriteColor(0);
   }
-  v81.fields.r = v65;
-  v81.fields.g = v66;
-  v81.fields.b = v67;
-  v81.fields.a = v68;
-  v80.fields.r = r;
-  v80.fields.g = g;
-  v80.fields.b = b;
-  v80.fields.a = a;
-  LimitUpResultInfoSkillComponent__SetTransformLabelSpriteColor(v42, v80, v81, v52);
+  v76 = CondSpriteColor;
+  v75.fields.r = r;
+  v75.fields.g = g;
+  v75.fields.b = b;
+  v75.fields.a = a;
+  LimitUpResultInfoSkillComponent__SetTransformLabelSpriteColor(v42, v75, v76, v52);
 LABEL_52:
   v53 = (System_Collections_Generic_List_object__o *)this->fields.resInfoList;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__get_gameObject(
@@ -1110,7 +1094,7 @@ LABEL_69:
   this = (LimitUpResultCheckComponent_o *)WrapControlText__textBBCodeAdjust(
                                             (UILabel_o *)this,
                                             detail,
-                                            *((_DWORD *)this + 106),
+                                            (int32_t)this[1].fields.skillChangeInfoTitle,
                                             0,
                                             0);
   if ( !v31 )
@@ -1125,7 +1109,7 @@ LABEL_69:
   this = (LimitUpResultCheckComponent_o *)v4->fields.skillChangeInfoDetailNow;
   if ( !this )
     goto LABEL_68;
-  WrapControlText__textBBCodeAdjust((UILabel_o *)this, detail, *((_DWORD *)this + 106), 0, 0);
+  WrapControlText__textBBCodeAdjust((UILabel_o *)this, detail, (int32_t)this[1].fields.skillChangeInfoTitle, 0, 0);
   this = (LimitUpResultCheckComponent_o *)v4->fields.resInfoList;
   if ( !this )
     goto LABEL_68;

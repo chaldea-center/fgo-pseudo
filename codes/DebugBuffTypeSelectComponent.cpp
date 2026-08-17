@@ -1,17 +1,18 @@
 void DebugBuffTypeSelectComponent___ctor(DebugBuffTypeSelectComponent_o *this, const MethodInfo *method)
 {
   Il2CppType *v3; // x20
-  __int64 v4; // x1
+  System_RuntimeTypeHandle_o v4; // x0
+  __int64 v5; // x1
   System_Type_o *TypeFromHandle; // x20
   System_Array_o *Values; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
-  struct System_Collections_Generic_List_BuffList_TYPE__o *v8; // x0
-  System_String_o *v9; // x2
-  System_String_o *v10; // x3
-  int32_t v11; // w4
-  int32_t v12; // w5
-  bool v13; // w6
-  bool v14; // w7
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
+  struct System_Collections_Generic_List_BuffList_TYPE__o *v9; // x0
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
 
   if ( (byte_5971E57 & 1) == 0 )
   {
@@ -23,18 +24,19 @@ void DebugBuffTypeSelectComponent___ctor(DebugBuffTypeSelectComponent_o *this, c
   v3 = BuffList_TYPE_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, method);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v3, 0);
+  v4.fields.value = (intptr_t)v3;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v4);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v5);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
-  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
+  v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
                                                               (System_Collections_IEnumerable_o *)Values,
                                                               (const MethodInfo_3868A20 *)Method_System_Linq_Enumerable_Cast_BuffList_TYPE___);
-  v8 = (struct System_Collections_Generic_List_BuffList_TYPE__o *)System_Linq_Enumerable__ToList_Int32Enum_(
-                                                                    v7,
+  v9 = (struct System_Collections_Generic_List_BuffList_TYPE__o *)System_Linq_Enumerable__ToList_Int32Enum_(
+                                                                    v8,
                                                                     (const MethodInfo_38A0BF0 *)Method_System_Linq_Enumerable_ToList_BuffList_TYPE___);
-  this->fields.buffList = v8;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.buffList, (int32_t)v8, v9, v10, v11, v12, v13, v14);
+  this->fields.buffList = v9;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.buffList, (int32_t)v9, v10, v11, v12, v13, v14, v15);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 

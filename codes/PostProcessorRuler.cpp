@@ -1,91 +1,111 @@
 void PostProcessorRuler___ctor(PostProcessorRuler_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
-  System_Array_o *v10; // x20
-  System_String_o *v11; // x2
-  System_String_o *v12; // x3
-  int32_t v13; // w4
-  int32_t v14; // w5
-  bool v15; // w6
-  bool v16; // w7
-  System_Array_o *v17; // x20
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
-  System_Array_o *v24; // x20
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
-  System_Array_o *v31; // x20
-  System_String_o *v32; // x2
-  System_String_o *v33; // x3
-  int32_t v34; // w4
-  int32_t v35; // w5
-  bool v36; // w6
-  bool v37; // w7
-  System_Array_o *v38; // x20
-  System_String_o *v39; // x2
-  System_String_o *v40; // x3
-  int32_t v41; // w4
-  int32_t v42; // w5
-  bool v43; // w6
-  bool v44; // w7
-  System_Array_o *v45; // x20
-  System_String_o *v46; // x2
-  System_String_o *v47; // x3
-  int32_t v48; // w4
-  int32_t v49; // w5
-  bool v50; // w6
-  bool v51; // w7
-  System_Array_o *v52; // x20
-  System_String_o *v53; // x2
-  System_String_o *v54; // x3
-  int32_t v55; // w4
-  int32_t v56; // w5
-  bool v57; // w6
-  bool v58; // w7
-  System_Array_o *v59; // x20
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct System_Int32_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  System_Array_o *v12; // x0
+  System_RuntimeFieldHandle_o v13; // x1
+  struct System_Int32_array *v14; // x20
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
+  System_Array_o *v21; // x0
+  System_RuntimeFieldHandle_o v22; // x1
+  struct System_Int32_array *v23; // x20
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  System_Array_o *v30; // x0
+  System_RuntimeFieldHandle_o v31; // x1
+  struct System_Int32_array *v32; // x20
+  System_String_o *v33; // x2
+  System_String_o *v34; // x3
+  int32_t v35; // w4
+  int32_t v36; // w5
+  bool v37; // w6
+  bool v38; // w7
+  System_Array_o *v39; // x0
+  System_RuntimeFieldHandle_o v40; // x1
+  struct System_Int32_array *v41; // x20
+  System_String_o *v42; // x2
+  System_String_o *v43; // x3
+  int32_t v44; // w4
+  int32_t v45; // w5
+  bool v46; // w6
+  bool v47; // w7
+  System_Array_o *v48; // x0
+  System_RuntimeFieldHandle_o v49; // x1
+  struct System_Int32_array *v50; // x20
+  System_String_o *v51; // x2
+  System_String_o *v52; // x3
+  int32_t v53; // w4
+  int32_t v54; // w5
+  bool v55; // w6
+  bool v56; // w7
+  System_Array_o *v57; // x0
+  System_RuntimeFieldHandle_o v58; // x1
+  struct System_Int32_array *v59; // x20
   System_String_o *v60; // x2
   System_String_o *v61; // x3
   int32_t v62; // w4
   int32_t v63; // w5
   bool v64; // w6
   bool v65; // w7
-  System_Array_o *v66; // x20
-  System_String_o *v67; // x2
-  System_String_o *v68; // x3
-  int32_t v69; // w4
-  int32_t v70; // w5
-  bool v71; // w6
-  bool v72; // w7
-  __int64 v73; // x0
-  __int64 v74; // x1
-  System_String_o *v75; // x2
-  System_String_o *v76; // x3
-  int32_t v77; // w4
-  int32_t v78; // w5
-  bool v79; // w6
-  bool v80; // w7
-  unsigned int v81; // w9
-  System_Array_o *v82; // x20
-  System_String_o *v83; // x2
-  System_String_o *v84; // x3
-  int32_t v85; // w4
-  int32_t v86; // w5
-  bool v87; // w6
-  bool v88; // w7
+  System_Array_o *v66; // x0
+  System_RuntimeFieldHandle_o v67; // x1
+  struct System_Int32_array *v68; // x20
+  System_String_o *v69; // x2
+  System_String_o *v70; // x3
+  int32_t v71; // w4
+  int32_t v72; // w5
+  bool v73; // w6
+  bool v74; // w7
+  System_Array_o *v75; // x20
+  System_RuntimeFieldHandle_o v76; // x1
+  System_String_o *v77; // x2
+  System_String_o *v78; // x3
+  int32_t v79; // w4
+  int32_t v80; // w5
+  bool v81; // w6
+  bool v82; // w7
+  System_Array_o *v83; // x20
+  System_RuntimeFieldHandle_o v84; // x1
+  System_String_o *v85; // x2
+  System_String_o *v86; // x3
+  int32_t v87; // w4
+  int32_t v88; // w5
+  bool v89; // w6
+  bool v90; // w7
+  __int64 v91; // x0
+  __int64 v92; // x1
+  System_String_o *v93; // x2
+  System_String_o *v94; // x3
+  int32_t v95; // w4
+  int32_t v96; // w5
+  bool v97; // w6
+  bool v98; // w7
+  unsigned int v99; // w9
+  System_Array_o *v100; // x0
+  System_RuntimeFieldHandle_o v101; // x1
+  struct System_Int32_array *v102; // x20
+  System_String_o *v103; // x2
+  System_String_o *v104; // x3
+  int32_t v105; // w4
+  int32_t v106; // w5
+  bool v107; // w6
+  bool v108; // w7
 
   if ( (byte_596E53D & 1) == 0 )
   {
@@ -104,91 +124,86 @@ void PostProcessorRuler___ctor(PostProcessorRuler_o *this, const MethodInfo *met
     byte_596E53D = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__9720C82395D62B4D89A4F86ECB11B6E9FA2767DE6BACCA9CE2190E019214A4B4,
-    0);
-  this->fields.num0 = (struct System_Int32_array *)v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num0, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v10,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__5F74BEAD322B2229C20441AFA97D8EF15BB4BDB0EE9A5DDF7DBFDC9379B9B4F9,
-    0);
-  this->fields.num1 = (struct System_Int32_array *)v10;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num1, (int32_t)v10, v11, v12, v13, v14, v15, v16);
-  v17 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v17,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__94ED0ED59BC1BD316129504FB4788BCA7FD7D74AE2E779CFC33DC902B635A317,
-    0);
-  this->fields.num2 = (struct System_Int32_array *)v17;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num2, (int32_t)v17, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v24,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__BC6F102CE3DCBD686D4D19E9E14616D336836856DB492377F49FEE50F035E423,
-    0);
-  this->fields.num3 = (struct System_Int32_array *)v24;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num3, (int32_t)v24, v25, v26, v27, v28, v29, v30);
-  v31 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v31,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__06F4290E9FBE47067FB3007610883278D1E16936A41BDFE41DCE11B9AAE3676B,
-    0);
-  this->fields.num4 = (struct System_Int32_array *)v31;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num4, (int32_t)v31, v32, v33, v34, v35, v36, v37);
-  v38 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v38,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__1ED8BBF477075524B2CD372A44DEC8C53A9D1FF92A9BD9623A02FB4107A46665,
-    0);
-  this->fields.num5 = (struct System_Int32_array *)v38;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num5, (int32_t)v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v45,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__9CB0A842F7477752CF0ED88779DFAC4F86B01B03E69826CBA999C580ECACA29D,
-    0);
-  this->fields.num6 = (struct System_Int32_array *)v45;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num6, (int32_t)v45, v46, v47, v48, v49, v50, v51);
-  v52 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v52,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__AE68F3792257FF6FCCB904CBD3739F960550FD677BA4B610C584A1531271CED1,
-    0);
-  this->fields.num7 = (struct System_Int32_array *)v52;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num7, (int32_t)v52, v53, v54, v55, v56, v57, v58);
-  v59 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v59,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__3ACF2EF2096C6B462EC79E4FA671815BB2AF869418FC7D07A7DF6CCCB0C7E275,
-    0);
-  this->fields.num8 = (struct System_Int32_array *)v59;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num8, (int32_t)v59, v60, v61, v62, v63, v64, v65);
+  v4.fields.value = Field__PrivateImplementationDetails__9720C82395D62B4D89A4F86ECB11B6E9FA2767DE6BACCA9CE2190E019214A4B4;
+  v5 = (struct System_Int32_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.num0 = v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num0, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v13.fields.value = Field__PrivateImplementationDetails__5F74BEAD322B2229C20441AFA97D8EF15BB4BDB0EE9A5DDF7DBFDC9379B9B4F9;
+  v14 = (struct System_Int32_array *)v12;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v12, v13, 0);
+  this->fields.num1 = v14;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num1, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+  v21 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v22.fields.value = Field__PrivateImplementationDetails__94ED0ED59BC1BD316129504FB4788BCA7FD7D74AE2E779CFC33DC902B635A317;
+  v23 = (struct System_Int32_array *)v21;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v21, v22, 0);
+  this->fields.num2 = v23;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num2, (int32_t)v23, v24, v25, v26, v27, v28, v29);
+  v30 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v31.fields.value = Field__PrivateImplementationDetails__BC6F102CE3DCBD686D4D19E9E14616D336836856DB492377F49FEE50F035E423;
+  v32 = (struct System_Int32_array *)v30;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v30, v31, 0);
+  this->fields.num3 = v32;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num3, (int32_t)v32, v33, v34, v35, v36, v37, v38);
+  v39 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v40.fields.value = Field__PrivateImplementationDetails__06F4290E9FBE47067FB3007610883278D1E16936A41BDFE41DCE11B9AAE3676B;
+  v41 = (struct System_Int32_array *)v39;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v39, v40, 0);
+  this->fields.num4 = v41;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num4, (int32_t)v41, v42, v43, v44, v45, v46, v47);
+  v48 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v49.fields.value = Field__PrivateImplementationDetails__1ED8BBF477075524B2CD372A44DEC8C53A9D1FF92A9BD9623A02FB4107A46665;
+  v50 = (struct System_Int32_array *)v48;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v48, v49, 0);
+  this->fields.num5 = v50;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num5, (int32_t)v50, v51, v52, v53, v54, v55, v56);
+  v57 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v58.fields.value = Field__PrivateImplementationDetails__9CB0A842F7477752CF0ED88779DFAC4F86B01B03E69826CBA999C580ECACA29D;
+  v59 = (struct System_Int32_array *)v57;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v57, v58, 0);
+  this->fields.num6 = v59;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num6, (int32_t)v59, v60, v61, v62, v63, v64, v65);
   v66 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v66,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__D5226DFBCE5F9EF51AB2D0514E06039745D500CFC2AA49E5EB2D5333852556B1,
-    0);
-  this->fields.num9 = (struct System_Int32_array *)v66;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num9, (int32_t)v66, v67, v68, v69, v70, v71, v72);
-  v73 = sub_2213B20(int___TypeInfo, 35);
-  if ( !v73 )
-    sub_2213CDC(0, v74);
-  v81 = *(_DWORD *)(v73 + 24);
-  if ( v81 <= 0x1B || (*(_DWORD *)(v73 + 140) = 1, v81 <= 0x20) )
-    sub_2213CE4(v73);
-  *(_DWORD *)(v73 + 160) = 1;
-  this->fields.comma = (struct System_Int32_array *)v73;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.comma, v73, v75, v76, v77, v78, v79, v80);
-  v82 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v82,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__6F7B48BDF9B07742A2259E00722D7F7A406A4D2907408BCFCFEF21FD1CC38395,
-    0);
-  this->fields.subtract = (struct System_Int32_array *)v82;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.subtract, (int32_t)v82, v83, v84, v85, v86, v87, v88);
+  v67.fields.value = Field__PrivateImplementationDetails__AE68F3792257FF6FCCB904CBD3739F960550FD677BA4B610C584A1531271CED1;
+  v68 = (struct System_Int32_array *)v66;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v66, v67, 0);
+  this->fields.num7 = v68;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num7, (int32_t)v68, v69, v70, v71, v72, v73, v74);
+  v75 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v76.fields.value = Field__PrivateImplementationDetails__3ACF2EF2096C6B462EC79E4FA671815BB2AF869418FC7D07A7DF6CCCB0C7E275;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v75, v76, 0);
+  this->fields.num8 = (struct System_Int32_array *)v75;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num8, (int32_t)v75, v77, v78, v79, v80, v81, v82);
+  v83 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v84.fields.value = Field__PrivateImplementationDetails__D5226DFBCE5F9EF51AB2D0514E06039745D500CFC2AA49E5EB2D5333852556B1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v83, v84, 0);
+  this->fields.num9 = (struct System_Int32_array *)v83;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.num9, (int32_t)v83, v85, v86, v87, v88, v89, v90);
+  v91 = sub_2213B20(int___TypeInfo, 35);
+  if ( !v91 )
+    sub_2213CDC(0, v92);
+  v99 = *(_DWORD *)(v91 + 24);
+  if ( v99 <= 0x1B || (*(_DWORD *)(v91 + 140) = 1, v99 <= 0x20) )
+    sub_2213CE4(v91);
+  *(_DWORD *)(v91 + 160) = 1;
+  this->fields.comma = (struct System_Int32_array *)v91;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.comma, v91, v93, v94, v95, v96, v97, v98);
+  v100 = (System_Array_o *)sub_2213B20(int___TypeInfo, 35);
+  v101.fields.value = Field__PrivateImplementationDetails__6F7B48BDF9B07742A2259E00722D7F7A406A4D2907408BCFCFEF21FD1CC38395;
+  v102 = (struct System_Int32_array *)v100;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v100, v101, 0);
+  this->fields.subtract = v102;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&this->fields.subtract,
+    (int32_t)v102,
+    v103,
+    v104,
+    v105,
+    v106,
+    v107,
+    v108);
   *(_QWORD *)&this->fields.fontSize = 0x100000002LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -664,23 +679,27 @@ int32_t PostProcessorRuler__GetCharOffset(PostProcessorRuler_o *this, int32_t nu
 
 UnityEngine_Vector2Int_o PostProcessorRuler__GetMousePositionInt(PostProcessorRuler_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v3; // x2
+  float x; // s8
+  float y; // s9
+  __int64 v4; // x1
+  __int64 v5; // x2
   int32_t width; // w19
-  __int64 v5; // x1
-  __int64 v6; // x2
+  __int64 v7; // x1
+  __int64 v8; // x2
   int32_t height; // w20
-  __int64 v8; // x8
-  float v9; // s0
-  float v10; // s1
-  __int64 v11; // x9
-  float v12; // s2
-  float v13; // s2
-  unsigned __int64 v14; // x8
-  float v15; // s0
-  unsigned __int64 mousePosition; // kr00_8
+  __int64 v10; // x8
+  float v11; // s0
+  float v12; // s1
+  __int64 v13; // x9
+  float v14; // s2
+  float v15; // s2
+  unsigned __int64 v16; // x8
+  float v17; // s0
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  mousePosition = (unsigned __int64)UnityEngine_Input__get_mousePosition(0);
+  mousePosition = UnityEngine_Input__get_mousePosition(0);
+  x = mousePosition.fields.x;
+  y = mousePosition.fields.y;
   width = UnityEngine_Screen__get_width(0);
   if ( !byte_5969ADF )
   {
@@ -688,38 +707,38 @@ UnityEngine_Vector2Int_o PostProcessorRuler__GetMousePositionInt(PostProcessorRu
     byte_5969ADF = 1;
   }
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v2, v3);
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v4, v5);
   height = UnityEngine_Screen__get_height(0);
   if ( !byte_5969ADF )
   {
     sub_2213A60(&System_Math_TypeInfo);
     byte_5969ADF = 1;
   }
-  v8 = *(&System_Math_TypeInfo->_2.cctor_finished + 1);
-  if ( !(_DWORD)v8 )
-    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v5, v6);
-  v9 = (float)height;
-  v10 = 0.0;
-  HIDWORD(v11) = 0;
-  v12 = (float)width;
-  if ( *((float *)&mousePosition + 1) <= (float)height )
-    v9 = *((float *)&mousePosition + 1);
-  if ( *((float *)&mousePosition + 1) < 0.0 )
-    v9 = 0.0;
-  if ( *(float *)&mousePosition <= v12 )
-    v12 = *(float *)&mousePosition;
-  LODWORD(v8) = vcvtms_s32_f32(v9);
-  if ( *(float *)&mousePosition >= 0.0 )
-    v10 = v12;
-  v13 = floorf(v9);
-  v14 = v8 << 32;
-  v15 = floorf(v10);
-  LODWORD(v11) = vcvtms_s32_f32(v10);
-  if ( v13 == INFINITY )
-    v14 = 0x8000000000000000LL;
+  v10 = *(&System_Math_TypeInfo->_2.cctor_finished + 1);
+  if ( !(_DWORD)v10 )
+    j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, v7, v8);
+  v11 = (float)height;
+  v12 = 0.0;
+  HIDWORD(v13) = 0;
+  v14 = (float)width;
+  if ( y <= (float)height )
+    v11 = y;
+  if ( y < 0.0 )
+    v11 = 0.0;
+  if ( x <= v14 )
+    v14 = x;
+  LODWORD(v10) = vcvtms_s32_f32(v11);
+  if ( x >= 0.0 )
+    v12 = v14;
+  v15 = floorf(v11);
+  v16 = v10 << 32;
+  v17 = floorf(v12);
+  LODWORD(v13) = vcvtms_s32_f32(v12);
   if ( v15 == INFINITY )
-    v11 = 0x80000000LL;
-  return (UnityEngine_Vector2Int_o)(v14 | v11);
+    v16 = 0x8000000000000000LL;
+  if ( v17 == INFINITY )
+    v13 = 0x80000000LL;
+  return (UnityEngine_Vector2Int_o)(v16 | v13);
 }
 
 
@@ -1283,7 +1302,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *PostProcessorRuler__
   v24 = ((__int64 (__fastcall *)(Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array_array *, __int64))v7->_6_System_Linq_Enumerable_SelectMany_T____T_->methodPointer)(
           arrays,
           v9);
-  return ((Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *(__fastcall *)(__int64))method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_->methodPointer)(v24);
+  return (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)((__int64 (__fastcall *)(__int64))method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_->methodPointer)(v24);
 }
 
 
@@ -2754,9 +2773,11 @@ void PostProcessorRuler__Update(PostProcessorRuler_o *this, const MethodInfo *me
   __int64 v19; // x0
   __int64 v20; // x0
   const MethodInfo *v21; // x2
-  const MethodInfo *v22; // x3
+  UnityEngine_Vector2Int_o v22; // x1
   const MethodInfo *v23; // x3
-  PostProcessorRuler_ScreenRectInfo_o v24; // [xsp+0h] [xbp-40h] BYREF
+  UnityEngine_Vector2Int_o v24; // x1
+  const MethodInfo *v25; // x3
+  PostProcessorRuler_ScreenRectInfo_o v26; // [xsp+0h] [xbp-40h] BYREF
   PostProcessorRuler_CharInfo_array *numInfos; // [xsp+18h] [xbp-28h] BYREF
 
   if ( (byte_596E532 & 1) == 0 )
@@ -2775,9 +2796,9 @@ void PostProcessorRuler__Update(PostProcessorRuler_o *this, const MethodInfo *me
   if ( !*(&CommonUI_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo, v6, v7);
   this->fields.useAspectRatio21x9 = !CommonUI__GetForceObi_16_9(0);
-  ScreenRectInfo = PostProcessorRuler__GetScreenRectInfo(&v24, this, v8);
-  v10 = *(_QWORD *)&v24.fields.LimitMinX16x9;
-  *(_OWORD *)&this->fields.screenRect.fields.LimitMinX = *(_OWORD *)&v24.fields.LimitMinX;
+  ScreenRectInfo = PostProcessorRuler__GetScreenRectInfo(&v26, this, v8);
+  v10 = *(_QWORD *)&v26.fields.LimitMinX16x9;
+  *(_OWORD *)&this->fields.screenRect.fields.LimitMinX = *(_OWORD *)&v26.fields.LimitMinX;
   *(_QWORD *)&this->fields.screenRect.fields.LimitMinX16x9 = v10;
   MousePositionInt = PostProcessorRuler__GetMousePositionInt((PostProcessorRuler_o *)ScreenRectInfo, v11);
   v16 = Method_System_Array_Empty_PostProcessorRuler_CharInfo___;
@@ -2799,8 +2820,10 @@ void PostProcessorRuler__Update(PostProcessorRuler_o *this, const MethodInfo *me
   numInfos = **(PostProcessorRuler_CharInfo_array ***)(v20 + 184);
   PostProcessorRuler__PopulateUnitHeightCharInfos(this, &numInfos, v14);
   PostProcessorRuler__PopulateUnitWidthCharInfos(this, &numInfos, v21);
-  PostProcessorRuler__PopulateMousePositionCharInfos(this, v17, &numInfos, v22);
-  PostProcessorRuler__ProcessCompute(this, v17, numInfos, v23);
+  v22 = v17;
+  PostProcessorRuler__PopulateMousePositionCharInfos(this, v22, &numInfos, v23);
+  v24 = v17;
+  PostProcessorRuler__ProcessCompute(this, v24, numInfos, v25);
 }
 
 

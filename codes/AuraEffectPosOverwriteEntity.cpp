@@ -49,12 +49,16 @@ UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetOffset(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
+  float v3; // s2
+  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.offsetX), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  result.fields.z = (float)this->fields.offsetZ / 1000.0;
-  result.fields.y = *((float *)&v2 + 1);
+  v3 = (float)this->fields.offsetZ / 1000.0;
+  v4 = *((float *)&v2 + 1);
   result.fields.x = *(float *)&v2;
+  result.fields.z = v3;
+  result.fields.y = v4;
   return result;
 }
 
@@ -64,12 +68,16 @@ UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetRotation(
         const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
+  float v3; // s2
+  float v4; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = vdiv_f32(vcvt_f32_s32(*(int32x2_t *)&this->fields.rotationX), vdup_n_s32(0x447A0000u)).n64_u64[0];
-  result.fields.z = (float)this->fields.rotationZ / 1000.0;
-  result.fields.y = *((float *)&v2 + 1);
+  v3 = (float)this->fields.rotationZ / 1000.0;
+  v4 = *((float *)&v2 + 1);
   result.fields.x = *(float *)&v2;
+  result.fields.z = v3;
+  result.fields.y = v4;
   return result;
 }
 

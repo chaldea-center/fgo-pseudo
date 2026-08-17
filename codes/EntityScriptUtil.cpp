@@ -256,6 +256,7 @@ float EntityScriptUtil__GetMillesimal(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o EntityScriptUtil__GetScriptValue___Il2CppFullySharedGenericType____Il2CppFullySharedGenericType_(
         System_Collections_Generic_Dictionary_string__object__o *script,
         System_String_o *key,
@@ -279,6 +280,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o EntityScriptUtil__GetScri
   unsigned int bits; // w9
   Il2CppMethodPointer methodPointer; // x8
   void (__fastcall *invoker_method)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD); // x9
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v25; // x0
+  void *v26; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v27; // x21
   _DWORD v28[6]; // [xsp+0h] [xbp-40h] BYREF
   Il2CppObject *value; // [xsp+18h] [xbp-28h] BYREF
@@ -323,8 +326,8 @@ LABEL_13:
     else
       v27 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
     memcpy((char *)v28 - ((actualSize + 15) & 0x1FFFFFFF0LL), v27, actualSize);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v27, actualSize);
-    return result;
+    v25 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v27, actualSize);
+    goto LABEL_19;
   }
   v16 = value;
   _2_TSource = method->rgctx_data->_2_TSource;
@@ -343,11 +346,13 @@ LABEL_13:
   v31 = v18;
   v32 = (char *)v28 - ((actualSize + 15) & 0x1FFFFFFF0LL);
   invoker_method(methodPointer, _3_System_Func_TSource__TDestination__Invoke, converter, &v31, v32);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                             monitor,
-                                                                             (char *)v28
-                                                                           - ((actualSize + 15) & 0x1FFFFFFF0LL),
-                                                                             actualSize);
+  v25 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    monitor,
+                                                                    (char *)v28 - ((actualSize + 15) & 0x1FFFFFFF0LL),
+                                                                    actualSize);
+LABEL_19:
+  result.monitor = v26;
+  result.klass = v25;
   return result;
 }
 
@@ -367,14 +372,14 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
   Il2CppObject *v15; // x21
   __int64 _2_TSource; // x1
   _QWORD *v17; // x0
-  void *v18; // x0
-  int v19; // w1
-  _QWORD **v20; // x20
-  __int64 v21; // x0
-  int v22; // w21
+  void *v19; // x0
+  int v20; // w1
+  _QWORD **v21; // x20
+  __int64 v22; // x0
+  int v23; // w21
   _QWORD *exception; // x0
-  _BYTE v24[8]; // [xsp+8h] [xbp-48h]
-  int v25; // [xsp+10h] [xbp-40h]
+  _BYTE v25[8]; // [xsp+8h] [xbp-48h]
+  int v26; // [xsp+10h] [xbp-40h]
   Il2CppObject *value; // [xsp+18h] [xbp-38h] BYREF
 
   if ( !method->rgctx_data )
@@ -384,7 +389,7 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
       sub_224B964();
   }
   value = 0;
-  v25 = 0;
+  v26 = 0;
   if ( script )
   {
     v10 = System_Collections_Generic_Dictionary_object__object___TryGetValue(
@@ -417,21 +422,21 @@ System_Nullable_int__o EntityScriptUtil__GetScriptValue_long__Nullable_int__(
       else
       {
         sub_221405C(v15, _2_TSource, v12);
-        if ( v19 != 1 )
+        if ( v20 != 1 )
           sub_230112C();
-        v20 = (_QWORD **)__cxa_begin_catch(v18);
-        v21 = sub_2213A74(&System_InvalidCastException_TypeInfo);
-        if ( (j_il2cpp_class_is_assignable_from_0(v21, **v20) & 1) == 0 )
+        v21 = (_QWORD **)__cxa_begin_catch(v19);
+        v22 = sub_2213A74(&System_InvalidCastException_TypeInfo);
+        if ( (j_il2cpp_class_is_assignable_from_0(v22, **v21) & 1) == 0 )
         {
           exception = __cxa_allocate_exception(8u);
-          *exception = *v20;
+          *exception = *v21;
           __cxa_throw(exception, (struct type_info *)`typeinfo for'Il2CppExceptionWrapper, 0);
         }
-        v22 = v25;
-        *(_QWORD *)&v24[8 * v25] = *v20;
-        v25 = v22 + 1;
+        v23 = v26;
+        *(_QWORD *)&v25[8 * v26] = *v21;
+        v26 = v23 + 1;
         __cxa_end_catch();
-        v25 = v22;
+        v26 = v23;
       }
     }
   }

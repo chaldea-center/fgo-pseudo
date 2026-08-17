@@ -2193,8 +2193,9 @@ System_Nullable_int__o EventCampaignMaster___c___IsOverrideEntryCondMessage_b__1
         EventCampaignEntity_o *x,
         const MethodInfo *method)
 {
+  System_Nullable_int__o v4; // x0
   int32_t priority; // w1
-  System_Nullable_int__o v5; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_int__o v7; // [xsp+8h] [xbp-18h] BYREF
 
   if ( (byte_597072E & 1) == 0 )
   {
@@ -2203,13 +2204,11 @@ System_Nullable_int__o EventCampaignMaster___c___IsOverrideEntryCondMessage_b__1
   }
   if ( !x )
     sub_2213CDC(this, x);
+  v4 = (System_Nullable_int__o)&v7;
   priority = x->fields.priority;
-  v5 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v5,
-    priority,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  return v5;
+  v7 = 0;
+  System_Nullable_int____ctor(v4, priority, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  return v7;
 }
 
 
@@ -2439,12 +2438,12 @@ System_ValueTuple_bool__Nullable_long___o *EventCampaignMaster___c__DisplayClass
   EventCampaignMaster___c__DisplayClass17_0_o *v5; // x21
   const MethodInfo_45E4A50 *v7; // x3
   bool v8; // w20
-  const MethodInfo_3CE90EC *v9; // x4
+  System_Nullable_long__o v9; // x2 OVERLAPPED
+  const MethodInfo_3CE90EC *v10; // x4
   System_ValueTuple_bool__Nullable_long___o *result; // x0
-  unsigned __int128 v11; // [xsp+0h] [xbp-40h] BYREF
+  System_Nullable_long__o v12; // [xsp+0h] [xbp-40h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
-  System_Nullable_long__o v13; // 0:x0.16
-  System_Nullable_long__o v14; // 0:x2.16
+  System_Nullable_long__o v14; // 0:x0.16
 
   v5 = this;
   if ( (byte_5970732 & 1) == 0 )
@@ -2464,22 +2463,22 @@ System_ValueTuple_bool__Nullable_long___o *EventCampaignMaster___c__DisplayClass
          (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   if ( entity )
   {
-    *(_QWORD *)&v13.fields.hasValue = &v11;
-    v13.fields.value = (int64_t)entity[6].monitor;
-    v11 = 0u;
-    System_Nullable_long____ctor(v13, Method_System_Nullable_long___ctor__, v7);
-    v14 = (System_Nullable_long__o)v11;
+    *(_QWORD *)&v14.fields.hasValue = &v12;
+    v14.fields.value = (int64_t)entity[6].monitor;
+    v12 = (System_Nullable_long__o)0LL;
+    System_Nullable_long____ctor(v14, Method_System_Nullable_long___ctor__, v7);
+    v9 = v12;
   }
   else
   {
-    v14.fields.value = 0;
-    *(_QWORD *)&v14.fields.hasValue = 0;
+    v9.fields.value = 0;
+    *(_QWORD *)&v9.fields.hasValue = 0;
   }
-  v9 = (const MethodInfo_3CE90EC *)Method_System_ValueTuple_bool__Nullable_long____ctor__;
+  v10 = (const MethodInfo_3CE90EC *)Method_System_ValueTuple_bool__Nullable_long____ctor__;
   *(_QWORD *)&retstr->fields.Item1 = 0;
   *(_QWORD *)&retstr->fields.Item2.fields.hasValue = 0;
   retstr->fields.Item2.fields.value = 0;
-  System_ValueTuple_bool__Nullable_long_____ctor(retstr, !v8, v14, v9);
+  System_ValueTuple_bool__Nullable_long_____ctor(retstr, !v8, v9, v10);
   return result;
 }
 

@@ -2021,7 +2021,7 @@ void ShopBuyItemListViewItemDraw__SetMask(
             return;
           }
           max_length = possessionAnotherItemIds->max_length;
-          v34 = *((_DWORD *)this + 128) % (int)max_length;
+          v34 = SLODWORD(this[1].fields.maskSprite) % (int)max_length;
           if ( v34 >= max_length )
             goto LABEL_194;
           v35 = v16->fields.anotherPayItemImage;

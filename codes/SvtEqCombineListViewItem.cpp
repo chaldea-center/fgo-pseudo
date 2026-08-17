@@ -1245,8 +1245,8 @@ bool SvtEqCombineListViewItem__SetSortValue(
   __int128 v59; // q1
   struct UserServantEntity_o *v60; // x8
   IconLabelInfo_o *v61; // x21
-  int32_t v62; // w20
-  int64_t v63; // x20
+  int32_t viewObject; // w20
+  int64_t viewObject_low; // x20
   IconLabelInfo_o *v64; // x21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v66; // [xsp+10h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v67; // [xsp+30h] [xbp-50h]
@@ -1650,11 +1650,11 @@ LABEL_153:
             goto LABEL_178;
           iconLabelInfo1 = v4->fields.iconLabelInfo1;
 LABEL_167:
-          v62 = *((_DWORD *)this + 100);
+          viewObject = (int32_t)this[1].fields.viewObject;
           this = (SvtEqCombineListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
           if ( iconLabelInfo1 )
           {
-            IconLabelInfo__Set_47880948(iconLabelInfo1, 2, v62, (int32_t)this, 0, 0, 0, 0, 0, 0);
+            IconLabelInfo__Set_47880948(iconLabelInfo1, 2, viewObject, (int32_t)this, 0, 0, 0, 0, 0, 0);
 LABEL_169:
             LOBYTE(this) = 1;
             return (char)this;
@@ -1693,13 +1693,13 @@ LABEL_165:
       this = (SvtEqCombineListViewItem_o *)v4->fields.userSvtEntity;
       if ( this )
       {
-        v63 = *((int *)this + 100);
+        viewObject_low = SLODWORD(this[1].fields.viewObject);
         v64 = v4->fields.iconLabelInfo1;
-        v4->fields.sortValue1 = v63;
+        v4->fields.sortValue1 = viewObject_low;
         this = (SvtEqCombineListViewItem_o *)UserServantEntity__getLevelMax((UserServantEntity_o *)this, 0);
         if ( v64 )
         {
-          IconLabelInfo__Set_47880948(v64, 2, v63, (int32_t)this, 0, 0, 0, 0, 0, 0);
+          IconLabelInfo__Set_47880948(v64, 2, viewObject_low, (int32_t)this, 0, 0, 0, 0, 0, 0);
           goto LABEL_169;
         }
       }
@@ -1711,7 +1711,7 @@ LABEL_178:
     this = (SvtEqCombineListViewItem_o *)v4->fields.userSvtEntity;
     if ( !this )
       goto LABEL_178;
-    v49 = *((int *)this + 103);
+    v49 = *(&this[1].fields.type + 1);
     v50 = v4->fields.iconLabelInfo1;
     v4->fields.sortValue1 = v49;
     this = (SvtEqCombineListViewItem_o *)UserServantEntity__get_HpBoostValue((UserServantEntity_o *)this, 0);
@@ -1742,7 +1742,7 @@ LABEL_164:
     this = (SvtEqCombineListViewItem_o *)v4->fields.userSvtEntity;
     if ( !this )
       goto LABEL_178;
-    v49 = *((int *)this + 102);
+    v49 = this[1].fields.type;
     v61 = v4->fields.iconLabelInfo1;
     v4->fields.sortValue1 = v49;
     this = (SvtEqCombineListViewItem_o *)UserServantEntity__get_AtkBoostValue((UserServantEntity_o *)this, 0);

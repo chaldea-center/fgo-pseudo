@@ -107,6 +107,7 @@ bool BattlePointData__AddPoint(
   int32_t v9; // w8
   int32_t maxValue; // w9
   bool v11; // cc
+  bool result; // w0
 
   if ( !this->fields._IsEnableToAddValue_k__BackingField )
     return 0;
@@ -134,9 +135,10 @@ bool BattlePointData__AddPoint(
   }
   if ( value == v9 )
     return 0;
+  result = 1;
   this->fields._IsShowedEffectAfterLastChanged_k__BackingField = 0;
   this->fields.IsPhaseDirty = 1;
-  return 1;
+  return result;
 }
 
 
@@ -279,6 +281,7 @@ BattlePointData_SaveData_o *BattlePointData__GetSaveData(BattlePointData_o *this
   Il2CppObject *v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
+  BattlePointData_SaveData_o *result; // x0
 
   if ( (byte_597357A & 1) == 0 )
   {
@@ -289,8 +292,9 @@ BattlePointData_SaveData_o *BattlePointData__GetSaveData(BattlePointData_o *this
   System_Object___ctor(v3, 0);
   if ( !v3 )
     sub_2213CDC(v4, v5);
+  result = (BattlePointData_SaveData_o *)v3;
   v3[1].klass = *(Il2CppClass **)&this->fields.id;
-  return (BattlePointData_SaveData_o *)v3;
+  return result;
 }
 
 

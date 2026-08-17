@@ -252,6 +252,7 @@ bool UserPresentListViewItem__SetSortValue(
   struct ItemEntity_o *itemEnt; // x8
   int64_t v11; // x8
   struct UserPresentBoxEntity_o *v12; // x9
+  bool result; // w0
 
   v4 = this;
   if ( (byte_596F4D6 & 1) == 0 )
@@ -309,8 +310,9 @@ LABEL_20:
   v4->fields.sortValue0B = v11;
   if ( !v12 )
     goto LABEL_22;
+  result = 1;
   v4->fields.sortValue1 = v12->fields.presentId;
-  return 1;
+  return result;
 }
 
 

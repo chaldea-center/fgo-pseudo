@@ -337,7 +337,7 @@ void BattleDropRandomBound__Initialize(
   bool v64; // w1
   float cosx; // [xsp+8h] [xbp-48h] BYREF
   float sinx; // [xsp+Ch] [xbp-44h] BYREF
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973412 & 1) == 0 )
@@ -545,17 +545,19 @@ void BattleDropRandomBound__SimpleFallUpdate(BattleDropRandomBound_o *this, cons
   struct System_Single_array *afterBoundGravityArray; // x10
   float v13; // s1
   float speedYPerFrame; // s0
+  float x; // s8
   float simpleCurrentSpeedY; // s0
   float simpleCurrentSpeedX; // s11
   float simpleStopYPosition; // s12
-  float v18; // s10
+  float z; // s9
+  float v20; // s10
   struct BattleDropRandomBound_BattleDropSimpleFallBound_o *dropFallBoundData; // x8
   struct BattleDropRandomBound_RangeFloat_o *afterBoundSpeedXPerFrame; // x8
-  int v21; // w20
-  float v22; // s0
-  struct BattleDropRandomBound_BattleDropSimpleFallBound_o *v23; // x8
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  int v23; // w20
+  float v24; // s0
+  struct BattleDropRandomBound_BattleDropSimpleFallBound_o *v25; // x8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973414 & 1) == 0 )
   {
@@ -590,10 +592,12 @@ LABEL_23:
           if ( activeInHierarchy )
           {
             localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)activeInHierarchy, 0);
+            x = localPosition.fields.x;
             simpleCurrentSpeedY = this->fields.simpleCurrentSpeedY;
             simpleCurrentSpeedX = this->fields.simpleCurrentSpeedX;
             simpleStopYPosition = this->fields.simpleStopYPosition;
-            v18 = localPosition.fields.y + simpleCurrentSpeedY;
+            z = localPosition.fields.z;
+            v20 = localPosition.fields.y + simpleCurrentSpeedY;
             if ( (float)(localPosition.fields.y + simpleCurrentSpeedY) < simpleStopYPosition )
             {
               ++this->fields.simpleCurrentBoundCount;
@@ -607,16 +611,16 @@ LABEL_23:
                 afterBoundSpeedXPerFrame = dropFallBoundData->fields.afterBoundSpeedXPerFrame;
                 if ( !afterBoundSpeedXPerFrame )
                   goto LABEL_39;
-                v21 = (int)activeInHierarchy;
-                v22 = UnityEngine_Random__Range(
+                v23 = (int)activeInHierarchy;
+                v24 = UnityEngine_Random__Range(
                         afterBoundSpeedXPerFrame->fields.min,
                         afterBoundSpeedXPerFrame->fields.max,
                         0);
-                if ( v21 != 1 )
-                  v22 = -v22;
-                this->fields.simpleCurrentSpeedX = v22;
+                if ( v23 != 1 )
+                  v24 = -v24;
+                this->fields.simpleCurrentSpeedX = v24;
               }
-              v18 = simpleStopYPosition;
+              v20 = simpleStopYPosition;
             }
             activeInHierarchy = this->fields.boundObject;
             if ( activeInHierarchy )
@@ -626,14 +630,14 @@ LABEL_23:
                                                                 0);
               if ( activeInHierarchy )
               {
-                v25.fields.x = localPosition.fields.x + simpleCurrentSpeedX;
-                v25.fields.y = v18;
-                v25.fields.z = localPosition.fields.z;
-                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)activeInHierarchy, v25, 0);
-                v23 = this->fields.dropFallBoundData;
-                if ( v23 )
+                v27.fields.x = x + simpleCurrentSpeedX;
+                v27.fields.y = v20;
+                v27.fields.z = z;
+                UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)activeInHierarchy, v27, 0);
+                v25 = this->fields.dropFallBoundData;
+                if ( v25 )
                 {
-                  if ( v23->fields.maxBoundCount < this->fields.simpleCurrentBoundCount )
+                  if ( v25->fields.maxBoundCount < this->fields.simpleCurrentBoundCount )
                     BattleDropRandomBound__StopBound(this, v4);
                   return;
                 }
@@ -688,8 +692,10 @@ void BattleDropRandomBound__StopBound(BattleDropRandomBound_o *this, const Metho
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s8
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( this->fields.isSimpleFallBound )
   {
@@ -700,14 +706,16 @@ void BattleDropRandomBound__StopBound(BattleDropRandomBound_o *this, const Metho
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform
       || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
+          x = localPosition.fields.x,
+          z = localPosition.fields.z,
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
     {
       sub_2213CDC(transform, v4);
     }
-    v6.fields.y = 0.0;
-    v6.fields.x = localPosition.fields.x;
-    v6.fields.z = localPosition.fields.z;
-    UnityEngine_Transform__set_localPosition(transform, v6, 0);
+    v8.fields.y = 0.0;
+    v8.fields.x = x;
+    v8.fields.z = z;
+    UnityEngine_Transform__set_localPosition(transform, v8, 0);
     this->fields.boundCount = this->fields.maxBoundCount + 1;
   }
 }

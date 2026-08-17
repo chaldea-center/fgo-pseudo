@@ -154,7 +154,8 @@ void LimitUpResultInfoSkillComponent__Setup(
   Il2CppObject *Component_object; // x0
   UILabel_o *nameLimitUpLabel; // x23
   ServantSkillStrengthStatus_o *v19; // x24
-  const MethodInfo *v20; // x3
+  UnityEngine_Vector2Int_o v20; // x6
+  const MethodInfo *v21; // x3
 
   if ( (byte_596A176 & 1) == 0 )
   {
@@ -204,6 +205,7 @@ LABEL_15:
   iconLimitUp = (SkillIconComponent_o *)ServantSkillEntity__GetStrengthStatus(svtSkillEntity, -1, 0);
   if ( !v19 )
     goto LABEL_15;
+  v20 = (UnityEngine_Vector2Int_o)0x1200000014LL;
   ServantSkillStrengthStatus__Set(
     v19,
     nameLimitUpLabel,
@@ -211,10 +213,10 @@ LABEL_15:
     svtSkillEntity->fields.skillNum,
     20,
     -9,
-    (UnityEngine_Vector2Int_o)0x1200000014LL,
+    v20,
     340,
     0,
     0);
 LABEL_14:
-  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v20);
+  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v21);
 }

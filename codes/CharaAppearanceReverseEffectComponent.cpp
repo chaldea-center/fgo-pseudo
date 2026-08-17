@@ -20,7 +20,7 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
   bool v7; // w7
   __int64 v10; // x1
   UIStandFigureRender_o *transform; // x0
-  UnityEngine_Vector2_o BodySize; // kr20_8
+  UnityEngine_Vector2_o BodySize; // kr00_8
   _BOOL4 isContinueSilhouette; // w8
   __int64 v14; // x1
   __int64 v15; // x1
@@ -29,14 +29,16 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
   UnityEngine_Object_o *subEffectBase; // x20
   const MethodInfo *v19; // x2
   float v20; // s8
-  UnityEngine_GameObject_o *v21; // x20
-  System_String_o *v22; // x21
-  CommonEffectLoadComponent_LoadEndHandler_o *v23; // x22
-  const MethodInfo *v24; // x3
-  __int64 v25; // x1
-  const MethodInfo *v26; // x6
-  unsigned __int64 localPosition; // kr28_8
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s9
+  float y; // s10
+  UnityEngine_GameObject_o *v23; // x20
+  System_String_o *v24; // x21
+  CommonEffectLoadComponent_LoadEndHandler_o *v25; // x22
+  const MethodInfo *v26; // x3
+  __int64 v27; // x1
+  const MethodInfo *v28; // x6
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971EC5 & 1) == 0 )
   {
@@ -118,39 +120,41 @@ void CharaAppearanceReverseEffectComponent__AppearanceStart(
     return;
   }
   transform = (UIStandFigureRender_o *)this->fields.subEffectBase;
+  if ( !transform )
+    goto LABEL_35;
+  transform = (UIStandFigureRender_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
+  if ( !transform )
+    goto LABEL_35;
+  LODWORD(v20) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+  transform = (UIStandFigureRender_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (transform = (UIStandFigureRender_o *)UnityEngine_GameObject__get_transform(
-                                               (UnityEngine_GameObject_o *)transform,
-                                               0)) == 0
-    || (LODWORD(v20) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
-        (transform = (UIStandFigureRender_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
     || (transform = (UIStandFigureRender_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0)) == 0
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
-                                            (UnityEngine_Transform_o *)transform,
-                                            0),
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0),
         (transform = (UIStandFigureRender_o *)this->fields.subEffectBase) == 0)
-    || (transform = (UIStandFigureRender_o *)UnityEngine_GameObject__get_transform(
-                                               (UnityEngine_GameObject_o *)transform,
-                                               0)) == 0 )
+    || (x = localPosition.fields.x,
+        y = localPosition.fields.y,
+        (transform = (UIStandFigureRender_o *)UnityEngine_GameObject__get_transform(
+                                                (UnityEngine_GameObject_o *)transform,
+                                                0)) == 0) )
   {
 LABEL_35:
     sub_2213CDC(transform, v10);
   }
-  v28.fields.y = -*((float *)&localPosition + 1);
-  v28.fields.x = -*(float *)&localPosition;
-  v28.fields.z = v20;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v28, 0);
-  v21 = this->fields.subEffectBase;
-  v22 = System_String__Concat_75651716((System_String_o *)StringLiteral_14192/*"Talk/"*/, this->fields.subEffectName, 0);
-  v23 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_2213CCC(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
+  v30.fields.y = -y;
+  v30.fields.x = -x;
+  v30.fields.z = v20;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v30, 0);
+  v23 = this->fields.subEffectBase;
+  v24 = System_String__Concat_75651716((System_String_o *)StringLiteral_14192/*"Talk/"*/, this->fields.subEffectName, 0);
+  v25 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_2213CCC(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
   CommonEffectLoadComponent_LoadEndHandler___ctor(
-    v23,
+    v25,
     (Il2CppObject *)this,
     Method_CharaAppearanceReverseEffectComponent_EndCreateEffect__,
-    v24);
+    v26);
   if ( !*(&CommonEffectManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo, v25);
-  CommonEffectManager__Create_50717624(v21, v22, v23, 0, 0, 0, v26);
+    j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo, v27);
+  CommonEffectManager__Create_50717624(v23, v24, v25, 0, 0, 0, v28);
 }
 
 

@@ -1,26 +1,28 @@
 void ExRoomServant___ctor(ExRoomServant_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
-  struct System_String_o *v10; // x1
-  System_String_o *v11; // x2
-  System_String_o *v12; // x3
-  int32_t v13; // w4
-  int32_t v14; // w5
-  bool v15; // w6
-  bool v16; // w7
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v17; // x20
-  System_String_o *v18; // x2
-  System_String_o *v19; // x3
-  int32_t v20; // w4
-  int32_t v21; // w5
-  bool v22; // w6
-  bool v23; // w7
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct ExRoomServant_VoiceType_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  struct System_String_o *v12; // x1
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v19; // x20
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
 
   if ( (byte_596AE78 & 1) == 0 )
   {
@@ -32,39 +34,38 @@ void ExRoomServant___ctor(ExRoomServant_o *this, const MethodInfo *method)
     byte_596AE78 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(ExRoomServant_VoiceType___TypeInfo, 6);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__90D856B7ECAC90C26898AF8A46404297AA0EF65768F62FDF8C3F08294BCBEE49,
-    0);
-  this->fields.targetSavePlayedVoiceTypes = (struct ExRoomServant_VoiceType_array *)v3;
+  v4.fields.value = Field__PrivateImplementationDetails__90D856B7ECAC90C26898AF8A46404297AA0EF65768F62FDF8C3F08294BCBEE49;
+  v5 = (struct ExRoomServant_VoiceType_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.targetSavePlayedVoiceTypes = v5;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.targetSavePlayedVoiceTypes,
-    (int32_t)v3,
-    v4,
-    v5,
+    (int32_t)v5,
     v6,
     v7,
     v8,
-    v9);
-  v10 = (struct System_String_o *)StringLiteral_1/*""*/;
+    v9,
+    v10,
+    v11);
+  v12 = (struct System_String_o *)StringLiteral_1/*""*/;
   this->fields.currentFaceId = -1;
-  this->fields.currentVoiceDataName = v10;
+  this->fields.currentVoiceDataName = v12;
   *(_QWORD *)&this->fields.currentSvtId = -1;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.currentVoiceDataName,
-    (int32_t)v10,
-    v11,
-    v12,
+    (int32_t)v12,
     v13,
     v14,
     v15,
-    v16);
-  v17 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TypeInfo);
-  System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
+    v16,
     v17,
+    v18);
+  v19 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___TypeInfo);
+  System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
+    v19,
     (const MethodInfo_3FBB9EC *)Method_System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string____ctor__);
-  this->fields.playedVoice = (struct System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___o *)v17;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.playedVoice, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  this->fields.playedVoice = (struct System_Collections_Generic_Dictionary_ExRoomServant_VoiceType__List_string___o *)v19;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.playedVoice, (int32_t)v19, v20, v21, v22, v23, v24, v25);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 

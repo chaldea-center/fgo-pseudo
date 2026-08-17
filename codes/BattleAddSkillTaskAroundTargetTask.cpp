@@ -13,13 +13,16 @@ bool BattleAddSkillTaskAroundTargetTask__AddTask(
         System_Nullable_int__o actorId,
         const MethodInfo *method)
 {
+  System_Nullable_int__o v11; // x2
   System_Collections_Generic_List_BattleLogicTask__o *IsFirstChecked; // x0
-  __int64 v12; // x1
+  __int64 v13; // x1
   BattleData_o *data; // x25
-  BattleAddSkillTaskAroundTargetTask_Argument_o *v14; // x24
-  const MethodInfo *v15; // x5
-  const MethodInfo *v16; // x4
-  System_Object_array *v17; // x0
+  BattleAddSkillTaskAroundTargetTask_Argument_o *v15; // x0
+  System_Nullable_int__o v16; // x4
+  BattleAddSkillTaskAroundTargetTask_Argument_o *v17; // x24
+  const MethodInfo *v18; // x5
+  const MethodInfo *v19; // x4
+  System_Object_array *v20; // x0
   System_Collections_Generic_List_BattleLogicTask__o *taskList; // [xsp+8h] [xbp-48h] BYREF
 
   if ( (byte_5973917 & 1) == 0 )
@@ -28,38 +31,41 @@ bool BattleAddSkillTaskAroundTargetTask__AddTask(
     sub_2213A60(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
     byte_5973917 = 1;
   }
+  v11 = actorId;
   taskList = 0;
   IsFirstChecked = (System_Collections_Generic_List_BattleLogicTask__o *)BattleAddSkillTaskAroundTargetTask__IsFirstChecked(
                                                                            this,
                                                                            task,
-                                                                           actorId,
+                                                                           v11,
                                                                            *(const MethodInfo **)&targetId);
   if ( ((unsigned __int8)IsFirstChecked & 1) != 0 )
   {
     if ( !logic )
       goto LABEL_10;
     data = logic->fields.data;
-    v14 = (BattleAddSkillTaskAroundTargetTask_Argument_o *)sub_2213CCC(BattleAddSkillTaskAroundTargetTask_Argument_TypeInfo);
-    BattleAddSkillTaskAroundTargetTask_Argument___ctor(v14, data, task, targetId, actorId, v15);
-    if ( BattleAddSkillTaskAroundTargetTask__TryGetAddableTaskList(this, &taskList, logic, v14, v16) )
+    v15 = (BattleAddSkillTaskAroundTargetTask_Argument_o *)sub_2213CCC(BattleAddSkillTaskAroundTargetTask_Argument_TypeInfo);
+    v16 = actorId;
+    v17 = v15;
+    BattleAddSkillTaskAroundTargetTask_Argument___ctor(v15, data, task, targetId, v16, v18);
+    if ( BattleAddSkillTaskAroundTargetTask__TryGetAddableTaskList(this, &taskList, logic, v17, v19) )
     {
       ((void (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, System_Collections_Generic_List_BattleLogicTask__o *, BattleLogic_o *, BattleAddSkillTaskAroundTargetTask_Argument_o *, const MethodInfo *))this->klass->vtable._5_PrevAddTask.methodPtr)(
         this,
         taskList,
         logic,
-        v14,
+        v17,
         this->klass->vtable._5_PrevAddTask.method);
       IsFirstChecked = taskList;
       if ( taskList )
       {
-        v17 = System_Collections_Generic_List_object___ToArray(
+        v20 = System_Collections_Generic_List_object___ToArray(
                 (System_Collections_Generic_List_object__o *)taskList,
                 (const MethodInfo_4485784 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-        BattleLogic__AddTaskTargetTaskAfter_53830196(logic, task, (BattleLogicTask_array *)v17, 0);
+        BattleLogic__AddTaskTargetTaskAfter_53830196(logic, task, (BattleLogicTask_array *)v20, 0);
         return 1;
       }
 LABEL_10:
-      sub_2213CDC(IsFirstChecked, v12);
+      sub_2213CDC(IsFirstChecked, v13);
     }
   }
   return 0;
@@ -118,9 +124,11 @@ bool BattleAddSkillTaskAroundTargetTask__IsFirstChecked(
   int32_t v14; // w5
   bool v15; // w6
   bool v16; // w7
-  const MethodInfo_3CF078C *v17; // x4
+  int32_t v17; // w0
+  System_Nullable_int__o v18; // x3
+  const MethodInfo_3CF078C *v19; // x4
   System_ValueTuple_Int32Enum__Nullable_int___o item; // [xsp+0h] [xbp-40h] BYREF
-  System_ValueTuple_Int32Enum__Nullable_int___o v20; // 0:x0.12
+  System_ValueTuple_Int32Enum__Nullable_int___o v22; // 0:x0.12
 
   v4 = *(_DWORD *)&actorId.fields.hasValue;
   v6 = this;
@@ -147,19 +155,17 @@ bool BattleAddSkillTaskAroundTargetTask__IsFirstChecked(
     sub_2213A04(p_HashAddSkillTaskCheckedTiming, (int32_t)v10, v11, v12, v13, v14, v15, v16);
     klass = (System_Collections_Generic_HashSet_T__o *)p_HashAddSkillTaskCheckedTiming->klass;
   }
-  v20.fields.Item2.fields.value = ((__int64 (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, const MethodInfo *, System_Nullable_int__o, const MethodInfo *))v6->klass->vtable._4_get_AddTiming.methodPtr)(
-                                    v6,
-                                    v6->klass->vtable._4_get_AddTiming.method,
-                                    actorId,
-                                    method);
-  *(_QWORD *)&v20.fields.Item1 = &item;
+  v17 = ((__int64 (__fastcall *)(BattleAddSkillTaskAroundTargetTask_o *, const MethodInfo *, System_Nullable_int__o, const MethodInfo *))v6->klass->vtable._4_get_AddTiming.methodPtr)(
+          v6,
+          v6->klass->vtable._4_get_AddTiming.method,
+          actorId,
+          method);
+  v18 = (System_Nullable_int__o)Method_System_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____ctor__;
+  v22.fields.Item2.fields.value = v17;
+  *(_QWORD *)&v22.fields.Item1 = &item;
   item.fields.Item2.fields.value = 0;
   *(_QWORD *)&item.fields.Item1 = 0;
-  System_ValueTuple_Int32Enum__Nullable_int_____ctor(
-    v20,
-    v4,
-    (System_Nullable_int__o)Method_System_ValueTuple_BattleAddSkillTaskAroundTargetTask_Timing__Nullable_int____ctor__,
-    v17);
+  System_ValueTuple_Int32Enum__Nullable_int_____ctor(v22, v4, v18, v19);
   if ( !klass )
 LABEL_8:
     sub_2213CDC(this, task);
@@ -484,7 +490,7 @@ bool BattleAddSkillTaskAroundTargetTask_Argument__get_IsAiNpc(
   ActSvt_k__BackingField = this->fields._ActSvt_k__BackingField;
   if ( !ActSvt_k__BackingField )
     sub_2213CDC(0, method);
-  return ((bool (__fastcall *)(struct BattleServantData_o *, const MethodInfo *))ActSvt_k__BackingField->klass->vtable._15_get_IsAiNpc.methodPtr)(
+  return ((__int64 (__fastcall *)(struct BattleServantData_o *, const MethodInfo *))ActSvt_k__BackingField->klass->vtable._15_get_IsAiNpc.methodPtr)(
            ActSvt_k__BackingField,
            ActSvt_k__BackingField->klass->vtable._15_get_IsAiNpc.method);
 }

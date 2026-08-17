@@ -5982,8 +5982,9 @@ bool ServantOperationListViewManager__TryGetItemCollectId(
     UserCommandCodeEntity_k__BackingField = item->fields._UserCommandCodeEntity_k__BackingField;
     if ( !UserCommandCodeEntity_k__BackingField )
     {
+      result = 0;
       *id = 0;
-      return 0;
+      return result;
     }
     v11 = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.fakeValue;
     v12 = *(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished + 1);

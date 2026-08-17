@@ -18,12 +18,9 @@ System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity__ConvertColorFromCol
 {
   System_String_o *v3; // x20
   System_Nullable_Color__o *result; // x0
-  float b; // s2
-  float a; // s3
-  const MethodInfo_45E1964 *v8; // x1
-  UnityEngine_Color_o v9; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Color_o v10; // 0:kr00_16.16
-  __int64 v11; // 0:s0.4,4:s1.4
+  const MethodInfo_45E1964 *v6; // x1
+  UnityEngine_Color_o v7; // [xsp+0h] [xbp-30h] BYREF
+  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = colorCode;
   if ( (byte_5970E18 & 1) == 0 )
@@ -32,26 +29,21 @@ System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity__ConvertColorFromCol
     colorCode = (System_String_o *)sub_2213A60(&StringLiteral_395/*"#"*/);
     byte_5970E18 = 1;
   }
-  *(_QWORD *)&v9.fields.r = 0;
-  *(_QWORD *)&v9.fields.b = 0;
+  *(_QWORD *)&v7.fields.r = 0;
+  *(_QWORD *)&v7.fields.b = 0;
   if ( !v3 )
     sub_2213CDC(colorCode, method);
   if ( !System_String__StartsWith(v3, (System_String_o *)StringLiteral_395/*"#"*/, 0) )
     v3 = System_String__Concat_75651716((System_String_o *)StringLiteral_395/*"#"*/, v3, 0);
-  result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(v3, &v9, 0);
+  result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(v3, &v7, 0);
   if ( ((unsigned __int8)result & 1) != 0 )
   {
-    v11 = *(_QWORD *)&v9.fields.r;
-    b = v9.fields.b;
-    a = v9.fields.a;
+    v8 = v7;
     *(_QWORD *)&retstr->fields.hasValue = 0;
     *(_QWORD *)&retstr->fields.value.fields.g = 0;
-    v8 = (const MethodInfo_45E1964 *)Method_System_Nullable_Color___ctor__;
+    v6 = (const MethodInfo_45E1964 *)Method_System_Nullable_Color___ctor__;
     retstr->fields.value.fields.a = 0.0;
-    *(_QWORD *)&v10.fields.r = v11;
-    v10.fields.b = b;
-    v10.fields.a = a;
-    System_Nullable_Color____ctor(retstr, v10, v8);
+    System_Nullable_Color____ctor(retstr, v8, v6);
   }
   else
   {
@@ -95,6 +87,10 @@ UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetAddColor(
         const MethodInfo *method)
 {
   float r; // s8
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  float v7; // s0
   System_Nullable_Color__o v8; // [xsp+Ch] [xbp-34h] BYREF
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -108,24 +104,28 @@ UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetAddColor(
   if ( entity )
   {
     NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v8, entity->fields.addColor, method);
-    result.fields.g = 0.0;
-    result.fields.b = 0.0;
-    result.fields.a = 0.0;
+    g = 0.0;
+    b = 0.0;
+    a = 0.0;
     if ( v8.fields.hasValue )
     {
       r = v8.fields.value.fields.r;
-      result.fields.g = v8.fields.value.fields.g;
-      result.fields.b = v8.fields.value.fields.b;
-      result.fields.a = v8.fields.value.fields.a;
+      g = v8.fields.value.fields.g;
+      b = v8.fields.value.fields.b;
+      a = v8.fields.value.fields.a;
     }
   }
   else
   {
-    result.fields.g = 0.0;
-    result.fields.b = 0.0;
-    result.fields.a = 0.0;
+    g = 0.0;
+    b = 0.0;
+    a = 0.0;
   }
-  result.fields.r = r;
+  v7 = r;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = v7;
   return result;
 }
 
@@ -145,24 +145,23 @@ System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_
   System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *result; // x0
   __int64 v12; // x1
   Il2CppObject *v13; // x21
-  System_Collections_Generic_Dictionary_object__object__o *v14; // x22
+  System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *v14; // x22
   System_Collections_Generic_Dictionary_object__object__o *v15; // x21
-  Il2CppObject *key; // x22
-  Il2CppObject *value; // x23
-  __int64 v18; // x1
-  Il2CppObject *v19; // x0
-  __int64 v20; // x1
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  __int64 v17; // x1
+  Il2CppObject *v18; // x0
+  __int64 v19; // x1
   __int64 Count; // x0
-  __int64 v22; // x1
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *v29; // x1
-  _QWORD v30[2]; // [xsp+0h] [xbp-90h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v31; // [xsp+10h] [xbp-80h] BYREF
+  __int64 v21; // x1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *v28; // x1
+  _QWORD v29[2]; // [xsp+0h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v30; // [xsp+10h] [xbp-80h] BYREF
 
   if ( (byte_5970E1B & 1) == 0 )
   {
@@ -184,7 +183,7 @@ System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_
     byte_5970E1B = 1;
   }
   isChangeEffectShaderDataLoaded = this->fields.isChangeEffectShaderDataLoaded;
-  memset(&v31, 0, sizeof(v31));
+  memset(&v30, 0, sizeof(v30));
   if ( isChangeEffectShaderDataLoaded )
   {
     p_changeEffectShaderDataDict = &this->fields.changeEffectShaderDataDict;
@@ -206,7 +205,7 @@ System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_
       result = (System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *)JsonManager__getDictionary_47982492(v13, 0);
       if ( result )
       {
-        v14 = (System_Collections_Generic_Dictionary_object__object__o *)result;
+        v14 = result;
         if ( System_Collections_Generic_Dictionary_object__object___get_Count(
                (System_Collections_Generic_Dictionary_object__object__o *)result,
                (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Count__) < 1 )
@@ -216,59 +215,59 @@ System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_
           v15,
           (const MethodInfo_3FFD280 *)Method_System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData___ctor__);
         System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-          &v31,
-          v14,
+          &v30,
+          (System_Collections_Generic_Dictionary_object__object__o *)v14,
           (const MethodInfo_3FFE044 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
-        v30[0] = 0;
-        v30[1] = &v31;
+        v29[0] = 0;
+        v29[1] = &v30;
         while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-                  &v31,
+                  &v30,
                   (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
         {
-          key = v31.fields._current.fields.key;
-          value = v31.fields._current.fields.value;
-          if ( !System_String__IsNullOrEmpty((System_String_o *)v31.fields._current.fields.key, 0) && value != 0 )
+          current = v30.fields._current;
+          if ( !System_String__IsNullOrEmpty((System_String_o *)v30.fields._current.fields.key, 0)
+            && current.fields.value != 0 )
           {
             if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-              j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v18);
-            v19 = JsonManager__Deserialize_object_(
-                    value,
+              j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v17);
+            v18 = JsonManager__Deserialize_object_(
+                    current.fields.value,
                     (const MethodInfo_38D38E4 *)Method_JsonManager_Deserialize_NpcServantDisplayTypeDetailEntity_ChangeShaderData___);
-            if ( v19 )
+            if ( v18 )
             {
               if ( !v15 )
-                sub_2213CDC(v19, v20);
+                sub_2213CDC(v18, v19);
               System_Collections_Generic_Dictionary_object__object___set_Item(
                 v15,
-                key,
-                v19,
+                current.fields.key,
+                v18,
                 (const MethodInfo_3FFDBFC *)Method_System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__set_Item__);
             }
           }
         }
-        Count = sub_1FF99AC(v30);
+        Count = sub_1FF99AC(v29);
         if ( !v15
           || (Count = System_Collections_Generic_Dictionary_object__object___get_Count(
                         v15,
                         (const MethodInfo_3FFD8C8 *)Method_System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__get_Count__),
               !this) )
         {
-          sub_2213CDC(Count, v22);
+          sub_2213CDC(Count, v21);
         }
         if ( (int)Count <= 0 )
-          v29 = 0;
+          v28 = 0;
         else
-          v29 = (System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *)v15;
-        *p_changeEffectShaderDataDict = v29;
+          v28 = (System_Collections_Generic_Dictionary_string__NpcServantDisplayTypeDetailEntity_ChangeShaderData__o *)v15;
+        *p_changeEffectShaderDataDict = v28;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.changeEffectShaderDataDict,
-          (int32_t)v29,
+          (int32_t)v28,
+          v22,
           v23,
           v24,
           v25,
           v26,
-          v27,
-          v28);
+          v27);
         return *p_changeEffectShaderDataDict;
       }
     }
@@ -400,6 +399,10 @@ UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetMainColor(
         NpcServantDisplayTypeDetailEntity_o *entity,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   BattleDataDefine_c *v7; // x0
   float *p_OVERWRITE_ATK_RATE_PRIORITY; // x8
   System_Nullable_Color__o v9; // [xsp+Ch] [xbp-34h] BYREF
@@ -416,10 +419,10 @@ UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetMainColor(
     && (NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v9, entity->fields.mainColor, method),
         v9.fields.hasValue) )
   {
-    result.fields.r = v9.fields.value.fields.r;
-    result.fields.g = v9.fields.value.fields.g;
-    result.fields.b = v9.fields.value.fields.b;
-    result.fields.a = v9.fields.value.fields.a;
+    r = v9.fields.value.fields.r;
+    g = v9.fields.value.fields.g;
+    b = v9.fields.value.fields.b;
+    a = v9.fields.value.fields.a;
   }
   else
   {
@@ -430,11 +433,15 @@ UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetMainColor(
       v7 = BattleDataDefine_TypeInfo;
     }
     p_OVERWRITE_ATK_RATE_PRIORITY = (float *)&v7->static_fields->OVERWRITE_ATK_RATE_PRIORITY;
-    result.fields.r = p_OVERWRITE_ATK_RATE_PRIORITY[14];
-    result.fields.g = p_OVERWRITE_ATK_RATE_PRIORITY[15];
-    result.fields.b = p_OVERWRITE_ATK_RATE_PRIORITY[16];
-    result.fields.a = p_OVERWRITE_ATK_RATE_PRIORITY[17];
+    r = p_OVERWRITE_ATK_RATE_PRIORITY[14];
+    g = p_OVERWRITE_ATK_RATE_PRIORITY[15];
+    b = p_OVERWRITE_ATK_RATE_PRIORITY[16];
+    a = p_OVERWRITE_ATK_RATE_PRIORITY[17];
   }
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

@@ -91,6 +91,7 @@ bool BattlePointEntity__TryGetBaseMax(
 {
   int32_t *v6; // x21
   const MethodInfo *v7; // x2
+  bool result; // w0
   int32_t max[2]; // [xsp+8h] [xbp-28h] BYREF
 
   *baseMax = 0;
@@ -102,8 +103,9 @@ bool BattlePointEntity__TryGetBaseMax(
     if ( !BattlePointEntity__TryGetDefaultMax(this, max, v7) )
       return 0;
   }
+  result = 1;
   *baseMax = *v6;
-  return 1;
+  return result;
 }
 
 

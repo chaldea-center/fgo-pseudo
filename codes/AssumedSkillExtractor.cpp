@@ -64,6 +64,7 @@ System_Collections_Generic_IEnumerable_SimpleSkillData__o *AssumedSkillExtractor
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_Generic_IEnumerable_SimpleSkillData__o *result; // x0
 
   if ( (byte_5972E16 & 1) == 0 )
   {
@@ -76,8 +77,9 @@ System_Collections_Generic_IEnumerable_SimpleSkillData__o *AssumedSkillExtractor
   *(_DWORD *)(v5 + 28) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 40) = battleEntity;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)battleEntity, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v5;
   *(_DWORD *)(v5 + 52) = userSvtId;
-  return (System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v5;
+  return result;
 }
 
 
@@ -144,8 +146,9 @@ bool AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1__MoveNext(
   bool v48; // w20
   CommandCodeSkillEntity_o *v49; // x8
   int32_t skillId; // w1
-  struct SimpleSkillData_o v51; // x8
-  struct SimpleSkillData_o v53; // [xsp+8h] [xbp-18h] BYREF
+  SimpleSkillData_o v51; // x0
+  struct SimpleSkillData_o v52; // x8
+  struct SimpleSkillData_o v54; // [xsp+8h] [xbp-18h] BYREF
 
   if ( (byte_5972E19 & 1) == 0 )
   {
@@ -246,12 +249,13 @@ LABEL_28:
             if ( v49 )
             {
               skillId = v49->fields.skillId;
-              v53 = 0;
+              v51 = (SimpleSkillData_o)&v54;
+              v54 = 0;
               v48 = 1;
-              SimpleSkillData___ctor((SimpleSkillData_o)&v53, skillId, 1, 0);
-              v51 = v53;
+              SimpleSkillData___ctor(v51, skillId, 1, 0);
+              v52 = v54;
               this->fields.__1__state = 1;
-              this->fields.__2__current = v51;
+              this->fields.__2__current = v52;
               return v48;
             }
 LABEL_27:
@@ -399,16 +403,17 @@ bool AssumedSkillExtractor__EnumerateMasterSkill_d__2__MoveNext(
   struct BattleSkillInfoData_o *v17; // x19
   int32_t v18; // w1
   int32_t skilllv; // w2
-  AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *v20; // x8
+  SimpleSkillData_o v20; // x0
   AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *v21; // x8
-  __int64 v22; // x19
-  System_Collections_Generic_List_Enumerator_T__o v24; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v25; // [xsp+20h] [xbp-50h] BYREF
-  __int64 v26; // [xsp+40h] [xbp-30h]
-  AssumedSkillExtractor__EnumerateMasterSkill_d__2_o **v27; // [xsp+48h] [xbp-28h] BYREF
-  AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *v28; // [xsp+58h] [xbp-18h] BYREF
+  AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *v22; // x8
+  __int64 v23; // x19
+  System_Collections_Generic_List_Enumerator_T__o v25; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v26; // [xsp+20h] [xbp-50h] BYREF
+  __int64 v27; // [xsp+40h] [xbp-30h]
+  AssumedSkillExtractor__EnumerateMasterSkill_d__2_o **v28; // [xsp+48h] [xbp-28h] BYREF
+  AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *v29; // [xsp+58h] [xbp-18h] BYREF
 
-  v28 = this;
+  v29 = this;
   v2 = this;
   if ( (byte_5972E1C & 1) == 0 )
   {
@@ -419,8 +424,8 @@ bool AssumedSkillExtractor__EnumerateMasterSkill_d__2__MoveNext(
     byte_5972E1C = 1;
   }
   _1__state = v2->fields.__1__state;
-  v26 = 0;
-  v27 = &v28;
+  v27 = 0;
+  v28 = &v29;
   if ( _1__state == 1 )
     goto LABEL_12;
   if ( _1__state )
@@ -436,59 +441,60 @@ LABEL_8:
     LOBYTE(masterSkillInfo) = 0;
     goto LABEL_16;
   }
-  v7 = v28->fields.data;
+  v7 = v29->fields.data;
   if ( !v7 )
     sub_2213CDC(v5, method);
   masterSkillInfo = (System_Collections_Generic_List_object__o *)v7->fields.masterSkillInfo;
   if ( masterSkillInfo )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      &v24,
+      &v25,
       masterSkillInfo,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_BattleSkillInfoData__GetEnumerator__);
-    current = v24.fields._current;
-    v9 = v28;
-    v25 = v24;
-    *(_OWORD *)&v28->fields.__7__wrap1.fields._list = *(_OWORD *)&v24.fields._list;
+    current = v25.fields._current;
+    v9 = v29;
+    v26 = v25;
+    *(_OWORD *)&v29->fields.__7__wrap1.fields._list = *(_OWORD *)&v25.fields._list;
     v9->fields.__7__wrap1.fields._current = (struct BattleSkillInfoData_o *)current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v9->fields.__7__wrap1, 0, v10, v11, v12, v13, v14, v15);
-    v2 = v28;
+    v2 = v29;
 LABEL_12:
     v2->fields.__1__state = -3;
     if ( System_Collections_Generic_List_Enumerator_object___MoveNext(
            (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
            (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__MoveNext__) )
     {
-      v17 = v28->fields.__7__wrap1.fields._current;
+      v17 = v29->fields.__7__wrap1.fields._current;
       if ( !v17 )
-        sub_2213CDC(v28, v16);
+        sub_2213CDC(v29, v16);
       v18 = ((__int64 (__fastcall *)(struct BattleSkillInfoData_o *, const MethodInfo *))v17->klass->vtable._5_get_skillId.methodPtr)(
-              v28->fields.__7__wrap1.fields._current,
+              v29->fields.__7__wrap1.fields._current,
               v17->klass->vtable._5_get_skillId.method);
       skilllv = v17->fields.skilllv;
-      v25.fields._list = 0;
-      SimpleSkillData___ctor((SimpleSkillData_o)&v25, v18, skilllv, 0);
-      v20 = v28;
+      v26.fields._list = 0;
+      v20 = (SimpleSkillData_o)&v26;
+      SimpleSkillData___ctor(v20, v18, skilllv, 0);
+      v21 = v29;
       LOBYTE(masterSkillInfo) = 1;
-      v28->fields.__2__current = (struct SimpleSkillData_o)v25.fields._list;
-      v20->fields.__1__state = 1;
+      v29->fields.__2__current = (struct SimpleSkillData_o)v26.fields._list;
+      v21->fields.__1__state = 1;
     }
     else
     {
-      AssumedSkillExtractor__EnumerateMasterSkill_d__2____m__Finally1(v28, v16);
-      v21 = v28;
+      AssumedSkillExtractor__EnumerateMasterSkill_d__2____m__Finally1(v29, v16);
+      v22 = v29;
       LOBYTE(masterSkillInfo) = 0;
-      *(_QWORD *)&v28->fields.__7__wrap1.fields._index = 0;
-      v21->fields.__7__wrap1.fields._current = 0;
-      v21->fields.__7__wrap1.fields._list = 0;
+      *(_QWORD *)&v29->fields.__7__wrap1.fields._index = 0;
+      v22->fields.__7__wrap1.fields._current = 0;
+      v22->fields.__7__wrap1.fields._list = 0;
     }
   }
 LABEL_16:
-  v22 = v26;
-  if ( v26 )
+  v23 = v27;
+  if ( v27 )
   {
-    sub_2010760(&v27, method);
-    sub_2213CD4(v22);
+    sub_2010760(&v28, method);
+    sub_2213CD4(v23);
   }
   return (char)masterSkillInfo;
 }
@@ -988,8 +994,8 @@ LABEL_55:
             v61 = 2;
 LABEL_71:
             this->fields.__2__current = v60[4];
-            this->fields.__1__state = v61;
             LOBYTE(p__7__wrap6) = 1;
+            this->fields.__1__state = v61;
             return (char)p__7__wrap6;
           }
           this->fields.__7__wrap6 = 0;
@@ -1078,6 +1084,7 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   bool v9; // w7
   AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *v10; // x20
   struct BattleEntity_o *_3__battleEntity; // x1
+  System_Collections_Generic_IEnumerator_SimpleSkillData__o *result; // x0
 
   if ( (byte_5972E22 & 1) == 0 )
   {
@@ -1109,8 +1116,9 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
     v7,
     v8,
     v9);
+  result = (System_Collections_Generic_IEnumerator_SimpleSkillData__o *)v10;
   v10->fields.userSvtId = this->fields.__3__userSvtId;
-  return (System_Collections_Generic_IEnumerator_SimpleSkillData__o *)v10;
+  return result;
 }
 
 

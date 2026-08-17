@@ -1371,15 +1371,17 @@ int64_t QuestTree__GetEndTimeWeekDays(
   int64_t v15; // x22
   System_DateTime_o v16; // x1
   System_DateTime_o v17; // x2
-  __int64 v18; // x1
-  __int64 v19; // x2
-  int v20; // w27
-  __int64 v21; // x1
-  __int64 v22; // x2
-  int64_t v23; // x22
-  int64_t v24; // x26
-  System_DateTime_o v25; // x1
-  System_DateTime_o v26; // x2
+  System_DateTime_o v18; // x0
+  __int64 v19; // x1
+  __int64 v20; // x2
+  int v21; // w27
+  __int64 v22; // x1
+  __int64 v23; // x2
+  int64_t v24; // x22
+  int64_t v25; // x26
+  System_DateTime_o v26; // x1
+  System_DateTime_o v27; // x2
+  System_DateTime_o v28; // x0
   uint64_t dateData; // [xsp+8h] [xbp-58h] BYREF
 
   if ( (byte_596D42E & 1) == 0 )
@@ -1416,37 +1418,31 @@ LABEL_30:
     dateData = NetworkManager__getDateTime_48347260(Time_48346468 - 3600 * value, 0).fields._dateData;
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v16.fields._dateData, v17.fields._dateData);
-    if ( (((unsigned int)questReleaseEnt->fields.targetId >> (System_DateTime__get_DayOfWeek(
-                                                                (System_DateTime_o)&dateData,
-                                                                0)
-                                                            + 1))
-        & 1) == 0 )
+    v18.fields._dateData = (uint64_t)&dateData;
+    if ( (((unsigned int)questReleaseEnt->fields.targetId >> (System_DateTime__get_DayOfWeek(v18, 0) + 1)) & 1) == 0 )
       return 0;
     if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v18, v19);
-    v20 = 6;
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v19, v20);
+    v21 = 6;
     v9 = NetworkManager__getNextDayStartTime(0) + 3600 * questReleaseEnt->fields.value;
-    v23 = v15 + 86400 - 3600 * value;
-    v24 = v9 + 518400;
+    v24 = v15 + 86400 - 3600 * value;
+    v25 = v9 + 518400;
     while ( 1 )
     {
       if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v21, v22);
-      dateData = NetworkManager__getDateTime_48347260(v23, 0).fields._dateData;
+        j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v22, v23);
+      dateData = NetworkManager__getDateTime_48347260(v24, 0).fields._dateData;
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v25.fields._dateData, v26.fields._dateData);
-      if ( (((unsigned int)questReleaseEnt->fields.targetId >> (System_DateTime__get_DayOfWeek(
-                                                                  (System_DateTime_o)&dateData,
-                                                                  0)
-                                                              + 1))
-          & 1) == 0 )
+        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v26.fields._dateData, v27.fields._dateData);
+      v28.fields._dateData = (uint64_t)&dateData;
+      if ( (((unsigned int)questReleaseEnt->fields.targetId >> (System_DateTime__get_DayOfWeek(v28, 0) + 1)) & 1) == 0 )
         break;
-      --v20;
+      --v21;
       v9 += 86400LL;
-      v23 += 86400LL;
-      if ( !v20 )
+      v24 += 86400LL;
+      if ( !v21 )
       {
-        v9 = v24;
+        v9 = v25;
         break;
       }
     }
@@ -1861,7 +1857,7 @@ int32_t QuestTree__GetQuestCount(QuestTree_o *this, int32_t warId, const MethodI
   __int64 size; // x10
   int32_t v54; // [xsp+14h] [xbp-FCh]
   System_Collections_Generic_List_Enumerator_object__o v55; // [xsp+38h] [xbp-D8h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v56; // [xsp+50h] [xbp-C0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v56; // [xsp+50h] [xbp-C0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+70h] [xbp-A0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+90h] [xbp-80h] BYREF
 
@@ -2062,13 +2058,13 @@ LABEL_22:
         v40,
         (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
       v42 = 0;
-      v56 = (System_Collections_Generic_List_Enumerator_int__o)v55;
+      v56 = v55;
       v55.fields._list = 0;
       *(_QWORD *)&v55.fields._index = &v56;
       while ( 1 )
       {
         v43 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-                &v56,
+                (System_Collections_Generic_List_Enumerator_int__o *)&v56,
                 (const MethodInfo_40F5CBC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
         if ( !v43 )
           break;
@@ -2076,7 +2072,7 @@ LABEL_22:
           sub_2213CDC(v43, v44);
         Item = System_Collections_Generic_Dictionary_int__int___get_Item(
                  ShareQuestIdToGroupIdDict,
-                 v56.fields._current,
+                 (int32_t)v56.fields._current,
                  (const MethodInfo_3F92B84 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
         v47 = Item;
         if ( (_DWORD)Item )
@@ -2115,7 +2111,7 @@ LABEL_22:
         }
       }
       System_Collections_Generic_List_Enumerator_int___Dispose(
-        &v56,
+        (System_Collections_Generic_List_Enumerator_int__o *)&v56,
         (const MethodInfo_40F5CB8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
       v18 = v54 - v42 + current->fields.questCount;
     }
@@ -2166,7 +2162,7 @@ int32_t QuestTree__GetQuestCountForMap(QuestTree_o *this, int32_t mapId, int32_t
   __int64 size; // x10
   int v39; // [xsp+4h] [xbp-CCh]
   System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+18h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v41; // [xsp+30h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v41; // [xsp+30h] [xbp-A0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+50h] [xbp-80h] BYREF
 
   if ( (byte_596D41E & 1) == 0 )
@@ -2293,13 +2289,13 @@ LABEL_25:
             v25,
             (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
           v27 = 0;
-          v41 = (System_Collections_Generic_List_Enumerator_int__o)v40;
+          v41 = v40;
           v40.fields._list = 0;
           *(_QWORD *)&v40.fields._index = &v41;
           while ( 1 )
           {
             v28 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-                    &v41,
+                    (System_Collections_Generic_List_Enumerator_int__o *)&v41,
                     (const MethodInfo_40F5CBC *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
             if ( !v28 )
               break;
@@ -2307,7 +2303,7 @@ LABEL_25:
               sub_2213CDC(v28, v29);
             Item = System_Collections_Generic_Dictionary_int__int___get_Item(
                      ShareQuestIdToGroupIdDict,
-                     v41.fields._current,
+                     (int32_t)v41.fields._current,
                      (const MethodInfo_3F92B84 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
             v32 = Item;
             if ( (_DWORD)Item )
@@ -2346,7 +2342,7 @@ LABEL_25:
             }
           }
           System_Collections_Generic_List_Enumerator_int___Dispose(
-            &v41,
+            (System_Collections_Generic_List_Enumerator_int__o *)&v41,
             (const MethodInfo_40F5CB8 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
           v39 = v39 - v27 + v22->fields.questCount;
         }
@@ -4017,6 +4013,7 @@ bool QuestTree__EnumerateBlankEarthSpotInfo_d__49__MoveNext(
   int32_t v30; // w5
   bool v31; // w6
   bool v32; // w7
+  bool result; // w0
 
   v8 = this;
   if ( (byte_596D632 & 1) == 0 )
@@ -4081,8 +4078,9 @@ bool QuestTree__EnumerateBlankEarthSpotInfo_d__49__MoveNext(
           v8->fields.__2__current = (struct MapControl_SpotInfo_o *)v25;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
           sub_2213A04(p__2__current, (int32_t)v25, v27, v28, v29, v30, v31, v32);
+          result = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return 1;
+          return result;
         }
       }
     }
@@ -4230,6 +4228,7 @@ bool QuestTree__Init_d__20__MoveNext(QuestTree__Init_d__20_o *this, const Method
   TerminalPramsManager_c *v7; // x0
   _BOOL4 isInvisibleConnectAndLoad; // w21
   int32_t v9; // w1
+  bool result; // w0
   __int64 v11; // x0
   __int64 v12; // x0
   UnityEngine_Object_o *v13; // x20
@@ -4262,8 +4261,9 @@ bool QuestTree__Init_d__20__MoveNext(QuestTree__Init_d__20_o *this, const Method
   _1__state = v3->fields.__1__state;
   if ( _1__state == 1 )
   {
+    result = 0;
     v3->fields.__1__state = -1;
-    return 0;
+    return result;
   }
   if ( _1__state )
     return 0;
@@ -4354,8 +4354,9 @@ LABEL_43:
   v3->fields.__2__current = (Il2CppObject *)v21;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
   sub_2213A04(p__2__current, (int32_t)v21, v23, v24, v25, v26, v27, v28);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 
@@ -6079,8 +6080,8 @@ LABEL_123:
         this->fields.__2__current = 0;
         p__2__current = &this->fields.__2__current;
         sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v2, v144, v145, v146, v147, v148);
-        *((_DWORD *)p__2__current - 2) = 1;
         LOBYTE(dataManager_5__2) = 1;
+        *((_DWORD *)p__2__current - 2) = 1;
         return dataManager_5__2;
       }
     }

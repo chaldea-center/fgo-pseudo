@@ -16,22 +16,31 @@ UnityEngine_Vector3_o BillBoardGrouped__GetDimensioned(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BillBoardGrouped__LateUpdate(BillBoardGrouped_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
   int32_t grouping; // w8
   struct UnityEngine_Transform_o *mTrf; // x19
   BillBoardGroupManager_c *v6; // x0
+  float *p_targetFov; // x8
+  float v8; // s0 OVERLAPPED
+  float v9; // s1
+  float v10; // s2
   BillBoardGroupManager_o *Instance; // x0
-  struct UnityEngine_Transform_o *v10; // x20
-  UnityEngine_Transform_o *v11; // x0
-  const MethodInfo *v12; // x3
+  struct UnityEngine_Transform_o *v12; // x20
+  float v13; // s1
+  float v14; // s0 OVERLAPPED
+  float v15; // s2
+  UnityEngine_Transform_o *v16; // x0
+  const MethodInfo *v17; // x3
+  float x; // s8
+  float y; // s9
+  float z; // s10
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Vector3_o forward; // 0:kr00_12.12
-  UnityEngine_Vector3_o LookVec; // 0:kr20_12.12
-  UnityEngine_Vector3_o VecBack; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o forward; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o LookVec; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596FB47 & 1) == 0 )
   {
@@ -53,12 +62,15 @@ void BillBoardGrouped__LateUpdate(BillBoardGrouped_o *this, const MethodInfo *me
         j_il2cpp_runtime_class_init_0(BillBoardGroupManager_TypeInfo, method, v2);
         v6 = BillBoardGroupManager_TypeInfo;
       }
-      VecBack = v6->static_fields->VecBack;
+      p_targetFov = &v6->static_fields->targetFov;
+      v8 = p_targetFov[4];
+      v9 = p_targetFov[5];
+      v10 = p_targetFov[6];
 LABEL_21:
-      v18 = UnityEngine_Quaternion__LookRotation_83371248(VecBack, 0);
+      v24 = UnityEngine_Quaternion__LookRotation_83371248(*(UnityEngine_Vector3_o *)&v8, 0);
       if ( mTrf )
       {
-        v11 = mTrf;
+        v16 = mTrf;
         goto LABEL_23;
       }
 LABEL_24:
@@ -67,22 +79,27 @@ LABEL_24:
     Instance = (BillBoardGroupManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_BillBoardGroupManager__get_Instance__);
     if ( !Instance )
       goto LABEL_24;
-    LookVec = BillBoardGroupManager__GetLookVec(Instance, this->fields.grouping, !this->fields.enableRotationZ, v12);
+    LookVec = BillBoardGroupManager__GetLookVec(Instance, this->fields.grouping, !this->fields.enableRotationZ, v17);
+    x = LookVec.fields.x;
+    y = LookVec.fields.y;
+    z = LookVec.fields.z;
     if ( !byte_5969AE0 )
     {
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    if ( (float)((float)((float)(LookVec.fields.z - static_fields->zeroVector.fields.z)
-                       * (float)(LookVec.fields.z - static_fields->zeroVector.fields.z))
-               + (float)((float)((float)(LookVec.fields.x - static_fields->zeroVector.fields.x)
-                               * (float)(LookVec.fields.x - static_fields->zeroVector.fields.x))
-                       + (float)((float)(LookVec.fields.y - static_fields->zeroVector.fields.y)
-                               * (float)(LookVec.fields.y - static_fields->zeroVector.fields.y)))) >= 1.0e-10 )
+    if ( (float)((float)((float)(z - static_fields->zeroVector.fields.z)
+                       * (float)(z - static_fields->zeroVector.fields.z))
+               + (float)((float)((float)(x - static_fields->zeroVector.fields.x)
+                               * (float)(x - static_fields->zeroVector.fields.x))
+                       + (float)((float)(y - static_fields->zeroVector.fields.y)
+                               * (float)(y - static_fields->zeroVector.fields.y)))) >= 1.0e-10 )
     {
       mTrf = this->fields.mTrf;
-      VecBack = LookVec;
+      v8 = x;
+      v9 = y;
+      v10 = z;
       goto LABEL_21;
     }
 LABEL_19:
@@ -92,22 +109,22 @@ LABEL_19:
   Instance = (BillBoardGroupManager_o *)this->fields.targetCamera;
   if ( !Instance )
     goto LABEL_24;
-  v10 = this->fields.mTrf;
+  v12 = this->fields.mTrf;
   Instance = (BillBoardGroupManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
   if ( !Instance )
     goto LABEL_24;
   forward = UnityEngine_Transform__get_forward((UnityEngine_Transform_o *)Instance, 0);
-  v17.fields.y = -forward.fields.y;
+  v13 = -forward.fields.y;
+  v14 = -forward.fields.x;
+  v15 = -forward.fields.z;
   if ( !this->fields.enableRotationZ )
-    v17.fields.y = 0.0;
-  v17.fields.x = -forward.fields.x;
-  v17.fields.z = -forward.fields.z;
-  v18 = UnityEngine_Quaternion__LookRotation_83371248(v17, 0);
-  if ( !v10 )
+    v13 = 0.0;
+  v24 = UnityEngine_Quaternion__LookRotation_83371248(*(UnityEngine_Vector3_o *)&v14, 0);
+  if ( !v12 )
     goto LABEL_24;
-  v11 = v10;
+  v16 = v12;
 LABEL_23:
-  UnityEngine_Transform__set_rotation(v11, v18, 0);
+  UnityEngine_Transform__set_rotation(v16, v24, 0);
 }
 
 

@@ -505,6 +505,7 @@ System_Collections_IEnumerator_o *PaymentHistoryDialog__WaitExternalPayment(
         const MethodInfo *method)
 {
   __int64 v2; // x19
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596C65B & 1) == 0 )
   {
@@ -513,8 +514,9 @@ System_Collections_IEnumerator_o *PaymentHistoryDialog__WaitExternalPayment(
   }
   v2 = sub_2213CCC(PaymentHistoryDialog__WaitExternalPayment_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
+  result = (System_Collections_IEnumerator_o *)v2;
   *(_DWORD *)(v2 + 16) = 0;
-  return (System_Collections_IEnumerator_o *)v2;
+  return result;
 }
 
 

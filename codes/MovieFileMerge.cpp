@@ -399,6 +399,7 @@ System_Collections_IEnumerator_o *MovieFileMerge__Download(
   int32_t v17; // w5
   bool v18; // w6
   bool v19; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596F71A & 1) == 0 )
   {
@@ -412,8 +413,9 @@ System_Collections_IEnumerator_o *MovieFileMerge__Download(
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = fileName;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v7 + 40), (int32_t)fileName, v14, v15, v16, v17, v18, v19);
+  result = (System_Collections_IEnumerator_o *)v7;
   *(_DWORD *)(v7 + 48) = crc;
-  return (System_Collections_IEnumerator_o *)v7;
+  return result;
 }
 
 
@@ -649,25 +651,24 @@ System_Collections_Generic_Dictionary_string__uint__o *MovieFileMerge__GetNeedDo
   __int64 v4; // x1
   System_Collections_Generic_Dictionary_TKey__TValue__o *AllDownLoadFilePathCRCDictionary; // x0
   const MethodInfo *v6; // x1
-  Il2CppObject *key; // x21
-  uint32_t value; // w22
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   Il2CppObject *LocalFolderPath; // x1
-  System_String_o *v10; // x23
-  _BOOL8 v11; // x0
+  System_String_o *v9; // x23
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
   __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x2
+  __int64 v13; // x2
   System_Byte_array *AllBytes; // x24
-  uint32_t v16; // w1
+  uint32_t v15; // w1
   System_IO_DirectoryInfo_o *Parent; // x0
-  __int64 v18; // x1
-  System_IO_DirectoryInfo_o *v19; // x21
+  __int64 v17; // x1
+  System_IO_DirectoryInfo_o *v18; // x21
+  System_String_o *v19; // x0
   System_String_o *v20; // x0
-  System_String_o *v21; // x0
   struct System_Collections_Generic_Dictionary_TKey__TValue__o *dictionary; // x20
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v24; // [xsp+0h] [xbp-C0h] BYREF
-  uint32_t v25; // [xsp+2Ch] [xbp-94h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v26; // [xsp+30h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v23; // [xsp+0h] [xbp-C0h] BYREF
+  int value; // [xsp+2Ch] [xbp-94h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v25; // [xsp+30h] [xbp-90h] BYREF
 
   if ( (byte_596F719 & 1) == 0 )
   {
@@ -684,8 +685,8 @@ System_Collections_Generic_Dictionary_string__uint__o *MovieFileMerge__GetNeedDo
     sub_2213A60(&StringLiteral_26548/*"{0}/{1}"*/);
     byte_596F719 = 1;
   }
-  v25 = 0;
-  memset(&v26, 0, sizeof(v26));
+  value = 0;
+  memset(&v25, 0, sizeof(v25));
   v3 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_2213CCC(System_Collections_Generic_Dictionary_string__uint__TypeInfo);
   System_Collections_Generic_Dictionary_object__uint____ctor(
     v3,
@@ -694,58 +695,57 @@ System_Collections_Generic_Dictionary_string__uint__o *MovieFileMerge__GetNeedDo
   if ( !AllDownLoadFilePathCRCDictionary )
     sub_2213CDC(0, v4);
   System_Collections_Generic_Dictionary_object__uint___GetEnumerator(
-    &v24,
+    &v23,
     AllDownLoadFilePathCRCDictionary,
     (const MethodInfo_4025450 *)Method_System_Collections_Generic_Dictionary_string__uint__GetEnumerator__);
-  v26 = v24;
-  v24.fields._dictionary = 0;
-  *(_QWORD *)&v24.fields._version = &v26;
+  v25 = v23;
+  v23.fields._dictionary = 0;
+  *(_QWORD *)&v23.fields._version = &v25;
   while ( System_Collections_Generic_Dictionary_Enumerator_object__uint___MoveNext(
-            &v26,
+            &v25,
             (const MethodInfo_416CE6C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__MoveNext__) )
   {
-    key = v26.fields._current.fields.key;
-    value = (uint32_t)v26.fields._current.fields.value;
+    current = v25.fields._current;
     LocalFolderPath = (Il2CppObject *)MovieFileMerge__GetLocalFolderPath(this, v6);
-    v10 = System_String__Format_75697880((System_String_o *)StringLiteral_26548/*"{0}/{1}"*/, LocalFolderPath, key, 0);
-    v11 = System_IO_File__Exists(v10, 0);
-    if ( !v11 )
+    v9 = System_String__Format_75697880((System_String_o *)StringLiteral_26548/*"{0}/{1}"*/, LocalFolderPath, current.fields.key, 0);
+    v10 = System_IO_File__Exists(v9, 0);
+    if ( !v10 )
       goto LABEL_11;
-    AllBytes = System_IO_File__ReadAllBytes(v10, 0);
-    v25 = value;
+    AllBytes = System_IO_File__ReadAllBytes(v9, 0);
+    value = (int)current.fields.value;
     if ( !*(&Crc32_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v13, v14);
-    v16 = Crc32__Compute(AllBytes, 0);
-    if ( !System_UInt32__Equals_77266184((uint32_t)&v25, v16, 0) )
+      j_il2cpp_runtime_class_init_0(Crc32_TypeInfo, v12, v13);
+    v15 = Crc32__Compute(AllBytes, 0);
+    if ( !System_UInt32__Equals_77266184((uint32_t)&value, v15, 0) )
     {
-      System_IO_File__Delete(v10, 0);
+      System_IO_File__Delete(v9, 0);
 LABEL_11:
       if ( !v3 )
-        sub_2213CDC(v11, v12);
+        sub_2213CDC(v10, v11);
       System_Collections_Generic_Dictionary_object__uint___Add(
         v3,
-        key,
-        value,
+        current.fields.key,
+        (uint32_t)current.fields.value,
         (const MethodInfo_4025054 *)Method_System_Collections_Generic_Dictionary_string__uint__Add__);
-      Parent = System_IO_Directory__GetParent(v10, 0);
-      v19 = Parent;
+      Parent = System_IO_Directory__GetParent(v9, 0);
+      v18 = Parent;
       if ( !Parent )
-        sub_2213CDC(0, v18);
-      v20 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))Parent->klass->vtable._8_get_FullName.methodPtr)(
+        sub_2213CDC(0, v17);
+      v19 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))Parent->klass->vtable._8_get_FullName.methodPtr)(
                                  Parent,
                                  Parent->klass->vtable._8_get_FullName.method);
-      if ( !System_IO_Directory__Exists(v20, 0) )
+      if ( !System_IO_Directory__Exists(v19, 0) )
       {
-        v21 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))v19->klass->vtable._8_get_FullName.methodPtr)(
-                                   v19,
-                                   v19->klass->vtable._8_get_FullName.method);
-        System_IO_Directory__CreateDirectory(v21, 0);
+        v20 = (System_String_o *)((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))v18->klass->vtable._8_get_FullName.methodPtr)(
+                                   v18,
+                                   v18->klass->vtable._8_get_FullName.method);
+        System_IO_Directory__CreateDirectory(v20, 0);
       }
     }
   }
-  dictionary = v24.fields._dictionary;
+  dictionary = v23.fields._dictionary;
   System_Collections_Generic_Dictionary_Enumerator_object__uint___Dispose(
-    &v26,
+    &v25,
     (const MethodInfo_416CF90 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__uint__Dispose__);
   if ( dictionary )
     sub_2213CD4(dictionary);
@@ -1443,6 +1443,7 @@ bool MovieFileMerge__CRCDownloadAndCheck_d__38__MoveNext(
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  bool result; // w0
   System_Collections_Generic_Dictionary_string__uint__o *Dic; // x0
   System_String_o *v17; // x2
   System_String_o *v18; // x3
@@ -1530,8 +1531,9 @@ bool MovieFileMerge__CRCDownloadAndCheck_d__38__MoveNext(
         v4->fields.__2__current = (Il2CppObject *)v7;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
 LABEL_22:
       sub_2213CDC(this, method);
@@ -1574,8 +1576,9 @@ LABEL_22:
   v4->fields.__2__current = (Il2CppObject *)v35;
   v36 = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
   sub_2213A04(v36, (int32_t)v35, v37, v38, v39, v40, v41, v42);
+  result = 1;
   v36[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 
@@ -2498,8 +2501,8 @@ LABEL_193:
       _4__this->fields.loader = 0;
 LABEL_75:
       sub_2213A04(v137, 0, v131, v132, v133, v134, v135, v136);
-      _4__this->fields.isDownloading = 0;
       LOBYTE(klass) = 0;
+      _4__this->fields.isDownloading = 0;
       return klass;
     }
     if ( !klass )
@@ -3164,6 +3167,7 @@ bool MovieFileMerge__Merge_d__40__MoveNext(MovieFileMerge__Merge_d__40_o *this, 
   int32_t v23; // w5
   bool v24; // w6
   bool v25; // w7
+  bool result; // w0
   struct FileMergeAndSplit_Merge_o *v27; // x8
   System_String_o *v28; // x21
   System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *Values; // x0
@@ -3245,8 +3249,9 @@ bool MovieFileMerge__Merge_d__40__MoveNext(MovieFileMerge__Merge_d__40_o *this, 
           v2->fields.__2__current = (Il2CppObject *)v18;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
           sub_2213A04(p__2__current, (int32_t)v18, v20, v21, v22, v23, v24, v25);
+          result = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return 1;
+          return result;
         }
       }
 LABEL_23:
@@ -3284,8 +3289,9 @@ LABEL_23:
   v2->fields.__2__current = (Il2CppObject *)v40;
   v41 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(v41, (int32_t)v40, v42, v43, v44, v45, v46, v47);
+  result = 1;
   v41[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 
@@ -3379,6 +3385,7 @@ bool MovieFileMerge__PlayCRIMovie_d__36__MoveNext(MovieFileMerge__PlayCRIMovie_d
   System_Action_o *v37; // x23
   struct MovieFileMerge___c__DisplayClass36_0_o *_8__1; // x8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
 
   v8 = this;
   if ( (byte_596F726 & 1) == 0 )
@@ -3509,8 +3516,9 @@ LABEL_32:
     v8->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
     sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   return 0;
 }

@@ -147,29 +147,28 @@ void GrandServantListMenuBranchDialog__Open(
   __int64 v31; // x2
   struct UICommonButton_o *changeServantButton; // x8
   __int64 v33; // kr00_8
-  float b; // s2
-  float a; // s3
+  __int64 v34; // kr08_8
   struct UICommonButton_o *resetGrandButton; // x8
-  __int64 v37; // x9
-  __int64 v38; // x8
-  __int64 v39; // x9
-  int32_t v40; // w20
-  int32_t v41; // w24
+  __int64 v36; // x9
+  __int64 v37; // x8
+  __int64 v38; // x9
+  int32_t v39; // w20
+  int32_t v40; // w24
   Il2CppObject *Entity; // x0
-  __int64 v43; // x1
-  __int64 v44; // x2
+  __int64 v42; // x1
+  __int64 v43; // x2
   UILabel_o *messageLabel; // x23
-  Il2CppObject *v46; // x22
+  Il2CppObject *v45; // x22
   UILabel_o *resetGrandButtonCoverLabel; // x23
-  System_String_o *v48; // x0
+  System_String_o *v47; // x0
   System_Object_array *OrganizationList; // x22
-  System_Func_object__bool__o *v50; // x23
-  char v51; // w21
-  __int64 v52; // x2
-  Il2CppObject *v53; // x21
+  System_Func_object__bool__o *v49; // x23
+  char v50; // w21
+  __int64 v51; // x2
+  Il2CppObject *v52; // x21
   UserItemEntity_o *EntityDefinitely; // x0
   int32_t num; // w20
-  UnityEngine_Color_o v56; // [xsp+0h] [xbp-50h] BYREF
+  UnityEngine_Color_o v55; // [xsp+0h] [xbp-50h] BYREF
 
   if ( (byte_596B33E & 1) == 0 )
   {
@@ -189,8 +188,8 @@ void GrandServantListMenuBranchDialog__Open(
     sub_2213A60(&StringLiteral_7307/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/);
     byte_596B33E = 1;
   }
-  *(_QWORD *)&v56.fields.r = 0;
-  *(_QWORD *)&v56.fields.b = 0;
+  *(_QWORD *)&v55.fields.r = 0;
+  *(_QWORD *)&v55.fields.b = 0;
   v9 = sub_2213CCC(GrandServantListMenuBranchDialog___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
@@ -212,39 +211,36 @@ void GrandServantListMenuBranchDialog__Open(
     v30);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_ColorUtility__TryParseHtmlString(
                                                                   (System_String_o *)StringLiteral_435/*"#4D4D4D"*/,
-                                                                  &v56,
+                                                                  &v55,
                                                                   0);
   changeServantButton = this->fields.changeServantButton;
   if ( !changeServantButton )
     goto LABEL_36;
-  v33 = *(_QWORD *)&v56.fields.r;
-  b = v56.fields.b;
-  a = v56.fields.a;
-  *(_QWORD *)&changeServantButton->fields.specifyDisabledColor.fields.r = *(_QWORD *)&v56.fields.r;
-  changeServantButton->fields.specifyDisabledColor.fields.b = b;
-  changeServantButton->fields.specifyDisabledColor.fields.a = a;
+  v33 = *(_QWORD *)&v55.fields.r;
+  v34 = *(_QWORD *)&v55.fields.b;
+  *(_QWORD *)&changeServantButton->fields.specifyDisabledColor.fields.r = *(_QWORD *)&v55.fields.r;
+  *(_QWORD *)&changeServantButton->fields.specifyDisabledColor.fields.b = v34;
   resetGrandButton = this->fields.resetGrandButton;
   if ( !resetGrandButton )
     goto LABEL_36;
   *(_QWORD *)&resetGrandButton->fields.specifyDisabledColor.fields.r = v33;
-  resetGrandButton->fields.specifyDisabledColor.fields.b = b;
-  resetGrandButton->fields.specifyDisabledColor.fields.a = a;
-  v37 = *v18;
+  *(_QWORD *)&resetGrandButton->fields.specifyDisabledColor.fields.b = v34;
+  v36 = *v18;
   if ( !*v18 )
     goto LABEL_36;
-  v38 = *(_QWORD *)(v37 + 72);
+  v37 = *(_QWORD *)(v36 + 72);
+  if ( !v37 )
+    goto LABEL_36;
+  if ( !*(_DWORD *)(v37 + 24) )
+    goto LABEL_37;
+  v38 = *(_QWORD *)(v36 + 80);
   if ( !v38 )
     goto LABEL_36;
   if ( !*(_DWORD *)(v38 + 24) )
-    goto LABEL_37;
-  v39 = *(_QWORD *)(v37 + 80);
-  if ( !v39 )
-    goto LABEL_36;
-  if ( !*(_DWORD *)(v39 + 24) )
 LABEL_37:
     sub_2213CE4(Master_object);
+  v39 = *(_DWORD *)(v37 + 32);
   v40 = *(_DWORD *)(v38 + 32);
-  v41 = *(_DWORD *)(v39 + 32);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v11, v31);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ItemMaster___);
@@ -252,29 +248,29 @@ LABEL_37:
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              Master_object,
-             v40,
+             v39,
              (const MethodInfo_3F10B30 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   messageLabel = this->fields.messageLabel;
-  v46 = Entity;
+  v45 = Entity;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v43, v44);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v42, v43);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
                                                                   (System_String_o *)StringLiteral_7306/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_MESSAGE"*/,
                                                                   0);
-  if ( !v46 )
+  if ( !v45 )
     goto LABEL_36;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(
                                                                   (System_String_o *)Master_object,
-                                                                  (Il2CppObject *)v46[1].monitor,
+                                                                  (Il2CppObject *)v45[1].monitor,
                                                                   0);
   if ( !messageLabel )
     goto LABEL_36;
   UILabel__set_text(messageLabel, (System_String_o *)Master_object, 0);
   resetGrandButtonCoverLabel = this->fields.resetGrandButtonCoverLabel;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_7307/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/, 0);
+  v47 = LocalizationManager__Get((System_String_o *)StringLiteral_7307/*"GRAND_SERVANT_LIST_MENU_BRANCH_DIALOG_RESET_GRAND_COVER_TEXT"*/, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(
-                                                                  v48,
-                                                                  (Il2CppObject *)v46[1].monitor,
+                                                                  v47,
+                                                                  (Il2CppObject *)v45[1].monitor,
                                                                   0);
   if ( !resetGrandButtonCoverLabel )
     goto LABEL_36;
@@ -285,27 +281,27 @@ LABEL_37:
   OrganizationList = (System_Object_array *)UserServantMaster__getOrganizationList(
                                               (UserServantMaster_o *)Master_object,
                                               0);
-  v50 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_UserServantEntity__bool__TypeInfo);
+  v49 = (System_Func_object__bool__o *)sub_2213CCC(System_Func_UserServantEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v50,
+    v49,
     (Il2CppObject *)v9,
     Method_GrandServantListMenuBranchDialog___c__DisplayClass12_0__Open_b__0__,
     0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)BasicHelper__Any_object__58785420(
                                                                   OrganizationList,
-                                                                  (System_Func_T__bool__o *)v50,
+                                                                  (System_Func_T__bool__o *)v49,
                                                                   (const MethodInfo_380FE8C *)Method_BasicHelper_Any_UserServantEntity____91711592);
   if ( !this->fields.changeServantButton )
     goto LABEL_36;
-  v51 = (char)Master_object;
+  v50 = (char)Master_object;
   UICommonButton__SetButtonEnable(this->fields.changeServantButton, (unsigned __int8)Master_object & 1, 1, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.changeServantButtonCover;
   if ( !Master_object )
     goto LABEL_36;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, (v51 & 1) == 0, 0);
-  v53 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, (v50 & 1) == 0, 0);
+  v52 = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v52);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v51);
   if ( !byte_5969EF2 )
   {
     sub_2213A60(&NetworkManager_TypeInfo);
@@ -314,19 +310,19 @@ LABEL_37:
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager_TypeInfo;
   if ( !*(&NetworkManager_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v52);
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, v11, v51);
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager_TypeInfo;
   }
-  if ( !v53
+  if ( !v52
     || ((EntityDefinitely = UserItemMaster__GetEntityDefinitely(
-                              (UserItemMaster_o *)v53,
+                              (UserItemMaster_o *)v52,
                               (int64_t)Master_object[2].fields.list[1].monitor,
-                              v40,
+                              v39,
                               0)) == 0
       ? (num = 0)
       : (num = EntityDefinitely->fields.num),
         (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.resetGrandButton) == 0
-     || (UICommonButton__SetButtonEnable((UICommonButton_o *)Master_object, num >= v41, 1, 0),
+     || (UICommonButton__SetButtonEnable((UICommonButton_o *)Master_object, num >= v40, 1, 0),
          (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.resetGrandButtonCoverLabel) == 0)
      || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__get_gameObject(
                                                                          (UnityEngine_Component_o *)Master_object,
@@ -335,7 +331,7 @@ LABEL_37:
 LABEL_36:
     sub_2213CDC(Master_object, v11);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, num < v41, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, num < v40, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
 }
 
@@ -506,7 +502,7 @@ System_IAsyncResult_o *GrandServantListMenuBranchDialog_CallbackFunc__BeginInvok
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(GrandServantListMenuBranchDialog_Result_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

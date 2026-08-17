@@ -304,6 +304,7 @@ System_Collections_IEnumerator_o *CoinRoomEffectComponent__PlayCoinArrivedSE(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597482F & 1) == 0 )
   {
@@ -315,8 +316,9 @@ System_Collections_IEnumerator_o *CoinRoomEffectComponent__PlayCoinArrivedSE(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 40) = totalCount;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -359,16 +361,17 @@ void CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectComponent_o *thi
   bool v37; // w7
   CoinRoomEffectComponent_o *v38; // x0
   const MethodInfo *v39; // x2
-  const MethodInfo *v40; // x2
-  System_Collections_IEnumerator_o *v41; // x0
+  UnityEngine_ParticleSystem_EmissionModule_o v40; // x0
+  const MethodInfo *v41; // x2
+  System_Collections_IEnumerator_o *v42; // x0
   struct UserCoinRoomEntity_o *afterEntity; // x8
   int32_t cnt; // w8
-  int32_t v44; // w22
-  const MethodInfo *v45; // x4
+  int32_t v45; // w22
+  const MethodInfo *v46; // x4
   struct UserCoinRoomEntity_o *beforeEntity; // x8
-  struct UserCoinRoomEntity_o *v47; // x8
-  UnityEngine_ParticleSystem_MinMaxCurve_o v48; // [xsp+0h] [xbp-90h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v49; // [xsp+28h] [xbp-68h] BYREF
+  struct UserCoinRoomEntity_o *v48; // x8
+  UnityEngine_ParticleSystem_MinMaxCurve_o v49; // [xsp+0h] [xbp-90h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v50; // [xsp+28h] [xbp-68h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+48h] [xbp-48h] BYREF
 
   if ( (byte_597482C & 1) == 0 )
@@ -468,23 +471,21 @@ void CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectComponent_o *thi
   if ( energyPartLoopRateOverTimeMax >= this->fields.energyPartLoopRateOverTimeMax )
     energyPartLoopRateOverTimeMax = this->fields.energyPartLoopRateOverTimeMax;
   m_ParticleSystem = CoinRoomEffectComponent__GetEmissionModule(v38, this->fields.coinPartObject, v39).fields.m_ParticleSystem;
-  UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(&v49, (float)energyPartLoopRateOverTimeMax, 0);
-  v48 = v49;
-  UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(
-    (UnityEngine_ParticleSystem_EmissionModule_o)&m_ParticleSystem,
-    &v48,
-    0);
-  v41 = CoinRoomEffectComponent__PlayCoinArrivedSE(this, energyPartLoopRateOverTimeMax, v40);
+  UnityEngine_ParticleSystem_MinMaxCurve__op_Implicit(&v50, (float)energyPartLoopRateOverTimeMax, 0);
+  v40.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  v49 = v50;
+  UnityEngine_ParticleSystem_EmissionModule__set_rateOverTime(v40, &v49, 0);
+  v42 = CoinRoomEffectComponent__PlayCoinArrivedSE(this, energyPartLoopRateOverTimeMax, v41);
   coinListPanel = (UnityEngine_GameObject_o *)UnityEngine_MonoBehaviour__StartCoroutine_83444756(
                                                 (UnityEngine_MonoBehaviour_o *)this,
-                                                v41,
+                                                v42,
                                                 0);
   afterEntity = this->fields.afterEntity;
   if ( !afterEntity )
     goto LABEL_31;
   cnt = afterEntity->fields.cnt;
   coinListPanel = this->fields.effectCircleObject;
-  v44 = cnt ? cnt : v16;
+  v45 = cnt ? cnt : v16;
   if ( !coinListPanel )
     goto LABEL_31;
   coinListPanel = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
@@ -496,13 +497,13 @@ void CoinRoomEffectComponent__StartPutInAnimation(CoinRoomEffectComponent_o *thi
     || (CoinRoomControlEffect__SetValue(
           (CoinRoomControlEffect_o *)coinListPanel,
           beforeEntity->fields.cnt,
-          v44,
+          v45,
           v16,
-          v45),
+          v46),
         (coinListPanel = this->fields.gaugeObject) == 0)
-    || (UnityEngine_GameObject__SetActive(coinListPanel, 1, 0), (v47 = this->fields.beforeEntity) == 0)
+    || (UnityEngine_GameObject__SetActive(coinListPanel, 1, 0), (v48 = this->fields.beforeEntity) == 0)
     || (coinListPanel = (UnityEngine_GameObject_o *)this->fields.gaugeSlider) == 0
-    || (UIProgressBar__set_value((UIProgressBar_o *)coinListPanel, (float)v47->fields.cnt / (float)v16, 0),
+    || (UIProgressBar__set_value((UIProgressBar_o *)coinListPanel, (float)v48->fields.cnt / (float)v16, 0),
         (coinListPanel = (UnityEngine_GameObject_o *)*p_circleAnimation) == 0) )
   {
 LABEL_31:
@@ -693,40 +694,42 @@ bool CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
   float v15; // s0
   float v16; // s1
   UnityEngine_ParticleSystem_o *v17; // x20
+  UnityEngine_ParticleSystem_MainModule_o v18; // x0
+  UnityEngine_ParticleSystem_MainModule_o v19; // x0
   float duration; // s0
   int32_t totalCount; // s1
   float arrivedPlaySeIntervalTime; // s2
-  float v21; // s1
+  float v23; // s1
   Il2CppObject *Component_object; // x0
-  System_String_o *v23; // x2
-  System_String_o *v24; // x3
-  int32_t v25; // w4
-  int32_t v26; // w5
-  bool v27; // w6
-  bool v28; // w7
-  System_String_o *v29; // x2
-  System_String_o *v30; // x3
-  int32_t v31; // w4
-  int32_t v32; // w5
-  bool v33; // w6
-  bool v34; // w7
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
   float lifeTime_5__2; // s8
-  UnityEngine_WaitForSeconds_o *v36; // x20
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  int32_t v43; // w8
+  UnityEngine_WaitForSeconds_o *v38; // x20
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
+  int32_t v42; // w5
+  bool v43; // w6
+  bool v44; // w7
+  int32_t v45; // w8
   float playIntervalTime_5__4; // s1
-  _QWORD *v45; // x0
+  _QWORD *v47; // x0
   _BOOL4 isGaugeAnimation_5__5; // w9
-  int32_t v47; // w8
+  int32_t v49; // w8
   struct UserCoinRoomEntity_o *beforeEntity; // x8
   struct UserCoinRoomEntity_o *afterEntity; // x9
-  UnityEngine_ParticleSystem_MinMaxCurve_o v51; // [xsp+0h] [xbp-70h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v52; // [xsp+20h] [xbp-50h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v53; // [xsp+0h] [xbp-70h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v54; // [xsp+20h] [xbp-50h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+48h] [xbp-28h] BYREF
 
   if ( (byte_5974836 & 1) == 0 )
@@ -741,7 +744,7 @@ bool CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
   _4__this = this->fields.__4__this;
   gaugeEffectComponent_5__6 = 0;
   m_ParticleSystem = 0;
-  memset(&v52, 0, sizeof(v52));
+  memset(&v54, 0, sizeof(v54));
   if ( _1__state > 1 )
   {
     if ( _1__state == 2 )
@@ -773,10 +776,10 @@ bool CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
     }
     if ( v15 >= this->fields._playIntervalTime_5__4 )
     {
-      v45 = Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__;
+      v47 = Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__;
       if ( (*((_BYTE *)Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__ + 83) & 2) != 0 )
-        v45 = (_QWORD *)sub_2213A78(Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__);
-      gaugeEffectComponent_5__6 = (System_Reflection_MethodBase_o *)sub_2213A44(v45, v45[4]);
+        v47 = (_QWORD *)sub_2213A78(Method_CoinRoomEffectComponent__PlayCoinArrivedSE_d__28_MoveNext__);
+      gaugeEffectComponent_5__6 = (System_Reflection_MethodBase_o *)sub_2213A44(v47, v47[4]);
       if ( !_4__this )
         goto LABEL_38;
       gaugeEffectComponent_5__6 = (System_Reflection_MethodBase_o *)OverwriteAssetSoundName__PlaySeContinue(
@@ -785,9 +788,9 @@ bool CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
                                                                       0,
                                                                       0);
       isGaugeAnimation_5__5 = this->fields._isGaugeAnimation_5__5;
-      v47 = this->fields._playCount_5__9 + 1;
+      v49 = this->fields._playCount_5__9 + 1;
       this->fields._time_5__8 = 0.0;
-      this->fields._playCount_5__9 = v47;
+      this->fields._playCount_5__9 = v49;
       if ( !isGaugeAnimation_5__5 )
       {
         beforeEntity = _4__this->fields.beforeEntity;
@@ -817,10 +820,10 @@ bool CoinRoomEffectComponent__PlayCoinArrivedSE_d__28__MoveNext(
       v5,
       v6,
       v7);
-    v43 = 3;
+    v45 = 3;
 LABEL_36:
     LOBYTE(gaugeEffectComponent_5__6) = 1;
-    this->fields.__1__state = v43;
+    this->fields.__1__state = v45;
     return (char)gaugeEffectComponent_5__6;
   }
   if ( !_1__state )
@@ -840,25 +843,22 @@ LABEL_36:
           m_ParticleSystem = UnityEngine_ParticleSystem__get_main(
                                (UnityEngine_ParticleSystem_o *)gaugeEffectComponent_5__6,
                                0).fields.m_ParticleSystem;
-          UnityEngine_ParticleSystem_MainModule__get_startLifetime(
-            &v51,
-            (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-            0);
-          v52 = v51;
-          this->fields._lifeTime_5__2 = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v52, 0);
+          v18.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+          UnityEngine_ParticleSystem_MainModule__get_startLifetime(&v53, v18, 0);
+          v54 = v53;
+          this->fields._lifeTime_5__2 = UnityEngine_ParticleSystem_MinMaxCurve__get_constant(&v54, 0);
           m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v17, 0).fields.m_ParticleSystem;
-          duration = UnityEngine_ParticleSystem_MainModule__get_duration(
-                       (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                       0);
+          v19.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+          duration = UnityEngine_ParticleSystem_MainModule__get_duration(v19, 0);
           totalCount = this->fields.totalCount;
           arrivedPlaySeIntervalTime = _4__this->fields.arrivedPlaySeIntervalTime;
           gaugeEffectComponent_5__6 = (System_Reflection_MethodBase_o *)_4__this->fields.gaugeObject;
           this->fields._isGaugeAnimation_5__5 = 0;
-          v21 = duration / (float)totalCount;
-          if ( v21 <= arrivedPlaySeIntervalTime )
-            v21 = arrivedPlaySeIntervalTime;
+          v23 = duration / (float)totalCount;
+          if ( v23 <= arrivedPlaySeIntervalTime )
+            v23 = arrivedPlaySeIntervalTime;
           this->fields._duration_5__3 = duration;
-          this->fields._playIntervalTime_5__4 = v21;
+          this->fields._playIntervalTime_5__4 = v23;
           if ( gaugeEffectComponent_5__6 )
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
@@ -868,12 +868,12 @@ LABEL_36:
             sub_2213A04(
               (MissionNaviTransitionBoardItem_o *)&this->fields._gaugeEffectComponent_5__6,
               (int32_t)Component_object,
-              v23,
-              v24,
               v25,
               v26,
               v27,
-              v28);
+              v28,
+              v29,
+              v30);
 LABEL_18:
             gaugeEffectComponent_5__6 = (System_Reflection_MethodBase_o *)_4__this->fields.coinPartObject;
             if ( !gaugeEffectComponent_5__6 )
@@ -881,19 +881,19 @@ LABEL_18:
             if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)gaugeEffectComponent_5__6, 0) )
             {
               lifeTime_5__2 = this->fields._lifeTime_5__2;
-              v36 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
-              UnityEngine_WaitForSeconds___ctor(v36, lifeTime_5__2 * 0.9, 0);
-              this->fields.__2__current = (Il2CppObject *)v36;
+              v38 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
+              UnityEngine_WaitForSeconds___ctor(v38, lifeTime_5__2 * 0.9, 0);
+              this->fields.__2__current = (Il2CppObject *)v38;
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
-                (int32_t)v36,
-                v37,
-                v38,
+                (int32_t)v38,
                 v39,
                 v40,
                 v41,
-                v42);
-              v43 = 2;
+                v42,
+                v43,
+                v44);
+              v45 = 2;
             }
             else
             {
@@ -901,13 +901,13 @@ LABEL_18:
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)&this->fields.__2__current,
                 0,
-                v29,
-                v30,
                 v31,
                 v32,
                 v33,
-                v34);
-              v43 = 1;
+                v34,
+                v35,
+                v36);
+              v45 = 1;
             }
             goto LABEL_36;
           }

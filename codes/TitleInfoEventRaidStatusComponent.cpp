@@ -773,21 +773,24 @@ void TitleInfoEventRaidStatusComponent__MoveUp(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
+  float x; // s9
+  float y; // s10
+  float z; // s8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  TitleInfoEventRaidStatusComponent_c *v10; // x8
-  UnityEngine_GameObject_o *v11; // x21
-  Il2CppObject *v12; // x21
-  UnityEngine_GameObject_o *v13; // x0
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v21; // 0:kr14_12.12
+  __int64 v11; // x1
+  __int64 v12; // x2
+  TitleInfoEventRaidStatusComponent_c *v13; // x8
+  UnityEngine_GameObject_o *v14; // x21
+  Il2CppObject *v15; // x21
+  UnityEngine_GameObject_o *v16; // x0
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F0C9 & 1) == 0 )
   {
@@ -799,30 +802,33 @@ void TitleInfoEventRaidStatusComponent__MoveUp(
   if ( !transform )
     goto LABEL_9;
   localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  x = localPosition.fields.x;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v10 = TitleInfoEventRaidStatusComponent_TypeInfo;
-  v11 = gameObject;
+  v13 = TitleInfoEventRaidStatusComponent_TypeInfo;
+  v14 = gameObject;
   if ( !*(&TitleInfoEventRaidStatusComponent_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TitleInfoEventRaidStatusComponent_TypeInfo, v8, v9);
-    v10 = TitleInfoEventRaidStatusComponent_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TitleInfoEventRaidStatusComponent_TypeInfo, v11, v12);
+    v13 = TitleInfoEventRaidStatusComponent_TypeInfo;
   }
-  v12 = UITweener__Begin_object_(
-          v11,
-          v10->static_fields->FRAME_ANIM_DURATION,
+  v15 = UITweener__Begin_object_(
+          v14,
+          v13->static_fields->FRAME_ANIM_DURATION,
           (const MethodInfo_3A047F4 *)Method_UITweener_Begin_TweenPosition___);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  if ( !transform || (v21 = UnityEngine_Transform__get_localPosition(transform, 0), !v12) )
+  if ( !transform || (v24 = UnityEngine_Transform__get_localPosition(transform, 0), !v15) )
 LABEL_9:
     sub_2213CDC(transform, v6);
-  *(UnityEngine_Vector3_o *)&v12[8].klass = v21;
-  HIDWORD(v12[8].monitor) = LODWORD(localPosition.fields.x);
-  LODWORD(v12[2].klass) = 2;
-  *(float *)&v12[9].klass = localPosition.fields.y + (float)moveY;
-  HIDWORD(v12[9].klass) = LODWORD(localPosition.fields.z);
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v12[5].klass = (Il2CppClass *)v13;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v12[5], (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  *(UnityEngine_Vector3_o *)&v15[8].klass = v24;
+  *((float *)&v15[8].monitor + 1) = x;
+  LODWORD(v15[2].klass) = 2;
+  *(float *)&v15[9].klass = y + (float)moveY;
+  *((float *)&v15[9].klass + 1) = z;
+  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v15[5].klass = (Il2CppClass *)v16;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v15[5], (int32_t)v16, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -1072,14 +1078,14 @@ void TitleInfoEventRaidStatusComponent__SetEntryAnim(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  TitleInfoEventRaidStatusComponent_c *v5; // x0
-  float32x2_t v6; // d0
+  __int64 v5; // x1
+  __int64 v6; // x2
+  TitleInfoEventRaidStatusComponent_c *v7; // x0
+  float32x2_t v8; // d0
   float32x2_t *static_fields; // x8
-  float v8; // s3
-  __int64 v9; // x1
-  __int64 v10; // x2
-  float y; // s1
-  float v12; // [xsp+0h] [xbp-30h]
+  float v10; // s3
+  float y; // [xsp+0h] [xbp-30h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F0C1 & 1) == 0 )
   {
@@ -1090,24 +1096,24 @@ void TitleInfoEventRaidStatusComponent__SetEntryAnim(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_10;
-  y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
-  v5 = TitleInfoEventRaidStatusComponent_TypeInfo;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  v7 = TitleInfoEventRaidStatusComponent_TypeInfo;
   this->fields.inPos.fields.x = 0.0;
-  this->fields.inPos.fields.y = y;
+  this->fields.inPos.fields.y = localPosition.fields.y;
   this->fields.inPos.fields.z = 0.0;
-  if ( !*(&v5->_2.cctor_finished + 1) )
+  if ( !*(&v7->_2.cctor_finished + 1) )
   {
-    v12 = y;
-    j_il2cpp_runtime_class_init_0(v5, v9, v10);
-    y = v12;
-    v5 = TitleInfoEventRaidStatusComponent_TypeInfo;
+    y = localPosition.fields.y;
+    j_il2cpp_runtime_class_init_0(v7, v5, v6);
+    localPosition.fields.y = y;
+    v7 = TitleInfoEventRaidStatusComponent_TypeInfo;
   }
-  v6.n64_u32[0] = 0;
-  static_fields = (float32x2_t *)v5->static_fields;
-  v8 = static_fields[11].n64_f32[0];
-  v6.n64_f32[1] = y;
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v6, static_fields[10]);
-  this->fields.outPos.fields.z = v8 + 0.0;
+  v8.n64_u32[0] = 0;
+  static_fields = (float32x2_t *)v7->static_fields;
+  v10 = static_fields[11].n64_f32[0];
+  v8.n64_u32[1] = LODWORD(localPosition.fields.y);
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v8, static_fields[10]);
+  this->fields.outPos.fields.z = v10 + 0.0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.outPos, 0),
@@ -1803,6 +1809,7 @@ void TitleInfoEventRaidStatusComponent__StartClearAnim(
   System_String_o *v24; // x1
   float v25; // s2
   float v26; // s0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F0C3 & 1) == 0 )
   {
@@ -1823,10 +1830,11 @@ void TitleInfoEventRaidStatusComponent__StartClearAnim(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     sub_2213CDC(0, v11);
-  y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  y = localPosition.fields.y;
   v16 = TitleInfoEventRaidStatusComponent_TypeInfo;
   this->fields.inPos.fields.x = 0.0;
-  this->fields.inPos.fields.y = y;
+  this->fields.inPos.fields.y = localPosition.fields.y;
   isJumbleRaid = this->fields.isJumbleRaid;
   this->fields.inPos.fields.z = 0.0;
   v18 = *(&v16->_2.cctor_finished + 1);
@@ -1892,9 +1900,9 @@ bool TitleInfoEventRaidStatusComponent__TryGetGridPosition(
     if ( EventBossStatusUiEntity__TryGetGridPos(eventBossStatusUiEntity, &v10, 0) )
     {
       v8 = v10.fields.z;
+      LOBYTE(eventBossStatusUiEntity) = 1;
       *(_QWORD *)&pos->fields.x = *(_QWORD *)&v10.fields.x;
       pos->fields.z = v8;
-      LOBYTE(eventBossStatusUiEntity) = 1;
     }
     else
     {

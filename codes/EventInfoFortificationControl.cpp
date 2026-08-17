@@ -1,19 +1,21 @@
 void EventInfoFortificationControl___ctor(EventInfoFortificationControl_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  System_String_o *v4; // x2
-  System_String_o *v5; // x3
-  int32_t v6; // w4
-  int32_t v7; // w5
-  bool v8; // w6
-  bool v9; // w7
-  System_Collections_Generic_List_object__o *v10; // x20
-  System_String_o *v11; // x2
-  System_String_o *v12; // x3
-  int32_t v13; // w4
-  int32_t v14; // w5
-  bool v15; // w6
-  bool v16; // w7
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  struct System_Int32_array *v5; // x20
+  System_String_o *v6; // x2
+  System_String_o *v7; // x3
+  int32_t v8; // w4
+  int32_t v9; // w5
+  bool v10; // w6
+  bool v11; // w7
+  System_Collections_Generic_List_object__o *v12; // x20
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
 
   if ( (byte_5971CB5 & 1) == 0 )
   {
@@ -24,26 +26,25 @@ void EventInfoFortificationControl___ctor(EventInfoFortificationControl_o *this,
     byte_5971CB5 = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1,
-    0);
-  this->fields.workTypeOrder = (struct System_Int32_array *)v3;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.workTypeOrder, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventInfoFortificationViewItem__TypeInfo);
+  v4.fields.value = Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1;
+  v5 = (struct System_Int32_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  this->fields.workTypeOrder = v5;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.workTypeOrder, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_2213CCC(System_Collections_Generic_List_EventInfoFortificationViewItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
+    v12,
     (const MethodInfo_44833FC *)Method_System_Collections_Generic_List_EventInfoFortificationViewItem___ctor__);
-  this->fields.fortificationViewItemList = (struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *)v10;
+  this->fields.fortificationViewItemList = (struct System_Collections_Generic_List_EventInfoFortificationViewItem__o *)v12;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.fortificationViewItemList,
-    (int32_t)v10,
-    v11,
-    v12,
+    (int32_t)v12,
     v13,
     v14,
     v15,
-    v16);
+    v16,
+    v17,
+    v18);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0);
 }
 

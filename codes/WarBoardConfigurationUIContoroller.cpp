@@ -175,15 +175,16 @@ void WarBoardConfigurationUIContoroller__InitCost(WarBoardConfigurationUIContoro
 {
   __int64 v2; // x2
   Il2CppType *v4; // x20
+  System_RuntimeTypeHandle_o v5; // x0
   System_Type_o *TypeFromHandle; // x0
   UnityEngine_Object_o *_83400868; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
-  UnityEngine_Object_o *v9; // x20
+  __int64 v8; // x1
+  __int64 v9; // x2
+  UnityEngine_Object_o *v10; // x20
   UIFont_o *Component_object; // x0
-  const MethodInfo *v11; // x1
-  UIFont_o *v12; // x20
-  const MethodInfo *v13; // x2
+  const MethodInfo *v12; // x1
+  UIFont_o *v13; // x20
+  const MethodInfo *v14; // x2
 
   if ( (byte_596E421 & 1) == 0 )
   {
@@ -197,45 +198,46 @@ void WarBoardConfigurationUIContoroller__InitCost(WarBoardConfigurationUIContoro
   v4 = UnityEngine_GameObject_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, method, v2);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v4, 0);
+  v5.fields.value = (intptr_t)v4;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v5, 0);
   _83400868 = UnityEngine_Resources__Load_83400868((System_String_o *)StringLiteral_7090/*"Fonts/FGO-NumberFont-02"*/, TypeFromHandle, 0);
   if ( _83400868 )
   {
     if ( (UnityEngine_GameObject_c *)_83400868->klass == UnityEngine_GameObject_TypeInfo )
-      v9 = _83400868;
+      v10 = _83400868;
     else
-      v9 = 0;
+      v10 = 0;
   }
   else
   {
-    v9 = 0;
+    v10 = 0;
   }
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-  Component_object = (UIFont_o *)UnityEngine_Object__op_Inequality(v9, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
+  Component_object = (UIFont_o *)UnityEngine_Object__op_Inequality(v10, 0, 0);
   if ( ((unsigned __int8)Component_object & 1) != 0 )
   {
-    if ( !v9 )
+    if ( !v10 )
       goto LABEL_20;
     Component_object = (UIFont_o *)UnityEngine_GameObject__GetComponent_object_(
-                                     (UnityEngine_GameObject_o *)v9,
+                                     (UnityEngine_GameObject_o *)v10,
                                      (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
     if ( !this->fields.currentCostLabel
-      || (v12 = Component_object,
+      || (v13 = Component_object,
           UILabel__set_bitmapFont(this->fields.currentCostLabel, Component_object, 0),
           (Component_object = (UIFont_o *)this->fields.maxCostLabel) == 0)
-      || (UILabel__set_bitmapFont((UILabel_o *)Component_object, v12, 0),
+      || (UILabel__set_bitmapFont((UILabel_o *)Component_object, v13, 0),
           (Component_object = (UIFont_o *)this->fields.spritLabel) == 0)
-      || (UILabel__set_bitmapFont((UILabel_o *)Component_object, v12, 0),
+      || (UILabel__set_bitmapFont((UILabel_o *)Component_object, v13, 0),
           (Component_object = (UIFont_o *)this->fields.currentApLabel) == 0) )
     {
 LABEL_20:
-      sub_2213CDC(Component_object, v11);
+      sub_2213CDC(Component_object, v12);
     }
-    UILabel__set_bitmapFont((UILabel_o *)Component_object, v12, 0);
+    UILabel__set_bitmapFont((UILabel_o *)Component_object, v13, 0);
   }
-  WarBoardConfigurationUIContoroller__ModifyCost(this, v11);
-  WarBoardConfigurationUIContoroller__ModifyAP(this, 0, v13);
+  WarBoardConfigurationUIContoroller__ModifyCost(this, v12);
+  WarBoardConfigurationUIContoroller__ModifyAP(this, 0, v14);
 }
 
 
@@ -1761,24 +1763,26 @@ void WarBoardConfigurationUIContoroller__OnClickStartButton(
   int32_t v25; // w5
   bool v26; // w6
   bool v27; // w7
+  System_Nullable_float__o p_titlePosY; // x0
+  System_Nullable_float__o v29; // x0
   bool IsEnabledPutOnFreeSquare; // w20
-  __int64 v29; // x1
-  __int64 v30; // x2
-  Il2CppObject *v31; // x20
-  System_String_o *v32; // x21
-  System_String_o *v33; // x22
-  System_String_o *v34; // x23
-  System_String_o *v35; // x24
-  CommonConfirmDialog_ClickDelegate_o *v36; // x25
-  __int64 v37; // x1
-  __int64 v38; // x2
-  Il2CppObject *v39; // x20
-  System_String_o *v40; // x21
-  System_String_o *v41; // x22
-  System_String_o *v42; // x23
-  System_String_o *v43; // x24
-  CommonConfirmDialog_ClickDelegate_o *v44; // x25
-  System_Nullable_float__o v45; // [xsp+60h] [xbp-50h] BYREF
+  __int64 v31; // x1
+  __int64 v32; // x2
+  Il2CppObject *v33; // x20
+  System_String_o *v34; // x21
+  System_String_o *v35; // x22
+  System_String_o *v36; // x23
+  System_String_o *v37; // x24
+  CommonConfirmDialog_ClickDelegate_o *v38; // x25
+  __int64 v39; // x1
+  __int64 v40; // x2
+  Il2CppObject *v41; // x20
+  System_String_o *v42; // x21
+  System_String_o *v43; // x22
+  System_String_o *v44; // x23
+  System_String_o *v45; // x24
+  CommonConfirmDialog_ClickDelegate_o *v46; // x25
+  System_Nullable_float__o v47; // [xsp+60h] [xbp-50h] BYREF
   System_Nullable_float__o titlePosY; // [xsp+68h] [xbp-48h] BYREF
 
   if ( (byte_596E432 & 1) == 0 )
@@ -1863,16 +1867,15 @@ void WarBoardConfigurationUIContoroller__OnClickStartButton(
           v26,
           v27);
       }
+      p_titlePosY = (System_Nullable_float__o)&titlePosY;
       titlePosY = 0;
       System_Nullable_float____ctor(
-        (System_Nullable_float__o)&titlePosY,
+        p_titlePosY,
         90.0,
         (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-      v45 = 0;
-      System_Nullable_float____ctor(
-        (System_Nullable_float__o)&v45,
-        15.0,
-        (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+      v29 = (System_Nullable_float__o)&v47;
+      v47 = 0;
+      System_Nullable_float____ctor(v29, 15.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
       if ( v12 )
       {
         CommonUI__OpenNotificationDialog_37376108(
@@ -1887,7 +1890,7 @@ void WarBoardConfigurationUIContoroller__OnClickStartButton(
           0,
           1,
           titlePosY,
-          v45,
+          v47,
           0,
           0,
           0,
@@ -1912,44 +1915,44 @@ LABEL_32:
     if ( !Instance )
       goto LABEL_32;
     WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0);
-    v31 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v33 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v29, v30);
-    v32 = LocalizationManager__Get((System_String_o *)StringLiteral_16037/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0);
-    v33 = LocalizationManager__Get((System_String_o *)StringLiteral_16035/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, 0);
-    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_16038/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0);
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_16036/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0);
-    v36 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v31, v32);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_16037/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0);
+    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_16035/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE"*/, 0);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_16038/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0);
+    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_16036/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0);
+    v38 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
-      v36,
+      v38,
       (Il2CppObject *)this,
       Method_WarBoardConfigurationUIContoroller_OnClickStartConfirmDialog__,
       0);
-    if ( !v31 )
+    if ( !v33 )
       goto LABEL_32;
-    CommonUI__OpenConfirmDialog_37373184((CommonUI_o *)v31, v32, v33, v34, v35, 1, v36, 0, 28, 180.0, 40.0, 0, 0, 0);
+    CommonUI__OpenConfirmDialog_37373184((CommonUI_o *)v33, v34, v35, v36, v37, 1, v38, 0, 28, 180.0, 40.0, 0, 0, 0);
   }
   else
   {
     if ( !Instance )
       goto LABEL_32;
     WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0);
-    v39 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v41 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v37, v38);
-    v40 = LocalizationManager__Get((System_String_o *)StringLiteral_16037/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0);
-    v41 = LocalizationManager__Get((System_String_o *)StringLiteral_16034/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, 0);
-    v42 = LocalizationManager__Get((System_String_o *)StringLiteral_16038/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0);
-    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_16036/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0);
-    v44 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39, v40);
+    v42 = LocalizationManager__Get((System_String_o *)StringLiteral_16037/*"WARBOARD_SORTIE_CONFIRMATION_TITLE"*/, 0);
+    v43 = LocalizationManager__Get((System_String_o *)StringLiteral_16034/*"WARBOARD_SORTIE_CONFIRMATION_MESSAGE"*/, 0);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_16038/*"WARBOARD_SORTIE_CONFIRMATION_YES"*/, 0);
+    v45 = LocalizationManager__Get((System_String_o *)StringLiteral_16036/*"WARBOARD_SORTIE_CONFIRMATION_NO"*/, 0);
+    v46 = (CommonConfirmDialog_ClickDelegate_o *)sub_2213CCC(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(
-      v44,
+      v46,
       (Il2CppObject *)this,
       Method_WarBoardConfigurationUIContoroller_OnClickStartConfirmDialog__,
       0);
-    if ( !v39 )
+    if ( !v41 )
       goto LABEL_32;
-    CommonUI__OpenConfirmDialog_37373184((CommonUI_o *)v39, v40, v41, v42, v43, 1, v44, 0, 28, 180.0, 43.0, 0, 0, 0);
+    CommonUI__OpenConfirmDialog_37373184((CommonUI_o *)v41, v42, v43, v44, v45, 1, v46, 0, 28, 180.0, 43.0, 0, 0, 0);
   }
 }
 

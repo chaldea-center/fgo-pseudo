@@ -109,6 +109,7 @@ UnityEngine_GameObject_o *GrandQuestResourceCatalogAssetBundle__GetClassServantN
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandQuestResourceCatalogAssetBundle__GetObject___Il2CppFullySharedGenericType_(
         GrandQuestResourceCatalogAssetBundle_o *this,
         AssetData_o *assetData,
@@ -121,6 +122,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandQuestResourceCatalog
   size_t v10; // x21
   __int64 v11; // x1
   Il2CppObject *Object_object__58532980; // x23
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v13; // x0
+  void *v14; // x1
   __int64 *v15; // x1
   __int64 v16; // x0
   void (__fastcall *v17)(__int64, __int64 *, Il2CppObject *, _QWORD *, _QWORD); // x8
@@ -154,24 +157,29 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandQuestResourceCatalog
                                                      (UnityEngine_Object_o *)Object_object__58532980,
                                                      0,
                                                      0);
-  if ( ((unsigned __int8)this & 1) != 0 )
+  if ( ((unsigned __int8)this & 1) == 0 )
   {
-    memset((char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL), 0, v10);
-    result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset((void *)method, 0, v10);
-    return result;
-  }
-  if ( !Object_object__58532980 )
+    if ( Object_object__58532980 )
+    {
+      v15 = *(__int64 **)(*(_QWORD *)(v5 + 56) + 8LL);
+      v16 = *v15;
+      v17 = (void (__fastcall *)(__int64, __int64 *, Il2CppObject *, _QWORD *, _QWORD))v15[2];
+      v18[0] = (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL);
+      v17(v16, v15, Object_object__58532980, v18, v18[0]);
+      v13 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                        (void *)method,
+                                                                        (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL),
+                                                                        v10);
+      goto LABEL_12;
+    }
 LABEL_11:
     sub_2213CDC(this, assetData);
-  v15 = *(__int64 **)(*(_QWORD *)(v5 + 56) + 8LL);
-  v16 = *v15;
-  v17 = (void (__fastcall *)(__int64, __int64 *, Il2CppObject *, _QWORD *, _QWORD))v15[2];
-  v18[0] = (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL);
-  v17(v16, v15, Object_object__58532980, v18, v18[0]);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                             (void *)method,
-                                                                             (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL),
-                                                                             v10);
+  }
+  memset((char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL), 0, v10);
+  v13 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memset((void *)method, 0, v10);
+LABEL_12:
+  result.monitor = v14;
+  result.klass = v13;
   return result;
 }
 

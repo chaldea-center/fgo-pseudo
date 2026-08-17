@@ -197,7 +197,7 @@ int64_t EventInfoServantRateControl__GetUserEventPoint(EventInfoServantRateContr
           break;
         this = (EventInfoServantRateControl_o *)UserEventPointMaster__GetPoint(
                                                   userEventPointMaster,
-                                                  *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+                                                  *(_QWORD *)(this[1].fields.m_CachedPtr + 64),
                                                   eventUiEntity->fields.eventId,
                                                   v10,
                                                   0);

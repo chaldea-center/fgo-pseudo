@@ -205,6 +205,7 @@ EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *EventInfoTipsArchiveLis
         const MethodInfo *method)
 {
   __int64 v8; // x22
+  EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *result; // x0
 
   if ( (byte_5972FDC & 1) == 0 )
   {
@@ -215,8 +216,9 @@ EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *EventInfoTipsArchiveLis
   System_Object___ctor((Il2CppObject *)v8, 0);
   *(_DWORD *)(v8 + 16) = id;
   *(_DWORD *)(v8 + 20) = index;
+  result = (EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *)v8;
   *(_DWORD *)(v8 + 24) = isNew;
-  return (EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *)v8;
+  return result;
 }
 
 
@@ -463,10 +465,10 @@ void EventInfoTipsArchiveListViewItem__LoadData(EventInfoTipsArchiveListViewItem
   EventInfoTipsArchiveListViewItem_o *v34; // x1
   Il2CppClass **v35; // x0
   System_Collections_Generic_List_object__o *v36; // x19
-  struct EventInfoTipsArchiveListViewItem___c_StaticFields *static_fields; // x8
-  System_Comparison_T__o *_9__16_0; // x20
+  void *atlasList; // x8
+  System_Comparison_T__o *v38; // x20
   Il2CppObject *v39; // x21
-  struct EventInfoTipsArchiveListViewItem___c_StaticFields *v40; // x0
+  struct EventInfoTipsArchiveListViewItem___c_StaticFields *static_fields; // x0
   System_String_o *v41; // x2
   System_String_o *v42; // x3
   int32_t v43; // w4
@@ -580,27 +582,35 @@ LABEL_35:
     j_il2cpp_runtime_class_init_0(EventInfoTipsArchiveListViewItem___c_TypeInfo, method);
     this = (EventInfoTipsArchiveListViewItem_o *)EventInfoTipsArchiveListViewItem___c_TypeInfo;
   }
-  static_fields = (struct EventInfoTipsArchiveListViewItem___c_StaticFields *)*((_QWORD *)this + 23);
-  _9__16_0 = (System_Comparison_T__o *)static_fields->__9__16_0;
-  if ( !_9__16_0 )
+  atlasList = this[2].fields.atlasList;
+  v38 = (System_Comparison_T__o *)*((_QWORD *)atlasList + 1);
+  if ( !v38 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[3].monitor) )
     {
       j_il2cpp_runtime_class_init_0(this, method);
-      static_fields = EventInfoTipsArchiveListViewItem___c_TypeInfo->static_fields;
+      atlasList = EventInfoTipsArchiveListViewItem___c_TypeInfo->static_fields;
     }
-    v39 = (Il2CppObject *)static_fields->__9;
-    _9__16_0 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__TypeInfo);
-    System_Comparison_object____ctor(_9__16_0, v39, Method_EventInfoTipsArchiveListViewItem___c__LoadData_b__16_0__, 0);
-    v40 = EventInfoTipsArchiveListViewItem___c_TypeInfo->static_fields;
-    v40->__9__16_0 = (struct System_Comparison_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__o *)_9__16_0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v40->__9__16_0, (int32_t)_9__16_0, v41, v42, v43, v44, v45, v46);
+    v39 = *(Il2CppObject **)atlasList;
+    v38 = (System_Comparison_T__o *)sub_2213CCC(System_Comparison_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__TypeInfo);
+    System_Comparison_object____ctor(v38, v39, Method_EventInfoTipsArchiveListViewItem___c__LoadData_b__16_0__, 0);
+    static_fields = EventInfoTipsArchiveListViewItem___c_TypeInfo->static_fields;
+    static_fields->__9__16_0 = (struct System_Comparison_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__o *)v38;
+    sub_2213A04(
+      (MissionNaviTransitionBoardItem_o *)&static_fields->__9__16_0,
+      (int32_t)v38,
+      v41,
+      v42,
+      v43,
+      v44,
+      v45,
+      v46);
   }
   if ( !v36 )
     goto LABEL_35;
   System_Collections_Generic_List_object___Sort_71849708(
     v36,
-    _9__16_0,
+    v38,
     (const MethodInfo_44856EC *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__Sort__);
 }
 

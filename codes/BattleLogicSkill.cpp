@@ -1615,8 +1615,8 @@ void BattleLogicSkill__actPassiveSkill(
   struct System_Collections_Generic_List_int__o *unfixedBuffList; // x8
   int v46; // w9
   BattleData_o *data; // x20
-  struct BattleLogicSkill___c_StaticFields *static_fields; // x8
-  System_Action_object__o *_9__11_0; // x21
+  void *static_fields; // x8
+  System_Action_object__o *v49; // x21
   Il2CppObject *v50; // x22
   struct BattleLogicSkill___c_StaticFields *v51; // x0
   System_String_o *v52; // x2
@@ -1821,23 +1821,23 @@ LABEL_53:
                 j_il2cpp_runtime_class_init_0(BattleLogicSkill___c_TypeInfo, skillInfo);
                 this = (BattleLogicSkill_o *)BattleLogicSkill___c_TypeInfo;
               }
-              static_fields = (struct BattleLogicSkill___c_StaticFields *)*((_QWORD *)this + 23);
-              _9__11_0 = (System_Action_object__o *)static_fields->__9__11_0;
-              if ( !_9__11_0 )
+              static_fields = this[3].fields.logicfunction;
+              v49 = (System_Action_object__o *)*((_QWORD *)static_fields + 5);
+              if ( !v49 )
               {
-                if ( !*((_DWORD *)this + 57) )
+                if ( !HIDWORD(this[4].fields.logictarget) )
                 {
                   j_il2cpp_runtime_class_init_0(this, skillInfo);
                   static_fields = BattleLogicSkill___c_TypeInfo->static_fields;
                 }
-                v50 = (Il2CppObject *)static_fields->__9;
-                _9__11_0 = (System_Action_object__o *)sub_2213CCC(System_Action_BattleServantData__TypeInfo);
-                System_Action_object____ctor(_9__11_0, v50, Method_BattleLogicSkill___c__actPassiveSkill_b__11_0__, 0);
+                v50 = *(Il2CppObject **)static_fields;
+                v49 = (System_Action_object__o *)sub_2213CCC(System_Action_BattleServantData__TypeInfo);
+                System_Action_object____ctor(v49, v50, Method_BattleLogicSkill___c__actPassiveSkill_b__11_0__, 0);
                 v51 = BattleLogicSkill___c_TypeInfo->static_fields;
-                v51->__9__11_0 = (struct System_Action_BattleServantData__o *)_9__11_0;
+                v51->__9__11_0 = (struct System_Action_BattleServantData__o *)v49;
                 sub_2213A04(
                   (MissionNaviTransitionBoardItem_o *)&v51->__9__11_0,
-                  (int32_t)_9__11_0,
+                  (int32_t)v49,
                   v52,
                   v53,
                   v54,
@@ -1847,7 +1847,7 @@ LABEL_53:
               }
               if ( data )
               {
-                BattleData__ExecFuncAllServant(data, (System_Action_BattleServantData__o *)_9__11_0, 0);
+                BattleData__ExecFuncAllServant(data, (System_Action_BattleServantData__o *)v49, 0);
                 this = (BattleLogicSkill_o *)v12->fields.logic;
                 if ( this )
                 {
@@ -3180,7 +3180,7 @@ LABEL_119:
     if ( !this )
       goto LABEL_260;
     v101 = BasicHelper__IndexValue_int__58805096(
-             *((System_Collections_Generic_List_T__o **)this + 39),
+             (System_Collections_Generic_List_T__o *)this[6].fields.logic,
              0,
              0,
              (const MethodInfo_3814B68 *)Method_BasicHelper_IndexValue_int___);

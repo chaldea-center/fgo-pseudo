@@ -72,6 +72,7 @@ DeckServantData_o *DeckServantData__Clone(DeckServantData_o *this, const MethodI
   bool v27; // w6
   bool v28; // w7
   bool isFollowerSvt; // w8
+  DeckServantData_o *result; // x0
   int64_t npcFollowerSvtId; // x9
   int32_t equipTarget2SkillChange; // w8
 
@@ -111,11 +112,12 @@ LABEL_7:
   v22 = sub_2213BB4(v19, v21);
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 48), v22, v23, v24, v25, v26, v27, v28);
   isFollowerSvt = this->fields.isFollowerSvt;
+  result = (DeckServantData_o *)v3;
   npcFollowerSvtId = this->fields.npcFollowerSvtId;
   *(_QWORD *)(v3 + 72) = *(_QWORD *)&this->fields.followerType;
   *(_BYTE *)(v3 + 56) = isFollowerSvt;
   equipTarget2SkillChange = this->fields.equipTarget2SkillChange;
   *(_QWORD *)(v3 + 64) = npcFollowerSvtId;
   *(_DWORD *)(v3 + 80) = equipTarget2SkillChange;
-  return (DeckServantData_o *)v3;
+  return result;
 }

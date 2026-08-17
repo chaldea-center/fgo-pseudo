@@ -36,6 +36,7 @@ System_Collections_IEnumerator_o *BattleMultiMessageDisplay__CoroutineDisplayMes
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5973F88 & 1) == 0 )
   {
@@ -50,8 +51,9 @@ System_Collections_IEnumerator_o *BattleMultiMessageDisplay__CoroutineDisplayMes
   *(_QWORD *)(v9 + 48) = message;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 48), (int32_t)message, v16, v17, v18, v19, v20, v21);
   *(_DWORD *)(v9 + 56) = index;
+  result = (System_Collections_IEnumerator_o *)v9;
   *(float *)(v9 + 32) = startDelayTime;
-  return (System_Collections_IEnumerator_o *)v9;
+  return result;
 }
 
 
@@ -670,8 +672,8 @@ LABEL_27:
     this->fields.__2__current = (Il2CppObject *)v32;
     v33 = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)v33, (int32_t)v32, v34, v35, v36, v37, v38, v39);
-    *((_DWORD *)v33 - 2) = 1;
     LOBYTE(message) = 1;
+    *((_DWORD *)v33 - 2) = 1;
   }
   return (char)message;
 }
@@ -739,6 +741,7 @@ bool BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19__MoveNext(
   int32_t v8; // w5
   bool v9; // w6
   bool v10; // w7
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   if ( this->fields.__1__state >= 2u )
@@ -756,8 +759,9 @@ bool BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19__MoveNext(
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v5, v6, v7, v8, v9, v10);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

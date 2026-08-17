@@ -1144,56 +1144,57 @@ EndrolContentItem_o *EndrolRootComponent__SetItemInfo(
   __int64 v55; // x8
   System_String_o *v56; // x24
   Il2CppType *v57; // x25
-  __int64 v58; // x1
-  __int64 v59; // x2
+  System_RuntimeTypeHandle_o v58; // x0
+  __int64 v59; // x1
+  __int64 v60; // x2
   System_Type_o *TypeFromHandle; // x25
-  __int64 v61; // x2
-  __int64 v62; // x3
-  EndrolRootComponent_o *v63; // x21
+  __int64 v62; // x2
+  __int64 v63; // x3
+  EndrolRootComponent_o *v64; // x21
   int32_t defaultFontSize; // w22
-  unsigned int v65; // w0
-  const MethodInfo *v66; // x5
+  unsigned int v66; // w0
+  const MethodInfo *v67; // x5
   int m_CancellationTokenSource; // w8
-  EndrolRootComponent_o *v68; // x23
-  unsigned int v69; // w27
+  EndrolRootComponent_o *v69; // x23
+  unsigned int v70; // w27
   EndrolRootComponent_o **p_endrolContentParent; // x24
-  unsigned int v71; // w28
-  unsigned int v72; // w8
-  System_String_o *v73; // x2
-  System_String_o *v74; // x3
-  int32_t v75; // w4
-  int32_t v76; // w5
-  bool v77; // w6
-  bool v78; // w7
-  System_String_o *v79; // x2
-  System_String_o *v80; // x3
-  int32_t v81; // w4
-  int32_t v82; // w5
-  bool v83; // w6
-  bool v84; // w7
-  System_String_o *v85; // x2
-  System_String_o *v86; // x3
-  int32_t v87; // w4
-  int32_t v88; // w5
-  bool v89; // w6
-  bool v90; // w7
-  unsigned int v91; // w8
-  EndrolRootComponent_o *v92; // x1
-  bool v93; // w8
+  unsigned int v72; // w28
+  unsigned int v73; // w8
+  System_String_o *v74; // x2
+  System_String_o *v75; // x3
+  int32_t v76; // w4
+  int32_t v77; // w5
+  bool v78; // w6
+  bool v79; // w7
+  System_String_o *v80; // x2
+  System_String_o *v81; // x3
+  int32_t v82; // w4
+  int32_t v83; // w5
+  bool v84; // w6
+  bool v85; // w7
+  System_String_o *v86; // x2
+  System_String_o *v87; // x3
+  int32_t v88; // w4
+  int32_t v89; // w5
+  bool v90; // w6
+  bool v91; // w7
+  unsigned int v92; // w8
+  EndrolRootComponent_o *v93; // x1
+  bool v94; // w8
   System_String_o *defaultTextColor; // x21
-  Il2CppObject *v95; // x0
-  EndrolRootComponent_o *v96; // x2
-  int32_t v97; // w3
+  Il2CppObject *v96; // x0
+  EndrolRootComponent_o *v97; // x2
+  int32_t v98; // w3
   int32_t lastObjectPosY; // w1
-  EndrolContentItem_o *v99; // x0
-  int32_t v100; // w4
+  EndrolContentItem_o *v100; // x0
+  int32_t v101; // w4
   EndrolContentItem_o *result; // x0
-  EndrolRootComponent_o *v102; // x0
-  bool v103; // w1
-  const MethodInfo *v104; // x2
-  EndrolContentItem_o *v105; // [xsp+0h] [xbp-80h]
+  EndrolRootComponent_o *v103; // x0
+  bool v104; // w1
+  const MethodInfo *v105; // x2
+  EndrolContentItem_o *v106; // [xsp+0h] [xbp-80h]
   int32_t fontSize; // [xsp+Ch] [xbp-74h]
-  UnityEngine_Vector2_o v107; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v108; // 0:s0.4,4:s1.4
 
   v8 = this;
   if ( (byte_596A4A1 & 1) == 0 )
@@ -1222,7 +1223,7 @@ EndrolContentItem_o *EndrolRootComponent__SetItemInfo(
     this = (EndrolRootComponent_o *)System_String__Split(nextDispString, 0x7Eu, 0, 0);
     if ( !this )
       goto LABEL_155;
-    v63 = this;
+    v64 = this;
     if ( LODWORD(this->fields.m_CancellationTokenSource) )
     {
       this = (EndrolRootComponent_o *)this->fields.contentPref;
@@ -1234,9 +1235,9 @@ EndrolContentItem_o *EndrolRootComponent__SetItemInfo(
                                         (System_String_o *)StringLiteral_1573/*"<"*/,
                                         (System_String_o *)StringLiteral_1/*""*/,
                                         0);
-      if ( LODWORD(v63->fields.m_CancellationTokenSource) )
+      if ( LODWORD(v64->fields.m_CancellationTokenSource) )
       {
-        this = (EndrolRootComponent_o *)v63->fields.contentPref;
+        this = (EndrolRootComponent_o *)v64->fields.contentPref;
         if ( !this )
           goto LABEL_155;
         this = (EndrolRootComponent_o *)System_String__Replace_75703400(
@@ -1251,47 +1252,47 @@ EndrolContentItem_o *EndrolRootComponent__SetItemInfo(
           goto LABEL_155;
         if ( ((__int64)this->fields.m_CancellationTokenSource & 0xFFFFFFFE) != 0 )
         {
-          v105 = item;
-          v65 = System_Int32__Parse((System_String_o *)this->fields.endrolContentParent, 0);
-          this = (EndrolRootComponent_o *)sub_2213B20(string___TypeInfo, v65);
-          m_CancellationTokenSource = (int)v63->fields.m_CancellationTokenSource;
-          v68 = this;
+          v106 = item;
+          v66 = System_Int32__Parse((System_String_o *)this->fields.endrolContentParent, 0);
+          this = (EndrolRootComponent_o *)sub_2213B20(string___TypeInfo, v66);
+          m_CancellationTokenSource = (int)v64->fields.m_CancellationTokenSource;
+          v69 = this;
           if ( m_CancellationTokenSource < 2 )
           {
 LABEL_132:
-            if ( !v68 )
+            if ( !v69 )
               goto LABEL_155;
-            item = v105;
-            if ( LODWORD(v68->fields.m_CancellationTokenSource) == 2 )
+            item = v106;
+            if ( LODWORD(v69->fields.m_CancellationTokenSource) == 2 )
             {
-              if ( !v105 )
+              if ( !v106 )
                 goto LABEL_155;
               EndrolContentItem__SetDoubleColumnText(
-                v105,
+                v106,
                 v8->fields.lastObjectPosY,
-                (System_String_array *)v68,
+                (System_String_array *)v69,
                 defaultFontSize,
                 v8,
-                v66);
+                v67);
             }
             else
             {
-              if ( !v105 )
+              if ( !v106 )
                 goto LABEL_155;
               EndrolContentItem__SetTripleColumnText(
-                v105,
+                v106,
                 v8->fields.lastObjectPosY,
-                (System_String_array *)v68,
+                (System_String_array *)v69,
                 defaultFontSize,
                 v8,
-                v66);
+                v67);
             }
             return item;
           }
-          v69 = 0;
-          p_endrolContentParent = (EndrolRootComponent_o **)&v63->fields.endrolContentParent;
-          v71 = 1;
-          while ( v71 < m_CancellationTokenSource )
+          v70 = 0;
+          p_endrolContentParent = (EndrolRootComponent_o **)&v64->fields.endrolContentParent;
+          v72 = 1;
+          while ( v72 < m_CancellationTokenSource )
           {
             this = *p_endrolContentParent;
             if ( !*p_endrolContentParent )
@@ -1300,10 +1301,10 @@ LABEL_132:
                                               (System_String_o *)this,
                                               (System_String_o *)StringLiteral_1573/*"<"*/,
                                               0);
-            v72 = (unsigned int)v63->fields.m_CancellationTokenSource;
+            v73 = (unsigned int)v64->fields.m_CancellationTokenSource;
             if ( ((unsigned __int8)this & 1) != 0 )
             {
-              if ( v71 >= v72 )
+              if ( v72 >= v73 )
                 break;
               this = *p_endrolContentParent;
               if ( !*p_endrolContentParent )
@@ -1313,19 +1314,19 @@ LABEL_132:
                                                 (System_String_o *)StringLiteral_1573/*"<"*/,
                                                 (System_String_o *)StringLiteral_1/*""*/,
                                                 0);
-              if ( v71 >= LODWORD(v63->fields.m_CancellationTokenSource) )
+              if ( v72 >= LODWORD(v64->fields.m_CancellationTokenSource) )
                 break;
               *p_endrolContentParent = this;
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)p_endrolContentParent,
                 (int32_t)this,
-                v73,
                 v74,
                 v75,
                 v76,
                 v77,
-                v78);
-              if ( v71 >= LODWORD(v63->fields.m_CancellationTokenSource) )
+                v78,
+                v79);
+              if ( v72 >= LODWORD(v64->fields.m_CancellationTokenSource) )
                 break;
               this = *p_endrolContentParent;
               if ( !*p_endrolContentParent )
@@ -1335,19 +1336,19 @@ LABEL_132:
                                                 (System_String_o *)StringLiteral_1831/*">"*/,
                                                 (System_String_o *)StringLiteral_1/*""*/,
                                                 0);
-              if ( v71 >= LODWORD(v63->fields.m_CancellationTokenSource) )
+              if ( v72 >= LODWORD(v64->fields.m_CancellationTokenSource) )
                 break;
               *p_endrolContentParent = this;
               sub_2213A04(
                 (MissionNaviTransitionBoardItem_o *)p_endrolContentParent,
                 (int32_t)this,
-                v79,
                 v80,
                 v81,
                 v82,
                 v83,
-                v84);
-              if ( v71 >= LODWORD(v63->fields.m_CancellationTokenSource) )
+                v84,
+                v85);
+              if ( v72 >= LODWORD(v64->fields.m_CancellationTokenSource) )
                 break;
               this = *p_endrolContentParent;
               if ( !*p_endrolContentParent )
@@ -1358,7 +1359,7 @@ LABEL_132:
                                                 0);
               if ( ((unsigned __int8)this & 1) != 0 )
               {
-                if ( v71 >= LODWORD(v63->fields.m_CancellationTokenSource) )
+                if ( v72 >= LODWORD(v64->fields.m_CancellationTokenSource) )
                   break;
                 this = *p_endrolContentParent;
                 if ( !*p_endrolContentParent )
@@ -1376,7 +1377,7 @@ LABEL_132:
             }
             else
             {
-              if ( v71 >= v72 )
+              if ( v72 >= v73 )
                 break;
               this = *p_endrolContentParent;
               if ( !*p_endrolContentParent )
@@ -1385,46 +1386,46 @@ LABEL_132:
                                                 (System_String_o *)this,
                                                 (System_String_o *)StringLiteral_16427/*"["*/,
                                                 0);
-              v91 = (unsigned int)v63->fields.m_CancellationTokenSource;
+              v92 = (unsigned int)v64->fields.m_CancellationTokenSource;
               if ( ((unsigned __int8)this & 1) != 0 )
               {
-                if ( v71 >= v91 )
+                if ( v72 >= v92 )
                   break;
-                if ( !v68 )
+                if ( !v69 )
                   goto LABEL_155;
-                if ( v69 >= LODWORD(v68->fields.m_CancellationTokenSource) )
+                if ( v70 >= LODWORD(v69->fields.m_CancellationTokenSource) )
                   break;
-                v92 = *p_endrolContentParent;
+                v93 = *p_endrolContentParent;
               }
               else
               {
-                if ( v71 >= v91 )
+                if ( v72 >= v92 )
                   break;
                 this = (EndrolRootComponent_o *)System_String__Concat_75651716(
                                                   v8->fields.defaultTextColor,
                                                   (System_String_o *)*p_endrolContentParent,
                                                   0);
-                if ( !v68 )
+                if ( !v69 )
                   goto LABEL_155;
-                v92 = this;
-                if ( v69 >= LODWORD(v68->fields.m_CancellationTokenSource) )
+                v93 = this;
+                if ( v70 >= LODWORD(v69->fields.m_CancellationTokenSource) )
                   break;
               }
-              *((_QWORD *)&v68->fields.contentPref + (int)v69) = v92;
+              *((_QWORD *)&v69->fields.contentPref + (int)v70) = v93;
               sub_2213A04(
-                (MissionNaviTransitionBoardItem_o *)(&v68->fields.contentPref + (int)v69++),
-                (int32_t)v92,
-                v85,
+                (MissionNaviTransitionBoardItem_o *)(&v69->fields.contentPref + (int)v70++),
+                (int32_t)v93,
                 v86,
                 v87,
                 v88,
                 v89,
-                v90);
+                v90,
+                v91);
             }
-            m_CancellationTokenSource = (int)v63->fields.m_CancellationTokenSource;
-            ++v71;
+            m_CancellationTokenSource = (int)v64->fields.m_CancellationTokenSource;
+            ++v72;
             ++p_endrolContentParent;
-            if ( (int)v71 >= m_CancellationTokenSource )
+            if ( (int)v72 >= m_CancellationTokenSource )
               goto LABEL_132;
           }
         }
@@ -1569,9 +1570,9 @@ LABEL_154:
         if ( !item )
           goto LABEL_155;
       }
-      v107.fields.x = v14;
-      v107.fields.y = v13;
-      EndrolContentItem__SetImage(item, v8->fields.lastObjectPosY, (System_String_o *)v12, v107, v8, v9);
+      v108.fields.x = v14;
+      v108.fields.y = v13;
+      EndrolContentItem__SetImage(item, v8->fields.lastObjectPosY, (System_String_o *)v12, v108, v8, v9);
       return item;
     }
     this = (EndrolRootComponent_o *)v8->fields.creditText;
@@ -1583,9 +1584,9 @@ LABEL_154:
                                         (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
       if ( this )
       {
-        v93 = System_String__Contains((System_String_o *)this, (System_String_o *)StringLiteral_16427/*"["*/, 0);
+        v94 = System_String__Contains((System_String_o *)this, (System_String_o *)StringLiteral_16427/*"["*/, 0);
         this = (EndrolRootComponent_o *)v8->fields.creditText;
-        if ( v93 )
+        if ( v94 )
         {
           if ( !this )
             goto LABEL_155;
@@ -1599,21 +1600,21 @@ LABEL_154:
           if ( !this )
             goto LABEL_155;
           defaultTextColor = v8->fields.defaultTextColor;
-          v95 = System_Collections_Generic_List_object___get_Item(
+          v96 = System_Collections_Generic_List_object___get_Item(
                   (System_Collections_Generic_List_object__o *)this,
                   v8->fields.nowDispIndex,
                   (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_string__get_Item__);
-          this = (EndrolRootComponent_o *)System_String__Concat_75651716(defaultTextColor, (System_String_o *)v95, 0);
+          this = (EndrolRootComponent_o *)System_String__Concat_75651716(defaultTextColor, (System_String_o *)v96, 0);
         }
-        v96 = this;
+        v97 = this;
         if ( item )
         {
-          v97 = v8->fields.defaultFontSize;
+          v98 = v8->fields.defaultFontSize;
           lastObjectPosY = v8->fields.lastObjectPosY;
-          v99 = item;
-          v100 = 4;
+          v100 = item;
+          v101 = 4;
 LABEL_150:
-          EndrolContentItem__SetText(v99, lastObjectPosY, (System_String_o *)v96, v97, v100, v8, v22);
+          EndrolContentItem__SetText(v100, lastObjectPosY, (System_String_o *)v97, v98, v101, v8, v22);
           return item;
         }
       }
@@ -1636,10 +1637,10 @@ LABEL_148:
     if ( item )
     {
       lastObjectPosY = v8->fields.lastObjectPosY;
-      v97 = fontSize;
-      v99 = item;
-      v96 = v25;
-      v100 = klass;
+      v98 = fontSize;
+      v100 = item;
+      v97 = v25;
+      v101 = klass;
       goto LABEL_150;
     }
 LABEL_155:
@@ -1811,21 +1812,22 @@ LABEL_90:
   v57 = UIWidget_Pivot_var;
   if ( !*(_DWORD *)(v55 + 228) )
     j_il2cpp_runtime_class_init_0(*(__int64 *)((char *)&qword_E0 + (_QWORD)v35), v53, v54);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v57, 0);
+  v58.fields.value = (intptr_t)v57;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v58, 0);
   if ( !*(_DWORD *)(*(__int64 *)((char *)&qword_98 + (_QWORD)v35) + 228) )
-    j_il2cpp_runtime_class_init_0(*(__int64 *)((char *)&qword_98 + (_QWORD)v35), v58, v59);
+    j_il2cpp_runtime_class_init_0(*(__int64 *)((char *)&qword_98 + (_QWORD)v35), v59, v60);
   this = (EndrolRootComponent_o *)System_Enum__Parse(TypeFromHandle, v56, 0);
   if ( !this )
     goto LABEL_155;
   if ( this->klass->_1.element_class == UIWidget_Pivot_TypeInfo->_1.element_class )
   {
     v27 = v35;
-    this = (EndrolRootComponent_o *)j_il2cpp_object_unbox_0(this, UIWidget_Pivot_TypeInfo, v61, v62);
+    this = (EndrolRootComponent_o *)j_il2cpp_object_unbox_0(this, UIWidget_Pivot_TypeInfo, v62, v63);
     klass = (int)this->klass;
     goto LABEL_90;
   }
-  v102 = (EndrolRootComponent_o *)sub_221405C(this, UIWidget_Pivot_TypeInfo, v61, v62);
-  EndrolRootComponent__callbackConfirmDlg(v102, v103, v104);
+  v103 = (EndrolRootComponent_o *)sub_221405C(this, UIWidget_Pivot_TypeInfo, v62, v63);
+  EndrolRootComponent__callbackConfirmDlg(v103, v104, v105);
   return result;
 }
 

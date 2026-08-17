@@ -45,7 +45,7 @@ System_Int32_array *AiActEntity__GetFixCommandCardIds(
   __int64 v14; // x10
   int32_t item; // [xsp+Ch] [xbp-44h] BYREF
   int32_t value[2]; // [xsp+10h] [xbp-40h] BYREF
-  __int64 v18; // [xsp+18h] [xbp-38h] BYREF
+  int32_t v18[2]; // [xsp+18h] [xbp-38h] BYREF
 
   if ( (byte_59703B2 & 1) == 0 )
   {
@@ -61,7 +61,7 @@ System_Int32_array *AiActEntity__GetFixCommandCardIds(
     byte_59703B2 = 1;
   }
   *(_QWORD *)value = 0;
-  v18 = 0;
+  *(_QWORD *)v18 = 0;
   item = 0;
   v5 = (System_Collections_Generic_List_int__o *)sub_2213CCC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
@@ -73,7 +73,7 @@ System_Int32_array *AiActEntity__GetFixCommandCardIds(
       IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                              this->fields.script,
                              (System_String_o *)StringLiteral_20371/*"fixArtsCardId"*/,
-                             (int32_t *)&v18 + 1,
+                             &v18[1],
                              -1,
                              0);
       if ( IntValueAndCompare )
@@ -82,7 +82,7 @@ System_Int32_array *AiActEntity__GetFixCommandCardIds(
           goto LABEL_29;
         version = v5->fields._version;
         items = v5->fields._items;
-        v7 = HIDWORD(v18);
+        v7 = (unsigned int)v18[1];
         goto LABEL_25;
       }
 LABEL_28:
@@ -96,7 +96,7 @@ LABEL_29:
       IntValueAndCompare = EntityScriptUtil__GetIntValueAndCompare(
                              this->fields.script,
                              (System_String_o *)StringLiteral_20372/*"fixBusterCardId"*/,
-                             (int32_t *)&v18,
+                             v18,
                              -1,
                              0);
       if ( IntValueAndCompare )
@@ -105,7 +105,7 @@ LABEL_29:
           goto LABEL_29;
         version = v5->fields._version;
         items = v5->fields._items;
-        v7 = (unsigned int)v18;
+        v7 = (unsigned int)v18[0];
         goto LABEL_25;
       }
       goto LABEL_28;

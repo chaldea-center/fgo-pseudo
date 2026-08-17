@@ -645,7 +645,10 @@ void ServantCheckWarningDialog__SetSlider(ServantCheckWarningDialog_o *this, boo
 {
   UISprite_o *sliderSprite; // x0
   __int64 *v6; // x8
-  UnityEngine_Color_o DisableColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float a; // s3
+  float b; // s2
+  float g; // s1
+  float r; // s0 OVERLAPPED
 
   if ( (byte_596C5D5 & 1) == 0 )
   {
@@ -660,15 +663,20 @@ void ServantCheckWarningDialog__SetSlider(ServantCheckWarningDialog_o *this, boo
   if ( !sliderOn )
     v6 = &StringLiteral_21576/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, (System_String_o *)*v6, 0);
-  DisableColor.fields.a = 1.0;
-  DisableColor.fields.b = 1.0;
+  a = 1.0;
+  b = 1.0;
   sliderSprite = (UISprite_o *)this->fields.decideButton;
-  DisableColor.fields.g = 1.0;
-  DisableColor.fields.r = 1.0;
+  g = 1.0;
+  r = 1.0;
   if ( !sliderOn )
-    DisableColor = this->fields.DisableColor;
+  {
+    r = this->fields.DisableColor.fields.r;
+    g = this->fields.DisableColor.fields.g;
+    b = this->fields.DisableColor.fields.b;
+    a = this->fields.DisableColor.fields.a;
+  }
   if ( !sliderSprite
-    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, DisableColor, 0),
+    || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, *(UnityEngine_Color_o *)&r, 0),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0)
     || (sliderSprite->klass->vtable._14_OnEnable.methodPtr(),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
@@ -777,7 +785,7 @@ System_IAsyncResult_o *ServantCheckWarningDialog_ClickDelegate__BeginInvoke(
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

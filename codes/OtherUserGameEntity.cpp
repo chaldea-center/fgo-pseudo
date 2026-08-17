@@ -801,7 +801,7 @@ ServantLeaderInfo_o *OtherUserGameEntity__getServantLeaderInfo(
   int64_t userId; // x9
   __int64 v15; // x8
   __int64 v16; // x9
-  int32_t *p_classId; // x10
+  ServantLeaderInfo_o **p_classId; // x10
 
   result = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                     this,
@@ -815,12 +815,12 @@ LABEL_19:
   {
     v15 = (unsigned int)userId & ~((int)userId >> 31);
     v16 = (unsigned int)result->fields.userId;
-    p_classId = &result->fields.classId;
+    p_classId = (ServantLeaderInfo_o **)&result->fields.classId;
     do
     {
       if ( !v16 )
         sub_2213CE4(result);
-      result = *(ServantLeaderInfo_o **)p_classId;
+      result = *p_classId;
       if ( returnSupportServantType == 2 )
       {
         if ( !result )
@@ -840,7 +840,7 @@ LABEL_19:
         }
       }
       --v15;
-      p_classId += 2;
+      ++p_classId;
       --v16;
     }
     while ( v15 );

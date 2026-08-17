@@ -60,6 +60,7 @@ void CostumeListViewItemDraw___ctor(CostumeListViewItemDraw_o *this, const Metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CostumeListViewItemDraw__SetCostumeIcon(
         CostumeListViewItemDraw_o *this,
         ServantCostumeEntity_o *svtCostumeEntity,
@@ -76,7 +77,9 @@ void CostumeListViewItemDraw__SetCostumeIcon(
   __int64 v13; // x2
   System_String_o *v14; // x20
   UnityEngine_Transform_o *v15; // x20
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  float v16; // s1
+  int v17; // s0 OVERLAPPED
+  int v18; // s2
 
   if ( (byte_596A253 & 1) == 0 )
   {
@@ -143,12 +146,12 @@ void CostumeListViewItemDraw__SetCostumeIcon(
                                                   0);
                       if ( v15 )
                       {
-                        v18.fields.y = -32.0;
-                        v18.fields.x = -45.0;
-                        v18.fields.z = 0.0;
+                        v16 = -32.0;
+                        v17 = -1036779520;
+                        v18 = 0;
                         if ( ((unsigned __int8)transform & 1) == 0 )
-                          v18.fields.y = -45.0;
-                        UnityEngine_Transform__set_localPosition(v15, v18, 0);
+                          v16 = -45.0;
+                        UnityEngine_Transform__set_localPosition(v15, *(UnityEngine_Vector3_o *)&v17, 0);
                         transform = this->fields.costomIcon;
                         if ( transform )
                         {

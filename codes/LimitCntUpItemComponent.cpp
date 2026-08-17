@@ -307,6 +307,7 @@ int32_t LimitCntUpItemComponent__getItemImgId(LimitCntUpItemComponent_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void LimitCntUpItemComponent__setLimitUpItemInfo(
         LimitCntUpItemComponent_o *this,
         int64_t usrId,
@@ -335,13 +336,16 @@ void LimitCntUpItemComponent__setLimitUpItemInfo(
   Il2CppObject *v27; // x0
   UILabel_o *needNumLb; // x20
   Il2CppObject *v29; // x0
+  float v30; // s1
+  float v31; // s0 OVERLAPPED
+  float v32; // s2
+  float v33; // s3
   int32_t needItemNum; // [xsp+0h] [xbp-60h] BYREF
   int32_t haveItemNum; // [xsp+4h] [xbp-5Ch] BYREF
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
-  UserItemEntity_o *v35; // [xsp+28h] [xbp-38h] BYREF
-  UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UserItemEntity_o *v37; // [xsp+28h] [xbp-38h] BYREF
   UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5974B2C & 1) == 0 )
   {
@@ -357,7 +361,7 @@ void LimitCntUpItemComponent__setLimitUpItemInfo(
     byte_5974B2C = 1;
   }
   v9 = DataManager_TypeInfo;
-  v35 = 0;
+  v37 = 0;
   entity = 0;
   this->fields.needItemNum = needNum;
   v10 = *(&v9->_2.cctor_finished + 1);
@@ -404,14 +408,14 @@ void LimitCntUpItemComponent__setLimitUpItemInfo(
     goto LABEL_39;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserItemMaster__TryGetEntity(
                                                                   (UserItemMaster_o *)Master_object,
-                                                                  &v35,
+                                                                  &v37,
                                                                   usrId,
                                                                   itemId,
                                                                   0);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
-    v22 = v35;
-    if ( !v35 )
+    v22 = v37;
+    if ( !v37 )
       goto LABEL_39;
 LABEL_20:
     LODWORD(v22) = v22[7];
@@ -464,17 +468,17 @@ LABEL_21:
     this->fields.isItemNum = 1;
     if ( Master_object )
     {
-      v38.fields.r = 1.0;
-      v38.fields.g = 1.0;
-      v38.fields.b = 1.0;
-      v38.fields.a = 1.0;
-      UIWidget__set_color((UIWidget_o *)Master_object, v38, 0);
+      v39.fields.r = 1.0;
+      v39.fields.g = 1.0;
+      v39.fields.b = 1.0;
+      v39.fields.a = 1.0;
+      UIWidget__set_color((UIWidget_o *)Master_object, v39, 0);
       Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.needNumLb;
       if ( Master_object )
       {
-        v37.fields.r = 1.0;
-        v37.fields.g = 1.0;
-        v37.fields.b = 1.0;
+        v31 = 1.0;
+        v30 = 1.0;
+        v32 = 1.0;
         goto LABEL_36;
       }
     }
@@ -485,20 +489,20 @@ LABEL_39:
   this->fields.isItemNum = 0;
   if ( !Master_object )
     goto LABEL_39;
-  v36.fields.g = 0.0;
-  v36.fields.a = 1.0;
-  v36.fields.r = 0.855;
-  v36.fields.b = 0.32;
-  UIWidget__set_color((UIWidget_o *)Master_object, v36, 0);
+  v38.fields.g = 0.0;
+  v38.fields.a = 1.0;
+  v38.fields.r = 0.855;
+  v38.fields.b = 0.32;
+  UIWidget__set_color((UIWidget_o *)Master_object, v38, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.needNumLb;
   if ( !Master_object )
     goto LABEL_39;
-  v37.fields.g = 0.0;
-  v37.fields.r = 0.855;
-  v37.fields.b = 0.32;
+  v30 = 0.0;
+  v31 = 0.855;
+  v32 = 0.32;
 LABEL_36:
-  v37.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)Master_object, v37, 0);
+  v33 = 1.0;
+  UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v31, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.itemInfo;
   if ( !Master_object )
     goto LABEL_39;

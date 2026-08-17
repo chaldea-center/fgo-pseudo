@@ -46,6 +46,7 @@ DropInfo_SaveData_o *DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *m
   __int64 v4; // x0
   __int64 v5; // x1
   bool isRateUp; // w8
+  DropInfo_SaveData_o *result; // x0
   bool isAdd; // w9
   __int64 v9; // d0
 
@@ -59,6 +60,7 @@ DropInfo_SaveData_o *DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *m
   if ( !v3 )
     sub_2213CDC(v4, v5);
   isRateUp = this->fields.isRateUp;
+  result = (DropInfo_SaveData_o *)v3;
   isAdd = this->fields.isAdd;
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.type;
   v9 = *(_QWORD *)&this->fields.lv;
@@ -66,7 +68,7 @@ DropInfo_SaveData_o *DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *m
   *(_BYTE *)(v3 + 52) = isAdd;
   *(_QWORD *)(v3 + 32) = v9;
   *(_QWORD *)(v3 + 44) = *(_QWORD *)&this->fields.originalNum;
-  return (DropInfo_SaveData_o *)v3;
+  return result;
 }
 
 

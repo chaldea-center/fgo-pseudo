@@ -99,6 +99,7 @@ bool TestBattleRequestButton__battleRequest_d__4__MoveNext(
   __int64 v7; // x1
   __int64 v8; // x2
   int64_t activeDeckId; // x3
+  bool result; // w0
   UnityEngine_WaitForEndOfFrame_o *v11; // x20
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
   System_String_o *v13; // x2
@@ -211,8 +212,9 @@ LABEL_18:
   v2->fields.__2__current = (Il2CppObject *)v11;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
   sub_2213A04(p__2__current, (int32_t)v11, v13, v14, v15, v16, v17, v18);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

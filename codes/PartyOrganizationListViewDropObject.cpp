@@ -256,23 +256,26 @@ void PartyOrganizationListViewDropObject__DragMoveStart(
   UnityEngine_GameObject_o *v24; // x20
   UnityEngine_GameObject_o *v25; // x8
   float v26; // s11
-  char *v27; // x20
+  float v27; // s4
+  float v28; // s5
+  float v29; // s3
+  char *v30; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v29; // x2
-  System_String_o *v30; // x3
-  int32_t v31; // w4
-  int32_t v32; // w5
-  bool v33; // w6
-  bool v34; // w7
-  int32_t v35; // w1
-  System_String_o *v36; // x2
-  System_String_o *v37; // x3
-  int32_t v38; // w4
-  int32_t v39; // w5
-  bool v40; // w6
-  bool v41; // w7
-  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v43; // 0:s1.4,4:s2.4,8:s3.4
+  System_String_o *v32; // x2
+  System_String_o *v33; // x3
+  int32_t v34; // w4
+  int32_t v35; // w5
+  bool v36; // w6
+  bool v37; // w7
+  int32_t v38; // w1
+  System_String_o *v39; // x2
+  System_String_o *v40; // x3
+  int32_t v41; // w4
+  int32_t v42; // w5
+  bool v43; // w6
+  bool v44; // w7
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   z = position.fields.z;
   y = position.fields.y;
@@ -361,25 +364,32 @@ void PartyOrganizationListViewDropObject__DragMoveStart(
   }
   v26 = **((float **)Component_object + 23);
   Component_object = (char *)UnityEngine_GameObject__get_transform(v25, 0);
-  if ( !Component_object
-    || (Component_object = (char *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)Component_object, 0)) == 0
-    || (v42.fields.x = x,
-        v42.fields.y = y,
-        v42.fields.z = z,
-        v43 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)Component_object, v42, 0),
-        (Component_object = (char *)TweenPosition__Begin(v24, v26, v43, 0)) == 0) )
-  {
+  if ( !Component_object )
+    goto LABEL_23;
+  Component_object = (char *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)Component_object, 0);
+  if ( !Component_object )
+    goto LABEL_23;
+  v45.fields.x = x;
+  v45.fields.y = y;
+  v45.fields.z = z;
+  v46 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)Component_object, v45, 0);
+  v27 = v46.fields.y;
+  v28 = v46.fields.z;
+  v46.fields.y = v46.fields.x;
+  v46.fields.z = v27;
+  v29 = v28;
+  Component_object = (char *)TweenPosition__Begin(v24, v26, *(UnityEngine_Vector3_o *)&v46.fields.y, 0);
+  if ( !Component_object )
 LABEL_23:
     sub_2213CDC(Component_object, v12);
-  }
-  v27 = Component_object;
+  v30 = Component_object;
   *((_DWORD *)Component_object + 8) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  *((_QWORD *)v27 + 10) = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 80), (int32_t)gameObject, v29, v30, v31, v32, v33, v34);
-  v35 = StringLiteral_9553/*"MoveEnd"*/;
-  *((_QWORD *)v27 + 11) = StringLiteral_9553/*"MoveEnd"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v27 + 88), v35, v36, v37, v38, v39, v40, v41);
+  *((_QWORD *)v30 + 10) = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 80), (int32_t)gameObject, v32, v33, v34, v35, v36, v37);
+  v38 = StringLiteral_9553/*"MoveEnd"*/;
+  *((_QWORD *)v30 + 11) = StringLiteral_9553/*"MoveEnd"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 88), v38, v39, v40, v41, v42, v43, v44);
 }
 
 
@@ -688,29 +698,33 @@ void PartyOrganizationListViewDropObject__Init_40966600(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void PartyOrganizationListViewDropObject__IntoMove(
         PartyOrganizationListViewDropObject_o *this,
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *dragObject; // x0
   UnityEngine_Transform_o *parent; // x20
-  UnityEngine_GameObject_o *v5; // x20
+  float y; // s4
+  float z; // s5
+  float v7; // s3
+  UnityEngine_GameObject_o *v8; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v7; // x2
-  System_String_o *v8; // x3
-  int32_t v9; // w4
-  int32_t v10; // w5
-  bool v11; // w6
-  bool v12; // w7
-  int32_t v13; // w1
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  int32_t v16; // w1
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   if ( (byte_596C00E & 1) == 0 )
   {
@@ -718,26 +732,40 @@ void PartyOrganizationListViewDropObject__IntoMove(
     byte_596C00E = 1;
   }
   dragObject = this->fields.dragObject;
-  if ( !dragObject
-    || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0)) == 0
-    || (parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0),
-        (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
-                                                    (UnityEngine_Component_o *)this,
-                                                    0)) == 0)
-    || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !parent)
-    || (v21 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
-        (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(this->fields.dragObject, 1.5, v21, 0)) == 0) )
+  if ( !dragObject )
+    goto LABEL_9;
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
+  if ( !dragObject )
+    goto LABEL_9;
+  parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  if ( !dragObject )
+    goto LABEL_9;
+  position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+  if ( !parent
+    || (v24 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
+        y = v24.fields.y,
+        z = v24.fields.z,
+        v24.fields.y = v24.fields.x,
+        v24.fields.z = y,
+        v7 = z,
+        (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(
+                                                    this->fields.dragObject,
+                                                    1.5,
+                                                    *(UnityEngine_Vector3_o *)&v24.fields.y,
+                                                    0)) == 0) )
   {
+LABEL_9:
     sub_2213CDC(dragObject, method);
   }
-  v5 = dragObject;
+  v8 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v5[3].monitor = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[3].monitor, (int32_t)gameObject, v7, v8, v9, v10, v11, v12);
-  v13 = StringLiteral_8073/*"IntoMove2"*/;
-  v5[3].fields.m_CachedPtr = StringLiteral_8073/*"IntoMove2"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[3].fields, v13, v14, v15, v16, v17, v18, v19);
+  v8[3].monitor = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8[3].monitor, (int32_t)gameObject, v10, v11, v12, v13, v14, v15);
+  v16 = StringLiteral_8073/*"IntoMove2"*/;
+  v8[3].fields.m_CachedPtr = StringLiteral_8073/*"IntoMove2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8[3].fields, v16, v17, v18, v19, v20, v21, v22);
 }
 
 

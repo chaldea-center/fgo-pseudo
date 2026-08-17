@@ -1022,8 +1022,11 @@ bool BattleCommandData__checkCriticalRate_53639572(
         int32_t count,
         const MethodInfo *method)
 {
+  bool result; // w0
+
+  result = count < rate;
   this->fields.critical = count < rate;
-  return count < rate;
+  return result;
 }
 
 

@@ -2187,9 +2187,9 @@ System_IAsyncResult_o *ScriptLogMessage_ProcAddLabel__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -2280,7 +2280,7 @@ System_IAsyncResult_o *ScriptLogMessage_ProcAddLabel2__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = txt;
-  return sub_2213A14(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v6, callback, object);
 }
 
 
@@ -2375,7 +2375,7 @@ void ScriptLogMessage___c__DisplayClass54_0___UpdateLabels_b__1(
   bool v6; // w6
   bool v7; // w7
   ScriptLogMessage___c__DisplayClass54_0_o *v8; // x19
-  struct System_String_o *tmpColorTag; // x1
+  struct System_Text_StringBuilder_o *tmpColorTag; // x1
 
   if ( !text )
     goto LABEL_7;
@@ -2388,7 +2388,7 @@ void ScriptLogMessage___c__DisplayClass54_0___UpdateLabels_b__1(
     ScriptLogMessage__AddLabel(
       (ScriptLogMessage_o *)this,
       text,
-      *((System_String_o **)this + 20),
+      (System_String_o *)this[3].fields.tmpTxt,
       v8->fields.isFoward,
       v4);
   }
@@ -2396,10 +2396,10 @@ void ScriptLogMessage___c__DisplayClass54_0___UpdateLabels_b__1(
   if ( !this )
 LABEL_7:
     sub_2213CDC(this, text);
-  tmpColorTag = v8->fields.tmpColorTag;
-  *((_QWORD *)this + 20) = tmpColorTag;
+  tmpColorTag = (struct System_Text_StringBuilder_o *)v8->fields.tmpColorTag;
+  this[3].fields.tmpTxt = tmpColorTag;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)((char *)this + 160),
+    (MissionNaviTransitionBoardItem_o *)&this[3].fields,
     (int32_t)tmpColorTag,
     (System_String_o *)method,
     v3,

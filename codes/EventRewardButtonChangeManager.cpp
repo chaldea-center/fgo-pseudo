@@ -163,20 +163,20 @@ void EventRewardButtonChangeManager__ChangeTabInfo(
 {
   EventRewardButtonChangeManager_o *v11; // x20
   int32_t max_length; // w9
-  int v13; // w8
-  __int64 v14; // x8
-  System_String_o **v15; // x9
-  System_String_o **v16; // x8
-  __int64 v17; // x8
+  int releaseEntityArray_high; // w8
+  struct UnityEngine_GameObject_array *v14; // x8
+  System_String_o **p_monitor; // x9
+  struct UnityEngine_GameObject_array *backImgObjs; // x8
+  struct UnityEngine_GameObject_array *v17; // x8
   System_String_o *v18; // x24
-  System_String_o *v19; // x29
+  Il2CppClass *klass; // x29
   unsigned __int64 v20; // x21
   int v21; // w19
   struct EventRewardSceneReleaseEntity_array *releaseEntityArray; // x8
   struct UICommonButton_array *eventBtns; // x8
   struct UICommonButton_array *v24; // x8
   struct UISprite_array *eventBtnImages; // x8
-  struct UnityEngine_GameObject_array *backImgObjs; // x8
+  struct UnityEngine_GameObject_array *v26; // x8
   struct UnityEngine_GameObject_array *activeImgObjs; // x8
   __int64 v28; // x2
   struct UISprite_array *btnTxtSprites; // x8
@@ -240,43 +240,43 @@ void EventRewardButtonChangeManager__ChangeTabInfo(
   v68 = openedTab;
   this = (EventRewardButtonChangeManager_o *)EventRewardButtonChangeManager_TypeInfo;
   v11->fields.eventCount = max_length;
-  v13 = *((_DWORD *)this + 57);
+  releaseEntityArray_high = HIDWORD(this[1].fields.releaseEntityArray);
   if ( max_length == 3 )
   {
-    if ( !v13 )
+    if ( !releaseEntityArray_high )
     {
       j_il2cpp_runtime_class_init_0(this, *(_QWORD *)&priorityId, *(_QWORD *)&currentEventId);
       this = (EventRewardButtonChangeManager_o *)EventRewardButtonChangeManager_TypeInfo;
     }
-    v16 = (System_String_o **)*((_QWORD *)this + 23);
-    v15 = v16 + 1;
+    backImgObjs = this[1].fields.backImgObjs;
+    p_monitor = (System_String_o **)&backImgObjs->obj.monitor;
   }
   else if ( max_length == 2 )
   {
-    if ( !v13 )
+    if ( !releaseEntityArray_high )
     {
       j_il2cpp_runtime_class_init_0(this, *(_QWORD *)&priorityId, *(_QWORD *)&currentEventId);
       this = (EventRewardButtonChangeManager_o *)EventRewardButtonChangeManager_TypeInfo;
     }
-    v14 = *((_QWORD *)this + 23);
-    v15 = (System_String_o **)(v14 + 24);
-    v16 = (System_String_o **)(v14 + 16);
+    v14 = this[1].fields.backImgObjs;
+    p_monitor = (System_String_o **)&v14->max_length;
+    backImgObjs = (struct UnityEngine_GameObject_array *)&v14->bounds;
   }
   else
   {
-    if ( !v13 )
+    if ( !releaseEntityArray_high )
     {
       j_il2cpp_runtime_class_init_0(this, *(_QWORD *)&priorityId, *(_QWORD *)&currentEventId);
       this = (EventRewardButtonChangeManager_o *)EventRewardButtonChangeManager_TypeInfo;
     }
-    v17 = *((_QWORD *)this + 23);
-    v15 = (System_String_o **)(v17 + 40);
-    v16 = (System_String_o **)(v17 + 32);
+    v17 = this[1].fields.backImgObjs;
+    p_monitor = (System_String_o **)&v17->m_Items[1];
+    backImgObjs = (struct UnityEngine_GameObject_array *)v17->m_Items;
   }
   if ( v11->fields.eventCount >= 1 )
   {
-    v18 = *v15;
-    v19 = *v16;
+    v18 = *p_monitor;
+    klass = backImgObjs->obj.klass;
     v20 = 0;
     v21 = 0;
     do
@@ -325,12 +325,12 @@ void EventRewardButtonChangeManager__ChangeTabInfo(
         if ( !this )
           goto LABEL_99;
         UISprite__set_spriteName((UISprite_o *)this, v18, 0);
-        backImgObjs = v11->fields.backImgObjs;
-        if ( !backImgObjs )
+        v26 = v11->fields.backImgObjs;
+        if ( !v26 )
           goto LABEL_99;
-        if ( v20 >= LODWORD(backImgObjs->max_length) )
+        if ( v20 >= LODWORD(v26->max_length) )
           goto LABEL_100;
-        this = (EventRewardButtonChangeManager_o *)backImgObjs->m_Items[v20];
+        this = (EventRewardButtonChangeManager_o *)v26->m_Items[v20];
         if ( !this )
           goto LABEL_99;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
@@ -363,7 +363,7 @@ void EventRewardButtonChangeManager__ChangeTabInfo(
         v32 = v31->m_Items[v20];
         if ( !v32 )
           goto LABEL_99;
-        v33 = *(System_String_o **)(*((_QWORD *)this + 23) + 72LL);
+        v33 = (System_String_o *)this[1].fields.backImgObjs->m_Items[5];
         v34 = System_Int32__ToString((int)v32 + 36, 0);
         v37 = System_String__Concat_75651716(v33, v34, 0);
         if ( !*(&EventRewardRootComponent_TypeInfo->_2.cctor_finished + 1) )
@@ -432,7 +432,7 @@ LABEL_53:
         this = (EventRewardButtonChangeManager_o *)v43->m_Items[v20];
         if ( !this )
           goto LABEL_99;
-        v44 = v21 == priorityId ? v19 : v18;
+        v44 = v21 == priorityId ? (System_String_o *)klass : v18;
         UISprite__set_spriteName((UISprite_o *)this, v44, 0);
         v45 = v11->fields.backImgObjs;
         if ( !v45 )
@@ -1228,7 +1228,7 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
   EventRewardButtonChangeManager_c *v15; // x0
   int v16; // w8
   System_String_o **p_RELEASE_EFFECT_3TAB_NAME; // x8
-  __int64 efffectData; // x0
+  UnityEngine_GameObject_o *efffectData; // x0
   struct UnityEngine_GameObject_array *effectObject; // x25
   __int64 v20; // x1
   __int64 v21; // x2
@@ -1239,7 +1239,7 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
   int32_t v26; // w5
   bool v27; // w6
   bool v28; // w7
-  __int64 v29; // x1
+  UnityEngine_GameObject_o *v29; // x1
   Il2CppClass **v30; // x0
   struct UnityEngine_GameObject_array *v31; // x8
   System_String_o *v32; // x2
@@ -1248,7 +1248,7 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
   int32_t v35; // w5
   bool v36; // w6
   bool v37; // w7
-  __int64 v38; // x23
+  UnityEngine_GameObject_o *v38; // x23
   struct UnityEngine_GameObject_array *v39; // x8
   struct UISprite_array *eventBtnImages; // x8
   UnityEngine_Transform_o *v41; // x21
@@ -1303,7 +1303,7 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
     }
     p_RELEASE_EFFECT_3TAB_NAME = &v15->static_fields->RELEASE_EFFECT_4TAB_NAME;
   }
-  efffectData = (__int64)this->fields.efffectData;
+  efffectData = (UnityEngine_GameObject_o *)this->fields.efffectData;
   if ( !efffectData )
     goto LABEL_47;
   effectObject = this->fields.effectObject;
@@ -1313,9 +1313,9 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
                               (const MethodInfo_37D2474 *)Method_AssetData_GetObject_GameObject____91708320);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v20, v21);
-  efffectData = (__int64)UnityEngine_Object__Instantiate_object_(
-                           Object_object__58532980,
-                           (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  efffectData = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
+                                              Object_object__58532980,
+                                              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectObject )
     goto LABEL_47;
   if ( LODWORD(effectObject->max_length) <= slot )
@@ -1323,26 +1323,26 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
   v29 = efffectData;
   v30 = &effectObject->obj.klass + slot;
   v30[4] = (Il2CppClass *)v29;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 4), v29, v23, v24, v25, v26, v27, v28);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 4), (int32_t)v29, v23, v24, v25, v26, v27, v28);
   v31 = this->fields.effectObject;
   if ( !v31 )
     goto LABEL_47;
   if ( LODWORD(v31->max_length) <= slot )
     goto LABEL_48;
-  efffectData = (__int64)v31->m_Items[slot];
+  efffectData = v31->m_Items[slot];
   if ( !efffectData )
     goto LABEL_47;
-  efffectData = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                           (UnityEngine_GameObject_o *)efffectData,
-                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
+  efffectData = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
+                                              efffectData,
+                                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TabOpenEffectComponent___);
   if ( !efffectData )
     goto LABEL_47;
   v38 = efffectData;
   if ( changeCallback )
   {
-    *(_QWORD *)(efffectData + 208) = changeCallback;
+    efffectData[8].fields.m_CachedPtr = (intptr_t)changeCallback;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)(efffectData + 208),
+      (MissionNaviTransitionBoardItem_o *)&efffectData[8].fields,
       (int32_t)changeCallback,
       v32,
       v33,
@@ -1353,8 +1353,8 @@ void EventRewardButtonChangeManager__SetReleaseEffect(
   }
   if ( endCallback )
   {
-    *(_QWORD *)(v38 + 216) = endCallback;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v38 + 216), (int32_t)endCallback, v32, v33, v34, v35, v36, v37);
+    v38[9].klass = (UnityEngine_GameObject_c *)endCallback;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v38[9], (int32_t)endCallback, v32, v33, v34, v35, v36, v37);
   }
   v39 = this->fields.effectObject;
   if ( !v39 )
@@ -1362,20 +1362,22 @@ LABEL_47:
     sub_2213CDC(efffectData, v13);
   if ( LODWORD(v39->max_length) <= slot )
     goto LABEL_48;
-  efffectData = (__int64)v39->m_Items[slot];
+  efffectData = v39->m_Items[slot];
   if ( !efffectData )
     goto LABEL_47;
-  efffectData = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)efffectData, 0);
+  efffectData = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(efffectData, 0);
   eventBtnImages = this->fields.eventBtnImages;
   if ( !eventBtnImages )
     goto LABEL_47;
   if ( LODWORD(eventBtnImages->max_length) <= slot )
     goto LABEL_48;
   v41 = (UnityEngine_Transform_o *)efffectData;
-  efffectData = (__int64)eventBtnImages->m_Items[slot];
+  efffectData = (UnityEngine_GameObject_o *)eventBtnImages->m_Items[slot];
   if ( !efffectData )
     goto LABEL_47;
-  efffectData = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)efffectData, 0);
+  efffectData = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                              (UnityEngine_Component_o *)efffectData,
+                                              0);
   if ( !v41 )
     goto LABEL_47;
   UnityEngine_Transform__set_parent(v41, (UnityEngine_Transform_o *)efffectData, 0);
@@ -1385,14 +1387,14 @@ LABEL_47:
   if ( LODWORD(v42->max_length) <= slot )
 LABEL_48:
     sub_2213CE4(efffectData);
-  efffectData = (__int64)v42->m_Items[slot];
+  efffectData = v42->m_Items[slot];
   if ( !efffectData )
     goto LABEL_47;
-  efffectData = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)efffectData, 0);
+  efffectData = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(efffectData, 0);
   v43 = (UnityEngine_Transform_o *)efffectData;
   if ( !byte_5969AE0 )
   {
-    efffectData = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    efffectData = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v43 )
@@ -1403,14 +1405,14 @@ LABEL_48:
     goto LABEL_47;
   if ( LODWORD(v44->max_length) <= slot )
     goto LABEL_48;
-  efffectData = (__int64)v44->m_Items[slot];
+  efffectData = v44->m_Items[slot];
   if ( !efffectData )
     goto LABEL_47;
-  efffectData = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)efffectData, 0);
+  efffectData = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(efffectData, 0);
   v45 = (UnityEngine_Transform_o *)efffectData;
   if ( !byte_5969AE5 )
   {
-    efffectData = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    efffectData = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !v45 )

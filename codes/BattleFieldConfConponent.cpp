@@ -109,41 +109,42 @@ void BattleFieldConfConponent__Initialize(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v6; // x1
   UnityEngine_Transform_o *transform; // x21
-  System_String_o *v8; // x2
-  System_String_o *v9; // x3
-  int32_t v10; // w4
-  int32_t v11; // w5
-  bool v12; // w6
-  bool v13; // w7
-  const MethodInfo *v14; // x1
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  int v8; // s0
+  int v9; // s2
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  const MethodInfo *v16; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (transform = UnityEngine_GameObject__get_transform(gameObject, 0),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0)
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0)) == 0
-    || (v15.fields.y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0).fields.y,
-        !transform) )
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0), !transform) )
   {
     sub_2213CDC(gameObject, v6);
   }
-  v15.fields.x = 0.0;
-  v15.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition(transform, v15, 0);
+  v8 = 0;
+  v9 = 0;
+  UnityEngine_Transform__set_localPosition(transform, localPosition, 0);
   BattleWindowComponent__setInitData((BattleWindowComponent_o *)this, 2, 0.15, 0, 0);
   BattleWindowComponent__setClose((BattleWindowComponent_o *)this, 0);
   this->fields.callbackClose = callback;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.callbackClose,
     (int32_t)callback,
-    v8,
-    v9,
     v10,
     v11,
     v12,
-    v13);
-  BattleFieldConfConponent__InitAtlas(this, v14);
+    v13,
+    v14,
+    v15);
+  BattleFieldConfConponent__InitAtlas(this, v16);
 }
 
 

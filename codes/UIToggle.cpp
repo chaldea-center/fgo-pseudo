@@ -745,7 +745,7 @@ System_IAsyncResult_o *UIToggle_Validate__BeginInvoke(
   v10[0] = choice;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -764,7 +764,7 @@ bool UIToggle_Validate__EndInvoke(UIToggle_Validate_o *this, System_IAsyncResult
 
 bool UIToggle_Validate__Invoke(UIToggle_Validate_o *this, bool choice, const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(intptr_t, bool, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, bool, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            choice,
            this->fields.method);

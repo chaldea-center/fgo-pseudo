@@ -869,20 +869,22 @@ System_ValueTuple_int__int__o RoadmapButtonPrefab___c___CheckReleasedOrAddedNewR
         int32_t currentId,
         const MethodInfo *method)
 {
-  System_ValueTuple_int__int__o v6; // [xsp+8h] [xbp-28h] BYREF
+  System_ValueTuple_int__int__o v6; // x0
+  System_ValueTuple_int__int__o v8; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596D643 & 1) == 0 )
   {
     sub_2213A60(&Method_System_ValueTuple_int__int___ctor__);
     byte_596D643 = 1;
   }
-  v6 = 0;
+  v6 = (System_ValueTuple_int__int__o)&v8;
+  v8 = 0;
   System_ValueTuple_int__int____ctor(
-    (System_ValueTuple_int__int__o)&v6,
+    v6,
     lastId,
     currentId,
     (const MethodInfo_3CEDC64 *)Method_System_ValueTuple_int__int___ctor__);
-  return v6;
+  return v8;
 }
 
 

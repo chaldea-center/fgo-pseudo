@@ -21,7 +21,7 @@ void WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o *this, con
   __int64 v3; // x1
   __int64 v4; // x2
   Il2CppObject *object; // x20
-  __int64 nextTurnObject; // x0
+  UILabel_o *nextTurnObject; // x0
   __int64 v7; // x1
   __int64 v8; // x2
   Il2CppObject *Component_object; // x0
@@ -56,8 +56,8 @@ void WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o *this, con
   struct UnityEngine_Vector2_StaticFields *static_fields; // x8
   struct UICommonButton_o *nextTurnButton; // x8
   struct UnityEngine_GameObject_array *tweenTargets; // x1
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596E449 & 1) == 0 )
   {
@@ -73,8 +73,8 @@ void WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o *this, con
              (const MethodInfo_39787F0 *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3, v4);
-  nextTurnObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)object, 0, 0);
-  if ( (nextTurnObject & 1) != 0 )
+  nextTurnObject = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)object, 0, 0);
+  if ( ((unsigned __int8)nextTurnObject & 1) != 0 )
   {
     if ( !object )
       goto LABEL_39;
@@ -87,39 +87,39 @@ void WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o *this, con
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
     if ( UnityEngine_Object__op_Inequality(splitAPLabel, 0, 0) )
     {
-      nextTurnObject = (__int64)this->fields.splitAPLabel;
+      nextTurnObject = this->fields.splitAPLabel;
       if ( !nextTurnObject )
         goto LABEL_39;
-      UILabel__set_bitmapFont((UILabel_o *)nextTurnObject, v13, 0);
+      UILabel__set_bitmapFont(nextTurnObject, v13, 0);
     }
     maxAPLabel = (UnityEngine_Object_o *)this->fields.maxAPLabel;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v14);
     if ( UnityEngine_Object__op_Inequality(maxAPLabel, 0, 0) )
     {
-      nextTurnObject = (__int64)this->fields.maxAPLabel;
+      nextTurnObject = this->fields.maxAPLabel;
       if ( !nextTurnObject )
         goto LABEL_39;
-      UILabel__set_bitmapFont((UILabel_o *)nextTurnObject, v13, 0);
+      UILabel__set_bitmapFont(nextTurnObject, v13, 0);
     }
     currentAPLabel = (UnityEngine_Object_o *)this->fields.currentAPLabel;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v16);
     if ( UnityEngine_Object__op_Inequality(currentAPLabel, 0, 0) )
     {
-      nextTurnObject = (__int64)this->fields.currentAPLabel;
+      nextTurnObject = this->fields.currentAPLabel;
       if ( !nextTurnObject )
         goto LABEL_39;
-      UILabel__set_bitmapFont((UILabel_o *)nextTurnObject, v13, 0);
+      UILabel__set_bitmapFont(nextTurnObject, v13, 0);
     }
   }
   nextTurnButtonBlinkPrefab = (UnityEngine_Object_o *)this->fields.nextTurnButtonBlinkPrefab;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7, v8);
-  nextTurnObject = UnityEngine_Object__op_Inequality(nextTurnButtonBlinkPrefab, 0, 0);
-  if ( (nextTurnObject & 1) != 0 )
+  nextTurnObject = (UILabel_o *)UnityEngine_Object__op_Inequality(nextTurnButtonBlinkPrefab, 0, 0);
+  if ( ((unsigned __int8)nextTurnObject & 1) != 0 )
   {
-    nextTurnObject = (__int64)this->fields.nextTurnObject;
+    nextTurnObject = (UILabel_o *)this->fields.nextTurnObject;
     if ( !nextTurnObject )
       goto LABEL_39;
     v25 = (Il2CppObject *)this->fields.nextTurnButtonBlinkPrefab;
@@ -140,16 +140,16 @@ void WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o *this, con
       v33,
       v34,
       v35);
-    nextTurnObject = (__int64)this->fields.nextTurnButtonBlink;
+    nextTurnObject = (UILabel_o *)this->fields.nextTurnButtonBlink;
     if ( !nextTurnObject )
       goto LABEL_39;
-    nextTurnObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)nextTurnObject, 0);
+    nextTurnObject = (UILabel_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)nextTurnObject, 0);
     if ( !this->fields.nextTurnButton )
       goto LABEL_39;
     v36 = (UnityEngine_Transform_o *)nextTurnObject;
-    nextTurnObject = (__int64)UnityEngine_Component__get_transform(
-                                (UnityEngine_Component_o *)this->fields.nextTurnButton,
-                                0);
+    nextTurnObject = (UILabel_o *)UnityEngine_Component__get_transform(
+                                    (UnityEngine_Component_o *)this->fields.nextTurnButton,
+                                    0);
     if ( !nextTurnObject )
       goto LABEL_39;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)nextTurnObject, 0);
@@ -157,22 +157,22 @@ void WarBoardPlayingUIController__Awake(WarBoardPlayingUIController_o *this, con
       goto LABEL_39;
     UnityEngine_Transform__set_localPosition(v36, localPosition, 0);
     Child = (UnityEngine_Object_o *)GameObjectExtensions__GetChild(this->fields.nextTurnButtonBlink, 0, 0);
-    nextTurnObject = UnityEngine_Object__op_Inequality(Child, 0, 0);
-    if ( (nextTurnObject & 1) == 0 )
+    nextTurnObject = (UILabel_o *)UnityEngine_Object__op_Inequality(Child, 0, 0);
+    if ( ((unsigned __int8)nextTurnObject & 1) == 0 )
       goto LABEL_37;
     if ( !byte_59699C0 )
     {
-      nextTurnObject = sub_2213A60(&UnityEngine_Vector2_TypeInfo);
+      nextTurnObject = (UILabel_o *)sub_2213A60(&UnityEngine_Vector2_TypeInfo);
       byte_59699C0 = 1;
     }
     if ( !Child )
 LABEL_39:
       sub_2213CDC(nextTurnObject, v7);
-    v41.fields.z = 0.0;
+    v42.fields.z = 0.0;
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
-    v41.fields.x = static_fields->zeroVector.fields.x;
-    v41.fields.y = static_fields->zeroVector.fields.y;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Child, v41, 0);
+    v42.fields.x = static_fields->zeroVector.fields.x;
+    v42.fields.y = static_fields->zeroVector.fields.y;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Child, v42, 0);
   }
 LABEL_37:
   nextTurnButton = this->fields.nextTurnButton;

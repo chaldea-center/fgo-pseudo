@@ -318,6 +318,7 @@ bool UserDeckMaster__IsEquip_50030864(
   BalanceConfig_c *v14; // x0
   int32_t klass; // w28
   int32_t v16; // w8
+  bool result; // w0
 
   if ( (byte_5971650 & 1) == 0 )
   {
@@ -378,8 +379,9 @@ LABEL_16:
     }
     v16 = (int32_t)v13[2].klass;
   }
+  result = v11;
   *partyIndex = v16;
-  return v11;
+  return result;
 }
 
 

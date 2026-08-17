@@ -1,12 +1,14 @@
 void BattleCommand___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct BattleCommand_TYPE_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
 
   if ( (byte_596F56D & 1) == 0 )
   {
@@ -16,20 +18,19 @@ void BattleCommand___cctor(const MethodInfo *method)
     byte_596F56D = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(BattleCommand_TYPE___TypeInfo, 6);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__D0EE47FA46F276FE089AC8624109AA30225984329C335054459E360DBE11E12A,
-    0);
-  BattleCommand_TypeInfo->static_fields->COMMAND_TYPES = (struct BattleCommand_TYPE_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__D0EE47FA46F276FE089AC8624109AA30225984329C335054459E360DBE11E12A;
+  v3 = (struct BattleCommand_TYPE_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  BattleCommand_TypeInfo->static_fields->COMMAND_TYPES = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)BattleCommand_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8,
+    v9);
 }
 
 

@@ -21,14 +21,20 @@ void ScriptBranchListViewItemDraw__SetItem(
   __int64 v14; // x1
   __int64 v15; // x2
   Il2CppObject *Component_object; // x22
-  const MethodInfo *v18; // x1
+  float v17; // s3 OVERLAPPED
+  float v18; // s0
+  float v19; // s1
+  float v20; // s2
+  const MethodInfo *v21; // x1
   bool IsFlagOn; // w0
   UIWidget_o *checkSprite; // x21
-  const MethodInfo *v21; // x1
+  const MethodInfo *v24; // x1
+  float v25; // s3 OVERLAPPED
+  float v26; // s0
+  float v27; // s1
+  float v28; // s2
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
-  int32_t v24; // w1
-  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v30; // w1
 
   if ( (byte_596DCD3 & 1) == 0 )
   {
@@ -40,7 +46,7 @@ void ScriptBranchListViewItemDraw__SetItem(
   {
     this->fields.drawItem = 0;
     p_drawItem = &this->fields.drawItem;
-    v24 = 0;
+    v30 = 0;
     goto LABEL_28;
   }
   title = item->fields.title;
@@ -80,33 +86,33 @@ void ScriptBranchListViewItemDraw__SetItem(
   titleTextLabel = (UILabel_o *)this->fields.baseImageTexture;
   if ( !titleTextLabel )
     goto LABEL_29;
-  v25.fields.a = 1.0;
-  v25.fields.r = mode == 1 ? 0.5 : 1.0;
-  v25.fields.g = v25.fields.r;
-  v25.fields.b = v25.fields.r;
-  UIWidget__set_color((UIWidget_o *)titleTextLabel, v25, 0);
-  IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v18);
+  v17 = 1.0;
+  v18 = mode == 1 ? 0.5 : 1.0;
+  v19 = v18;
+  v20 = v18;
+  UIWidget__set_color((UIWidget_o *)titleTextLabel, *(UnityEngine_Color_o *)(&v17 - 3), 0);
+  IsFlagOn = ScriptBranchListViewItem__get_IsFlagOn(item, v21);
   checkSprite = (UIWidget_o *)this->fields.checkSprite;
   this->fields.checkFlag = IsFlagOn;
-  titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_IsFlagOn(item, v21);
+  titleTextLabel = (UILabel_o *)ScriptBranchListViewItem__get_IsFlagOn(item, v24);
   if ( !checkSprite )
 LABEL_29:
     sub_2213CDC(titleTextLabel, title);
-  v26.fields.a = 1.0;
+  v25 = 1.0;
   if ( ((unsigned __int8)titleTextLabel & 1) != 0 )
-    v26.fields.r = 1.0;
+    v26 = 1.0;
   else
-    v26.fields.r = 0.5;
-  v26.fields.g = v26.fields.r;
-  v26.fields.b = v26.fields.r;
-  UIWidget__set_color(checkSprite, v26, 0);
+    v26 = 0.5;
+  v27 = v26;
+  v28 = v26;
+  UIWidget__set_color(checkSprite, *(UnityEngine_Color_o *)(&v25 - 3), 0);
   this->fields.drawItem = item;
   p_drawItem = &this->fields.drawItem;
-  v24 = (int)item;
+  v30 = (int)item;
 LABEL_28:
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)p_drawItem,
-    v24,
+    v30,
     *(System_String_o **)&mode,
     (System_String_o *)method,
     v4,
@@ -116,12 +122,16 @@ LABEL_28:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDraw_o *this, const MethodInfo *method)
 {
   ScriptBranchListViewItem_o *drawItem; // x0
   _BOOL4 v4; // w20
   struct ScriptBranchListViewItem_o *v5; // x8
-  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v6; // s0 OVERLAPPED
+  float v7; // s3
+  float v8; // s1
+  float v9; // s2
 
   drawItem = this->fields.drawItem;
   if ( !drawItem )
@@ -151,12 +161,12 @@ void ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDraw_o *this, 
   if ( !drawItem )
 LABEL_14:
     sub_2213CDC(drawItem, method);
-  v7.fields.r = 0.5;
-  v7.fields.a = 1.0;
+  v6 = 0.5;
+  v7 = 1.0;
   if ( v4 )
-    v7.fields.r = 1.0;
-  v7.fields.g = v7.fields.r;
-  v7.fields.b = v7.fields.r;
-  UIWidget__set_color((UIWidget_o *)drawItem, v7, 0);
+    v6 = 1.0;
+  v8 = v6;
+  v9 = v6;
+  UIWidget__set_color((UIWidget_o *)drawItem, *(UnityEngine_Color_o *)&v6, 0);
   this->fields.checkFlag = v4;
 }

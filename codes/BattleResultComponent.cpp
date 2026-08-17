@@ -2128,7 +2128,7 @@ void BattleResultComponent__Set(
   Il2CppObject *Master_object; // x19
   int32_t eventId; // w23
   int32_t QuestId; // w24
-  __int64 v176; // x9
+  struct UnityEngine_Transform_o *friendshipUpItemDialogRoot; // x9
   BattleResultComponent_o *v177; // x8
   unsigned int v178; // w9
   int v179; // w19
@@ -2918,19 +2918,19 @@ LABEL_200:
 LABEL_164:
     if ( !this )
       goto LABEL_200;
-    v168 = *((_DWORD *)this + 78) & 0xFFFFF7FF;
+    v168 = (__int64)this[1].fields.bondsResult & 0xFFFFF7FF;
   }
   else
   {
     if ( !this )
       goto LABEL_200;
-    v168 = *((_DWORD *)this + 78) | 0x800;
+    v168 = LODWORD(this[1].fields.bondsResult) | 0x800;
   }
-  v176 = *((_QWORD *)this + 58);
-  *((_DWORD *)this + 78) = v168;
-  *((_DWORD *)this + 78) = v168 & 0xFFFFEFFF;
-  if ( v176 && *(_QWORD *)(v176 + 24) )
-    *((_DWORD *)this + 78) = v168 | 0x1000;
+  friendshipUpItemDialogRoot = this[1].fields.friendshipUpItemDialogRoot;
+  LODWORD(this[1].fields.bondsResult) = v168;
+  LODWORD(this[1].fields.bondsResult) = v168 & 0xFFFFEFFF;
+  if ( friendshipUpItemDialogRoot && friendshipUpItemDialogRoot[1].klass )
+    LODWORD(this[1].fields.bondsResult) = v168 | 0x1000;
   this = (BattleResultComponent_o *)BattleData__isBattleResultLoseQuestClear(v80, 0);
   if ( ((unsigned __int8)this & 1) != 0
     || (this = (BattleResultComponent_o *)BattleData__isBattleRetreatQuestClear(v80, 0), ((unsigned __int8)this & 1) != 0) )

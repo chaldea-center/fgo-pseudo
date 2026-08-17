@@ -443,8 +443,8 @@ void BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_b__0(
   if ( !this )
     goto LABEL_14;
   v29 = (int)v48;
-  *((_QWORD *)this + 4) = v48;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(this + 1), v29, v23, v24, v25, v26, v27, v28);
+  this[1].klass = (BonusSelectSummonAssetManager___c__DisplayClass21_0_c *)v48;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[1], v29, v23, v24, v25, v26, v27, v28);
   if ( !v5->fields.__4__this
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           (BonusSelectSummonAssetManager_o *)this,
@@ -454,8 +454,8 @@ void BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_b__0(
           v30),
         (this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this) == 0)
     || (v37 = (int)v47,
-        *((_QWORD *)this + 5) = v47,
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 40), v37, v31, v32, v33, v34, v35, v36),
+        this[1].monitor = v47,
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[1].monitor, v37, v31, v32, v33, v34, v35, v36),
         !v5->fields.__4__this)
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           (BonusSelectSummonAssetManager_o *)this,
@@ -469,7 +469,7 @@ LABEL_14:
     sub_2213CDC(this, assetData);
   }
   v45 = (int)v46;
-  *((_QWORD *)this + 6) = v46;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)this + 48), v45, v39, v40, v41, v42, v43, v44);
+  this[1].fields.__4__this = (struct BonusSelectSummonAssetManager_o *)v46;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&this[1].fields, v45, v39, v40, v41, v42, v43, v44);
   ActionExtensions__Call(v5->fields.finishCallback, 0);
 }

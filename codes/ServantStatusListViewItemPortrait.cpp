@@ -72,26 +72,30 @@ void ServantStatusListViewItemPortrait__EnsureItemCount(
   unsigned __int64 v21; // x28
   __int64 v22; // x24
   __int64 v23; // x1
-  __int64 v24; // x29
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  __int64 v27; // x29
   __int64 i; // x27
-  __int64 v26; // x1
-  __int64 v27; // x2
+  __int64 v29; // x1
+  __int64 v30; // x2
   Il2CppObject *gameObject; // x23
-  ServantStatusListViewItemPortrait_o *v29; // x23
-  ServantStatusListViewItemPortrait_o *v30; // x24
-  __int64 v31; // x1
-  __int64 v32; // x2
+  ServantStatusListViewItemPortrait_o *v32; // x23
+  ServantStatusListViewItemPortrait_o *v33; // x24
+  __int64 v34; // x1
+  __int64 v35; // x2
   int32_t layer; // w24
-  struct ServantStatusListViewItemPortrait_array *v34; // x24
-  System_String_o *v35; // x2
-  System_String_o *v36; // x3
-  int32_t v37; // w4
-  int32_t v38; // w5
-  bool v39; // w6
-  bool v40; // w7
-  ServantStatusListViewItemPortrait_o *v41; // x23
-  __int64 v42; // x0
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  struct ServantStatusListViewItemPortrait_array *v37; // x24
+  System_String_o *v38; // x2
+  System_String_o *v39; // x3
+  int32_t v40; // w4
+  int32_t v41; // w5
+  bool v42; // w6
+  bool v43; // w7
+  ServantStatusListViewItemPortrait_o *v44; // x23
+  __int64 v45; // x0
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
   if ( (byte_596DF64 & 1) == 0 )
@@ -136,8 +140,8 @@ void ServantStatusListViewItemPortrait__EnsureItemCount(
             if ( !this )
             {
 LABEL_34:
-              v42 = sub_2213D00(this, v23);
-              sub_2213BA0(v42, 0);
+              v45 = sub_2213D00(this, v23);
+              sub_2213BA0(v45, 0);
             }
           }
           if ( v21 >= v17[6] )
@@ -169,24 +173,27 @@ LABEL_33:
       if ( this )
       {
         localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0);
-        v24 = count - (__int64)(int)max_length;
+        x = localScale.fields.x;
+        y = localScale.fields.y;
+        z = localScale.fields.z;
+        v27 = count - (__int64)(int)max_length;
         for ( i = 8LL * (int)max_length + 32; ; i += 8 )
         {
           gameObject = (Il2CppObject *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
+            j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v29, v30);
           this = (ServantStatusListViewItemPortrait_o *)UnityEngine_Object__Instantiate_object_(
                                                           gameObject,
                                                           (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
           if ( !this )
             break;
-          v29 = this;
+          v32 = this;
           this = (ServantStatusListViewItemPortrait_o *)UnityEngine_GameObject__get_transform(
                                                           (UnityEngine_GameObject_o *)this,
                                                           0);
           if ( !this )
             break;
-          v30 = this;
+          v33 = this;
           UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)this, parent, 0);
           if ( !byte_5969AE6 )
           {
@@ -194,10 +201,13 @@ LABEL_33:
             byte_5969AE6 = 1;
           }
           UnityEngine_Transform__set_localRotation(
-            (UnityEngine_Transform_o *)v30,
+            (UnityEngine_Transform_o *)v33,
             UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
             0);
-          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v30, localScale, 0);
+          v47.fields.x = x;
+          v47.fields.y = y;
+          v47.fields.z = z;
+          UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)v33, v47, 0);
           if ( !parent )
             break;
           this = (ServantStatusListViewItemPortrait_o *)UnityEngine_Component__get_gameObject(
@@ -207,28 +217,28 @@ LABEL_33:
             break;
           layer = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0);
           if ( !*(&NGUITools_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v31, v32);
-          NGUITools__SetLayer((UnityEngine_GameObject_o *)v29, layer, 0);
-          v34 = *p_portraitItems;
+            j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo, v34, v35);
+          NGUITools__SetLayer((UnityEngine_GameObject_o *)v32, layer, 0);
+          v37 = *p_portraitItems;
           this = (ServantStatusListViewItemPortrait_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                          (UnityEngine_GameObject_o *)v29,
+                                                          (UnityEngine_GameObject_o *)v32,
                                                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusListViewItemPortrait___);
-          if ( !v34 )
+          if ( !v37 )
             break;
-          v41 = this;
+          v44 = this;
           if ( this )
           {
-            this = (ServantStatusListViewItemPortrait_o *)sub_2213BB4(this, v34->obj.klass->_1.element_class);
+            this = (ServantStatusListViewItemPortrait_o *)sub_2213BB4(this, v37->obj.klass->_1.element_class);
             if ( !this )
               goto LABEL_34;
           }
-          if ( (unsigned int)max_length >= LODWORD(v34->max_length) )
+          if ( (unsigned int)max_length >= LODWORD(v37->max_length) )
             goto LABEL_33;
-          *(Il2CppClass **)((char *)&v34->obj.klass + i) = (Il2CppClass *)v41;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)v34 + i), (int32_t)v41, v35, v36, v37, v38, v39, v40);
-          --v24;
+          *(Il2CppClass **)((char *)&v37->obj.klass + i) = (Il2CppClass *)v44;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)((char *)v37 + i), (int32_t)v44, v38, v39, v40, v41, v42, v43);
+          --v27;
           LODWORD(max_length) = max_length + 1;
-          if ( !v24 )
+          if ( !v27 )
             return;
         }
       }
@@ -363,7 +373,7 @@ ServantStatusListViewItemPortrait_array *ServantStatusListViewItemPortrait__Setu
         const MethodInfo *method)
 {
   ServantStatusListViewItemPortrait_array *result; // x0
-  struct ServantStatusListViewItemPortrait_array **p_portraitItems; // x23
+  ServantStatusListViewItemPortrait_array **p_portraitItems; // x23
   __int64 v13; // x1
   ServantStatusListViewItemPortrait_array *v14; // x25
   __int64 v15; // x1

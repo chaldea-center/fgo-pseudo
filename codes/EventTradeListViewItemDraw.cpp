@@ -850,6 +850,7 @@ LABEL_32:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventTradeListViewItemDraw__UpdateItem(
         EventTradeListViewItemDraw_o *this,
         EventTradeListViewItem_o *item,
@@ -930,12 +931,15 @@ void EventTradeListViewItemDraw__UpdateItem(
   UILabel_o *timeLeftLabel; // x22
   __int64 v79; // x1
   __int64 v80; // x2
-  int32_t v83; // [xsp+8h] [xbp-58h] BYREF
+  float v81; // s1 OVERLAPPED
+  float v82; // s2
+  float v83; // s3
+  float v84; // s0
+  int32_t v85; // [xsp+8h] [xbp-58h] BYREF
   int32_t NowTradeNum; // [xsp+Ch] [xbp-54h] BYREF
   EventTradePickupEntity_o *pickupEntity; // [xsp+18h] [xbp-48h] BYREF
-  UnityEngine_Color_o v86; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v88; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v89; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596AD27 & 1) == 0 )
   {
@@ -995,11 +999,11 @@ void EventTradeListViewItemDraw__UpdateItem(
                 if ( pickupSprite )
                 {
                   v11 = *(_DWORD *)&this->fields.NAME_COLOR_DEFAULT.fields.r;
-                  v86.fields.a = (float)HIBYTE(v11) / 255.0;
-                  v86.fields.b = (float)BYTE2(v11) / 255.0;
-                  v86.fields.g = (float)BYTE1(v11) / 255.0;
-                  v86.fields.r = (float)(unsigned __int8)v11 / 255.0;
-                  UILabel__set_effectColor((UILabel_o *)pickupSprite, v86, 0);
+                  v88.fields.a = (float)HIBYTE(v11) / 255.0;
+                  v88.fields.b = (float)BYTE2(v11) / 255.0;
+                  v88.fields.g = (float)BYTE1(v11) / 255.0;
+                  v88.fields.r = (float)(unsigned __int8)v11 / 255.0;
+                  UILabel__set_effectColor((UILabel_o *)pickupSprite, v88, 0);
                   pickupSprite = EventTradeListViewItem__get_NowTradeNum(item, v12);
                   TradeInfo_k__BackingField = item->fields._TradeInfo_k__BackingField;
                   if ( TradeInfo_k__BackingField )
@@ -1030,8 +1034,8 @@ void EventTradeListViewItemDraw__UpdateItem(
                           if ( v22 )
                           {
                             v23 = (Il2CppObject *)pickupSprite;
-                            v83 = v22->fields.maxTradeNum;
-                            v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v83);
+                            v85 = v22->fields.maxTradeNum;
+                            v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v85);
                             pickupSprite = (__int64)System_String__Format_75697880(v20, v23, v24, 0);
                             if ( progressLabel )
                             {
@@ -1211,16 +1215,19 @@ void EventTradeListViewItemDraw__UpdateItem(
                                   pickupSprite = (__int64)this->fields.timeLeftLabel;
                                   if ( pickupSprite )
                                   {
-                                    v88.fields.g = 0.92157;
-                                    v88.fields.b = 0.015686;
-                                    v88.fields.a = 1.0;
+                                    v81 = 0.92157;
+                                    v82 = 0.015686;
+                                    v83 = 1.0;
                                     if ( v66 < 3600 )
                                     {
-                                      v88.fields.g = 0.0;
-                                      v88.fields.b = 0.0;
+                                      v81 = 0.0;
+                                      v82 = 0.0;
                                     }
-                                    v88.fields.r = 1.0;
-                                    UIWidget__set_color((UIWidget_o *)pickupSprite, v88, 0);
+                                    v84 = 1.0;
+                                    UIWidget__set_color(
+                                      (UIWidget_o *)pickupSprite,
+                                      *(UnityEngine_Color_o *)(&v81 - 1),
+                                      0);
                                     pickupSprite = (__int64)this->fields.tradingStateSprite;
                                     if ( pickupSprite )
                                     {
@@ -1273,11 +1280,11 @@ void EventTradeListViewItemDraw__UpdateItem(
                       if ( pickupSprite )
                       {
                         rgba = this->fields.NAME_COLOR_DEFAULT.fields.rgba;
-                        v87.fields.a = (float)HIBYTE(rgba) / 255.0;
-                        v87.fields.b = (float)BYTE2(rgba) / 255.0;
-                        v87.fields.g = (float)BYTE1(rgba) / 255.0;
-                        v87.fields.r = (float)(unsigned __int8)rgba / 255.0;
-                        UILabel__set_effectColor((UILabel_o *)pickupSprite, v87, 0);
+                        v89.fields.a = (float)HIBYTE(rgba) / 255.0;
+                        v89.fields.b = (float)BYTE2(rgba) / 255.0;
+                        v89.fields.g = (float)BYTE1(rgba) / 255.0;
+                        v89.fields.r = (float)(unsigned __int8)rgba / 255.0;
+                        UILabel__set_effectColor((UILabel_o *)pickupSprite, v89, 0);
                         pickupSprite = (__int64)this->fields.tradeStartButtonSprite;
                         if ( pickupSprite )
                         {

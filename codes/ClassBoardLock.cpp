@@ -348,20 +348,21 @@ void ClassBoardLock__UpdateDraw(
 {
   bool hasValue; // w20
   ClassBoardLock_o *v4; // x19
+  System_Nullable_Int32Enum__o v5; // x0
   ClassBoardSquare_o *Value; // x0
-  const MethodInfo *v6; // x3
+  const MethodInfo *v7; // x3
   struct IClassBoardSquareModel_o *SquareModel_k__BackingField; // x20
   IClassBoardSquareModel_c *klass; // x8
-  __int64 v9; // x9
+  __int64 v10; // x9
   IClassBoardSquareModel_c **p_offset; // x10
-  __int64 v11; // x0
-  int v12; // w20
-  const MethodInfo *v13; // x1
-  System_Nullable_AcquireFlag__o v14; // [xsp+8h] [xbp-28h] BYREF
+  __int64 v12; // x0
+  int v13; // w20
+  const MethodInfo *v14; // x1
+  System_Nullable_AcquireFlag__o v15; // [xsp+8h] [xbp-28h] BYREF
 
   hasValue = handoverFlag.fields.hasValue;
   v4 = this;
-  v14 = handoverFlag;
+  v15 = handoverFlag;
   if ( (byte_59746CC & 1) == 0 )
   {
     sub_2213A60(&IClassBoardSquareModel_TypeInfo);
@@ -371,8 +372,9 @@ void ClassBoardLock__UpdateDraw(
   }
   if ( hasValue )
   {
+    v5 = (System_Nullable_Int32Enum__o)&v15;
     Value = (ClassBoardSquare_o *)System_Nullable_Int32Enum___get_Value(
-                                    (System_Nullable_Int32Enum__o)&v14,
+                                    v5,
                                     (const MethodInfo_45E46B0 *)Method_System_Nullable_AcquireFlag__get_Value__);
   }
   else
@@ -381,53 +383,53 @@ void ClassBoardLock__UpdateDraw(
     if ( !SquareModel_k__BackingField )
       sub_2213CDC(this, handoverFlag);
     klass = SquareModel_k__BackingField->klass;
-    v9 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
+    v10 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
     if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
     {
       p_offset = (IClassBoardSquareModel_c **)&klass->_1.interfaceOffsets->offset;
       while ( *(p_offset - 1) != IClassBoardSquareModel_TypeInfo )
       {
-        --v9;
+        --v10;
         p_offset += 2;
-        if ( !v9 )
+        if ( !v10 )
           goto LABEL_10;
       }
-      v11 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 15];
+      v12 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 15];
     }
     else
     {
 LABEL_10:
-      v11 = sub_224BC3C(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
+      v12 = sub_224BC3C(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
     }
-    Value = (ClassBoardSquare_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD, _QWORD))v11)(
+    Value = (ClassBoardSquare_o *)(*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD, _QWORD))v12)(
                                     SquareModel_k__BackingField,
                                     0,
-                                    *(_QWORD *)(v11 + 8));
+                                    *(_QWORD *)(v12 + 8));
   }
-  v12 = (int)Value;
-  ClassBoardSquare__SetActiveArrayObject(Value, v4->fields.notCondObjects, 0, v6);
-  if ( v12 )
+  v13 = (int)Value;
+  ClassBoardSquare__SetActiveArrayObject(Value, v4->fields.notCondObjects, 0, v7);
+  if ( v13 )
   {
-    if ( (v12 & 1) != 0 )
+    if ( (v13 & 1) != 0 )
     {
-      ClassBoardSquare__DrawAcquired((ClassBoardSquare_o *)v4, v13);
+      ClassBoardSquare__DrawAcquired((ClassBoardSquare_o *)v4, v14);
     }
-    else if ( (v12 & 2) != 0 )
+    else if ( (v13 & 2) != 0 )
     {
-      ClassBoardSquare__DrawNotConnected((ClassBoardSquare_o *)v4, v13);
+      ClassBoardSquare__DrawNotConnected((ClassBoardSquare_o *)v4, v14);
     }
-    else if ( (v12 & 4) != 0 )
+    else if ( (v13 & 4) != 0 )
     {
-      ClassBoardLock__DrawNotCond(v4, v13);
+      ClassBoardLock__DrawNotCond(v4, v14);
     }
-    else if ( (v12 & 0x10) != 0 )
+    else if ( (v13 & 0x10) != 0 )
     {
-      ClassBoardSquare__DrawUnacquired((ClassBoardSquare_o *)v4, v13);
+      ClassBoardSquare__DrawUnacquired((ClassBoardSquare_o *)v4, v14);
     }
   }
   else
   {
-    ClassBoardSquare__DrawAvailable((ClassBoardSquare_o *)v4, v13);
+    ClassBoardSquare__DrawAvailable((ClassBoardSquare_o *)v4, v14);
   }
 }
 

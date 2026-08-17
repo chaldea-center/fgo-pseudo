@@ -106,7 +106,7 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
 {
   CriFsWebInstaller_o *installer; // x0
   struct CriFsWebInstaller_o **p_installer; // x20
-  __int64 StatusInfo; // x0
+  CriFsWebInstaller_StatusInfo_o *StatusInfo; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x2
   float contentsSize; // s0
@@ -127,7 +127,7 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
   installer = this->fields.installer;
   if ( installer )
   {
-    StatusInfo = (__int64)CriFsWebInstaller__GetStatusInfo(&v14, installer, method);
+    StatusInfo = CriFsWebInstaller__GetStatusInfo(&v14, installer, method);
     contentsSize = (float)v14.fields.contentsSize;
     status = v14.fields.status;
     error = v14.fields.error;
@@ -145,11 +145,11 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
         v11 = System_Enum__ToString((System_Enum_o *)&v14, 0);
         v12 = System_String__Concat_75651716((System_String_o *)StringLiteral_16536/*"[CriFsWebInstallerError]"*/, v11, 0);
         this->fields._error_k__BackingField = v12;
-        StatusInfo = sub_2213A04(&this->fields._error_k__BackingField, v12);
+        StatusInfo = (CriFsWebInstaller_StatusInfo_o *)sub_2213A04(&this->fields._error_k__BackingField, v12);
       }
       if ( !byte_59699B9 )
       {
-        StatusInfo = sub_2213A60(&CriFsWebInstaller_TypeInfo);
+        StatusInfo = (CriFsWebInstaller_StatusInfo_o *)sub_2213A60(&CriFsWebInstaller_TypeInfo);
         byte_59699B9 = 1;
       }
       if ( status == 2 && CriFsWebInstaller_TypeInfo->static_fields->_isCrcEnabled_k__BackingField )
@@ -161,12 +161,12 @@ void CriFsWebInstallRequest__Update(CriFsWebInstallRequest_o *this, const Method
                                    &this->fields.crc32,
                                    v7) == 0;
       }
-      StatusInfo = (__int64)*p_installer;
+      StatusInfo = (CriFsWebInstaller_StatusInfo_o *)*p_installer;
       if ( *p_installer )
       {
-        (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)StatusInfo + 392LL))(
+        (*(void (__fastcall **)(CriFsWebInstaller_StatusInfo_o *, _QWORD))(*(_QWORD *)&StatusInfo->fields.status + 392LL))(
           StatusInfo,
-          *(_QWORD *)(*(_QWORD *)StatusInfo + 400LL));
+          *(_QWORD *)(*(_QWORD *)&StatusInfo->fields.status + 400LL));
         this->fields.installer = 0;
         sub_2213A04(&this->fields.installer, 0);
         doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;

@@ -286,14 +286,16 @@ bool ServantPassiveSkillEntity__TryGetOtherValidEventId(
 {
   int32_t v4; // w0
   int32_t v5; // w9
+  bool result; // w0
 
   v4 = ServantPassiveSkillEntity__GetOtherValidEventId(this, (const MethodInfo *)otherValidEventId);
   if ( v4 <= 0 )
     v5 = -1;
   else
     v5 = v4;
+  result = v4 > 0;
   *otherValidEventId = v5;
-  return v4 > 0;
+  return result;
 }
 
 

@@ -558,7 +558,7 @@ System_IAsyncResult_o *BattleCharaChangeConfirmListViewItemDrawSingleValue_GetVa
   *(_QWORD *)&v13 = v9;
   *((_QWORD *)&v13 + 1) = v10;
   v14 = 0;
-  return sub_2213A14(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v12, callback, object);
 }
 
 

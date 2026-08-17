@@ -367,7 +367,7 @@ int32_t ServantStatusListViewObject__GetKind(ServantStatusListViewObject_o *this
   v6 = this->fields.itemDraw;
   if ( !v6 )
     sub_2213CDC(0, v5);
-  return ((int32_t (__fastcall *)(struct ServantStatusListViewItemDraw_o *, const MethodInfo *))v6->klass->vtable._4_GetKind.methodPtr)(
+  return ((__int64 (__fastcall *)(struct ServantStatusListViewItemDraw_o *, const MethodInfo *))v6->klass->vtable._4_GetKind.methodPtr)(
            v6,
            v6->klass->vtable._4_GetKind.method);
 }
@@ -382,7 +382,7 @@ int32_t ServantStatusListViewObject__GetSize(ServantStatusListViewObject_o *this
   UnityEngine_Object_o *v7; // x19
   _BOOL8 v8; // x0
   __int64 v9; // x1
-  float v11; // s1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596DF81 & 1) == 0 )
   {
@@ -414,11 +414,11 @@ int32_t ServantStatusListViewObject__GetSize(ServantStatusListViewObject_o *this
     return 0;
   if ( !v7 )
     sub_2213CDC(v8, v9);
-  v11 = COERCE_FLOAT(LODWORD(UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v7, 0).fields.y));
-  if ( v11 == INFINITY )
+  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v7, 0);
+  if ( size.fields.y == INFINITY )
     return 0x80000000;
   else
-    return (int)v11;
+    return (int)size.fields.y;
 }
 
 
@@ -544,6 +544,7 @@ LABEL_27:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewObject__Init_44599120(
         ServantStatusListViewObject_o *this,
         int32_t initMode,
@@ -551,23 +552,18 @@ void ServantStatusListViewObject__Init_44599120(
 {
   const MethodInfo *v3; // x3
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v10.fields.x = v5;
-  v10.fields.y = v6;
-  v10.fields.z = v7;
-  ServantStatusListViewObject__Init(this, initMode, 0, v4, v10, v3);
+  ServantStatusListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewObject__Init_44600556(
         ServantStatusListViewObject_o *this,
         int32_t initMode,
@@ -575,23 +571,18 @@ void ServantStatusListViewObject__Init_44600556(
         const MethodInfo *method)
 {
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  ServantStatusListViewObject__Init(this, initMode, callbackFunc, v4, v11, method);
+  ServantStatusListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewObject__Init_44609492(
         ServantStatusListViewObject_o *this,
         int32_t initMode,
@@ -599,20 +590,14 @@ void ServantStatusListViewObject__Init_44609492(
         float delay,
         const MethodInfo *method)
 {
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  ServantStatusListViewObject__Init(this, initMode, callbackFunc, delay, v11, method);
+  ServantStatusListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 

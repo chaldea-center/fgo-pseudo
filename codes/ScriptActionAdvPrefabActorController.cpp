@@ -345,9 +345,9 @@ void ScriptActionAdvPrefabActorController__Update(
   __int64 v5; // x1
   UnityEngine_Transform_o *v6; // x20
   UnityEngine_Transform_o *v7; // x20
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o eulerAngles; // 0:kr14_12.12
-  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o eulerAngles; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59727C7 & 1) == 0 )
@@ -366,10 +366,10 @@ void ScriptActionAdvPrefabActorController__Update(
     v6 = transform;
     position = UnityEngine_Transform__get_position(this->fields.FollowTarget, 0);
     if ( !v6
-      || (v10.fields.z = position.fields.z + this->fields.followOffsetPosition.fields.z,
-          v10.fields.y = position.fields.y + this->fields.followOffsetPosition.fields.y,
-          v10.fields.x = position.fields.x + this->fields.followOffsetPosition.fields.x,
-          UnityEngine_Transform__set_position(v6, v10, 0),
+      || (v9.fields.z = position.fields.z + this->fields.followOffsetPosition.fields.z,
+          v9.fields.y = position.fields.y + this->fields.followOffsetPosition.fields.y,
+          v9.fields.x = position.fields.x + this->fields.followOffsetPosition.fields.x,
+          UnityEngine_Transform__set_position(v6, v9, 0),
           transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0),
           !this->fields.FollowTarget)
       || (v7 = transform, eulerAngles = UnityEngine_Transform__get_eulerAngles(this->fields.FollowTarget, 0), !v7) )

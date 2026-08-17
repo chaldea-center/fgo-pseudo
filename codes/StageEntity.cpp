@@ -1620,6 +1620,7 @@ bool StageEntity__TryGetChangeBgData(
   int32_t v15; // w0
   int32_t IntValue; // w0
   System_Collections_Generic_Dictionary_string__object__o *script; // x8
+  bool result; // w0
 
   if ( (byte_59714FF & 1) == 0 )
   {
@@ -1656,9 +1657,9 @@ bool StageEntity__TryGetChangeBgData(
       if ( (int)++v13 >= max_length )
         goto LABEL_11;
     }
+    result = 1;
     *stageBgId = v14[4];
     *stageBgType = v14[5];
-    return 1;
   }
   else
   {
@@ -1672,6 +1673,7 @@ LABEL_11:
     }
     return *stageBgId > 0;
   }
+  return result;
 }
 
 
@@ -2449,12 +2451,14 @@ bool StageEntity__GetExBattleUiSkillEffectIds_d__85__MoveNext(
   int32_t v38; // w5
   bool v39; // w6
   bool v40; // w7
+  bool result; // w0
   int32_t v42; // w0
   StageEntity__GetExBattleUiSkillEffectIds_d__85_o *v43; // x9
+  int32_t v44; // w8
   ExtraBattleUserInterfaceData_JsonConvertData_array *dataArray; // [xsp+18h] [xbp-28h] BYREF
-  StageEntity__GetExBattleUiSkillEffectIds_d__85_o *v45; // [xsp+28h] [xbp-18h]
+  StageEntity__GetExBattleUiSkillEffectIds_d__85_o *v46; // [xsp+28h] [xbp-18h]
 
-  v45 = this;
+  v46 = this;
   v3 = this;
   if ( (byte_5971540 & 1) == 0 )
   {
@@ -2505,10 +2509,10 @@ LABEL_14:
     v15 = (struct System_Collections_Generic_IEnumerator_int__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_int__o *, _QWORD))v14)(
                                                                     v10,
                                                                     *(_QWORD *)(v14 + 8));
-    v16 = v45;
-    v45->fields.__7__wrap1 = v15;
+    v16 = v46;
+    v46->fields.__7__wrap1 = v15;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v16->fields.__7__wrap1, (int32_t)v15, v17, v18, v19, v20, v21, v22);
-    v3 = v45;
+    v3 = v46;
   }
   _7__wrap1 = v3->fields.__7__wrap1;
   v3->fields.__1__state = -3;
@@ -2538,15 +2542,15 @@ LABEL_22:
           *(_QWORD *)(v27 + 8))
       & 1) == 0 )
   {
-    StageEntity__GetExBattleUiSkillEffectIds_d__85____m__Finally1(v45, v28);
-    v34 = v45;
-    v45->fields.__7__wrap1 = 0;
+    StageEntity__GetExBattleUiSkillEffectIds_d__85____m__Finally1(v46, v28);
+    v34 = v46;
+    v46->fields.__7__wrap1 = 0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&v34->fields.__7__wrap1, 0, v35, v36, v37, v38, v39, v40);
     return 0;
   }
-  v29 = v45->fields.__7__wrap1;
+  v29 = v46->fields.__7__wrap1;
   if ( !v29 )
-    sub_2213CDC(v45, v28);
+    sub_2213CDC(v46, v28);
   v30 = v29->klass;
   v31 = *(unsigned __int16 *)&v29->klass->_2.rank;
   if ( *(_WORD *)&v29->klass->_2.rank )
@@ -2564,15 +2568,17 @@ LABEL_22:
   else
   {
 LABEL_30:
-    v33 = sub_224BC3C(v45->fields.__7__wrap1, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+    v33 = sub_224BC3C(v46->fields.__7__wrap1, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
   }
   v42 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_int__o *, _QWORD))v33)(
           v29,
           *(_QWORD *)(v33 + 8));
-  v43 = v45;
-  v45->fields.__1__state = 1;
-  v43->fields.__2__current = v42;
-  return 1;
+  v43 = v46;
+  v44 = v42;
+  result = 1;
+  v46->fields.__1__state = 1;
+  v43->fields.__2__current = v44;
+  return result;
 }
 
 
@@ -2771,9 +2777,9 @@ System_String_o *StageEntity___c___GetBattleStartVoiceIdArray_b__47_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
-           x,
-           x->klass->vtable[3].method);
+  return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
+                              x,
+                              x->klass->vtable[3].method);
 }
 
 

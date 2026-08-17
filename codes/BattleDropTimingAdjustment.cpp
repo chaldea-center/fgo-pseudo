@@ -553,7 +553,7 @@ int32_t BattleDropTimingAdjustment___c___Initialize_b__4_1(
 LABEL_8:
     v7 = sub_224BC3C(g, System_Linq_IGrouping_int__DropInfo__TypeInfo, 0);
   }
-  return (*(int32_t (__fastcall **)(System_Linq_IGrouping_int__DropInfo__o *, _QWORD))v7)(g, *(_QWORD *)(v7 + 8));
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__DropInfo__o *, _QWORD))v7)(g, *(_QWORD *)(v7 + 8));
 }
 
 

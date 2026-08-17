@@ -351,7 +351,7 @@ LABEL_18:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, item, v13);
         this = (BattleCharaChangeConfirmListViewItemDrawClassSkill_o *)BalanceConfig_TypeInfo;
       }
-      if ( (__int64)i >= *(int *)(*((_QWORD *)this + 23) + 44LL) )
+      if ( (__int64)i >= SHIDWORD(this[1].fields.arrowSprite->fields.rightAnchor) )
         break;
       if ( !v10 )
         goto LABEL_18;

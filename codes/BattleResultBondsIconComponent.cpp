@@ -274,20 +274,24 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
   float v21; // s12
   float v22; // s0
   float v23; // s10
-  float v24; // s9
-  float v25; // s0
-  float v26; // s10
-  UnityEngine_Transform_o *v27; // x20
-  float v28; // s8
-  float v29; // s0
-  int v30; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v32; // 0:kr14_12.12
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s13
+  float z; // s14
+  float v26; // s15
+  float v27; // s9
+  float v28; // s0
+  float v29; // s10
+  UnityEngine_Transform_o *v30; // x20
+  float v31; // s8
+  float v32; // s0
+  float value; // [xsp+8h] [xbp-78h]
+  int v34; // [xsp+Ch] [xbp-74h] BYREF
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974434 & 1) == 0 )
   {
@@ -299,13 +303,13 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
     byte_5974434 = 1;
   }
   isMax = this->fields.isMax;
-  v30 = 0;
+  v34 = 0;
   if ( !isMax )
   {
     p_baseFriendshipExp = (System_String_o *)&this->fields.baseFriendshipExp;
     atlabel = this->fields.atlabel;
-    v30 = this->fields.nextFriendship - (this->fields.friendship + this->fields.baseFriendshipExp);
-    if ( v30 > 0 )
+    v34 = this->fields.nextFriendship - (this->fields.friendship + this->fields.baseFriendshipExp);
+    if ( v34 > 0 )
     {
       v6 = System_Int32__ToString_77138656((int32_t)p_baseFriendshipExp, (System_String_o *)StringLiteral_9617/*"N0"*/, 0);
       p_baseFriendshipExp = System_String__Concat_75651716((System_String_o *)StringLiteral_26977/*"＋ "*/, v6, 0);
@@ -335,7 +339,7 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
                   parenthesisAjust = this->fields.parenthesisAjust;
                   mText = v8->fields.mText;
                   v11 = v7;
-                  v12 = System_Int32__ToString_77138656((int32_t)&v30, (System_String_o *)StringLiteral_9617/*"N0"*/, 0);
+                  v12 = System_Int32__ToString_77138656((int32_t)&v34, (System_String_o *)StringLiteral_9617/*"N0"*/, 0);
                   p_baseFriendshipExp = System_String__Concat_75696856(
                                           mText,
                                           (System_String_o *)StringLiteral_26974/*"（＋"*/,
@@ -361,7 +365,7 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
                             / (float)(UILabel__get_printedSize((UILabel_o *)p_baseFriendshipExp, 0).fields.x - v13);
                       }
                       bonuslabel = this->fields.bonuslabel;
-                      v18 = System_Int32__ToString_77138656((int32_t)&v30, (System_String_o *)StringLiteral_9617/*"N0"*/, 0);
+                      v18 = System_Int32__ToString_77138656((int32_t)&v34, (System_String_o *)StringLiteral_9617/*"N0"*/, 0);
                       p_baseFriendshipExp = System_String__Concat_75694928(
                                               (System_String_o *)StringLiteral_26974/*"（＋"*/,
                                               v18,
@@ -378,12 +382,12 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
                                                                      0);
                           if ( p_baseFriendshipExp )
                           {
-                            v33.fields.x = v16;
-                            v33.fields.y = 1.0;
-                            v33.fields.z = 1.0;
+                            v35.fields.x = v16;
+                            v35.fields.y = 1.0;
+                            v35.fields.z = 1.0;
                             UnityEngine_Transform__set_localScale(
                               (UnityEngine_Transform_o *)p_baseFriendshipExp,
-                              v33,
+                              v35,
                               0);
                             p_baseFriendshipExp = (System_String_o *)this->fields.atlabel;
                             if ( p_baseFriendshipExp )
@@ -393,12 +397,12 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
                                                                          0);
                               if ( p_baseFriendshipExp )
                               {
-                                v34.fields.x = v16;
-                                v34.fields.y = 1.0;
-                                v34.fields.z = 1.0;
+                                v36.fields.x = v16;
+                                v36.fields.y = 1.0;
+                                v36.fields.z = 1.0;
                                 UnityEngine_Transform__set_localScale(
                                   (UnityEngine_Transform_o *)p_baseFriendshipExp,
-                                  v34,
+                                  v36,
                                   0);
                                 p_baseFriendshipExp = (System_String_o *)this->fields.bonuslabel;
                                 if ( p_baseFriendshipExp )
@@ -429,31 +433,35 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
                                         p_baseFriendshipExp = (System_String_o *)this->fields.bonuslabel;
                                         if ( p_baseFriendshipExp )
                                         {
+                                          y = localPosition.fields.y;
+                                          z = localPosition.fields.z;
                                           p_baseFriendshipExp = (System_String_o *)UnityEngine_Component__get_transform(
                                                                                      (UnityEngine_Component_o *)p_baseFriendshipExp,
                                                                                      0);
                                           if ( p_baseFriendshipExp )
                                           {
-                                            v32 = UnityEngine_Transform__get_localPosition(
+                                            v38 = UnityEngine_Transform__get_localPosition(
                                                     (UnityEngine_Transform_o *)p_baseFriendshipExp,
                                                     0);
                                             p_baseFriendshipExp = (System_String_o *)this->fields.atlabel;
+                                            value = v38.fields.y;
                                             if ( p_baseFriendshipExp )
                                             {
+                                              v26 = v38.fields.z;
                                               p_baseFriendshipExp = (System_String_o *)UnityEngine_Component__get_transform(
                                                                                          (UnityEngine_Component_o *)p_baseFriendshipExp,
                                                                                          0);
                                               if ( p_baseFriendshipExp )
                                               {
-                                                v35.fields.z = localPosition.fields.z;
-                                                v24 = friendshipLabelSpace + (float)(v16 * (float)(v21 - v13));
-                                                v25 = v16 * v23;
-                                                v26 = (float)(v24 + (float)(v16 * v23)) * 0.5;
-                                                v35.fields.x = (float)(v25 - v26) - (float)(v25 * 0.5);
-                                                v35.fields.y = localPosition.fields.y;
+                                                v39.fields.z = z;
+                                                v27 = friendshipLabelSpace + (float)(v16 * (float)(v21 - v13));
+                                                v28 = v16 * v23;
+                                                v29 = (float)(v27 + (float)(v16 * v23)) * 0.5;
+                                                v39.fields.x = (float)(v28 - v29) - (float)(v28 * 0.5);
+                                                v39.fields.y = y;
                                                 UnityEngine_Transform__set_localPosition(
                                                   (UnityEngine_Transform_o *)p_baseFriendshipExp,
-                                                  v35,
+                                                  v39,
                                                   0);
                                                 p_baseFriendshipExp = (System_String_o *)this->fields.bonuslabel;
                                                 if ( p_baseFriendshipExp )
@@ -463,12 +471,12 @@ void BattleResultBondsIconComponent__LayoutFriendshipValue(
                                                                                              0);
                                                   if ( p_baseFriendshipExp )
                                                   {
-                                                    v36.fields.z = v32.fields.z;
-                                                    v36.fields.x = (float)(v24 * 0.5) - (float)(v24 - v26);
-                                                    v36.fields.y = v32.fields.y;
+                                                    v40.fields.z = v26;
+                                                    v40.fields.x = (float)(v27 * 0.5) - (float)(v27 - v29);
+                                                    v40.fields.y = value;
                                                     UnityEngine_Transform__set_localPosition(
                                                       (UnityEngine_Transform_o *)p_baseFriendshipExp,
-                                                      v36,
+                                                      v40,
                                                       0);
                                                     return;
                                                   }
@@ -509,15 +517,15 @@ LABEL_39:
                                                  0);
       if ( !this->fields.atlabel )
         goto LABEL_39;
-      v27 = (UnityEngine_Transform_o *)p_baseFriendshipExp;
-      v28 = this->fields.friendshipLabelArea;
-      LODWORD(v29) = *(_QWORD *)&UILabel__get_printedSize(this->fields.atlabel, 0);
-      if ( !v27 )
+      v30 = (UnityEngine_Transform_o *)p_baseFriendshipExp;
+      v31 = this->fields.friendshipLabelArea;
+      LODWORD(v32) = *(_QWORD *)&UILabel__get_printedSize(this->fields.atlabel, 0);
+      if ( !v30 )
         goto LABEL_39;
-      v37.fields.x = v28 / v29;
-      v37.fields.y = 1.0;
-      v37.fields.z = 1.0;
-      UnityEngine_Transform__set_localScale(v27, v37, 0);
+      v41.fields.x = v31 / v32;
+      v41.fields.y = 1.0;
+      v41.fields.z = 1.0;
+      UnityEngine_Transform__set_localScale(v30, v41, 0);
     }
   }
 }
@@ -792,7 +800,7 @@ LABEL_23:
 LABEL_20:
     v19 = sub_224BC3C(v15, IFriendshipGauge_TypeInfo, 2);
   }
-  return (*(bool (__fastcall **)(struct IFriendshipGauge_o *, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8));
+  return (*(__int64 (__fastcall **)(struct IFriendshipGauge_o *, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8));
 }
 
 

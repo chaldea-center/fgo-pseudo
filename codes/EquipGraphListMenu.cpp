@@ -2094,7 +2094,7 @@ System_IAsyncResult_o *EquipGraphListMenu_CallbackFunc__BeginInvoke(
   v12[0] = j_il2cpp_value_box_0(EquipGraphListMenu_ResultKind_TypeInfo, &v15);
   v12[1] = item;
   *(_QWORD *)&v13 = j_il2cpp_value_box_0(EquipGraphListViewManager_EquipGraphType_TypeInfo, &v14);
-  return sub_2213A14(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v12, callback, object);
 }
 
 
@@ -2189,7 +2189,7 @@ System_IAsyncResult_o *EquipGraphListMenu_RequestCallbackFunc__BeginInvoke(
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

@@ -307,7 +307,7 @@ bool AddBgmArgument__IsHighPriorityThanBaseStageBgm(
   System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__o *v12; // x21
   struct ControlOtherBgmPriorityAtOverStageBgm_array *controlOtherBgmPriorityAtOverStageBgmArray; // x8
   _QWORD *v14; // x9
-  __int64 v15; // x10
+  __int64 klass_low; // x10
   Il2CppClass **v16; // x0
   const MethodInfo *v17; // x2
   struct ControlOtherBgmPriorityAtOverStageBgm_array *v18; // x8
@@ -327,11 +327,11 @@ bool AddBgmArgument__IsHighPriorityThanBaseStageBgm(
   v12 = (System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__o *)this;
   controlOtherBgmPriorityAtOverStageBgmArray = this->fields.controlOtherBgmPriorityAtOverStageBgmArray;
   v14 = Method_System_Collections_Generic_List_BattleFieldEnvironmentData_BGMData__Add__;
-  ++*((_DWORD *)this + 7);
+  ++HIDWORD(this[1].klass);
   if ( !controlOtherBgmPriorityAtOverStageBgmArray )
     goto LABEL_14;
-  v15 = *((int *)this + 6);
-  if ( (unsigned int)v15 >= LODWORD(controlOtherBgmPriorityAtOverStageBgmArray->max_length) )
+  klass_low = SLODWORD(this[1].klass);
+  if ( (unsigned int)klass_low >= LODWORD(controlOtherBgmPriorityAtOverStageBgmArray->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
@@ -340,8 +340,8 @@ bool AddBgmArgument__IsHighPriorityThanBaseStageBgm(
   }
   else
   {
-    v16 = &controlOtherBgmPriorityAtOverStageBgmArray->obj.klass + v15;
-    v12->fields._size = v15 + 1;
+    v16 = &controlOtherBgmPriorityAtOverStageBgmArray->obj.klass + klass_low;
+    v12->fields._size = klass_low + 1;
     v16[4] = (Il2CppClass *)addBgm;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)(v16 + 4), (int32_t)addBgm, v6, v7, v8, v9, v10, v11);
   }

@@ -128,10 +128,10 @@ LABEL_20:
 LABEL_16:
     v21 = sub_224BC3C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserEventPointEntity__TypeInfo, 2);
   }
-  return (*(UserEventPointEntity_o *(__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v21)(
-           v18,
-           PK,
-           *(_QWORD *)(v21 + 8));
+  return (UserEventPointEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v21)(
+                                     v18,
+                                     PK,
+                                     *(_QWORD *)(v21 + 8));
 }
 
 

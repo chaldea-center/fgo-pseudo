@@ -50,6 +50,7 @@ System_Collections_IEnumerator_o *EventInfoUserEventPointControl__CountUpAnim(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5973059 & 1) == 0 )
   {
@@ -61,8 +62,9 @@ System_Collections_IEnumerator_o *EventInfoUserEventPointControl__CountUpAnim(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_QWORD *)(v5 + 32) = addCound;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -491,6 +493,7 @@ bool EventInfoUserEventPointControl__CountUpAnim_d__25__MoveNext(
   int32_t v19; // w5
   bool v20; // w6
   bool v21; // w7
+  bool result; // w0
   int64_t currentTotalPoint; // x1
 
   if ( (byte_597305B & 1) == 0 )
@@ -546,8 +549,9 @@ LABEL_20:
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v16, v17, v18, v19, v20, v21);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

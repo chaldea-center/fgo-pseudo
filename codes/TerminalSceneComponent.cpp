@@ -516,15 +516,23 @@ bool TerminalSceneComponent__CheckEventDailyPoint(
   System_DateTime_o v10; // x20
   TerminalPramsManager_c *v11; // x0
   System_DateTime_o v12; // x1
-  __int64 v13; // x1
+  System_DateTime_o v13; // x0
+  __int64 v14; // x1
   int32_t Hour; // w19
-  BalanceConfig_c *v15; // x8
+  BalanceConfig_c *v16; // x8
+  System_DateTime_o v17; // x0
+  System_DateTime_o v18; // x0
   int32_t Year; // w19
+  System_DateTime_o v20; // x0
   int32_t Month; // w21
+  System_DateTime_o v22; // x0
   int32_t Day; // w0
-  __int64 v19; // x1
-  BalanceConfig_c *v20; // x8
-  int32_t v21; // w22
+  __int64 v24; // x1
+  BalanceConfig_c *v25; // x8
+  int32_t v26; // w22
+  System_DateTime_o v27; // x0
+  System_DateTime_o v28; // x1
+  System_DateTime_o v29; // x0
   System_DateTime_o t2; // [xsp+0h] [xbp-50h] BYREF
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
@@ -601,41 +609,41 @@ LABEL_40:
     dateData = NetworkManager__getServerDateTime(0).fields._dateData;
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v12.fields._dateData);
-    Hour = System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
-    v15 = BalanceConfig_TypeInfo;
+    v13.fields._dateData = (uint64_t)&dateData;
+    Hour = System_DateTime__get_Hour(v13, 0);
+    v16 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v13);
-      v15 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v14);
+      v16 = BalanceConfig_TypeInfo;
     }
-    if ( Hour < v15->static_fields->EventDailyPointResetAt )
+    if ( Hour < v16->static_fields->EventDailyPointResetAt )
     {
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v13);
-      dateData = System_DateTime__AddDays((System_DateTime_o)&dateData, -1.0, 0).fields._dateData;
+        j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v14);
+      v17.fields._dateData = (uint64_t)&dateData;
+      dateData = System_DateTime__AddDays(v17, -1.0, 0).fields._dateData;
     }
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v13);
-    Year = System_DateTime__get_Year((System_DateTime_o)&dateData, 0);
-    Month = System_DateTime__get_Month((System_DateTime_o)&dateData, 0);
-    Day = System_DateTime__get_Day((System_DateTime_o)&dateData, 0);
-    v20 = BalanceConfig_TypeInfo;
-    v21 = Day;
+      j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v14);
+    v18.fields._dateData = (uint64_t)&dateData;
+    Year = System_DateTime__get_Year(v18, 0);
+    v20.fields._dateData = (uint64_t)&dateData;
+    Month = System_DateTime__get_Month(v20, 0);
+    v22.fields._dateData = (uint64_t)&dateData;
+    Day = System_DateTime__get_Day(v22, 0);
+    v25 = BalanceConfig_TypeInfo;
+    v26 = Day;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v19);
-      v20 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v24);
+      v25 = BalanceConfig_TypeInfo;
     }
-    System_DateTime___ctor_77014300(
-      (System_DateTime_o)&t2,
-      Year,
-      Month,
-      v21,
-      v20->static_fields->EventDailyPointResetAt,
-      0,
-      0,
-      0);
-    if ( System_DateTime__op_LessThanOrEqual(v10, t2, 0) )
+    v27.fields._dateData = (uint64_t)&t2;
+    System_DateTime___ctor_77014300(v27, Year, Month, v26, v25->static_fields->EventDailyPointResetAt, 0, 0, 0);
+    v28.fields._dateData = t2.fields._dateData;
+    v29.fields._dateData = v10.fields._dateData;
+    if ( System_DateTime__op_LessThanOrEqual(v29, v28, 0) )
       return 1;
   }
   return 0;
@@ -2933,14 +2941,18 @@ UnityEngine_Vector2_o TerminalSceneComponent__FSSpotArrowPosLerp(
   float v6; // s9
   TerminalSceneComponent_o *v7; // x0
   const MethodInfo *v8; // x1
+  float v9; // s1
+  float v10; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   x = this->fields.TUTORIAL_SPOT_ARROW_POS.fields.x;
   y = this->fields.TUTORIAL_SPOT_ARROW_POS.fields.y;
   v5 = offset_21_9.fields.y;
   v6 = x + (float)(offset_21_9.fields.x * TerminalSceneComponent__FSRatioNormX(this, method));
-  result.fields.y = y + (float)((float)(v5 + TerminalSceneComponent__FSRatioNormY(v7, v8)) + 75.0);
-  result.fields.x = v6;
+  v9 = y + (float)((float)(v5 + TerminalSceneComponent__FSRatioNormY(v7, v8)) + 75.0);
+  v10 = v6;
+  result.fields.y = v9;
+  result.fields.x = v10;
   return result;
 }
 
@@ -2959,6 +2971,10 @@ UnityEngine_Rect_o TerminalSceneComponent__FSSpotArrowRectLerp(
   TerminalSceneComponent_o *v9; // x0
   const MethodInfo *v10; // x1
   float v11; // s0
+  float v12; // s2
+  float v13; // s3
+  float v14; // s1
+  float v15; // s0
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   m_XMin = this->fields.TUTORIAL_SPOT_ARROW_RECT.fields.m_XMin;
@@ -2968,10 +2984,14 @@ UnityEngine_Rect_o TerminalSceneComponent__FSSpotArrowRectLerp(
   m_Height = this->fields.TUTORIAL_SPOT_ARROW_RECT.fields.m_Height;
   v8 = m_XMin + (float)(offset_21_9.fields.x * TerminalSceneComponent__FSRatioNormX(this, method));
   v11 = y * TerminalSceneComponent__FSRatioNormY(v9, v10);
-  result.fields.m_Width = m_Width;
-  result.fields.m_Height = m_Height;
-  result.fields.m_YMin = m_YMin + (float)(v11 + -20.0);
-  result.fields.m_XMin = v8;
+  v12 = m_Width;
+  v13 = m_Height;
+  v14 = m_YMin + (float)(v11 + -20.0);
+  v15 = v8;
+  result.fields.m_Height = v13;
+  result.fields.m_Width = v12;
+  result.fields.m_YMin = v14;
+  result.fields.m_XMin = v15;
   return result;
 }
 
@@ -5688,8 +5708,8 @@ void TerminalSceneComponent__LocateDialogToUiRoot(
   float z; // s10
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   System_Nullable_Vector3__o v14; // [xsp+0h] [xbp-50h] BYREF
-  UnityEngine_Vector3_o Value; // 0:kr00_12.12
-  System_Nullable_Vector3__o v16; // 0:x0.16
+  System_Nullable_Vector3__o v15; // 0:x0.16
+  UnityEngine_Vector3_o Value; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   hasValue = localScale.fields.hasValue;
@@ -5714,9 +5734,9 @@ void TerminalSceneComponent__LocateDialogToUiRoot(
   UnityEngine_Transform__SetParent((UnityEngine_Transform_o *)v8, (UnityEngine_Transform_o *)this, 0);
   if ( hasValue )
   {
-    *(_QWORD *)&v16.fields.hasValue = &v14;
-    *(_QWORD *)&v16.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-    Value = System_Nullable_Vector3___get_Value(v16, v9);
+    *(_QWORD *)&v15.fields.hasValue = &v14;
+    *(_QWORD *)&v15.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+    Value = System_Nullable_Vector3___get_Value(v15, v9);
     x = Value.fields.x;
     y = Value.fields.y;
     z = Value.fields.z;
@@ -10601,6 +10621,7 @@ System_Collections_IEnumerator_o *TerminalSceneComponent__coFadein_WorldDisp(
   int32_t v21; // w5
   bool v22; // w6
   bool v23; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5972CA5 & 1) == 0 )
   {
@@ -10619,8 +10640,9 @@ System_Collections_IEnumerator_o *TerminalSceneComponent__coFadein_WorldDisp(
   *(float *)(v9 + 64) = fadeTime;
   *(_QWORD *)(v9 + 40) = endAct;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v9 + 40), (int32_t)endAct, v18, v19, v20, v21, v22, v23);
+  result = (System_Collections_IEnumerator_o *)v9;
   *(_BYTE *)(v9 + 48) = isExecuteUnusedAssets;
-  return (System_Collections_IEnumerator_o *)v9;
+  return result;
 }
 
 
@@ -10862,12 +10884,20 @@ UnityEngine_Color_o TerminalSceneComponent__get_FirstFadeMapColor(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._FirstFadeMapColor_k__BackingField.fields.r;
-  result.fields.g = this->fields._FirstFadeMapColor_k__BackingField.fields.g;
-  result.fields.b = this->fields._FirstFadeMapColor_k__BackingField.fields.b;
-  result.fields.a = this->fields._FirstFadeMapColor_k__BackingField.fields.a;
+  r = this->fields._FirstFadeMapColor_k__BackingField.fields.r;
+  g = this->fields._FirstFadeMapColor_k__BackingField.fields.g;
+  b = this->fields._FirstFadeMapColor_k__BackingField.fields.b;
+  a = this->fields._FirstFadeMapColor_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -10976,10 +11006,14 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_COMBINE_ARROW_POS_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float v3; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.TUTORIAL_COMBINE_ARROW_POS.fields.x;
-  result.fields.y = this->fields.TUTORIAL_COMBINE_ARROW_POS.fields.y + 33.0;
+  x = this->fields.TUTORIAL_COMBINE_ARROW_POS.fields.x;
+  v3 = this->fields.TUTORIAL_COMBINE_ARROW_POS.fields.y + 33.0;
+  result.fields.y = v3;
+  result.fields.x = x;
   return result;
 }
 
@@ -10988,12 +11022,20 @@ UnityEngine_Rect_o TerminalSceneComponent__get_TUTORIAL_COMBINE_ARROW_RECT_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float v3; // s3
+  float v4; // s1
+  float m_Width; // s2
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.TUTORIAL_COMBINE_ARROW_RECT.fields.m_XMin;
-  result.fields.m_Height = 135.0;
-  result.fields.m_YMin = this->fields.TUTORIAL_COMBINE_ARROW_RECT.fields.m_YMin + 53.0;
-  result.fields.m_Width = this->fields.TUTORIAL_COMBINE_ARROW_RECT.fields.m_Width;
+  m_XMin = this->fields.TUTORIAL_COMBINE_ARROW_RECT.fields.m_XMin;
+  v3 = 135.0;
+  v4 = this->fields.TUTORIAL_COMBINE_ARROW_RECT.fields.m_YMin + 53.0;
+  m_Width = this->fields.TUTORIAL_COMBINE_ARROW_RECT.fields.m_Width;
+  result.fields.m_Height = v3;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = v4;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
@@ -11002,10 +11044,14 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_GACHA_ARROW_POS_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float v3; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.TUTORIAL_GACHA_ARROW_POS.fields.x;
-  result.fields.y = this->fields.TUTORIAL_GACHA_ARROW_POS.fields.y + 33.0;
+  x = this->fields.TUTORIAL_GACHA_ARROW_POS.fields.x;
+  v3 = this->fields.TUTORIAL_GACHA_ARROW_POS.fields.y + 33.0;
+  result.fields.y = v3;
+  result.fields.x = x;
   return result;
 }
 
@@ -11014,12 +11060,20 @@ UnityEngine_Rect_o TerminalSceneComponent__get_TUTORIAL_GACHA_ARROW_RECT_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float v3; // s3
+  float v4; // s1
+  float m_Width; // s2
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.TUTORIAL_GACHA_ARROW_RECT.fields.m_XMin;
-  result.fields.m_Height = 135.0;
-  result.fields.m_YMin = this->fields.TUTORIAL_GACHA_ARROW_RECT.fields.m_YMin + 53.0;
-  result.fields.m_Width = this->fields.TUTORIAL_GACHA_ARROW_RECT.fields.m_Width;
+  m_XMin = this->fields.TUTORIAL_GACHA_ARROW_RECT.fields.m_XMin;
+  v3 = 135.0;
+  v4 = this->fields.TUTORIAL_GACHA_ARROW_RECT.fields.m_YMin + 53.0;
+  m_Width = this->fields.TUTORIAL_GACHA_ARROW_RECT.fields.m_Width;
+  result.fields.m_Height = v3;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = v4;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
@@ -11031,6 +11085,8 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_MENU_ARROW_POS2_FS(
   float x; // s8
   float y; // s9
   float OffsetX; // s0
+  float v6; // s1
+  float v7; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5972C8B & 1) == 0 )
@@ -11043,8 +11099,10 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_MENU_ARROW_POS2_FS(
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method);
   OffsetX = FSUtility__GetOffsetX(68.0, 2, 0);
-  result.fields.y = y + 33.0;
-  result.fields.x = x + (float)(OffsetX + -2.0);
+  v6 = y + 33.0;
+  v7 = x + (float)(OffsetX + -2.0);
+  result.fields.y = v6;
+  result.fields.x = v7;
   return result;
 }
 
@@ -11056,6 +11114,8 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_MENU_ARROW_POS_FS(
   float x; // s8
   float y; // s9
   float OffsetX; // s0
+  float v6; // s1
+  float v7; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5972C8A & 1) == 0 )
@@ -11068,8 +11128,10 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_MENU_ARROW_POS_FS(
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method);
   OffsetX = FSUtility__GetOffsetX(68.0, 2, 0);
-  result.fields.y = y + 33.0;
-  result.fields.x = x + (float)(OffsetX + -14.0);
+  v6 = y + 33.0;
+  v7 = x + (float)(OffsetX + -14.0);
+  result.fields.y = v6;
+  result.fields.x = v7;
   return result;
 }
 
@@ -11082,16 +11144,24 @@ UnityEngine_Rect_o TerminalSceneComponent__get_TUTORIAL_MENU_ARROW_RECT_FS(
   float m_YMin; // s10
   float m_Width; // s8
   float m_Height; // s11
+  float v6; // s0
+  float v7; // s1
+  float v8; // s3
+  float v9; // s2
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   m_XMin = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_XMin;
   m_YMin = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_YMin;
   m_Width = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_Width;
   m_Height = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_Height;
-  result.fields.m_XMin = m_XMin + TerminalSceneComponent__FSMenuOffsetX(this, method);
-  result.fields.m_YMin = m_YMin + 33.0;
-  result.fields.m_Height = m_Height + 33.0;
-  result.fields.m_Width = m_Width;
+  v6 = m_XMin + TerminalSceneComponent__FSMenuOffsetX(this, method);
+  v7 = m_YMin + 33.0;
+  v8 = m_Height + 33.0;
+  v9 = m_Width;
+  result.fields.m_Height = v8;
+  result.fields.m_Width = v9;
+  result.fields.m_YMin = v7;
+  result.fields.m_XMin = v6;
   return result;
 }
 
@@ -11102,6 +11172,8 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_QUEST_ARROW_POS_FS(
 {
   float y; // s8
   float x; // s9
+  float v5; // s0
+  float v6; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_5972C8C & 1) == 0 )
@@ -11113,8 +11185,10 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_QUEST_ARROW_POS_FS(
   y = this->fields.TUTORIAL_QUEST_ARROW_POS.fields.y;
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method);
-  result.fields.x = x + FSUtility__GetOffsetX(64.0, 2, 0);
-  result.fields.y = y;
+  v5 = x + FSUtility__GetOffsetX(64.0, 2, 0);
+  v6 = y;
+  result.fields.y = v6;
+  result.fields.x = v5;
   return result;
 }
 
@@ -11128,6 +11202,10 @@ UnityEngine_Rect_o TerminalSceneComponent__get_TUTORIAL_QUEST_ARROW_RECT_FS(
   float m_Width; // s9
   float m_Height; // s10
   float OffsetX; // s0
+  float v8; // s1
+  float v9; // s2
+  float v10; // s0
+  float v11; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5972C8D & 1) == 0 )
@@ -11142,10 +11220,14 @@ UnityEngine_Rect_o TerminalSceneComponent__get_TUTORIAL_QUEST_ARROW_RECT_FS(
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method);
   OffsetX = FSUtility__GetOffsetX(64.0, 2, 0);
-  result.fields.m_YMin = m_YMin;
-  result.fields.m_Width = m_Width;
-  result.fields.m_XMin = m_XMin + OffsetX;
-  result.fields.m_Height = m_Height;
+  v8 = m_YMin;
+  v9 = m_Width;
+  v10 = m_XMin + OffsetX;
+  v11 = m_Height;
+  result.fields.m_Height = v11;
+  result.fields.m_Width = v9;
+  result.fields.m_YMin = v8;
+  result.fields.m_XMin = v10;
   return result;
 }
 
@@ -11154,6 +11236,8 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS1_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o v4; // kr00_8
   UnityEngine_Vector2_o v5; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
@@ -11161,8 +11245,10 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS1_FS(
   v5.fields.x = -55.0;
   v5.fields.y = -97.0;
   v4 = TerminalSceneComponent__FSSpotArrowPosLerp(this, v5, method);
-  result.fields.y = v4.fields.y;
-  result.fields.x = v4.fields.x;
+  y = v4.fields.y;
+  x = v4.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -11171,6 +11257,8 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS2_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o v4; // kr00_8
   UnityEngine_Vector2_o v5; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
@@ -11178,8 +11266,10 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS2_FS(
   v5.fields.x = 0.0;
   v5.fields.y = -113.0;
   v4 = TerminalSceneComponent__FSSpotArrowPosLerp(this, v5, method);
-  result.fields.y = v4.fields.y;
-  result.fields.x = v4.fields.x;
+  y = v4.fields.y;
+  x = v4.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -11188,6 +11278,8 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS4_FS(
         TerminalSceneComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o v4; // kr00_8
   UnityEngine_Vector2_o v5; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
@@ -11195,8 +11287,10 @@ UnityEngine_Vector2_o TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS4_FS(
   v5.fields.x = 0.0;
   v5.fields.y = -113.0;
   v4 = TerminalSceneComponent__FSSpotArrowPosLerp(this, v5, method);
-  result.fields.y = v4.fields.y;
-  result.fields.x = v4.fields.x;
+  y = v4.fields.y;
+  x = v4.fields.x;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -12072,7 +12166,7 @@ System_IAsyncResult_o *TerminalSceneComponent_PlayChapterStartCallback__BeginInv
   v10[0] = isPlay;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -12169,20 +12263,25 @@ void TerminalSceneComponent_StateTutorial1_QuestArrow__begin(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v28; // x0
   CommonUI_o *v29; // x22
-  UnityEngine_Vector2_o TUTORIAL_QUEST_ARROW_POS_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_QUEST_ARROW_POS_FS; // kr00_8
   TerminalSceneComponent_o *v31; // x8
+  float m_XMin; // s10
+  float m_YMin; // s11
   float x; // s14
   float y; // s15
-  System_Action_o *v34; // x23
-  struct ScrTerminalListTop_o *v35; // x21
-  System_Action_o *v36; // x20
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  UnityEngine_Rect_o TUTORIAL_QUEST_ARROW_RECT_FS; // 0:kr00_16.16
+  float m_Width; // s12
+  float m_Height; // s13
+  System_Action_o *v38; // x23
+  struct ScrTerminalListTop_o *v39; // x21
+  System_Action_o *v40; // x20
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  UnityEngine_Rect_o TUTORIAL_QUEST_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v48; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972CF9 & 1) == 0 )
   {
@@ -12255,48 +12354,57 @@ void TerminalSceneComponent_StateTutorial1_QuestArrow__begin(
   v31 = *v13;
   if ( !*v13 )
     goto LABEL_22;
+  m_XMin = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_YMin;
   x = v31->fields.TUTORIAL_QUEST_MESSAGE_POS.fields.x;
   y = v31->fields.TUTORIAL_QUEST_MESSAGE_POS.fields.y;
-  v34 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  m_Width = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_Height;
+  v38 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v34,
+    v38,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial1_QuestArrow___c__DisplayClass0_0__begin_b__0__,
     0);
-  if ( !v29
-    || (CommonUI__OpenTutorialNotificationDialogArrow(
-          v29,
-          v26,
-          TUTORIAL_QUEST_ARROW_POS_FS,
-          TUTORIAL_QUEST_ARROW_RECT_FS,
-          90.0,
-          (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
-          -1,
-          v34,
-          0),
-        !*v13)
-    || (v35 = (*v13)->fields.mTerminalList,
-        v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
+  if ( !v29 )
+    goto LABEL_22;
+  v48.fields.m_XMin = m_XMin;
+  v48.fields.m_YMin = m_YMin;
+  v48.fields.m_Width = m_Width;
+  v48.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialNotificationDialogArrow(
+    v29,
+    v26,
+    TUTORIAL_QUEST_ARROW_POS_FS,
+    v48,
+    90.0,
+    (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
+    -1,
+    v38,
+    0);
+  if ( !*v13
+    || (v39 = (*v13)->fields.mTerminalList,
+        v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(
-          v36,
+          v40,
           (Il2CppObject *)v4,
           Method_TerminalSceneComponent_StateTutorial1_QuestArrow___c__DisplayClass0_0__begin_b__1__,
           0),
-        !v35) )
+        !v39) )
   {
 LABEL_22:
     sub_2213CDC(mFG, v6);
   }
-  v35->fields.mQuestClickAct = v36;
+  v39->fields.mQuestClickAct = v40;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v35->fields.mQuestClickAct,
-    (int32_t)v36,
-    v37,
-    v38,
-    v39,
-    v40,
+    (MissionNaviTransitionBoardItem_o *)&v39->fields.mQuestClickAct,
+    (int32_t)v40,
     v41,
-    v42);
+    v42,
+    v43,
+    v44,
+    v45,
+    v46);
 }
 
 
@@ -12458,19 +12566,24 @@ void TerminalSceneComponent_StateTutorial1_SpotArrow__begin(
   __int64 v21; // x1
   System_String_o *v22; // x21
   Il2CppObject *Instance; // x22
-  UnityEngine_Vector2_o TUTORIAL_SPOT_ARROW_POS1_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_SPOT_ARROW_POS1_FS; // kr00_8
   float x; // s14
   float y; // s15
-  System_Action_o *v27; // x23
-  struct ScrTerminalMap_o *v28; // x21
-  System_Action_o *v29; // x19
-  System_String_o *v30; // x2
-  System_String_o *v31; // x3
-  int32_t v32; // w4
-  int32_t v33; // w5
-  bool v34; // w6
-  bool v35; // w7
-  UnityEngine_Rect_o TUTORIAL_SPOT_ARROW_RECT1_FS; // 0:kr00_16.16
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
+  System_Action_o *v31; // x23
+  struct ScrTerminalMap_o *v32; // x21
+  System_Action_o *v33; // x19
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  UnityEngine_Rect_o TUTORIAL_SPOT_ARROW_RECT1_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v41; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972CF7 & 1) == 0 )
   {
@@ -12506,47 +12619,57 @@ void TerminalSceneComponent_StateTutorial1_SpotArrow__begin(
   TUTORIAL_SPOT_ARROW_RECT1_FS = TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_RECT1_FS(that, 0);
   x = that->fields.TUTORIAL_SPOT_MESSAGE_POS.fields.x;
   y = that->fields.TUTORIAL_SPOT_MESSAGE_POS.fields.y;
-  v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  m_XMin = TUTORIAL_SPOT_ARROW_RECT1_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_SPOT_ARROW_RECT1_FS.fields.m_YMin;
+  m_Width = TUTORIAL_SPOT_ARROW_RECT1_FS.fields.m_Width;
+  m_Height = TUTORIAL_SPOT_ARROW_RECT1_FS.fields.m_Height;
+  v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v27,
+    v31,
     (Il2CppObject *)v5,
     Method_TerminalSceneComponent_StateTutorial1_SpotArrow___c__DisplayClass1_0__begin_b__0__,
     0);
-  if ( !Instance
-    || (CommonUI__OpenTutorialNotificationDialogArrow(
-          (CommonUI_o *)Instance,
-          v22,
-          TUTORIAL_SPOT_ARROW_POS1_FS,
-          TUTORIAL_SPOT_ARROW_RECT1_FS,
-          90.0,
-          (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
-          -1,
-          v27,
-          0),
-        (mTerminalMap = that->fields.mTerminalMap) == 0)
+  if ( !Instance )
+    goto LABEL_12;
+  v41.fields.m_XMin = m_XMin;
+  v41.fields.m_YMin = m_YMin;
+  v41.fields.m_Width = m_Width;
+  v41.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialNotificationDialogArrow(
+    (CommonUI_o *)Instance,
+    v22,
+    TUTORIAL_SPOT_ARROW_POS1_FS,
+    v41,
+    90.0,
+    (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
+    -1,
+    v31,
+    0);
+  mTerminalMap = that->fields.mTerminalMap;
+  if ( !mTerminalMap
     || (ScrTerminalMap__SetMapCamera_TutorialFocusSpot(mTerminalMap, *(SrcSpotBasePrefab_o **)(v5 + 16), 0.5, 0),
-        v28 = that->fields.mTerminalMap,
-        v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
+        v32 = that->fields.mTerminalMap,
+        v33 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(
-          v29,
+          v33,
           (Il2CppObject *)v5,
           Method_TerminalSceneComponent_StateTutorial1_SpotArrow___c__DisplayClass1_0__begin_b__1__,
           0),
-        !v28) )
+        !v32) )
   {
 LABEL_12:
     sub_2213CDC(mTerminalMap, v7);
   }
-  v28->fields.mSpotClickAct = v29;
+  v32->fields.mSpotClickAct = v33;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v28->fields.mSpotClickAct,
-    (int32_t)v29,
-    v30,
-    v31,
-    v32,
-    v33,
+    (MissionNaviTransitionBoardItem_o *)&v32->fields.mSpotClickAct,
+    (int32_t)v33,
     v34,
-    v35);
+    v35,
+    v36,
+    v37,
+    v38,
+    v39);
 }
 
 
@@ -12696,20 +12819,25 @@ void TerminalSceneComponent_StateTutorial2_QuestArrow__begin(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v28; // x0
   CommonUI_o *v29; // x22
-  UnityEngine_Vector2_o TUTORIAL_QUEST_ARROW_POS_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_QUEST_ARROW_POS_FS; // kr00_8
   TerminalSceneComponent_o *v31; // x8
+  float m_XMin; // s10
+  float m_YMin; // s11
   float x; // s14
   float y; // s15
-  System_Action_o *v34; // x23
-  struct ScrTerminalListTop_o *v35; // x21
-  System_Action_o *v36; // x20
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  UnityEngine_Rect_o TUTORIAL_QUEST_ARROW_RECT_FS; // 0:kr00_16.16
+  float m_Width; // s12
+  float m_Height; // s13
+  System_Action_o *v38; // x23
+  struct ScrTerminalListTop_o *v39; // x21
+  System_Action_o *v40; // x20
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  UnityEngine_Rect_o TUTORIAL_QUEST_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v48; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972CFE & 1) == 0 )
   {
@@ -12782,48 +12910,57 @@ void TerminalSceneComponent_StateTutorial2_QuestArrow__begin(
   v31 = *v13;
   if ( !*v13 )
     goto LABEL_22;
+  m_XMin = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_YMin;
   x = v31->fields.TUTORIAL_QUEST_MESSAGE_POS.fields.x;
   y = v31->fields.TUTORIAL_QUEST_MESSAGE_POS.fields.y;
-  v34 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  m_Width = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_Height;
+  v38 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v34,
+    v38,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial2_QuestArrow___c__DisplayClass0_0__begin_b__0__,
     0);
-  if ( !v29
-    || (CommonUI__OpenTutorialNotificationDialogArrow(
-          v29,
-          v26,
-          TUTORIAL_QUEST_ARROW_POS_FS,
-          TUTORIAL_QUEST_ARROW_RECT_FS,
-          90.0,
-          (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
-          -1,
-          v34,
-          0),
-        !*v13)
-    || (v35 = (*v13)->fields.mTerminalList,
-        v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
+  if ( !v29 )
+    goto LABEL_22;
+  v48.fields.m_XMin = m_XMin;
+  v48.fields.m_YMin = m_YMin;
+  v48.fields.m_Width = m_Width;
+  v48.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialNotificationDialogArrow(
+    v29,
+    v26,
+    TUTORIAL_QUEST_ARROW_POS_FS,
+    v48,
+    90.0,
+    (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
+    -1,
+    v38,
+    0);
+  if ( !*v13
+    || (v39 = (*v13)->fields.mTerminalList,
+        v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(
-          v36,
+          v40,
           (Il2CppObject *)v4,
           Method_TerminalSceneComponent_StateTutorial2_QuestArrow___c__DisplayClass0_0__begin_b__1__,
           0),
-        !v35) )
+        !v39) )
   {
 LABEL_22:
     sub_2213CDC(mFG, v6);
   }
-  v35->fields.mQuestClickAct = v36;
+  v39->fields.mQuestClickAct = v40;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v35->fields.mQuestClickAct,
-    (int32_t)v36,
-    v37,
-    v38,
-    v39,
-    v40,
+    (MissionNaviTransitionBoardItem_o *)&v39->fields.mQuestClickAct,
+    (int32_t)v40,
     v41,
-    v42);
+    v42,
+    v43,
+    v44,
+    v45,
+    v46);
 }
 
 
@@ -12985,19 +13122,24 @@ void TerminalSceneComponent_StateTutorial2_SpotArrow__begin(
   __int64 v21; // x1
   System_String_o *v22; // x21
   Il2CppObject *Instance; // x22
-  UnityEngine_Vector2_o TUTORIAL_SPOT_ARROW_POS2_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_SPOT_ARROW_POS2_FS; // kr00_8
   float x; // s14
   float y; // s15
-  System_Action_o *v27; // x23
-  struct ScrTerminalMap_o *v28; // x21
-  System_Action_o *v29; // x19
-  System_String_o *v30; // x2
-  System_String_o *v31; // x3
-  int32_t v32; // w4
-  int32_t v33; // w5
-  bool v34; // w6
-  bool v35; // w7
-  UnityEngine_Rect_o TUTORIAL_SPOT_ARROW_RECT2_FS; // 0:kr00_16.16
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
+  System_Action_o *v31; // x23
+  struct ScrTerminalMap_o *v32; // x21
+  System_Action_o *v33; // x19
+  System_String_o *v34; // x2
+  System_String_o *v35; // x3
+  int32_t v36; // w4
+  int32_t v37; // w5
+  bool v38; // w6
+  bool v39; // w7
+  UnityEngine_Rect_o TUTORIAL_SPOT_ARROW_RECT2_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v41; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972CFC & 1) == 0 )
   {
@@ -13033,47 +13175,57 @@ void TerminalSceneComponent_StateTutorial2_SpotArrow__begin(
   TUTORIAL_SPOT_ARROW_RECT2_FS = TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_RECT2_FS(that, 0);
   x = that->fields.TUTORIAL_SPOT_MESSAGE_POS.fields.x;
   y = that->fields.TUTORIAL_SPOT_MESSAGE_POS.fields.y;
-  v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  m_XMin = TUTORIAL_SPOT_ARROW_RECT2_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_SPOT_ARROW_RECT2_FS.fields.m_YMin;
+  m_Width = TUTORIAL_SPOT_ARROW_RECT2_FS.fields.m_Width;
+  m_Height = TUTORIAL_SPOT_ARROW_RECT2_FS.fields.m_Height;
+  v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v27,
+    v31,
     (Il2CppObject *)v5,
     Method_TerminalSceneComponent_StateTutorial2_SpotArrow___c__DisplayClass1_0__begin_b__0__,
     0);
-  if ( !Instance
-    || (CommonUI__OpenTutorialNotificationDialogArrow(
-          (CommonUI_o *)Instance,
-          v22,
-          TUTORIAL_SPOT_ARROW_POS2_FS,
-          TUTORIAL_SPOT_ARROW_RECT2_FS,
-          90.0,
-          (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
-          -1,
-          v27,
-          0),
-        (mTerminalMap = that->fields.mTerminalMap) == 0)
+  if ( !Instance )
+    goto LABEL_12;
+  v41.fields.m_XMin = m_XMin;
+  v41.fields.m_YMin = m_YMin;
+  v41.fields.m_Width = m_Width;
+  v41.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialNotificationDialogArrow(
+    (CommonUI_o *)Instance,
+    v22,
+    TUTORIAL_SPOT_ARROW_POS2_FS,
+    v41,
+    90.0,
+    (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
+    -1,
+    v31,
+    0);
+  mTerminalMap = that->fields.mTerminalMap;
+  if ( !mTerminalMap
     || (ScrTerminalMap__SetMapCamera_TutorialFocusSpot(mTerminalMap, *(SrcSpotBasePrefab_o **)(v5 + 16), 0.5, 0),
-        v28 = that->fields.mTerminalMap,
-        v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
+        v32 = that->fields.mTerminalMap,
+        v33 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(
-          v29,
+          v33,
           (Il2CppObject *)v5,
           Method_TerminalSceneComponent_StateTutorial2_SpotArrow___c__DisplayClass1_0__begin_b__1__,
           0),
-        !v28) )
+        !v32) )
   {
 LABEL_12:
     sub_2213CDC(mTerminalMap, v7);
   }
-  v28->fields.mSpotClickAct = v29;
+  v32->fields.mSpotClickAct = v33;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v28->fields.mSpotClickAct,
-    (int32_t)v29,
-    v30,
-    v31,
-    v32,
-    v33,
+    (MissionNaviTransitionBoardItem_o *)&v32->fields.mSpotClickAct,
+    (int32_t)v33,
     v34,
-    v35);
+    v35,
+    v36,
+    v37,
+    v38,
+    v39);
 }
 
 
@@ -13210,22 +13362,27 @@ void TerminalSceneComponent_StateTutorial3_GachaArrow__begin(
   __int64 v14; // x1
   System_String_o *v15; // x20
   CommonUI_o *v16; // x21
-  UnityEngine_Vector2_o TUTORIAL_GACHA_ARROW_POS_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_GACHA_ARROW_POS_FS; // kr00_8
   TerminalSceneComponent_o *v18; // x8
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
   float x; // s14
   float y; // s15
   struct TerminalSceneComponent_StateTutorial3_GachaArrow___c_StaticFields *TUTORIAL_MENU_ARROW_POS2; // x8
   System_Action_o *_9__0_0; // x22
-  Il2CppObject *v23; // x23
+  Il2CppObject *v27; // x23
   struct TerminalSceneComponent_StateTutorial3_GachaArrow___c_StaticFields *static_fields; // x0
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
-  System_Action_o *v31; // x20
-  UnityEngine_Rect_o TUTORIAL_GACHA_ARROW_RECT_FS; // 0:kr00_16.16
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  System_Action_o *v35; // x20
+  UnityEngine_Rect_o TUTORIAL_GACHA_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v37; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972D04 & 1) == 0 )
   {
@@ -13261,6 +13418,10 @@ void TerminalSceneComponent_StateTutorial3_GachaArrow__begin(
   v18 = *v13;
   if ( !*v13 )
     goto LABEL_17;
+  m_XMin = TUTORIAL_GACHA_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_GACHA_ARROW_RECT_FS.fields.m_YMin;
+  m_Width = TUTORIAL_GACHA_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_GACHA_ARROW_RECT_FS.fields.m_Height;
   x = v18->fields.TUTORIAL_MENU_MESSAGE_POS.fields.x;
   y = v18->fields.TUTORIAL_MENU_MESSAGE_POS.fields.y;
   Instance = (TerminalSceneComponent_o *)TerminalSceneComponent_StateTutorial3_GachaArrow___c_TypeInfo;
@@ -13278,41 +13439,45 @@ void TerminalSceneComponent_StateTutorial3_GachaArrow__begin(
       j_il2cpp_runtime_class_init_0(Instance, v6);
       TUTORIAL_MENU_ARROW_POS2 = TerminalSceneComponent_StateTutorial3_GachaArrow___c_TypeInfo->static_fields;
     }
-    v23 = (Il2CppObject *)TUTORIAL_MENU_ARROW_POS2->__9;
+    v27 = (Il2CppObject *)TUTORIAL_MENU_ARROW_POS2->__9;
     _9__0_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__0_0, v23, Method_TerminalSceneComponent_StateTutorial3_GachaArrow___c__begin_b__0_0__, 0);
+    System_Action___ctor(_9__0_0, v27, Method_TerminalSceneComponent_StateTutorial3_GachaArrow___c__begin_b__0_0__, 0);
     static_fields = TerminalSceneComponent_StateTutorial3_GachaArrow___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = _9__0_0;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__0_0,
       (int32_t)_9__0_0,
-      v25,
-      v26,
-      v27,
-      v28,
       v29,
-      v30);
+      v30,
+      v31,
+      v32,
+      v33,
+      v34);
   }
   if ( !v16 )
 LABEL_17:
     sub_2213CDC(Instance, v6);
+  v37.fields.m_XMin = m_XMin;
+  v37.fields.m_YMin = m_YMin;
+  v37.fields.m_Width = m_Width;
+  v37.fields.m_Height = m_Height;
   CommonUI__OpenTutorialNotificationDialogArrow(
     v16,
     v15,
     TUTORIAL_GACHA_ARROW_POS_FS,
-    TUTORIAL_GACHA_ARROW_RECT_FS,
+    v37,
     0.0,
     (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
     -1,
     _9__0_0,
     0);
-  v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v31,
+    v35,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial3_GachaArrow___c__DisplayClass0_0__begin_b__1__,
     0);
-  MainMenuBar__SetDispBtnAct(2, v31, 0);
+  MainMenuBar__SetDispBtnAct(2, v35, 0);
 }
 
 
@@ -13475,22 +13640,27 @@ void TerminalSceneComponent_StateTutorial3_MenuArrow__begin(
   __int64 v14; // x1
   System_String_o *v15; // x20
   CommonUI_o *v16; // x21
-  UnityEngine_Vector2_o TUTORIAL_MENU_ARROW_POS_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_MENU_ARROW_POS_FS; // kr00_8
   TerminalSceneComponent_o *v18; // x8
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
   float x; // s14
   float y; // s15
   struct TerminalSceneComponent_StateTutorial3_MenuArrow___c_StaticFields *TUTORIAL_MENU_ARROW_POS2; // x8
   System_Action_o *_9__0_0; // x22
-  Il2CppObject *v23; // x23
+  Il2CppObject *v27; // x23
   struct TerminalSceneComponent_StateTutorial3_MenuArrow___c_StaticFields *static_fields; // x0
-  System_String_o *v25; // x2
-  System_String_o *v26; // x3
-  int32_t v27; // w4
-  int32_t v28; // w5
-  bool v29; // w6
-  bool v30; // w7
-  System_Action_o *v31; // x20
-  UnityEngine_Rect_o TUTORIAL_MENU_ARROW_RECT_FS; // 0:kr00_16.16
+  System_String_o *v29; // x2
+  System_String_o *v30; // x3
+  int32_t v31; // w4
+  int32_t v32; // w5
+  bool v33; // w6
+  bool v34; // w7
+  System_Action_o *v35; // x20
+  UnityEngine_Rect_o TUTORIAL_MENU_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v37; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972D01 & 1) == 0 )
   {
@@ -13526,6 +13696,10 @@ void TerminalSceneComponent_StateTutorial3_MenuArrow__begin(
   v18 = *v13;
   if ( !*v13 )
     goto LABEL_17;
+  m_XMin = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_YMin;
+  m_Width = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_Height;
   x = v18->fields.TUTORIAL_MENU_MESSAGE_POS.fields.x;
   y = v18->fields.TUTORIAL_MENU_MESSAGE_POS.fields.y;
   Instance = (TerminalSceneComponent_o *)TerminalSceneComponent_StateTutorial3_MenuArrow___c_TypeInfo;
@@ -13543,41 +13717,45 @@ void TerminalSceneComponent_StateTutorial3_MenuArrow__begin(
       j_il2cpp_runtime_class_init_0(Instance, v6);
       TUTORIAL_MENU_ARROW_POS2 = TerminalSceneComponent_StateTutorial3_MenuArrow___c_TypeInfo->static_fields;
     }
-    v23 = (Il2CppObject *)TUTORIAL_MENU_ARROW_POS2->__9;
+    v27 = (Il2CppObject *)TUTORIAL_MENU_ARROW_POS2->__9;
     _9__0_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__0_0, v23, Method_TerminalSceneComponent_StateTutorial3_MenuArrow___c__begin_b__0_0__, 0);
+    System_Action___ctor(_9__0_0, v27, Method_TerminalSceneComponent_StateTutorial3_MenuArrow___c__begin_b__0_0__, 0);
     static_fields = TerminalSceneComponent_StateTutorial3_MenuArrow___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = _9__0_0;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__0_0,
       (int32_t)_9__0_0,
-      v25,
-      v26,
-      v27,
-      v28,
       v29,
-      v30);
+      v30,
+      v31,
+      v32,
+      v33,
+      v34);
   }
   if ( !v16 )
 LABEL_17:
     sub_2213CDC(Instance, v6);
+  v37.fields.m_XMin = m_XMin;
+  v37.fields.m_YMin = m_YMin;
+  v37.fields.m_Width = m_Width;
+  v37.fields.m_Height = m_Height;
   CommonUI__OpenTutorialNotificationDialogArrow(
     v16,
     v15,
     TUTORIAL_MENU_ARROW_POS_FS,
-    TUTORIAL_MENU_ARROW_RECT_FS,
+    v37,
     0.0,
     (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
     -1,
     _9__0_0,
     0);
-  v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v31,
+    v35,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial3_MenuArrow___c__DisplayClass0_0__begin_b__1__,
     0);
-  MainMenuBar__SetMenuBtnAct(v31, 0);
+  MainMenuBar__SetMenuBtnAct(v35, 0);
 }
 
 
@@ -13749,20 +13927,25 @@ void TerminalSceneComponent_StateTutorial4_QuestArrow__begin(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v28; // x0
   CommonUI_o *v29; // x22
-  UnityEngine_Vector2_o TUTORIAL_QUEST_ARROW_POS_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_QUEST_ARROW_POS_FS; // kr00_8
   TerminalSceneComponent_o *v31; // x8
+  float m_XMin; // s10
+  float m_YMin; // s11
   float x; // s14
   float y; // s15
-  System_Action_o *v34; // x23
-  struct ScrTerminalListTop_o *v35; // x21
-  System_Action_o *v36; // x20
-  System_String_o *v37; // x2
-  System_String_o *v38; // x3
-  int32_t v39; // w4
-  int32_t v40; // w5
-  bool v41; // w6
-  bool v42; // w7
-  UnityEngine_Rect_o TUTORIAL_QUEST_ARROW_RECT_FS; // 0:kr00_16.16
+  float m_Width; // s12
+  float m_Height; // s13
+  System_Action_o *v38; // x23
+  struct ScrTerminalListTop_o *v39; // x21
+  System_Action_o *v40; // x20
+  System_String_o *v41; // x2
+  System_String_o *v42; // x3
+  int32_t v43; // w4
+  int32_t v44; // w5
+  bool v45; // w6
+  bool v46; // w7
+  UnityEngine_Rect_o TUTORIAL_QUEST_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v48; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972D09 & 1) == 0 )
   {
@@ -13835,48 +14018,57 @@ void TerminalSceneComponent_StateTutorial4_QuestArrow__begin(
   v31 = *v13;
   if ( !*v13 )
     goto LABEL_22;
+  m_XMin = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_YMin;
   x = v31->fields.TUTORIAL_QUEST_MESSAGE_POS.fields.x;
   y = v31->fields.TUTORIAL_QUEST_MESSAGE_POS.fields.y;
-  v34 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  m_Width = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_QUEST_ARROW_RECT_FS.fields.m_Height;
+  v38 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v34,
+    v38,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial4_QuestArrow___c__DisplayClass0_0__begin_b__0__,
     0);
-  if ( !v29
-    || (CommonUI__OpenTutorialNotificationDialogArrow(
-          v29,
-          v26,
-          TUTORIAL_QUEST_ARROW_POS_FS,
-          TUTORIAL_QUEST_ARROW_RECT_FS,
-          90.0,
-          (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
-          -1,
-          v34,
-          0),
-        !*v13)
-    || (v35 = (*v13)->fields.mTerminalList,
-        v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
+  if ( !v29 )
+    goto LABEL_22;
+  v48.fields.m_XMin = m_XMin;
+  v48.fields.m_YMin = m_YMin;
+  v48.fields.m_Width = m_Width;
+  v48.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialNotificationDialogArrow(
+    v29,
+    v26,
+    TUTORIAL_QUEST_ARROW_POS_FS,
+    v48,
+    90.0,
+    (UnityEngine_Vector2_o)__PAIR64__(LODWORD(y), LODWORD(x)),
+    -1,
+    v38,
+    0);
+  if ( !*v13
+    || (v39 = (*v13)->fields.mTerminalList,
+        v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(
-          v36,
+          v40,
           (Il2CppObject *)v4,
           Method_TerminalSceneComponent_StateTutorial4_QuestArrow___c__DisplayClass0_0__begin_b__1__,
           0),
-        !v35) )
+        !v39) )
   {
 LABEL_22:
     sub_2213CDC(mFG, v6);
   }
-  v35->fields.mQuestClickAct = v36;
+  v39->fields.mQuestClickAct = v40;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v35->fields.mQuestClickAct,
-    (int32_t)v36,
-    v37,
-    v38,
-    v39,
-    v40,
+    (MissionNaviTransitionBoardItem_o *)&v39->fields.mQuestClickAct,
+    (int32_t)v40,
     v41,
-    v42);
+    v42,
+    v43,
+    v44,
+    v45,
+    v46);
 }
 
 
@@ -14036,17 +14228,22 @@ void TerminalSceneComponent_StateTutorial4_SpotArrow__begin(
   bool v19; // w6
   bool v20; // w7
   Il2CppObject *Instance; // x21
-  UnityEngine_Vector2_o TUTORIAL_SPOT_ARROW_POS4_FS; // kr10_8
-  System_Action_o *v23; // x22
-  struct ScrTerminalMap_o *v24; // x21
-  System_Action_o *v25; // x19
-  System_String_o *v26; // x2
-  System_String_o *v27; // x3
-  int32_t v28; // w4
-  int32_t v29; // w5
-  bool v30; // w6
-  bool v31; // w7
-  UnityEngine_Rect_o TUTORIAL_SPOT_ARROW_RECT4_FS; // 0:kr00_16.16
+  UnityEngine_Vector2_o TUTORIAL_SPOT_ARROW_POS4_FS; // kr00_8
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
+  System_Action_o *v27; // x22
+  struct ScrTerminalMap_o *v28; // x21
+  System_Action_o *v29; // x19
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  UnityEngine_Rect_o TUTORIAL_SPOT_ARROW_RECT4_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v37; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_5972D07 & 1) == 0 )
   {
@@ -14075,44 +14272,48 @@ void TerminalSceneComponent_StateTutorial4_SpotArrow__begin(
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   TUTORIAL_SPOT_ARROW_POS4_FS = TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_POS4_FS(that, 0);
   TUTORIAL_SPOT_ARROW_RECT4_FS = TerminalSceneComponent__get_TUTORIAL_SPOT_ARROW_RECT4_FS(that, 0);
-  v23 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  m_XMin = TUTORIAL_SPOT_ARROW_RECT4_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_SPOT_ARROW_RECT4_FS.fields.m_YMin;
+  m_Width = TUTORIAL_SPOT_ARROW_RECT4_FS.fields.m_Width;
+  m_Height = TUTORIAL_SPOT_ARROW_RECT4_FS.fields.m_Height;
+  v27 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v23,
+    v27,
     (Il2CppObject *)v5,
     Method_TerminalSceneComponent_StateTutorial4_SpotArrow___c__DisplayClass1_0__begin_b__0__,
     0);
-  if ( !Instance
-    || (CommonUI__OpenTutorialArrowMark(
-          (CommonUI_o *)Instance,
-          TUTORIAL_SPOT_ARROW_POS4_FS,
-          90.0,
-          TUTORIAL_SPOT_ARROW_RECT4_FS,
-          v23,
-          0),
-        (mTerminalMap = that->fields.mTerminalMap) == 0)
+  if ( !Instance )
+    goto LABEL_10;
+  v37.fields.m_XMin = m_XMin;
+  v37.fields.m_YMin = m_YMin;
+  v37.fields.m_Width = m_Width;
+  v37.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialArrowMark((CommonUI_o *)Instance, TUTORIAL_SPOT_ARROW_POS4_FS, 90.0, v37, v27, 0);
+  mTerminalMap = that->fields.mTerminalMap;
+  if ( !mTerminalMap
     || (ScrTerminalMap__SetMapCamera_TutorialFocusSpot(mTerminalMap, *(SrcSpotBasePrefab_o **)(v5 + 16), 0.5, 0),
-        v24 = that->fields.mTerminalMap,
-        v25 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
+        v28 = that->fields.mTerminalMap,
+        v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo),
         System_Action___ctor(
-          v25,
+          v29,
           (Il2CppObject *)v5,
           Method_TerminalSceneComponent_StateTutorial4_SpotArrow___c__DisplayClass1_0__begin_b__1__,
           0),
-        !v24) )
+        !v28) )
   {
 LABEL_10:
     sub_2213CDC(mTerminalMap, v7);
   }
-  v24->fields.mSpotClickAct = v25;
+  v28->fields.mSpotClickAct = v29;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v24->fields.mSpotClickAct,
-    (int32_t)v25,
-    v26,
-    v27,
-    v28,
-    v29,
+    (MissionNaviTransitionBoardItem_o *)&v28->fields.mSpotClickAct,
+    (int32_t)v29,
     v30,
-    v31);
+    v31,
+    v32,
+    v33,
+    v34,
+    v35);
 }
 
 
@@ -14247,19 +14448,24 @@ void TerminalSceneComponent_StateTutorial5_CombineArrow__begin(
   bool v12; // w7
   TerminalSceneComponent_o **v13; // x21
   CommonUI_o *v14; // x20
-  UnityEngine_Vector2_o TUTORIAL_COMBINE_ARROW_POS_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_COMBINE_ARROW_POS_FS; // kr00_8
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
   struct TerminalSceneComponent_StateTutorial5_CombineArrow___c_StaticFields *TUTORIAL_MENU_ARROW_POS2; // x8
   System_Action_o *_9__0_0; // x21
-  Il2CppObject *v18; // x22
+  Il2CppObject *v22; // x22
   struct TerminalSceneComponent_StateTutorial5_CombineArrow___c_StaticFields *static_fields; // x0
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
-  System_Action_o *v26; // x20
-  UnityEngine_Rect_o TUTORIAL_COMBINE_ARROW_RECT_FS; // 0:kr00_16.16
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
+  System_Action_o *v30; // x20
+  UnityEngine_Rect_o TUTORIAL_COMBINE_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v32; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   if ( (byte_5972D0F & 1) == 0 )
   {
@@ -14287,7 +14493,11 @@ void TerminalSceneComponent_StateTutorial5_CombineArrow__begin(
   if ( !*v13 )
     goto LABEL_14;
   TUTORIAL_COMBINE_ARROW_RECT_FS = TerminalSceneComponent__get_TUTORIAL_COMBINE_ARROW_RECT_FS(Instance, 0);
+  m_XMin = TUTORIAL_COMBINE_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_COMBINE_ARROW_RECT_FS.fields.m_YMin;
   Instance = (TerminalSceneComponent_o *)TerminalSceneComponent_StateTutorial5_CombineArrow___c_TypeInfo;
+  m_Width = TUTORIAL_COMBINE_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_COMBINE_ARROW_RECT_FS.fields.m_Height;
   if ( !*(&TerminalSceneComponent_StateTutorial5_CombineArrow___c_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_StateTutorial5_CombineArrow___c_TypeInfo, v6);
@@ -14302,32 +14512,36 @@ void TerminalSceneComponent_StateTutorial5_CombineArrow__begin(
       j_il2cpp_runtime_class_init_0(Instance, v6);
       TUTORIAL_MENU_ARROW_POS2 = TerminalSceneComponent_StateTutorial5_CombineArrow___c_TypeInfo->static_fields;
     }
-    v18 = (Il2CppObject *)TUTORIAL_MENU_ARROW_POS2->__9;
+    v22 = (Il2CppObject *)TUTORIAL_MENU_ARROW_POS2->__9;
     _9__0_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__0_0, v18, Method_TerminalSceneComponent_StateTutorial5_CombineArrow___c__begin_b__0_0__, 0);
+    System_Action___ctor(_9__0_0, v22, Method_TerminalSceneComponent_StateTutorial5_CombineArrow___c__begin_b__0_0__, 0);
     static_fields = TerminalSceneComponent_StateTutorial5_CombineArrow___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = _9__0_0;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__0_0,
       (int32_t)_9__0_0,
-      v20,
-      v21,
-      v22,
-      v23,
       v24,
-      v25);
+      v25,
+      v26,
+      v27,
+      v28,
+      v29);
   }
   if ( !v14 )
 LABEL_14:
     sub_2213CDC(Instance, v6);
-  CommonUI__OpenTutorialArrowMark(v14, TUTORIAL_COMBINE_ARROW_POS_FS, 0.0, TUTORIAL_COMBINE_ARROW_RECT_FS, _9__0_0, 0);
-  v26 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v32.fields.m_XMin = m_XMin;
+  v32.fields.m_YMin = m_YMin;
+  v32.fields.m_Width = m_Width;
+  v32.fields.m_Height = m_Height;
+  CommonUI__OpenTutorialArrowMark(v14, TUTORIAL_COMBINE_ARROW_POS_FS, 0.0, v32, _9__0_0, 0);
+  v30 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v26,
+    v30,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial5_CombineArrow___c__DisplayClass0_0__begin_b__1__,
     0);
-  MainMenuBar__SetDispBtnAct(4, v26, 0);
+  MainMenuBar__SetDispBtnAct(4, v30, 0);
 }
 
 
@@ -14493,19 +14707,24 @@ void TerminalSceneComponent_StateTutorial5_MenuArrow__begin(
   __int64 v14; // x1
   Il2CppObject *Instance; // x20
   System_String_o *v16; // x21
-  UnityEngine_Vector2_o TUTORIAL_MENU_ARROW_POS2_FS; // kr10_8
+  UnityEngine_Vector2_o TUTORIAL_MENU_ARROW_POS2_FS; // kr00_8
+  float m_XMin; // s10
+  float m_YMin; // s11
+  float m_Width; // s12
+  float m_Height; // s13
   struct TerminalSceneComponent_StateTutorial5_MenuArrow___c_StaticFields *fields; // x8
   System_Action_o *_9__0_0; // x22
-  Il2CppObject *v20; // x23
+  Il2CppObject *v24; // x23
   struct TerminalSceneComponent_StateTutorial5_MenuArrow___c_StaticFields *static_fields; // x0
-  System_String_o *v22; // x2
-  System_String_o *v23; // x3
-  int32_t v24; // w4
-  int32_t v25; // w5
-  bool v26; // w6
-  bool v27; // w7
-  System_Action_o *v28; // x20
-  UnityEngine_Rect_o TUTORIAL_MENU_ARROW_RECT_FS; // 0:kr00_16.16
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
+  System_Action_o *v32; // x20
+  UnityEngine_Rect_o TUTORIAL_MENU_ARROW_RECT_FS; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v34; // 0:s2.4,4:s3.4,8:s4.4,12:s5.4
 
   if ( (byte_5972D0C & 1) == 0 )
   {
@@ -14540,7 +14759,11 @@ void TerminalSceneComponent_StateTutorial5_MenuArrow__begin(
   TUTORIAL_MENU_ARROW_RECT_FS = TerminalSceneComponent__get_TUTORIAL_MENU_ARROW_RECT_FS(
                                   (TerminalSceneComponent_o *)v5,
                                   0);
+  m_XMin = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_XMin;
+  m_YMin = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_YMin;
   v5 = (System_String_o *)TerminalSceneComponent_StateTutorial5_MenuArrow___c_TypeInfo;
+  m_Width = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_Width;
+  m_Height = TUTORIAL_MENU_ARROW_RECT_FS.fields.m_Height;
   if ( !*(&TerminalSceneComponent_StateTutorial5_MenuArrow___c_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_StateTutorial5_MenuArrow___c_TypeInfo, v6);
@@ -14555,41 +14778,45 @@ void TerminalSceneComponent_StateTutorial5_MenuArrow__begin(
       j_il2cpp_runtime_class_init_0(v5, v6);
       fields = TerminalSceneComponent_StateTutorial5_MenuArrow___c_TypeInfo->static_fields;
     }
-    v20 = (Il2CppObject *)fields->__9;
+    v24 = (Il2CppObject *)fields->__9;
     _9__0_0 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__0_0, v20, Method_TerminalSceneComponent_StateTutorial5_MenuArrow___c__begin_b__0_0__, 0);
+    System_Action___ctor(_9__0_0, v24, Method_TerminalSceneComponent_StateTutorial5_MenuArrow___c__begin_b__0_0__, 0);
     static_fields = TerminalSceneComponent_StateTutorial5_MenuArrow___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = _9__0_0;
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&static_fields->__9__0_0,
       (int32_t)_9__0_0,
-      v22,
-      v23,
-      v24,
-      v25,
       v26,
-      v27);
+      v27,
+      v28,
+      v29,
+      v30,
+      v31);
   }
   if ( !Instance )
 LABEL_16:
     sub_2213CDC(v5, v6);
+  v34.fields.m_XMin = m_XMin;
+  v34.fields.m_YMin = m_YMin;
+  v34.fields.m_Width = m_Width;
+  v34.fields.m_Height = m_Height;
   CommonUI__OpenTutorialNotificationDialogArrow(
     (CommonUI_o *)Instance,
     v16,
     TUTORIAL_MENU_ARROW_POS2_FS,
-    TUTORIAL_MENU_ARROW_RECT_FS,
+    v34,
     0.0,
     (UnityEngine_Vector2_o)0xC224000000000000LL,
     -1,
     _9__0_0,
     0);
-  v28 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v32 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v28,
+    v32,
     (Il2CppObject *)v4,
     Method_TerminalSceneComponent_StateTutorial5_MenuArrow___c__DisplayClass0_0__begin_b__1__,
     0);
-  MainMenuBar__SetMenuBtnAct(v28, 0);
+  MainMenuBar__SetMenuBtnAct(v32, 0);
 }
 
 
@@ -16304,7 +16531,7 @@ void TerminalSceneComponent___c__DisplayClass195_0___RegenerateEarthView_b__0(
     || (this = (TerminalSceneComponent___c__DisplayClass195_0_o *)((__int64 (__fastcall *)(struct BaseCore_o *, System_Collections_Generic_List_MapControl_WarInfo__o *, bool, const MethodInfo *, long double))mEarthCore->klass->vtable._8_Setup.methodPtr)(
                                                                     mEarthCore,
                                                                     WarInfoAll_OrderReverse,
-                                                                    *(_BYTE *)(*((_QWORD *)this + 23) + 90LL) == 0,
+                                                                    BYTE2(this[5].fields.callback->fields.method_info) == 0,
                                                                     mEarthCore->klass->vtable._8_Setup.method,
                                                                     v6),
         (v7 = v2->fields.__4__this) == 0)
@@ -16533,7 +16760,7 @@ void TerminalSceneComponent___c__DisplayClass212_0___SetupStandServant_b__1(
   this = (TerminalSceneComponent___c__DisplayClass212_0_o *)_4__this->fields.mTerminalServant;
   if ( !this )
     goto LABEL_38;
-  if ( !*((_BYTE *)this + 65) )
+  if ( !BYTE1(this[1].fields.__4__this) )
   {
     this = (TerminalSceneComponent___c__DisplayClass212_0_o *)StandFigureSlideComponent__IsMoving(
                                                                 (StandFigureSlideComponent_o *)this,
@@ -16546,7 +16773,7 @@ void TerminalSceneComponent___c__DisplayClass212_0___SetupStandServant_b__1(
       this = (TerminalSceneComponent___c__DisplayClass212_0_o *)v4->fields.mEarthCore;
       if ( !this )
         goto LABEL_38;
-      if ( !*((_BYTE *)this + 145) )
+      if ( !BYTE1(this[3].fields.__4__this) )
       {
         *(float *)&v5 = ((float (__fastcall *)(TerminalSceneComponent___c__DisplayClass212_0_o *, Il2CppClass **))this->klass[1]._1.nestedTypes)(
                           this,
@@ -16719,7 +16946,7 @@ void TerminalSceneComponent___c__DisplayClass212_1___SetupStandServant_b__2(
   if ( !_4__this )
 LABEL_12:
     sub_2213CDC(this, method);
-  TerminalSceneComponent__SetupStandServant(_4__this, usd, *(_BYTE *)(*((_QWORD *)this + 23) + 90LL), 0, 0);
+  TerminalSceneComponent__SetupStandServant(_4__this, usd, BYTE2(this[5].fields.CS___8__locals1[2].monitor), 0, 0);
 }
 
 
@@ -17254,9 +17481,9 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__0(
   TerminalSceneComponent___c__DisplayClass256_0_o *v2; // x19
   struct TerminalSceneComponent_o *_4__this; // x8
   ScrTerminalListTop_o *mTerminalList; // x20
-  int32_t v5; // w21
+  int32_t method_ptr_high; // w21
   System_Action_o *_9__6; // x22
-  int v7; // w24
+  int invoke_impl; // w24
   System_String_o *v8; // x2
   System_String_o *v9; // x3
   int32_t v10; // w4
@@ -17289,20 +17516,20 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__0(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
   }
-  v5 = *(_DWORD *)(*((_QWORD *)this + 23) + 20LL);
+  method_ptr_high = HIDWORD(this[3].fields.__9__6->fields.method_ptr);
   if ( !byte_596A92D )
   {
     sub_2213A60(&TerminalPramsManager_TypeInfo);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
     byte_596A92D = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[4].fields.__9__2) )
   {
     j_il2cpp_runtime_class_init_0(this, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
   }
   _9__6 = v2->fields.__9__6;
-  v7 = *(_DWORD *)(*((_QWORD *)this + 23) + 24LL);
+  invoke_impl = this[3].fields.__9__6->fields.invoke_impl;
   if ( !_9__6 )
   {
     _9__6 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
@@ -17317,7 +17544,7 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__0(
   if ( !mTerminalList )
 LABEL_18:
     sub_2213CDC(this, method);
-  ScrTerminalListTop__StartWindowMessage_43695928(mTerminalList, v5, v7 + 1, 2, _9__6, 0, 0);
+  ScrTerminalListTop__StartWindowMessage_43695928(mTerminalList, method_ptr_high, invoke_impl + 1, 2, _9__6, 0, 0);
 }
 
 
@@ -17479,7 +17706,7 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__2(
   bool Effect; // w21
   struct TerminalSceneComponent_o *v19; // x8
   ScrTerminalListTop_o *mTerminalList; // x20
-  int32_t v21; // w21
+  int32_t method_ptr_high; // w21
 
   v2 = this;
   if ( (byte_5972D2E & 1) == 0 )
@@ -17615,7 +17842,7 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__2(
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
   }
   v19 = v2->fields.__4__this;
-  *(_BYTE *)(*((_QWORD *)this + 23) + 170LL) = Effect;
+  BYTE2(this[3].fields.__9__6[1].fields.method) = Effect;
   if ( !v19 )
     goto LABEL_60;
   mTerminalList = v19->fields.mTerminalList;
@@ -17625,19 +17852,19 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__2(
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
     byte_596A92E = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[4].fields.__9__2) )
   {
     j_il2cpp_runtime_class_init_0(this, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
   }
-  v21 = *(_DWORD *)(*((_QWORD *)this + 23) + 20LL);
+  method_ptr_high = HIDWORD(this[3].fields.__9__6->fields.method_ptr);
   if ( !byte_596A92D )
   {
     sub_2213A60(&TerminalPramsManager_TypeInfo);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
     byte_596A92D = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[4].fields.__9__2) )
   {
     j_il2cpp_runtime_class_init_0(this, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
@@ -17645,7 +17872,11 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__2(
   if ( !mTerminalList )
 LABEL_60:
     sub_2213CDC(this, method);
-  ScrTerminalListTop__RequestBattleSecnario(mTerminalList, v21, *(_DWORD *)(*((_QWORD *)this + 23) + 24LL) + 1, 0);
+  ScrTerminalListTop__RequestBattleSecnario(
+    mTerminalList,
+    method_ptr_high,
+    LODWORD(this[3].fields.__9__6->fields.invoke_impl) + 1,
+    0);
 }
 
 
@@ -17656,8 +17887,8 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__6(
   TerminalSceneComponent___c__DisplayClass256_0_o *v2; // x19
   struct TerminalSceneComponent_o *_4__this; // x8
   ScrTerminalListTop_o *mTerminalList; // x20
-  int32_t v5; // w22
-  int32_t v6; // w23
+  int32_t klass_high; // w22
+  int32_t method_ptr_high; // w23
   struct TerminalSceneComponent_o *v7; // x8
 
   v2 = this;
@@ -17683,26 +17914,26 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__6(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
   }
-  v5 = *(_DWORD *)(*((_QWORD *)this + 23) + 4LL);
+  klass_high = HIDWORD(this[3].fields.__9__6->klass);
   if ( !byte_596A92E )
   {
     sub_2213A60(&TerminalPramsManager_TypeInfo);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
     byte_596A92E = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[4].fields.__9__2) )
   {
     j_il2cpp_runtime_class_init_0(this, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
   }
-  v6 = *(_DWORD *)(*((_QWORD *)this + 23) + 20LL);
+  method_ptr_high = HIDWORD(this[3].fields.__9__6->fields.method_ptr);
   if ( !byte_596A92D )
   {
     sub_2213A60(&TerminalPramsManager_TypeInfo);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
     byte_596A92D = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[4].fields.__9__2) )
   {
     j_il2cpp_runtime_class_init_0(this, method);
     this = (TerminalSceneComponent___c__DisplayClass256_0_o *)TerminalPramsManager_TypeInfo;
@@ -17710,9 +17941,9 @@ void TerminalSceneComponent___c__DisplayClass256_0___PlayAutoExecuteQuest_b__6(
   if ( !mTerminalList
     || (ScrTerminalListTop__SetBattleSetupInfo(
           mTerminalList,
-          v5,
-          v6,
-          *(_DWORD *)(*((_QWORD *)this + 23) + 24LL) + 1,
+          klass_high,
+          method_ptr_high,
+          LODWORD(this[3].fields.__9__6->fields.invoke_impl) + 1,
           1,
           0,
           0,
@@ -18504,7 +18735,7 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
   TerminalPramsManager_c *v27; // x0
   __int64 v28; // x1
   System_Collections_IEnumerator_o *v29; // x0
-  __int64 v30; // x8
+  System_Action_c *klass; // x8
   __int64 v31; // x8
   TerminalPramsManager_c *v32; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
@@ -18519,8 +18750,8 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
   bool v42; // w7
   Il2CppObject *Master_object; // x21
   System_String_o *PrioredFolderBGM; // x21
-  int klass; // w24
-  int32_t OrdealCallWarId; // w8
+  int v45; // w24
+  int32_t method_info_high; // w8
   int monitor; // w24
   struct ScrTerminalListTop_o *mTerminalList; // x8
   struct ScrTerminalListTop_o *v49; // x8
@@ -18662,7 +18893,7 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
       this = (TerminalSceneComponent__coFadein_WorldDisp_d__218_o *)TerminalPramsManager_TypeInfo;
     }
-    if ( *(_BYTE *)(*((_QWORD *)this + 23) + 103LL) )
+    if ( HIBYTE(this[2].fields.endAct->fields.original_method_info) )
     {
       if ( !*(&TerminalSceneComponent_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method);
@@ -18677,10 +18908,10 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo, method);
         this = (TerminalSceneComponent__coFadein_WorldDisp_d__218_o *)TerminalSceneComponent_TypeInfo;
       }
-      v30 = **((_QWORD **)this + 23);
-      if ( !v30 )
+      klass = this[2].fields.endAct->klass;
+      if ( !klass )
         goto LABEL_151;
-      v31 = *(_QWORD *)(v30 + 264);
+      v31 = *(_QWORD *)&klass->_2.static_fields_size;
       if ( !v31 )
         goto LABEL_151;
       this = *(TerminalSceneComponent__coFadein_WorldDisp_d__218_o **)(v31 + 552);
@@ -18755,8 +18986,9 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
           v2->fields.__2__current = (Il2CppObject *)v35;
           p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
           sub_2213A04(p__2__current, (int32_t)v35, v37, v38, v39, v40, v41, v42);
+          result = 1;
           p__2__current[-1].fields._BoardType_k__BackingField = 1;
-          return 1;
+          return result;
         }
       }
       goto LABEL_151;
@@ -18792,7 +19024,7 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              &entity,
-             *(_DWORD *)(*((_QWORD *)this + 23) + 4LL),
+             HIDWORD(this[2].fields.endAct->klass),
              (const MethodInfo_3F10B80 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
       {
         this = (TerminalSceneComponent__coFadein_WorldDisp_d__218_o *)_4__this->fields.mTerminalList;
@@ -18808,25 +19040,25 @@ bool TerminalSceneComponent__coFadein_WorldDisp_d__218__MoveNext(
             goto LABEL_133;
           if ( !entity )
             goto LABEL_151;
-          klass = (int)entity[1].klass;
+          v45 = (int)entity[1].klass;
           this = (TerminalSceneComponent__coFadein_WorldDisp_d__218_o *)BalanceConfig_TypeInfo;
           if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
           {
             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, method);
             this = (TerminalSceneComponent__coFadein_WorldDisp_d__218_o *)BalanceConfig_TypeInfo;
           }
-          OrdealCallWarId = *(_DWORD *)(*((_QWORD *)this + 23) + 860LL);
-          if ( klass == OrdealCallWarId )
+          method_info_high = HIDWORD(this[2].fields.endAct[6].fields.method_info);
+          if ( v45 == method_info_high )
             goto LABEL_133;
           if ( !entity )
             goto LABEL_151;
           monitor = (int)entity[3].monitor;
-          if ( !*((_DWORD *)this + 57) )
+          if ( !HIDWORD(this[3].monitor) )
           {
             j_il2cpp_runtime_class_init_0(this, method);
-            OrdealCallWarId = BalanceConfig_TypeInfo->static_fields->OrdealCallWarId;
+            method_info_high = BalanceConfig_TypeInfo->static_fields->OrdealCallWarId;
           }
-          if ( monitor == OrdealCallWarId || !TerminalSceneComponent__IsValidGrandBgm(_4__this, &index, 0) )
+          if ( monitor == method_info_high || !TerminalSceneComponent__IsValidGrandBgm(_4__this, &index, 0) )
 LABEL_133:
             TerminalSceneComponent__playBgm(_4__this, PrioredFolderBGM, 0, 0.0, 0);
           else
@@ -18845,7 +19077,7 @@ LABEL_133:
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, method);
           this = (TerminalSceneComponent__coFadein_WorldDisp_d__218_o *)TerminalPramsManager_TypeInfo;
         }
-        if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 103LL) )
+        if ( !HIBYTE(this[2].fields.endAct->fields.original_method_info) )
         {
           if ( !entity )
             goto LABEL_151;

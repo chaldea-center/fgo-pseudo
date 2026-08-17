@@ -40,12 +40,18 @@ UnityEngine_Vector3_o TitleInfoEventTowerStamp__GetStampPosition(
         const MethodInfo *method)
 {
   int32_t row; // w8
+  float v4; // s2
+  float v5; // s1
+  float v6; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   row = this->fields.row;
-  result.fields.z = 0.0;
-  result.fields.y = (float)(this->fields.stampStartPosY + this->fields.stampHeight * (i % row));
-  result.fields.x = (float)(this->fields.stampStartPosX + this->fields.stampWidth * (i / row));
+  v4 = 0.0;
+  v5 = (float)(this->fields.stampStartPosY + this->fields.stampHeight * (i % row));
+  v6 = (float)(this->fields.stampStartPosX + this->fields.stampWidth * (i / row));
+  result.fields.z = v4;
+  result.fields.y = v5;
+  result.fields.x = v6;
   return result;
 }
 

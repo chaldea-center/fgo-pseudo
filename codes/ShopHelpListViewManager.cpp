@@ -220,14 +220,16 @@ void ShopHelpListViewManager___ctor(ShopHelpListViewManager_o *this, const Metho
   int32_t v220; // w5
   bool v221; // w6
   bool v222; // w7
-  System_Array_o *v223; // x20
-  System_String_o *v224; // x2
-  System_String_o *v225; // x3
-  int32_t v226; // w4
-  int32_t v227; // w5
-  bool v228; // w6
-  bool v229; // w7
-  __int64 v230; // x0
+  System_Array_o *v223; // x0
+  System_RuntimeFieldHandle_o v224; // x1
+  struct ShopHelpItemInfo_ItemKind_array *v225; // x20
+  System_String_o *v226; // x2
+  System_String_o *v227; // x3
+  int32_t v228; // w4
+  int32_t v229; // w5
+  bool v230; // w6
+  bool v231; // w7
+  __int64 v232; // x0
 
   if ( (byte_596C868 & 1) == 0 )
   {
@@ -687,8 +689,8 @@ LABEL_76:
     if ( !v3 )
     {
 LABEL_75:
-      v230 = sub_2213D00(v3, v56);
-      sub_2213BA0(v230, 0);
+      v232 = sub_2213D00(v3, v56);
+      sub_2213BA0(v232, 0);
     }
   }
   if ( LODWORD(v47->max_length) <= 0x14 )
@@ -707,20 +709,19 @@ LABEL_74:
     v221,
     v222);
   v223 = (System_Array_o *)sub_2213B20(ShopHelpItemInfo_ItemKind___TypeInfo, 19);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v223,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__516CE5EF4CC7A81C9A872419689A9764E2EBEB4282A29E143CD06FEBDE26A4FC,
-    0);
-  this->fields.kinds = (struct ShopHelpItemInfo_ItemKind_array *)v223;
+  v224.fields.value = Field__PrivateImplementationDetails__516CE5EF4CC7A81C9A872419689A9764E2EBEB4282A29E143CD06FEBDE26A4FC;
+  v225 = (struct ShopHelpItemInfo_ItemKind_array *)v223;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v223, v224, 0);
+  this->fields.kinds = v225;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&this->fields.kinds,
-    (int32_t)v223,
-    v224,
-    v225,
+    (int32_t)v225,
     v226,
     v227,
     v228,
-    v229);
+    v229,
+    v230,
+    v231);
   ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 

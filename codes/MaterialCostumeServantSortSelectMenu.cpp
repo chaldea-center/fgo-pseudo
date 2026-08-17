@@ -198,8 +198,8 @@ void MaterialCostumeServantSortSelectMenu__InitCategoryContainer(
   Il2CppObject *v21; // x21
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o BottomPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o BottomPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596B744 & 1) == 0 )
@@ -295,10 +295,10 @@ void MaterialCostumeServantSortSelectMenu__InitCategoryContainer(
         if ( !v21 )
           goto LABEL_28;
         ServantFilterCategoryContainer__SetActive((ServantFilterCategoryContainer_o *)v21, 1, 0);
-        v25.fields.x = x;
-        v25.fields.y = y;
-        v25.fields.z = z;
-        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v21, v25, 0);
+        v24.fields.x = x;
+        v24.fields.y = y;
+        v24.fields.z = z;
+        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v21, v24, 0);
         ServantFilterCategoryContainer__Layout(
           (ServantFilterCategoryContainer_o *)v21,
           HIDWORD(v21[3].monitor) == v5,
@@ -507,11 +507,12 @@ void MaterialCostumeServantSortSelectMenu__Open(
   const MethodInfo *v36; // x1
   const MethodInfo *v37; // x2
   System_Array_o *v38; // x21
-  const MethodInfo *v39; // x2
+  System_RuntimeFieldHandle_o v39; // x1
   const MethodInfo *v40; // x2
-  const MethodInfo *v41; // x1
+  const MethodInfo *v41; // x2
+  const MethodInfo *v42; // x1
   struct UIScrollView_o *filterScrollView; // x8
-  System_Action_o *v43; // x20
+  System_Action_o *v44; // x20
 
   if ( (byte_596B741 & 1) == 0 )
   {
@@ -599,13 +600,11 @@ void MaterialCostumeServantSortSelectMenu__Open(
     MaterialCostumeServantSortSelectMenu__SetupUseFilterKindList(this, v36);
     MaterialCostumeServantSortSelectMenu__SetupFilterButtons(this, this->fields.operationSortInfo, v37);
     v38 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 6);
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-      v38,
-      (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__254E546EEA15BA06916343C0FDAB6F3C2D1DB240CE5A73224D5036D7C8DFC2BE,
-      0);
-    MaterialCostumeServantSortSelectMenu__InitCategoryContainer(this, (ListViewSort_FilterCategoryKind_array *)v38, v39);
-    MaterialCostumeServantSortSelectMenu__SetButtenEnable(this, 1, v40);
-    MaterialCostumeServantSortSelectMenu__SetButtenSelect(this, v41);
+    v39.fields.value = Field__PrivateImplementationDetails__254E546EEA15BA06916343C0FDAB6F3C2D1DB240CE5A73224D5036D7C8DFC2BE;
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v38, v39, 0);
+    MaterialCostumeServantSortSelectMenu__InitCategoryContainer(this, (ListViewSort_FilterCategoryKind_array *)v38, v40);
+    MaterialCostumeServantSortSelectMenu__SetButtenEnable(this, 1, v41);
+    MaterialCostumeServantSortSelectMenu__SetButtenSelect(this, v42);
     filterScrollView = this->fields.filterScrollView;
     if ( !filterScrollView
       || !*p_baseSortInfo
@@ -616,9 +615,9 @@ LABEL_16:
     }
     UIProgressBar__set_value((UIProgressBar_o *)gameObject, (*p_baseSortInfo)->fields.scrollBarValue, 0);
     this->fields.state = 1;
-    v43 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(v43, (Il2CppObject *)this, Method_MaterialCostumeServantSortSelectMenu_EndOpen__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v43, 0, 0, 0);
+    v44 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    System_Action___ctor(v44, (Il2CppObject *)this, Method_MaterialCostumeServantSortSelectMenu_EndOpen__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v44, 0, 0, 0);
   }
 }
 
@@ -1153,7 +1152,7 @@ System_IAsyncResult_o *MaterialCostumeServantSortSelectMenu_CallbackFunc__BeginI
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

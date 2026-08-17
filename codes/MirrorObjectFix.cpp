@@ -52,59 +52,83 @@ UnityEngine_Bounds_o *MirrorObjectFix__GetBounds(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const MethodInfo *method)
 {
-  __int64 v3; // kr30_8
+  __int64 v3; // kr00_8
   float m20; // s10
   float32x2_t v5; // d15
   const MethodInfo *v6; // x1
   UnityEngine_Transform_o *RootTransform; // x0
   __int64 v8; // x1
-  UnityEngine_Vector3_o lossyScale; // [xsp+0h] [xbp-170h]
-  UnityEngine_Matrix4x4_o v10; // [xsp+10h] [xbp-160h] BYREF
-  UnityEngine_Matrix4x4_o v11; // [xsp+50h] [xbp-120h] BYREF
-  UnityEngine_Matrix4x4_o v12; // [xsp+90h] [xbp-E0h] BYREF
-  UnityEngine_Matrix4x4_o v13; // [xsp+D0h] [xbp-A0h] BYREF
+  float x; // s11
+  float y; // s12
+  float z; // s13
+  float w; // s14
+  float v13; // s7
+  unsigned __int64 v14; // d3 OVERLAPPED
+  float v15; // s5
+  int v16; // s4
+  UnityEngine_Vector3_o v17; // [xsp+0h] [xbp-170h]
+  UnityEngine_Matrix4x4_o v18; // [xsp+10h] [xbp-160h] BYREF
+  UnityEngine_Matrix4x4_o v19; // [xsp+50h] [xbp-120h] BYREF
+  UnityEngine_Matrix4x4_o v20; // [xsp+90h] [xbp-E0h] BYREF
+  UnityEngine_Matrix4x4_o v21; // [xsp+D0h] [xbp-A0h] BYREF
   float m11; // [xsp+15Ch] [xbp-14h]
-  UnityEngine_Vector3_o v15; // 0:kr24_12.12
-  UnityEngine_Vector3_o v16; // 0:kr40_12.12
-  UnityEngine_Quaternion_o rotation; // 0:kr00_16.16
-  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Quaternion_o v26; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  MirrorObjectFix__GetBounds((UnityEngine_Bounds_o *)&v13, this, method);
-  v3 = *(_QWORD *)&v13.fields.m00;
-  m20 = v13.fields.m20;
-  v5.n64_u64[0] = *(unsigned __int64 *)&v13.fields.m30;
-  m11 = v13.fields.m11;
-  UnityEngine_Gizmos__get_matrix(&v13, 0);
-  v18.fields.r = 1.0;
-  v18.fields.a = 1.0;
-  v18.fields.g = 0.92157;
-  v18.fields.b = 0.015686;
-  UnityEngine_Gizmos__set_color(v18, 0);
+  MirrorObjectFix__GetBounds((UnityEngine_Bounds_o *)&v21, this, method);
+  v3 = *(_QWORD *)&v21.fields.m00;
+  m20 = v21.fields.m20;
+  v5.n64_u64[0] = *(unsigned __int64 *)&v21.fields.m30;
+  m11 = v21.fields.m11;
+  UnityEngine_Gizmos__get_matrix(&v21, 0);
+  v24.fields.r = 1.0;
+  v24.fields.a = 1.0;
+  v24.fields.g = 0.92157;
+  v24.fields.b = 0.015686;
+  UnityEngine_Gizmos__set_color(v24, 0);
   RootTransform = MirrorObjectFix__get_RootTransform(this, v6);
   if ( !RootTransform
     || (rotation = UnityEngine_Transform__get_rotation(RootTransform, 0),
+        x = rotation.fields.x,
+        y = rotation.fields.y,
+        z = rotation.fields.z,
+        w = rotation.fields.w,
         (RootTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
     sub_2213CDC(RootTransform, v8);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(RootTransform, 0);
-  *(_QWORD *)&v16.fields.x = v3;
-  v16.fields.z = m20;
-  UnityEngine_Matrix4x4__TRS(&v12, v16, rotation, lossyScale, 0);
-  v11 = v12;
-  UnityEngine_Gizmos__set_matrix(&v11, 0);
+  v13 = lossyScale.fields.x;
+  *(_QWORD *)&v17.fields.y = *(_QWORD *)&lossyScale.fields.y;
+  *(_QWORD *)&lossyScale.fields.x = v3;
+  lossyScale.fields.z = m20;
+  v26.fields.x = x;
+  v26.fields.y = y;
+  v26.fields.z = z;
+  v26.fields.w = w;
+  v17.fields.x = v13;
+  UnityEngine_Matrix4x4__TRS(&v20, lossyScale, v26, v17, 0);
+  v19 = v20;
+  UnityEngine_Gizmos__set_matrix(&v19, 0);
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  *(float32x2_t *)&v15.fields.x = vadd_f32(v5, v5);
-  v15.fields.z = m11 + m11;
-  UnityEngine_Gizmos__DrawWireCube(UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, v15, 0);
-  v10 = v13;
-  UnityEngine_Gizmos__set_matrix(&v10, 0);
+  v14 = vadd_f32(v5, v5).n64_u64[0];
+  v15 = m11 + m11;
+  v16 = HIDWORD(v14);
+  UnityEngine_Gizmos__DrawWireCube(
+    UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
+    *(UnityEngine_Vector3_o *)&v14,
+    0);
+  v18 = v21;
+  UnityEngine_Gizmos__set_matrix(&v18, 0);
 }
 
 

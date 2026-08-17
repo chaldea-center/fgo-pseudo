@@ -645,7 +645,7 @@ void SvtCombineResultWindowComponent__UpdateValue(
         float val,
         const MethodInfo *method)
 {
-  __int64 resUsrSvtData; // x0
+  UserServantEntity_o *resUsrSvtData; // x0
   int v6; // w20
   __int64 v7; // x2
   const MethodInfo *v8; // x4
@@ -691,15 +691,15 @@ void SvtCombineResultWindowComponent__UpdateValue(
     sub_2213A60(&StringLiteral_9617/*"N0"*/);
     byte_596A1B9 = 1;
   }
-  resUsrSvtData = (__int64)this->fields.resUsrSvtData;
+  resUsrSvtData = this->fields.resUsrSvtData;
   *(_QWORD *)afterHp = 0;
   afterAtk = 0;
   if ( !resUsrSvtData )
     goto LABEL_69;
-  resUsrSvtData = UserServantEntity__getLevelMax((UserServantEntity_o *)resUsrSvtData, 0);
+  resUsrSvtData = (UserServantEntity_o *)UserServantEntity__getLevelMax(resUsrSvtData, 0);
   if ( !this->fields.skipCollider )
     goto LABEL_69;
-  v6 = resUsrSvtData;
+  v6 = (int)resUsrSvtData;
   UnityEngine_Collider__set_enabled(this->fields.skipCollider, 1, 0);
   baseUsrSvtData = this->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
@@ -720,7 +720,7 @@ void SvtCombineResultWindowComponent__UpdateValue(
     byte_5969ADF = 1;
   }
   v14 = v13 + exp;
-  resUsrSvtData = (__int64)System_Math_TypeInfo;
+  resUsrSvtData = (UserServantEntity_o *)System_Math_TypeInfo;
   if ( !*(&System_Math_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo, method, v7);
   v15 = vcvtms_s32_f32(v14);
@@ -730,7 +730,7 @@ void SvtCombineResultWindowComponent__UpdateValue(
     v16 = v15;
   if ( !byte_5969AE4 )
   {
-    resUsrSvtData = sub_2213A60(&UnityEngine_Mathf_TypeInfo);
+    resUsrSvtData = (UserServantEntity_o *)sub_2213A60(&UnityEngine_Mathf_TypeInfo);
     byte_5969AE4 = 1;
   }
   v17 = fabsf(val);
@@ -754,14 +754,19 @@ void SvtCombineResultWindowComponent__UpdateValue(
   v20 = this->fields.baseUsrSvtData;
   if ( !v20 )
     goto LABEL_69;
-  resUsrSvtData = SvtCombineResultWindowComponent__setSvtExp(this, (int32_t)method, v16, v20->fields.lv, v8);
+  resUsrSvtData = (UserServantEntity_o *)SvtCombineResultWindowComponent__setSvtExp(
+                                           this,
+                                           (int32_t)method,
+                                           v16,
+                                           v20->fields.lv,
+                                           v8);
   v21 = this->fields.baseUsrSvtData;
-  afterHp[1] = resUsrSvtData;
+  afterHp[1] = (int)resUsrSvtData;
   if ( !v21 )
     goto LABEL_69;
   if ( v21->fields.lv == v6 )
     return;
-  v22 = resUsrSvtData;
+  v22 = (int)resUsrSvtData;
   if ( !this->fields.isUpdateGauge )
   {
     v23 = Method_SvtCombineResultWindowComponent_UpdateValue__;
@@ -776,16 +781,16 @@ void SvtCombineResultWindowComponent__UpdateValue(
     this->fields.endDispLvInfoFlg = 1;
     return;
   }
-  resUsrSvtData = (__int64)this->fields.lvUpInfo;
+  resUsrSvtData = (UserServantEntity_o *)this->fields.lvUpInfo;
   if ( !resUsrSvtData )
     goto LABEL_69;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)resUsrSvtData, 1, 0);
-  resUsrSvtData = (__int64)this->fields.lvUpInfo;
+  resUsrSvtData = (UserServantEntity_o *)this->fields.lvUpInfo;
   if ( !resUsrSvtData )
     goto LABEL_69;
-  resUsrSvtData = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)resUsrSvtData,
-                             (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+  resUsrSvtData = (UserServantEntity_o *)UnityEngine_GameObject__GetComponent_object_(
+                                           (UnityEngine_GameObject_o *)resUsrSvtData,
+                                           (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !resUsrSvtData )
     goto LABEL_69;
   v25 = (UITweener_o *)resUsrSvtData;
@@ -795,18 +800,18 @@ void SvtCombineResultWindowComponent__UpdateValue(
   this->fields.PrevLevel = v22;
   this->fields.endDispLvInfoFlg = 0;
   v27 = isEqCombine ? this->fields.resSvtEqLvLb : this->fields.resLvLb;
-  resUsrSvtData = (__int64)System_Int32__ToString((int32_t)&afterHp[1], 0);
+  resUsrSvtData = (UserServantEntity_o *)System_Int32__ToString((int32_t)&afterHp[1], 0);
   if ( !v27 )
     goto LABEL_69;
   UIExtrusionLabel__set_text(v27, (System_String_o *)resUsrSvtData, 0);
   resLvWidget = this->fields.resLvWidget;
-  resUsrSvtData = (__int64)SvtCombineResultWindowComponent_TypeInfo;
+  resUsrSvtData = (UserServantEntity_o *)SvtCombineResultWindowComponent_TypeInfo;
   if ( !*(&SvtCombineResultWindowComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SvtCombineResultWindowComponent_TypeInfo, method, v28);
   if ( !resLvWidget )
     goto LABEL_69;
   UIWidget__set_color(resLvWidget, SvtCombineResultWindowComponent_TypeInfo->static_fields->COLOR_VAL, 0);
-  resUsrSvtData = (__int64)this->fields.checkResInfo;
+  resUsrSvtData = (UserServantEntity_o *)this->fields.checkResInfo;
   if ( !resUsrSvtData )
     goto LABEL_69;
   CheckCombineResStatus__getCombineResStatus(
@@ -821,10 +826,10 @@ void SvtCombineResultWindowComponent__UpdateValue(
     if ( this->fields.isEqCombine )
     {
       resSvtEqHpLb = this->fields.resSvtEqHpLb;
-      resUsrSvtData = (__int64)System_Int32__ToString_77138656(
-                                 (int32_t)afterHp,
-                                 (System_String_o *)StringLiteral_9617/*"N0"*/,
-                                 0);
+      resUsrSvtData = (UserServantEntity_o *)System_Int32__ToString_77138656(
+                                               (int32_t)afterHp,
+                                               (System_String_o *)StringLiteral_9617/*"N0"*/,
+                                               0);
       if ( !resSvtEqHpLb )
         goto LABEL_69;
       UILabel__set_text(resSvtEqHpLb, (System_String_o *)resUsrSvtData, 0);
@@ -832,16 +837,16 @@ void SvtCombineResultWindowComponent__UpdateValue(
     else
     {
       resHpLb = this->fields.resHpLb;
-      resUsrSvtData = (__int64)System_Int32__ToString_77138656(
-                                 (int32_t)afterHp,
-                                 (System_String_o *)StringLiteral_9617/*"N0"*/,
-                                 0);
+      resUsrSvtData = (UserServantEntity_o *)System_Int32__ToString_77138656(
+                                               (int32_t)afterHp,
+                                               (System_String_o *)StringLiteral_9617/*"N0"*/,
+                                               0);
       if ( !resHpLb )
         goto LABEL_69;
       UILabel__set_text(resHpLb, (System_String_o *)resUsrSvtData, 0);
       SvtCombineResultWindowComponent__setResAdjustHpInfo(this, this->fields.resUsrSvtData, v33);
     }
-    resUsrSvtData = (__int64)SvtCombineResultWindowComponent_TypeInfo;
+    resUsrSvtData = (UserServantEntity_o *)SvtCombineResultWindowComponent_TypeInfo;
     resHpWidget = this->fields.resHpWidget;
     if ( !*(&SvtCombineResultWindowComponent_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(SvtCombineResultWindowComponent_TypeInfo, method, v31);
@@ -854,10 +859,10 @@ void SvtCombineResultWindowComponent__UpdateValue(
   if ( this->fields.isEqCombine )
   {
     resSvtEqAtkLb = this->fields.resSvtEqAtkLb;
-    resUsrSvtData = (__int64)System_Int32__ToString_77138656(
-                               (int32_t)&afterAtk,
-                               (System_String_o *)StringLiteral_9617/*"N0"*/,
-                               0);
+    resUsrSvtData = (UserServantEntity_o *)System_Int32__ToString_77138656(
+                                             (int32_t)&afterAtk,
+                                             (System_String_o *)StringLiteral_9617/*"N0"*/,
+                                             0);
     if ( !resSvtEqAtkLb )
       goto LABEL_69;
     UILabel__set_text(resSvtEqAtkLb, (System_String_o *)resUsrSvtData, 0);
@@ -865,16 +870,16 @@ void SvtCombineResultWindowComponent__UpdateValue(
   else
   {
     resAtkLb = this->fields.resAtkLb;
-    resUsrSvtData = (__int64)System_Int32__ToString_77138656(
-                               (int32_t)&afterAtk,
-                               (System_String_o *)StringLiteral_9617/*"N0"*/,
-                               0);
+    resUsrSvtData = (UserServantEntity_o *)System_Int32__ToString_77138656(
+                                             (int32_t)&afterAtk,
+                                             (System_String_o *)StringLiteral_9617/*"N0"*/,
+                                             0);
     if ( !resAtkLb )
       goto LABEL_69;
     UILabel__set_text(resAtkLb, (System_String_o *)resUsrSvtData, 0);
     SvtCombineResultWindowComponent__setResAdjustAtkInfo(this, this->fields.resUsrSvtData, v38);
   }
-  resUsrSvtData = (__int64)SvtCombineResultWindowComponent_TypeInfo;
+  resUsrSvtData = (UserServantEntity_o *)SvtCombineResultWindowComponent_TypeInfo;
   resAtkWidget = this->fields.resAtkWidget;
   if ( !*(&SvtCombineResultWindowComponent_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(SvtCombineResultWindowComponent_TypeInfo, method, v36);
@@ -1854,7 +1859,7 @@ void SvtCombineResultWindowComponent__setBefResultState(
   bool v84; // w7
   System_Action_o *v85; // x20
   __int64 barExp; // [xsp+0h] [xbp-40h] BYREF
-  __int64 lateExp; // [xsp+8h] [xbp-38h] BYREF
+  int32_t lateExp[2]; // [xsp+8h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v88; // 0:x0.16
   UnityEngine_Color_o v89; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v90; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -1877,7 +1882,7 @@ void SvtCombineResultWindowComponent__setBefResultState(
   }
   skipCollider = this->fields.skipCollider;
   barExp = 0;
-  lateExp = 0;
+  *(_QWORD *)lateExp = 0;
   if ( !skipCollider )
     goto LABEL_54;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)skipCollider, 0, 0);
@@ -2041,18 +2046,13 @@ LABEL_14:
   skipCollider = *p_baseUsrSvtData;
   if ( !*p_baseUsrSvtData )
     goto LABEL_54;
-  UserServantEntity__getExpInfo(
-    (UserServantEntity_o *)skipCollider,
-    (int32_t *)&lateExp + 1,
-    (int32_t *)&lateExp,
-    (float *)&barExp + 1,
-    0);
+  UserServantEntity__getExpInfo((UserServantEntity_o *)skipCollider, &lateExp[1], lateExp, (float *)&barExp + 1, 0);
   skipCollider = this->fields.currentExpBar;
   if ( !skipCollider )
     goto LABEL_54;
   UIProgressBar__set_value((UIProgressBar_o *)skipCollider, *((float *)&barExp + 1), 0);
   currentExpValLb = this->fields.currentExpValLb;
-  skipCollider = System_Int32__ToString_77138656((int32_t)&lateExp, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
+  skipCollider = System_Int32__ToString_77138656((int32_t)lateExp, (System_String_o *)StringLiteral_422/*"#,0"*/, 0);
   if ( !currentExpValLb )
     goto LABEL_54;
   UILabel__set_text(currentExpValLb, (System_String_o *)skipCollider, 0);
@@ -2861,7 +2861,7 @@ void SvtCombineResultWindowComponent__setResAdjustAtkInfo(
   int32_t v16; // w23
   __int64 v17; // x2
   BalanceConfig_c *v18; // x0
-  int v19; // w24
+  int32_t v19; // w24
   int32_t v20; // w9
   int v21; // w8
   int v22; // w10
@@ -2872,7 +2872,7 @@ void SvtCombineResultWindowComponent__setResAdjustAtkInfo(
   bool v27; // w8
   int32_t addParamMaxAdjust2[2]; // [xsp+18h] [xbp-58h] BYREF
   int32_t secondMaxAdjustAtk[2]; // [xsp+20h] [xbp-50h] BYREF
-  __int64 maxAjustAtk; // [xsp+28h] [xbp-48h] BYREF
+  int32_t maxAjustAtk[2]; // [xsp+28h] [xbp-48h] BYREF
   int32_t atkData[2]; // [xsp+38h] [xbp-38h] BYREF
   UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -2886,7 +2886,7 @@ void SvtCombineResultWindowComponent__setResAdjustAtkInfo(
   resAdjustAtkIconLabel = (UnityEngine_Component_o *)this->fields.resAdjustAtkIconLabel;
   *(_QWORD *)atkData = 0;
   *(_QWORD *)secondMaxAdjustAtk = 0;
-  maxAjustAtk = 0;
+  *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
   if ( !resAdjustAtkIconLabel )
     goto LABEL_40;
@@ -2939,8 +2939,8 @@ void SvtCombineResultWindowComponent__setResAdjustAtkInfo(
   v16 = v14->static_fields->StatusUpAdjustAtk;
   if ( UserServantEntity__GetAdjustMaxDetail(
          (UserServantEntity_o *)resAdjustAtkIconLabel,
-         (int32_t *)&maxAjustAtk + 1,
-         (int32_t *)&maxAjustAtk,
+         &maxAjustAtk[1],
+         maxAjustAtk,
          &secondMaxAdjustAtk[1],
          secondMaxAdjustAtk,
          &addParamMaxAdjust2[1],
@@ -2948,7 +2948,7 @@ void SvtCombineResultWindowComponent__setResAdjustAtkInfo(
          0) )
   {
     v18 = BalanceConfig_TypeInfo;
-    v19 = maxAjustAtk;
+    v19 = maxAjustAtk[0];
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, targetData, v17);
@@ -3016,7 +3016,7 @@ void SvtCombineResultWindowComponent__setResAdjustHpInfo(
   int32_t v16; // w23
   __int64 v17; // x2
   BalanceConfig_c *v18; // x0
-  int v19; // w24
+  int32_t v19; // w24
   int32_t v20; // w9
   int v21; // w8
   int v22; // w10
@@ -3027,7 +3027,7 @@ void SvtCombineResultWindowComponent__setResAdjustHpInfo(
   bool v27; // w8
   int32_t addParamMaxAdjust2[2]; // [xsp+18h] [xbp-58h] BYREF
   int32_t secondMaxAdjustAtk[2]; // [xsp+20h] [xbp-50h] BYREF
-  __int64 maxAjustAtk; // [xsp+28h] [xbp-48h] BYREF
+  int32_t maxAjustAtk[2]; // [xsp+28h] [xbp-48h] BYREF
   int32_t atkData[2]; // [xsp+38h] [xbp-38h] BYREF
   UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -3041,7 +3041,7 @@ void SvtCombineResultWindowComponent__setResAdjustHpInfo(
   resAdjustHpIconLabel = (UnityEngine_Component_o *)this->fields.resAdjustHpIconLabel;
   *(_QWORD *)atkData = 0;
   *(_QWORD *)secondMaxAdjustAtk = 0;
-  maxAjustAtk = 0;
+  *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)addParamMaxAdjust2 = 0;
   if ( !resAdjustHpIconLabel )
     goto LABEL_40;
@@ -3094,8 +3094,8 @@ void SvtCombineResultWindowComponent__setResAdjustHpInfo(
   v16 = v14->static_fields->StatusUpAdjustHp;
   if ( UserServantEntity__GetAdjustMaxDetail(
          (UserServantEntity_o *)resAdjustHpIconLabel,
-         (int32_t *)&maxAjustAtk + 1,
-         (int32_t *)&maxAjustAtk,
+         &maxAjustAtk[1],
+         maxAjustAtk,
          &secondMaxAdjustAtk[1],
          secondMaxAdjustAtk,
          &addParamMaxAdjust2[1],
@@ -3103,7 +3103,7 @@ void SvtCombineResultWindowComponent__setResAdjustHpInfo(
          0) )
   {
     v18 = BalanceConfig_TypeInfo;
-    v19 = HIDWORD(maxAjustAtk);
+    v19 = maxAjustAtk[1];
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, targetData, v17);

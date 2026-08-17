@@ -23,14 +23,16 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
   struct DebugPanelRootComponent_paramDelegate_o *v4; // x8
   struct DebugPanelRootComponent_paramStrDelegate_o *paramStrdel; // x8
   int32_t max; // w9
-  void (__fastcall **paramdel)(_QWORD); // x8
+  struct DebugPanelRootComponent_paramDelegate_o *paramdel; // x8
   const MethodInfo *v8; // x1
+  _BOOL4 v9; // w9
+  struct DebugPanelRootComponent_tgrDelegate_o *tgrdel; // x8
   struct DebugPanelRootComponent_menuDelegate_o *menudel; // x8
   _BOOL4 flg; // w9
   struct DebugPanelRootComponent_paramtgrDelegate_o *paramtgrdel; // x8
-  __int64 v12; // x0
-  System_ArgumentOutOfRangeException_o *v13; // x19
   __int64 v14; // x0
+  System_ArgumentOutOfRangeException_o *v15; // x19
+  __int64 v16; // x0
 
   type = this->fields.type;
   if ( type > 2 )
@@ -45,17 +47,29 @@ void DebugMenuComponent__OnClickMenu(DebugMenuComponent_o *this, const MethodInf
         method = (const MethodInfo *)(unsigned int)this->fields.min;
         this->fields.param = (int)method;
       }
-      paramdel = (void (__fastcall **)(_QWORD))this->fields.paramdel;
+      paramdel = this->fields.paramdel;
       if ( !paramdel )
         goto LABEL_24;
-LABEL_17:
-      paramdel[3](paramdel[8]);
-LABEL_22:
-      DebugMenuComponent__updateTitleLabel(this, v8);
-      return;
+      ((void (__fastcall *)(intptr_t, const MethodInfo *, intptr_t))paramdel->fields.invoke_impl)(
+        paramdel->fields.method_code,
+        method,
+        paramdel->fields.method);
     }
-    if ( type == 3 )
+    else
     {
+      if ( type != 3 )
+      {
+        if ( type != 4 )
+          goto LABEL_25;
+        paramStrdel = this->fields.paramStrdel;
+        if ( !paramStrdel )
+          goto LABEL_24;
+        ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))paramStrdel->fields.invoke_impl)(
+          paramStrdel->fields.method_code,
+          this->fields.strParam,
+          paramStrdel->fields.method);
+        return;
+      }
       flg = this->fields.flg;
       paramtgrdel = this->fields.paramtgrdel;
       this->fields.flg = !flg;
@@ -66,57 +80,52 @@ LABEL_22:
         (unsigned int)this->fields.param,
         !flg,
         paramtgrdel->fields.method);
-      goto LABEL_22;
     }
-    if ( type != 4 )
-      goto LABEL_25;
-    paramStrdel = this->fields.paramStrdel;
-    if ( !paramStrdel )
-      goto LABEL_24;
-    ((void (__fastcall *)(intptr_t, struct System_String_o *, intptr_t))paramStrdel->fields.invoke_impl)(
-      paramStrdel->fields.method_code,
-      this->fields.strParam,
-      paramStrdel->fields.method);
+LABEL_22:
+    DebugMenuComponent__updateTitleLabel(this, v8);
+    return;
   }
-  else
+  if ( type )
   {
-    if ( type )
+    if ( type != 1 )
     {
-      if ( type != 1 )
+      if ( type == 2 )
       {
-        if ( type == 2 )
+        v4 = this->fields.paramdel;
+        if ( v4 )
         {
-          v4 = this->fields.paramdel;
-          if ( v4 )
-          {
-            ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
-              v4->fields.method_code,
-              (unsigned int)this->fields.param,
-              v4->fields.method);
-            return;
-          }
-LABEL_24:
-          sub_2213CDC(this, method);
+          ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
+            v4->fields.method_code,
+            (unsigned int)this->fields.param,
+            v4->fields.method);
+          return;
         }
-LABEL_25:
-        v12 = sub_2213A74(&System_ArgumentOutOfRangeException_TypeInfo);
-        v13 = (System_ArgumentOutOfRangeException_o *)sub_2213CCC(v12);
-        System_ArgumentOutOfRangeException___ctor(v13, 0);
-        v14 = sub_2213A74(&Method_DebugMenuComponent_OnClickMenu__);
-        sub_2213BA0(v13, v14);
+LABEL_24:
+        sub_2213CDC(this, method);
       }
-      paramdel = (void (__fastcall **)(_QWORD))this->fields.tgrdel;
-      this->fields.flg ^= 1u;
-      if ( !paramdel )
-        goto LABEL_24;
-      goto LABEL_17;
+LABEL_25:
+      v14 = sub_2213A74(&System_ArgumentOutOfRangeException_TypeInfo);
+      v15 = (System_ArgumentOutOfRangeException_o *)sub_2213CCC(v14);
+      System_ArgumentOutOfRangeException___ctor(v15, 0);
+      v16 = sub_2213A74(&Method_DebugMenuComponent_OnClickMenu__);
+      sub_2213BA0(v15, v16);
     }
-    menudel = this->fields.menudel;
-    if ( menudel )
-      ((void (__fastcall *)(intptr_t, intptr_t))menudel->fields.invoke_impl)(
-        menudel->fields.method_code,
-        menudel->fields.method);
+    v9 = this->fields.flg;
+    tgrdel = this->fields.tgrdel;
+    this->fields.flg = !v9;
+    if ( !tgrdel )
+      goto LABEL_24;
+    ((void (__fastcall *)(intptr_t, bool, intptr_t))tgrdel->fields.invoke_impl)(
+      tgrdel->fields.method_code,
+      !v9,
+      tgrdel->fields.method);
+    goto LABEL_22;
   }
+  menudel = this->fields.menudel;
+  if ( menudel )
+    ((void (__fastcall *)(intptr_t, intptr_t))menudel->fields.invoke_impl)(
+      menudel->fields.method_code,
+      menudel->fields.method);
 }
 
 

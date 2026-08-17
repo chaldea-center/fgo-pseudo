@@ -366,6 +366,7 @@ void BattleSkillSelectBtnBaseComponent__SetBtnSprite(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleSkillSelectBtnBaseComponent__UpdateButton(
         BattleSkillSelectBtnBaseComponent_o *this,
         int32_t index,
@@ -378,11 +379,17 @@ void BattleSkillSelectBtnBaseComponent__UpdateButton(
   __int64 v11; // x1
   Il2CppObject *v12; // x21
   _BOOL4 v13; // w23
+  float a; // s3
+  float b; // s2
+  float g; // s1
+  float r; // s0 OVERLAPPED
   System_String_o *klass; // x8
-  System_String_o *v18; // x1
+  System_String_o *v19; // x1
+  float v20; // s3
+  float v21; // s2
+  float v22; // s1
+  float v23; // s0 OVERLAPPED
   Il2CppObject *component; // [xsp+8h] [xbp-38h] BYREF
-  UnityEngine_Color_o disableColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_597429D & 1) == 0 )
   {
@@ -422,17 +429,22 @@ void BattleSkillSelectBtnBaseComponent__UpdateButton(
            &component,
            (const MethodInfo_38B7F30 *)Method_UnityEngine_GameObject_TryGetComponent_UIButton___) )
     {
-      disableColor.fields.a = 1.0;
-      disableColor.fields.b = 1.0;
+      a = 1.0;
+      b = 1.0;
       v10 = component;
-      disableColor.fields.g = 1.0;
-      disableColor.fields.r = 1.0;
+      g = 1.0;
+      r = 1.0;
       if ( v13 )
-        disableColor = this->fields.disableColor;
+      {
+        r = this->fields.disableColor.fields.r;
+        g = this->fields.disableColor.fields.g;
+        b = this->fields.disableColor.fields.b;
+        a = this->fields.disableColor.fields.a;
+      }
       if ( !component )
 LABEL_26:
         sub_2213CDC(v10, v11);
-      UIButtonColor__set_defaultColor((UIButtonColor_o *)component, disableColor, 0);
+      UIButtonColor__set_defaultColor((UIButtonColor_o *)component, *(UnityEngine_Color_o *)&r, 0);
     }
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
@@ -452,17 +464,22 @@ LABEL_26:
           goto LABEL_26;
       }
       if ( klass )
-        v18 = klass;
+        v19 = klass;
       else
-        v18 = (System_String_o *)StringLiteral_1/*""*/;
-      UILabel__set_text(label, v18, 0);
-      v24.fields.a = 1.0;
-      v24.fields.b = 1.0;
-      v24.fields.g = 1.0;
-      v24.fields.r = 1.0;
+        v19 = (System_String_o *)StringLiteral_1/*""*/;
+      UILabel__set_text(label, v19, 0);
+      v20 = 1.0;
+      v21 = 1.0;
+      v22 = 1.0;
+      v23 = 1.0;
       if ( v13 )
-        v24 = this->fields.disableColor;
-      UIWidget__set_color((UIWidget_o *)label, v24, 0);
+      {
+        v23 = this->fields.disableColor.fields.r;
+        v22 = this->fields.disableColor.fields.g;
+        v21 = this->fields.disableColor.fields.b;
+        v20 = this->fields.disableColor.fields.a;
+      }
+      UIWidget__set_color((UIWidget_o *)label, *(UnityEngine_Color_o *)&v23, 0);
     }
   }
 }

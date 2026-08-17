@@ -153,6 +153,7 @@ void QuestBoardListViewObject__InitItem(QuestBoardListViewObject_o *this, const 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void QuestBoardListViewObject__Init_43262556(
         QuestBoardListViewObject_o *this,
         int32_t initMode,
@@ -160,20 +161,14 @@ void QuestBoardListViewObject__Init_43262556(
         const MethodInfo *method)
 {
   float v4; // s0
-  float v5; // s1
-  float v6; // s2
-  float v7; // s3
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v5; // s1 OVERLAPPED
 
   if ( !byte_5969AE0 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v11.fields.x = v5;
-  v11.fields.y = v6;
-  v11.fields.z = v7;
-  QuestBoardListViewObject__Init_43262640(this, initMode, callbackFunc, v4, v11, method);
+  QuestBoardListViewObject__Init_43262640(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 

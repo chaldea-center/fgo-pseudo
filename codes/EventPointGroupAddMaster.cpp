@@ -240,6 +240,7 @@ bool EventPointGroupAddMaster__IsClearCondChangeImage(
   int v37; // w23
   int32_t v38; // w21
   System_Collections_ObjectModel_Collection_T__o *v39; // x22
+  bool result; // w0
 
   if ( (byte_59708E9 & 1) == 0 )
   {
@@ -370,8 +371,9 @@ LABEL_18:
     if ( v37 == ++v38 )
       return 0;
   }
+  result = 1;
   *imageId = HIDWORD(v39[1].monitor);
-  return 1;
+  return result;
 }
 
 

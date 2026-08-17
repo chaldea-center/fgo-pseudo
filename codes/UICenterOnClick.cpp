@@ -18,12 +18,16 @@ void UICenterOnClick__OnClick(UICenterOnClick_o *this, const MethodInfo *method)
   const MethodInfo *v12; // x4
   Il2CppObject *Component_object; // x21
   UnityEngine_Transform_o *cachedTransform; // x22
-  float v15; // s9
+  float x; // s9
   float y; // s10
+  float z; // s8
+  float v18; // s9
+  float v19; // s10
   UnityEngine_GameObject_o *cachedGameObject; // x0
-  UnityEngine_Vector3_o v18; // 0:kr14_12.12
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5974FAC & 1) == 0 )
   {
@@ -77,36 +81,40 @@ void UICenterOnClick__OnClick(UICenterOnClick_o *this, const MethodInfo *method)
         position = UnityEngine_Transform__get_position(v9, 0);
         if ( cachedTransform )
         {
-          v18 = UnityEngine_Transform__InverseTransformPoint(cachedTransform, position, 0);
+          v22 = UnityEngine_Transform__InverseTransformPoint(cachedTransform, position, 0);
           if ( Component_object )
           {
+            x = v22.fields.x;
+            y = v22.fields.y;
+            z = v22.fields.z;
             if ( UIScrollView__get_canMoveHorizontally((UIScrollView_o *)Component_object, 0) )
             {
-              v15 = -v18.fields.x;
+              v18 = -x;
             }
             else
             {
               v9 = UIRect__get_cachedTransform((UIRect_o *)v8, 0);
               if ( !v9 )
                 goto LABEL_29;
-              LODWORD(v15) = (unsigned int)UnityEngine_Transform__get_localPosition(v9, 0);
+              LODWORD(v18) = (unsigned int)UnityEngine_Transform__get_localPosition(v9, 0);
             }
             if ( UIScrollView__get_canMoveVertically((UIScrollView_o *)Component_object, 0) )
             {
-              y = -v18.fields.y;
+              v19 = -y;
             }
             else
             {
               v9 = UIRect__get_cachedTransform((UIRect_o *)v8, 0);
               if ( !v9 )
                 goto LABEL_29;
-              y = UnityEngine_Transform__get_localPosition(v9, 0).fields.y;
+              localPosition = UnityEngine_Transform__get_localPosition(v9, 0);
+              v19 = localPosition.fields.y;
             }
             cachedGameObject = UIRect__get_cachedGameObject((UIRect_o *)v8, 0);
-            v19.fields.x = v15;
-            v19.fields.z = -v18.fields.z;
-            v19.fields.y = y;
-            SpringPanel__Begin(cachedGameObject, v19, 6.0, 0);
+            v24.fields.x = v18;
+            v24.fields.z = -z;
+            v24.fields.y = v19;
+            SpringPanel__Begin(cachedGameObject, v24, 6.0, 0);
             return;
           }
         }

@@ -40,6 +40,7 @@ void RecommendSupportServantSelectListViewItemDraw___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
         RecommendSupportServantSelectListViewItemDraw_o *this,
         const MethodInfo *method)
@@ -55,13 +56,17 @@ void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
   System_Collections_Generic_List_object__o *ItemList; // x8
   struct TweenColor_o *v11; // x20
   struct TweenColor_o *v12; // x8
+  float v13; // s0 OVERLAPPED
+  float v14; // s1
+  int v15; // s0 OVERLAPPED
+  int v16; // s1
+  int v17; // s2
+  float v18; // s3
   struct TweenColor_o *warningTweenColor; // x8
-  struct TweenColor_o *v23; // x8
-  int32_t v25; // w10
-  struct RecommendSupportServantSelectListViewItemDraw_WarningLabelText_array *v26; // x9
-  UnityEngine_Vector2_o v28; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v29; // 0:s0.4,4:s1.4
-  UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct TweenColor_o *v25; // x8
+  int32_t v27; // w10
+  struct RecommendSupportServantSelectListViewItemDraw_WarningLabelText_array *v28; // x9
+  UnityEngine_Vector2_o v30; // 0:s0.4,4:s1.4
   UnityEngine_Color_o v31; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
@@ -168,61 +173,61 @@ void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
       warningLabel = v2->fields.warningLabel;
       if ( !warningLabel )
         goto LABEL_47;
-      v28.fields.x = 2.0;
-      v28.fields.y = 2.0;
+      v13 = 2.0;
+      v14 = 2.0;
     }
     else
     {
-      v23 = v2->fields.warningTweenColor;
+      v25 = v2->fields.warningTweenColor;
       if ( v7->fields.isSkillInvalid )
       {
-        if ( !v23 )
+        if ( !v25 )
           goto LABEL_47;
         __asm { FMOV            V0.4S, #1.0 }
-        v23->fields.to = _Q0;
+        v25->fields.to = _Q0;
         warningLabel = v2->fields.warningLabel;
         if ( !warningLabel )
           goto LABEL_47;
-        v29.fields.x = 2.0;
-        v29.fields.y = 2.0;
-        UILabel__set_effectDistance((UILabel_o *)warningLabel, v29, 0);
+        v30.fields.x = 2.0;
+        v30.fields.y = 2.0;
+        UILabel__set_effectDistance((UILabel_o *)warningLabel, v30, 0);
         warningLabel = v2->fields.warningLabel;
         if ( !warningLabel )
           goto LABEL_47;
-        v30.fields.r = 0.0;
-        v30.fields.g = 0.0;
-        v30.fields.a = 0.50196;
-        v30.fields.b = 0.0;
+        v15 = 0;
+        v16 = 0;
+        v18 = 0.50196;
+        v17 = 0;
         goto LABEL_39;
       }
-      if ( !v23 )
+      if ( !v25 )
         goto LABEL_47;
       __asm { FMOV            V0.4S, #1.0 }
-      v23->fields.to = _Q0;
+      v25->fields.to = _Q0;
       warningLabel = v2->fields.warningLabel;
       if ( !warningLabel )
         goto LABEL_47;
-      v28.fields.x = 1.0;
-      v28.fields.y = 1.0;
+      v13 = 1.0;
+      v14 = 1.0;
     }
-    UILabel__set_effectDistance((UILabel_o *)warningLabel, v28, 0);
+    UILabel__set_effectDistance((UILabel_o *)warningLabel, *(UnityEngine_Vector2_o *)&v13, 0);
     warningLabel = v2->fields.warningLabel;
     if ( !warningLabel )
       goto LABEL_47;
-    v30.fields.r = 0.0;
-    v30.fields.g = 0.0;
-    v30.fields.b = 0.0;
-    v30.fields.a = 1.0;
+    v15 = 0;
+    v16 = 0;
+    v17 = 0;
+    v18 = 1.0;
 LABEL_39:
-    UILabel__set_effectColor((UILabel_o *)warningLabel, v30, 0);
+    UILabel__set_effectColor((UILabel_o *)warningLabel, *(UnityEngine_Color_o *)&v15, 0);
 LABEL_40:
-    v25 = v2->fields.warningLabelTextSync2Pattern;
-    v26 = v2->fields.warningLabelTexts;
-    v2->fields.warningLabelTextSync2Pattern = v25 + 1;
-    v2->fields.warningLabelTextSync2PatternOld = v25;
-    if ( v26 )
+    v27 = v2->fields.warningLabelTextSync2Pattern;
+    v28 = v2->fields.warningLabelTexts;
+    v2->fields.warningLabelTextSync2Pattern = v27 + 1;
+    v2->fields.warningLabelTextSync2PatternOld = v27;
+    if ( v28 )
     {
-      if ( v25 + 1 >= SLODWORD(v26->max_length) )
+      if ( v27 + 1 >= SLODWORD(v28->max_length) )
         v2->fields.warningLabelTextSync2Pattern = 0;
       return;
     }

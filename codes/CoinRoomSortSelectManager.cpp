@@ -186,8 +186,8 @@ void CoinRoomSortSelectManager__InitCategoryContainer(
   Il2CppObject *v19; // x21
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o BottomPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o BottomPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_5974851 & 1) == 0 )
@@ -281,10 +281,10 @@ LABEL_27:
         if ( !v19 )
           goto LABEL_27;
         ServantFilterCategoryContainer__SetActive((ServantFilterCategoryContainer_o *)v19, 1, 0);
-        v23.fields.x = x;
-        v23.fields.y = y;
-        v23.fields.z = z;
-        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v19, v23, 0);
+        v22.fields.x = x;
+        v22.fields.y = y;
+        v22.fields.z = z;
+        ServantFilterCategoryContainer__SetPosition((ServantFilterCategoryContainer_o *)v19, v22, 0);
         ServantFilterCategoryContainer__Layout(
           (ServantFilterCategoryContainer_o *)v19,
           HIDWORD(v19[3].monitor) == v5,
@@ -1315,8 +1315,10 @@ void CoinRoomSortSelectManager__SetupButtonLayout(
 {
   UnityEngine_GameObject_o *servantSortRoot; // x0
   bool v6; // w1
-  System_Array_o *v7; // x20
-  const MethodInfo *v8; // x2
+  System_Array_o *v7; // x0
+  System_RuntimeFieldHandle_o v8; // x1
+  ListViewSort_FilterCategoryKind_array *v9; // x20
+  const MethodInfo *v10; // x2
 
   if ( (byte_5974854 & 1) == 0 )
   {
@@ -1354,11 +1356,10 @@ LABEL_11:
   UnityEngine_GameObject__SetActive(servantSortRoot, v6, 0);
 LABEL_12:
   v7 = (System_Array_o *)sub_2213B20(ListViewSort_FilterCategoryKind___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v7,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0F9817BD50D95010EC11F3FB54C5CFCC06B1F6F9B8A1A053A0169143CC4F9805,
-    0);
-  CoinRoomSortSelectManager__InitCategoryContainer(this, (ListViewSort_FilterCategoryKind_array *)v7, v8);
+  v8.fields.value = Field__PrivateImplementationDetails__0F9817BD50D95010EC11F3FB54C5CFCC06B1F6F9B8A1A053A0169143CC4F9805;
+  v9 = (ListViewSort_FilterCategoryKind_array *)v7;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v7, v8, 0);
+  CoinRoomSortSelectManager__InitCategoryContainer(this, v9, v10);
   servantSortRoot = (UnityEngine_GameObject_o *)this->fields.scrollView;
   if ( !servantSortRoot )
     goto LABEL_14;
@@ -1693,7 +1694,7 @@ System_IAsyncResult_o *CoinRoomSortSelectManager_CallbackFunc__BeginInvoke(
   v10[0] = result;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

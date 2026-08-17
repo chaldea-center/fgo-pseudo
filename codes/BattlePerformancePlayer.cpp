@@ -156,7 +156,7 @@ void BattlePerformancePlayer__Initialize(
   __int64 v39; // x8
   struct BattlePerformance_o *perf; // x1
   struct BattleServantParamComponent_array *v41; // x8
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.perf = inperf;
   sub_2213A04(

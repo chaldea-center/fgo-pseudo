@@ -407,5 +407,5 @@ bool UserEventQuestCooltimeMaster___c__DisplayClass5_0___GetEntityFromSpotId_b__
   {
     sub_2213CDC(this, entity);
   }
-  return *((_DWORD *)this + 12) == v3->fields.spotId;
+  return LODWORD(this[2].klass) == v3->fields.spotId;
 }

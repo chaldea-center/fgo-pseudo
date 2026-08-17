@@ -849,7 +849,7 @@ System_IAsyncResult_o *LinkConfirmDialog_ClickDelegate__BeginInvoke(
   v10[0] = isOk;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1115,12 +1115,12 @@ LABEL_28:
         this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)LinkConfirmDialog_TypeInfo;
         v16 = _4__this->fields.bannerRetryCount + 1;
         _4__this->fields.bannerRetryCount = v16;
-        if ( !*((_DWORD *)this + 57) )
+        if ( !HIDWORD(this[3].fields.__4__this) )
         {
           j_il2cpp_runtime_class_init_0(this, method);
           this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)LinkConfirmDialog_TypeInfo;
         }
-        if ( v16 <= **((_DWORD **)this + 23) )
+        if ( v16 <= (__int64)this[2].fields._texDl_5__2->klass )
         {
           v69 = v3->fields.__8__1;
           if ( v69 )

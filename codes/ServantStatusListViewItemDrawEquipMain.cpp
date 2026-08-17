@@ -49,7 +49,7 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
   __int64 v33; // x2
   UILabel_o *v34; // x19
   __int64 barExp; // [xsp+20h] [xbp-40h] BYREF
-  __int64 exp; // [xsp+28h] [xbp-38h] BYREF
+  int32_t exp[2]; // [xsp+28h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-28h] BYREF
 
   if ( (byte_596D343 & 1) == 0 )
@@ -68,7 +68,7 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
   }
   entity = 0;
   barExp = 0;
-  exp = 0;
+  *(_QWORD *)exp = 0;
   this->fields.dispMode = mode;
   if ( item && mode )
   {
@@ -136,21 +136,21 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
       }
     }
     levelLabel = this->fields.levelLabel;
-    HIDWORD(exp) = ServantStatusListViewItem__get_Level(item, 0);
-    servantFacceIcon = (ServantFaceIconComponent_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+    exp[1] = ServantStatusListViewItem__get_Level(item, 0);
+    servantFacceIcon = (ServantFaceIconComponent_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( levelLabel )
     {
       UIExtrusionLabel__set_text(levelLabel, (System_String_o *)servantFacceIcon, 0);
       maxLevelLabel = this->fields.maxLevelLabel;
-      HIDWORD(exp) = ServantStatusListViewItem__get_MaxLevel(item, 0);
-      servantFacceIcon = (ServantFaceIconComponent_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+      exp[1] = ServantStatusListViewItem__get_MaxLevel(item, 0);
+      servantFacceIcon = (ServantFaceIconComponent_o *)System_Int32__ToString((int32_t)&exp[1], 0);
       if ( maxLevelLabel )
       {
         UILabel__set_text(maxLevelLabel, (System_String_o *)servantFacceIcon, 0);
         costLabel = this->fields.costLabel;
         Cost = ServantStatusListViewItem__get_Cost(item, 0);
-        HIDWORD(exp) = ServantStatusListViewItem__get_EquipCost(item, 0) + Cost;
-        servantFacceIcon = (ServantFaceIconComponent_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+        exp[1] = ServantStatusListViewItem__get_EquipCost(item, 0) + Cost;
+        servantFacceIcon = (ServantFaceIconComponent_o *)System_Int32__ToString((int32_t)&exp[1], 0);
         if ( costLabel )
         {
           UILabel__set_text(costLabel, (System_String_o *)servantFacceIcon, 0);
@@ -166,12 +166,7 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
             if ( hpIconLabel )
             {
               UIIconLabel__Set_48071660(hpIconLabel, 3, Hp, (int32_t)servantFacceIcon, 0, 0, 0, 0, 0, 0, 0);
-              ExpInfo = ServantStatusListViewItem__GetExpInfo(
-                          item,
-                          (int32_t *)&exp,
-                          (int32_t *)&barExp + 1,
-                          (float *)&barExp,
-                          0);
+              ExpInfo = ServantStatusListViewItem__GetExpInfo(item, exp, (int32_t *)&barExp + 1, (float *)&barExp, 0);
               servantFacceIcon = (ServantFaceIconComponent_o *)this->fields.expBase;
               if ( ExpInfo )
               {

@@ -169,8 +169,10 @@ LABEL_10:
 
 System_Int32_array *ConstantStrMaster__GetRewardUpFuncCategory(ConstantStrMaster_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  const MethodInfo *v4; // x3
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Int32_array *v5; // x20
+  const MethodInfo *v6; // x3
 
   if ( (byte_597066D & 1) == 0 )
   {
@@ -180,18 +182,19 @@ System_Int32_array *ConstantStrMaster__GetRewardUpFuncCategory(ConstantStrMaster
     byte_597066D = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 7);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__32E61B8A078EC5060768F6C250266F4A9A747B496E0B2130085D11FB5ADC41A8,
-    0);
-  return ConstantStrMaster__GetValueArray(this, (System_String_o *)StringLiteral_11640/*"REWARD_UP_FUNC_CATEGORY"*/, (System_Int32_array *)v3, v4);
+  v4.fields.value = Field__PrivateImplementationDetails__32E61B8A078EC5060768F6C250266F4A9A747B496E0B2130085D11FB5ADC41A8;
+  v5 = (System_Int32_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  return ConstantStrMaster__GetValueArray(this, (System_String_o *)StringLiteral_11640/*"REWARD_UP_FUNC_CATEGORY"*/, v5, v6);
 }
 
 
 System_Int32_array *ConstantStrMaster__GetRewardUpIgnoreSvtId(ConstantStrMaster_o *this, const MethodInfo *method)
 {
-  System_Array_o *v3; // x20
-  const MethodInfo *v4; // x3
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  System_Int32_array *v5; // x20
+  const MethodInfo *v6; // x3
 
   if ( (byte_597066E & 1) == 0 )
   {
@@ -201,11 +204,10 @@ System_Int32_array *ConstantStrMaster__GetRewardUpIgnoreSvtId(ConstantStrMaster_
     byte_597066E = 1;
   }
   v3 = (System_Array_o *)sub_2213B20(int___TypeInfo, 8);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__5125E39E939B8566F4CC0BF2887F335560BD37968AD9EAF0FAFD413BD659457C,
-    0);
-  return ConstantStrMaster__GetValueArray(this, (System_String_o *)StringLiteral_11641/*"REWARD_UP_IGNORE_SVT_ID"*/, (System_Int32_array *)v3, v4);
+  v4.fields.value = Field__PrivateImplementationDetails__5125E39E939B8566F4CC0BF2887F335560BD37968AD9EAF0FAFD413BD659457C;
+  v5 = (System_Int32_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
+  return ConstantStrMaster__GetValueArray(this, (System_String_o *)StringLiteral_11641/*"REWARD_UP_IGNORE_SVT_ID"*/, v5, v6);
 }
 
 
@@ -495,10 +497,13 @@ UnityEngine_Vector3_o ConstantStrMaster__GetValueVector3(
 {
   const MethodInfo *v3; // x3
   System_Single_array *ValueFloatArray; // x0
+  float v5; // s0
   float *p_y; // x8
   float *p_z; // x9
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   float x; // t1
+  float v10; // s2
+  float v11; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   ValueFloatArray = ConstantStrMaster__GetValueFloatArray(this, name, 0, v3);
@@ -506,7 +511,7 @@ UnityEngine_Vector3_o ConstantStrMaster__GetValueVector3(
   {
     if ( LODWORD(ValueFloatArray->max_length) <= 2 )
       sub_2213CE4(ValueFloatArray);
-    result.fields.x = ValueFloatArray->m_Items[0];
+    v5 = ValueFloatArray->m_Items[0];
     p_y = &ValueFloatArray->m_Items[1];
     p_z = &ValueFloatArray->m_Items[2];
   }
@@ -521,10 +526,13 @@ UnityEngine_Vector3_o ConstantStrMaster__GetValueVector3(
     p_y = &static_fields->zeroVector.fields.y;
     x = static_fields->zeroVector.fields.x;
     p_z = &static_fields->zeroVector.fields.z;
-    result.fields.x = x;
+    v5 = x;
   }
-  result.fields.z = *p_z;
-  result.fields.y = *p_y;
+  v10 = *p_z;
+  v11 = *p_y;
+  result.fields.z = v10;
+  result.fields.y = v11;
+  result.fields.x = v5;
   return result;
 }
 

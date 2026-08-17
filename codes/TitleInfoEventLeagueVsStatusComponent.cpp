@@ -316,14 +316,14 @@ void TitleInfoEventLeagueVsStatusComponent__SetEntryAnim(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
-  TitleInfoEventLeagueVsStatusComponent_c *v5; // x0
-  float32x2_t v6; // d0
+  __int64 v5; // x1
+  __int64 v6; // x2
+  TitleInfoEventLeagueVsStatusComponent_c *v7; // x0
+  float32x2_t v8; // d0
   float32x2_t *static_fields; // x8
-  float v8; // s3
-  __int64 v9; // x1
-  __int64 v10; // x2
-  float y; // s1
-  float v12; // [xsp+0h] [xbp-30h]
+  float v10; // s3
+  float y; // [xsp+0h] [xbp-30h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F084 & 1) == 0 )
   {
@@ -334,24 +334,24 @@ void TitleInfoEventLeagueVsStatusComponent__SetEntryAnim(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_9;
-  y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
-  v5 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  v7 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
   this->fields.inPos.fields.x = 0.0;
-  this->fields.inPos.fields.y = y;
+  this->fields.inPos.fields.y = localPosition.fields.y;
   this->fields.inPos.fields.z = 0.0;
-  if ( !*(&v5->_2.cctor_finished + 1) )
+  if ( !*(&v7->_2.cctor_finished + 1) )
   {
-    v12 = y;
-    j_il2cpp_runtime_class_init_0(v5, v9, v10);
-    y = v12;
-    v5 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
+    y = localPosition.fields.y;
+    j_il2cpp_runtime_class_init_0(v7, v5, v6);
+    localPosition.fields.y = y;
+    v7 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
   }
-  v6.n64_u32[0] = 0;
-  static_fields = (float32x2_t *)v5->static_fields;
-  v8 = static_fields[1].n64_f32[0];
-  v6.n64_f32[1] = y;
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v6, (float32x2_t)static_fields->n64_u64[0]);
-  this->fields.outPos.fields.z = v8 + 0.0;
+  v8.n64_u32[0] = 0;
+  static_fields = (float32x2_t *)v7->static_fields;
+  v10 = static_fields[1].n64_f32[0];
+  v8.n64_u32[1] = LODWORD(localPosition.fields.y);
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v8, (float32x2_t)static_fields->n64_u64[0]);
+  this->fields.outPos.fields.z = v10 + 0.0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.outPos, 0),
@@ -385,15 +385,15 @@ void TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
   bool v7; // w7
   UnityEngine_Transform_o *transform; // x0
   __int64 v11; // x1
-  TitleInfoEventLeagueVsStatusComponent_c *v12; // x0
-  float32x2_t v13; // d0
+  __int64 v12; // x1
+  const MethodInfo *v13; // x2
+  TitleInfoEventLeagueVsStatusComponent_c *v14; // x0
+  float32x2_t v15; // d0
   float32x2_t *static_fields; // x8
-  System_String_o *v15; // x1
-  float v16; // s3
-  __int64 v17; // x1
-  const MethodInfo *v18; // x2
-  float y; // s1
-  float v20; // [xsp+0h] [xbp-30h]
+  System_String_o *v17; // x1
+  float v18; // s3
+  float y; // [xsp+0h] [xbp-30h]
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596F085 & 1) == 0 )
   {
@@ -414,26 +414,26 @@ void TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     sub_2213CDC(0, v11);
-  y = UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
-  v12 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  v14 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
   this->fields.inPos.fields.x = 0.0;
-  this->fields.inPos.fields.y = y;
+  this->fields.inPos.fields.y = localPosition.fields.y;
   this->fields.inPos.fields.z = 0.0;
-  if ( !*(&v12->_2.cctor_finished + 1) )
+  if ( !*(&v14->_2.cctor_finished + 1) )
   {
-    v20 = y;
-    j_il2cpp_runtime_class_init_0(v12, v17, v18);
-    y = v20;
-    v12 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
+    y = localPosition.fields.y;
+    j_il2cpp_runtime_class_init_0(v14, v12, v13);
+    localPosition.fields.y = y;
+    v14 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
   }
-  v13.n64_u32[0] = 0;
-  static_fields = (float32x2_t *)v12->static_fields;
-  v15 = (System_String_o *)StringLiteral_2378/*"AnimFrameOutEnd"*/;
-  v16 = static_fields[1].n64_f32[0];
-  v13.n64_f32[1] = y;
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v13, (float32x2_t)static_fields->n64_u64[0]);
-  this->fields.outPos.fields.z = v16 + 0.0;
-  TitleInfoEventLeagueVsStatusComponent__FrameOut(this, v15, v18);
+  v15.n64_u32[0] = 0;
+  static_fields = (float32x2_t *)v14->static_fields;
+  v17 = (System_String_o *)StringLiteral_2378/*"AnimFrameOutEnd"*/;
+  v18 = static_fields[1].n64_f32[0];
+  v15.n64_u32[1] = LODWORD(localPosition.fields.y);
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(v15, (float32x2_t)static_fields->n64_u64[0]);
+  this->fields.outPos.fields.z = v18 + 0.0;
+  TitleInfoEventLeagueVsStatusComponent__FrameOut(this, v17, v13);
 }
 
 

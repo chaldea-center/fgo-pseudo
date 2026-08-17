@@ -312,8 +312,8 @@ void WarBoardWallComponent__Initialize(
   struct WarBoardWallData_o *v75; // x8
   __int64 v76; // x0
   int32_t wallImageId; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o v78; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o SquarePosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v79; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596E055 & 1) == 0 )
   {
@@ -439,10 +439,10 @@ void WarBoardWallComponent__Initialize(
       wallData = (WarBoardBreakPointComponent_o *)UnityEngine_GameObject__get_transform(v52, 0);
       if ( !wallData )
         break;
-      v78.fields.y = 0.0;
-      v78.fields.z = 0.0;
-      v78.fields.x = v43;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)wallData, v78, 0);
+      v79.fields.y = 0.0;
+      v79.fields.z = 0.0;
+      v79.fields.x = v43;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)wallData, v79, 0);
       v54 = this->fields.breakPointParent;
       if ( !v54 )
         break;
@@ -586,11 +586,11 @@ void WarBoardWallComponent__OnClick(WarBoardWallComponent_o *this, const MethodI
   struct WarBoardWallData_o *wallData; // x8
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x20
-  __int64 v6; // x8
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
   struct WarBoardWallData_o *v7; // x8
   _QWORD *v8; // x0
   System_Reflection_MethodBase_o *v9; // x20
-  __int64 v10; // x8
+  struct System_Threading_CancellationTokenSource_o *v10; // x8
   Il2CppObject *Instance; // x0
   WarBoardWallData_o *v12; // x20
   WarBoardManager_o *v13; // x21
@@ -620,10 +620,14 @@ void WarBoardWallComponent__OnClick(WarBoardWallComponent_o *this, const MethodI
     this = (WarBoardWallComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( this )
     {
-      v6 = *((_QWORD *)this + 42);
-      if ( v6 )
+      m_CancellationTokenSource = this[3].fields.m_CancellationTokenSource;
+      if ( m_CancellationTokenSource )
       {
-        OverwriteAssetSoundName__PlaySe(v5, *(System_String_o **)(v6 + 24), 0, 0);
+        OverwriteAssetSoundName__PlaySe(
+          v5,
+          (System_String_o *)m_CancellationTokenSource->fields._registeredCallbacksLists,
+          0,
+          0);
         this = (WarBoardWallComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         v7 = v2->fields.wallData;
         if ( v7 )
@@ -646,10 +650,10 @@ LABEL_22:
   this = (WarBoardWallComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !this )
     goto LABEL_22;
-  v10 = *((_QWORD *)this + 42);
+  v10 = this[3].fields.m_CancellationTokenSource;
   if ( !v10 )
     goto LABEL_22;
-  OverwriteAssetSoundName__PlaySe(v9, *(System_String_o **)(v10 + 40), 0, 0);
+  OverwriteAssetSoundName__PlaySe(v9, *(System_String_o **)&v10->fields._disposed, 0, 0);
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   v12 = v2->fields.wallData;
   v13 = (WarBoardManager_o *)Instance;
@@ -815,7 +819,7 @@ void WarBoardWallComponent__OnLongClick(WarBoardWallComponent_o *this, const Met
   UnityEngine_Component_c *klass; // x8
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x20
-  __int64 v6; // x8
+  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
   Il2CppObject *Instance; // x0
   WarBoardWallData_o *v8; // x20
   WarBoardManager_o *v9; // x21
@@ -839,8 +843,8 @@ void WarBoardWallComponent__OnLongClick(WarBoardWallComponent_o *this, const Met
   v5 = (System_Reflection_MethodBase_o *)sub_2213A44(v4, v4[4]);
   this = (WarBoardWallComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !this
-    || (v6 = *((_QWORD *)this + 42)) == 0
-    || (OverwriteAssetSoundName__PlaySe(v5, *(System_String_o **)(v6 + 40), 0, 0),
+    || (m_CancellationTokenSource = this[3].fields.m_CancellationTokenSource) == 0
+    || (OverwriteAssetSoundName__PlaySe(v5, *(System_String_o **)&m_CancellationTokenSource->fields._disposed, 0, 0),
         Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__),
         v8 = (WarBoardWallData_o *)v2[3].klass,
         v9 = (WarBoardManager_o *)Instance,

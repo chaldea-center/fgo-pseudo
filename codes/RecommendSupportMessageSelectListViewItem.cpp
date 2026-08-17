@@ -39,12 +39,14 @@ bool RecommendSupportMessageSelectListViewItem__SetSortValue(
         const MethodInfo *method)
 {
   struct RecommendAdviceMessageEntity_o *RecommendAdviceMessageEntity_k__BackingField; // x9
+  bool result; // w0
 
   RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField;
   if ( !RecommendAdviceMessageEntity_k__BackingField )
     sub_2213CDC(this, sort);
+  result = 1;
   this->fields.sortValue1 = RecommendAdviceMessageEntity_k__BackingField->fields.priority;
-  return 1;
+  return result;
 }
 
 

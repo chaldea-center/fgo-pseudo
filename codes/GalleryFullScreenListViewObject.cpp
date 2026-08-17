@@ -282,12 +282,20 @@ UnityEngine_Rect_o GalleryFullScreenListViewObject__GetDragObjectRange(
         GalleryFullScreenListViewObject_o *this,
         const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float m_YMin; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.dragObjectRect.fields.m_XMin;
-  result.fields.m_YMin = this->fields.dragObjectRect.fields.m_YMin;
-  result.fields.m_Width = this->fields.dragObjectRect.fields.m_Width;
-  result.fields.m_Height = this->fields.dragObjectRect.fields.m_Height;
+  m_XMin = this->fields.dragObjectRect.fields.m_XMin;
+  m_YMin = this->fields.dragObjectRect.fields.m_YMin;
+  m_Width = this->fields.dragObjectRect.fields.m_Width;
+  m_Height = this->fields.dragObjectRect.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = m_YMin;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
@@ -297,19 +305,25 @@ UnityEngine_Rect_o GalleryFullScreenListViewObject__GetDragObjectRect(
         const MethodInfo *method)
 {
   int32x2_t v2; // d2
-  float32x2_t v3; // d3
-  unsigned __int64 v4; // d1
-  unsigned __int64 v5; // d3
+  float *p_cgScale; // x8
+  float32x2_t v4; // d3
+  unsigned __int64 v5; // d1
+  unsigned __int64 v6; // d3
+  float v7; // s0
+  float v8; // s2
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2.n64_u64[0] = *(unsigned __int64 *)&this->fields.cgHeight;
-  v3.n64_u64[0] = vld1_dup_f32(&this->fields.cgScale).n64_u64[0];
-  v4 = vdiv_f32(vmul_f32(vcvt_f32_s32(vneg_s32(v2)), (float32x2_t)0x3F0000003F000000LL), v3).n64_u64[0];
-  v5 = vdiv_f32(vcvt_f32_s32(v2), v3).n64_u64[0];
-  result.fields.m_XMin = *((float *)&v4 + 1);
-  result.fields.m_Width = *((float *)&v5 + 1);
-  result.fields.m_YMin = *(float *)&v4;
-  result.fields.m_Height = *(float *)&v5;
+  p_cgScale = &this->fields.cgScale;
+  v4.n64_u64[0] = vld1_dup_f32(p_cgScale).n64_u64[0];
+  v5 = vdiv_f32(vmul_f32(vcvt_f32_s32(vneg_s32(v2)), (float32x2_t)0x3F0000003F000000LL), v4).n64_u64[0];
+  v6 = vdiv_f32(vcvt_f32_s32(v2), v4).n64_u64[0];
+  v7 = *((float *)&v5 + 1);
+  v8 = *((float *)&v6 + 1);
+  result.fields.m_Height = *(float *)&v6;
+  result.fields.m_YMin = *(float *)&v5;
+  result.fields.m_Width = v8;
+  result.fields.m_XMin = v7;
   return result;
 }
 
@@ -506,6 +520,7 @@ LABEL_21:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GalleryFullScreenListViewObject__InitDrawCallBack(
         GalleryFullScreenListViewObject_o *this,
         const MethodInfo *method)
@@ -526,23 +541,27 @@ void GalleryFullScreenListViewObject__InitDrawCallBack(
   UnityEngine_GameObject_o *dispObject; // x20
   bool v17; // w22
   UnityEngine_GameObject_o *v18; // x20
+  float y; // s1 OVERLAPPED
   UnityEngine_Vector3_o *p_localScale; // x8
   float *p_z; // x9
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
-  struct UnityEngine_Vector3_StaticFields *v22; // x8
+  int v23; // s2
+  float x; // s0
+  struct UnityEngine_Vector3_StaticFields *v25; // x8
   UnityEngine_GameObject_o *gameObject; // x20
-  struct UnityEngine_Vector3_StaticFields *v24; // x9
+  struct UnityEngine_Vector3_StaticFields *v27; // x9
+  float v28; // s1 OVERLAPPED
   UnityEngine_Vector3_o *p_oneVector; // x8
-  float *v26; // x9
-  UnityEngine_GameObject_o *v27; // x20
-  struct UnityEngine_Vector3_StaticFields *v28; // x8
-  const MethodInfo *v29; // x1
-  System_Collections_IEnumerator_o *v30; // x0
-  UnityEngine_Vector3_o v31; // [xsp+0h] [xbp-50h] BYREF
+  float *v30; // x9
+  int v31; // s2
+  float v32; // s0
+  UnityEngine_GameObject_o *v33; // x20
+  struct UnityEngine_Vector3_StaticFields *v34; // x8
+  const MethodInfo *v35; // x1
+  System_Collections_IEnumerator_o *v36; // x0
+  UnityEngine_Vector3_o v37; // [xsp+0h] [xbp-50h] BYREF
   UnityEngine_Vector3_o localScale; // [xsp+10h] [xbp-40h] BYREF
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B559 & 1) == 0 )
   {
@@ -553,8 +572,8 @@ void GalleryFullScreenListViewObject__InitDrawCallBack(
   linkItem = this->fields.linkItem;
   localScale.fields.z = 0.0;
   *(_QWORD *)&localScale.fields.x = 0;
-  v31.fields.z = 0.0;
-  *(_QWORD *)&v31.fields.x = 0;
+  v37.fields.z = 0.0;
+  *(_QWORD *)&v37.fields.x = 0;
   if ( linkItem
     && (naturalAligment = GalleryFullScreenListViewItem_TypeInfo->_2.naturalAligment,
         linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
@@ -571,16 +590,16 @@ void GalleryFullScreenListViewObject__InitDrawCallBack(
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw
     || (GalleryFullScreenListViewItemDraw__SetScale(itemDraw, &this->fields.cgWidth, &this->fields.cgHeight, v2),
-        GalleryFullScreenListViewObject__GetMaximTransformValues(this, &localScale, &v31, v8),
+        GalleryFullScreenListViewObject__GetMaximTransformValues(this, &localScale, &v37, v8),
         Size = FSWindowUtil__GetSize(0),
         (itemDraw = this->fields.itemDraw) == 0) )
   {
     sub_2213CDC(itemDraw, method);
   }
-  v33.fields.z = 1.0;
-  v33.fields.y = (float)(Size.fields.y * this->fields.cgScale) / (float)this->fields.cgHeight;
-  v33.fields.x = v33.fields.y;
-  GalleryFullScreenListViewItemDraw__SetMovieLocalScale(itemDraw, v33, method);
+  v39.fields.z = 1.0;
+  v39.fields.y = (float)(Size.fields.y * this->fields.cgScale) / (float)this->fields.cgHeight;
+  v39.fields.x = v39.fields.y;
+  GalleryFullScreenListViewItemDraw__SetMovieLocalScale(itemDraw, v39, method);
   if ( v6 )
   {
     v12 = LODWORD(v6[1].klass) == 1;
@@ -611,7 +630,7 @@ void GalleryFullScreenListViewObject__InitDrawCallBack(
   {
     if ( v17 )
     {
-      v34.fields.y = localScale.fields.y;
+      y = localScale.fields.y;
       p_localScale = &localScale;
       p_z = &localScale.fields.z;
     }
@@ -623,17 +642,17 @@ void GalleryFullScreenListViewObject__InitDrawCallBack(
         byte_5969AE5 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-      v34.fields.y = static_fields->oneVector.fields.y;
+      y = static_fields->oneVector.fields.y;
       p_localScale = &static_fields->oneVector;
       p_z = &static_fields->oneVector.fields.z;
     }
-    v34.fields.z = *p_z;
-    v34.fields.x = p_localScale->fields.x;
-    GameObjectExtensions__SetLocalScale(dispObject, v34, 0);
+    v23 = *(_DWORD *)p_z;
+    x = p_localScale->fields.x;
+    GameObjectExtensions__SetLocalScale(dispObject, *(UnityEngine_Vector3_o *)(&y - 1), 0);
     v18 = this->fields.dispObject;
     if ( v17 )
     {
-      v22 = (struct UnityEngine_Vector3_StaticFields *)&v31;
+      v25 = (struct UnityEngine_Vector3_StaticFields *)&v37;
       goto LABEL_30;
     }
   }
@@ -642,9 +661,9 @@ void GalleryFullScreenListViewObject__InitDrawCallBack(
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
-  v22 = UnityEngine_Vector3_TypeInfo->static_fields;
+  v25 = UnityEngine_Vector3_TypeInfo->static_fields;
 LABEL_30:
-  GameObjectExtensions__SetLocalEulerAngle(v18, v22->zeroVector, 0);
+  GameObjectExtensions__SetLocalEulerAngle(v18, v25->zeroVector, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( v17 )
   {
@@ -653,21 +672,21 @@ LABEL_30:
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
-    v24 = UnityEngine_Vector3_TypeInfo->static_fields;
-    v35.fields.y = v24->oneVector.fields.y;
-    p_oneVector = &v24->oneVector;
-    v26 = &v24->oneVector.fields.z;
+    v27 = UnityEngine_Vector3_TypeInfo->static_fields;
+    v28 = v27->oneVector.fields.y;
+    p_oneVector = &v27->oneVector;
+    v30 = &v27->oneVector.fields.z;
   }
   else
   {
-    v35.fields.y = localScale.fields.y;
+    v28 = localScale.fields.y;
     p_oneVector = &localScale;
-    v26 = &localScale.fields.z;
+    v30 = &localScale.fields.z;
   }
-  v35.fields.z = *v26;
-  v35.fields.x = p_oneVector->fields.x;
-  GameObjectExtensions__SetLocalScale(gameObject, v35, 0);
-  v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v31 = *(_DWORD *)v30;
+  v32 = p_oneVector->fields.x;
+  GameObjectExtensions__SetLocalScale(gameObject, *(UnityEngine_Vector3_o *)(&v28 - 1), 0);
+  v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( v17 )
   {
     if ( !byte_5969AE0 )
@@ -675,15 +694,15 @@ LABEL_30:
       sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
-    v28 = UnityEngine_Vector3_TypeInfo->static_fields;
+    v34 = UnityEngine_Vector3_TypeInfo->static_fields;
   }
   else
   {
-    v28 = (struct UnityEngine_Vector3_StaticFields *)&v31;
+    v34 = (struct UnityEngine_Vector3_StaticFields *)&v37;
   }
-  GameObjectExtensions__SetLocalEulerAngle(v27, v28->zeroVector, 0);
-  v30 = GalleryFullScreenListViewObject__WaitOneFrameSetUpCallBack(this, v29);
-  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v30, 0);
+  GameObjectExtensions__SetLocalEulerAngle(v33, v34->zeroVector, 0);
+  v36 = GalleryFullScreenListViewObject__WaitOneFrameSetUpCallBack(this, v35);
+  UnityEngine_MonoBehaviour__StartCoroutine_83444756((UnityEngine_MonoBehaviour_o *)this, v36, 0);
 }
 
 
@@ -1021,17 +1040,19 @@ void GalleryFullScreenListViewObject___c__DisplayClass25_0___EventMaximStartView
   const MethodInfo *v5; // x3
   struct GalleryFullScreenListViewObject_o *v6; // x8
   int32x2_t v7; // d0
-  float32x4_t v8; // q1
-  struct GalleryFullScreenListViewObject_o *v9; // x8
-  struct GalleryFullScreenListViewObject_o *v10; // x8
-  UnityEngine_Vector3_o v11; // [xsp+0h] [xbp-30h] BYREF
+  const float *p_cgScale; // x9
+  float32x4_t v9; // q1
+  float32x4_t v10; // q0
+  struct GalleryFullScreenListViewObject_o *v11; // x8
+  struct GalleryFullScreenListViewObject_o *v12; // x8
+  UnityEngine_Vector3_o v13; // [xsp+0h] [xbp-30h] BYREF
   UnityEngine_Vector3_o localScale; // [xsp+10h] [xbp-20h] BYREF
 
   _4__this = this->fields.__4__this;
   localScale.fields.z = 0.0;
   *(_QWORD *)&localScale.fields.x = 0;
-  v11.fields.z = 0.0;
-  *(_QWORD *)&v11.fields.x = 0;
+  v13.fields.z = 0.0;
+  *(_QWORD *)&v13.fields.x = 0;
   if ( !_4__this )
     goto LABEL_8;
   v4 = this;
@@ -1047,22 +1068,24 @@ void GalleryFullScreenListViewObject___c__DisplayClass25_0___EventMaximStartView
   if ( !v6 )
     goto LABEL_8;
   v7.n64_u64[0] = *(unsigned __int64 *)&v6->fields.cgHeight;
-  v8.n128_u64[0] = vrev64_s32(vmul_f32(vcvt_f32_s32(vneg_s32(v7)), (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  *(int32x2_t *)&v8.n128_i8[8] = vrev64_s32(vcvt_f32_s32(v7));
-  v6->fields.dragObjectRect = (struct UnityEngine_Rect_o)vdivq_f32(v8, vld1q_dup_f32(&v6->fields.cgScale));
+  p_cgScale = &v6->fields.cgScale;
+  v9.n128_u64[0] = vrev64_s32(vmul_f32(vcvt_f32_s32(vneg_s32(v7)), (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
+  *(int32x2_t *)&v9.n128_i8[8] = vrev64_s32(vcvt_f32_s32(v7));
+  v10 = vld1q_dup_f32(p_cgScale);
+  v6->fields.dragObjectRect = (struct UnityEngine_Rect_o)vdivq_f32(v9, v10);
   this = (GalleryFullScreenListViewObject___c__DisplayClass25_0_o *)v4->fields.__4__this;
   if ( !this
     || (GalleryFullScreenListViewObject__GetMaximTransformValues(
           (GalleryFullScreenListViewObject_o *)this,
           &localScale,
-          &v11,
+          &v13,
           v5),
-        (v9 = v4->fields.__4__this) == 0)
-    || (GameObjectExtensions__SetLocalScale(v9->fields.dragObject, localScale, 0), (v10 = v4->fields.__4__this) == 0) )
+        (v11 = v4->fields.__4__this) == 0)
+    || (GameObjectExtensions__SetLocalScale(v11->fields.dragObject, localScale, 0), (v12 = v4->fields.__4__this) == 0) )
   {
 LABEL_8:
     sub_2213CDC(this, method);
   }
-  GameObjectExtensions__SetLocalEulerAngle(v10->fields.dragObject, v11, 0);
+  GameObjectExtensions__SetLocalEulerAngle(v12->fields.dragObject, v13, 0);
   ActionExtensions__Call(v4->fields.setUpEndCallBack, 0);
 }

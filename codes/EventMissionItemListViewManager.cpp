@@ -1072,6 +1072,7 @@ bool EventMissionItemListViewManager__GetIsQpMaxAlert(
   int32_t v67; // w5
   bool v68; // w6
   bool v69; // w7
+  bool result; // w0
 
   if ( (byte_596A72F & 1) == 0 )
   {
@@ -1186,8 +1187,9 @@ LABEL_24:
     this->fields.getQpValue = v51;
     num = v50 - v51;
 LABEL_22:
+    result = 1;
     *p_overQpValue = num;
-    return 1;
+    return result;
   }
   return 0;
 }
@@ -4586,31 +4588,31 @@ bool EventMissionItemListViewManager__MoveEaseScroll_IE_d__42__MoveNext(
   EventMissionItemListViewManager__MoveEaseScroll_IE_d__42_o **_4__this; // x20
   EventMissionItemListViewManager__MoveEaseScroll_IE_d__42_o *v4; // x19
   float value; // s0
-  float v6; // s8
+  float y; // s8
   float v7; // s8
-  float v8; // s0
-  float v9; // s1
-  float v10; // s0
+  float v8; // s1
   float timer_5__5; // s8
-  float v12; // s0
+  float v10; // s0
   float duration_5__4; // s0
-  float v14; // s1
-  float v15; // s0
-  float v16; // s2
-  float v17; // s1
+  float v12; // s1
+  float v13; // s0
+  float v14; // s2
+  float v15; // s1
   float start_5__2; // s8
-  float v19; // s10
-  float v20; // s0
-  float v21; // s0
+  float v17; // s10
+  float v18; // s0
+  float v19; // s0
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
-  float y; // s1
-  float v31; // s1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   _1__state = this->fields.__1__state;
   _4__this = (EventMissionItemListViewManager__MoveEaseScroll_IE_d__42_o **)this->fields.__4__this;
@@ -4645,11 +4647,11 @@ bool EventMissionItemListViewManager__MoveEaseScroll_IE_d__42__MoveNext(
                                                                            0);
     if ( !this )
       goto LABEL_35;
-    y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
     this = _4__this[11];
     if ( !this )
       goto LABEL_35;
-    v6 = y;
+    y = localPosition.fields.y;
     UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0);
     this = _4__this[10];
     if ( !this )
@@ -4659,23 +4661,24 @@ bool EventMissionItemListViewManager__MoveEaseScroll_IE_d__42__MoveNext(
                                                                            0);
     if ( !this )
       goto LABEL_35;
-    v31 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+    v29 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
     this = _4__this[12];
     if ( !this )
       goto LABEL_35;
-    v7 = v31 - v6;
-    v8 = fabsf(COERCE_FLOAT(LODWORD(ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)this, v4->fields.index, 0).fields.y)));
+    v7 = v29.fields.y - y;
+    v30 = ListViewItemSeed__GetLocalPosition((ListViewItemSeed_o *)this, v4->fields.index, 0);
+    v30.fields.x = fabsf(v30.fields.y);
     v4->fields._timer_5__5 = 0.0;
-    v9 = v8 / v7;
-    v10 = v7 * (float)((float)(v8 / v7) - v4->fields._start_5__2);
+    v8 = v30.fields.x / v7;
+    v30.fields.x = v7 * (float)((float)(v30.fields.x / v7) - v4->fields._start_5__2);
     timer_5__5 = 0.0;
-    v12 = (float)(v10 + -2000.0) / 2000.0;
-    if ( v12 < 0.0 )
-      v12 = 0.0;
-    duration_5__4 = v12 + 1.0;
+    v10 = (float)(v30.fields.x + -2000.0) / 2000.0;
+    if ( v10 < 0.0 )
+      v10 = 0.0;
+    duration_5__4 = v10 + 1.0;
     if ( duration_5__4 > 3.0 )
       duration_5__4 = 3.0;
-    v4->fields._end_5__3 = v9;
+    v4->fields._end_5__3 = v8;
     v4->fields._duration_5__4 = duration_5__4;
   }
   if ( timer_5__5 >= duration_5__4 )
@@ -4689,35 +4692,36 @@ bool EventMissionItemListViewManager__MoveEaseScroll_IE_d__42__MoveNext(
     ActionExtensions__Call(v4->fields.onFinished, 0);
     return 0;
   }
-  v14 = timer_5__5 + UnityEngine_Time__get_deltaTime(0);
-  v15 = v4->fields._duration_5__4;
-  if ( v14 <= v15 )
-    v16 = v14;
+  v12 = timer_5__5 + UnityEngine_Time__get_deltaTime(0);
+  v13 = v4->fields._duration_5__4;
+  if ( v12 <= v13 )
+    v14 = v12;
   else
-    v16 = v4->fields._duration_5__4;
-  if ( v14 >= 0.0 )
-    v17 = v16;
+    v14 = v4->fields._duration_5__4;
+  if ( v12 >= 0.0 )
+    v15 = v14;
   else
-    v17 = 0.0;
-  v4->fields._timer_5__5 = v17;
+    v15 = 0.0;
+  v4->fields._timer_5__5 = v15;
   if ( !_4__this
     || ((start_5__2 = v4->fields._start_5__2,
-         v19 = v4->fields._end_5__3 - start_5__2,
-         v20 = v17 / (float)(v15 * 0.5),
-         v20 >= 1.0)
-      ? (v21 = (float)(2.0 - exp2f((float)(v20 + -1.0) * -10.0)) * (float)(v19 * 0.5))
-      : (v21 = powf(v20, 5.0) * (float)(v19 * 0.5)),
+         v17 = v4->fields._end_5__3 - start_5__2,
+         v18 = v15 / (float)(v13 * 0.5),
+         v18 >= 1.0)
+      ? (v19 = (float)(2.0 - exp2f((float)(v18 + -1.0) * -10.0)) * (float)(v17 * 0.5))
+      : (v19 = powf(v18, 5.0) * (float)(v17 * 0.5)),
         (this = _4__this[11]) == 0) )
   {
 LABEL_35:
     sub_2213CDC(this, method);
   }
-  UIProgressBar__set_value((UIProgressBar_o *)this, start_5__2 + v21, 0);
+  UIProgressBar__set_value((UIProgressBar_o *)this, start_5__2 + v19, 0);
   v4->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
-  sub_2213A04(p__2__current, 0, v24, v25, v26, v27, v28, v29);
+  sub_2213A04(p__2__current, 0, v22, v23, v24, v25, v26, v27);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 
@@ -4842,8 +4846,8 @@ bool EventMissionItemListViewManager__SetPreviousFilter_d__41__MoveNext(
         v2->fields.__2__current = (Il2CppObject *)v17;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
         sub_2213A04(p__2__current, (int32_t)v17, v19, v20, v21, v22, v23, v24);
-        p__2__current[-1].fields._BoardType_k__BackingField = 2;
         LOBYTE(v14) = 1;
+        p__2__current[-1].fields._BoardType_k__BackingField = 2;
         return v14;
       }
       goto LABEL_32;
@@ -4858,8 +4862,8 @@ bool EventMissionItemListViewManager__SetPreviousFilter_d__41__MoveNext(
         v2->fields.__2__current = (Il2CppObject *)started;
         v7 = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
         sub_2213A04(v7, (int32_t)started, v8, v9, v10, v11, v12, v13);
-        v7[-1].fields._BoardType_k__BackingField = 1;
         LOBYTE(v14) = 1;
+        v7[-1].fields._BoardType_k__BackingField = 1;
         return v14;
       }
 LABEL_32:

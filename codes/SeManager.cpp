@@ -3549,6 +3549,7 @@ System_Collections_IEnumerator_o *SeManager__PlayCommonSeWithDelay(
 {
   bool v9; // w22
   __int64 v10; // x21
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597015B & 1) == 0 )
   {
@@ -3559,11 +3560,12 @@ System_Collections_IEnumerator_o *SeManager__PlayCommonSeWithDelay(
   v10 = sub_2213CCC(SeManager__PlayCommonSeWithDelay_d__54_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_DWORD *)(v10 + 16) = 0;
+  result = (System_Collections_IEnumerator_o *)v10;
   *(_DWORD *)(v10 + 40) = kind;
   *(float *)(v10 + 36) = delay;
   *(_DWORD *)(v10 + 32) = waitFrameCount;
   *(_BYTE *)(v10 + 44) = v9;
-  return (System_Collections_IEnumerator_o *)v10;
+  return result;
 }
 
 
@@ -4429,7 +4431,7 @@ LABEL_37:
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo, *(_QWORD *)&kind);
     this = (SeManager_o *)SeManager_TypeInfo;
   }
-  if ( !*(_BYTE *)(*((_QWORD *)this + 23) + 32LL) )
+  if ( !LOBYTE(this[1].fields.m_CancellationTokenSource->fields._state) )
   {
     systemSeClipNames = v10->fields.systemSeClipNames;
     if ( !systemSeClipNames )
@@ -6210,6 +6212,7 @@ bool SeManager__CoWaitSameVoiceLoading_d__153__MoveNext(
   int32_t v29; // w5
   bool v30; // w6
   bool v31; // w7
+  bool result; // w0
   System_Action_o *finishCallback; // x0
 
   if ( (byte_59701AF & 1) == 0 )
@@ -6267,8 +6270,9 @@ LABEL_11:
       this->fields.__2__current = (Il2CppObject *)v24;
       p__2__current = &this->fields.__2__current;
       sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+      result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
-      return 1;
+      return result;
     }
     finishCallback = this->fields.finishCallback;
     goto LABEL_11;
@@ -6340,6 +6344,7 @@ bool SeManager__PlayCommonSeWithDelay_d__54__MoveNext(
   int32_t _1__state; // w8
   int32_t i_5__2; // w8
   Il2CppObject **v11; // x19
+  bool result; // w0
   float delay; // s8
   UnityEngine_WaitForSeconds_o *v14; // x20
   Il2CppObject **p__2__current; // x19
@@ -6369,18 +6374,20 @@ bool SeManager__PlayCommonSeWithDelay_d__54__MoveNext(
     SeManager__PlayCommonSe(kind, ignorePreDelay, v2);
     return 0;
   }
-  if ( _1__state == 1 )
+  if ( _1__state != 1 )
   {
-    i_5__2 = this->fields._i_5__2;
-    this->fields.__1__state = -1;
-    _1__state = i_5__2 + 1;
-    this->fields._i_5__2 = _1__state;
-    goto LABEL_8;
-  }
-  if ( _1__state )
+    if ( !_1__state )
+    {
+      this->fields._i_5__2 = 0;
+      this->fields.__1__state = -1;
+      goto LABEL_8;
+    }
     return 0;
-  this->fields._i_5__2 = 0;
+  }
+  i_5__2 = this->fields._i_5__2;
   this->fields.__1__state = -1;
+  _1__state = i_5__2 + 1;
+  this->fields._i_5__2 = _1__state;
 LABEL_8:
   if ( _1__state >= this->fields.waitFrameCount )
   {
@@ -6390,6 +6397,7 @@ LABEL_8:
     this->fields.__2__current = (Il2CppObject *)v14;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v14, v16, v17, v18, v19, v20, v21);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 2;
   }
   else
@@ -6397,9 +6405,10 @@ LABEL_8:
     this->fields.__2__current = 0;
     v11 = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)v11, 0, (System_String_o *)v2, v3, v4, v5, v6, v7);
+    result = 1;
     *((_DWORD *)v11 - 2) = 1;
   }
-  return 1;
+  return result;
 }
 
 

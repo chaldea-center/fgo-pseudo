@@ -240,7 +240,7 @@ bool WarBoardSquareComponent__GetButtonIsEnable(WarBoardSquareComponent_o *this,
   button = this->fields.button;
   if ( !button )
     sub_2213CDC(0, method);
-  return ((bool (__fastcall *)(struct UIButton_o *, const MethodInfo *))button->klass->vtable._4_get_isEnabled.methodPtr)(
+  return ((__int64 (__fastcall *)(struct UIButton_o *, const MethodInfo *))button->klass->vtable._4_get_isEnabled.methodPtr)(
            button,
            button->klass->vtable._4_get_isEnabled.method);
 }
@@ -1307,7 +1307,7 @@ LABEL_28:
 
 void WarBoardSquareComponent__PlayUnDispCostAnim(WarBoardSquareComponent_o *this, const MethodInfo *method)
 {
-  __int64 costLabel; // x0
+  char *costLabel; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *v5; // x0
   struct TweenScale_o **p_tweenScale; // x20
@@ -1344,7 +1344,7 @@ void WarBoardSquareComponent__PlayUnDispCostAnim(WarBoardSquareComponent_o *this
     sub_2213A60(&StringLiteral_11129/*"PlayUnDispCostAnim2"*/);
     byte_596E03B = 1;
   }
-  costLabel = (__int64)this->fields.costLabel;
+  costLabel = (char *)this->fields.costLabel;
   if ( !costLabel )
     goto LABEL_11;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costLabel, 0);
@@ -1358,7 +1358,7 @@ void WarBoardSquareComponent__PlayUnDispCostAnim(WarBoardSquareComponent_o *this
   tweenScale = this->fields.tweenScale;
   if ( !byte_5969AE5 )
   {
-    costLabel = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    costLabel = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE5 = 1;
   }
   if ( !tweenScale )
@@ -1388,20 +1388,20 @@ void WarBoardSquareComponent__PlayUnDispCostAnim(WarBoardSquareComponent_o *this
           v23,
           v24,
           v25),
-        (costLabel = (__int64)this->fields.tweenScale) == 0) )
+        (costLabel = (char *)this->fields.tweenScale) == 0) )
   {
 LABEL_11:
     sub_2213CDC(costLabel, method);
   }
   v32 = StringLiteral_11129/*"PlayUnDispCostAnim2"*/;
-  *(_QWORD *)(costLabel + 88) = StringLiteral_11129/*"PlayUnDispCostAnim2"*/;
+  *((_QWORD *)costLabel + 11) = StringLiteral_11129/*"PlayUnDispCostAnim2"*/;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(costLabel + 88), v32, v26, v27, v28, v29, v30, v31);
 }
 
 
 void WarBoardSquareComponent__PlayUnDispCostAnim2(WarBoardSquareComponent_o *this, const MethodInfo *method)
 {
-  __int64 costLabel; // x0
+  char *costLabel; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *v5; // x0
   System_String_o *v6; // x2
@@ -1475,7 +1475,7 @@ void WarBoardSquareComponent__PlayUnDispCostAnim2(WarBoardSquareComponent_o *thi
     sub_2213A60(&StringLiteral_7016/*"FinishUnDispCostAnim"*/);
     byte_596E03C = 1;
   }
-  costLabel = (__int64)this->fields.costLabel;
+  costLabel = (char *)this->fields.costLabel;
   if ( !costLabel )
     goto LABEL_17;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costLabel, 0);
@@ -1512,7 +1512,7 @@ void WarBoardSquareComponent__PlayUnDispCostAnim2(WarBoardSquareComponent_o *thi
     v21,
     v22,
     v23);
-  costLabel = (__int64)this->fields.costLabel;
+  costLabel = (char *)this->fields.costLabel;
   if ( !costLabel )
     goto LABEL_17;
   v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costLabel, 0);
@@ -1532,7 +1532,7 @@ void WarBoardSquareComponent__PlayUnDispCostAnim2(WarBoardSquareComponent_o *thi
   v34 = this->fields.tweenScale;
   if ( !byte_5969AE0 )
   {
-    costLabel = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+    costLabel = (char *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
     byte_5969AE0 = 1;
   }
   if ( !v34 )
@@ -1556,7 +1556,7 @@ void WarBoardSquareComponent__PlayUnDispCostAnim2(WarBoardSquareComponent_o *thi
     v42,
     v43,
     v44);
-  costLabel = (__int64)this->fields.costLabel;
+  costLabel = (char *)this->fields.costLabel;
   if ( !costLabel )
     goto LABEL_17;
   v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)costLabel, 0);
@@ -1581,13 +1581,13 @@ void WarBoardSquareComponent__PlayUnDispCostAnim2(WarBoardSquareComponent_o *thi
           v58,
           v59,
           v60),
-        (costLabel = (__int64)this->fields.tweenAlpha) == 0) )
+        (costLabel = (char *)this->fields.tweenAlpha) == 0) )
   {
 LABEL_17:
     sub_2213CDC(costLabel, method);
   }
   v67 = StringLiteral_7016/*"FinishUnDispCostAnim"*/;
-  *(_QWORD *)(costLabel + 88) = StringLiteral_7016/*"FinishUnDispCostAnim"*/;
+  *((_QWORD *)costLabel + 11) = StringLiteral_7016/*"FinishUnDispCostAnim"*/;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(costLabel + 88), v67, v61, v62, v63, v64, v65, v66);
 }
 
@@ -2321,16 +2321,19 @@ bool WarBoardSquareComponent__StopEffectEndLoop_d__64__MoveNext(
   int v9; // w8
   void *v10; // x20
   int i; // w22
-  UnityEngine_WaitForSeconds_o *v12; // x20
+  UnityEngine_ParticleSystem_MainModule_o v12; // x0
+  UnityEngine_ParticleSystem_MainModule_o v13; // x0
+  UnityEngine_ParticleSystem_MainModule_o v14; // x0
+  UnityEngine_WaitForSeconds_o *v15; // x20
   Il2CppObject **p__2__current; // x19
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
-  UnityEngine_ParticleSystem_MinMaxCurve_o v21; // [xsp+0h] [xbp-80h] BYREF
-  UnityEngine_ParticleSystem_MinMaxCurve_o v22; // [xsp+20h] [xbp-60h] BYREF
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
+  UnityEngine_ParticleSystem_MinMaxCurve_o v24; // [xsp+0h] [xbp-80h] BYREF
+  UnityEngine_ParticleSystem_MinMaxCurve_o v25; // [xsp+20h] [xbp-60h] BYREF
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+48h] [xbp-38h] BYREF
 
   if ( (byte_596E04B & 1) == 0 )
@@ -2342,7 +2345,7 @@ bool WarBoardSquareComponent__StopEffectEndLoop_d__64__MoveNext(
   }
   _1__state = this->fields.__1__state;
   m_ParticleSystem = 0;
-  memset(&v22, 0, sizeof(v22));
+  memset(&v25, 0, sizeof(v25));
   if ( _1__state )
   {
     if ( _1__state != 1 )
@@ -2383,30 +2386,27 @@ LABEL_21:
       if ( !effect )
         goto LABEL_21;
       m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)effect, 0).fields.m_ParticleSystem;
-      UnityEngine_ParticleSystem_MainModule__get_startLifetime(
-        &v21,
-        (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-        0);
-      v22 = v21;
-      if ( constantMax < UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v22, 0) )
+      v12.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      UnityEngine_ParticleSystem_MainModule__get_startLifetime(&v24, v12, 0);
+      v25 = v24;
+      if ( constantMax < UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v25, 0) )
       {
-        UnityEngine_ParticleSystem_MainModule__get_startLifetime(
-          &v21,
-          (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-          0);
-        v22 = v21;
-        constantMax = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v22, 0);
+        v13.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+        UnityEngine_ParticleSystem_MainModule__get_startLifetime(&v24, v13, 0);
+        v25 = v24;
+        constantMax = UnityEngine_ParticleSystem_MinMaxCurve__get_constantMax(&v25, 0);
       }
-      UnityEngine_ParticleSystem_MainModule__set_loop((UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem, 0, 0);
+      v14.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+      UnityEngine_ParticleSystem_MainModule__set_loop(v14, 0, 0);
       v9 = *((_DWORD *)v10 + 6);
     }
     constantMax = constantMax * 1.2;
   }
-  v12 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
-  UnityEngine_WaitForSeconds___ctor(v12, constantMax, 0);
-  this->fields.__2__current = (Il2CppObject *)v12;
+  v15 = (UnityEngine_WaitForSeconds_o *)sub_2213CCC(UnityEngine_WaitForSeconds_TypeInfo);
+  UnityEngine_WaitForSeconds___ctor(v15, constantMax, 0);
+  this->fields.__2__current = (Il2CppObject *)v15;
   p__2__current = &this->fields.__2__current;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v12, v14, v15, v16, v17, v18, v19);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v15, v17, v18, v19, v20, v21, v22);
   *((_DWORD *)p__2__current - 2) = 1;
   return _1__state == 0;
 }

@@ -688,7 +688,8 @@ LABEL_24:
       (System_Collections_Generic_List_Enumerator_T__o *)&v59,
       (System_Collections_Generic_List_object__o *)Instance,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_UserServantEntity__GetEnumerator__);
-    v62 = *(System_Collections_Generic_List_Enumerator_object__o *)&v59.fields.currentCryptoKey;
+    v62.fields._current = (Il2CppObject *)v59.fields.fakeValue;
+    *(_OWORD *)&v62.fields._list = *(_OWORD *)&v59.fields.currentCryptoKey;
     v60 = 0;
     v61 = &v62;
     while ( 1 )

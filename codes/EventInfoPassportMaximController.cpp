@@ -196,6 +196,7 @@ void EventInfoPassportMaximController__ClearPassportInputComponents(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventInfoPassportMaximController__Close(EventInfoPassportMaximController_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
@@ -208,22 +209,29 @@ void EventInfoPassportMaximController__Close(EventInfoPassportMaximController_o 
   __int64 v10; // x1
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_GameObject_o *v12; // x20
-  TweenScale_o *v13; // x20
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
-  int32_t v20; // w1
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o v28; // 0:s1.4,4:s2.4,8:s3.4
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v16; // s3
+  float v17; // s4
+  float v18; // s3
+  TweenScale_o *v19; // x20
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
+  int32_t v26; // w1
+  System_String_o *v27; // x2
+  System_String_o *v28; // x3
+  int32_t v29; // w4
+  int32_t v30; // w5
+  bool v31; // w6
+  bool v32; // w7
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   if ( (byte_5971D47 & 1) == 0 )
   {
@@ -272,32 +280,46 @@ LABEL_14:
       goto LABEL_23;
     v12 = maximMask;
     maximMask = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(this->fields.selectPassport, 0);
-    if ( !maximMask
-      || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)maximMask, 0),
-          (maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0)
-      || (maximMask = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(maximMask, 0)) == 0
-      || (v28 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)maximMask, position, 0),
-          TweenPosition__Begin(v12, 0.2, v28, 0),
-          v13 = TweenScale__Begin(v12, 0.2, this->fields.maximStartScale, 0),
-          maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
-          !v13) )
-    {
+    if ( !maximMask )
+      goto LABEL_23;
+    position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)maximMask, 0);
+    x = position.fields.x;
+    y = position.fields.y;
+    z = position.fields.z;
+    maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    if ( !maximMask )
+      goto LABEL_23;
+    maximMask = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(maximMask, 0);
+    if ( !maximMask )
+      goto LABEL_23;
+    v34.fields.x = x;
+    v34.fields.y = y;
+    v34.fields.z = z;
+    v35 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)maximMask, v34, 0);
+    v16 = v35.fields.y;
+    v17 = v35.fields.z;
+    v35.fields.y = v35.fields.x;
+    v35.fields.z = v16;
+    v18 = v17;
+    TweenPosition__Begin(v12, 0.2, *(UnityEngine_Vector3_o *)&v35.fields.y, 0);
+    v19 = TweenScale__Begin(v12, 0.2, this->fields.maximStartScale, 0);
+    maximMask = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    if ( !v19 )
 LABEL_23:
       sub_2213CDC(maximMask, v5);
-    }
-    v13->fields.eventReceiver = maximMask;
+    v19->fields.eventReceiver = maximMask;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v13->fields.eventReceiver,
+      (MissionNaviTransitionBoardItem_o *)&v19->fields.eventReceiver,
       (int32_t)maximMask,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19);
-    v20 = StringLiteral_10279/*"OnCloseMaximPassportFinished"*/;
-    v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10279/*"OnCloseMaximPassportFinished"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
+      v20,
+      v21,
+      v22,
+      v23,
+      v24,
+      v25);
+    v26 = StringLiteral_10279/*"OnCloseMaximPassportFinished"*/;
+    v19->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10279/*"OnCloseMaximPassportFinished"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v19->fields.callWhenFinished, v26, v27, v28, v29, v30, v31, v32);
   }
 }
 
@@ -363,6 +385,7 @@ System_Collections_IEnumerator_o *EventInfoPassportMaximController__DelayAndExec
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5971D4B & 1) == 0 )
   {
@@ -378,8 +401,9 @@ System_Collections_IEnumerator_o *EventInfoPassportMaximController__DelayAndExec
     sub_2213CDC(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 40) = action;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -425,13 +449,14 @@ LABEL_7:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o EventInfoPassportMaximController__GetMaximScale(
         EventInfoPassportMaximController_o *this,
         UnityEngine_GameObject_o *target,
         const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float x; // s0
+  float x; // s0 OVERLAPPED
   float y; // s1
   float z; // s2
   UnityEngine_GameObject_o *gameObject; // x0
@@ -446,9 +471,11 @@ UnityEngine_Vector3_o EventInfoPassportMaximController__GetMaximScale(
   float v18; // s8
   float v19; // s8
   float v20; // s3
+  float v21; // s0
+  float v22; // s1
+  float v23; // s2
   UnityEngine_Bounds_o v24; // [xsp+8h] [xbp-58h] BYREF
-  UnityEngine_Vector3_o v25; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5971D4D & 1) == 0 )
@@ -490,15 +517,12 @@ LABEL_25:
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0);
     if ( gameObject )
     {
-      localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
-      x = localScale.fields.x;
-      y = localScale.fields.y;
-      z = localScale.fields.z;
+      *(UnityEngine_Vector3_o *)&x = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
 LABEL_24:
-      result.fields.x = x + x;
-      result.fields.y = y + y;
-      result.fields.z = z + z;
-      return result;
+      v21 = x + x;
+      v22 = y + y;
+      v23 = z + z;
+      goto LABEL_26;
     }
     goto LABEL_25;
   }
@@ -517,13 +541,17 @@ LABEL_24:
     v19 = (float)m_CachedPtr / v15;
   else
     v19 = (float)((float)m_CachedPtr / v18) / v14;
-  v25 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
+  localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
   v20 = 1.0;
   if ( v19 >= 1.0 )
     v20 = v19;
-  result.fields.x = v20 * v25.fields.x;
-  result.fields.y = v20 * v25.fields.y;
-  result.fields.z = v20 * v25.fields.z;
+  v21 = v20 * localScale.fields.x;
+  v22 = v20 * localScale.fields.y;
+  v23 = v20 * localScale.fields.z;
+LABEL_26:
+  result.fields.z = v23;
+  result.fields.y = v22;
+  result.fields.x = v21;
   return result;
 }
 
@@ -599,15 +627,19 @@ void EventInfoPassportMaximController__Open(
   const MethodInfo *v39; // x2
   const MethodInfo *v40; // x1
   const MethodInfo *v41; // x2
-  float v42; // s0
-  float v43; // s1
-  float v44; // s3
-  float v45; // s2
-  float v46; // s4
-  UnityEngine_Vector3_o MaximScale; // 0:kr40_12.12
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v45; // s0
+  float v46; // s1
+  float v47; // s3
+  float v48; // s2
+  float v49; // s4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v50; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o MaximScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v54; // 0:s1.4,4:s2.4,8:s3.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5971D46 & 1) == 0 )
@@ -755,14 +787,20 @@ void EventInfoPassportMaximController__Open(
                                                  this,
                                                  (UnityEngine_GameObject_o *)v20,
                                                  v41);
-                                  v42 = sub_24B9B38(0);
-                                  v44 = v43;
-                                  v46 = v45;
-                                  v50.fields.x = v42;
-                                  v50.fields.y = v44;
-                                  v50.fields.z = v46;
-                                  TweenPosition__Begin((UnityEngine_GameObject_o *)v20, 0.2, v50, 0);
-                                  TweenScale__Begin((UnityEngine_GameObject_o *)v20, 0.2, MaximScale, 0);
+                                  x = MaximScale.fields.x;
+                                  y = MaximScale.fields.y;
+                                  z = MaximScale.fields.z;
+                                  v45 = sub_24B9B38(0);
+                                  v47 = v46;
+                                  v49 = v48;
+                                  v53.fields.x = v45;
+                                  v53.fields.y = v47;
+                                  v53.fields.z = v49;
+                                  TweenPosition__Begin((UnityEngine_GameObject_o *)v20, 0.2, v53, 0);
+                                  v54.fields.x = x;
+                                  v54.fields.y = y;
+                                  v54.fields.z = z;
+                                  TweenScale__Begin((UnityEngine_GameObject_o *)v20, 0.2, v54, 0);
                                   return;
                                 }
                               }
@@ -1111,6 +1149,7 @@ bool EventInfoPassportMaximController__DelayAndExecute_d__31__MoveNext(
   unsigned int i_5__2; // w8
   struct EventInfoPassportMaximController_o *_4__this; // x20
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   int32_t action; // w8
 
   _1__state = this->fields.__1__state;
@@ -1145,8 +1184,9 @@ LABEL_5:
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   return 0;
 }

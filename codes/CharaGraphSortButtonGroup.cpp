@@ -119,7 +119,10 @@ void CharaGraphSortButtonGroup__SetBonusFilterButtonState(
 {
   __int64 v7; // x1
   UIWidget_o *bonusFilterKindButton; // x0
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v9; // s0 OVERLAPPED
+  float v10; // s3
+  float v11; // s1
+  float v12; // s2
 
   if ( CharaGraphSortButtonGroup__IsActive(
          (UnityEngine_Component_o *)this->fields.bonusFilterKindButton,
@@ -136,13 +139,13 @@ void CharaGraphSortButtonGroup__SetBonusFilterButtonState(
     {
       sub_2213CDC(bonusFilterKindButton, v7);
     }
-    v10.fields.r = 1.0;
-    v10.fields.a = 1.0;
+    v9 = 1.0;
+    v10 = 1.0;
     if ( state == 3 )
-      v10.fields.r = 0.5;
-    v10.fields.g = v10.fields.r;
-    v10.fields.b = v10.fields.r;
-    UIWidget__set_color(bonusFilterKindButton, v10, 0);
+      v9 = 0.5;
+    v11 = v9;
+    v12 = v9;
+    UIWidget__set_color(bonusFilterKindButton, *(UnityEngine_Color_o *)&v9, 0);
   }
 }
 
@@ -209,6 +212,7 @@ void CharaGraphSortButtonGroup__SetFilterButtonState(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CharaGraphSortButtonGroup__SetSortButtonImage(
         CharaGraphSortButtonGroup_o *this,
         ListViewSort_o *sort,
@@ -226,7 +230,10 @@ void CharaGraphSortButtonGroup__SetSortButtonImage(
   System_String_o **v15; // x8
   UILabel_o *bonusFilterKindLabel; // x22
   struct UICommonButton_o *bonusFilterKindButton; // x8
-  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v18; // s0 OVERLAPPED
+  float v19; // s3
+  float v20; // s1
+  float v21; // s2
 
   if ( (byte_596FAF8 & 1) == 0 )
   {
@@ -313,13 +320,13 @@ void CharaGraphSortButtonGroup__SetSortButtonImage(
 LABEL_37:
     sub_2213CDC(IsActive, v8);
   }
-  v19.fields.r = 1.0;
-  v19.fields.a = 1.0;
+  v18 = 1.0;
+  v19 = 1.0;
   if ( bonusFilterKindButton->fields.mState == 3 )
-    v19.fields.r = 0.5;
-  v19.fields.g = v19.fields.r;
-  v19.fields.b = v19.fields.r;
-  UIWidget__set_color((UIWidget_o *)IsActive, v19, 0);
+    v18 = 0.5;
+  v20 = v18;
+  v21 = v18;
+  UIWidget__set_color((UIWidget_o *)IsActive, *(UnityEngine_Color_o *)&v18, 0);
 }
 
 

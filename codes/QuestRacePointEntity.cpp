@@ -122,10 +122,11 @@ int32_t QuestRacePointEntity__GetEffectGrade(QuestRacePointEntity_o *this, const
   __int64 v7; // x1
   int32_t v8; // w19
   Il2CppType *v9; // x20
-  __int64 v10; // x1
+  System_RuntimeTypeHandle_o v10; // x0
+  __int64 v11; // x1
   System_Type_o *TypeFromHandle; // x20
   int32_t Length; // w0
-  int32_t v13; // w8
+  int32_t v14; // w8
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5970FDE & 1) == 0 )
@@ -156,22 +157,23 @@ int32_t QuestRacePointEntity__GetEffectGrade(QuestRacePointEntity_o *this, const
   v9 = EventRaceBoostEffect_BoostGrade_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v7);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v9, 0);
+  v10.fields.value = (intptr_t)v9;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v10, 0);
   if ( !*(_DWORD *)(qword_5984398 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_5984398, v10);
+    j_il2cpp_runtime_class_init_0(qword_5984398, v11);
   Values = System_Enum__GetValues(TypeFromHandle, 0);
   if ( !Values )
 LABEL_19:
     sub_2213CDC(Values, v4);
   Length = System_Array__get_Length(Values, 0);
   if ( v8 >= Length )
-    v13 = Length;
+    v14 = Length;
   else
-    v13 = v8;
+    v14 = v8;
   if ( v8 < 1 )
     return 1;
   else
-    return v13;
+    return v14;
 }
 
 
@@ -402,7 +404,7 @@ System_String_o *QuestRacePointEntity___c___GetVoices_b__10_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
-           x,
-           x->klass->vtable[3].method);
+  return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))x->klass->vtable[3].methodPtr)(
+                              x,
+                              x->klass->vtable[3].method);
 }

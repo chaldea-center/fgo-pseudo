@@ -1023,6 +1023,7 @@ LABEL_88:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventCraftNumConfirmDialogComponent__SetExchangeBase(
         EventCraftNumConfirmDialogComponent_o *this,
         const MethodInfo *method)
@@ -1065,18 +1066,21 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
   System_String_o *v37; // x0
   struct UILabel_array *v38; // x8
   struct System_Boolean_array *isShortage; // x9
-  __int64 v42; // x1
-  __int64 v43; // x2
+  float v40; // s0 OVERLAPPED
+  float v41; // s3
+  float v42; // s1
+  float v43; // s2
+  __int64 v44; // x1
+  __int64 v45; // x2
   UILabel_o *exchangeDestinationLb; // x20
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
   GiftEntity_array *GiftListById; // x20
-  GiftEntity_o *v47; // x8
-  __int64 v48; // x2
+  GiftEntity_o *v49; // x8
+  __int64 v50; // x2
   UISprite_o *exchangeDestinationItemIcon; // x20
   int32_t monitor; // w21
-  __int64 v51; // [xsp+0h] [xbp-80h]
+  __int64 v53; // [xsp+0h] [xbp-80h]
   Il2CppObject *entity; // [xsp+8h] [xbp-78h] BYREF
-  UnityEngine_Color_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = this;
   if ( (byte_596A540 & 1) == 0 )
@@ -1137,7 +1141,7 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
     goto LABEL_50;
   if ( SLODWORD(exchangeOriginCountLb->max_length) < v14 )
     return;
-  v51 = max_length_low;
+  v53 = max_length_low;
   v16 = 0;
   while ( 1 )
   {
@@ -1210,12 +1214,12 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
                       this = (EventCraftNumConfirmDialogComponent_o *)v38->m_Items[v16];
                       if ( this )
                       {
-                        v53.fields.r = 1.0;
-                        v53.fields.a = 1.0;
+                        v40 = 1.0;
+                        v41 = 1.0;
                         ++v16;
-                        v53.fields.g = isShortage->m_Items[v19] ? 0.0 : 1.0;
-                        v53.fields.b = v53.fields.g;
-                        UIWidget__set_color((UIWidget_o *)this, v53, 0);
+                        v42 = isShortage->m_Items[v19] ? 0.0 : 1.0;
+                        v43 = v42;
+                        UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)&v40, 0);
                         v12 = v3->fields.consumeItemList;
                         if ( v12 )
                           continue;
@@ -1234,14 +1238,14 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
   this = (EventCraftNumConfirmDialogComponent_o *)v3->fields.exchangeOriginItemUiParent2;
   if ( !this )
     goto LABEL_50;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v51 == 2, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v53 == 2, 0);
   this = (EventCraftNumConfirmDialogComponent_o *)v3->fields.exchangeOriginItemUiParent3;
   if ( !this )
     goto LABEL_50;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v51 != 2, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v53 != 2, 0);
   exchangeDestinationLb = v3->fields.exchangeDestinationLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v42, v43);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v44, v45);
   this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_4035/*"CRAFT_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, 0);
   if ( !exchangeDestinationLb )
     goto LABEL_50;
@@ -1262,8 +1266,8 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
       goto LABEL_50;
     if ( LODWORD(GiftListById->max_length) )
     {
-      v47 = GiftListById->m_Items[0];
-      if ( !v47 )
+      v49 = GiftListById->m_Items[0];
+      if ( !v49 )
         goto LABEL_50;
       this = (EventCraftNumConfirmDialogComponent_o *)v3->fields.itemMaster;
       if ( !this )
@@ -1271,7 +1275,7 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
       this = (EventCraftNumConfirmDialogComponent_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                         &entity,
-                                                        v47->fields.objectId,
+                                                        v49->fields.objectId,
                                                         (const MethodInfo_3F10B80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
@@ -1280,7 +1284,7 @@ void EventCraftNumConfirmDialogComponent__SetExchangeBase(
           exchangeDestinationItemIcon = v3->fields.exchangeDestinationItemIcon;
           monitor = (int32_t)entity[2].monitor;
           if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v48);
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, method, v50);
           AtlasManager__SetItem(exchangeDestinationItemIcon, monitor, 0);
           goto LABEL_68;
         }
@@ -1371,6 +1375,7 @@ LABEL_17:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventCraftNumConfirmDialogComponent__SetTimeLabel(
         EventCraftNumConfirmDialogComponent_o *this,
         const MethodInfo *method)
@@ -1450,12 +1455,15 @@ void EventCraftNumConfirmDialogComponent__SetTimeLabel(
   BalanceConfig_c *v74; // x8
   int64_t v75; // x20
   int64_t SECONDS_PER_DAY; // x21
-  __int64 v78; // x1
-  __int64 v79; // x2
-  __int64 v80; // x21
+  float v77; // s0 OVERLAPPED
+  float v78; // s3
+  float v79; // s1
+  float v80; // s2
+  __int64 v81; // x1
+  __int64 v82; // x2
+  __int64 v83; // x21
   UILabel_o *supportToolLeftTimeLb; // x19
-  System_String_o *v82; // x0
-  UnityEngine_Color_o v83; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_String_o *v85; // x0
 
   v4 = this;
   if ( (byte_596A53D & 1) == 0 )
@@ -1646,19 +1654,19 @@ LABEL_35:
   this = (EventCraftNumConfirmDialogComponent_o *)v4->fields.useSupportToolBtnSp;
   if ( !this )
     goto LABEL_69;
-  v83.fields.r = 1.0;
-  v83.fields.a = 1.0;
+  v77 = 1.0;
+  v78 = 1.0;
   if ( v75 > SECONDS_PER_DAY )
-    v83.fields.r = 0.5;
-  v83.fields.g = v83.fields.r;
-  v83.fields.b = v83.fields.r;
-  UIWidget__set_color((UIWidget_o *)this, v83, 0);
-  v80 = v4->fields.isButtonOn ? v4->fields.supportToolTime : 0LL;
+    v77 = 0.5;
+  v79 = v77;
+  v80 = v77;
+  UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)&v77, 0);
+  v83 = v4->fields.isButtonOn ? v4->fields.supportToolTime : 0LL;
   supportToolLeftTimeLb = v4->fields.supportToolLeftTimeLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v78, v79);
-  v82 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
-  this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v80 + v75, 0, v82, 0);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v81, v82);
+  v85 = LocalizationManager__Get((System_String_o *)StringLiteral_13950/*"TIME_FORMAT_1"*/, 0);
+  this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v83 + v75, 0, v85, 0);
   if ( !supportToolLeftTimeLb )
     goto LABEL_69;
   UILabel__set_text(supportToolLeftTimeLb, (System_String_o *)this, 0);

@@ -125,6 +125,7 @@ System_Collections_IEnumerator_o *BattleSkillSelectAddFuncConfComponent__Corouti
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5974297 & 1) == 0 )
   {
@@ -136,8 +137,9 @@ System_Collections_IEnumerator_o *BattleSkillSelectAddFuncConfComponent__Corouti
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 32) = index;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -821,7 +823,7 @@ System_IAsyncResult_o *BattleSkillSelectAddFuncConfComponent_SelectCallBack__Beg
   v10[0] = skillInfo;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

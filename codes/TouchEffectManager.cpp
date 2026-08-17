@@ -129,16 +129,20 @@ void TouchEffectManager__CreateLocal(
   struct TouchEffectManager_StaticFields *static_fields; // x8
   System_Collections_Generic_List_object__o *effectList; // x0
   UnityEngine_Transform_o *v13; // x21
-  struct TouchEffectManager_StaticFields *v14; // x8
-  __int64 v15; // x1
-  __int64 v16; // x2
-  TouchEffectManager_c *v17; // x0
-  struct TouchEffectManager_StaticFields *v18; // x8
+  float v14; // s10
+  float v15; // s11
+  float z; // s12
+  struct TouchEffectManager_StaticFields *v17; // x8
+  __int64 v18; // x1
+  __int64 v19; // x2
+  TouchEffectManager_c *v20; // x0
+  struct TouchEffectManager_StaticFields *v21; // x8
   int32_t CREATE_EFFECT_MAX; // w10
-  int v20; // w9
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  int v23; // w9
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   y = p.fields.y;
   x = p.fields.x;
@@ -194,13 +198,16 @@ void TouchEffectManager__CreateLocal(
       effectList = (System_Collections_Generic_List_object__o *)this->fields.effectCamera;
       if ( !effectList )
         goto LABEL_27;
-      v22.fields.z = 0.0;
-      v22.fields.x = x;
-      v22.fields.y = y;
-      v23 = UnityEngine_Camera__ScreenToWorldPoint_83198228((UnityEngine_Camera_o *)effectList, v22, 0);
+      v14 = localScale.fields.x;
+      v15 = localScale.fields.y;
+      z = localScale.fields.z;
+      v25.fields.z = 0.0;
+      v25.fields.x = x;
+      v25.fields.y = y;
+      v26 = UnityEngine_Camera__ScreenToWorldPoint_83198228((UnityEngine_Camera_o *)effectList, v25, 0);
       if ( !v13 )
         goto LABEL_27;
-      UnityEngine_Transform__set_position(v13, v23, 0);
+      UnityEngine_Transform__set_position(v13, v26, 0);
       if ( !byte_5969AE6 )
       {
         sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -210,32 +217,35 @@ void TouchEffectManager__CreateLocal(
         v13,
         UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
         0);
-      UnityEngine_Transform__set_localScale(v13, localScale, 0);
-      v14 = TouchEffectManager_TypeInfo->static_fields;
-      effectList = (System_Collections_Generic_List_object__o *)v14->effectList;
+      v27.fields.x = v14;
+      v27.fields.y = v15;
+      v27.fields.z = z;
+      UnityEngine_Transform__set_localScale(v13, v27, 0);
+      v17 = TouchEffectManager_TypeInfo->static_fields;
+      effectList = (System_Collections_Generic_List_object__o *)v17->effectList;
       if ( !effectList
         || (effectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         effectList,
-                                                                        v14->effectIdx,
+                                                                        v17->effectIdx,
                                                                         (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_CommonParticleControlComponent__get_Item__)) == 0 )
       {
 LABEL_27:
         sub_2213CDC(effectList, v8);
       }
       CommonParticleControlComponent__particleStart((CommonParticleControlComponent_o *)effectList, 1, 0);
-      v17 = TouchEffectManager_TypeInfo;
-      v18 = TouchEffectManager_TypeInfo->static_fields;
-      CREATE_EFFECT_MAX = v18->CREATE_EFFECT_MAX;
-      v20 = v18->effectIdx + 1;
-      v18->effectIdx = v20;
-      if ( v20 >= CREATE_EFFECT_MAX )
+      v20 = TouchEffectManager_TypeInfo;
+      v21 = TouchEffectManager_TypeInfo->static_fields;
+      CREATE_EFFECT_MAX = v21->CREATE_EFFECT_MAX;
+      v23 = v21->effectIdx + 1;
+      v21->effectIdx = v23;
+      if ( v23 >= CREATE_EFFECT_MAX )
       {
-        if ( !*(&v17->_2.cctor_finished + 1) )
+        if ( !*(&v20->_2.cctor_finished + 1) )
         {
-          j_il2cpp_runtime_class_init_0(v17, v15, v16);
-          v18 = TouchEffectManager_TypeInfo->static_fields;
+          j_il2cpp_runtime_class_init_0(v20, v18, v19);
+          v21 = TouchEffectManager_TypeInfo->static_fields;
         }
-        v18->effectIdx = 0;
+        v21->effectIdx = 0;
       }
     }
   }

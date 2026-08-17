@@ -15,8 +15,8 @@ void ServantStatusListViewItemDrawRandomLimitCountSupport__Awake(
   UnityEngine_GameObject_o *baseSprite; // x0
   float v4; // s0
   float v5; // s1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:kr14_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
   baseSprite = (UnityEngine_GameObject_o *)this->fields.baseSprite;
   if ( !baseSprite )
@@ -135,6 +135,7 @@ ServantStatusListViewItemButton_o *ServantStatusListViewItemDrawRandomLimitCount
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawRandomLimitCountSupport__Layout(
         ServantStatusListViewItemDrawRandomLimitCountSupport_o *this,
         ServantStatusListViewItem_o *item,
@@ -156,20 +157,21 @@ void ServantStatusListViewItemDrawRandomLimitCountSupport__Layout(
   unsigned int v17; // w8
   struct UISprite_o *v18; // x8
   UnityEngine_BoxCollider_o *baseCollider; // x22
+  int v20; // s0 OVERLAPPED
+  int v22; // s2
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v22; // x0
-  UnityEngine_GameObject_o *v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x2
-  UnityEngine_Object_o *v26; // x20
+  UnityEngine_GameObject_o *v24; // x0
+  UnityEngine_GameObject_o *v25; // x0
+  __int64 v26; // x1
+  __int64 v27; // x2
+  UnityEngine_Object_o *v28; // x20
+  float v29; // s1
   int transformNameAddHeight; // w8
-  int v28; // w8
-  UnityEngine_GameObject_o *v29; // x0
-  int v30; // w8
   int v31; // w8
-  UnityEngine_Vector3_o size; // 0:kr00_12.12
-  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v32; // x0
+  int v33; // w8
+  int v34; // w8
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
   if ( (byte_596D36B & 1) == 0 )
@@ -260,8 +262,8 @@ LABEL_16:
                                                                      this->klass[1]._1.methods);
   if ( !baseCollider )
     goto LABEL_54;
-  v34.fields.z = 0.0;
-  UnityEngine_BoxCollider__set_size(baseCollider, v34, 0);
+  v22 = 0;
+  UnityEngine_BoxCollider__set_size(baseCollider, *(UnityEngine_Vector3_o *)&v20, 0);
   this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.titleBase;
   if ( !this )
     goto LABEL_54;
@@ -270,36 +272,34 @@ LABEL_16:
   this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.buttonBaseObj;
   if ( !this )
     goto LABEL_54;
-  v22 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)this, 0);
-  GameObjectExtensions__SetLocalPositionY(v22, v15 + v4->fields.buttonBasePosition.fields.y, 0);
+  v24 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)this, 0);
+  GameObjectExtensions__SetLocalPositionY(v24, v15 + v4->fields.buttonBasePosition.fields.y, 0);
   this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.explanationLabel;
   if ( !this )
     goto LABEL_54;
-  v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPositionY(
-    v23,
+    v25,
     v15 + (float)(v4->fields.explanationBasePosition.fields.y - (float)v14),
     0);
   if ( !item )
     goto LABEL_54;
   if ( !ServantStatusListViewItem__get_IsSaveTransformServant(item, 0) )
     return;
-  v26 = (UnityEngine_Object_o *)v4->fields.baseCollider;
+  v28 = (UnityEngine_Object_o *)v4->fields.baseCollider;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24, v25);
-  if ( UnityEngine_Object__op_Inequality(v26, 0, 0) )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26, v27);
+  if ( UnityEngine_Object__op_Inequality(v28, 0, 0) )
   {
     this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.baseCollider;
     if ( !this )
       goto LABEL_54;
     size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-    v35.fields.x = size.fields.x;
-    v35.fields.z = size.fields.z;
     this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.baseCollider;
     if ( !this )
       goto LABEL_54;
-    v35.fields.y = size.fields.y + (float)v4->fields.transformNameAddHeight;
-    UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, v35, 0);
+    v29 = size.fields.y + (float)v4->fields.transformNameAddHeight;
+    UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, size, 0);
   }
   this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.baseSprite;
   if ( !this )
@@ -317,19 +317,19 @@ LABEL_16:
     0);
   GameObjectExtensions__AddLocalPositionY(v4->fields.titleBase, (float)(v4->fields.transformNameAddHeight / 2), 0);
   transformNameAddHeight = v4->fields.transformNameAddHeight;
-  v28 = transformNameAddHeight <= 0 ? -transformNameAddHeight : 1 - transformNameAddHeight;
-  GameObjectExtensions__AddLocalPositionY(v4->fields.buttonBaseObj, (float)(v28 >> 1), 0);
+  v31 = transformNameAddHeight <= 0 ? -transformNameAddHeight : 1 - transformNameAddHeight;
+  GameObjectExtensions__AddLocalPositionY(v4->fields.buttonBaseObj, (float)(v31 >> 1), 0);
   this = (ServantStatusListViewItemDrawRandomLimitCountSupport_o *)v4->fields.explanationLabel;
   if ( !this )
 LABEL_54:
     sub_2213CDC(this, item);
-  v29 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v30 = v4->fields.transformNameAddHeight;
-  if ( v30 <= 0 )
-    v31 = -v30;
+  v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v33 = v4->fields.transformNameAddHeight;
+  if ( v33 <= 0 )
+    v34 = -v33;
   else
-    v31 = 1 - v30;
-  GameObjectExtensions__AddLocalPositionY(v29, (float)(v31 >> 1), 0);
+    v34 = 1 - v33;
+  GameObjectExtensions__AddLocalPositionY(v32, (float)(v34 >> 1), 0);
 }
 
 
@@ -366,6 +366,7 @@ void ServantStatusListViewItemDrawRandomLimitCountSupport__SetItem(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawRandomLimitCountSupport__SetReflectOwnSettingButtonDisplay(
         ServantStatusListViewItemDrawRandomLimitCountSupport_o *this,
         System_String_o *text,
@@ -385,7 +386,10 @@ void ServantStatusListViewItemDrawRandomLimitCountSupport__SetReflectOwnSettingB
   float v17; // s13
   float v18; // s14
   float v19; // s15
-  UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v20; // s0 OVERLAPPED
+  float v21; // s1
+  float v22; // s2
+  float v23; // s3
 
   if ( (byte_596D367 & 1) == 0 )
   {
@@ -451,22 +455,22 @@ LABEL_33:
     sub_2213CDC(reflectOwnSettingButtonSprite, text);
   }
   if ( isSelected )
-    v23.fields.r = v16;
+    v20 = v16;
   else
-    v23.fields.r = v11;
+    v20 = v11;
   if ( isSelected )
-    v23.fields.g = v17;
+    v21 = v17;
   else
-    v23.fields.g = v12;
+    v21 = v12;
   if ( isSelected )
-    v23.fields.b = v18;
+    v22 = v18;
   else
-    v23.fields.b = v13;
+    v22 = v13;
   if ( isSelected )
-    v23.fields.a = v19;
+    v23 = v19;
   else
-    v23.fields.a = v14;
-  UILabel__set_effectColor((UILabel_o *)reflectOwnSettingButtonSprite, v23, 0);
+    v23 = v14;
+  UILabel__set_effectColor((UILabel_o *)reflectOwnSettingButtonSprite, *(UnityEngine_Color_o *)&v20, 0);
 }
 
 

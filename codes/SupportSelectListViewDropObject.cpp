@@ -170,6 +170,7 @@ void SupportSelectListViewDropObject__DestroyDragObj(SupportSelectListViewDropOb
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SupportSelectListViewDropObject__DoSwap(
         SupportSelectListViewDropObject_o *this,
         UnityEngine_Vector3_o targetPosition,
@@ -191,8 +192,11 @@ void SupportSelectListViewDropObject__DoSwap(
   UnityEngine_Transform_o *transform; // x0
   __int64 v18; // x1
   UnityEngine_GameObject_o *klass; // x19
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s1.4,4:s2.4,8:s3.4
+  float v20; // s4
+  float v21; // s5
+  float v22; // s3
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
@@ -203,17 +207,31 @@ void SupportSelectListViewDropObject__DoSwap(
   v9 = (MissionNaviTransitionBoardItem_o *)((char *)v9 + 128);
   sub_2213A04(v9, (int32_t)DragObject_42479216, v11, v12, v13, v14, v15, v16);
   klass = (UnityEngine_GameObject_o *)v9->klass;
-  if ( !klass
-    || (transform = UnityEngine_GameObject__get_transform(klass, 0)) == 0
-    || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0
-    || (v20.fields.x = x,
-        v20.fields.y = y,
-        v20.fields.z = z,
-        v21 = UnityEngine_Transform__InverseTransformPoint(transform, v20, 0),
-        (transform = (UnityEngine_Transform_o *)TweenPosition__Begin(klass, duration, v21, 0)) == 0) )
-  {
+  if ( !klass )
+    goto LABEL_6;
+  transform = UnityEngine_GameObject__get_transform(klass, 0);
+  if ( !transform )
+    goto LABEL_6;
+  transform = UnityEngine_Transform__get_parent(transform, 0);
+  if ( !transform )
+    goto LABEL_6;
+  v23.fields.x = x;
+  v23.fields.y = y;
+  v23.fields.z = z;
+  v24 = UnityEngine_Transform__InverseTransformPoint(transform, v23, 0);
+  v20 = v24.fields.y;
+  v21 = v24.fields.z;
+  v24.fields.y = v24.fields.x;
+  v24.fields.z = v20;
+  v22 = v21;
+  transform = (UnityEngine_Transform_o *)TweenPosition__Begin(
+                                           klass,
+                                           duration,
+                                           *(UnityEngine_Vector3_o *)&v24.fields.y,
+                                           0);
+  if ( !transform )
+LABEL_6:
     sub_2213CDC(transform, v18);
-  }
   LODWORD(transform[1].monitor) = 3;
 }
 

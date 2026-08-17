@@ -130,47 +130,49 @@ void CombineHelpListViewManager___cctor(const MethodInfo *method)
   int32_t v128; // w5
   bool v129; // w6
   bool v130; // w7
-  System_Array_o *v131; // x19
+  System_Array_o *v131; // x0
+  System_RuntimeFieldHandle_o v132; // x1
+  System_Array_o *v133; // x19
   struct CombineHelpListViewManager_StaticFields *static_fields; // x0
-  System_String_o *v133; // x2
-  System_String_o *v134; // x3
-  int32_t v135; // w4
-  int32_t v136; // w5
-  bool v137; // w6
-  bool v138; // w7
-  int32_t v139; // w1
-  struct CombineHelpListViewManager_StaticFields *v140; // x0
-  System_String_o *v141; // x2
-  System_String_o *v142; // x3
-  int32_t v143; // w4
-  int32_t v144; // w5
-  bool v145; // w6
-  bool v146; // w7
-  int32_t v147; // w1
-  struct CombineHelpListViewManager_StaticFields *v148; // x0
-  System_String_o *v149; // x2
-  System_String_o *v150; // x3
-  int32_t v151; // w4
-  int32_t v152; // w5
-  bool v153; // w6
-  bool v154; // w7
-  int32_t v155; // w1
-  struct CombineHelpListViewManager_StaticFields *v156; // x0
-  System_String_o *v157; // x2
-  System_String_o *v158; // x3
-  int32_t v159; // w4
-  int32_t v160; // w5
-  bool v161; // w6
-  bool v162; // w7
-  int32_t v163; // w1
-  struct CombineHelpListViewManager_StaticFields *v164; // x0
-  System_String_o *v165; // x2
-  System_String_o *v166; // x3
-  int32_t v167; // w4
-  int32_t v168; // w5
-  bool v169; // w6
-  bool v170; // w7
-  __int64 v171; // x0
+  System_String_o *v135; // x2
+  System_String_o *v136; // x3
+  int32_t v137; // w4
+  int32_t v138; // w5
+  bool v139; // w6
+  bool v140; // w7
+  int32_t v141; // w1
+  struct CombineHelpListViewManager_StaticFields *v142; // x0
+  System_String_o *v143; // x2
+  System_String_o *v144; // x3
+  int32_t v145; // w4
+  int32_t v146; // w5
+  bool v147; // w6
+  bool v148; // w7
+  int32_t v149; // w1
+  struct CombineHelpListViewManager_StaticFields *v150; // x0
+  System_String_o *v151; // x2
+  System_String_o *v152; // x3
+  int32_t v153; // w4
+  int32_t v154; // w5
+  bool v155; // w6
+  bool v156; // w7
+  int32_t v157; // w1
+  struct CombineHelpListViewManager_StaticFields *v158; // x0
+  System_String_o *v159; // x2
+  System_String_o *v160; // x3
+  int32_t v161; // w4
+  int32_t v162; // w5
+  bool v163; // w6
+  bool v164; // w7
+  int32_t v165; // w1
+  struct CombineHelpListViewManager_StaticFields *v166; // x0
+  System_String_o *v167; // x2
+  System_String_o *v168; // x3
+  int32_t v169; // w4
+  int32_t v170; // w5
+  bool v171; // w6
+  bool v172; // w7
+  __int64 v173; // x0
 
   if ( (byte_5974B51 & 1) == 0 )
   {
@@ -406,8 +408,8 @@ void CombineHelpListViewManager___cctor(const MethodInfo *method)
     if ( !v4 )
     {
 LABEL_51:
-      v171 = sub_2213D00(v4, v12);
-      sub_2213BA0(v171, 0);
+      v173 = sub_2213D00(v4, v12);
+      sub_2213BA0(v173, 0);
     }
   }
   if ( LODWORD(v1->max_length) <= 0xE )
@@ -426,53 +428,52 @@ LABEL_50:
     v129,
     v130);
   v131 = (System_Array_o *)sub_2213B20(CombineHelpListViewManager_ItemKind___TypeInfo, 14);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v131,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DA617C7DA2D7AF1918BC783DA92A42F0574C2DA2909E869D12CB5B78BE84C339,
-    0);
+  v132.fields.value = Field__PrivateImplementationDetails__DA617C7DA2D7AF1918BC783DA92A42F0574C2DA2909E869D12CB5B78BE84C339;
+  v133 = v131;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v131, v132, 0);
   static_fields = CombineHelpListViewManager_TypeInfo->static_fields;
-  static_fields->KindList = (struct CombineHelpListViewManager_ItemKind_array *)v131;
+  static_fields->KindList = (struct CombineHelpListViewManager_ItemKind_array *)v133;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&static_fields->KindList,
-    (int32_t)v131,
-    v133,
-    v134,
+    (int32_t)v133,
     v135,
     v136,
     v137,
-    v138);
-  v139 = StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
-  v140 = CombineHelpListViewManager_TypeInfo->static_fields;
-  v140->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v140->HELP_BASE_SPRITE_PATH,
+    v138,
     v139,
+    v140);
+  v141 = StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
+  v142 = CombineHelpListViewManager_TypeInfo->static_fields;
+  v142->HELP_BASE_SPRITE_PATH = (struct System_String_o *)StringLiteral_15218/*"Tutorial/tutorial_0006"*/;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v142->HELP_BASE_SPRITE_PATH,
     v141,
-    v142,
     v143,
     v144,
     v145,
-    v146);
-  v147 = StringLiteral_25548/*"tutorial_0006"*/;
-  v148 = CombineHelpListViewManager_TypeInfo->static_fields;
-  v148->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_25548/*"tutorial_0006"*/;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v148->HELP_BASE_SPRITE_NAME,
+    v146,
     v147,
+    v148);
+  v149 = StringLiteral_25548/*"tutorial_0006"*/;
+  v150 = CombineHelpListViewManager_TypeInfo->static_fields;
+  v150->HELP_BASE_SPRITE_NAME = (struct System_String_o *)StringLiteral_25548/*"tutorial_0006"*/;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v150->HELP_BASE_SPRITE_NAME,
     v149,
-    v150,
     v151,
     v152,
     v153,
-    v154);
-  v155 = StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
-  v156 = CombineHelpListViewManager_TypeInfo->static_fields;
-  v156->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v156->HELP_BASE_ALPHA_PATH, v155, v157, v158, v159, v160, v161, v162);
-  v163 = StringLiteral_25549/*"tutorial_alpha"*/;
-  v164 = CombineHelpListViewManager_TypeInfo->static_fields;
-  v164->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_25549/*"tutorial_alpha"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v164->HELP_BASE_ALPHA_NAME, v163, v165, v166, v167, v168, v169, v170);
+    v154,
+    v155,
+    v156);
+  v157 = StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
+  v158 = CombineHelpListViewManager_TypeInfo->static_fields;
+  v158->HELP_BASE_ALPHA_PATH = (struct System_String_o *)StringLiteral_15219/*"Tutorial/tutorial_alpha"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v158->HELP_BASE_ALPHA_PATH, v157, v159, v160, v161, v162, v163, v164);
+  v165 = StringLiteral_25549/*"tutorial_alpha"*/;
+  v166 = CombineHelpListViewManager_TypeInfo->static_fields;
+  v166->HELP_BASE_ALPHA_NAME = (struct System_String_o *)StringLiteral_25549/*"tutorial_alpha"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v166->HELP_BASE_ALPHA_NAME, v165, v167, v168, v169, v170, v171, v172);
 }
 
 
@@ -1615,9 +1616,9 @@ System_IAsyncResult_o *CombineHelpListViewManager_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 
@@ -1697,9 +1698,9 @@ System_IAsyncResult_o *CombineHelpListViewManager_CallbackFunc2__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  char v5; // [xsp+8h] [xbp-8h] BYREF
+  __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
-  return sub_2213A14(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, &v5, callback, object);
 }
 
 

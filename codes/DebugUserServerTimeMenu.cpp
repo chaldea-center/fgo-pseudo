@@ -18,10 +18,15 @@ void DebugUserServerTimeMenu__SetupUserServerTimeNow(DebugUserServerTimeMenu_o *
   System_DateTime_o v5; // x1
   UnityEngine_Component_o *inputYear; // x8
   Il2CppObject *Component_object; // x20
-  Il2CppObject *v8; // x20
+  System_DateTime_o v8; // x0
   Il2CppObject *v9; // x20
-  Il2CppObject *v10; // x20
-  Il2CppObject *v11; // x19
+  System_DateTime_o v10; // x0
+  Il2CppObject *v11; // x20
+  System_DateTime_o v12; // x0
+  Il2CppObject *v13; // x20
+  System_DateTime_o v14; // x0
+  Il2CppObject *v15; // x19
+  System_DateTime_o v16; // x0
   uint64_t dateData; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596DC21 & 1) == 0 )
@@ -46,64 +51,58 @@ void DebugUserServerTimeMenu__SetupUserServerTimeNow(DebugUserServerTimeMenu_o *
   Component_object = UnityEngine_Component__GetComponent_object_(
                        inputYear,
                        (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                    (System_DateTime_o)&dateData,
-                                    (System_String_o *)StringLiteral_26358/*"yyyy"*/,
-                                    0);
+  v8.fields._dateData = (uint64_t)&dateData;
+  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(v8, (System_String_o *)StringLiteral_26358/*"yyyy"*/, 0);
   if ( !Component_object )
     goto LABEL_16;
   UIInput__set_value((UIInput_o *)Component_object, (System_String_o *)v4.fields._dateData, 0);
   v4.fields._dateData = (uint64_t)this->fields.inputMonth;
   if ( !v4.fields._dateData )
     goto LABEL_16;
-  v8 = UnityEngine_Component__GetComponent_object_(
-         (UnityEngine_Component_o *)v4.fields._dateData,
-         (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                    (System_DateTime_o)&dateData,
-                                    (System_String_o *)StringLiteral_9084/*"MM"*/,
-                                    0);
-  if ( !v8 )
-    goto LABEL_16;
-  UIInput__set_value((UIInput_o *)v8, (System_String_o *)v4.fields._dateData, 0);
-  v4.fields._dateData = (uint64_t)this->fields.inputDay;
-  if ( !v4.fields._dateData )
-    goto LABEL_16;
   v9 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)v4.fields._dateData,
          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
-  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                    (System_DateTime_o)&dateData,
-                                    (System_String_o *)StringLiteral_19333/*"dd"*/,
-                                    0);
+  v10.fields._dateData = (uint64_t)&dateData;
+  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(v10, (System_String_o *)StringLiteral_9084/*"MM"*/, 0);
   if ( !v9 )
     goto LABEL_16;
   UIInput__set_value((UIInput_o *)v9, (System_String_o *)v4.fields._dateData, 0);
+  v4.fields._dateData = (uint64_t)this->fields.inputDay;
+  if ( !v4.fields._dateData )
+    goto LABEL_16;
+  v11 = UnityEngine_Component__GetComponent_object_(
+          (UnityEngine_Component_o *)v4.fields._dateData,
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+  v12.fields._dateData = (uint64_t)&dateData;
+  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(v12, (System_String_o *)StringLiteral_19333/*"dd"*/, 0);
+  if ( !v11 )
+    goto LABEL_16;
+  UIInput__set_value((UIInput_o *)v11, (System_String_o *)v4.fields._dateData, 0);
   v4.fields._dateData = (uint64_t)this->fields.inputHour;
-  if ( !v4.fields._dateData
-    || (v10 = UnityEngine_Component__GetComponent_object_(
-                (UnityEngine_Component_o *)v4.fields._dateData,
-                (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___),
-        v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                          (System_DateTime_o)&dateData,
-                                          (System_String_o *)StringLiteral_7518/*"HH"*/,
-                                          0),
-        !v10)
-    || (UIInput__set_value((UIInput_o *)v10, (System_String_o *)v4.fields._dateData, 0),
+  if ( !v4.fields._dateData )
+    goto LABEL_16;
+  v13 = UnityEngine_Component__GetComponent_object_(
+          (UnityEngine_Component_o *)v4.fields._dateData,
+          (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+  v14.fields._dateData = (uint64_t)&dateData;
+  v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(v14, (System_String_o *)StringLiteral_7518/*"HH"*/, 0);
+  if ( !v13
+    || (UIInput__set_value((UIInput_o *)v13, (System_String_o *)v4.fields._dateData, 0),
         (v4.fields._dateData = (uint64_t)this->fields.inputMinute) == 0)
-    || (v11 = UnityEngine_Component__GetComponent_object_(
+    || (v15 = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)v4.fields._dateData,
                 (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___),
+        v16.fields._dateData = (uint64_t)&dateData,
         v4.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                          (System_DateTime_o)&dateData,
+                                          v16,
                                           (System_String_o *)StringLiteral_22736/*"mm"*/,
                                           0),
-        !v11) )
+        !v15) )
   {
 LABEL_16:
     sub_2213CDC(v4.fields._dateData, v5.fields._dateData);
   }
-  UIInput__set_value((UIInput_o *)v11, (System_String_o *)v4.fields._dateData, 0);
+  UIInput__set_value((UIInput_o *)v15, (System_String_o *)v4.fields._dateData, 0);
 }
 
 
@@ -193,17 +192,22 @@ void DebugUserServerTimeMenu__open(
   __int64 v9; // x1
   __int64 v10; // x2
   Il2CppObject *Component_object; // x21
-  Il2CppObject *v12; // x21
+  System_DateTime_o v12; // x0
   Il2CppObject *v13; // x21
-  Il2CppObject *v14; // x21
+  System_DateTime_o v14; // x0
   Il2CppObject *v15; // x21
+  System_DateTime_o v16; // x0
+  Il2CppObject *v17; // x21
+  System_DateTime_o v18; // x0
+  Il2CppObject *v19; // x21
+  System_DateTime_o v20; // x0
   struct System_Action_o **p_endCallbackFunc; // x20
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
   uint64_t dateData; // [xsp+38h] [xbp-38h] BYREF
 
   if ( (byte_596DC20 & 1) == 0 )
@@ -249,76 +253,78 @@ void DebugUserServerTimeMenu__open(
                            (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
       if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v9, v10);
-      v6.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                        (System_DateTime_o)&dateData,
-                                        (System_String_o *)StringLiteral_26358/*"yyyy"*/,
-                                        0);
+      v12.fields._dateData = (uint64_t)&dateData;
+      v6.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(v12, (System_String_o *)StringLiteral_26358/*"yyyy"*/, 0);
       if ( Component_object )
       {
         UIInput__set_value((UIInput_o *)Component_object, (System_String_o *)v6.fields._dateData, 0);
         v6.fields._dateData = (uint64_t)this->fields.inputMonth;
         if ( v6.fields._dateData )
         {
-          v12 = UnityEngine_Component__GetComponent_object_(
+          v13 = UnityEngine_Component__GetComponent_object_(
                   (UnityEngine_Component_o *)v6.fields._dateData,
                   (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+          v14.fields._dateData = (uint64_t)&dateData;
           v6.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                            (System_DateTime_o)&dateData,
+                                            v14,
                                             (System_String_o *)StringLiteral_9084/*"MM"*/,
                                             0);
-          if ( v12 )
+          if ( v13 )
           {
-            UIInput__set_value((UIInput_o *)v12, (System_String_o *)v6.fields._dateData, 0);
+            UIInput__set_value((UIInput_o *)v13, (System_String_o *)v6.fields._dateData, 0);
             v6.fields._dateData = (uint64_t)this->fields.inputDay;
             if ( v6.fields._dateData )
             {
-              v13 = UnityEngine_Component__GetComponent_object_(
+              v15 = UnityEngine_Component__GetComponent_object_(
                       (UnityEngine_Component_o *)v6.fields._dateData,
                       (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+              v16.fields._dateData = (uint64_t)&dateData;
               v6.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                                (System_DateTime_o)&dateData,
+                                                v16,
                                                 (System_String_o *)StringLiteral_19333/*"dd"*/,
                                                 0);
-              if ( v13 )
+              if ( v15 )
               {
-                UIInput__set_value((UIInput_o *)v13, (System_String_o *)v6.fields._dateData, 0);
+                UIInput__set_value((UIInput_o *)v15, (System_String_o *)v6.fields._dateData, 0);
                 v6.fields._dateData = (uint64_t)this->fields.inputHour;
                 if ( v6.fields._dateData )
                 {
-                  v14 = UnityEngine_Component__GetComponent_object_(
+                  v17 = UnityEngine_Component__GetComponent_object_(
                           (UnityEngine_Component_o *)v6.fields._dateData,
                           (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                  v18.fields._dateData = (uint64_t)&dateData;
                   v6.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                                    (System_DateTime_o)&dateData,
+                                                    v18,
                                                     (System_String_o *)StringLiteral_7518/*"HH"*/,
                                                     0);
-                  if ( v14 )
+                  if ( v17 )
                   {
-                    UIInput__set_value((UIInput_o *)v14, (System_String_o *)v6.fields._dateData, 0);
+                    UIInput__set_value((UIInput_o *)v17, (System_String_o *)v6.fields._dateData, 0);
                     v6.fields._dateData = (uint64_t)this->fields.inputMinute;
                     if ( v6.fields._dateData )
                     {
-                      v15 = UnityEngine_Component__GetComponent_object_(
+                      v19 = UnityEngine_Component__GetComponent_object_(
                               (UnityEngine_Component_o *)v6.fields._dateData,
                               (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                      v20.fields._dateData = (uint64_t)&dateData;
                       v6.fields._dateData = (uint64_t)System_DateTime__ToString_77027772(
-                                                        (System_DateTime_o)&dateData,
+                                                        v20,
                                                         (System_String_o *)StringLiteral_22736/*"mm"*/,
                                                         0);
-                      if ( v15 )
+                      if ( v19 )
                       {
-                        UIInput__set_value((UIInput_o *)v15, (System_String_o *)v6.fields._dateData, 0);
+                        UIInput__set_value((UIInput_o *)v19, (System_String_o *)v6.fields._dateData, 0);
                         this->fields.endCallbackFunc = endCallback;
                         p_endCallbackFunc = &this->fields.endCallbackFunc;
                         sub_2213A04(
                           (MissionNaviTransitionBoardItem_o *)p_endCallbackFunc,
                           (int32_t)endCallback,
-                          v17,
-                          v18,
-                          v19,
-                          v20,
-                          v21,
-                          v22);
+                          v22,
+                          v23,
+                          v24,
+                          v25,
+                          v26,
+                          v27);
                         v6.fields._dateData = (uint64_t)*(p_endCallbackFunc - 6);
                         if ( v6.fields._dateData )
                         {

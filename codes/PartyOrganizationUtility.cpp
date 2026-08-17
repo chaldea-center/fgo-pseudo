@@ -3071,9 +3071,9 @@ LABEL_14:
   System_Text_StringBuilder__Append_75735064(v13, v26, 0);
   System_Text_StringBuilder__Append_75735064(v13, v27, 0);
   System_Text_StringBuilder__Append_75735064(v13, v33, 0);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v13->klass->vtable._3_ToString.methodPtr)(
-           v13,
-           v13->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v13->klass->vtable._3_ToString.methodPtr)(
+                              v13,
+                              v13->klass->vtable._3_ToString.method);
 }
 
 
@@ -3404,6 +3404,7 @@ bool PartyOrganizationUtility__IsRarityRestriction(
   int32_t v25; // w2
   bool v26; // zf
   _BOOL4 v27; // w8
+  bool result; // w0
   System_String_o *Name; // x0
   System_String_o *v30; // x2
   System_String_o *v31; // x3
@@ -3412,8 +3413,9 @@ bool PartyOrganizationUtility__IsRarityRestriction(
   bool v34; // w6
   bool v35; // w7
   System_Collections_Generic_IEnumerable_int__o *ActRarity; // x0
+  int32_t v37; // w8
   SkillLvEntity_o *skillLvEntity; // [xsp+8h] [xbp-78h] BYREF
-  Il2CppObject *v38; // [xsp+10h] [xbp-70h] BYREF
+  Il2CppObject *v39; // [xsp+10h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-68h] BYREF
 
   if ( (byte_596C1E0 & 1) == 0 )
@@ -3431,7 +3433,7 @@ bool PartyOrganizationUtility__IsRarityRestriction(
     byte_596C1E0 = 1;
   }
   v14 = (int)StringLiteral_1/*""*/;
-  v38 = 0;
+  v39 = 0;
   entity = 0;
   skillLvEntity = 0;
   *skillName = (System_String_o *)StringLiteral_1/*""*/;
@@ -3512,21 +3514,21 @@ bool PartyOrganizationUtility__IsRarityRestriction(
               goto LABEL_41;
             Instance = (void *)DataMasterBase_object__object__int___TryGetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
-                                 &v38,
+                                 &v39,
                                  v25,
                                  (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
-              Instance = v38;
-              if ( !v38 )
+              Instance = v39;
+              if ( !v39 )
                 goto LABEL_41;
-              Instance = (void *)EventEntity__IsEventPeriod((EventEntity_o *)v38, 0, 0);
+              Instance = (void *)EventEntity__IsEventPeriod((EventEntity_o *)v39, 0, 0);
               if ( ((unsigned __int8)Instance & 1) != 0 )
                 goto LABEL_31;
-              Instance = v38;
-              if ( !v38 )
+              Instance = v39;
+              if ( !v39 )
                 goto LABEL_41;
-              Instance = (void *)EventEntity__IsSkillRelease((EventEntity_o *)v38, 0, 0);
+              Instance = (void *)EventEntity__IsSkillRelease((EventEntity_o *)v39, 0, 0);
               if ( ((unsigned __int8)Instance & 1) != 0 )
               {
 LABEL_31:
@@ -3565,8 +3567,10 @@ LABEL_31:
             if ( skillLvEntity )
             {
               ActRarity = (System_Collections_Generic_IEnumerable_int__o *)SkillLvEntity__GetActRarity(skillLvEntity, 0);
-              *actMaxRarity = System_Linq_Enumerable__Max(ActRarity, 0);
-              return 1;
+              v37 = System_Linq_Enumerable__Max(ActRarity, 0);
+              result = 1;
+              *actMaxRarity = v37;
+              return result;
             }
           }
         }
@@ -6465,6 +6469,7 @@ QuestUseItemInfo_o *PartyOrganizationUtility___c___GetQuestUseItems_b__134_9(
   int32_t Num_k__BackingField; // w8
   int32_t v5; // w9
   int64_t EndedAt_k__BackingField; // x11
+  QuestUseItemInfo_o *v7; // x0
 
   if ( !result )
     goto LABEL_9;
@@ -6489,8 +6494,9 @@ LABEL_9:
     result->fields._EndedAt_k__BackingField = EndedAt_k__BackingField;
   }
 LABEL_8:
+  v7 = result;
   result->fields._Num_k__BackingField = v5 + Num_k__BackingField;
-  return result;
+  return v7;
 }
 
 
@@ -6913,7 +6919,7 @@ LABEL_20:
     sub_2213CDC(this, info);
   EntityDefinitely = UserItemMaster__GetEntityDefinitely(
                        userItemMaster,
-                       *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+                       *(_QWORD *)&this[3].fields.list[1].fields._size,
                        itemEntity_i__Field->fields.id,
                        0);
   if ( EntityDefinitely )

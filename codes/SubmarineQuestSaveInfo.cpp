@@ -18,6 +18,7 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateBySaveValue(System_Strin
 {
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v4; // x1
+  SubmarineQuestSaveInfo_o *result; // x0
   System_String_array *v6; // x0
   __int64 v7; // x1
   System_String_array *v8; // x20
@@ -69,15 +70,17 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateBySaveValue(System_Strin
   System_Object___ctor((Il2CppObject *)v19, 0);
   *(_DWORD *)(v19 + 16) = v10;
   *(_DWORD *)(v19 + 20) = v14;
+  result = (SubmarineQuestSaveInfo_o *)v19;
   *(_BYTE *)(v19 + 24) = v17;
   *(_BYTE *)(v19 + 25) = v18;
-  return (SubmarineQuestSaveInfo_o *)v19;
+  return result;
 }
 
 
 SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateDefault(const MethodInfo *method)
 {
   __int64 v1; // x19
+  SubmarineQuestSaveInfo_o *result; // x0
 
   if ( (byte_596CF46 & 1) == 0 )
   {
@@ -86,9 +89,10 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateDefault(const MethodInfo
   }
   v1 = sub_2213CCC(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0);
+  result = (SubmarineQuestSaveInfo_o *)v1;
   *(_WORD *)(v1 + 24) = 0;
   *(_QWORD *)(v1 + 16) = -1;
-  return (SubmarineQuestSaveInfo_o *)v1;
+  return result;
 }
 
 

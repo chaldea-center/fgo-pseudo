@@ -16,16 +16,22 @@ UnityEngine_Color_o EventBossStatusUiEntity__ConvertColorFromInt(
         int32_t value,
         const MethodInfo *method)
 {
+  float v3; // s3
   unsigned __int64 v4; // d0
+  float v5; // s2
+  float v6; // s1
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.a = 1.0;
+  v3 = 1.0;
   v4 = vdiv_f32(
          vcvt_f32_s32(vand_s8(vshl_u32(vdup_n_s32(value), (uint32x2_t)0xFFFFFFF8FFFFFFF0LL), (int8x8_t)0xFF000000FFLL)),
          vdup_n_s32(0x437F0000u)).n64_u64[0];
-  result.fields.b = (float)(unsigned __int8)value / 255.0;
-  result.fields.g = *((float *)&v4 + 1);
+  v5 = (float)(unsigned __int8)value / 255.0;
+  v6 = *((float *)&v4 + 1);
   result.fields.r = *(float *)&v4;
+  result.fields.a = v3;
+  result.fields.b = v5;
+  result.fields.g = v6;
   return result;
 }
 
@@ -36,7 +42,10 @@ UnityEngine_Color_o EventBossStatusUiEntity__ConvertColorFromStr(
         const MethodInfo *method)
 {
   int32_t v4; // w0
+  float v5; // s3
   unsigned __int64 v6; // d0
+  float v7; // s2
+  float v8; // s1
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_59706ED & 1) == 0 )
@@ -47,13 +56,16 @@ UnityEngine_Color_o EventBossStatusUiEntity__ConvertColorFromStr(
   if ( !*(&System_Convert_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo, value);
   v4 = System_Convert__ToInt32_76696416(value, 16, 0);
-  result.fields.a = 1.0;
+  v5 = 1.0;
   v6 = vdiv_f32(
          vcvt_f32_s32(vand_s8(vshl_u32(vdup_n_s32(v4), (uint32x2_t)0xFFFFFFF8FFFFFFF0LL), (int8x8_t)0xFF000000FFLL)),
          vdup_n_s32(0x437F0000u)).n64_u64[0];
-  result.fields.b = (float)(unsigned __int8)v4 / 255.0;
-  result.fields.g = *((float *)&v6 + 1);
+  v7 = (float)(unsigned __int8)v4 / 255.0;
+  v8 = *((float *)&v6 + 1);
   result.fields.r = *(float *)&v6;
+  result.fields.a = v5;
+  result.fields.b = v7;
+  result.fields.g = v8;
   return result;
 }
 
@@ -95,9 +107,9 @@ System_String_o *EventBossStatusUiEntity__GetCountFormat(EventBossStatusUiEntity
   v4 = (System_String_o *)StringLiteral_1/*""*/;
   ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_19112/*"count_format"*/, v2);
   if ( ScriptObj )
-    return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
-             ScriptObj,
-             ScriptObj->klass->vtable[3].method);
+    return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
+                                ScriptObj,
+                                ScriptObj->klass->vtable[3].method);
   else
     return v4;
 }
@@ -148,7 +160,11 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetScriptColor(
   Il2CppObject *ScriptObj; // x0
   EventBossStatusUiEntity_o *v9; // x0
   const MethodInfo *v10; // x2
-  UnityEngine_Color_o v15; // 0:kr00_16.16
+  float v11; // s2
+  float v12; // s3
+  float v13; // s0
+  float v14; // s1
+  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = defaultColor.fields.a;
@@ -167,10 +183,14 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetScriptColor(
     b = v15.fields.b;
     a = v15.fields.a;
   }
-  result.fields.b = b;
-  result.fields.a = a;
-  result.fields.r = r;
-  result.fields.g = g;
+  v11 = b;
+  v12 = a;
+  v13 = r;
+  v14 = g;
+  result.fields.a = v12;
+  result.fields.b = v11;
+  result.fields.g = v14;
+  result.fields.r = v13;
   return result;
 }
 
@@ -246,9 +266,9 @@ System_String_o *EventBossStatusUiEntity__GetScriptString(
 
   ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, key, (const MethodInfo *)defStr);
   if ( ScriptObj )
-    return ((System_String_o *(__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
-             ScriptObj,
-             ScriptObj->klass->vtable[3].method);
+    return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
+                                ScriptObj,
+                                ScriptObj->klass->vtable[3].method);
   else
     return defStr;
 }
@@ -267,7 +287,11 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusBattleColor(
   Il2CppObject *ScriptObj; // x0
   EventBossStatusUiEntity_o *v10; // x0
   const MethodInfo *v11; // x2
-  UnityEngine_Color_o v16; // 0:kr00_16.16
+  float v12; // s2
+  float v13; // s3
+  float v14; // s0
+  float v15; // s1
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = defaultColor.fields.a;
@@ -291,10 +315,14 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusBattleColor(
     b = v16.fields.b;
     a = v16.fields.a;
   }
-  result.fields.b = b;
-  result.fields.a = a;
-  result.fields.r = r;
-  result.fields.g = g;
+  v12 = b;
+  v13 = a;
+  v14 = r;
+  v15 = g;
+  result.fields.a = v13;
+  result.fields.b = v12;
+  result.fields.g = v15;
+  result.fields.r = v14;
   return result;
 }
 
@@ -325,7 +353,11 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusLastColor(
   Il2CppObject *ScriptObj; // x0
   EventBossStatusUiEntity_o *v10; // x0
   const MethodInfo *v11; // x2
-  UnityEngine_Color_o v16; // 0:kr00_16.16
+  float v12; // s2
+  float v13; // s3
+  float v14; // s0
+  float v15; // s1
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = defaultColor.fields.a;
@@ -349,10 +381,14 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusLastColor(
     b = v16.fields.b;
     a = v16.fields.a;
   }
-  result.fields.b = b;
-  result.fields.a = a;
-  result.fields.r = r;
-  result.fields.g = g;
+  v12 = b;
+  v13 = a;
+  v14 = r;
+  v15 = g;
+  result.fields.a = v13;
+  result.fields.b = v12;
+  result.fields.g = v15;
+  result.fields.r = v14;
   return result;
 }
 
@@ -370,7 +406,11 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusWinColor(
   Il2CppObject *ScriptObj; // x0
   EventBossStatusUiEntity_o *v10; // x0
   const MethodInfo *v11; // x2
-  UnityEngine_Color_o v16; // 0:kr00_16.16
+  float v12; // s2
+  float v13; // s3
+  float v14; // s0
+  float v15; // s1
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = defaultColor.fields.a;
@@ -394,10 +434,14 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusWinColor(
     b = v16.fields.b;
     a = v16.fields.a;
   }
-  result.fields.b = b;
-  result.fields.a = a;
-  result.fields.r = r;
-  result.fields.g = g;
+  v12 = b;
+  v13 = a;
+  v14 = r;
+  v15 = g;
+  result.fields.a = v13;
+  result.fields.b = v12;
+  result.fields.g = v15;
+  result.fields.r = v14;
   return result;
 }
 
@@ -468,6 +512,8 @@ UnityEngine_Vector2_o EventBossStatusUiEntity__GetTextEffectDistance(
   float y; // s8
   float x; // s9
   float FloatValue; // s9
+  float v7; // s1
+  float v8; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   y = defaultValue.fields.y;
@@ -479,8 +525,10 @@ UnityEngine_Vector2_o EventBossStatusUiEntity__GetTextEffectDistance(
     byte_59706EE = 1;
   }
   FloatValue = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_25342/*"text_effect_distance_x"*/, x, 0);
-  result.fields.y = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_25343/*"text_effect_distance_y"*/, y, 0);
-  result.fields.x = FloatValue;
+  v7 = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_25343/*"text_effect_distance_y"*/, y, 0);
+  v8 = FloatValue;
+  result.fields.y = v7;
+  result.fields.x = v8;
   return result;
 }
 

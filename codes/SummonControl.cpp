@@ -7349,6 +7349,7 @@ bool SummonControl__checkMaxDrawNum(SummonControl_o *this, const MethodInfo *met
   GachaEntity_o *CurrentGachaData; // x0
   __int64 v9; // x1
   int maxDrawNum; // w8
+  bool result; // w0
 
   gachaParamData = this->fields.gachaParamData;
   if ( !gachaParamData )
@@ -7363,8 +7364,9 @@ bool SummonControl__checkMaxDrawNum(SummonControl_o *this, const MethodInfo *met
   maxDrawNum = CurrentGachaData->fields.maxDrawNum;
   if ( maxDrawNum < 1 || UserGachaData->fields.num < maxDrawNum )
     return 0;
+  result = 1;
   this->fields.lastMaxDrawGachaId = gachaId;
-  return 1;
+  return result;
 }
 
 
@@ -10589,22 +10591,34 @@ UnityEngine_Vector2_o SummonControl__get_TUTORIAL_FORMATION_ARROW_POS_FS(
         SummonControl_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float v3; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.TUTORIAL_FORMATION_ARROW_POS.fields.x;
-  result.fields.y = this->fields.TUTORIAL_FORMATION_ARROW_POS.fields.y + 33.0;
+  x = this->fields.TUTORIAL_FORMATION_ARROW_POS.fields.x;
+  v3 = this->fields.TUTORIAL_FORMATION_ARROW_POS.fields.y + 33.0;
+  result.fields.y = v3;
+  result.fields.x = x;
   return result;
 }
 
 
 UnityEngine_Rect_o SummonControl__get_TUTORIAL_FORMATION_ARROW_RECT_FS(SummonControl_o *this, const MethodInfo *method)
 {
+  float m_XMin; // s0
+  float v3; // s1
+  float m_Width; // s2
+  float m_Height; // s3
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.m_XMin = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_XMin;
-  result.fields.m_YMin = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_YMin + 33.0;
-  result.fields.m_Width = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_Width;
-  result.fields.m_Height = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_Height;
+  m_XMin = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_XMin;
+  v3 = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_YMin + 33.0;
+  m_Width = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_Width;
+  m_Height = this->fields.TUTORIAL_FORMATION_ARROW_RECT.fields.m_Height;
+  result.fields.m_Height = m_Height;
+  result.fields.m_Width = m_Width;
+  result.fields.m_YMin = v3;
+  result.fields.m_XMin = m_XMin;
   return result;
 }
 
@@ -10615,6 +10629,8 @@ UnityEngine_Vector2_o SummonControl__get_TUTORIAL_MENU_ARROW_POS_FS(SummonContro
   float x; // s8
   float y; // s9
   float OffsetX; // s0
+  float v7; // s1
+  float v8; // s0
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( (byte_596CA1A & 1) == 0 )
@@ -10627,8 +10643,10 @@ UnityEngine_Vector2_o SummonControl__get_TUTORIAL_MENU_ARROW_POS_FS(SummonContro
   if ( !*(&FSUtility_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo, method, v2);
   OffsetX = FSUtility__GetOffsetX(68.0, 2, 0);
-  result.fields.y = y + 33.0;
-  result.fields.x = x + (float)(OffsetX + -14.0);
+  v7 = y + 33.0;
+  v8 = x + (float)(OffsetX + -14.0);
+  result.fields.y = v7;
+  result.fields.x = v8;
   return result;
 }
 
@@ -10639,16 +10657,24 @@ UnityEngine_Rect_o SummonControl__get_TUTORIAL_MENU_ARROW_RECT_FS(SummonControl_
   float m_YMin; // s10
   float m_Width; // s8
   float m_Height; // s11
+  float v6; // s0
+  float v7; // s1
+  float v8; // s3
+  float v9; // s2
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   m_XMin = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_XMin;
   m_YMin = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_YMin;
   m_Width = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_Width;
   m_Height = this->fields.TUTORIAL_MENU_ARROW_RECT.fields.m_Height;
-  result.fields.m_XMin = m_XMin + SummonControl__FSMenuOffsetX(this, method);
-  result.fields.m_YMin = m_YMin + 33.0;
-  result.fields.m_Height = m_Height + 33.0;
-  result.fields.m_Width = m_Width;
+  v6 = m_XMin + SummonControl__FSMenuOffsetX(this, method);
+  v7 = m_YMin + 33.0;
+  v8 = m_Height + 33.0;
+  v9 = m_Width;
+  result.fields.m_Height = v8;
+  result.fields.m_Width = v9;
+  result.fields.m_YMin = v7;
+  result.fields.m_XMin = v6;
   return result;
 }
 
@@ -10670,6 +10696,7 @@ bool SummonControl__isEnhanceTresureDevice(SummonControl_o *this, int32_t *svtId
   struct GachaInfos_array *v10; // x8
   GachaInfos_o *v11; // x8
   int32_t objectId; // w22
+  bool result; // w0
 
   v4 = this;
   if ( (byte_596CA85 & 1) == 0 )
@@ -10718,8 +10745,9 @@ LABEL_17:
 LABEL_15:
   objectId = 0;
 LABEL_16:
+  result = v9;
   *svtId = objectId;
-  return v9;
+  return result;
 }
 
 
@@ -12559,7 +12587,7 @@ void SummonControl__setCenter(SummonControl_o *this, const MethodInfo *method)
   float v8; // s9
   float v9; // s10
   float v10; // s1
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
   indexPanel = (UnityEngine_Component_o *)this->fields.indexPanel;
@@ -12587,14 +12615,14 @@ LABEL_11:
     indexPanel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(indexPanel, 0);
     if ( !indexPanel )
       goto LABEL_11;
-    v12.fields.x = v7;
-    v12.fields.y = v8;
-    v12.fields.z = v9;
-    v11 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)indexPanel, v12, 0);
+    v11.fields.x = v7;
+    v11.fields.y = v8;
+    v11.fields.z = v9;
+    v12 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)indexPanel, v11, 0);
     if ( v5 >= v4[3].n64_u32[0] )
       goto LABEL_12;
     ++v5;
-    *(UnityEngine_Vector3_o *)(p_fields - 2) = v11;
+    *(UnityEngine_Vector3_o *)(p_fields - 2) = v12;
     p_fields += 3;
   }
   while ( v5 != 4 );
@@ -13365,7 +13393,7 @@ void SummonControl__setSummonData(SummonControl_o *this, const MethodInfo *metho
   System_String_o *v62; // x20
   System_String_o *assetPath; // x20
   AssetLoader_LoadEndDataHandler_o *v64; // x21
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596CA24 & 1) == 0 )
   {
@@ -14700,6 +14728,7 @@ bool SummonControl__CoWaitCreatedMBannerSpringPanel_d__188__MoveNext(
   bool v25; // w6
   bool v26; // w7
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   UnityEngine_Object_o *spring_5__2; // x19
   UICenterOnChild_o *summonMBannerCenterChild; // x19
 
@@ -14771,8 +14800,9 @@ LABEL_9:
       v8->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       sub_2213A04(p__2__current, 0, v2, v22, v23, v24, v25, v26);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     goto LABEL_14;
   }
@@ -14863,6 +14893,7 @@ bool SummonControl__WaitBattleChrLoad_d__265__MoveNext(
   bool v20; // w7
   Il2CppObject *wait_5__2; // x1
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   ServantAssetArgs_o *battleAssetArgs; // x19
   System_String_o *v25; // x2
   System_String_o *v26; // x3
@@ -14903,8 +14934,9 @@ bool SummonControl__WaitBattleChrLoad_d__265__MoveNext(
     this->fields.__2__current = wait_5__2;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)wait_5__2, v15, v16, v17, v18, v19, v20);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   if ( !_4__this )
     goto LABEL_19;

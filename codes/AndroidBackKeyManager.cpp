@@ -371,14 +371,15 @@ void AndroidBackKeyManager__InstantiateSelf(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppType *v2; // x19
-  __int64 v3; // x1
+  System_RuntimeTypeHandle_o v3; // x0
+  __int64 v4; // x1
   System_Type_o *TypeFromHandle; // x19
   UnityEngine_Object_o *ObjectOfType; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
   Il2CppObject *Instance; // x19
-  UnityEngine_GameObject_o *v8; // x19
-  UnityEngine_Component_o *v9; // x0
-  __int64 v10; // x1
+  UnityEngine_GameObject_o *v9; // x19
+  UnityEngine_Component_o *v10; // x0
+  __int64 v11; // x1
   UnityEngine_Transform_o *transform; // x20
 
   if ( (byte_59729BE & 1) == 0 )
@@ -394,30 +395,31 @@ void AndroidBackKeyManager__InstantiateSelf(const MethodInfo *method)
   v2 = AndroidBackKeyManager_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v1);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v2, 0);
+  v3.fields.value = (intptr_t)v2;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v3, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v3);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v4);
   ObjectOfType = UnityEngine_Object__FindObjectOfType(TypeFromHandle, 0);
   if ( UnityEngine_Object__op_Equality(ObjectOfType, 0, 0) )
   {
     Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
     {
-      v8 = (UnityEngine_GameObject_o *)sub_2213CCC(UnityEngine_GameObject_TypeInfo);
-      UnityEngine_GameObject___ctor_83438680(v8, 0);
-      if ( !v8
-        || (UnityEngine_Object__set_name((UnityEngine_Object_o *)v8, (System_String_o *)StringLiteral_2372/*"AndroidBackKeyManager"*/, 0),
-            transform = UnityEngine_GameObject__get_transform(v8, 0),
-            (v9 = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__)) == 0)
-        || (v9 = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v9, 0), !transform) )
+      v9 = (UnityEngine_GameObject_o *)sub_2213CCC(UnityEngine_GameObject_TypeInfo);
+      UnityEngine_GameObject___ctor_83438680(v9, 0);
+      if ( !v9
+        || (UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)StringLiteral_2372/*"AndroidBackKeyManager"*/, 0),
+            transform = UnityEngine_GameObject__get_transform(v9, 0),
+            (v10 = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__)) == 0)
+        || (v10 = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v10, 0), !transform) )
       {
-        sub_2213CDC(v9, v10);
+        sub_2213CDC(v10, v11);
       }
-      UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v9, 0);
+      UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)v10, 0);
       UnityEngine_GameObject__AddComponent_object_(
-        v8,
+        v9,
         (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_AndroidBackKeyManager___);
     }
   }
@@ -529,16 +531,20 @@ bool AndroidBackKeyManager__IsBtnTouchable(
   __int64 v11; // x1
   Il2CppObject *Component_object; // x21
   __int64 v13; // x1
-  __int64 v14; // x1
-  UICamera_c *v15; // x0
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  __int64 v17; // x1
+  UICamera_c *v18; // x0
   struct UICamera_StaticFields *static_fields; // x8
-  __int128 v17; // q1
-  __int128 v18; // q2
-  __int64 v19; // x1
+  __int128 v20; // q1
+  __int128 v21; // q2
+  __int64 v22; // x1
   UnityEngine_Object_o *gameObject; // x20
-  UnityEngine_Bounds_o v22; // [xsp+8h] [xbp-98h] BYREF
-  UnityEngine_RaycastHit_o v23; // [xsp+20h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v24; // 0:kr00_12.12
+  UnityEngine_Bounds_o v25; // [xsp+8h] [xbp-98h] BYREF
+  UnityEngine_RaycastHit_o v26; // [xsp+20h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59729C3 & 1) == 0 )
   {
@@ -548,7 +554,7 @@ bool AndroidBackKeyManager__IsBtnTouchable(
     byte_59729C3 = 1;
   }
   v5 = *(&UICamera_TypeInfo->_2.cctor_finished + 1);
-  memset(&v23, 0, sizeof(v23));
+  memset(&v26, 0, sizeof(v26));
   if ( !v5 )
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, btnObj);
   mainCamera = (AndroidBackKeyManager_o *)UICamera__get_mainCamera(0);
@@ -572,35 +578,41 @@ bool AndroidBackKeyManager__IsBtnTouchable(
   if ( !Component_object )
     goto LABEL_27;
   bounds = (UnityEngine_Component_o *)UnityEngine_Collider__get_bounds(
-                                        &v22,
+                                        &v25,
                                         (UnityEngine_Collider_o *)Component_object,
                                         0);
   if ( !mainCamera )
     goto LABEL_27;
-  v24 = UnityEngine_Camera__WorldToScreenPoint_83198204((UnityEngine_Camera_o *)mainCamera, v22.fields.m_Center, 0);
+  v27 = UnityEngine_Camera__WorldToScreenPoint_83198204((UnityEngine_Camera_o *)mainCamera, v25.fields.m_Center, 0);
+  x = v27.fields.x;
+  y = v27.fields.y;
+  z = v27.fields.z;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v13);
-  if ( !UICamera__Raycast(v24, 0) )
+  v28.fields.x = x;
+  v28.fields.y = y;
+  v28.fields.z = z;
+  if ( !UICamera__Raycast(v28, 0) )
     return 0;
-  v15 = UICamera_TypeInfo;
+  v18 = UICamera_TypeInfo;
   if ( !*(&UICamera_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v14);
-    v15 = UICamera_TypeInfo;
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo, v17);
+    v18 = UICamera_TypeInfo;
   }
-  static_fields = v15->static_fields;
-  v17 = *(_OWORD *)&static_fields->lastHit.fields.m_Normal.fields.y;
-  v18 = *(_OWORD *)&static_fields->lastHit.fields.m_Distance;
-  *(_OWORD *)&v23.fields.m_Point.fields.x = *(_OWORD *)&static_fields->lastHit.fields.m_Point.fields.x;
-  *(_OWORD *)&v23.fields.m_Normal.fields.y = v17;
-  *(_OWORD *)&v23.fields.m_Distance = v18;
-  bounds = (UnityEngine_Component_o *)UnityEngine_RaycastHit__get_collider(&v23, 0);
+  static_fields = v18->static_fields;
+  v20 = *(_OWORD *)&static_fields->lastHit.fields.m_Normal.fields.y;
+  v21 = *(_OWORD *)&static_fields->lastHit.fields.m_Distance;
+  *(_OWORD *)&v26.fields.m_Point.fields.x = *(_OWORD *)&static_fields->lastHit.fields.m_Point.fields.x;
+  *(_OWORD *)&v26.fields.m_Normal.fields.y = v20;
+  *(_OWORD *)&v26.fields.m_Distance = v21;
+  bounds = (UnityEngine_Component_o *)UnityEngine_RaycastHit__get_collider(&v26, 0);
   if ( !bounds )
 LABEL_27:
     sub_2213CDC(bounds, v10);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(bounds, 0);
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v19);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v22);
   return UnityEngine_Object__op_Equality(gameObject, (UnityEngine_Object_o *)btnObj, 0);
 }
 
@@ -1100,17 +1112,18 @@ BattlePerformanceMaster_o *AndroidBackKeyManager__get_BattlePerfMaster(
   struct BattlePerformanceMaster_o *battlePerfMaster; // t1
   __int64 v6; // x1
   Il2CppType *v7; // x20
-  __int64 v8; // x1
+  System_RuntimeTypeHandle_o v8; // x0
+  __int64 v9; // x1
   System_Type_o *TypeFromHandle; // x20
   UnityEngine_Object_o *ObjectOfType; // x0
-  System_String_o *v11; // x2
-  System_String_o *v12; // x3
-  int32_t v13; // w4
-  int32_t v14; // w5
-  bool v15; // w6
-  bool v16; // w7
-  int32_t v17; // w8
-  BattlePerformanceMaster_c *v18; // x1
+  System_String_o *v12; // x2
+  System_String_o *v13; // x3
+  int32_t v14; // w4
+  int32_t v15; // w5
+  bool v16; // w6
+  bool v17; // w7
+  int32_t v18; // w8
+  BattlePerformanceMaster_c *v19; // x1
   __int64 naturalAligment; // x9
 
   if ( (byte_59729BF & 1) == 0 )
@@ -1130,30 +1143,31 @@ BattlePerformanceMaster_o *AndroidBackKeyManager__get_BattlePerfMaster(
     v7 = BattlePerformanceMaster_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
       j_il2cpp_runtime_class_init_0(qword_59843E0, v6);
-    TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v7, 0);
+    v8.fields.value = (intptr_t)v7;
+    TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v9);
     ObjectOfType = UnityEngine_Object__FindObjectOfType(TypeFromHandle, 0);
-    v17 = (int)ObjectOfType;
+    v18 = (int)ObjectOfType;
     if ( ObjectOfType )
     {
-      v18 = BattlePerformanceMaster_TypeInfo;
+      v19 = BattlePerformanceMaster_TypeInfo;
       naturalAligment = BattlePerformanceMaster_TypeInfo->_2.naturalAligment;
       if ( ObjectOfType->klass->_2.naturalAligment >= (unsigned int)naturalAligment
         && (BattlePerformanceMaster_c *)ObjectOfType->klass->_2.typeHierarchy[naturalAligment - 1] == BattlePerformanceMaster_TypeInfo )
       {
         p_battlePerfMaster->klass = (MissionNaviTransitionBoardItem_c *)ObjectOfType;
         if ( ObjectOfType->klass->_2.naturalAligment >= (unsigned int)naturalAligment
-          && (BattlePerformanceMaster_c *)ObjectOfType->klass->_2.typeHierarchy[naturalAligment - 1] == v18 )
+          && (BattlePerformanceMaster_c *)ObjectOfType->klass->_2.typeHierarchy[naturalAligment - 1] == v19 )
         {
           goto LABEL_17;
         }
       }
-      sub_221405C(ObjectOfType, v18, v11);
+      sub_221405C(ObjectOfType, v19, v12);
     }
     p_battlePerfMaster->klass = 0;
 LABEL_17:
-    sub_2213A04(p_battlePerfMaster, v17, v11, v12, v13, v14, v15, v16);
+    sub_2213A04(p_battlePerfMaster, v18, v12, v13, v14, v15, v16, v17);
   }
   return (BattlePerformanceMaster_o *)p_battlePerfMaster->klass;
 }

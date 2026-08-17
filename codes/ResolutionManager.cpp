@@ -163,6 +163,7 @@ void ResolutionManager__OnPostRender(ResolutionManager_o *this, const MethodInfo
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *camera; // x20
@@ -173,16 +174,17 @@ void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *m
   __int64 v8; // x1
   BattlePerformance_c *v9; // x0
   UnityEngine_Matrix4x4_o *v10; // x8
-  __int128 v11; // q2
-  __int128 v12; // q3
-  UnityEngine_Matrix4x4_o v13; // [xsp+0h] [xbp-230h] BYREF
-  UnityEngine_Matrix4x4_o v14; // [xsp+40h] [xbp-1F0h] BYREF
-  UnityEngine_Matrix4x4_o v15; // [xsp+80h] [xbp-1B0h] BYREF
-  UnityEngine_Matrix4x4_o v16; // [xsp+C0h] [xbp-170h] BYREF
-  UnityEngine_Matrix4x4_o v17[2]; // [xsp+100h] [xbp-130h] BYREF
-  UnityEngine_Matrix4x4_o v18; // [xsp+180h] [xbp-B0h] BYREF
-  UnityEngine_Matrix4x4_o v19; // [xsp+1C0h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  float v11; // s0 OVERLAPPED
+  __int128 v12; // q2
+  __int128 v13; // q3
+  float v14; // s1
+  UnityEngine_Matrix4x4_o v15; // [xsp+0h] [xbp-230h] BYREF
+  UnityEngine_Matrix4x4_o v16; // [xsp+40h] [xbp-1F0h] BYREF
+  UnityEngine_Matrix4x4_o v17; // [xsp+80h] [xbp-1B0h] BYREF
+  UnityEngine_Matrix4x4_o v18; // [xsp+C0h] [xbp-170h] BYREF
+  UnityEngine_Matrix4x4_o v19[2]; // [xsp+100h] [xbp-130h] BYREF
+  UnityEngine_Matrix4x4_o v20; // [xsp+180h] [xbp-B0h] BYREF
+  UnityEngine_Matrix4x4_o v21; // [xsp+1C0h] [xbp-70h] BYREF
 
   if ( (byte_5970139 & 1) == 0 )
   {
@@ -192,9 +194,9 @@ void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *m
   }
   camera = (UnityEngine_Object_o *)this->fields.camera;
   v4 = *(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1);
-  memset(&v17[1], 0, sizeof(UnityEngine_Matrix4x4_o));
-  memset(&v18, 0, sizeof(v18));
-  memset(&v19, 0, sizeof(v19));
+  memset(&v19[1], 0, sizeof(UnityEngine_Matrix4x4_o));
+  memset(&v20, 0, sizeof(v20));
+  memset(&v21, 0, sizeof(v21));
   if ( !v4 )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method);
   if ( UnityEngine_Object__op_Inequality(camera, 0, 0) && this->fields.enableFlip && this->fields.is3DCamera )
@@ -206,7 +208,7 @@ void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *m
     {
       sub_2213CDC(v6, v5);
     }
-    UnityEngine_Camera__get_projectionMatrix(v17, v7, 0);
+    UnityEngine_Camera__get_projectionMatrix(v19, v7, 0);
     v9 = BattlePerformance_TypeInfo;
     if ( !*(&BattlePerformance_TypeInfo->_2.cctor_finished + 1) )
     {
@@ -215,30 +217,30 @@ void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *m
     }
     if ( v9->static_fields->CameraFlip )
     {
-      v10 = &v19;
-      v19 = v17[0];
-      v20.fields.x = -1.0;
+      v10 = &v21;
+      v21 = v19[0];
+      v11 = -1.0;
     }
     else
     {
-      v10 = &v18;
-      v18 = v17[0];
-      v20.fields.x = 1.0;
+      v10 = &v20;
+      v20 = v19[0];
+      v11 = 1.0;
     }
-    v11 = *(_OWORD *)&v10->fields.m01;
-    *(_OWORD *)&v17[1].fields.m00 = *(_OWORD *)&v10->fields.m00;
-    *(_OWORD *)&v17[1].fields.m01 = v11;
-    v12 = *(_OWORD *)&v10->fields.m03;
-    v20.fields.z = 1.0;
-    *(_OWORD *)&v17[1].fields.m02 = *(_OWORD *)&v10->fields.m02;
-    *(_OWORD *)&v17[1].fields.m03 = v12;
-    v20.fields.y = 1.0;
-    UnityEngine_Matrix4x4__Scale(v17, v20, 0);
-    v15 = v17[1];
-    v14 = v17[0];
-    UnityEngine_Matrix4x4__op_Multiply(&v16, &v15, &v14, 0);
-    v13 = v16;
-    UnityEngine_Camera__set_projectionMatrix(v7, &v13, 0);
+    v12 = *(_OWORD *)&v10->fields.m01;
+    *(_OWORD *)&v19[1].fields.m00 = *(_OWORD *)&v10->fields.m00;
+    *(_OWORD *)&v19[1].fields.m01 = v12;
+    v13 = *(_OWORD *)&v10->fields.m03;
+    LODWORD(v12) = 1.0;
+    *(_OWORD *)&v19[1].fields.m02 = *(_OWORD *)&v10->fields.m02;
+    *(_OWORD *)&v19[1].fields.m03 = v13;
+    v14 = 1.0;
+    UnityEngine_Matrix4x4__Scale(v19, *(UnityEngine_Vector3_o *)&v11, 0);
+    v17 = v19[1];
+    v16 = v19[0];
+    UnityEngine_Matrix4x4__op_Multiply(&v18, &v17, &v16, 0);
+    v15 = v18;
+    UnityEngine_Camera__set_projectionMatrix(v7, &v15, 0);
   }
 }
 
@@ -265,6 +267,7 @@ void ResolutionManager__OnPreRender(ResolutionManager_o *this, const MethodInfo 
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ResolutionManager__ReScale(ResolutionManager_o *this, const MethodInfo *method)
 {
   const MethodInfo_3820CA8 *v3; // x1
@@ -281,8 +284,11 @@ void ResolutionManager__ReScale(ResolutionManager_o *this, const MethodInfo *met
   UnityEngine_Object_o *camera; // x22
   int v15; // w21
   __int64 v16; // x1
-  UnityEngine_Camera_o *v17; // x0
-  UnityEngine_Rect_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v17; // s3 OVERLAPPED
+  UnityEngine_Camera_o *v18; // x0
+  float v19; // s2
+  float v20; // s1
+  int v21; // s0
 
   if ( (byte_5970135 & 1) == 0 )
   {
@@ -307,17 +313,16 @@ void ResolutionManager__ReScale(ResolutionManager_o *this, const MethodInfo *met
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
   if ( UnityEngine_Object__op_Inequality(camera, 0, 0) )
   {
-    v18.fields.m_Height = 1.0;
+    v17 = 1.0;
     if ( (float)((float)((float)CameraWidth / (float)logicalHeight) * (float)logicalWidth) >= (float)CameraWidth )
-      v18.fields.m_Height = (float)((float)CameraWidth * (float)logicalHeight)
-                          / (float)((float)v15 * (float)logicalWidth);
-    v17 = this->fields.camera;
-    if ( !v17 )
+      v17 = (float)((float)CameraWidth * (float)logicalHeight) / (float)((float)v15 * (float)logicalWidth);
+    v18 = this->fields.camera;
+    if ( !v18 )
       sub_2213CDC(0, v16);
-    v18.fields.m_Width = 1.0;
-    v18.fields.m_YMin = (float)(1.0 - v18.fields.m_Height) * 0.5;
-    v18.fields.m_XMin = 0.0;
-    UnityEngine_Camera__set_rect(v17, v18, 0);
+    v19 = 1.0;
+    v20 = (float)(1.0 - v17) * 0.5;
+    v21 = 0;
+    UnityEngine_Camera__set_rect(v18, *(UnityEngine_Rect_o *)(&v17 - 3), 0);
   }
 }
 
@@ -538,7 +543,7 @@ int32_t ResolutionManager__get_CameraHeight(ResolutionManager_o *this, const Met
         {
           v5 = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(v5, 0);
           if ( v5 )
-            return ((int32_t (__fastcall *)(UnityEngine_Camera_o *, _QWORD))v5->klass[1]._1.byval_arg.data)(
+            return ((__int64 (__fastcall *)(UnityEngine_Camera_o *, _QWORD))v5->klass[1]._1.byval_arg.data)(
                      v5,
                      *(_QWORD *)&v5->klass[1]._1.byval_arg.bits);
         }
@@ -584,7 +589,7 @@ int32_t ResolutionManager__get_CameraWidth(ResolutionManager_o *this, const Meth
         {
           v5 = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(v5, 0);
           if ( v5 )
-            return ((int32_t (__fastcall *)(UnityEngine_Camera_o *, void *))v5->klass[1]._1.image)(
+            return ((__int64 (__fastcall *)(UnityEngine_Camera_o *, void *))v5->klass[1]._1.image)(
                      v5,
                      v5->klass[1]._1.gc_desc);
         }

@@ -2674,9 +2674,11 @@ void ShopBuyItemListViewManager__SetMode_41958800(
 void ShopBuyItemListViewManager__SetMultiEventScrollInfo(ShopBuyItemListViewManager_o *this, const MethodInfo *method)
 {
   void *scrollView; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float x; // s8
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596C7F9 & 1) == 0 )
   {
@@ -2691,25 +2693,27 @@ void ShopBuyItemListViewManager__SetMultiEventScrollInfo(ShopBuyItemListViewMana
                  (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !scrollView )
     goto LABEL_10;
-  v6.fields.x = *((float *)scrollView + 74);
-  v6.fields.y = *((float *)scrollView + 75);
-  v6.fields.w = 400.0;
-  v6.fields.z = *((float *)scrollView + 76);
-  UIPanel__set_baseClipRegion((UIPanel_o *)scrollView, v6, 0);
+  v8.fields.x = *((float *)scrollView + 74);
+  v8.fields.y = *((float *)scrollView + 75);
+  v8.fields.w = 400.0;
+  v8.fields.z = *((float *)scrollView + 76);
+  UIPanel__set_baseClipRegion((UIPanel_o *)scrollView, v8, 0);
   scrollView = this->fields.scrollView;
   if ( !scrollView
     || (scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0),
         (scrollView = this->fields.scrollView) == 0)
-    || (scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0)) == 0 )
+    || (x = localPosition.fields.x,
+        z = localPosition.fields.z,
+        (scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0)) == 0) )
   {
 LABEL_10:
     sub_2213CDC(scrollView, method);
   }
-  v5.fields.y = 16.0;
-  v5.fields.x = localPosition.fields.x;
-  v5.fields.z = localPosition.fields.z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollView, v5, 0);
+  v7.fields.y = 16.0;
+  v7.fields.x = x;
+  v7.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollView, v7, 0);
 }
 
 
@@ -2796,9 +2800,11 @@ void ShopBuyItemListViewManager__SetScrollBarUnEnable(
 void ShopBuyItemListViewManager__SetSingleEventScrollInfo(ShopBuyItemListViewManager_o *this, const MethodInfo *method)
 {
   void *scrollView; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector4_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float x; // s8
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector4_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596C7F8 & 1) == 0 )
   {
@@ -2813,25 +2819,27 @@ void ShopBuyItemListViewManager__SetSingleEventScrollInfo(ShopBuyItemListViewMan
                  (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !scrollView )
     goto LABEL_10;
-  v6.fields.x = *((float *)scrollView + 74);
-  v6.fields.y = *((float *)scrollView + 75);
-  v6.fields.w = 470.0;
-  v6.fields.z = *((float *)scrollView + 76);
-  UIPanel__set_baseClipRegion((UIPanel_o *)scrollView, v6, 0);
+  v8.fields.x = *((float *)scrollView + 74);
+  v8.fields.y = *((float *)scrollView + 75);
+  v8.fields.w = 470.0;
+  v8.fields.z = *((float *)scrollView + 76);
+  UIPanel__set_baseClipRegion((UIPanel_o *)scrollView, v8, 0);
   scrollView = this->fields.scrollView;
   if ( !scrollView
     || (scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0)) == 0
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)scrollView, 0),
         (scrollView = this->fields.scrollView) == 0)
-    || (scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0)) == 0 )
+    || (x = localPosition.fields.x,
+        z = localPosition.fields.z,
+        (scrollView = UnityEngine_Component__get_transform((UnityEngine_Component_o *)scrollView, 0)) == 0) )
   {
 LABEL_10:
     sub_2213CDC(scrollView, method);
   }
-  v5.fields.y = 82.0;
-  v5.fields.x = localPosition.fields.x;
-  v5.fields.z = localPosition.fields.z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollView, v5, 0);
+  v7.fields.y = 82.0;
+  v7.fields.x = x;
+  v7.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollView, v7, 0);
 }
 
 

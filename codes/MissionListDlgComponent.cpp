@@ -427,21 +427,21 @@ void MissionListDlgComponent___c__DisplayClass15_0___OpenEventMissionListDialog_
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
-  struct EventDetailEntity_o *eventDetailEnt; // x1
+  struct System_String_o *eventDetailEnt; // x1
   System_String_o *v13; // x2
   System_String_o *v14; // x3
   int32_t v15; // w4
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
-  struct EventMissionEntity_array *eventMissionEntList; // x1
+  struct System_String_o *eventMissionEntList; // x1
   System_String_o *v20; // x2
   System_String_o *v21; // x3
   int32_t v22; // w4
   int32_t v23; // w5
   bool v24; // w6
   bool v25; // w7
-  struct System_Action_o *missionBtnCallback; // x1
+  struct EventDetailEntity_o *missionBtnCallback; // x1
   __int64 v27; // x2
   struct MissionListDlgComponent_o *v28; // x8
   UnityEngine_Object_o *eventMissionListViewManager; // x20
@@ -464,8 +464,8 @@ void MissionListDlgComponent___c__DisplayClass15_0___OpenEventMissionListDialog_
   EventMissionEntity_array *v46; // x21
   int32_t v47; // w22
   BaseDialog_o *v48; // x19
-  struct MissionListDlgComponent___c_StaticFields *static_fields; // x8
-  System_Action_o *_9__15_1; // x20
+  void *static_fields; // x8
+  System_Action_o *v50; // x20
   Il2CppObject *v51; // x21
   struct MissionListDlgComponent___c_StaticFields *v52; // x0
   System_String_o *v53; // x2
@@ -514,10 +514,10 @@ void MissionListDlgComponent___c__DisplayClass15_0___OpenEventMissionListDialog_
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.__4__this;
   if ( !this )
     goto LABEL_48;
-  eventDetailEnt = v2->fields.eventDetailEnt;
-  *((_QWORD *)this + 19) = eventDetailEnt;
+  eventDetailEnt = (struct System_String_o *)v2->fields.eventDetailEnt;
+  this[2].fields.title = eventDetailEnt;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)((char *)this + 152),
+    (MissionNaviTransitionBoardItem_o *)&this[2].fields.title,
     (int32_t)eventDetailEnt,
     v6,
     v7,
@@ -528,10 +528,10 @@ void MissionListDlgComponent___c__DisplayClass15_0___OpenEventMissionListDialog_
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.__4__this;
   if ( !this )
     goto LABEL_48;
-  eventMissionEntList = v2->fields.eventMissionEntList;
-  *((_QWORD *)this + 20) = eventMissionEntList;
+  eventMissionEntList = (struct System_String_o *)v2->fields.eventMissionEntList;
+  this[2].fields.subTitle = eventMissionEntList;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)((char *)this + 160),
+    (MissionNaviTransitionBoardItem_o *)&this[2].fields.subTitle,
     (int32_t)eventMissionEntList,
     v13,
     v14,
@@ -542,9 +542,17 @@ void MissionListDlgComponent___c__DisplayClass15_0___OpenEventMissionListDialog_
   this = (MissionListDlgComponent___c__DisplayClass15_0_o *)v2->fields.__4__this;
   if ( !this )
     goto LABEL_48;
-  missionBtnCallback = v2->fields.missionBtnCallback;
-  *((_QWORD *)this + 21) = missionBtnCallback;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)this + 1, (int32_t)missionBtnCallback, v20, v21, v22, v23, v24, v25);
+  missionBtnCallback = (struct EventDetailEntity_o *)v2->fields.missionBtnCallback;
+  this[2].fields.eventDetailEnt = missionBtnCallback;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&this[2].fields.eventDetailEnt,
+    (int32_t)missionBtnCallback,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25);
   v28 = v2->fields.__4__this;
   if ( !v28 )
     goto LABEL_48;
@@ -566,7 +574,7 @@ void MissionListDlgComponent___c__DisplayClass15_0___OpenEventMissionListDialog_
       j_il2cpp_runtime_class_init_0(MissionListDlgComponent_TypeInfo, method, v30);
       this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent_TypeInfo;
     }
-    if ( **((_DWORD **)this + 23) >= SLODWORD(v31->max_length) )
+    if ( (__int64)this[2].fields.missionBtnCallback->klass >= SLODWORD(v31->max_length) )
     {
       v32 = v2->fields.__4__this;
       if ( !v32 )
@@ -662,23 +670,23 @@ LABEL_40:
     j_il2cpp_runtime_class_init_0(MissionListDlgComponent___c_TypeInfo, method, v30);
     this = (MissionListDlgComponent___c__DisplayClass15_0_o *)MissionListDlgComponent___c_TypeInfo;
   }
-  static_fields = (struct MissionListDlgComponent___c_StaticFields *)*((_QWORD *)this + 23);
-  _9__15_1 = static_fields->__9__15_1;
-  if ( !_9__15_1 )
+  static_fields = this[2].fields.missionBtnCallback;
+  v50 = (System_Action_o *)*((_QWORD *)static_fields + 1);
+  if ( !v50 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[3].fields.subTitle) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v30);
       static_fields = MissionListDlgComponent___c_TypeInfo->static_fields;
     }
-    v51 = (Il2CppObject *)static_fields->__9;
-    _9__15_1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__15_1, v51, Method_MissionListDlgComponent___c__OpenEventMissionListDialog_b__15_1__, 0);
+    v51 = *(Il2CppObject **)static_fields;
+    v50 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    System_Action___ctor(v50, v51, Method_MissionListDlgComponent___c__OpenEventMissionListDialog_b__15_1__, 0);
     v52 = MissionListDlgComponent___c_TypeInfo->static_fields;
-    v52->__9__15_1 = _9__15_1;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v52->__9__15_1, (int32_t)_9__15_1, v53, v54, v55, v56, v57, v58);
+    v52->__9__15_1 = v50;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v52->__9__15_1, (int32_t)v50, v53, v54, v55, v56, v57, v58);
   }
   if ( !v48 )
     goto LABEL_48;
-  BaseDialog__Open(v48, _9__15_1, 1, 0, 0);
+  BaseDialog__Open(v48, v50, 1, 0, 0);
 }

@@ -1019,14 +1019,14 @@ void CombineMenuControl__SetTransformInfo(CombineMenuControl_o *this, const Meth
   ServantTransformMaster_o *v23; // x20
   __int64 v24; // x21
   __int64 v25; // x22
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // krC0_16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // kr00_16
   int32_t v27; // w0
   __int64 v28; // x1
   struct UserServantEntity_o *v29; // x8
   int32_t v30; // w21
   __int64 v31; // x22
   __int64 v32; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // krD0_16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // kr10_16
   System_String_o *v34; // x20
   ServantTransformEntity_o *v35; // x0
   System_String_o *v36; // x20
@@ -1043,21 +1043,21 @@ void CombineMenuControl__SetTransformInfo(CombineMenuControl_o *this, const Meth
   struct UserServantEntity_o *v47; // x8
   __int64 v48; // x20
   __int64 v49; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v50; // krE0_16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v50; // kr20_16
   ServantTransformEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v54; // 0:x0.16
-  UnityEngine_Color_o v55; // 0:kr10_16.16
-  UnityEngine_Color_o v56; // 0:kr30_16.16
-  UnityEngine_Color_o v57; // 0:kr50_16.16
-  UnityEngine_Color_o v58; // 0:kr70_16.16
-  UnityEngine_Color_o v59; // 0:kr90_16.16
-  UnityEngine_Color_o v60; // 0:krB0_16.16
-  UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v62; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v55; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o DefaultCondTitleLabelColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v60; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o DefaultCondTitleSpriteColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v62; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v63; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v64; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v65; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -1114,19 +1114,19 @@ void CombineMenuControl__SetTransformInfo(CombineMenuControl_o *this, const Meth
       v15 = this;
 LABEL_44:
       DefaultCondTitleLabelColor = TransformHelper__get_DefaultCondTitleLabelColor(0);
-      v57 = ColorHelper__ParseColorCode_51166816(condLabelColor, DefaultCondTitleLabelColor, 0);
+      v60 = ColorHelper__ParseColorCode_51166816(condLabelColor, DefaultCondTitleLabelColor, 0);
       condSpriteColor = 0;
-      this->fields._CondTitleLabelColor_k__BackingField = v57;
+      this->fields._CondTitleLabelColor_k__BackingField = v60;
       if ( (v16 & 1) == 0 )
       {
         condSpriteColor = v13->fields.condSpriteColor;
         v15 = v17;
       }
       DefaultCondTitleSpriteColor = TransformHelper__get_DefaultCondTitleSpriteColor(0);
-      v58 = ColorHelper__ParseColorCode_51166816(condSpriteColor, DefaultCondTitleSpriteColor, 0);
+      v62 = ColorHelper__ParseColorCode_51166816(condSpriteColor, DefaultCondTitleSpriteColor, 0);
       if ( !v15 )
         goto LABEL_65;
-      v15->fields._CondTitleSpriteColor_k__BackingField = v58;
+      v15->fields._CondTitleSpriteColor_k__BackingField = v62;
       v39 = this->fields.baseUserServantEntity;
       if ( v39 )
       {
@@ -1154,20 +1154,20 @@ LABEL_44:
       v44 = 1;
       v43 = this;
 LABEL_54:
-      v65 = TransformHelper__get_DefaultCondTitleLabelColor(0);
-      v59 = ColorHelper__ParseColorCode_51166816(v42, v65, 0);
+      v63 = TransformHelper__get_DefaultCondTitleLabelColor(0);
+      v64 = ColorHelper__ParseColorCode_51166816(v42, v63, 0);
       v46 = 0;
-      this->fields._CondTitleLabelColorAfter_k__BackingField = v59;
+      this->fields._CondTitleLabelColorAfter_k__BackingField = v64;
       if ( (v44 & 1) == 0 )
       {
         v46 = v41->fields.condSpriteColor;
         v43 = v45;
       }
-      v66 = TransformHelper__get_DefaultCondTitleSpriteColor(0);
-      v60 = ColorHelper__ParseColorCode_51166816(v46, v66, 0);
+      v65 = TransformHelper__get_DefaultCondTitleSpriteColor(0);
+      v66 = ColorHelper__ParseColorCode_51166816(v46, v65, 0);
       if ( v43 )
       {
-        v43->fields._CondTitleSpriteColorAfter_k__BackingField = v60;
+        v43->fields._CondTitleSpriteColorAfter_k__BackingField = v66;
         v47 = this->fields.baseUserServantEntity;
         if ( v47 )
         {
@@ -1253,18 +1253,18 @@ LABEL_65:
     v34 = ServantTransformEntity__GetCondLabelColor(entity, 0);
   else
     v34 = 0;
-  v61 = TransformHelper__get_DefaultCondTitleLabelColor(0);
-  v55 = ColorHelper__ParseColorCode_51166816(v34, v61, 0);
+  v55 = TransformHelper__get_DefaultCondTitleLabelColor(0);
+  v56 = ColorHelper__ParseColorCode_51166816(v34, v55, 0);
   v35 = entity;
-  this->fields._CondTitleLabelColor_k__BackingField = v55;
+  this->fields._CondTitleLabelColor_k__BackingField = v56;
   if ( v35 )
     v36 = ServantTransformEntity__GetCondSpriteColor(v35, 0);
   else
     v36 = 0;
-  v62 = TransformHelper__get_DefaultCondTitleSpriteColor(0);
-  v56 = ColorHelper__ParseColorCode_51166816(v36, v62, 0);
+  v57 = TransformHelper__get_DefaultCondTitleSpriteColor(0);
+  v58 = ColorHelper__ParseColorCode_51166816(v36, v57, 0);
   v37 = entity;
-  this->fields._CondTitleSpriteColor_k__BackingField = v56;
+  this->fields._CondTitleSpriteColor_k__BackingField = v58;
   if ( v37 )
     LOBYTE(v37) = ServantTransformEntity__IsNotSkillChange(v37, 0);
   this->fields._TransformIsNotSkillChange_k__BackingField = (unsigned __int8)v37 & 1;
@@ -1358,12 +1358,20 @@ LABEL_25:
 
 UnityEngine_Color_o CombineMenuControl__get_CondTitleLabelColor(CombineMenuControl_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._CondTitleLabelColor_k__BackingField.fields.r;
-  result.fields.g = this->fields._CondTitleLabelColor_k__BackingField.fields.g;
-  result.fields.b = this->fields._CondTitleLabelColor_k__BackingField.fields.b;
-  result.fields.a = this->fields._CondTitleLabelColor_k__BackingField.fields.a;
+  r = this->fields._CondTitleLabelColor_k__BackingField.fields.r;
+  g = this->fields._CondTitleLabelColor_k__BackingField.fields.g;
+  b = this->fields._CondTitleLabelColor_k__BackingField.fields.b;
+  a = this->fields._CondTitleLabelColor_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -1372,24 +1380,40 @@ UnityEngine_Color_o CombineMenuControl__get_CondTitleLabelColorAfter(
         CombineMenuControl_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.r;
-  result.fields.g = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.g;
-  result.fields.b = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.b;
-  result.fields.a = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.a;
+  r = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.r;
+  g = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.g;
+  b = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.b;
+  a = this->fields._CondTitleLabelColorAfter_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
 
 UnityEngine_Color_o CombineMenuControl__get_CondTitleSpriteColor(CombineMenuControl_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._CondTitleSpriteColor_k__BackingField.fields.r;
-  result.fields.g = this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
-  result.fields.b = this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
-  result.fields.a = this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
+  r = this->fields._CondTitleSpriteColor_k__BackingField.fields.r;
+  g = this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
+  b = this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
+  a = this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -1398,12 +1422,20 @@ UnityEngine_Color_o CombineMenuControl__get_CondTitleSpriteColorAfter(
         CombineMenuControl_o *this,
         const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.r;
-  result.fields.g = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
-  result.fields.b = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
-  result.fields.a = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
+  r = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.r;
+  g = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
+  b = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
+  a = this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 

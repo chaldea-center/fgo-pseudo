@@ -1408,6 +1408,7 @@ LABEL_17:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CombineInfoComponent__setCombineResStatusInfo(
         CombineInfoComponent_o *this,
         CombineSvtData_o *resSvtData,
@@ -1442,43 +1443,46 @@ void CombineInfoComponent__setCombineResStatusInfo(
   __int64 v30; // x1
   CombineInfoComponent_c *v31; // x0
   const MethodInfo *v32; // x2
-  UIWidget_o *v34; // x0
-  UIExtrusionLabel_o *v37; // x25
-  UILabel_o *v38; // x25
-  UIExtrusionLabel_o *v39; // x26
-  UILabel_o *v40; // x26
-  __int64 v41; // x1
-  __int64 v42; // x26
-  __int64 v43; // x27
-  int32_t v44; // w0
-  int32_t v45; // w1
-  __int64 v46; // x1
+  float v33; // s0 OVERLAPPED
+  float v34; // s1
+  UIWidget_o *v35; // x0
+  float v36; // s2
+  float v37; // s3
+  UIExtrusionLabel_o *v38; // x25
+  UILabel_o *v39; // x25
+  UIExtrusionLabel_o *v40; // x26
+  UILabel_o *v41; // x26
+  __int64 v42; // x1
+  __int64 v43; // x26
+  __int64 v44; // x27
+  int32_t v45; // w0
+  int32_t v46; // w1
+  __int64 v47; // x1
   bool isLevelMax; // w0
   System_String_o *INIT_VAL_TXT; // x1
   UILabel_o *infoLb; // x26
-  System_String_o *v50; // x27
-  Il2CppObject *v51; // x28
-  Il2CppObject *v52; // x0
-  __int64 v53; // x1
-  CombineInfoComponent_c *v54; // x0
-  UnityEngine_Color_o *p_COLOR_VAL; // x8
+  System_String_o *v51; // x27
+  Il2CppObject *v52; // x28
+  Il2CppObject *v53; // x0
+  __int64 v54; // x1
+  CombineInfoComponent_c *v55; // x0
+  float *p_r; // x8
   int32_t LimitCntMax; // w0
-  const MethodInfo *v57; // x3
+  const MethodInfo *v58; // x3
   ServantOverwriteStatus_o *OverwriteStatus; // x24
   UILabel_o *resHpLb; // x25
-  CombineInfoComponent_c *v60; // x0
+  CombineInfoComponent_c *v61; // x0
   int32_t combineResAtk; // w8
   UILabel_o *resAtkLb; // x20
-  CombineInfoComponent_c *v63; // x0
+  CombineInfoComponent_c *v64; // x0
   int32_t combineResSvtMaxLv; // [xsp+8h] [xbp-88h] BYREF
   int32_t LevelMax; // [xsp+Ch] [xbp-84h] BYREF
-  __int64 v66; // [xsp+10h] [xbp-80h] BYREF
-  __int64 v67; // [xsp+18h] [xbp-78h] BYREF
+  __int64 v67; // [xsp+10h] [xbp-80h] BYREF
+  __int64 v68; // [xsp+18h] [xbp-78h] BYREF
   __int64 barExp; // [xsp+20h] [xbp-70h] BYREF
-  __int64 exp; // [xsp+28h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v70; // 0:x0.16
+  int32_t exp[2]; // [xsp+28h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v71; // 0:x0.16
-  UnityEngine_Color_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v72; // 0:x0.16
   UnityEngine_Color_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -1503,9 +1507,9 @@ void CombineInfoComponent__setCombineResStatusInfo(
     byte_5974ACC = 1;
   }
   barExp = 0;
-  exp = 0;
-  v66 = 0;
+  *(_QWORD *)exp = 0;
   v67 = 0;
+  v68 = 0;
   if ( !resSvtData )
     goto LABEL_123;
   baseSvtData = resSvtData->fields.baseSvtData;
@@ -1514,15 +1518,10 @@ void CombineInfoComponent__setCombineResStatusInfo(
     goto LABEL_123;
   this = (CombineInfoComponent_o *)v4->fields.baseSvtData;
   lv = baseSvtData->fields.lv;
-  HIDWORD(exp) = resSvtData->fields.combineResSvtLv;
+  exp[1] = resSvtData->fields.combineResSvtLv;
   if ( !this )
     goto LABEL_123;
-  UserServantEntity__getExpInfo(
-    (UserServantEntity_o *)this,
-    (int32_t *)&exp,
-    (int32_t *)&barExp + 1,
-    (float *)&barExp,
-    0);
+  UserServantEntity__getExpInfo((UserServantEntity_o *)this, exp, (int32_t *)&barExp + 1, (float *)&barExp, 0);
   this = (CombineInfoComponent_o *)v4->fields.resCrExpBar;
   if ( !this )
     goto LABEL_123;
@@ -1553,33 +1552,33 @@ void CombineInfoComponent__setCombineResStatusInfo(
                                      (const MethodInfo_3820CA8 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !v7 )
     goto LABEL_123;
-  v72.fields.r = 1.0;
-  v72.fields.g = 1.0;
-  v10 = (UIWidget_o *)this;
-  v72.fields.b = 1.0;
-  v72.fields.a = 1.0;
-  UIWidget__set_color(v7, v72, 0);
-  if ( !v8 )
-    goto LABEL_123;
   v73.fields.r = 1.0;
   v73.fields.g = 1.0;
+  v10 = (UIWidget_o *)this;
   v73.fields.b = 1.0;
   v73.fields.a = 1.0;
-  UIWidget__set_color(v8, v73, 0);
-  if ( !v9 )
+  UIWidget__set_color(v7, v73, 0);
+  if ( !v8 )
     goto LABEL_123;
   v74.fields.r = 1.0;
   v74.fields.g = 1.0;
   v74.fields.b = 1.0;
   v74.fields.a = 1.0;
-  UIWidget__set_color(v9, v74, 0);
-  if ( !v10 )
+  UIWidget__set_color(v8, v74, 0);
+  if ( !v9 )
     goto LABEL_123;
   v75.fields.r = 1.0;
   v75.fields.g = 1.0;
   v75.fields.b = 1.0;
   v75.fields.a = 1.0;
-  UIWidget__set_color(v10, v75, 0);
+  UIWidget__set_color(v9, v75, 0);
+  if ( !v10 )
+    goto LABEL_123;
+  v76.fields.r = 1.0;
+  v76.fields.g = 1.0;
+  v76.fields.b = 1.0;
+  v76.fields.a = 1.0;
+  UIWidget__set_color(v10, v76, 0);
   this = (CombineInfoComponent_o *)v4->fields.infoLb;
   if ( !this )
     goto LABEL_123;
@@ -1626,14 +1625,14 @@ void CombineInfoComponent__setCombineResStatusInfo(
   if ( !this )
     goto LABEL_123;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  v11 = HIDWORD(exp) - lv;
+  v11 = exp[1] - lv;
   if ( v11 >= 1 )
   {
     this = (CombineInfoComponent_o *)v4->fields.resExpBar;
     if ( !this )
       goto LABEL_123;
     UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0);
-    if ( HIDWORD(exp) == resSvtData->fields.combineResSvtMaxLv )
+    if ( exp[1] == resSvtData->fields.combineResSvtMaxLv )
     {
       this = (CombineInfoComponent_o *)v4->fields.resRemaingExpBar;
       if ( v11 == 1 )
@@ -1707,16 +1706,16 @@ LABEL_48:
   v14 = *(_QWORD *)&baseSvtData->fields.limitCount.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, resSvtData);
-  *(_QWORD *)&v70.fields.currentCryptoKey = v13;
-  *(_QWORD *)&v70.fields.fakeValue = v14;
-  this = (CombineInfoComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v70, 0);
+  *(_QWORD *)&v71.fields.currentCryptoKey = v13;
+  *(_QWORD *)&v71.fields.fakeValue = v14;
+  this = (CombineInfoComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v71, 0);
   resExpBar = (UIProgressBar_o *)v4->fields.resExpBar;
-  HIDWORD(v66) = (_DWORD)this;
+  HIDWORD(v67) = (_DWORD)this;
   if ( !resExpBar )
     goto LABEL_123;
   combineResLimitCnt = resSvtData->fields.combineResLimitCnt;
   UIProgressBar__set_value(resExpBar, resSvtData->fields.combineResExpBarVal, 0);
-  if ( System_Int32__Equals_77138484((int32_t)&v66 + 4, combineResLimitCnt, 0)
+  if ( System_Int32__Equals_77138484((int32_t)&v67 + 4, combineResLimitCnt, 0)
     || !UserServantEntity__isLevelMax(baseSvtData, 0) )
   {
     goto LABEL_48;
@@ -1776,40 +1775,40 @@ LABEL_66:
         goto LABEL_123;
       goto LABEL_95;
     }
-    v37 = v4->fields.resLvLb;
-    this = (CombineInfoComponent_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
-    if ( !v37 )
-      goto LABEL_123;
-    UIExtrusionLabel__set_text(v37, (System_String_o *)this, 0);
-    v38 = v4->fields.resMaxLvLb;
-    this = (CombineInfoComponent_o *)System_Int32__ToString((int)resSvtData + 32, 0);
+    v38 = v4->fields.resLvLb;
+    this = (CombineInfoComponent_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !v38 )
       goto LABEL_123;
-    UILabel__set_text(v38, (System_String_o *)this, 0);
+    UIExtrusionLabel__set_text(v38, (System_String_o *)this, 0);
+    v39 = v4->fields.resMaxLvLb;
+    this = (CombineInfoComponent_o *)System_Int32__ToString((int)resSvtData + 32, 0);
+    if ( !v39 )
+      goto LABEL_123;
+    UILabel__set_text(v39, (System_String_o *)this, 0);
     goto LABEL_91;
   }
   if ( dispType == 2 )
   {
-    v39 = v4->fields.resLvLb;
-    this = (CombineInfoComponent_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
-    if ( !v39 )
-      goto LABEL_123;
-    UIExtrusionLabel__set_text(v39, (System_String_o *)this, 0);
-    v40 = v4->fields.resMaxLvLb;
-    this = (CombineInfoComponent_o *)System_Int32__ToString((int)resSvtData + 32, 0);
+    v40 = v4->fields.resLvLb;
+    this = (CombineInfoComponent_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !v40 )
       goto LABEL_123;
-    UILabel__set_text(v40, (System_String_o *)this, 0);
-    v42 = *(_QWORD *)&baseSvtData->fields.limitCount.fields.currentCryptoKey;
-    v43 = *(_QWORD *)&baseSvtData->fields.limitCount.fields.fakeValue;
+    UIExtrusionLabel__set_text(v40, (System_String_o *)this, 0);
+    v41 = v4->fields.resMaxLvLb;
+    this = (CombineInfoComponent_o *)System_Int32__ToString((int)resSvtData + 32, 0);
+    if ( !v41 )
+      goto LABEL_123;
+    UILabel__set_text(v41, (System_String_o *)this, 0);
+    v43 = *(_QWORD *)&baseSvtData->fields.limitCount.fields.currentCryptoKey;
+    v44 = *(_QWORD *)&baseSvtData->fields.limitCount.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v41);
-    *(_QWORD *)&v71.fields.currentCryptoKey = v42;
-    *(_QWORD *)&v71.fields.fakeValue = v43;
-    v44 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v71, 0);
-    v45 = resSvtData->fields.combineResLimitCnt;
-    LODWORD(v66) = v44;
-    if ( System_Int32__Equals_77138484((int32_t)&v66, v45, 0) )
+      j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v42);
+    *(_QWORD *)&v72.fields.currentCryptoKey = v43;
+    *(_QWORD *)&v72.fields.fakeValue = v44;
+    v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v72, 0);
+    v46 = resSvtData->fields.combineResLimitCnt;
+    LODWORD(v67) = v45;
+    if ( System_Int32__Equals_77138484((int32_t)&v67, v46, 0) )
     {
 LABEL_91:
       isLevelMax = UserServantEntity__isLevelMax(baseSvtData, 0);
@@ -1844,32 +1843,35 @@ LABEL_123:
     }
     infoLb = v4->fields.infoLb;
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v46);
-    v50 = LocalizationManager__Get((System_String_o *)StringLiteral_8977/*"MAX_LVUP_TXT"*/, 0);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v47);
+    v51 = LocalizationManager__Get((System_String_o *)StringLiteral_8977/*"MAX_LVUP_TXT"*/, 0);
     LevelMax = UserServantEntity__getLevelMax(baseSvtData, 0);
-    v51 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &LevelMax);
+    v52 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &LevelMax);
     combineResSvtMaxLv = resSvtData->fields.combineResSvtMaxLv;
-    v52 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &combineResSvtMaxLv);
-    this = (CombineInfoComponent_o *)System_String__Format_75697880(v50, v51, v52, 0);
+    v53 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &combineResSvtMaxLv);
+    this = (CombineInfoComponent_o *)System_String__Format_75697880(v51, v52, v53, 0);
     if ( !infoLb )
       goto LABEL_123;
     UILabel__set_text(infoLb, (System_String_o *)this, 0);
-    v54 = CombineInfoComponent_TypeInfo;
+    v55 = CombineInfoComponent_TypeInfo;
     if ( !*(&CombineInfoComponent_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(CombineInfoComponent_TypeInfo, v53);
-      v54 = CombineInfoComponent_TypeInfo;
+      j_il2cpp_runtime_class_init_0(CombineInfoComponent_TypeInfo, v54);
+      v55 = CombineInfoComponent_TypeInfo;
     }
-    p_COLOR_VAL = &v54->static_fields->COLOR_VAL;
-    v34 = v8;
-    v78 = *p_COLOR_VAL;
+    p_r = &v55->static_fields->COLOR_VAL.fields.r;
+    v35 = v8;
+    v33 = *p_r;
+    v34 = p_r[1];
+    v36 = p_r[2];
+    v37 = p_r[3];
   }
   else
   {
     if ( dispType != 4 )
       goto LABEL_108;
     v28 = v4->fields.resLvLb;
-    this = (CombineInfoComponent_o *)System_Int32__ToString((int32_t)&exp + 4, 0);
+    this = (CombineInfoComponent_o *)System_Int32__ToString((int32_t)&exp[1], 0);
     if ( !v28 )
       goto LABEL_123;
     UIExtrusionLabel__set_text(v28, (System_String_o *)this, 0);
@@ -1890,31 +1892,31 @@ LABEL_123:
     if ( !this )
       goto LABEL_123;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-    v76.fields.r = 1.0;
-    v76.fields.g = 1.0;
-    v76.fields.b = 1.0;
-    v76.fields.a = 1.0;
-    UIWidget__set_color(v7, v76, 0);
     v77.fields.r = 1.0;
     v77.fields.g = 1.0;
     v77.fields.b = 1.0;
     v77.fields.a = 1.0;
-    UIWidget__set_color(v9, v77, 0);
+    UIWidget__set_color(v7, v77, 0);
     v78.fields.r = 1.0;
     v78.fields.g = 1.0;
-    v34 = v10;
     v78.fields.b = 1.0;
     v78.fields.a = 1.0;
+    UIWidget__set_color(v9, v78, 0);
+    v33 = 1.0;
+    v34 = 1.0;
+    v35 = v10;
+    v36 = 1.0;
+    v37 = 1.0;
   }
-  UIWidget__set_color(v34, v78, 0);
+  UIWidget__set_color(v35, *(UnityEngine_Color_o *)&v33, 0);
 LABEL_108:
   LimitCntMax = UserServantEntity__getLimitCntMax(baseSvtData, 0);
-  CombineInfoComponent__setResLimitCntInfo(v4, LimitCntMax, resSvtData->fields.combineResLimitCnt, v57);
+  CombineInfoComponent__setResLimitCntInfo(v4, LimitCntMax, resSvtData->fields.combineResLimitCnt, v58);
   OverwriteStatus = UserServantEntity__GetOverwriteStatus(baseSvtData, 0, 0);
   resHpLb = v4->fields.resHpLb;
-  HIDWORD(v67) = resSvtData->fields.combineResHp;
+  HIDWORD(v68) = resSvtData->fields.combineResHp;
   this = (CombineInfoComponent_o *)System_Int32__ToString_77138656(
-                                     (int32_t)&v67 + 4,
+                                     (int32_t)&v68 + 4,
                                      (System_String_o *)StringLiteral_9617/*"N0"*/,
                                      0);
   if ( !resHpLb )
@@ -1922,35 +1924,35 @@ LABEL_108:
   UILabel__set_text(resHpLb, (System_String_o *)this, 0);
   if ( !OverwriteStatus )
     goto LABEL_123;
-  if ( OverwriteStatus->fields._Hp_k__BackingField != HIDWORD(v67) )
+  if ( OverwriteStatus->fields._Hp_k__BackingField != HIDWORD(v68) )
   {
-    v60 = CombineInfoComponent_TypeInfo;
+    v61 = CombineInfoComponent_TypeInfo;
     if ( !*(&CombineInfoComponent_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(CombineInfoComponent_TypeInfo, resSvtData);
-      v60 = CombineInfoComponent_TypeInfo;
+      v61 = CombineInfoComponent_TypeInfo;
     }
-    UIWidget__set_color(v9, v60->static_fields->COLOR_VAL, 0);
+    UIWidget__set_color(v9, v61->static_fields->COLOR_VAL, 0);
   }
   combineResAtk = resSvtData->fields.combineResAtk;
   resAtkLb = v4->fields.resAtkLb;
-  LODWORD(v67) = combineResAtk;
+  LODWORD(v68) = combineResAtk;
   this = (CombineInfoComponent_o *)System_Int32__ToString_77138656(
-                                     (int32_t)&v67,
+                                     (int32_t)&v68,
                                      (System_String_o *)StringLiteral_9617/*"N0"*/,
                                      0);
   if ( !resAtkLb )
     goto LABEL_123;
   UILabel__set_text(resAtkLb, (System_String_o *)this, 0);
-  if ( OverwriteStatus->fields._Atk_k__BackingField != (_DWORD)v67 )
+  if ( OverwriteStatus->fields._Atk_k__BackingField != (_DWORD)v68 )
   {
-    v63 = CombineInfoComponent_TypeInfo;
+    v64 = CombineInfoComponent_TypeInfo;
     if ( !*(&CombineInfoComponent_TypeInfo->_2.cctor_finished + 1) )
     {
       j_il2cpp_runtime_class_init_0(CombineInfoComponent_TypeInfo, resSvtData);
-      v63 = CombineInfoComponent_TypeInfo;
+      v64 = CombineInfoComponent_TypeInfo;
     }
-    UIWidget__set_color(v10, v63->static_fields->COLOR_VAL, 0);
+    UIWidget__set_color(v10, v64->static_fields->COLOR_VAL, 0);
   }
   if ( v4->fields.dispType == 4 )
   {

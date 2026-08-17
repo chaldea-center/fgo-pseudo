@@ -30,7 +30,7 @@ void ServantStatusListViewItemDrawFlavorText__SetItem(
   int v12; // w23
   UnityEngine_Vector2_o v13; // x1
   UnityEngine_Vector2_o v14; // x2
-  UnityEngine_Vector2_o printedSize; // kr30_8
+  UnityEngine_Vector2_o printedSize; // kr00_8
   UnityEngine_Object_o *baseButton; // x21
   int32_t y; // w20
   __int64 v18; // x2
@@ -40,13 +40,17 @@ void ServantStatusListViewItemDrawFlavorText__SetItem(
   UnityEngine_Object_o *baseCollider; // x21
   int v23; // w23
   __int64 v24; // x2
-  UnityEngine_Object_o *v25; // x21
-  UnityEngine_Vector3_o size; // 0:kr00_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr14_12.12
-  UnityEngine_Vector3_o v29; // 0:kr20_12.12
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
+  float v25; // s1
+  UnityEngine_Object_o *v26; // x21
+  float x; // s11
+  float z; // s12
+  float v29; // s9
+  float v30; // s10
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
   if ( (byte_596D34B & 1) == 0 )
@@ -89,7 +93,7 @@ LABEL_16:
       this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
       if ( this )
       {
-        v12 = *((_DWORD *)this + 43);
+        v12 = *((_DWORD *)&this[1].fields.isFirst + 1);
         UIWidget__set_height((UIWidget_o *)this, 1000, 0);
         this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
         if ( this )
@@ -137,23 +141,21 @@ LABEL_16:
               if ( !this )
                 goto LABEL_51;
               size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-              v32.fields.x = size.fields.x;
-              v32.fields.z = size.fields.z;
               this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.baseCollider;
               if ( !this )
                 goto LABEL_51;
-              v32.fields.y = size.fields.y + (float)v23;
-              UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, v32, 0);
+              v25 = size.fields.y + (float)v23;
+              UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, size, 0);
             }
-            v25 = (UnityEngine_Object_o *)v6->fields.baseSprite;
+            v26 = (UnityEngine_Object_o *)v6->fields.baseSprite;
             if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, item, v24);
-            if ( UnityEngine_Object__op_Inequality(v25, 0, 0) )
+            if ( UnityEngine_Object__op_Inequality(v26, 0, 0) )
             {
               this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.baseSprite;
               if ( !this )
                 goto LABEL_51;
-              UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)this + 43) + v23, 0);
+              UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)&this[1].fields.isFirst + 1) + v23, 0);
             }
             this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
             if ( this )
@@ -167,15 +169,19 @@ LABEL_16:
                 this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.titleBase;
                 if ( this )
                 {
+                  x = localPosition.fields.x;
+                  z = localPosition.fields.z;
                   this = (ServantStatusListViewItemDrawFlavorText_o *)UnityEngine_GameObject__get_transform(
                                                                         (UnityEngine_GameObject_o *)this,
                                                                         0);
                   if ( this )
                   {
-                    v29 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+                    v33 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
                     this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
                     if ( this )
                     {
+                      v29 = v33.fields.x;
+                      v30 = v33.fields.z;
                       UIWidget__set_height((UIWidget_o *)this, y, 0);
                       this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
                       if ( this )
@@ -185,10 +191,10 @@ LABEL_16:
                                                                               0);
                         if ( this )
                         {
-                          v30.fields.z = localPosition.fields.z;
-                          v30.fields.y = (float)(printedSize.fields.y * 0.5) + -14.0;
-                          v30.fields.x = localPosition.fields.x;
-                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v30, 0);
+                          v34.fields.z = z;
+                          v34.fields.y = (float)(printedSize.fields.y * 0.5) + -14.0;
+                          v34.fields.x = x;
+                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v34, 0);
                           this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.titleBase;
                           if ( this )
                           {
@@ -197,10 +203,10 @@ LABEL_16:
                                                                                   0);
                             if ( this )
                             {
-                              v31.fields.z = v29.fields.z;
-                              v31.fields.y = (float)(printedSize.fields.y * 0.5) + 20.0;
-                              v31.fields.x = v29.fields.x;
-                              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v31, 0);
+                              v35.fields.z = v30;
+                              v35.fields.y = (float)(printedSize.fields.y * 0.5) + 20.0;
+                              v35.fields.x = v29;
+                              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v35, 0);
                               return;
                             }
                           }

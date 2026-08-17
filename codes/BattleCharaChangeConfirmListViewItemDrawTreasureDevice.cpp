@@ -53,9 +53,9 @@ void BattleCharaChangeConfirmListViewItemDrawTreasureDevice__Awake(
         const MethodInfo *method)
 {
   UnityEngine_Component_o *nowTitleLabel; // x0
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v5; // 0:kr14_12.12
-  UnityEngine_Vector3_o v6; // 0:kr20_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
   nowTitleLabel = (UnityEngine_Component_o *)this->fields.nowTitleLabel;
   if ( !nowTitleLabel )

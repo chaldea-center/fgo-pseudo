@@ -21,8 +21,11 @@ void FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
   UnityEngine_Transform_o *transform; // x0
   __int64 v5; // x1
   float addBottomY; // s11
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s8
+  float y; // s10
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597229B & 1) == 0 )
   {
@@ -40,14 +43,17 @@ void FSOffset__AddBottomY(FSOffset_o *this, const MethodInfo *method)
       if ( !transform
         || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
             addBottomY = this->fields.addBottomY,
+            x = localPosition.fields.x,
+            y = localPosition.fields.y,
+            z = localPosition.fields.z,
             (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
       {
         sub_2213CDC(transform, v5);
       }
-      v8.fields.x = localPosition.fields.x;
-      v8.fields.z = localPosition.fields.z;
-      v8.fields.y = localPosition.fields.y + addBottomY;
-      UnityEngine_Transform__set_localPosition(transform, v8, 0);
+      v11.fields.x = x;
+      v11.fields.z = z;
+      v11.fields.y = y + addBottomY;
+      UnityEngine_Transform__set_localPosition(transform, v11, 0);
     }
   }
 }
@@ -107,9 +113,11 @@ void FSOffset__AddOffsetX_51153804(FSOffset_o *this, float ratio, const MethodIn
   __int64 v15; // x1
   float v16; // s11
   float x; // s9
+  float y; // s8
   int32_t addDirectionX; // w8
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  float z; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597229A & 1) == 0 )
   {
@@ -143,7 +151,9 @@ void FSOffset__AddOffsetX_51153804(FSOffset_o *this, float ratio, const MethodIn
   v16 = (float)(v13 * offsetXRatio) - subMarginX;
   localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
   x = localPosition.fields.x;
+  y = localPosition.fields.y;
   addDirectionX = this->fields.addDirectionX;
+  z = localPosition.fields.z;
   if ( addDirectionX == 1 )
   {
     x = v16 + localPosition.fields.x;
@@ -156,10 +166,10 @@ void FSOffset__AddOffsetX_51153804(FSOffset_o *this, float ratio, const MethodIn
   if ( !transform )
 LABEL_21:
     sub_2213CDC(transform, v15);
-  v20.fields.x = x;
-  v20.fields.y = localPosition.fields.y;
-  v20.fields.z = localPosition.fields.z;
-  UnityEngine_Transform__set_localPosition(transform, v20, 0);
+  v22.fields.x = x;
+  v22.fields.y = y;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localPosition(transform, v22, 0);
 }
 
 
@@ -314,7 +324,7 @@ void FSOffset__UpdateOffset(FSOffset_o *this, const MethodInfo *method)
   _BOOL4 checkForceObi; // w8
   const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
-  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {

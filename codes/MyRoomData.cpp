@@ -220,6 +220,7 @@ System_Int32_array *MyRoomData__getUsrSvtNum(MyRoomData_o *this, const MethodInf
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
   int v5; // w8
+  System_Int32_array *result; // x0
   int32_t servantEquipSum[2]; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_596B93B & 1) == 0 )
@@ -249,8 +250,9 @@ System_Int32_array *MyRoomData__getUsrSvtNum(MyRoomData_o *this, const MethodInf
   v5 = *(_DWORD *)(v2 + 24);
   if ( !v5 || (*(_DWORD *)(v2 + 32) = servantEquipSum[1], v5 == 1) )
     sub_2213CE4(Instance);
+  result = (System_Int32_array *)v2;
   *(_DWORD *)(v2 + 36) = servantEquipSum[0];
-  return (System_Int32_array *)v2;
+  return result;
 }
 
 

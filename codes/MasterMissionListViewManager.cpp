@@ -743,7 +743,8 @@ LABEL_18:
     (System_Collections_Generic_List_Enumerator_T__o *)&v37,
     (System_Collections_Generic_List_object__o *)Master_object,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v40 = *(System_Collections_Generic_List_Enumerator_object__o *)&v37.fields._dictionary;
+  v40.fields._current = v37.fields._current.fields.key;
+  *(_OWORD *)&v40.fields._list = *(_OWORD *)&v37.fields._dictionary;
   v37.fields._dictionary = 0;
   *(_QWORD *)&v37.fields._version = &v40;
   while ( 1 )

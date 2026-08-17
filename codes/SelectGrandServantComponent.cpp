@@ -123,8 +123,9 @@ void SelectGrandServantComponent__AdjustIconToCenter(SelectGrandServantComponent
   float v24; // s8
   float v25; // s9
   UICenterOnChild_o *v26; // x19
-  UnityEngine_Vector3_o v27; // 0:kr34_12.12
+  unsigned __int64 v27; // [xsp+0h] [xbp-50h]
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596B119 & 1) == 0 )
   {
@@ -194,10 +195,12 @@ void SelectGrandServantComponent__AdjustIconToCenter(SelectGrandServantComponent
             if ( !v23 )
               goto LABEL_32;
             v24 = (float)(v19 + v20) * 0.5;
+            v27 = vmul_f32(vadd_f32(v21, v22), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
             LODWORD(v25) = (unsigned int)UnityEngine_Transform__InverseTransformPoint(v23, position, 0);
-            *(float32x2_t *)&v27.fields.x = vmul_f32(vadd_f32(v21, v22), (float32x2_t)0x3F0000003F000000LL);
-            v27.fields.z = v24;
-            if ( vabds_f32(v25, COERCE_FLOAT(UnityEngine_Transform__InverseTransformPoint(v23, v27, 0))) > 0.5 )
+            v29.fields.y = *((float *)&v27 + 1);
+            LODWORD(v29.fields.x) = v27;
+            v29.fields.z = v24;
+            if ( vabds_f32(v25, COERCE_FLOAT(UnityEngine_Transform__InverseTransformPoint(v23, v29, 0))) > 0.5 )
             {
               cachedTransform = (UnityEngine_Transform_o *)this->fields.currentIcon;
               if ( cachedTransform )

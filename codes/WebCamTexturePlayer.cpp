@@ -131,6 +131,7 @@ bool WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4__MoveNext(
   System_Action_object__o *v25; // x22
   struct WebCamTexturePlayer___c__DisplayClass4_0_o *_8__1; // x8
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   __int64 v29; // x1
   Il2CppObject *Instance; // x19
   WebCamTexturePlayer__CameraPermissionCheckRoutine_d__4_o *v31; // x20
@@ -291,8 +292,9 @@ LABEL_11:
       v8->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
       sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     this->klass = 0;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)this, 0, v2, v3, v4, v5, v6, v7);

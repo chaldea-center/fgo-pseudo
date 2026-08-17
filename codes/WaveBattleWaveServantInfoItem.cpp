@@ -657,7 +657,7 @@ LABEL_40:
         if ( UserServantCollectionMaster__TryGetEntity(
                v43,
                &v87,
-               *(_QWORD *)(*((_QWORD *)this + 23) + 64LL),
+               this[1].fields.classCompatibilityIcon[1].fields.m_CachedPtr,
                (*p_servantData)->fields.svtId,
                0) )
         {
@@ -1154,7 +1154,7 @@ System_IAsyncResult_o *WaveBattleWaveServantInfoItem_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

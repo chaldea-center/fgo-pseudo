@@ -85,9 +85,10 @@ LABEL_8:
 bool RemovedBuffInfo__get_ExistRemoveBuff(RemovedBuffInfo_o *this, const MethodInfo *method)
 {
   struct System_Collections_Generic_List_BattleBuffData_BuffData__o *RemovedAllBuffList_k__BackingField; // x8
+  System_Nullable_int__o v4; // x0
   int32_t size; // w1
-  bool v5; // cc
-  struct System_Collections_Generic_List_BattleBuffData_BuffData__o *v7; // [xsp+8h] [xbp-18h] BYREF
+  bool v6; // cc
+  struct System_Collections_Generic_List_BattleBuffData_BuffData__o *v8; // [xsp+8h] [xbp-18h] BYREF
 
   if ( (byte_59738B4 & 1) == 0 )
   {
@@ -100,19 +101,17 @@ bool RemovedBuffInfo__get_ExistRemoveBuff(RemovedBuffInfo_o *this, const MethodI
   RemovedAllBuffList_k__BackingField = this->fields._RemovedAllBuffList_k__BackingField;
   if ( RemovedAllBuffList_k__BackingField )
   {
+    v4 = (System_Nullable_int__o)&v8;
     size = RemovedAllBuffList_k__BackingField->fields._size;
-    v7 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v7,
-      size,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    RemovedAllBuffList_k__BackingField = v7;
+    v8 = 0;
+    System_Nullable_int____ctor(v4, size, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    RemovedAllBuffList_k__BackingField = v8;
   }
   if ( (_BYTE)RemovedAllBuffList_k__BackingField )
-    v5 = SHIDWORD(RemovedAllBuffList_k__BackingField) <= 0;
+    v6 = SHIDWORD(RemovedAllBuffList_k__BackingField) <= 0;
   else
-    v5 = 1;
-  return !v5;
+    v6 = 1;
+  return !v6;
 }
 
 

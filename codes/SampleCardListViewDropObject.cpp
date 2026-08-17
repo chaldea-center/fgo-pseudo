@@ -79,6 +79,7 @@ void SampleCardListViewDropObject__CardDragDelete(SampleCardListViewDropObject_o
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SampleCardListViewDropObject__CardDragMoveStart(
         SampleCardListViewDropObject_o *this,
         UnityEngine_Vector3_o position,
@@ -105,23 +106,26 @@ void SampleCardListViewDropObject__CardDragMoveStart(
   UnityEngine_Object_o *v22; // x22
   const MethodInfo *v23; // x2
   UnityEngine_GameObject_o *v24; // x20
-  char *v25; // x20
+  float v25; // s3
+  float v26; // s4
+  float v27; // s3
+  char *v28; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v27; // x2
-  System_String_o *v28; // x3
-  int32_t v29; // w4
-  int32_t v30; // w5
-  bool v31; // w6
-  bool v32; // w7
-  int32_t v33; // w1
-  System_String_o *v34; // x2
-  System_String_o *v35; // x3
-  int32_t v36; // w4
-  int32_t v37; // w5
-  bool v38; // w6
-  bool v39; // w7
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v41; // 0:s1.4,4:s2.4,8:s3.4
+  System_String_o *v30; // x2
+  System_String_o *v31; // x3
+  int32_t v32; // w4
+  int32_t v33; // w5
+  bool v34; // w6
+  bool v35; // w7
+  int32_t v36; // w1
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
+  int32_t v40; // w5
+  bool v41; // w6
+  bool v42; // w7
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   z = position.fields.z;
   y = position.fields.y;
@@ -188,45 +192,54 @@ LABEL_18:
   Component_object = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)Component_object, 0);
   if ( !Component_object )
     goto LABEL_18;
-  v40.fields.x = x;
-  v40.fields.y = y;
-  v40.fields.z = z;
-  v41 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)Component_object, v40, 0);
-  Component_object = TweenPosition__Begin(v24, 0.2, v41, 0);
+  v43.fields.x = x;
+  v43.fields.y = y;
+  v43.fields.z = z;
+  v44 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)Component_object, v43, 0);
+  v25 = v44.fields.y;
+  v26 = v44.fields.z;
+  v44.fields.y = v44.fields.x;
+  v44.fields.z = v25;
+  v27 = v26;
+  Component_object = TweenPosition__Begin(v24, 0.2, *(UnityEngine_Vector3_o *)&v44.fields.y, 0);
   if ( !Component_object )
     goto LABEL_18;
-  v25 = (char *)Component_object;
+  v28 = (char *)Component_object;
   *((_DWORD *)Component_object + 8) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  *((_QWORD *)v25 + 10) = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 80), (int32_t)gameObject, v27, v28, v29, v30, v31, v32);
-  v33 = StringLiteral_4501/*"CardMoveEnd"*/;
-  *((_QWORD *)v25 + 11) = StringLiteral_4501/*"CardMoveEnd"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v25 + 88), v33, v34, v35, v36, v37, v38, v39);
+  *((_QWORD *)v28 + 10) = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 80), (int32_t)gameObject, v30, v31, v32, v33, v34, v35);
+  v36 = StringLiteral_4501/*"CardMoveEnd"*/;
+  *((_QWORD *)v28 + 11) = StringLiteral_4501/*"CardMoveEnd"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v28 + 88), v36, v37, v38, v39, v40, v41, v42);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SampleCardListViewDropObject__CardIntoMove(SampleCardListViewDropObject_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *dragObject; // x0
   UnityEngine_Transform_o *parent; // x20
-  UnityEngine_GameObject_o *v5; // x20
+  float y; // s4
+  float z; // s5
+  float v7; // s3
+  UnityEngine_GameObject_o *v8; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v7; // x2
-  System_String_o *v8; // x3
-  int32_t v9; // w4
-  int32_t v10; // w5
-  bool v11; // w6
-  bool v12; // w7
-  int32_t v13; // w1
-  System_String_o *v14; // x2
-  System_String_o *v15; // x3
-  int32_t v16; // w4
-  int32_t v17; // w5
-  bool v18; // w6
-  bool v19; // w7
+  System_String_o *v10; // x2
+  System_String_o *v11; // x3
+  int32_t v12; // w4
+  int32_t v13; // w5
+  bool v14; // w6
+  bool v15; // w7
+  int32_t v16; // w1
+  System_String_o *v17; // x2
+  System_String_o *v18; // x3
+  int32_t v19; // w4
+  int32_t v20; // w5
+  bool v21; // w6
+  bool v22; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   if ( (byte_596DE18 & 1) == 0 )
   {
@@ -234,26 +247,40 @@ void SampleCardListViewDropObject__CardIntoMove(SampleCardListViewDropObject_o *
     byte_596DE18 = 1;
   }
   dragObject = this->fields.dragObject;
-  if ( !dragObject
-    || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0)) == 0
-    || (parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0),
-        (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
-                                                    (UnityEngine_Component_o *)this,
-                                                    0)) == 0)
-    || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !parent)
-    || (v21 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
-        (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(this->fields.dragObject, 1.5, v21, 0)) == 0) )
+  if ( !dragObject )
+    goto LABEL_9;
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
+  if ( !dragObject )
+    goto LABEL_9;
+  parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  if ( !dragObject )
+    goto LABEL_9;
+  position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+  if ( !parent
+    || (v24 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
+        y = v24.fields.y,
+        z = v24.fields.z,
+        v24.fields.y = v24.fields.x,
+        v24.fields.z = y,
+        v7 = z,
+        (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(
+                                                    this->fields.dragObject,
+                                                    1.5,
+                                                    *(UnityEngine_Vector3_o *)&v24.fields.y,
+                                                    0)) == 0) )
   {
+LABEL_9:
     sub_2213CDC(dragObject, method);
   }
-  v5 = dragObject;
+  v8 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v5[3].monitor = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[3].monitor, (int32_t)gameObject, v7, v8, v9, v10, v11, v12);
-  v13 = StringLiteral_4499/*"CardIntoMove2"*/;
-  v5[3].fields.m_CachedPtr = StringLiteral_4499/*"CardIntoMove2"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v5[3].fields, v13, v14, v15, v16, v17, v18, v19);
+  v8[3].monitor = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8[3].monitor, (int32_t)gameObject, v10, v11, v12, v13, v14, v15);
+  v16 = StringLiteral_4499/*"CardIntoMove2"*/;
+  v8[3].fields.m_CachedPtr = StringLiteral_4499/*"CardIntoMove2"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8[3].fields, v16, v17, v18, v19, v20, v21, v22);
 }
 
 

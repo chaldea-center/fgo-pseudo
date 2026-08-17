@@ -457,12 +457,12 @@ System_String_o *ByteReader__ReadLine(
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
     sub_2213CDC(0, v8);
-  return ((System_String_o *(__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))UTF8->klass->vtable._36_GetString.methodPtr)(
-           UTF8,
-           buffer,
-           (unsigned int)start,
-           (unsigned int)count,
-           UTF8->klass->vtable._36_GetString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))UTF8->klass->vtable._36_GetString.methodPtr)(
+                              UTF8,
+                              buffer,
+                              (unsigned int)start,
+                              (unsigned int)count,
+                              UTF8->klass->vtable._36_GetString.method);
 }
 
 

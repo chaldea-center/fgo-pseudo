@@ -871,6 +871,10 @@ UnityEngine_Color_o ScriptMessageLabel__GetColor(System_String_o *colorTag, cons
   System_String_o *v7; // x0
   System_String_o *v8; // x0
   bool v9; // w0
+  float g; // s1
+  float b; // s2
+  float a; // s3
+  float v13; // s0
   UnityEngine_Color_o v14; // [xsp+0h] [xbp-40h] BYREF
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -902,24 +906,28 @@ LABEL_14:
     v7 = System_String__Trim_75713456(colorTag, (System_Char_array *)v4, 0);
     v8 = System_String__Concat_75651716((System_String_o *)StringLiteral_395/*"#"*/, v7, 0);
     v9 = UnityEngine_ColorUtility__TryParseHtmlString(v8, &v14, 0);
-    result.fields.g = 1.0;
-    result.fields.b = 1.0;
-    result.fields.a = 1.0;
+    g = 1.0;
+    b = 1.0;
+    a = 1.0;
     if ( v9 )
     {
-      result.fields.g = v14.fields.g;
+      g = v14.fields.g;
       r = v14.fields.r;
-      result.fields.b = v14.fields.b;
-      result.fields.a = v14.fields.a;
+      a = v14.fields.a;
+      b = v14.fields.b;
     }
   }
   else
   {
-    result.fields.g = 1.0;
-    result.fields.b = 1.0;
-    result.fields.a = 1.0;
+    g = 1.0;
+    b = 1.0;
+    a = 1.0;
   }
-  result.fields.r = r;
+  v13 = r;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = v13;
   return result;
 }
 
@@ -956,9 +964,9 @@ System_String_o *ScriptMessageLabel__GetCommandName(System_String_o *txt, int32_
   if ( !v5 )
 LABEL_14:
     sub_2213CDC(appended, v7);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
-           v5,
-           v5->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v5->klass->vtable._3_ToString.methodPtr)(
+                              v5,
+                              v5->klass->vtable._3_ToString.method);
 }
 
 
@@ -1153,6 +1161,7 @@ ScriptMessageLabel_o *ScriptMessageLabel__GetLogLabel(ScriptMessageLabel_o *this
   int32_t v60; // w5
   bool v61; // w6
   bool v62; // w7
+  ScriptMessageLabel_o *result; // x0
   bool isPlayingVoice; // w8
 
   if ( (byte_59728CC & 1) == 0 )
@@ -1198,13 +1207,14 @@ ScriptMessageLabel_o *ScriptMessageLabel__GetLogLabel(ScriptMessageLabel_o *this
   *(_QWORD *)(v3 + 96) = *(_QWORD *)&this->fields.fontSize;
   *(_QWORD *)(v3 + 112) = colorTag;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v3 + 112), (int32_t)colorTag, v57, v58, v59, v60, v61, v62);
+  result = (ScriptMessageLabel_o *)v3;
   *(float *)(v3 + 104) = this->fields.widthSize;
   *(struct UnityEngine_Vector2_o *)(v3 + 72) = this->fields.mainPosition;
   *(struct UnityEngine_Vector2_o *)(v3 + 80) = this->fields.rubyPosition;
   isPlayingVoice = this->fields.isPlayingVoice;
   *(float *)(v3 + 108) = this->fields.yOffset;
   *(_BYTE *)(v3 + 192) = isPlayingVoice;
-  return (ScriptMessageLabel_o *)v3;
+  return result;
 }
 
 
@@ -1428,9 +1438,9 @@ System_String_o *ScriptMessageLabel__GetTagFairingString(System_String_o *txt, c
   if ( stringLength < 1 )
   {
     if ( v15 )
-      return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v15->klass->vtable._3_ToString.methodPtr)(
-               v15,
-               v15->klass->vtable._3_ToString.method);
+      return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v15->klass->vtable._3_ToString.methodPtr)(
+                                  v15,
+                                  v15->klass->vtable._3_ToString.method);
 LABEL_44:
     sub_2213CDC(txt, method);
   }
@@ -1473,9 +1483,9 @@ LABEL_44:
       System_Text_StringBuilder__Append_75737396(v15, (uint16_t)txt, 0);
     }
   }
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v15->klass->vtable._3_ToString.methodPtr)(
-           v15,
-           v15->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v15->klass->vtable._3_ToString.methodPtr)(
+                              v15,
+                              v15->klass->vtable._3_ToString.method);
 }
 
 
@@ -1587,9 +1597,9 @@ LABEL_27:
     return v9;
   if ( !v8 )
     goto LABEL_31;
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v8->klass->vtable._3_ToString.methodPtr)(
-           v8,
-           v8->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v8->klass->vtable._3_ToString.methodPtr)(
+                              v8,
+                              v8->klass->vtable._3_ToString.method);
 }
 
 
@@ -4541,6 +4551,7 @@ void ScriptMessageLabel___c__DisplayClass60_0___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptMessageLabel___c__DisplayClass60_0___SetLogDraw_b__0(
         ScriptMessageLabel___c__DisplayClass60_0_o *this,
         const MethodInfo *method)
@@ -4554,7 +4565,9 @@ void ScriptMessageLabel___c__DisplayClass60_0___SetLogDraw_b__0(
   struct ScriptMessageLabel_o *v8; // x8
   struct ScriptMessageLabel_o *v9; // x8
   float32x2_t *v10; // x8
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  int v11; // s2 OVERLAPPED
+  unsigned __int64 v12; // d0 OVERLAPPED
+  int v13; // s1
 
   v2 = this;
   if ( (byte_59728DF & 1) == 0 )
@@ -4611,9 +4624,13 @@ void ScriptMessageLabel___c__DisplayClass60_0___SetLogDraw_b__0(
               {
                 if ( this )
                 {
-                  *(float32x2_t *)&v11.fields.x = vsub_f32(v10[10], v10[9]);
-                  v11.fields.z = 0.0;
-                  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v11, 0);
+                  v11 = 0;
+                  v12 = vsub_f32(v10[10], v10[9]).n64_u64[0];
+                  v13 = HIDWORD(v12);
+                  UnityEngine_Transform__set_localPosition(
+                    (UnityEngine_Transform_o *)this,
+                    *(UnityEngine_Vector3_o *)(&v11 - 2),
+                    0);
                   return;
                 }
               }

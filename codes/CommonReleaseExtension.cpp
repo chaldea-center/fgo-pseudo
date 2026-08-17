@@ -467,6 +467,8 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleare
   int32_t condId; // w20
   _BOOL4 isCheckResetFlag; // w21
   int v9; // w8
+  bool IsQuestClear_47284152; // w8
+  bool result; // w0
 
   v4 = this;
   if ( (byte_59702B3 & 1) == 0 )
@@ -512,8 +514,9 @@ LABEL_21:
   {
     if ( !v9 )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo, entity);
-    v4->fields.isNotClearedAsClearedQuest = !CondType__IsQuestClear_47284152(condId, -1, isCheckResetFlag, 0);
-    return 1;
+    IsQuestClear_47284152 = CondType__IsQuestClear_47284152(condId, -1, isCheckResetFlag, 0);
+    result = 1;
+    v4->fields.isNotClearedAsClearedQuest = !IsQuestClear_47284152;
   }
   else
   {
@@ -521,4 +524,5 @@ LABEL_21:
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo, entity);
     return CondType__IsQuestClear_47284152(condId, -1, isCheckResetFlag, 0);
   }
+  return result;
 }

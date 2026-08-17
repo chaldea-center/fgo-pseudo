@@ -107,26 +107,30 @@ void ShopTopListViewObject__EventMove(ShopTopListViewObject_o *this, const Metho
   const MethodInfo *v2; // x2
   __int64 v4; // x1
   __int64 v5; // x2
-  ListViewObject_c *v6; // x0
+  float x; // s8
+  float y; // s9
+  ListViewObject_c *v8; // x0
+  float z; // s10
   UnityEngine_GameObject_o *dragObject; // x20
-  TweenPosition_o *v8; // x0
-  __int64 v9; // x1
-  TweenPosition_o *v10; // x20
+  TweenPosition_o *v11; // x0
+  __int64 v12; // x1
+  TweenPosition_o *v13; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v12; // x2
-  System_String_o *v13; // x3
-  int32_t v14; // w4
-  int32_t v15; // w5
-  bool v16; // w6
-  bool v17; // w7
-  int32_t v18; // w1
-  System_String_o *v19; // x2
-  System_String_o *v20; // x3
-  int32_t v21; // w4
-  int32_t v22; // w5
-  bool v23; // w6
-  bool v24; // w7
-  UnityEngine_Vector3_o TargetPosition; // 0:kr00_12.12
+  System_String_o *v15; // x2
+  System_String_o *v16; // x3
+  int32_t v17; // w4
+  int32_t v18; // w5
+  bool v19; // w6
+  bool v20; // w7
+  int32_t v21; // w1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  UnityEngine_Vector3_o TargetPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s1.4,4:s2.4,8:s3.4
 
   if ( (byte_596C945 & 1) == 0 )
   {
@@ -135,32 +139,38 @@ void ShopTopListViewObject__EventMove(ShopTopListViewObject_o *this, const Metho
     byte_596C945 = 1;
   }
   TargetPosition = ShopTopListViewObject__GetTargetPosition(this, this->fields.initMode, v2);
-  v6 = ListViewObject_TypeInfo;
+  x = TargetPosition.fields.x;
+  y = TargetPosition.fields.y;
+  v8 = ListViewObject_TypeInfo;
+  z = TargetPosition.fields.z;
   dragObject = this->fields.dragObject;
   if ( !*(&ListViewObject_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo, v4, v5);
-    v6 = ListViewObject_TypeInfo;
+    v8 = ListViewObject_TypeInfo;
   }
-  v8 = TweenPosition__Begin(dragObject, v6->static_fields->BASE_MOVE_TIME, TargetPosition, 0);
-  if ( !v8 )
-    sub_2213CDC(0, v9);
-  v10 = v8;
-  v8->fields.method = 3;
+  v29.fields.x = x;
+  v29.fields.y = y;
+  v29.fields.z = z;
+  v11 = TweenPosition__Begin(dragObject, v8->static_fields->BASE_MOVE_TIME, v29, 0);
+  if ( !v11 )
+    sub_2213CDC(0, v12);
+  v13 = v11;
+  v11->fields.method = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v10->fields.eventReceiver = gameObject;
+  v13->fields.eventReceiver = gameObject;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v10->fields.eventReceiver,
+    (MissionNaviTransitionBoardItem_o *)&v13->fields.eventReceiver,
     (int32_t)gameObject,
-    v12,
-    v13,
-    v14,
     v15,
     v16,
-    v17);
-  v18 = StringLiteral_6499/*"EventMoveFinish"*/;
-  v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6499/*"EventMoveFinish"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v10->fields.callWhenFinished, v18, v19, v20, v21, v22, v23, v24);
+    v17,
+    v18,
+    v19,
+    v20);
+  v21 = StringLiteral_6499/*"EventMoveFinish"*/;
+  v13->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6499/*"EventMoveFinish"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v13->fields.callWhenFinished, v21, v22, v23, v24, v25, v26, v27);
 }
 
 
@@ -304,9 +314,6 @@ UnityEngine_Vector3_o ShopTopListViewObject__GetStartPosition(
   __int64 v5; // x1
   float v6; // s1
   float v7; // s0
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
-  UnityEngine_Vector3_o position; // 0:kr14_12.12
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( initMode == 7 )
@@ -315,7 +322,7 @@ UnityEngine_Vector3_o ShopTopListViewObject__GetStartPosition(
     {
       v7 = 0.0;
       v6 = 800.0;
-      goto LABEL_7;
+      return UnityEngine_Transform__TransformPoint_83496448(transform, v7, v6, 0.0, 0);
     }
 LABEL_10:
     sub_2213CDC(transform, v5);
@@ -326,22 +333,13 @@ LABEL_10:
     {
       v6 = 0.0;
       v7 = 500.0;
-LABEL_7:
-      v11 = UnityEngine_Transform__TransformPoint_83496448(transform, v7, v6, 0.0, 0);
-      result.fields.x = v11.fields.x;
-      result.fields.y = v11.fields.y;
-      result.fields.z = v11.fields.z;
-      return result;
+      return UnityEngine_Transform__TransformPoint_83496448(transform, v7, v6, 0.0, 0);
     }
     goto LABEL_10;
   }
   if ( !transform )
     goto LABEL_10;
-  position = UnityEngine_Transform__get_position(transform, 0);
-  result.fields.x = position.fields.x;
-  result.fields.y = position.fields.y;
-  result.fields.z = position.fields.z;
-  return result;
+  return UnityEngine_Transform__get_position(transform, 0);
 }
 
 
@@ -361,16 +359,18 @@ UnityEngine_Vector3_o ShopTopListViewObject__GetTargetPosition(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *dragObject; // x0
+  UnityEngine_Transform_o *v5; // x20
+  float v6; // s0 OVERLAPPED
+  float v7; // s1
+  float v8; // s2
   UnityEngine_Transform_o *parent; // x20
-  UnityEngine_Transform_o *v9; // x20
-  UnityEngine_Vector3_o v10; // 0:kr14_12.12
-  UnityEngine_Vector3_o v11; // 0:kr34_12.12
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   dragObject = this->fields.dragObject;
-  if ( initMode == 5 )
+  if ( initMode != 5 )
   {
     if ( dragObject )
     {
@@ -386,11 +386,8 @@ UnityEngine_Vector3_o ShopTopListViewObject__GetTargetPosition(
           position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
           if ( parent )
           {
-            v10 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
-            result.fields.x = v10.fields.x + 0.0;
-            result.fields.y = v10.fields.y + 800.0;
-            result.fields.z = v10.fields.z + 0.0;
-            return result;
+            *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+            goto LABEL_13;
           }
         }
       }
@@ -403,17 +400,21 @@ LABEL_12:
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
   if ( !dragObject )
     goto LABEL_12;
-  v9 = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
+  v5 = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !dragObject )
     goto LABEL_12;
-  v13 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
-  if ( !v9 )
+  v10 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+  if ( !v5 )
     goto LABEL_12;
-  v11 = UnityEngine_Transform__InverseTransformPoint(v9, v13, 0);
-  result.fields.x = v11.fields.x;
-  result.fields.y = v11.fields.y;
-  result.fields.z = v11.fields.z;
+  v11 = UnityEngine_Transform__InverseTransformPoint(v5, v10, 0);
+  v6 = v11.fields.x + 0.0;
+  v7 = v11.fields.y + 800.0;
+  v8 = v11.fields.z + 0.0;
+LABEL_13:
+  result.fields.z = v8;
+  result.fields.y = v7;
+  result.fields.x = v6;
   return result;
 }
 

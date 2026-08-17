@@ -210,7 +210,7 @@ int32_t BattleRandom__getGutsNext(int32_t max, const MethodInfo *method)
     return max - 1;
   if ( !v6 || (v7 = *(_QWORD *)(v6 + 40), ++*(_DWORD *)(v6 + 52), !v7) )
     sub_2213CDC(v7, v8);
-  return (*(int32_t (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
+  return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
            v7,
            (unsigned int)max,
            *(_QWORD *)(*(_QWORD *)v7 + 432LL));
@@ -246,7 +246,7 @@ int32_t BattleRandom__getNext(int32_t max, const MethodInfo *method)
     return max - 1;
   if ( !v6 || (v7 = *(_QWORD *)(v6 + 32), ++*(_DWORD *)(v6 + 48), !v7) )
     sub_2213CDC(v7, v8);
-  return (*(int32_t (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
+  return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v7 + 424LL))(
            v7,
            (unsigned int)max,
            *(_QWORD *)(*(_QWORD *)v7 + 432LL));
@@ -283,7 +283,7 @@ int32_t BattleRandom__getRandom(int32_t min, int32_t max, const MethodInfo *meth
     return min;
   if ( !v8 || (v9 = *(_QWORD *)(v8 + 32), ++*(_DWORD *)(v8 + 48), !v9) )
     sub_2213CDC(v9, v10);
-  return (*(int32_t (__fastcall **)(__int64, _QWORD, _QWORD, _QWORD))(*(_QWORD *)v9 + 408LL))(
+  return (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD, _QWORD))(*(_QWORD *)v9 + 408LL))(
            v9,
            (unsigned int)min,
            (unsigned int)max,

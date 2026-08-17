@@ -42,7 +42,7 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o ServantSkillEntity__GetFriendP
 {
   Il2CppObject *Master_object; // x0
   __int64 v6; // x1
-  System_Nullable_ValueTuple_FuncList_TYPE__int___o result; // 0:x0.12
+  System_Nullable_ValueTuple_FuncList_TYPE__int___o v7; // x0
 
   if ( (byte_59712FD & 1) == 0 )
   {
@@ -55,15 +55,15 @@ System_Nullable_ValueTuple_FuncList_TYPE__int___o ServantSkillEntity__GetFriendP
   Master_object = DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !Master_object )
     sub_2213CDC(0, v6);
-  *(_QWORD *)&result.fields.hasValue = SkillLvMaster__GetEntity(
-                                         (SkillLvMaster_o *)Master_object,
-                                         this->fields.skillId,
-                                         skillLv,
-                                         0);
-  result.fields.value.fields.Item2 = 0;
-  if ( *(_QWORD *)&result.fields.hasValue )
-    return SkillLvEntity__GetFriendPointUpTypeVal(*(SkillLvEntity_o **)&result.fields.hasValue, 0);
-  return result;
+  *(_QWORD *)&v7.fields.hasValue = SkillLvMaster__GetEntity(
+                                     (SkillLvMaster_o *)Master_object,
+                                     this->fields.skillId,
+                                     skillLv,
+                                     0);
+  v7.fields.value.fields.Item2 = 0;
+  if ( *(_QWORD *)&v7.fields.hasValue )
+    return SkillLvEntity__GetFriendPointUpTypeVal(*(SkillLvEntity_o **)&v7.fields.hasValue, 0);
+  return v7;
 }
 
 

@@ -612,6 +612,7 @@ LABEL_29:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void GardenPartitionsManager__CreatePartition(GardenPartitionsManager_o *this, const MethodInfo *method)
 {
   GardenPartitionsManager_o *v2; // x19
@@ -626,24 +627,26 @@ void GardenPartitionsManager__CreatePartition(GardenPartitionsManager_o *this, c
   const MethodInfo *v11; // x3
   struct System_Collections_Generic_List_GardenItem__o *v12; // x8
   GardenPartitionsManager_o *v13; // x22
-  __int64 v14; // x1
-  __int64 v15; // x2
-  Il2CppObject *Component_object; // x22
+  float v14; // s0 OVERLAPPED
+  int v15; // s1
+  int v16; // s2
   __int64 v17; // x1
   __int64 v18; // x2
+  Il2CppObject *Component_object; // x22
+  __int64 v20; // x1
+  __int64 v21; // x2
   int32_t eventId; // w24
   System_String_o *lineSpriteName; // x23
-  System_String_o *v21; // x2
-  System_String_o *v22; // x3
-  int32_t v23; // w4
-  int32_t v24; // w5
-  bool v25; // w6
-  bool v26; // w7
+  System_String_o *v24; // x2
+  System_String_o *v25; // x3
+  int32_t v26; // w4
+  int32_t v27; // w5
+  bool v28; // w6
+  bool v29; // w7
   intptr_t m_CachedPtr; // x8
-  _QWORD *v28; // x9
+  _QWORD *v31; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  intptr_t v30; // x8
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  intptr_t v33; // x8
 
   v2 = this;
   if ( (byte_596A839 & 1) == 0 )
@@ -701,23 +704,23 @@ LABEL_28:
     if ( v12 )
     {
       v13 = this;
-      v31.fields.x = GardenPartitionsManager__CalcPartitionPosition(v2, v4, v12->fields._size, v11);
+      v14 = GardenPartitionsManager__CalcPartitionPosition(v2, v4, v12->fields._size, v11);
       if ( v13 )
       {
-        v31.fields.y = 0.0;
-        v31.fields.z = 0.0;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v13, v31, 0);
+        v15 = 0;
+        v16 = 0;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v13, *(UnityEngine_Vector3_o *)&v14, 0);
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v5,
                              (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14, v15);
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v17, v18);
         if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
         {
           eventId = v2->fields.eventId;
           lineSpriteName = v2->fields.lineSpriteName;
           if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v17, v18);
+            j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v20, v21);
           AtlasManager__SetEventUI_47569484(eventId, (UISprite_o *)Component_object, lineSpriteName, 0);
         }
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v5, 1, 0);
@@ -725,7 +728,7 @@ LABEL_28:
         if ( this )
         {
           m_CachedPtr = this->fields.m_CachedPtr;
-          v28 = Method_System_Collections_Generic_List_GameObject__Add__;
+          v31 = Method_System_Collections_Generic_List_GameObject__Add__;
           ++HIDWORD(this->fields.m_CancellationTokenSource);
           if ( m_CachedPtr )
           {
@@ -735,14 +738,14 @@ LABEL_28:
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)this,
                 (Il2CppObject *)v5,
-                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+                *(const MethodInfo_4483C64 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
             }
             else
             {
-              v30 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+              v33 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
               LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-              *(_QWORD *)(v30 + 32) = v5;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v30 + 32), (int32_t)v5, v21, v22, v23, v24, v25, v26);
+              *(_QWORD *)(v33 + 32) = v5;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)(v33 + 32), (int32_t)v5, v24, v25, v26, v27, v28, v29);
             }
             gardenItemList = v2->fields.gardenItemList;
             ++v4;

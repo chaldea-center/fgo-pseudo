@@ -443,6 +443,7 @@ bool ShopPlayVoiceComponent__PlayVoiceOnce(
   const MethodInfo *v7; // x1
   ShopPlayVoiceComponent_o *v8; // x0
   const MethodInfo *v9; // x2
+  bool result; // w0
   System_String_o *VoiceFromMaster; // x0
   const MethodInfo *v12; // x2
 
@@ -458,8 +459,9 @@ bool ShopPlayVoiceComponent__PlayVoiceOnce(
     return 0;
   VoiceFromMaster = ShopPlayVoiceComponent__GetVoiceFromMaster(v8, name, v9);
   ShopPlayVoiceComponent__PlayVoice(this, VoiceFromMaster, v12);
+  result = 1;
   this->fields.voicePlayOnce |= flag;
-  return 1;
+  return result;
 }
 
 

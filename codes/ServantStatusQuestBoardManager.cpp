@@ -111,6 +111,7 @@ bool ServantStatusQuestBoardManager__UpdateAlphaAnim(ServantStatusQuestBoardMana
   int32_t v21; // w23
   int32_t ALPHA_ANIM_COUNT_RESET_VAL; // w8
   int32_t v23; // w23
+  bool result; // w0
 
   if ( (byte_596DFAC & 1) == 0 )
   {
@@ -205,8 +206,9 @@ bool ServantStatusQuestBoardManager__UpdateAlphaAnim(ServantStatusQuestBoardMana
   if ( !*p_fadeUIAlphaCalculator )
 LABEL_24:
     sub_2213CDC(fadeUIAlphaCalculator, v12);
+  result = v17 & 1;
   this->fields.mAlphaAnimNow = (*p_fadeUIAlphaCalculator)->fields._Current_k__BackingField;
-  return v17 & 1;
+  return result;
 }
 
 

@@ -885,7 +885,7 @@ void SummonResultComponent__SetOldResultData(
         bool *autoSale,
         const MethodInfo *method)
 {
-  __int64 Object; // x0
+  UnityEngine_Component_o *Object; // x0
   __int64 v7; // x1
   struct UIGrid_o *fstGrid; // x8
   struct UIGrid_o *scdGrid; // x9
@@ -904,7 +904,7 @@ void SummonResultComponent__SetOldResultData(
   BalanceConfig_c *v22; // x0
   int v23; // w8
   __int64 v24; // x29
-  __int64 *v25; // x8
+  void **v25; // x8
   GachaInfos_o *v26; // x23
   UnityEngine_GameObject_o *targetGo; // x24
   UnityEngine_Transform_o *transform; // x0
@@ -926,9 +926,9 @@ void SummonResultComponent__SetOldResultData(
   int32_t sellMana; // w24
   int32_t summonBeforeMana; // w25
   int UserItemMax; // w9
-  __int64 v47; // x8
+  intptr_t m_CachedPtr; // x8
   _QWORD *v48; // x9
-  __int64 v49; // x10
+  __int64 klass_low; // x10
   float v50; // s12
   float v51; // s11
   float v52; // s8
@@ -978,22 +978,27 @@ void SummonResultComponent__SetOldResultData(
     {
       if ( (unsigned int)v24 >= v23 )
         sub_2213CE4(v22);
-      v25 = (__int64 *)((unsigned int)v24 >= 6 ? &this->fields.scdGrid : &this->fields.fstGrid);
-      Object = *v25;
+      v25 = (void **)((unsigned int)v24 >= 6 ? &this->fields.scdGrid : &this->fields.fstGrid);
+      Object = (UnityEngine_Component_o *)*v25;
       if ( !*v25 )
         break;
       v26 = resultList->m_Items[v24];
       targetGo = this->fields.targetGo;
-      transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Object, 0);
-      Object = (__int64)BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, targetGo, transform, 0, 0);
+      transform = UnityEngine_Component__get_transform(Object, 0);
+      Object = (UnityEngine_Component_o *)BaseMonoBehaviour__createObject(
+                                            (BaseMonoBehaviour_o *)this,
+                                            targetGo,
+                                            transform,
+                                            0,
+                                            0);
       if ( !Object )
         break;
       v29 = (UnityEngine_GameObject_o *)Object;
-      Object = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Object, 0);
+      Object = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Object, 0);
       v30 = (UnityEngine_Transform_o *)Object;
       if ( !byte_5969AE5 )
       {
-        Object = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+        Object = (UnityEngine_Component_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
         byte_5969AE5 = 1;
       }
       if ( !v30 )
@@ -1004,16 +1009,16 @@ void SummonResultComponent__SetOldResultData(
       if ( v26->fields.isNew
         && (objectId = v26->fields.objectId, !SummonResultComponent__checkOverlapSvt(this, objectId, v31)) )
       {
-        Object = (__int64)this->fields.befSvtList;
+        Object = (UnityEngine_Component_o *)this->fields.befSvtList;
         if ( !Object )
           break;
-        v47 = *(_QWORD *)(Object + 16);
+        m_CachedPtr = Object->fields.m_CachedPtr;
         v48 = Method_System_Collections_Generic_List_int__Add__;
-        ++*(_DWORD *)(Object + 28);
-        if ( !v47 )
+        ++HIDWORD(Object[1].klass);
+        if ( !m_CachedPtr )
           break;
-        v49 = *(int *)(Object + 24);
-        if ( (unsigned int)v49 >= *(_DWORD *)(v47 + 24) )
+        klass_low = SLODWORD(Object[1].klass);
+        if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
         {
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)Object,
@@ -1024,8 +1029,8 @@ void SummonResultComponent__SetOldResultData(
         else
         {
           v33 = 0;
-          *(_DWORD *)(Object + 24) = v49 + 1;
-          *(_DWORD *)(v47 + 4 * v49 + 32) = objectId;
+          LODWORD(Object[1].klass) = klass_low + 1;
+          *(_DWORD *)(m_CachedPtr + 4 * klass_low + 32) = objectId;
         }
       }
       else
@@ -1045,9 +1050,9 @@ void SummonResultComponent__SetOldResultData(
         v38 = 0;
         *autoSale = 1;
       }
-      Object = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                          v29,
-                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SummonResultInfoComponent___);
+      Object = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
+                                            v29,
+                                            (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_SummonResultInfoComponent___);
       if ( !Object )
         break;
       SummonResultInfoComponent__setResultData(
@@ -1114,14 +1119,14 @@ LABEL_63:
 LABEL_47:
   v50 = (float)max_length;
   v51 = (float)maxPerLine;
-  Object = (__int64)this->fields.fstGrid;
+  Object = (UnityEngine_Component_o *)this->fields.fstGrid;
   if ( (float)max_length <= v51 )
     v52 = 22.0;
   else
     v52 = 106.0;
   if ( !Object )
     goto LABEL_63;
-  Object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Object, 0);
+  Object = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(Object, 0);
   if ( !Object )
     goto LABEL_63;
   v53 = v50 <= v51 ? v50 : v51;
@@ -1129,14 +1134,16 @@ LABEL_47:
   v56.fields.x = (float)(cellWidth * -0.5) * (float)(v53 + -1.0);
   v56.fields.y = v52;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Object, v56, 0);
-  Object = (__int64)this->fields.fstGrid;
+  Object = (UnityEngine_Component_o *)this->fields.fstGrid;
   if ( !Object )
     goto LABEL_63;
-  (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Object + 440LL))(Object, *(_QWORD *)(*(_QWORD *)Object + 448LL));
-  Object = (__int64)*p_scdGrid;
+  ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))Object->klass[1]._1.element_class)(
+    Object,
+    Object->klass[1]._1.castClass);
+  Object = (UnityEngine_Component_o *)*p_scdGrid;
   if ( !*p_scdGrid )
     goto LABEL_63;
-  Object = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)Object, 0);
+  Object = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(Object, 0);
   if ( !Object )
     goto LABEL_63;
   v54 = (float)(v50 - v51) + -1.0;
@@ -1146,11 +1153,13 @@ LABEL_47:
   v57.fields.x = (float)(v14 * -0.5) * v54;
   v57.fields.y = -62.0;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Object, v57, 0);
-  Object = (__int64)this->fields.scdGrid;
+  Object = (UnityEngine_Component_o *)this->fields.scdGrid;
   if ( !Object )
     goto LABEL_63;
-  (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Object + 440LL))(Object, *(_QWORD *)(*(_QWORD *)Object + 448LL));
-  Object = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))Object->klass[1]._1.element_class)(
+    Object,
+    Object->klass[1]._1.castClass);
+  Object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !Object )
     goto LABEL_63;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Object, 1, 0);
@@ -2077,23 +2086,24 @@ void SummonResultComponent__initGachaResultList(
   const MethodInfo *v44; // x2
   const MethodInfo *v45; // x5
   float v46; // s8
+  System_Nullable_int__o v47; // x0
   int32_t max_length; // w1
-  struct UIGrid_o *v48; // x8
-  GachaExtraGifts_o *v49; // x9
-  SummonResultComponent_o *v50; // x0
-  System_Collections_Generic_IEnumerable_int__o *v51; // x1
+  struct UIGrid_o *v49; // x8
+  GachaExtraGifts_o *v50; // x9
+  SummonResultComponent_o *v51; // x0
+  System_Collections_Generic_IEnumerable_int__o *v52; // x1
   int32_t gachaExtraGiftResultType; // w2
   int32_t gachaExtraGiftBonusType; // w3
-  bool v54; // w4
-  System_Collections_Generic_HashSet_int__o *v55; // x22
-  il2cpp_array_size_t v56; // x8
-  __int64 v57; // x25
-  int32_t v58; // w23
-  int32_t v59; // w24
-  GachaExtraGifts_o *v60; // x29
-  __int64 v61; // x1
-  __int64 v62; // x2
-  __int64 v63; // [xsp+8h] [xbp-78h] BYREF
+  bool v55; // w4
+  System_Collections_Generic_HashSet_int__o *v56; // x22
+  il2cpp_array_size_t v57; // x8
+  __int64 v58; // x25
+  int32_t v59; // w23
+  int32_t v60; // w24
+  GachaExtraGifts_o *v61; // x29
+  __int64 v62; // x1
+  __int64 v63; // x2
+  __int64 v64; // [xsp+8h] [xbp-78h] BYREF
   bool autoSale[4]; // [xsp+1Ch] [xbp-64h] BYREF
 
   v9 = resultList;
@@ -2359,81 +2369,79 @@ LABEL_41:
       v46 = 0.0;
       if ( v9 )
       {
+        v47 = (System_Nullable_int__o)&v64;
         max_length = v9->max_length;
-        v63 = 0;
-        System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v63,
-          max_length,
-          (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-        if ( (_BYTE)v63 )
-          v46 = (float)SHIDWORD(v63);
+        v64 = 0;
+        System_Nullable_int____ctor(v47, max_length, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+        if ( (_BYTE)v64 )
+          v46 = (float)SHIDWORD(v64);
       }
-      v48 = this->fields.fstGrid;
-      if ( !v48 )
+      v49 = this->fields.fstGrid;
+      if ( !v49 )
         goto LABEL_97;
       if ( LODWORD(gachaExtraGiftList->max_length) )
       {
-        v49 = gachaExtraGiftList->m_Items[0];
-        if ( !v49 )
+        v50 = gachaExtraGiftList->m_Items[0];
+        if ( !v50 )
           goto LABEL_97;
-        v50 = this;
-        v51 = (System_Collections_Generic_IEnumerable_int__o *)extraGiftIds;
-        gachaExtraGiftBonusType = v49->fields.gachaExtraGiftBonusType;
-        gachaExtraGiftResultType = v49->fields.gachaExtraGiftResultType;
-        v54 = v46 > (float)v48->fields.maxPerLine;
+        v51 = this;
+        v52 = (System_Collections_Generic_IEnumerable_int__o *)extraGiftIds;
+        gachaExtraGiftBonusType = v50->fields.gachaExtraGiftBonusType;
+        gachaExtraGiftResultType = v50->fields.gachaExtraGiftResultType;
+        v55 = v46 > (float)v49->fields.maxPerLine;
         goto LABEL_95;
       }
 LABEL_98:
       sub_2213CE4(changeSceneBtnInfo);
     }
-    v55 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
+    v56 = (System_Collections_Generic_HashSet_int__o *)sub_2213CCC(System_Collections_Generic_HashSet_int__TypeInfo);
     System_Collections_Generic_HashSet_int____ctor(
-      v55,
+      v56,
       (const MethodInfo_42B3DF0 *)Method_System_Collections_Generic_HashSet_int___ctor__);
-    v56 = extraGiftIds->max_length;
-    if ( (int)v56 >= 1 )
+    v57 = extraGiftIds->max_length;
+    if ( (int)v57 >= 1 )
     {
-      v57 = 0;
       v58 = 0;
       v59 = 0;
-      while ( (unsigned int)v57 < (unsigned int)v56 && (unsigned int)v57 < LODWORD(gachaExtraGiftList->max_length) )
+      v60 = 0;
+      while ( (unsigned int)v58 < (unsigned int)v57 && (unsigned int)v58 < LODWORD(gachaExtraGiftList->max_length) )
       {
-        v60 = gachaExtraGiftList->m_Items[v57];
-        if ( !v60 )
+        v61 = gachaExtraGiftList->m_Items[v58];
+        if ( !v61 )
           goto LABEL_97;
-        if ( v60->fields.gachaExtraGiftBonusType == 2 )
+        if ( v61->fields.gachaExtraGiftBonusType == 2 )
         {
-          if ( !v55 )
+          if ( !v56 )
             goto LABEL_97;
           changeSceneBtnInfo = (UnityEngine_GameObject_o *)System_Collections_Generic_HashSet_int___Add(
-                                                             v55,
-                                                             extraGiftIds->m_Items[v57],
+                                                             v56,
+                                                             extraGiftIds->m_Items[v58],
                                                              (const MethodInfo_42B5030 *)Method_System_Collections_Generic_HashSet_int__Add__);
-          v58 = v60->fields.gachaExtraGiftBonusType;
-          v59 = v60->fields.gachaExtraGiftResultType;
-          v56 = extraGiftIds->max_length;
+          v59 = v61->fields.gachaExtraGiftBonusType;
+          v60 = v61->fields.gachaExtraGiftResultType;
+          v57 = extraGiftIds->max_length;
         }
-        if ( (int)++v57 >= (int)v56 )
+        if ( (int)++v58 >= (int)v57 )
           goto LABEL_89;
       }
       goto LABEL_98;
     }
+    v60 = 0;
     v59 = 0;
-    v58 = 0;
 LABEL_89:
     if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)extraGiftIds, 0) )
     {
-      v50 = this;
-      v51 = (System_Collections_Generic_IEnumerable_int__o *)v55;
-      gachaExtraGiftResultType = v59;
-      gachaExtraGiftBonusType = v58;
-      v54 = 0;
+      v51 = this;
+      v52 = (System_Collections_Generic_IEnumerable_int__o *)v56;
+      gachaExtraGiftResultType = v60;
+      gachaExtraGiftBonusType = v59;
+      v55 = 0;
 LABEL_95:
-      SummonResultComponent__SetBonusGiftDisplay(v50, v51, gachaExtraGiftResultType, gachaExtraGiftBonusType, v54, v45);
+      SummonResultComponent__SetBonusGiftDisplay(v51, v52, gachaExtraGiftResultType, gachaExtraGiftBonusType, v55, v45);
       goto LABEL_96;
     }
     if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v61, v62);
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v62, v63);
     changeSceneBtnInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12970/*"SUMMON_EXTRA_ITEM_GIFTS_MSG"*/, 0);
     if ( !this->fields.extraGiftMsgLb )
       goto LABEL_97;
@@ -2484,7 +2492,7 @@ void SummonResultComponent__setCenter(SummonResultComponent_o *this, const Metho
   float v8; // s9
   float v9; // s10
   float v10; // s1
-  UnityEngine_Vector3_o v11; // 0:kr00_12.12
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
   mWidget = (UnityEngine_Component_o *)this->fields.mWidget;
@@ -2512,14 +2520,14 @@ LABEL_11:
     mWidget = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(mWidget, 0);
     if ( !mWidget )
       goto LABEL_11;
-    v12.fields.x = v7;
-    v12.fields.y = v8;
-    v12.fields.z = v9;
-    v11 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)mWidget, v12, 0);
+    v11.fields.x = v7;
+    v11.fields.y = v8;
+    v11.fields.z = v9;
+    v12 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)mWidget, v11, 0);
     if ( v5 >= v4[3].n64_u32[0] )
       goto LABEL_12;
     ++v5;
-    *(UnityEngine_Vector3_o *)(p_fields - 2) = v11;
+    *(UnityEngine_Vector3_o *)(p_fields - 2) = v12;
     p_fields += 3;
   }
   while ( v5 != 4 );

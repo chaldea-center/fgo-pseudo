@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ArrayHelper__GetClampedValueSafely___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *self,
         int32_t index,
@@ -12,6 +13,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ArrayHelper__GetClampedVa
   __int64 v12; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v13; // x1
   __int64 v14; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v15; // x0
+  void *v16; // x1
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v17; // [xsp+8h] [xbp-38h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
@@ -44,7 +47,9 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o ArrayHelper__GetClampedVa
                                                                     + (unsigned int)self->obj.klass->_2.native_size
                                                                     * (__int64)(int)v14);
   }
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v13, actualSize);
+  v15 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memmove(monitor, v13, actualSize);
+  result.monitor = v16;
+  result.klass = v15;
   return result;
 }
 

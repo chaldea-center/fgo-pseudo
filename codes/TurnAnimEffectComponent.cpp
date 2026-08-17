@@ -322,6 +322,7 @@ bool TurnAnimEffectComponent__PlayStartThen_d__14__MoveNext(
   bool v20; // w6
   bool v21; // w7
   Il2CppObject **p__2__current; // x19
+  bool result; // w0
   struct System_Action_o *onCompleted; // x8
   int32_t leftTurnCount; // [xsp+Ch] [xbp-24h] BYREF
 
@@ -361,8 +362,9 @@ LABEL_6:
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v16, v17, v18, v19, v20, v21);
+    result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
-    return 1;
+    return result;
   }
   onCompleted = this->fields.onCompleted;
   _4__this->fields.CanShowBuff = 1;

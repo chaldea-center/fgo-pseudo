@@ -21,7 +21,8 @@ int32_t EventBulletinBoardEntity__GetFollowId(EventBulletinBoardEntity_o *this, 
 {
   struct EventBulletinBoardEntity_BulletinBoardInfo_array *script; // x0
   int32_t v4; // w1
-  __int64 v6; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_int__o v5; // x0
+  __int64 v7; // [xsp+8h] [xbp-18h] BYREF
 
   if ( (byte_5970706 & 1) == 0 )
   {
@@ -39,12 +40,10 @@ int32_t EventBulletinBoardEntity__GetFollowId(EventBulletinBoardEntity_o *this, 
     if ( script )
     {
       v4 = (int32_t)script->m_Items[1];
-      v6 = 0;
-      System_Nullable_int____ctor(
-        (System_Nullable_int__o)&v6,
-        v4,
-        (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-      LODWORD(script) = HIDWORD(v6);
+      v5 = (System_Nullable_int__o)&v7;
+      v7 = 0;
+      System_Nullable_int____ctor(v5, v4, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+      LODWORD(script) = HIDWORD(v7);
     }
   }
   return (int)script;
@@ -59,8 +58,9 @@ bool EventBulletinBoardEntity__IsMatchMapId(
   System_Collections_Generic_IEnumerable_TSource__o *script; // x0
   Il2CppObject *v6; // x0
   int32_t monitor_high; // w1
-  int v8; // w8
-  __int64 v11; // [xsp+8h] [xbp-28h] BYREF
+  System_Nullable_int__o v8; // x0
+  int v9; // w8
+  __int64 v12; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5970705 & 1) == 0 )
   {
@@ -76,18 +76,16 @@ bool EventBulletinBoardEntity__IsMatchMapId(
                (const MethodInfo_3881578 *)Method_System_Linq_Enumerable_FirstOrDefault_EventBulletinBoardEntity_BulletinBoardInfo___)) != 0 )
   {
     monitor_high = HIDWORD(v6[2].monitor);
-    v11 = 0;
-    System_Nullable_int____ctor(
-      (System_Nullable_int__o)&v11,
-      monitor_high,
-      (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-    v8 = HIDWORD(v11);
+    v8 = (System_Nullable_int__o)&v12;
+    v12 = 0;
+    System_Nullable_int____ctor(v8, monitor_high, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+    v9 = HIDWORD(v12);
   }
   else
   {
-    v8 = 0;
+    v9 = 0;
   }
-  return !v8 || v8 == targetMapId;
+  return !v9 || v9 == targetMapId;
 }
 
 

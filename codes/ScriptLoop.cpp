@@ -83,6 +83,7 @@ bool ScriptLoop__IsExecuteLogErase(ScriptLoop_o *this, const MethodInfo *method)
   System_Collections_Generic_List_int__o *switchCaseIndex; // x0
   System_String_o *v8; // x22
   Il2CppObject *Item; // x0
+  bool result; // w0
 
   if ( (byte_5972860 & 1) == 0 )
   {
@@ -159,8 +160,9 @@ LABEL_20:
     this->fields.lastLoopSwitchCaseCount,
     v6,
     (const MethodInfo_4485494 *)Method_System_Collections_Generic_List_string__RemoveRange__);
+  result = 1;
   this->fields.switchCaseCount = this->fields.lastLoopSwitchCaseCount;
-  return 1;
+  return result;
 }
 
 

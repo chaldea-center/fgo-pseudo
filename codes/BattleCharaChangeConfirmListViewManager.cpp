@@ -90,8 +90,8 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   BattleCharaChangeConfirmListViewManager_c *v58; // x0
   float v59; // s9
   UnityEngine_Component_o *dummyEndObject; // x19
-  float y; // s1
-  UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BAED & 1) == 0 )
   {
@@ -143,10 +143,10 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
       if ( !transform )
         goto LABEL_32;
-      v62.fields.x = -v21;
-      v62.fields.y = -v22;
-      v62.fields.z = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v62, 0);
+      v61.fields.x = -v21;
+      v61.fields.y = -v22;
+      v61.fields.z = 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v61, 0);
       transform = (UnityEngine_Component_o *)this->fields.scrollView;
       if ( !transform )
         goto LABEL_32;
@@ -176,7 +176,7 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0);
   if ( !transform )
     goto LABEL_32;
-  y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
   dummyStart = this->fields.dummyStart;
   if ( !dummyStart )
     goto LABEL_32;
@@ -184,7 +184,7 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   if ( !*p_objectList )
     goto LABEL_32;
   v35 = 0;
-  v36 = y - (float)dummyStart->fields.mHeight;
+  v36 = localPosition.fields.y - (float)dummyStart->fields.mHeight;
   while ( 1 )
   {
     klass = (int32_t)transform[1].klass;

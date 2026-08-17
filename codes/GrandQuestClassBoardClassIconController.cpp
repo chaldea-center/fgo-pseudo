@@ -10,15 +10,15 @@ void GrandQuestClassBoardClassIconController__LateUpdate(
         GrandQuestClassBoardClassIconController_o *this,
         const MethodInfo *method)
 {
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v3; // x1
   UnityEngine_Transform_o *v4; // x19
 
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  v4 = (UnityEngine_Transform_o *)transform;
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  v4 = transform;
   if ( !byte_5969AE6 )
   {
-    transform = sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
+    transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
     byte_5969AE6 = 1;
   }
   if ( !v4 )

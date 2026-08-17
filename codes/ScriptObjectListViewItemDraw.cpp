@@ -4,6 +4,7 @@ void ScriptObjectListViewItemDraw___ctor(ScriptObjectListViewItemDraw_o *this, c
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ScriptObjectListViewItemDraw__SetItem(
         ScriptObjectListViewItemDraw_o *this,
         ScriptObjectListViewItem_o *item,
@@ -42,17 +43,20 @@ void ScriptObjectListViewItemDraw__SetItem(
   __int64 v36; // x1
   __int64 v37; // x2
   Il2CppObject *Component_object; // x21
-  System_String_o *v40; // x24
-  System_String_o *v41; // x21
-  System_String_o *v42; // x2
-  System_String_o *v43; // x1
-  Il2CppObject *v44; // x23
-  System_String_o *v45; // x3
-  System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+20h] [xbp-70h] BYREF
+  float v39; // s0 OVERLAPPED
+  float v40; // s3
+  float v41; // s1
+  float v42; // s2
+  System_String_o *v43; // x24
+  System_String_o *v44; // x21
+  System_String_o *v45; // x2
+  System_String_o *v46; // x1
+  Il2CppObject *v47; // x23
+  System_String_o *v48; // x3
+  System_Collections_Generic_List_Enumerator_object__o v49; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+20h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-58h] BYREF
   int32_t result; // [xsp+4Ch] [xbp-44h] BYREF
-  UnityEngine_Color_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596DD26 & 1) == 0 )
   {
@@ -77,7 +81,7 @@ void ScriptObjectListViewItemDraw__SetItem(
   }
   result = 0;
   entity = 0;
-  memset(&v47, 0, sizeof(v47));
+  memset(&v50, 0, sizeof(v50));
   if ( item && mode )
   {
     if ( !ScriptObjectListViewItem__get_TitleText(item, (const MethodInfo *)item) )
@@ -107,13 +111,13 @@ LABEL_35:
           baseImageTexture = (UnityEngine_Component_o *)this->fields.baseImageTexture;
           if ( baseImageTexture )
           {
-            v50.fields.r = 1.0;
-            v50.fields.a = 1.0;
+            v39 = 1.0;
+            v40 = 1.0;
             if ( mode == 1 )
-              v50.fields.r = 0.5;
-            v50.fields.g = v50.fields.r;
-            v50.fields.b = v50.fields.r;
-            UIWidget__set_color((UIWidget_o *)baseImageTexture, v50, 0);
+              v39 = 0.5;
+            v41 = v39;
+            v42 = v39;
+            UIWidget__set_color((UIWidget_o *)baseImageTexture, *(UnityEngine_Color_o *)&v39, 0);
             return;
           }
         }
@@ -198,23 +202,23 @@ LABEL_53:
       goto LABEL_53;
     v25 = baseImageTexture;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v46,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v49,
       v24,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ShopScriptEntity__GetEnumerator__);
-    v47 = v46;
-    v46.fields._list = 0;
-    *(_QWORD *)&v46.fields._index = &v47;
+    v50 = v49;
+    v49.fields._list = 0;
+    *(_QWORD *)&v49.fields._index = &v50;
     while ( 1 )
     {
       v26 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v47,
+              &v50,
               (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__MoveNext__);
       if ( !v26 )
         break;
-      current = v47.fields._current;
-      if ( !v47.fields._current )
+      current = v50.fields._current;
+      if ( !v50.fields._current )
         sub_2213CDC(v26, v27);
-      monitor = (System_String_o *)v47.fields._current[2].monitor;
+      monitor = (System_String_o *)v50.fields._current[2].monitor;
       v30 = System_Int32__ToString((int32_t)&result, 0);
       if ( System_String__op_Equality(monitor, v30, 0) && current[1].monitor )
         goto LABEL_28;
@@ -222,7 +226,7 @@ LABEL_53:
     current = 0;
 LABEL_28:
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v47,
+      &v50,
       (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__Dispose__);
     if ( result )
     {
@@ -244,37 +248,37 @@ LABEL_28:
       if ( current )
       {
         v35 = this->fields.titleTextLabel;
-        v40 = ScriptObjectListViewItem__get_TitleText(item, v10);
-        v41 = (System_String_o *)StringLiteral_113/*" "*/;
-        v42 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current->klass->vtable[3].methodPtr)(
+        v43 = ScriptObjectListViewItem__get_TitleText(item, v10);
+        v44 = (System_String_o *)StringLiteral_113/*" "*/;
+        v45 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current->klass->vtable[3].methodPtr)(
                                    current,
                                    current->klass->vtable[3].method);
-        baseImageTexture = (UnityEngine_Component_o *)v40;
-        v43 = v41;
+        baseImageTexture = (UnityEngine_Component_o *)v43;
+        v46 = v44;
       }
       else
       {
-        v44 = entity;
+        v47 = entity;
         v35 = this->fields.titleTextLabel;
         baseImageTexture = (UnityEngine_Component_o *)ScriptObjectListViewItem__get_TitleText(item, v10);
-        v45 = (System_String_o *)baseImageTexture;
-        if ( !v44 )
+        v48 = (System_String_o *)baseImageTexture;
+        if ( !v47 )
         {
           if ( !v35 )
             goto LABEL_53;
           v34 = v35;
-          v33 = v45;
+          v33 = v48;
           goto LABEL_34;
         }
         if ( !entity )
           goto LABEL_53;
-        v42 = (System_String_o *)entity[1].monitor;
-        v43 = (System_String_o *)StringLiteral_113/*" "*/;
+        v45 = (System_String_o *)entity[1].monitor;
+        v46 = (System_String_o *)StringLiteral_113/*" "*/;
       }
       baseImageTexture = (UnityEngine_Component_o *)System_String__Concat_75694928(
                                                       (System_String_o *)baseImageTexture,
-                                                      v43,
-                                                      v42,
+                                                      v46,
+                                                      v45,
                                                       0);
       if ( !v35 )
         goto LABEL_53;

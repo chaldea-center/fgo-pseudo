@@ -91,10 +91,12 @@ bool DiggingSchedulerTaskAnimationSkippable__IsSkipCondSatisfied(
   struct System_Func_bool__o *SkipCond; // x8
 
   SkipCond = this->fields.SkipCond;
-  return SkipCond
-      && ((bool (__fastcall *)(intptr_t, intptr_t))SkipCond->fields.invoke_impl)(
-           SkipCond->fields.method_code,
-           SkipCond->fields.method);
+  if ( SkipCond )
+    return ((__int64 (__fastcall *)(intptr_t, intptr_t))SkipCond->fields.invoke_impl)(
+             SkipCond->fields.method_code,
+             SkipCond->fields.method);
+  else
+    return 0;
 }
 
 
@@ -162,6 +164,7 @@ bool DiggingSchedulerTaskAnimationSkippable__Execute_d__6__MoveNext(
   bool v9; // w6
   bool v10; // w7
   struct System_Func_bool__o *SkipCond; // x8
+  bool result; // w0
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
 
   _1__state = this->fields.__1__state;
@@ -201,8 +204,9 @@ LABEL_13:
   v4->fields.__2__current = 0;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v4->fields.__2__current;
   sub_2213A04(p__2__current, 0, v5, v6, v7, v8, v9, v10);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

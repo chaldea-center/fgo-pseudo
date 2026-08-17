@@ -158,6 +158,8 @@ WarBoardCommonMiniPopup_LineLayout_o WarBoardCommonMiniPopup__GetLineLayout(
   unsigned int v8; // w10
   __int64 v9; // x9
   float *v10; // x8
+  float v11; // s0
+  float v12; // s1
   WarBoardCommonMiniPopup_LineLayout_o result; // 0:s0.4,4:s1.4
 
   LineCount = WarBoardCommonMiniPopup__GetLineCount(this, message, method);
@@ -181,8 +183,10 @@ LABEL_9:
   v9 = (int)v8;
 LABEL_7:
   v10 = (float *)(&lineLayouts->obj.klass + v9);
-  result.fields.MessagePosY = v10[8];
-  result.fields.ButtonRootPosY = v10[9];
+  v11 = v10[8];
+  v12 = v10[9];
+  result.fields.ButtonRootPosY = v12;
+  result.fields.MessagePosY = v11;
   return result;
 }
 
@@ -302,13 +306,17 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
   bool v7; // w7
   const MethodInfo *v12; // x2
   WarBoardCommonMiniPopup_LineLayout_o v13; // x1
-  WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr20_8
+  WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
   UnityEngine_GameObject_o *noticeButtonRoot; // x0
-  const MethodInfo *v16; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v18; // 0:kr14_12.12
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s10
+  float z; // s11
+  float v18; // s9
+  float v19; // s10
+  const MethodInfo *v20; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
   sub_2213A04(
@@ -345,31 +353,35 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
+  x = localPosition.fields.x;
+  z = localPosition.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)noticeButtonRoot,
                                                    0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v19.fields.x = localPosition.fields.x;
-  v19.fields.y = LineLayout.fields.MessagePosY;
-  v19.fields.z = localPosition.fields.z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v19, 0);
+  v22.fields.x = x;
+  v22.fields.y = LineLayout.fields.MessagePosY;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v22, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v18 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
+  v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
+  v18 = v23.fields.x;
+  v19 = v23.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot
-    || (v20.fields.x = v18.fields.x,
-        v20.fields.y = LineLayout.fields.ButtonRootPosY,
-        v20.fields.z = v18.fields.z,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v20, 0),
+    || (v24.fields.x = v18,
+        v24.fields.y = LineLayout.fields.ButtonRootPosY,
+        v24.fields.z = v19,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v24, 0),
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.yesButtonLabel) == 0)
     || (UILabel__set_text((UILabel_o *)noticeButtonRoot, yesButton, 0),
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.noButtonLabel) == 0) )
@@ -378,7 +390,7 @@ LABEL_15:
     sub_2213CDC(noticeButtonRoot, v13);
   }
   UILabel__set_text((UILabel_o *)noticeButtonRoot, noButton, 0);
-  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v16);
+  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v20);
 }
 
 
@@ -394,13 +406,17 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
   bool v7; // w7
   const MethodInfo *v11; // x2
   WarBoardCommonMiniPopup_LineLayout_o v12; // x1
-  WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr20_8
+  WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
   UnityEngine_GameObject_o *noticeButtonRoot; // x0
-  const MethodInfo *v15; // x1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v17; // 0:kr14_12.12
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s10
+  float z; // s11
+  float v17; // s9
+  float v18; // s10
+  const MethodInfo *v19; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
   sub_2213A04(
@@ -437,15 +453,17 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
+  x = localPosition.fields.x;
+  z = localPosition.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)noticeButtonRoot,
                                                    0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v18.fields.x = localPosition.fields.x;
-  v18.fields.y = LineLayout.fields.MessagePosY;
-  v18.fields.z = localPosition.fields.z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v18, 0);
+  v21.fields.x = x;
+  v21.fields.y = LineLayout.fields.MessagePosY;
+  v21.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v21, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
@@ -456,21 +474,25 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v17 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
+  v22 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = this->fields.noticeButtonRoot;
+  if ( !noticeButtonRoot )
+    goto LABEL_15;
+  v17 = v22.fields.x;
+  v18 = v22.fields.z;
+  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot
-    || (noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0)) == 0
-    || (v19.fields.x = v17.fields.x,
-        v19.fields.y = LineLayout.fields.ButtonRootPosY,
-        v19.fields.z = v17.fields.z,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v19, 0),
+    || (v23.fields.x = v17,
+        v23.fields.y = LineLayout.fields.ButtonRootPosY,
+        v23.fields.z = v18,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v23, 0),
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.closeButtonLabel) == 0) )
   {
 LABEL_15:
     sub_2213CDC(noticeButtonRoot, v12);
   }
   UILabel__set_text((UILabel_o *)noticeButtonRoot, closeButton, 0);
-  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v15);
+  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v19);
 }
 
 

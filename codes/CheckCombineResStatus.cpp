@@ -372,6 +372,7 @@ bool CheckCombineResStatus__checkIncrementLv(CheckCombineResStatus_o *this, int3
   int32_t maxLv; // w8
   void *Instance; // x0
   __int64 v7; // x1
+  bool result; // w0
 
   if ( (byte_5974ABF & 1) == 0 )
   {
@@ -393,13 +394,15 @@ bool CheckCombineResStatus__checkIncrementLv(CheckCombineResStatus_o *this, int3
     }
     if ( *((_DWORD *)Instance + 6) < this->fields.totalExp )
     {
+      result = 0;
       ++this->fields.checkLv;
-      return 0;
+      return result;
     }
     maxLv = *((_DWORD *)Instance + 5);
   }
+  result = 1;
   this->fields.increLv = maxLv;
-  return 1;
+  return result;
 }
 
 

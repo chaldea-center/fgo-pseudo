@@ -22,6 +22,7 @@ float BattleCharaChangeConfirmListViewObject__GetArrowOffsetY(
   UnityEngine_Object_o *itemDraw; // x20
   __int64 v5; // x1
   struct BattleCharaChangeConfirmListViewItemDraw_o *v6; // x0
+  float result; // s0
 
   if ( (byte_596BAFB & 1) == 0 )
   {
@@ -36,9 +37,10 @@ float BattleCharaChangeConfirmListViewObject__GetArrowOffsetY(
   v6 = this->fields.itemDraw;
   if ( !v6 )
     sub_2213CDC(0, v5);
-  return ((float (__fastcall *)(struct BattleCharaChangeConfirmListViewItemDraw_o *, const MethodInfo *))v6->klass->vtable._8_GetArrowOffsetY.methodPtr)(
-           v6,
-           v6->klass->vtable._8_GetArrowOffsetY.method);
+  ((void (__fastcall *)(struct BattleCharaChangeConfirmListViewItemDraw_o *, const MethodInfo *))v6->klass->vtable._8_GetArrowOffsetY.methodPtr)(
+    v6,
+    v6->klass->vtable._8_GetArrowOffsetY.method);
+  return result;
 }
 
 
@@ -76,11 +78,13 @@ float BattleCharaChangeConfirmListViewObject__GetObjectLocalPositionY(
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v3; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     sub_2213CDC(0, v3);
-  return UnityEngine_Transform__get_localPosition(transform, 0).fields.y;
+  localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+  return localPosition.fields.y;
 }
 
 

@@ -2879,6 +2879,7 @@ bool BattleInfoData__AllDeckServantEnumerable_d__97__MoveNext(
   int32_t v98; // w5
   bool v99; // w6
   bool v100; // w7
+  bool result; // w0
   struct BattleDeckServantData_o *v102; // x1
   BattleInfoData__AllDeckServantEnumerable_d__97_o *v103; // x0
   System_String_o *v104; // x2
@@ -3168,8 +3169,9 @@ LABEL_55:
     v107,
     v108,
     v109);
+  result = 1;
   v111->fields.__1__state = 1;
-  return 1;
+  return result;
 }
 
 
@@ -3346,8 +3348,9 @@ bool BattleInfoData___c___AllDeckServantEnumerable_b__97_0(
         const MethodInfo *method)
 {
   Il2CppType *v4; // x20
+  System_RuntimeTypeHandle_o v5; // x0
   System_Type_o *TypeFromHandle; // x0
-  __int64 v6; // x1
+  __int64 v7; // x1
 
   if ( (byte_597028B & 1) == 0 )
   {
@@ -3357,9 +3360,10 @@ bool BattleInfoData___c___AllDeckServantEnumerable_b__97_0(
   v4 = System_Runtime_CompilerServices_CompilerGeneratedAttribute_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, x);
-  TypeFromHandle = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v4, 0);
+  v5.fields.value = (intptr_t)v4;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v5, 0);
   if ( !x )
-    sub_2213CDC(TypeFromHandle, v6);
+    sub_2213CDC(TypeFromHandle, v7);
   return (((__int64 (__fastcall *)(System_Reflection_FieldInfo_o *, System_Type_o *, _QWORD, const MethodInfo *))x->klass->vtable._12_IsDefined.methodPtr)(
             x,
             TypeFromHandle,
@@ -3462,7 +3466,8 @@ bool BattleInfoData___c__98_object____ExtractFields_b__98_0(
   __int64 v5; // x1
   BattleInfoData___c__98_T__c *klass; // x9
   System_Type_o *v7; // x19
-  System_RuntimeTypeHandle_o v8; // x20
+  intptr_t _3_T; // x20
+  System_RuntimeTypeHandle_o v9; // x0
   System_Type_o *TypeFromHandle; // x1
 
   if ( !x )
@@ -3472,10 +3477,11 @@ bool BattleInfoData___c__98_object____ExtractFields_b__98_0(
          x->klass->vtable._17_unknown.method);
   klass = method->klass;
   v7 = (System_Type_o *)v4;
-  v8.fields.value = (intptr_t)klass->rgctx_data->_3_T;
+  _3_T = (intptr_t)klass->rgctx_data->_3_T;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, v5);
-  TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
+  v9.fields.value = _3_T;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
   return System_Type__op_Equality(v7, TypeFromHandle, 0);
 }
 

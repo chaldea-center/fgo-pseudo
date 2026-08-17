@@ -1625,7 +1625,7 @@ System_IAsyncResult_o *BonusSelectSummonConfirmDialog_ClickDelegate__BeginInvoke
   v10[0] = isDecide;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -1752,7 +1752,7 @@ System_IAsyncResult_o *BonusSelectSummonConfirmDialog_OnTapPartyMemberEvent__Beg
   v10[0] = memberItem;
   v10[2] = 0;
   v10[1] = j_il2cpp_value_box_0(qword_5984328, v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 
@@ -1855,7 +1855,7 @@ System_IAsyncResult_o *BonusSelectSummonConfirmDialog_TryGetBonusSelectData__Beg
   v11[2] = 0;
   v11[0] = v7;
   v11[1] = j_il2cpp_value_box_0(qword_5984348, &v12);
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 
@@ -1885,7 +1885,7 @@ bool BonusSelectSummonConfirmDialog_TryGetBonusSelectData__Invoke(
         int32_t gachaId,
         const MethodInfo *method)
 {
-  return ((bool (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
+  return ((__int64 (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
            this->fields.method_code,
            data,
            gachaId,

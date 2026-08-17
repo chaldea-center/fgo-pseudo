@@ -2483,7 +2483,8 @@ LABEL_68:
       (System_Collections_Generic_List_Enumerator_T__o *)&v48,
       (System_Collections_Generic_List_object__o *)Instance,
       (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    v51 = *(System_Collections_Generic_List_Enumerator_object__o *)&v48.fields.currentCryptoKey;
+    *(_OWORD *)&v51.fields._list = *(_OWORD *)&v48.fields.currentCryptoKey;
+    v51.fields._current = (Il2CppObject *)v48.fields.fakeValue;
     v49 = 0;
     v50 = &v51;
     while ( 1 )
@@ -4597,7 +4598,8 @@ void WarehouseListViewManager__UpdateItemState(
     (System_Collections_Generic_List_Enumerator_T__o *)&v33,
     SelfUserGame,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-  v36 = *(System_Collections_Generic_List_Enumerator_object__o *)&v33.fields.currentCryptoKey;
+  v36.fields._current = (Il2CppObject *)v33.fields.fakeValue;
+  *(_OWORD *)&v36.fields._list = *(_OWORD *)&v33.fields.currentCryptoKey;
   v34 = 0;
   v35 = &v36;
   while ( 1 )
@@ -5063,7 +5065,7 @@ System_IAsyncResult_o *WarehouseListViewManager_CallbackFunc__BeginInvoke(
   v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(WarehouseListViewManager_ResultKind_TypeInfo, &v12);
   v11[1] = item;
-  return sub_2213A14(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v11, callback, object);
 }
 
 

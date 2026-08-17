@@ -1650,6 +1650,8 @@ bool PurchaseLogicIOS___c___CheckIfReceiptShouldBeSentInIOSOldStyle_b__2_0(
 {
   uint64_t dateData; // x20
   uint64_t v5; // x19
+  System_DateTime_o v6; // x0
+  System_DateTime_o v7; // x1
 
   if ( (byte_597011D & 1) == 0 )
   {
@@ -1662,7 +1664,9 @@ bool PurchaseLogicIOS___c___CheckIfReceiptShouldBeSentInIOSOldStyle_b__2_0(
   v5 = r->fields._purchaseDate_k__BackingField.fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, r);
-  return System_DateTime__op_GreaterThan((System_DateTime_o)dateData, (System_DateTime_o)v5, 0);
+  v6.fields._dateData = dateData;
+  v7.fields._dateData = v5;
+  return System_DateTime__op_GreaterThan(v6, v7, 0);
 }
 
 
@@ -1786,6 +1790,8 @@ bool PurchaseLogicIOS___c__DisplayClass2_0___CheckIfReceiptShouldBeSentInIOSOldS
   PurchaseLogicIOS___c__DisplayClass2_0_o *v4; // x20
   uint64_t dateData; // x21
   uint64_t v6; // x22
+  System_DateTime_o v7; // x0
+  System_DateTime_o v8; // x1
 
   v4 = this;
   if ( (byte_597011E & 1) == 0 )
@@ -1799,7 +1805,9 @@ bool PurchaseLogicIOS___c__DisplayClass2_0___CheckIfReceiptShouldBeSentInIOSOldS
   v6 = r->fields._purchaseDate_k__BackingField.fields._dateData;
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, r);
-  return System_DateTime__op_LessThanOrEqual((System_DateTime_o)dateData, (System_DateTime_o)v6, 0)
+  v7.fields._dateData = dateData;
+  v8.fields._dateData = v6;
+  return System_DateTime__op_LessThanOrEqual(v7, v8, 0)
       && System_String__op_Equality(
            r->fields._transactionID_k__BackingField,
            v4->fields.transactionIdInOldStyleReceipt,

@@ -966,7 +966,7 @@ bool SetGameOptionComponent___c___reflectionGameOption_b__42_0(
 {
   if ( !x )
     sub_2213CDC(this, 0);
-  return ((bool (__fastcall *)(GameOptionContentBase_o *, const MethodInfo *))x->klass->vtable._6_IsAvailable.methodPtr)(
+  return ((__int64 (__fastcall *)(GameOptionContentBase_o *, const MethodInfo *))x->klass->vtable._6_IsAvailable.methodPtr)(
            x,
            x->klass->vtable._6_IsAvailable.method);
 }

@@ -1141,9 +1141,10 @@ void ShopRootComponent__EndRequestShop(ShopRootComponent_o *this, System_String_
   System_String_o *v15; // x22
   System_String_o *v16; // x23
   NotificationDialog_ClickDelegate_o *v17; // x24
+  System_Nullable_float__o v18; // x0
   int32_t TargetId; // w0
-  const MethodInfo *v19; // x1
-  System_Nullable_float__o v20; // [xsp+68h] [xbp-38h] BYREF
+  const MethodInfo *v20; // x1
+  System_Nullable_float__o v21; // [xsp+68h] [xbp-38h] BYREF
 
   if ( (byte_596C8C8 & 1) == 0 )
   {
@@ -1157,7 +1158,7 @@ void ShopRootComponent__EndRequestShop(ShopRootComponent_o *this, System_String_
     sub_2213A60(&StringLiteral_10929/*"PURCHASE_CLASS_BOARD_RESET_CHECK_RESULT_DIALOG_MSG"*/);
     byte_596C8C8 = 1;
   }
-  v20 = 0;
+  v21 = 0;
   buyItemListViewManager = (void *)System_String__op_Equality(result, (System_String_o *)StringLiteral_23336/*"ng"*/, 0);
   if ( ((unsigned __int8)buyItemListViewManager & 1) != 0 )
   {
@@ -1220,10 +1221,8 @@ LABEL_23:
     (Il2CppObject *)this,
     Method_ShopRootComponent__EndRequestShop_b__103_0__,
     0);
-  System_Nullable_float____ctor(
-    (System_Nullable_float__o)&v20,
-    13.0,
-    (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
+  v18 = (System_Nullable_float__o)&v21;
+  System_Nullable_float____ctor(v18, 13.0, (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
   if ( !Instance )
     goto LABEL_23;
   CommonUI__OpenNotificationDialog_37376108(
@@ -1238,7 +1237,7 @@ LABEL_23:
     0,
     0,
     0,
-    v20,
+    v21,
     25,
     0,
     0,
@@ -1250,7 +1249,7 @@ LABEL_23:
   TargetId = ShopEntity__get_TargetId((ShopEntity_o *)v11, 0);
   ClassBoardSave__DeleteOpenedMissionClearDialogByBaseId(TargetId, 0);
 LABEL_22:
-  ShopRootComponent__RefreshInfo(this, v19);
+  ShopRootComponent__RefreshInfo(this, v20);
 }
 
 
@@ -2681,6 +2680,7 @@ bool ShopRootComponent__OnGiftClose(ShopRootComponent_o *this, bool receivedNewS
   __int64 v13; // x2
   UnityEngine_Object_o *titleInfo; // x20
   struct ShopInfoIndicator_o *informationPanel; // x8
+  bool result; // w0
 
   if ( (byte_596C8D4 & 1) == 0 )
   {
@@ -2724,8 +2724,9 @@ bool ShopRootComponent__OnGiftClose(ShopRootComponent_o *this, bool receivedNewS
   if ( !informationPanel )
 LABEL_15:
     sub_2213CDC(BuyItemKind, v9);
+  result = 1;
   informationPanel->fields._IsEnableSwitchButton_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 
@@ -6870,7 +6871,7 @@ void ShopRootComponent___c__DisplayClass164_0___CloseShopResetDialog_b__1(
   if ( !this || !request )
 LABEL_10:
     sub_2213CDC(this, method);
-  ShopResetPurchaseNumRequest__beginRequest(request, baseShopId, *((_DWORD *)this + 25), 0);
+  ShopResetPurchaseNumRequest__beginRequest(request, baseShopId, HIDWORD(this[2].fields.__4__this), 0);
 }
 
 

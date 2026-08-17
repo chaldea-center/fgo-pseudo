@@ -20,6 +20,7 @@ System_String_o *BattleSealedCommandWindowComponent__get_closeBtnPath(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleSealedCommandWindowComponent__setLabel(
         BattleSealedCommandWindowComponent_o *this,
         System_String_o *str,
@@ -30,7 +31,9 @@ void BattleSealedCommandWindowComponent__setLabel(
   __int64 labelDefaultFontSize; // x1
   UILabel_o *transform; // x0
   __int64 v10; // x8
-  UnityEngine_Vector3_o labelDefaultPosition; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s1
+  float z; // s2
+  float x; // s0 OVERLAPPED
 
   if ( (byte_5974174 & 1) == 0 )
   {
@@ -77,19 +80,21 @@ LABEL_19:
     v10 = *(_QWORD *)&args->fields._localPosition_k__BackingField.fields.hasValue;
     if ( (_BYTE)v10 )
     {
-      labelDefaultPosition.fields.y = args->fields._localPosition_k__BackingField.fields.value.fields.y;
-      labelDefaultPosition.fields.z = args->fields._localPosition_k__BackingField.fields.value.fields.z;
-      labelDefaultPosition.fields.x = *((float *)&v10 + 1);
+      y = args->fields._localPosition_k__BackingField.fields.value.fields.y;
+      z = args->fields._localPosition_k__BackingField.fields.value.fields.z;
+      x = *((float *)&v10 + 1);
       if ( !transform )
         goto LABEL_19;
     }
     else
     {
-      labelDefaultPosition = this->fields.labelDefaultPosition;
+      x = this->fields.labelDefaultPosition.fields.x;
+      y = this->fields.labelDefaultPosition.fields.y;
+      z = this->fields.labelDefaultPosition.fields.z;
       if ( !transform )
         goto LABEL_19;
     }
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, labelDefaultPosition, 0);
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&x, 0);
   }
 }
 
@@ -110,14 +115,19 @@ System_Nullable_int__o BattleSealedCommandWindowComponent_LabelAdjustArgs__get_f
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Nullable_Vector3__o BattleSealedCommandWindowComponent_LabelAdjustArgs__get_localPosition(
         BattleSealedCommandWindowComponent_LabelAdjustArgs_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v3; // x0
   System_Nullable_Vector3__o result; // 0:x0.16
 
-  *(_QWORD *)&result.fields.value.fields.y = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.value.fields.y;
-  *(_QWORD *)&result.fields.hasValue = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.hasValue;
+  v2 = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.value.fields.y;
+  v3 = *(_QWORD *)&this->fields._localPosition_k__BackingField.fields.hasValue;
+  *(_QWORD *)&result.fields.value.fields.y = v2;
+  *(_QWORD *)&result.fields.hasValue = v3;
   return result;
 }
 

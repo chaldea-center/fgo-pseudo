@@ -94,9 +94,9 @@ System_String_o *SkillInfo__GetMargeExplanation(
             if ( v6 )
             {
               System_Text_StringBuilder__Append_75735064(v6, (System_String_o *)StringLiteral_351/*" ……"*/, 0);
-              return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v6->klass->vtable._3_ToString.methodPtr)(
-                       v6,
-                       v6->klass->vtable._3_ToString.method);
+              return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v6->klass->vtable._3_ToString.methodPtr)(
+                                          v6,
+                                          v6->klass->vtable._3_ToString.method);
             }
 LABEL_21:
             sub_2213CDC(skillInfoList, isEquipExplanation);
@@ -114,9 +114,9 @@ LABEL_21:
   }
   if ( !v6 )
     goto LABEL_21;
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v6->klass->vtable._3_ToString.methodPtr)(
-           v6,
-           v6->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v6->klass->vtable._3_ToString.methodPtr)(
+                              v6,
+                              v6->klass->vtable._3_ToString.method);
 }
 
 
@@ -169,9 +169,9 @@ System_String_o *SkillInfo__GetMargeExplanation_50621816(
   if ( !v4 )
 LABEL_17:
     sub_2213CDC(IsNullOrEmpty, v6);
-  return ((System_String_o *(__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v4->klass->vtable._3_ToString.methodPtr)(
-           v4,
-           v4->klass->vtable._3_ToString.method);
+  return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v4->klass->vtable._3_ToString.methodPtr)(
+                              v4,
+                              v4->klass->vtable._3_ToString.method);
 }
 
 

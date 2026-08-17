@@ -235,23 +235,26 @@ UnityEngine_Vector3_o BattleActorAnimationEffect__GetFlippedLocalScale(
         const MethodInfo *method)
 {
   int32_t enemyScaleFlip; // w8
+  float z; // s2
+  float x; // s0
+  float y; // s1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( isEnemy )
   {
     enemyScaleFlip = this->fields.enemyScaleFlip;
-    result.fields.z = -1.0;
+    z = -1.0;
     if ( (enemyScaleFlip & 1) != 0 )
-      result.fields.x = -1.0;
+      x = -1.0;
     else
-      result.fields.x = 1.0;
+      x = 1.0;
     if ( (enemyScaleFlip & 2) != 0 )
-      result.fields.y = -1.0;
+      y = -1.0;
     else
-      result.fields.y = 1.0;
+      y = 1.0;
     if ( (enemyScaleFlip & 4) == 0 )
-      result.fields.z = 1.0;
+      z = 1.0;
   }
   else
   {
@@ -261,10 +264,13 @@ UnityEngine_Vector3_o BattleActorAnimationEffect__GetFlippedLocalScale(
       byte_5969AE5 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    result.fields.x = static_fields->oneVector.fields.x;
-    result.fields.y = static_fields->oneVector.fields.y;
-    result.fields.z = static_fields->oneVector.fields.z;
+    x = static_fields->oneVector.fields.x;
+    y = static_fields->oneVector.fields.y;
+    z = static_fields->oneVector.fields.z;
   }
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

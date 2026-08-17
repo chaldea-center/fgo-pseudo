@@ -17,6 +17,7 @@ void UVScrollAnimation__Update(UVScrollAnimation_o *this, const MethodInfo *meth
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
@@ -26,7 +27,8 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
   __int64 v7; // x1
   float32x2_t v8; // d0
   int8x8_t v9; // d0
-  float v15; // [xsp+0h] [xbp-70h]
+  unsigned __int64 v15; // d0
+  float v16; // [xsp+0h] [xbp-70h]
   float offsetYPerSec; // [xsp+10h] [xbp-60h]
   float time; // [xsp+20h] [xbp-50h]
   float offsetXPerSec; // [xsp+30h] [xbp-40h]
@@ -55,20 +57,22 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
     {
       time = UnityEngine_Time__get_time(0);
       offsetXPerSec = this->fields.offsetXPerSec;
-      v15 = UnityEngine_Time__get_time(0);
+      v16 = UnityEngine_Time__get_time(0);
       offsetYPerSec = this->fields.offsetYPerSec;
       material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0);
       if ( material )
       {
         v8.n64_u64[0] = vmul_f32(
-                          (float32x2_t)__PAIR64__(LODWORD(v15), LODWORD(time)),
+                          (float32x2_t)__PAIR64__(LODWORD(v16), LODWORD(time)),
                           (float32x2_t)__PAIR64__(LODWORD(offsetYPerSec), LODWORD(offsetXPerSec))).n64_u64[0];
         v9.n64_u64[0] = vsub_f32(v8, vrndm_f32(v8)).n64_u64[0];
         __asm { FMOV            V1.2S, #1.0 }
+        v15 = vbic_s8(vbsl_s8(vcgt_f32(v9, _D1), _D1, v9), vcltz_f32(v9)).n64_u64[0];
+        _D1.n64_u32[0] = HIDWORD(v15);
         UnityEngine_Material__SetTextureOffset(
           material,
           (System_String_o *)StringLiteral_16914/*"_MainTex"*/,
-          (UnityEngine_Vector2_o)vbic_s8(vbsl_s8(vcgt_f32(v9, _D1), _D1, v9), vcltz_f32(v9)).n64_u64[0],
+          *(UnityEngine_Vector2_o *)((char *)&_D1 - 4),
           0);
         return;
       }

@@ -221,22 +221,30 @@ void SaveDataDeleteMenuDialog__UpdateSaveDeleteButton(
 {
   UIButtonColor_o *saveDeleteButtonColor; // x0
   _BOOL4 v5; // w21
-  UnityEngine_Color_o buttonDisabledColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float a; // s3
+  float b; // s2
+  float g; // s1
+  float r; // s0 OVERLAPPED
 
   saveDeleteButtonColor = this->fields.saveDeleteButtonColor;
   if ( !saveDeleteButtonColor )
     goto LABEL_7;
   v5 = isEnabled;
   saveDeleteButtonColor->klass->vtable._14_SetState.methodPtr();
-  buttonDisabledColor.fields.a = 1.0;
-  buttonDisabledColor.fields.b = 1.0;
+  a = 1.0;
+  b = 1.0;
   saveDeleteButtonColor = this->fields.saveDeleteButtonColor;
-  buttonDisabledColor.fields.g = 1.0;
-  buttonDisabledColor.fields.r = 1.0;
+  g = 1.0;
+  r = 1.0;
   if ( !v5 )
-    buttonDisabledColor = this->fields.buttonDisabledColor;
+  {
+    r = this->fields.buttonDisabledColor.fields.r;
+    g = this->fields.buttonDisabledColor.fields.g;
+    b = this->fields.buttonDisabledColor.fields.b;
+    a = this->fields.buttonDisabledColor.fields.a;
+  }
   if ( !saveDeleteButtonColor
-    || (UIButtonColor__set_defaultColor(saveDeleteButtonColor, buttonDisabledColor, 0),
+    || (UIButtonColor__set_defaultColor(saveDeleteButtonColor, *(UnityEngine_Color_o *)&r, 0),
         (saveDeleteButtonColor = this->fields.saveDeleteButtonColor) == 0) )
   {
 LABEL_7:

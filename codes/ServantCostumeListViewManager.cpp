@@ -739,7 +739,8 @@ ServantCostumeItemInfo_array *ServantCostumeListViewManager__GetServantCostumeIt
     (System_Collections_Generic_List_Enumerator_T__o *)&v53,
     (System_Collections_Generic_List_int__o *)Instance,
     (const MethodInfo_4467D20 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v54 = *(System_Collections_Generic_List_Enumerator_int__o *)&v53.fields.currentCryptoKey;
+  *(_QWORD *)&v54.fields._current = v53.fields.fakeValue;
+  *(_OWORD *)&v54.fields._list = *(_OWORD *)&v53.fields.currentCryptoKey;
   v53.fields.currentCryptoKey = 0;
   v53.fields.hiddenValue = (int64_t)&v54;
   while ( 1 )
@@ -1275,7 +1276,7 @@ LABEL_21:
   this = (ServantCostumeListViewManager_o *)v4->fields.combineRootComponent;
   if ( !this )
     goto LABEL_26;
-  if ( *((_DWORD *)this + 119) == 8 )
+  if ( HIDWORD(this[1].fields.m_CachedPtr) == 8 )
     CombineRootComponent__ShowSelectCostumeBaseSvt((CombineRootComponent_o *)this, 0);
 }
 
@@ -2478,7 +2479,7 @@ System_IAsyncResult_o *ServantCostumeListViewManager_CallbackFunc__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(ServantCostumeListViewManager_ResultKind_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

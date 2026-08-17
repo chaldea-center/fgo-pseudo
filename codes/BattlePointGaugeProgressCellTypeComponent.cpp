@@ -246,6 +246,7 @@ bool BattlePointGaugeProgressCellTypeComponent__TryGetCellColor(
   struct BattlePointGaugeProgressCellTypeComponent_CellColorEntry_array *cellColorArray; // x8
   int max_length; // w9
   BattlePointGaugeProgressCellTypeComponent_CellColorEntry_o *i; // x8
+  bool result; // w0
   __int128 v8; // q0
   __int128 v9; // q1
 
@@ -267,10 +268,11 @@ bool BattlePointGaugeProgressCellTypeComponent__TryGetCellColor(
   }
   v9 = *(_OWORD *)&i->fields.phase;
   v8 = *(_OWORD *)&i->fields.topColor.fields.a;
+  result = 1;
   colorEntry->fields.bottomColor.fields.a = i->fields.bottomColor.fields.a;
   *(_OWORD *)&colorEntry->fields.phase = v9;
   *(_OWORD *)&colorEntry->fields.topColor.fields.a = v8;
-  return 1;
+  return result;
 }
 
 
@@ -428,7 +430,7 @@ void BattlePointGaugeProgressCellTypeComponent__UpdateProgressGauge_54724088(
   __int64 v14; // x1
   Il2CppObject *Item; // x23
   __int64 v16; // x1
-  UISprite_o *v17; // x23
+  Il2CppObject *v17; // x23
   const MethodInfo *v18; // x4
   _BOOL4 ignoreChangeFirstSprite; // w24
   bool v20; // zf
@@ -437,14 +439,17 @@ void BattlePointGaugeProgressCellTypeComponent__UpdateProgressGauge_54724088(
   struct BattlePointGaugeProgressCellTypeComponent_CellColorEntry_array *cellColorArray; // x11
   __int64 max_length; // x10
   float *p_a; // x8
-  float v26; // s8
-  float v27; // s9
-  float v28; // s10
-  float v29; // s11
+  float inactiveCellAlpha; // s3 OVERLAPPED
+  int klass_high; // s0
+  int monitor; // s1
+  int monitor_high; // s2
+  float v30; // s8
+  float v31; // s9
+  float v32; // s10
+  float v33; // s11
   int32_t phase; // [xsp+4h] [xbp-8Ch] BYREF
   BattlePointPhaseEntity_o *entitya; // [xsp+8h] [xbp-88h] BYREF
-  UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
   if ( (byte_5974166 & 1) == 0 )
@@ -500,10 +505,10 @@ LABEL_49:
           goto LABEL_49;
         if ( v13 < SLODWORD(this->fields.m_CancellationTokenSource) )
         {
-          v17 = (UISprite_o *)System_Collections_Generic_List_object___get_Item(
-                                (System_Collections_Generic_List_object__o *)this,
-                                v13,
-                                (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UIGradientSprite__get_Item__);
+          v17 = System_Collections_Generic_List_object___get_Item(
+                  (System_Collections_Generic_List_object__o *)this,
+                  v13,
+                  (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_UIGradientSprite__get_Item__);
           if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
           if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v17, 0, 0) )
@@ -531,7 +536,7 @@ LABEL_49:
               this = (BattlePointGaugeProgressCellTypeComponent_o *)System_String__Format(cellSpriteNameFormat, v22, 0);
               if ( !v17 )
                 goto LABEL_49;
-              UISprite__set_spriteName(v17, (System_String_o *)this, 0);
+              UISprite__set_spriteName((UISprite_o *)v17, (System_String_o *)this, 0);
             }
             if ( !entitya )
               goto LABEL_49;
@@ -550,16 +555,16 @@ LABEL_49:
               }
               if ( !v17 )
                 goto LABEL_49;
-              v27 = *(p_a - 1);
-              v26 = *p_a;
-              v29 = *(p_a - 3);
-              v28 = *(p_a - 2);
+              v31 = *(p_a - 1);
+              v30 = *p_a;
+              v33 = *(p_a - 3);
+              v32 = *(p_a - 2);
               UIGradientSprite__set_TopColor((UIGradientSprite_o *)v17, *(UnityEngine_Color_o *)(p_a - 7), 0);
-              v33.fields.r = v29;
-              v33.fields.g = v28;
-              v33.fields.b = v27;
-              v33.fields.a = v26;
-              UIGradientSprite__set_BottomColor((UIGradientSprite_o *)v17, v33, 0);
+              v36.fields.r = v33;
+              v36.fields.g = v32;
+              v36.fields.b = v31;
+              v36.fields.a = v30;
+              UIGradientSprite__set_BottomColor((UIGradientSprite_o *)v17, v36, 0);
             }
             else
             {
@@ -567,13 +572,13 @@ LABEL_40:
               if ( !v17 )
                 goto LABEL_49;
             }
-            v32.fields.a = 1.0;
+            inactiveCellAlpha = 1.0;
             if ( v13 >= v11 )
-              v32.fields.a = v8->fields.inactiveCellAlpha;
-            v32.fields.r = v17->fields.mColor.fields.r;
-            v32.fields.g = v17->fields.mColor.fields.g;
-            v32.fields.b = v17->fields.mColor.fields.b;
-            UIWidget__set_color((UIWidget_o *)v17, v32, 0);
+              inactiveCellAlpha = v8->fields.inactiveCellAlpha;
+            klass_high = HIDWORD(v17[9].klass);
+            monitor = (int)v17[9].monitor;
+            monitor_high = HIDWORD(v17[9].monitor);
+            UIWidget__set_color((UIWidget_o *)v17, *(UnityEngine_Color_o *)(&inactiveCellAlpha - 3), 0);
           }
         }
       }

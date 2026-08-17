@@ -1027,6 +1027,7 @@ System_Collections_IEnumerator_o *CGThumbnailListViewManager__SelectItemCoroutin
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596B503 & 1) == 0 )
   {
@@ -1038,8 +1039,9 @@ System_Collections_IEnumerator_o *CGThumbnailListViewManager__SelectItemCoroutin
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(_DWORD *)(v5 + 40) = index;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -2071,7 +2073,7 @@ System_IAsyncResult_o *CGThumbnailListViewManager_CallbackFunc__BeginInvoke(
   v10 = thumbnailIndex;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984348, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -2148,6 +2150,7 @@ bool CGThumbnailListViewManager__SelectItemCoroutine_d__40__MoveNext(
   int32_t v38; // w5
   bool v39; // w6
   bool v40; // w7
+  bool result; // w0
   struct CGThumbnailListViewManager___c__DisplayClass40_0_o *_8__1; // x8
   struct CGThumbnailListViewManager_CallbackFunc_o *callbackFunc; // x21
 
@@ -2282,8 +2285,9 @@ LABEL_22:
                     v38,
                     v39,
                     v40);
+                  result = 1;
                   *((_DWORD *)p__2__current - 2) = 1;
-                  return 1;
+                  return result;
                 }
               }
             }

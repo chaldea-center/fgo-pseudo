@@ -539,10 +539,10 @@ BattleActionData_o *BattleLogicNpcAi__MakeLoadNpcPreStepInAction(
   PreLoadNpcBattleLogicTask___ctor(v5, targetId, 0, v6);
   if ( !v5 )
     sub_2213CDC(v7, v8);
-  return ((BattleActionData_o *(__fastcall *)(PreLoadNpcBattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))v5->klass->vtable._6_MakeActionData.methodPtr)(
-           v5,
-           this->fields.logic,
-           v5->klass->vtable._6_MakeActionData.method);
+  return (BattleActionData_o *)((__int64 (__fastcall *)(PreLoadNpcBattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))v5->klass->vtable._6_MakeActionData.methodPtr)(
+                                 v5,
+                                 this->fields.logic,
+                                 v5->klass->vtable._6_MakeActionData.method);
 }
 
 
@@ -566,10 +566,10 @@ BattleActionData_o *BattleLogicNpcAi__MakeStepInAction(
   NpcStepInBattleLogicTask___ctor(v7, targetId, isForcedSpeedOne, v8);
   if ( !v7 )
     sub_2213CDC(v9, v10);
-  return ((BattleActionData_o *(__fastcall *)(NpcStepInBattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))v7->klass->vtable._6_MakeActionData.methodPtr)(
-           v7,
-           this->fields.logic,
-           v7->klass->vtable._6_MakeActionData.method);
+  return (BattleActionData_o *)((__int64 (__fastcall *)(NpcStepInBattleLogicTask_o *, struct BattleLogic_o *, const MethodInfo *))v7->klass->vtable._6_MakeActionData.methodPtr)(
+                                 v7,
+                                 this->fields.logic,
+                                 v7->klass->vtable._6_MakeActionData.method);
 }
 
 

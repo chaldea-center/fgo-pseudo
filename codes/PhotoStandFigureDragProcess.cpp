@@ -80,18 +80,19 @@ void PhotoStandFigureDragProcess__GetPositionDelta(
         UnityEngine_Vector3_o touchPosition,
         const MethodInfo *method)
 {
+  __int64 v4; // x1
   UnityEngine_Transform_o *parent; // x0
   struct PhotoStandFigureDragProcess_TouchInfo_o *touchInfo; // x8
-  float32x2_t v6; // d10
-  float z; // s9
+  float z; // s8
+  float32x2_t v8; // d10
+  float v9; // s9
   float32x2_t *static_fields; // x9
-  float32x2_t v9; // d3
-  float32x2_t v10; // d3
-  __int64 v11; // x1
-  float x; // s0
-  float y; // s1
-  UnityEngine_Vector3_o v14; // 0:kr14_12.12
+  float32x2_t v11; // d3
+  float32x2_t v12; // d3
+  float x; // [xsp+0h] [xbp-50h]
+  float y; // [xsp+10h] [xbp-40h]
   UnityEngine_Vector3_o WorldPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   WorldPosition = PhotoStandFigureDragProcess__GetWorldPosition(
                     this,
@@ -100,62 +101,58 @@ void PhotoStandFigureDragProcess__GetPositionDelta(
   parent = this->fields.parent;
   if ( !parent )
     goto LABEL_10;
-  v14 = UnityEngine_Transform__InverseTransformPoint(parent, WorldPosition, 0);
-  x = v14.fields.x;
-  y = v14.fields.y;
+  v16 = UnityEngine_Transform__InverseTransformPoint(parent, WorldPosition, 0);
   touchInfo = this->fields.touchInfo;
   if ( !touchInfo )
     goto LABEL_10;
-  v6.n64_u64[0] = *(unsigned __int64 *)&touchInfo->fields.TouchPosition.fields.x;
-  z = touchInfo->fields.TouchPosition.fields.z;
+  z = v16.fields.z;
+  v8.n64_u64[0] = *(unsigned __int64 *)&touchInfo->fields.TouchPosition.fields.x;
+  v9 = touchInfo->fields.TouchPosition.fields.z;
   if ( !byte_5969AE0 )
   {
+    x = v16.fields.x;
+    y = v16.fields.y;
     parent = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
-    x = v14.fields.x;
-    y = v14.fields.y;
+    v16.fields.x = x;
+    v16.fields.y = y;
     touchInfo = this->fields.touchInfo;
     byte_5969AE0 = 1;
   }
   static_fields = (float32x2_t *)UnityEngine_Vector3_TypeInfo->static_fields;
-  v9.n64_u64[0] = vsub_f32(v6, (float32x2_t)static_fields->n64_u64[0]).n64_u64[0];
-  if ( (float)((float)((float)(z - static_fields[1].n64_f32[0]) * (float)(z - static_fields[1].n64_f32[0]))
-             + vaddv_f32(vmul_f32(v9, v9))) >= 1.0e-10 )
+  v11.n64_u64[0] = vsub_f32(v8, (float32x2_t)static_fields->n64_u64[0]).n64_u64[0];
+  if ( (float)((float)((float)(v9 - static_fields[1].n64_f32[0]) * (float)(v9 - static_fields[1].n64_f32[0]))
+             + vaddv_f32(vmul_f32(v11, v11))) >= 1.0e-10 )
   {
     if ( !touchInfo )
       goto LABEL_10;
-    v10.n64_u64[0] = *(unsigned __int64 *)&touchInfo->fields.TouchPosition.fields.x;
-    touchInfo->fields.PositionDelta.fields.z = v14.fields.z - touchInfo->fields.TouchPosition.fields.z;
-    *(float32x2_t *)&touchInfo->fields.PositionDelta.fields.x = vsub_f32(
-                                                                  (float32x2_t)__PAIR64__(LODWORD(y), LODWORD(x)),
-                                                                  v10);
+    v12.n64_u64[0] = *(unsigned __int64 *)&touchInfo->fields.TouchPosition.fields.x;
+    touchInfo->fields.PositionDelta.fields.z = z - touchInfo->fields.TouchPosition.fields.z;
+    *(float32x2_t *)&touchInfo->fields.PositionDelta.fields.x = vsub_f32(*(float32x2_t *)&v16.fields.x, v12);
     touchInfo = this->fields.touchInfo;
   }
   if ( !touchInfo )
 LABEL_10:
-    sub_2213CDC(parent, v11);
-  touchInfo->fields.TouchPosition.fields.z = v14.fields.z;
-  touchInfo->fields.TouchPosition.fields.x = x;
-  touchInfo->fields.TouchPosition.fields.y = y;
+    sub_2213CDC(parent, v4);
+  touchInfo->fields.TouchPosition.fields.z = z;
+  touchInfo->fields.TouchPosition.fields.x = v16.fields.x;
+  touchInfo->fields.TouchPosition.fields.y = v16.fields.y;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o PhotoStandFigureDragProcess__GetWorldPosition(
         PhotoStandFigureDragProcess_o *this,
         UnityEngine_Vector2_o screenPos,
         const MethodInfo *method)
 {
   UnityEngine_Camera_o *mainCamera; // x0
-  float v4; // s2
-  UnityEngine_Vector3_o v5; // 0:kr00_12.12
+  int v4; // s2
 
   mainCamera = this->fields.mainCamera;
   if ( !mainCamera )
     sub_2213CDC(0, method);
-  v4 = 0.0;
-  v5.fields.x = screenPos.fields.x;
-  v5.fields.y = screenPos.fields.y;
-  v5.fields.z = v4;
-  return UnityEngine_Camera__ScreenToWorldPoint_83198228(mainCamera, v5, 0);
+  v4 = 0;
+  return UnityEngine_Camera__ScreenToWorldPoint_83198228(mainCamera, *(UnityEngine_Vector3_o *)&screenPos.fields.x, 0);
 }
 
 
@@ -327,7 +324,7 @@ void PhotoStandFigureDragProcess__OneTouch(PhotoStandFigureDragProcess_o *this, 
   float z; // s1
   const MethodInfo *v8; // x1
   UnityEngine_Touch_o v9; // [xsp+0h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o v10; // 0:kr00_12.12
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   memset(&v9, 0, sizeof(v9));
   touches = UnityEngine_Input__get_touches(0);
@@ -391,7 +388,7 @@ void PhotoStandFigureDragProcess__SetPosition(PhotoStandFigureDragProcess_o *thi
 {
   UnityEngine_Transform_o *targetTransform; // x19
   struct PhotoStandFigureDragProcess_TouchInfo_o *touchInfo; // x8
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
   targetTransform = this->fields.targetTransform;
@@ -434,15 +431,20 @@ void PhotoStandFigureDragProcess__SetScale(PhotoStandFigureDragProcess_o *this, 
   float32x2_t v24; // d0
   UnityEngine_Vector3_o *v25; // x8
   UnityEngine_Vector3_o *v26; // x8
+  float v27; // s9
+  float v28; // s10
+  float v29; // s8
   UnityEngine_Transform_o *targetTransform; // x19
-  UnityEngine_Vector3_o v28; // 0:kr00_12.12
-  UnityEngine_Vector3_o v29; // 0:kr20_12.12
-  UnityEngine_Vector3_o v30; // 0:kr34_12.12
-  UnityEngine_Vector3_o localPosition; // 0:kr40_12.12
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  float v31; // s10
+  float v32; // s9
+  float v33; // s8
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   touchInfo = this->fields.touchInfo;
   if ( !touchInfo )
@@ -501,10 +503,10 @@ void PhotoStandFigureDragProcess__SetScale(PhotoStandFigureDragProcess_o *this, 
           this = (PhotoStandFigureDragProcess_o *)v6->fields.targetTransform;
           if ( !this )
             goto LABEL_38;
-          v28 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v25[4], 0);
-          v18 = v28.fields.x;
-          y = v28.fields.y;
-          z = v28.fields.z;
+          v34 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v25[4], 0);
+          v18 = v34.fields.x;
+          y = v34.fields.y;
+          z = v34.fields.z;
           goto LABEL_29;
         }
       }
@@ -527,38 +529,44 @@ LABEL_29:
       v6->fields.localScale.fields.y = v8;
       if ( this )
       {
-        v32.fields.x = v8;
-        v32.fields.y = v8;
-        v32.fields.z = v6->fields.localScale.fields.z;
-        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v32, 0);
+        v35.fields.x = v8;
+        v35.fields.y = v8;
+        v35.fields.z = v6->fields.localScale.fields.z;
+        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v35, 0);
         if ( v16 )
           return;
         this = (PhotoStandFigureDragProcess_o *)v6->fields.targetTransform;
         if ( this )
         {
-          v33.fields.x = v18;
-          v33.fields.y = y;
-          v33.fields.z = z;
-          v35 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v33, 0);
+          v36.fields.x = v18;
+          v36.fields.y = y;
+          v36.fields.z = z;
+          v37 = UnityEngine_Transform__TransformPoint((UnityEngine_Transform_o *)this, v36, 0);
           this = (PhotoStandFigureDragProcess_o *)v6->fields.parent;
           if ( this )
           {
-            v29 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v35, 0);
+            v38 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v37, 0);
             v26 = (UnityEngine_Vector3_o *)v6->fields.touchInfo;
             if ( v26 )
             {
               this = (PhotoStandFigureDragProcess_o *)v6->fields.parent;
               if ( this )
               {
-                v30 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v26[4], 0);
+                v27 = v38.fields.y;
+                v28 = v38.fields.z;
+                v29 = v38.fields.x;
+                v39 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v26[4], 0);
                 targetTransform = v6->fields.targetTransform;
                 if ( targetTransform )
                 {
+                  v31 = v39.fields.z - v28;
+                  v32 = v39.fields.y - v27;
+                  v33 = v39.fields.x - v29;
                   localPosition = UnityEngine_Transform__get_localPosition(targetTransform, 0);
-                  v34.fields.x = (float)(v30.fields.x - v29.fields.x) + localPosition.fields.x;
-                  v34.fields.y = (float)(v30.fields.y - v29.fields.y) + localPosition.fields.y;
-                  v34.fields.z = (float)(v30.fields.z - v29.fields.z) + localPosition.fields.z;
-                  UnityEngine_Transform__set_localPosition(targetTransform, v34, 0);
+                  localPosition.fields.x = v33 + localPosition.fields.x;
+                  localPosition.fields.y = v32 + localPosition.fields.y;
+                  localPosition.fields.z = v31 + localPosition.fields.z;
+                  UnityEngine_Transform__set_localPosition(targetTransform, localPosition, 0);
                   return;
                 }
               }
@@ -579,7 +587,7 @@ void PhotoStandFigureDragProcess__SetUp(PhotoStandFigureDragProcess_o *this, con
   struct PhotoStandFigureDragProcess_TouchInfo_o *touchInfo; // x20
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   targetTransform = this->fields.targetTransform;
   if ( !targetTransform )
@@ -639,10 +647,10 @@ void PhotoStandFigureDragProcess__TwoTouch(PhotoStandFigureDragProcess_o *this, 
 {
   UnityEngine_Transform_o *touches; // x0
   __int64 v4; // x1
-  UnityEngine_Vector2_o position; // kr20_8
-  UnityEngine_Vector2_o v6; // kr28_8
-  UnityEngine_Vector2_o v7; // kr30_8
-  UnityEngine_Vector2_o v8; // kr38_8
+  UnityEngine_Vector2_o position; // kr00_8
+  UnityEngine_Vector2_o v6; // kr08_8
+  UnityEngine_Vector2_o v7; // kr10_8
+  UnityEngine_Vector2_o v8; // kr18_8
   struct PhotoStandFigureDragProcess_TouchInfo_o *touchInfo; // x20
   const MethodInfo *v10; // x1
   struct PhotoStandFigureDragProcess_TouchInfo_o *v11; // x8
@@ -656,9 +664,9 @@ void PhotoStandFigureDragProcess__TwoTouch(PhotoStandFigureDragProcess_o *this, 
   float x; // s0
   UnityEngine_Touch_o v20; // [xsp+0h] [xbp-F0h] BYREF
   UnityEngine_Touch_o dest; // [xsp+50h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o WorldPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v23; // 0:kr14_12.12
-  UnityEngine_Vector2_o v24; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v22; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o WorldPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_596BC52 & 1) == 0 )
   {
@@ -685,9 +693,9 @@ LABEL_24:
   v7 = UnityEngine_Touch__get_position(&dest, 0);
   v8 = UnityEngine_Touch__get_position(&v20, 0);
   touchInfo = this->fields.touchInfo;
-  v24.fields.x = (float)(v7.fields.x + v8.fields.x) * 0.5;
-  v24.fields.y = (float)(v7.fields.y + v8.fields.y) * 0.5;
-  WorldPosition = PhotoStandFigureDragProcess__GetWorldPosition(this, v24, v10);
+  v22.fields.x = (float)(v7.fields.x + v8.fields.x) * 0.5;
+  v22.fields.y = (float)(v7.fields.y + v8.fields.y) * 0.5;
+  WorldPosition = PhotoStandFigureDragProcess__GetWorldPosition(this, v22, v10);
   if ( !touchInfo )
     goto LABEL_23;
   touchInfo->fields.ScalePivotWorldPos = WorldPosition;
@@ -697,15 +705,15 @@ LABEL_24:
   touches = this->fields.parent;
   if ( !touches )
     goto LABEL_23;
-  v23 = UnityEngine_Transform__InverseTransformPoint(touches, v11->fields.ScalePivotWorldPos, 0);
+  v24 = UnityEngine_Transform__InverseTransformPoint(touches, v11->fields.ScalePivotWorldPos, 0);
   v13 = this->fields.touchInfo;
   if ( !v13 )
     goto LABEL_23;
   if ( v13->fields.TouchCount == 2 )
   {
-    v14 = v23.fields.z - v13->fields.TouchPosition.fields.z;
+    v14 = v24.fields.z - v13->fields.TouchPosition.fields.z;
     *(float32x2_t *)&v13->fields.PositionDelta.fields.x = vsub_f32(
-                                                            *(float32x2_t *)&v23.fields.x,
+                                                            *(float32x2_t *)&v24.fields.x,
                                                             *(float32x2_t *)&v13->fields.TouchPosition.fields.x);
     v13->fields.PositionDelta.fields.z = v14;
     v13 = this->fields.touchInfo;
@@ -717,7 +725,7 @@ LABEL_24:
     this->fields.isTouchScale = 0;
     v13->fields.TouchCount = 2;
   }
-  v13->fields.TouchPosition = v23;
+  v13->fields.TouchPosition = v24;
   isTouchScale = this->fields.isTouchScale;
   v16 = (float)((float)(position.fields.x - v6.fields.x) * (float)(position.fields.x - v6.fields.x))
       + (float)((float)(position.fields.y - v6.fields.y) * (float)(position.fields.y - v6.fields.y));

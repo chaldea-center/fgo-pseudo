@@ -163,12 +163,11 @@ void BattleSyncTransformComponent__SyncTarget(BattleSyncTransformComponent_o *th
   const MethodInfo *v9; // x1
   UnityEngine_Transform_o *v10; // x21
   UnityEngine_Transform_o *v11; // x21
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr30_12.12
-  UnityEngine_Vector3_o lossyScale; // 0:kr44_12.12
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o lossyScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -195,10 +194,10 @@ void BattleSyncTransformComponent__SyncTarget(BattleSyncTransformComponent_o *th
         position = UnityEngine_Transform__get_position(transform, 0);
         if ( v7 )
         {
-          v15.fields.z = position.fields.z + syncData->fields.positionDiff.fields.z;
-          v15.fields.y = position.fields.y + syncData->fields.positionDiff.fields.y;
-          v15.fields.x = position.fields.x + syncData->fields.positionDiff.fields.x;
-          UnityEngine_Transform__set_position(v7, v15, 0);
+          v13.fields.z = position.fields.z + syncData->fields.positionDiff.fields.z;
+          v13.fields.y = position.fields.y + syncData->fields.positionDiff.fields.y;
+          v13.fields.x = position.fields.x + syncData->fields.positionDiff.fields.x;
+          UnityEngine_Transform__set_position(v7, v13, 0);
           syncData = this->fields.syncData;
           if ( syncData )
           {
@@ -220,10 +219,10 @@ LABEL_26:
                 localScale = UnityEngine_Transform__get_localScale(transform, 0);
                 if ( v10 )
                 {
-                  v16.fields.z = localScale.fields.z + syncData->fields.scaleDiff.fields.z;
-                  v16.fields.y = localScale.fields.y + syncData->fields.scaleDiff.fields.y;
-                  v16.fields.x = localScale.fields.x + syncData->fields.scaleDiff.fields.x;
-                  UnityEngine_Transform__set_localScale(v10, v16, 0);
+                  v15.fields.z = localScale.fields.z + syncData->fields.scaleDiff.fields.z;
+                  v15.fields.y = localScale.fields.y + syncData->fields.scaleDiff.fields.y;
+                  v15.fields.x = localScale.fields.x + syncData->fields.scaleDiff.fields.x;
+                  UnityEngine_Transform__set_localScale(v10, v15, 0);
                   syncData = this->fields.syncData;
                   if ( syncData )
                   {
@@ -235,10 +234,10 @@ LABEL_19:
                     if ( transform )
                     {
                       lossyScale = UnityEngine_Transform__get_lossyScale(transform, 0);
-                      v17.fields.x = lossyScale.fields.x + syncData->fields.scaleDiff.fields.x;
-                      v17.fields.y = lossyScale.fields.y + syncData->fields.scaleDiff.fields.y;
-                      v17.fields.z = lossyScale.fields.z + syncData->fields.scaleDiff.fields.z;
-                      TransformHelper__SetLossyScale(v11, v17, 0);
+                      lossyScale.fields.x = lossyScale.fields.x + syncData->fields.scaleDiff.fields.x;
+                      lossyScale.fields.y = lossyScale.fields.y + syncData->fields.scaleDiff.fields.y;
+                      lossyScale.fields.z = lossyScale.fields.z + syncData->fields.scaleDiff.fields.z;
+                      TransformHelper__SetLossyScale(v11, lossyScale, 0);
                       return;
                     }
                   }
@@ -302,11 +301,17 @@ UnityEngine_Vector3_o BattleSyncTransformComponent_SyncData__GetFixPosition(
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
 {
+  float v3; // s2
+  float v4; // s0
+  float v5; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.z = position.fields.z + this->fields.positionDiff.fields.z;
-  result.fields.x = position.fields.x + this->fields.positionDiff.fields.x;
-  result.fields.y = position.fields.y + this->fields.positionDiff.fields.y;
+  v3 = position.fields.z + this->fields.positionDiff.fields.z;
+  v4 = position.fields.x + this->fields.positionDiff.fields.x;
+  v5 = position.fields.y + this->fields.positionDiff.fields.y;
+  result.fields.z = v3;
+  result.fields.y = v5;
+  result.fields.x = v4;
   return result;
 }
 
@@ -316,20 +321,18 @@ UnityEngine_Quaternion_o BattleSyncTransformComponent_SyncData__GetFixRotation(
         UnityEngine_Quaternion_o rotation,
         const MethodInfo *method)
 {
-  UnityEngine_Vector3_o v4; // 0:kr00_12.12
-  UnityEngine_Vector3_o Positive; // 0:kr14_12.12
-  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v4; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Positive; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = UnityEngine_Quaternion__Internal_ToEulerRad(rotation, 0);
-  v6.fields.x = v4.fields.x * 57.296;
-  v6.fields.y = v4.fields.y * 57.296;
-  v6.fields.z = v4.fields.z * 57.296;
-  Positive = UnityEngine_Quaternion__Internal_MakePositive(v6, 0);
-  v7.fields.x = (float)(Positive.fields.x + this->fields.rotationDiff.fields.x) * 0.017453;
-  v7.fields.y = (float)(Positive.fields.y + this->fields.rotationDiff.fields.y) * 0.017453;
-  v7.fields.z = (float)(Positive.fields.z + this->fields.rotationDiff.fields.z) * 0.017453;
-  return UnityEngine_Quaternion__Internal_FromEulerRad(v7, 0);
+  v4.fields.x = v4.fields.x * 57.296;
+  v4.fields.y = v4.fields.y * 57.296;
+  v4.fields.z = v4.fields.z * 57.296;
+  Positive = UnityEngine_Quaternion__Internal_MakePositive(v4, 0);
+  Positive.fields.x = (float)(Positive.fields.x + this->fields.rotationDiff.fields.x) * 0.017453;
+  Positive.fields.y = (float)(Positive.fields.y + this->fields.rotationDiff.fields.y) * 0.017453;
+  Positive.fields.z = (float)(Positive.fields.z + this->fields.rotationDiff.fields.z) * 0.017453;
+  return UnityEngine_Quaternion__Internal_FromEulerRad(Positive, 0);
 }
 
 
@@ -338,11 +341,17 @@ UnityEngine_Vector3_o BattleSyncTransformComponent_SyncData__GetFixScale(
         UnityEngine_Vector3_o scale,
         const MethodInfo *method)
 {
+  float v3; // s2
+  float v4; // s0
+  float v5; // s1
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.z = scale.fields.z + this->fields.scaleDiff.fields.z;
-  result.fields.x = scale.fields.x + this->fields.scaleDiff.fields.x;
-  result.fields.y = scale.fields.y + this->fields.scaleDiff.fields.y;
+  v3 = scale.fields.z + this->fields.scaleDiff.fields.z;
+  v4 = scale.fields.x + this->fields.scaleDiff.fields.x;
+  v5 = scale.fields.y + this->fields.scaleDiff.fields.y;
+  result.fields.z = v3;
+  result.fields.y = v5;
+  result.fields.x = v4;
   return result;
 }
 

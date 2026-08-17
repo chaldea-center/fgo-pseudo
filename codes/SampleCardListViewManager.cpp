@@ -1,12 +1,14 @@
 void SampleCardListViewManager___cctor(const MethodInfo *method)
 {
-  System_Array_o *v1; // x19
-  System_String_o *v2; // x2
-  System_String_o *v3; // x3
-  int32_t v4; // w4
-  int32_t v5; // w5
-  bool v6; // w6
-  bool v7; // w7
+  System_Array_o *v1; // x0
+  System_RuntimeFieldHandle_o v2; // x1
+  struct System_Int32_array *v3; // x19
+  System_String_o *v4; // x2
+  System_String_o *v5; // x3
+  int32_t v6; // w4
+  int32_t v7; // w5
+  bool v8; // w6
+  bool v9; // w7
 
   if ( (byte_596DE32 & 1) == 0 )
   {
@@ -16,20 +18,19 @@ void SampleCardListViewManager___cctor(const MethodInfo *method)
     byte_596DE32 = 1;
   }
   v1 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v1,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__040FA467EEBC312075F7BF093BA7D0374B9217A3FB344624D6D7CDA05C641D90,
-    0);
-  SampleCardListViewManager_TypeInfo->static_fields->deckData = (struct System_Int32_array *)v1;
+  v2.fields.value = Field__PrivateImplementationDetails__040FA467EEBC312075F7BF093BA7D0374B9217A3FB344624D6D7CDA05C641D90;
+  v3 = (struct System_Int32_array *)v1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v1, v2, 0);
+  SampleCardListViewManager_TypeInfo->static_fields->deckData = v3;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)SampleCardListViewManager_TypeInfo->static_fields,
-    (int32_t)v1,
-    v2,
-    v3,
+    (int32_t)v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8,
+    v9);
 }
 
 

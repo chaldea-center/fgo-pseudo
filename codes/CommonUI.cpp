@@ -702,8 +702,9 @@ bool CommonUI__CheckOpenQuestByEventPoint(
   bool result; // w0
   _BOOL8 IsNullOrEmpty; // x0
   const MethodInfo *v28; // x6
-  System_String_o *v29; // x2
-  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+18h] [xbp-78h] BYREF
+  System_Nullable_float__o v29; // x5
+  System_String_o *v30; // x2
+  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+18h] [xbp-78h] BYREF
 
   if ( (byte_5969FE4 & 1) == 0 )
   {
@@ -717,7 +718,7 @@ bool CommonUI__CheckOpenQuestByEventPoint(
     sub_2213A60(&StringLiteral_7231/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE"*/);
     byte_5969FE4 = 1;
   }
-  memset(&v30, 0, sizeof(v30));
+  memset(&v31, 0, sizeof(v31));
   if ( groupId < 1 )
   {
     EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventId, 0);
@@ -745,7 +746,7 @@ bool CommonUI__CheckOpenQuestByEventPoint(
   if ( !Instance )
     goto LABEL_29;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v30,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     (System_Collections_Generic_List_object__o *)Instance,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   current = 0;
@@ -754,14 +755,14 @@ LABEL_10:
   while ( 1 )
   {
     v22 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v30,
+            &v31,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v22 )
       break;
-    current = v30.fields._current;
-    if ( !v30.fields._current )
+    current = v31.fields._current;
+    if ( !v31.fields._current )
       sub_2213CDC(v22, v23);
-    v24 = *(int64_t *)((char *)&v30.fields._current->klass + (unsigned __int64)&qword_20);
+    v24 = *(int64_t *)((char *)&v31.fields._current->klass + (unsigned __int64)&qword_20);
     if ( v24 > oldUserEventPoint
       && v24 <= EventPointNoGroup
       && (!v21 || v24 && v24 < *(__int64 *)((char *)&qword_20 + (_QWORD)v21)) )
@@ -770,7 +771,7 @@ LABEL_10:
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v30,
+    &v31,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   if ( !v21 )
     return 0;
@@ -787,17 +788,18 @@ LABEL_29:
   if ( v25 )
   {
     IsNullOrEmpty = System_String__IsNullOrEmpty(msgFormat, 0);
+    v29 = 0;
     if ( IsNullOrEmpty )
-      v29 = (System_String_o *)StringLiteral_7231/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE"*/;
+      v30 = (System_String_o *)StringLiteral_7231/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE"*/;
     else
-      v29 = msgFormat;
+      v30 = msgFormat;
     CommonUI__OpenQuestNewPlayableDialog(
       (CommonUI_o *)IsNullOrEmpty,
       *(_DWORD *)((char *)&word_10 + (_QWORD)v21),
-      v29,
+      v30,
       func,
       onClickOkSeKind,
-      0,
+      v29,
       messagePosYForcedAdd,
       v28);
     return 1;
@@ -3836,8 +3838,16 @@ UnityEngine_GameObject_o *CommonUI__CreateMenu(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x19
   UnityEngine_Transform_o *transform; // x21
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
+  float x; // s11
+  float y; // s12
+  float z; // s13
+  float v12; // s8
+  float v13; // s9
+  float v14; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5969F0F & 1) == 0 )
   {
@@ -3850,18 +3860,30 @@ UnityEngine_GameObject_o *CommonUI__CreateMenu(
   v5 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                      (Il2CppObject *)prefab,
                                      (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  if ( !v5 )
+    goto LABEL_12;
+  v7 = v5;
+  transform = UnityEngine_GameObject__get_transform(v5, 0);
+  v5 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v7, 0);
   if ( !v5
-    || (v7 = v5,
-        transform = UnityEngine_GameObject__get_transform(v5, 0),
-        (v5 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v7, 0)) == 0)
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)v5, 0),
+        x = localPosition.fields.x,
+        y = localPosition.fields.y,
+        z = localPosition.fields.z,
         (v5 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v7, 0)) == 0)
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v5, 0), !transform) )
   {
+LABEL_12:
     sub_2213CDC(v5, v6);
   }
+  v12 = localScale.fields.x;
+  v13 = localScale.fields.y;
+  v14 = localScale.fields.z;
   UnityEngine_Transform__set_parent(transform, this->fields.baseMount, 0);
-  UnityEngine_Transform__set_localPosition(transform, localPosition, 0);
+  v18.fields.x = x;
+  v18.fields.y = y;
+  v18.fields.z = z;
+  UnityEngine_Transform__set_localPosition(transform, v18, 0);
   if ( !byte_5969AE6 )
   {
     sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -3871,7 +3893,10 @@ UnityEngine_GameObject_o *CommonUI__CreateMenu(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v19.fields.x = v12;
+  v19.fields.y = v13;
+  v19.fields.z = v14;
+  UnityEngine_Transform__set_localScale(transform, v19, 0);
   return v7;
 }
 
@@ -3889,8 +3914,16 @@ UnityEngine_GameObject_o *CommonUI__CreateMenu_37366184(
   __int64 v10; // x1
   UnityEngine_GameObject_o *v11; // x20
   UnityEngine_Transform_o *transform; // x21
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o localScale; // 0:kr14_12.12
+  float x; // s11
+  float y; // s12
+  float z; // s13
+  float v16; // s8
+  float v17; // s9
+  float v18; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5969F10 & 1) == 0 )
   {
@@ -3909,18 +3942,30 @@ UnityEngine_GameObject_o *CommonUI__CreateMenu_37366184(
   v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                      object,
                                      (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  if ( !v9 )
+    goto LABEL_12;
+  v11 = v9;
+  transform = UnityEngine_GameObject__get_transform(v9, 0);
+  v9 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0);
   if ( !v9
-    || (v11 = v9,
-        transform = UnityEngine_GameObject__get_transform(v9, 0),
-        (v9 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0)) == 0)
     || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)v9, 0),
+        x = localPosition.fields.x,
+        y = localPosition.fields.y,
+        z = localPosition.fields.z,
         (v9 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v11, 0)) == 0)
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v9, 0), !transform) )
   {
+LABEL_12:
     sub_2213CDC(v9, v10);
   }
+  v16 = localScale.fields.x;
+  v17 = localScale.fields.y;
+  v18 = localScale.fields.z;
   UnityEngine_Transform__set_parent(transform, this->fields.baseMount, 0);
-  UnityEngine_Transform__set_localPosition(transform, localPosition, 0);
+  v22.fields.x = x;
+  v22.fields.y = y;
+  v22.fields.z = z;
+  UnityEngine_Transform__set_localPosition(transform, v22, 0);
   if ( !byte_5969AE6 )
   {
     sub_2213A60(&UnityEngine_Quaternion_TypeInfo);
@@ -3930,7 +3975,10 @@ UnityEngine_GameObject_o *CommonUI__CreateMenu_37366184(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
     0);
-  UnityEngine_Transform__set_localScale(transform, localScale, 0);
+  v23.fields.x = v16;
+  v23.fields.y = v17;
+  v23.fields.z = v18;
+  UnityEngine_Transform__set_localScale(transform, v23, 0);
   return v11;
 }
 
@@ -4161,6 +4209,7 @@ System_Collections_IEnumerator_o *CommonUI__DelayOpenClassBoardReleaseDialog(
   CommonUI__DelayOpenClassBoardReleaseDialog_d__756_o *v11; // x22
   __int64 v12; // x0
   __int64 v13; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_596A01C & 1) == 0 )
   {
@@ -4178,8 +4227,9 @@ System_Collections_IEnumerator_o *CommonUI__DelayOpenClassBoardReleaseDialog(
   v11->fields.onCloseCallBack = onCloseCallBack;
   sub_2213A04(&v11->fields.onCloseCallBack, onCloseCallBack);
   v11->fields.isGrand = isGrand;
+  result = (System_Collections_IEnumerator_o *)v11;
   v11->fields.waitTime = waitTime;
-  return (System_Collections_IEnumerator_o *)v11;
+  return result;
 }
 
 
@@ -6352,10 +6402,14 @@ UnityEngine_GameObject_o *CommonUI__GetRightPlateObject(CommonUI_o *this, const 
 
 UnityEngine_Vector2_o CommonUI__GetTutorialBackArrowPos(CommonUI_o *this, const MethodInfo *method)
 {
+  float v2; // s0
+  float v3; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = -430.0;
-  result.fields.y = 220.0;
+  v2 = -430.0;
+  v3 = 220.0;
+  result.fields.y = v3;
+  result.fields.x = v2;
   return result;
 }
 
@@ -6860,7 +6914,8 @@ bool CommonUI__IsBlankEarthQuestByQuestInfo(MapControl_QuestInfo_o *questInfo, c
   int32_t SpotID; // w20
   WarEntity_o *WarInfo_k__BackingField; // x0
   int32_t parentBlankEarthSpotId; // w1
-  __int64 v9; // [xsp+8h] [xbp-18h] BYREF
+  System_Nullable_int__o v8; // x0
+  __int64 v10; // [xsp+8h] [xbp-18h] BYREF
 
   v2 = questInfo;
   if ( (byte_596A059 & 1) == 0 )
@@ -6888,12 +6943,13 @@ bool CommonUI__IsBlankEarthQuestByQuestInfo(MapControl_QuestInfo_o *questInfo, c
       if ( WarInfo_k__BackingField )
       {
         parentBlankEarthSpotId = WarInfo_k__BackingField->fields.parentBlankEarthSpotId;
-        v9 = 0;
+        v8 = (System_Nullable_int__o)&v10;
+        v10 = 0;
         System_Nullable_int____ctor(
-          (System_Nullable_int__o)&v9,
+          v8,
           parentBlankEarthSpotId,
           (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-        LOBYTE(WarInfo_k__BackingField) = HIDWORD(v9) != 0;
+        LOBYTE(WarInfo_k__BackingField) = HIDWORD(v10) != 0;
       }
     }
   }
@@ -8713,6 +8769,8 @@ void CommonUI__OpenAccountLinkageNotificationDialog(
   const MethodInfo *v16; // x2
   UnityEngine_GameObject_o *Menu_37366184; // x0
   Il2CppObject *Component_object; // x0
+  System_Nullable_float__o v19; // x3
+  System_Nullable_int__o v20; // x4
 
   if ( (byte_596A037 & 1) == 0 )
   {
@@ -8739,12 +8797,14 @@ void CommonUI__OpenAccountLinkageNotificationDialog(
   if ( !*p_accountLinkageNotificationDialog )
 LABEL_10:
     sub_2213CDC(Menu_37366184, v15);
+  v19 = msgPosY;
+  v20 = msgFontSize;
   AccountLinkageNotificationDialog__Open(
     (AccountLinkageNotificationDialog_o *)Menu_37366184,
     message,
     func,
-    msgPosY,
-    msgFontSize,
+    v19,
+    v20,
     spacingY,
     0);
 }
@@ -10340,6 +10400,7 @@ LABEL_10:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommonUI__OpenCoinRoomGetEffect(
         CommonUI_o *this,
         UnityEngine_Transform_o *parent,
@@ -10366,12 +10427,15 @@ void CommonUI__OpenCoinRoomGetEffect(
   System_String_o *SceneName; // x0
   bool v27; // w22
   UnityEngine_Transform_o *v28; // x21
-  System_Action_o *v31; // x21
-  const MethodInfo *v32; // x2
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  int z_low; // s2
+  System_Action_o *v32; // x21
+  const MethodInfo *v33; // x2
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   Il2CppObject *Component_object; // x0
   QuestRewardItemAction_o *effectAction; // x20
-  System_Action_o *v35; // x21
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v37; // x21
 
   if ( (byte_5969FC1 & 1) == 0 )
   {
@@ -10402,13 +10466,13 @@ void CommonUI__OpenCoinRoomGetEffect(
   coinRoomEffectAssetData = this->fields.coinRoomEffectAssetData;
   if ( !coinRoomEffectAssetData )
   {
-    v31 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    v32 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
     System_Action___ctor(
-      v31,
+      v32,
       (Il2CppObject *)v11,
       Method_CommonUI___c__DisplayClass659_0__OpenCoinRoomGetEffect_b__0__,
       0);
-    CommonUI__LoadCoinRoomGetEffect(this, v31, v32);
+    CommonUI__LoadCoinRoomGetEffect(this, v32, v33);
     return;
   }
   v17 = CommonUI_TypeInfo;
@@ -10468,7 +10532,10 @@ void CommonUI__OpenCoinRoomGetEffect(
     }
     if ( v28 )
     {
-      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+      static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+      y = static_fields->oneVector.fields.y;
+      z_low = LODWORD(static_fields->oneVector.fields.z);
+      x = static_fields->oneVector.fields.x;
       goto LABEL_26;
     }
 LABEL_29:
@@ -10476,11 +10543,11 @@ LABEL_29:
   }
   if ( !Menu )
     goto LABEL_29;
-  oneVector.fields.x = 1.0;
-  oneVector.fields.y = 1.0;
-  oneVector.fields.z = 0.1;
+  x = 1.0;
+  y = 1.0;
+  z_low = 1036831949;
 LABEL_26:
-  UnityEngine_Transform__set_localScale(v28, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v28, *(UnityEngine_Vector3_o *)&x, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        v20,
                        (const MethodInfo_38B8770 *)Method_GameObjectExtensions_SafeGetComponent_QuestRewardItemAction___);
@@ -10491,15 +10558,15 @@ LABEL_26:
     goto LABEL_29;
   QuestRewardItemAction__Setup((QuestRewardItemAction_o *)Menu, v11->fields.questRewardInfo, 0);
   effectAction = v11->fields.effectAction;
-  v35 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  v37 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
   System_Action___ctor(
-    v35,
+    v37,
     (Il2CppObject *)v11,
     Method_CommonUI___c__DisplayClass659_0__OpenCoinRoomGetEffect_b__1__,
     0);
   if ( !effectAction )
     goto LABEL_29;
-  QuestRewardItemAction__Play(effectAction, 0, v35, 0.0, 0, 0);
+  QuestRewardItemAction__Play(effectAction, 0, v37, 0.0, 0, 0);
 }
 
 
@@ -11605,6 +11672,7 @@ System_Collections_IEnumerator_o *CommonUI__OpenDataUpdateDialogCR(
   CommonUI__OpenDataUpdateDialogCR_d__404_o *v11; // x22
   __int64 v12; // x0
   __int64 v13; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969F20 & 1) == 0 )
   {
@@ -11623,8 +11691,9 @@ System_Collections_IEnumerator_o *CommonUI__OpenDataUpdateDialogCR(
   sub_2213A04(&v11->fields.message, message);
   v11->fields.func = func;
   sub_2213A04(&v11->fields.func, func);
+  result = (System_Collections_IEnumerator_o *)v11;
   v11->fields.isNetwrokRebootBlock = isNetwrokRebootBlock;
-  return (System_Collections_IEnumerator_o *)v11;
+  return result;
 }
 
 
@@ -12034,6 +12103,7 @@ System_Collections_IEnumerator_o *CommonUI__OpenErrorDialogCR(
   CommonUI__OpenErrorDialogCR_d__401_o *v13; // x22
   __int64 v14; // x0
   __int64 v15; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969F1F & 1) == 0 )
   {
@@ -12053,8 +12123,9 @@ System_Collections_IEnumerator_o *CommonUI__OpenErrorDialogCR(
   v13->fields.func = func;
   sub_2213A04(&v13->fields.func, func);
   v13->fields.isNetwrokRebootBlock = isNetwrokRebootBlock;
+  result = (System_Collections_IEnumerator_o *)v13;
   v13->fields.isAssertDialog = isAssertDialog;
-  return (System_Collections_IEnumerator_o *)v13;
+  return result;
 }
 
 
@@ -13688,6 +13759,7 @@ LABEL_10:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommonUI__OpenItemGetEffect(
         CommonUI_o *this,
         UnityEngine_Transform_o *parent,
@@ -13715,16 +13787,19 @@ void CommonUI__OpenItemGetEffect(
   System_String_o *SceneName; // x0
   bool v28; // w22
   UnityEngine_Transform_o *v29; // x21
-  QuestRewardInfo_o *v32; // x21
-  System_Action_o *v33; // x22
-  CommonUI_o *v34; // x0
-  const MethodInfo *v35; // x2
+  float x; // s0 OVERLAPPED
+  float y; // s1
+  int z_low; // s2
+  QuestRewardInfo_o *v33; // x21
+  System_Action_o *v34; // x22
+  CommonUI_o *v35; // x0
+  const MethodInfo *v36; // x2
   int32_t ItemEffectId; // w1
-  const MethodInfo *v37; // x3
+  const MethodInfo *v38; // x3
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   Il2CppObject *Component_object; // x0
   QuestRewardItemAction_o *effectAction; // x20
-  System_Action_o *v40; // x21
-  UnityEngine_Vector3_o oneVector; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v42; // x21
 
   if ( (byte_5969FC3 & 1) == 0 )
   {
@@ -13754,11 +13829,11 @@ void CommonUI__OpenItemGetEffect(
   sub_2213A04(&v11->fields.callBack, callBack);
   if ( !this->fields.itemGetEffectAssetData )
   {
-    v32 = v11->fields.questRewardInfo;
-    v33 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(v33, (Il2CppObject *)v11, Method_CommonUI___c__DisplayClass661_0__OpenItemGetEffect_b__0__, 0);
-    ItemEffectId = CommonUI__GetItemEffectId(v34, v32, v35);
-    CommonUI__LoadItemGetEffect_37432188(this, ItemEffectId, v33, v37);
+    v33 = v11->fields.questRewardInfo;
+    v34 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    System_Action___ctor(v34, (Il2CppObject *)v11, Method_CommonUI___c__DisplayClass661_0__OpenItemGetEffect_b__0__, 0);
+    ItemEffectId = CommonUI__GetItemEffectId(v35, v33, v36);
+    CommonUI__LoadItemGetEffect_37432188(this, ItemEffectId, v34, v38);
     return;
   }
   v16 = CommonUI_TypeInfo;
@@ -13823,7 +13898,10 @@ void CommonUI__OpenItemGetEffect(
     }
     if ( v29 )
     {
-      oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
+      static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+      y = static_fields->oneVector.fields.y;
+      z_low = LODWORD(static_fields->oneVector.fields.z);
+      x = static_fields->oneVector.fields.x;
       goto LABEL_27;
     }
 LABEL_30:
@@ -13831,11 +13909,11 @@ LABEL_30:
   }
   if ( !Menu )
     goto LABEL_30;
-  oneVector.fields.x = 1.0;
-  oneVector.fields.y = 1.0;
-  oneVector.fields.z = 0.1;
+  x = 1.0;
+  y = 1.0;
+  z_low = 1036831949;
 LABEL_27:
-  UnityEngine_Transform__set_localScale(v29, oneVector, 0);
+  UnityEngine_Transform__set_localScale(v29, *(UnityEngine_Vector3_o *)&x, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        v21,
                        (const MethodInfo_38B8770 *)Method_GameObjectExtensions_SafeGetComponent_QuestRewardItemAction___);
@@ -13846,11 +13924,11 @@ LABEL_27:
     goto LABEL_30;
   QuestRewardItemAction__Setup((QuestRewardItemAction_o *)Menu, v11->fields.questRewardInfo, 0);
   effectAction = v11->fields.effectAction;
-  v40 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-  System_Action___ctor(v40, (Il2CppObject *)v11, Method_CommonUI___c__DisplayClass661_0__OpenItemGetEffect_b__1__, 0);
+  v42 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+  System_Action___ctor(v42, (Il2CppObject *)v11, Method_CommonUI___c__DisplayClass661_0__OpenItemGetEffect_b__1__, 0);
   if ( !effectAction )
     goto LABEL_30;
-  QuestRewardItemAction__Play(effectAction, 0, v40, 0.0, 0, 0);
+  QuestRewardItemAction__Play(effectAction, 0, v42, 0.0, 0, 0);
 }
 
 
@@ -16287,6 +16365,7 @@ System_Collections_IEnumerator_o *CommonUI__OpenRetryBootDialogCR(
   CommonUI__OpenRetryBootDialogCR_d__413_o *v11; // x22
   __int64 v12; // x0
   __int64 v13; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969F22 & 1) == 0 )
   {
@@ -16305,8 +16384,9 @@ System_Collections_IEnumerator_o *CommonUI__OpenRetryBootDialogCR(
   sub_2213A04(&v11->fields.message, message);
   v11->fields.func = func;
   sub_2213A04(&v11->fields.func, func);
+  result = (System_Collections_IEnumerator_o *)v11;
   v11->fields.isNetwrokRebootBlock = isNetwrokRebootBlock;
-  return (System_Collections_IEnumerator_o *)v11;
+  return result;
 }
 
 
@@ -16339,6 +16419,7 @@ System_Collections_IEnumerator_o *CommonUI__OpenRetryDialogCR(
   CommonUI__OpenRetryDialogCR_d__409_o *v15; // x22
   __int64 v16; // x0
   __int64 v17; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969F21 & 1) == 0 )
   {
@@ -16361,8 +16442,9 @@ System_Collections_IEnumerator_o *CommonUI__OpenRetryDialogCR(
   sub_2213A04(&v15->fields.cancleTxt, cancleTxt);
   v15->fields.func = func;
   sub_2213A04(&v15->fields.func, func);
+  result = (System_Collections_IEnumerator_o *)v15;
   v15->fields.isNetwrokRebootBlock = isNetwrokRebootBlock;
-  return (System_Collections_IEnumerator_o *)v15;
+  return result;
 }
 
 
@@ -19314,6 +19396,7 @@ System_Collections_IEnumerator_o *CommonUI__OpenStonePurchaseMenuCoroutine(
   CommonUI__OpenStonePurchaseMenuCoroutine_d__508_o *v9; // x22
   __int64 v10; // x0
   __int64 v11; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969F5C & 1) == 0 )
   {
@@ -19330,8 +19413,9 @@ System_Collections_IEnumerator_o *CommonUI__OpenStonePurchaseMenuCoroutine(
   sub_2213A04(&v9->fields.callback, callback);
   v9->fields.refreshCallback = refreshCallback;
   sub_2213A04(&v9->fields.refreshCallback, refreshCallback);
+  result = (System_Collections_IEnumerator_o *)v9;
   v9->fields.isEnableAccessConfirmation = isEnableAccessConfirmation;
-  return (System_Collections_IEnumerator_o *)v9;
+  return result;
 }
 
 
@@ -20624,6 +20708,7 @@ System_Collections_IEnumerator_o *CommonUI__OpenWarningDialogCR(
   CommonUI__OpenWarningDialogCR_d__397_o *v18; // x22
   __int64 v19; // x0
   __int64 v20; // x1
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5969F1E & 1) == 0 )
   {
@@ -20643,11 +20728,12 @@ System_Collections_IEnumerator_o *CommonUI__OpenWarningDialogCR(
   v18->fields.func = func;
   sub_2213A04(&v18->fields.func, func);
   v18->fields.ableToCloseTapOutDialog = ableToCloseTapOutDialog;
+  result = (System_Collections_IEnumerator_o *)v18;
   v18->fields.isNetwrokRebootBlock = isNetwrokRebootBlock;
   v18->fields.closeButtonY = closeButtonY;
   v18->fields.messageEffect = messageEffect;
   v18->fields.effectDistance = effectDistance;
-  return (System_Collections_IEnumerator_o *)v18;
+  return result;
 }
 
 
@@ -25355,21 +25441,22 @@ bool CommonUI__TryGetSceneTransitionAction(
   __int64 v79; // x1
   __int64 v80; // x2
   Il2CppType *v81; // x22
-  __int64 v82; // x1
-  __int64 v83; // x2
-  System_Type_o *v84; // x22
-  Il2CppObject *v85; // x23
-  __int64 v86; // x1
-  __int64 v87; // x2
-  System_String_o *v88; // x21
-  __int64 v89; // x1
-  __int64 v90; // x2
-  unsigned int v91; // w21
-  System_Action_o *v92; // x21
-  int32_t v93; // [xsp+4h] [xbp-7Ch] BYREF
-  Il2CppObject *v94; // [xsp+8h] [xbp-78h] BYREF
+  System_RuntimeTypeHandle_o v82; // x0
+  __int64 v83; // x1
+  __int64 v84; // x2
+  System_Type_o *v85; // x22
+  Il2CppObject *v86; // x23
+  __int64 v87; // x1
+  __int64 v88; // x2
+  System_String_o *v89; // x21
+  __int64 v90; // x1
+  __int64 v91; // x2
+  unsigned int v92; // w21
+  System_Action_o *v93; // x21
+  int32_t v94; // [xsp+4h] [xbp-7Ch] BYREF
+  Il2CppObject *v95; // [xsp+8h] [xbp-78h] BYREF
   Il2CppObject *entity; // [xsp+10h] [xbp-70h] BYREF
-  __int64 v96; // [xsp+18h] [xbp-68h] BYREF
+  int32_t result[2]; // [xsp+18h] [xbp-68h] BYREF
 
   if ( (byte_596A053 & 1) == 0 )
   {
@@ -25436,9 +25523,9 @@ bool CommonUI__TryGetSceneTransitionAction(
     byte_596A053 = 1;
   }
   entity = 0;
-  v96 = 0;
+  *(_QWORD *)result = 0;
+  v95 = 0;
   v94 = 0;
-  v93 = 0;
   v15 = sub_2213CCC(CommonUI___c__DisplayClass815_0_TypeInfo);
   CommonUI___c__DisplayClass815_0___ctor((CommonUI___c__DisplayClass815_0_o *)v15, 0);
   if ( !v15 )
@@ -25474,14 +25561,14 @@ bool CommonUI__TryGetSceneTransitionAction(
   if ( !System_Enum__TryParse_Int32Enum__59119168(
           v20,
           1,
-          (int32_t *)&v96 + 1,
+          &result[1],
           (const MethodInfo_3861640 *)Method_System_Enum_TryParse_SceneList_Type___) )
     goto LABEL_65;
-  if ( SHIDWORD(v96) > 34 )
+  if ( result[1] > 34 )
   {
-    if ( HIDWORD(v96) != 72 )
+    if ( result[1] != 72 )
     {
-      if ( HIDWORD(v96) == 91 )
+      if ( result[1] == 91 )
       {
         v26 = BalanceConfig_TypeInfo;
         if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
@@ -25531,7 +25618,7 @@ bool CommonUI__TryGetSceneTransitionAction(
             goto LABEL_160;
           if ( DataMasterBase_object__object__int___TryGetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-                 &v94,
+                 &v95,
                  *(_DWORD *)(v32 + 16),
                  (const MethodInfo_3F10B80 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
           {
@@ -25542,15 +25629,15 @@ bool CommonUI__TryGetSceneTransitionAction(
               goto LABEL_160;
             if ( ShopMaster__IsEventShopOpen((ShopMaster_o *)Instance, *(_DWORD *)(v32 + 16), 0) )
             {
-              Instance = (__int64)v94;
-              if ( !v94 )
+              Instance = (__int64)v95;
+              if ( !v95 )
                 goto LABEL_160;
-              if ( EventDetailEntity__IsReward((EventDetailEntity_o *)v94, 0) )
+              if ( EventDetailEntity__IsReward((EventDetailEntity_o *)v95, 0) )
                 goto LABEL_52;
-              Instance = (__int64)v94;
-              if ( !v94 )
+              Instance = (__int64)v95;
+              if ( !v95 )
                 goto LABEL_160;
-              if ( EventDetailEntity__IsEventShop((EventDetailEntity_o *)v94, 0) )
+              if ( EventDetailEntity__IsEventShop((EventDetailEntity_o *)v95, 0) )
               {
 LABEL_52:
                 v15 = sub_2213CCC(CommonUI___c__DisplayClass815_5_TypeInfo);
@@ -25578,10 +25665,10 @@ LABEL_52:
 LABEL_160:
                 sub_2213CDC(Instance, v17);
               }
-              Instance = (__int64)v94;
-              if ( !v94 )
+              Instance = (__int64)v95;
+              if ( !v95 )
                 goto LABEL_160;
-              if ( !EventDetailEntity__IsExchangeShop((EventDetailEntity_o *)v94, 0) )
+              if ( !EventDetailEntity__IsExchangeShop((EventDetailEntity_o *)v95, 0) )
                 goto LABEL_150;
               v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
               v37 = &Method_CommonUI___c__DisplayClass815_4__TryGetSceneTransitionAction_b__13__;
@@ -25593,11 +25680,11 @@ LABEL_160:
         v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         v30 = &Method_CommonUI___c__DisplayClass815_0__TryGetSceneTransitionAction_b__12__;
 LABEL_148:
-        v92 = v29;
+        v93 = v29;
         System_Action___ctor(v29, (Il2CppObject *)v15, *v30, 0);
         v60 = transitionAction;
-        v61 = v92;
-        *transitionAction = v92;
+        v61 = v93;
+        *transitionAction = v93;
         goto LABEL_149;
       }
 LABEL_65:
@@ -25607,11 +25694,11 @@ LABEL_65:
     goto LABEL_161;
   }
   Instance = 0;
-  if ( SHIDWORD(v96) > 29 )
+  if ( result[1] > 29 )
   {
-    switch ( HIDWORD(v96) )
+    switch ( result[1] )
     {
-      case 0x1E:
+      case 30:
         if ( *(int *)(v19 + 24) < 2 )
         {
           v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
@@ -25645,7 +25732,7 @@ LABEL_65:
         v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         v37 = &Method_CommonUI___c__DisplayClass815_10__TryGetSceneTransitionAction_b__22__;
         break;
-      case 0x20:
+      case 32:
         if ( *(int *)(v19 + 24) < 2 )
           goto LABEL_65;
         v32 = sub_2213CCC(CommonUI___c__DisplayClass815_6_TypeInfo);
@@ -25664,7 +25751,7 @@ LABEL_65:
         v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
         v37 = &Method_CommonUI___c__DisplayClass815_6__TryGetSceneTransitionAction_b__16__;
         break;
-      case 0x22:
+      case 34:
         v38 = *(_QWORD *)(v19 + 24);
         if ( (int)v38 >= 2 )
         {
@@ -25737,30 +25824,31 @@ LABEL_65:
                 v81 = MasterMissionComponent_Type_var;
                 if ( !*(_DWORD *)(qword_59843E0 + 228) )
                   j_il2cpp_runtime_class_init_0(qword_59843E0, v79, v80);
-                Instance = (__int64)System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v81, 0);
+                v82.fields.value = (intptr_t)v81;
+                Instance = (__int64)System_Type__GetTypeFromHandle(v82, 0);
                 if ( *(_DWORD *)(v19 + 24) > 2u )
                 {
-                  v84 = (System_Type_o *)Instance;
-                  v85 = *(Il2CppObject **)(v19 + 48);
+                  v85 = (System_Type_o *)Instance;
+                  v86 = *(Il2CppObject **)(v19 + 48);
                   if ( !*(_DWORD *)(qword_5984398 + 228) )
-                    j_il2cpp_runtime_class_init_0(qword_5984398, v82, v83);
-                  Instance = System_Enum__IsDefined(v84, v85, 0);
+                    j_il2cpp_runtime_class_init_0(qword_5984398, v83, v84);
+                  Instance = System_Enum__IsDefined(v85, v86, 0);
                   if ( (Instance & 1) != 0 )
                   {
                     if ( *(_DWORD *)(v19 + 24) <= 2u )
                       goto LABEL_161;
-                    v88 = *(System_String_o **)(v19 + 48);
+                    v89 = *(System_String_o **)(v19 + 48);
                     if ( !*(_DWORD *)(qword_5984398 + 228) )
-                      j_il2cpp_runtime_class_init_0(qword_5984398, v86, v87);
+                      j_il2cpp_runtime_class_init_0(qword_5984398, v87, v88);
                     System_Enum__TryParse_Int32Enum__59119168(
-                      v88,
+                      v89,
                       1,
-                      (int32_t *)&v96,
+                      result,
                       (const MethodInfo_3861640 *)Method_System_Enum_TryParse_MasterMissionComponent_Type____91748248);
-                    v91 = v96;
+                    v92 = result[0];
                     if ( !*(&TerminalPramsManager_TypeInfo->_2.cctor_finished + 1) )
-                      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v89, v90);
-                    sub_23C2BD0(v91, 0);
+                      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo, v90, v91);
+                    sub_23C2BD0(v92, 0);
                   }
                   v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
                   v30 = &Method_CommonUI___c__DisplayClass815_0__TryGetSceneTransitionAction_b__0__;
@@ -25904,9 +25992,9 @@ LABEL_150:
     LOBYTE(Instance) = 1;
     return Instance & 1;
   }
-  switch ( HIDWORD(v96) )
+  switch ( result[1] )
   {
-    case 0x14:
+    case 20:
       if ( *(int *)(v19 + 24) < 2 )
         goto LABEL_56;
       if ( System_String__op_Equality(*(System_String_o **)(v19 + 40), (System_String_o *)StringLiteral_6835/*"FRIEND_POINT"*/, 0) )
@@ -25958,7 +26046,7 @@ LABEL_56:
       v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v37 = &Method_CommonUI___c__DisplayClass815_7__TryGetSceneTransitionAction_b__18__;
       goto LABEL_87;
-    case 0x16:
+    case 22:
       if ( *(int *)(v19 + 24) < 2 )
       {
         v29 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
@@ -25991,7 +26079,7 @@ LABEL_56:
       v36 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
       v37 = &Method_CommonUI___c__DisplayClass815_8__TryGetSceneTransitionAction_b__20__;
       goto LABEL_87;
-    case 0x17:
+    case 23:
       v32 = sub_2213CCC(CommonUI___c__DisplayClass815_9_TypeInfo);
       CommonUI___c__DisplayClass815_9___ctor((CommonUI___c__DisplayClass815_9_o *)v32, 0);
       if ( !v32 )
@@ -26000,11 +26088,11 @@ LABEL_56:
       sub_2213A04(v32 + 24, v15);
       v33 = *(_DWORD *)(v19 + 24);
       v34 = 0;
-      v93 = 0;
+      v94 = 0;
       if ( v33 >= 2 )
       {
-        System_Int32__TryParse(*(System_String_o **)(v19 + 40), &v93, 0);
-        v34 = v93;
+        System_Int32__TryParse(*(System_String_o **)(v19 + 40), &v94, 0);
+        v34 = v94;
       }
       v35 = (SceneJumpInfo_o *)sub_2213CCC(SceneJumpInfo_TypeInfo);
       SceneJumpInfo___ctor_48464876(v35, v34, 0);
@@ -26405,6 +26493,7 @@ bool CommonUI__TryParseExRoomType(
   int32_t v6; // w22
   char v7; // w21
   int32_t v8; // w0
+  bool result; // w0
 
   if ( (byte_596A055 & 1) == 0 )
   {
@@ -26437,8 +26526,9 @@ bool CommonUI__TryParseExRoomType(
   {
     v7 = 1;
   }
+  result = v7;
   *exRoomType = v6;
-  return v7;
+  return result;
 }
 
 
@@ -27309,18 +27399,24 @@ void CommonUI__setObiImgSize(CommonUI_o *this, int32_t heightSize, int32_t width
   UnityEngine_Component_o *leftImg; // x0
   __int64 v10; // x2
   UIWidget_o *topImg; // x20
+  int v12; // s2 OVERLAPPED
   int32_t HEIGHT; // w8
-  int v13; // w8
-  ManagerConfig_c *v14; // x0
+  int v14; // w8
+  float v15; // s1
+  int v16; // s0
+  ManagerConfig_c *v17; // x0
   int WIDTH; // w22
-  __int64 v16; // x2
-  UIWidget_o *v17; // x21
-  int v19; // w8
-  int v20; // w8
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v19; // x2
+  UIWidget_o *v20; // x21
+  int v21; // s1 OVERLAPPED
+  int v22; // s2
+  int v23; // w8
+  float v24; // s0
+  int v25; // s2 OVERLAPPED
+  int v26; // w8
+  float v27; // s0
+  int v28; // s1
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5969F11 & 1) == 0 )
   {
@@ -27338,13 +27434,13 @@ void CommonUI__setObiImgSize(CommonUI_o *this, int32_t heightSize, int32_t width
       {
         if ( this->fields.forceObi_16_9 )
         {
-          v14 = ManagerConfig_TypeInfo;
+          v17 = ManagerConfig_TypeInfo;
           if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
           {
             j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v7, v8);
-            v14 = ManagerConfig_TypeInfo;
+            v17 = ManagerConfig_TypeInfo;
           }
-          WIDTH = v14->static_fields->WIDTH;
+          WIDTH = v17->static_fields->WIDTH;
         }
         else
         {
@@ -27368,24 +27464,27 @@ void CommonUI__setObiImgSize(CommonUI_o *this, int32_t heightSize, int32_t width
         if ( !leftImg )
           goto LABEL_67;
         UIWidget__set_width((UIWidget_o *)leftImg, widthSize + 3, 0);
-        v17 = (UIWidget_o *)this->fields.leftImg;
+        v20 = (UIWidget_o *)this->fields.leftImg;
         leftImg = (UnityEngine_Component_o *)ManagerConfig_TypeInfo;
         if ( !*(&ManagerConfig_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v7, v16);
-        if ( !v17 )
+          j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo, v7, v19);
+        if ( !v20 )
           goto LABEL_67;
-        UIWidget__set_height(v17, ManagerConfig_TypeInfo->static_fields->HEIGHT, 0);
+        UIWidget__set_height(v20, ManagerConfig_TypeInfo->static_fields->HEIGHT, 0);
         leftImg = (UnityEngine_Component_o *)this->fields.leftImg;
         if ( !leftImg )
           goto LABEL_67;
         leftImg = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(leftImg, 0);
         if ( !leftImg )
           goto LABEL_67;
-        v23.fields.y = 0.0;
-        v23.fields.z = 0.0;
-        v19 = WIDTH <= 0 ? -WIDTH : 1 - WIDTH;
-        v23.fields.x = (float)(v19 >> 1);
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)leftImg, v23, 0);
+        v21 = 0;
+        v22 = 0;
+        v23 = WIDTH <= 0 ? -WIDTH : 1 - WIDTH;
+        v24 = (float)(v23 >> 1);
+        UnityEngine_Transform__set_localPosition(
+          (UnityEngine_Transform_o *)leftImg,
+          *(UnityEngine_Vector3_o *)(&v21 - 1),
+          0);
         leftImg = (UnityEngine_Component_o *)this->fields.rightImg;
         if ( !leftImg )
           goto LABEL_67;
@@ -27400,11 +27499,14 @@ void CommonUI__setObiImgSize(CommonUI_o *this, int32_t heightSize, int32_t width
         leftImg = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(leftImg, 0);
         if ( !leftImg )
           goto LABEL_67;
-        v24.fields.z = 0.0;
-        v20 = WIDTH >= 0 ? WIDTH : WIDTH + 1;
-        v24.fields.x = (float)(v20 >> 1) + -0.5;
-        v24.fields.y = 0.0;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)leftImg, v24, 0);
+        v25 = 0;
+        v26 = WIDTH >= 0 ? WIDTH : WIDTH + 1;
+        v27 = (float)(v26 >> 1) + -0.5;
+        v28 = 0;
+        UnityEngine_Transform__set_localPosition(
+          (UnityEngine_Transform_o *)leftImg,
+          *(UnityEngine_Vector3_o *)(&v25 - 2),
+          0);
         leftImg = (UnityEngine_Component_o *)this->fields.topImg;
         if ( !leftImg )
           goto LABEL_67;
@@ -27465,10 +27567,10 @@ void CommonUI__setObiImgSize(CommonUI_o *this, int32_t heightSize, int32_t width
       leftImg = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(leftImg, 0);
       if ( !leftImg )
         goto LABEL_67;
-      v21.fields.z = 0.0;
-      v21.fields.y = (float)(ManagerConfig_TypeInfo->static_fields->HEIGHT / 2) + -1.0;
-      v21.fields.x = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)leftImg, v21, 0);
+      v29.fields.z = 0.0;
+      v29.fields.y = (float)(ManagerConfig_TypeInfo->static_fields->HEIGHT / 2) + -1.0;
+      v29.fields.x = 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)leftImg, v29, 0);
       leftImg = (UnityEngine_Component_o *)this->fields.bottomImg;
       if ( !leftImg )
         goto LABEL_67;
@@ -27483,15 +27585,18 @@ void CommonUI__setObiImgSize(CommonUI_o *this, int32_t heightSize, int32_t width
       leftImg = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(leftImg, 0);
       if ( !leftImg )
         goto LABEL_67;
-      v22.fields.z = 0.0;
+      v12 = 0;
       HEIGHT = ManagerConfig_TypeInfo->static_fields->HEIGHT;
       if ( HEIGHT <= 0 )
-        v13 = -HEIGHT;
+        v14 = -HEIGHT;
       else
-        v13 = 1 - HEIGHT;
-      v22.fields.y = (float)(v13 >> 1) + 1.0;
-      v22.fields.x = 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)leftImg, v22, 0);
+        v14 = 1 - HEIGHT;
+      v15 = (float)(v14 >> 1) + 1.0;
+      v16 = 0;
+      UnityEngine_Transform__set_localPosition(
+        (UnityEngine_Transform_o *)leftImg,
+        *(UnityEngine_Vector3_o *)(&v12 - 2),
+        0);
     }
     leftImg = (UnityEngine_Component_o *)this->fields.leftImg;
     if ( !leftImg )
@@ -28159,6 +28264,7 @@ bool CommonUI__DelayOpenClassBoardReleaseDialog_d__756__MoveNext(
   int32_t v16; // w5
   bool v17; // w6
   bool v18; // w7
+  bool result; // w0
   float waitTime; // s8
   float v21; // s8
   UnityEngine_WaitForSeconds_o *v22; // x20
@@ -28210,8 +28316,9 @@ bool CommonUI__DelayOpenClassBoardReleaseDialog_d__756__MoveNext(
         v8->fields.__2__current = 0;
         p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
         sub_2213A04(p__2__current, 0, v13, v14, v15, v16, v17, v18);
+        result = 1;
         p__2__current[-1].fields._BoardType_k__BackingField = 1;
-        return 1;
+        return result;
       }
 LABEL_10:
       waitTime = v8->fields.waitTime;
@@ -28226,8 +28333,9 @@ LABEL_10:
         v8->fields.__2__current = (Il2CppObject *)v22;
         v23 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
         sub_2213A04(v23, (int32_t)v22, v24, v25, v26, v27, v28, v29);
+        result = 1;
         v23[-1].fields._BoardType_k__BackingField = 2;
-        return 1;
+        return result;
       }
 LABEL_15:
       if ( !_4__this )
@@ -28670,8 +28778,8 @@ LABEL_45:
   this->fields.__2__current = v12;
   v13 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v13, (int32_t)v12, v14, v15, v16, v17, v18, v19);
-  *((_DWORD *)v13 - 2) = 1;
   LOBYTE(MovieFileMerge_k__BackingField) = 1;
+  *((_DWORD *)v13 - 2) = 1;
   return (char)MovieFileMerge_k__BackingField;
 }
 
@@ -28757,6 +28865,7 @@ bool CommonUI__DownloadMovieIfNeeded_d__861__MoveNext(
   struct System_Action_o *v26; // x8
   struct CommonUI___c__DisplayClass861_0_o *v27; // x21
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
+  bool result; // w0
   struct CommonUI___c__DisplayClass861_0_o *v30; // x21
   int32_t questID; // w22
   int32_t questPhase; // w23
@@ -28789,8 +28898,9 @@ bool CommonUI__DownloadMovieIfNeeded_d__861__MoveNext(
   _1__state = v8->fields.__1__state;
   if ( _1__state == 2 )
   {
+    result = 0;
     v8->fields.__1__state = -1;
-    return 0;
+    return result;
   }
   _4__this = v8->fields.__4__this;
   if ( _1__state == 1 )
@@ -28870,8 +28980,9 @@ LABEL_27:
     v8->fields.__2__current = 0;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
     sub_2213A04(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   if ( v27->fields.isCancel )
   {
@@ -28897,8 +29008,9 @@ LABEL_23:
   v8->fields.__2__current = (Il2CppObject *)v39;
   v40 = (MissionNaviTransitionBoardItem_o *)&v8->fields.__2__current;
   sub_2213A04(v40, (int32_t)v39, v41, v42, v43, v44, v45, v46);
+  result = 1;
   v40[-1].fields._BoardType_k__BackingField = 2;
-  return 1;
+  return result;
 }
 
 
@@ -28968,6 +29080,7 @@ bool CommonUI__OpenDataUpdateDialogCR_d__404__MoveNext(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
   ErrorDialog_ClickDelegate_o *v15; // x21
   System_Delegate_o *v16; // x0
   ErrorDialog_ClickDelegate_c *v17; // x1
@@ -29016,7 +29129,7 @@ bool CommonUI__OpenDataUpdateDialogCR_d__404__MoveNext(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
       this = (CommonUI__OpenDataUpdateDialogCR_d__404_o *)NetworkManager_TypeInfo;
     }
-    if ( *(_BYTE *)(*((_QWORD *)this + 23) + 144LL) )
+    if ( LOBYTE(this[2].fields.__4__this->fields.maskFade) )
       return 0;
   }
   if ( !_4__this )
@@ -29029,8 +29142,9 @@ LABEL_34:
     v3->fields.__2__current = (Il2CppObject *)v6;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   v15 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v15, (Il2CppObject *)_4__this, Method_CommonUI_OnEndDataUpdateDialog__, 0);
@@ -29143,6 +29257,7 @@ bool CommonUI__OpenErrorDialogCR_d__401__MoveNext(CommonUI__OpenErrorDialogCR_d_
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
   ErrorDialog_ClickDelegate_o *v15; // x21
   System_Delegate_o *v16; // x0
   __int64 v17; // x2
@@ -29180,7 +29295,7 @@ bool CommonUI__OpenErrorDialogCR_d__401__MoveNext(CommonUI__OpenErrorDialogCR_d_
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
       this = (CommonUI__OpenErrorDialogCR_d__401_o *)NetworkManager_TypeInfo;
     }
-    if ( *(_BYTE *)(*((_QWORD *)this + 23) + 144LL) )
+    if ( LOBYTE(this[2].fields.__4__this->fields.maskFade) )
       return 0;
   }
   if ( !_4__this )
@@ -29193,8 +29308,9 @@ LABEL_20:
     v3->fields.__2__current = (Il2CppObject *)v6;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   v15 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v15, (Il2CppObject *)_4__this, Method_CommonUI_OnEndErrorDialog__, 0);
@@ -29287,6 +29403,7 @@ bool CommonUI__OpenRetryBootDialogCR_d__413__MoveNext(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
   ErrorDialog_ClickDelegate_o *v15; // x21
   System_Delegate_o *v16; // x0
   __int64 v17; // x2
@@ -29324,7 +29441,7 @@ bool CommonUI__OpenRetryBootDialogCR_d__413__MoveNext(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
       this = (CommonUI__OpenRetryBootDialogCR_d__413_o *)NetworkManager_TypeInfo;
     }
-    if ( *(_BYTE *)(*((_QWORD *)this + 23) + 144LL) )
+    if ( LOBYTE(this[2].fields.__4__this->fields.maskFade) )
       return 0;
   }
   if ( !_4__this )
@@ -29337,8 +29454,9 @@ LABEL_20:
     v3->fields.__2__current = (Il2CppObject *)v6;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   v15 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v15, (Il2CppObject *)_4__this, Method_CommonUI_OnEndRetryBootDialog__, 0);
@@ -29429,6 +29547,7 @@ bool CommonUI__OpenRetryDialogCR_d__409__MoveNext(CommonUI__OpenRetryDialogCR_d_
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
   ErrorDialog_ClickDelegate_o *v15; // x21
   System_Delegate_o *v16; // x0
   __int64 v17; // x2
@@ -29469,7 +29588,7 @@ bool CommonUI__OpenRetryDialogCR_d__409__MoveNext(CommonUI__OpenRetryDialogCR_d_
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
       this = (CommonUI__OpenRetryDialogCR_d__409_o *)NetworkManager_TypeInfo;
     }
-    if ( *(_BYTE *)(*((_QWORD *)this + 23) + 144LL) )
+    if ( *((_BYTE *)this[2].monitor + 144) )
       return 0;
   }
   if ( !_4__this )
@@ -29481,8 +29600,9 @@ bool CommonUI__OpenRetryDialogCR_d__409__MoveNext(CommonUI__OpenRetryDialogCR_d_
     v3->fields.__2__current = (Il2CppObject *)v6;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   v15 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v15, (Il2CppObject *)_4__this, Method_CommonUI_OnEndRetryDialog__, 0);
@@ -29800,6 +29920,7 @@ bool CommonUI__OpenWarningDialogCR_d__397__MoveNext(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
   ErrorDialog_ClickDelegate_o *v15; // x21
   System_Delegate_o *v16; // x0
   __int64 v17; // x2
@@ -29836,7 +29957,7 @@ bool CommonUI__OpenWarningDialogCR_d__397__MoveNext(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo, method, v2);
       this = (CommonUI__OpenWarningDialogCR_d__397_o *)NetworkManager_TypeInfo;
     }
-    if ( *(_BYTE *)(*((_QWORD *)this + 23) + 144LL) )
+    if ( *(_BYTE *)(*(_QWORD *)&this[1].fields.effectDistance.fields.value + 144LL) )
       return 0;
   }
   if ( !_4__this )
@@ -29849,8 +29970,9 @@ LABEL_20:
     v3->fields.__2__current = (Il2CppObject *)v6;
     p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
     sub_2213A04(p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+    result = 1;
     p__2__current[-1].fields._BoardType_k__BackingField = 1;
-    return 1;
+    return result;
   }
   v15 = (ErrorDialog_ClickDelegate_o *)sub_2213CCC(ErrorDialog_ClickDelegate_TypeInfo);
   ErrorDialog_ClickDelegate___ctor(v15, (Il2CppObject *)_4__this, Method_CommonUI_OnEndWarningDialog__, 0);
@@ -30475,7 +30597,7 @@ void CommonUI___c__DisplayClass542_0___PlayLogo_b__0(CommonUI___c__DisplayClass5
     {
       this = (CommonUI___c__DisplayClass542_0_o *)CommonUI__CreateMenu_37366184(
                                                     (CommonUI_o *)this,
-                                                    *((System_String_o **)this + 60),
+                                                    (System_String_o *)this[15].klass,
                                                     0);
       if ( this )
       {
@@ -34281,7 +34403,7 @@ void CommonUI___c__DisplayClass815_7___TryGetSceneTransitionAction_b__18(
   int32_t gachaId; // w21
   struct GachaEntity_o *gachaEnt; // x8
   int32_t type; // w20
-  __int64 v8; // x8
+  struct GachaEntity_o *v8; // x8
   const MethodInfo_47A29F8 *v9; // x0
 
   v2 = this;
@@ -34310,7 +34432,7 @@ void CommonUI___c__DisplayClass815_7___TryGetSceneTransitionAction_b__18(
     this = (CommonUI___c__DisplayClass815_7_o *)TerminalPramsManager_TypeInfo;
   }
   gachaEnt = v2->fields.gachaEnt;
-  *(_DWORD *)(*((_QWORD *)this + 23) + 12LL) = gachaId;
+  HIDWORD(this[4].fields.gachaEnt->monitor) = gachaId;
   if ( !gachaEnt )
     goto LABEL_17;
   type = gachaEnt->fields.type;
@@ -34320,14 +34442,14 @@ void CommonUI___c__DisplayClass815_7___TryGetSceneTransitionAction_b__18(
     this = (CommonUI___c__DisplayClass815_7_o *)TerminalPramsManager_TypeInfo;
     byte_596A158 = 1;
   }
-  if ( !*((_DWORD *)this + 57) )
+  if ( !HIDWORD(this[5].fields.gachaEnt) )
   {
     j_il2cpp_runtime_class_init_0(this, method, v4);
     this = (CommonUI___c__DisplayClass815_7_o *)TerminalPramsManager_TypeInfo;
   }
-  v8 = *((_QWORD *)this + 23);
+  v8 = this[4].fields.gachaEnt;
   v9 = (const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__;
-  *(_DWORD *)(v8 + 8) = type;
+  LODWORD(v8->monitor) = type;
   this = (CommonUI___c__DisplayClass815_7_o *)SingletonMonoBehaviour_object___get_Instance(v9);
   if ( !this )
 LABEL_17:
@@ -35881,6 +36003,7 @@ bool CommonUI__waitRebootMaskFade_d__348__MoveNext(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  bool result; // w0
   Il2CppObject **p__2__current; // x19
 
   if ( (byte_596F190 & 1) == 0 )
@@ -35913,8 +36036,9 @@ LABEL_11:
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v6, v7, v8, v9, v10, v11);
+  result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
-  return 1;
+  return result;
 }
 
 

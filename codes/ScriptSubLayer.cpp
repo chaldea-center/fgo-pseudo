@@ -558,23 +558,26 @@ void ScriptSubLayer__SetBackgroundColor(ScriptSubLayer_o *this, UnityEngine_Colo
 void ScriptSubLayer__SetDepth(ScriptSubLayer_o *this, float depth, const MethodInfo *method)
 {
   UnityEngine_Component_o *meshRender; // x0
-  unsigned __int64 localPosition; // kr00_8
-  UnityEngine_Vector3_o v7; // 0:kr14_12.12
+  float x; // s9
+  float y; // s10
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   meshRender = (UnityEngine_Component_o *)this->fields.meshRender;
   if ( !meshRender
     || (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0)) == 0
-    || (localPosition = (unsigned __int64)UnityEngine_Transform__get_localPosition(
-                                            (UnityEngine_Transform_o *)meshRender,
-                                            0),
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)meshRender, 0),
         (meshRender = (UnityEngine_Component_o *)this->fields.meshRender) == 0)
-    || (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0)) == 0 )
+    || (x = localPosition.fields.x,
+        y = localPosition.fields.y,
+        (meshRender = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(meshRender, 0)) == 0) )
   {
     sub_2213CDC(meshRender, method);
   }
-  *(_QWORD *)&v7.fields.x = localPosition;
-  v7.fields.z = -depth;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)meshRender, v7, 0);
+  v9.fields.z = -depth;
+  v9.fields.x = x;
+  v9.fields.y = y;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)meshRender, v9, 0);
 }
 
 
@@ -1190,12 +1193,20 @@ UnityEngine_GameObject_o *ScriptSubLayer__get_SubStretchBase(ScriptSubLayer_o *t
 
 UnityEngine_Color_o ScriptSubLayer__get_backgroundColor(ScriptSubLayer_o *this, const MethodInfo *method)
 {
+  float r; // s0
+  float g; // s1
+  float b; // s2
+  float a; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.r = this->fields._backgroundColor_k__BackingField.fields.r;
-  result.fields.g = this->fields._backgroundColor_k__BackingField.fields.g;
-  result.fields.b = this->fields._backgroundColor_k__BackingField.fields.b;
-  result.fields.a = this->fields._backgroundColor_k__BackingField.fields.a;
+  r = this->fields._backgroundColor_k__BackingField.fields.r;
+  g = this->fields._backgroundColor_k__BackingField.fields.g;
+  b = this->fields._backgroundColor_k__BackingField.fields.b;
+  a = this->fields._backgroundColor_k__BackingField.fields.a;
+  result.fields.a = a;
+  result.fields.b = b;
+  result.fields.g = g;
+  result.fields.r = r;
   return result;
 }
 
@@ -1417,7 +1428,10 @@ void ScriptSubLayer_ShakeParam___ctor(
         float shakeY,
         const MethodInfo *method)
 {
-  *(ScriptSubLayer_ShakeParam_o *)&method->methodPointer = this;
+  *(float *)&method->methodPointer = this.fields.time;
+  HIDWORD(method->methodPointer) = LODWORD(this.fields.cycle);
+  *(float *)&method->virtualMethodPointer = this.fields.x;
+  HIDWORD(method->virtualMethodPointer) = LODWORD(this.fields.y);
 }
 
 

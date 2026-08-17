@@ -92,7 +92,7 @@ void EventFortificationManager__CreateOrganizationUI(
 {
   struct AutoFortificationButtonComponent_o **p_autoOrganizationBtn; // x20
   UnityEngine_Object_o *autoOrganizationBtn; // x22
-  __int64 transform; // x0
+  UnityEngine_GameObject_o *transform; // x0
   __int64 v8; // x1
   __int64 v9; // x2
   struct FortificationAssetManager_o *assetManager; // x8
@@ -124,8 +124,8 @@ void EventFortificationManager__CreateOrganizationUI(
   autoOrganizationBtn = (UnityEngine_Object_o *)this->fields.autoOrganizationBtn;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, parent, method);
-  transform = UnityEngine_Object__op_Equality(autoOrganizationBtn, 0, 0);
-  if ( (transform & 1) != 0 )
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(autoOrganizationBtn, 0, 0);
+  if ( ((unsigned __int8)transform & 1) != 0 )
   {
     assetManager = this->fields.assetManager;
     if ( !assetManager )
@@ -133,13 +133,13 @@ void EventFortificationManager__CreateOrganizationUI(
     autoFortificationButton_k__BackingField = (Il2CppObject *)assetManager->fields._autoFortificationButton_k__BackingField;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8, v9);
-    transform = (__int64)UnityEngine_Object__Instantiate_object_(
-                           autoFortificationButton_k__BackingField,
-                           (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
+                                              autoFortificationButton_k__BackingField,
+                                              (const MethodInfo_38F34CC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_25;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)transform,
+                         transform,
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_AutoFortificationButtonComponent___);
     *p_autoOrganizationBtn = (struct AutoFortificationButtonComponent_o *)Component_object;
     sub_2213A04(
@@ -151,45 +151,51 @@ void EventFortificationManager__CreateOrganizationUI(
       v16,
       v17,
       v18);
-    transform = (__int64)*p_autoOrganizationBtn;
+    transform = (UnityEngine_GameObject_o *)*p_autoOrganizationBtn;
     if ( !*p_autoOrganizationBtn )
       goto LABEL_25;
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                              (UnityEngine_Component_o *)transform,
+                                              0);
     if ( !transform )
       goto LABEL_25;
     UnityEngine_Transform__SetParent((UnityEngine_Transform_o *)transform, parent, 0);
-    transform = (__int64)*p_autoOrganizationBtn;
+    transform = (UnityEngine_GameObject_o *)*p_autoOrganizationBtn;
     if ( !*p_autoOrganizationBtn )
       goto LABEL_25;
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                              (UnityEngine_Component_o *)transform,
+                                              0);
     v19 = (UnityEngine_Transform_o *)transform;
     if ( !byte_5969AE5 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v19 )
       goto LABEL_25;
     UnityEngine_Transform__set_localScale(v19, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-    transform = (__int64)*p_autoOrganizationBtn;
+    transform = (UnityEngine_GameObject_o *)*p_autoOrganizationBtn;
     if ( !*p_autoOrganizationBtn )
       goto LABEL_25;
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                              (UnityEngine_Component_o *)transform,
+                                              0);
     v20 = (UnityEngine_Transform_o *)transform;
     if ( !byte_5969AE0 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE0 = 1;
     }
     if ( !v20
       || (UnityEngine_Transform__set_localPosition(v20, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0),
-          (transform = (__int64)*p_autoOrganizationBtn) == 0)
-      || (transform = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0)) == 0 )
+          (transform = (UnityEngine_GameObject_o *)*p_autoOrganizationBtn) == 0)
+      || (transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0)) == 0 )
     {
 LABEL_25:
       sub_2213CDC(transform, v8);
     }
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 0, 0);
+    UnityEngine_GameObject__SetActive(transform, 0, 0);
   }
   v21 = this->fields.autoOrganizationBtn;
   eventId = this->fields.eventId;
@@ -1298,7 +1304,7 @@ void EventFortificationManager__SetFortificationWork(EventFortificationManager_o
   UnityEngine_Component_o *transform; // x0
   UnityEngine_GameObject_o *v26; // x0
   __int64 v27; // x1
-  __int64 v28; // x0
+  UnityEngine_Transform_o *v28; // x0
   __int64 v29; // x1
   UnityEngine_Transform_o *v30; // x24
   UnityEngine_GameObject_o *v31; // x0
@@ -1424,11 +1430,11 @@ LABEL_43:
     v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v16, 0);
     if ( !v26 )
       sub_2213CDC(0, v27);
-    v28 = (__int64)UnityEngine_GameObject__get_transform(v26, 0);
-    v30 = (UnityEngine_Transform_o *)v28;
+    v28 = UnityEngine_GameObject__get_transform(v26, 0);
+    v30 = v28;
     if ( !byte_5969AE5 )
     {
-      v28 = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      v28 = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v30 )
@@ -2549,8 +2555,8 @@ void EventFortificationManager___c__DisplayClass31_0___SelectFortificationServan
   bool v16; // w7
   struct EventFortificationManager_o *v17; // x8
   struct EventFortificationListViewManager_o *v18; // x19
-  struct EventFortificationManager___c_StaticFields *static_fields; // x8
-  System_Action_o *_9__31_1; // x20
+  void *static_fields; // x8
+  System_Action_o *v20; // x20
   Il2CppObject *v21; // x21
   struct EventFortificationManager___c_StaticFields *v22; // x0
   System_String_o *v23; // x2
@@ -2615,29 +2621,29 @@ void EventFortificationManager___c__DisplayClass31_0___SelectFortificationServan
     j_il2cpp_runtime_class_init_0(EventFortificationManager___c_TypeInfo, method, v11);
     this = (EventFortificationManager___c__DisplayClass31_0_o *)EventFortificationManager___c_TypeInfo;
   }
-  static_fields = (struct EventFortificationManager___c_StaticFields *)*((_QWORD *)this + 23);
-  _9__31_1 = static_fields->__9__31_1;
-  if ( !_9__31_1 )
+  static_fields = this[5].fields.item;
+  v20 = (System_Action_o *)*((_QWORD *)static_fields + 4);
+  if ( !v20 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[7].klass) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v11);
       static_fields = EventFortificationManager___c_TypeInfo->static_fields;
     }
-    v21 = (Il2CppObject *)static_fields->__9;
-    _9__31_1 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
-    System_Action___ctor(_9__31_1, v21, Method_EventFortificationManager___c__SelectFortificationServant_b__31_1__, 0);
+    v21 = *(Il2CppObject **)static_fields;
+    v20 = (System_Action_o *)sub_2213CCC(System_Action_TypeInfo);
+    System_Action___ctor(v20, v21, Method_EventFortificationManager___c__SelectFortificationServant_b__31_1__, 0);
     v22 = EventFortificationManager___c_TypeInfo->static_fields;
-    v22->__9__31_1 = _9__31_1;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v22->__9__31_1, (int32_t)_9__31_1, v23, v24, v25, v26, v27, v28);
+    v22->__9__31_1 = v20;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v22->__9__31_1, (int32_t)v20, v23, v24, v25, v26, v27, v28);
   }
   if ( !v18 )
 LABEL_17:
     sub_2213CDC(this, method);
-  v18->fields.CallbackFunc2 = _9__31_1;
+  v18->fields.CallbackFunc2 = v20;
   sub_2213A04(
     (MissionNaviTransitionBoardItem_o *)&v18->fields.CallbackFunc2,
-    (int32_t)_9__31_1,
+    (int32_t)v20,
     v11,
     v12,
     v13,
@@ -2672,8 +2678,8 @@ void EventFortificationManager___c__DisplayClass32_0___CloseServantFortification
   __int64 v11; // x2
   struct EventFortificationManager_o *v12; // x8
   System_Collections_Generic_List_object__o *eventFortificationWorkManagers; // x20
-  struct EventFortificationManager___c_StaticFields *static_fields; // x8
-  System_Action_object__o *_9__32_1; // x21
+  void *static_fields; // x8
+  System_Action_object__o *v15; // x21
   Il2CppObject *v16; // x22
   struct EventFortificationManager___c_StaticFields *v17; // x0
   System_String_o *v18; // x2
@@ -2685,8 +2691,8 @@ void EventFortificationManager___c__DisplayClass32_0___CloseServantFortification
   __int64 v24; // x2
   struct EventFortificationManager_o *v25; // x8
   System_Collections_Generic_List_object__o *eventFortificationWorkMiniManagers; // x19
-  struct EventFortificationManager___c_StaticFields *v27; // x8
-  System_Action_object__o *_9__32_2; // x20
+  void *v27; // x8
+  System_Action_object__o *v28; // x20
   Il2CppObject *v29; // x21
   struct EventFortificationManager___c_StaticFields *v30; // x0
   System_String_o *v31; // x2
@@ -2762,31 +2768,31 @@ void EventFortificationManager___c__DisplayClass32_0___CloseServantFortification
     j_il2cpp_runtime_class_init_0(EventFortificationManager___c_TypeInfo, method, v11);
     this = (EventFortificationManager___c__DisplayClass32_0_o *)EventFortificationManager___c_TypeInfo;
   }
-  static_fields = (struct EventFortificationManager___c_StaticFields *)*((_QWORD *)this + 23);
-  _9__32_1 = (System_Action_object__o *)static_fields->__9__32_1;
-  if ( !_9__32_1 )
+  static_fields = this[5].fields.__4__this;
+  v15 = (System_Action_object__o *)*((_QWORD *)static_fields + 5);
+  if ( !v15 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[7].klass) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v11);
       static_fields = EventFortificationManager___c_TypeInfo->static_fields;
     }
-    v16 = (Il2CppObject *)static_fields->__9;
-    _9__32_1 = (System_Action_object__o *)sub_2213CCC(System_Action_EventFortificationWorkManager__TypeInfo);
+    v16 = *(Il2CppObject **)static_fields;
+    v15 = (System_Action_object__o *)sub_2213CCC(System_Action_EventFortificationWorkManager__TypeInfo);
     System_Action_object____ctor(
-      _9__32_1,
+      v15,
       v16,
       Method_EventFortificationManager___c__CloseServantFortificationList_b__32_1__,
       0);
     v17 = EventFortificationManager___c_TypeInfo->static_fields;
-    v17->__9__32_1 = (struct System_Action_EventFortificationWorkManager__o *)_9__32_1;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->__9__32_1, (int32_t)_9__32_1, v18, v19, v20, v21, v22, v23);
+    v17->__9__32_1 = (struct System_Action_EventFortificationWorkManager__o *)v15;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v17->__9__32_1, (int32_t)v15, v18, v19, v20, v21, v22, v23);
   }
   if ( !eventFortificationWorkManagers )
     goto LABEL_34;
   System_Collections_Generic_List_object___ForEach(
     eventFortificationWorkManagers,
-    (System_Action_T__o *)_9__32_1,
+    (System_Action_T__o *)v15,
     (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_EventFortificationWorkManager__ForEach__);
   v25 = v3->fields.__4__this;
   if ( !v25 )
@@ -2798,31 +2804,31 @@ void EventFortificationManager___c__DisplayClass32_0___CloseServantFortification
     j_il2cpp_runtime_class_init_0(EventFortificationManager___c_TypeInfo, method, v24);
     this = (EventFortificationManager___c__DisplayClass32_0_o *)EventFortificationManager___c_TypeInfo;
   }
-  v27 = (struct EventFortificationManager___c_StaticFields *)*((_QWORD *)this + 23);
-  _9__32_2 = (System_Action_object__o *)v27->__9__32_2;
-  if ( !_9__32_2 )
+  v27 = this[5].fields.__4__this;
+  v28 = (System_Action_object__o *)*((_QWORD *)v27 + 6);
+  if ( !v28 )
   {
-    if ( !*((_DWORD *)this + 57) )
+    if ( !HIDWORD(this[7].klass) )
     {
       j_il2cpp_runtime_class_init_0(this, method, v24);
       v27 = EventFortificationManager___c_TypeInfo->static_fields;
     }
-    v29 = (Il2CppObject *)v27->__9;
-    _9__32_2 = (System_Action_object__o *)sub_2213CCC(System_Action_EventFortificationWorkManager__TypeInfo);
+    v29 = *(Il2CppObject **)v27;
+    v28 = (System_Action_object__o *)sub_2213CCC(System_Action_EventFortificationWorkManager__TypeInfo);
     System_Action_object____ctor(
-      _9__32_2,
+      v28,
       v29,
       Method_EventFortificationManager___c__CloseServantFortificationList_b__32_2__,
       0);
     v30 = EventFortificationManager___c_TypeInfo->static_fields;
-    v30->__9__32_2 = (struct System_Action_EventFortificationWorkManager__o *)_9__32_2;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30->__9__32_2, (int32_t)_9__32_2, v31, v32, v33, v34, v35, v36);
+    v30->__9__32_2 = (struct System_Action_EventFortificationWorkManager__o *)v28;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v30->__9__32_2, (int32_t)v28, v31, v32, v33, v34, v35, v36);
   }
   if ( !eventFortificationWorkMiniManagers )
     goto LABEL_34;
   System_Collections_Generic_List_object___ForEach(
     eventFortificationWorkMiniManagers,
-    (System_Action_T__o *)_9__32_2,
+    (System_Action_T__o *)v28,
     (const MethodInfo_4484684 *)Method_System_Collections_Generic_List_EventFortificationWorkManager__ForEach__);
   this = (EventFortificationManager___c__DisplayClass32_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v38 = (CommonUI_o *)this;

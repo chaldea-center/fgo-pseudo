@@ -254,7 +254,7 @@ void CriFsServer__CriInternalLateUpdate(CriFsServer_o *this, const MethodInfo *m
 void CriFsServer__CriInternalUpdate(CriFsServer_o *this, const MethodInfo *method)
 {
   CriFsServer_o *v2; // x19
-  __int64 v3; // x0
+  const MethodInfo *v3; // x0
   __int64 v4; // x1
   Il2CppObject *requestList; // x0
   int32_t v6; // w20
@@ -270,14 +270,14 @@ void CriFsServer__CriInternalUpdate(CriFsServer_o *this, const MethodInfo *metho
     this = (CriFsServer_o *)sub_2213A60(&Method_System_Collections_Generic_List_CriFsRequest__get_Item__);
     byte_596973E = 1;
   }
-  v3 = CriFsInstaller__criFsInstaller_ExecuteMain((const MethodInfo *)this);
+  v3 = (const MethodInfo *)CriFsInstaller__criFsInstaller_ExecuteMain((const MethodInfo *)this);
   if ( !byte_59699BA )
   {
-    v3 = sub_2213A60(&CriFsWebInstaller_TypeInfo);
+    v3 = (const MethodInfo *)sub_2213A60(&CriFsWebInstaller_TypeInfo);
     byte_59699BA = 1;
   }
   if ( CriFsWebInstaller_TypeInfo->static_fields->_isInitialized_k__BackingField )
-    CriFsWebInstaller__criFsWebInstaller_ExecuteMain((const MethodInfo *)v3);
+    CriFsWebInstaller__criFsWebInstaller_ExecuteMain(v3);
   requestList = (Il2CppObject *)v2->fields.requestList;
   if ( !requestList )
 LABEL_23:

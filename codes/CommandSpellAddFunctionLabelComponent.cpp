@@ -14,6 +14,7 @@ void CommandSpellAddFunctionLabelComponent__Awake(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void CommandSpellAddFunctionLabelComponent__SetData(
         CommandSpellAddFunctionLabelComponent_o *this,
         BattleServantData_o *svtData,
@@ -35,9 +36,12 @@ void CommandSpellAddFunctionLabelComponent__SetData(
   AddSkillData_o *v20; // x8
   __int64 v21; // x1
   UILabel_o *v22; // x20
+  float v23; // s0 OVERLAPPED
+  float v24; // s1
+  float v25; // s2
+  float v26; // s3
   UILabel_o *addFunctionLabel; // x20
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
-  UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5973879 & 1) == 0 )
   {
@@ -130,9 +134,9 @@ void CommandSpellAddFunctionLabelComponent__SetData(
             Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
             if ( Master_object )
             {
-              v27.fields.r = 1.0;
-              v27.fields.g = 1.0;
-              v27.fields.b = 1.0;
+              v23 = 1.0;
+              v24 = 1.0;
+              v25 = 1.0;
               goto LABEL_30;
             }
           }
@@ -151,12 +155,12 @@ LABEL_25:
           Master_object = (ClassBoardCommandSpellMaster_o *)this->fields.commandSpellIcon;
           if ( Master_object )
           {
-            v27.fields.r = 0.5;
-            v27.fields.g = 0.5;
-            v27.fields.b = 0.5;
+            v23 = 0.5;
+            v24 = 0.5;
+            v25 = 0.5;
 LABEL_30:
-            v27.fields.a = 1.0;
-            UIWidget__set_color((UIWidget_o *)Master_object, v27, 0);
+            v26 = 1.0;
+            UIWidget__set_color((UIWidget_o *)Master_object, *(UnityEngine_Color_o *)&v23, 0);
             return;
           }
         }

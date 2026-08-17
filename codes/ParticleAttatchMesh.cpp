@@ -395,14 +395,15 @@ void ParticleAttatchMesh__CleanupParticle(ParticleAttatchMesh_o *this, const Met
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_ParticleSystem_MainModule_o v13; // x0
   int32_t orgMaxParticles; // w1
-  System_String_o *v15; // x2
-  System_String_o *v16; // x3
-  int32_t v17; // w4
-  int32_t v18; // w5
-  bool v19; // w6
-  bool v20; // w7
-  const MethodInfo *v21; // x1
+  UnityEngine_ParticleSystem_MainModule_o v15; // x0
+  System_String_o *v16; // x2
+  System_String_o *v17; // x3
+  int32_t v18; // w4
+  int32_t v19; // w5
+  bool v20; // w6
+  bool v21; // w7
   const MethodInfo *v22; // x1
+  const MethodInfo *v23; // x1
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-28h] BYREF
 
   if ( (byte_5973E8A & 1) == 0 )
@@ -431,17 +432,15 @@ void ParticleAttatchMesh__CleanupParticle(ParticleAttatchMesh_o *this, const Met
     v13.fields.m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)gameObject, 0).fields.m_ParticleSystem;
     orgMaxParticles = this->fields.orgMaxParticles;
     m_ParticleSystem = v13.fields.m_ParticleSystem;
-    UnityEngine_ParticleSystem_MainModule__set_maxParticles(
-      (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-      orgMaxParticles,
-      0);
+    v15.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+    UnityEngine_ParticleSystem_MainModule__set_maxParticles(v15, orgMaxParticles, 0);
     this->fields.targetPS = 0;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.targetPS, 0, v15, v16, v17, v18, v19, v20);
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.targetPS, 0, v16, v17, v18, v19, v20, v21);
   }
   this->fields.particles = 0;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.particles, 0, v6, v7, v8, v9, v10, v11);
-  ParticleAttatchMesh__CleanupCustomData(this, v21);
-  ParticleAttatchMesh__CleanupMesh(this, v22);
+  ParticleAttatchMesh__CleanupCustomData(this, v22);
+  ParticleAttatchMesh__CleanupMesh(this, v23);
 }
 
 
@@ -522,10 +521,14 @@ System_Collections_Generic_List_int__o *ParticleAttatchMesh__MergeVertexIndices(
   _BOOL8 v5; // x0
   __int64 v6; // x1
   int32_t v7; // w22
+  float x; // s8
+  float y; // s9
+  float z; // s10
   struct System_Int32_array *items; // x8
-  _QWORD *v9; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  UnityEngine_Vector3_o Item; // 0:kr00_12.12
+  UnityEngine_Vector3_o Item; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973E91 & 1) == 0 )
   {
@@ -561,19 +564,25 @@ System_Collections_Generic_List_int__o *ParticleAttatchMesh__MergeVertexIndices(
                (const MethodInfo_44E3278 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
       if ( !v3 )
         break;
+      x = Item.fields.x;
+      y = Item.fields.y;
+      z = Item.fields.z;
       if ( !System_Collections_Generic_HashSet_Vector3___Contains(
               v3,
               Item,
               (const MethodInfo_42C7980 *)Method_System_Collections_Generic_HashSet_Vector3__Contains__) )
       {
+        v16.fields.x = x;
+        v16.fields.y = y;
+        v16.fields.z = z;
         v5 = System_Collections_Generic_HashSet_Vector3___Add(
                v3,
-               Item,
+               v16,
                (const MethodInfo_42C84E0 *)Method_System_Collections_Generic_HashSet_Vector3__Add__);
         if ( !v4 )
           break;
         items = v4->fields._items;
-        v9 = Method_System_Collections_Generic_List_int__Add__;
+        v12 = Method_System_Collections_Generic_List_int__Add__;
         ++v4->fields._version;
         if ( !items )
           break;
@@ -583,7 +592,7 @@ System_Collections_Generic_List_int__o *ParticleAttatchMesh__MergeVertexIndices(
           System_Collections_Generic_List_int___AddWithResize(
             v4,
             v7,
-            *(const MethodInfo_4467270 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+            *(const MethodInfo_4467270 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
         }
         else
         {
@@ -678,15 +687,18 @@ void ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, const Metho
   __int64 v19; // x1
   UnityEngine_ParticleSystem_o *m_ParticleSystem; // x0
   UnityEngine_Component_o *v21; // x8
-  struct UnityEngine_ParticleSystem_Particle_array *v22; // x0
+  UnityEngine_ParticleSystem_MainModule_o v22; // x0
+  struct UnityEngine_ParticleSystem_Particle_array *v23; // x0
   struct UnityEngine_ParticleSystem_Particle_array **p_particles; // x19
-  System_String_o *v24; // x2
-  System_String_o *v25; // x3
-  int32_t v26; // w4
-  int32_t v27; // w5
-  bool v28; // w6
-  bool v29; // w7
-  UnityEngine_ParticleSystem_o *v30; // [xsp+8h] [xbp-28h] BYREF
+  System_String_o *v25; // x2
+  System_String_o *v26; // x3
+  int32_t v27; // w4
+  int32_t v28; // w5
+  bool v29; // w6
+  bool v30; // w7
+  UnityEngine_ParticleSystem_MainModule_o v31; // x0
+  UnityEngine_ParticleSystem_o *v32; // [xsp+8h] [xbp-28h] BYREF
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973E89 & 1) == 0 )
   {
@@ -694,7 +706,7 @@ void ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, const Metho
     sub_2213A60(&UnityEngine_ParticleSystem_Particle___TypeInfo);
     byte_5973E89 = 1;
   }
-  v30 = 0;
+  v32 = 0;
   p_targetPS = &this->fields.targetPS;
   targetPS = (UnityEngine_Object_o *)this->fields.targetPS;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -730,7 +742,7 @@ void ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, const Metho
             goto LABEL_20;
           m_ParticleSystem = UnityEngine_ParticleSystem__get_main(m_ParticleSystem, 0).fields.m_ParticleSystem;
           v21 = (UnityEngine_Component_o *)*p_targetPS;
-          v30 = m_ParticleSystem;
+          v32 = m_ParticleSystem;
           if ( !v21 )
             goto LABEL_20;
           m_ParticleSystem = (UnityEngine_ParticleSystem_o *)UnityEngine_Component__get_gameObject(v21, 0);
@@ -739,26 +751,25 @@ void ParticleAttatchMesh__SetupParticle(ParticleAttatchMesh_o *this, const Metho
           m_ParticleSystem = (UnityEngine_ParticleSystem_o *)UnityEngine_GameObject__get_transform(
                                                                (UnityEngine_GameObject_o *)m_ParticleSystem,
                                                                0);
-          if ( !m_ParticleSystem
-            || (this->fields.orgParticleScale = UnityEngine_Transform__get_localScale(
-                                                  (UnityEngine_Transform_o *)m_ParticleSystem,
-                                                  0),
-                this->fields.orgMaxParticles = UnityEngine_ParticleSystem_MainModule__get_maxParticles(
-                                                 (UnityEngine_ParticleSystem_MainModule_o)&v30,
-                                                 0),
-                v22 = (struct UnityEngine_ParticleSystem_Particle_array *)sub_2213B20(
-                                                                            UnityEngine_ParticleSystem_Particle___TypeInfo,
-                                                                            v18),
-                this->fields.particles = v22,
-                p_particles = &this->fields.particles,
-                sub_2213A04((MissionNaviTransitionBoardItem_o *)p_particles, (int32_t)v22, v24, v25, v26, v27, v28, v29),
-                (m_ParticleSystem = (UnityEngine_ParticleSystem_o *)*(p_particles - 1)) == 0) )
-          {
+          if ( !m_ParticleSystem )
+            goto LABEL_20;
+          localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)m_ParticleSystem, 0);
+          v22.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v32;
+          this->fields.orgParticleScale = localScale;
+          this->fields.orgMaxParticles = UnityEngine_ParticleSystem_MainModule__get_maxParticles(v22, 0);
+          v23 = (struct UnityEngine_ParticleSystem_Particle_array *)sub_2213B20(
+                                                                      UnityEngine_ParticleSystem_Particle___TypeInfo,
+                                                                      v18);
+          this->fields.particles = v23;
+          p_particles = &this->fields.particles;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)p_particles, (int32_t)v23, v25, v26, v27, v28, v29, v30);
+          m_ParticleSystem = (UnityEngine_ParticleSystem_o *)*(p_particles - 1);
+          if ( !m_ParticleSystem )
 LABEL_20:
             sub_2213CDC(m_ParticleSystem, v19);
-          }
           UnityEngine_ParticleSystem__SetParticles_83834724(m_ParticleSystem, *p_particles, v18, 0);
-          UnityEngine_ParticleSystem_MainModule__set_maxParticles((UnityEngine_ParticleSystem_MainModule_o)&v30, v18, 0);
+          v31.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&v32;
+          UnityEngine_ParticleSystem_MainModule__set_maxParticles(v31, v18, 0);
         }
       }
     }
@@ -828,8 +839,8 @@ void ParticleAttatchMesh__UpdateCustomData(ParticleAttatchMesh_o *this, int32_t 
   struct System_Collections_Generic_List_Vector4__o *customData1; // x23
   int32_t customDataType2; // w8
   struct System_Collections_Generic_List_Vector4__o *customData2; // x23
-  UnityEngine_Vector4_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Vector4_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v57; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_5973E8F & 1) == 0 )
   {
@@ -1020,12 +1031,12 @@ void ParticleAttatchMesh__UpdateCustomData(ParticleAttatchMesh_o *this, int32_t 
               goto LABEL_73;
             if ( i < customData1->fields._size )
             {
-              *(UnityEngine_Vector2_o *)&v57.fields.x = System_Collections_Generic_List_Vector2___get_Item(
+              *(UnityEngine_Vector2_o *)&v57.fields.r = System_Collections_Generic_List_Vector2___get_Item(
                                                           (System_Collections_Generic_List_Vector2__o *)targetPS,
                                                           v53,
                                                           (const MethodInfo_44E09FC *)Method_System_Collections_Generic_List_Vector2__get_Item__);
-              v57.fields.z = 0.0;
-              v57.fields.w = 0.0;
+              v57.fields.b = 0.0;
+              v57.fields.a = 0.0;
               goto LABEL_49;
             }
           }
@@ -1043,15 +1054,15 @@ void ParticleAttatchMesh__UpdateCustomData(ParticleAttatchMesh_o *this, int32_t 
             goto LABEL_73;
           if ( i < customData1->fields._size )
           {
-            v57 = (UnityEngine_Vector4_o)System_Collections_Generic_List_Color___get_Item(
-                                           (System_Collections_Generic_List_Color__o *)targetPS,
-                                           v53,
-                                           (const MethodInfo_4418D2C *)Method_System_Collections_Generic_List_Color__get_Item__);
+            v57 = System_Collections_Generic_List_Color___get_Item(
+                    (System_Collections_Generic_List_Color__o *)targetPS,
+                    v53,
+                    (const MethodInfo_4418D2C *)Method_System_Collections_Generic_List_Color__get_Item__);
 LABEL_49:
             System_Collections_Generic_List_Vector4___set_Item(
               customData1,
               i,
-              v57,
+              (UnityEngine_Vector4_o)v57,
               (const MethodInfo_44E5C44 *)Method_System_Collections_Generic_List_Vector4__set_Item__);
           }
         }
@@ -1071,12 +1082,12 @@ LABEL_49:
           goto LABEL_73;
         if ( i >= customData2->fields._size )
           continue;
-        *(UnityEngine_Vector2_o *)&v58.fields.x = System_Collections_Generic_List_Vector2___get_Item(
+        *(UnityEngine_Vector2_o *)&v58.fields.r = System_Collections_Generic_List_Vector2___get_Item(
                                                     (System_Collections_Generic_List_Vector2__o *)targetPS,
                                                     v53,
                                                     (const MethodInfo_44E09FC *)Method_System_Collections_Generic_List_Vector2__get_Item__);
-        v58.fields.z = 0.0;
-        v58.fields.w = 0.0;
+        v58.fields.b = 0.0;
+        v58.fields.a = 0.0;
       }
       else
       {
@@ -1092,15 +1103,15 @@ LABEL_49:
           goto LABEL_73;
         if ( i >= customData2->fields._size )
           continue;
-        v58 = (UnityEngine_Vector4_o)System_Collections_Generic_List_Color___get_Item(
-                                       (System_Collections_Generic_List_Color__o *)targetPS,
-                                       v53,
-                                       (const MethodInfo_4418D2C *)Method_System_Collections_Generic_List_Color__get_Item__);
+        v58 = System_Collections_Generic_List_Color___get_Item(
+                (System_Collections_Generic_List_Color__o *)targetPS,
+                v53,
+                (const MethodInfo_4418D2C *)Method_System_Collections_Generic_List_Color__get_Item__);
       }
       System_Collections_Generic_List_Vector4___set_Item(
         customData2,
         i,
-        v58,
+        (UnityEngine_Vector4_o)v58,
         (const MethodInfo_44E5C44 *)Method_System_Collections_Generic_List_Vector4__set_Item__);
     }
   }
@@ -1125,6 +1136,7 @@ LABEL_73:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetPS; // x20
@@ -1144,47 +1156,51 @@ void ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this, const Meth
   UnityEngine_Transform_o *transform; // x23
   __int64 v18; // x1
   UnityEngine_Object_o *v19; // x24
-  float v20; // s8
-  float x; // s13
-  float v22; // s9
-  float v23; // s10
-  float v24; // s14
-  float v25; // s11
-  float z; // s12
-  float v29; // s8
-  float v30; // s9
-  float v31; // s10
-  float v32; // s11
-  float v33; // s12
-  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v35; // s8
-  float v36; // s9
-  float v37; // s10
-  int32_t scalingMode; // w0
-  unsigned __int64 v39; // x21
-  __int64 v40; // x25
-  __int64 v41; // x26
-  struct UnityEngine_ParticleSystem_Particle_array *particles; // x27
-  int32_t v43; // w22
-  float v44; // s11
-  float v45; // s12
   unsigned int lossyScale; // s0
-  unsigned int v47; // s0
-  float y; // s1
-  float v49; // s2
-  float v50; // s2
-  float v51; // s0
-  float v52; // s1
-  float v53; // s2
+  float v21; // s8
+  unsigned int v22; // s0
+  float x; // s13
+  float v24; // s9
+  float y; // s10
+  float v26; // s14
+  float v27; // s11
+  float z; // s12
+  float v29; // s0 OVERLAPPED
+  float v30; // s1
+  float v31; // s2
+  float v32; // s8
+  float v33; // s9
+  float v34; // s10
+  float v35; // s11
+  float v36; // s12
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float v38; // s8
+  float v39; // s9
+  float v40; // s10
+  UnityEngine_ParticleSystem_MainModule_o v41; // x0
+  int32_t scalingMode; // w0
+  unsigned __int64 v43; // x21
+  __int64 v44; // x25
+  __int64 v45; // x26
+  struct UnityEngine_ParticleSystem_Particle_array *particles; // x27
+  int32_t v47; // w22
   unsigned int Item; // s0
-  float v55; // s1
-  __int64 v56; // x0
-  float v57; // s2
+  float v49; // s11
+  float v50; // s12
+  __int64 v51; // x0
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-88h] BYREF
-  UnityEngine_Vector3_o v59; // 0:krC0_12.12
-  UnityEngine_Vector3_o localScale; // 0:krD4_12.12
-  UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973E8B & 1) == 0 )
   {
@@ -1267,35 +1283,40 @@ void ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this, const Meth
     lossyScale = (unsigned int)UnityEngine_Transform__get_lossyScale(transform, 0);
     if ( !v16 )
       goto LABEL_56;
-    v20 = *(float *)&lossyScale;
-    v47 = (unsigned int)UnityEngine_Transform__get_lossyScale(v16, 0);
+    v21 = *(float *)&lossyScale;
+    v22 = (unsigned int)UnityEngine_Transform__get_lossyScale(v16, 0);
     x = this->fields.orgParticleScale.fields.x;
-    v22 = *(float *)&v47;
-    v23 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(transform, 0).fields.y));
-    y = UnityEngine_Transform__get_lossyScale(v16, 0).fields.y;
-    v24 = this->fields.orgParticleScale.fields.y;
-    v25 = y;
-    z = UnityEngine_Transform__get_lossyScale(transform, 0).fields.z;
-    v49 = UnityEngine_Transform__get_lossyScale(v16, 0).fields.z;
-    v61.fields.x = x * (float)(v20 / v22);
-    v61.fields.y = v24 * (float)(v23 / v25);
-    v61.fields.z = this->fields.orgParticleScale.fields.z * (float)(z / v49);
+    v24 = *(float *)&v22;
+    v53 = UnityEngine_Transform__get_lossyScale(transform, 0);
+    y = v53.fields.y;
+    v54 = UnityEngine_Transform__get_lossyScale(v16, 0);
+    v26 = this->fields.orgParticleScale.fields.y;
+    v27 = v54.fields.y;
+    v55 = UnityEngine_Transform__get_lossyScale(transform, 0);
+    z = v55.fields.z;
+    v56 = UnityEngine_Transform__get_lossyScale(v16, 0);
+    v29 = x * (float)(v21 / v24);
+    v30 = v26 * (float)(y / v27);
+    v31 = this->fields.orgParticleScale.fields.z * (float)(z / v56.fields.z);
   }
   else
   {
     if ( !transform )
       goto LABEL_56;
-    v29 = COERCE_FLOAT(UnityEngine_Transform__get_lossyScale(transform, 0));
-    v30 = COERCE_FLOAT(UnityEngine_Transform__get_lossyScale(v12, 0));
-    v31 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(transform, 0).fields.y));
-    v32 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_lossyScale(v12, 0).fields.y));
-    v33 = UnityEngine_Transform__get_lossyScale(transform, 0).fields.z;
-    v50 = UnityEngine_Transform__get_lossyScale(v12, 0).fields.z;
-    v61.fields.x = v29 / v30;
-    v61.fields.y = v31 / v32;
-    v61.fields.z = v33 / v50;
+    v32 = COERCE_FLOAT(UnityEngine_Transform__get_lossyScale(transform, 0));
+    v33 = COERCE_FLOAT(UnityEngine_Transform__get_lossyScale(v12, 0));
+    v57 = UnityEngine_Transform__get_lossyScale(transform, 0);
+    v34 = v57.fields.y;
+    v58 = UnityEngine_Transform__get_lossyScale(v12, 0);
+    v35 = v58.fields.y;
+    v59 = UnityEngine_Transform__get_lossyScale(transform, 0);
+    v36 = v59.fields.z;
+    v60 = UnityEngine_Transform__get_lossyScale(v12, 0);
+    v29 = v32 / v33;
+    v30 = v34 / v35;
+    v31 = v36 / v60.fields.z;
   }
-  UnityEngine_Transform__set_localScale(v12, v61, 0);
+  UnityEngine_Transform__set_localScale(v12, *(UnityEngine_Vector3_o *)&v29, 0);
   if ( !byte_5969AE5 )
   {
     sub_2213A60(&UnityEngine_Vector3_TypeInfo);
@@ -1306,40 +1327,33 @@ void ParticleAttatchMesh__UpdateParticle(ParticleAttatchMesh_o *this, const Meth
 LABEL_56:
     sub_2213CDC(Particles_83835248, v6);
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v35 = static_fields->oneVector.fields.x;
-  v36 = static_fields->oneVector.fields.y;
-  v37 = static_fields->oneVector.fields.z;
+  v38 = static_fields->oneVector.fields.x;
+  v39 = static_fields->oneVector.fields.y;
+  v40 = static_fields->oneVector.fields.z;
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(Particles_83835248, 0).fields.m_ParticleSystem;
-  scalingMode = UnityEngine_ParticleSystem_MainModule__get_scalingMode(
-                  (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                  0);
+  v41.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+  scalingMode = UnityEngine_ParticleSystem_MainModule__get_scalingMode(v41, 0);
   if ( scalingMode == 1 )
   {
     localScale = UnityEngine_Transform__get_localScale(v12, 0);
-    v51 = localScale.fields.x;
-    v52 = localScale.fields.y;
-    v53 = localScale.fields.z;
     goto LABEL_40;
   }
   if ( !scalingMode )
   {
-    v59 = UnityEngine_Transform__get_lossyScale(v12, 0);
-    v51 = v59.fields.x;
-    v52 = v59.fields.y;
-    v53 = v59.fields.z;
+    localScale = UnityEngine_Transform__get_lossyScale(v12, 0);
 LABEL_40:
-    v35 = v51;
-    v36 = v52;
-    v37 = v53;
+    v38 = localScale.fields.x;
+    v39 = localScale.fields.y;
+    v40 = localScale.fields.z;
   }
   if ( size >= 1 )
   {
-    v39 = 0;
+    v43 = 0;
     if ( v10 <= 1 )
-      v40 = 1;
+      v44 = 1;
     else
-      v40 = (unsigned int)v10;
-    v41 = 32;
+      v44 = (unsigned int)v10;
+    v45 = 32;
     do
     {
       Particles_83835248 = (UnityEngine_ParticleSystem_o *)this->fields.useVertexIndices;
@@ -1347,48 +1361,48 @@ LABEL_40:
         goto LABEL_56;
       Particles_83835248 = (UnityEngine_ParticleSystem_o *)System_Collections_Generic_List_int___get_Item(
                                                              (System_Collections_Generic_List_int__o *)Particles_83835248,
-                                                             v39,
+                                                             v43,
                                                              (const MethodInfo_4466F78 *)Method_System_Collections_Generic_List_int__get_Item__);
       particles = this->fields.particles;
       if ( !particles )
         goto LABEL_56;
-      v43 = (int)Particles_83835248;
+      v47 = (int)Particles_83835248;
       Particles_83835248 = (UnityEngine_ParticleSystem_o *)this->fields.cacheVertices;
       if ( !Particles_83835248 )
         goto LABEL_56;
       Item = (unsigned int)System_Collections_Generic_List_Vector3___get_Item(
                              (System_Collections_Generic_List_Vector3__o *)Particles_83835248,
-                             v43,
+                             v47,
                              (const MethodInfo_44E3278 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
       Particles_83835248 = (UnityEngine_ParticleSystem_o *)this->fields.cacheVertices;
       if ( !Particles_83835248 )
         goto LABEL_56;
-      v44 = *(float *)&Item;
-      v55 = System_Collections_Generic_List_Vector3___get_Item(
+      v49 = *(float *)&Item;
+      v62 = System_Collections_Generic_List_Vector3___get_Item(
               (System_Collections_Generic_List_Vector3__o *)Particles_83835248,
-              v43,
-              (const MethodInfo_44E3278 *)Method_System_Collections_Generic_List_Vector3__get_Item__).fields.y;
+              v47,
+              (const MethodInfo_44E3278 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
       Particles_83835248 = (UnityEngine_ParticleSystem_o *)this->fields.cacheVertices;
       if ( !Particles_83835248 )
         goto LABEL_56;
-      v45 = v55;
-      v57 = System_Collections_Generic_List_Vector3___get_Item(
+      v50 = v62.fields.y;
+      v63 = System_Collections_Generic_List_Vector3___get_Item(
               (System_Collections_Generic_List_Vector3__o *)Particles_83835248,
-              v43,
-              (const MethodInfo_44E3278 *)Method_System_Collections_Generic_List_Vector3__get_Item__).fields.z;
-      if ( v39 >= LODWORD(particles->max_length) )
-        sub_2213CE4(v56);
-      v62.fields.z = v57 / v37;
-      v62.fields.y = v45 / v36;
-      v62.fields.x = v44 / v35;
+              v47,
+              (const MethodInfo_44E3278 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
+      if ( v43 >= LODWORD(particles->max_length) )
+        sub_2213CE4(v51);
+      v64.fields.z = v63.fields.z / v40;
+      v64.fields.y = v50 / v39;
+      v64.fields.x = v49 / v38;
       UnityEngine_ParticleSystem_Particle__set_position(
-        (UnityEngine_ParticleSystem_Particle_o *)((char *)particles + v41),
-        v62,
+        (UnityEngine_ParticleSystem_Particle_o *)((char *)particles + v45),
+        v64,
         0);
-      ++v39;
-      v41 += 132;
+      ++v43;
+      v45 += 132;
     }
-    while ( v40 != v39 );
+    while ( v44 != v43 );
   }
   Particles_83835248 = this->fields.targetPS;
   if ( !Particles_83835248 )

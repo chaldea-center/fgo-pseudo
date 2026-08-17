@@ -17,7 +17,7 @@ void UIDragDropListViewItem__DragStart(UIDragDropListViewItem_o *this, const Met
   int32_t v10; // w5
   bool v11; // w6
   bool v12; // w7
-  UnityEngine_Vector3_o position; // 0:kr00_12.12
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_59720E8 & 1) == 0 )
   {
@@ -113,8 +113,7 @@ void UIDragDropListViewItem__OnDragDropMove(
   __int64 v8; // x1
   UnityEngine_GameObject_o *transform; // x0
   UnityEngine_Transform_o *v10; // x19
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = delta.fields.z;
   y = delta.fields.y;
@@ -137,10 +136,10 @@ void UIDragDropListViewItem__OnDragDropMove(
     }
     v10 = (UnityEngine_Transform_o *)transform;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
-    v12.fields.y = y + localPosition.fields.y;
-    v12.fields.z = z + localPosition.fields.z;
-    v12.fields.x = x + localPosition.fields.x;
-    UnityEngine_Transform__set_localPosition(v10, v12, 0);
+    localPosition.fields.y = y + localPosition.fields.y;
+    localPosition.fields.z = z + localPosition.fields.z;
+    localPosition.fields.x = x + localPosition.fields.x;
+    UnityEngine_Transform__set_localPosition(v10, localPosition, 0);
   }
 }
 

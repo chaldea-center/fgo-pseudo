@@ -555,6 +555,7 @@ System_Collections_IEnumerator_o *EventInfoShipProgressDrawComponent__PlayProgre
   int32_t v12; // w5
   bool v13; // w6
   bool v14; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_597262F & 1) == 0 )
   {
@@ -568,8 +569,9 @@ System_Collections_IEnumerator_o *EventInfoShipProgressDrawComponent__PlayProgre
   *(_QWORD *)(v8 + 32) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v8 + 32), (int32_t)this, v9, v10, v11, v12, v13, v14);
   *(_BYTE *)(v8 + 40) = v7;
+  result = (System_Collections_IEnumerator_o *)v8;
   *(_BYTE *)(v8 + 41) = isWait;
-  return (System_Collections_IEnumerator_o *)v8;
+  return result;
 }
 
 
@@ -595,9 +597,13 @@ void EventInfoShipProgressDrawComponent__ResetShip(
   struct EventInfoPointRiverProgressControl_ProgressData_o *v18; // x9
   struct Custom2dSplineMesh_array *v19; // x8
   __int64 v20; // x9
+  float x; // s8
+  float y; // s9
+  float z; // s10
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v22; // x1
-  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:kr00_12.12
+  const MethodInfo *v25; // x1
+  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.progressData = progressData_;
   p_progressData = &this->fields.progressData;
@@ -649,9 +655,15 @@ LABEL_15:
   if ( !v10 )
     goto LABEL_14;
   PointAsWorldFlatten = Custom2dSplineMesh__GetPointAsWorldFlatten(v10, this->fields.startRate, 0);
+  x = PointAsWorldFlatten.fields.x;
+  y = PointAsWorldFlatten.fields.y;
+  z = PointAsWorldFlatten.fields.z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetPosition(gameObject, PointAsWorldFlatten, 0);
-  EventInfoShipProgressDrawComponent__SaveProgressData(this, v22);
+  v27.fields.x = x;
+  v27.fields.y = y;
+  v27.fields.z = z;
+  GameObjectExtensions__SetPosition(gameObject, v27, 0);
+  EventInfoShipProgressDrawComponent__SaveProgressData(this, v25);
 }
 
 
@@ -673,6 +685,7 @@ void EventInfoShipProgressDrawComponent__SaveProgressData(
   System_String_o *v14; // x0
   float startRate; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Vector3_o v16[5]; // [xsp+10h] [xbp-40h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972633 & 1) == 0 )
   {
@@ -688,8 +701,9 @@ void EventInfoShipProgressDrawComponent__SaveProgressData(
   System_Text_StringBuilder___ctor(v3, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (v16[0] = UnityEngine_Transform__get_localPosition(transform, 0),
-        transform = (UnityEngine_Transform_o *)System_Single__ToString(v16[0].fields.x, (const MethodInfo *)v16),
+    || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
+        v16[0] = localPosition,
+        transform = (UnityEngine_Transform_o *)System_Single__ToString(localPosition.fields.x, (const MethodInfo *)v16),
         !v3) )
   {
     sub_2213CDC(transform, v5);
@@ -769,9 +783,13 @@ void EventInfoShipProgressDrawComponent__Setup(
   struct EventInfoPointRiverProgressControl_ProgressData_o *v34; // x9
   struct Custom2dSplineMesh_array *v35; // x8
   __int64 v36; // x9
+  float x; // s8
+  float y; // s9
+  float z; // s10
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v38; // x1
-  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:kr00_12.12
+  const MethodInfo *v41; // x1
+  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597262B & 1) == 0 )
   {
@@ -894,9 +912,15 @@ LABEL_41:
   if ( !v15 )
     goto LABEL_41;
   PointAsWorldFlatten = Custom2dSplineMesh__GetPointAsWorldFlatten(v15, this->fields.startRate, 0);
+  x = PointAsWorldFlatten.fields.x;
+  y = PointAsWorldFlatten.fields.y;
+  z = PointAsWorldFlatten.fields.z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetPosition(gameObject, PointAsWorldFlatten, 0);
-  EventInfoShipProgressDrawComponent__SaveProgressData(this, v38);
+  v43.fields.x = x;
+  v43.fields.y = y;
+  v43.fields.z = z;
+  GameObjectExtensions__SetPosition(gameObject, v43, 0);
+  EventInfoShipProgressDrawComponent__SaveProgressData(this, v41);
 }
 
 
@@ -918,7 +942,7 @@ bool EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
   struct EventInfoShipProgressDrawComponent_o *_4__this; // x20
   int v5; // w21
   int32_t i_5__2; // w8
-  void *targetFrameRate; // x0
+  UnityEngine_GameObject_o *targetFrameRate; // x0
   __int64 v8; // x1
   float v9; // s0
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x9
@@ -926,21 +950,27 @@ bool EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
   __int64 ReleaseScenarioIndex; // x9
   Il2CppClass **v13; // x8
   Custom2dSplineMesh_o *v14; // x21
-  bool v15; // w22
-  UITweener_o *v16; // x23
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v18; // s11
+  float v19; // s12
+  float v20; // s13
+  bool v21; // w22
+  UITweener_o *v22; // x23
   float deltaTime; // s0
   float startRate; // s0
   Il2CppObject **p__2__current; // x19
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
+  System_String_o *v26; // x2
+  System_String_o *v27; // x3
+  int32_t v28; // w4
+  int32_t v29; // w5
+  bool v30; // w6
+  bool v31; // w7
   struct EventInfoPointRiverProgressControl_o *pointRiverProgressCtr; // x8
-  const MethodInfo *v27; // x1
-  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:kr00_12.12
-  UnityEngine_Vector3_o v30; // 0:kr14_12.12
+  const MethodInfo *v33; // x1
+  UnityEngine_Vector3_o PointAsWorldFlatten; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5972635 & 1) == 0 )
   {
@@ -967,7 +997,7 @@ bool EventInfoShipProgressDrawComponent__EasingMove_d__13__MoveNext(
   }
   if ( !*(&UnityEngine_Application_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo, method);
-  targetFrameRate = (void *)UnityEngine_Application__get_targetFrameRate(0);
+  targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_Application__get_targetFrameRate(0);
   if ( !_4__this )
 LABEL_25:
     sub_2213CDC(targetFrameRate, v8);
@@ -981,8 +1011,8 @@ LABEL_25:
     targetFrameRate = pointRiverProgressCtr->fields.maskPanel;
     if ( !targetFrameRate )
       goto LABEL_25;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)targetFrameRate, 0, 0);
-    EventInfoShipProgressDrawComponent__SaveProgressData(_4__this, v27);
+    UnityEngine_GameObject__SetActive(targetFrameRate, 0, 0);
+    EventInfoShipProgressDrawComponent__SaveProgressData(_4__this, v33);
     ActionExtensions__Call(this->fields.endAction, 0);
     return 0;
   }
@@ -1003,37 +1033,47 @@ LABEL_25:
                           (Custom2dSplineMesh_o *)v13[4],
                           _4__this->fields.startRate,
                           0);
-  v30 = Custom2dSplineMesh__GetPointAsWorldFlatten(v14, _4__this->fields.startRate + this->fields.moveRate, 0);
-  targetFrameRate = UnityEngine_Component__get_transform((UnityEngine_Component_o *)_4__this, 0);
+  x = PointAsWorldFlatten.fields.x;
+  y = PointAsWorldFlatten.fields.y;
+  z = PointAsWorldFlatten.fields.z;
+  v36 = Custom2dSplineMesh__GetPointAsWorldFlatten(v14, _4__this->fields.startRate + this->fields.moveRate, 0);
+  v18 = v36.fields.x;
+  v19 = v36.fields.y;
+  v20 = v36.fields.z;
+  targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                                  (UnityEngine_Component_o *)_4__this,
+                                                  0);
   if ( !targetFrameRate )
     goto LABEL_25;
   targetFrameRate = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetFrameRate, 0);
   if ( !targetFrameRate )
     goto LABEL_25;
-  targetFrameRate = UnityEngine_GameObject__AddComponent_object_(
-                      (UnityEngine_GameObject_o *)targetFrameRate,
-                      (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+  targetFrameRate = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
+                                                  targetFrameRate,
+                                                  (const MethodInfo_38B6EB0 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   if ( !targetFrameRate )
     goto LABEL_25;
-  v15 = 1;
-  v16 = (UITweener_o *)targetFrameRate;
-  *((_DWORD *)targetFrameRate + 32) = LODWORD(PointAsWorldFlatten.fields.x);
-  *((_DWORD *)targetFrameRate + 33) = LODWORD(PointAsWorldFlatten.fields.y);
-  *((_BYTE *)targetFrameRate + 152) = 1;
-  *((_DWORD *)targetFrameRate + 34) = LODWORD(PointAsWorldFlatten.fields.z);
-  *(UnityEngine_Vector3_o *)((char *)targetFrameRate + 140) = v30;
+  v21 = 1;
+  v22 = (UITweener_o *)targetFrameRate;
+  *(float *)&targetFrameRate[5].monitor = x;
+  *((float *)&targetFrameRate[5].monitor + 1) = y;
+  LOBYTE(targetFrameRate[6].monitor) = 1;
+  *(float *)&targetFrameRate[5].fields.m_CachedPtr = z;
+  *((float *)&targetFrameRate[5].fields.m_CachedPtr + 1) = v18;
+  *(float *)&targetFrameRate[6].klass = v19;
+  *((float *)&targetFrameRate[6].klass + 1) = v20;
   deltaTime = UnityEngine_Time__get_deltaTime(0);
-  v16->fields.method = 0;
-  v16->fields.duration = deltaTime;
-  UITweener__PlayForward(v16, 0);
+  v22->fields.method = 0;
+  v22->fields.duration = deltaTime;
+  UITweener__PlayForward(v22, 0);
   Custom2dSplineMesh__SetPathRate(v14, _4__this->fields.startRate, 0);
   startRate = _4__this->fields.startRate;
   this->fields.__2__current = 0;
   p__2__current = &this->fields.__2__current;
   _4__this->fields.startRate = startRate + *((float *)p__2__current + 4);
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v20, v21, v22, v23, v24, v25);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, 0, v26, v27, v28, v29, v30, v31);
   *((_DWORD *)p__2__current - 2) = 1;
-  return v15;
+  return v21;
 }
 
 
@@ -1111,9 +1151,11 @@ bool EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15__MoveNe
   float v19; // s10
   float v20; // s9
   MissionNaviTransitionBoardItem_o *p__2__current; // x19
-  float v23; // s1
-  UnityEngine_Vector3_o localPosition; // 0:kr00_12.12
+  bool result; // w0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
   if ( (byte_5972636 & 1) == 0 )
@@ -1173,9 +1215,9 @@ bool EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15__MoveNe
           goto LABEL_33;
         GameObjectExtensions__SetLocalPosition_42891620(
           (UnityEngine_GameObject_o *)this,
-          localPosition.fields.x,
-          localPosition.fields.y - Component_object->fields.slideOutPosition.fields.y,
-          localPosition.fields.z,
+          x,
+          y - Component_object->fields.slideOutPosition.fields.y,
+          z,
           0);
       }
       else
@@ -1188,31 +1230,33 @@ bool EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15__MoveNe
                                                                                           0);
         if ( !this )
           goto LABEL_33;
-        v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.y;
+        v24 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
         if ( !Component_object )
           goto LABEL_33;
         v19 = Component_object->fields.slideOutPosition.fields.y;
-        v20 = v23;
+        v20 = v24.fields.y;
         this = (EventInfoShipProgressDrawComponent__PlayProgressShipResetAnim_d__15_o *)UnityEngine_Component__get_transform(
                                                                                           (UnityEngine_Component_o *)_4__this,
                                                                                           0);
         if ( !this )
           goto LABEL_33;
+        v25 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
         y = v20 + v19;
-        z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0).fields.z;
+        z = v25.fields.z;
       }
-      v25.fields.x = x;
-      v25.fields.y = y;
-      v25.fields.z = z;
-      EventInfoUISlideAnimation__StartSlideAnim_52752912(Component_object, 0, v25, v13, 0);
+      v26.fields.x = x;
+      v26.fields.y = y;
+      v26.fields.z = z;
+      EventInfoUISlideAnimation__StartSlideAnim_52752912(Component_object, 0, v26, v13, 0);
     }
     if ( v2->fields.isWait )
     {
       v2->fields.__2__current = 0;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
       sub_2213A04(p__2__current, 0, v7, v8, v9, v10, v11, v12);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
     if ( v2->fields.isFadeIn )
       v18 = (const MethodInfo **)&StringLiteral_24658/*"ship_fade_in"*/;

@@ -32,6 +32,7 @@ void SampleCardUIDragDropListViewItem__CardDragReturnEnd(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SampleCardUIDragDropListViewItem__CardDragReturnStart(
         SampleCardUIDragDropListViewItem_o *this,
         const MethodInfo *method)
@@ -41,23 +42,26 @@ void SampleCardUIDragDropListViewItem__CardDragReturnStart(
   UnityEngine_Component_o *v5; // x20
   UnityEngine_GameObject_o *dragObject; // x0
   UnityEngine_Transform_o *v7; // x21
-  UnityEngine_GameObject_o *v8; // x20
+  float y; // s3
+  float z; // s4
+  float v10; // s3
+  UnityEngine_GameObject_o *v11; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  System_String_o *v10; // x2
-  System_String_o *v11; // x3
-  int32_t v12; // w4
-  int32_t v13; // w5
-  bool v14; // w6
-  bool v15; // w7
-  int32_t v16; // w1
-  System_String_o *v17; // x2
-  System_String_o *v18; // x3
-  int32_t v19; // w4
-  int32_t v20; // w5
-  bool v21; // w6
-  bool v22; // w7
+  System_String_o *v13; // x2
+  System_String_o *v14; // x3
+  int32_t v15; // w4
+  int32_t v16; // w5
+  bool v17; // w6
+  bool v18; // w7
+  int32_t v19; // w1
+  System_String_o *v20; // x2
+  System_String_o *v21; // x3
+  int32_t v22; // w4
+  int32_t v23; // w5
+  bool v24; // w6
+  bool v25; // w7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
   if ( (byte_596DE5B & 1) == 0 )
   {
@@ -80,28 +84,43 @@ void SampleCardUIDragDropListViewItem__CardDragReturnStart(
     v5 = 0;
   }
   dragObject = this->fields.dragObject;
-  if ( !dragObject
-    || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0)) == 0
-    || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_parent(
-                                                   (UnityEngine_Transform_o *)dragObject,
-                                                   0),
-        !v5)
-    || (v7 = (UnityEngine_Transform_o *)dragObject,
-        (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v5, 0)) == 0)
-    || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !v7)
-    || (v24 = UnityEngine_Transform__InverseTransformPoint(v7, position, 0),
-        (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(this->fields.dragObject, 0.2, v24, 0)) == 0) )
+  if ( !dragObject )
+    goto LABEL_16;
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0);
+  if ( !dragObject )
+    goto LABEL_16;
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)dragObject, 0);
+  if ( !v5 )
+    goto LABEL_16;
+  v7 = (UnityEngine_Transform_o *)dragObject;
+  dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v5, 0);
+  if ( !dragObject )
+    goto LABEL_16;
+  position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
+  if ( !v7
+    || (v27 = UnityEngine_Transform__InverseTransformPoint(v7, position, 0),
+        y = v27.fields.y,
+        z = v27.fields.z,
+        v27.fields.y = v27.fields.x,
+        v27.fields.z = y,
+        v10 = z,
+        (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(
+                                                    this->fields.dragObject,
+                                                    0.2,
+                                                    *(UnityEngine_Vector3_o *)&v27.fields.y,
+                                                    0)) == 0) )
   {
+LABEL_16:
     sub_2213CDC(dragObject, method);
   }
-  v8 = dragObject;
+  v11 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v8[3].monitor = gameObject;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8[3].monitor, (int32_t)gameObject, v10, v11, v12, v13, v14, v15);
-  v16 = StringLiteral_4493/*"CardDragReturnEnd"*/;
-  v8[3].fields.m_CachedPtr = StringLiteral_4493/*"CardDragReturnEnd"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v8[3].fields, v16, v17, v18, v19, v20, v21, v22);
+  v11[3].monitor = gameObject;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14, v15, v16, v17, v18);
+  v19 = StringLiteral_4493/*"CardDragReturnEnd"*/;
+  v11[3].fields.m_CachedPtr = StringLiteral_4493/*"CardDragReturnEnd"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v11[3].fields, v19, v20, v21, v22, v23, v24, v25);
 }
 
 

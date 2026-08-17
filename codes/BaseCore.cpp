@@ -34,6 +34,8 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BaseCore__CreateEarthPoin
   __int64 *v23; // x1
   __int64 v24; // x0
   void (__fastcall *v25)(__int64, __int64 *, UnityEngine_GameObject_o *, _QWORD *, _QWORD); // x8
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v26; // x0
+  void *v27; // x1
   _BYTE v28[12]; // [xsp+0h] [xbp-38h] BYREF
   int32_t v29; // [xsp+Ch] [xbp-2Ch] BYREF
   _QWORD v30[2]; // [xsp+10h] [xbp-28h] BYREF
@@ -80,10 +82,12 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o BaseCore__CreateEarthPoin
   v25 = (void (__fastcall *)(__int64, __int64 *, UnityEngine_GameObject_o *, _QWORD *, _QWORD))v23[2];
   v30[0] = &v28[-((v14 + 15) & 0x1FFFFFFF0LL)];
   v25(v24, v23, v18, v30, v30[0]);
-  result.klass = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
-                                                                             (void *)method,
-                                                                             &v28[-((v14 + 15) & 0x1FFFFFFF0LL)],
-                                                                             v14);
+  v26 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+                                                                    (void *)method,
+                                                                    &v28[-((v14 + 15) & 0x1FFFFFFF0LL)],
+                                                                    v14);
+  result.monitor = v27;
+  result.klass = v26;
   return result;
 }
 
@@ -372,21 +376,25 @@ void BaseCore__SetRotateY_PointInitAngle(BaseCore_o *this, const MethodInfo *met
   UnityEngine_Transform_o *transform; // x0
   __int64 v4; // x1
   float PointInitAngle_k__BackingField; // s9
-  UnityEngine_Vector3_o localEulerAngles; // 0:kr00_12.12
-  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s8
+  float z; // s10
+  UnityEngine_Vector3_o localEulerAngles; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (localEulerAngles = UnityEngine_Transform__get_localEulerAngles(transform, 0),
         PointInitAngle_k__BackingField = this->fields._PointInitAngle_k__BackingField,
+        x = localEulerAngles.fields.x,
+        z = localEulerAngles.fields.z,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
     sub_2213CDC(transform, v4);
   }
-  v7.fields.x = localEulerAngles.fields.x;
-  v7.fields.y = PointInitAngle_k__BackingField;
-  v7.fields.z = localEulerAngles.fields.z;
-  UnityEngine_Transform__set_localEulerAngles(transform, v7, 0);
+  v9.fields.x = x;
+  v9.fields.y = PointInitAngle_k__BackingField;
+  v9.fields.z = z;
+  UnityEngine_Transform__set_localEulerAngles(transform, v9, 0);
 }
 
 

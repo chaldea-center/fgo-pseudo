@@ -150,6 +150,7 @@ LABEL_12:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_ValueTuple_List_Color___List_float___o OutlineEffectMain__GetColorsAndKeys(
         OutlineEffectMain_o *this,
         const MethodInfo *method)
@@ -162,19 +163,25 @@ System_ValueTuple_List_Color___List_float___o OutlineEffectMain__GetColorsAndKey
   const MethodInfo_3CF8CCC *v8; // x4
   il2cpp_array_size_t max_length; // x8
   unsigned __int64 v10; // x22
-  _DWORD *p_time; // x25
+  float *p_time; // x25
+  int v12; // s0 OVERLAPPED
+  int v13; // s1
+  int v14; // s2
+  int v15; // s3
   struct UnityEngine_Color_array *items; // x8
-  float v16; // s8
-  _QWORD *v17; // x9
+  float v17; // s8
+  _QWORD *v18; // x9
   __int64 size; // x10
-  struct System_Single_array *v19; // x8
-  _QWORD *v20; // x9
-  __int64 v21; // x10
-  struct System_Collections_Generic_List_Color__o *v24; // [xsp+0h] [xbp-60h] BYREF
-  struct System_Collections_Generic_List_float__o *v25; // [xsp+8h] [xbp-58h]
-  System_ValueTuple_object__object__o v26; // 0:x0.16
+  Il2CppObject *v20; // x8
+  struct System_Single_array *v21; // x8
+  _QWORD *v22; // x9
+  __int64 v23; // x10
+  struct System_Collections_Generic_List_Color__o *v24; // x0
+  struct System_Collections_Generic_List_float__o *v25; // x1
+  struct System_Collections_Generic_List_Color__o *v26; // [xsp+0h] [xbp-60h] BYREF
+  struct System_Collections_Generic_List_float__o *v27; // [xsp+8h] [xbp-58h]
+  System_ValueTuple_object__object__o v28; // 0:x0.16
   System_ValueTuple_List_Color___List_float___o result; // 0:x0.16
-  UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596BD99 & 1) == 0 )
   {
@@ -202,17 +209,20 @@ System_ValueTuple_List_Color___List_float___o OutlineEffectMain__GetColorsAndKey
   if ( (int)max_length >= 1 )
   {
     v10 = 0;
-    p_time = (_DWORD *)&ColorKeys->m_Items[0].fields.time;
+    p_time = &ColorKeys->m_Items[0].fields.time;
     while ( 1 )
     {
       if ( v10 >= (unsigned int)max_length )
         sub_2213CE4(v6);
       if ( !v4 )
         break;
-      v28 = (UnityEngine_Color_o)*((_OWORD *)p_time - 1);
+      v12 = *((_DWORD *)p_time - 4);
+      v13 = *((_DWORD *)p_time - 3);
+      v14 = *((_DWORD *)p_time - 2);
+      v15 = *((_DWORD *)p_time - 1);
       items = v4->fields._items;
-      v16 = *(float *)p_time;
-      v17 = Method_System_Collections_Generic_List_Color__Add__;
+      v17 = *p_time;
+      v18 = Method_System_Collections_Generic_List_Color__Add__;
       ++v4->fields._version;
       if ( !items )
         break;
@@ -221,33 +231,37 @@ System_ValueTuple_List_Color___List_float___o OutlineEffectMain__GetColorsAndKey
       {
         System_Collections_Generic_List_Color___AddWithResize(
           v4,
-          v28,
-          *(const MethodInfo_4419050 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+          *(UnityEngine_Color_o *)&v12,
+          *(const MethodInfo_4419050 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
+        v20 = &items->obj + size;
         v4->fields._size = size + 1;
-        items->m_Items[size] = v28;
+        LODWORD(v20[2].klass) = v12;
+        HIDWORD(v20[2].klass) = v13;
+        LODWORD(v20[2].monitor) = v14;
+        HIDWORD(v20[2].monitor) = v15;
       }
       if ( !v5 )
         break;
-      v19 = v5->fields._items;
-      v20 = Method_System_Collections_Generic_List_float__Add__;
+      v21 = v5->fields._items;
+      v22 = Method_System_Collections_Generic_List_float__Add__;
       ++v5->fields._version;
-      if ( !v19 )
+      if ( !v21 )
         break;
-      v21 = v5->fields._size;
-      if ( (unsigned int)v21 >= LODWORD(v19->max_length) )
+      v23 = v5->fields._size;
+      if ( (unsigned int)v23 >= LODWORD(v21->max_length) )
       {
         System_Collections_Generic_List_float___AddWithResize(
           v5,
-          v16,
-          *(const MethodInfo_44AEAF4 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          v17,
+          *(const MethodInfo_44AEAF4 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
-        v5->fields._size = v21 + 1;
-        v19->m_Items[v21] = v16;
+        v5->fields._size = v23 + 1;
+        v21->m_Items[v23] = v17;
       }
       LODWORD(max_length) = ColorKeys->max_length;
       ++v10;
@@ -259,17 +273,19 @@ LABEL_19:
     sub_2213CDC(v6, v7);
   }
 LABEL_18:
-  v26.fields.Item1 = (Il2CppObject *)&v24;
-  v26.fields.Item2 = (Il2CppObject *)v4;
-  v24 = 0;
-  v25 = 0;
+  v28.fields.Item1 = (Il2CppObject *)&v26;
+  v28.fields.Item2 = (Il2CppObject *)v4;
+  v26 = 0;
+  v27 = 0;
   System_ValueTuple_object__object____ctor(
-    v26,
+    v28,
     (Il2CppObject *)v5,
     (Il2CppObject *)Method_System_ValueTuple_List_Color___List_float____ctor__,
     v8);
-  result.fields.Item1 = v24;
+  v24 = v26;
+  v25 = v27;
   result.fields.Item2 = v25;
+  result.fields.Item1 = v24;
   return result;
 }
 

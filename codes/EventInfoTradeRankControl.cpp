@@ -1161,7 +1161,7 @@ void EventInfoTradeRankControl___c__DisplayClass20_1___PlayAnim_b__2(
   this = (EventInfoTradeRankControl___c__DisplayClass20_1_o *)CS___8__locals1->fields.__4__this;
   if ( !this
     || (afterRank = v4->fields.afterRank,
-        *((_DWORD *)this + 42) = afterRank,
+        LODWORD(this[4].monitor) = afterRank,
         EventInfoUIProgressControl__SaveEventProgressValueSaveData((EventInfoUIProgressControl_o *)this, afterRank, v2),
         (v7 = v4->fields.CS___8__locals1) == 0)
     || (this = (EventInfoTradeRankControl___c__DisplayClass20_1_o *)v7->fields.__4__this) == 0

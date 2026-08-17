@@ -428,10 +428,12 @@ bool BoxGachaResultEffectComponent__IsUnSkippable(BoxGachaResultEffectComponent_
   struct System_Func_bool__o *isUnSkippable; // x8
 
   isUnSkippable = this->fields.isUnSkippable;
-  return isUnSkippable
-      && ((bool (__fastcall *)(intptr_t, intptr_t))isUnSkippable->fields.invoke_impl)(
-           isUnSkippable->fields.method_code,
-           isUnSkippable->fields.method);
+  if ( isUnSkippable )
+    return ((__int64 (__fastcall *)(intptr_t, intptr_t))isUnSkippable->fields.invoke_impl)(
+             isUnSkippable->fields.method_code,
+             isUnSkippable->fields.method);
+  else
+    return 0;
 }
 
 
@@ -818,19 +820,18 @@ void BoxGachaResultEffectComponent__SetGachaButtonStatus(
   UnityEngine_Object_o *multiGachaButton; // x21
   __int64 v6; // x1
   UnityEngine_Behaviour_o *multiGachaBgSprite; // x0
-  float a; // s8
-  float b; // s9
-  unsigned __int64 v10; // kr00_8
-  __int64 v11; // x1
-  __int64 v12; // x2
+  unsigned __int64 v8; // kr00_8
+  unsigned __int64 v9; // kr08_8
+  __int64 v10; // x1
+  __int64 v11; // x2
   UnityEngine_Object_o *multiGachaLongPressSkipObj; // x21
-  UnityEngine_Color_o v14; // [xsp+0h] [xbp-60h] BYREF
-  UnityEngine_Color_o v15; // 0:kr10_16.16
-  UnityEngine_Color_o v16; // 0:kr20_16.16
-  UnityEngine_Color_o v17; // 0:kr30_16.16
-  UnityEngine_Color_o v18; // 0:kr40_16.16
-  UnityEngine_Color_o v19; // 0:kr50_16.16
-  UnityEngine_Color_o v20; // 0:kr60_16.16
+  UnityEngine_Color_o v13; // [xsp+0h] [xbp-60h] BYREF
+  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A7F8 & 1) == 0 )
   {
@@ -839,8 +840,8 @@ void BoxGachaResultEffectComponent__SetGachaButtonStatus(
     byte_596A7F8 = 1;
   }
   multiGachaButton = (UnityEngine_Object_o *)this->fields.multiGachaButton;
-  *(_QWORD *)&v14.fields.r = 0;
-  *(_QWORD *)&v14.fields.b = 0;
+  *(_QWORD *)&v13.fields.r = 0;
+  *(_QWORD *)&v13.fields.b = 0;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, isEnble, method);
   if ( !UnityEngine_Object__op_Equality(multiGachaButton, 0, 0) )
@@ -849,61 +850,53 @@ void BoxGachaResultEffectComponent__SetGachaButtonStatus(
     if ( !multiGachaBgSprite )
       goto LABEL_21;
     UnityEngine_Behaviour__set_enabled(multiGachaBgSprite, isEnble, 0);
-    UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_434/*"#4C4C4C"*/, &v14, 0);
-    a = 1.0;
-    b = 1.0;
-    v10 = __PAIR64__(1.0, 1.0);
+    UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_434/*"#4C4C4C"*/, &v13, 0);
+    v8 = __PAIR64__(1.0, 1.0);
+    v9 = __PAIR64__(1.0, 1.0);
     if ( !isEnble )
     {
-      v10 = *(_QWORD *)&v14.fields.r;
-      b = v14.fields.b;
-      a = v14.fields.a;
+      v8 = *(_QWORD *)&v13.fields.r;
+      v9 = *(_QWORD *)&v13.fields.b;
     }
     multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGachaBgSprite;
     if ( !multiGachaBgSprite )
       goto LABEL_21;
-    *(_QWORD *)&v15.fields.r = v10;
-    v15.fields.b = b;
-    v15.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v15, 0);
+    *(_QWORD *)&v14.fields.r = v8;
+    *(_QWORD *)&v14.fields.b = v9;
+    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v14, 0);
     multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGachaTimeSprite;
     if ( !multiGachaBgSprite )
       goto LABEL_21;
-    *(_QWORD *)&v16.fields.r = v10;
-    v16.fields.b = b;
-    v16.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v16, 0);
+    *(_QWORD *)&v15.fields.r = v8;
+    *(_QWORD *)&v15.fields.b = v9;
+    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v15, 0);
     multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiInfoTxtSprite;
     if ( !multiGachaBgSprite )
       goto LABEL_21;
-    *(_QWORD *)&v17.fields.r = v10;
-    v17.fields.b = b;
-    v17.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v17, 0);
+    *(_QWORD *)&v16.fields.r = v8;
+    *(_QWORD *)&v16.fields.b = v9;
+    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v16, 0);
     multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGacha1DigitNumSprite;
     if ( !multiGachaBgSprite )
       goto LABEL_21;
-    *(_QWORD *)&v18.fields.r = v10;
-    v18.fields.b = b;
-    v18.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v18, 0);
+    *(_QWORD *)&v17.fields.r = v8;
+    *(_QWORD *)&v17.fields.b = v9;
+    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v17, 0);
     multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGacha2DigitNumSprite;
     if ( !multiGachaBgSprite )
       goto LABEL_21;
-    *(_QWORD *)&v19.fields.r = v10;
-    v19.fields.b = b;
-    v19.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v19, 0);
+    *(_QWORD *)&v18.fields.r = v8;
+    *(_QWORD *)&v18.fields.b = v9;
+    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v18, 0);
     multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGacha3DigitNumSprite;
     if ( !multiGachaBgSprite )
       goto LABEL_21;
-    *(_QWORD *)&v20.fields.r = v10;
-    v20.fields.b = b;
-    v20.fields.a = a;
-    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v20, 0);
+    *(_QWORD *)&v19.fields.r = v8;
+    *(_QWORD *)&v19.fields.b = v9;
+    UIWidget__set_color((UIWidget_o *)multiGachaBgSprite, v19, 0);
     multiGachaLongPressSkipObj = (UnityEngine_Object_o *)this->fields.multiGachaLongPressSkipObj;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11, v12);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v10, v11);
     if ( UnityEngine_Object__op_Inequality(multiGachaLongPressSkipObj, 0, 0) )
     {
       multiGachaBgSprite = (UnityEngine_Behaviour_o *)this->fields.multiGachaLongPressSkipObj;

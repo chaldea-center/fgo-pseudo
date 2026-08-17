@@ -268,22 +268,22 @@ void WarBoardCost__SetOverwriteCost_44823928(
   bool OverwriteBaseActionPoint; // w21
   __int64 v6; // x8
   int32_t v7[2]; // [xsp+0h] [xbp-30h] BYREF
-  __int64 v8; // [xsp+8h] [xbp-28h] BYREF
+  int32_t value[2]; // [xsp+8h] [xbp-28h] BYREF
 
   *(_QWORD *)v7 = 0;
-  v8 = 0;
+  *(_QWORD *)value = 0;
   if ( !reinforcementsEntity )
     sub_2213CDC(this, 0);
   OverwriteBaseActionPoint = WarBoardReinforcementsEntity__TryGetOverwriteBaseActionPoint(
                                reinforcementsEntity,
-                               (int32_t *)&v8 + 1,
+                               &value[1],
                                0);
   if ( OverwriteBaseActionPoint )
-    this->fields.overwirteBaseActionPoint = HIDWORD(v8);
-  if ( WarBoardReinforcementsEntity__TryGetOverwriteAttackCost(reinforcementsEntity, (int32_t *)&v8, 0) )
+    this->fields.overwirteBaseActionPoint = value[1];
+  if ( WarBoardReinforcementsEntity__TryGetOverwriteAttackCost(reinforcementsEntity, value, 0) )
   {
     OverwriteBaseActionPoint = 1;
-    this->fields.overwirteAttack = v8;
+    this->fields.overwirteAttack = value[0];
   }
   if ( WarBoardReinforcementsEntity__TryGetOverwriteMoveCost(reinforcementsEntity, &v7[1], 0) )
   {

@@ -32,7 +32,7 @@ void SyncScrollComponent__AddTarget(
 {
   __int64 v7; // x1
   _BOOL8 v8; // x0
-  SyncScrollComponent_ScrollSet_o v9; // x1
+  SyncScrollComponent_ScrollSet_o v9; // x1 OVERLAPPED
   System_Collections_Generic_List_EventDelegate__o *onChange; // x22
   EventDelegate_Callback_o *v11; // x23
   __int64 v12; // x1
@@ -157,7 +157,7 @@ void SyncScrollComponent__OnDestroy(SyncScrollComponent_o *this, const MethodInf
   int v15; // w9
   _OWORD v16[2]; // [xsp+0h] [xbp-90h] BYREF
   __int128 v17; // [xsp+20h] [xbp-70h] BYREF
-  __int128 v18; // [xsp+30h] [xbp-60h]
+  UnityEngine_Object_o *x[2]; // [xsp+30h] [xbp-60h]
 
   if ( (byte_5972082 & 1) == 0 )
   {
@@ -174,7 +174,7 @@ void SyncScrollComponent__OnDestroy(SyncScrollComponent_o *this, const MethodInf
   }
   targetScrolls = (System_Collections_ICollection_o *)this->fields.targetScrolls;
   v17 = 0u;
-  v18 = 0u;
+  *(_OWORD *)x = 0u;
   if ( !BasicHelper__IsNullOrEmpty(targetScrolls, 0) )
   {
     v5 = this->fields.targetScrolls;
@@ -185,14 +185,14 @@ void SyncScrollComponent__OnDestroy(SyncScrollComponent_o *this, const MethodInf
       v5,
       (const MethodInfo_453F6E0 *)Method_System_Collections_Generic_List_SyncScrollComponent_ScrollSet__GetEnumerator__);
     v17 = v16[0];
-    v18 = v16[1];
+    *(_OWORD *)x = v16[1];
     *(_QWORD *)&v16[0] = 0;
     *((_QWORD *)&v16[0] + 1) = &v17;
     while ( System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet___MoveNext(
               (System_Collections_Generic_List_Enumerator_T__o *)&v17,
               (const MethodInfo_4144A9C *)Method_System_Collections_Generic_List_Enumerator_SyncScrollComponent_ScrollSet__MoveNext__) )
     {
-      v7 = (UnityEngine_Object_o *)*((_QWORD *)&v18 + 1);
+      v7 = x[1];
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6);
       v8 = UnityEngine_Object__op_Inequality(v7, 0, 0);

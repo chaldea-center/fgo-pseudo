@@ -624,7 +624,8 @@ LABEL_98:
     (System_Collections_Generic_List_Enumerator_T__o *)&v177,
     (System_Collections_Generic_List_object__o *)Master_object,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_FortificationAutomaticDialogComponent_DetailInfo__GetEnumerator__);
-  v180 = *(System_Collections_Generic_List_Enumerator_object__o *)&v177.fields.currentCryptoKey;
+  *(_OWORD *)&v180.fields._list = *(_OWORD *)&v177.fields.currentCryptoKey;
+  v180.fields._current = (Il2CppObject *)v177.fields.fakeValue;
   v177.fields.currentCryptoKey = 0;
   v177.fields.hiddenValue = (int64_t)&v180;
   while ( 1 )

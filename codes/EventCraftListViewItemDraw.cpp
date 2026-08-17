@@ -945,9 +945,12 @@ void EventCraftListViewItemDraw__UpdateItem(
   AtlasManager_c *v101; // x0
   UISprite_o *craftingStateSprite; // x20
   __int64 *v103; // x23
-  int v106; // [xsp+8h] [xbp-68h] BYREF
+  float v104; // s1 OVERLAPPED
+  float v105; // s2
+  float v106; // s3
+  float v107; // s0
+  int v108; // [xsp+8h] [xbp-68h] BYREF
   int32_t NowCompleteNum; // [xsp+Ch] [xbp-64h] BYREF
-  UnityEngine_Color_o v108; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A4FB & 1) == 0 )
   {
@@ -1116,8 +1119,8 @@ LABEL_30:
                     if ( v74 )
                     {
                       v75 = (Il2CppObject *)Time;
-                      v106 = v74->fields.getNum + v74->fields.tradeNum;
-                      v76 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v106);
+                      v108 = v74->fields.getNum + v74->fields.tradeNum;
+                      v76 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v108);
                       Time = (__int64)System_String__Format_75697880(v72, v75, v76, 0);
                       if ( progressLabel )
                       {
@@ -1258,16 +1261,16 @@ LABEL_124:
                           Time = (__int64)this->fields.timeLeftLabel;
                           if ( Time )
                           {
-                            v108.fields.g = 0.92157;
-                            v108.fields.b = 0.015686;
-                            v108.fields.a = 1.0;
+                            v104 = 0.92157;
+                            v105 = 0.015686;
+                            v106 = 1.0;
                             if ( v91 < 3600 )
                             {
-                              v108.fields.g = 0.0;
-                              v108.fields.b = 0.0;
+                              v104 = 0.0;
+                              v105 = 0.0;
                             }
-                            v108.fields.r = 1.0;
-                            UIWidget__set_color((UIWidget_o *)Time, v108, 0);
+                            v107 = 1.0;
+                            UIWidget__set_color((UIWidget_o *)Time, *(UnityEngine_Color_o *)(&v104 - 1), 0);
                             Time = (__int64)this->fields.craftingStateSprite;
                             if ( Time )
                             {

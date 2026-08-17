@@ -764,7 +764,7 @@ LABEL_21:
 
 void CombineEffectComponent__SetCardParam(CombineEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 fsm; // x0
+  unsigned __int64 fsm; // x0
   struct UnityEngine_GameObject_o *Value; // x0
   System_String_o *v5; // x2
   System_String_o *v6; // x3
@@ -1096,10 +1096,10 @@ void CombineEffectComponent__SetCardParam(CombineEffectComponent_o *this, const 
   DesignCardManager_o *v332; // x20
   int32_t baseClassCardId; // w21
   Il2CppObject *v334; // x20
-  __int64 v335; // x8
+  int64_t v335; // x8
   _QWORD *v336; // x9
   __int64 v337; // x10
-  __int64 v338; // x8
+  int64_t v338; // x8
   AssetLoader_LoadEndDataHandler_o *v339; // x21
   __int64 v340; // x1
   int32_t kind; // w8
@@ -1195,316 +1195,316 @@ void CombineEffectComponent__SetCardParam(CombineEffectComponent_o *this, const 
     sub_2213A60(&StringLiteral_6948/*"Feed17NodeName"*/);
     byte_59749B3 = 1;
   }
-  fsm = (__int64)this->fields.fsm;
+  fsm = (unsigned __int64)this->fields.fsm;
   classCardId = 0;
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_4747/*"CombineEffect"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_4747/*"CombineEffect"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
   Value = HutongGames_PlayMaker_FsmGameObject__get_Value((HutongGames_PlayMaker_FsmGameObject_o *)fsm, 0);
   this->fields.effect = Value;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)&this->fields.effect, (int32_t)Value, v5, v6, v7, v8, v9, v10);
-  fsm = (__int64)this->fields.fsm;
+  fsm = (unsigned __int64)this->fields.fsm;
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_4504/*"CardScale"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmFloat(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_4504/*"CardScale"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
   v11 = HutongGames_PlayMaker_FsmFloat__get_Value((HutongGames_PlayMaker_FsmFloat_o *)fsm, 0);
-  fsm = (__int64)this->fields.fsm;
+  fsm = (unsigned __int64)this->fields.fsm;
   if ( !fsm )
     goto LABEL_267;
   v12 = v11;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_3179/*"BaseCardNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_3179/*"BaseCardNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v13 = (System_String_o *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_7179/*"FstFeedNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_7179/*"FstFeedNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v14 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_13151/*"ScndFeedNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_13151/*"ScndFeedNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v15 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_15034/*"ThrdFeedNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_15034/*"ThrdFeedNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v16 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_7138/*"FourthFeedNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_7138/*"FourthFeedNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v17 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6990/*"FifthFeedNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6990/*"FifthFeedNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v18 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6937/*"Feed06NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6937/*"Feed06NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v19 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6938/*"Feed07NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6938/*"Feed07NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v20 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6939/*"Feed08NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6939/*"Feed08NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v21 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6940/*"Feed09NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6940/*"Feed09NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v22 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   item = v22;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6941/*"Feed10NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6941/*"Feed10NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v23 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v377 = v23;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6942/*"Feed11NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6942/*"Feed11NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v24 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v376 = v24;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6943/*"Feed12NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6943/*"Feed12NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v25 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v375 = v25;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6944/*"Feed13NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6944/*"Feed13NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v26 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v374 = v26;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6945/*"Feed14NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6945/*"Feed14NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v27 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v373 = v27;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6946/*"Feed15NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6946/*"Feed15NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v28 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v372 = v28;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6947/*"Feed16NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6947/*"Feed16NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v29 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v371 = v29;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6948/*"Feed17NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6948/*"Feed17NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v30 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v370 = v30;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6949/*"Feed18NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6949/*"Feed18NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v31 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   v369 = v31;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6950/*"Feed19NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6950/*"Feed19NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v32 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6951/*"Feed20NodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6951/*"Feed20NodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
   nodename = v13;
@@ -1925,68 +1925,68 @@ void CombineEffectComponent__SetCardParam(CombineEffectComponent_o *this, const 
     v237,
     v238,
     v239);
-  fsm = (__int64)this->fields.fsm;
+  fsm = (unsigned __int64)this->fields.fsm;
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_13441/*"SkillItemNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_13441/*"SkillItemNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v240 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_13194/*"SecItemNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_13194/*"SecItemNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v241 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_15035/*"ThrdItemNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_15035/*"ThrdItemNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v242 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_7139/*"FourthItemNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_7139/*"FourthItemNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
   if ( !this->fields.fsm )
     goto LABEL_267;
   v243 = (Il2CppObject *)fsm;
-  fsm = (__int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
+  fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables(this->fields.fsm, 0);
   if ( !fsm )
     goto LABEL_267;
-  fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                   (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                   (System_String_o *)StringLiteral_6991/*"FifthItemNodeName"*/,
-                   0);
+  fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                            (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                            (System_String_o *)StringLiteral_6991/*"FifthItemNodeName"*/,
+                            0);
   if ( !fsm )
     goto LABEL_267;
   v244 = (Il2CppObject *)HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)fsm, 0);
@@ -2106,15 +2106,15 @@ void CombineEffectComponent__SetCardParam(CombineEffectComponent_o *this, const 
     v299,
     v300,
     v301);
-  fsm = (__int64)this->fields.effect;
+  fsm = (unsigned __int64)this->fields.effect;
   if ( !fsm )
     goto LABEL_267;
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)fsm, 0);
-  fsm = (__int64)TransformHelper__getNodeFromName(transform, nodename, 1, 0);
+  fsm = (unsigned __int64)TransformHelper__getNodeFromName(transform, nodename, 1, 0);
   if ( !fsm )
     goto LABEL_267;
   v303 = (UnityEngine_Component_o *)fsm;
-  fsm = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)fsm, 0);
+  fsm = (unsigned __int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)fsm, 0);
   if ( !fsm )
     goto LABEL_267;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)fsm, 0, 0);
@@ -2150,7 +2150,7 @@ LABEL_201:
   CardImageLimitCount = UserServantEntity__getCardImageLimitCount(baseSvtEntity, 0, 0, v307, 0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v310);
-  fsm = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  fsm = (unsigned __int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !fsm )
     goto LABEL_267;
   fsm = ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -2172,22 +2172,22 @@ LABEL_201:
     v314 = OverwriteStatus;
   }
   gameObject = UnityEngine_Component__get_gameObject(v303, 0);
-  fsm = (__int64)CharaGraphManager__CreateTexturePrefab_47625456(
-                   gameObject,
-                   *p_baseSvtEntity,
-                   v312,
-                   10,
-                   0,
-                   0,
-                   v314,
-                   0,
-                   0,
-                   overrideTransformVal,
-                   0);
+  fsm = (unsigned __int64)CharaGraphManager__CreateTexturePrefab_47625456(
+                            gameObject,
+                            *p_baseSvtEntity,
+                            v312,
+                            10,
+                            0,
+                            0,
+                            v314,
+                            0,
+                            0,
+                            overrideTransformVal,
+                            0);
   if ( !fsm )
     goto LABEL_267;
   v316 = (UnityEngine_Component_o *)fsm;
-  fsm = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0);
+  fsm = (unsigned __int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)fsm, 0);
   v317 = (UnityEngine_Transform_o *)fsm;
   if ( !byte_5969AE0 )
   {
@@ -2197,7 +2197,7 @@ LABEL_201:
   if ( !v317 )
     goto LABEL_267;
   UnityEngine_Transform__set_localPosition(v317, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  fsm = (__int64)UnityEngine_Component__get_transform(v316, 0);
+  fsm = (unsigned __int64)UnityEngine_Component__get_transform(v316, 0);
   if ( !fsm )
     goto LABEL_267;
   v381.fields.x = v12;
@@ -2213,7 +2213,7 @@ LABEL_201:
   if ( !v320 )
     goto LABEL_267;
   IsGrandServant = UserServantEntity__IsGrandServant(v320, 0);
-  fsm = (__int64)*p_baseSvtEntity;
+  fsm = (unsigned __int64)*p_baseSvtEntity;
   if ( IsGrandServant )
   {
     if ( !fsm )
@@ -2221,14 +2221,14 @@ LABEL_201:
     SvtClassId = UserServantEntity__getSvtClassId((UserServantEntity_o *)fsm, 0, 1, 0);
     if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v322);
-    fsm = (__int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    fsm = (unsigned __int64)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
     if ( !fsm )
       goto LABEL_267;
     this->fields.baseClassCardId = ClassBoardClassMaster__GetClassBoardBaseId(
                                      (ClassBoardClassMaster_o *)fsm,
                                      SvtClassId,
                                      0);
-    fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    fsm = (unsigned __int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
     if ( !fsm )
       goto LABEL_267;
     GrandDesignCardPath = DesignCardManager__GetGrandDesignCardPath(
@@ -2242,11 +2242,11 @@ LABEL_201:
       goto LABEL_267;
     if ( UserServantEntity__isExceeded((UserServantEntity_o *)fsm, 0) )
     {
-      fsm = (__int64)*p_baseSvtEntity;
+      fsm = (unsigned __int64)*p_baseSvtEntity;
       if ( !*p_baseSvtEntity )
         goto LABEL_267;
       FrameCardPrefix = UserServantEntity__getFrameCardPrefix((UserServantEntity_o *)fsm, 0);
-      fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+      fsm = (unsigned __int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
       if ( !fsm )
         goto LABEL_267;
       GrandDesignCardPath = DesignCardManager__GetExceedFrameCardPath(
@@ -2257,7 +2257,7 @@ LABEL_201:
     }
     else
     {
-      fsm = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+      fsm = (unsigned __int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
       if ( !this->fields.baseSvtEntity )
         goto LABEL_267;
       v332 = (DesignCardManager_o *)fsm;
@@ -2269,7 +2269,7 @@ LABEL_201:
     }
   }
   v334 = (Il2CppObject *)GrandDesignCardPath;
-  fsm = (__int64)this->fields.releaseAssetPath;
+  fsm = (unsigned __int64)this->fields.releaseAssetPath;
   if ( !fsm )
     goto LABEL_267;
   v335 = *(_QWORD *)(fsm + 16);
@@ -2306,7 +2306,7 @@ LABEL_201:
   {
     if ( kind == 2 )
     {
-      fsm = (__int64)this->fields.fsm;
+      fsm = (unsigned __int64)this->fields.fsm;
       if ( !fsm )
         goto LABEL_267;
       v347 = StringLiteral_18958/*"combine_fodder02"*/;
@@ -2328,17 +2328,17 @@ LABEL_254:
       v351 = v349 - 1;
       if ( v351 < LODWORD(startAniName->max_length) )
       {
-        fsm = (__int64)this->fields.fsm;
+        fsm = (unsigned __int64)this->fields.fsm;
         if ( fsm )
         {
           v352 = startAniName->m_Items[v351];
-          fsm = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
+          fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
           if ( fsm )
           {
-            fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                             (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                             (System_String_o *)StringLiteral_13592/*"StartAnimationName"*/,
-                             0);
+            fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                                      (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                                      (System_String_o *)StringLiteral_13592/*"StartAnimationName"*/,
+                                      0);
             if ( fsm )
             {
               *(_QWORD *)(fsm + 56) = v352;
@@ -2378,18 +2378,18 @@ LABEL_267:
     v346 = v343 - 1;
     if ( v346 >= LODWORD(itemAniName->max_length) )
       goto LABEL_268;
-    fsm = (__int64)this->fields.fsm;
+    fsm = (unsigned __int64)this->fields.fsm;
     if ( !fsm )
       goto LABEL_267;
     v347 = (__int64)itemAniName->m_Items[v346];
 LABEL_263:
-    fsm = (__int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
+    fsm = (unsigned __int64)PlayMakerFSM__get_FsmVariables((PlayMakerFSM_o *)fsm, 0);
     if ( fsm )
     {
-      fsm = (__int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
-                       (HutongGames_PlayMaker_FsmVariables_o *)fsm,
-                       (System_String_o *)StringLiteral_13592/*"StartAnimationName"*/,
-                       0);
+      fsm = (unsigned __int64)HutongGames_PlayMaker_FsmVariables__GetFsmString(
+                                (HutongGames_PlayMaker_FsmVariables_o *)fsm,
+                                (System_String_o *)StringLiteral_13592/*"StartAnimationName"*/,
+                                0);
       if ( fsm )
       {
         *(_QWORD *)(fsm + 56) = v347;

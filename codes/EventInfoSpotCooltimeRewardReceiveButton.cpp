@@ -1189,15 +1189,18 @@ void EventInfoSpotCooltimeRewardReceiveButton__UpdateButtonDisp(
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *receiveButton; // x0
-  const MethodInfo *v7; // x1
+  float v5; // s0 OVERLAPPED
+  float v6; // s1
+  float v7; // s2
+  float v8; // s3
+  const MethodInfo *v9; // x1
   int32_t buttonState; // w8
-  bool v9; // zf
-  unsigned int v10; // w8
-  int v11; // w10
-  _BOOL4 v12; // w8
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  bool v11; // zf
+  unsigned int v12; // w8
+  int v13; // w10
+  _BOOL4 v14; // w8
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   receiveButton = (UnityEngine_Behaviour_o *)this->fields.receiveButton;
   this->fields.buttonState = state;
@@ -1209,17 +1212,17 @@ void EventInfoSpotCooltimeRewardReceiveButton__UpdateButtonDisp(
       receiveButton = (UnityEngine_Behaviour_o *)this->fields.buttonSprite;
       if ( receiveButton )
       {
-        v13.fields.r = 1.0;
-        v13.fields.g = 1.0;
-        v13.fields.b = 1.0;
-        v13.fields.a = 1.0;
-        UIWidget__set_color((UIWidget_o *)receiveButton, v13, 0);
+        v15.fields.r = 1.0;
+        v15.fields.g = 1.0;
+        v15.fields.b = 1.0;
+        v15.fields.a = 1.0;
+        UIWidget__set_color((UIWidget_o *)receiveButton, v15, 0);
         receiveButton = (UnityEngine_Behaviour_o *)this->fields.buttonTextLabel;
         if ( receiveButton )
         {
-          v14.fields.r = 1.0;
-          v14.fields.g = 1.0;
-          v14.fields.b = 1.0;
+          v5 = 1.0;
+          v6 = 1.0;
+          v7 = 1.0;
           goto LABEL_10;
         }
       }
@@ -1233,31 +1236,31 @@ LABEL_18:
   receiveButton = (UnityEngine_Behaviour_o *)this->fields.buttonSprite;
   if ( !receiveButton )
     goto LABEL_18;
-  v15.fields.r = 0.5;
-  v15.fields.g = 0.5;
-  v15.fields.b = 0.5;
-  v15.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)receiveButton, v15, 0);
+  v16.fields.r = 0.5;
+  v16.fields.g = 0.5;
+  v16.fields.b = 0.5;
+  v16.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)receiveButton, v16, 0);
   receiveButton = (UnityEngine_Behaviour_o *)this->fields.buttonTextLabel;
   if ( !receiveButton )
     goto LABEL_18;
-  v14.fields.r = 0.5;
-  v14.fields.g = 0.5;
-  v14.fields.b = 0.5;
+  v5 = 0.5;
+  v6 = 0.5;
+  v7 = 0.5;
 LABEL_10:
-  v14.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)receiveButton, v14, 0);
+  v8 = 1.0;
+  UIWidget__set_color((UIWidget_o *)receiveButton, *(UnityEngine_Color_o *)&v5, 0);
   buttonState = this->fields.buttonState;
-  v9 = buttonState == 2;
-  v10 = buttonState - 1;
-  v11 = v9;
-  v12 = v10 < 2;
+  v11 = buttonState == 2;
+  v12 = buttonState - 1;
+  v13 = v11;
+  v14 = v12 < 2;
   if ( this->fields.mode != 1 )
-    v12 = v11;
-  if ( v12 )
-    EventInfoSpotCooltimeRewardReceiveButton__PlayButtonEffect(this, v7);
+    v14 = v13;
+  if ( v14 )
+    EventInfoSpotCooltimeRewardReceiveButton__PlayButtonEffect(this, v9);
   else
-    EventInfoSpotCooltimeRewardReceiveButton__StopButtonEffect(this, v7);
+    EventInfoSpotCooltimeRewardReceiveButton__StopButtonEffect(this, v9);
 }
 
 

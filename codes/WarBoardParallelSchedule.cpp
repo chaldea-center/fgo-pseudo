@@ -211,6 +211,7 @@ bool WarBoardParallelSchedule__Execute_d__4__MoveNext(
   int32_t v64; // w5
   bool v65; // w6
   bool v66; // w7
+  bool result; // w0
   unsigned __int64 v68; // x21
   struct System_Boolean_array *v69; // x26
   bool *v70; // x27
@@ -463,8 +464,9 @@ LABEL_45:
   v3->fields.__2__current = &v83->obj;
   p__2__current = (MissionNaviTransitionBoardItem_o *)&v3->fields.__2__current;
   sub_2213A04(p__2__current, (int32_t)v83, v61, v62, v63, v64, v65, v66);
+  result = 1;
   p__2__current[-1].fields._BoardType_k__BackingField = 1;
-  return 1;
+  return result;
 }
 
 

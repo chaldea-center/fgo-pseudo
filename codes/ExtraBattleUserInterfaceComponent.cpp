@@ -390,10 +390,14 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceComponent__get_OverKillPositionAdj
         ExtraBattleUserInterfaceComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.overKillPositionAdjust.fields.x;
-  result.fields.y = this->fields.overKillPositionAdjust.fields.y;
+  x = this->fields.overKillPositionAdjust.fields.x;
+  y = this->fields.overKillPositionAdjust.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -402,10 +406,14 @@ UnityEngine_Vector2_o ExtraBattleUserInterfaceComponent__get_SkillSkipPositionAd
         ExtraBattleUserInterfaceComponent_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields.skillSkipPositionAdjust.fields.x;
-  result.fields.y = this->fields.skillSkipPositionAdjust.fields.y;
+  x = this->fields.skillSkipPositionAdjust.fields.x;
+  y = this->fields.skillSkipPositionAdjust.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

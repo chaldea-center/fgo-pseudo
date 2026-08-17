@@ -31,7 +31,7 @@ void MasterMissionReceiveConfirmListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   MasterMissionReceiveConfirmListViewItemDraw_o *v10; // x19
-  UnityEngine_Vector2_o printedSize; // kr10_8
+  UnityEngine_Vector2_o printedSize; // kr00_8
   int32_t v12; // w24
   __int64 v13; // x1
   MasterMissionReceiveConfirmListViewItemDraw_c *v14; // x0
@@ -58,21 +58,21 @@ void MasterMissionReceiveConfirmListViewItemDraw__SetItem(
   struct UILabel_array *v35; // x8
   UILabel_o *v36; // x24
   struct UILabel_array *v37; // x8
-  UnityEngine_Vector2_o v38; // kr18_8
+  UnityEngine_Vector2_o v38; // kr08_8
   int y; // w8
   int v40; // w21
   UnityEngine_GameObject_o *v41; // x0
   __int64 v42; // x1
   UnityEngine_Object_o *boxCollider; // x20
   int32_t LINE_HEIGHT; // w22
+  float v45; // s1
   bool v46; // [xsp+4h] [xbp-8Ch]
   Il2CppObject *MasterData_object; // [xsp+8h] [xbp-88h]
   int32_t v48; // [xsp+14h] [xbp-7Ch] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-78h] BYREF
   System_String_o *countText; // [xsp+20h] [xbp-70h] BYREF
   System_String_o *nameText; // [xsp+28h] [xbp-68h] BYREF
-  UnityEngine_Vector3_o size; // 0:kr00_12.12
-  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
   v10 = this;
   if ( (byte_597437D & 1) == 0 )
@@ -99,11 +99,11 @@ void MasterMissionReceiveConfirmListViewItemDraw__SetItem(
     this = (MasterMissionReceiveConfirmListViewItemDraw_o *)v10->fields.messageLabel;
     if ( !this )
       goto LABEL_66;
-    UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)this + 106) * message->fields._stringLength, 0);
+    UIWidget__set_height((UIWidget_o *)this, this[5].fields.dispMode * message->fields._stringLength, 0);
     this = (MasterMissionReceiveConfirmListViewItemDraw_o *)v10->fields.messageLabel;
     if ( !this )
       goto LABEL_66;
-    WrapControlText__textAdjust((UILabel_o *)this, message, *((_DWORD *)this + 106), *((_DWORD *)this + 106), 0);
+    WrapControlText__textAdjust((UILabel_o *)this, message, this[5].fields.dispMode, this[5].fields.dispMode, 0);
     this = (MasterMissionReceiveConfirmListViewItemDraw_o *)v10->fields.messageLabel;
     if ( !this )
       goto LABEL_66;
@@ -276,7 +276,7 @@ LABEL_54:
     }
     if ( !v10->fields.lineSprite )
       goto LABEL_66;
-    v40 = *(_DWORD *)(*((_QWORD *)this + 23) + 8LL) + v20;
+    v40 = LODWORD(this[2].fields.messageLabel->monitor) + v20;
     v41 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10->fields.lineSprite, 0);
     GameObjectExtensions__SetLocalPositionY(v41, (float)-v40, 0);
     this = (MasterMissionReceiveConfirmListViewItemDraw_o *)v10->fields.lineSprite;
@@ -298,13 +298,11 @@ LABEL_54:
       if ( !this )
         goto LABEL_66;
       size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0);
-      v53.fields.x = size.fields.x;
-      v53.fields.z = size.fields.z;
       this = (MasterMissionReceiveConfirmListViewItemDraw_o *)v10->fields.boxCollider;
       if ( !this )
         goto LABEL_66;
-      v53.fields.y = (float)(LINE_HEIGHT + v40);
-      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, v53, 0);
+      v45 = (float)(LINE_HEIGHT + v40);
+      UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, size, 0);
     }
   }
 }

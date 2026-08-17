@@ -35,355 +35,367 @@ void BalanceConfig___cctor(const MethodInfo *method)
   bool v33; // w7
   Il2CppClass *v34; // x0
   struct BalanceConfig_StaticFields *v35; // x8
-  System_Array_o *v36; // x19
+  System_Array_o *v36; // x0
+  System_RuntimeFieldHandle_o v37; // x1
+  MissionNaviTransitionBoardItem_c *v38; // x19
   MissionNaviTransitionBoardItem_o *p_MainRecordFolderWarIds; // x0
-  System_String_o *v38; // x2
-  System_String_o *v39; // x3
-  int32_t v40; // w4
-  int32_t v41; // w5
-  bool v42; // w6
-  bool v43; // w7
-  struct BalanceConfig_StaticFields *v44; // x8
-  System_String_o *v45; // x2
-  System_String_o *v46; // x3
-  int32_t v47; // w4
-  int32_t v48; // w5
-  bool v49; // w6
-  bool v50; // w7
+  System_String_o *v40; // x2
+  System_String_o *v41; // x3
+  int32_t v42; // w4
+  int32_t v43; // w5
+  bool v44; // w6
+  bool v45; // w7
+  struct BalanceConfig_StaticFields *v46; // x8
+  System_String_o *v47; // x2
+  System_String_o *v48; // x3
+  int32_t v49; // w4
+  int32_t v50; // w5
+  bool v51; // w6
+  bool v52; // w7
   MissionNaviTransitionBoardItem_o *p_EventBoardGameDiceButtonPostion; // x0
-  System_String_o *v52; // x2
-  System_String_o *v53; // x3
-  int32_t v54; // w4
-  int32_t v55; // w5
-  bool v56; // w6
-  bool v57; // w7
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
   MissionNaviTransitionBoardItem_o *p_EventBoardGameMapIdList; // x0
-  System_String_o *v59; // x2
-  System_String_o *v60; // x3
-  int32_t v61; // w4
-  int32_t v62; // w5
-  bool v63; // w6
-  bool v64; // w7
-  __int64 v65; // x1
-  struct BalanceConfig_StaticFields *v66; // x8
-  System_String_o *v67; // x2
-  System_String_o *v68; // x3
-  int32_t v69; // w4
-  int32_t v70; // w5
-  bool v71; // w6
-  bool v72; // w7
-  int32_t v73; // w1
+  System_String_o *v61; // x2
+  System_String_o *v62; // x3
+  int32_t v63; // w4
+  int32_t v64; // w5
+  bool v65; // w6
+  bool v66; // w7
+  __int64 v67; // x1
+  struct BalanceConfig_StaticFields *v68; // x8
+  System_String_o *v69; // x2
+  System_String_o *v70; // x3
+  int32_t v71; // w4
+  int32_t v72; // w5
+  bool v73; // w6
+  bool v74; // w7
+  int32_t v75; // w1
   MissionNaviTransitionBoardItem_o *p_AfterPart2TitleBgmName; // x0
-  System_String_o *v75; // x2
-  System_String_o *v76; // x3
-  int32_t v77; // w4
-  int32_t v78; // w5
-  bool v79; // w6
-  bool v80; // w7
-  int32_t v81; // w1
+  System_String_o *v77; // x2
+  System_String_o *v78; // x3
+  int32_t v79; // w4
+  int32_t v80; // w5
+  bool v81; // w6
+  bool v82; // w7
+  int32_t v83; // w1
   MissionNaviTransitionBoardItem_o *p_AfterPart2TerminalBgmName; // x0
-  System_String_o *v83; // x2
-  System_String_o *v84; // x3
-  int32_t v85; // w4
-  int32_t v86; // w5
-  bool v87; // w6
-  bool v88; // w7
+  System_String_o *v85; // x2
+  System_String_o *v86; // x3
+  int32_t v87; // w4
+  int32_t v88; // w5
+  bool v89; // w6
+  bool v90; // w7
   MissionNaviTransitionBoardItem_o *p_consumeStormPodSpotId; // x0
-  System_String_o *v90; // x2
-  System_String_o *v91; // x3
-  int32_t v92; // w4
-  int32_t v93; // w5
-  bool v94; // w6
-  bool v95; // w7
+  System_String_o *v92; // x2
+  System_String_o *v93; // x3
+  int32_t v94; // w4
+  int32_t v95; // w5
+  bool v96; // w6
+  bool v97; // w7
   MissionNaviTransitionBoardItem_o *p_StormPodHelpIds; // x0
-  System_String_o *v97; // x2
-  System_String_o *v98; // x3
-  int32_t v99; // w4
-  int32_t v100; // w5
-  bool v101; // w6
-  bool v102; // w7
+  System_String_o *v99; // x2
+  System_String_o *v100; // x3
+  int32_t v101; // w4
+  int32_t v102; // w5
+  bool v103; // w6
+  bool v104; // w7
   MissionNaviTransitionBoardItem_o *p_legacyAspectMovies; // x0
-  System_String_o *v104; // x2
-  System_String_o *v105; // x3
-  int32_t v106; // w4
-  int32_t v107; // w5
-  bool v108; // w6
-  bool v109; // w7
+  System_String_o *v106; // x2
+  System_String_o *v107; // x3
+  int32_t v108; // w4
+  int32_t v109; // w5
+  bool v110; // w6
+  bool v111; // w7
   MissionNaviTransitionBoardItem_o *p_UIStandFigureROffsetEffectNames; // x0
-  System_String_o *v111; // x2
-  System_String_o *v112; // x3
-  int32_t v113; // w4
-  int32_t v114; // w5
-  bool v115; // w6
-  bool v116; // w7
+  System_String_o *v113; // x2
+  System_String_o *v114; // x3
+  int32_t v115; // w4
+  int32_t v116; // w5
+  bool v117; // w6
+  bool v118; // w7
   MissionNaviTransitionBoardItem_o *p_UIStandFigureROffsetImages; // x0
-  System_String_o *v118; // x2
-  System_String_o *v119; // x3
-  int32_t v120; // w4
-  int32_t v121; // w5
-  bool v122; // w6
-  bool v123; // w7
-  Il2CppClass *v124; // x0
-  struct BalanceConfig_StaticFields *v125; // x8
-  __int64 v126; // x0
-  __int64 v127; // x1
-  System_String_o *v128; // x2
-  System_String_o *v129; // x3
-  int32_t v130; // w4
-  int32_t v131; // w5
-  bool v132; // w6
-  bool v133; // w7
-  int v134; // w8
-  MissionNaviTransitionBoardItem_c *v135; // x1
-  BalanceConfig_c *v136; // x8
+  System_String_o *v120; // x2
+  System_String_o *v121; // x3
+  int32_t v122; // w4
+  int32_t v123; // w5
+  bool v124; // w6
+  bool v125; // w7
+  Il2CppClass *v126; // x0
+  struct BalanceConfig_StaticFields *v127; // x8
+  __int64 v128; // x0
+  __int64 v129; // x1
+  System_String_o *v130; // x2
+  System_String_o *v131; // x3
+  int32_t v132; // w4
+  int32_t v133; // w5
+  bool v134; // w6
+  bool v135; // w7
+  int v136; // w8
+  MissionNaviTransitionBoardItem_c *v137; // x1
+  BalanceConfig_c *v138; // x8
   MissionNaviTransitionBoardItem_o *p_MainChaptersWithEventId; // x0
-  System_String_o *v138; // x2
-  System_String_o *v139; // x3
-  int32_t v140; // w4
-  int32_t v141; // w5
-  bool v142; // w6
-  bool v143; // w7
-  struct BalanceConfig_StaticFields *v144; // x8
-  System_String_o *v145; // x2
-  System_String_o *v146; // x3
-  int32_t v147; // w4
-  int32_t v148; // w5
-  bool v149; // w6
-  bool v150; // w7
-  struct BalanceConfig_StaticFields *v151; // x8
-  Il2CppClass *v152; // x0
+  System_String_o *v140; // x2
+  System_String_o *v141; // x3
+  int32_t v142; // w4
+  int32_t v143; // w5
+  bool v144; // w6
+  bool v145; // w7
+  struct BalanceConfig_StaticFields *v146; // x8
+  System_String_o *v147; // x2
+  System_String_o *v148; // x3
+  int32_t v149; // w4
+  int32_t v150; // w5
+  bool v151; // w6
+  bool v152; // w7
   struct BalanceConfig_StaticFields *v153; // x8
-  System_Array_o *v154; // x19
+  Il2CppClass *v154; // x0
+  struct BalanceConfig_StaticFields *v155; // x8
+  System_Array_o *v156; // x0
+  System_RuntimeFieldHandle_o v157; // x1
+  MissionNaviTransitionBoardItem_c *v158; // x19
   MissionNaviTransitionBoardItem_o *p_Extra1SortOrderClassIds; // x0
-  System_String_o *v156; // x2
-  System_String_o *v157; // x3
-  int32_t v158; // w4
-  int32_t v159; // w5
-  bool v160; // w6
-  bool v161; // w7
-  System_Array_o *v162; // x19
+  System_String_o *v160; // x2
+  System_String_o *v161; // x3
+  int32_t v162; // w4
+  int32_t v163; // w5
+  bool v164; // w6
+  bool v165; // w7
+  System_Array_o *v166; // x0
+  System_RuntimeFieldHandle_o v167; // x1
+  MissionNaviTransitionBoardItem_c *v168; // x19
   MissionNaviTransitionBoardItem_o *p_Extra2SortOrderClassIds; // x0
-  System_String_o *v164; // x2
-  System_String_o *v165; // x3
-  int32_t v166; // w4
-  int32_t v167; // w5
-  bool v168; // w6
-  bool v169; // w7
-  struct BalanceConfig_StaticFields *v170; // x8
-  Il2CppClass *v171; // x0
-  __int64 v172; // x0
-  struct BalanceConfig_StaticFields *v173; // x8
-  System_String_o *v174; // x2
-  System_String_o *v175; // x3
-  int32_t v176; // w4
-  int32_t v177; // w5
-  bool v178; // w6
-  bool v179; // w7
+  System_String_o *v170; // x2
+  System_String_o *v171; // x3
+  int32_t v172; // w4
+  int32_t v173; // w5
+  bool v174; // w6
+  bool v175; // w7
+  struct BalanceConfig_StaticFields *v176; // x8
+  Il2CppClass *v177; // x0
+  __int64 v178; // x0
+  struct BalanceConfig_StaticFields *v179; // x8
   System_String_o *v180; // x2
   System_String_o *v181; // x3
   int32_t v182; // w4
   int32_t v183; // w5
   bool v184; // w6
   bool v185; // w7
-  struct BalanceConfig_StaticFields *v186; // x8
-  System_String_o *v187; // x2
-  System_String_o *v188; // x3
-  int32_t v189; // w4
-  int32_t v190; // w5
-  bool v191; // w6
-  bool v192; // w7
-  MissionNaviTransitionBoardItem_c *v193; // x1
-  BalanceConfig_c *v194; // x8
+  System_String_o *v186; // x2
+  System_String_o *v187; // x3
+  int32_t v188; // w4
+  int32_t v189; // w5
+  bool v190; // w6
+  bool v191; // w7
+  struct BalanceConfig_StaticFields *v192; // x8
+  System_String_o *v193; // x2
+  System_String_o *v194; // x3
+  int32_t v195; // w4
+  int32_t v196; // w5
+  bool v197; // w6
+  bool v198; // w7
+  MissionNaviTransitionBoardItem_c *v199; // x1
+  BalanceConfig_c *v200; // x8
   MissionNaviTransitionBoardItem_o *p_OrdealCallChapterFolderEventUIDispWarIds; // x0
-  System_String_o *v196; // x2
-  System_String_o *v197; // x3
-  int32_t v198; // w4
-  int32_t v199; // w5
-  bool v200; // w6
-  bool v201; // w7
-  struct BalanceConfig_StaticFields *v202; // x8
-  System_String_o *v203; // x2
-  System_String_o *v204; // x3
-  int32_t v205; // w4
-  int32_t v206; // w5
-  bool v207; // w6
-  bool v208; // w7
-  struct BalanceConfig_StaticFields *v209; // x8
-  System_Array_o *v210; // x19
+  System_String_o *v202; // x2
+  System_String_o *v203; // x3
+  int32_t v204; // w4
+  int32_t v205; // w5
+  bool v206; // w6
+  bool v207; // w7
+  struct BalanceConfig_StaticFields *v208; // x8
+  System_String_o *v209; // x2
+  System_String_o *v210; // x3
+  int32_t v211; // w4
+  int32_t v212; // w5
+  bool v213; // w6
+  bool v214; // w7
+  struct BalanceConfig_StaticFields *v215; // x8
+  System_Array_o *v216; // x0
+  System_RuntimeFieldHandle_o v217; // x1
+  MissionNaviTransitionBoardItem_c *v218; // x19
   MissionNaviTransitionBoardItem_o *p_NotSendTrackEventAtWarIds; // x0
-  System_String_o *v212; // x2
-  System_String_o *v213; // x3
-  int32_t v214; // w4
-  int32_t v215; // w5
-  bool v216; // w6
-  bool v217; // w7
-  Il2CppClass *v218; // x0
-  System_Array_o *v219; // x19
+  System_String_o *v220; // x2
+  System_String_o *v221; // x3
+  int32_t v222; // w4
+  int32_t v223; // w5
+  bool v224; // w6
+  bool v225; // w7
+  Il2CppClass *v226; // x0
+  System_Array_o *v227; // x0
+  System_RuntimeFieldHandle_o v228; // x1
+  MissionNaviTransitionBoardItem_c *v229; // x19
   MissionNaviTransitionBoardItem_o *p_NotRequiredPlayWarIds; // x0
-  System_String_o *v221; // x2
-  System_String_o *v222; // x3
-  int32_t v223; // w4
-  int32_t v224; // w5
-  bool v225; // w6
-  bool v226; // w7
-  Il2CppClass *v227; // x0
-  __int64 v228; // x0
-  struct BalanceConfig_StaticFields *v229; // x8
-  System_String_o *v230; // x2
-  System_String_o *v231; // x3
-  int32_t v232; // w4
-  int32_t v233; // w5
-  bool v234; // w6
-  bool v235; // w7
-  System_Collections_Generic_Dictionary_string__int__c *v236; // x0
-  System_Collections_Generic_Dictionary_object__int__o *v237; // x19
+  System_String_o *v231; // x2
+  System_String_o *v232; // x3
+  int32_t v233; // w4
+  int32_t v234; // w5
+  bool v235; // w6
+  bool v236; // w7
+  Il2CppClass *v237; // x0
+  __int64 v238; // x0
+  struct BalanceConfig_StaticFields *v239; // x8
+  System_String_o *v240; // x2
+  System_String_o *v241; // x3
+  int32_t v242; // w4
+  int32_t v243; // w5
+  bool v244; // w6
+  bool v245; // w7
+  System_Collections_Generic_Dictionary_string__int__c *v246; // x0
+  System_Collections_Generic_Dictionary_object__int__o *v247; // x19
   MissionNaviTransitionBoardItem_o *p_MissionIconDisplayMsDictionary; // x0
-  System_String_o *v239; // x2
-  System_String_o *v240; // x3
-  int32_t v241; // w4
-  int32_t v242; // w5
-  bool v243; // w6
-  bool v244; // w7
-  Il2CppClass *v250; // x0
-  struct BalanceConfig_StaticFields *v251; // x8
-  System_String_o *v252; // x2
-  System_String_o *v253; // x3
-  int32_t v254; // w4
-  int32_t v255; // w5
-  bool v256; // w6
-  bool v257; // w7
-  int v258; // w8
-  MissionNaviTransitionBoardItem_c *v259; // x1
-  BalanceConfig_c *v260; // x8
+  System_String_o *v249; // x2
+  System_String_o *v250; // x3
+  int32_t v251; // w4
+  int32_t v252; // w5
+  bool v253; // w6
+  bool v254; // w7
+  Il2CppClass *v260; // x0
+  struct BalanceConfig_StaticFields *v261; // x8
+  System_String_o *v262; // x2
+  System_String_o *v263; // x3
+  int32_t v264; // w4
+  int32_t v265; // w5
+  bool v266; // w6
+  bool v267; // w7
+  int v268; // w8
+  MissionNaviTransitionBoardItem_c *v269; // x1
+  BalanceConfig_c *v270; // x8
   MissionNaviTransitionBoardItem_o *p_PlayableBeastClassIds; // x0
-  Il2CppClass *v262; // x0
-  struct BalanceConfig_StaticFields *v263; // x8
-  System_String_o *v264; // x2
-  System_String_o *v265; // x3
-  int32_t v266; // w4
-  int32_t v267; // w5
-  bool v268; // w6
-  bool v269; // w7
-  MissionNaviTransitionBoardItem_c *v270; // x1
-  BalanceConfig_c *v271; // x8
+  Il2CppClass *v272; // x0
+  struct BalanceConfig_StaticFields *v273; // x8
+  System_String_o *v274; // x2
+  System_String_o *v275; // x3
+  int32_t v276; // w4
+  int32_t v277; // w5
+  bool v278; // w6
+  bool v279; // w7
+  MissionNaviTransitionBoardItem_c *v280; // x1
+  BalanceConfig_c *v281; // x8
   MissionNaviTransitionBoardItem_o *p_MainInterludeMapReturnWarIds; // x0
-  Il2CppClass *v273; // x0
-  struct BalanceConfig_StaticFields *v274; // x8
-  System_String_o *v275; // x2
-  System_String_o *v276; // x3
-  int32_t v277; // w4
-  int32_t v278; // w5
-  bool v279; // w6
-  bool v280; // w7
-  MissionNaviTransitionBoardItem_c *v281; // x1
-  BalanceConfig_c *v282; // x8
+  Il2CppClass *v283; // x0
+  struct BalanceConfig_StaticFields *v284; // x8
+  System_String_o *v285; // x2
+  System_String_o *v286; // x3
+  int32_t v287; // w4
+  int32_t v288; // w5
+  bool v289; // w6
+  bool v290; // w7
+  MissionNaviTransitionBoardItem_c *v291; // x1
+  BalanceConfig_c *v292; // x8
   MissionNaviTransitionBoardItem_o *p_InvalidOpeningMovieIds; // x0
-  System_String_o *v284; // x2
-  System_String_o *v285; // x3
-  int32_t v286; // w4
-  int32_t v287; // w5
-  bool v288; // w6
-  bool v289; // w7
-  struct BalanceConfig_StaticFields *v290; // x8
-  System_String_o *v291; // x2
-  System_String_o *v292; // x3
-  int32_t v293; // w4
-  int32_t v294; // w5
-  bool v295; // w6
-  bool v296; // w7
-  MissionNaviTransitionBoardItem_c *v297; // x19
-  int32_t v298; // w1
+  System_String_o *v294; // x2
+  System_String_o *v295; // x3
+  int32_t v296; // w4
+  int32_t v297; // w5
+  bool v298; // w6
+  bool v299; // w7
+  struct BalanceConfig_StaticFields *v300; // x8
+  System_String_o *v301; // x2
+  System_String_o *v302; // x3
+  int32_t v303; // w4
+  int32_t v304; // w5
+  bool v305; // w6
+  bool v306; // w7
+  MissionNaviTransitionBoardItem_c *v307; // x19
+  int32_t v308; // w1
   MissionNaviTransitionBoardItem_o *p_TerminalGrandBgmNames; // x0
-  System_String_o *v300; // x2
-  System_String_o *v301; // x3
-  int32_t v302; // w4
-  int32_t v303; // w5
-  bool v304; // w6
-  bool v305; // w7
-  struct System_String_o *v306; // x1
-  struct BalanceConfig_StaticFields *v307; // x8
-  System_String_o *v308; // x2
-  System_String_o *v309; // x3
-  int32_t v310; // w4
-  int32_t v311; // w5
-  bool v312; // w6
-  bool v313; // w7
-  System_String_o *v314; // x2
-  System_String_o *v315; // x3
-  int32_t v316; // w4
-  int32_t v317; // w5
-  bool v318; // w6
-  bool v319; // w7
-  int v320; // w8
-  struct BalanceConfig_StaticFields *v321; // x8
-  __int64 v322; // x19
-  __int64 v323; // x20
-  __int64 v324; // x1
-  System_String_o *v325; // x2
-  System_String_o *v326; // x3
-  int32_t v327; // w4
-  int32_t v328; // w5
-  bool v329; // w6
-  bool v330; // w7
+  System_String_o *v310; // x2
+  System_String_o *v311; // x3
+  int32_t v312; // w4
+  int32_t v313; // w5
+  bool v314; // w6
+  bool v315; // w7
+  struct System_String_o *v316; // x1
+  struct BalanceConfig_StaticFields *v317; // x8
+  System_String_o *v318; // x2
+  System_String_o *v319; // x3
+  int32_t v320; // w4
+  int32_t v321; // w5
+  bool v322; // w6
+  bool v323; // w7
+  System_String_o *v324; // x2
+  System_String_o *v325; // x3
+  int32_t v326; // w4
+  int32_t v327; // w5
+  bool v328; // w6
+  bool v329; // w7
+  int v330; // w8
+  struct BalanceConfig_StaticFields *v331; // x8
+  __int64 v332; // x19
+  __int64 v333; // x20
+  __int64 v334; // x1
+  System_String_o *v335; // x2
+  System_String_o *v336; // x3
+  int32_t v337; // w4
+  int32_t v338; // w5
+  bool v339; // w6
+  bool v340; // w7
   MissionNaviTransitionBoardItem_o *p_ChapterBoardLayoutDataArray; // x0
-  System_String_o *v332; // x2
-  System_String_o *v333; // x3
-  int32_t v334; // w4
-  int32_t v335; // w5
-  bool v336; // w6
-  bool v337; // w7
-  System_String_o *v338; // x2
-  System_String_o *v339; // x3
-  int32_t v340; // w4
-  int32_t v341; // w5
-  bool v342; // w6
-  bool v343; // w7
-  struct BalanceConfig_StaticFields *v344; // x8
-  Il2CppClass *v345; // x0
-  struct BalanceConfig_StaticFields *v346; // x8
-  System_String_o *v347; // x2
-  System_String_o *v348; // x3
-  int32_t v349; // w4
-  int32_t v350; // w5
-  bool v351; // w6
-  bool v352; // w7
-  int v353; // w8
+  System_String_o *v342; // x2
+  System_String_o *v343; // x3
+  int32_t v344; // w4
+  int32_t v345; // w5
+  bool v346; // w6
+  bool v347; // w7
+  System_String_o *v348; // x2
+  System_String_o *v349; // x3
+  int32_t v350; // w4
+  int32_t v351; // w5
+  bool v352; // w6
+  bool v353; // w7
   struct BalanceConfig_StaticFields *v354; // x8
-  System_Array_o *v355; // x19
-  MissionNaviTransitionBoardItem_o *p_SaveDataDeleteButtonOpenCondition; // x0
+  Il2CppClass *v355; // x0
+  struct BalanceConfig_StaticFields *v356; // x8
   System_String_o *v357; // x2
   System_String_o *v358; // x3
   int32_t v359; // w4
   int32_t v360; // w5
   bool v361; // w6
   bool v362; // w7
-  System_String_o *v363; // x2
-  System_String_o *v364; // x3
-  int32_t v365; // w4
-  int32_t v366; // w5
-  bool v367; // w6
-  bool v368; // w7
-  MissionNaviTransitionBoardItem_c *v369; // x1
-  BalanceConfig_c *v370; // x8
+  int v363; // w8
+  struct BalanceConfig_StaticFields *v364; // x8
+  System_Array_o *v365; // x0
+  System_RuntimeFieldHandle_o v366; // x1
+  MissionNaviTransitionBoardItem_c *v367; // x19
+  MissionNaviTransitionBoardItem_o *p_SaveDataDeleteButtonOpenCondition; // x0
+  System_String_o *v369; // x2
+  System_String_o *v370; // x3
+  int32_t v371; // w4
+  int32_t v372; // w5
+  bool v373; // w6
+  bool v374; // w7
+  System_String_o *v375; // x2
+  System_String_o *v376; // x3
+  int32_t v377; // w4
+  int32_t v378; // w5
+  bool v379; // w6
+  bool v380; // w7
+  MissionNaviTransitionBoardItem_c *v381; // x1
+  BalanceConfig_c *v382; // x8
   MissionNaviTransitionBoardItem_o *p_EventActionOnSpotEventIds; // x0
-  Il2CppClass *v372; // x0
-  System_String_o *v373; // x2
-  System_String_o *v374; // x3
-  int32_t v375; // w4
-  int32_t v376; // w5
-  bool v377; // w6
-  bool v378; // w7
-  MissionNaviTransitionBoardItem_c *v379; // x1
-  BalanceConfig_c *v380; // x8
+  Il2CppClass *v384; // x0
+  System_String_o *v385; // x2
+  System_String_o *v386; // x3
+  int32_t v387; // w4
+  int32_t v388; // w5
+  bool v389; // w6
+  bool v390; // w7
+  MissionNaviTransitionBoardItem_c *v391; // x1
+  BalanceConfig_c *v392; // x8
   MissionNaviTransitionBoardItem_o *p_ExRoomWarIds; // x0
   MissionNaviTransitionBoardItem_o *p_RecommendSupportListChapterSubAndPhaseOverwriteNameData; // x0
-  System_String_o *v383; // x2
-  System_String_o *v384; // x3
-  int32_t v385; // w4
-  int32_t v386; // w5
-  bool v387; // w6
-  bool v388; // w7
-  __int64 v389; // x0
+  System_String_o *v395; // x2
+  System_String_o *v396; // x3
+  int32_t v397; // w4
+  int32_t v398; // w5
+  bool v399; // w6
+  bool v400; // w7
+  __int64 v401; // x0
 
   if ( (byte_596FDC1 & 1) == 0 )
   {
@@ -485,456 +497,450 @@ void BalanceConfig___cctor(const MethodInfo *method)
   *(_QWORD *)&v35->EventTowerFadeOutPlayTime = 0x340400000LL;
   v35->FriendPointBoostItemEfffectId = 3;
   v36 = (System_Array_o *)sub_2213B20(v34, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v36,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__22D03F489C004F5681AE8973B03439B55A0BE2B17BEE6C8C5DD34C4FDEA4F6C6,
-    0);
+  v37.fields.value = Field__PrivateImplementationDetails__22D03F489C004F5681AE8973B03439B55A0BE2B17BEE6C8C5DD34C4FDEA4F6C6;
+  v38 = (MissionNaviTransitionBoardItem_c *)v36;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v36, v37, 0);
   p_MainRecordFolderWarIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->MainRecordFolderWarIds;
-  p_MainRecordFolderWarIds->klass = (MissionNaviTransitionBoardItem_c *)v36;
-  sub_2213A04(p_MainRecordFolderWarIds, (int32_t)v36, v38, v39, v40, v41, v42, v43);
-  v44 = BalanceConfig_TypeInfo->static_fields;
-  v44->MainInterludeWarId = 1004;
-  v44->MainInterludeWarIdOnMaterial = 0;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v44->MainInterludeWarIdOnMaterial, 0, v45, v46, v47, v48, v49, v50);
+  p_MainRecordFolderWarIds->klass = v38;
+  sub_2213A04(p_MainRecordFolderWarIds, (int32_t)v38, v40, v41, v42, v43, v44, v45);
+  v46 = BalanceConfig_TypeInfo->static_fields;
+  v46->MainInterludeWarId = 1004;
+  v46->MainInterludeWarIdOnMaterial = 0;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v46->MainInterludeWarIdOnMaterial, 0, v47, v48, v49, v50, v51, v52);
   p_EventBoardGameDiceButtonPostion = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->EventBoardGameDiceButtonPostion;
   p_EventBoardGameDiceButtonPostion->klass = 0;
-  sub_2213A04(p_EventBoardGameDiceButtonPostion, 0, v52, v53, v54, v55, v56, v57);
+  sub_2213A04(p_EventBoardGameDiceButtonPostion, 0, v54, v55, v56, v57, v58, v59);
   p_EventBoardGameMapIdList = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->EventBoardGameMapIdList;
   p_EventBoardGameMapIdList->klass = 0;
-  sub_2213A04(p_EventBoardGameMapIdList, 0, v59, v60, v61, v62, v63, v64);
-  v65 = StringLiteral_3046/*"BGM_TITLE_5"*/;
-  v66 = BalanceConfig_TypeInfo->static_fields;
-  *(_OWORD *)&v66->TitleFlowOld = xmmword_E9D200;
-  v66->OrdealCallClearBgmName = (struct System_String_o *)v65;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v66->OrdealCallClearBgmName, v65, v67, v68, v69, v70, v71, v72);
-  v73 = StringLiteral_3042/*"BGM_TITLE_1"*/;
+  sub_2213A04(p_EventBoardGameMapIdList, 0, v61, v62, v63, v64, v65, v66);
+  v67 = StringLiteral_3046/*"BGM_TITLE_5"*/;
+  v68 = BalanceConfig_TypeInfo->static_fields;
+  *(_OWORD *)&v68->TitleFlowOld = xmmword_E9D200;
+  v68->OrdealCallClearBgmName = (struct System_String_o *)v67;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v68->OrdealCallClearBgmName, v67, v69, v70, v71, v72, v73, v74);
+  v75 = StringLiteral_3042/*"BGM_TITLE_1"*/;
   p_AfterPart2TitleBgmName = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->AfterPart2TitleBgmName;
   p_AfterPart2TitleBgmName->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_3042/*"BGM_TITLE_1"*/;
-  sub_2213A04(p_AfterPart2TitleBgmName, v73, v75, v76, v77, v78, v79, v80);
-  v81 = StringLiteral_3032/*"BGM_CHALDEA_1"*/;
+  sub_2213A04(p_AfterPart2TitleBgmName, v75, v77, v78, v79, v80, v81, v82);
+  v83 = StringLiteral_3032/*"BGM_CHALDEA_1"*/;
   p_AfterPart2TerminalBgmName = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->AfterPart2TerminalBgmName;
   p_AfterPart2TerminalBgmName->klass = (MissionNaviTransitionBoardItem_c *)StringLiteral_3032/*"BGM_CHALDEA_1"*/;
-  sub_2213A04(p_AfterPart2TerminalBgmName, v81, v83, v84, v85, v86, v87, v88);
+  sub_2213A04(p_AfterPart2TerminalBgmName, v83, v85, v86, v87, v88, v89, v90);
   p_consumeStormPodSpotId = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->consumeStormPodSpotId;
   p_consumeStormPodSpotId->klass = 0;
-  sub_2213A04(p_consumeStormPodSpotId, 0, v90, v91, v92, v93, v94, v95);
+  sub_2213A04(p_consumeStormPodSpotId, 0, v92, v93, v94, v95, v96, v97);
   p_StormPodHelpIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->StormPodHelpIds;
   p_StormPodHelpIds->klass = 0;
-  sub_2213A04(p_StormPodHelpIds, 0, v97, v98, v99, v100, v101, v102);
+  sub_2213A04(p_StormPodHelpIds, 0, v99, v100, v101, v102, v103, v104);
   p_legacyAspectMovies = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->legacyAspectMovies;
   p_legacyAspectMovies->klass = 0;
-  sub_2213A04(p_legacyAspectMovies, 0, v104, v105, v106, v107, v108, v109);
+  sub_2213A04(p_legacyAspectMovies, 0, v106, v107, v108, v109, v110, v111);
   p_UIStandFigureROffsetEffectNames = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetEffectNames;
   p_UIStandFigureROffsetEffectNames->klass = 0;
-  sub_2213A04(p_UIStandFigureROffsetEffectNames, 0, v111, v112, v113, v114, v115, v116);
+  sub_2213A04(p_UIStandFigureROffsetEffectNames, 0, v113, v114, v115, v116, v117, v118);
   p_UIStandFigureROffsetImages = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetImages;
   p_UIStandFigureROffsetImages->klass = 0;
-  sub_2213A04(p_UIStandFigureROffsetImages, 0, v118, v119, v120, v121, v122, v123);
-  v124 = int___TypeInfo;
-  v125 = BalanceConfig_TypeInfo->static_fields;
-  v125->WarBoardEvalFactorsAffectRatio = 10000;
-  v125->IsWarBoardAiCalcEvalSum = 0;
-  v125->StoneFragmentExchangeNoticeDispMax = 999;
-  *(_QWORD *)&v125->MapCameraMoveTimeConstant = 0x3FD9999A00000000LL;
-  *(_QWORD *)&v125->MapCameraMoveTimeLogarithmBase = 0xF00002AF8LL;
-  v125->Camera2DResetDuration = 0.644;
-  v126 = sub_2213B20(v124, 2);
-  if ( !v126 )
+  sub_2213A04(p_UIStandFigureROffsetImages, 0, v120, v121, v122, v123, v124, v125);
+  v126 = int___TypeInfo;
+  v127 = BalanceConfig_TypeInfo->static_fields;
+  v127->WarBoardEvalFactorsAffectRatio = 10000;
+  v127->IsWarBoardAiCalcEvalSum = 0;
+  v127->StoneFragmentExchangeNoticeDispMax = 999;
+  *(_QWORD *)&v127->MapCameraMoveTimeConstant = 0x3FD9999A00000000LL;
+  *(_QWORD *)&v127->MapCameraMoveTimeLogarithmBase = 0xF00002AF8LL;
+  v127->Camera2DResetDuration = 0.644;
+  v128 = sub_2213B20(v126, 2);
+  if ( !v128 )
     goto LABEL_47;
-  v134 = *(_DWORD *)(v126 + 24);
-  v135 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !v134 )
+  v136 = *(_DWORD *)(v128 + 24);
+  v137 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !v136 )
     goto LABEL_46;
-  *(_DWORD *)(v126 + 32) = 311;
-  if ( v134 == 1 )
+  *(_DWORD *)(v128 + 32) = 311;
+  if ( v136 == 1 )
     goto LABEL_46;
-  v136 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 36) = 407;
-  p_MainChaptersWithEventId = (MissionNaviTransitionBoardItem_o *)&v136->static_fields->MainChaptersWithEventId;
-  p_MainChaptersWithEventId->klass = v135;
-  sub_2213A04(p_MainChaptersWithEventId, (int32_t)v135, v128, v129, v130, v131, v132, v133);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+  v138 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 36) = 407;
+  p_MainChaptersWithEventId = (MissionNaviTransitionBoardItem_o *)&v138->static_fields->MainChaptersWithEventId;
+  p_MainChaptersWithEventId->klass = v137;
+  sub_2213A04(p_MainChaptersWithEventId, (int32_t)v137, v130, v131, v132, v133, v134, v135);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v144 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 2800502;
-  v144->TreasureDevicesForcedOpenEffect = (struct System_Int32_array *)v126;
+  v146 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 32) = 2800502;
+  v146->TreasureDevicesForcedOpenEffect = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v144->TreasureDevicesForcedOpenEffect,
-    v126,
-    v138,
-    v139,
+    (MissionNaviTransitionBoardItem_o *)&v146->TreasureDevicesForcedOpenEffect,
+    v128,
     v140,
     v141,
     v142,
-    v143);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+    v143,
+    v144,
+    v145);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v151 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 800106;
-  v151->HeroineTreasureDeviceRankUpEffects = (struct System_Int32_array *)v126;
+  v153 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 32) = 800106;
+  v153->HeroineTreasureDeviceRankUpEffects = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v151->HeroineTreasureDeviceRankUpEffects,
-    v126,
-    v145,
-    v146,
+    (MissionNaviTransitionBoardItem_o *)&v153->HeroineTreasureDeviceRankUpEffects,
+    v128,
     v147,
     v148,
     v149,
-    v150);
-  v152 = int___TypeInfo;
-  v153 = BalanceConfig_TypeInfo->static_fields;
-  *(_QWORD *)&v153->HeroineLimitCountOrtinaxRefurbished = 0x110000000DLL;
-  v153->ClassBoardReleaseQuestId = 4000100;
-  v154 = (System_Array_o *)sub_2213B20(v152, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v154,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__0576E2463551A09802222B33A5BA38F57896D9DD406B6DB32A10299A54B4B5BC,
-    0);
+    v150,
+    v151,
+    v152);
+  v154 = int___TypeInfo;
+  v155 = BalanceConfig_TypeInfo->static_fields;
+  *(_QWORD *)&v155->HeroineLimitCountOrtinaxRefurbished = 0x110000000DLL;
+  v155->ClassBoardReleaseQuestId = 4000100;
+  v156 = (System_Array_o *)sub_2213B20(v154, 4);
+  v157.fields.value = Field__PrivateImplementationDetails__0576E2463551A09802222B33A5BA38F57896D9DD406B6DB32A10299A54B4B5BC;
+  v158 = (MissionNaviTransitionBoardItem_c *)v156;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v156, v157, 0);
   p_Extra1SortOrderClassIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->Extra1SortOrderClassIds;
-  p_Extra1SortOrderClassIds->klass = (MissionNaviTransitionBoardItem_c *)v154;
-  sub_2213A04(p_Extra1SortOrderClassIds, (int32_t)v154, v156, v157, v158, v159, v160, v161);
-  v162 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v162,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__ED0B1052171B7B497721747C13B3FA78DABBC3D49393EEB78155642A20EACDCA,
-    0);
+  p_Extra1SortOrderClassIds->klass = v158;
+  sub_2213A04(p_Extra1SortOrderClassIds, (int32_t)v158, v160, v161, v162, v163, v164, v165);
+  v166 = (System_Array_o *)sub_2213B20(int___TypeInfo, 4);
+  v167.fields.value = Field__PrivateImplementationDetails__ED0B1052171B7B497721747C13B3FA78DABBC3D49393EEB78155642A20EACDCA;
+  v168 = (MissionNaviTransitionBoardItem_c *)v166;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v166, v167, 0);
   p_Extra2SortOrderClassIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->Extra2SortOrderClassIds;
-  p_Extra2SortOrderClassIds->klass = (MissionNaviTransitionBoardItem_c *)v162;
-  sub_2213A04(p_Extra2SortOrderClassIds, (int32_t)v162, v164, v165, v166, v167, v168, v169);
-  v170 = BalanceConfig_TypeInfo->static_fields;
-  v171 = int___TypeInfo;
-  v170->ClassBoardCameraSelectMoveMaxDistance = 1024;
-  *(_QWORD *)&v170->ClassBoardCameraSelectSecMin = 0x3F8000003DCCCCCDLL;
-  *(_QWORD *)&v170->ClassBoardCameraSelectEasingType = 0x3FD9999A00000005LL;
-  v172 = sub_2213B20(v171, 0);
-  v173 = BalanceConfig_TypeInfo->static_fields;
-  v173->NotUIChangeMapIds = (struct System_Int32_array *)v172;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v173->NotUIChangeMapIds, v172, v174, v175, v176, v177, v178, v179);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+  p_Extra2SortOrderClassIds->klass = v168;
+  sub_2213A04(p_Extra2SortOrderClassIds, (int32_t)v168, v170, v171, v172, v173, v174, v175);
+  v176 = BalanceConfig_TypeInfo->static_fields;
+  v177 = int___TypeInfo;
+  v176->ClassBoardCameraSelectMoveMaxDistance = 1024;
+  *(_QWORD *)&v176->ClassBoardCameraSelectSecMin = 0x3F8000003DCCCCCDLL;
+  *(_QWORD *)&v176->ClassBoardCameraSelectEasingType = 0x3FD9999A00000005LL;
+  v178 = sub_2213B20(v177, 0);
+  v179 = BalanceConfig_TypeInfo->static_fields;
+  v179->NotUIChangeMapIds = (struct System_Int32_array *)v178;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v179->NotUIChangeMapIds, v178, v180, v181, v182, v183, v184, v185);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v186 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 3300100;
-  v186->LimitSealedDialogMaxLimitOpenIds = (struct System_Int32_array *)v126;
+  v192 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 32) = 3300100;
+  v192->LimitSealedDialogMaxLimitOpenIds = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v186->LimitSealedDialogMaxLimitOpenIds,
-    v126,
-    v180,
-    v181,
-    v182,
-    v183,
-    v184,
-    v185);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+    (MissionNaviTransitionBoardItem_o *)&v192->LimitSealedDialogMaxLimitOpenIds,
+    v128,
+    v186,
+    v187,
+    v188,
+    v189,
+    v190,
+    v191);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  v193 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !*(_DWORD *)(v126 + 24) )
+  v199 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v194 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 32) = 402;
-  p_OrdealCallChapterFolderEventUIDispWarIds = (MissionNaviTransitionBoardItem_o *)&v194->static_fields->OrdealCallChapterFolderEventUIDispWarIds;
-  p_OrdealCallChapterFolderEventUIDispWarIds->klass = v193;
-  sub_2213A04(p_OrdealCallChapterFolderEventUIDispWarIds, (int32_t)v193, v187, v188, v189, v190, v191, v192);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+  v200 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 32) = 402;
+  p_OrdealCallChapterFolderEventUIDispWarIds = (MissionNaviTransitionBoardItem_o *)&v200->static_fields->OrdealCallChapterFolderEventUIDispWarIds;
+  p_OrdealCallChapterFolderEventUIDispWarIds->klass = v199;
+  sub_2213A04(p_OrdealCallChapterFolderEventUIDispWarIds, (int32_t)v199, v193, v194, v195, v196, v197, v198);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v202 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 80432;
-  v202->RecoveryFatigueDelayedChangeBgEvents = (struct System_Int32_array *)v126;
+  v208 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 32) = 80432;
+  v208->RecoveryFatigueDelayedChangeBgEvents = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v202->RecoveryFatigueDelayedChangeBgEvents,
-    v126,
-    v196,
-    v197,
-    v198,
-    v199,
-    v200,
-    v201);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
-    goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
-    goto LABEL_46;
-  v209 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 94086401;
-  v209->noneDisplayFreeQuestMaterial = (struct System_Int32_array *)v126;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v209->noneDisplayFreeQuestMaterial,
-    v126,
+    (MissionNaviTransitionBoardItem_o *)&v208->RecoveryFatigueDelayedChangeBgEvents,
+    v128,
+    v202,
     v203,
     v204,
     v205,
     v206,
-    v207,
-    v208);
-  v210 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v210,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__829FEE660E2799B8814849BCC3884998BB3651E975AC0C0D659AD53227033DBC,
-    0);
-  p_NotSendTrackEventAtWarIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds;
-  p_NotSendTrackEventAtWarIds->klass = (MissionNaviTransitionBoardItem_c *)v210;
-  sub_2213A04(p_NotSendTrackEventAtWarIds, (int32_t)v210, v212, v213, v214, v215, v216, v217);
-  v218 = int___TypeInfo;
-  BalanceConfig_TypeInfo->static_fields->StartingMemberFriendshipRate = 0;
-  v219 = (System_Array_o *)sub_2213B20(v218, 6);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v219,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__96039A68C58EBF2F40B99A5B8F9F313745D9C4E02164BB0FCE39159471432F4B,
-    0);
-  p_NotRequiredPlayWarIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->NotRequiredPlayWarIds;
-  p_NotRequiredPlayWarIds->klass = (MissionNaviTransitionBoardItem_c *)v219;
-  sub_2213A04(p_NotRequiredPlayWarIds, (int32_t)v219, v221, v222, v223, v224, v225, v226);
-  v227 = int___TypeInfo;
-  *(_WORD *)&BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = 0;
-  v228 = sub_2213B20(v227, 0);
-  v229 = BalanceConfig_TypeInfo->static_fields;
-  v229->EventItemNotDispItemGetEffect = (struct System_Int32_array *)v228;
+    v207);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
+    goto LABEL_47;
+  if ( !*(_DWORD *)(v128 + 24) )
+    goto LABEL_46;
+  v215 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 32) = 94086401;
+  v215->noneDisplayFreeQuestMaterial = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v229->EventItemNotDispItemGetEffect,
-    v228,
-    v230,
-    v231,
-    v232,
-    v233,
-    v234,
-    v235);
-  v236 = System_Collections_Generic_Dictionary_string__int__TypeInfo;
+    (MissionNaviTransitionBoardItem_o *)&v215->noneDisplayFreeQuestMaterial,
+    v128,
+    v209,
+    v210,
+    v211,
+    v212,
+    v213,
+    v214);
+  v216 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
+  v217.fields.value = Field__PrivateImplementationDetails__829FEE660E2799B8814849BCC3884998BB3651E975AC0C0D659AD53227033DBC;
+  v218 = (MissionNaviTransitionBoardItem_c *)v216;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v216, v217, 0);
+  p_NotSendTrackEventAtWarIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds;
+  p_NotSendTrackEventAtWarIds->klass = v218;
+  sub_2213A04(p_NotSendTrackEventAtWarIds, (int32_t)v218, v220, v221, v222, v223, v224, v225);
+  v226 = int___TypeInfo;
+  BalanceConfig_TypeInfo->static_fields->StartingMemberFriendshipRate = 0;
+  v227 = (System_Array_o *)sub_2213B20(v226, 6);
+  v228.fields.value = Field__PrivateImplementationDetails__96039A68C58EBF2F40B99A5B8F9F313745D9C4E02164BB0FCE39159471432F4B;
+  v229 = (MissionNaviTransitionBoardItem_c *)v227;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v227, v228, 0);
+  p_NotRequiredPlayWarIds = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->NotRequiredPlayWarIds;
+  p_NotRequiredPlayWarIds->klass = v229;
+  sub_2213A04(p_NotRequiredPlayWarIds, (int32_t)v229, v231, v232, v233, v234, v235, v236);
+  v237 = int___TypeInfo;
+  *(_WORD *)&BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = 0;
+  v238 = sub_2213B20(v237, 0);
+  v239 = BalanceConfig_TypeInfo->static_fields;
+  v239->EventItemNotDispItemGetEffect = (struct System_Int32_array *)v238;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v239->EventItemNotDispItemGetEffect,
+    v238,
+    v240,
+    v241,
+    v242,
+    v243,
+    v244,
+    v245);
+  v246 = System_Collections_Generic_Dictionary_string__int__TypeInfo;
   BalanceConfig_TypeInfo->static_fields->IsEnableFadeRerunSkipped = 1;
-  v237 = (System_Collections_Generic_Dictionary_object__int__o *)sub_2213CCC(v236);
+  v247 = (System_Collections_Generic_Dictionary_object__int__o *)sub_2213CCC(v246);
   System_Collections_Generic_Dictionary_object__int____ctor(
-    v237,
+    v247,
     (const MethodInfo_3FF3708 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   p_MissionIconDisplayMsDictionary = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->MissionIconDisplayMsDictionary;
-  p_MissionIconDisplayMsDictionary->klass = (MissionNaviTransitionBoardItem_c *)v237;
-  sub_2213A04(p_MissionIconDisplayMsDictionary, (int32_t)v237, v239, v240, v241, v242, v243, v244);
+  p_MissionIconDisplayMsDictionary->klass = (MissionNaviTransitionBoardItem_c *)v247;
+  sub_2213A04(p_MissionIconDisplayMsDictionary, (int32_t)v247, v249, v250, v251, v252, v253, v254);
   __asm { FMOV            V0.2S, #1.0 }
-  v250 = int___TypeInfo;
-  v251 = BalanceConfig_TypeInfo->static_fields;
-  *(_QWORD *)&v251->DisableBackMaskTime = _D0;
-  v251->IsMissionNaviAutoClassify = 0;
-  v126 = sub_2213B20(v250, 2);
-  if ( !v126 )
+  v260 = int___TypeInfo;
+  v261 = BalanceConfig_TypeInfo->static_fields;
+  *(_QWORD *)&v261->DisableBackMaskTime = _D0;
+  v261->IsMissionNaviAutoClassify = 0;
+  v128 = sub_2213B20(v260, 2);
+  if ( !v128 )
     goto LABEL_47;
-  v258 = *(_DWORD *)(v126 + 24);
-  v259 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !v258 )
+  v268 = *(_DWORD *)(v128 + 24);
+  v269 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !v268 )
     goto LABEL_46;
-  *(_DWORD *)(v126 + 32) = 33;
-  if ( v258 == 1 )
+  *(_DWORD *)(v128 + 32) = 33;
+  if ( v268 == 1 )
     goto LABEL_46;
-  v260 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 36) = 38;
-  p_PlayableBeastClassIds = (MissionNaviTransitionBoardItem_o *)&v260->static_fields->PlayableBeastClassIds;
-  p_PlayableBeastClassIds->klass = v259;
-  sub_2213A04(p_PlayableBeastClassIds, (int32_t)v259, v252, v253, v254, v255, v256, v257);
-  v262 = int___TypeInfo;
-  v263 = BalanceConfig_TypeInfo->static_fields;
-  *(_QWORD *)&v263->PlayableBeastBaseClassId = 0x1518000000021LL;
-  v263->DefaultQuestUseFriendshipUpItemGroupId = 1;
-  v126 = sub_2213B20(v262, 1);
-  if ( !v126 )
+  v270 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 36) = 38;
+  p_PlayableBeastClassIds = (MissionNaviTransitionBoardItem_o *)&v270->static_fields->PlayableBeastClassIds;
+  p_PlayableBeastClassIds->klass = v269;
+  sub_2213A04(p_PlayableBeastClassIds, (int32_t)v269, v262, v263, v264, v265, v266, v267);
+  v272 = int___TypeInfo;
+  v273 = BalanceConfig_TypeInfo->static_fields;
+  *(_QWORD *)&v273->PlayableBeastBaseClassId = 0x1518000000021LL;
+  v273->DefaultQuestUseFriendshipUpItemGroupId = 1;
+  v128 = sub_2213B20(v272, 1);
+  if ( !v128 )
     goto LABEL_47;
-  v270 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !*(_DWORD *)(v126 + 24) )
+  v280 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v271 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 32) = 9189;
-  p_MainInterludeMapReturnWarIds = (MissionNaviTransitionBoardItem_o *)&v271->static_fields->MainInterludeMapReturnWarIds;
-  p_MainInterludeMapReturnWarIds->klass = v270;
-  sub_2213A04(p_MainInterludeMapReturnWarIds, (int32_t)v270, v264, v265, v266, v267, v268, v269);
-  v273 = int___TypeInfo;
-  v274 = BalanceConfig_TypeInfo->static_fields;
-  *(_QWORD *)&v274->GrandSvtLv = 0xA00000064LL;
-  *(_OWORD *)&v274->GalleryReleaseQuestId = xmmword_E9BE40;
-  v126 = sub_2213B20(v273, 1);
-  if ( !v126 )
+  v281 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 32) = 9189;
+  p_MainInterludeMapReturnWarIds = (MissionNaviTransitionBoardItem_o *)&v281->static_fields->MainInterludeMapReturnWarIds;
+  p_MainInterludeMapReturnWarIds->klass = v280;
+  sub_2213A04(p_MainInterludeMapReturnWarIds, (int32_t)v280, v274, v275, v276, v277, v278, v279);
+  v283 = int___TypeInfo;
+  v284 = BalanceConfig_TypeInfo->static_fields;
+  *(_QWORD *)&v284->GrandSvtLv = 0xA00000064LL;
+  *(_OWORD *)&v284->GalleryReleaseQuestId = xmmword_E9BE40;
+  v128 = sub_2213B20(v283, 1);
+  if ( !v128 )
     goto LABEL_47;
-  v281 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !*(_DWORD *)(v126 + 24) )
+  v291 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v282 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 32) = 20;
-  p_InvalidOpeningMovieIds = (MissionNaviTransitionBoardItem_o *)&v282->static_fields->InvalidOpeningMovieIds;
-  p_InvalidOpeningMovieIds->klass = v281;
-  sub_2213A04(p_InvalidOpeningMovieIds, (int32_t)v281, v275, v276, v277, v278, v279, v280);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+  v292 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 32) = 20;
+  p_InvalidOpeningMovieIds = (MissionNaviTransitionBoardItem_o *)&v292->static_fields->InvalidOpeningMovieIds;
+  p_InvalidOpeningMovieIds->klass = v291;
+  sub_2213A04(p_InvalidOpeningMovieIds, (int32_t)v291, v285, v286, v287, v288, v289, v290);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v290 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 20145403;
-  v290->TerminalGrandBgmCommonReleaseIds = (struct System_Int32_array *)v126;
+  v300 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 32) = 20145403;
+  v300->TerminalGrandBgmCommonReleaseIds = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v290->TerminalGrandBgmCommonReleaseIds,
-    v126,
-    v284,
-    v285,
-    v286,
-    v287,
-    v288,
-    v289);
-  v126 = sub_2213B20(string___TypeInfo, 1);
-  if ( !v126 )
+    (MissionNaviTransitionBoardItem_o *)&v300->TerminalGrandBgmCommonReleaseIds,
+    v128,
+    v294,
+    v295,
+    v296,
+    v297,
+    v298,
+    v299);
+  v128 = sub_2213B20(string___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  v297 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !*(_DWORD *)(v126 + 24) )
+  v307 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v298 = StringLiteral_3037/*"BGM_GROUND1_1"*/;
-  *(_QWORD *)(v126 + 32) = StringLiteral_3037/*"BGM_GROUND1_1"*/;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v126 + 32), v298, v291, v292, v293, v294, v295, v296);
+  v308 = StringLiteral_3037/*"BGM_GROUND1_1"*/;
+  *(_QWORD *)(v128 + 32) = StringLiteral_3037/*"BGM_GROUND1_1"*/;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v128 + 32), v308, v301, v302, v303, v304, v305, v306);
   p_TerminalGrandBgmNames = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->TerminalGrandBgmNames;
-  p_TerminalGrandBgmNames->klass = v297;
-  sub_2213A04(p_TerminalGrandBgmNames, (int32_t)v297, v300, v301, v302, v303, v304, v305);
-  v306 = (struct System_String_o *)StringLiteral_1/*""*/;
-  v307 = BalanceConfig_TypeInfo->static_fields;
-  *(_QWORD *)&v307->GrandEx2Id = 0x1869F00002719LL;
-  v307->GrandEx1Id = 10008;
-  v307->IsKeepEnemyFaceIconPosZ = 0;
-  v307->IsEnableSavedMemoryBattle = 1;
-  *(_OWORD *)&v307->UseEquipServantNameTextMaxWidth = xmmword_E9C240;
-  v307->anxOnlineUrl = v306;
+  p_TerminalGrandBgmNames->klass = v307;
+  sub_2213A04(p_TerminalGrandBgmNames, (int32_t)v307, v310, v311, v312, v313, v314, v315);
+  v316 = (struct System_String_o *)StringLiteral_1/*""*/;
+  v317 = BalanceConfig_TypeInfo->static_fields;
+  *(_QWORD *)&v317->GrandEx2Id = 0x1869F00002719LL;
+  v317->GrandEx1Id = 10008;
+  v317->IsKeepEnemyFaceIconPosZ = 0;
+  v317->IsEnableSavedMemoryBattle = 1;
+  *(_OWORD *)&v317->UseEquipServantNameTextMaxWidth = xmmword_E9C240;
+  v317->anxOnlineUrl = v316;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v307->anxOnlineUrl,
-    (int32_t)v306,
-    v308,
-    v309,
-    v310,
-    v311,
-    v312,
-    v313);
-  v126 = sub_2213B20(int___TypeInfo, 2);
-  if ( !v126 )
-    goto LABEL_47;
-  v320 = *(_DWORD *)(v126 + 24);
-  if ( !v320 )
-    goto LABEL_46;
-  *(_DWORD *)(v126 + 32) = 409;
-  if ( v320 == 1 )
-    goto LABEL_46;
-  v321 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 36) = 410;
-  v321->Part2FinalChapterBoardNextLayoutTargetId = (struct System_Int32_array *)v126;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v321->Part2FinalChapterBoardNextLayoutTargetId,
-    v126,
-    v314,
-    v315,
-    v316,
-    v317,
+    (MissionNaviTransitionBoardItem_o *)&v317->anxOnlineUrl,
+    (int32_t)v316,
     v318,
-    v319);
-  v322 = sub_2213B20(QuestBoardListViewItemDraw_ChapterBoardLayoutData___TypeInfo, 1);
-  v323 = sub_2213CCC(QuestBoardListViewItemDraw_ChapterBoardLayoutData_TypeInfo);
+    v319,
+    v320,
+    v321,
+    v322,
+    v323);
+  v128 = sub_2213B20(int___TypeInfo, 2);
+  if ( !v128 )
+    goto LABEL_47;
+  v330 = *(_DWORD *)(v128 + 24);
+  if ( !v330 )
+    goto LABEL_46;
+  *(_DWORD *)(v128 + 32) = 409;
+  if ( v330 == 1 )
+    goto LABEL_46;
+  v331 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 36) = 410;
+  v331->Part2FinalChapterBoardNextLayoutTargetId = (struct System_Int32_array *)v128;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v331->Part2FinalChapterBoardNextLayoutTargetId,
+    v128,
+    v324,
+    v325,
+    v326,
+    v327,
+    v328,
+    v329);
+  v332 = sub_2213B20(QuestBoardListViewItemDraw_ChapterBoardLayoutData___TypeInfo, 1);
+  v333 = sub_2213CCC(QuestBoardListViewItemDraw_ChapterBoardLayoutData_TypeInfo);
   QuestBoardListViewItemDraw_ChapterBoardLayoutData___ctor(
-    (QuestBoardListViewItemDraw_ChapterBoardLayoutData_o *)v323,
+    (QuestBoardListViewItemDraw_ChapterBoardLayoutData_o *)v333,
     0);
-  if ( !v323 )
+  if ( !v333 )
     goto LABEL_47;
-  *(_QWORD *)(v323 + 16) = 0xFFFFFF7A000001F6LL;
-  if ( !v322 )
+  *(_QWORD *)(v333 + 16) = 0xFFFFFF7A000001F6LL;
+  if ( !v332 )
     goto LABEL_47;
-  v126 = sub_2213BB4(v323, *(_QWORD *)(*(_QWORD *)v322 + 64LL));
-  if ( !v126 )
+  v128 = sub_2213BB4(v333, *(_QWORD *)(*(_QWORD *)v332 + 64LL));
+  if ( !v128 )
   {
-    v389 = sub_2213D00(0, v324);
-    sub_2213BA0(v389, 0);
+    v401 = sub_2213D00(0, v334);
+    sub_2213BA0(v401, 0);
   }
-  if ( !*(_DWORD *)(v322 + 24) )
+  if ( !*(_DWORD *)(v332 + 24) )
     goto LABEL_46;
-  *(_QWORD *)(v322 + 32) = v323;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v322 + 32), v323, v325, v326, v327, v328, v329, v330);
+  *(_QWORD *)(v332 + 32) = v333;
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v332 + 32), v333, v335, v336, v337, v338, v339, v340);
   p_ChapterBoardLayoutDataArray = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->ChapterBoardLayoutDataArray;
-  p_ChapterBoardLayoutDataArray->klass = (MissionNaviTransitionBoardItem_c *)v322;
-  sub_2213A04(p_ChapterBoardLayoutDataArray, v322, v332, v333, v334, v335, v336, v337);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+  p_ChapterBoardLayoutDataArray->klass = (MissionNaviTransitionBoardItem_c *)v332;
+  sub_2213A04(p_ChapterBoardLayoutDataArray, v332, v342, v343, v344, v345, v346, v347);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
     goto LABEL_47;
-  if ( !*(_DWORD *)(v126 + 24) )
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v344 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 32) = 401001;
-  v344->BlankEarthRankChangeEventUiIds = (struct System_Int32_array *)v126;
-  sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v344->BlankEarthRankChangeEventUiIds,
-    v126,
-    v338,
-    v339,
-    v340,
-    v341,
-    v342,
-    v343);
-  v345 = int___TypeInfo;
-  v346 = BalanceConfig_TypeInfo->static_fields;
-  v346->IgnoreResumePauseOnStop = 0;
-  *(_OWORD *)&v346->PhotoStandFigureZoomRateMin = xmmword_E9C3B0;
-  v126 = sub_2213B20(v345, 2);
-  if ( !v126 )
-    goto LABEL_47;
-  v353 = *(_DWORD *)(v126 + 24);
-  if ( !v353 || (*(_DWORD *)(v126 + 32) = 262400, v353 == 1) )
-LABEL_46:
-    sub_2213CE4(v126);
   v354 = BalanceConfig_TypeInfo->static_fields;
-  *(_DWORD *)(v126 + 36) = 262410;
-  v354->MyRoomMainDiffBgLinkedIds = (struct System_Int32_array *)v126;
+  *(_DWORD *)(v128 + 32) = 401001;
+  v354->BlankEarthRankChangeEventUiIds = (struct System_Int32_array *)v128;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v354->MyRoomMainDiffBgLinkedIds,
-    v126,
-    v347,
+    (MissionNaviTransitionBoardItem_o *)&v354->BlankEarthRankChangeEventUiIds,
+    v128,
     v348,
     v349,
     v350,
     v351,
-    v352);
-  v355 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v355,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__DFA3355157472A098D8BC1F9CEE1FB1EA6B408B6239019AB66BBBE9B4DD73AA4,
-    0);
-  p_SaveDataDeleteButtonOpenCondition = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->SaveDataDeleteButtonOpenCondition;
-  p_SaveDataDeleteButtonOpenCondition->klass = (MissionNaviTransitionBoardItem_c *)v355;
-  sub_2213A04(p_SaveDataDeleteButtonOpenCondition, (int32_t)v355, v357, v358, v359, v360, v361, v362);
-  v126 = sub_2213B20(int___TypeInfo, 1);
-  if ( !v126 )
+    v352,
+    v353);
+  v355 = int___TypeInfo;
+  v356 = BalanceConfig_TypeInfo->static_fields;
+  v356->IgnoreResumePauseOnStop = 0;
+  *(_OWORD *)&v356->PhotoStandFigureZoomRateMin = xmmword_E9C3B0;
+  v128 = sub_2213B20(v355, 2);
+  if ( !v128 )
     goto LABEL_47;
-  v369 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !*(_DWORD *)(v126 + 24) )
+  v363 = *(_DWORD *)(v128 + 24);
+  if ( !v363 || (*(_DWORD *)(v128 + 32) = 262400, v363 == 1) )
+LABEL_46:
+    sub_2213CE4(v128);
+  v364 = BalanceConfig_TypeInfo->static_fields;
+  *(_DWORD *)(v128 + 36) = 262410;
+  v364->MyRoomMainDiffBgLinkedIds = (struct System_Int32_array *)v128;
+  sub_2213A04(
+    (MissionNaviTransitionBoardItem_o *)&v364->MyRoomMainDiffBgLinkedIds,
+    v128,
+    v357,
+    v358,
+    v359,
+    v360,
+    v361,
+    v362);
+  v365 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
+  v366.fields.value = Field__PrivateImplementationDetails__DFA3355157472A098D8BC1F9CEE1FB1EA6B408B6239019AB66BBBE9B4DD73AA4;
+  v367 = (MissionNaviTransitionBoardItem_c *)v365;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v365, v366, 0);
+  p_SaveDataDeleteButtonOpenCondition = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->SaveDataDeleteButtonOpenCondition;
+  p_SaveDataDeleteButtonOpenCondition->klass = v367;
+  sub_2213A04(p_SaveDataDeleteButtonOpenCondition, (int32_t)v367, v369, v370, v371, v372, v373, v374);
+  v128 = sub_2213B20(int___TypeInfo, 1);
+  if ( !v128 )
+    goto LABEL_47;
+  v381 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v370 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 32) = 80612;
-  p_EventActionOnSpotEventIds = (MissionNaviTransitionBoardItem_o *)&v370->static_fields->EventActionOnSpotEventIds;
-  p_EventActionOnSpotEventIds->klass = v369;
-  sub_2213A04(p_EventActionOnSpotEventIds, (int32_t)v369, v363, v364, v365, v366, v367, v368);
-  v372 = int___TypeInfo;
+  v382 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 32) = 80612;
+  p_EventActionOnSpotEventIds = (MissionNaviTransitionBoardItem_o *)&v382->static_fields->EventActionOnSpotEventIds;
+  p_EventActionOnSpotEventIds->klass = v381;
+  sub_2213A04(p_EventActionOnSpotEventIds, (int32_t)v381, v375, v376, v377, v378, v379, v380);
+  v384 = int___TypeInfo;
   BalanceConfig_TypeInfo->static_fields->ExRoomFirstEffectQuestId = 94158821;
-  v126 = sub_2213B20(v372, 1);
-  if ( !v126 )
+  v128 = sub_2213B20(v384, 1);
+  if ( !v128 )
 LABEL_47:
-    sub_2213CDC(v126, v127);
-  v379 = (MissionNaviTransitionBoardItem_c *)v126;
-  if ( !*(_DWORD *)(v126 + 24) )
+    sub_2213CDC(v128, v129);
+  v391 = (MissionNaviTransitionBoardItem_c *)v128;
+  if ( !*(_DWORD *)(v128 + 24) )
     goto LABEL_46;
-  v380 = BalanceConfig_TypeInfo;
-  *(_DWORD *)(v126 + 32) = 1007;
-  p_ExRoomWarIds = (MissionNaviTransitionBoardItem_o *)&v380->static_fields->ExRoomWarIds;
-  p_ExRoomWarIds->klass = v379;
-  sub_2213A04(p_ExRoomWarIds, (int32_t)v379, v373, v374, v375, v376, v377, v378);
+  v392 = BalanceConfig_TypeInfo;
+  *(_DWORD *)(v128 + 32) = 1007;
+  p_ExRoomWarIds = (MissionNaviTransitionBoardItem_o *)&v392->static_fields->ExRoomWarIds;
+  p_ExRoomWarIds->klass = v391;
+  sub_2213A04(p_ExRoomWarIds, (int32_t)v391, v385, v386, v387, v388, v389, v390);
   p_RecommendSupportListChapterSubAndPhaseOverwriteNameData = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->RecommendSupportListChapterSubAndPhaseOverwriteNameData;
   p_RecommendSupportListChapterSubAndPhaseOverwriteNameData->klass = 0;
-  sub_2213A04(p_RecommendSupportListChapterSubAndPhaseOverwriteNameData, 0, v383, v384, v385, v386, v387, v388);
+  sub_2213A04(p_RecommendSupportListChapterSubAndPhaseOverwriteNameData, 0, v395, v396, v397, v398, v399, v400);
 }
 
 
@@ -1275,792 +1281,795 @@ void BalanceConfig__Initialize(const MethodInfo *method)
   bool v327; // w6
   bool v328; // w7
   System_Array_o *v329; // x21
-  __int64 v330; // x1
-  System_String_o *v331; // x2
-  System_String_o *v332; // x3
-  int32_t v333; // w4
-  int32_t v334; // w5
-  bool v335; // w6
-  bool v336; // w7
-  BalanceConfig_c *v337; // x0
+  System_RuntimeFieldHandle_o v330; // x1
+  __int64 v331; // x1
+  System_String_o *v332; // x2
+  System_String_o *v333; // x3
+  int32_t v334; // w4
+  int32_t v335; // w5
+  bool v336; // w6
+  bool v337; // w7
+  BalanceConfig_c *v338; // x0
   MissionNaviTransitionBoardItem_o *p_EventTowerFadeOutDelayTime; // x0
-  int32_t v339; // w0
-  __int64 v340; // x1
-  BalanceConfig_c *v341; // x8
-  int v342; // w21
-  System_String_o *v343; // x1
-  int32_t v344; // w0
-  System_String_o *v345; // x1
-  int32_t v346; // w0
-  System_String_o *v347; // x1
-  struct BalanceConfig_StaticFields *v348; // x8
+  int32_t v340; // w0
+  __int64 v341; // x1
+  BalanceConfig_c *v342; // x8
+  int v343; // w21
+  System_String_o *v344; // x1
+  int32_t v345; // w0
+  System_String_o *v346; // x1
+  int32_t v347; // w0
+  System_String_o *v348; // x1
+  struct BalanceConfig_StaticFields *v349; // x8
   System_Int32_array *MainRecordFolderWarIds; // x2
-  System_Int32_array *v350; // x0
-  struct BalanceConfig_StaticFields *v351; // x8
-  System_String_o *v352; // x2
-  System_String_o *v353; // x3
-  int32_t v354; // w4
-  int32_t v355; // w5
-  bool v356; // w6
-  bool v357; // w7
-  int32_t v358; // w0
-  System_String_o *v359; // x1
-  System_Int32_array *v360; // x0
-  struct BalanceConfig_StaticFields *v361; // x8
-  System_String_o *v362; // x2
-  System_String_o *v363; // x3
-  int32_t v364; // w4
-  int32_t v365; // w5
-  bool v366; // w6
-  bool v367; // w7
-  System_String_o *v368; // x2
-  System_String_o *v369; // x3
-  int32_t v370; // w4
-  int32_t v371; // w5
-  bool v372; // w6
-  bool v373; // w7
-  unsigned int v374; // w8
-  MissionNaviTransitionBoardItem_c *v375; // x21
-  BalanceConfig_c *v376; // x0
+  System_Int32_array *v351; // x0
+  struct BalanceConfig_StaticFields *v352; // x8
+  System_String_o *v353; // x2
+  System_String_o *v354; // x3
+  int32_t v355; // w4
+  int32_t v356; // w5
+  bool v357; // w6
+  bool v358; // w7
+  int32_t v359; // w0
+  System_String_o *v360; // x1
+  System_Int32_array *v361; // x0
+  struct BalanceConfig_StaticFields *v362; // x8
+  System_String_o *v363; // x2
+  System_String_o *v364; // x3
+  int32_t v365; // w4
+  int32_t v366; // w5
+  bool v367; // w6
+  bool v368; // w7
+  System_String_o *v369; // x2
+  System_String_o *v370; // x3
+  int32_t v371; // w4
+  int32_t v372; // w5
+  bool v373; // w6
+  bool v374; // w7
+  unsigned int v375; // w8
+  MissionNaviTransitionBoardItem_c *v376; // x21
+  BalanceConfig_c *v377; // x0
   MissionNaviTransitionBoardItem_o *p_EventBoardGameDiceButtonPostion; // x0
-  System_Int32_array *v378; // x0
-  __int64 v379; // x1
-  System_String_o *v380; // x2
-  System_String_o *v381; // x3
-  int32_t v382; // w4
-  int32_t v383; // w5
-  bool v384; // w6
-  bool v385; // w7
-  BalanceConfig_c *v386; // x8
-  MissionNaviTransitionBoardItem_c *v387; // x21
+  System_Int32_array *v379; // x0
+  __int64 v380; // x1
+  System_String_o *v381; // x2
+  System_String_o *v382; // x3
+  int32_t v383; // w4
+  int32_t v384; // w5
+  bool v385; // w6
+  bool v386; // w7
+  BalanceConfig_c *v387; // x8
+  MissionNaviTransitionBoardItem_c *v388; // x21
   MissionNaviTransitionBoardItem_o *p_MainInterludeWarIdOnMaterial; // x0
-  System_String_o *v389; // x2
-  System_String_o *v390; // x3
-  int32_t v391; // w4
-  int32_t v392; // w5
-  bool v393; // w6
-  bool v394; // w7
-  Il2CppObject *v395; // x21
-  BalanceConfig_c *v396; // x0
-  MissionNaviTransitionBoardItem_o *v397; // x0
-  System_Int32_array *v398; // x0
-  __int64 v399; // x1
-  System_String_o *v400; // x2
-  System_String_o *v401; // x3
-  int32_t v402; // w4
-  int32_t v403; // w5
-  bool v404; // w6
-  bool v405; // w7
-  BalanceConfig_c *v406; // x8
-  MissionNaviTransitionBoardItem_c *v407; // x21
+  System_String_o *v390; // x2
+  System_String_o *v391; // x3
+  int32_t v392; // w4
+  int32_t v393; // w5
+  bool v394; // w6
+  bool v395; // w7
+  Il2CppObject *v396; // x21
+  BalanceConfig_c *v397; // x0
+  MissionNaviTransitionBoardItem_o *v398; // x0
+  System_Int32_array *v399; // x0
+  __int64 v400; // x1
+  System_String_o *v401; // x2
+  System_String_o *v402; // x3
+  int32_t v403; // w4
+  int32_t v404; // w5
+  bool v405; // w6
+  bool v406; // w7
+  BalanceConfig_c *v407; // x8
+  MissionNaviTransitionBoardItem_c *v408; // x21
   MissionNaviTransitionBoardItem_o *p_EventBoardGameMapIdList; // x0
-  int32_t v409; // w0
-  System_String_o *v410; // x1
-  int32_t v411; // w0
-  System_String_o *v412; // x1
-  int32_t v413; // w0
-  System_String_o *v414; // x1
-  int32_t v415; // w0
-  System_String_o *v416; // x1
-  int32_t v417; // w0
-  System_String_o *v418; // x1
-  System_String_o *v419; // x21
-  __int64 v420; // x1
-  System_String_o *v421; // x2
-  System_String_o *v422; // x3
-  int32_t v423; // w4
-  int32_t v424; // w5
-  bool v425; // w6
-  bool v426; // w7
-  BalanceConfig_c *v427; // x0
+  int32_t v410; // w0
+  System_String_o *v411; // x1
+  int32_t v412; // w0
+  System_String_o *v413; // x1
+  int32_t v414; // w0
+  System_String_o *v415; // x1
+  int32_t v416; // w0
+  System_String_o *v417; // x1
+  int32_t v418; // w0
+  System_String_o *v419; // x1
+  System_String_o *v420; // x21
+  __int64 v421; // x1
+  System_String_o *v422; // x2
+  System_String_o *v423; // x3
+  int32_t v424; // w4
+  int32_t v425; // w5
+  bool v426; // w6
+  bool v427; // w7
+  BalanceConfig_c *v428; // x0
   MissionNaviTransitionBoardItem_o *p_OrdealCallClearBgmName; // x0
-  System_String_o *v429; // x21
-  __int64 v430; // x1
-  System_String_o *v431; // x2
-  System_String_o *v432; // x3
-  int32_t v433; // w4
-  int32_t v434; // w5
-  bool v435; // w6
-  bool v436; // w7
-  BalanceConfig_c *v437; // x0
+  System_String_o *v430; // x21
+  __int64 v431; // x1
+  System_String_o *v432; // x2
+  System_String_o *v433; // x3
+  int32_t v434; // w4
+  int32_t v435; // w5
+  bool v436; // w6
+  bool v437; // w7
+  BalanceConfig_c *v438; // x0
   MissionNaviTransitionBoardItem_o *p_AfterPart2TitleBgmName; // x0
-  System_String_o *v439; // x21
-  __int64 v440; // x1
-  System_String_o *v441; // x2
-  System_String_o *v442; // x3
-  int32_t v443; // w4
-  int32_t v444; // w5
-  bool v445; // w6
-  bool v446; // w7
-  BalanceConfig_c *v447; // x0
+  System_String_o *v440; // x21
+  __int64 v441; // x1
+  System_String_o *v442; // x2
+  System_String_o *v443; // x3
+  int32_t v444; // w4
+  int32_t v445; // w5
+  bool v446; // w6
+  bool v447; // w7
+  BalanceConfig_c *v448; // x0
   MissionNaviTransitionBoardItem_o *p_AfterPart2TerminalBgmName; // x0
-  System_Array_o *v449; // x21
-  System_Int32_array *v450; // x0
-  __int64 v451; // x1
-  System_String_o *v452; // x2
-  System_String_o *v453; // x3
-  int32_t v454; // w4
-  int32_t v455; // w5
-  bool v456; // w6
-  bool v457; // w7
-  BalanceConfig_c *v458; // x8
-  MissionNaviTransitionBoardItem_c *v459; // x21
+  System_Array_o *v450; // x0
+  System_RuntimeFieldHandle_o v451; // x1
+  System_Int32_array *v452; // x21
+  System_Int32_array *v453; // x0
+  __int64 v454; // x1
+  System_String_o *v455; // x2
+  System_String_o *v456; // x3
+  int32_t v457; // w4
+  int32_t v458; // w5
+  bool v459; // w6
+  bool v460; // w7
+  BalanceConfig_c *v461; // x8
+  MissionNaviTransitionBoardItem_c *v462; // x21
   MissionNaviTransitionBoardItem_o *p_consumeStormPodSpotId; // x0
-  System_String_o *v461; // x1
-  System_Int32_array *v462; // x0
-  struct BalanceConfig_StaticFields *v463; // x8
-  System_String_o *v464; // x2
-  System_String_o *v465; // x3
-  int32_t v466; // w4
-  int32_t v467; // w5
-  bool v468; // w6
-  bool v469; // w7
+  System_String_o *v464; // x1
+  System_Int32_array *v465; // x0
+  struct BalanceConfig_StaticFields *v466; // x8
+  System_String_o *v467; // x2
+  System_String_o *v468; // x3
+  int32_t v469; // w4
+  int32_t v470; // w5
+  bool v471; // w6
+  bool v472; // w7
   System_String_array *ValueStringArray; // x0
-  struct BalanceConfig_StaticFields *v471; // x8
-  System_String_o *v472; // x2
-  System_String_o *v473; // x3
-  int32_t v474; // w4
-  int32_t v475; // w5
-  bool v476; // w6
-  bool v477; // w7
-  int32_t v478; // w0
-  System_String_o *v479; // x1
-  int32_t v480; // w0
-  System_String_o *v481; // x1
-  System_String_o *v482; // x0
-  struct BalanceConfig_StaticFields *v483; // x8
-  System_String_o *v484; // x2
-  System_String_o *v485; // x3
-  int32_t v486; // w4
-  int32_t v487; // w5
-  bool v488; // w6
-  bool v489; // w7
-  __int64 v490; // x1
-  System_String_o *v491; // x2
-  System_String_o *v492; // x3
-  int32_t v493; // w4
-  int32_t v494; // w5
-  bool v495; // w6
-  bool v496; // w7
-  struct BalanceConfig_StaticFields *v497; // x8
-  int32_t v498; // w1
-  int32_t v499; // w0
-  __int64 v500; // x1
-  BalanceConfig_c *v501; // x8
-  int32_t v502; // w21
-  System_String_o *v503; // x1
-  int32_t v504; // w0
-  System_String_o *v505; // x1
-  System_String_array *v506; // x0
-  struct BalanceConfig_StaticFields *v507; // x8
-  System_String_o *v508; // x2
-  System_String_o *v509; // x3
-  int32_t v510; // w4
-  int32_t v511; // w5
-  bool v512; // w6
-  bool v513; // w7
-  System_String_array *v514; // x0
-  struct BalanceConfig_StaticFields *v515; // x8
-  System_String_o *v516; // x2
-  System_String_o *v517; // x3
-  int32_t v518; // w4
-  int32_t v519; // w5
-  bool v520; // w6
-  bool v521; // w7
-  __int64 v522; // x1
-  BalanceConfig_c *v523; // x0
-  System_String_o *v524; // x2
-  System_String_o *v525; // x3
-  int32_t v526; // w4
-  int32_t v527; // w5
-  bool v528; // w6
-  bool v529; // w7
-  Il2CppObject *v530; // x21
-  int32_t v531; // w1
-  System_String_o *v532; // x2
-  System_String_o *v533; // x3
-  int32_t v534; // w4
-  int32_t v535; // w5
-  bool v536; // w6
-  bool v537; // w7
-  int32_t v538; // w1
-  System_String_o *v539; // x2
-  System_String_o *v540; // x3
-  int32_t v541; // w4
-  int32_t v542; // w5
-  bool v543; // w6
-  bool v544; // w7
-  int32_t v545; // w1
-  System_String_o *v546; // x2
-  System_String_o *v547; // x3
-  int32_t v548; // w4
-  int32_t v549; // w5
-  bool v550; // w6
-  bool v551; // w7
-  int32_t v552; // w1
-  System_String_o *v553; // x2
-  System_String_o *v554; // x3
-  int32_t v555; // w4
-  int32_t v556; // w5
-  bool v557; // w6
-  bool v558; // w7
-  int32_t v559; // w1
-  System_String_o *v560; // x2
-  System_String_o *v561; // x3
-  int32_t v562; // w4
-  int32_t v563; // w5
-  bool v564; // w6
-  bool v565; // w7
-  int32_t v566; // w1
-  System_String_o *v567; // x2
-  System_String_o *v568; // x3
-  int32_t v569; // w4
-  int32_t v570; // w5
-  bool v571; // w6
-  bool v572; // w7
-  int32_t v573; // w1
-  __int64 v574; // x1
-  System_String_o *v575; // x2
-  System_String_o *v576; // x3
-  int32_t v577; // w4
-  int32_t v578; // w5
-  bool v579; // w6
-  bool v580; // w7
-  BalanceConfig_c *v581; // x0
+  struct BalanceConfig_StaticFields *v474; // x8
+  System_String_o *v475; // x2
+  System_String_o *v476; // x3
+  int32_t v477; // w4
+  int32_t v478; // w5
+  bool v479; // w6
+  bool v480; // w7
+  int32_t v481; // w0
+  System_String_o *v482; // x1
+  int32_t v483; // w0
+  System_String_o *v484; // x1
+  System_String_o *v485; // x0
+  struct BalanceConfig_StaticFields *v486; // x8
+  System_String_o *v487; // x2
+  System_String_o *v488; // x3
+  int32_t v489; // w4
+  int32_t v490; // w5
+  bool v491; // w6
+  bool v492; // w7
+  __int64 v493; // x1
+  System_String_o *v494; // x2
+  System_String_o *v495; // x3
+  int32_t v496; // w4
+  int32_t v497; // w5
+  bool v498; // w6
+  bool v499; // w7
+  struct BalanceConfig_StaticFields *v500; // x8
+  int32_t v501; // w1
+  int32_t v502; // w0
+  __int64 v503; // x1
+  BalanceConfig_c *v504; // x8
+  int32_t v505; // w21
+  System_String_o *v506; // x1
+  int32_t v507; // w0
+  System_String_o *v508; // x1
+  System_String_array *v509; // x0
+  struct BalanceConfig_StaticFields *v510; // x8
+  System_String_o *v511; // x2
+  System_String_o *v512; // x3
+  int32_t v513; // w4
+  int32_t v514; // w5
+  bool v515; // w6
+  bool v516; // w7
+  System_String_array *v517; // x0
+  struct BalanceConfig_StaticFields *v518; // x8
+  System_String_o *v519; // x2
+  System_String_o *v520; // x3
+  int32_t v521; // w4
+  int32_t v522; // w5
+  bool v523; // w6
+  bool v524; // w7
+  __int64 v525; // x1
+  BalanceConfig_c *v526; // x0
+  System_String_o *v527; // x2
+  System_String_o *v528; // x3
+  int32_t v529; // w4
+  int32_t v530; // w5
+  bool v531; // w6
+  bool v532; // w7
+  Il2CppObject *v533; // x21
+  int32_t v534; // w1
+  System_String_o *v535; // x2
+  System_String_o *v536; // x3
+  int32_t v537; // w4
+  int32_t v538; // w5
+  bool v539; // w6
+  bool v540; // w7
+  int32_t v541; // w1
+  System_String_o *v542; // x2
+  System_String_o *v543; // x3
+  int32_t v544; // w4
+  int32_t v545; // w5
+  bool v546; // w6
+  bool v547; // w7
+  int32_t v548; // w1
+  System_String_o *v549; // x2
+  System_String_o *v550; // x3
+  int32_t v551; // w4
+  int32_t v552; // w5
+  bool v553; // w6
+  bool v554; // w7
+  int32_t v555; // w1
+  System_String_o *v556; // x2
+  System_String_o *v557; // x3
+  int32_t v558; // w4
+  int32_t v559; // w5
+  bool v560; // w6
+  bool v561; // w7
+  int32_t v562; // w1
+  System_String_o *v563; // x2
+  System_String_o *v564; // x3
+  int32_t v565; // w4
+  int32_t v566; // w5
+  bool v567; // w6
+  bool v568; // w7
+  int32_t v569; // w1
+  System_String_o *v570; // x2
+  System_String_o *v571; // x3
+  int32_t v572; // w4
+  int32_t v573; // w5
+  bool v574; // w6
+  bool v575; // w7
+  int32_t v576; // w1
+  __int64 v577; // x1
+  System_String_o *v578; // x2
+  System_String_o *v579; // x3
+  int32_t v580; // w4
+  int32_t v581; // w5
+  bool v582; // w6
+  bool v583; // w7
+  BalanceConfig_c *v584; // x0
   MissionNaviTransitionBoardItem_o *p_UIStandFigureROffsetEffectNames; // x0
-  System_String_o *v583; // x2
-  System_String_o *v584; // x3
-  int32_t v585; // w4
-  int32_t v586; // w5
-  bool v587; // w6
-  bool v588; // w7
-  Il2CppObject *v589; // x21
-  int32_t v590; // w1
-  System_String_o *v591; // x2
-  System_String_o *v592; // x3
-  int32_t v593; // w4
-  int32_t v594; // w5
-  bool v595; // w6
-  bool v596; // w7
-  int32_t v597; // w1
-  System_String_o *v598; // x2
-  System_String_o *v599; // x3
-  int32_t v600; // w4
-  int32_t v601; // w5
-  bool v602; // w6
-  bool v603; // w7
-  int32_t v604; // w1
-  System_String_o *v605; // x2
-  System_String_o *v606; // x3
-  int32_t v607; // w4
-  int32_t v608; // w5
-  bool v609; // w6
-  bool v610; // w7
-  int32_t v611; // w1
-  System_String_o *v612; // x2
-  System_String_o *v613; // x3
-  int32_t v614; // w4
-  int32_t v615; // w5
-  bool v616; // w6
-  bool v617; // w7
-  int32_t v618; // w1
-  System_String_o *v619; // x2
-  System_String_o *v620; // x3
-  int32_t v621; // w4
-  int32_t v622; // w5
-  bool v623; // w6
-  bool v624; // w7
-  int32_t v625; // w1
-  System_String_o *v626; // x2
-  System_String_o *v627; // x3
-  int32_t v628; // w4
-  int32_t v629; // w5
-  bool v630; // w6
-  bool v631; // w7
-  int32_t v632; // w1
-  System_String_o *v633; // x2
-  System_String_o *v634; // x3
-  int32_t v635; // w4
-  int32_t v636; // w5
-  bool v637; // w6
-  bool v638; // w7
-  int32_t v639; // w1
-  System_String_o *v640; // x2
-  System_String_o *v641; // x3
-  int32_t v642; // w4
-  int32_t v643; // w5
-  bool v644; // w6
-  bool v645; // w7
-  int32_t v646; // w1
-  System_String_o *v647; // x2
-  System_String_o *v648; // x3
-  int32_t v649; // w4
-  int32_t v650; // w5
-  bool v651; // w6
-  bool v652; // w7
-  int32_t v653; // w1
-  System_String_o *v654; // x2
-  System_String_o *v655; // x3
-  int32_t v656; // w4
-  int32_t v657; // w5
-  bool v658; // w6
-  bool v659; // w7
-  int32_t v660; // w1
-  System_String_o *v661; // x2
-  System_String_o *v662; // x3
-  int32_t v663; // w4
-  int32_t v664; // w5
-  bool v665; // w6
-  bool v666; // w7
-  int32_t v667; // w1
-  System_String_o *v668; // x2
-  System_String_o *v669; // x3
-  int32_t v670; // w4
-  int32_t v671; // w5
-  bool v672; // w6
-  bool v673; // w7
-  int32_t v674; // w1
-  System_String_o *v675; // x2
-  System_String_o *v676; // x3
-  int32_t v677; // w4
-  int32_t v678; // w5
-  bool v679; // w6
-  bool v680; // w7
-  int32_t v681; // w1
-  System_String_o *v682; // x2
-  System_String_o *v683; // x3
-  int32_t v684; // w4
-  int32_t v685; // w5
-  bool v686; // w6
-  bool v687; // w7
-  int32_t v688; // w1
-  System_String_o *v689; // x2
-  System_String_o *v690; // x3
-  int32_t v691; // w4
-  int32_t v692; // w5
-  bool v693; // w6
-  bool v694; // w7
-  int32_t v695; // w1
-  System_String_o *v696; // x2
-  System_String_o *v697; // x3
-  int32_t v698; // w4
-  int32_t v699; // w5
-  bool v700; // w6
-  bool v701; // w7
-  int32_t v702; // w1
-  System_String_o *v703; // x2
-  System_String_o *v704; // x3
-  int32_t v705; // w4
-  int32_t v706; // w5
-  bool v707; // w6
-  bool v708; // w7
-  int32_t v709; // w1
-  __int64 v710; // x1
-  System_String_o *v711; // x2
-  System_String_o *v712; // x3
-  int32_t v713; // w4
-  int32_t v714; // w5
-  bool v715; // w6
-  bool v716; // w7
-  BalanceConfig_c *v717; // x0
+  System_String_o *v586; // x2
+  System_String_o *v587; // x3
+  int32_t v588; // w4
+  int32_t v589; // w5
+  bool v590; // w6
+  bool v591; // w7
+  Il2CppObject *v592; // x21
+  int32_t v593; // w1
+  System_String_o *v594; // x2
+  System_String_o *v595; // x3
+  int32_t v596; // w4
+  int32_t v597; // w5
+  bool v598; // w6
+  bool v599; // w7
+  int32_t v600; // w1
+  System_String_o *v601; // x2
+  System_String_o *v602; // x3
+  int32_t v603; // w4
+  int32_t v604; // w5
+  bool v605; // w6
+  bool v606; // w7
+  int32_t v607; // w1
+  System_String_o *v608; // x2
+  System_String_o *v609; // x3
+  int32_t v610; // w4
+  int32_t v611; // w5
+  bool v612; // w6
+  bool v613; // w7
+  int32_t v614; // w1
+  System_String_o *v615; // x2
+  System_String_o *v616; // x3
+  int32_t v617; // w4
+  int32_t v618; // w5
+  bool v619; // w6
+  bool v620; // w7
+  int32_t v621; // w1
+  System_String_o *v622; // x2
+  System_String_o *v623; // x3
+  int32_t v624; // w4
+  int32_t v625; // w5
+  bool v626; // w6
+  bool v627; // w7
+  int32_t v628; // w1
+  System_String_o *v629; // x2
+  System_String_o *v630; // x3
+  int32_t v631; // w4
+  int32_t v632; // w5
+  bool v633; // w6
+  bool v634; // w7
+  int32_t v635; // w1
+  System_String_o *v636; // x2
+  System_String_o *v637; // x3
+  int32_t v638; // w4
+  int32_t v639; // w5
+  bool v640; // w6
+  bool v641; // w7
+  int32_t v642; // w1
+  System_String_o *v643; // x2
+  System_String_o *v644; // x3
+  int32_t v645; // w4
+  int32_t v646; // w5
+  bool v647; // w6
+  bool v648; // w7
+  int32_t v649; // w1
+  System_String_o *v650; // x2
+  System_String_o *v651; // x3
+  int32_t v652; // w4
+  int32_t v653; // w5
+  bool v654; // w6
+  bool v655; // w7
+  int32_t v656; // w1
+  System_String_o *v657; // x2
+  System_String_o *v658; // x3
+  int32_t v659; // w4
+  int32_t v660; // w5
+  bool v661; // w6
+  bool v662; // w7
+  int32_t v663; // w1
+  System_String_o *v664; // x2
+  System_String_o *v665; // x3
+  int32_t v666; // w4
+  int32_t v667; // w5
+  bool v668; // w6
+  bool v669; // w7
+  int32_t v670; // w1
+  System_String_o *v671; // x2
+  System_String_o *v672; // x3
+  int32_t v673; // w4
+  int32_t v674; // w5
+  bool v675; // w6
+  bool v676; // w7
+  int32_t v677; // w1
+  System_String_o *v678; // x2
+  System_String_o *v679; // x3
+  int32_t v680; // w4
+  int32_t v681; // w5
+  bool v682; // w6
+  bool v683; // w7
+  int32_t v684; // w1
+  System_String_o *v685; // x2
+  System_String_o *v686; // x3
+  int32_t v687; // w4
+  int32_t v688; // w5
+  bool v689; // w6
+  bool v690; // w7
+  int32_t v691; // w1
+  System_String_o *v692; // x2
+  System_String_o *v693; // x3
+  int32_t v694; // w4
+  int32_t v695; // w5
+  bool v696; // w6
+  bool v697; // w7
+  int32_t v698; // w1
+  System_String_o *v699; // x2
+  System_String_o *v700; // x3
+  int32_t v701; // w4
+  int32_t v702; // w5
+  bool v703; // w6
+  bool v704; // w7
+  int32_t v705; // w1
+  System_String_o *v706; // x2
+  System_String_o *v707; // x3
+  int32_t v708; // w4
+  int32_t v709; // w5
+  bool v710; // w6
+  bool v711; // w7
+  int32_t v712; // w1
+  __int64 v713; // x1
+  System_String_o *v714; // x2
+  System_String_o *v715; // x3
+  int32_t v716; // w4
+  int32_t v717; // w5
+  bool v718; // w6
+  bool v719; // w7
+  BalanceConfig_c *v720; // x0
   MissionNaviTransitionBoardItem_o *p_UIStandFigureROffsetImages; // x0
-  int32_t v719; // w0
-  __int64 v720; // x1
-  BalanceConfig_c *v721; // x8
-  int32_t v722; // w21
-  System_String_o *v723; // x1
-  int32_t v724; // w0
-  System_String_o *v725; // x1
-  int32_t v726; // w0
-  System_String_o *v727; // x1
-  int32_t v728; // w0
-  System_String_o *v729; // x1
-  struct BalanceConfig_StaticFields *v730; // x8
+  int32_t v722; // w0
+  __int64 v723; // x1
+  BalanceConfig_c *v724; // x8
+  int32_t v725; // w21
+  System_String_o *v726; // x1
+  int32_t v727; // w0
+  System_String_o *v728; // x1
+  int32_t v729; // w0
+  System_String_o *v730; // x1
+  int32_t v731; // w0
+  System_String_o *v732; // x1
+  struct BalanceConfig_StaticFields *v733; // x8
   int32_t StoneFragmentExchangeNoticeDispMax; // w2
-  int32_t v732; // w0
-  System_String_o *v733; // x1
-  int32_t v734; // w0
-  System_String_o *v735; // x1
-  int32_t v736; // w0
-  System_String_o *v737; // x1
-  struct BalanceConfig_StaticFields *v738; // x8
-  int32_t MapCameraMoveTimeLogarithmBase; // w2
-  int32_t v740; // w0
+  int32_t v735; // w0
+  System_String_o *v736; // x1
+  int32_t v737; // w0
+  System_String_o *v738; // x1
+  int32_t v739; // w0
+  System_String_o *v740; // x1
   struct BalanceConfig_StaticFields *v741; // x8
-  int32_t MapCameraMoveEasingType; // w2
+  int32_t MapCameraMoveTimeLogarithmBase; // w2
   int32_t v743; // w0
-  System_String_o *v744; // x1
-  int32_t v745; // w0
-  struct BalanceConfig_StaticFields *v746; // x8
+  struct BalanceConfig_StaticFields *v744; // x8
+  int32_t MapCameraMoveEasingType; // w2
+  int32_t v746; // w0
+  System_String_o *v747; // x1
+  int32_t v748; // w0
+  struct BalanceConfig_StaticFields *v749; // x8
   System_Int32_array *MainChaptersWithEventId; // x2
-  System_String_o *v748; // x1
-  System_Int32_array *v749; // x0
-  struct BalanceConfig_StaticFields *v750; // x8
-  System_String_o *v751; // x2
-  System_String_o *v752; // x3
-  int32_t v753; // w4
-  int32_t v754; // w5
-  bool v755; // w6
-  bool v756; // w7
-  int32_t v757; // w0
-  System_String_o *v758; // x1
-  int32_t v759; // w0
-  System_String_o *v760; // x1
-  int32_t v761; // w0
-  System_String_o *v762; // x1
-  int32_t v763; // w0
-  System_String_o *v764; // x1
-  int32_t v765; // w0
-  System_String_o *v766; // x1
-  int32_t v767; // w0
-  System_String_o *v768; // x1
-  int32_t v769; // w0
-  struct BalanceConfig_StaticFields *v770; // x8
-  System_Int32_array *TreasureDevicesForcedOpenEffect; // x2
-  System_Int32_array *v772; // x0
+  System_String_o *v751; // x1
+  System_Int32_array *v752; // x0
+  struct BalanceConfig_StaticFields *v753; // x8
+  System_String_o *v754; // x2
+  System_String_o *v755; // x3
+  int32_t v756; // w4
+  int32_t v757; // w5
+  bool v758; // w6
+  bool v759; // w7
+  int32_t v760; // w0
+  System_String_o *v761; // x1
+  int32_t v762; // w0
+  System_String_o *v763; // x1
+  int32_t v764; // w0
+  System_String_o *v765; // x1
+  int32_t v766; // w0
+  System_String_o *v767; // x1
+  int32_t v768; // w0
+  System_String_o *v769; // x1
+  int32_t v770; // w0
+  System_String_o *v771; // x1
+  int32_t v772; // w0
   struct BalanceConfig_StaticFields *v773; // x8
-  System_String_o *v774; // x2
-  System_String_o *v775; // x3
-  int32_t v776; // w4
-  int32_t v777; // w5
-  bool v778; // w6
-  bool v779; // w7
-  System_Int32_array *v780; // x0
-  struct BalanceConfig_StaticFields *v781; // x8
-  System_String_o *v782; // x2
-  System_String_o *v783; // x3
-  int32_t v784; // w4
-  int32_t v785; // w5
-  bool v786; // w6
-  bool v787; // w7
-  int32_t v788; // w0
-  struct BalanceConfig_StaticFields *v789; // x8
-  int32_t SpecialLimitCountPLD; // w2
+  System_Int32_array *TreasureDevicesForcedOpenEffect; // x2
+  System_Int32_array *v775; // x0
+  struct BalanceConfig_StaticFields *v776; // x8
+  System_String_o *v777; // x2
+  System_String_o *v778; // x3
+  int32_t v779; // w4
+  int32_t v780; // w5
+  bool v781; // w6
+  bool v782; // w7
+  System_Int32_array *v783; // x0
+  struct BalanceConfig_StaticFields *v784; // x8
+  System_String_o *v785; // x2
+  System_String_o *v786; // x3
+  int32_t v787; // w4
+  int32_t v788; // w5
+  bool v789; // w6
+  bool v790; // w7
   int32_t v791; // w0
   struct BalanceConfig_StaticFields *v792; // x8
-  int32_t ClassBoardReleaseQuestId; // w2
+  int32_t SpecialLimitCountPLD; // w2
   int32_t v794; // w0
   struct BalanceConfig_StaticFields *v795; // x8
-  System_Int32_array *Extra1SortOrderClassIds; // x2
-  System_Int32_array *v797; // x0
+  int32_t ClassBoardReleaseQuestId; // w2
+  int32_t v797; // w0
   struct BalanceConfig_StaticFields *v798; // x8
-  System_String_o *v799; // x2
-  System_String_o *v800; // x3
-  int32_t v801; // w4
-  int32_t v802; // w5
-  bool v803; // w6
-  bool v804; // w7
-  System_Int32_array *v805; // x0
-  struct BalanceConfig_StaticFields *v806; // x8
-  System_String_o *v807; // x2
-  System_String_o *v808; // x3
-  int32_t v809; // w4
-  int32_t v810; // w5
-  bool v811; // w6
-  bool v812; // w7
-  int32_t v813; // w0
-  System_String_o *v814; // x1
-  int32_t v815; // w0
-  System_String_o *v816; // x1
-  int32_t v817; // w0
-  struct BalanceConfig_StaticFields *v818; // x8
+  System_Int32_array *Extra1SortOrderClassIds; // x2
+  System_Int32_array *v800; // x0
+  struct BalanceConfig_StaticFields *v801; // x8
+  System_String_o *v802; // x2
+  System_String_o *v803; // x3
+  int32_t v804; // w4
+  int32_t v805; // w5
+  bool v806; // w6
+  bool v807; // w7
+  System_Int32_array *v808; // x0
+  struct BalanceConfig_StaticFields *v809; // x8
+  System_String_o *v810; // x2
+  System_String_o *v811; // x3
+  int32_t v812; // w4
+  int32_t v813; // w5
+  bool v814; // w6
+  bool v815; // w7
+  int32_t v816; // w0
+  System_String_o *v817; // x1
+  int32_t v818; // w0
+  System_String_o *v819; // x1
+  int32_t v820; // w0
+  struct BalanceConfig_StaticFields *v821; // x8
   int32_t ClassBoardCameraSelectEasingType; // w2
-  System_String_o *v820; // x1
-  int32_t v821; // w0
-  System_String_o *v822; // x1
-  int32_t v823; // w0
-  struct BalanceConfig_StaticFields *v824; // x8
+  System_String_o *v823; // x1
+  int32_t v824; // w0
+  System_String_o *v825; // x1
+  int32_t v826; // w0
+  struct BalanceConfig_StaticFields *v827; // x8
   System_Int32_array *NotUIChangeMapIds; // x2
-  System_String_o *v826; // x1
-  System_Int32_array *v827; // x0
-  struct BalanceConfig_StaticFields *v828; // x8
-  System_String_o *v829; // x2
-  System_String_o *v830; // x3
-  int32_t v831; // w4
-  int32_t v832; // w5
-  bool v833; // w6
-  bool v834; // w7
-  System_Int32_array *v835; // x0
-  struct BalanceConfig_StaticFields *v836; // x8
-  System_String_o *v837; // x2
-  System_String_o *v838; // x3
-  int32_t v839; // w4
-  int32_t v840; // w5
-  bool v841; // w6
-  bool v842; // w7
-  System_Int32_array *v843; // x0
-  struct BalanceConfig_StaticFields *v844; // x8
-  System_String_o *v845; // x2
-  System_String_o *v846; // x3
-  int32_t v847; // w4
-  int32_t v848; // w5
-  bool v849; // w6
-  bool v850; // w7
-  System_Int32_array *v851; // x0
-  struct BalanceConfig_StaticFields *v852; // x8
-  System_String_o *v853; // x2
-  System_String_o *v854; // x3
-  int32_t v855; // w4
-  int32_t v856; // w5
-  bool v857; // w6
-  bool v858; // w7
-  System_String_o *v859; // x1
-  System_Int32_array *v860; // x0
-  struct BalanceConfig_StaticFields *v861; // x8
-  System_String_o *v862; // x2
-  System_String_o *v863; // x3
-  int32_t v864; // w4
-  int32_t v865; // w5
-  bool v866; // w6
-  bool v867; // w7
-  System_Int32_array *v868; // x0
-  struct BalanceConfig_StaticFields *v869; // x8
-  System_String_o *v870; // x2
-  System_String_o *v871; // x3
-  int32_t v872; // w4
-  int32_t v873; // w5
-  bool v874; // w6
-  bool v875; // w7
-  int32_t v876; // w0
-  System_String_o *v877; // x1
-  struct BalanceConfig_StaticFields *v878; // x8
-  System_Int32_array *NotRequiredPlayWarIds; // x2
-  System_Int32_array *v880; // x0
+  System_String_o *v829; // x1
+  System_Int32_array *v830; // x0
+  struct BalanceConfig_StaticFields *v831; // x8
+  System_String_o *v832; // x2
+  System_String_o *v833; // x3
+  int32_t v834; // w4
+  int32_t v835; // w5
+  bool v836; // w6
+  bool v837; // w7
+  System_Int32_array *v838; // x0
+  struct BalanceConfig_StaticFields *v839; // x8
+  System_String_o *v840; // x2
+  System_String_o *v841; // x3
+  int32_t v842; // w4
+  int32_t v843; // w5
+  bool v844; // w6
+  bool v845; // w7
+  System_Int32_array *v846; // x0
+  struct BalanceConfig_StaticFields *v847; // x8
+  System_String_o *v848; // x2
+  System_String_o *v849; // x3
+  int32_t v850; // w4
+  int32_t v851; // w5
+  bool v852; // w6
+  bool v853; // w7
+  System_Int32_array *v854; // x0
+  struct BalanceConfig_StaticFields *v855; // x8
+  System_String_o *v856; // x2
+  System_String_o *v857; // x3
+  int32_t v858; // w4
+  int32_t v859; // w5
+  bool v860; // w6
+  bool v861; // w7
+  System_String_o *v862; // x1
+  System_Int32_array *v863; // x0
+  struct BalanceConfig_StaticFields *v864; // x8
+  System_String_o *v865; // x2
+  System_String_o *v866; // x3
+  int32_t v867; // w4
+  int32_t v868; // w5
+  bool v869; // w6
+  bool v870; // w7
+  System_Int32_array *v871; // x0
+  struct BalanceConfig_StaticFields *v872; // x8
+  System_String_o *v873; // x2
+  System_String_o *v874; // x3
+  int32_t v875; // w4
+  int32_t v876; // w5
+  bool v877; // w6
+  bool v878; // w7
+  int32_t v879; // w0
+  System_String_o *v880; // x1
   struct BalanceConfig_StaticFields *v881; // x8
-  System_String_o *v882; // x2
-  System_String_o *v883; // x3
-  int32_t v884; // w4
-  int32_t v885; // w5
-  bool v886; // w6
-  bool v887; // w7
-  int32_t v888; // w0
-  System_String_o *v889; // x1
-  int32_t v890; // w0
-  System_String_o *v891; // x1
-  System_String_o *v892; // x0
-  MissionNaviTransitionBoardItem_o *v893; // x8
-  System_String_o *v894; // x2
-  System_String_o *v895; // x3
-  int32_t v896; // w4
-  int32_t v897; // w5
-  bool v898; // w6
-  bool v899; // w7
-  System_Int32_array *v900; // x0
-  struct BalanceConfig_StaticFields *v901; // x8
-  System_String_o *v902; // x2
-  System_String_o *v903; // x3
-  int32_t v904; // w4
-  int32_t v905; // w5
-  bool v906; // w6
-  bool v907; // w7
-  bool v908; // w9
-  System_String_o *v909; // x1
-  float v910; // s0
-  System_Collections_Generic_Dictionary_string__int__c *v911; // x0
-  System_Collections_Generic_Dictionary_object__int__o *v912; // x21
-  __int64 v913; // x1
-  MstMissionEntity_c *v914; // x0
-  TitleInfoControl_c *v915; // x8
+  System_Int32_array *NotRequiredPlayWarIds; // x2
+  System_Int32_array *v883; // x0
+  struct BalanceConfig_StaticFields *v884; // x8
+  System_String_o *v885; // x2
+  System_String_o *v886; // x3
+  int32_t v887; // w4
+  int32_t v888; // w5
+  bool v889; // w6
+  bool v890; // w7
+  int32_t v891; // w0
+  System_String_o *v892; // x1
+  int32_t v893; // w0
+  System_String_o *v894; // x1
+  System_String_o *v895; // x0
+  MissionNaviTransitionBoardItem_o *v896; // x8
+  System_String_o *v897; // x2
+  System_String_o *v898; // x3
+  int32_t v899; // w4
+  int32_t v900; // w5
+  bool v901; // w6
+  bool v902; // w7
+  System_Int32_array *v903; // x0
+  struct BalanceConfig_StaticFields *v904; // x8
+  System_String_o *v905; // x2
+  System_String_o *v906; // x3
+  int32_t v907; // w4
+  int32_t v908; // w5
+  bool v909; // w6
+  bool v910; // w7
+  bool v911; // w9
+  System_String_o *v912; // x1
+  float v913; // s0
+  System_Collections_Generic_Dictionary_string__int__c *v914; // x0
+  System_Collections_Generic_Dictionary_object__int__o *v915; // x21
+  __int64 v916; // x1
+  MstMissionEntity_c *v917; // x0
+  TitleInfoControl_c *v918; // x8
   System_String_o *MISSION_ICON_DISPLAY_MS_GROUP_NORMAL; // x22
   float EVENT_ALPHA_ANIM_TIME_INTERVAL; // s0
-  int32_t v918; // w2
-  Il2CppObject *MISSION_ICON_DISPLAY_MS_GROUP_LIMITED; // x22
-  float v920; // s0
   int32_t v921; // w2
-  int32_t v922; // w0
+  Il2CppObject *MISSION_ICON_DISPLAY_MS_GROUP_LIMITED; // x22
+  float v923; // s0
+  int32_t v924; // w2
+  int32_t v925; // w0
   MissionNaviTransitionBoardItem_o *p_MissionIconDisplayMsDictionary; // x0
-  System_String_o *v924; // x2
-  System_String_o *v925; // x3
-  int32_t v926; // w4
-  int32_t v927; // w5
-  bool v928; // w6
-  bool v929; // w7
-  int32_t v930; // w0
-  System_String_o *v931; // x1
-  int32_t v932; // w0
-  System_String_o *v933; // x1
-  struct BalanceConfig_StaticFields *v934; // x8
-  System_Int32_array *PlayableBeastClassIds; // x2
-  System_Int32_array *v936; // x0
+  System_String_o *v927; // x2
+  System_String_o *v928; // x3
+  int32_t v929; // w4
+  int32_t v930; // w5
+  bool v931; // w6
+  bool v932; // w7
+  int32_t v933; // w0
+  System_String_o *v934; // x1
+  int32_t v935; // w0
+  System_String_o *v936; // x1
   struct BalanceConfig_StaticFields *v937; // x8
-  System_String_o *v938; // x2
-  System_String_o *v939; // x3
-  int32_t v940; // w4
-  int32_t v941; // w5
-  bool v942; // w6
-  bool v943; // w7
-  System_Int32_array *v944; // x0
-  struct BalanceConfig_StaticFields *v945; // x8
-  System_String_o *v946; // x2
-  System_String_o *v947; // x3
-  int32_t v948; // w4
-  int32_t v949; // w5
-  bool v950; // w6
-  bool v951; // w7
-  int32_t v952; // w0
-  struct BalanceConfig_StaticFields *v953; // x8
-  System_Int32_array *MainInterludeMapReturnWarIds; // x2
-  System_Int32_array *v955; // x0
+  System_Int32_array *PlayableBeastClassIds; // x2
+  System_Int32_array *v939; // x0
+  struct BalanceConfig_StaticFields *v940; // x8
+  System_String_o *v941; // x2
+  System_String_o *v942; // x3
+  int32_t v943; // w4
+  int32_t v944; // w5
+  bool v945; // w6
+  bool v946; // w7
+  System_Int32_array *v947; // x0
+  struct BalanceConfig_StaticFields *v948; // x8
+  System_String_o *v949; // x2
+  System_String_o *v950; // x3
+  int32_t v951; // w4
+  int32_t v952; // w5
+  bool v953; // w6
+  bool v954; // w7
+  int32_t v955; // w0
   struct BalanceConfig_StaticFields *v956; // x8
-  System_String_o *v957; // x2
-  System_String_o *v958; // x3
-  int32_t v959; // w4
-  int32_t v960; // w5
-  bool v961; // w6
-  bool v962; // w7
-  int32_t v963; // w0
-  struct BalanceConfig_StaticFields *v964; // x8
-  int32_t GalleryDefaultZoomRateMax; // w2
+  System_Int32_array *MainInterludeMapReturnWarIds; // x2
+  System_Int32_array *v958; // x0
+  struct BalanceConfig_StaticFields *v959; // x8
+  System_String_o *v960; // x2
+  System_String_o *v961; // x3
+  int32_t v962; // w4
+  int32_t v963; // w5
+  bool v964; // w6
+  bool v965; // w7
   int32_t v966; // w0
   struct BalanceConfig_StaticFields *v967; // x8
-  int32_t SvtCoinQuestOpenQuestId; // w2
+  int32_t GalleryDefaultZoomRateMax; // w2
   int32_t v969; // w0
   struct BalanceConfig_StaticFields *v970; // x8
-  int32_t GrandBoardWarId; // w2
+  int32_t SvtCoinQuestOpenQuestId; // w2
   int32_t v972; // w0
   struct BalanceConfig_StaticFields *v973; // x8
-  int32_t GrandSvtLv; // w2
+  int32_t GrandBoardWarId; // w2
   int32_t v975; // w0
   struct BalanceConfig_StaticFields *v976; // x8
-  int32_t GrandSvtSkillLv; // w2
+  int32_t GrandSvtLv; // w2
   int32_t v978; // w0
   struct BalanceConfig_StaticFields *v979; // x8
-  System_Int32_array *InvalidOpeningMovieIds; // x2
-  System_Int32_array *v981; // x0
+  int32_t GrandSvtSkillLv; // w2
+  int32_t v981; // w0
   struct BalanceConfig_StaticFields *v982; // x8
-  System_String_o *v983; // x2
-  System_String_o *v984; // x3
-  int32_t v985; // w4
-  int32_t v986; // w5
-  bool v987; // w6
-  bool v988; // w7
-  System_Int32_array *v989; // x0
-  struct BalanceConfig_StaticFields *v990; // x8
-  System_String_o *v991; // x2
-  System_String_o *v992; // x3
-  int32_t v993; // w4
-  int32_t v994; // w5
-  bool v995; // w6
-  bool v996; // w7
-  System_String_array *v997; // x0
-  struct BalanceConfig_StaticFields *v998; // x8
-  System_String_o *v999; // x2
-  System_String_o *v1000; // x3
-  int32_t v1001; // w4
-  int32_t v1002; // w5
-  bool v1003; // w6
-  bool v1004; // w7
-  bool v1005; // w9
-  struct BalanceConfig_StaticFields *v1006; // x8
-  int32_t GrandExtraWarId; // w2
-  int32_t v1008; // w0
+  System_Int32_array *InvalidOpeningMovieIds; // x2
+  System_Int32_array *v984; // x0
+  struct BalanceConfig_StaticFields *v985; // x8
+  System_String_o *v986; // x2
+  System_String_o *v987; // x3
+  int32_t v988; // w4
+  int32_t v989; // w5
+  bool v990; // w6
+  bool v991; // w7
+  System_Int32_array *v992; // x0
+  struct BalanceConfig_StaticFields *v993; // x8
+  System_String_o *v994; // x2
+  System_String_o *v995; // x3
+  int32_t v996; // w4
+  int32_t v997; // w5
+  bool v998; // w6
+  bool v999; // w7
+  System_String_array *v1000; // x0
+  struct BalanceConfig_StaticFields *v1001; // x8
+  System_String_o *v1002; // x2
+  System_String_o *v1003; // x3
+  int32_t v1004; // w4
+  int32_t v1005; // w5
+  bool v1006; // w6
+  bool v1007; // w7
+  bool v1008; // w9
   struct BalanceConfig_StaticFields *v1009; // x8
-  int32_t GrandExtra1WarId; // w2
+  int32_t GrandExtraWarId; // w2
   int32_t v1011; // w0
   struct BalanceConfig_StaticFields *v1012; // x8
-  int32_t GrandExtra2WarId; // w2
+  int32_t GrandExtra1WarId; // w2
   int32_t v1014; // w0
-  System_String_o *v1015; // x1
-  System_String_o *v1016; // x0
-  MissionNaviTransitionBoardItem_o *v1017; // x8
-  System_String_o *v1018; // x2
-  System_String_o *v1019; // x3
-  int32_t v1020; // w4
-  int32_t v1021; // w5
-  bool v1022; // w6
-  bool v1023; // w7
-  bool v1024; // w9
-  System_String_o *v1025; // x1
-  __int64 v1026; // x1
-  int32_t v1027; // w21
-  BalanceConfig_c *v1028; // x0
-  struct BalanceConfig_StaticFields *v1029; // x8
-  System_String_o *v1030; // x1
+  struct BalanceConfig_StaticFields *v1015; // x8
+  int32_t GrandExtra2WarId; // w2
+  int32_t v1017; // w0
+  System_String_o *v1018; // x1
+  System_String_o *v1019; // x0
+  MissionNaviTransitionBoardItem_o *v1020; // x8
+  System_String_o *v1021; // x2
+  System_String_o *v1022; // x3
+  int32_t v1023; // w4
+  int32_t v1024; // w5
+  bool v1025; // w6
+  bool v1026; // w7
+  bool v1027; // w9
+  System_String_o *v1028; // x1
+  __int64 v1029; // x1
+  int32_t v1030; // w21
+  BalanceConfig_c *v1031; // x0
+  struct BalanceConfig_StaticFields *v1032; // x8
+  System_String_o *v1033; // x1
   System_Int32_array *Part2FinalChapterBoardNextLayoutTargetId; // x2
-  System_Int32_array *v1032; // x0
-  struct BalanceConfig_StaticFields *v1033; // x8
-  System_String_o *v1034; // x2
-  System_String_o *v1035; // x3
-  int32_t v1036; // w4
-  int32_t v1037; // w5
-  bool v1038; // w6
-  bool v1039; // w7
-  Il2CppObject *v1040; // x21
-  __int64 v1041; // x1
-  System_Object_array *v1042; // x0
-  System_String_o *v1043; // x2
-  System_String_o *v1044; // x3
-  int32_t v1045; // w4
-  int32_t v1046; // w5
-  bool v1047; // w6
-  bool v1048; // w7
-  MissionNaviTransitionBoardItem_c *v1049; // x21
-  BalanceConfig_c *v1050; // x0
+  System_Int32_array *v1035; // x0
+  struct BalanceConfig_StaticFields *v1036; // x8
+  System_String_o *v1037; // x2
+  System_String_o *v1038; // x3
+  int32_t v1039; // w4
+  int32_t v1040; // w5
+  bool v1041; // w6
+  bool v1042; // w7
+  Il2CppObject *v1043; // x21
+  __int64 v1044; // x1
+  System_Object_array *v1045; // x0
+  System_String_o *v1046; // x2
+  System_String_o *v1047; // x3
+  int32_t v1048; // w4
+  int32_t v1049; // w5
+  bool v1050; // w6
+  bool v1051; // w7
+  MissionNaviTransitionBoardItem_c *v1052; // x21
+  BalanceConfig_c *v1053; // x0
   MissionNaviTransitionBoardItem_o *p_ChapterBoardLayoutDataArray; // x0
-  BalanceConfig_c *v1052; // x0
-  System_Int32_array *v1053; // x0
-  struct BalanceConfig_StaticFields *v1054; // x8
-  System_String_o *v1055; // x2
-  System_String_o *v1056; // x3
-  int32_t v1057; // w4
-  int32_t v1058; // w5
-  bool v1059; // w6
-  bool v1060; // w7
-  int32_t v1061; // w0
-  System_String_o *v1062; // x1
-  struct BalanceConfig_StaticFields *v1063; // x8
+  BalanceConfig_c *v1055; // x0
+  System_Int32_array *v1056; // x0
+  struct BalanceConfig_StaticFields *v1057; // x8
+  System_String_o *v1058; // x2
+  System_String_o *v1059; // x3
+  int32_t v1060; // w4
+  int32_t v1061; // w5
+  bool v1062; // w6
+  bool v1063; // w7
+  int32_t v1064; // w0
+  System_String_o *v1065; // x1
+  struct BalanceConfig_StaticFields *v1066; // x8
   int32_t PhotoStandFigureZoomRateMin; // w2
-  int32_t v1065; // w0
-  System_String_o *v1066; // x1
-  struct BalanceConfig_StaticFields *v1067; // x8
+  int32_t v1068; // w0
+  System_String_o *v1069; // x1
+  struct BalanceConfig_StaticFields *v1070; // x8
   int32_t PhotoStandFigureZoomRateMax; // w2
-  int32_t v1069; // w0
-  System_String_o *v1070; // x1
-  struct BalanceConfig_StaticFields *v1071; // x8
+  int32_t v1072; // w0
+  System_String_o *v1073; // x1
+  struct BalanceConfig_StaticFields *v1074; // x8
   int32_t BeginningAfterTimeWarId; // w2
-  int32_t v1073; // w0
-  System_String_o *v1074; // x1
-  struct BalanceConfig_StaticFields *v1075; // x8
+  int32_t v1076; // w0
+  System_String_o *v1077; // x1
+  struct BalanceConfig_StaticFields *v1078; // x8
   int32_t Title6ClearWarId; // w2
-  int32_t v1077; // w0
-  System_String_o *v1078; // x1
-  struct BalanceConfig_StaticFields *v1079; // x8
-  System_Int32_array *MyRoomMainDiffBgLinkedIds; // x2
-  System_Int32_array *v1081; // x0
+  int32_t v1080; // w0
+  System_String_o *v1081; // x1
   struct BalanceConfig_StaticFields *v1082; // x8
-  System_String_o *v1083; // x2
-  System_String_o *v1084; // x3
-  int32_t v1085; // w4
-  int32_t v1086; // w5
-  bool v1087; // w6
-  bool v1088; // w7
-  System_Int32_array *v1089; // x0
-  struct BalanceConfig_StaticFields *v1090; // x8
-  System_String_o *v1091; // x2
-  System_String_o *v1092; // x3
-  int32_t v1093; // w4
-  int32_t v1094; // w5
-  bool v1095; // w6
-  bool v1096; // w7
-  System_Int32_array *v1097; // x0
-  struct BalanceConfig_StaticFields *v1098; // x8
-  System_String_o *v1099; // x2
-  System_String_o *v1100; // x3
-  int32_t v1101; // w4
-  int32_t v1102; // w5
-  bool v1103; // w6
-  bool v1104; // w7
-  int32_t v1105; // w0
-  struct BalanceConfig_StaticFields *v1106; // x8
-  System_Int32_array *ExRoomWarIds; // x2
-  System_Int32_array *v1108; // x0
+  System_Int32_array *MyRoomMainDiffBgLinkedIds; // x2
+  System_Int32_array *v1084; // x0
+  struct BalanceConfig_StaticFields *v1085; // x8
+  System_String_o *v1086; // x2
+  System_String_o *v1087; // x3
+  int32_t v1088; // w4
+  int32_t v1089; // w5
+  bool v1090; // w6
+  bool v1091; // w7
+  System_Int32_array *v1092; // x0
+  struct BalanceConfig_StaticFields *v1093; // x8
+  System_String_o *v1094; // x2
+  System_String_o *v1095; // x3
+  int32_t v1096; // w4
+  int32_t v1097; // w5
+  bool v1098; // w6
+  bool v1099; // w7
+  System_Int32_array *v1100; // x0
+  struct BalanceConfig_StaticFields *v1101; // x8
+  System_String_o *v1102; // x2
+  System_String_o *v1103; // x3
+  int32_t v1104; // w4
+  int32_t v1105; // w5
+  bool v1106; // w6
+  bool v1107; // w7
+  int32_t v1108; // w0
   struct BalanceConfig_StaticFields *v1109; // x8
-  System_String_o *v1110; // x2
-  System_String_o *v1111; // x3
-  int32_t v1112; // w4
-  int32_t v1113; // w5
-  bool v1114; // w6
-  bool v1115; // w7
+  System_Int32_array *ExRoomWarIds; // x2
+  System_Int32_array *v1111; // x0
+  struct BalanceConfig_StaticFields *v1112; // x8
+  System_String_o *v1113; // x2
+  System_String_o *v1114; // x3
+  int32_t v1115; // w4
+  int32_t v1116; // w5
+  bool v1117; // w6
+  bool v1118; // w7
   float result; // [xsp+Ch] [xbp-64h] BYREF
 
   if ( (byte_596FDC0 & 1) == 0 )
@@ -2947,589 +2956,586 @@ void BalanceConfig__Initialize(const MethodInfo *method)
   if ( !BalanceConfig_TypeInfo->static_fields->EventTowerFadeOutDelayTime )
   {
     v329 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-      v329,
-      (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__84DF4B72A51E01473BC25693E526BC603A140C4300062B4A7F64A9F7D00ABB95,
-      0);
-    v337 = BalanceConfig_TypeInfo;
+    v330.fields.value = Field__PrivateImplementationDetails__84DF4B72A51E01473BC25693E526BC603A140C4300062B4A7F64A9F7D00ABB95;
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v329, v330, 0);
+    v338 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v330);
-      v337 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v331);
+      v338 = BalanceConfig_TypeInfo;
     }
-    p_EventTowerFadeOutDelayTime = (MissionNaviTransitionBoardItem_o *)&v337->static_fields->EventTowerFadeOutDelayTime;
+    p_EventTowerFadeOutDelayTime = (MissionNaviTransitionBoardItem_o *)&v338->static_fields->EventTowerFadeOutDelayTime;
     p_EventTowerFadeOutDelayTime->klass = (MissionNaviTransitionBoardItem_c *)v329;
-    sub_2213A04(p_EventTowerFadeOutDelayTime, (int32_t)v329, v331, v332, v333, v334, v335, v336);
+    sub_2213A04(p_EventTowerFadeOutDelayTime, (int32_t)v329, v332, v333, v334, v335, v336, v337);
   }
-  v339 = ConstantMaster__GetValue_48903564(
+  v340 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_5968/*"EVENT_TOWER_FADEOUT_PLAY_TIME"*/,
            3000,
            0);
-  v341 = BalanceConfig_TypeInfo;
-  v342 = v339;
+  v342 = BalanceConfig_TypeInfo;
+  v343 = v340;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v340);
-    v341 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v341);
+    v342 = BalanceConfig_TypeInfo;
   }
-  v343 = (System_String_o *)StringLiteral_8975/*"MAX_FRIENDPOINT_BOOST_ITEM_USE"*/;
-  v341->static_fields->EventTowerFadeOutPlayTime = (float)v342 / 1000.0;
-  v344 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, v343, 0);
-  v345 = (System_String_o *)StringLiteral_6803/*"FRIENDPOINT_BOOST_ITEM_EFFECT_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->MaxFriendChocolateUse = v344;
-  v346 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v345, 3, 0);
-  v347 = (System_String_o *)StringLiteral_8892/*"MAIN_RECORD_FOLDER_WAR_IDS"*/;
-  v348 = BalanceConfig_TypeInfo->static_fields;
-  MainRecordFolderWarIds = v348->MainRecordFolderWarIds;
-  v348->FriendPointBoostItemEfffectId = v346;
-  v350 = ConstantStrMaster__GetValueArray(v5, v347, MainRecordFolderWarIds, 0);
-  v351 = BalanceConfig_TypeInfo->static_fields;
-  v351->MainRecordFolderWarIds = v350;
+  v344 = (System_String_o *)StringLiteral_8975/*"MAX_FRIENDPOINT_BOOST_ITEM_USE"*/;
+  v342->static_fields->EventTowerFadeOutPlayTime = (float)v343 / 1000.0;
+  v345 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, v344, 0);
+  v346 = (System_String_o *)StringLiteral_6803/*"FRIENDPOINT_BOOST_ITEM_EFFECT_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->MaxFriendChocolateUse = v345;
+  v347 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v346, 3, 0);
+  v348 = (System_String_o *)StringLiteral_8892/*"MAIN_RECORD_FOLDER_WAR_IDS"*/;
+  v349 = BalanceConfig_TypeInfo->static_fields;
+  MainRecordFolderWarIds = v349->MainRecordFolderWarIds;
+  v349->FriendPointBoostItemEfffectId = v347;
+  v351 = ConstantStrMaster__GetValueArray(v5, v348, MainRecordFolderWarIds, 0);
+  v352 = BalanceConfig_TypeInfo->static_fields;
+  v352->MainRecordFolderWarIds = v351;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v351->MainRecordFolderWarIds,
-    (int32_t)v350,
-    v352,
+    (MissionNaviTransitionBoardItem_o *)&v352->MainRecordFolderWarIds,
+    (int32_t)v351,
     v353,
     v354,
     v355,
     v356,
-    v357);
-  v358 = ConstantMaster__GetValue_48903564(
+    v357,
+    v358);
+  v359 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_8881/*"MAIN_INTERLUDE_WAR_ID"*/,
            1004,
            0);
-  v359 = (System_String_o *)StringLiteral_5734/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/;
-  BalanceConfig_TypeInfo->static_fields->MainInterludeWarId = v358;
-  v360 = ConstantStrMaster__GetValueArray(v5, v359, 0, 0);
-  v361 = BalanceConfig_TypeInfo->static_fields;
-  v361->EventBoardGameDiceButtonPostion = v360;
+  v360 = (System_String_o *)StringLiteral_5734/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/;
+  BalanceConfig_TypeInfo->static_fields->MainInterludeWarId = v359;
+  v361 = ConstantStrMaster__GetValueArray(v5, v360, 0, 0);
+  v362 = BalanceConfig_TypeInfo->static_fields;
+  v362->EventBoardGameDiceButtonPostion = v361;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v361->EventBoardGameDiceButtonPostion,
-    (int32_t)v360,
-    v362,
+    (MissionNaviTransitionBoardItem_o *)&v362->EventBoardGameDiceButtonPostion,
+    (int32_t)v361,
     v363,
     v364,
     v365,
     v366,
-    v367);
+    v367,
+    v368);
   if ( !BalanceConfig_TypeInfo->static_fields->EventBoardGameDiceButtonPostion )
   {
     Instance = (Il2CppObject *)sub_2213B20(int___TypeInfo, 3);
     if ( !Instance )
       goto LABEL_182;
-    v374 = (unsigned int)Instance[1].monitor;
-    v375 = (MissionNaviTransitionBoardItem_c *)Instance;
-    if ( v374 <= 1 )
+    v375 = (unsigned int)Instance[1].monitor;
+    v376 = (MissionNaviTransitionBoardItem_c *)Instance;
+    if ( v375 <= 1 )
       goto LABEL_181;
     HIDWORD(Instance[2].klass) = -59;
-    if ( v374 == 2 )
+    if ( v375 == 2 )
       goto LABEL_181;
-    v376 = BalanceConfig_TypeInfo;
-    v375->_1.byval_arg.bits = -500;
-    if ( !*(&v376->_2.cctor_finished + 1) )
+    v377 = BalanceConfig_TypeInfo;
+    v376->_1.byval_arg.bits = -500;
+    if ( !*(&v377->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v376, v2);
-      v376 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v377, v2);
+      v377 = BalanceConfig_TypeInfo;
     }
-    p_EventBoardGameDiceButtonPostion = (MissionNaviTransitionBoardItem_o *)&v376->static_fields->EventBoardGameDiceButtonPostion;
-    p_EventBoardGameDiceButtonPostion->klass = v375;
-    sub_2213A04(p_EventBoardGameDiceButtonPostion, (int32_t)v375, v368, v369, v370, v371, v372, v373);
+    p_EventBoardGameDiceButtonPostion = (MissionNaviTransitionBoardItem_o *)&v377->static_fields->EventBoardGameDiceButtonPostion;
+    p_EventBoardGameDiceButtonPostion->klass = v376;
+    sub_2213A04(p_EventBoardGameDiceButtonPostion, (int32_t)v376, v369, v370, v371, v372, v373, v374);
   }
-  v378 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_8944/*"MATERIAL_MAIN_INTERLUDE_WAR_ID"*/, 0, 0);
-  v386 = BalanceConfig_TypeInfo;
-  v387 = (MissionNaviTransitionBoardItem_c *)v378;
+  v379 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_8944/*"MATERIAL_MAIN_INTERLUDE_WAR_ID"*/, 0, 0);
+  v387 = BalanceConfig_TypeInfo;
+  v388 = (MissionNaviTransitionBoardItem_c *)v379;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v379);
-    v386 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v380);
+    v387 = BalanceConfig_TypeInfo;
   }
-  p_MainInterludeWarIdOnMaterial = (MissionNaviTransitionBoardItem_o *)&v386->static_fields->MainInterludeWarIdOnMaterial;
-  p_MainInterludeWarIdOnMaterial->klass = v387;
-  sub_2213A04(p_MainInterludeWarIdOnMaterial, (int32_t)v387, v380, v381, v382, v383, v384, v385);
+  p_MainInterludeWarIdOnMaterial = (MissionNaviTransitionBoardItem_o *)&v387->static_fields->MainInterludeWarIdOnMaterial;
+  p_MainInterludeWarIdOnMaterial->klass = v388;
+  sub_2213A04(p_MainInterludeWarIdOnMaterial, (int32_t)v388, v381, v382, v383, v384, v385, v386);
   if ( !BalanceConfig_TypeInfo->static_fields->MainInterludeWarIdOnMaterial )
   {
     Instance = (Il2CppObject *)sub_2213B20(int___TypeInfo, 1);
     if ( !Instance )
       goto LABEL_182;
-    v395 = Instance;
+    v396 = Instance;
     if ( !LODWORD(Instance[1].monitor) )
       goto LABEL_181;
-    v396 = BalanceConfig_TypeInfo;
-    LODWORD(v395[2].klass) = 307;
-    if ( !*(&v396->_2.cctor_finished + 1) )
+    v397 = BalanceConfig_TypeInfo;
+    LODWORD(v396[2].klass) = 307;
+    if ( !*(&v397->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(v396, v2);
-      v396 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v397, v2);
+      v397 = BalanceConfig_TypeInfo;
     }
-    v397 = (MissionNaviTransitionBoardItem_o *)&v396->static_fields->MainInterludeWarIdOnMaterial;
-    v397->klass = (MissionNaviTransitionBoardItem_c *)v395;
-    sub_2213A04(v397, (int32_t)v395, v389, v390, v391, v392, v393, v394);
+    v398 = (MissionNaviTransitionBoardItem_o *)&v397->static_fields->MainInterludeWarIdOnMaterial;
+    v398->klass = (MissionNaviTransitionBoardItem_c *)v396;
+    sub_2213A04(v398, (int32_t)v396, v390, v391, v392, v393, v394, v395);
   }
-  v398 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_5737/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, 0, 0);
-  v406 = BalanceConfig_TypeInfo;
-  v407 = (MissionNaviTransitionBoardItem_c *)v398;
+  v399 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_5737/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, 0, 0);
+  v407 = BalanceConfig_TypeInfo;
+  v408 = (MissionNaviTransitionBoardItem_c *)v399;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v399);
-    v406 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v400);
+    v407 = BalanceConfig_TypeInfo;
   }
-  p_EventBoardGameMapIdList = (MissionNaviTransitionBoardItem_o *)&v406->static_fields->EventBoardGameMapIdList;
-  p_EventBoardGameMapIdList->klass = v407;
-  sub_2213A04(p_EventBoardGameMapIdList, (int32_t)v407, v400, v401, v402, v403, v404, v405);
-  v409 = ConstantMaster__GetValue_48903564(
+  p_EventBoardGameMapIdList = (MissionNaviTransitionBoardItem_o *)&v407->static_fields->EventBoardGameMapIdList;
+  p_EventBoardGameMapIdList->klass = v408;
+  sub_2213A04(p_EventBoardGameMapIdList, (int32_t)v408, v401, v402, v403, v404, v405, v406);
+  v410 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_5739/*"EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID"*/,
            94047745,
            0);
-  v410 = (System_String_o *)StringLiteral_5740/*"EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextBoardQuestId = v409;
-  v411 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v410, 94047744, 0);
-  v412 = (System_String_o *)StringLiteral_14008/*"TITLE_FLOW_OLD"*/;
-  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextRoundQuestId = v411;
-  v413 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v412, 0, 0);
-  v414 = (System_String_o *)StringLiteral_12929/*"STORY_WAR_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->TitleFlowOld = v413;
-  v415 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v414, 1003, 0);
-  v416 = (System_String_o *)StringLiteral_10124/*"ORDEAL_CALL_WAR_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->StoryWarId = v415;
-  v417 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v416, 401, 0);
-  v418 = (System_String_o *)StringLiteral_10123/*"ORDEAL_CALL_CLEAR_BGM_NAME"*/;
-  BalanceConfig_TypeInfo->static_fields->OrdealCallWarId = v417;
-  v419 = ConstantStrMaster__GetValue(v5, v418, 0);
-  if ( !System_String__IsNullOrEmpty(v419, 0) )
+  v411 = (System_String_o *)StringLiteral_5740/*"EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextBoardQuestId = v410;
+  v412 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v411, 94047744, 0);
+  v413 = (System_String_o *)StringLiteral_14008/*"TITLE_FLOW_OLD"*/;
+  BalanceConfig_TypeInfo->static_fields->EventBoardGameNextRoundQuestId = v412;
+  v414 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v413, 0, 0);
+  v415 = (System_String_o *)StringLiteral_12929/*"STORY_WAR_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->TitleFlowOld = v414;
+  v416 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v415, 1003, 0);
+  v417 = (System_String_o *)StringLiteral_10124/*"ORDEAL_CALL_WAR_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->StoryWarId = v416;
+  v418 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v417, 401, 0);
+  v419 = (System_String_o *)StringLiteral_10123/*"ORDEAL_CALL_CLEAR_BGM_NAME"*/;
+  BalanceConfig_TypeInfo->static_fields->OrdealCallWarId = v418;
+  v420 = ConstantStrMaster__GetValue(v5, v419, 0);
+  if ( !System_String__IsNullOrEmpty(v420, 0) )
   {
-    v427 = BalanceConfig_TypeInfo;
+    v428 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v420);
-      v427 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v421);
+      v428 = BalanceConfig_TypeInfo;
     }
-    p_OrdealCallClearBgmName = (MissionNaviTransitionBoardItem_o *)&v427->static_fields->OrdealCallClearBgmName;
-    p_OrdealCallClearBgmName->klass = (MissionNaviTransitionBoardItem_c *)v419;
-    sub_2213A04(p_OrdealCallClearBgmName, (int32_t)v419, v421, v422, v423, v424, v425, v426);
+    p_OrdealCallClearBgmName = (MissionNaviTransitionBoardItem_o *)&v428->static_fields->OrdealCallClearBgmName;
+    p_OrdealCallClearBgmName->klass = (MissionNaviTransitionBoardItem_c *)v420;
+    sub_2213A04(p_OrdealCallClearBgmName, (int32_t)v420, v422, v423, v424, v425, v426, v427);
   }
-  v429 = ConstantStrMaster__GetValue(v5, (System_String_o *)StringLiteral_2014/*"AFTER_PART2_TITLE_BGM_NAME"*/, 0);
-  if ( !System_String__IsNullOrEmpty(v429, 0) )
+  v430 = ConstantStrMaster__GetValue(v5, (System_String_o *)StringLiteral_2014/*"AFTER_PART2_TITLE_BGM_NAME"*/, 0);
+  if ( !System_String__IsNullOrEmpty(v430, 0) )
   {
-    v437 = BalanceConfig_TypeInfo;
+    v438 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v430);
-      v437 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v431);
+      v438 = BalanceConfig_TypeInfo;
     }
-    p_AfterPart2TitleBgmName = (MissionNaviTransitionBoardItem_o *)&v437->static_fields->AfterPart2TitleBgmName;
-    p_AfterPart2TitleBgmName->klass = (MissionNaviTransitionBoardItem_c *)v429;
-    sub_2213A04(p_AfterPart2TitleBgmName, (int32_t)v429, v431, v432, v433, v434, v435, v436);
+    p_AfterPart2TitleBgmName = (MissionNaviTransitionBoardItem_o *)&v438->static_fields->AfterPart2TitleBgmName;
+    p_AfterPart2TitleBgmName->klass = (MissionNaviTransitionBoardItem_c *)v430;
+    sub_2213A04(p_AfterPart2TitleBgmName, (int32_t)v430, v432, v433, v434, v435, v436, v437);
   }
-  v439 = ConstantStrMaster__GetValue(v5, (System_String_o *)StringLiteral_2013/*"AFTER_PART2_TERMINAL_BGM_NAME"*/, 0);
-  if ( !System_String__IsNullOrEmpty(v439, 0) )
+  v440 = ConstantStrMaster__GetValue(v5, (System_String_o *)StringLiteral_2013/*"AFTER_PART2_TERMINAL_BGM_NAME"*/, 0);
+  if ( !System_String__IsNullOrEmpty(v440, 0) )
   {
-    v447 = BalanceConfig_TypeInfo;
+    v448 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v440);
-      v447 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v441);
+      v448 = BalanceConfig_TypeInfo;
     }
-    p_AfterPart2TerminalBgmName = (MissionNaviTransitionBoardItem_o *)&v447->static_fields->AfterPart2TerminalBgmName;
-    p_AfterPart2TerminalBgmName->klass = (MissionNaviTransitionBoardItem_c *)v439;
-    sub_2213A04(p_AfterPart2TerminalBgmName, (int32_t)v439, v441, v442, v443, v444, v445, v446);
+    p_AfterPart2TerminalBgmName = (MissionNaviTransitionBoardItem_o *)&v448->static_fields->AfterPart2TerminalBgmName;
+    p_AfterPart2TerminalBgmName->klass = (MissionNaviTransitionBoardItem_c *)v440;
+    sub_2213A04(p_AfterPart2TerminalBgmName, (int32_t)v440, v442, v443, v444, v445, v446, v447);
   }
-  v449 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v449,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__A1FBA00A0F8840358C0A54605FFD365F75E3A3D7AFF25F48F474C4E89BB0B37D,
-    0);
-  v450 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_3941/*"CONSUME_STORMPOD_SPOT_ID"*/, (System_Int32_array *)v449, 0);
-  v458 = BalanceConfig_TypeInfo;
-  v459 = (MissionNaviTransitionBoardItem_c *)v450;
+  v450 = (System_Array_o *)sub_2213B20(int___TypeInfo, 5);
+  v451.fields.value = Field__PrivateImplementationDetails__A1FBA00A0F8840358C0A54605FFD365F75E3A3D7AFF25F48F474C4E89BB0B37D;
+  v452 = (System_Int32_array *)v450;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v450, v451, 0);
+  v453 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_3941/*"CONSUME_STORMPOD_SPOT_ID"*/, v452, 0);
+  v461 = BalanceConfig_TypeInfo;
+  v462 = (MissionNaviTransitionBoardItem_c *)v453;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v451);
-    v458 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v454);
+    v461 = BalanceConfig_TypeInfo;
   }
-  p_consumeStormPodSpotId = (MissionNaviTransitionBoardItem_o *)&v458->static_fields->consumeStormPodSpotId;
-  p_consumeStormPodSpotId->klass = v459;
-  sub_2213A04(p_consumeStormPodSpotId, (int32_t)v459, v452, v453, v454, v455, v456, v457);
+  p_consumeStormPodSpotId = (MissionNaviTransitionBoardItem_o *)&v461->static_fields->consumeStormPodSpotId;
+  p_consumeStormPodSpotId->klass = v462;
+  sub_2213A04(p_consumeStormPodSpotId, (int32_t)v462, v455, v456, v457, v458, v459, v460);
   Instance = (Il2CppObject *)sub_2213B20(int___TypeInfo, 1);
   if ( !Instance )
 LABEL_182:
     sub_2213CDC(Instance, v2);
   if ( !LODWORD(Instance[1].monitor) )
     goto LABEL_181;
-  v461 = (System_String_o *)StringLiteral_12927/*"STORMPOD_HELP_IDS"*/;
+  v464 = (System_String_o *)StringLiteral_12927/*"STORMPOD_HELP_IDS"*/;
   LODWORD(Instance[2].klass) = 71;
-  v462 = ConstantStrMaster__GetValueArray(v5, v461, (System_Int32_array *)Instance, 0);
-  v463 = BalanceConfig_TypeInfo->static_fields;
-  v463->StormPodHelpIds = v462;
+  v465 = ConstantStrMaster__GetValueArray(v5, v464, (System_Int32_array *)Instance, 0);
+  v466 = BalanceConfig_TypeInfo->static_fields;
+  v466->StormPodHelpIds = v465;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v463->StormPodHelpIds,
-    (int32_t)v462,
-    v464,
-    v465,
-    v466,
+    (MissionNaviTransitionBoardItem_o *)&v466->StormPodHelpIds,
+    (int32_t)v465,
     v467,
     v468,
-    v469);
+    v469,
+    v470,
+    v471,
+    v472);
   ValueStringArray = ConstantStrMaster__GetValueStringArray(v5, (System_String_o *)StringLiteral_8605/*"LEGACY_ASPECT_MOVIES"*/, 0, 0);
-  v471 = BalanceConfig_TypeInfo->static_fields;
-  v471->legacyAspectMovies = ValueStringArray;
+  v474 = BalanceConfig_TypeInfo->static_fields;
+  v474->legacyAspectMovies = ValueStringArray;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v471->legacyAspectMovies,
+    (MissionNaviTransitionBoardItem_o *)&v474->legacyAspectMovies,
     (int32_t)ValueStringArray,
-    v472,
-    v473,
-    v474,
     v475,
     v476,
-    v477);
-  v478 = ConstantMaster__GetValue_48903564(
+    v477,
+    v478,
+    v479,
+    v480);
+  v481 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7194/*"GACHA_DAILY_MAX_DRAW_NUM_RESET_AT"*/,
            4,
            0);
-  v479 = (System_String_o *)StringLiteral_9003/*"MEMORY_DECK_LIMIT_BY_QUEST"*/;
-  BalanceConfig_TypeInfo->static_fields->GachaDailyMaxDrawNumResetAt = v478;
-  v480 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v479, 100, 0);
-  v481 = (System_String_o *)StringLiteral_7805/*"IOS_EXAMINATION_NEWS_URL"*/;
-  BalanceConfig_TypeInfo->static_fields->MemoryDeckLimitByQuest = v480;
-  v482 = ConstantStrMaster__GetValue(v5, v481, 0);
-  v483 = BalanceConfig_TypeInfo->static_fields;
-  v483->IOS_ExaminationNewsUrl = v482;
+  v482 = (System_String_o *)StringLiteral_9003/*"MEMORY_DECK_LIMIT_BY_QUEST"*/;
+  BalanceConfig_TypeInfo->static_fields->GachaDailyMaxDrawNumResetAt = v481;
+  v483 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v482, 100, 0);
+  v484 = (System_String_o *)StringLiteral_7805/*"IOS_EXAMINATION_NEWS_URL"*/;
+  BalanceConfig_TypeInfo->static_fields->MemoryDeckLimitByQuest = v483;
+  v485 = ConstantStrMaster__GetValue(v5, v484, 0);
+  v486 = BalanceConfig_TypeInfo->static_fields;
+  v486->IOS_ExaminationNewsUrl = v485;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v483->IOS_ExaminationNewsUrl,
-    (int32_t)v482,
-    v484,
-    v485,
-    v486,
+    (MissionNaviTransitionBoardItem_o *)&v486->IOS_ExaminationNewsUrl,
+    (int32_t)v485,
     v487,
     v488,
-    v489);
-  v497 = BalanceConfig_TypeInfo->static_fields;
-  if ( !v497->IOS_ExaminationNewsUrl )
+    v489,
+    v490,
+    v491,
+    v492);
+  v500 = BalanceConfig_TypeInfo->static_fields;
+  if ( !v500->IOS_ExaminationNewsUrl )
   {
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v490);
-      v497 = BalanceConfig_TypeInfo->static_fields;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v493);
+      v500 = BalanceConfig_TypeInfo->static_fields;
     }
-    v498 = StringLiteral_21045/*"https://view.fate-go.jp/"*/;
-    v497->IOS_ExaminationNewsUrl = (struct System_String_o *)StringLiteral_21045/*"https://view.fate-go.jp/"*/;
+    v501 = StringLiteral_21045/*"https://view.fate-go.jp/"*/;
+    v500->IOS_ExaminationNewsUrl = (struct System_String_o *)StringLiteral_21045/*"https://view.fate-go.jp/"*/;
     sub_2213A04(
-      (MissionNaviTransitionBoardItem_o *)&v497->IOS_ExaminationNewsUrl,
-      v498,
-      v491,
-      v492,
-      v493,
+      (MissionNaviTransitionBoardItem_o *)&v500->IOS_ExaminationNewsUrl,
+      v501,
       v494,
       v495,
-      v496);
+      v496,
+      v497,
+      v498,
+      v499);
   }
-  v499 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_10133/*"OTHER_IMAGE_LIMIT_COUNT"*/, 0);
-  v501 = BalanceConfig_TypeInfo;
-  v502 = v499;
+  v502 = ConstantMaster__GetValue((ConstantMaster_o *)MasterData_object, (System_String_o *)StringLiteral_10133/*"OTHER_IMAGE_LIMIT_COUNT"*/, 0);
+  v504 = BalanceConfig_TypeInfo;
+  v505 = v502;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v500);
-    v501 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v503);
+    v504 = BalanceConfig_TypeInfo;
   }
-  v503 = (System_String_o *)StringLiteral_6015/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/;
-  v501->static_fields->OtherImageLimitCount = v502;
-  v504 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v503, 9937100, 0);
-  v505 = (System_String_o *)StringLiteral_12825/*"STAND_FIGURE_R_OFFSET_EFFECT_NAMES"*/;
-  BalanceConfig_TypeInfo->static_fields->ExclusiveNpcServantIdStart = v504;
-  v506 = ConstantStrMaster__GetValueStringArray(v5, v505, 0, 0);
-  v507 = BalanceConfig_TypeInfo->static_fields;
-  v507->UIStandFigureROffsetEffectNames = v506;
+  v506 = (System_String_o *)StringLiteral_6015/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/;
+  v504->static_fields->OtherImageLimitCount = v505;
+  v507 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v506, 9937100, 0);
+  v508 = (System_String_o *)StringLiteral_12825/*"STAND_FIGURE_R_OFFSET_EFFECT_NAMES"*/;
+  BalanceConfig_TypeInfo->static_fields->ExclusiveNpcServantIdStart = v507;
+  v509 = ConstantStrMaster__GetValueStringArray(v5, v508, 0, 0);
+  v510 = BalanceConfig_TypeInfo->static_fields;
+  v510->UIStandFigureROffsetEffectNames = v509;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v507->UIStandFigureROffsetEffectNames,
-    (int32_t)v506,
-    v508,
-    v509,
-    v510,
+    (MissionNaviTransitionBoardItem_o *)&v510->UIStandFigureROffsetEffectNames,
+    (int32_t)v509,
     v511,
     v512,
-    v513);
-  v514 = ConstantStrMaster__GetValueStringArray(v5, (System_String_o *)StringLiteral_12824/*"STAND_FIGURE_R_OFFSET_EFFECT_IMAGES"*/, 0, 0);
-  v515 = BalanceConfig_TypeInfo->static_fields;
-  v515->UIStandFigureROffsetImages = v514;
+    v513,
+    v514,
+    v515,
+    v516);
+  v517 = ConstantStrMaster__GetValueStringArray(v5, (System_String_o *)StringLiteral_12824/*"STAND_FIGURE_R_OFFSET_EFFECT_IMAGES"*/, 0, 0);
+  v518 = BalanceConfig_TypeInfo->static_fields;
+  v518->UIStandFigureROffsetImages = v517;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v515->UIStandFigureROffsetImages,
-    (int32_t)v514,
-    v516,
-    v517,
-    v518,
+    (MissionNaviTransitionBoardItem_o *)&v518->UIStandFigureROffsetImages,
+    (int32_t)v517,
     v519,
     v520,
-    v521);
-  v523 = BalanceConfig_TypeInfo;
+    v521,
+    v522,
+    v523,
+    v524);
+  v526 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->static_fields->UIStandFigureROffsetEffectNames )
   {
     Instance = (Il2CppObject *)sub_2213B20(string___TypeInfo, 7);
     if ( !Instance )
       goto LABEL_182;
-    v530 = Instance;
+    v533 = Instance;
     if ( !LODWORD(Instance[1].monitor) )
       goto LABEL_181;
-    v531 = StringLiteral_17981/*"bit_result_bond"*/;
+    v534 = StringLiteral_17981/*"bit_result_bond"*/;
     Instance[2].klass = (Il2CppClass *)StringLiteral_17981/*"bit_result_bond"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&Instance[2], v531, v524, v525, v526, v527, v528, v529);
-    if ( ((__int64)v530[1].monitor & 0xFFFFFFFE) == 0 )
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&Instance[2], v534, v527, v528, v529, v530, v531, v532);
+    if ( ((__int64)v533[1].monitor & 0xFFFFFFFE) == 0 )
       goto LABEL_181;
-    v538 = StringLiteral_17993/*"bit_result_noble"*/;
-    v530[2].monitor = (void *)StringLiteral_17993/*"bit_result_noble"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v530[2].monitor, v538, v532, v533, v534, v535, v536, v537);
-    if ( LODWORD(v530[1].monitor) <= 2 )
+    v541 = StringLiteral_17993/*"bit_result_noble"*/;
+    v533[2].monitor = (void *)StringLiteral_17993/*"bit_result_noble"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v533[2].monitor, v541, v535, v536, v537, v538, v539, v540);
+    if ( LODWORD(v533[1].monitor) <= 2 )
       goto LABEL_181;
-    v545 = StringLiteral_17996/*"bit_result_servant"*/;
-    v530[3].klass = (Il2CppClass *)StringLiteral_17996/*"bit_result_servant"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v530[3], v545, v539, v540, v541, v542, v543, v544);
-    if ( ((__int64)v530[1].monitor & 0xFFFFFFFC) == 0 )
+    v548 = StringLiteral_17996/*"bit_result_servant"*/;
+    v533[3].klass = (Il2CppClass *)StringLiteral_17996/*"bit_result_servant"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v533[3], v548, v542, v543, v544, v545, v546, v547);
+    if ( ((__int64)v533[1].monitor & 0xFFFFFFFC) == 0 )
       goto LABEL_181;
-    v552 = StringLiteral_17997/*"bit_result_skill"*/;
-    v530[3].monitor = (void *)StringLiteral_17997/*"bit_result_skill"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v530[3].monitor, v552, v546, v547, v548, v549, v550, v551);
-    if ( LODWORD(v530[1].monitor) <= 4 )
+    v555 = StringLiteral_17997/*"bit_result_skill"*/;
+    v533[3].monitor = (void *)StringLiteral_17997/*"bit_result_skill"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v533[3].monitor, v555, v549, v550, v551, v552, v553, v554);
+    if ( LODWORD(v533[1].monitor) <= 4 )
       goto LABEL_181;
-    v559 = StringLiteral_17982/*"bit_result_command_card_exceed"*/;
-    v530[4].klass = (Il2CppClass *)StringLiteral_17982/*"bit_result_command_card_exceed"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v530[4], v559, v553, v554, v555, v556, v557, v558);
-    if ( LODWORD(v530[1].monitor) <= 5 )
+    v562 = StringLiteral_17982/*"bit_result_command_card_exceed"*/;
+    v533[4].klass = (Il2CppClass *)StringLiteral_17982/*"bit_result_command_card_exceed"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v533[4], v562, v556, v557, v558, v559, v560, v561);
+    if ( LODWORD(v533[1].monitor) <= 5 )
       goto LABEL_181;
-    v566 = StringLiteral_17983/*"bit_result_extraskill"*/;
-    v530[4].monitor = (void *)StringLiteral_17983/*"bit_result_extraskill"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v530[4].monitor, v566, v560, v561, v562, v563, v564, v565);
-    if ( LODWORD(v530[1].monitor) <= 6 )
+    v569 = StringLiteral_17983/*"bit_result_extraskill"*/;
+    v533[4].monitor = (void *)StringLiteral_17983/*"bit_result_extraskill"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v533[4].monitor, v569, v563, v564, v565, v566, v567, v568);
+    if ( LODWORD(v533[1].monitor) <= 6 )
       goto LABEL_181;
-    v573 = StringLiteral_17986/*"bit_result_friendship_exceed"*/;
-    v530[5].klass = (Il2CppClass *)StringLiteral_17986/*"bit_result_friendship_exceed"*/;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v530[5], v573, v567, v568, v569, v570, v571, v572);
-    v581 = BalanceConfig_TypeInfo;
+    v576 = StringLiteral_17986/*"bit_result_friendship_exceed"*/;
+    v533[5].klass = (Il2CppClass *)StringLiteral_17986/*"bit_result_friendship_exceed"*/;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)&v533[5], v576, v570, v571, v572, v573, v574, v575);
+    v584 = BalanceConfig_TypeInfo;
     if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v574);
-      v581 = BalanceConfig_TypeInfo;
+      j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v577);
+      v584 = BalanceConfig_TypeInfo;
     }
-    p_UIStandFigureROffsetEffectNames = (MissionNaviTransitionBoardItem_o *)&v581->static_fields->UIStandFigureROffsetEffectNames;
-    p_UIStandFigureROffsetEffectNames->klass = (MissionNaviTransitionBoardItem_c *)v530;
-    sub_2213A04(p_UIStandFigureROffsetEffectNames, (int32_t)v530, v575, v576, v577, v578, v579, v580);
-    v523 = BalanceConfig_TypeInfo;
+    p_UIStandFigureROffsetEffectNames = (MissionNaviTransitionBoardItem_o *)&v584->static_fields->UIStandFigureROffsetEffectNames;
+    p_UIStandFigureROffsetEffectNames->klass = (MissionNaviTransitionBoardItem_c *)v533;
+    sub_2213A04(p_UIStandFigureROffsetEffectNames, (int32_t)v533, v578, v579, v580, v581, v582, v583);
+    v526 = BalanceConfig_TypeInfo;
   }
-  if ( !*(&v523->_2.cctor_finished + 1) )
+  if ( !*(&v526->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(v523, v522);
-    v523 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v526, v525);
+    v526 = BalanceConfig_TypeInfo;
   }
-  if ( !v523->static_fields->UIStandFigureROffsetImages )
+  if ( !v526->static_fields->UIStandFigureROffsetImages )
   {
     Instance = (Il2CppObject *)sub_2213B20(string___TypeInfo, 18);
     if ( !Instance )
       goto LABEL_182;
-    v589 = Instance;
+    v592 = Instance;
     if ( LODWORD(Instance[1].monitor) )
     {
-      v590 = StringLiteral_1377/*"1053900:100:0"*/;
+      v593 = StringLiteral_1377/*"1053900:100:0"*/;
       Instance[2].klass = (Il2CppClass *)StringLiteral_1377/*"1053900:100:0"*/;
-      sub_2213A04((MissionNaviTransitionBoardItem_o *)&Instance[2], v590, v583, v584, v585, v586, v587, v588);
-      if ( ((__int64)v589[1].monitor & 0xFFFFFFFE) != 0 )
+      sub_2213A04((MissionNaviTransitionBoardItem_o *)&Instance[2], v593, v586, v587, v588, v589, v590, v591);
+      if ( ((__int64)v592[1].monitor & 0xFFFFFFFE) != 0 )
       {
-        v597 = StringLiteral_1380/*"1053910:100:0"*/;
-        v589[2].monitor = (void *)StringLiteral_1380/*"1053910:100:0"*/;
-        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v589[2].monitor, v597, v591, v592, v593, v594, v595, v596);
-        if ( LODWORD(v589[1].monitor) > 2 )
+        v600 = StringLiteral_1380/*"1053910:100:0"*/;
+        v592[2].monitor = (void *)StringLiteral_1380/*"1053910:100:0"*/;
+        sub_2213A04((MissionNaviTransitionBoardItem_o *)&v592[2].monitor, v600, v594, v595, v596, v597, v598, v599);
+        if ( LODWORD(v592[1].monitor) > 2 )
         {
-          v604 = StringLiteral_1378/*"1053901:100:0"*/;
-          v589[3].klass = (Il2CppClass *)StringLiteral_1378/*"1053901:100:0"*/;
-          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v589[3], v604, v598, v599, v600, v601, v602, v603);
-          if ( ((__int64)v589[1].monitor & 0xFFFFFFFC) != 0 )
+          v607 = StringLiteral_1378/*"1053901:100:0"*/;
+          v592[3].klass = (Il2CppClass *)StringLiteral_1378/*"1053901:100:0"*/;
+          sub_2213A04((MissionNaviTransitionBoardItem_o *)&v592[3], v607, v601, v602, v603, v604, v605, v606);
+          if ( ((__int64)v592[1].monitor & 0xFFFFFFFC) != 0 )
           {
-            v611 = StringLiteral_1381/*"1053911:100:0"*/;
-            v589[3].monitor = (void *)StringLiteral_1381/*"1053911:100:0"*/;
-            sub_2213A04((MissionNaviTransitionBoardItem_o *)&v589[3].monitor, v611, v605, v606, v607, v608, v609, v610);
-            if ( LODWORD(v589[1].monitor) > 4 )
+            v614 = StringLiteral_1381/*"1053911:100:0"*/;
+            v592[3].monitor = (void *)StringLiteral_1381/*"1053911:100:0"*/;
+            sub_2213A04((MissionNaviTransitionBoardItem_o *)&v592[3].monitor, v614, v608, v609, v610, v611, v612, v613);
+            if ( LODWORD(v592[1].monitor) > 4 )
             {
-              v618 = StringLiteral_1379/*"1053902:100:0"*/;
-              v589[4].klass = (Il2CppClass *)StringLiteral_1379/*"1053902:100:0"*/;
-              sub_2213A04((MissionNaviTransitionBoardItem_o *)&v589[4], v618, v612, v613, v614, v615, v616, v617);
-              if ( LODWORD(v589[1].monitor) > 5 )
+              v621 = StringLiteral_1379/*"1053902:100:0"*/;
+              v592[4].klass = (Il2CppClass *)StringLiteral_1379/*"1053902:100:0"*/;
+              sub_2213A04((MissionNaviTransitionBoardItem_o *)&v592[4], v621, v615, v616, v617, v618, v619, v620);
+              if ( LODWORD(v592[1].monitor) > 5 )
               {
-                v625 = StringLiteral_1382/*"1053912:100:0"*/;
-                v589[4].monitor = (void *)StringLiteral_1382/*"1053912:100:0"*/;
+                v628 = StringLiteral_1382/*"1053912:100:0"*/;
+                v592[4].monitor = (void *)StringLiteral_1382/*"1053912:100:0"*/;
                 sub_2213A04(
-                  (MissionNaviTransitionBoardItem_o *)&v589[4].monitor,
-                  v625,
-                  v619,
-                  v620,
-                  v621,
+                  (MissionNaviTransitionBoardItem_o *)&v592[4].monitor,
+                  v628,
                   v622,
                   v623,
-                  v624);
-                if ( LODWORD(v589[1].monitor) > 6 )
+                  v624,
+                  v625,
+                  v626,
+                  v627);
+                if ( LODWORD(v592[1].monitor) > 6 )
                 {
-                  v632 = StringLiteral_1374/*"1053000:100:0"*/;
-                  v589[5].klass = (Il2CppClass *)StringLiteral_1374/*"1053000:100:0"*/;
-                  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v589[5], v632, v626, v627, v628, v629, v630, v631);
-                  if ( ((__int64)v589[1].monitor & 0xFFFFFFF8) != 0 )
+                  v635 = StringLiteral_1374/*"1053000:100:0"*/;
+                  v592[5].klass = (Il2CppClass *)StringLiteral_1374/*"1053000:100:0"*/;
+                  sub_2213A04((MissionNaviTransitionBoardItem_o *)&v592[5], v635, v629, v630, v631, v632, v633, v634);
+                  if ( ((__int64)v592[1].monitor & 0xFFFFFFF8) != 0 )
                   {
-                    v639 = StringLiteral_1375/*"1053001:100:0"*/;
-                    v589[5].monitor = (void *)StringLiteral_1375/*"1053001:100:0"*/;
+                    v642 = StringLiteral_1375/*"1053001:100:0"*/;
+                    v592[5].monitor = (void *)StringLiteral_1375/*"1053001:100:0"*/;
                     sub_2213A04(
-                      (MissionNaviTransitionBoardItem_o *)&v589[5].monitor,
-                      v639,
-                      v633,
-                      v634,
-                      v635,
+                      (MissionNaviTransitionBoardItem_o *)&v592[5].monitor,
+                      v642,
                       v636,
                       v637,
-                      v638);
-                    if ( LODWORD(v589[1].monitor) > 8 )
+                      v638,
+                      v639,
+                      v640,
+                      v641);
+                    if ( LODWORD(v592[1].monitor) > 8 )
                     {
-                      v646 = StringLiteral_1376/*"1053002:100:0"*/;
-                      v589[6].klass = (Il2CppClass *)StringLiteral_1376/*"1053002:100:0"*/;
+                      v649 = StringLiteral_1376/*"1053002:100:0"*/;
+                      v592[6].klass = (Il2CppClass *)StringLiteral_1376/*"1053002:100:0"*/;
                       sub_2213A04(
-                        (MissionNaviTransitionBoardItem_o *)&v589[6],
-                        v646,
-                        v640,
-                        v641,
-                        v642,
+                        (MissionNaviTransitionBoardItem_o *)&v592[6],
+                        v649,
                         v643,
                         v644,
-                        v645);
-                      if ( LODWORD(v589[1].monitor) > 9 )
+                        v645,
+                        v646,
+                        v647,
+                        v648);
+                      if ( LODWORD(v592[1].monitor) > 9 )
                       {
-                        v653 = StringLiteral_1507/*"5047900:100:0"*/;
-                        v589[6].monitor = (void *)StringLiteral_1507/*"5047900:100:0"*/;
+                        v656 = StringLiteral_1507/*"5047900:100:0"*/;
+                        v592[6].monitor = (void *)StringLiteral_1507/*"5047900:100:0"*/;
                         sub_2213A04(
-                          (MissionNaviTransitionBoardItem_o *)&v589[6].monitor,
-                          v653,
-                          v647,
-                          v648,
-                          v649,
+                          (MissionNaviTransitionBoardItem_o *)&v592[6].monitor,
+                          v656,
                           v650,
                           v651,
-                          v652);
-                        if ( LODWORD(v589[1].monitor) > 0xA )
+                          v652,
+                          v653,
+                          v654,
+                          v655);
+                        if ( LODWORD(v592[1].monitor) > 0xA )
                         {
-                          v660 = StringLiteral_1510/*"5047910:100:0"*/;
-                          v589[7].klass = (Il2CppClass *)StringLiteral_1510/*"5047910:100:0"*/;
+                          v663 = StringLiteral_1510/*"5047910:100:0"*/;
+                          v592[7].klass = (Il2CppClass *)StringLiteral_1510/*"5047910:100:0"*/;
                           sub_2213A04(
-                            (MissionNaviTransitionBoardItem_o *)&v589[7],
-                            v660,
-                            v654,
-                            v655,
-                            v656,
+                            (MissionNaviTransitionBoardItem_o *)&v592[7],
+                            v663,
                             v657,
                             v658,
-                            v659);
-                          if ( LODWORD(v589[1].monitor) > 0xB )
+                            v659,
+                            v660,
+                            v661,
+                            v662);
+                          if ( LODWORD(v592[1].monitor) > 0xB )
                           {
-                            v667 = StringLiteral_1508/*"5047901:100:0"*/;
-                            v589[7].monitor = (void *)StringLiteral_1508/*"5047901:100:0"*/;
+                            v670 = StringLiteral_1508/*"5047901:100:0"*/;
+                            v592[7].monitor = (void *)StringLiteral_1508/*"5047901:100:0"*/;
                             sub_2213A04(
-                              (MissionNaviTransitionBoardItem_o *)&v589[7].monitor,
-                              v667,
-                              v661,
-                              v662,
-                              v663,
+                              (MissionNaviTransitionBoardItem_o *)&v592[7].monitor,
+                              v670,
                               v664,
                               v665,
-                              v666);
-                            if ( LODWORD(v589[1].monitor) > 0xC )
+                              v666,
+                              v667,
+                              v668,
+                              v669);
+                            if ( LODWORD(v592[1].monitor) > 0xC )
                             {
-                              v674 = StringLiteral_1511/*"5047911:100:0"*/;
-                              v589[8].klass = (Il2CppClass *)StringLiteral_1511/*"5047911:100:0"*/;
+                              v677 = StringLiteral_1511/*"5047911:100:0"*/;
+                              v592[8].klass = (Il2CppClass *)StringLiteral_1511/*"5047911:100:0"*/;
                               sub_2213A04(
-                                (MissionNaviTransitionBoardItem_o *)&v589[8],
-                                v674,
-                                v668,
-                                v669,
-                                v670,
+                                (MissionNaviTransitionBoardItem_o *)&v592[8],
+                                v677,
                                 v671,
                                 v672,
-                                v673);
-                              if ( LODWORD(v589[1].monitor) > 0xD )
+                                v673,
+                                v674,
+                                v675,
+                                v676);
+                              if ( LODWORD(v592[1].monitor) > 0xD )
                               {
-                                v681 = StringLiteral_1509/*"5047902:100:0"*/;
-                                v589[8].monitor = (void *)StringLiteral_1509/*"5047902:100:0"*/;
+                                v684 = StringLiteral_1509/*"5047902:100:0"*/;
+                                v592[8].monitor = (void *)StringLiteral_1509/*"5047902:100:0"*/;
                                 sub_2213A04(
-                                  (MissionNaviTransitionBoardItem_o *)&v589[8].monitor,
-                                  v681,
-                                  v675,
-                                  v676,
-                                  v677,
+                                  (MissionNaviTransitionBoardItem_o *)&v592[8].monitor,
+                                  v684,
                                   v678,
                                   v679,
-                                  v680);
-                                if ( LODWORD(v589[1].monitor) > 0xE )
+                                  v680,
+                                  v681,
+                                  v682,
+                                  v683);
+                                if ( LODWORD(v592[1].monitor) > 0xE )
                                 {
-                                  v688 = StringLiteral_1512/*"5047912:100:0"*/;
-                                  v589[9].klass = (Il2CppClass *)StringLiteral_1512/*"5047912:100:0"*/;
+                                  v691 = StringLiteral_1512/*"5047912:100:0"*/;
+                                  v592[9].klass = (Il2CppClass *)StringLiteral_1512/*"5047912:100:0"*/;
                                   sub_2213A04(
-                                    (MissionNaviTransitionBoardItem_o *)&v589[9],
-                                    v688,
-                                    v682,
-                                    v683,
-                                    v684,
+                                    (MissionNaviTransitionBoardItem_o *)&v592[9],
+                                    v691,
                                     v685,
                                     v686,
-                                    v687);
-                                  if ( ((__int64)v589[1].monitor & 0xFFFFFFF0) != 0 )
+                                    v687,
+                                    v688,
+                                    v689,
+                                    v690);
+                                  if ( ((__int64)v592[1].monitor & 0xFFFFFFF0) != 0 )
                                   {
-                                    v695 = StringLiteral_1504/*"5047000:100:0"*/;
-                                    v589[9].monitor = (void *)StringLiteral_1504/*"5047000:100:0"*/;
+                                    v698 = StringLiteral_1504/*"5047000:100:0"*/;
+                                    v592[9].monitor = (void *)StringLiteral_1504/*"5047000:100:0"*/;
                                     sub_2213A04(
-                                      (MissionNaviTransitionBoardItem_o *)&v589[9].monitor,
-                                      v695,
-                                      v689,
-                                      v690,
-                                      v691,
+                                      (MissionNaviTransitionBoardItem_o *)&v592[9].monitor,
+                                      v698,
                                       v692,
                                       v693,
-                                      v694);
-                                    if ( LODWORD(v589[1].monitor) > 0x10 )
+                                      v694,
+                                      v695,
+                                      v696,
+                                      v697);
+                                    if ( LODWORD(v592[1].monitor) > 0x10 )
                                     {
-                                      v702 = StringLiteral_1505/*"5047001:100:0"*/;
-                                      v589[10].klass = (Il2CppClass *)StringLiteral_1505/*"5047001:100:0"*/;
+                                      v705 = StringLiteral_1505/*"5047001:100:0"*/;
+                                      v592[10].klass = (Il2CppClass *)StringLiteral_1505/*"5047001:100:0"*/;
                                       sub_2213A04(
-                                        (MissionNaviTransitionBoardItem_o *)&v589[10],
-                                        v702,
-                                        v696,
-                                        v697,
-                                        v698,
+                                        (MissionNaviTransitionBoardItem_o *)&v592[10],
+                                        v705,
                                         v699,
                                         v700,
-                                        v701);
-                                      if ( LODWORD(v589[1].monitor) > 0x11 )
+                                        v701,
+                                        v702,
+                                        v703,
+                                        v704);
+                                      if ( LODWORD(v592[1].monitor) > 0x11 )
                                       {
-                                        v709 = StringLiteral_1506/*"5047002:100:0"*/;
-                                        v589[10].monitor = (void *)StringLiteral_1506/*"5047002:100:0"*/;
+                                        v712 = StringLiteral_1506/*"5047002:100:0"*/;
+                                        v592[10].monitor = (void *)StringLiteral_1506/*"5047002:100:0"*/;
                                         sub_2213A04(
-                                          (MissionNaviTransitionBoardItem_o *)&v589[10].monitor,
-                                          v709,
-                                          v703,
-                                          v704,
-                                          v705,
+                                          (MissionNaviTransitionBoardItem_o *)&v592[10].monitor,
+                                          v712,
                                           v706,
                                           v707,
-                                          v708);
-                                        v717 = BalanceConfig_TypeInfo;
+                                          v708,
+                                          v709,
+                                          v710,
+                                          v711);
+                                        v720 = BalanceConfig_TypeInfo;
                                         if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
                                         {
-                                          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v710);
-                                          v717 = BalanceConfig_TypeInfo;
+                                          j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v713);
+                                          v720 = BalanceConfig_TypeInfo;
                                         }
-                                        p_UIStandFigureROffsetImages = (MissionNaviTransitionBoardItem_o *)&v717->static_fields->UIStandFigureROffsetImages;
-                                        p_UIStandFigureROffsetImages->klass = (MissionNaviTransitionBoardItem_c *)v589;
+                                        p_UIStandFigureROffsetImages = (MissionNaviTransitionBoardItem_o *)&v720->static_fields->UIStandFigureROffsetImages;
+                                        p_UIStandFigureROffsetImages->klass = (MissionNaviTransitionBoardItem_c *)v592;
                                         sub_2213A04(
                                           p_UIStandFigureROffsetImages,
-                                          (int32_t)v589,
-                                          v711,
-                                          v712,
-                                          v713,
+                                          (int32_t)v592,
                                           v714,
                                           v715,
-                                          v716);
+                                          v716,
+                                          v717,
+                                          v718,
+                                          v719);
                                         goto LABEL_152;
                                       }
                                     }
@@ -3553,787 +3559,787 @@ LABEL_181:
     sub_2213CE4(Instance);
   }
 LABEL_152:
-  v719 = ConstantMaster__GetValue_48903564(
+  v722 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7837/*"IS_WAR_BOARD_AI_CALC_EVAL_SUM"*/,
            0,
            0);
-  v721 = BalanceConfig_TypeInfo;
-  v722 = v719;
+  v724 = BalanceConfig_TypeInfo;
+  v725 = v722;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v720);
-    v721 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v723);
+    v724 = BalanceConfig_TypeInfo;
   }
-  v723 = (System_String_o *)StringLiteral_16083/*"WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO"*/;
-  v721->static_fields->IsWarBoardAiCalcEvalSum = v722 != 0;
-  v724 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v723, 10000, 0);
-  v725 = (System_String_o *)StringLiteral_7838/*"IS_WAR_BOARD_AI_FILTER_NOT_ACTION"*/;
-  BalanceConfig_TypeInfo->static_fields->WarBoardEvalFactorsAffectRatio = v724;
-  v726 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v725, 1, 0);
-  v727 = (System_String_o *)StringLiteral_7839/*"IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE"*/;
-  BalanceConfig_TypeInfo->static_fields->IsWarBoardAiFilterNotAction = v726 != 0;
-  v728 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v727, 0, 0);
-  v729 = (System_String_o *)StringLiteral_12885/*"STONE_FRAGMENT_EXCHANGE_NOTICE_MAX"*/;
-  v730 = BalanceConfig_TypeInfo->static_fields;
-  StoneFragmentExchangeNoticeDispMax = v730->StoneFragmentExchangeNoticeDispMax;
-  v730->IsWarBoardAiFilterWasteRoute = v728 != 0;
-  v732 = ConstantMaster__GetValue_48903564(
+  v726 = (System_String_o *)StringLiteral_16083/*"WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO"*/;
+  v724->static_fields->IsWarBoardAiCalcEvalSum = v725 != 0;
+  v727 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v726, 10000, 0);
+  v728 = (System_String_o *)StringLiteral_7838/*"IS_WAR_BOARD_AI_FILTER_NOT_ACTION"*/;
+  BalanceConfig_TypeInfo->static_fields->WarBoardEvalFactorsAffectRatio = v727;
+  v729 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v728, 1, 0);
+  v730 = (System_String_o *)StringLiteral_7839/*"IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE"*/;
+  BalanceConfig_TypeInfo->static_fields->IsWarBoardAiFilterNotAction = v729 != 0;
+  v731 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v730, 0, 0);
+  v732 = (System_String_o *)StringLiteral_12885/*"STONE_FRAGMENT_EXCHANGE_NOTICE_MAX"*/;
+  v733 = BalanceConfig_TypeInfo->static_fields;
+  StoneFragmentExchangeNoticeDispMax = v733->StoneFragmentExchangeNoticeDispMax;
+  v733->IsWarBoardAiFilterWasteRoute = v731 != 0;
+  v735 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
-           v729,
+           v732,
            StoneFragmentExchangeNoticeDispMax,
            0);
-  v733 = (System_String_o *)StringLiteral_1474/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/;
-  BalanceConfig_TypeInfo->static_fields->StoneFragmentExchangeNoticeDispMax = v732;
-  v734 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v733, 0, 0);
-  v735 = (System_String_o *)StringLiteral_1473/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/;
-  BalanceConfig_TypeInfo->static_fields->MapCameraMoveTimeConstant = (float)v734 / 1000.0;
-  v736 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v735, 1700, 0);
-  v737 = (System_String_o *)StringLiteral_1475/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/;
-  v738 = BalanceConfig_TypeInfo->static_fields;
-  MapCameraMoveTimeLogarithmBase = v738->MapCameraMoveTimeLogarithmBase;
-  v738->MapCameraMoveTimeCoefficient = (float)v736 / 1000.0;
-  v740 = ConstantMaster__GetValue_48903564(
+  v736 = (System_String_o *)StringLiteral_1474/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/;
+  BalanceConfig_TypeInfo->static_fields->StoneFragmentExchangeNoticeDispMax = v735;
+  v737 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v736, 0, 0);
+  v738 = (System_String_o *)StringLiteral_1473/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/;
+  BalanceConfig_TypeInfo->static_fields->MapCameraMoveTimeConstant = (float)v737 / 1000.0;
+  v739 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v738, 1700, 0);
+  v740 = (System_String_o *)StringLiteral_1475/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/;
+  v741 = BalanceConfig_TypeInfo->static_fields;
+  MapCameraMoveTimeLogarithmBase = v741->MapCameraMoveTimeLogarithmBase;
+  v741->MapCameraMoveTimeCoefficient = (float)v739 / 1000.0;
+  v743 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
-           v737,
+           v740,
            MapCameraMoveTimeLogarithmBase,
            0);
-  v741 = BalanceConfig_TypeInfo->static_fields;
-  MapCameraMoveEasingType = v741->MapCameraMoveEasingType;
-  v741->MapCameraMoveTimeLogarithmBase = v740;
-  v743 = ConstantMaster__GetValue_48903564(
+  v744 = BalanceConfig_TypeInfo->static_fields;
+  MapCameraMoveEasingType = v744->MapCameraMoveEasingType;
+  v744->MapCameraMoveTimeLogarithmBase = v743;
+  v746 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_1472/*"3D_MAP_CAMERA_MOVE_EASING_TYPE"*/,
            MapCameraMoveEasingType,
            0);
-  v744 = (System_String_o *)StringLiteral_3404/*"CAMERA_2D_RESET_DURATION"*/;
-  BalanceConfig_TypeInfo->static_fields->MapCameraMoveEasingType = v743;
-  v745 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v744, 644, 0);
-  v746 = BalanceConfig_TypeInfo->static_fields;
-  MainChaptersWithEventId = v746->MainChaptersWithEventId;
-  v748 = (System_String_o *)StringLiteral_8878/*"MAIN_CHAPTERS_WITH_EVENT_ID"*/;
-  v746->Camera2DResetDuration = (float)v745 / 1000.0;
-  v749 = ConstantStrMaster__GetValueArray(v5, v748, MainChaptersWithEventId, 0);
-  v750 = BalanceConfig_TypeInfo->static_fields;
-  v750->MainChaptersWithEventId = v749;
+  v747 = (System_String_o *)StringLiteral_3404/*"CAMERA_2D_RESET_DURATION"*/;
+  BalanceConfig_TypeInfo->static_fields->MapCameraMoveEasingType = v746;
+  v748 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v747, 644, 0);
+  v749 = BalanceConfig_TypeInfo->static_fields;
+  MainChaptersWithEventId = v749->MainChaptersWithEventId;
+  v751 = (System_String_o *)StringLiteral_8878/*"MAIN_CHAPTERS_WITH_EVENT_ID"*/;
+  v749->Camera2DResetDuration = (float)v748 / 1000.0;
+  v752 = ConstantStrMaster__GetValueArray(v5, v751, MainChaptersWithEventId, 0);
+  v753 = BalanceConfig_TypeInfo->static_fields;
+  v753->MainChaptersWithEventId = v752;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v750->MainChaptersWithEventId,
-    (int32_t)v749,
-    v751,
-    v752,
-    v753,
+    (MissionNaviTransitionBoardItem_o *)&v753->MainChaptersWithEventId,
+    (int32_t)v752,
     v754,
     v755,
-    v756);
-  v757 = ConstantMaster__GetValue_48903564(
+    v756,
+    v757,
+    v758,
+    v759);
+  v760 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_10130/*"ORT_SECONDE_FORM_ID"*/,
            1,
            0);
-  v758 = (System_String_o *)StringLiteral_10131/*"ORT_THIRD_FORM_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->OrtSecondFormId = v757;
-  v759 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v758, 2, 0);
-  v760 = (System_String_o *)StringLiteral_10125/*"ORT_FIRST_QUEST_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->OrtThirdFormId = v759;
-  v761 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v760, 3001324, 0);
-  v762 = (System_String_o *)StringLiteral_10129/*"ORT_LATE_QUEST_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->OrtFirstQuestId = v761;
-  v763 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v762, 3001325, 0);
-  v764 = (System_String_o *)StringLiteral_10126/*"ORT_LATE_PHASE_BREAK"*/;
-  BalanceConfig_TypeInfo->static_fields->OrtLateQuestId = v763;
-  v765 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v764, 5, 0);
-  v766 = (System_String_o *)StringLiteral_10128/*"ORT_LATE_PHASE_SECOND_FORM"*/;
-  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseBreak = v765;
-  v767 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v766, 6, 0);
-  v768 = (System_String_o *)StringLiteral_10127/*"ORT_LATE_PHASE_DEAD"*/;
-  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseSecondForm = v767;
-  v769 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v768, 7, 0);
-  v770 = BalanceConfig_TypeInfo->static_fields;
-  TreasureDevicesForcedOpenEffect = v770->TreasureDevicesForcedOpenEffect;
-  v770->OrtLatePhaseDead = v769;
-  v772 = ConstantStrMaster__GetValueArray(
+  v761 = (System_String_o *)StringLiteral_10131/*"ORT_THIRD_FORM_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->OrtSecondFormId = v760;
+  v762 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v761, 2, 0);
+  v763 = (System_String_o *)StringLiteral_10125/*"ORT_FIRST_QUEST_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->OrtThirdFormId = v762;
+  v764 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v763, 3001324, 0);
+  v765 = (System_String_o *)StringLiteral_10129/*"ORT_LATE_QUEST_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->OrtFirstQuestId = v764;
+  v766 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v765, 3001325, 0);
+  v767 = (System_String_o *)StringLiteral_10126/*"ORT_LATE_PHASE_BREAK"*/;
+  BalanceConfig_TypeInfo->static_fields->OrtLateQuestId = v766;
+  v768 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v767, 5, 0);
+  v769 = (System_String_o *)StringLiteral_10128/*"ORT_LATE_PHASE_SECOND_FORM"*/;
+  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseBreak = v768;
+  v770 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v769, 6, 0);
+  v771 = (System_String_o *)StringLiteral_10127/*"ORT_LATE_PHASE_DEAD"*/;
+  BalanceConfig_TypeInfo->static_fields->OrtLatePhaseSecondForm = v770;
+  v772 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v771, 7, 0);
+  v773 = BalanceConfig_TypeInfo->static_fields;
+  TreasureDevicesForcedOpenEffect = v773->TreasureDevicesForcedOpenEffect;
+  v773->OrtLatePhaseDead = v772;
+  v775 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_14083/*"TREASURE_DEVICES_FORCED_OPEN_EFFECT"*/,
            TreasureDevicesForcedOpenEffect,
            0);
-  v773 = BalanceConfig_TypeInfo->static_fields;
-  v773->TreasureDevicesForcedOpenEffect = v772;
+  v776 = BalanceConfig_TypeInfo->static_fields;
+  v776->TreasureDevicesForcedOpenEffect = v775;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v773->TreasureDevicesForcedOpenEffect,
-    (int32_t)v772,
-    v774,
-    v775,
-    v776,
+    (MissionNaviTransitionBoardItem_o *)&v776->TreasureDevicesForcedOpenEffect,
+    (int32_t)v775,
     v777,
     v778,
-    v779);
-  v780 = ConstantStrMaster__GetValueArray(
+    v779,
+    v780,
+    v781,
+    v782);
+  v783 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_7517/*"HEROINE_TREASURE_DEVICE_RANKUP_EFFECTS"*/,
            BalanceConfig_TypeInfo->static_fields->HeroineTreasureDeviceRankUpEffects,
            0);
-  v781 = BalanceConfig_TypeInfo->static_fields;
-  v781->HeroineTreasureDeviceRankUpEffects = v780;
+  v784 = BalanceConfig_TypeInfo->static_fields;
+  v784->HeroineTreasureDeviceRankUpEffects = v783;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v781->HeroineTreasureDeviceRankUpEffects,
-    (int32_t)v780,
-    v782,
-    v783,
-    v784,
+    (MissionNaviTransitionBoardItem_o *)&v784->HeroineTreasureDeviceRankUpEffects,
+    (int32_t)v783,
     v785,
     v786,
-    v787);
-  v788 = ConstantMaster__GetValue_48903564(
+    v787,
+    v788,
+    v789,
+    v790);
+  v791 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7516/*"HEROINE_LIMIT_COUNT_ORTINAX_REFURBISHED"*/,
            BalanceConfig_TypeInfo->static_fields->HeroineLimitCountOrtinaxRefurbished,
            0);
-  v789 = BalanceConfig_TypeInfo->static_fields;
-  SpecialLimitCountPLD = v789->SpecialLimitCountPLD;
-  v789->HeroineLimitCountOrtinaxRefurbished = v788;
-  v791 = ConstantMaster__GetValue_48903564(
+  v792 = BalanceConfig_TypeInfo->static_fields;
+  SpecialLimitCountPLD = v792->SpecialLimitCountPLD;
+  v792->HeroineLimitCountOrtinaxRefurbished = v791;
+  v794 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_12791/*"SPECIAL_LIMIT_COUNT_PLD"*/,
            SpecialLimitCountPLD,
            0);
-  v792 = BalanceConfig_TypeInfo->static_fields;
-  ClassBoardReleaseQuestId = v792->ClassBoardReleaseQuestId;
-  v792->SpecialLimitCountPLD = v791;
-  v794 = ConstantMaster__GetValue_48903564(
+  v795 = BalanceConfig_TypeInfo->static_fields;
+  ClassBoardReleaseQuestId = v795->ClassBoardReleaseQuestId;
+  v795->SpecialLimitCountPLD = v794;
+  v797 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_3558/*"CLASS_BOARD_RELEASE_QUEST_ID"*/,
            ClassBoardReleaseQuestId,
            0);
-  v795 = BalanceConfig_TypeInfo->static_fields;
-  Extra1SortOrderClassIds = v795->Extra1SortOrderClassIds;
-  v795->ClassBoardReleaseQuestId = v794;
-  v797 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_6056/*"EXTRA1_SORT_ORDER_CLASS_IDS"*/, Extra1SortOrderClassIds, 0);
   v798 = BalanceConfig_TypeInfo->static_fields;
-  v798->Extra1SortOrderClassIds = v797;
+  Extra1SortOrderClassIds = v798->Extra1SortOrderClassIds;
+  v798->ClassBoardReleaseQuestId = v797;
+  v800 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_6056/*"EXTRA1_SORT_ORDER_CLASS_IDS"*/, Extra1SortOrderClassIds, 0);
+  v801 = BalanceConfig_TypeInfo->static_fields;
+  v801->Extra1SortOrderClassIds = v800;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v798->Extra1SortOrderClassIds,
-    (int32_t)v797,
-    v799,
-    v800,
-    v801,
+    (MissionNaviTransitionBoardItem_o *)&v801->Extra1SortOrderClassIds,
+    (int32_t)v800,
     v802,
     v803,
-    v804);
-  v805 = ConstantStrMaster__GetValueArray(
+    v804,
+    v805,
+    v806,
+    v807);
+  v808 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_6057/*"EXTRA2_SORT_ORDER_CLASS_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->Extra2SortOrderClassIds,
            0);
-  v806 = BalanceConfig_TypeInfo->static_fields;
-  v806->Extra2SortOrderClassIds = v805;
+  v809 = BalanceConfig_TypeInfo->static_fields;
+  v809->Extra2SortOrderClassIds = v808;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v806->Extra2SortOrderClassIds,
-    (int32_t)v805,
-    v807,
-    v808,
-    v809,
+    (MissionNaviTransitionBoardItem_o *)&v809->Extra2SortOrderClassIds,
+    (int32_t)v808,
     v810,
     v811,
-    v812);
-  v813 = ConstantMaster__GetValue_48903564(
+    v812,
+    v813,
+    v814,
+    v815);
+  v816 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_3509/*"CLASS_BOARD_CAMERA_SELECT_MOVE_MAX_DISTANCE"*/,
            BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectMoveMaxDistance,
            0);
-  v814 = (System_String_o *)StringLiteral_3511/*"CLASS_BOARD_CAMERA_SELECT_SEC_MIN"*/;
-  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectMoveMaxDistance = v813;
-  v815 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v814, 100, 0);
-  v816 = (System_String_o *)StringLiteral_3510/*"CLASS_BOARD_CAMERA_SELECT_SEC_MAX"*/;
-  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectSecMin = (float)v815 / 1000.0;
-  v817 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v816, 1000, 0);
-  v818 = BalanceConfig_TypeInfo->static_fields;
-  ClassBoardCameraSelectEasingType = v818->ClassBoardCameraSelectEasingType;
-  v820 = (System_String_o *)StringLiteral_3508/*"CLASS_BOARD_CAMERA_SELECT_EASING_TYPE"*/;
-  v818->ClassBoardCameraSelectSecMax = (float)v817 / 1000.0;
-  v821 = ConstantMaster__GetValue_48903564(
+  v817 = (System_String_o *)StringLiteral_3511/*"CLASS_BOARD_CAMERA_SELECT_SEC_MIN"*/;
+  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectMoveMaxDistance = v816;
+  v818 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v817, 100, 0);
+  v819 = (System_String_o *)StringLiteral_3510/*"CLASS_BOARD_CAMERA_SELECT_SEC_MAX"*/;
+  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectSecMin = (float)v818 / 1000.0;
+  v820 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v819, 1000, 0);
+  v821 = BalanceConfig_TypeInfo->static_fields;
+  ClassBoardCameraSelectEasingType = v821->ClassBoardCameraSelectEasingType;
+  v823 = (System_String_o *)StringLiteral_3508/*"CLASS_BOARD_CAMERA_SELECT_EASING_TYPE"*/;
+  v821->ClassBoardCameraSelectSecMax = (float)v820 / 1000.0;
+  v824 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
-           v820,
+           v823,
            ClassBoardCameraSelectEasingType,
            0);
-  v822 = (System_String_o *)StringLiteral_3501/*"CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE"*/;
-  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectEasingType = v821;
-  v823 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v822, 1700, 0);
-  v824 = BalanceConfig_TypeInfo->static_fields;
-  NotUIChangeMapIds = v824->NotUIChangeMapIds;
-  v826 = (System_String_o *)StringLiteral_9707/*"NOT_UI_CHANGE_MAP_IDS"*/;
-  v824->ClassBoard2DCameraDefaultSize = (float)v823 / 1000.0;
-  v827 = ConstantStrMaster__GetValueArray(v5, v826, NotUIChangeMapIds, 0);
-  v828 = BalanceConfig_TypeInfo->static_fields;
-  v828->NotUIChangeMapIds = v827;
+  v825 = (System_String_o *)StringLiteral_3501/*"CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE"*/;
+  BalanceConfig_TypeInfo->static_fields->ClassBoardCameraSelectEasingType = v824;
+  v826 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v825, 1700, 0);
+  v827 = BalanceConfig_TypeInfo->static_fields;
+  NotUIChangeMapIds = v827->NotUIChangeMapIds;
+  v829 = (System_String_o *)StringLiteral_9707/*"NOT_UI_CHANGE_MAP_IDS"*/;
+  v827->ClassBoard2DCameraDefaultSize = (float)v826 / 1000.0;
+  v830 = ConstantStrMaster__GetValueArray(v5, v829, NotUIChangeMapIds, 0);
+  v831 = BalanceConfig_TypeInfo->static_fields;
+  v831->NotUIChangeMapIds = v830;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v828->NotUIChangeMapIds,
-    (int32_t)v827,
-    v829,
-    v830,
-    v831,
+    (MissionNaviTransitionBoardItem_o *)&v831->NotUIChangeMapIds,
+    (int32_t)v830,
     v832,
     v833,
-    v834);
-  v835 = ConstantStrMaster__GetValueArray(
+    v834,
+    v835,
+    v836,
+    v837);
+  v838 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_8635/*"LIMIT_SEALED_DIALOG_MAX_LIMIT_OPEN_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->LimitSealedDialogMaxLimitOpenIds,
            0);
-  v836 = BalanceConfig_TypeInfo->static_fields;
-  v836->LimitSealedDialogMaxLimitOpenIds = v835;
+  v839 = BalanceConfig_TypeInfo->static_fields;
+  v839->LimitSealedDialogMaxLimitOpenIds = v838;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v836->LimitSealedDialogMaxLimitOpenIds,
-    (int32_t)v835,
-    v837,
-    v838,
-    v839,
+    (MissionNaviTransitionBoardItem_o *)&v839->LimitSealedDialogMaxLimitOpenIds,
+    (int32_t)v838,
     v840,
     v841,
-    v842);
-  v843 = ConstantStrMaster__GetValueArray(
+    v842,
+    v843,
+    v844,
+    v845);
+  v846 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_10122/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->OrdealCallChapterFolderEventUIDispWarIds,
            0);
-  v844 = BalanceConfig_TypeInfo->static_fields;
-  v844->OrdealCallChapterFolderEventUIDispWarIds = v843;
+  v847 = BalanceConfig_TypeInfo->static_fields;
+  v847->OrdealCallChapterFolderEventUIDispWarIds = v846;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v844->OrdealCallChapterFolderEventUIDispWarIds,
-    (int32_t)v843,
-    v845,
-    v846,
-    v847,
+    (MissionNaviTransitionBoardItem_o *)&v847->OrdealCallChapterFolderEventUIDispWarIds,
+    (int32_t)v846,
     v848,
     v849,
-    v850);
-  v851 = ConstantStrMaster__GetValueArray(
+    v850,
+    v851,
+    v852,
+    v853);
+  v854 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_11549/*"RECOVERY_FATIGUE_DELAYED_CHANGE_BG_EVENTS"*/,
            BalanceConfig_TypeInfo->static_fields->RecoveryFatigueDelayedChangeBgEvents,
            0);
-  v852 = BalanceConfig_TypeInfo->static_fields;
-  v852->RecoveryFatigueDelayedChangeBgEvents = v851;
+  v855 = BalanceConfig_TypeInfo->static_fields;
+  v855->RecoveryFatigueDelayedChangeBgEvents = v854;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v852->RecoveryFatigueDelayedChangeBgEvents,
-    (int32_t)v851,
-    v853,
-    v854,
-    v855,
+    (MissionNaviTransitionBoardItem_o *)&v855->RecoveryFatigueDelayedChangeBgEvents,
+    (int32_t)v854,
     v856,
     v857,
-    v858);
+    v858,
+    v859,
+    v860,
+    v861);
   Instance = (Il2CppObject *)sub_2213B20(int___TypeInfo, 1);
   if ( !Instance )
     goto LABEL_182;
   if ( !LODWORD(Instance[1].monitor) )
     goto LABEL_181;
-  v859 = (System_String_o *)StringLiteral_9662/*"NONE_DISPLAY_FREE_QUEST_MATERIAL"*/;
+  v862 = (System_String_o *)StringLiteral_9662/*"NONE_DISPLAY_FREE_QUEST_MATERIAL"*/;
   LODWORD(Instance[2].klass) = 94086401;
-  v860 = ConstantStrMaster__GetValueArray(v5, v859, (System_Int32_array *)Instance, 0);
-  v861 = BalanceConfig_TypeInfo->static_fields;
-  v861->noneDisplayFreeQuestMaterial = v860;
+  v863 = ConstantStrMaster__GetValueArray(v5, v862, (System_Int32_array *)Instance, 0);
+  v864 = BalanceConfig_TypeInfo->static_fields;
+  v864->noneDisplayFreeQuestMaterial = v863;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v861->noneDisplayFreeQuestMaterial,
-    (int32_t)v860,
-    v862,
-    v863,
-    v864,
+    (MissionNaviTransitionBoardItem_o *)&v864->noneDisplayFreeQuestMaterial,
+    (int32_t)v863,
     v865,
     v866,
-    v867);
-  v868 = ConstantStrMaster__GetValueArray(
+    v867,
+    v868,
+    v869,
+    v870);
+  v871 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_9706/*"NOT_SEND_TRACK_EVENT_AT_WAR_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->NotSendTrackEventAtWarIds,
            0);
-  v869 = BalanceConfig_TypeInfo->static_fields;
-  v869->NotSendTrackEventAtWarIds = v868;
+  v872 = BalanceConfig_TypeInfo->static_fields;
+  v872->NotSendTrackEventAtWarIds = v871;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v869->NotSendTrackEventAtWarIds,
-    (int32_t)v868,
-    v870,
-    v871,
-    v872,
+    (MissionNaviTransitionBoardItem_o *)&v872->NotSendTrackEventAtWarIds,
+    (int32_t)v871,
     v873,
     v874,
-    v875);
-  v876 = ConstantMaster__GetValue_48903564(
+    v875,
+    v876,
+    v877,
+    v878);
+  v879 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_12827/*"STARTING_MEMBER_FRIENDSHIP_RATE"*/,
            0,
            0);
-  v877 = (System_String_o *)StringLiteral_9701/*"NOT_REQUIRED_WAR_IDS"*/;
-  v878 = BalanceConfig_TypeInfo->static_fields;
-  NotRequiredPlayWarIds = v878->NotRequiredPlayWarIds;
-  v878->StartingMemberFriendshipRate = v876;
-  v880 = ConstantStrMaster__GetValueArray(v5, v877, NotRequiredPlayWarIds, 0);
+  v880 = (System_String_o *)StringLiteral_9701/*"NOT_REQUIRED_WAR_IDS"*/;
   v881 = BalanceConfig_TypeInfo->static_fields;
-  v881->NotRequiredPlayWarIds = v880;
+  NotRequiredPlayWarIds = v881->NotRequiredPlayWarIds;
+  v881->StartingMemberFriendshipRate = v879;
+  v883 = ConstantStrMaster__GetValueArray(v5, v880, NotRequiredPlayWarIds, 0);
+  v884 = BalanceConfig_TypeInfo->static_fields;
+  v884->NotRequiredPlayWarIds = v883;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v881->NotRequiredPlayWarIds,
-    (int32_t)v880,
-    v882,
-    v883,
-    v884,
+    (MissionNaviTransitionBoardItem_o *)&v884->NotRequiredPlayWarIds,
+    (int32_t)v883,
     v885,
     v886,
-    v887);
-  v888 = ConstantMaster__GetValue_48903564(
+    v887,
+    v888,
+    v889,
+    v890);
+  v891 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7829/*"IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE"*/,
            0,
            0);
-  v889 = (System_String_o *)StringLiteral_7831/*"IS_EVENT_POINT_MENU"*/;
-  BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = v888 != 0;
-  v890 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v889, 0, 0);
-  v891 = (System_String_o *)StringLiteral_8676/*"LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE"*/;
-  BalanceConfig_TypeInfo->static_fields->IsEventPointMenu = v890 != 0;
-  v892 = ConstantStrMaster__GetValue(v5, v891, 0);
-  v893 = (MissionNaviTransitionBoardItem_o *)BalanceConfig_TypeInfo->static_fields;
-  v893[7].klass = (MissionNaviTransitionBoardItem_c *)v892;
-  sub_2213A04(v893 + 7, (int32_t)v892, v894, v895, v896, v897, v898, v899);
-  v900 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_5841/*"EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT"*/, 0, 0);
-  v901 = BalanceConfig_TypeInfo->static_fields;
-  v901->EventItemNotDispItemGetEffect = v900;
+  v892 = (System_String_o *)StringLiteral_7831/*"IS_EVENT_POINT_MENU"*/;
+  BalanceConfig_TypeInfo->static_fields->IsEnableOldBlockShortestRoute = v891 != 0;
+  v893 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v892, 0, 0);
+  v894 = (System_String_o *)StringLiteral_8676/*"LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE"*/;
+  BalanceConfig_TypeInfo->static_fields->IsEventPointMenu = v893 != 0;
+  v895 = ConstantStrMaster__GetValue(v5, v894, 0);
+  v896 = (MissionNaviTransitionBoardItem_o *)BalanceConfig_TypeInfo->static_fields;
+  v896[7].klass = (MissionNaviTransitionBoardItem_c *)v895;
+  sub_2213A04(v896 + 7, (int32_t)v895, v897, v898, v899, v900, v901, v902);
+  v903 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_5841/*"EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT"*/, 0, 0);
+  v904 = BalanceConfig_TypeInfo->static_fields;
+  v904->EventItemNotDispItemGetEffect = v903;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v901->EventItemNotDispItemGetEffect,
-    (int32_t)v900,
-    v902,
-    v903,
-    v904,
+    (MissionNaviTransitionBoardItem_o *)&v904->EventItemNotDispItemGetEffect,
+    (int32_t)v903,
     v905,
     v906,
-    v907);
-  v908 = ConstantMaster__GetValue_48903564(
+    v907,
+    v908,
+    v909,
+    v910);
+  v911 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7828/*"IS_ENABLE_FADE_RERUN_SKIPPED"*/,
            1,
            0) != 0;
-  v909 = (System_String_o *)StringLiteral_5202/*"DISABLE_BACK_MASK_TIME"*/;
-  BalanceConfig_TypeInfo->static_fields->IsEnableFadeRerunSkipped = v908;
-  v910 = (float)ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v909, 1000, 0) / 1000.0;
-  v911 = System_Collections_Generic_Dictionary_string__int__TypeInfo;
-  BalanceConfig_TypeInfo->static_fields->DisableBackMaskTime = v910;
-  v912 = (System_Collections_Generic_Dictionary_object__int__o *)sub_2213CCC(v911);
+  v912 = (System_String_o *)StringLiteral_5202/*"DISABLE_BACK_MASK_TIME"*/;
+  BalanceConfig_TypeInfo->static_fields->IsEnableFadeRerunSkipped = v911;
+  v913 = (float)ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v912, 1000, 0) / 1000.0;
+  v914 = System_Collections_Generic_Dictionary_string__int__TypeInfo;
+  BalanceConfig_TypeInfo->static_fields->DisableBackMaskTime = v913;
+  v915 = (System_Collections_Generic_Dictionary_object__int__o *)sub_2213CCC(v914);
   System_Collections_Generic_Dictionary_object__int____ctor(
-    v912,
+    v915,
     (const MethodInfo_3FF3708 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-  v914 = MstMissionEntity_TypeInfo;
+  v917 = MstMissionEntity_TypeInfo;
   if ( !*(&MstMissionEntity_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(MstMissionEntity_TypeInfo, v913);
-    v914 = MstMissionEntity_TypeInfo;
+    j_il2cpp_runtime_class_init_0(MstMissionEntity_TypeInfo, v916);
+    v917 = MstMissionEntity_TypeInfo;
   }
-  v915 = TitleInfoControl_TypeInfo;
-  MISSION_ICON_DISPLAY_MS_GROUP_NORMAL = v914->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_NORMAL;
+  v918 = TitleInfoControl_TypeInfo;
+  MISSION_ICON_DISPLAY_MS_GROUP_NORMAL = v917->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_NORMAL;
   if ( !*(&TitleInfoControl_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo, v913);
-    v915 = TitleInfoControl_TypeInfo;
+    j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo, v916);
+    v918 = TitleInfoControl_TypeInfo;
   }
-  EVENT_ALPHA_ANIM_TIME_INTERVAL = v915->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
+  EVENT_ALPHA_ANIM_TIME_INTERVAL = v918->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
   if ( EVENT_ALPHA_ANIM_TIME_INTERVAL == INFINITY )
-    v918 = 0;
+    v921 = 0;
   else
-    v918 = 1000 * (int)EVENT_ALPHA_ANIM_TIME_INTERVAL;
+    v921 = 1000 * (int)EVENT_ALPHA_ANIM_TIME_INTERVAL;
   Instance = (Il2CppObject *)ConstantMaster__GetValue_48903564(
                                (ConstantMaster_o *)MasterData_object,
                                MISSION_ICON_DISPLAY_MS_GROUP_NORMAL,
-                               v918,
+                               v921,
                                0);
-  if ( !v912 )
+  if ( !v915 )
     goto LABEL_182;
   System_Collections_Generic_Dictionary_object__int___set_Item(
-    v912,
+    v915,
     (Il2CppObject *)MISSION_ICON_DISPLAY_MS_GROUP_NORMAL,
     (int32_t)Instance,
     (const MethodInfo_3FF4088 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
   MISSION_ICON_DISPLAY_MS_GROUP_LIMITED = (Il2CppObject *)MstMissionEntity_TypeInfo->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_LIMITED;
-  v920 = TitleInfoControl_TypeInfo->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
-  if ( v920 == INFINITY )
-    v921 = 0;
+  v923 = TitleInfoControl_TypeInfo->static_fields->EVENT_ALPHA_ANIM_TIME_INTERVAL;
+  if ( v923 == INFINITY )
+    v924 = 0;
   else
-    v921 = 1000 * (int)v920;
-  v922 = ConstantMaster__GetValue_48903564(
+    v924 = 1000 * (int)v923;
+  v925 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            MstMissionEntity_TypeInfo->static_fields->MISSION_ICON_DISPLAY_MS_GROUP_LIMITED,
-           v921,
+           v924,
            0);
   System_Collections_Generic_Dictionary_object__int___set_Item(
-    v912,
+    v915,
     MISSION_ICON_DISPLAY_MS_GROUP_LIMITED,
-    v922,
+    v925,
     (const MethodInfo_3FF4088 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
   p_MissionIconDisplayMsDictionary = (MissionNaviTransitionBoardItem_o *)&BalanceConfig_TypeInfo->static_fields->MissionIconDisplayMsDictionary;
-  p_MissionIconDisplayMsDictionary->klass = (MissionNaviTransitionBoardItem_c *)v912;
-  sub_2213A04(p_MissionIconDisplayMsDictionary, (int32_t)v912, v924, v925, v926, v927, v928, v929);
-  v930 = ConstantMaster__GetValue_48903564(
+  p_MissionIconDisplayMsDictionary->klass = (MissionNaviTransitionBoardItem_c *)v915;
+  sub_2213A04(p_MissionIconDisplayMsDictionary, (int32_t)v915, v927, v928, v929, v930, v931, v932);
+  v933 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_3036/*"BGM_FADE_OUT_TIME_BEFORE_BATTLE"*/,
            1000,
            0);
-  v931 = (System_String_o *)StringLiteral_7834/*"IS_MISSION_NAVI_AUTO_CLASSIFY"*/;
-  BalanceConfig_TypeInfo->static_fields->BgmFadeOutTimeBeforeBattle = (float)v930 / 1000.0;
-  v932 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v931, 0, 0);
-  v933 = (System_String_o *)StringLiteral_10815/*"PLAYABLE_BEAST_CLASS_IDS"*/;
-  v934 = BalanceConfig_TypeInfo->static_fields;
-  PlayableBeastClassIds = v934->PlayableBeastClassIds;
-  v934->IsMissionNaviAutoClassify = v932 != 0;
-  v936 = ConstantStrMaster__GetValueArray(v5, v933, PlayableBeastClassIds, 0);
+  v934 = (System_String_o *)StringLiteral_7834/*"IS_MISSION_NAVI_AUTO_CLASSIFY"*/;
+  BalanceConfig_TypeInfo->static_fields->BgmFadeOutTimeBeforeBattle = (float)v933 / 1000.0;
+  v935 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v934, 0, 0);
+  v936 = (System_String_o *)StringLiteral_10815/*"PLAYABLE_BEAST_CLASS_IDS"*/;
   v937 = BalanceConfig_TypeInfo->static_fields;
-  v937->PlayableBeastClassIds = v936;
+  PlayableBeastClassIds = v937->PlayableBeastClassIds;
+  v937->IsMissionNaviAutoClassify = v935 != 0;
+  v939 = ConstantStrMaster__GetValueArray(v5, v936, PlayableBeastClassIds, 0);
+  v940 = BalanceConfig_TypeInfo->static_fields;
+  v940->PlayableBeastClassIds = v939;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v937->PlayableBeastClassIds,
-    (int32_t)v936,
-    v938,
-    v939,
-    v940,
+    (MissionNaviTransitionBoardItem_o *)&v940->PlayableBeastClassIds,
+    (int32_t)v939,
     v941,
     v942,
-    v943);
-  v944 = ConstantStrMaster__GetValueArray(
+    v943,
+    v944,
+    v945,
+    v946);
+  v947 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_6003/*"EXCHANGE_SVT_COIN_ITEM_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->ExchangeSvtCoinItemIds,
            0);
-  v945 = BalanceConfig_TypeInfo->static_fields;
-  v945->ExchangeSvtCoinItemIds = v944;
+  v948 = BalanceConfig_TypeInfo->static_fields;
+  v948->ExchangeSvtCoinItemIds = v947;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v945->ExchangeSvtCoinItemIds,
-    (int32_t)v944,
-    v946,
-    v947,
-    v948,
+    (MissionNaviTransitionBoardItem_o *)&v948->ExchangeSvtCoinItemIds,
+    (int32_t)v947,
     v949,
     v950,
-    v951);
-  v952 = ConstantMaster__GetValue_48903564(
+    v951,
+    v952,
+    v953,
+    v954);
+  v955 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_5166/*"DEFAULT_QUEST_USE_FRIENDSHIP_UP_ITEM_GROUP_ID"*/,
            BalanceConfig_TypeInfo->static_fields->DefaultQuestUseFriendshipUpItemGroupId,
            0);
-  v953 = BalanceConfig_TypeInfo->static_fields;
-  MainInterludeMapReturnWarIds = v953->MainInterludeMapReturnWarIds;
-  v953->DefaultQuestUseFriendshipUpItemGroupId = v952;
-  v955 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_8880/*"MAIN_INTERLUDE_MAP_RETURN_WAR_IDS"*/, MainInterludeMapReturnWarIds, 0);
   v956 = BalanceConfig_TypeInfo->static_fields;
-  v956->MainInterludeMapReturnWarIds = v955;
+  MainInterludeMapReturnWarIds = v956->MainInterludeMapReturnWarIds;
+  v956->DefaultQuestUseFriendshipUpItemGroupId = v955;
+  v958 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_8880/*"MAIN_INTERLUDE_MAP_RETURN_WAR_IDS"*/, MainInterludeMapReturnWarIds, 0);
+  v959 = BalanceConfig_TypeInfo->static_fields;
+  v959->MainInterludeMapReturnWarIds = v958;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v956->MainInterludeMapReturnWarIds,
-    (int32_t)v955,
-    v957,
-    v958,
-    v959,
+    (MissionNaviTransitionBoardItem_o *)&v959->MainInterludeMapReturnWarIds,
+    (int32_t)v958,
     v960,
     v961,
-    v962);
-  v963 = ConstantMaster__GetValue_48903564(
+    v962,
+    v963,
+    v964,
+    v965);
+  v966 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7213/*"GALLERY_RELEASE_QUEST_ID"*/,
            BalanceConfig_TypeInfo->static_fields->GalleryReleaseQuestId,
            0);
-  v964 = BalanceConfig_TypeInfo->static_fields;
-  GalleryDefaultZoomRateMax = v964->GalleryDefaultZoomRateMax;
-  v964->GalleryReleaseQuestId = v963;
-  v966 = ConstantMaster__GetValue_48903564(
+  v967 = BalanceConfig_TypeInfo->static_fields;
+  GalleryDefaultZoomRateMax = v967->GalleryDefaultZoomRateMax;
+  v967->GalleryReleaseQuestId = v966;
+  v969 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7210/*"GALLERY_DEFAULT_ZOOM_RATE_MAX"*/,
            GalleryDefaultZoomRateMax,
            0);
-  v967 = BalanceConfig_TypeInfo->static_fields;
-  SvtCoinQuestOpenQuestId = v967->SvtCoinQuestOpenQuestId;
-  v967->GalleryDefaultZoomRateMax = v966;
-  v969 = ConstantMaster__GetValue_48903564(
+  v970 = BalanceConfig_TypeInfo->static_fields;
+  SvtCoinQuestOpenQuestId = v970->SvtCoinQuestOpenQuestId;
+  v970->GalleryDefaultZoomRateMax = v969;
+  v972 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_13100/*"SVT_COIN_QUEST_OPEN_QUEST_ID"*/,
            SvtCoinQuestOpenQuestId,
            0);
-  v970 = BalanceConfig_TypeInfo->static_fields;
-  GrandBoardWarId = v970->GrandBoardWarId;
-  v970->SvtCoinQuestOpenQuestId = v969;
-  v972 = ConstantMaster__GetValue_48903564(
+  v973 = BalanceConfig_TypeInfo->static_fields;
+  GrandBoardWarId = v973->GrandBoardWarId;
+  v973->SvtCoinQuestOpenQuestId = v972;
+  v975 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_7276/*"GRAND_BOARD_WAR_ID"*/,
            GrandBoardWarId,
            0);
-  v973 = BalanceConfig_TypeInfo->static_fields;
-  GrandSvtLv = v973->GrandSvtLv;
-  v973->GrandBoardWarId = v972;
-  v975 = ConstantMaster__GetValue_48903564(
+  v976 = BalanceConfig_TypeInfo->static_fields;
+  GrandSvtLv = v976->GrandSvtLv;
+  v976->GrandBoardWarId = v975;
+  v978 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_3863/*"COND_GRAND_SVT_LV"*/,
            GrandSvtLv,
            0);
-  v976 = BalanceConfig_TypeInfo->static_fields;
-  GrandSvtSkillLv = v976->GrandSvtSkillLv;
-  v976->GrandSvtLv = v975;
-  v978 = ConstantMaster__GetValue_48903564(
+  v979 = BalanceConfig_TypeInfo->static_fields;
+  GrandSvtSkillLv = v979->GrandSvtSkillLv;
+  v979->GrandSvtLv = v978;
+  v981 = ConstantMaster__GetValue_48903564(
            (ConstantMaster_o *)MasterData_object,
            (System_String_o *)StringLiteral_3864/*"COND_GRAND_SVT_SKILL_LV"*/,
            GrandSvtSkillLv,
            0);
-  v979 = BalanceConfig_TypeInfo->static_fields;
-  InvalidOpeningMovieIds = v979->InvalidOpeningMovieIds;
-  v979->GrandSvtSkillLv = v978;
-  v981 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_7798/*"INVALID_OPENING_MOVIE_IDS"*/, InvalidOpeningMovieIds, 0);
   v982 = BalanceConfig_TypeInfo->static_fields;
-  v982->InvalidOpeningMovieIds = v981;
+  InvalidOpeningMovieIds = v982->InvalidOpeningMovieIds;
+  v982->GrandSvtSkillLv = v981;
+  v984 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_7798/*"INVALID_OPENING_MOVIE_IDS"*/, InvalidOpeningMovieIds, 0);
+  v985 = BalanceConfig_TypeInfo->static_fields;
+  v985->InvalidOpeningMovieIds = v984;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v982->InvalidOpeningMovieIds,
-    (int32_t)v981,
-    v983,
-    v984,
-    v985,
+    (MissionNaviTransitionBoardItem_o *)&v985->InvalidOpeningMovieIds,
+    (int32_t)v984,
     v986,
     v987,
-    v988);
-  v989 = ConstantStrMaster__GetValueArray(
+    v988,
+    v989,
+    v990,
+    v991);
+  v992 = ConstantStrMaster__GetValueArray(
            v5,
            (System_String_o *)StringLiteral_13923/*"TERMINAL_GRAND_BGM_COMMON_RELEASE_IDS"*/,
            BalanceConfig_TypeInfo->static_fields->TerminalGrandBgmCommonReleaseIds,
            0);
-  v990 = BalanceConfig_TypeInfo->static_fields;
-  v990->TerminalGrandBgmCommonReleaseIds = v989;
+  v993 = BalanceConfig_TypeInfo->static_fields;
+  v993->TerminalGrandBgmCommonReleaseIds = v992;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v990->TerminalGrandBgmCommonReleaseIds,
-    (int32_t)v989,
-    v991,
-    v992,
-    v993,
+    (MissionNaviTransitionBoardItem_o *)&v993->TerminalGrandBgmCommonReleaseIds,
+    (int32_t)v992,
     v994,
     v995,
-    v996);
-  v997 = ConstantStrMaster__GetValueStringArray(
-           v5,
-           (System_String_o *)StringLiteral_13924/*"TERMINAL_GRAND_BGM_NAMES"*/,
-           BalanceConfig_TypeInfo->static_fields->TerminalGrandBgmNames,
-           0);
-  v998 = BalanceConfig_TypeInfo->static_fields;
-  v998->TerminalGrandBgmNames = v997;
+    v996,
+    v997,
+    v998,
+    v999);
+  v1000 = ConstantStrMaster__GetValueStringArray(
+            v5,
+            (System_String_o *)StringLiteral_13924/*"TERMINAL_GRAND_BGM_NAMES"*/,
+            BalanceConfig_TypeInfo->static_fields->TerminalGrandBgmNames,
+            0);
+  v1001 = BalanceConfig_TypeInfo->static_fields;
+  v1001->TerminalGrandBgmNames = v1000;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v998->TerminalGrandBgmNames,
-    (int32_t)v997,
-    v999,
-    v1000,
-    v1001,
+    (MissionNaviTransitionBoardItem_o *)&v1001->TerminalGrandBgmNames,
+    (int32_t)v1000,
     v1002,
     v1003,
-    v1004);
-  v1005 = ConstantMaster__GetValue_48903564(
+    v1004,
+    v1005,
+    v1006,
+    v1007);
+  v1008 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_7833/*"IS_KEEP_PARTY_ORGANIZATION_ENEMY_FACE_ICON_POS_Z"*/,
             0,
             0) != 0;
-  v1006 = BalanceConfig_TypeInfo->static_fields;
-  GrandExtraWarId = v1006->GrandExtraWarId;
-  v1006->IsKeepEnemyFaceIconPosZ = v1005;
-  v1008 = ConstantMaster__GetValue_48903564(
+  v1009 = BalanceConfig_TypeInfo->static_fields;
+  GrandExtraWarId = v1009->GrandExtraWarId;
+  v1009->IsKeepEnemyFaceIconPosZ = v1008;
+  v1011 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_7295/*"GRAND_EXTRA_WAR_ID"*/,
             GrandExtraWarId,
             0);
-  v1009 = BalanceConfig_TypeInfo->static_fields;
-  GrandExtra1WarId = v1009->GrandExtra1WarId;
-  v1009->GrandExtraWarId = v1008;
-  v1011 = ConstantMaster__GetValue_48903564(
+  v1012 = BalanceConfig_TypeInfo->static_fields;
+  GrandExtra1WarId = v1012->GrandExtra1WarId;
+  v1012->GrandExtraWarId = v1011;
+  v1014 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_7293/*"GRAND_EXTRA_1_WAR_ID"*/,
             GrandExtra1WarId,
             0);
-  v1012 = BalanceConfig_TypeInfo->static_fields;
-  GrandExtra2WarId = v1012->GrandExtra2WarId;
-  v1012->GrandExtra1WarId = v1011;
-  v1014 = ConstantMaster__GetValue_48903564(
+  v1015 = BalanceConfig_TypeInfo->static_fields;
+  GrandExtra2WarId = v1015->GrandExtra2WarId;
+  v1015->GrandExtra1WarId = v1014;
+  v1017 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_7294/*"GRAND_EXTRA_2_WAR_ID"*/,
             GrandExtra2WarId,
             0);
-  v1015 = (System_String_o *)StringLiteral_2033/*"ANIPLEX_PLUS_URL"*/;
-  BalanceConfig_TypeInfo->static_fields->GrandExtra2WarId = v1014;
-  v1016 = ConstantStrMaster__GetValue(v5, v1015, 0);
-  v1017 = (MissionNaviTransitionBoardItem_o *)BalanceConfig_TypeInfo->static_fields;
-  v1017[8].klass = (MissionNaviTransitionBoardItem_c *)v1016;
-  sub_2213A04(v1017 + 8, (int32_t)v1016, v1018, v1019, v1020, v1021, v1022, v1023);
-  v1024 = ConstantMaster__GetValue_48903564(
+  v1018 = (System_String_o *)StringLiteral_2033/*"ANIPLEX_PLUS_URL"*/;
+  BalanceConfig_TypeInfo->static_fields->GrandExtra2WarId = v1017;
+  v1019 = ConstantStrMaster__GetValue(v5, v1018, 0);
+  v1020 = (MissionNaviTransitionBoardItem_o *)BalanceConfig_TypeInfo->static_fields;
+  v1020[8].klass = (MissionNaviTransitionBoardItem_c *)v1019;
+  sub_2213A04(v1020 + 8, (int32_t)v1019, v1021, v1022, v1023, v1024, v1025, v1026);
+  v1027 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_7830/*"IS_ENABLE_SAVED_MEMORY_BATTLE"*/,
             1,
             0) != 0;
-  v1025 = (System_String_o *)StringLiteral_10503/*"PART2_FINAL_CHAPTER_COMMON_RELEASE_ID"*/;
-  BalanceConfig_TypeInfo->static_fields->IsEnableSavedMemoryBattle = v1024;
-  v1027 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v1025, -1, 0);
+  v1028 = (System_String_o *)StringLiteral_10503/*"PART2_FINAL_CHAPTER_COMMON_RELEASE_ID"*/;
+  BalanceConfig_TypeInfo->static_fields->IsEnableSavedMemoryBattle = v1027;
+  v1030 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v1028, -1, 0);
   if ( !byte_596FDC5 )
   {
     sub_2213A60(&BalanceConfig_TypeInfo);
     byte_596FDC5 = 1;
   }
-  v1028 = BalanceConfig_TypeInfo;
+  v1031 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1026);
-    v1028 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1029);
+    v1031 = BalanceConfig_TypeInfo;
   }
-  v1029 = v1028->static_fields;
-  v1030 = (System_String_o *)StringLiteral_10502/*"PART2_FINAL_CHAPTER_BOARD_NEXT_LAYOUT_TARGET_ID"*/;
-  Part2FinalChapterBoardNextLayoutTargetId = v1029->Part2FinalChapterBoardNextLayoutTargetId;
-  v1029->_Part2FinalChapterCommonReleaseId_k__BackingField = v1027;
-  v1032 = ConstantStrMaster__GetValueArray(v5, v1030, Part2FinalChapterBoardNextLayoutTargetId, 0);
-  v1033 = BalanceConfig_TypeInfo->static_fields;
-  v1033->Part2FinalChapterBoardNextLayoutTargetId = v1032;
+  v1032 = v1031->static_fields;
+  v1033 = (System_String_o *)StringLiteral_10502/*"PART2_FINAL_CHAPTER_BOARD_NEXT_LAYOUT_TARGET_ID"*/;
+  Part2FinalChapterBoardNextLayoutTargetId = v1032->Part2FinalChapterBoardNextLayoutTargetId;
+  v1032->_Part2FinalChapterCommonReleaseId_k__BackingField = v1030;
+  v1035 = ConstantStrMaster__GetValueArray(v5, v1033, Part2FinalChapterBoardNextLayoutTargetId, 0);
+  v1036 = BalanceConfig_TypeInfo->static_fields;
+  v1036->Part2FinalChapterBoardNextLayoutTargetId = v1035;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v1033->Part2FinalChapterBoardNextLayoutTargetId,
-    (int32_t)v1032,
-    v1034,
-    v1035,
-    v1036,
+    (MissionNaviTransitionBoardItem_o *)&v1036->Part2FinalChapterBoardNextLayoutTargetId,
+    (int32_t)v1035,
     v1037,
     v1038,
-    v1039);
-  v1040 = (Il2CppObject *)ConstantStrMaster__GetValue(v5, (System_String_o *)StringLiteral_3474/*"CHAPTER_BOARD_LAYOUT_DATA"*/, 0);
-  if ( !System_String__IsNullOrEmpty((System_String_o *)v1040, 0) )
+    v1039,
+    v1040,
+    v1041,
+    v1042);
+  v1043 = (Il2CppObject *)ConstantStrMaster__GetValue(v5, (System_String_o *)StringLiteral_3474/*"CHAPTER_BOARD_LAYOUT_DATA"*/, 0);
+  if ( !System_String__IsNullOrEmpty((System_String_o *)v1043, 0) )
   {
     if ( !*(&JsonManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v1041);
-    v1042 = JsonManager__DeserializeArray_object_(
-              v1040,
+      j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo, v1044);
+    v1045 = JsonManager__DeserializeArray_object_(
+              v1043,
               (const MethodInfo_38D3A34 *)Method_JsonManager_DeserializeArray_QuestBoardListViewItemDraw_ChapterBoardLayoutData___);
-    if ( v1042 )
+    if ( v1045 )
     {
-      v1049 = (MissionNaviTransitionBoardItem_c *)v1042;
-      v1050 = BalanceConfig_TypeInfo;
+      v1052 = (MissionNaviTransitionBoardItem_c *)v1045;
+      v1053 = BalanceConfig_TypeInfo;
       if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
       {
-        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1041);
-        v1050 = BalanceConfig_TypeInfo;
+        j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1044);
+        v1053 = BalanceConfig_TypeInfo;
       }
-      p_ChapterBoardLayoutDataArray = (MissionNaviTransitionBoardItem_o *)&v1050->static_fields->ChapterBoardLayoutDataArray;
-      p_ChapterBoardLayoutDataArray->klass = v1049;
-      sub_2213A04(p_ChapterBoardLayoutDataArray, (int32_t)v1049, v1043, v1044, v1045, v1046, v1047, v1048);
+      p_ChapterBoardLayoutDataArray = (MissionNaviTransitionBoardItem_o *)&v1053->static_fields->ChapterBoardLayoutDataArray;
+      p_ChapterBoardLayoutDataArray->klass = v1052;
+      sub_2213A04(p_ChapterBoardLayoutDataArray, (int32_t)v1052, v1046, v1047, v1048, v1049, v1050, v1051);
     }
   }
-  v1052 = BalanceConfig_TypeInfo;
+  v1055 = BalanceConfig_TypeInfo;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
-    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1041);
-    v1052 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v1044);
+    v1055 = BalanceConfig_TypeInfo;
   }
-  v1053 = ConstantStrMaster__GetValueArray(
+  v1056 = ConstantStrMaster__GetValueArray(
             v5,
             (System_String_o *)StringLiteral_3066/*"BLANK_EARTH_RANK_CHANGE_EVENT_UI_ID"*/,
-            v1052->static_fields->BlankEarthRankChangeEventUiIds,
+            v1055->static_fields->BlankEarthRankChangeEventUiIds,
             0);
-  v1054 = BalanceConfig_TypeInfo->static_fields;
-  v1054->BlankEarthRankChangeEventUiIds = v1053;
+  v1057 = BalanceConfig_TypeInfo->static_fields;
+  v1057->BlankEarthRankChangeEventUiIds = v1056;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v1054->BlankEarthRankChangeEventUiIds,
-    (int32_t)v1053,
-    v1055,
-    v1056,
-    v1057,
+    (MissionNaviTransitionBoardItem_o *)&v1057->BlankEarthRankChangeEventUiIds,
+    (int32_t)v1056,
     v1058,
     v1059,
-    v1060);
-  v1061 = ConstantMaster__GetValue_48903564(
+    v1060,
+    v1061,
+    v1062,
+    v1063);
+  v1064 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_7750/*"IGNORE_RESUME_PAUSE_ON_STOP"*/,
             0,
             0);
-  v1062 = (System_String_o *)StringLiteral_10792/*"PHOTO_STAND_FIGURE_ZOOM_RATE_MIN"*/;
-  v1063 = BalanceConfig_TypeInfo->static_fields;
-  PhotoStandFigureZoomRateMin = v1063->PhotoStandFigureZoomRateMin;
-  v1063->IgnoreResumePauseOnStop = v1061 != 0;
-  v1065 = ConstantMaster__GetValue_48903564(
+  v1065 = (System_String_o *)StringLiteral_10792/*"PHOTO_STAND_FIGURE_ZOOM_RATE_MIN"*/;
+  v1066 = BalanceConfig_TypeInfo->static_fields;
+  PhotoStandFigureZoomRateMin = v1066->PhotoStandFigureZoomRateMin;
+  v1066->IgnoreResumePauseOnStop = v1064 != 0;
+  v1068 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
-            v1062,
+            v1065,
             PhotoStandFigureZoomRateMin,
             0);
-  v1066 = (System_String_o *)StringLiteral_10791/*"PHOTO_STAND_FIGURE_ZOOM_RATE_MAX"*/;
-  v1067 = BalanceConfig_TypeInfo->static_fields;
-  PhotoStandFigureZoomRateMax = v1067->PhotoStandFigureZoomRateMax;
-  v1067->PhotoStandFigureZoomRateMin = v1065;
-  v1069 = ConstantMaster__GetValue_48903564(
+  v1069 = (System_String_o *)StringLiteral_10791/*"PHOTO_STAND_FIGURE_ZOOM_RATE_MAX"*/;
+  v1070 = BalanceConfig_TypeInfo->static_fields;
+  PhotoStandFigureZoomRateMax = v1070->PhotoStandFigureZoomRateMax;
+  v1070->PhotoStandFigureZoomRateMin = v1068;
+  v1072 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
-            v1066,
+            v1069,
             PhotoStandFigureZoomRateMax,
             0);
-  v1070 = (System_String_o *)StringLiteral_3023/*"BEGINNING_AFTER_TIME_WAR_ID"*/;
-  v1071 = BalanceConfig_TypeInfo->static_fields;
-  BeginningAfterTimeWarId = v1071->BeginningAfterTimeWarId;
-  v1071->PhotoStandFigureZoomRateMax = v1069;
-  v1073 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v1070, BeginningAfterTimeWarId, 0);
-  v1074 = (System_String_o *)StringLiteral_14005/*"TITLE_6_CLEAR_WAR_ID"*/;
-  v1075 = BalanceConfig_TypeInfo->static_fields;
-  Title6ClearWarId = v1075->Title6ClearWarId;
-  v1075->BeginningAfterTimeWarId = v1073;
-  v1077 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v1074, Title6ClearWarId, 0);
-  v1078 = (System_String_o *)StringLiteral_9230/*"MY_ROOM_MAIN_DIFF_BG_LINKED_ID"*/;
-  v1079 = BalanceConfig_TypeInfo->static_fields;
-  MyRoomMainDiffBgLinkedIds = v1079->MyRoomMainDiffBgLinkedIds;
-  v1079->Title6ClearWarId = v1077;
-  v1081 = ConstantStrMaster__GetValueArray(v5, v1078, MyRoomMainDiffBgLinkedIds, 0);
+  v1073 = (System_String_o *)StringLiteral_3023/*"BEGINNING_AFTER_TIME_WAR_ID"*/;
+  v1074 = BalanceConfig_TypeInfo->static_fields;
+  BeginningAfterTimeWarId = v1074->BeginningAfterTimeWarId;
+  v1074->PhotoStandFigureZoomRateMax = v1072;
+  v1076 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v1073, BeginningAfterTimeWarId, 0);
+  v1077 = (System_String_o *)StringLiteral_14005/*"TITLE_6_CLEAR_WAR_ID"*/;
+  v1078 = BalanceConfig_TypeInfo->static_fields;
+  Title6ClearWarId = v1078->Title6ClearWarId;
+  v1078->BeginningAfterTimeWarId = v1076;
+  v1080 = ConstantMaster__GetValue_48903564((ConstantMaster_o *)MasterData_object, v1077, Title6ClearWarId, 0);
+  v1081 = (System_String_o *)StringLiteral_9230/*"MY_ROOM_MAIN_DIFF_BG_LINKED_ID"*/;
   v1082 = BalanceConfig_TypeInfo->static_fields;
-  v1082->MyRoomMainDiffBgLinkedIds = v1081;
+  MyRoomMainDiffBgLinkedIds = v1082->MyRoomMainDiffBgLinkedIds;
+  v1082->Title6ClearWarId = v1080;
+  v1084 = ConstantStrMaster__GetValueArray(v5, v1081, MyRoomMainDiffBgLinkedIds, 0);
+  v1085 = BalanceConfig_TypeInfo->static_fields;
+  v1085->MyRoomMainDiffBgLinkedIds = v1084;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v1082->MyRoomMainDiffBgLinkedIds,
-    (int32_t)v1081,
-    v1083,
-    v1084,
-    v1085,
+    (MissionNaviTransitionBoardItem_o *)&v1085->MyRoomMainDiffBgLinkedIds,
+    (int32_t)v1084,
     v1086,
     v1087,
-    v1088);
-  v1089 = ConstantStrMaster__GetValueArray(
+    v1088,
+    v1089,
+    v1090,
+    v1091);
+  v1092 = ConstantStrMaster__GetValueArray(
             v5,
             (System_String_o *)StringLiteral_11949/*"SAVEDATA_DELETE_BUTTON_OPEN_CONDITION"*/,
             BalanceConfig_TypeInfo->static_fields->SaveDataDeleteButtonOpenCondition,
             0);
-  v1090 = BalanceConfig_TypeInfo->static_fields;
-  v1090->SaveDataDeleteButtonOpenCondition = v1089;
+  v1093 = BalanceConfig_TypeInfo->static_fields;
+  v1093->SaveDataDeleteButtonOpenCondition = v1092;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v1090->SaveDataDeleteButtonOpenCondition,
-    (int32_t)v1089,
-    v1091,
-    v1092,
-    v1093,
+    (MissionNaviTransitionBoardItem_o *)&v1093->SaveDataDeleteButtonOpenCondition,
+    (int32_t)v1092,
     v1094,
     v1095,
-    v1096);
-  v1097 = ConstantStrMaster__GetValueArray(
+    v1096,
+    v1097,
+    v1098,
+    v1099);
+  v1100 = ConstantStrMaster__GetValueArray(
             v5,
             (System_String_o *)StringLiteral_5704/*"EVENT_ACTION_ON_SPOT_EVENT_ID"*/,
             BalanceConfig_TypeInfo->static_fields->EventActionOnSpotEventIds,
             0);
-  v1098 = BalanceConfig_TypeInfo->static_fields;
-  v1098->EventActionOnSpotEventIds = v1097;
+  v1101 = BalanceConfig_TypeInfo->static_fields;
+  v1101->EventActionOnSpotEventIds = v1100;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v1098->EventActionOnSpotEventIds,
-    (int32_t)v1097,
-    v1099,
-    v1100,
-    v1101,
+    (MissionNaviTransitionBoardItem_o *)&v1101->EventActionOnSpotEventIds,
+    (int32_t)v1100,
     v1102,
     v1103,
-    v1104);
-  v1105 = ConstantMaster__GetValue_48903564(
+    v1104,
+    v1105,
+    v1106,
+    v1107);
+  v1108 = ConstantMaster__GetValue_48903564(
             (ConstantMaster_o *)MasterData_object,
             (System_String_o *)StringLiteral_6073/*"EX_ROOM_FIRST_EFFECT_QUEST_ID"*/,
             BalanceConfig_TypeInfo->static_fields->ExRoomFirstEffectQuestId,
             0);
-  v1106 = BalanceConfig_TypeInfo->static_fields;
-  ExRoomWarIds = v1106->ExRoomWarIds;
-  v1106->ExRoomFirstEffectQuestId = v1105;
-  v1108 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_6087/*"EX_ROOM_WAR_IDS"*/, ExRoomWarIds, 0);
   v1109 = BalanceConfig_TypeInfo->static_fields;
-  v1109->ExRoomWarIds = v1108;
+  ExRoomWarIds = v1109->ExRoomWarIds;
+  v1109->ExRoomFirstEffectQuestId = v1108;
+  v1111 = ConstantStrMaster__GetValueArray(v5, (System_String_o *)StringLiteral_6087/*"EX_ROOM_WAR_IDS"*/, ExRoomWarIds, 0);
+  v1112 = BalanceConfig_TypeInfo->static_fields;
+  v1112->ExRoomWarIds = v1111;
   sub_2213A04(
-    (MissionNaviTransitionBoardItem_o *)&v1109->ExRoomWarIds,
-    (int32_t)v1108,
-    v1110,
-    v1111,
-    v1112,
+    (MissionNaviTransitionBoardItem_o *)&v1112->ExRoomWarIds,
+    (int32_t)v1111,
     v1113,
     v1114,
-    v1115);
+    v1115,
+    v1116,
+    v1117,
+    v1118);
   ConstantStrMaster__TryOverwriteJsonArray_object_(
     v5,
     (System_String_o *)StringLiteral_11516/*"RECOMMEND_SUPPORT_LIST_CHAPTER_SUB_AND_PHASE_OVERWRITE_NAME"*/,

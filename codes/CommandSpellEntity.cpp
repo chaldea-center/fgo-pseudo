@@ -109,9 +109,10 @@ bool CommandSpellEntity__checkScript(
   System_Collections_Generic_Dictionary_object__object__o *Item; // x0
   __int64 v10; // x2
   __int64 v11; // x3
-  CommandSpellEntity_o *v12; // x0
-  int32_t v13; // w1
-  const MethodInfo *v14; // x2
+  _QWORD *v12; // x8
+  CommandSpellEntity_o *v13; // x0
+  int32_t v14; // w1
+  const MethodInfo *v15; // x2
 
   if ( (byte_5970619 & 1) == 0 )
   {
@@ -139,13 +140,14 @@ bool CommandSpellEntity__checkScript(
       }
       if ( Item->klass->_1.element_class == *(Il2CppClass **)(qword_5984368 + 64) )
       {
-        *param = *(_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10, v11);
+        v12 = (_QWORD *)j_il2cpp_object_unbox_0(Item, qword_5984368, v10, v11);
         LOBYTE(script) = 1;
+        *param = *v12;
       }
       else
       {
         sub_221405C(Item, qword_5984368, v10, v11);
-        LOBYTE(script) = CommandSpellEntity__checkUseTreasure(v12, v13, v14);
+        LOBYTE(script) = CommandSpellEntity__checkUseTreasure(v13, v14, v15);
       }
     }
     else

@@ -48,9 +48,10 @@ bool ParticleSystemSyncComponent__IsUnderMinTimeDiff(ParticleSystemSyncComponent
   __int64 v8; // x1
   float time; // s0
   float v10; // s8
+  UnityEngine_ParticleSystem_MainModule_o v11; // x0
   float duration; // s9
-  float v12; // s10
-  float v13; // s0
+  float v13; // s10
+  float v14; // s0
   float minTimeDiffSec; // s1
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-48h] BYREF
 
@@ -77,14 +78,13 @@ bool ParticleSystemSyncComponent__IsUnderMinTimeDiff(ParticleSystemSyncComponent
           sub_2213CDC(v7, v8);
         v10 = time;
         m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v6, 0).fields.m_ParticleSystem;
-        duration = UnityEngine_ParticleSystem_MainModule__get_duration(
-                     (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                     0);
-        v12 = UnityEngine_ParticleSystem__get_time(v6, 0);
-        v13 = vabds_f32(fmodf(v10, duration), v12);
+        v11.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+        duration = UnityEngine_ParticleSystem_MainModule__get_duration(v11, 0);
+        v13 = UnityEngine_ParticleSystem__get_time(v6, 0);
+        v14 = vabds_f32(fmodf(v10, duration), v13);
         minTimeDiffSec = v4->fields.minTimeDiffSec;
-        this = (ParticleSystemSyncComponent_o *)(v13 < minTimeDiffSec);
-        if ( v13 >= minTimeDiffSec )
+        this = (ParticleSystemSyncComponent_o *)(v14 < minTimeDiffSec);
+        if ( v14 >= minTimeDiffSec )
           break;
         max_length = particles->max_length;
         ++v5;
@@ -117,8 +117,9 @@ void ParticleSystemSyncComponent__SimulateParticles(ParticleSystemSyncComponent_
   __int64 v7; // x1
   float time; // s0
   float v9; // s8
+  UnityEngine_ParticleSystem_MainModule_o v10; // x0
   float duration; // s0
-  float v11; // s0
+  float v12; // s0
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-38h] BYREF
 
   particles = this->fields.particles;
@@ -139,11 +140,10 @@ void ParticleSystemSyncComponent__SimulateParticles(ParticleSystemSyncComponent_
           sub_2213CDC(v6, v7);
         v9 = time;
         m_ParticleSystem = UnityEngine_ParticleSystem__get_main(v5, 0).fields.m_ParticleSystem;
-        duration = UnityEngine_ParticleSystem_MainModule__get_duration(
-                     (UnityEngine_ParticleSystem_MainModule_o)&m_ParticleSystem,
-                     0);
-        v11 = fmodf(v9, duration);
-        UnityEngine_ParticleSystem__Simulate_83836784(v5, v11, 0);
+        v10.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
+        duration = UnityEngine_ParticleSystem_MainModule__get_duration(v10, 0);
+        v12 = fmodf(v9, duration);
+        UnityEngine_ParticleSystem__Simulate_83836784(v5, v12, 0);
         UnityEngine_ParticleSystem__Play_83836996(v5, 0);
         max_length = particles->max_length;
         ++v4;

@@ -126,10 +126,10 @@ LABEL_20:
 LABEL_16:
     v19 = sub_224BC3C(lookup, System_Collections_Generic_IReadOnlyDictionary_string__UserShopEntity__TypeInfo, 2);
   }
-  return (*(UserShopEntity_o *(__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
-           v16,
-           PK,
-           *(_QWORD *)(v19 + 8));
+  return (UserShopEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, _QWORD))v19)(
+                               v16,
+                               PK,
+                               *(_QWORD *)(v19 + 8));
 }
 
 

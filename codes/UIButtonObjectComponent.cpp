@@ -11,9 +11,15 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
   __int64 v6; // x1
   UnityEngine_Collider_o *v7; // x0
   UnityEngine_Object_o *buttonsprite; // x21
+  float v9; // s0 OVERLAPPED
+  float v10; // s3
+  float v11; // s1
+  float v12; // s2
   UnityEngine_Object_o *textlabel; // x21
-  UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  float v14; // s0 OVERLAPPED
+  float v15; // s3
+  float v16; // s1
+  float v17; // s2
 
   if ( (byte_596FD6A & 1) == 0 )
   {
@@ -38,13 +44,13 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
     v7 = (UnityEngine_Collider_o *)this->fields.buttonsprite;
     if ( !v7 )
       goto LABEL_23;
-    v12.fields.r = 0.5;
-    v12.fields.a = 1.0;
+    v9 = 0.5;
+    v10 = 1.0;
     if ( flg )
-      v12.fields.r = 1.0;
-    v12.fields.g = v12.fields.r;
-    v12.fields.b = v12.fields.r;
-    UIWidget__set_color((UIWidget_o *)v7, v12, 0);
+      v9 = 1.0;
+    v11 = v9;
+    v12 = v9;
+    UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&v9, 0);
   }
   textlabel = (UnityEngine_Object_o *)this->fields.textlabel;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
@@ -54,13 +60,13 @@ void UIButtonObjectComponent__setActive(UIButtonObjectComponent_o *this, bool fl
     v7 = (UnityEngine_Collider_o *)this->fields.textlabel;
     if ( v7 )
     {
-      v13.fields.r = 0.5;
-      v13.fields.a = 1.0;
+      v14 = 0.5;
+      v15 = 1.0;
       if ( flg )
-        v13.fields.r = 1.0;
-      v13.fields.g = v13.fields.r;
-      v13.fields.b = v13.fields.r;
-      UIWidget__set_color((UIWidget_o *)v7, v13, 0);
+        v14 = 1.0;
+      v16 = v14;
+      v17 = v14;
+      UIWidget__set_color((UIWidget_o *)v7, *(UnityEngine_Color_o *)&v14, 0);
       return;
     }
 LABEL_23:

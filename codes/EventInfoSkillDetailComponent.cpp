@@ -93,9 +93,9 @@ void EventInfoSkillDetailComponent__Setup(
   float v26; // s1
   float skillDetailMinHeight; // s8
   UnityEngine_GameObject_o *partition; // x21
-  float v29; // s1
   int32_t imageValue; // [xsp+8h] [xbp-58h] BYREF
   int32_t typeValue; // [xsp+Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_597263D & 1) == 0 )
   {
@@ -163,10 +163,10 @@ void EventInfoSkillDetailComponent__Setup(
       {
         sub_2213CDC(SkillDetail, v25);
       }
-      v29 = COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)SkillDetail, 0).fields.y));
+      localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)SkillDetail, 0);
       GameObjectExtensions__SetLocalPositionY(
         partition,
-        -(float)(this->fields.partitionOffset + (float)(skillDetailMinHeight + v29)),
+        -(float)(this->fields.partitionOffset + (float)(skillDetailMinHeight + localPosition.fields.y)),
         0);
     }
     GameObjectHelper__SetActiveSafely(this->fields.partition, shouldShowPartition, 0);

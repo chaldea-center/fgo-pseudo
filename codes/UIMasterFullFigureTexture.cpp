@@ -482,12 +482,12 @@ void UIMasterFullFigureTexture__SetTexture(UIMasterFullFigureTexture_o *this, co
 void UIMasterFullFigureTexture__SetTextureStatus(UIMasterFullFigureTexture_o *this, const MethodInfo *method)
 {
   UITexture_o *bodyTexture; // x20
-  const MethodInfo *v4; // x1
-  UnityEngine_Vector2_o BodySize; // kr10_8
-  int32_t v6; // w1
-  int32_t v7; // w1
   UIWidget_o *transform; // x0
-  __int64 v9; // x1
+  __int64 v5; // x1
+  const MethodInfo *v6; // x1
+  UnityEngine_Vector2_o BodySize; // kr00_8
+  int32_t v8; // w1
+  int32_t v9; // w1
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o BodyUvRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
@@ -496,17 +496,17 @@ void UIMasterFullFigureTexture__SetTextureStatus(UIMasterFullFigureTexture_o *th
   if ( !bodyTexture )
     goto LABEL_18;
   UITexture__set_uvRect(bodyTexture, BodyUvRect, 0);
-  BodySize = UIMasterFullFigureRender__GetBodySize((UIMasterFullFigureRender_o *)this, v4);
+  BodySize = UIMasterFullFigureRender__GetBodySize((UIMasterFullFigureRender_o *)this, v6);
   transform = (UIWidget_o *)this->fields.bodyTexture;
   if ( !transform )
     goto LABEL_18;
-  v6 = BodySize.fields.x == INFINITY ? 0x80000000 : (int)BodySize.fields.x;
-  UIWidget__set_width(transform, v6, 0);
+  v8 = BodySize.fields.x == INFINITY ? 0x80000000 : (int)BodySize.fields.x;
+  UIWidget__set_width(transform, v8, 0);
   transform = (UIWidget_o *)this->fields.bodyTexture;
   if ( !transform )
     goto LABEL_18;
-  v7 = BodySize.fields.y == INFINITY ? 0x80000000 : (int)BodySize.fields.y;
-  UIWidget__set_height(transform, v7, 0);
+  v9 = BodySize.fields.y == INFINITY ? 0x80000000 : (int)BodySize.fields.y;
+  UIWidget__set_height(transform, v9, 0);
   transform = (UIWidget_o *)this->fields.bodyTexture;
   if ( !transform )
     goto LABEL_18;
@@ -530,7 +530,7 @@ void UIMasterFullFigureTexture__SetTextureStatus(UIMasterFullFigureTexture_o *th
     || (transform = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0)) == 0 )
   {
 LABEL_18:
-    sub_2213CDC(transform, v9);
+    sub_2213CDC(transform, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0);
 }

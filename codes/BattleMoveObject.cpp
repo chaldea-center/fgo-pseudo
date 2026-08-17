@@ -298,31 +298,37 @@ void BattleMoveObject__StartNotTweenMove(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method)
 {
-  __int64 gameObject; // x0
+  UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   UnityEngine_Transform_o *transform; // x20
+  unsigned int v6; // s0
   float y; // s8
-  float v7; // s9
-  __int64 v8; // x1
+  unsigned int v8; // s9
+  unsigned int v9; // s0
+  float v10; // s1
+  __int64 v11; // x1
   UnityEngine_Object_o *rigibody; // x20
-  UnityEngine_Rigidbody_o *v10; // x20
-  UnityEngine_Rigidbody_o *v11; // x20
+  UnityEngine_Rigidbody_o *v13; // x20
+  UnityEngine_Rigidbody_o *v14; // x20
   float timeSinceLevelLoad; // s0
   int32_t easingType; // w8
-  float v14; // s8
-  float v15; // s1
-  float v16; // s0
-  float v17; // s0
+  float v17; // s8
   float v18; // s1
-  float v19; // s2
+  float v19; // s0
   float v20; // s0
+  float v21; // s1
+  float v22; // s2
+  float v23; // s0
+  unsigned __int64 v24; // d0 OVERLAPPED
+  float v25; // s2
+  int v26; // s1
   struct System_Action_GameObject__o *callback; // x20
-  UnityEngine_GameObject_o *v22; // x1
-  unsigned int position; // s0
-  UnityEngine_Vector3_o v24; // 0:kr34_12.12
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_GameObject_o *v28; // x1
+  UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( (byte_5973552 & 1) == 0 )
   {
@@ -331,64 +337,65 @@ void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method
   }
   if ( this->fields.dropflg )
   {
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_39;
-    gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
     if ( !gameObject )
       goto LABEL_39;
-    if ( COERCE_FLOAT(LODWORD(UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0).fields.y)) < this->fields.checkvec.fields.y )
+    position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
+    if ( position.fields.y < this->fields.checkvec.fields.y )
     {
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_39;
-      transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      transform = UnityEngine_GameObject__get_transform(gameObject, 0);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_39;
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !gameObject )
         goto LABEL_39;
-      position = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
+      v6 = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
       y = this->fields.checkvec.fields.y;
-      v7 = *(float *)&position;
-      gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v8 = v6;
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_39;
-      gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !gameObject )
         goto LABEL_39;
-      v25.fields.z = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0).fields.z;
+      v30 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)gameObject, 0);
       if ( !transform )
         goto LABEL_39;
-      v25.fields.x = v7;
-      v25.fields.y = y;
-      UnityEngine_Transform__set_position(transform, v25, 0);
+      v9 = v8;
+      v10 = y;
+      UnityEngine_Transform__set_position(transform, v30, 0);
       rigibody = (UnityEngine_Object_o *)this->fields.rigibody;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
-      gameObject = UnityEngine_Object__op_Inequality(rigibody, 0, 0);
-      if ( (gameObject & 1) != 0 )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v11);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(rigibody, 0, 0);
+      if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
-        v10 = this->fields.rigibody;
+        v13 = this->fields.rigibody;
         if ( !byte_5969AE0 )
         {
-          gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
-        if ( !v10 )
+        if ( !v13 )
           goto LABEL_39;
-        UnityEngine_Rigidbody__set_linearVelocity(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        v11 = this->fields.rigibody;
+        UnityEngine_Rigidbody__set_linearVelocity(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+        v14 = this->fields.rigibody;
         if ( !byte_5969AE0 )
         {
-          gameObject = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          gameObject = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
-        if ( !v11 )
+        if ( !v14 )
           goto LABEL_39;
-        UnityEngine_Rigidbody__set_angularVelocity(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-        gameObject = (__int64)this->fields.rigibody;
+        UnityEngine_Rigidbody__set_angularVelocity(v14, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+        gameObject = (UnityEngine_GameObject_o *)this->fields.rigibody;
         if ( !gameObject )
           goto LABEL_39;
         UnityEngine_Rigidbody__set_useGravity((UnityEngine_Rigidbody_o *)gameObject, 0, 0);
@@ -400,39 +407,39 @@ void BattleMoveObject__Update(BattleMoveObject_o *this, const MethodInfo *method
     return;
   timeSinceLevelLoad = UnityEngine_Time__get_timeSinceLevelLoad(0);
   easingType = this->fields.easingType;
-  v14 = timeSinceLevelLoad - this->fields.notTweenInfo.fields.startTime;
-  v15 = v14 / this->fields.notTweenInfo.fields.time;
-  v16 = v15 * v15;
+  v17 = timeSinceLevelLoad - this->fields.notTweenInfo.fields.startTime;
+  v18 = v17 / this->fields.notTweenInfo.fields.time;
+  v19 = v18 * v18;
   if ( easingType == 1 )
-    v17 = v16 * (float)((float)(v15 * 2.7016) + -1.7016);
+    v20 = v19 * (float)((float)(v18 * 2.7016) + -1.7016);
   else
-    v17 = v15 * (float)(v15 * v16);
-  gameObject = (__int64)this->fields.selfTransform;
+    v20 = v18 * (float)(v18 * v19);
+  gameObject = (UnityEngine_GameObject_o *)this->fields.selfTransform;
   if ( !gameObject )
 LABEL_39:
     sub_2213CDC(gameObject, v4);
-  v18 = 0.0;
-  v19 = 1.0;
-  v20 = v17 + 0.0;
-  if ( v20 <= 1.0 )
-    v19 = v20;
-  if ( v20 >= 0.0 )
-    v18 = v19;
-  *(float32x2_t *)&v24.fields.x = vadd_f32(
-                                    *(float32x2_t *)&this->fields.notTweenInfo.fields.from.fields.x,
-                                    vmul_n_f32(
-                                      vsub_f32(
-                                        *(float32x2_t *)&this->fields.notTweenInfo.fields.to.fields.x,
-                                        *(float32x2_t *)&this->fields.notTweenInfo.fields.from.fields.x),
-                                      v18));
-  v24.fields.z = this->fields.notTweenInfo.fields.from.fields.z
-               + (float)(v18
-                       * (float)(this->fields.notTweenInfo.fields.to.fields.z
-                               - this->fields.notTweenInfo.fields.from.fields.z));
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v24, 0);
-  if ( v14 > this->fields.notTweenInfo.fields.time )
+  v21 = 0.0;
+  v22 = 1.0;
+  v23 = v20 + 0.0;
+  if ( v23 <= 1.0 )
+    v22 = v23;
+  if ( v23 >= 0.0 )
+    v21 = v22;
+  v24 = vadd_f32(
+          *(float32x2_t *)&this->fields.notTweenInfo.fields.from.fields.x,
+          vmul_n_f32(
+            vsub_f32(
+              *(float32x2_t *)&this->fields.notTweenInfo.fields.to.fields.x,
+              *(float32x2_t *)&this->fields.notTweenInfo.fields.from.fields.x),
+            v21)).n64_u64[0];
+  v25 = this->fields.notTweenInfo.fields.from.fields.z
+      + (float)(v21
+              * (float)(this->fields.notTweenInfo.fields.to.fields.z - this->fields.notTweenInfo.fields.from.fields.z));
+  v26 = HIDWORD(v24);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, *(UnityEngine_Vector3_o *)&v24, 0);
+  if ( v17 > this->fields.notTweenInfo.fields.time )
   {
-    gameObject = (__int64)this->fields.selfTransform;
+    gameObject = (UnityEngine_GameObject_o *)this->fields.selfTransform;
     this->fields.isNotTweenMove = 0;
     if ( gameObject )
     {
@@ -443,10 +450,10 @@ LABEL_39:
       callback = this->fields.notTweenInfo.fields.callback;
       if ( callback )
       {
-        v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+        v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         ((void (__fastcall *)(intptr_t, UnityEngine_GameObject_o *, intptr_t))callback->fields.invoke_impl)(
           callback->fields.method_code,
-          v22,
+          v28,
           callback->fields.method);
       }
       return;
@@ -468,6 +475,7 @@ System_Collections_IEnumerator_o *BattleMoveObject___StartNotTweenMove(
   int32_t v9; // w5
   bool v10; // w6
   bool v11; // w7
+  System_Collections_IEnumerator_o *result; // x0
 
   if ( (byte_5973558 & 1) == 0 )
   {
@@ -479,8 +487,9 @@ System_Collections_IEnumerator_o *BattleMoveObject___StartNotTweenMove(
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 40) = this;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  result = (System_Collections_IEnumerator_o *)v5;
   *(float *)(v5 + 32) = delay;
-  return (System_Collections_IEnumerator_o *)v5;
+  return result;
 }
 
 
@@ -795,6 +804,7 @@ bool BattleMoveObject___StartNotTweenMove_d__36__MoveNext(
   int32_t v11; // w5
   bool v12; // w6
   bool v13; // w7
+  bool result; // w0
 
   v2 = this;
   if ( (byte_597355A & 1) == 0 )
@@ -821,14 +831,16 @@ bool BattleMoveObject___StartNotTweenMove_d__36__MoveNext(
       v2->fields.__2__current = (Il2CppObject *)v6;
       p__2__current = (MissionNaviTransitionBoardItem_o *)&v2->fields.__2__current;
       sub_2213A04(p__2__current, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+      result = 1;
       p__2__current[-1].fields._BoardType_k__BackingField = 1;
-      return 1;
+      return result;
     }
   }
   if ( !_4__this )
     sub_2213CDC(this, method);
+  result = 0;
   _4__this->fields.isNotTweenMove = 1;
-  return 0;
+  return result;
 }
 
 

@@ -40,20 +40,22 @@ int32_t GachaAppendMaster__GetAppendSummonState(
   int GachaDailyMaxDrawNumResetAt; // w28
   __int64 v16; // x1
   int64_t TodayStartTime; // x23
+  System_DateTime_o v18; // x0
+  System_DateTime_o v19; // x0
   int32_t id; // w24
   int32_t idx; // w25
-  int64_t v20; // x22
-  GachaAppendEntity_o *v21; // x8
+  int64_t v22; // x22
+  GachaAppendEntity_o *v23; // x8
   int maxDrawNum; // w9
-  const MethodInfo *v23; // x2
+  const MethodInfo *v25; // x2
   int i; // w23
-  _BOOL8 v25; // x0
-  __int64 v26; // x1
-  GachaAppendMaster_c *v27; // x0
-  int32_t v28; // w20
-  int32_t v29; // w21
+  _BOOL8 v27; // x0
+  __int64 v28; // x1
+  GachaAppendMaster_c *v29; // x0
+  int32_t v30; // w20
+  int32_t v31; // w21
   int klass_high; // w8
-  System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+10h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+10h] [xbp-80h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-68h] BYREF
   uint64_t dateData; // [xsp+38h] [xbp-58h] BYREF
 
@@ -76,7 +78,7 @@ int32_t GachaAppendMaster__GetAppendSummonState(
   dateData = 0;
   entity = 0;
   v7 = *(&DataManager_TypeInfo->_2.cctor_finished + 1);
-  memset(&v32, 0, sizeof(v32));
+  memset(&v34, 0, sizeof(v34));
   if ( !v7 )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, gachaEnt);
   Master_object = (UserGachaDrawLogMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_UserGachaDrawLogMaster___);
@@ -98,12 +100,14 @@ int32_t GachaAppendMaster__GetAppendSummonState(
   TodayStartTime = NetworkManager__getTodayStartTime(0);
   if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v16);
-  Master_object = (UserGachaDrawLogMaster_o *)System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
+  v18.fields._dateData = (uint64_t)&dateData;
+  Master_object = (UserGachaDrawLogMaster_o *)System_DateTime__get_Hour(v18, 0);
   if ( ((unsigned int)Master_object & 0x80000000) == 0 )
   {
     if ( !*(&System_DateTime_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo, v9);
-    Master_object = (UserGachaDrawLogMaster_o *)System_DateTime__get_Hour((System_DateTime_o)&dateData, 0);
+    v19.fields._dateData = (uint64_t)&dateData;
+    Master_object = (UserGachaDrawLogMaster_o *)System_DateTime__get_Hour(v19, 0);
     if ( GachaDailyMaxDrawNumResetAt > (int)Master_object )
     {
       Master_object = (UserGachaDrawLogMaster_o *)GachaAppendMaster_TypeInfo;
@@ -124,21 +128,21 @@ int32_t GachaAppendMaster__GetAppendSummonState(
     j_il2cpp_runtime_class_init_0(GachaAppendMaster_TypeInfo, v9);
   if ( !v11 )
     goto LABEL_48;
-  v20 = TodayStartTime + 3600LL * GachaDailyMaxDrawNumResetAt;
+  v22 = TodayStartTime + 3600LL * GachaDailyMaxDrawNumResetAt;
   Master_object = (UserGachaDrawLogMaster_o *)UserGachaDrawLogMaster__GetDrawLogNum(
                                                 v11,
                                                 id,
                                                 idx,
-                                                v20,
-                                                GachaAppendMaster_TypeInfo->static_fields->ONEDAY_SECOND + v20,
+                                                v22,
+                                                GachaAppendMaster_TypeInfo->static_fields->ONEDAY_SECOND + v22,
                                                 0);
-  v21 = *appendEnt;
+  v23 = *appendEnt;
   if ( !*appendEnt )
     goto LABEL_48;
-  maxDrawNum = v21->fields.maxDrawNum;
+  maxDrawNum = v23->fields.maxDrawNum;
   if ( maxDrawNum >= 1 && (int)Master_object >= maxDrawNum )
     return 1;
-  if ( !v21->fields.gachaGroupId )
+  if ( !v23->fields.gachaGroupId )
     return 2;
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v9);
@@ -157,39 +161,39 @@ int32_t GachaAppendMaster__GetAppendSummonState(
   Master_object = (UserGachaDrawLogMaster_o *)GachaAppendMaster__GetGroupGachaList(
                                                 this,
                                                 (*appendEnt)->fields.gachaGroupId,
-                                                v23);
+                                                v25);
   if ( !Master_object )
     goto LABEL_48;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v32,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v34,
     (System_Collections_Generic_List_object__o *)Master_object,
     (const MethodInfo_448473C *)Method_System_Collections_Generic_List_GachaAppendEntity__GetEnumerator__);
   for ( i = 0; ; i += UserGachaDrawLogMaster__GetDrawLogNum(
                         v11,
-                        v28,
-                        v29,
-                        v20,
-                        v27->static_fields->ONEDAY_SECOND + v20,
+                        v30,
+                        v31,
+                        v22,
+                        v29->static_fields->ONEDAY_SECOND + v22,
                         0) )
   {
-    v25 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v32,
+    v27 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v34,
             (const MethodInfo_40FBAD8 *)Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__MoveNext__);
-    if ( !v25 )
+    if ( !v27 )
       break;
-    if ( !v32.fields._current )
-      sub_2213CDC(v25, v26);
-    v27 = GachaAppendMaster_TypeInfo;
-    v28 = *(_DWORD *)((char *)&v32.fields._current->klass + (unsigned __int64)&word_10);
-    v29 = *(_DWORD *)((char *)&v32.fields._current->klass + (unsigned __int64)&word_10 + 4);
+    if ( !v34.fields._current )
+      sub_2213CDC(v27, v28);
+    v29 = GachaAppendMaster_TypeInfo;
+    v30 = *(_DWORD *)((char *)&v34.fields._current->klass + (unsigned __int64)&word_10);
+    v31 = *(_DWORD *)((char *)&v34.fields._current->klass + (unsigned __int64)&word_10 + 4);
     if ( !*(&GachaAppendMaster_TypeInfo->_2.cctor_finished + 1) )
     {
-      j_il2cpp_runtime_class_init_0(GachaAppendMaster_TypeInfo, v26);
-      v27 = GachaAppendMaster_TypeInfo;
+      j_il2cpp_runtime_class_init_0(GachaAppendMaster_TypeInfo, v28);
+      v29 = GachaAppendMaster_TypeInfo;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v32,
+    &v34,
     (const MethodInfo_40FBAD4 *)Method_System_Collections_Generic_List_Enumerator_GachaAppendEntity__Dispose__);
   if ( !entity )
 LABEL_48:

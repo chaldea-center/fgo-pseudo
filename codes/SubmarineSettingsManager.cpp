@@ -388,11 +388,17 @@ UnityEngine_Vector3_o SubmarineSettingsManager__get_BoardOffset(
         SubmarineSettingsManager_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
+  float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  result.fields.x = this->fields._BoardOffset_k__BackingField.fields.x;
-  result.fields.y = this->fields._BoardOffset_k__BackingField.fields.y;
-  result.fields.z = this->fields._BoardOffset_k__BackingField.fields.z;
+  x = this->fields._BoardOffset_k__BackingField.fields.x;
+  y = this->fields._BoardOffset_k__BackingField.fields.y;
+  z = this->fields._BoardOffset_k__BackingField.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 
@@ -419,10 +425,14 @@ UnityEngine_Vector2_o SubmarineSettingsManager__get_PanelUnitSize(
         SubmarineSettingsManager_o *this,
         const MethodInfo *method)
 {
+  float x; // s0
+  float y; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  result.fields.x = this->fields._PanelUnitSize_k__BackingField.fields.x;
-  result.fields.y = this->fields._PanelUnitSize_k__BackingField.fields.y;
+  x = this->fields._PanelUnitSize_k__BackingField.fields.x;
+  y = this->fields._PanelUnitSize_k__BackingField.fields.y;
+  result.fields.y = y;
+  result.fields.x = x;
   return result;
 }
 

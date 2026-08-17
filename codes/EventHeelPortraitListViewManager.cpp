@@ -336,7 +336,7 @@ void EventHeelPortraitListViewManager__InitDialog(EventHeelPortraitListViewManag
 {
   __int64 v2; // x2
   UnityEngine_Object_o *heelPortraitDetailDialog; // x20
-  __int64 transform; // x0
+  UnityEngine_GameObject_o *transform; // x0
   const MethodInfo *v6; // x1
   __int64 v7; // x2
   struct EventHeelPortraitAssetManager_o *assetManager; // x8
@@ -361,8 +361,8 @@ void EventHeelPortraitListViewManager__InitDialog(EventHeelPortraitListViewManag
   heelPortraitDetailDialog = (UnityEngine_Object_o *)this->fields.heelPortraitDetailDialog;
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, method, v2);
-  transform = UnityEngine_Object__op_Equality(heelPortraitDetailDialog, 0, 0);
-  if ( (transform & 1) != 0 )
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(heelPortraitDetailDialog, 0, 0);
+  if ( ((unsigned __int8)transform & 1) != 0 )
   {
     assetManager = this->fields.assetManager;
     if ( !assetManager )
@@ -371,14 +371,14 @@ void EventHeelPortraitListViewManager__InitDialog(EventHeelPortraitListViewManag
     uiRoot = this->fields.uiRoot;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v6, v7);
-    transform = (__int64)UnityEngine_Object__Instantiate_object__59717116(
-                           heelPortraitDetailDialog_k__BackingField,
-                           uiRoot,
-                           (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__59717116(
+                                              heelPortraitDetailDialog_k__BackingField,
+                                              uiRoot,
+                                              (const MethodInfo_38F35FC *)Method_UnityEngine_Object_Instantiate_GameObject____91801432);
     if ( !transform )
       goto LABEL_17;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)transform,
+                         transform,
                          (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_HeelPortraitDetailDialogComponent___);
     this->fields.heelPortraitDetailDialog = (struct HeelPortraitDetailDialogComponent_o *)Component_object;
     sub_2213A04(
@@ -390,14 +390,16 @@ void EventHeelPortraitListViewManager__InitDialog(EventHeelPortraitListViewManag
       v15,
       v16,
       v17);
-    transform = (__int64)this->fields.heelPortraitDetailDialog;
+    transform = (UnityEngine_GameObject_o *)this->fields.heelPortraitDetailDialog;
     if ( !transform )
       goto LABEL_17;
-    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
+                                              (UnityEngine_Component_o *)transform,
+                                              0);
     v18 = (UnityEngine_Transform_o *)transform;
     if ( !byte_5969AE5 )
     {
-      transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+      transform = (UnityEngine_GameObject_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
       byte_5969AE5 = 1;
     }
     if ( !v18 )
@@ -405,7 +407,7 @@ LABEL_17:
       sub_2213CDC(transform, v6);
     UnityEngine_Transform__set_localScale(v18, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   }
-  transform = (__int64)this->fields.heelPortraitDetailDialog;
+  transform = (UnityEngine_GameObject_o *)this->fields.heelPortraitDetailDialog;
   if ( !transform )
     goto LABEL_17;
   HeelPortraitDetailDialogComponent__Init((HeelPortraitDetailDialogComponent_o *)transform, v6);

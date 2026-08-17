@@ -163,6 +163,7 @@ BattleSetupInfo_o *BattleSetupInfo__ConvertBattleSetupInfo(
   int32_t v35; // w5
   bool v36; // w6
   bool v37; // w7
+  BattleSetupInfo_o *result; // x0
 
   if ( (byte_5970293 & 1) == 0 )
   {
@@ -224,9 +225,10 @@ LABEL_10:
   sub_2213A04((MissionNaviTransitionBoardItem_o *)(v14 + 176), (int32_t)v31, v32, v33, v34, v35, v36, v37);
   *(_QWORD *)(v14 + 184) = 0;
   *(_QWORD *)(v14 + 192) = 0;
+  result = (BattleSetupInfo_o *)v14;
   *(_DWORD *)(v14 + 200) = 0;
   *(_BYTE *)(v14 + 204) = isScriptBeforeWarBoard;
-  return (BattleSetupInfo_o *)v14;
+  return result;
 }
 
 
@@ -273,6 +275,7 @@ BattleSetupInfo_BattleSetupSaveInfo_o *BattleSetupInfo__GetInfoForSave(
   int32_t v39; // w5
   bool v40; // w6
   bool v41; // w7
+  BattleSetupInfo_BattleSetupSaveInfo_o *result; // x0
 
   if ( (byte_597028F & 1) == 0 )
   {
@@ -346,8 +349,9 @@ BattleSetupInfo_BattleSetupSaveInfo_o *BattleSetupInfo__GetInfoForSave(
     v39,
     v40,
     v41);
+  result = (BattleSetupInfo_BattleSetupSaveInfo_o *)v3;
   *(_DWORD *)(v3 + 188) = this->fields.restartWave;
-  return (BattleSetupInfo_BattleSetupSaveInfo_o *)v3;
+  return result;
 }
 
 

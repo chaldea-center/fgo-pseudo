@@ -7,8 +7,7 @@ void EffectFlipData___ctor(EffectFlipData_o *this, const MethodInfo *method)
 
 void EffectFlipData__Flip(EffectFlipData_o *this, UnityEngine_Transform_o *trEffect, const MethodInfo *method)
 {
-  UnityEngine_Vector3_o localScale; // 0:kr00_12.12
-  UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( this->fields.rotate >= 1 )
   {
@@ -22,12 +21,11 @@ void EffectFlipData__Flip(EffectFlipData_o *this, UnityEngine_Transform_o *trEff
 LABEL_13:
     sub_2213CDC(this, trEffect);
   localScale = UnityEngine_Transform__get_localScale(trEffect, 0);
-  v6 = localScale;
   if ( this->fields.scaleX >= 1 )
-    v6.fields.x = -localScale.fields.x;
+    localScale.fields.x = -localScale.fields.x;
   if ( this->fields.scaleZ >= 1 )
-    v6.fields.z = -localScale.fields.z;
-  UnityEngine_Transform__set_localScale(trEffect, v6, 0);
+    localScale.fields.z = -localScale.fields.z;
+  UnityEngine_Transform__set_localScale(trEffect, localScale, 0);
 }
 
 

@@ -174,7 +174,7 @@ LABEL_12:
       goto LABEL_46;
     this = (ExcludeMotionMaster_o *)ExcludeMotionEntity__IsSatisfyPhaseCond(
                                       v20,
-                                      *(_DWORD *)(*((_QWORD *)this + 23) + 24LL),
+                                      (int32_t)this[2].fields.list->fields._monitor,
                                       v18);
     if ( ((unsigned __int8)this & 1) == 0 )
     {

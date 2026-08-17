@@ -126,11 +126,13 @@ void LoginBonusWithTransitionDialog__Open_53979764(
 {
   UnityEngine_GameObject_o *buttonDecide; // x0
   UnityEngine_Transform_o *v11; // x23
-  float v12; // s8
-  ItemMaster_o *v13; // x3
-  const MethodInfo *v14; // x7
-  float y; // s1
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s8
+  int v13; // s0
+  float v14; // s1
+  ItemMaster_o *v15; // x3
+  const MethodInfo *v16; // x7
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
   buttonDecide = this->fields.buttonDecide;
   if ( !buttonDecide )
@@ -146,19 +148,19 @@ void LoginBonusWithTransitionDialog__Open_53979764(
   if ( !this->fields.buttonCancel
     || (v11 = (UnityEngine_Transform_o *)buttonDecide,
         (buttonDecide = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(this->fields.buttonCancel, 0)) == 0)
-    || (y = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)buttonDecide, 0).fields.y,
+    || (localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)buttonDecide, 0),
         (buttonDecide = this->fields.buttonCancel) == 0)
-    || (v12 = y, (buttonDecide = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(buttonDecide, 0)) == 0)
-    || (v16.fields.z = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)buttonDecide, 0).fields.z,
-        !v11) )
+    || (y = localPosition.fields.y,
+        (buttonDecide = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(buttonDecide, 0)) == 0)
+    || (v18 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)buttonDecide, 0), !v11) )
   {
 LABEL_10:
     sub_2213CDC(buttonDecide, bonusData);
   }
-  v16.fields.x = 0.0;
-  v16.fields.y = v12;
-  UnityEngine_Transform__set_localPosition(v11, v16, 0);
-  LoginBonusWithTransitionDialog__Open(this, bonusData, giftMst, v13, onCancelCallback, 0, 0, v14);
+  v13 = 0;
+  v14 = y;
+  UnityEngine_Transform__set_localPosition(v11, v18, 0);
+  LoginBonusWithTransitionDialog__Open(this, bonusData, giftMst, v15, onCancelCallback, 0, 0, v16);
 }
 
 

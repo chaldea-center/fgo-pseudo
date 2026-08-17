@@ -312,7 +312,7 @@ bool ReactTaskTarget___c__DisplayClass5_0___CreateReactionTasksPartial_b__0(
   creator = this->fields.creator;
   if ( !creator )
     sub_2213CDC(0, svt);
-  return ((bool (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, BattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
+  return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, BattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
            creator,
            this->fields.logic,
            svt,
@@ -331,11 +331,11 @@ BattleLogicTask_o *ReactTaskTarget___c__DisplayClass5_0___CreateReactionTasksPar
   creator = this->fields.creator;
   if ( !creator )
     sub_2213CDC(0, svt);
-  return ((BattleLogicTask_o *(__fastcall *)(struct ServantReactTaskCreator_o *, BattleServantData_o *, struct BattleLogic_o *, const MethodInfo *))creator->klass->vtable._8_Create.methodPtr)(
-           creator,
-           svt,
-           this->fields.logic,
-           creator->klass->vtable._8_Create.method);
+  return (BattleLogicTask_o *)((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, BattleServantData_o *, struct BattleLogic_o *, const MethodInfo *))creator->klass->vtable._8_Create.methodPtr)(
+                                creator,
+                                svt,
+                                this->fields.logic,
+                                creator->klass->vtable._8_Create.method);
 }
 
 
@@ -357,7 +357,7 @@ bool ReactTaskTarget___c__DisplayClass8_0___ExistTargetPriority_b__0(
   creator = this->fields.creator;
   if ( !creator )
     sub_2213CDC(0, svt);
-  return ((bool (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, BattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
+  return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, BattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
            creator,
            this->fields.logic,
            svt,

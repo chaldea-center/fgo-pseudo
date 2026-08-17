@@ -343,18 +343,24 @@ bool ServantLimitEntity__IsNeedChangeSaintGraphName(ServantLimitEntity_o *this, 
 
 UnityEngine_Color_o ServantLimitEntity__getWeaponColor(ServantLimitEntity_o *this, const MethodInfo *method)
 {
+  float v2; // s3
   unsigned __int64 v3; // d0
+  float v4; // s2
+  float v5; // s1
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  result.fields.a = 1.0;
+  v2 = 1.0;
   v3 = vdiv_f32(
          vcvt_f32_s32(
            vand_s8(
              vshl_u32(vdup_n_s32(this->fields.weaponColor), (uint32x2_t)0xFFFFFFF8FFFFFFF0LL),
              (int8x8_t)0xFF000000FFLL)),
          vdup_n_s32(0x437F0000u)).n64_u64[0];
-  result.fields.b = (float)(unsigned __int8)this->fields.weaponColor / 255.0;
-  result.fields.g = *((float *)&v3 + 1);
+  v4 = (float)(unsigned __int8)this->fields.weaponColor / 255.0;
+  v5 = *((float *)&v3 + 1);
   result.fields.r = *(float *)&v3;
+  result.fields.a = v2;
+  result.fields.b = v4;
+  result.fields.g = v5;
   return result;
 }

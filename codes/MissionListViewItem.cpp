@@ -227,6 +227,7 @@ bool MissionListViewItem__GetProgInfo(
   bool v6; // w6
   bool v7; // w7
   System_String_o *v8; // x8
+  bool result; // w0
 
   v8 = this->fields.progTxt;
   *progTxt = v8;
@@ -239,8 +240,9 @@ bool MissionListViewItem__GetProgInfo(
     v5,
     v6,
     v7);
+  result = 1;
   *barExp = this->fields.progVal;
-  return 1;
+  return result;
 }
 
 

@@ -144,8 +144,9 @@ void SetSmoothnessControl__Reflection(SetSmoothnessControl_o *this, const Method
 {
   System_Nullable_bool__o v3; // w19
   _BOOL4 hasValue; // t1
-  __int64 v5; // x1
-  __int64 v6; // x2
+  System_Nullable_bool__o v5; // w0
+  __int64 v6; // x1
+  __int64 v7; // x2
   bool Value; // w19
 
   if ( (byte_596B5CB & 1) == 0 )
@@ -159,9 +160,10 @@ void SetSmoothnessControl__Reflection(SetSmoothnessControl_o *this, const Method
   v3 = (System_Nullable_bool__o)((_WORD)this + 64);
   if ( hasValue )
   {
-    Value = System_Nullable_bool___get_Value(v3, (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
+    v5 = v3;
+    Value = System_Nullable_bool___get_Value(v5, (const MethodInfo_45E0958 *)Method_System_Nullable_bool__get_Value__);
     if ( !*(&OptionManager_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, v5, v6);
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo, v6, v7);
     OptionManager__SetBattleFpsHighOrNot(Value, 0);
   }
 }

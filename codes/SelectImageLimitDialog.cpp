@@ -246,7 +246,7 @@ void SelectImageLimitDialog__LoadImageLimitData(SelectImageLimitDialog_o *this, 
   __int64 v7; // x2
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
   __int64 v9; // x1
-  Il2CppObject *value; // x20
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   _BOOL8 v11; // x0
   __int64 v12; // x1
   System_String_o *v13; // x0
@@ -304,15 +304,15 @@ LABEL_8:
               &v17,
               (const MethodInfo_41690A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
-      value = v17.fields._current.fields.value;
+      current = v17.fields._current;
       v11 = System_Int32__TryParse((System_String_o *)v17.fields._current.fields.key, &result[1], 0);
       if ( v11 )
       {
-        if ( !value )
+        if ( !current.fields.value )
           sub_2213CDC(v11, v12);
-        v13 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))value->klass->vtable[3].methodPtr)(
-                                   value,
-                                   value->klass->vtable[3].method);
+        v13 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
+                                   current.fields.value,
+                                   current.fields.value->klass->vtable[3].method);
         if ( System_Int32__TryParse(v13, result, 0) )
         {
           dicSelectedImageLimit = this->fields.dicSelectedImageLimit;

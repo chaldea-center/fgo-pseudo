@@ -696,6 +696,7 @@ bool FollowerInfo__GetQuestRestriction_48752332(
   __int64 v16; // x1
   const MethodInfo *v17; // x3
   System_Int32_array *v18; // x23
+  bool result; // w0
   int32_t ServantId; // w0
   int32_t limitCount; // w23
   int32_t v22; // w24
@@ -761,9 +762,10 @@ LABEL_15:
   }
   else
   {
+    result = 0;
     *isWhole = 0;
-    return 0;
   }
+  return result;
 }
 
 

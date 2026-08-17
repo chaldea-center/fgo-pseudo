@@ -192,47 +192,47 @@ void ServantStatusListViewItemDrawButton__SetItem(
   unsigned int mHeight; // w20
   float v32; // s9
   UnityEngine_BoxCollider_o *v33; // x20
-  struct UISprite_o *v34; // x8
-  int v35; // s10
-  float v36; // s8
-  __int64 *v37; // x8
+  unsigned int v34; // s0
+  struct UISprite_o *v35; // x8
+  int v36; // s10
+  float v37; // s8
+  __int64 *v38; // x8
   struct UICommonButton_array *tdSpeedButtonList; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  struct UICommonButton_array *v40; // x8
-  UnityEngine_GameObject_o *v41; // x0
-  struct UICommonButton_array *v42; // x8
-  __int64 v43; // x2
+  struct UICommonButton_array *v41; // x8
+  UnityEngine_GameObject_o *v42; // x0
+  struct UICommonButton_array *v43; // x8
+  __int64 v44; // x2
   struct UIRangeLabel_array *tdSpeedRangeLabelList; // x8
-  UIRangeLabel_o *v45; // x20
-  struct UIRangeLabel_array *v46; // x8
-  UIRangeLabel_o *v47; // x20
-  float v48; // s8
+  UIRangeLabel_o *v46; // x20
+  struct UIRangeLabel_array *v47; // x8
+  UIRangeLabel_o *v48; // x20
+  float v49; // s8
   UnityEngine_GameObject_o *titleBase; // x20
   float LocalPositionY; // s0
   UnityEngine_GameObject_o *buttonBase; // x20
-  float v52; // s0
+  float v53; // s0
   UnityEngine_BoxCollider_o *collider; // x20
-  float v54; // s8
+  unsigned int size; // s0
+  float v56; // s8
   UILabel_o *explanationLabel; // x20
-  UnityEngine_GameObject_o *v56; // x0
-  __int64 v57; // x1
-  __int64 v58; // x2
+  UnityEngine_GameObject_o *v58; // x0
+  __int64 v59; // x1
+  __int64 v60; // x2
   UISprite_o *titleSprite; // x20
-  UILabel_o *v60; // x20
-  __int64 v61; // x2
+  UILabel_o *v62; // x20
+  __int64 v63; // x2
   int32_t TD_SPEED_BASE_SPRITE_HEIGHT; // w1
-  float v63; // s8
-  UnityEngine_GameObject_o *v64; // x20
-  float v65; // s0
+  float v65; // s8
   UnityEngine_GameObject_o *v66; // x20
   float v67; // s0
-  UnityEngine_BoxCollider_o *v68; // x20
-  float v69; // s8
-  int32_t v70; // s9
-  UnityEngine_GameObject_o *v71; // x0
-  unsigned int v72; // s0
-  unsigned int size; // s0
-  unsigned int v74; // s0
+  UnityEngine_GameObject_o *v68; // x20
+  float v69; // s0
+  UnityEngine_BoxCollider_o *v70; // x20
+  unsigned int v71; // s0
+  float v72; // s8
+  int32_t v73; // s9
+  UnityEngine_GameObject_o *v74; // x0
   struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o id; // [xsp+0h] [xbp-60h] BYREF
   System_String_o *resultText; // [xsp+18h] [xbp-48h] BYREF
   UnityEngine_Vector3_o v77; // 0:s0.4,4:s1.4,8:s2.4
@@ -282,22 +282,22 @@ void ServantStatusListViewItemDrawButton__SetItem(
             goto LABEL_16;
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
           GameObjectExtensions__SetLocalPositionX(gameObject, 95.0, 0);
-          v40 = this->fields.tdSpeedButtonList;
-          if ( !v40 )
+          v41 = this->fields.tdSpeedButtonList;
+          if ( !v41 )
             goto LABEL_16;
-          if ( (v40->max_length & 0xFFFFFFFE) != 0 )
+          if ( (v41->max_length & 0xFFFFFFFE) != 0 )
           {
-            baseSprite = v40->m_Items[1];
+            baseSprite = v41->m_Items[1];
             if ( !baseSprite )
               goto LABEL_16;
-            v41 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
-            GameObjectExtensions__SetLocalPositionX(v41, -95.0, 0);
-            v42 = this->fields.tdSpeedButtonList;
-            if ( !v42 )
+            v42 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
+            GameObjectExtensions__SetLocalPositionX(v42, -95.0, 0);
+            v43 = this->fields.tdSpeedButtonList;
+            if ( !v43 )
               goto LABEL_16;
-            if ( LODWORD(v42->max_length) > 2 )
+            if ( LODWORD(v43->max_length) > 2 )
             {
-              baseSprite = v42->m_Items[2];
+              baseSprite = v43->m_Items[2];
               if ( !baseSprite )
                 goto LABEL_16;
               baseSprite = (UICommonButton_o *)UnityEngine_Component__get_gameObject(
@@ -311,34 +311,34 @@ void ServantStatusListViewItemDrawButton__SetItem(
                 goto LABEL_16;
               if ( LODWORD(tdSpeedRangeLabelList->max_length) )
               {
-                v45 = tdSpeedRangeLabelList->m_Items[0];
+                v46 = tdSpeedRangeLabelList->m_Items[0];
                 if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v43);
+                  j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v44);
                 baseSprite = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12515/*"SERVANT_STATUS_VOICE_EFFECT_ON"*/, 0);
-                if ( !v45 )
-                  goto LABEL_16;
-                UIRangeLabel__Set(v45, (System_String_o *)baseSprite, 0, 1, 0, 0, 0);
-                v46 = this->fields.tdSpeedRangeLabelList;
                 if ( !v46 )
                   goto LABEL_16;
-                if ( (v46->max_length & 0xFFFFFFFE) != 0 )
+                UIRangeLabel__Set(v46, (System_String_o *)baseSprite, 0, 1, 0, 0, 0);
+                v47 = this->fields.tdSpeedRangeLabelList;
+                if ( !v47 )
+                  goto LABEL_16;
+                if ( (v47->max_length & 0xFFFFFFFE) != 0 )
                 {
-                  v47 = v46->m_Items[1];
+                  v48 = v47->m_Items[1];
                   baseSprite = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12514/*"SERVANT_STATUS_VOICE_EFFECT_OFF"*/, 0);
-                  if ( !v47 )
+                  if ( !v48 )
                     goto LABEL_16;
-                  UIRangeLabel__Set(v47, (System_String_o *)baseSprite, 0, 1, 0, 0, 0);
+                  UIRangeLabel__Set(v48, (System_String_o *)baseSprite, 0, 1, 0, 0, 0);
                   baseSprite = (UICommonButton_o *)this->fields.baseSprite;
                   if ( !baseSprite )
                     goto LABEL_16;
-                  v48 = vcvts_n_f32_s32(154 - LODWORD(baseSprite[1].fields.specifyDisabledColor.fields.a), 1u);
+                  v49 = vcvts_n_f32_s32(154 - LODWORD(baseSprite[1].fields.specifyDisabledColor.fields.a), 1u);
                   UIWidget__set_height((UIWidget_o *)baseSprite, 154, 0);
                   titleBase = this->fields.titleBase;
                   LocalPositionY = GameObjectExtensions__GetLocalPositionY(titleBase, 0);
-                  GameObjectExtensions__SetLocalPositionY(titleBase, LocalPositionY + v48, 0);
+                  GameObjectExtensions__SetLocalPositionY(titleBase, LocalPositionY + v49, 0);
                   buttonBase = this->fields.buttonBase;
-                  v52 = GameObjectExtensions__GetLocalPositionY(buttonBase, 0);
-                  GameObjectExtensions__SetLocalPositionY(buttonBase, v48 + v52, 0);
+                  v53 = GameObjectExtensions__GetLocalPositionY(buttonBase, 0);
+                  GameObjectExtensions__SetLocalPositionY(buttonBase, v49 + v53, 0);
                   collider = this->fields.collider;
                   if ( !collider )
                     goto LABEL_16;
@@ -346,9 +346,9 @@ void ServantStatusListViewItemDrawButton__SetItem(
                   baseSprite = (UICommonButton_o *)this->fields.collider;
                   if ( !baseSprite )
                     goto LABEL_16;
-                  v54 = *(float *)&size;
-                  v78.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)baseSprite, 0).fields.z;
-                  v78.fields.x = v54;
+                  v56 = *(float *)&size;
+                  v78 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)baseSprite, 0);
+                  v78.fields.x = v56;
                   v78.fields.y = 154.0;
                   UnityEngine_BoxCollider__set_size(collider, v78, 0);
                   baseSprite = (UICommonButton_o *)this->fields.explanationLabel;
@@ -371,11 +371,11 @@ void ServantStatusListViewItemDrawButton__SetItem(
                   baseSprite = (UICommonButton_o *)this->fields.explanationLabel;
                   if ( !baseSprite )
                     goto LABEL_16;
-                  v56 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
-                  GameObjectExtensions__SetLocalPositionY(v56, -45.0, 0);
+                  v58 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
+                  GameObjectExtensions__SetLocalPositionY(v58, -45.0, 0);
                   titleSprite = this->fields.titleSprite;
                   if ( !*(&AtlasManager_TypeInfo->_2.cctor_finished + 1) )
-                    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v57, v58);
+                    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo, v59, v60);
                   AtlasManager__SetDownloadCommonSprite(titleSprite, (System_String_o *)StringLiteral_21729/*"img_txt_voice_effect"*/, 0);
                   goto LABEL_90;
                 }
@@ -490,18 +490,18 @@ void ServantStatusListViewItemDrawButton__SetItem(
                   v33 = this->fields.collider;
                   if ( !v33 )
                     goto LABEL_16;
-                  v72 = (unsigned int)UnityEngine_BoxCollider__get_size(this->fields.collider, 0);
-                  v34 = this->fields.baseSprite;
-                  if ( !v34 )
+                  v34 = (unsigned int)UnityEngine_BoxCollider__get_size(this->fields.collider, 0);
+                  v35 = this->fields.baseSprite;
+                  if ( !v35 )
                     goto LABEL_16;
                   baseSprite = (UICommonButton_o *)this->fields.collider;
                   if ( !baseSprite )
                     goto LABEL_16;
-                  v35 = v34->fields.mHeight;
-                  v36 = *(float *)&v72;
-                  v77.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)baseSprite, 0).fields.z;
-                  v77.fields.y = (float)v35;
-                  v77.fields.x = v36;
+                  v36 = v35->fields.mHeight;
+                  v37 = *(float *)&v34;
+                  v77 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)baseSprite, 0);
+                  v77.fields.y = (float)v36;
+                  v77.fields.x = v37;
                   UnityEngine_BoxCollider__set_size(v33, v77, 0);
                   GameObjectExtensions__SetLocalPositionY(
                     this->fields.buttonBase,
@@ -511,7 +511,7 @@ void ServantStatusListViewItemDrawButton__SetItem(
                   baseSprite = (UICommonButton_o *)this->fields.titleSprite;
                   if ( !baseSprite )
                     goto LABEL_16;
-                  v37 = &StringLiteral_21619/*"img_txt_battlevoice"*/;
+                  v38 = &StringLiteral_21619/*"img_txt_battlevoice"*/;
                   goto LABEL_89;
                 }
               }
@@ -545,42 +545,42 @@ void ServantStatusListViewItemDrawButton__SetItem(
           }
           goto LABEL_16;
         }
-        v60 = this->fields.explanationLabel;
+        v62 = this->fields.explanationLabel;
         if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v8, v9);
         baseSprite = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12505/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, 0);
-        if ( !v60 )
+        if ( !v62 )
           goto LABEL_16;
-        UILabel__set_text(v60, (System_String_o *)baseSprite, 0);
+        UILabel__set_text(v62, (System_String_o *)baseSprite, 0);
         if ( !*(&ServantStatusListViewItemDrawButton_TypeInfo->_2.cctor_finished + 1) )
-          j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawButton_TypeInfo, v8, v61);
+          j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawButton_TypeInfo, v8, v63);
         baseSprite = (UICommonButton_o *)this->fields.baseSprite;
         if ( !baseSprite )
           goto LABEL_16;
         TD_SPEED_BASE_SPRITE_HEIGHT = ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_BASE_SPRITE_HEIGHT;
-        v63 = vcvts_n_f32_s32(
+        v65 = vcvts_n_f32_s32(
                 TD_SPEED_BASE_SPRITE_HEIGHT - LODWORD(baseSprite[1].fields.specifyDisabledColor.fields.a),
                 1u);
         UIWidget__set_height((UIWidget_o *)baseSprite, TD_SPEED_BASE_SPRITE_HEIGHT, 0);
-        v64 = this->fields.titleBase;
-        v65 = GameObjectExtensions__GetLocalPositionY(v64, 0);
-        GameObjectExtensions__SetLocalPositionY(v64, v65 + v63, 0);
-        v66 = this->fields.buttonBase;
+        v66 = this->fields.titleBase;
         v67 = GameObjectExtensions__GetLocalPositionY(v66, 0);
-        GameObjectExtensions__SetLocalPositionY(v66, v63 + v67, 0);
-        v68 = this->fields.collider;
-        if ( !v68 )
+        GameObjectExtensions__SetLocalPositionY(v66, v67 + v65, 0);
+        v68 = this->fields.buttonBase;
+        v69 = GameObjectExtensions__GetLocalPositionY(v68, 0);
+        GameObjectExtensions__SetLocalPositionY(v68, v65 + v69, 0);
+        v70 = this->fields.collider;
+        if ( !v70 )
           goto LABEL_16;
-        v74 = (unsigned int)UnityEngine_BoxCollider__get_size(this->fields.collider, 0);
+        v71 = (unsigned int)UnityEngine_BoxCollider__get_size(this->fields.collider, 0);
         baseSprite = (UICommonButton_o *)this->fields.collider;
         if ( !baseSprite )
           goto LABEL_16;
-        v69 = *(float *)&v74;
-        v70 = ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_BASE_SPRITE_HEIGHT;
-        v79.fields.z = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)baseSprite, 0).fields.z;
-        v79.fields.y = (float)v70;
-        v79.fields.x = v69;
-        UnityEngine_BoxCollider__set_size(v68, v79, 0);
+        v72 = *(float *)&v71;
+        v73 = ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_BASE_SPRITE_HEIGHT;
+        v79 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)baseSprite, 0);
+        v79.fields.y = (float)v73;
+        v79.fields.x = v72;
+        UnityEngine_BoxCollider__set_size(v70, v79, 0);
         baseSprite = (UICommonButton_o *)this->fields.explanationLabel;
         if ( !baseSprite )
           goto LABEL_16;
@@ -591,17 +591,17 @@ void ServantStatusListViewItemDrawButton__SetItem(
         baseSprite = (UICommonButton_o *)this->fields.explanationLabel;
         if ( !baseSprite )
           goto LABEL_16;
-        v71 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
+        v74 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseSprite, 0);
         GameObjectExtensions__SetLocalPositionY(
-          v71,
+          v74,
           ServantStatusListViewItemDrawButton_TypeInfo->static_fields->TD_SPEED_EXPLANATION_LABEL_POS_Y,
           0);
         baseSprite = (UICommonButton_o *)this->fields.titleSprite;
         if ( !baseSprite )
           goto LABEL_16;
-        v37 = &StringLiteral_21693/*"img_txt_npspeed"*/;
+        v38 = &StringLiteral_21693/*"img_txt_npspeed"*/;
 LABEL_89:
-        UISprite__set_spriteName((UISprite_o *)baseSprite, (System_String_o *)*v37, 0);
+        UISprite__set_spriteName((UISprite_o *)baseSprite, (System_String_o *)*v38, 0);
 LABEL_90:
         baseSprite = (UICommonButton_o *)this->fields.titleSprite;
         if ( baseSprite )

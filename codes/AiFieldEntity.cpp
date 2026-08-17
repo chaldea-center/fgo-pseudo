@@ -109,9 +109,9 @@ System_String_o *AiFieldEntity__getVoice(AiFieldEntity_o *this, const MethodInfo
   }
   result = (System_String_o *)AiBaseEntity__getScriptObj((AiBaseEntity_o *)this, v4->static_fields->KEY_VOICE_NAME, v2);
   if ( result )
-    return ((System_String_o *(__fastcall *)(System_String_o *, const MethodInfo *))result->klass->vtable._3_ToString.methodPtr)(
-             result,
-             result->klass->vtable._3_ToString.method);
+    return (System_String_o *)((__int64 (__fastcall *)(System_String_o *, const MethodInfo *))result->klass->vtable._3_ToString.methodPtr)(
+                                result,
+                                result->klass->vtable._3_ToString.method);
   return result;
 }
 

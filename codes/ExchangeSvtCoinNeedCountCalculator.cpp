@@ -363,11 +363,13 @@ int32_t ExchangeSvtCoinNeedCountCalculator__GetMaxExceedConsumeCoin(int32_t svtI
   int v15; // w22
   int32_t v16; // w20
   ServantExceedEntity_o *v17; // x23
+  System_Nullable_int__o v18; // x0
   int32_t objectNum; // w1
-  unsigned __int64 v19; // x8
-  unsigned __int64 v21; // [xsp+0h] [xbp-40h] BYREF
+  unsigned __int64 v20; // x8
+  System_Nullable_int__o v21; // x0
+  unsigned __int64 v23; // [xsp+0h] [xbp-40h] BYREF
   ServantExceedEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
 
   if ( (byte_596B47D & 1) == 0 )
   {
@@ -391,9 +393,9 @@ int32_t ExchangeSvtCoinNeedCountCalculator__GetMaxExceedConsumeCoin(int32_t svtI
     v8 = *(_QWORD *)&PossessedUserServantMaxExceedCount->fields.limitCount.fields.fakeValue;
     if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4, v5);
-    *(_QWORD *)&v23.fields.currentCryptoKey = v7;
-    *(_QWORD *)&v23.fields.fakeValue = v8;
-    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v23, 0);
+    *(_QWORD *)&v25.fields.currentCryptoKey = v7;
+    *(_QWORD *)&v25.fields.fakeValue = v8;
+    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v25, 0);
     LODWORD(v6) = v6->fields.exceedCount;
     v10 = v9;
   }
@@ -434,21 +436,17 @@ LABEL_23:
   while ( ((unsigned __int8)Master_object & 1) != 0 );
   if ( !v17 )
     return 0;
+  v18 = (System_Nullable_int__o)&v23;
   objectNum = v17->fields.objectNum;
-  v21 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v21,
-    objectNum,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( !(_BYTE)v21 )
+  v23 = 0;
+  System_Nullable_int____ctor(v18, objectNum, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( !(_BYTE)v23 )
     return 0;
-  v19 = HIDWORD(v21);
-  v21 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v21,
-    v15 - v19,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  return HIDWORD(v21);
+  v20 = HIDWORD(v23);
+  v21 = (System_Nullable_int__o)&v23;
+  v23 = 0;
+  System_Nullable_int____ctor(v21, v15 - v20, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  return HIDWORD(v23);
 }
 
 

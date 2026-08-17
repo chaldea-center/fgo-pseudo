@@ -102,7 +102,7 @@ void ExRoomMissionController__ApplyReceivedResult(
                                                   (const MethodInfo_4483994 *)Method_System_Collections_Generic_List_ExRoomMissionListOutput__get_Item__);
             if ( this )
             {
-              *((_DWORD *)this + 9) = 4;
+              HIDWORD(this[1].klass) = 4;
 LABEL_19:
               ReceivedMissionIds_k__BackingField = result->fields._ReceivedMissionIds_k__BackingField;
               ++v6;
@@ -498,7 +498,7 @@ int32_t ExRoomMissionController__IExRoomMissionController_LoadFilter(
 LABEL_8:
     v7 = sub_224BC3C(exRoomMissionRepository, IExRoomMissionRepository_TypeInfo, 2);
   }
-  return (*(int32_t (__fastcall **)(struct IExRoomMissionRepository_o *, _QWORD))v7)(
+  return (*(__int64 (__fastcall **)(struct IExRoomMissionRepository_o *, _QWORD))v7)(
            exRoomMissionRepository,
            *(_QWORD *)(v7 + 8));
 }

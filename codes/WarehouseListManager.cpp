@@ -1258,7 +1258,7 @@ System_IAsyncResult_o *WarehouseListManager_CallbackFunc__BeginInvoke(
   v12[0] = j_il2cpp_value_box_0(WarehouseListManager_ResultKind_TypeInfo, &v15);
   v12[1] = list;
   *(_QWORD *)&v13 = j_il2cpp_value_box_0(qword_5984348, &v14);
-  return sub_2213A14(this, v12, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v12, callback, object);
 }
 
 

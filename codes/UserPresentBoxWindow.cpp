@@ -798,6 +798,7 @@ QuestRewardInfo_o *UserPresentBoxWindow__CreateQuestRewardInfo(
   __int64 v4; // x20
   __int64 v5; // x0
   __int64 v6; // x1
+  QuestRewardInfo_o *result; // x0
 
   if ( (byte_596F496 & 1) == 0 )
   {
@@ -808,9 +809,10 @@ QuestRewardInfo_o *UserPresentBoxWindow__CreateQuestRewardInfo(
   QuestRewardInfo___ctor((QuestRewardInfo_o *)v4, 0);
   if ( !userPresentBox || !v4 )
     sub_2213CDC(v5, v6);
+  result = (QuestRewardInfo_o *)v4;
   *(_QWORD *)(v4 + 16) = *(_QWORD *)&userPresentBox->fields.giftType;
   *(_DWORD *)(v4 + 24) = userPresentBox->fields.num;
-  return (QuestRewardInfo_o *)v4;
+  return result;
 }
 
 
@@ -1569,9 +1571,11 @@ LABEL_20:
 void UserPresentBoxWindow__OpenHelp(UserPresentBoxWindow_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x19
-  System_Array_o *v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
+  System_Array_o *v3; // x0
+  System_RuntimeFieldHandle_o v4; // x1
+  TutorialFlag_ImageId_array *v5; // x20
+  __int64 v6; // x0
+  __int64 v7; // x1
 
   if ( (byte_596F4AD & 1) == 0 )
   {
@@ -1582,13 +1586,12 @@ void UserPresentBoxWindow__OpenHelp(UserPresentBoxWindow_o *this, const MethodIn
   }
   Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v3 = (System_Array_o *)sub_2213B20(TutorialFlag_ImageId___TypeInfo, 3);
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-    v3,
-    (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__5F16E08EADD1A2A2D3D16BD4B4C55938DC336BD93B4BFEB58328CA0A6DA33D2E,
-    0);
+  v4.fields.value = Field__PrivateImplementationDetails__5F16E08EADD1A2A2D3D16BD4B4C55938DC336BD93B4BFEB58328CA0A6DA33D2E;
+  v5 = (TutorialFlag_ImageId_array *)v3;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v3, v4, 0);
   if ( !Instance )
-    sub_2213CDC(v4, v5);
-  CommonUI__OpenTutorialImageDialog((CommonUI_o *)Instance, (TutorialFlag_ImageId_array *)v3, 201, 0, 0, 0, 0);
+    sub_2213CDC(v6, v7);
+  CommonUI__OpenTutorialImageDialog((CommonUI_o *)Instance, v5, 201, 0, 0, 0, 0);
 }
 
 
@@ -1729,13 +1732,13 @@ void UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const MethodInfo
   int32_t CommandCodeFrameMax; // [xsp+30h] [xbp-A0h] BYREF
   int32_t v118; // [xsp+34h] [xbp-9Ch] BYREF
   int32_t svtEquipKeep; // [xsp+38h] [xbp-98h] BYREF
-  int v120; // [xsp+3Ch] [xbp-94h] BYREF
+  int32_t v120; // [xsp+3Ch] [xbp-94h] BYREF
   int32_t svtKeep; // [xsp+40h] [xbp-90h] BYREF
-  int v122; // [xsp+44h] [xbp-8Ch] BYREF
+  int32_t v122; // [xsp+44h] [xbp-8Ch] BYREF
   UnityEngine_Vector2_o offset; // [xsp+48h] [xbp-88h] BYREF
   UnityEngine_Vector3_o scroll; // [xsp+50h] [xbp-80h] BYREF
   Il2CppObject *entity; // [xsp+60h] [xbp-70h] BYREF
-  __int64 servantEquipSum; // [xsp+68h] [xbp-68h] BYREF
+  int32_t servantEquipSum[2]; // [xsp+68h] [xbp-68h] BYREF
 
   if ( (byte_596F485 & 1) == 0 )
   {
@@ -1766,7 +1769,7 @@ void UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const MethodInfo
     byte_596F485 = 1;
   }
   entity = 0;
-  servantEquipSum = 0;
+  *(_QWORD *)servantEquipSum = 0;
   scroll.fields.z = 0.0;
   offset = 0;
   *(_QWORD *)&scroll.fields.x = 0;
@@ -1796,12 +1799,7 @@ void UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const MethodInfo
   if ( !this->fields.userServantMaster )
     goto LABEL_146;
   v13 = (UserCommandCodeMaster_o *)Instance;
-  Instance = UserServantMaster__getCount(
-               this->fields.userServantMaster,
-               (int32_t *)&servantEquipSum + 1,
-               (int32_t *)&servantEquipSum,
-               1,
-               0);
+  Instance = UserServantMaster__getCount(this->fields.userServantMaster, &servantEquipSum[1], servantEquipSum, 1, 0);
   if ( !v13 )
     goto LABEL_146;
   Count = UserCommandCodeMaster__getCount(v13, 0);
@@ -1810,7 +1808,7 @@ void UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const MethodInfo
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v15, v16);
   v19 = LocalizationManager__Get((System_String_o *)StringLiteral_13005/*"SUM_INFO"*/, 0);
-  v122 = HIDWORD(servantEquipSum);
+  v122 = servantEquipSum[1];
   Instance = j_il2cpp_value_box_0(qword_5984348, &v122);
   if ( !SelfUserGame )
     goto LABEL_146;
@@ -1823,7 +1821,7 @@ void UserPresentBoxWindow__ReDisp(UserPresentBoxWindow_o *this, const MethodInfo
   UILabel__set_text(svtNumValLb, (System_String_o *)Instance, 0);
   svtEqNumValLb = this->fields.svtEqNumValLb;
   v23 = LocalizationManager__Get((System_String_o *)StringLiteral_13005/*"SUM_INFO"*/, 0);
-  v120 = servantEquipSum;
+  v120 = servantEquipSum[0];
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v120);
   svtEquipKeep = SelfUserGame->fields.svtEquipKeep;
   v25 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &svtEquipKeep);
@@ -3044,11 +3042,14 @@ void UserPresentBoxWindow__SetSelectCount(UserPresentBoxWindow_o *this, int32_t 
   __int64 v9; // x2
   UIWidget_o *v10; // x20
   int32_t v11; // w22
+  float r; // s0 OVERLAPPED
+  float g; // s1
+  float b; // s2
+  float a; // s3
   struct UILabel_o *presentNoticeLabel; // x8
-  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
-  UnityEngine_Color_o mColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  v16 = selected;
+  v17 = selected;
   if ( (byte_596F4AA & 1) == 0 )
   {
     sub_2213A60(&BalanceConfig_TypeInfo);
@@ -3060,14 +3061,14 @@ void UserPresentBoxWindow__SetSelectCount(UserPresentBoxWindow_o *this, int32_t 
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, *(_QWORD *)&selected, method);
   v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10897/*"PRESENT_SELECT_INFO"*/, 0);
-  v6 = (Il2CppObject *)System_Int32__ToString((int32_t)&v16, 0);
+  v6 = (Il2CppObject *)System_Int32__ToString((int32_t)&v17, 0);
   v7 = System_String__Format_75697880(v5, v6, (Il2CppObject *)this->fields.presentMaxSelectable, 0);
   if ( !presentSelectNumLabel )
     goto LABEL_14;
   UILabel__set_text(presentSelectNumLabel, v7, 0);
   v7 = (System_String_o *)BalanceConfig_TypeInfo;
   v10 = (UIWidget_o *)this->fields.presentSelectNumLabel;
-  v11 = v16;
+  v11 = v17;
   if ( !*(&BalanceConfig_TypeInfo->_2.cctor_finished + 1) )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo, v8, v9);
@@ -3078,19 +3079,22 @@ void UserPresentBoxWindow__SetSelectCount(UserPresentBoxWindow_o *this, int32_t 
     presentNoticeLabel = this->fields.presentNoticeLabel;
     if ( !presentNoticeLabel )
       goto LABEL_14;
-    mColor = presentNoticeLabel->fields.mColor;
+    r = presentNoticeLabel->fields.mColor.fields.r;
+    g = presentNoticeLabel->fields.mColor.fields.g;
+    b = presentNoticeLabel->fields.mColor.fields.b;
+    a = presentNoticeLabel->fields.mColor.fields.a;
   }
   else
   {
-    mColor.fields.r = 1.0;
-    mColor.fields.g = 1.0;
-    mColor.fields.b = 1.0;
-    mColor.fields.a = 1.0;
+    r = 1.0;
+    g = 1.0;
+    b = 1.0;
+    a = 1.0;
   }
   if ( !v10 )
 LABEL_14:
     sub_2213CDC(v7, v8);
-  UIWidget__set_color(v10, mColor, 0);
+  UIWidget__set_color(v10, *(UnityEngine_Color_o *)&r, 0);
 }
 
 
@@ -5125,7 +5129,7 @@ System_IAsyncResult_o *UserPresentBoxWindow_ClickDelegate__BeginInvoke(
   v10[0] = hasGetServant;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -5206,7 +5210,7 @@ void UserPresentBoxWindow___c__DisplayClass82_0___ShowExpiredPresents_b__0(
         UserPresentBoxWindow___c__DisplayClass82_0_o *this,
         const MethodInfo *method)
 {
-  CommonUI_o *Instance; // x0
+  Il2CppObject *Instance; // x0
   __int64 v4; // x1
   System_String_o *v5; // x2
   System_String_o *v6; // x3
@@ -5228,10 +5232,10 @@ void UserPresentBoxWindow___c__DisplayClass82_0___ShowExpiredPresents_b__0(
     sub_2213A60(&StringLiteral_1/*""*/);
     byte_596F4B8 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_47A29F8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
-  CommonUI__CloseNotificationDialog(Instance, 0);
+  CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_13;
@@ -5240,7 +5244,7 @@ void UserPresentBoxWindow___c__DisplayClass82_0___ShowExpiredPresents_b__0(
     goto LABEL_13;
   if ( (byte_596F4F6 & 1) == 0 )
   {
-    Instance = (CommonUI_o *)sub_2213A60(&Method_System_Collections_Generic_List_long__Clear__);
+    Instance = (Il2CppObject *)sub_2213A60(&Method_System_Collections_Generic_List_long__Clear__);
     byte_596F4F6 = 1;
   }
   checkedIdList = userPresentListViewManager->fields.checkedIdList;

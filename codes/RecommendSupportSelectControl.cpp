@@ -92,22 +92,26 @@ Il2CppObject *RecommendSupportSelectControl__GetDialog_object_(
         const MethodInfo_3973E0C *method)
 {
   const MethodInfo_3973E0C_RGCTXs *rgctx_data; // x8
-  System_RuntimeTypeHandle_o v5; // x21
+  intptr_t _0_T; // x21
+  System_RuntimeTypeHandle_o v6; // x0
   System_Type_o *TypeFromHandle; // x22
-  __int64 v7; // x1
-  UnityEngine_Object_o *v8; // x21
-  Il2CppType *v9; // x21
-  System_Type_o *v10; // x0
+  __int64 v8; // x1
+  UnityEngine_Object_o *v9; // x21
+  Il2CppType *v10; // x21
+  System_RuntimeTypeHandle_o v11; // x0
+  System_Type_o *v12; // x0
   UnityEngine_Object_o **p_messageSelectDialog; // x8
-  Il2CppType *v12; // x21
-  System_Type_o *v13; // x0
-  _BOOL8 v14; // x0
-  __int64 v15; // x1
-  __int64 v16; // x1
+  Il2CppType *v14; // x21
+  System_RuntimeTypeHandle_o v15; // x0
+  System_Type_o *v16; // x0
+  _BOOL8 v17; // x0
+  __int64 v18; // x1
+  __int64 v19; // x1
   System_Type_o *Type; // x20
-  Il2CppType *_0_T; // x22
-  System_Type_o *v19; // x0
-  long double v20; // q0
+  Il2CppType *v21; // x22
+  System_RuntimeTypeHandle_o v22; // x0
+  System_Type_o *v23; // x0
+  long double v24; // q0
   Il2CppClass *_1_T; // x1
 
   rgctx_data = method->rgctx_data;
@@ -123,30 +127,33 @@ Il2CppObject *RecommendSupportSelectControl__GetDialog_object_(
       rgctx_data = method->rgctx_data;
     }
   }
-  v5.fields.value = (intptr_t)rgctx_data->_0_T;
+  _0_T = (intptr_t)rgctx_data->_0_T;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, method);
-  TypeFromHandle = System_Type__GetTypeFromHandle(v5, 0);
-  v8 = 0;
+  v6.fields.value = _0_T;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
+  v9 = 0;
   if ( System_Type__GetTypeCode(TypeFromHandle, 0) == 1 )
   {
-    v9 = RecommendSupportMessageSelectDialog_var;
+    v10 = RecommendSupportMessageSelectDialog_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v7);
-    v10 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v9, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v10, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v8);
+    v11.fields.value = (intptr_t)v10;
+    v12 = System_Type__GetTypeFromHandle(v11, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v12, 0) )
     {
       p_messageSelectDialog = (UnityEngine_Object_o **)&this->fields.messageSelectDialog;
 LABEL_15:
-      v8 = *p_messageSelectDialog;
+      v9 = *p_messageSelectDialog;
       goto LABEL_16;
     }
-    v12 = RecommendSupportCancelConfirmDialog_var;
+    v14 = RecommendSupportCancelConfirmDialog_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v7);
-    v13 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v12, 0);
-    v8 = 0;
-    if ( System_Type__op_Equality(TypeFromHandle, v13, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v8);
+    v15.fields.value = (intptr_t)v14;
+    v16 = System_Type__GetTypeFromHandle(v15, 0);
+    v9 = 0;
+    if ( System_Type__op_Equality(TypeFromHandle, v16, 0) )
     {
       p_messageSelectDialog = (UnityEngine_Object_o **)&this->fields.cancelConfirmDialog;
       goto LABEL_15;
@@ -154,23 +161,24 @@ LABEL_15:
   }
 LABEL_16:
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-  v14 = UnityEngine_Object__op_Inequality(v8, 0, 0);
-  if ( !v14 )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+  v17 = UnityEngine_Object__op_Inequality(v9, 0, 0);
+  if ( !v17 )
     return 0;
-  if ( !v8 )
-    sub_2213CDC(v14, v15);
-  Type = System_Object__GetType((Il2CppObject *)v8, 0);
-  _0_T = method->rgctx_data->_0_T;
+  if ( !v9 )
+    sub_2213CDC(v17, v18);
+  Type = System_Object__GetType((Il2CppObject *)v9, 0);
+  v21 = method->rgctx_data->_0_T;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_59843E0, v16);
-  v19 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)_0_T, 0);
-  if ( !System_Type__op_Equality(Type, v19, 0) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, v19);
+  v22.fields.value = (intptr_t)v21;
+  v23 = System_Type__GetTypeFromHandle(v22, 0);
+  if ( !System_Type__op_Equality(Type, v23, 0) )
     return 0;
   _1_T = method->rgctx_data->_1_T;
   if ( (*((_WORD *)&_1_T->_2.bitflags2 + 1) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_224B908(v20);
-  return (Il2CppObject *)sub_2213BB4(v8, _1_T);
+    _1_T = (Il2CppClass *)sub_224B908(v24);
+  return (Il2CppObject *)sub_2213BB4(v9, _1_T);
 }
 
 
@@ -179,57 +187,63 @@ Il2CppObject *RecommendSupportSelectControl__GetMenu_object_(
         const MethodInfo_3973FF4 *method)
 {
   const MethodInfo_3973FF4_RGCTXs *rgctx_data; // x8
-  System_RuntimeTypeHandle_o v5; // x21
+  intptr_t _0_T; // x21
+  System_RuntimeTypeHandle_o v6; // x0
   System_Type_o *TypeFromHandle; // x21
-  __int64 v7; // x1
-  Il2CppObject *v8; // x22
-  Il2CppType *v9; // x22
-  System_Type_o *v10; // x0
+  __int64 v8; // x1
+  Il2CppObject *v9; // x22
+  Il2CppType *v10; // x22
+  System_RuntimeTypeHandle_o v11; // x0
+  System_Type_o *v12; // x0
   Il2CppObject **p_mainMenu; // x21
-  __int64 v12; // x1
-  bool v13; // w8
+  __int64 v14; // x1
+  bool v15; // w8
   Il2CppObject *result; // x0
-  __int64 v15; // x1
+  __int64 v17; // x1
   System_Type_o *Type; // x20
-  Il2CppType *_0_T; // x21
-  System_Type_o *v18; // x0
-  bool v19; // w8
-  long double v20; // q0
+  Il2CppType *v19; // x21
+  System_RuntimeTypeHandle_o v20; // x0
+  System_Type_o *v21; // x0
+  bool v22; // w8
+  long double v23; // q0
   Il2CppClass *_1_T; // x1
-  Il2CppType *v22; // x22
-  System_Type_o *v23; // x0
-  __int64 v24; // x1
+  Il2CppType *v25; // x22
+  System_RuntimeTypeHandle_o v26; // x0
+  System_Type_o *v27; // x0
+  __int64 v28; // x1
   UnityEngine_Object_o *servantSelectMenu; // x22
   Il2CppObject *Component_object; // x0
-  System_String_o *v27; // x2
-  System_String_o *v28; // x3
-  int32_t v29; // w4
-  int32_t v30; // w5
-  bool v31; // w6
-  bool v32; // w7
-  Il2CppType *v33; // x22
-  System_Type_o *v34; // x0
-  __int64 v35; // x1
+  System_String_o *v31; // x2
+  System_String_o *v32; // x3
+  int32_t v33; // w4
+  int32_t v34; // w5
+  bool v35; // w6
+  bool v36; // w7
+  Il2CppType *v37; // x22
+  System_RuntimeTypeHandle_o v38; // x0
+  System_Type_o *v39; // x0
+  __int64 v40; // x1
   UnityEngine_Object_o *equipSelectMenu; // x22
-  Il2CppObject *v37; // x0
-  System_String_o *v38; // x2
-  System_String_o *v39; // x3
-  int32_t v40; // w4
-  int32_t v41; // w5
-  bool v42; // w6
-  bool v43; // w7
-  Il2CppType *v44; // x22
-  System_Type_o *v45; // x0
+  Il2CppObject *v42; // x0
+  System_String_o *v43; // x2
+  System_String_o *v44; // x3
+  int32_t v45; // w4
+  int32_t v46; // w5
+  bool v47; // w6
+  bool v48; // w7
+  Il2CppType *v49; // x22
+  System_RuntimeTypeHandle_o v50; // x0
+  System_Type_o *v51; // x0
   UnityEngine_Object_o *questSelectMenu; // x22
-  Il2CppObject *v47; // x0
-  System_String_o *v48; // x2
-  System_String_o *v49; // x3
-  int32_t v50; // w4
-  int32_t v51; // w5
-  bool v52; // w6
-  bool v53; // w7
-  UnityEngine_GameObject_o *v54; // [xsp+0h] [xbp-50h] BYREF
-  UnityEngine_GameObject_o *v55; // [xsp+8h] [xbp-48h] BYREF
+  Il2CppObject *v53; // x0
+  System_String_o *v54; // x2
+  System_String_o *v55; // x3
+  int32_t v56; // w4
+  int32_t v57; // w5
+  bool v58; // w6
+  bool v59; // w7
+  UnityEngine_GameObject_o *v60; // [xsp+0h] [xbp-50h] BYREF
+  UnityEngine_GameObject_o *v61; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_GameObject_o *prefabObject; // [xsp+18h] [xbp-38h] BYREF
 
   rgctx_data = method->rgctx_data;
@@ -254,36 +268,39 @@ Il2CppObject *RecommendSupportSelectControl__GetMenu_object_(
     }
   }
   prefabObject = 0;
-  v54 = 0;
-  v55 = 0;
-  v5.fields.value = (intptr_t)rgctx_data->_0_T;
+  v60 = 0;
+  v61 = 0;
+  _0_T = (intptr_t)rgctx_data->_0_T;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, method);
-  TypeFromHandle = System_Type__GetTypeFromHandle(v5, 0);
-  v8 = 0;
+  v6.fields.value = _0_T;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
+  v9 = 0;
   if ( System_Type__GetTypeCode(TypeFromHandle, 0) == 1 )
   {
-    v9 = RecommendSupportSelectListViewMenu_var;
+    v10 = RecommendSupportSelectListViewMenu_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v7);
-    v10 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v9, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v10, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v8);
+    v11.fields.value = (intptr_t)v10;
+    v12 = System_Type__GetTypeFromHandle(v11, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v12, 0) )
     {
       p_mainMenu = (Il2CppObject **)&this->fields.mainMenu;
 LABEL_11:
-      v8 = *p_mainMenu;
+      v9 = *p_mainMenu;
       goto LABEL_12;
     }
-    v22 = RecommendSupportServantSelectListMenu_var;
+    v25 = RecommendSupportServantSelectListMenu_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v7);
-    v23 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v22, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v23, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v8);
+    v26.fields.value = (intptr_t)v25;
+    v27 = System_Type__GetTypeFromHandle(v26, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v27, 0) )
     {
       p_mainMenu = (Il2CppObject **)&this->fields.servantSelectMenu;
       servantSelectMenu = (UnityEngine_Object_o *)this->fields.servantSelectMenu;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v24);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28);
       if ( UnityEngine_Object__op_Equality(servantSelectMenu, 0, 0) )
       {
         RecommendSupportSelectControl__SetPrefabAndNullCheck(
@@ -301,12 +318,12 @@ LABEL_11:
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.servantSelectMenu,
           (int32_t)Component_object,
-          v27,
-          v28,
-          v29,
-          v30,
           v31,
-          v32);
+          v32,
+          v33,
+          v34,
+          v35,
+          v36);
         result = *p_mainMenu;
         if ( !*p_mainMenu )
           goto LABEL_50;
@@ -314,35 +331,36 @@ LABEL_11:
       }
       goto LABEL_11;
     }
-    v33 = RecommendSupportEquipSelectListMenu_var;
+    v37 = RecommendSupportEquipSelectListMenu_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v24);
-    v34 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v33, 0);
-    if ( System_Type__op_Equality(TypeFromHandle, v34, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v28);
+    v38.fields.value = (intptr_t)v37;
+    v39 = System_Type__GetTypeFromHandle(v38, 0);
+    if ( System_Type__op_Equality(TypeFromHandle, v39, 0) )
     {
       p_mainMenu = (Il2CppObject **)&this->fields.equipSelectMenu;
       equipSelectMenu = (UnityEngine_Object_o *)this->fields.equipSelectMenu;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v35);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40);
       if ( UnityEngine_Object__op_Equality(equipSelectMenu, 0, 0) )
       {
-        RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &v55, (System_String_o *)StringLiteral_11714/*"RecommendSupportEquipSelectListMenuPrefab"*/, 0);
-        result = (Il2CppObject *)v55;
-        if ( !v55 )
+        RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &v61, (System_String_o *)StringLiteral_11714/*"RecommendSupportEquipSelectListMenuPrefab"*/, 0);
+        result = (Il2CppObject *)v61;
+        if ( !v61 )
           goto LABEL_50;
-        v37 = UnityEngine_GameObject__GetComponent_object_(
-                v55,
+        v42 = UnityEngine_GameObject__GetComponent_object_(
+                v61,
                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportEquipSelectListMenu___);
-        *p_mainMenu = v37;
+        *p_mainMenu = v42;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.equipSelectMenu,
-          (int32_t)v37,
-          v38,
-          v39,
-          v40,
-          v41,
-          v42,
-          v43);
+          (int32_t)v42,
+          v43,
+          v44,
+          v45,
+          v46,
+          v47,
+          v48);
         result = *p_mainMenu;
         if ( !*p_mainMenu )
           goto LABEL_50;
@@ -350,36 +368,37 @@ LABEL_11:
       }
       goto LABEL_11;
     }
-    v44 = RecommendSupportQuestSelectListMenu_var;
+    v49 = RecommendSupportQuestSelectListMenu_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v35);
-    v45 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v44, 0);
-    v8 = 0;
-    if ( System_Type__op_Equality(TypeFromHandle, v45, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v40);
+    v50.fields.value = (intptr_t)v49;
+    v51 = System_Type__GetTypeFromHandle(v50, 0);
+    v9 = 0;
+    if ( System_Type__op_Equality(TypeFromHandle, v51, 0) )
     {
       p_mainMenu = (Il2CppObject **)&this->fields.questSelectMenu;
       questSelectMenu = (UnityEngine_Object_o *)this->fields.questSelectMenu;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
       if ( UnityEngine_Object__op_Equality(questSelectMenu, 0, 0) )
       {
-        RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &v54, (System_String_o *)StringLiteral_11717/*"RecommendSupportQuestSelectMenuPrefab"*/, 0);
-        result = (Il2CppObject *)v54;
-        if ( !v54 )
+        RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &v60, (System_String_o *)StringLiteral_11717/*"RecommendSupportQuestSelectMenuPrefab"*/, 0);
+        result = (Il2CppObject *)v60;
+        if ( !v60 )
           goto LABEL_50;
-        v47 = UnityEngine_GameObject__GetComponent_object_(
-                v54,
+        v53 = UnityEngine_GameObject__GetComponent_object_(
+                v60,
                 (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestSelectListMenu___);
-        *p_mainMenu = v47;
+        *p_mainMenu = v53;
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)&this->fields.questSelectMenu,
-          (int32_t)v47,
-          v48,
-          v49,
-          v50,
-          v51,
-          v52,
-          v53);
+          (int32_t)v53,
+          v54,
+          v55,
+          v56,
+          v57,
+          v58,
+          v59);
         result = *p_mainMenu;
         if ( !*p_mainMenu )
           goto LABEL_50;
@@ -390,31 +409,32 @@ LABEL_11:
   }
 LABEL_12:
   if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v7);
-  v13 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v8, 0, 0);
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v8);
+  v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0, 0);
   result = 0;
-  if ( v13 )
+  if ( v15 )
   {
-    if ( v8 )
+    if ( v9 )
     {
-      Type = System_Object__GetType(v8, 0);
-      _0_T = method->rgctx_data->_0_T;
+      Type = System_Object__GetType(v9, 0);
+      v19 = method->rgctx_data->_0_T;
       if ( !*(_DWORD *)(qword_59843E0 + 228) )
-        j_il2cpp_runtime_class_init_0(qword_59843E0, v15);
-      v18 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)_0_T, 0);
-      v19 = System_Type__op_Equality(Type, v18, 0);
+        j_il2cpp_runtime_class_init_0(qword_59843E0, v17);
+      v20.fields.value = (intptr_t)v19;
+      v21 = System_Type__GetTypeFromHandle(v20, 0);
+      v22 = System_Type__op_Equality(Type, v21, 0);
       result = 0;
-      if ( v19 )
+      if ( v22 )
       {
         _1_T = method->rgctx_data->_1_T;
         if ( (*((_WORD *)&_1_T->_2.bitflags2 + 1) & 1) == 0 )
-          _1_T = (Il2CppClass *)sub_224B908(v20);
-        return (Il2CppObject *)sub_2213BB4(v8, _1_T);
+          _1_T = (Il2CppClass *)sub_224B908(v23);
+        return (Il2CppObject *)sub_2213BB4(v9, _1_T);
       }
       return result;
     }
 LABEL_50:
-    sub_2213CDC(result, v12);
+    sub_2213CDC(result, v14);
   }
   return result;
 }
@@ -655,40 +675,43 @@ void RecommendSupportSelectControl__OpenDialog_object_(
         const MethodInfo_3974450 *method)
 {
   const MethodInfo_3974450_RGCTXs *rgctx_data; // x8
-  System_RuntimeTypeHandle_o v9; // x22
+  intptr_t _0_T; // x22
+  System_RuntimeTypeHandle_o v10; // x0
   System_Type_o *TypeFromHandle; // x22
-  __int64 v11; // x1
-  Il2CppType *v12; // x21
-  System_Type_o *v13; // x0
-  __int64 v14; // x1
+  __int64 v12; // x1
+  Il2CppType *v13; // x21
+  System_RuntimeTypeHandle_o v14; // x0
+  System_Type_o *v15; // x0
+  __int64 v16; // x1
   struct RecommendSupportMessageSelectDialog_o **p_messageSelectDialog; // x21
   UnityEngine_Object_o *messageSelectDialog; // x22
-  __int64 v17; // x1
-  RecommendSupportMessageSelectDialog_o *v18; // x0
+  __int64 v19; // x1
+  RecommendSupportMessageSelectDialog_o *v20; // x0
   Il2CppObject *Component_object; // x0
-  System_String_o *v20; // x2
-  System_String_o *v21; // x3
-  int32_t v22; // w4
-  int32_t v23; // w5
-  bool v24; // w6
-  bool v25; // w7
-  __int64 v26; // x1
-  UnityEngine_Object_o *v27; // x22
-  Il2CppType *v28; // x21
-  System_Type_o *v29; // x0
-  __int64 v30; // x1
+  System_String_o *v22; // x2
+  System_String_o *v23; // x3
+  int32_t v24; // w4
+  int32_t v25; // w5
+  bool v26; // w6
+  bool v27; // w7
+  __int64 v28; // x1
+  UnityEngine_Object_o *v29; // x22
+  Il2CppType *v30; // x21
+  System_RuntimeTypeHandle_o v31; // x0
+  System_Type_o *v32; // x0
+  __int64 v33; // x1
   struct RecommendSupportCancelConfirmDialog_o **p_cancelConfirmDialog; // x21
   UnityEngine_Object_o *cancelConfirmDialog; // x22
-  Il2CppObject *v33; // x0
-  System_String_o *v34; // x2
-  System_String_o *v35; // x3
-  int32_t v36; // w4
-  int32_t v37; // w5
-  bool v38; // w6
-  bool v39; // w7
-  __int64 v40; // x1
-  UnityEngine_Object_o *v41; // x20
-  UnityEngine_GameObject_o *v42; // [xsp+0h] [xbp-40h] BYREF
+  Il2CppObject *v36; // x0
+  System_String_o *v37; // x2
+  System_String_o *v38; // x3
+  int32_t v39; // w4
+  int32_t v40; // w5
+  bool v41; // w6
+  bool v42; // w7
+  __int64 v43; // x1
+  UnityEngine_Object_o *v44; // x20
+  UnityEngine_GameObject_o *v45; // [xsp+0h] [xbp-40h] BYREF
   UnityEngine_GameObject_o *prefabObject; // [xsp+8h] [xbp-38h] BYREF
 
   rgctx_data = method->rgctx_data;
@@ -708,40 +731,42 @@ void RecommendSupportSelectControl__OpenDialog_object_(
       rgctx_data = method->rgctx_data;
     }
   }
-  v42 = 0;
+  v45 = 0;
   prefabObject = 0;
-  v9.fields.value = (intptr_t)rgctx_data->_0_T;
+  _0_T = (intptr_t)rgctx_data->_0_T;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
     j_il2cpp_runtime_class_init_0(qword_59843E0, callback);
-  TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
+  v10.fields.value = _0_T;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v10, 0);
   this->fields._SelectIndex_k__BackingField = index;
   if ( System_Type__GetTypeCode(TypeFromHandle, 0) != 1 )
     return;
-  v12 = RecommendSupportMessageSelectDialog_var;
+  v13 = RecommendSupportMessageSelectDialog_var;
   if ( !*(_DWORD *)(qword_59843E0 + 228) )
-    j_il2cpp_runtime_class_init_0(qword_59843E0, v11);
-  v13 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v12, 0);
-  if ( System_Type__op_Equality(TypeFromHandle, v13, 0) )
+    j_il2cpp_runtime_class_init_0(qword_59843E0, v12);
+  v14.fields.value = (intptr_t)v13;
+  v15 = System_Type__GetTypeFromHandle(v14, 0);
+  if ( System_Type__op_Equality(TypeFromHandle, v15, 0) )
   {
     p_messageSelectDialog = &this->fields.messageSelectDialog;
     messageSelectDialog = (UnityEngine_Object_o *)this->fields.messageSelectDialog;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v14);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v16);
     if ( !UnityEngine_Object__op_Equality(messageSelectDialog, 0, 0) )
     {
 LABEL_19:
-      v18 = this->fields.messageSelectDialog;
+      v20 = this->fields.messageSelectDialog;
       this->fields._IsEdit_k__BackingField = 1;
-      if ( v18 )
+      if ( v20 )
       {
-        RecommendSupportMessageSelectDialog__Open(v18, callback, 0);
+        RecommendSupportMessageSelectDialog__Open(v20, callback, 0);
         return;
       }
 LABEL_36:
-      sub_2213CDC(v18, v17);
+      sub_2213CDC(v20, v19);
     }
     RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &prefabObject, (System_String_o *)StringLiteral_11716/*"RecommendSupportMessageSelectDialogPrefab"*/, 0);
-    v18 = (RecommendSupportMessageSelectDialog_o *)prefabObject;
+    v20 = (RecommendSupportMessageSelectDialog_o *)prefabObject;
     if ( !prefabObject )
       goto LABEL_36;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
@@ -751,69 +776,70 @@ LABEL_36:
     sub_2213A04(
       (MissionNaviTransitionBoardItem_o *)&this->fields.messageSelectDialog,
       (int32_t)Component_object,
-      v20,
-      v21,
       v22,
       v23,
       v24,
-      v25);
-    v27 = (UnityEngine_Object_o *)*p_messageSelectDialog;
+      v25,
+      v26,
+      v27);
+    v29 = (UnityEngine_Object_o *)*p_messageSelectDialog;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v26);
-    if ( !UnityEngine_Object__op_Equality(v27, 0, 0) )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v28);
+    if ( !UnityEngine_Object__op_Equality(v29, 0, 0) )
     {
-      v18 = *p_messageSelectDialog;
+      v20 = *p_messageSelectDialog;
       if ( !*p_messageSelectDialog )
         goto LABEL_36;
-      RecommendSupportMessageSelectDialog__Init(v18, 0);
+      RecommendSupportMessageSelectDialog__Init(v20, 0);
       goto LABEL_19;
     }
   }
   else
   {
-    v28 = RecommendSupportCancelConfirmDialog_var;
+    v30 = RecommendSupportCancelConfirmDialog_var;
     if ( !*(_DWORD *)(qword_59843E0 + 228) )
-      j_il2cpp_runtime_class_init_0(qword_59843E0, v14);
-    v29 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v28, 0);
-    if ( !System_Type__op_Equality(TypeFromHandle, v29, 0) )
+      j_il2cpp_runtime_class_init_0(qword_59843E0, v16);
+    v31.fields.value = (intptr_t)v30;
+    v32 = System_Type__GetTypeFromHandle(v31, 0);
+    if ( !System_Type__op_Equality(TypeFromHandle, v32, 0) )
       return;
     p_cancelConfirmDialog = &this->fields.cancelConfirmDialog;
     cancelConfirmDialog = (UnityEngine_Object_o *)this->fields.cancelConfirmDialog;
     if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v30);
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v33);
     if ( UnityEngine_Object__op_Equality(cancelConfirmDialog, 0, 0) )
     {
-      RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &v42, (System_String_o *)StringLiteral_11713/*"RecommendSupportCancelConfirmDialogPrefab"*/, 0);
-      v18 = (RecommendSupportMessageSelectDialog_o *)v42;
-      if ( !v42 )
+      RecommendSupportSelectControl__SetPrefabAndNullCheck(this, &v45, (System_String_o *)StringLiteral_11713/*"RecommendSupportCancelConfirmDialogPrefab"*/, 0);
+      v20 = (RecommendSupportMessageSelectDialog_o *)v45;
+      if ( !v45 )
         goto LABEL_36;
-      v33 = UnityEngine_GameObject__GetComponent_object_(
-              v42,
+      v36 = UnityEngine_GameObject__GetComponent_object_(
+              v45,
               (const MethodInfo_38B6F40 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportCancelConfirmDialog___);
-      *p_cancelConfirmDialog = (struct RecommendSupportCancelConfirmDialog_o *)v33;
+      *p_cancelConfirmDialog = (struct RecommendSupportCancelConfirmDialog_o *)v36;
       sub_2213A04(
         (MissionNaviTransitionBoardItem_o *)&this->fields.cancelConfirmDialog,
-        (int32_t)v33,
-        v34,
-        v35,
-        v36,
+        (int32_t)v36,
         v37,
         v38,
-        v39);
-      v41 = (UnityEngine_Object_o *)*p_cancelConfirmDialog;
+        v39,
+        v40,
+        v41,
+        v42);
+      v44 = (UnityEngine_Object_o *)*p_cancelConfirmDialog;
       if ( !*(&UnityEngine_Object_TypeInfo->_2.cctor_finished + 1) )
-        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v40);
-      if ( UnityEngine_Object__op_Equality(v41, 0, 0) )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo, v43);
+      if ( UnityEngine_Object__op_Equality(v44, 0, 0) )
         return;
-      v18 = (RecommendSupportMessageSelectDialog_o *)*p_cancelConfirmDialog;
+      v20 = (RecommendSupportMessageSelectDialog_o *)*p_cancelConfirmDialog;
       if ( !*p_cancelConfirmDialog )
         goto LABEL_36;
-      RecommendSupportCancelConfirmDialog__Init((RecommendSupportCancelConfirmDialog_o *)v18, 0);
+      RecommendSupportCancelConfirmDialog__Init((RecommendSupportCancelConfirmDialog_o *)v20, 0);
     }
-    v18 = (RecommendSupportMessageSelectDialog_o *)*p_cancelConfirmDialog;
+    v20 = (RecommendSupportMessageSelectDialog_o *)*p_cancelConfirmDialog;
     if ( !*p_cancelConfirmDialog )
       goto LABEL_36;
-    RecommendSupportCancelConfirmDialog__Open((RecommendSupportCancelConfirmDialog_o *)v18, callback, 0);
+    RecommendSupportCancelConfirmDialog__Open((RecommendSupportCancelConfirmDialog_o *)v20, callback, 0);
   }
 }
 
@@ -1266,8 +1292,7 @@ int32_t RecommendSupportSelectControl__get_SelectQuestId(
         const MethodInfo *method)
 {
   RecommendSupportData_o *RecommendSupportData_k__BackingField; // x0
-  int32_t questPhase; // [xsp+8h] [xbp-8h] BYREF
-  int32_t questId; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t questPhase[2]; // [xsp+8h] [xbp-8h] BYREF
 
   RecommendSupportData_k__BackingField = this->fields._RecommendSupportData_k__BackingField;
   if ( !RecommendSupportData_k__BackingField )
@@ -1275,10 +1300,10 @@ int32_t RecommendSupportSelectControl__get_SelectQuestId(
   RecommendSupportData__TryGetQuest(
     RecommendSupportData_k__BackingField,
     this->fields._SelectIndex_k__BackingField,
-    &questId,
-    &questPhase,
+    &questPhase[1],
+    questPhase,
     0);
-  return questId;
+  return questPhase[1];
 }
 
 
@@ -1287,8 +1312,7 @@ int32_t RecommendSupportSelectControl__get_SelectQuestPhase(
         const MethodInfo *method)
 {
   RecommendSupportData_o *RecommendSupportData_k__BackingField; // x0
-  int32_t questId; // [xsp+8h] [xbp-8h] BYREF
-  int32_t questPhase; // [xsp+Ch] [xbp-4h] BYREF
+  int32_t questPhase[2]; // [xsp+8h] [xbp-8h] BYREF
 
   RecommendSupportData_k__BackingField = this->fields._RecommendSupportData_k__BackingField;
   if ( !RecommendSupportData_k__BackingField )
@@ -1296,10 +1320,10 @@ int32_t RecommendSupportSelectControl__get_SelectQuestPhase(
   RecommendSupportData__TryGetQuest(
     RecommendSupportData_k__BackingField,
     this->fields._SelectIndex_k__BackingField,
-    &questId,
-    &questPhase,
+    questPhase,
+    &questPhase[1],
     0);
-  return questPhase;
+  return questPhase[1];
 }
 
 
@@ -1480,7 +1504,7 @@ System_IAsyncResult_o *RecommendSupportSelectControl_DialogResultCallBack__Begin
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(RecommendSupportSelectControl_DialogState_TypeInfo, &v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 

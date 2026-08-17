@@ -151,7 +151,7 @@ void ItemIconListViewDialog__CreateItemList(
   Il2CppObject *v13; // x0
   __int64 v14; // x1
   UnityEngine_GameObject_o *v15; // x24
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v17; // x1
   UnityEngine_Transform_o *v18; // x26
   UnityEngine_Transform_o *v19; // x0
@@ -253,11 +253,11 @@ void ItemIconListViewDialog__CreateItemList(
         v15 = (UnityEngine_GameObject_o *)v13;
         if ( !v13 )
           sub_2213CDC(0, v14);
-        transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v13, 0);
-        v18 = (UnityEngine_Transform_o *)transform;
+        transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v13, 0);
+        v18 = transform;
         if ( !byte_5969AE0 )
         {
-          transform = sub_2213A60(&UnityEngine_Vector3_TypeInfo);
+          transform = (UnityEngine_Transform_o *)sub_2213A60(&UnityEngine_Vector3_TypeInfo);
           byte_5969AE0 = 1;
         }
         if ( !v18 )

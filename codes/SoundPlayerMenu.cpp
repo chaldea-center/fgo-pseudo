@@ -2457,6 +2457,7 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
   int32_t v31; // w5
   bool v32; // w6
   bool v33; // w7
+  bool result; // w0
   SoundPlayerMenu___c_c *v35; // x0
   struct SoundPlayerMenu___c_StaticFields *static_fields; // x8
   System_Func_bool__o *_9__39_0; // x20
@@ -2560,8 +2561,9 @@ bool SoundPlayerMenu__trialListening_d__39__MoveNext(
           this->fields.__2__current = (Il2CppObject *)v26;
           p__2__current = &this->fields.__2__current;
           sub_2213A04((MissionNaviTransitionBoardItem_o *)p__2__current, (int32_t)v26, v28, v29, v30, v31, v32, v33);
+          result = 1;
           *((_DWORD *)p__2__current - 2) = 1;
-          return 1;
+          return result;
         }
       }
 LABEL_40:
@@ -2626,8 +2628,9 @@ LABEL_31:
   this->fields.__2__current = (Il2CppObject *)v46;
   v47 = &this->fields.__2__current;
   sub_2213A04((MissionNaviTransitionBoardItem_o *)v47, (int32_t)v46, v48, v49, v50, v51, v52, v53);
+  result = 1;
   *((_DWORD *)v47 - 2) = 2;
-  return 1;
+  return result;
 }
 
 

@@ -2234,8 +2234,8 @@ LABEL_37:
     this->fields.__2__current = v37;
     v38 = &this->fields.__2__current;
     sub_2213A04((MissionNaviTransitionBoardItem_o *)v38, (int32_t)v37, v39, v40, v41, v42, v43, v44);
-    *((_DWORD *)v38 - 2) = 1;
     LOBYTE(Instance) = 1;
+    *((_DWORD *)v38 - 2) = 1;
   }
   return (char)Instance;
 }

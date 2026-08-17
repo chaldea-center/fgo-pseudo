@@ -818,27 +818,28 @@ void ServantSkillInfoIconComponent__SetSkillInfo(
   int32_t v36; // w5
   bool v37; // w6
   bool v38; // w7
-  __int64 v39; // x1
-  __int64 v40; // x2
+  UnityEngine_Vector2Int_o v39; // x6
+  __int64 v40; // x1
+  __int64 v41; // x2
   UILabel_o *levelLabel; // x23
-  System_String_o *v42; // x24
-  Il2CppObject *v43; // x22
-  Il2CppObject *v44; // x0
-  __int64 v45; // x2
-  SkillEntity_o *v46; // x21
-  int32_t v47; // w23
+  System_String_o *v43; // x24
+  Il2CppObject *v44; // x22
+  Il2CppObject *v45; // x0
+  __int64 v46; // x2
+  SkillEntity_o *v47; // x21
+  int32_t v48; // w23
   UILabel_o *chargeTitleLb; // x22
   UILabel_o *chargeTimeLb; // x22
-  __int64 v50; // x2
-  __int64 v51; // x20
-  __int64 v52; // x21
-  int32_t v53; // w0
-  const MethodInfo *v54; // x2
+  __int64 v51; // x2
+  __int64 v52; // x20
+  __int64 v53; // x21
+  int32_t v54; // w0
+  const MethodInfo *v55; // x2
   UILabel_o *addLabel; // [xsp+0h] [xbp-80h]
-  int32_t v56; // [xsp+14h] [xbp-6Ch] BYREF
-  int32_t v57; // [xsp+18h] [xbp-68h] BYREF
+  int32_t v57; // [xsp+14h] [xbp-6Ch] BYREF
+  int32_t v58; // [xsp+18h] [xbp-68h] BYREF
   int32_t SkillChargeTime; // [xsp+1Ch] [xbp-64h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v59; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
 
   if ( (byte_596A398 & 1) == 0 )
   {
@@ -911,6 +912,7 @@ void ServantSkillInfoIconComponent__SetSkillInfo(
   skillNameLabel = *p_skillStrengthStatus;
   if ( !*p_skillStrengthStatus )
     goto LABEL_33;
+  v39 = (UnityEngine_Vector2Int_o)0x1000000012LL;
   ServantSkillStrengthStatus__Set(
     (ServantSkillStrengthStatus_o *)skillNameLabel,
     this->fields.skillNameLabel,
@@ -918,19 +920,19 @@ void ServantSkillInfoIconComponent__SetSkillInfo(
     skillRecord,
     18,
     -7,
-    (UnityEngine_Vector2Int_o)0x1000000012LL,
+    v39,
     210,
     0,
     0);
   levelLabel = this->fields.levelLabel;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v39, v40);
-  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_5206/*"DISP_SKLL_LV"*/, 0);
-  v57 = skillLv;
-  v43 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v57);
-  v56 = skillMaxLv;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v56);
-  skillNameLabel = System_String__Format_75697880(v42, v43, v44, 0);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v40, v41);
+  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5206/*"DISP_SKLL_LV"*/, 0);
+  v58 = skillLv;
+  v44 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v58);
+  v57 = skillMaxLv;
+  v45 = (Il2CppObject *)j_il2cpp_value_box_0(qword_5984348, &v57);
+  skillNameLabel = System_String__Format_75697880(v43, v44, v45, 0);
   if ( !levelLabel )
     goto LABEL_33;
   UILabel__set_text(levelLabel, (System_String_o *)skillNameLabel, 0);
@@ -948,17 +950,17 @@ void ServantSkillInfoIconComponent__SetSkillInfo(
                      (const MethodInfo_3F10B30 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( !skillNameLabel )
     goto LABEL_33;
-  v46 = (SkillEntity_o *)skillNameLabel;
-  v47 = *((_DWORD *)skillNameLabel + 10);
+  v47 = (SkillEntity_o *)skillNameLabel;
+  v48 = *((_DWORD *)skillNameLabel + 10);
   chargeTitleLb = this->fields.chargeTitleLb;
   if ( !*(&LocalizationManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v20, v45);
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo, v20, v46);
   skillNameLabel = LocalizationManager__Get((System_String_o *)StringLiteral_12739/*"SKILLCHARGETURN_TXT"*/, 0);
   if ( !chargeTitleLb )
     goto LABEL_33;
   UILabel__set_text(chargeTitleLb, (System_String_o *)skillNameLabel, 0);
   chargeTimeLb = this->fields.chargeTimeLb;
-  SkillChargeTime = SkillEntity__getSkillChargeTime(v46, this->fields.currentSkillLv, 0);
+  SkillChargeTime = SkillEntity__getSkillChargeTime(v47, this->fields.currentSkillLv, 0);
   skillNameLabel = System_Int32__ToString((int32_t)&SkillChargeTime, 0);
   if ( !chargeTimeLb )
     goto LABEL_33;
@@ -967,19 +969,19 @@ void ServantSkillInfoIconComponent__SetSkillInfo(
   if ( !skillNameLabel )
     goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)skillNameLabel, 1, 0);
-  if ( this->fields.currentSkillLv >= v47 )
+  if ( this->fields.currentSkillLv >= v48 )
     return;
   if ( !baseUserServantEntity )
 LABEL_33:
     sub_2213CDC(skillNameLabel, v20);
-  v52 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
-  v51 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
+  v53 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.currentCryptoKey;
+  v52 = *(_QWORD *)&baseUserServantEntity->fields.svtId.fields.fakeValue;
   if ( !*(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20, v50);
-  *(_QWORD *)&v59.fields.currentCryptoKey = v52;
-  *(_QWORD *)&v59.fields.fakeValue = v51;
-  v53 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v59, 0);
-  ServantSkillInfoIconComponent__checkEnableCombine(this, v53, v54);
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20, v51);
+  *(_QWORD *)&v60.fields.currentCryptoKey = v53;
+  *(_QWORD *)&v60.fields.fakeValue = v52;
+  v54 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_55997068(v60, 0);
+  ServantSkillInfoIconComponent__checkEnableCombine(this, v54, v55);
 }
 
 
@@ -1281,7 +1283,7 @@ System_IAsyncResult_o *ServantSkillInfoIconComponent_ClickDelegate__BeginInvoke(
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(qword_5984328, v12);
   v10[1] = j_il2cpp_value_box_0(qword_5984348, &v11);
-  return sub_2213A14(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v10, callback, object);
 }
 
 

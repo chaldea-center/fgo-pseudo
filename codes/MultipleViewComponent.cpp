@@ -1953,7 +1953,7 @@ System_IAsyncResult_o *MultipleViewComponent_RequestCallbackFunc__BeginInvoke(
   v10[0] = isRequest;
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(qword_5984328, v10);
-  return sub_2213A14(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_2213A14(this, v9, callback, object);
 }
 
 
@@ -2216,7 +2216,7 @@ LABEL_28:
   this = (MultipleViewComponent___c__DisplayClass37_1_o *)v24->fields.__4__this;
   if ( !this )
     goto LABEL_28;
-  v25 = (UILabel_o *)*((_QWORD *)this + 7);
+  v25 = (UILabel_o *)this[1].fields.CS___8__locals1;
   this = (MultipleViewComponent___c__DisplayClass37_1_o *)MultipleViewComponent__GetTitleMessage(
                                                             (MultipleViewComponent_o *)this,
                                                             (const MethodInfo *)result);

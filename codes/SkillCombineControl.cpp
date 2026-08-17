@@ -125,55 +125,58 @@ SetLevelUpData_o *SkillCombineControl__CreateLeveUpData(
   bool v34; // w6
   bool v35; // w7
   const MethodInfo *v36; // x1
+  System_Nullable_int__o v37; // x0
   int32_t qp; // w1
-  const MethodInfo *v38; // x1
-  unsigned __int64 v39; // x8
-  float v40; // x28^4
-  __int64 v41; // x29
-  const MethodInfo *v42; // x1
-  System_String_o *v43; // x2
-  System_String_o *v44; // x3
-  int32_t v45; // w4
-  int32_t v46; // w5
-  bool v47; // w6
-  bool v48; // w7
+  const MethodInfo *v39; // x1
+  unsigned __int64 v40; // x8
+  System_Nullable_float__o v41; // x0
+  float v42; // x28^4
+  __int64 v43; // x29
+  const MethodInfo *v44; // x1
+  System_String_o *v45; // x2
+  System_String_o *v46; // x3
+  int32_t v47; // w4
+  int32_t v48; // w5
+  bool v49; // w6
+  bool v50; // w7
   float CombineCampaignQpRate; // s0
-  double v50; // d0
-  __int64 v51; // x0
-  System_String_o *v52; // x2
-  System_String_o *v53; // x3
-  int32_t v54; // w4
-  int32_t v55; // w5
-  bool v56; // w6
-  bool v57; // w7
-  int v58; // w8
+  System_Nullable_float__o v52; // x0
+  double v53; // d0
+  __int64 v54; // x0
+  System_String_o *v55; // x2
+  System_String_o *v56; // x3
+  int32_t v57; // w4
+  int32_t v58; // w5
+  bool v59; // w6
+  bool v60; // w7
+  int v61; // w8
   __int64 itemIds; // x1
-  System_String_o *v60; // x2
-  System_String_o *v61; // x3
-  int32_t v62; // w4
-  int32_t v63; // w5
-  bool v64; // w6
-  bool v65; // w7
+  System_String_o *v63; // x2
+  System_String_o *v64; // x3
+  int32_t v65; // w4
+  int32_t v66; // w5
+  bool v67; // w6
+  bool v68; // w7
   __int64 itemNums; // x1
-  System_String_o *v67; // x2
-  System_String_o *v68; // x3
-  int32_t v69; // w4
-  int32_t v70; // w5
-  bool v71; // w6
-  bool v72; // w7
-  __int64 v73; // x1
-  __int64 v74; // x2
+  System_String_o *v70; // x2
+  System_String_o *v71; // x3
+  int32_t v72; // w4
+  int32_t v73; // w5
+  bool v74; // w6
+  bool v75; // w7
+  __int64 v76; // x1
+  __int64 v77; // x2
   int32_t DispLimitCountStageSealAfterAtStageLimitCount; // w21
   UserServantEntity_o *baseUserServantEntity; // x8
-  ServantLimitAddMaster_o *v77; // x20
+  ServantLimitAddMaster_o *v80; // x20
   System_String_o *OverwriteSkillName; // x0
-  System_String_o *v79; // x2
-  System_String_o *v80; // x3
-  int32_t v81; // w4
-  int32_t v82; // w5
-  bool v83; // w6
-  bool v84; // w7
-  unsigned __int64 v86; // [xsp+0h] [xbp-70h] BYREF
+  System_String_o *v82; // x2
+  System_String_o *v83; // x3
+  int32_t v84; // w4
+  int32_t v85; // w5
+  bool v86; // w6
+  bool v87; // w7
+  unsigned __int64 v89; // [xsp+0h] [xbp-70h] BYREF
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
   if ( (byte_596A3B5 & 1) == 0 )
@@ -233,53 +236,53 @@ SetLevelUpData_o *SkillCombineControl__CreateLeveUpData(
     SkillCombineControl__GetCombineCampaignQpRate(this, v36);
     *(_DWORD *)(v20 + 76) = 0;
     *(_QWORD *)(v20 + 80) = this->fields.userQP;
-    v51 = sub_2213B20(int___TypeInfo, 0);
-    *(_QWORD *)(v20 + 96) = v51;
-    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 96), v51, v52, v53, v54, v55, v56, v57);
+    v54 = sub_2213B20(int___TypeInfo, 0);
+    *(_QWORD *)(v20 + 96) = v54;
+    sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 96), v54, v55, v56, v57, v58, v59, v60);
 LABEL_21:
     itemNums = sub_2213B20(int___TypeInfo, 0);
     goto LABEL_22;
   }
+  v37 = (System_Nullable_int__o)&v89;
   qp = CombineSkillEntity->fields.qp;
-  v86 = 0;
-  System_Nullable_int____ctor(
-    (System_Nullable_int__o)&v86,
-    qp,
-    (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
-  if ( (_BYTE)v86 )
+  v89 = 0;
+  System_Nullable_int____ctor(v37, qp, (const MethodInfo_45E430C *)Method_System_Nullable_int___ctor__);
+  if ( (_BYTE)v89 )
   {
-    v39 = HIDWORD(v86);
-    v86 = 0;
+    v40 = HIDWORD(v89);
+    v41 = (System_Nullable_float__o)&v89;
+    v89 = 0;
     System_Nullable_float____ctor(
-      (System_Nullable_float__o)&v86,
-      (float)(int)v39,
+      v41,
+      (float)(int)v40,
       (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-    v40 = *((float *)&v86 + 1);
-    v41 = (unsigned __int8)v86;
-    CombineCampaignQpRate = SkillCombineControl__GetCombineCampaignQpRate(this, v42);
-    if ( v41 )
+    v42 = *((float *)&v89 + 1);
+    v43 = (unsigned __int8)v89;
+    CombineCampaignQpRate = SkillCombineControl__GetCombineCampaignQpRate(this, v44);
+    if ( v43 )
     {
-      v86 = 0;
+      v52 = (System_Nullable_float__o)&v89;
+      v89 = 0;
       System_Nullable_float____ctor(
-        (System_Nullable_float__o)&v86,
-        CombineCampaignQpRate * v40,
+        v52,
+        CombineCampaignQpRate * v42,
         (const MethodInfo_45E6918 *)Method_System_Nullable_float___ctor__);
-      v50 = *((float *)&v86 + 1);
+      v53 = *((float *)&v89 + 1);
     }
     else
     {
-      v50 = 0.0;
+      v53 = 0.0;
     }
-    if ( v50 == INFINITY )
-      v58 = 0x80000000;
+    if ( v53 == INFINITY )
+      v61 = 0x80000000;
     else
-      v58 = (int)v50;
-    *(_DWORD *)(v20 + 76) = v58;
+      v61 = (int)v53;
+    *(_DWORD *)(v20 + 76) = v61;
     *(_QWORD *)(v20 + 80) = this->fields.userQP;
   }
   else
   {
-    SkillCombineControl__GetCombineCampaignQpRate(this, v38);
+    SkillCombineControl__GetCombineCampaignQpRate(this, v39);
     *(_DWORD *)(v20 + 76) = 0;
     *(_QWORD *)(v20 + 80) = this->fields.userQP;
   }
@@ -287,15 +290,15 @@ LABEL_21:
   if ( !itemIds )
     itemIds = sub_2213B20(int___TypeInfo, 0);
   *(_QWORD *)(v20 + 96) = itemIds;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 96), itemIds, v43, v44, v45, v46, v47, v48);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 96), itemIds, v45, v46, v47, v48, v49, v50);
   itemNums = (__int64)CombineSkillEntity->fields.itemNums;
   if ( !itemNums )
     goto LABEL_21;
 LABEL_22:
   *(_QWORD *)(v20 + 104) = itemNums;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 104), itemNums, v60, v61, v62, v63, v64, v65);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 104), itemNums, v63, v64, v65, v66, v67, v68);
   *(_QWORD *)(v20 + 56) = titleText;
-  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 56), (int32_t)titleText, v67, v68, v69, v70, v71, v72);
+  sub_2213A04((MissionNaviTransitionBoardItem_o *)(v20 + 56), (int32_t)titleText, v70, v71, v72, v73, v74, v75);
   Instance = (DataManager_o *)this->fields.baseUserServantEntity;
   if ( !Instance )
     goto LABEL_33;
@@ -306,17 +309,17 @@ LABEL_22:
                                                     0,
                                                     0);
   if ( !*(&DataManager_TypeInfo->_2.cctor_finished + 1) )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v73, v74);
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo, v76, v77);
   Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3856318 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   baseUserServantEntity = this->fields.baseUserServantEntity;
   if ( !baseUserServantEntity )
     goto LABEL_33;
-  v77 = (ServantLimitAddMaster_o *)Instance;
+  v80 = (ServantLimitAddMaster_o *)Instance;
   Instance = (DataManager_o *)UserServantEntity__GetServantId(baseUserServantEntity, overrideTransformVal, 0);
-  if ( !v77 )
+  if ( !v80 )
     goto LABEL_33;
   if ( ServantLimitAddMaster__TryGetEntity(
-         v77,
+         v80,
          &entity,
          (int32_t)Instance,
          DispLimitCountStageSealAfterAtStageLimitCount,
@@ -335,12 +338,12 @@ LABEL_22:
         sub_2213A04(
           (MissionNaviTransitionBoardItem_o *)(v20 + 40),
           (int32_t)OverwriteSkillName,
-          v79,
-          v80,
-          v81,
           v82,
           v83,
-          v84);
+          v84,
+          v85,
+          v86,
+          v87);
         return (SetLevelUpData_o *)v20;
       }
 LABEL_33:
@@ -2566,6 +2569,7 @@ LABEL_8:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void SkillCombineControl__SetTitleText(SkillCombineControl_o *this, const MethodInfo *method)
 {
   int32_t switchIdxType; // w8
@@ -2576,12 +2580,15 @@ void SkillCombineControl__SetTitleText(SkillCombineControl_o *this, const Method
   float *p_a; // x11
   UILabel_o *condTitleLabel; // x20
   System_ValueTuple_object__object__o Item; // kr00_16
+  float b; // s2
+  float a; // s3
+  float r; // s0 OVERLAPPED
+  float g; // s1
   struct UnityEngine_Color_o *p_CondTitleSpriteColor_k__BackingField; // x8
-  float *v15; // x9
-  float *v16; // x10
-  float *v17; // x11
+  float *v16; // x9
+  float *v17; // x10
+  float *v18; // x11
   TransformServantInfo_o *transformInfo; // [xsp+8h] [xbp-18h] BYREF
-  UnityEngine_Color_o CondTitleSpriteColor_k__BackingField; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( (byte_596A3AB & 1) == 0 )
@@ -2657,25 +2664,25 @@ void SkillCombineControl__SetTitleText(SkillCombineControl_o *this, const Method
     if ( this->fields.displayTransformIndex <= 0 )
     {
       p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColor_k__BackingField;
-      v15 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
-      v16 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
-      v17 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
+      v16 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
+      v17 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
+      v18 = &this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
       if ( !switchSkillIdsList )
         goto LABEL_25;
     }
     else
     {
       p_CondTitleSpriteColor_k__BackingField = &this->fields._CondTitleSpriteColorAfter_k__BackingField;
-      v15 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
-      v16 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
-      v17 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
+      v16 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.g;
+      v17 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.b;
+      v18 = &this->fields._CondTitleSpriteColorAfter_k__BackingField.fields.a;
       if ( !switchSkillIdsList )
         goto LABEL_25;
     }
-    CondTitleSpriteColor_k__BackingField.fields.a = *v17;
-    CondTitleSpriteColor_k__BackingField.fields.b = *v16;
-    CondTitleSpriteColor_k__BackingField.fields.g = *v15;
-    CondTitleSpriteColor_k__BackingField.fields.r = p_CondTitleSpriteColor_k__BackingField->fields.r;
+    a = *v18;
+    b = *v17;
+    g = *v16;
+    r = p_CondTitleSpriteColor_k__BackingField->fields.r;
     goto LABEL_22;
   }
   if ( !switchSkillIdsList
@@ -2685,9 +2692,12 @@ void SkillCombineControl__SetTitleText(SkillCombineControl_o *this, const Method
 LABEL_25:
     sub_2213CDC(switchSkillIdsList, method);
   }
-  CondTitleSpriteColor_k__BackingField = this->fields._CondTitleSpriteColor_k__BackingField;
+  b = this->fields._CondTitleSpriteColor_k__BackingField.fields.b;
+  a = this->fields._CondTitleSpriteColor_k__BackingField.fields.a;
+  r = this->fields._CondTitleSpriteColor_k__BackingField.fields.r;
+  g = this->fields._CondTitleSpriteColor_k__BackingField.fields.g;
 LABEL_22:
-  UIWidget__set_color((UIWidget_o *)switchSkillIdsList, CondTitleSpriteColor_k__BackingField, 0);
+  UIWidget__set_color((UIWidget_o *)switchSkillIdsList, *(UnityEngine_Color_o *)&r, 0);
 }
 
 
@@ -2700,7 +2710,7 @@ bool SkillCombineControl__TrySetSwitchSkillIdsList(SkillCombineControl_o *this, 
   int32_t v7; // w5
   bool v8; // w6
   bool v9; // w7
-  System_ValueTuple_object__object__o v10; // x1
+  System_ValueTuple_object__object__o v10; // x1 OVERLAPPED
   UserServantEntity_o *baseUserServantEntity; // x0
   __int64 v12; // x1
   __int64 v13; // x2
@@ -2730,7 +2740,7 @@ bool SkillCombineControl__TrySetSwitchSkillIdsList(SkillCombineControl_o *this, 
   struct System_String_array *titles; // x8
   System_Collections_Generic_List_T__o *switchSkillIdsList; // x24
   System_Predicate_T__o *v39; // x25
-  System_ValueTuple_object__object__o v40; // kr40_16
+  System_ValueTuple_object__object__o v40; // kr00_16
   BalanceConfig_c *v41; // x0
   Il2CppObject *v42; // x22
   Il2CppObject *v43; // x2

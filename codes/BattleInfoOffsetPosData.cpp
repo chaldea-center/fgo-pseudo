@@ -68,6 +68,9 @@ UnityEngine_Vector3_o BattleInfoOffsetPosData__get_Offset(BattleInfoOffsetPosDat
   __int64 v4; // x8
   __int64 v5; // x9
   __int64 v6; // x10
+  float v7; // s1
+  float v8; // s0
+  float v9; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   IsActive = BattleInfoOffsetPosData__get_IsActive(this, method);
@@ -85,8 +88,11 @@ UnityEngine_Vector3_o BattleInfoOffsetPosData__get_Offset(BattleInfoOffsetPosDat
     v6 = 32;
   else
     v6 = 44;
-  result.fields.y = *(float *)((char *)&this->klass + v5);
-  result.fields.x = *(float *)((char *)&this->klass + v4);
-  result.fields.z = *(float *)((char *)&this->klass + v6);
+  v7 = *(float *)((char *)&this->klass + v5);
+  v8 = *(float *)((char *)&this->klass + v4);
+  v9 = *(float *)((char *)&this->klass + v6);
+  result.fields.z = v9;
+  result.fields.y = v7;
+  result.fields.x = v8;
   return result;
 }

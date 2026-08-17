@@ -1569,7 +1569,9 @@ System_Int32_array *DataVals__GetSameBuffLimitTargetIndividuality(DataVals_o *th
 System_Int32_array *DataVals__GetShortenMaxCountArray(DataVals_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  System_Array_o *ParamArray; // x19
+  System_Collections_ICollection_o *ParamArray; // x19
+  System_Array_o *v5; // x0
+  System_RuntimeFieldHandle_o v6; // x1
 
   if ( (byte_597031D & 1) == 0 )
   {
@@ -1577,14 +1579,13 @@ System_Int32_array *DataVals__GetShortenMaxCountArray(DataVals_o *this, const Me
     sub_2213A60(&Field__PrivateImplementationDetails__11047585FE102FBB5CADB42446612A578D88C6EF5ED076BB7AC360C4F9E4373D);
     byte_597031D = 1;
   }
-  ParamArray = (System_Array_o *)DataVals__GetParamArray(this, 187, v2);
-  if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)ParamArray, 0) )
+  ParamArray = (System_Collections_ICollection_o *)DataVals__GetParamArray(this, 187, v2);
+  if ( BasicHelper__IsNullOrEmpty(ParamArray, 0) )
   {
-    ParamArray = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(
-      ParamArray,
-      (System_RuntimeFieldHandle_o)Field__PrivateImplementationDetails__11047585FE102FBB5CADB42446612A578D88C6EF5ED076BB7AC360C4F9E4373D,
-      0);
+    v5 = (System_Array_o *)sub_2213B20(int___TypeInfo, 3);
+    v6.fields.value = Field__PrivateImplementationDetails__11047585FE102FBB5CADB42446612A578D88C6EF5ED076BB7AC360C4F9E4373D;
+    ParamArray = (System_Collections_ICollection_o *)v5;
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_76340728(v5, v6, 0);
   }
   return (System_Int32_array *)ParamArray;
 }
@@ -4075,14 +4076,16 @@ bool DataVals__TryGetOverwriteFuncInvalidType(DataVals_o *this, int32_t *invalid
   const MethodInfo *v5; // x3
   bool isParam; // w20
   int32_t Param; // w8
+  bool result; // w0
 
   isParam = DataVals__isParam(this, 215, method);
   if ( isParam )
     Param = DataVals__GetParam(this, 215, -1, v5);
   else
     Param = -1;
+  result = isParam;
   *invalidType = Param;
-  return isParam;
+  return result;
 }
 
 
